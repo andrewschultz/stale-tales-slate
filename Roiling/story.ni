@@ -5689,6 +5689,7 @@ carry out means-hinting:
 			try objhinting act-ruin curtain instead;
 		if player has latches:
 			try objhinting latches instead;
+	if player has settler and settler is not examined, say "You should probably examine the settler." instead;
 	all-say "Nothing left to do here. You should be able to get going to the next part."
 
 book others-hinting
@@ -10042,6 +10043,7 @@ carry out denialing:
 	say "Warping space and time, you move back to the Trips Strip...";
 	get-cool-stuff;
 	now denial is true;
+	move player to strip of profits strip;
 	the rule succeeds;
 
 denialnaileding is an action applying to nothing.
@@ -10066,6 +10068,7 @@ carry out denialnaileding:
 	repeat with ZT running through patchable things:
 		now ZT is in lalaland;
 	get-cool-stuff;
+	move player to strip of profits;
 
 chapter roveovering
 
@@ -10310,6 +10313,7 @@ every turn when location of player is dusty study and stuff-found >= 3 (this is 
 			say "You're sick of the knocking, so you just answer the door, already.";
 			try opening side door instead;
 		say "[one of]Whoah! Bangish bashing at the door[it-door]![or]The bangish bashing continues.[stopping]";
+		now knockage is true;
 
 to say it-door:
 	set the pronoun it to the side door;
@@ -10714,6 +10718,7 @@ check going nowhere in cavern (this is the cavern check rule):
 	do nothing instead;
 
 check going inside in cavern:
+	if plaster is in cavern, say "There's nowhere to go in, yet." instead;
 	if act-ruin curtain is in cavern:
 		now curtain-know is true;
 		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it" instead;
@@ -24943,6 +24948,8 @@ understand "demo dome" and "demo mode" and "dome mode" and "demo dome mode" as d
 
 knockage is a truth state that varies.
 
+demo-dome is a truth state that varies.
+
 carry out demoing:
 	if mrlp is demo dome:
 		say "You already are in demo dome mode." instead;
@@ -24951,6 +24958,7 @@ carry out demoing:
 	if player is not in dusty study or gunter is in lalaland:
 		say "For reasons of continuity, you can't visit the Demo Dome until you've restarted the game." instead;
 	say "[if knockage is true]You ignore Gunter's emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You call up a nav-van and then pull out your discreet, secret ID to enter.";
+	now demo-dome is true;
 	move player to peek keep;
 	now red writing is examined; [this is a silly hack to make sure sparse spares is tracked ok]
 	now right hand status line is "Poking Around";
@@ -26941,7 +26949,11 @@ to say 2dg of (rg - a region):
 
 to say eqls:
 	if screenread is false:
-		say "========";
+		say "====";
+
+to say eq2:
+	if screenread is false:
+		say "[eqls][eqls]";
 
 to say 2da:
 	if screenread is false:
@@ -27238,12 +27250,12 @@ rule for showing alternate routes:
 	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The Means Manse has no mutually exclusive solutions, and Presto only has one alternative, for the hoop. This list overlaps very little with the MISSED list which shows actual points missed.";
 	d "[list of solved regions].";
 	if routes is solved:
-		say "[eqls]ROUTES[line break]";
+		say "[eq2][b]ROUTES[r][eq2][line break]";
 		say "[2da]you could've gone [if misted is true]AMIDST[else]ABOARD[end if] in Ripe Pier.";
 		say "[2da]you could've looked [if behinded is true]WITHIN[else]BEHIND[end if] on the Cripple Clipper.";
 		say "[2da]you could've gone [if thor is reflexed]BETWEEN[else]THROUGH[end if] after finding the button on the Cripple Clipper.";
 	if troves is solved:
-		say "[eqls]TROVES[line break]";
+		say "[eq2][b]TROVES[r][eq2][line break]";
 		say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
 		say "[2da]you could've [if decide-win is true]DECIDE[else]RESIGNe[end if]d in the Upscale Capsule, too.";
 	if presto is solved:
@@ -27362,6 +27374,15 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've changed the pram into a RAMP[if heights is unvisited], if you'd gone up from the study[end if].";
 		if t-b is in dusty study:
 			say "[2dmiss of myreg]you could've changed the ten beams in the study to a BASEMENT.";
+	else if myreg is stores:
+		if store B is in stores, say "[2dmiss of myreg]Store B could've given you some SORBET.";
+		if store K is in stores, say "[2dmiss of myreg]Store K could've made some TOKERS.";
+		if store N is in stores, say "[2dmiss of myreg]NESTOR was hiding in Store K.";
+		if store U is in stores, say "[2dmiss of myreg]ROUTES were in Store U.";
+		if store V is in stores, say "[2dmiss of myreg]TROVES were in Store V.";
+		if store P is in stores, say "[2dmiss of myreg]PRESTO would've opened Store P.";
+		if store Y is in stores, say "[2dmiss of myreg]The OYSTER was in Store Y.";
+		if store W is in stores, say "[2dmiss of myreg]TOWERS were in Store W.";
 	else if myreg is routes:
 		if worst ad is in same mesa:
 			say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
@@ -27575,7 +27596,9 @@ rule for showing what the player missed: [there may be a way to do things withou
 	say "An all-feat leaflet flutters over the fourth wall.";
 	now all regions are not tickedoff;
 	now anything-missed is false;
+	if others is solved, show-miss others and true instead;
 	show-miss Means Manse and true;
+	show-miss stores and true;
 	show-miss routes and true;
 	show-miss troves and true;
 	show-miss oyster and true;
@@ -29244,8 +29267,6 @@ carry out misseding:
 	now mrlp is solved;
 	carry out the showing what the player missed activity;
 	now mrlp is unsolved;
-	if player is in strip of profits:
-		carry out the showing alternate routes activity;
 	the rule succeeds;
 
 chapter missesing
@@ -29270,8 +29291,10 @@ chapter missalt
 missalting is an action out of world.
 
 understand the command "missalt" as something new.
+understand the command "alt" as something new.
 
 understand "missalt" as missalting.
+understand "alt" as missalting.
 
 carry out missalting:
 	say "[miss-types].";
@@ -29281,7 +29304,7 @@ carry out missalting:
 to say miss-types:
 	say "MISSED = all regions['] misses.";
 	say "MISSES = this region's misses.";
-	say "MISSALT = show alternate routes.";
+	say "MISSALT = show alternate routes";
 
 chapter elving
 
@@ -29317,22 +29340,6 @@ carry out elving:
 	say "Blah people: [list of blah people].";
 	say "Elvonly people: [list of elvonly people].";
 	the rule succeeds.
-
-chapter ALT
-
-[* ALT shows alternate ways through]
-
-alting is an action out of world.
-
-understand the command "alt" as something new.
-
-understand "alt" as alting.
-
-carry out alting:
-	now mrlp is solved;
-	carry out the showing alternate routes activity;
-	now mrlp is unsolved;
-	the rule succeeds;
 
 chapter specsing
 
