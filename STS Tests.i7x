@@ -58,9 +58,11 @@ carry out etuing:
 		the rule succeeds;
 	if nu < 0 or nu > maxtestnum, say "Need 1-[maxtestnum]. Try -1 to see the whole list. Currently the test command each turn list is [cur-act]." instead;
 	now cmdtype is number understood;
-	if nu is 0, say "Resetting." instead;
-	if hint-divide > 0 and remainder after dividing number understood by (hint-divide * 2) >= hint-divide, now have-objhinted is true;
-	say "Now [cur-act] every turn.";
+	if nu is 0:
+		say "[if cmdtype is 0]Already testing nothing[else]Resetting[end if]." instead;
+	else:
+		if hint-divide > 0 and remainder after dividing number understood by (hint-divide * 2) >= hint-divide, now have-objhinted is true;
+		say "Now [cur-act] every turn.";
 	the rule succeeds;
 
 to say cur-act:

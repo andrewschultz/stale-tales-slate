@@ -228,6 +228,8 @@ a portal can be enter-clued. a portal is usually not enter-clued.
 
 a portal has a region called a go-region.
 
+definition: a portal is slick if its diffic is 11 or less.
+
 instead of taking a portal:
 	say "You try taking the portal in the entering sense.";
 	try entering the noun instead;
@@ -4912,7 +4914,9 @@ to say bug-report:
 bugsquash is a truth state that varies.
 
 to abort-if-bugfind:
+	say "Attempting to cut off testing bugsquash = [bugsquash].";
 	if bugsquash is true:
+		say "[word number 1 in the player's command] = first letter.";
 		if word number 1 in the player's command is not "showme":
 			say "Cutting off testing now.";
 			end the story finally;
@@ -5661,19 +5665,15 @@ carry out means-hinting:
 			else:
 				all-say "You have found a way out of the study. Any way gets you to a secret passage out of the Means Manse, though along the way, you may wish to HINT SETTLER or HINT DIORAMA to figure what to do with them.";
 			now settler-hint-yet is true instead;
-		if tables are visible:
-			try objhinting tables instead;
-		if niche is visible:
-			try objhinting niche instead;
-		if t-b are visible:
-			try objhinting t-b instead;
+		if tables are in study, try objhinting tables instead;
+		if niche is in study, try objhinting niche instead;
+		if t-b are in study, try objhinting t-b instead;
 		all-say "You should move along, now, unless you want to mess with the settler and diorama to be sure of what you are doing." instead;
 	if location of player is heights:
-		if ramp is visible:
-			try objhinting ramp instead;
-		if pram is visible:
-			try objhinting pram instead;
-		all-say "[bug-report]" instead;
+		if ramp is in heights, try objhinting ramp instead;
+		if pram is in heights, try objhinting pram instead;
+		all-say "[bug-report]";
+		the rule succeeds;
 	if location of player is Farming Framing:
 		if sitar is visible:
 			try objhinting the sitar instead;
@@ -5808,16 +5808,28 @@ carry out stores-hinting:
 			try objhinting Store H instead;
 		all-say "Go through the HOSTER to the OTHERS area." instead;
 	if number of game-critical stos is 0:
-		all-say "(Note: you've cleared all the stores you need to[if number of needed regions > 0], though you still have work to do behind them[end if].)";
+		all-say "(Note: you've cleared all the stores you need to[if number of needed regions > 0], though you still have work to do behind them[end if].)[paragraph break]";
 		if Store K is visible:
 			try objhinting Store K instead;
 		if Store N is visible:
 			try objhinting Store N instead;
 		all-say "You have nothing more to do here. You need to [if number of needed regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
-	if cur-hint-sto is not visible:
-		now cur-hint-sto is a random game-critical sto;
+	if cur-hint-sto is not in Strip of Profits:
+		if Store U is in Strip of profits:
+			now cur-hint-sto is Store U;
+		else if Store V is in Strip of profits:
+			now cur-hint-sto is Store V;
+		else if Store P is in Strip of profits:
+			now cur-hint-sto is Store P;
+		else if Store Y is in Strip of profits:
+			now cur-hint-sto is Store Y;
+		else if Store W is in Strip of profits:
+			now cur-hint-sto is Store W;
+		else if Store T is in Strip of profits:
+			now cur-hint-sto is Store T;
+		all-say "You don't need to change any more stores now." instead; [should not happen but just in case]
+	if number of portals in strip of profits > 0, say "While [the slickest portal in strip of profits] [if number of portals in strip of profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
 	try objhinting cur-hint-sto instead;
-	all-say "BUG. You should not have fallen through here." instead;
 
 to sto-hint (stosto - a sto):
 	say "Sto hint for [stosto].";
@@ -5887,7 +5899,7 @@ carry out presto-hinting:
 	if player is in Grey Gyre or player is in Burnt Brunt:
 		if hacks' shack is unvisited:
 			if spoilit is false:
-				all-say "You're all done here, so you maybe should [if saps' pass is unvisited]go north[else if hogs are in saps' pass]go see about getting past the lawl wall [hereish of Saps' Pass][else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+				all-say "You're all done here for now[if player is in Burnt Brunt (the yak can be helped later,)[else],[end if] so you maybe should [if saps' pass is unvisited]go north[else if phat path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
 	if player is in Saps' Pass:
 		try objhinting lawl wall instead;
 	if player is in phat path:
@@ -5979,7 +5991,7 @@ to say wash-up:
 	say "[one of]Rand and Leo are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
 
 to say hereish of (rm - a room):
-	say "[if player is in rm]here[else][rm][end if]"
+	say "[if player is in rm]here[else]in [rm][end if]"
 
 book routes-hinting
 
@@ -6113,42 +6125,36 @@ carry out troves-hinting:
 			try objhinting verbose instead;
 		if post is reflexive:
 			try objhinting post instead;
+	if player is in boarded roadbed:
 		if what-a-bee is reflexive and bee's head is reflexive:
 			if bee-head-first is true:
 				try objhinting bee's head instead;
 			try objhinting what-a-bee instead;
+		if bee's head is reflexive, try objhinting bee's head instead;
+		if what-a-bee is reflexive, try objhinting what-a-bee instead;
 		try objhinting cellar door instead;
-	if player is in Drain Nadir:
-		if diapers are reflexive:
-			try objhinting diapers instead;
-	if player is in Boredom Bedroom:
-		try objhinting ltb instead;
-	if player is in Browse Bowers:
-		try objhinting brochure instead;
+[	if player is in Drain Nadir, try objhinting diapers instead;]
+	if player is in Boredom Bedroom, try objhinting ltb instead;
+	if player is in Browse Bowers, try objhinting brochure instead;
 	if location of player is Econ Cone:
 		if rivets are reflexive and prai is reflexive:
-			if rivets-first is true:
-				try objhinting rivets instead;
-			else:
-				try objhinting prai instead;
+			if rivets-first is true, try objhinting rivets instead;
+			try objhinting prai instead;
 		try objhinting Pernod instead;
 	if location of player is Upscale Capsule:
-		if noise is in Upscale Capsule:
-			try objhinting vanity instead;
+		if noise is in Upscale Capsule, try objhinting vanity instead;
 		if stream is reflexive and lobster is in Upscale Capsule:
-			if lobster-first is true:
-				try objhinting lobster instead;
+			if lobster-first is true, try objhinting lobster instead;
 			try objhinting stream instead;
-		if salt is in Upscale Capsule:
-			try objhinting salt instead;
-		if song is reflexive:
-			if song-first is true:
-				try objhinting song instead;
-			else:
-				try objhinting playbill instead;
+		if lobster is in Upscale Capsule, try objhinting lobster instead;
+		if stream is in upscale capsule, try objhinting stream instead;
+		if salt is in Upscale Capsule, try objhinting salt instead;
+		if song-first is true, try objhinting song instead;
+		try objhinting playbill instead;
 	if spoilit is true:
 		say "--hmmph. Do nothing. This is a BUG, but keep the truffle[no line break]";
 		now spoilit is false instead;
+	say "Bug report crashes here, not sure why." instead;
 	all-say "Your book has no further advice, though it probably should. [bug-report]" instead;
 
 bee-head-first is a truth state which varies.
@@ -6943,7 +6949,7 @@ instead of taking inventory:
 	else:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
-		say "In this region you have found:[line break]";
+		say "Here in the [mrlp] region you have found:[line break]";
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
@@ -6961,7 +6967,10 @@ instead of taking inventory:
 		say "Your general tools are hidden. IV will turn them back on.";
 	if number of worn things > 0:
 		say "[line break]You are also wearing [a list of worn things].";
-	if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
+	if mrlp is presto and bored yak is not in lalaland:
+		if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can't carry, but you can push it around[if number of things on skid > 0]. It holds [the list of things on skid][end if]." instead;
+		if mrlp of skid is presto, say "You remember leaving the skid in [location of skid]." instead;
+	if mrlp of skid is presto and bored yak is not in lalaland, say "You remember
 	if mrlp is otters and power-back is false, say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
 	if player has compass, say "[line break]You also have a compass to tell direction."; [start OTHERS special stuff]
 	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to GURU things you could make fruits from.";
@@ -7790,7 +7799,7 @@ before listening (this is the you can hear stuff some places rule):
 	if location of player is rustic citrus:
 		say "Curtis is mumbling about some perceived slight." instead;
 	if Rand is visible and Rand is washed up:
-		say "The silence is a bit awkward, so you try chatting.";
+		say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
 		try asking a random washed up person about "rannygazoo" instead;
 	if mrlp is presto:
 		say "[if cur-score of presto is 0]A shot. Sort of[else]You don't hear anything congruent to what you've needed to say in this area, which is a good thing[end if]." instead;
@@ -7867,7 +7876,7 @@ before listening (this is the you can hear stuff some places rule):
 		try examining sob ever verbose instead;
 	if player is in Boarded Roadbed:
 		unless what-a-bee is reflexive and bee's head is reflexive:
-			say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][run paragraph on] You see red a bit at getting no direct help, yourself." instead;
+			say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!' [in random order]You see red a bit at getting no direct help, yourself." instead;
 		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet:
 		say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
@@ -7934,8 +7943,8 @@ before smelling (this is the you can smell some stuff some places rule):
 	if player is in study and Gunter is in lalaland:
 		say "Bean soup. Subpoena is near." instead;
 	if player is in strip: [stores]
-		if oyster is in strip:
-			say "Seawater scents from Store Y." instead;
+		if store y is in strip, say "Seawater scents from Store Y." instead;
+		if oyster-x is in strip, say "Seawater scents from the oyster." instead;
 		if roved is true and hoster is visible:
 			say "A mix of nice smells from the hoster where Store H was." instead;
 	if player is in Farming Framing:
@@ -9732,6 +9741,14 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 			say "You feel your arch-greed recharged.";
 			min-up;
 		continue the action;
+	else if noun is troend1 or noun is troend2:
+		let temp be 0;
+		if lobster is preef, increment temp;
+		if stream is preef, increment temp;
+		if divorces is preef, increment temp;
+		if temp > 0, say "(NOTE: before moving on, you much with some stuff to get a few extra points.)[paragraph break]";
+		increase min-score of troves by temp;
+		increase cur-score of troves by temp;
 	else if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
 		d "General LLPish min-up for [noun].";
 		min-up;
@@ -10043,7 +10060,7 @@ carry out denialing:
 	say "Warping space and time, you move back to the Trips Strip...";
 	get-cool-stuff;
 	now denial is true;
-	move player to strip of profits strip;
+	move player to strip of profits;
 	the rule succeeds;
 
 denialnaileding is an action applying to nothing.
@@ -11059,7 +11076,11 @@ understand "x [number]" as gridxing when player has gird grid.
 
 gridxing is an action applying to one number.
 
+check gridxing when roved is true:
+	say "You look back on what you accomplished. Perhaps [if rustic citrus is unvisited]a variable challenge awaits[else if cur-score of rustic citrus < 14]you need to mix things up all sorts of different ways, here[end if]." instead;
+
 carry out gridxing:
+	if roved is true, say "You don't need to review what you accomplished in-depth, though it's sort of fun." instead;
 	if number understood < 1 or number understood > 6:
 		say "You must choose 1-6 in the Gird Grid." instead;
 	choose row number understood in table of griddiness;
@@ -11084,11 +11105,9 @@ check examining the Gird Grid:
 	else:
 		say "You need to chose 1-6, or one of PTUVWY. Case insensitive." instead;
 	if there is a reg-match entry:
-		if reg-match entry is solved or reg-match entry is bypassed:
-			say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel pleased with what you fixed." instead;
+		if reg-match entry is solved or reg-match entry is bypassed, say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel [if reg-match entry is bypassed]relieved you didn't have to deal with that[else]pleased with what you fixed[end if]." instead;
 	say "[reg-blurb entry][line break]";
-	if there is a reg-match entry and mrlp is reg-match entry:
-		say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
+	if there is a reg-match entry and mrlp is reg-match entry, say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
 	the rule succeeds;
 
 table of griddiness
@@ -12089,7 +12108,7 @@ a sto can be bedruggled. a sto is usually not bedruggled. [K and N are bedruggle
 
 specification of sto is "Something that may or may not change into a portal."
 
-cur-hint-sto is a sto that varies. cur-hint-sto is usually Store V.
+cur-hint-sto is a sto that varies. cur-hint-sto is usually Store U.
 
 the plural of sto is stos.
 
@@ -12340,7 +12359,7 @@ check smelling when smoke cloud is visible:
 
 section tokers
 
-the tokers are plural-named people. "Some tokers are here[if Store N is visible], moaning about their friend they lost nearby[otherwise], doing their tokin['] thing[if-nest]."
+the tokers are plural-named people. "Some tokers are here[if Store N is visible], moaning about their friend they lost nearby[otherwise], doing their tokin['] thing[if-nest][end if]."
 
 description of tokers is "Long-haired, lazy, babbling bums, unwilling to do anything nearing earning. Their taste in clothes is worse than their taste in music. they seem to be fervently arguing whether it is best to say dude, like, or man too much."
 
@@ -13768,7 +13787,7 @@ a-text of heat is "RYRY". b-text of heat is "RGRG". parse-text of heat is "[sp]x
 
 book Bustle Sublet
 
-Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if sob ever verbose is visible]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
+Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is visible]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
 
 after looking in bustle sublet:
 	set the pronoun it to sob ever verbose;
@@ -13853,7 +13872,7 @@ a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop
 every turn when player is in Boarded Roadbed:
 	if what-a-bee is not reflexive or bee's head is not reflexive:
 		if current action is not listening:
-			say "How to get down to the cellar? The cellar.";
+			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if what-a-bee is reflexie or bee's head is reflexive]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
 
 book Boarded Roadbed
 
@@ -13870,7 +13889,7 @@ after looking in boarded roadbed:
 	set the pronoun her to what-a-bee;
 	continue the action;
 
-initial appearance of what-a-bee is "The [what-a-bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
+initial appearance of what-a-bee is "[one of]An[or]The[stopping] [what-a-bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
 
 a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
 
@@ -13990,7 +14009,7 @@ Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you 
 
 chapter ltb
 
-ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]Perhaps it will give you an idea how to focus and move on, though.". printed name of ltb is "LEAD". [ ltb = lead the book]
+ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of ltb is "LEAD". [ ltb = lead the book]
 
 a-text of ltb is "RYYR". b-text of ltb is "???R". parse-text of ltb is "x[sp]e[sp]a[sp]x". ltb is parse-spoilable.
 
@@ -14557,7 +14576,7 @@ to decide whether (int - a thing) is interjective: [this is for hinting in prest
 
 book Grey Gyre
 
-Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the place is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too. [else if ether is visible]The maze entrance north has been replaced by ether[otherwise][ether-check]ou can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
+Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the place is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too[else if ether is visible]. The maze entrance north has been replaced by ether[otherwise]. [ether-check]ou can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
 
 does the player mean doing something with the volt maze when the player is in grey gyre: it is very likely.
 
@@ -15096,7 +15115,10 @@ before scaning a washed up person (this is the clue whassup if washups rule) :
 check scaning Leo when Rand is in Ridge and Rand is fightin:
 	say "It's Rand you need to deal with, now." instead;
 
-Leo is a fightin bruisin reflexive person. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset[end if]."
+Leo is a fightin bruisin reflexive person. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset. For all their macho talk, he and Rand might just need someone to talk to[end if]."
+
+to say o-p of (p - a persion):
+	say "[if o-p is Leo]Rand[else if o-p is Rand]Leo[else]BUG[end if]"
 
 check taking a fightin person:
 	say "You can 'take' them by trickery." instead;
@@ -15107,7 +15129,7 @@ to say l-r:
 to say lrp:
 	say "[if a random chance of 1 in 2 succeeds]Leo and Rand[else]Rand and Leo[end if]"
 
-Rand is a fightin bruisin reflexive person. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
+Rand is a fightin bruisin reflexive person. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset. For all their macho talk, he and Leo might just need someone to talk to[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
 
 a-text of Leo is "YRY". b-text of Leo is "YRY". parse-text of leo is "o[sp]l[sp]e". leo is any-spoilable.
 
@@ -15432,13 +15454,13 @@ check going east in Phat Path:
 Check going inside in Phat Path:
 	Try going north instead;
 
-the smart people sign is scenery in Phat Path. description of smart people sign is "'ALERT! ALTER nothing in here if not technically inclined. You OUGHT not to abuse LOG ONS.' Hm, weird that logons has a space."
+the smart people sign is scenery in Phat Path. description of smart people sign is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!"
 
 check taking smart people sign:
 	say "Removing the warning won't make the warning any less valid." instead;
 
 check scaning smart people sign:
-	say "It's all over the place. Maybe you should focus on specific letters. The ones in CAPS seem like a start.";
+	say "It's all over the place. Maybe you should focus on a specific row[if rebuked is true] you haven't worked with yet[end if].";
 
 the lawl wall is vanishing scenery in Saps' Pass.
 
@@ -15454,7 +15476,7 @@ some keys are part of the lawl wall. the keys are vanishing and plural-named. de
 
 a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". keys is any-spoilable.
 
-the hogs are vanishing plural-named people in Saps' Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
+the hogs are vanishing plural-named people in Saps' Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look much more pompous, though--maybe distracting them just right can get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
 
 after printing the locale description for Saps' Pass when Saps' Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
@@ -15501,19 +15523,19 @@ after fliptoing when player is in phat path (this is the update byebyes rule) :
 		set the pronoun it to smart people sign;
 	continue the action;
 
-the log ons letters are a plural-named reflexive thing. the log ons letters are part of the smart people sign. description is "They're bolded, IN CAPS and slightly raised."
+the log ons letters are a plural-named reflexive thing. the log ons letters are part of the smart people sign. description is "[if log ons are reflexed]The letters seem dull now you said so long[else]They're bolded, IN CAPS and slightly raised[end if]."
 
 understand "logons/letters" and "logons letters" as log ons letters.
 
 a-text of log ons is "RYRYRR". b-text of log ons is "RGRGPR". parse-text of log ons is "x[sp]o[sp]x[sp]o[sp]n[sp]x". log ons is cheat-spoilable.
 
-the alert letters are a plural-named reflexive thing. the alert letters are part of the smart people sign. description is "They're bolded, IN CAPS and slightly raised--ALERT is red, but ALTER isn't."
+the alert letters are a plural-named reflexive thing. the alert letters are part of the smart people sign. description is "[if alert letters are reflexed]The letters seem dull now you said later[else]They're bolded, IN CAPS and slightly raised[end if]."
 
 understand "alter letters" and "alter/letters" as alert letters.
 
 a-text of alert is "RYRYR". b-text of alert is "RY???". parse-text of alert is "x[sp]-[sp]?[sp]?[sp]?".
 
-the ought letters are a plural-named reflexive thing. the ought letters are part of the smart people sign. description is "They're bolded, IN CAPS and slightly raised. They're also red."
+the ought letters are a plural-named reflexive thing. the ought letters are part of the smart people sign. description is "[if ought letters are reflexed]The letters seem dull now you said tough[else]They're bolded, IN CAPS and slightly raised. They're also red[end if]."
 
 a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "x[sp]-[sp]-[sp]x[sp]x". ought is cheat-spoilable.
 
@@ -25613,7 +25635,7 @@ to all-say-x (xx - indexed text):
 	if hint-to-display is true or hint-to-file is true:
 		do nothing;
 	else:
-		all-say "[xx]";
+		say "[xx]";
 
 to all-say (xx - indexed text):
 	if auto-hint-proc is true:
@@ -26148,14 +26170,14 @@ Store K	"[one of]Store K is not critical, because it's a bit of American slang.[
 Store N	"[one of]Looks like there's a guy in Store N. You need to figure his name.[plus][or]Items fall out of Store N if you keep poking or examining.[plus][or]The toners/Sterno give a lot of clues.[plus][or]The mythology and Tintin clue may tip you off.[plus][or]NESTOR is his name.[minus][cycling]"
 Store P	"[one of]You seem to need a magic word, and the tropes poster plus Store P give you a few hints.[plus][or]In particular, you see two blinking colors, which means the first two letters are P/T O/R.[plus][or]But the second must be a consonant. Also, TROPES means you know where the vowels are.[plus][or]Process of elimination gives PRESTO.[minus][cycling]"
 tropes poster	--	Store P
-Store T	"[one of]Cute squeaky noises from burrows there by a river. There must be many such animals. As if there's some animal that this industrial buildup has displaced.[plus][or]There are four choices left, if you use the settler, but what is a riverside animal?[plus][or]OTTERS.[minus][cycling]"
+Store T	"[one of]Cute squeaky noises from burrows in Store T. There must be many such animals. As if there's some animal that this industrial buildup has displaced.[plus][or]There are four choices left, if you use the settler, but what is a riverside animal?[plus][or]OTTERS.[minus][cycling]"
 Store U	"[one of]The roads in Store U. What's another word for that? They're numbered, too.[plus][or]The settler's a big help here, as it knocks out the vowel. Then you can try where T should go. Or better yet, you can guess that whatever it is is plural, and that knocks things out logically.[plus][or]Not just any old roads but ones with signs for bus stops, etc.[plus][or]ROUTES.[minus][cycling]"
 roads	--	Store U
-Store V	"[one of]You see sparkling inside if you look at the right angle. Well, several angles.[plus][or]Hmm, treasures. Where do you find treasures? (Word-logic clues follow before the solution.)[plus][or]If you use the settler, you can figure which vowels are where.[plus][or]Then you can figure the first letter, since you have CCVCVC, and many two-consonant combinations don't work well to start.[plus][or]You should wind up with TROVES.[minus][cycling]"
+Store V	"[one of]You see sparkling inside Store V if you look at the right angle. Well, several angles.[plus][or]Hmm, treasures. Where do you find treasures? (Word-logic clues follow before the solution.)[plus][or]If you use the settler, you can figure which vowels are where.[plus][or]Then you can figure the first letter, since you have CCVCVC, and many two-consonant combinations don't work well to start.[plus][or]You should wind up with TROVES.[minus][cycling]"
 voters	"You can scan the voters if you can't figure what Store V should be."
-Store W	"[one of]You may wish to look at the description, though RESTOW also allows a clue.[plus][or]Store W seems taller than the other stores, like it has several levels. It's just an illusion. Plus, the store seems to blur into separate halves when you look at it.[plus][or]What's a name for a tall building, or tall buildings?[plus][or]TOWERS.[minus][cycling]"
+Store W	"[one of]You may wish to look at the description of Store W, though RESTOW also allows a clue.[plus][or]Store W seems taller than the other stores, like it has several levels. It's just an illusion. Plus, the store seems to blur into separate halves when you look at it.[plus][or]What's a name for a tall building, or tall buildings?[plus][or]TOWERS.[minus][cycling]"
 shells	"The shells clue that Store Y might become something that lives in a shell."
-Store Y	"[one of]Hm, looks slimy on the inside, and it smells like saltwater too. It's also a weird shell shape, Store Y is. What sea life do you know that has a Y in it?[plus][or]Also, if you use the Letters Settler, you'll notice a letter that's a new color--orange. A combination of yellow and red.[plus][or]What letter can be a vowel or a consonant?[plus][or]Y. So the settler gives you three letters.[plus][or]You probably see by now--or can use process of elimination--to note Store Y becomes an OYSTER.[minus][cycling]"
+Store Y	"[one of]Hm, store Y looks slimy on the inside, and it smells like saltwater too. It's also a weird shell shape, Store Y is. What sea life do you know that has a Y in it?[plus][or]Also, if you use the Letters Settler, you'll notice a letter that's a new color--orange. A combination of yellow and red.[plus][or]What letter can be a vowel or a consonant?[plus][or]Y. So the settler gives you three letters.[plus][or]You probably see by now--or can use process of elimination--to note Store Y becomes an OYSTER.[minus][cycling]"
 otters-x	"[if you-can-advance]You've solved enough to go there[else if patcher is off-stage]You need to solve more stores to have the strength to make it past the otters[otherwise]You need to solve more stores, or zap them with the patcher, to make it past[end if]."
 routes-x	"Just ENTER them."
 troves-x	"Just ENTER them."
@@ -26280,7 +26302,7 @@ vile veil	"The vile veil is just a cheapo to explain why you can only go back no
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
 camo coma	"The camo-coma is just a barrier to prevent you going any way but west from the seminar."
-smart people sign	"[one of]The sign indicates Rand and Leo don't belong in the shack. But if you've tried going north, you know they'll want to try[if rebuked is true], and they've been persistent, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
+smart people sign	"[one of]The sign gives you three ways to tell Rand and Leo they've done their job[if rebuked is true], and they've been persistently loyal, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
 alert letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say LATER.[minus][cycling]"
 log ons letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say SO LONG.[minus][cycling]"
 ought letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say TOUGH.[minus][cycling]"
@@ -27811,10 +27833,9 @@ understand "ts" as tsing.
 
 carry out tsing:
 	move player to Strip of Profits;
-	now player has the super purse;
-	now player has the letters settler;
-	now player has the pedanto-notepad;
-	now player has the gird grid;
+	get-cool-stuff;
+	if player has lamp, now lamp is in lalaland;
+	if player has teariest treatise, now teariest treatise is in lalaland;
 	now Means Manse is solved;
 	say "I gave you the purse, settler, and notepad.";
 	the rule succeeds;
