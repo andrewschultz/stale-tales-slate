@@ -4308,7 +4308,7 @@ to say spec-help of (itm - a thing):
 [		else:
 			say "You feel as though you could've done something.";]
 	if itm is a mack-idea:
-		say "[if itm is ment]The macks seem to waver a bit, but not enough.[else]The macks look at you funny.";
+		say "[if itm is ment]The macks seem to waver a bit, but not enough[else]The macks look at you funny[end if].";
 		continue the action;
 	d "You may want to put in special text here in the table of spechelp, tsh, for ([noun]). Or not.";
 	say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen.";
@@ -5712,28 +5712,20 @@ carry out others-hinting:
 		try objhinting moss cap instead;
 	if player has s-i and player has storage:
 		all-say "You probably want to put the icons in the storage." instead;
-	if player has s-c:
-		try objhinting s-c instead;
-	if player has icons:
-		try objhinting icons instead;
-	if player has coin:
-		try objhinting coin instead;
-	if player has coins:
-		try objhinting coins instead;
-	if fruits-flipped >= 8 and tekno-token is off-stage:
-		say "You can go back to Curtis for a reward." instead;
-	if fruits-flipped >= 12 and coin is off-stage:
-		say "You can go back to Curtis for a reward." instead;
-	if fruits-flipped >= 16 and coins are off-stage and icons are off-stage:
-		say "You can go back to Curtis for a reward." instead;
-	if fruits-flipped >= 20 and a droll dollar is off-stage:
-		say "You can go back to Curtis for a reward[if curtis-level < 3]--well, more than one. You've gotten all the fruits you need[end if]." instead;
+	if player has s-c, try objhinting s-c instead;
+	if player has icon, try objhinting icon instead;
+	if player has icons, try objhinting icons instead;
+	if player has coin, try objhinting coin instead;
+	if player has coins, try objhinting coins instead;
+	if curtis-level < 4:
+		let levdelt be (fruits-flipped / 4) - curtis-level;
+		if levdelt > 0, say "You can go back to Curtis for [if player has coin or player has icon or player has coins or player has icons or player has s-c or player has s-i]another[else]a[end if] reward[if levdelt > 1]. More than one, in fact[end if][if fruits-flipped >= 20]. You've gotten all the fruits you need[end if]." instead;
 	if player is in gates stage:
 		if passport is off-stage:
 			all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
 	if droll dollar is not off-stage and enuf-fruit-poke is false:
 		now enuf-fruit-poke is true;
-		say "You have gotten enough fruits, so from here on out I'll just be hinting random fruits unless you go [if gates stage is visited]back north to the Gates Stage[else]north[end if]." instead;
+		say "You have gotten enough fruits, so from here on out you'll need to hint something specific if you want to change it. You'll want to go [if player is in gates stage]north of the gates[else if gates stage is visited]back north to the Gates Stage[else]north[end if]." instead;
 	if player has passport:
 		if gates stage is unvisited:
 			all-say "You haven't visited the gates stage north of the swell wells, yet. That's where you can use the passport." instead;
@@ -5772,7 +5764,15 @@ carry out others-hinting:
 		if storage box is in Scape Space:
 			if player has droll dollar:
 				try objhinting storage box instead;
-	all-say "Nothing specific left to do here[if curtis-level < 3], though you may need to give Curtis some more fruits[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if]."
+	all-say "Nothing specific [if player is in scape space or player is in rustic citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you an HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left > 0]. There are [fruits-left in words] fruits you can still pick off here[else if player is not in gates stage]. You've cleared all the fruits here[end if]."
+
+to decide which number is fruits-left:
+	let temp be 0;
+	repeat with myf running through fruits:
+		if location of player is frroom of myf:
+			unless player has myf or myf is in lalaland:
+				increment temp;
+	decide on temp;
 
 box-down-road is a truth state that varies.
 
@@ -8952,7 +8952,7 @@ carry out fliptoing:
 			else if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
 				now the-from entry is in lalaland;
 			if taked entry is true or player has the-from entry:
-				if the-from entry is not ruby:
+				if the-from entry is not ruby and the-from entry is not medals: [else medals go from worn to carried]
 					now player has the-to entry;
 			if there is a roomjump entry:
 				if roomjump entry is Strip of Profits:
@@ -9027,7 +9027,7 @@ after fliptoing (this is the fruit cue rule):
 				d "[myf] still to do.";
 				continue the action;
 	if another-break is true, say "[line break]";
-	say "You look around and don't see much else to do with the fruits here. Maybe it's time to look around elsewhere.";
+	say "You look around and don't see any way to [if player is in clangier clearing]bargain for[else]pick off[end if] more fruits here. Maybe it's time to look around elsewhere.";
 	continue the action;
 
 the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
@@ -22316,7 +22316,7 @@ check fliptoing the whistle when whistle is reflexive:
 		get-dead;
 		follow the shutdown rules instead;
 	if number of visible people > 1:
-		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Frat-Gone Frontage[if merle is in lalaland] or the Alcoves[end if]." instead;
+		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Frat-Gone Frontage[if merle is in lalaland] or the Alcoves[end if][if player is in alcoves], or find a way to get rid of everyone else[end if]." instead;
 
 definition: a person (called pe) is npcish:
 	if pe is the player, decide no;
@@ -22630,7 +22630,7 @@ the medals are a reflexive wearable plural-named thing.
 understand "iq/lucky medal/medals" and "iq/lucky" as medals.
 
 after printing the name of medals while taking inventory:
-	say "([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (adjsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (adjsolve + 1) in medalings][end if])";
+	say "([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][end if])";
 
 medalings is a list of text variable. medalings is { "crusted over", "grimy", "dull", "shiny", "gleaming" }
 
@@ -22890,7 +22890,9 @@ to decide which mack-idea is mack-hint:
 	let got-mack be false;
 	let cur-mack be t-despairingly;
 	repeat with QQ running through ment reflexive mack-ideas in frontage:
+		d "Considering [QQ] for hints.";
 		if mack-prio of QQ < cur-prio:
+			d "Potentially choosing [QQ].";
 			now cur-mack is QQ;
 			now cur-prio is mack-prio of QQ;
 			now got-mack is true;
@@ -23644,7 +23646,7 @@ instead of doing something with a border arbored:
 
 chapter augural arugula
 
-the augural arugula is an edible thing. description of arugula is "It's not enough for a luau. Arg."
+some augural arugula is an edible thing. description of arugula is "It's not enough for a luau. Arg."
 
 check eating arugula:
 	say "Not very tasty, but your vision seems clearer. 'La! A guru!' you think to yourself. You can now GURU what you are curious about.";
@@ -24290,7 +24292,7 @@ check giving a final-puz thing to when mrlp is others:
 
 a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "i[sp]c[sp]o[sp]n". coin is cheat-spoilable.
 
-the icon is a thing. description is "The icon is designed to be too interesting to pitch but not important looking enough to be currency. There's a singed design on it, which is signed."
+an icon is a thing. description is "The icon is designed to be too interesting to pitch but not important looking enough to be currency. There's a singed design on it, which is signed."
 
 the coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
 
@@ -25680,7 +25682,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide yes;
 	if hintcand is red writing:
 		decide yes;
-	if hintcand is Thearchy Hatchery:
+	if hintcand is Thearchy Hatchery or hintcand is Maturation Natatorium:
 		if mrlp is towers:
 			if actionless coastlines is visited or Strati Strait is visited:
 				decide yes;
@@ -26009,7 +26011,7 @@ to say medal-help:
 	if nounsolve is 0 and adjsolve is 0:
 		say "Maybe you can find someone, or something, to help. You should [if player is in wire deck or player is in preserve]see what you can do here[else]explore north or south of the barley[end if]";
 	else if nounsolve >= 3:
-		say "You've done good work in the preserve, but maybe you can go [if wire deck is unvisited]north[else]to the wire deck[end if] to do more";
+		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in wire deck] is optional now,)[else],[end if] but maybe you can go [if wire deck is unvisited]north[else]to the wire deck[end if] to do more";
 	else if adjsolve >= 3:
 		say "You've done good work in the wire deck, but maybe you can go [if wire deck is unvisited]north[else]to the preserve[end if] to do more";
 	else if nounsolve is 0 or adjsolve is 0:
@@ -26517,10 +26519,10 @@ leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound tog
 ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"	--	"you can make the ocelots COOLEST"
 wire weir	"It's just there to provide a boundary in the Wickeder Wire Deck."
 raptor	"[one of]You need to be quick here. The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring, doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make the raptor a PARROT"
-nails	"[one of]They're arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
-pines	"[one of]They're shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
-corona	"[one of]Black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
-thrones	"[one of]Sit on them and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
+nails	"[one of]The nails are arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
+pines	"[one of]The pines are shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
+corona	"[one of]The corona is black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
+thrones	"[one of]Sit on the thrones and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
 disrupt r stupidr	"It's just there to block you from going any other way except back north."
 Elmer	--	Merle
 Merle	"[if parrot is in alcoves]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
@@ -26531,7 +26533,7 @@ hornets	"It will help you when the time comes."
 racoon	"It will help you when the time comes."
 parrot	"[one of]The parrot is scared of Merle and Elmer, as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
 sober robes	"Elmer and Merle can't be naked, and I felt like trawling for a cheap anagram. Win-win! (Oh. The robes aren't important to the game.)"
-medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or]If you have gotten rid of Merle and Elmer, going QUICKLY to the west will help you deal with Elvira's initial attack.[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3][need-refurb][else]can make you go QUICKLY[but-in-alcoves][end if]"
+medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or][medals-do].[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3][need-refurb][else]can make you go QUICKLY[but-in-alcoves][end if]"
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
 Look-Kool	"You can't do much but admire them."
@@ -26638,6 +26640,9 @@ larded ladder	"[dome-blab]"
 talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
+
+to say medals-do:
+	say "[if alcoves is unvisited]The medals are only fully useful west of the frontage[else if merle is not in lalaland]You can't really use the medals until Merle and Elmer are gone[else]The medals let you go QUICKLY before going west of the Alcoves, which will help you deal with Elvira's initial attack[end if]"
 
 to say need-refurb:
 	say "need refurbishing. Maybe in the ";
@@ -26936,7 +26941,6 @@ to say 2dg of (rg - a region):
 		if rg is towers and number of guardians not in lalaland > 1:
 			say "[eqls][eqls]starting missed Towers guardians[line break]";
 		now rg is tickedoff;
-	say "[2da]";
 
 to say eqls:
 	if screenread is false:
@@ -27331,13 +27335,13 @@ a region can be tickedoff. a region is usually not tickedoff.
 
 to say 2dmiss of (cr2 - a region):
 	now anything-missed is true;
-	say "[2dg of cr2]";
+	say "[2dg of cr2][2da]";
 
 miss-room is a room that varies.
 
 to say 2drm of (rr - a room):
-	say "[2dg of map region of rr]";
-	unless miss-room is rr, say "====[b][rr][r]====[line break]";
+	if anything-missed is false, say "[2dg of map region of rr]";
+	unless miss-room is rr, say "[eqls][b][rr][r][eqls][line break]";
 	now miss-room is rr;
 	say "[2da]";
 
@@ -27434,15 +27438,11 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				if player is female:
 					if gua is Lars Eede or gua is Hostile-Is-He Lot, next;
 				now xxx is gua;
-				if xxx is reed's ale:
-					if player is male:
-						now xxx is Lars Eede;
-					else:
-						now xxx is Elsa Erde;
+				if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reed's Ale;
 				choose row with the-from of xxx in table of towers anagrams;
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
-				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is lars eede or the-from entry is elsa erde]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
+				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
 			if number of guardians not in lalaland > 1:
 				say "(that's all for the guardians)[line break]";
 		if strudel is reflexive:
@@ -28800,7 +28800,7 @@ carry out fruiing:
 	let fruhid be 0;
 	let fruhere be 0;
 	repeat with fru running through fruits:
-		say "[fru]: [if fru is off-stage]off-stage[else if fru is in lalaland]DONE[else]in OTHERS[end if].";
+		say "[fru]: [if fru is off-stage]off-stage[else if fru is in lalaland]DONE[else]in OTHERS[end if]. Frroom = [frroom of fru].";
 		if fru is in lalaland:
 			increment frusolv;
 		else if fru is off-stage:
