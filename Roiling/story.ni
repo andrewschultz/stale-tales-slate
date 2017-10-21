@@ -5899,14 +5899,14 @@ carry out presto-hinting:
 	if player is in Grey Gyre or player is in Burnt Brunt:
 		if hacks' shack is unvisited:
 			if spoilit is false:
-				all-say "You're all done here for now[if player is in Burnt Brunt (the yak can be helped later,)[else],[end if] so you maybe should [if saps' pass is unvisited]go north[else if phat path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+				all-say "You're all done here for now[if player is in Burnt Brunt] (the yak can be helped later,)[else],[end if] so you maybe should [if saps' pass is unvisited]go north[else if phat path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
 	if player is in Saps' Pass:
 		try objhinting lawl wall instead;
 	if player is in phat path:
 		if shack is unvisited:
-			if smart people sign is visible and shack is unvisited:
+			if harpings phrasing is visible and shack is unvisited:
 				if Leo is visible:
-					try objhinting smart people sign instead;
+					try objhinting harpings phrasing instead;
 				else:
 					all-say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's in that shack[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
 	if spoilit is true:
@@ -6969,8 +6969,7 @@ instead of taking inventory:
 		say "[line break]You are also wearing [a list of worn things].";
 	if mrlp is presto and bored yak is not in lalaland:
 		if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can't carry, but you can push it around[if number of things on skid > 0]. It holds [the list of things on skid][end if]." instead;
-		if mrlp of skid is presto, say "You remember leaving the skid in [location of skid]." instead;
-	if mrlp of skid is presto and bored yak is not in lalaland, say "You remember
+		if map region of location of skid is presto, say "You remember leaving the skid in [location of skid]." instead;
 	if mrlp is otters and power-back is false, say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
 	if player has compass, say "[line break]You also have a compass to tell direction."; [start OTHERS special stuff]
 	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to GURU things you could make fruits from.";
@@ -9743,9 +9742,9 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		continue the action;
 	else if noun is troend1 or noun is troend2:
 		let temp be 0;
-		if lobster is preef, increment temp;
-		if stream is preef, increment temp;
-		if divorces is preef, increment temp;
+		if lobster is prefigured, increment temp;
+		if stream is prefigured, increment temp;
+		if divorces is prefigured, increment temp;
 		if temp > 0, say "(NOTE: before moving on, you much with some stuff to get a few extra points.)[paragraph break]";
 		increase min-score of troves by temp;
 		increase cur-score of troves by temp;
@@ -13872,7 +13871,7 @@ a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop
 every turn when player is in Boarded Roadbed:
 	if what-a-bee is not reflexive or bee's head is not reflexive:
 		if current action is not listening:
-			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if what-a-bee is reflexie or bee's head is reflexive]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
+			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if what-a-bee is reflexive or bee's head is reflexive]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
 
 book Boarded Roadbed
 
@@ -15117,8 +15116,8 @@ check scaning Leo when Rand is in Ridge and Rand is fightin:
 
 Leo is a fightin bruisin reflexive person. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset. For all their macho talk, he and Rand might just need someone to talk to[end if]."
 
-to say o-p of (p - a persion):
-	say "[if o-p is Leo]Rand[else if o-p is Rand]Leo[else]BUG[end if]"
+to say r-l of (p - a person):
+	say "[if p is Leo]Rand[else if p is Rand]Leo[else]BUG[end if]"
 
 check taking a fightin person:
 	say "You can 'take' them by trickery." instead;
@@ -15169,7 +15168,7 @@ for writing a paragraph about a bruisin person:
 	if Rand is fightin:
 		say "Rand is here, looking to do a little better than Leo." instead;
 	if Leo is eager:
-		say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if smart people sign is visible] into that computer area they probably don't need to be[end if]." instead;
+		say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is visible] into that computer area they probably don't need to be[end if]." instead;
 	if Rand is washed up and Leo is washed up:
 		say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talk and listen would help, or the right word might help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
 
@@ -15454,12 +15453,12 @@ check going east in Phat Path:
 Check going inside in Phat Path:
 	Try going north instead;
 
-the smart people sign is scenery in Phat Path. description of smart people sign is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!"
+the harpings phrasing is scenery in Phat Path. description of harpings phrasing is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!"
 
-check taking smart people sign:
+check taking harpings phrasing:
 	say "Removing the warning won't make the warning any less valid." instead;
 
-check scaning smart people sign:
+check scaning harpings phrasing:
 	say "It's all over the place. Maybe you should focus on a specific row[if rebuked is true] you haven't worked with yet[end if].";
 
 the lawl wall is vanishing scenery in Saps' Pass.
@@ -15518,24 +15517,24 @@ does the player mean doing something with entry 1 of byebyes:
 	it is likely.
 
 after fliptoing when player is in phat path (this is the update byebyes rule) :
-	if noun is part of the smart people sign:
+	if noun is part of the harpings phrasing:
 		remove noun from byebyes, if present;
-		set the pronoun it to smart people sign;
+		set the pronoun it to harpings phrasing;
 	continue the action;
 
-the log ons letters are a plural-named reflexive thing. the log ons letters are part of the smart people sign. description is "[if log ons are reflexed]The letters seem dull now you said so long[else]They're bolded, IN CAPS and slightly raised[end if]."
+the log ons letters are a plural-named reflexive thing. the log ons letters are part of the harpings phrasing. description is "[if log ons are reflexed]The letters seem dull now you said so long[else]They're bolded, IN CAPS and slightly raised[end if]."
 
 understand "logons/letters" and "logons letters" as log ons letters.
 
 a-text of log ons is "RYRYRR". b-text of log ons is "RGRGPR". parse-text of log ons is "x[sp]o[sp]x[sp]o[sp]n[sp]x". log ons is cheat-spoilable.
 
-the alert letters are a plural-named reflexive thing. the alert letters are part of the smart people sign. description is "[if alert letters are reflexed]The letters seem dull now you said later[else]They're bolded, IN CAPS and slightly raised[end if]."
+the alert letters are a plural-named reflexive thing. the alert letters are part of the harpings phrasing. description is "[if alert letters are reflexed]The letters seem dull now you said later[else]They're bolded, IN CAPS and slightly raised[end if]."
 
 understand "alter letters" and "alter/letters" as alert letters.
 
 a-text of alert is "RYRYR". b-text of alert is "RY???". parse-text of alert is "x[sp]-[sp]?[sp]?[sp]?".
 
-the ought letters are a plural-named reflexive thing. the ought letters are part of the smart people sign. description is "[if ought letters are reflexed]The letters seem dull now you said tough[else]They're bolded, IN CAPS and slightly raised. They're also red[end if]."
+the ought letters are a plural-named reflexive thing. the ought letters are part of the harpings phrasing. description is "[if ought letters are reflexed]The letters seem dull now you said tough[else]They're bolded, IN CAPS and slightly raised. They're also red[end if]."
 
 a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "x[sp]-[sp]-[sp]x[sp]x". ought is cheat-spoilable.
 
@@ -26302,7 +26301,7 @@ vile veil	"The vile veil is just a cheapo to explain why you can only go back no
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
 camo coma	"The camo-coma is just a barrier to prevent you going any way but west from the seminar."
-smart people sign	"[one of]The sign gives you three ways to tell Rand and Leo they've done their job[if rebuked is true], and they've been persistently loyal, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
+harpings phrasing	"[one of]The sign gives you three ways to tell Rand and Leo they've done their job[if rebuked is true], and they've been persistently loyal, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
 alert letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say LATER.[minus][cycling]"
 log ons letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say SO LONG.[minus][cycling]"
 ought letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say TOUGH.[minus][cycling]"

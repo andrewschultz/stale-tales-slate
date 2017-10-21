@@ -360,7 +360,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
 "leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
-"sgin"	242774022	--	smart people sign	--	"Look at what's on the sign."
+"harpings"	449033901	--	harpings phrasing	--	"[harphr]."
+"harping"	352759935	--	harpings phrasing	--	"[harphr]."
 "rebuff"	389684416	shack	--	--	"The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise."
 "magnetic"	462684739	shack	--	--	"The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise."
 "computer"	660245011	shack	--	--	"You need to fix the program in the computer[if number of things on labs slab < 4], well, once you get it running[end if]."
@@ -411,7 +412,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "hog"	144234578	phat path	--	--	"You need to deal with all the hogs."
 "key"	303098539	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
 "entyr"	507506690	phat path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
-"letters"	697243862	--	smart people sign	--	"You may want to focus on the highlighted letters on the sign."
 "algorithm"	497738055	shack	--	--	"[no-txtbk]."
 "algorithms"	594012021	shack	--	--	"[no-txtbk]."
 "labs"	170694528	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
@@ -1490,6 +1490,9 @@ this is the Rand-sad rule:
 
 to say boing-clue:
 	say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing mechanism inside[else]The popgun is just fine[end if]"
+
+to say harphr:
+	say "Concentrate on the words of the harpings phrasing"
 
 to say shackbut:
 	say "There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though"
