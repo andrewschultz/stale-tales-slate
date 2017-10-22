@@ -191,7 +191,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lineof"	396387775	self-id	--	--	"They're dead and not interfering with you."
 "meat"	297179098	--	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	--	see-meats rule	"[spec-meat]."
-"liver"	419101417	--	--	liv-vis rule	"[if Riverville liver is in lalaland or cow liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if Riverville liver is not visible or cow liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
+"liver"	419101417	--	--	liv-vis rule	"[if Riverville liver is in lalaland or viler liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if Riverville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
 "cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
@@ -689,7 +689,7 @@ this is the first-two-forest rule:
 	the rule fails;
 
 this is the see-meats rule:
-	if riverville is visible or Spam is visible or cow is visible or player is in s-e-d:
+	if riverville is visible or Spam is visible or viler liver is visible or player is in s-e-d:
 		the rule succeeds;
 	the rule fails;
 
