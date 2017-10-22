@@ -1282,8 +1282,7 @@ carry out gotoing:
 		say "The command you may be looking for is RETRY. Do that now instead?";
 		if the player yes-consents:
 			try retrying instead;
-		else:
-			say "OK." instead;
+		say "OK." instead;
 	if noureg is solved and noureg is not stores:
 		say "You already solved [noureg]." instead;
 	if last-loc of noureg is unvisited:
@@ -5808,12 +5807,13 @@ carry out stores-hinting:
 			try objhinting Store H instead;
 		all-say "Go through the HOSTER to the OTHERS area." instead;
 	if number of game-critical stos is 0:
-		all-say "(Note: you've cleared all the stores you need to[if number of needed regions > 0], though you still have work to do behind them[end if].)[paragraph break]";
+		all-say "(Note: you've cleared all the stores you need to[if number of needed regions > 0], though you still have work to do behind them[end if].)[line break]";
 		if Store K is visible:
 			try objhinting Store K instead;
 		if Store N is visible:
 			try objhinting Store N instead;
 		all-say "You have nothing more to do here. You need to [if number of needed regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
+	if number of portals in strip of profits > 0, say "While [the slickest portal in strip of profits] [if number of portals in strip of profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
 	if cur-hint-sto is not in Strip of Profits:
 		if Store U is in Strip of profits:
 			now cur-hint-sto is Store U;
@@ -5827,8 +5827,8 @@ carry out stores-hinting:
 			now cur-hint-sto is Store W;
 		else if Store T is in Strip of profits:
 			now cur-hint-sto is Store T;
-		all-say "You don't need to change any more stores now." instead; [should not happen but just in case]
-	if number of portals in strip of profits > 0, say "While [the slickest portal in strip of profits] [if number of portals in strip of profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
+		else:
+			all-say "You don't need to change any more stores now." instead; [should not happen but just in case]
 	try objhinting cur-hint-sto instead;
 
 to sto-hint (stosto - a sto):
@@ -6272,9 +6272,9 @@ carry out oyster-hinting:
 	else if location of player is Rascal Craals and ruby is off-stage:
 		all-say "This would be a good place to bury something, but you're not sure what.";
 	else if location of player is End Den:
-		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't do much good. You need some sort of talisman to guide you through.[or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pearl.[else]There are two fragments that can combine to form what you need. The arches and Helots' Hostel contain them.[end if][cycling]";
+		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Helots' Hostel contain them[end if].[minus][cycling]";
 	else:
-		all-say "I can't find anything to try to do right now. Maybe hint a specific thing instead.";
+		all-say "There's nothing to do with anything in this location. Maybe hint something specific from your inventory or move to another place.";
 	the rule succeeds;
 
 book towers-hinting
@@ -6284,7 +6284,7 @@ to say seesaw:
 
 to say to-center:
 	repeat with mydir running through directions:
-		if the room mydir of location of player is topside:
+		if the room mydir of location of player is treading gradient:
 			say "[mydir]";
 			continue the action;
 	say "[if player is in actionless coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Nude Dune]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
@@ -6500,9 +6500,9 @@ carry out otters-hinting:
 	else if player is in loop pool or player is in bran barn:
 		all-say "You recovered your powers, so there's nothing more to do here.";
 	else if player is in Anger Pit:
-		all-say "The path north is cleared[if number of flippable animals in wire deck <= 1], and you've taken care of the wire deck, so you can probably retreat[else][tho-work][end if].";
+		all-say "The path north is cleared[tho-work].";
 	else if player is in Anteroom:
-		all-say "The path south is cleared[if number of animals in preserve >= 3], and you've taken care of the preserve, so you can probably retreat[else][tho-work][end if].";
+		all-say "The path south is cleared[tho-work].";
 	else if player is in wickeder wire deck or player is in perverse preserve:
 		if power-back is false:
 			all-say "You need to get your powers back before you do anything. Look around [if frontage is visited]the frontage[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
@@ -7962,8 +7962,8 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "Eew-gas sewage. Skint-stink." instead;
 	if player is in Drain Nadir:
 		say "Ew--mild mildew. A mustier semi-rut." instead;
-	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule:
-		say "Perfumed. Dump-free." instead;
+	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule, say "Perfumed. Dump-free." instead;
+	if noun is ether, say "Nontoxic, but still potentially dangerous, [if ether-try is true]since[else]if[end if] someone's hiding there." instead;
 	if mrlp is presto: [presto]
 		say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
 	if player is in a mazeroom or player is in Unwary Runway:
@@ -9298,7 +9298,7 @@ ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	"You begin explaini
 p-2	p-2	false	667670490	--	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the painting, but as you talk, he bends a little more. Yes--it was Elvira who put the painting there. Or her agents. To make sure he didn't use his magic powers unwisely. You promise to re-bran what is barren. He perks up. 'Then you're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]As you two rip up the poster for fun, he also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."
 sea cube	sea cube	false	496604299	--	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if power-back is true] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."
-atmo-moat	atmo-moat	false	243725566	--	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity."
+atmo-moat	atmo-moat	false	243725566	--	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Even if they weren't long words, that took a bit of energy. However, there's probably even more danger inside."
 t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin macks 7]
 t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."
 t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."
@@ -18571,6 +18571,8 @@ chapter splaining
 
 bogus-plains is privately-named LLPish reflexive scenery in Lapsin' Plains. understand "plains" as bogus-plains when player is in Lapsin' Plains and debug-state is true. bogus-plains is undesc. printed name is "all around the plains"
 
+understand "bp" as bogus-plains when debug-state is true.
+
 a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-text of bogus-plains is "x[sp]x[sp]x[sp]a[sp]?[sp]?".
 
 chapter bonking
@@ -19018,7 +19020,7 @@ check entering a-p:
 	if find-base is true:
 		check-detours instead;
 	else:
-		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.";
+		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.[paragraph break]";
 		move player to End Den instead;
 
 to check-detours:
@@ -19741,7 +19743,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  [pc of admirer]~~~~~~
 [line break]+[pc of ingrates].[pc of wait-seer].[pc of atheists].~ +
 [line break]  [pc of iPrune] [pc of grailman] [if player is male][pc of hostile-is-he lot][else][pc of lois the hostile][end if]~
-[line break]  .[pc of butlers].[if player is male][pc of lars eede][else][pc of erde].~
+[line break]  .[pc of butlers].[if player is male][pc of lars eede][else][pc of elsa erde][end if].~
 [line break]  [pc of muscly] [pc of man covered in inapt paint] [pc of ego drains]~
 [line break]![pc of pirates].[pc of diners].[pc of arid den].[pc of bonker]!
 [line break]  [pc of Ray Eck]   [pc of natives]
@@ -21661,7 +21663,10 @@ to shuffle-guardians (goner - a guardian):
 	if can-see-map:
 		draw-my-loc;
 	let RG be number of red guardians not in lalaland;
+	unless Lars Eede is in lalaland or Elsa Erde is in lalaland, increment RG;
 	let BG be number of blue guardians not in lalaland;
+	d "Reds left = [list of red guardians not in lalaland].";
+	d "Blues left = [list of blue guardians not in lalaland].";
 	d "Reds now [RG], blues now [BG]. [goner] = [if goner is red]red[else if goner is blue]blue[else if goner is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
 	if number of visible guardians > 0:
 		now mr-hinty is a random visible guardian;
@@ -21720,8 +21725,10 @@ check going (this is the guardian reposition before rule):
 					now QQ is passtried;
 					if loc entry is location and blockdir entry is noun:
 						if blockdir entry is neuter, set the pronoun it to blockdir entry;
+						now mr-hinty is QQ;
 						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 					if loc entry is not location and blockdir entry is opposite of noun:
+						now mr-hinty is QQ;
 						if blockdir entry is neuter, set the pronoun it to blockdir entry;
 						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 		if number of taunty guardians > 0:
@@ -22406,7 +22413,7 @@ carry out playing:
 				say "OK." instead;
 			say "As you blow the whistle, you feel a deep vibration on the ground. You hear a cacophony of animal noises in the distance. '[randbla]!' Elvira's voice still lilts as she calls for slayer layers relays. 'Gash, hags! Groupies, uprise! Go!'[paragraph break]'Ahh, get the hag!' you yell. The battle is on!";
 			say "[lee-or-eels][wfak]";
-			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock find valence in this enclave: [twiddle of table of animal friends and 5]Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
+			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock find valence in this enclave: [twiddle of table of animal friends and 5]. Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
 			now otters is solved;
 			now last-solved-region is otters;
 			first-status;
@@ -26020,7 +26027,7 @@ to say if-cro:
 		say ", if you figure what to do with the crocus";
 
 to say casp-cap:
-	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something.[plus][or]SCRAPE the blackboard.[minus][cycling]"
+	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or]SCRAPE the blackboard.[minus][cycling]"
 
 to decide whether one-imp-down:
 	if imp1 is reflexed or imp2 is reflexed or imp3 is reflexed:
@@ -26035,7 +26042,7 @@ to decide whether one-whine-down:
 to say medal-help:
 	say "The medals look less than perfect. ";
 	if nounsolve is 0 and adjsolve is 0:
-		say "Maybe you can find someone, or something, to help. You should [if player is in wire deck or player is in preserve]see what you can do here[else]explore north or south of the barley[end if]";
+		say "Maybe you can find someone, or something, to help. You should [if player is in wire deck or player is in preserve]see what you can do here[else if player is in tapering anger pit or player is in anteroom]go north or south[else]explore north or south of the barley[end if]";
 	else if nounsolve >= 3:
 		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in wire deck] is optional now,)[else],[end if] but maybe you can go [if wire deck is unvisited]north[else]to the wire deck[end if] to do more";
 	else if adjsolve >= 3:
@@ -26381,13 +26388,13 @@ crate	"[if crate is reflexive][one of]You can't figure where the debris is comin
 c2	--	crate
 fragments	--	crate
 bogus-plains	"[one of]You can talk about how great you are, to all who would hear.[plus][or]What can you do in the lapsin['] plains?[plus][or]SPLAIN.[minus][cycling]"
-waste	"[one of]The waste puzzle is optional. [plus][or][one of]The waste is hard to move. It requires effort.[plus][or]Taking the waste is out, but you can sift through it the right way.[plus][or]SWEAT.[minus][cycling][stopping]"
-lance	"[one of]The lance is optional. [plus][or][minus][cycling][if player has lance and lance is reflexed]You can use the lance to defeat an optional monster near the end.[else if player does not have wipes][one of]You need an item to make the lance less dirty.[plus][or]The wipes in the Helots' Hostel can do that.[plus][or]You should be able to get the wipes unless you used the pills on Aunt Tuna.[minus][cycling][else][one of]The lance is too dirty.[plus][or]What can you do to an item that is too dirty?[plus][or]CLEAN the lance.[minus][cycling]"
+waste	"[one of]The waste puzzle is optional.[plus][or][one of]The waste is hard to move. It requires effort.[plus][or]Taking the waste is out, but you can sift through it the right way.[plus][or]SWEAT.[minus][cycling][stopping]"
+lance	"[lance-hints]"
 heaps	"[one of]The heaps are malleable, but they might be a pain to search.[plus][or]If you SHAPE the heaps, you get a Keep Yorpwald Beautiful Last Lousy Point.[minus][cycling]"
 eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[plus][or]They are EEKS. That leaves twelve choices.[plus][or]Two, if you use the settler.[plus][or]SEEK.[minus][cycling]"
 aunt tuna	"Aunt Tuna is useful for talking to. She has good information[if tea tray is not in lalaland]. Her food is also edible[end if]."
 dent	"[one of]The dent can be dealt with if you know how to futz with it, but it's a last lousy point.[plus][or]No, not futz, another four-letter word.[plus][or]You need to TEND the dent.[minus][cycling]"	--
-wipes	"[one of]The wipes are part of an optional puzzle. [plus][or][minus][cycling][if player has wipes]The wipes can be used to tidy up an item[in-hovels].[else][one of]You can't just plain take the wipes. You are not fast enough.[plus][or]What's a quicker action than TAKE, to get the wipes?[plus][or]SWIPE the wipes.[minus][cycling]"
+wipes	"[if player has wipes][one of]The wipes, unsurprisngly, help make something less dirty.[plus][or]What is something that is very dirty?[plus][or][name-the-lance].[minus][cycling][else][one of]You can't just plain take the wipes. You are not fast enough.[plus][or]What's a quicker action than TAKE, to get the wipes?[plus][or]SWIPE the wipes.[minus][cycling][end if]"
 tea tray	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can EAT the tea.[minus][cycling]"
 trout	"[if trout is in range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can TUTOR the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"
 raw red drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
@@ -26447,7 +26454,7 @@ keycar	--	Ray Eck
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
 smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if Dr Yow is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in Obscurest Subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"
-Reed's Ale	"[one of]The RELEASED poem is awful, isn't it?[plus][or]The zip-lock bag is a bit of a clue.[plus][or]RESEALED.[minus][cycling]"
+Reed's Ale	"[one of]Poor [el-la-f]! Having to dress like that. They either want to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-f]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-f].[minus][cycling]"
 Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
@@ -26467,7 +26474,7 @@ retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"
 ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if Shaven Havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
 raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT is the PLAY button.[plus][or]RETAPE is the RECORD button.[plus][or]Combining RETAPE and REPEAT can bring a sound from one end of this region's map to another.[minus][cycling]"
-gizmo	"[if kid has gizmo][kid-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][kid-full] in Actionless Coastlines.[plus][or][he-she-c] may need a lecture first.[plus][or]Give [kid-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
+gizmo	"[if kid has gizmo][kid-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][kid-full] in Actionless Coastlines.[plus][or][kid-yow-lect], but now [he-she] needs a tool.[plus][or]Give [kid-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
 ID Tag	"[if Obscurest Subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
@@ -26609,7 +26616,7 @@ melon	"[one of]You need to see another, better, melon.[plus][or]Maybe you could 
 nectarine	"[one of]The nectarine's not too old, but if it were, you might get it cheaper. Cheaperer.[plus][or]Len Craig suddenly starts using bad grammar describing the nectarine.[plus][or]ANCIENTER.[minus][cycling]"
 peach	"[one of]The peach is currently too expensive, but there's a way to fix that.[plus][or]The settler knocks the peach out, logically, on cheat mode. Actually, just mentioning cheat mode may be a tremendous hint, here.[plus][or]How could the peach be described as less expensive?[plus][or]CHEAP.[minus][cycling]"
 pre-mang	"[one of]'Go, man!' What sort of fruit anagrams that?[plus][or]A mango. But you need to find a way to get to it.[plus][or]This didn't quite fit anywhere in Routes.[plus][or]AMONG.[minus][cycling]"
-quince	"[if quince is reflexed][frootz][else][one of]How do you count in Italian, to name a price for the quince? [plus][or]Uno, duo, tre, quattro, ... [plus][or] ...CINQUE. [minus][cycling][end if]"
+quince	"[if quince is reflexed][frootz][else][one of]How do you count in Italian, to name a price for the quince? [plus][or]Uno, duo, tre, quattro, ...[plus][or] ...CINQUE.[minus][cycling][end if]"
 an-a	"[one of]You need to take an a the right way.[plus][or]An a, not the a--and it's six letters if you scan it. It's also very yellow, part of a bunch of letters.[plus][or]If you NAB AN A, everything else comes out and you find a banana underneath.[minus][cycling]" [scape space fruit hints]
 orange	"[if player has orange][frootz][else][one of]You can't just take the orange directly.[plus][or]You probably need to get closer to it slowly.[plus][or]GO NEAR to get the orange.[minus][cycling]"
 pugnacious plant	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]It seems to be making a weird mumbling.[plus][or]RHUBARB.[minus][cycling]"
@@ -26666,6 +26673,18 @@ larded ladder	"[dome-blab]"
 talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
+
+to say name-the-lance:
+	say "[if lance is off-stage]You haven't found it yet, but you probably will when you see it[else]The lance in the Shadier Airshed[end if]"
+
+to say lance-hints:
+	if player does not have lance:
+		say "[one of]The lance is part of an optional quest. It isn't clean enough to take.[plus][or]You need an item to make the lance less dirty.[plus][or]The wipes in the Helots' Hostel can do that.[plus][or][if player has wipes]Now you need to apply the wipes the right way[else]You should be able to get the wipes unless you used the pills on Aunt Tuna. You need to take them quickly. HINT them if you need more clues[end if].[plus][or]CLEAN the lance once you have the wipes.[minus][cycling]";
+	else:
+		say "[one of]The detour past the Horned Hedron entry opens up if you have the lance.[plus][or]Once you get there, you have an animal to defeat, which should not be hard.[minus][cycling]"
+
+to say kid-yow-lect:
+	say "[if yow is in lalaland]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
 
 to say medals-do:
 	say "[if alcoves is unvisited]The medals are only fully useful west of the frontage[else if merle is not in lalaland]You can't really use the medals until Merle and Elmer are gone[else]The medals let you go QUICKLY before going west of the Alcoves, which will help you deal with Elvira's initial attack[end if]"
@@ -27464,7 +27483,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to TAN the ant.";
 		else if ant is not in lalaland:
 			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
-		if bogus-plains are reflexed:
+		if bogus-plains are reflexive:
 			say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed:
 			say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";

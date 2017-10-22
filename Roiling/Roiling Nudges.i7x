@@ -869,6 +869,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "hydra"	268182261	--	--	hydra-know rule	"[if player is in Inclosure]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
 "pine"	323172422	--	pines	--	"So many pines, hard to pick one. Might as well take care of them all."
 "nail"	169902011	--	nails	--	"So many nails, hard to pick one. Might as well take care of them all."
+"critters"	664946148	perverse preserve	--	--	"[restrictr]."
+"critter"	568672182	perverse preserve	--	--	"[restrictr]."
 "raccoon"	343135453	preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
 "ocelot"	452440705	--	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
 "throne"	496782314	--	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
@@ -910,10 +912,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "near"	284225238	Anteroom	--	callos-gone rule	"[locname-part]."
 "moot"	315890325	Anteroom	--	callos-gone rule	"[locname-part]."
 "preserve"	838970678	perverse preserve	--	--	"[locname]."
-"disrupt"	537301488	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."
-"studip"	451977685	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."
 "ottre"	493702525	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	--	degen-true rule	"[not-the-reg]."
+
+["disrupt"	537301488	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."
+"studip"	451977685	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."]
 
 table of others nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -1913,6 +1916,9 @@ to say no-lam:
 
 to say fresc:
 	say "Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second"
+
+to say restrictr:
+	say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that."
 
 this is the hydra-know rule:
 	if the player is in Inclosure:

@@ -368,7 +368,7 @@ understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient
 
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is in lalaland and Leo is in Phat Path.
 
-understand "alter" as a mistake ("Vandalism! For shame!") when smart people sign is visible.
+understand "alter" as a mistake ("Vandalism! For shame!") when harpings phrasing is visible.
 
 chapter hacks' shack
 
