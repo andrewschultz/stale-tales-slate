@@ -2622,10 +2622,8 @@ carry out hushing:
 		say "[one of]Being the main villain, Red Bull Burdell's just too loud. But perhaps you can make the Talking Villain pay for his big mouth[or]You may want to pay attention to what Red Bull Burdell says every turn, since you can't zone it out[stopping]." instead;
 	if talk-quiet is true:
 		say "You already can't hear random dialogue." instead;
-	else:
-		say "HUSH on. [i][bracket]NOTE: you will still hear the first random dialogue in an area, but it will be noted as such.[close bracket][r][line break]";
 	now talk-quiet is true;
-	the rule succeeds;
+	say "HUSH on. [i][bracket]NOTE: you will still hear the first random dialogue in an area, but it will be noted as such.[close bracket][r][line break]" instead;
 
 chapter angleing
 
@@ -6328,7 +6326,7 @@ check taking dots:
 check examining the flesh shelf:
 	ignore the examine supporters rule.
 
-A glopmeat is a kind of thing. A glopmeat can be stuck. A glopmeat is usually stuck.
+A glopmeat is a kind of thing.
 
 a sandwich is on the flesh shelf. the sandwich is not fixed in place.
 
@@ -6416,7 +6414,7 @@ before doing something with the chicken liver when chicken liver is visible:
 	if liver-disambig-yet is false:
 		now liver-disambig-yet is true;
 		if the player's command does not match "chicken":
-			say "(You aren't sure which liver to handle, but the cow liver looks viler. So, yeah, the chicken.)";
+			say "(You aren't sure which liver to handle, but the cow liver looks viler. So, yeah, the chicken.) ";
 
 after doing something with a glopmeat:
 	if noun is in canister:
@@ -6445,12 +6443,10 @@ check taking a glopmeat:
 		say "You've already got it." instead;
 	if noun is in canister:
 		say "You shouldn't put your fingers near the blades." instead;
-	if noun is stuck:
-		say "It's stuck, well, frozen to the wall[if player does not have chisel]. And you can't change that. Well, not with what you've got[end if][if player has chisel][chiz-chiz][end if].";
-		if player has chisel:
-			now noun is not stuck;
-			now player has noun;
-		do nothing instead;
+	say "It's stuck, well, frozen to the wall[if player does not have chisel]. And you can't change that. Well, not with what you've got[end if][if player has chisel][chiz-chiz][end if].";
+	if player has chisel:
+		now player has noun;
+	the rule succeeds;
 
 check putting bread on Spam:
 	ignore the can't put what's not held rule;
@@ -6465,7 +6461,7 @@ check putting Spam on bread:
 	say "No sense remaking the sandwich." instead;
 
 to say chiz-chiz:
-	say ". But you look through your inventory, and that chisel [if cow liver is stuck and chicken liver is stuck]looks made for scraping stuff. It easily peels the liver, which you take[else]looks up to the task again. It works"
+	say ". But you look through your inventory, and that chisel [if number of glopmeats in s-e-d is 2]looks made for scraping stuff. It easily peels the liver, which you take[else]looks up to the task again. It works[end if]"
 
 instead of eating a glopmeat:
 	say "Uggh. No way[if noun is examined]. Even though someone stamped it as eatable[end if]."
@@ -10658,8 +10654,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 		say "Hm, I didn't recognize that verb...maybe you want to PLAY the bugle?";
 		if the player yes-consents:
 			try playing the bugle instead;
-		else:
-			say "OK." instead;
+		say "OK." instead;
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the nothing to do error:
@@ -13183,10 +13178,10 @@ does the player mean peeling with the chisel: it is likely.
 
 does the player mean doing something with the cur-liv (this is the use-cur-liv rule):
 	if the current action is peelxing:
-		if cur-liv is not stuck:
+		if cur-liv is not in s-e-d:
 			it is very unlikely;
 	if the current action is peeling with:
-		if cur-liv is not stuck:
+		if cur-liv is not in s-e-d:
 			it is very unlikely;
 	it is likely.
 
@@ -13228,10 +13223,9 @@ carry out peeling it with:
 		say "That doesn't need to be scraped. Try something stuck to something." instead;
 	if noun is in canister:
 		say "The chisel and the blades would have a big fight first." instead;
-	if noun is not stuck:
+	if noun is not in s-e-d:
 		say "You already peeled it off." instead;
 	say "Cr-r-r-r-k. The chisel successfully leverages the freezer-burned [noun] from the wall.";
-	now noun is not stuck;
 	now player has noun;
 	the rule succeeds;
 
