@@ -122,10 +122,8 @@ to prio-sort (ta - table name):
 chat-rand is a truth state that varies.
 
 every turn (this is the process random dialogue rule) :
-	if current action is hinting:
-		do nothing instead;
-	if current action is fliptoing:
-		do nothing instead;
+	if current action is hinting, do nothing instead;
+	if current action is fliptoing, do nothing instead;
 	now chat-rand is true;
 	consider the find-blather rule;
 	now chat-rand is false;
@@ -146,8 +144,7 @@ this is the find-blather rule:
 			if there is a go-ahead entry:
 				consider the go-ahead entry;
 				if the rule succeeded:
-					if chat-rand is true and talk-quiet is true and done-once entry is true:
-						the rule succeeds;
+					if chat-rand is true and talk-quiet is true and done-once entry is true, the rule succeeds;
 					if showtabname is true:
 						say "([mytab entry])";
 					now done-once entry is true;
@@ -300,70 +297,57 @@ this is the bzzt rule:
 	the rule fails.
 
 this is the am-yessing rule:
-	if current action is saying yes:
-		the rule succeeds;
+	if current action is saying yes, the rule succeeds;
 	the rule fails.
 
 this is the am-noing rule:
-	if current action is saying no:
-		the rule succeeds;
+	if current action is saying no, the rule succeeds;
 	the rule fails.
 
 this is the is-singing rule:
-	if current action is singing:
-		the rule succeeds;
+	if current action is singing, the rule succeeds;
 	the rule fails.
 
 this is the you-said-nothing rule:
-	if pardons is true:
-		the rule succeeds;
+	if pardons is true, the rule succeeds;
 	the rule fails;
 
 this is the you-cussed rule:
-	if current action is swearing obscenely:
-		the rule succeeds;
+	if current action is swearing obscenely, the rule succeeds;
 	the rule fails;
 
 this is the you-waited rule:
-	if current action is waiting:
-		the rule succeeds;
+	if current action is waiting, the rule succeeds;
 	the rule fails;
 
 this is the you-attacked rule:
-	if current action is attacking:
-		the rule succeeds;
+	if current action is attacking, the rule succeeds;
 	the rule fails;
 
 this is the am-sleeping rule:
-	if current action is sleeping:
-		the rule succeeds;
+	if current action is sleeping, the rule succeeds;
 	the rule fails;
 
 this is the undo-ok rule:
-	if currently-undoing is true:
-		the rule succeeds;
+	if currently-undoing is true, the rule succeeds;
 	the rule fails;
 
 this is the undo-rej rule:
-	if currently-rejecting is true:
-		the rule succeeds;
+	if currently-rejecting is true, the rule succeeds;
 	the rule fails;
 
 section MANOR random text rules
 
 this is the read-books rule:
-	if current action is examining the bookshelf:
-		the rule succeeds;
+	if current action is examining the bookshelf, the rule succeeds;
 	the rule fails.
 
 this is the pun-quip rule:
-	if current quip is pun-quip:
-		the rule succeeds;
+	if current quip is pun-quip, the rule succeeds;
 	the rule fails.
 
 this is the mob-chanting rule:
-	if current action is listening and player is in study and gunter is in lll:
-		the rule succeeds;
+	if current action is listening and player is in study and gunter is in lll, the rule succeeds;
 	the rule fails;
 
 section STRIP random text rules
@@ -371,112 +355,92 @@ section STRIP random text rules
 this is the movie-over-ad rule:
 	if current action is not examining store c:
 		the rule fails;
-	if go-with-first of table of sicko movies and table of store c ads:
-		the rule succeeds;
+	if go-with-first of table of sicko movies and table of store c ads, the rule succeeds;
 	the rule fails;
 
 this is the compet-over-ad rule:
 	if current action is not examining store c:
 		the rule fails;
-	if go-with-first of table of store c competitors and table of store c ads:
-		the rule succeeds;
+	if go-with-first of table of store c competitors and table of store c ads, the rule succeeds;
 	the rule fails;
 
 this is the read-c rule:
-	if current action is examining store c:
-		the rule succeeds;
+	if current action is examining store c, the rule succeeds;
 	the rule fails.
 
 this is the ohai-tokers rule:
-	if player is in strip and tokers are in strip and nestor is in strip:
-		the rule succeeds;
+	if player is in strip and tokers are in strip and nestor is in strip, the rule succeeds;
 	the rule fails;
 
 this is the lecture-point rule:
 	if player is in cruelest:
-		if go-with-first of table of idiotic lecture points and table of overdone movies:
-			the rule succeeds;
+		if go-with-first of table of idiotic lecture points and table of overdone movies, the rule succeeds;
 	the rule fails;
 
 this is the name-movie rule:
-	if player is in cruelest:
-		the rule succeeds;
+	if player is in cruelest, the rule succeeds;
 	the rule fails;
 
 section ROUTES random text rules
 
 this is the ask-deli rule:
-	if pat-whine is true:
-		the rule succeeds;
+	if pat-whine is true, the rule succeeds;
 	the rule fails;
 
 this is the read-pious-1 rule:
 	if current action is examining the lament mantle:
-		if pious-state is true:
-			the rule succeeds;
+		if pious-state is true, the rule succeeds;
 	the rule fails.
 
 this is the read-pious-2 rule:
 	if current action is examining the lament mantle:
-		if pious-state is false:
-			the rule succeeds;
+		if pious-state is false, the rule succeeds;
 	the rule fails.
 
 this is the horby rule:
-	if player is in cleric circle and Brother Horbert is in cleric circle:
-		the rule succeeds;
+	if player is in cleric circle and Brother Horbert is in cleric circle, the rule succeeds;
 	the rule fails;
 
 this is the horb-bye rule:
-	if current action is exiting in Cleric Circle:
-		the rule succeeds;
+	if current action is exiting in Cleric Circle, the rule succeeds;
 	the rule fails;
 
 section TROVES random text rules
 
 this is the read-eths rule:
-	if current action is examining Pa Egg Pea:
-		the rule succeeds;
+	if current action is examining Pa Egg Pea, the rule succeeds;
 	the rule fails.
 
 this is the say-gritty rule:
-	if player is in Bustle Sublet or player is in Boarded Roadbed or player is in Loather Rathole:
-		the rule succeeds;
+	if player is in Bustle Sublet or player is in Boarded Roadbed or player is in Loather Rathole, the rule succeeds;
 	the rule fails;
 
 this is the in-lot-or-ruin rule:
-	if player is in Bustle Sublet:
-		the rule succeeds;
+	if player is in Bustle Sublet, the rule succeeds;
 	the rule fails;
 
 this is the read-deal rule:
-	if current action is examining ltb:
-		the rule succeeds;
+	if current action is examining ltb, the rule succeeds;
 	the rule fails;
 
 this is the read-brochure rule:
-	if current action is examining the brochure:
-		the rule succeeds;
+	if current action is examining the brochure, the rule succeeds;
 	the rule fails;
 
 this is the say-posh rule:
-	if player is in Econ Cone or player is in Browse Bowers:
-		the rule succeeds;
+	if player is in Econ Cone or player is in Browse Bowers, the rule succeeds;
 	the rule fails;
 
 this is the read-tec rule:
-	if current action is examining desk sked:
-		the rule succeeds;
+	if current action is examining desk sked, the rule succeeds;
 	the rule fails.
 
 this is the desk-look rule:
-	if current action is examining the big important desk:
-		the rule succeeds;
+	if current action is examining the big important desk, the rule succeeds;
 	the rule fails;
 
 this is the read-divorces rule:
-	if current action is examining DIVORCES:
-		the rule succeeds;
+	if current action is examining DIVORCES, the rule succeeds;
 	the rule fails.
 
 section PRESTO random text rules
@@ -484,138 +448,114 @@ section PRESTO random text rules
 this is the chitchat-over-idols rule:
 	unless Rand is washed up and player is in ridge:
 		the rule fails;
-	if go-with-first of table of Leo-Rand chitchat and table of Leo-Rand idols:
-		the rule succeeds;
+	if go-with-first of table of Leo-Rand chitchat and table of Leo-Rand idols, the rule succeeds;
 	the rule fails;
 
 this is the Leo-Rand-cry rule:
-	if Rand is washed up and player is in ridge:
-		the rule succeeds;
+	if Rand is washed up and player is in ridge, the rule succeeds;
 	the rule fails;
 
 this is the catechism-over-research rule:
 	if current action is not examining catechism:
 		the rule fails;
-	if go-with-first of table of catechism pages and table of research topics:
-		the rule succeeds;
+	if go-with-first of table of catechism pages and table of research topics, the rule succeeds;
 	the rule fails;
 
 this is the research-over-doctors rule:
 	if current action is not examining the catechism:
 		the rule fails;
-	if go-with-first of table of research topics and table of smartypants:
-		the rule succeeds;
+	if go-with-first of table of research topics and table of smartypants, the rule succeeds;
 	the rule fails.
 
 this is the read-docs rule:
-	if current action is examining the catechism:
-		the rule succeeds;
+	if current action is examining the catechism, the rule succeeds;
 	the rule fails;
 
 this is the read-futon rule:
-	if current action is examining the futon:
-		the rule succeeds;
+	if current action is examining the futon, the rule succeeds;
 	the rule fails;
 
 section OYSTER random text rules
 
 this is the in-bar rule:
-	if player is in hops shop:
-		the rule succeeds;
+	if player is in hops shop, the rule succeeds;
 	the rule fails;
 
 this is the bar-over-comp rule:
 	if player is not in hops shop:
 		the rule fails;
-	if go-with-first of table of bar dialogue and table of competing bars:
-		the rule succeeds;
+	if go-with-first of table of bar dialogue and table of competing bars, the rule succeeds;
 	the rule fails;
 
 this is the casper-talk rule:
-	if casper-mumble is true:
-		the rule succeeds;
+	if casper-mumble is true, the rule succeeds;
 	the rule fails;
 
 this is the ohai-bullies rule:
-	if carps are in anger range and player is in anger range:
-		the rule succeeds;
+	if carps are in anger range and player is in anger range, the rule succeeds;
 	the rule fails;
 
 this is the insult-over-girls rule:
 	if player is not in anger range or pikes are not in anger range:
 		the rule fails;
-	if go-with-first of table of fish fries and table of unpopular girls:
-		the rule succeeds;
+	if go-with-first of table of fish fries and table of unpopular girls, the rule succeeds;
 	the rule fails;
 
 this is the ohai-tuna rule:
-	if player is in helots' hostel:
-		the rule succeeds;
+	if player is in helots' hostel, the rule succeeds;
 	the rule fails;
 
 this is the gossip-over-chatter rule:
 	if location of player is not helots' hostel:
 		the rule fails;
-	if go-with-first of table of tuna gossip and table of aunt tuna chatter:
-		the rule succeeds;
+	if go-with-first of table of tuna gossip and table of aunt tuna chatter, the rule succeeds;
 	the rule fails;
 
 this is the screed-read rule:
-	if current action is examining the theses sheets:
-		the rule succeeds;
+	if current action is examining the theses sheets, the rule succeeds;
 	the rule fails.
 
 section TOWERS random text rules
 
 this is the rodney-here rule:
-	if player is in trefoil and rodney is in trefoil:
-		the rule succeeds;
+	if player is in trefoil and rodney is in trefoil, the rule succeeds;
 	the rule fails;
 
 this is the examining-gizmo rule:
-	if current action is examining the gizmo:
-		the rule succeeds;
+	if current action is examining the gizmo, the rule succeeds;
 	the rule fails;
 
 section OTTERS random text rules
 
 this is the last-battle rule:
-	if current action is playing whistle and player is in Inclosure:
-		the rule succeeds;
+	if current action is playing whistle and player is in Inclosure, the rule succeeds;
 	the rule fails.
 
 this is the em-sez rule:
 	if player is in alcoves and Merle is in alcoves:
-		if Merle is reflexed:
-			the rule succeeds;
+		if Merle is reflexed, the rule succeeds;
 	the rule fails;
 
 this is the alcove-talk rule:
-	if player is in alcoves:
-		if Elmer is in alcoves:
-			if Merle is reflexed:
-				the rule succeeds;
-			else: [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc]
-				say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]";
+	if player is in alcoves and Elmer is in alcoves:
+		if Merle is reflexed, the rule succeeds;
+		say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]"; [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc]
 	the rule fails;
 
 this is the Elvira-taunt rule:
 	if player is in Reclusion Inclosure:
 		if current action is going east or current action is gotoing:
-			if qbc_litany is not table of Elvira comments:
-				the rule succeeds;
+			if qbc_litany is not table of Elvira comments, the rule succeeds;
 	the rule fails;
 
 section OTHERS random text rules
 
 this is the sloganing rule:
-	if player is in gates stage and current action is going north:
-		the rule succeeds;
+	if player is in gates stage and current action is going north, the rule succeeds;
 	the rule fails;
 
 this is the clearing-listen rule:
-	if player is in clearing and current action is listening:
-		the rule succeeds;
+	if player is in clearing and current action is listening, the rule succeeds;
 	the rule fails.
 
 section deciding how to weight rules
@@ -708,7 +648,6 @@ to say twiddle of (tn - a table name) and (nums - a number):
 	if currow is tr:
 		now currow is 0;
 	now curidx entry is currow;
-
 
 volume random text blurb tables [vrt]
 
