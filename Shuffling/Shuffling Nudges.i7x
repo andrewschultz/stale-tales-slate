@@ -684,13 +684,11 @@ to say spec-meat:
 	say "You'll need to be more specific about the meat to poke at"
 
 this is the first-two-forest rule:
-	if player is in sf or player is in rf:
-		the rule succeeds;
+	if player is in sf or player is in rf, the rule succeeds;
 	the rule fails;
 
 this is the see-meats rule:
-	if riverville is visible or Spam is visible or viler liver is visible or player is in s-e-d:
-		the rule succeeds;
+	if riverville is visible or Spam is visible or viler liver is visible or player is in s-e-d, the rule succeeds;
 	the rule fails;
 
 this is the liv-vis rule:
@@ -716,8 +714,7 @@ to say marsh-lake:
 section sortie nudges
 
 this is the no-d rule:
-	if player is in trodes or player is in fields or player is in s-e-d:
-		the rule succeeds;
+	if player is in trodes or player is in fields or player is in s-e-d, the rule succeeds;
 	the rule fails;
 
 this is the sf-or-rf rule:
@@ -725,20 +722,17 @@ this is the sf-or-rf rule:
 	the rule fails;
 
 this is the cent-spin rule:
-	if the player is in Centrifuge and centrifuge-stopped is false:
-		the rule succeeds;
+	if the player is in Centrifuge and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
 
 this is the nick-visit rule:
-	if nick is visited:
-		the rule succeeds;
+	if nick is visited, the rule succeeds;
 	the rule fails;
 
 this is the kitch-visit rule:
 	if player is in kitchen:
 		the rule fails;
-	if kitchen is visited:
-		the rule succeeds;
+	if kitchen is visited, the rule succeeds;
 	the rule fails;
 
 to say to-trio:
@@ -754,13 +748,11 @@ to say label-no:
 	say "The tall trio is probably what you want to change, but the label may have information";
 
 this is the rm-or-moor rule:
-	if player is in room or player is in moor:
-		the rule succeeds;
+	if player is in room or player is in moor, the rule succeeds;
 	the rule fails;
 
 this is the got-shoes rule:
-	if shoes are in lalaland:
-		the rule succeeds;
+	if shoes are in lalaland, the rule succeeds;
 	the rule fails;
 
 to say woe-all:
@@ -785,8 +777,7 @@ to say but-but:
 	say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
 
 this is the panel-in-silo rule:
-	if player is in moor and panel is part of the silo:
-		the rule succeeds;
+	if player is in moor and panel is part of the silo, the rule succeeds;
 	the rule fails;
 
 to say what-b-says:
@@ -796,20 +787,17 @@ to say best-not-defile:
 	say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
 
 this is the got-plane rule:
-	if the player has the poem and the poem is folded:
-		the rule succeeds;
+	if the player has the poem and the poem is folded, the rule succeeds;
 	the rule fails;
 
 this is the b4-cent rule:
-	if player is in Centrifuge and centrifuge-stopped is false:
-		the rule succeeds;
+	if player is in Centrifuge and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
 
 section metros nudges
 
 this is the af-cent rule:
-	if player is in Centrifuge and centrifuge-stopped is true:
-		the rule succeeds;
+	if player is in Centrifuge and centrifuge-stopped is true, the rule succeeds;
 	the rule fails;
 
 to say no-hot:
@@ -828,8 +816,7 @@ to say ug-bug:
 	say "Ugh. Too messy. Mentally and physically"
 
 this is the angst rule:
-	if player has emitter and emitter is angstgnatted:
-		the rule succeeds;
+	if player has emitter and emitter is angstgnatted, the rule succeeds;
 	the rule fails;
 
 to say nerd-nah:
@@ -861,13 +848,11 @@ to say mits-are:
 	say "The mittens are as comfortable as they're going to be"
 
 this is the no-beats rule:
-	if player is in anti-cool or player is in red condo:
-		the rule succeeds;
+	if player is in anti-cool or player is in red condo, the rule succeeds;
 	the rule fails;
 
 this is the resin-lala rule:
-	if resin is in lalaland:
-		the rule succeeds;
+	if resin is in lalaland, the rule succeeds;
 	the rule fails.
 
 section resort nudges
@@ -884,13 +869,11 @@ to say simple-riot:
 this is the hotspot-no-kilns rule:
 	if player is in hotspot:
 		if kilns are not in hotspot:
-			if protest is in hotspot or riot is in hotspot:
-				the rule succeeds;
+			if protest is in hotspot or riot is in hotspot, the rule succeeds;
 	the rule fails;
 
 this is the riot-gone rule:
-	if player is in hotspot and riot is in lalaland:
-		the rule succeeds;
+	if player is in hotspot and riot is in lalaland, the rule succeeds;
 	the rule fails;
 
 to say ennui:
@@ -905,8 +888,7 @@ to say chem-bad:
 	say "Bad idea to mess with chemical compounds you don't understand"
 
 this is the has-lube rule:
-	if the player has the blue lube:
-		the rule succeeds;
+	if the player has the blue lube, the rule succeeds;
 	the rule fails;
 
 to say gad-part:
@@ -924,13 +906,11 @@ this is the past-strip rule:
 	decide no;
 
 this is the past-intro rule:
-	if notices section is visited:
-		the rule succeeds;
+	if notices section is visited, the rule succeeds;
 	the rule fails;
 
 this is the can-retry rule:
-	if trips strip is visited:
-		the rule succeeds;
+	if trips strip is visited, the rule succeeds;
 	the rule fails
 
 to say what-for:
@@ -952,8 +932,7 @@ to say cussy:
 	say "You're not fooling ME. Shame on you";
 
 this is the know-point rule:
-	if pointcue is true:
-		the rule succeeds;
+	if pointcue is true, the rule succeeds;
 	the rule fails.
 
 this is the can-i-parse rule:
