@@ -4380,6 +4380,56 @@ blurb
 "'We are right! Rage! Writhe!'"
 "'Witchery: why rec it?'"
 
+part random text rules
+
+section intro rules
+
+this is the x-namelist rule:
+	if current action is examining name list, the rule succeeds;
+	the rule fails;
+
+section forest rules
+
+this is the reading-the-map rule:
+	if current action is examining the maps, the rule succeeds;
+	the rule fails;
+
+section sortie rules
+
+this is the pat-poem rule:
+	if player is in moor and pat is in moor, the rule succeeds;
+	the rule fails;
+
+section metros rules
+
+this is the x-psa rule:
+	if current action is examining Pa's PSA, the rule succeeds;
+	the rule fails;
+
+this is the with-hippies rule:
+	if player is in cramped red camp, the rule succeeds;
+	the rule fails;
+
+this is the talk-in-condo rule:
+	if player is in condo and talkers are in condo, the rule succeeds;
+	the rule fails;
+
+this is the in-mensa rule:
+	if player is in anti-cool location:
+		if current action is not objasking about and current action is not objasking generically, the rule succeeds;
+	the rule fails;
+
+section resort rules
+
+this is the protests rule:
+	if player is in hotspot:
+		if riot is in hotspot or protest is in hotspot, the rule succeeds;
+	the rule fails;
+
+this is the burdell rule:
+	if player is in hotspot and burdell is in hotspot, the rule succeeds;
+	the rule fails;
+
 Shuffling Random Text ends here.
 
 ---- DOCUMENTATION ----
