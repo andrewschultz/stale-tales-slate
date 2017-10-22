@@ -327,15 +327,17 @@ You can pretend you don't really want the keys by saying SYKE...
 ...or you can bug the hogs by saying GOSH.
 Either way, the hogs get mad at you, tire themselves out chasing you, and leave the keys open for Rand and Leo.
 >>PHAT PATH
-?What's the smart people's sign for?
-Leo and Rand are nice, but they don't belong in the shack. But they have a hard time leaving.
-So do you, surprisingly. But the sign has ALERT, LOGONS and OUGHT.
+?What are the harpings phrasings for?
+They're in all caps, not letting you get in.
+Well, Leo and Rand, especially.
+You need to relieve them of their duties. They don't belong in the shack, but they have a hard time leaving. You all had fun together.
+The three sentences anagram to clumps of letters.
 You only need two of these three to move on.
 TOUGH...
 ...LATER...
 ...SO LONG.
 ?Is the hawt thaw significant?
-Not strictly. It's not necessary to complete the game.
+Not strictly. It's only necessary to get maximum points.
 It's really weird, though. It barely makes any sense at all!
 If you take a good hard look at it, you may want to say WHAT.
 >>HACKS' SHACK
@@ -348,7 +350,8 @@ It makes a CAPS LOCK key.
 Once you have a keyboard, you can PUT CAPS LOCK IN KEYBOARD.
 ?The gum?
 Aw, c'mon. If you got here, this is a gimme!
-It becomes a mug.
+Ugg, umm...
+It becomes a MUG.
 ?The flea?
 Something else organic.
 Make it a LEAF.
@@ -362,10 +365,10 @@ Well, it has portability etc.
 It can become a SKID...
 ...then flip back later.
 You'll need to move the skid around, unsurprisingly. Use the PUSH command.
-However, once you've gotten rid of the yak, the game will let you flip the skid to the disk.
+However, once you've gotten rid of the yak, you'll want to flip the skid back to the disk for good.
 ?The slab?
-You can put computer components on it as you find it.
-The screen, the keyboard.
+Not important by itself, but you can put computer components on it as you find it.
+The screen and the keyboard, in particular.
 ?The fount?
 It's dry but restful.
 FUTON.
@@ -374,7 +377,7 @@ These aren't critical, but if you figure them, good job.
 They help the computer run a bit faster.
 ROM STICKS.
 ?The escaroles?
-They are not critical to the game, but they provide a slightly easier alternate solution.
+They are not critical to the game, though they provide a slightly easier alternate solution.
 Make 'em into something more workmanlike, less froufrou. More nourishing.
 CASSEROLE.
 There is too much for you to eat. Maybe a friend or friends can.
@@ -384,7 +387,7 @@ You may notice the polemic by Mel Copi.
 It will teach you how to COMPILE, later.
 ?The textbook?
 It's not useful til you need to program, then you'll use it automatically.
-It's mostly for amusement.
+So, yeah, it's mostly for amusement.
 ?The horrible book? (Note: there are five possible titles)
 It's an alternate solution.
 It also clues that you need to make a KEYBOARD.
@@ -421,8 +424,9 @@ Or SLEEP.
 Of course. It never works at first.
 Now you're awake, you've got the energy to DEBUG.
 ?What do I need to do with the USB?
-You have two options! Lucky you. It'd be nice to have transport out.
-There are only five possibilities. So you have a forty percent chance with a first guess.
+It'd be nice to have transport out. And you have two options! Lucky you.
+There are only five possibilities. So you have a forty percent chance with a random first guess.
+You have no particular reason to visit Boise State University, the Universal Bank of Switzerland or St. Bonaventure University. (Thanks, acronymfinder.com!)
 You can take a SUB or BUS out for slightly different alternate endings.
 >STORE U
 >>ABOVEGROUND
