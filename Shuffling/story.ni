@@ -1321,7 +1321,7 @@ bread	"[one of]The bread can be changed. [plus][or]It becomes a BEARD. [minus][c
 sandwich	"[one of]The sandwich [i-sed]is useful for two puzzles. It has 'the usual two parts.' [plus][or]Take BREAD to separate the sandwich from Stored, Er, Dots into bread and Spam. [minus][cycling]"
 chisel	"[one of]That chisel might be handy for some items[if player is in Enclosure] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers in Stored, Er, Dots. [minus][cycling]"
 liches	"[one of]The liches are a tool of some greater evil, and their descriptions suggest another word (+)[or]Make them into a CHISEL[cycling]."
-Riverville liver	"[put-can]"
+River Ville liver	"[put-can]"
 viler liver	"[put-can]"
 canister	"You can put meat in the canister."
 livers	"[one of]Transforming the livers is necessary. The gadget shows all reds, but actually, that's because it's 'easy' another way. [plus][or]If you shift all the letters over one, LIVERS become SLIVER. [minus][cycling]"
@@ -1523,7 +1523,7 @@ to say toho:
 	say "[if grips are visible and ropes are visible]you did a bit more[else]you can also meddle with the sprig and spore[end if]";
 
 to say put-can:
-	say "[one of]Examining the livers indicates they need to be processed. [plus][or]You need to put both livers in the canister. [plus][or][unless Riverville liver is in lalaland]PUT RIVERVILLE IN CANISTER. [end if][unless viler liver is in lalaland]PUT VILER LIVER IN CANISTER. [end if][minus][cycling]"
+	say "[one of]Examining the livers indicates they need to be processed. [plus][or]You need to put both livers in the canister. [plus][or][unless River Ville liver is in lalaland]PUT River Ville IN CANISTER. [end if][unless viler liver is in lalaland]PUT VILER LIVER IN CANISTER. [end if][minus][cycling]"
 
 to say i-sed:
 	say "[if player is not in s-e-d]in Stored, Er, Dots [end if]";
@@ -1575,13 +1575,13 @@ carry out forest-hinting:
 	if chisel is off-stage:
 		try objhinting liches instead;
 	if livers are off-stage:
-		if player does not have Riverville liver and player does not have viler liver:
+		if player does not have River Ville liver and player does not have viler liver:
 			try objhinting chisel instead;
-		if Riverville liver is not off-stage:
-			try objhinting Riverville liver instead;
+		if River Ville liver is not off-stage:
+			try objhinting River Ville liver instead;
 		if viler liver is not off-stage:
 			try objhinting viler liver instead;
-		try objhinting Riverville liver instead;
+		try objhinting River Ville liver instead;
 	if sliver is off-stage:
 		try objhinting livers instead;
 	if spread is in Enclosure:
@@ -4617,7 +4617,7 @@ carry out xmxing:
 	if noun is bubble and noughts are in bubble:
 		say "The bubble doesn't change, but the ones inside do.";
 		try xmxing ones instead;
-	if noun is Riverville liver or noun is viler liver:
+	if noun is River Ville liver or noun is viler liver:
 		say "It seems to come together with a duplicate of itself. You look again, and your x-ray vision remains." instead;
 	if noun is banshee:
 		say "The banshee seems to howl about being a has-been.";
@@ -6147,22 +6147,52 @@ to say glasstype:
 to say nosey:
 	say "[one of]a fake warty witch's conker[or]a fake parrot beak[or]a red plastic ball under his glasses[or]a fake pig snout[or]a Pinocchio-style wooden rod sprouting from his face[or]a pickle-shaped and -colored schnoz[at random]"
 
-chapter Storing Area
+chapter Stored Er Dots
 
-s-e-d is west of Self-ID Fields. s-e-d is in Forest. s-e-d is privately-named. printed name of s-e-d is "Stored, er, Dots". understand "stored/ er/ dots" as s-e-d.
+s-e-d is west of Self-ID Fields. s-e-d is in Forest. s-e-d is privately-named. printed name of s-e-d is "Stored, er, Dots". understand "stored dots" and "stored er dots" as s-e-d.
+
+first-sed-yet is a truth state that varies.
+
+after choosing notable locale objects when player is in s-e-d:
+	set the locale priority of the sandwich to 1;
+
+rule for printing a locale paragraph about a thing in s-e-d when first-sed-yet is false:
+	say "You notice the flesh shelf contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
+	[now scantier canister is mentioned;]
+	now sandwich is mentioned;
+	now all glopmeats are mentioned;
+	now dots are mentioned;
+	now flesh shelf is mentioned;
+	now the player is mentioned;
+	now first-sed-yet is true;
+	the rule succeeds;
+
+[rule for printing a locale paragraph about a thing in s-e-d:
+	say "PING [the item described] [if the item described is mentioned]ment[else]not ment[end if].";
+	continue the action;]
+
+rule for printing a locale paragraph about a glopmeat when s-e-d is visited:
+	if the item described is not mentioned:
+		say "The [list of glopmeats] [if number of glopmeats in s-e-d is 1]is[else]are[end if] still on the flesh shelf.";
+		now all glopmeats are mentioned;
+		the rule succeeds;
 
 check going nowhere in s-e-d:
 	say "You can only go back east." instead;
 
 section canister / red ring
 
-the scantier canister is a fixed in place container.
+the scantier canister is a fixed in place container in s-e-d. initial appearance is "[can-desc]."
 
 description of canister is "It's small, nowhere near the size of a cistern. It's got a red ring you can put stuff in, and you can see a grinder of sabled blades inside. The grinder reads [i]team meat, tame [']em at...[r] and appears to have no switch or anything. MASH SHAM HAMS is written on it[if number of glopmeats in lalaland is 1]. It's about half full[end if]."
 
-initial appearance of canister is "On the flesh shelf, there's a scantier canister [if livers are off-stage]that looks operable[else]you broke[end if][one of]. You can probably call it a acn without hurting its feelings[or][stopping]."
+to say can-desc:
+	if livers are not off-stage:
+		say "The canister you broke sits on the flesh shelf";
+	else:
+		say "A scantier canister sits on the flesh shelf[if number of glopmeats in canister is 1], containinig the [list of glopmeats in canister][one of]. You can probably call it a can without hurting its feelings[or][stopping]";
 
-the canister is on the flesh shelf. understand "can" as canister.
+understand "can" as canister.
 
 instead of taking the canister:
 	say "It's welded to the shelf.";
@@ -6209,7 +6239,7 @@ the canister can be broken. the canister is not broken.
 check examining canister:
 	ignore the examine containers rule;
 
-does the player mean inserting Riverville liver into canister when Riverville liver is in canister: it is very unlikely.
+does the player mean inserting River Ville liver into canister when River Ville liver is in canister: it is very unlikely.
 
 does the player mean inserting viler liver into canister when viler liver is in canister: it is very unlikely.
 
@@ -6234,7 +6264,7 @@ check inserting into the scantier canister:
 			set the pronoun it to livers;
 			set the pronoun them to livers;
 			reg-inc;
-			now Riverville liver is in lalaland;
+			now River Ville liver is in lalaland;
 			now viler liver is in lalaland;
 			now canister is broken;
 			now canister is realized;
@@ -6244,10 +6274,10 @@ check inserting into the scantier canister:
 			say "The canister seems to whir. The meat you put in is shortly unrecognizable.";
 			if noun is a glopmeat:
 				if number of visible glopmeats is 2:
-					if noun is Riverville liver:
+					if noun is River Ville liver:
 						now cur-liv is viler liver;
 					else:
-						now cur-liv is Riverville liver;
+						now cur-liv is River Ville liver;
 			now noun is in lalaland instead;
 	if noun is bread:
 		say "You don't need to futz with the bread that way." instead;
@@ -6263,13 +6293,16 @@ check switching off the canister:
 
 section flesh shelf
 
-the flesh shelf is a useless fixed in place supporter in s-e-d.
+the flesh shelf is useless scenery in s-e-d.
 
 initial appearance of flesh shelf is "[if number of things on flesh shelf is 0]You've taken everything from the shelf[else]You see [a list of things on flesh shelf] on the shelf[end if]."
 
+check taking flesh shelf:
+	say "It's too heavy, and nobody, um, helfs you (that's a Far Side reference)." instead;
+
 description of flesh shelf is "NO SHAM HAMS ON FLESH SHELF is traced into its top[if number of things on flesh shelf is 0]. It's clear of items[else]. You can see [a list of things on flesh shelf] on it[end if]."
 
-description of s-e-d is "This is a storing area with various unpalatable-looking meats[if number of things on flesh shelf is 0], and you've taken the stuff that isn't totally nasty[else] on a flesh shelf[end if]. Dots are all over the shelf too."
+description of s-e-d is "This is a storing area with various unpalatable-looking meats on a flesh shelf. Dots are all over the shelf too."
 
 the dots are useless scenery in s-e-d. "They are probably just ice, but they, er, fit in."
 
@@ -6279,9 +6312,9 @@ check taking dots:
 check examining the flesh shelf:
 	ignore the examine supporters rule.
 
-A glopmeat is a kind of thing.
+section sandwich
 
-a sandwich is on the flesh shelf. the sandwich is not fixed in place.
+a sandwich is in s-e-d. initial appearance is "A sandwich lies on the flesh shelf. It doesn't seem as stuck to the shelf as the livers[if number of glopmeats in s-e-d < 2] were[end if]."
 
 instead of pulling sandwich:
 	try opening sandwich;
@@ -6347,15 +6380,17 @@ check taking Spam:
 
 description of Spam is "It's nastily marbled with mostly pink and some white."
 
-section meats in freezer
+section liver 1 and liver 2
+
+A glopmeat is a kind of thing.
 
 check putting it on:
 	if noun is a glopmeat and second noun is a glopmeat:
 		say "They don't quite seem to stick. What's a better way to join the two pieces of meat?" instead;
 
-the cur-liv is a glopmeat that varies. the cur-liv is the Riverville liver.
+the cur-liv is a glopmeat that varies. the cur-liv is the River Ville liver.
 
-understand "meat" as Riverville liver when cur-liv is the Riverville liver.
+understand "meat" as River Ville liver when cur-liv is the River Ville liver.
 understand "meat" as viler liver when cur-liv is the viler liver.
 
 liver-disambig-yet is a truth state that varies.
@@ -6363,11 +6398,11 @@ liver-disambig-yet is a truth state that varies.
 before doing something with the viler liver when viler liver is visible:
 	now liver-disambig-yet is true;
 
-before doing something with the Riverville liver when Riverville liver is visible:
+before doing something with the River Ville liver when River Ville liver is visible:
 	if liver-disambig-yet is false:
 		now liver-disambig-yet is true;
-		if the player's command does not match "riverville":
-			say "(You aren't sure which liver to handle, but the viler liver is, well, viler. So, yeah, the Riverville.) ";
+		if the player's command does not match "River Ville":
+			say "(You aren't sure which liver to handle, but the viler liver is, well, viler. So, yeah, the River Ville.) ";
 
 after doing something with a glopmeat:
 	if noun is in canister:
@@ -6381,15 +6416,19 @@ does the player mean inserting the cur-liv into:
 		it is very unlikely;
 	it is likely.
 
-The Riverville liver is a glopmeat on flesh shelf.
+The River Ville liver is a glopmeat in s-e-d.
 
-The viler liver is a glopmeat on flesh shelf.
+understand "riverville" and "riverville liver" as river ville liver.
+
+printed name of River Ville liver is "RiverVille Liver". indefinite article of River Ville liver is "a".
+
+The viler liver is a glopmeat in s-e-d.
 
 description of a glopmeat is usually "[if item described is not in canister]It's ugly and frozen and stamped 100% amalgamatable[else]It's all chopped up in the canister right now[end if]."
 
 does the player mean taking cur-liv when cur-liv is held: it is unlikely.
 
-does the player mean taking Riverville liver when Riverville liver is held and viler liver is held: it is very likely.
+does the player mean taking River Ville liver when River Ville liver is held and viler liver is held: it is very likely.
 
 check taking a glopmeat:
 	if player has noun:
@@ -10733,7 +10772,7 @@ after reading a command:
 	let XX be indexed text;
 	let XX be the player's command in lower case;
 	change the text of the player's command to XX;
-	if the viler liver is visible or the Riverville liver is visible or livers are visible or Spam is visible:
+	if the viler liver is visible or the River Ville liver is visible or livers are visible or Spam is visible:
 		if the player's command matches the regular expression "\bmeats\b", case insensitively:
 			say "What kind of meats they are is important. As are their physical characteristics. So you'll need to be specific.";
 			reject the player's command;
@@ -10796,7 +10835,7 @@ after reading a command:
 		replace the regular expression "^chisel" in XX with "scrape";
 		change the text of the player's command to XX;
 	if word number 1 in the player's command is "silver":
-		if player has livers or viler liver is visible or Riverville liver is visible:
+		if player has livers or viler liver is visible or River Ville liver is visible:
 			say "The livers are too dull to do anything like that with. Yet.[liv-preef]";
 			reject the player's command;
 	if word number 1 in the player's command is "tell":
@@ -11003,7 +11042,7 @@ carry out scaning:
 	now ever-scan is true;
 	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
-	if noun is Riverville liver or noun is viler liver:
+	if noun is River Ville liver or noun is viler liver:
 		say "You see five red lights in a row--but you only see the [if noun is viler liver]bottom[else]top[end if] half of them. Odd." instead;
 	if noun is dial:
 		if numset of dial is 16:
@@ -11896,7 +11935,7 @@ does the player mean inserting the silver into the shotgun: it is likely.
 
 check inserting it into (this is the forest-insert rule):
 	if second noun is sandwich:
-		if noun is viler liver or noun is Riverville liver:
+		if noun is viler liver or noun is River Ville liver:
 			say "That might only make the sandwich grosser, and besides, the bread's already stuck to the meat." instead;
 		otherwise:
 			say "The sandwich won't be helped by adding anything." instead;
@@ -12193,7 +12232,7 @@ carry out smelling:
 		say "It smells like the opposite of a garden. Powerful." instead;
 	if noun is gardenia:
 		say "Smells wonderful, like cooking." instead;
-	if noun is Riverville liver or noun is viler liver:
+	if noun is River Ville liver or noun is viler liver:
 		say "Thankfully, it's been frozen, so it smells vaguely like freezer-burn." instead;
 	if noun is taco:
 		say "Awesome. You take righteous pride in your culinary ability." instead;
@@ -13100,7 +13139,7 @@ carry out shooting:
 
 chapter peeling
 
-the dont-peel-taken-riverville rule is listed before the use-cur-liv rule in the does the player mean rulebook.
+the dont-peel-taken-River Ville rule is listed before the use-cur-liv rule in the does the player mean rulebook.
 the dont-peel-taken-viler rule is listed before the use-cur-liv rule in the does the player mean rulebook.
 
 test pe with "purloin chisel/gonear chicken/rules/peel liver/peel liver"
@@ -13119,7 +13158,7 @@ does the player mean doing something with livers when a glopmeat is visible: it 
 
 rule for supplying a missing second noun while peeling: now the second noun is chisel.
 
-does the player mean peeling the Riverville liver with when the player has the Riverville liver (this is the dont-peel-taken-riverville rule): it is very unlikely.
+does the player mean peeling the River Ville liver with when the player has the River Ville liver (this is the dont-peel-taken-River Ville rule): it is very unlikely.
 
 does the player mean peeling the cur-liv with when the player does not have the cur-liv (this is the peel-untaken-liv rule): it is very likely.
 
@@ -13143,9 +13182,9 @@ check peeling sandwich with:
 	try opening sandwich instead;
 
 to decide which glopmeat is the non-cur-liver:
-	if cur-liv is Riverville liver:
+	if cur-liv is River Ville liver:
 		decide on viler liver;
-	decide on Riverville liver.
+	decide on River Ville liver.
 
 does the player mean inserting into cur-liv: it is unlikely;
 does the player mean putting on cur-liv: it is unlikely;
@@ -13160,10 +13199,10 @@ check putting a glopmeat on a glopmeat:
 check inserting a glopmeat into a glopmeat:
 	try tying noun to second noun instead;
 
-check tying viler liver to Riverville liver:
-	try tying Riverville liver to viler liver instead;
+check tying viler liver to River Ville liver:
+	try tying River Ville liver to viler liver instead;
 
-check tying Riverville liver to viler liver:
+check tying River Ville liver to viler liver:
 	say "You can't blend them that thoroughly by yourself. Some device might be more handy." instead;
 
 carry out peeling it with:

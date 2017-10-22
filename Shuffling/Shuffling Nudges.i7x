@@ -191,7 +191,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lineof"	396387775	self-id	--	--	"They're dead and not interfering with you."
 "meat"	297179098	--	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	--	see-meats rule	"[spec-meat]."
-"liver"	419101417	--	--	liv-vis rule	"[if Riverville liver is in lalaland or viler liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if Riverville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
+"liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is in lalaland or viler liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
+"ville"	387591453	--	river ville liver	--	"[rivliv]."
+"river"	450611381	--	river ville liver	--	"[rivliv]."
 "cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
@@ -683,12 +685,15 @@ to say nau-zer-enuf:
 to say spec-meat:
 	say "You'll need to be more specific about the meat to poke at"
 
+to say rivliv:
+	say "It's just a liver. No need to parse the brand name"
+
 this is the first-two-forest rule:
 	if player is in sf or player is in rf, the rule succeeds;
 	the rule fails;
 
 this is the see-meats rule:
-	if riverville is visible or Spam is visible or viler liver is visible or player is in s-e-d, the rule succeeds;
+	if River Ville is visible or Spam is visible or viler liver is visible or player is in s-e-d, the rule succeeds;
 	the rule fails;
 
 this is the liv-vis rule:
