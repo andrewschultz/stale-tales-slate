@@ -27,7 +27,7 @@
 			<objects at="wsw" />
 		</room>
 		<room id="8" name="Stored, er, Dots" subtitle="" x="-416" y="-224" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-40" customDown="0">Cow/Chicken liver|Sandwich</objects>
+			<objects at="n" custom="yes" customRight="-40" customDown="0">Riverville/|Viler Liver|Sandwich</objects>
 		</room>
 		<room id="9" name="Sorted 'Trodes" subtitle="" x="-160" y="-224" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="e" custom="yes" customRight="0" customDown="-18">Bubble|Bucket|Shell</objects>

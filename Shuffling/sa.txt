@@ -137,8 +137,11 @@ They become a SHOTGUN.
 They become SHADES.
 >>Stored, Er, Dots
 ?What are the dots for?
-Examine them. They're frozen, protruding from the wall
-Take them to reveal the livers.
+They're frozen, protruding from the wall
+They're just there to make it more believable it's frozen in here.
+?Is there a difference between the two livers?
+Cosmetically, yes.
+Functionally, no.
 ?What do I do with the grinder?
 You need to put each liver in it.
 With the product, the livers...
