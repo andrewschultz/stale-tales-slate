@@ -1191,21 +1191,18 @@ to say locname:
 	say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
 this is the gunter-yet rule:
-	if player is in study and gunter is off-stage:
-		the rule succeeds;
+	if player is in study and gunter is off-stage, the rule succeeds;
 	the rule fails;
 
 to say locname-part:
 	say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
 
 this is the Gunter-left rule:
-	if player is in study and Gunter is in lalaland:
-		the rule succeeds;
+	if player is in study and Gunter is in lalaland, the rule succeeds;
 	the rule fails.
 
 this is the is-study-dark rule:
-	if player is in study and study is not lit:
-		the rule succeeds;
+	if player is in study and study is not lit, the rule succeeds;
 	the rule fails;
 
 this is the x-oped rule:
@@ -1232,26 +1229,22 @@ to say dark-palm:
 	say "[one of]You punch your fist as you realize DARK has no anagrams...right into the palm[or]Oh no, not again. Concentrate on the palm[stopping]"
 
 this is the dark-study rule:
-	if player is in study and study is dark:
-		the rule succeeds;
+	if player is in study and study is dark, the rule succeeds;
 	the rule fails.
 
 to say g-pin:
 	say "It's more that it's a giant pin and not, like, a safety pin";
 
 this is the basement-visible rule:
-	if player is in dusty study and t-b is not in dusty study:
-		the rule succeeds;
+	if player is in dusty study and t-b is not in dusty study, the rule succeeds;
 	the rule fails;
 
 this is the chimney-visible rule:
-	if player is in dusty study and niche is not in dusty study:
-		the rule succeeds;
+	if player is in dusty study and niche is not in dusty study, the rule succeeds;
 	the rule fails;
 
 this is the stable-visible rule:
-	if player is in dusty study and tables are not in dusty study:
-		the rule succeeds;
+	if player is in dusty study and tables are not in dusty study, the rule succeeds;
 	the rule fails;
 
 to say curtain-block:
@@ -1261,8 +1254,7 @@ to say hisin:
 	say "The high sign is a clue. Bad idea to change it"
 
 this is the elmo-chat rule:
-	if qbc_litany is table of elmo comments:
-		the rule succeeds;
+	if qbc_litany is table of elmo comments, the rule succeeds;
 	the rule fails;
 
 to say w-twi:
@@ -1335,10 +1327,8 @@ to say fol-reag:
 
 this is the has-reag rule:
 	if list o toils is examined:
-		if player is in cleric circle:
-			the rule succeeds;
-		if number of visible quest-items > 0:
-			the rule succeeds;
+		if player is in cleric circle, the rule succeeds;
+		if number of visible quest-items > 0, the rule succeeds;
 	the rule fails;
 
 to say cant-giant:
@@ -1366,10 +1356,8 @@ to say no-poi:
 	say "The [if player is in mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
 
 this is the first-two rule:
-	if player is in same mesa:
-		the rule succeeds;
-	if brother horbert is visible:
-		the rule succeeds;
+	if player is in same mesa, the rule succeeds;
+	if brother horbert is visible, the rule succeeds;
 	the rule fails;
 
 to say ash-soot:
@@ -1382,8 +1370,7 @@ to say horb-magic of (tt - a thing):
 	say "[if list o toils is examined]Brother Horbert will work his magic with that[else if player does not have tt]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[else]That seems curiously inert to your attempts[end if]";
 
 this is the am-along rule:
-	if told-of-logan:
-		the rule succeeds;
+	if told-of-logan, the rule succeeds;
 	the rule fails;
 
 to say dark-been:
@@ -1414,8 +1401,7 @@ to say ei2pg:
 	say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
 
 this is the glaring-futile rule:
-	if player is in Boredom Bedroom and lager is in lalaland:
-		the rule succeeds;
+	if player is in Boredom Bedroom and lager is in lalaland, the rule succeeds;
 	the rule fails;
 
 to say rotun:
@@ -1428,13 +1414,11 @@ to say scrapery:
 	say "If you brought down the skyscraper like that somehow, mass panic would ensue. Destroy it from within";
 
 this is the ignore-ignored rule:
-	if player is in Upscale Capsule and noise is in lalaland:
-		the rule succeeds;
+	if player is in Upscale Capsule and noise is in lalaland, the rule succeeds;
 	the rule fails;
 
 this is the divorces-gone rule:
-	if player is in Upscale Capsule and divorces is in lalaland:
-		the rule succeeds;
+	if player is in Upscale Capsule and divorces is in lalaland, the rule succeeds;
 	the rule fails;
 
 to say ruts-pull:
@@ -1444,8 +1428,7 @@ to say sidewalk-oops:
 	say "You can't make the sidewalk crumble any more, and you probably don't want to"
 
 this is the lot-observed rule:
-	if player is in Bustle Sublet and sob ever verbose is in lalaland:
-		the rule succeeds;
+	if player is in Bustle Sublet and sob ever verbose is in lalaland, the rule succeeds;
 	the rule fails;
 
 to say boor-grub:
@@ -1454,21 +1437,18 @@ to say boor-grub:
 section presto nudges
 
 this is the in-mazeroom rule:
-	if location of player is mazeroom or location of player is Nowt Town:
-		the rule succeeds;
+	if location of player is mazeroom or location of player is Nowt Town, the rule succeeds;
 	the rule fails;
 
 to say mz-chg:
 	say "It's the maze you need to change, not the zany meter"
 
 this is the maze-gone rule:
-	if player is in gyre and maze is in lalaland:
-		the rule succeeds;
+	if player is in gyre and maze is in lalaland, the rule succeeds;
 	the rule fails;
 
 this is the ether-gone rule:
-	if player is in gyre and ether is in lalaland:
-		the rule succeeds;
+	if player is in gyre and ether is in lalaland, the rule succeeds;
 	the rule fails;
 
 to say ca-co:
@@ -1487,8 +1467,7 @@ to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze"
 
 this is the Rand-sad rule:
-	if Rand is washed up and player is in dirge ridge and Leo is in dirge ridge:
-		the rule succeeds;
+	if Rand is washed up and player is in dirge ridge and Leo is in dirge ridge, the rule succeeds;
 	the rule fails;
 
 to say boing-clue:
@@ -1504,8 +1483,7 @@ to say caffeine-no:
 	say "The name brand is not important. Besides, your body will break down the caffeine on its own, when needed"
 
 this is the my-cola rule:
-	if fizzy cola is visible or dirty cola is visible:
-		the rule succeeds;
+	if fizzy cola is visible or dirty cola is visible, the rule succeeds;
 	the rule fails;
 
 to say cola-is-cola:
@@ -1529,19 +1507,16 @@ to say kboard-det:
 			say "You need to find something less awful that could make a keyboard. That book would probably arrange the letters worse than QWERTY.[no line break]";
 
 this is the bookvis rule:
-	if number of visible badbooks > 0:
-		the rule succeeds;
+	if number of visible badbooks > 0, the rule succeeds;
 	the rule fails;
 
 this is the wise-to-sleep rule:
 	if player is in hacks' shack:
-		if scratch paper is visible and scratch paper is reflexive:
-			the rule succeeds;
+		if scratch paper is visible and scratch paper is reflexive, the rule succeeds;
 	the rule fails;
 
 this is the volt-maze-visible rule:
-	if ether is off-stage and player is in Grey Gyre:
-		the rule succeeds;
+	if ether is off-stage and player is in Grey Gyre, the rule succeeds;
 	the rule fails.
 
 this is the gun-broken rule:
@@ -1555,14 +1530,12 @@ this is the gun-broken rule:
 
 this is the Leo-mad rule:
 	if player is in dirge ridge:
-		if Leo is fightin:
-			the rule succeeds;
+		if Leo is fightin, the rule succeeds;
 	the rule fails;
 
 this is the Rand-mad rule:
 	if player is in dirge ridge:
-		if Rand is fightin:
-			the rule succeeds;
+		if Rand is fightin, the rule succeeds;
 	the rule fails;
 
 this is the washup rule:
@@ -1572,8 +1545,7 @@ this is the washup rule:
 	the rule succeeds;
 
 this is the enemy-lines rule:
-	if ether is in lalaland and player is in Grey Gyre and Leo is in Grey Gyre:
-		the rule succeeds;
+	if ether is in lalaland and player is in Grey Gyre and Leo is in Grey Gyre, the rule succeeds;
 	the rule fails;
 
 to say d-sli:
@@ -1585,13 +1557,11 @@ to say slab-score:
 	say "[if slab-pts > 5]+++ (tired yet?)[run paragraph on][else][slab-pts][end if]";
 
 this is the time-to-compile rule:
-	if scratch paper is reflexive and rebooted is true:
-		the rule succeeds;
+	if scratch paper is reflexive and rebooted is true, the rule succeeds;
 	the rule fails.
 
 this is the time-to-debug rule:
-	if scratch paper is reflexed:
-		the rule succeeds;
+	if scratch paper is reflexed, the rule succeeds;
 	the rule fails.
 
 to say caps-no:
@@ -1612,8 +1582,7 @@ to say patron:
 	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
 
 this is the clam-gone rule:
-	if player is in lode and clam is not in lode:
-		the rule succeeds;
+	if player is in lode and clam is not in lode, the rule succeeds;
 	the rule fails;
 
 to say dest-esc:
@@ -1638,13 +1607,11 @@ to say just-tea:
 	say "Best to think of it as just tea";
 
 this is the crates-menace rule:
-	if player is in Lapsin' plains and crate is reflexive:
-		the rule succeeds;
+	if player is in Lapsin' plains and crate is reflexive, the rule succeeds;
 	the rule fails;
 
 this is the plains rule:
-	if player is in plains:
-		the rule succeeds;
+	if player is in plains, the rule succeeds;
 	the rule fails;
 
 to say knob-skis:
@@ -1666,15 +1633,12 @@ to say to-dig:
 	say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
 
 this is the is-hauntable rule:
-	if player is in anger range and haunter is off-stage:
-		the rule succeeds;
-	if haunter is visible:
-		the rule succeeds;
+	if player is in anger range and haunter is off-stage, the rule succeeds;
+	if haunter is visible, the rule succeeds;
 	the rule fails;
 
 this is the h-assuaged rule:
-	if haunter is reflexed and haunter is in location of player:
-		the rule succeeds;
+	if haunter is reflexed and haunter is in location of player, the rule succeeds;
 	the rule fails.
 
 to say its-msg:
@@ -1689,16 +1653,14 @@ to say war-one:
 	say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of warriors in lalaland > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 
 this is the pas-vis rule:
-	if number of visible hintpastries > 0:
-		the rule succeeds;
+	if number of visible hintpastries > 0, the rule succeeds;
 	the rule fails;
 
 to say eat-pastry:
 	say "The pastry is for eating, not for changing[if toaster is not visible]. It might be more edible if you heated it up, though[end if]"
 
 this is the strood rule:
-	if player has strudel and strudel is reflexed:
-		the rule succeeds;
+	if player has strudel and strudel is reflexed, the rule succeeds;
 	the rule fails;
 
 to say not-singular-hp:
@@ -1732,8 +1694,7 @@ to say gasgad:
 	say "You can't change the gadflies. There are too many"
 
 this is the duck-cant rule:
-	if player is not in subsector and location of duck is location of player:
-		the rule succeeds;
+	if player is not in subsector and location of duck is location of player, the rule succeeds;
 	the rule fails;
 
 to say no-ropin:
@@ -1764,33 +1725,26 @@ to say grail-name:
 	say "His full name, Liam Garn"
 
 this is the see-female-admirer rule:
-	if player is female and admirer is visible:
-		the rule succeeds;
+	if player is female and admirer is visible, the rule succeeds;
 	the rule fails;
 
 this is the bonker-gone rule:
-	if player is in Danger Garden and bonker is in lalaland:
-		the rule succeeds;
+	if player is in Danger Garden and bonker is in lalaland, the rule succeeds;
 	the rule fails;
 
 this is the kid-can-learn rule:
-	if player is in subsector:
-		if smart kid is in subsector:
-			if kid-atten is true:
-				the rule succeeds;
+	if player is in subsector and smart kid is in subsector and kid-atten is true, the rule succeeds;
 	the rule fails.
 
 to say smart-kid-no:
 	say "[kid-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";
 
 this is the kid-male rule:
-	if smart kid is visible and smart kid is male:
-		the rule succeeds;
+	if smart kid is visible and smart kid is male, the rule succeeds;
 	the rule fails;
 
 this is the kid-female rule:
-	if smart kid is visible and smart kid is female:
-		the rule succeeds;
+	if smart kid is visible and smart kid is female, the rule succeeds;
 	the rule fails;
 
 to say giz-tex:
@@ -1817,8 +1771,7 @@ to say flow-fine:
 	say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"
 
 this is the got-pot rule:
-	if flowerpot is not off-stage:
-		the rule succeeds;
+	if flowerpot is not off-stage, the rule succeeds;
 	the rule fails;
 
 to say towersloc:
@@ -1839,8 +1792,7 @@ section otters nudges
 
 this is the cppc rule:
 	if player is in limits:
-		if cactus pearl is in limits or pearl cactus is in limits:
-			the rule succeeds;
+		if cactus pearl is in limits or pearl cactus is in limits, the rule succeeds;
 	the rule fails.
 
 to say adj-needs-ly:
@@ -1866,13 +1818,11 @@ to say add-ly:
 	say "No, you need a couple more letters... [if power-back is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
 
 this is the frontage-after rule:
-	if player is in frontage and macks are in lalaland:
-		the rule succeeds;
+	if player is in frontage and macks are in lalaland, the rule succeeds;
 	the rule fails;
 
 this is the frontage-before rule:
-	if player is in frontage and macks are in frontage:
-		the rule succeeds;
+	if player is in frontage and macks are in frontage, the rule succeeds;
 	the rule fails;
 
 to say both-medals:
@@ -1903,12 +1853,9 @@ to say e-m-prank:
 	say "If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down"
 
 this is the eelmr rule:
-	if player is in alcoves and Elmer is in alcoves:
-		the rule succeeds;
-	if player is in bran barn and mr lee is in bran barn:
-		the rule succeeds;
-	if player is in loop pool:
-		the rule succeeds;
+	if player is in alcoves and Elmer is in alcoves, the rule succeeds;
+	if player is in bran barn and mr lee is in bran barn, the rule succeeds;
+	if player is in loop pool, the rule succeeds;
 	the rule fails;
 
 to say no-lam:
@@ -1921,10 +1868,8 @@ to say restrictr:
 	say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that."
 
 this is the hydra-know rule:
-	if the player is in Inclosure:
-		the rule succeeds;
-	if the player is in alcoves and hydra-known is true:
-		the rule succeeds;
+	if the player is in Inclosure, the rule succeeds;
+	if the player is in alcoves and hydra-known is true, the rule succeeds;
 	the rule fails.
 
 to say no-stockade:
@@ -1940,25 +1885,21 @@ to say elv-mach:
 	say "You have enough to think about without one more of Elvira's machines"
 
 this is the imp-here rule:
-	if player is in Tapering Anger Pit and imp is in Tapering Anger Pit:
-		the rule succeeds;
+	if player is in Tapering Anger Pit and imp is in Tapering Anger Pit, the rule succeeds;
 	the rule fails;
 
 this is the imp-gone rule:
-	if player is in Tapering Anger Pit and imp is not in Tapering Anger Pit:
-		the rule succeeds;
+	if player is in Tapering Anger Pit and imp is not in Tapering Anger Pit, the rule succeeds;
 	the rule fails;
 
 this is the callos-here rule:
 	if player is in anteroom:
-		if whiners are in anteroom:
-			the rule succeeds;
+		if whiners are in anteroom, the rule succeeds;
 	the rule fails;
 
 this is the callos-gone rule:
 	if player is in anteroom:
-		if whiners are not in anteroom:
-			the rule succeeds;
+		if whiners are not in anteroom, the rule succeeds;
 	the rule fails;
 
 to say plur-fruit:
@@ -1989,13 +1930,11 @@ to say no-pryer:
 	say "No, it's the whole pryer bars"
 
 this is the need-mango rule:
-	if player is in clearing and mango is off-stage:
-		the rule succeeds;
+	if player is in clearing and mango is off-stage, the rule succeeds;
 	the rule fails.
 
 this is the lemnomel rule:
-	if lemons are visible and melon is not visible:
-		the rule succeeds;
+	if lemons are visible and melon is not visible, the rule succeeds;
 	the rule fails;
 
 to say papay:
@@ -2047,8 +1986,7 @@ to say no-mess:
 	say "No need to mess with the helpful sign";
 
 this is the elvira-here rule:
-	if otters is not solved:
-		the rule succeeds;
+	if otters is not solved, the rule succeeds;
 	the rule fails;
 
 to say no-set:
@@ -2061,13 +1999,11 @@ to say innies:
 	say "You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway"
 
 this is the in-innie rule:
-	if location of player is innie:
-		the rule succeeds;
+	if location of player is innie, the rule succeeds;
 	the rule fails;
 
 this is the past-strip rule:
-	if strip of profits is visited:
-		the rule succeeds;
+	if strip of profits is visited, the rule succeeds;
 	the rule fails;
 
 to say dir-rej:
@@ -2088,8 +2024,7 @@ to say mild-swear:
 	say "[if mrlp is presto and cur-score of presto > 0]This region has some lame swears, but that's not one of them[else][cussy][end if]";
 
 this is the know-point rule:
-	if cur-score of means manse > 1:
-		the rule succeeds;
+	if cur-score of means manse > 1, the rule succeeds;
 	the rule fails;
 
 to say no-special-verb:
@@ -2111,8 +2046,7 @@ to say cussy:
 	say "You're not fooling ME. Shame on you"
 
 this is the can-i-parse rule:
-	if elmo is in lalaland:
-		the rule succeeds;
+	if elmo is in lalaland, the rule succeeds;
 
 this is the degen-false rule:
 	the rule fails.
