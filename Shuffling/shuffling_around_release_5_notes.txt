@@ -1,9 +1,11 @@
 Shuffling Around Release 5 Notes
 
-This fixed one bug Sean M. Shore found in A Roiling Original. The problem was that the saltine could be used on an item you've prefigured or hinted, which essentially renders it useless. So there's not much new mechanically. There are other minor things, including some code cleanup and also small game text tweaks.
+This fixed one bug Sean M. Shore found that I didn't have time to fix before release. The problem was that the saltine could be used on an item you've prefigured or hinted, which essentially renders it useless. So there's not much new mechanically. There are other minor things, including some code cleanup and also small game text tweaks. I ran tests to make sure that cluing was effective.
 
-The big fixes are probably in Store R. The first two room names are different. The opening room for Store I is naed differently, the dial doesn't quite disappear, and Lord Ablemiser's name was changed too.
+The big fixes are probably area names. The two flanking rooms in store F are renamed, as are several rooms in Store R. The first two room names are different. The opening room for Store I is named differently, the dial doesn't quite disappear, and Lord Ablemiser's name was changed too.
 
+--bug where TAKEing a liver would seem to prevent you from PEELing it. You could actually TAKE it again, but this broke immersion, to say the least.
+--liver in Store F is more appropriately named
 --1000 poem codas and 1000 job competitor names
 --hinting disambiguation is better
 --over 3500 total random texts
@@ -11,8 +13,13 @@ The big fixes are probably in Store R. The first two room names are different. T
 --tweaks to the Trizbort map
 --the game loops after 30 random names or maps, unless you win.
   --the final list-of-lists once you win is touched up too
---certify/rectify usage tweaks
+--CERTIFY/RECTIFY usage tweaks
 --last scan now appears/stays in header until solved
 --you now have the ability to interpret gadget showings with PARSE or turn it off with SPARE
 --VERB/VERBS and PAD VERBS now give general help
 --final room is named differently, with two new commands to win
+--inventory is now organized by general and region-specific items
+
+Many other bugs were fixed, too. https://github.com/andrewschultz/stale-tales-slate has the various changes, including any going forward. I doubt there will be that many. I hope there won't. I enjoyed writing this, but it's time to move on.
+
+The room name changes are Flesh Shelf (west of Self-ID Fields), Gnarliest Triangles (east of Self-ID Fields), Astral Altars, Leis Isle, Rived Drive and Means Manse.

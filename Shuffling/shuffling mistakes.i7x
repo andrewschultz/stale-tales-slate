@@ -92,11 +92,11 @@ understand "towers" as a mistake ("That should work--but it doesn't! Maybe the t
 
 understand "oyster" as a mistake ("Nice try, but that's next game![fake-clue of store y]") when player is in trips strip.
 
-understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.") when player is in s-e-d or player is in Trodes or player is in Trips Strip.
+understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.") when player is in Trips Strip.
 
-understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in s-e-d or player is in Trodes or player is in Trips Strip.
+understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Trips Strip.
 
-understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in s-e-d.
+understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in Flesh Shelf.
 
 book store f
 
@@ -122,7 +122,7 @@ understand "lien" as a mistake ("If they owe something, that's their business. I
 
 chapter stored er dots
 
-understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in s-e-d.
+understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in Flesh Shelf.
 
 understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or player has bread.
 

@@ -1318,8 +1318,8 @@ rambling shout	"[one of]The shout is a clue which way to go. [plus][or]You shoul
 aroma of teas	"[one of]The aroma of teas is a clue which way to go. [plus][or]You should go EAST. [minus][cycling]"
 turnstile	"[if Enclosure is visited]You can come and go as you need[else]You need a way through the turnstile--perhaps you should learn to fit in[end if]."
 bread	"[one of]The bread can be changed. [plus][or]It becomes a BEARD. [minus][cycling]"
-sandwich	"[one of]The sandwich [i-sed]is useful for two puzzles. It has 'the usual two parts.' [plus][or]Take BREAD to separate the sandwich from Stored, Er, Dots into bread and Spam. [minus][cycling]"
-chisel	"[one of]That chisel might be handy for some items[if player is in Enclosure] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers in Stored, Er, Dots. [minus][cycling]"
+sandwich	"[one of]The sandwich[i-fle] is useful for two puzzles. It has 'the usual two parts.' [plus][or]Take BREAD to separate the sandwich from the Flesh Shelf into bread and Spam. [minus][cycling]"
+chisel	"[one of]That chisel might be handy for some items[if player is in Enclosure] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers[i-fle]. [minus][cycling]"
 liches	"[one of]The liches are a tool of some greater evil, and their descriptions suggest another word (+)[or]Make them into a CHISEL[cycling]."
 River Ville liver	"[put-can]"
 viler liver	"[put-can]"
@@ -1525,8 +1525,8 @@ to say toho:
 to say put-can:
 	say "[one of]Examining the livers indicates they need to be processed. [plus][or]You need to put both livers in the canister. [plus][or][unless River Ville liver is in lalaland]PUT River Ville IN CANISTER. [end if][unless viler liver is in lalaland]PUT VILER LIVER IN CANISTER. [end if][minus][cycling]"
 
-to say i-sed:
-	say "[if player is not in s-e-d]in Stored, Er, Dots [end if]";
+to say i-fle:
+	say "[if player is not in Flesh Shelf] in Flesh Shelf[end if]";
 
 to say i-s-t:
 	say "[if player is in Sorted Trodes][else]in Sorted Trodes [end if]";
@@ -1541,7 +1541,7 @@ carry out forest-hinting:
 	if location of player is Self-ID Fields:
 		if Sorted Trodes is unvisited:
 			all-say "Go east and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
-		if s-e-d is unvisited:
+		if Flesh Shelf is unvisited:
 			all-say "Go west and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
 		if ones are off-stage or shades are off-stage:
 			all-say "You need to solve a puzzle to the east." instead;
@@ -1552,7 +1552,7 @@ carry out forest-hinting:
 			try objhinting the bread instead;
 		if shades are off-stage:
 			try objhinting dashes instead;
-	if player is in s-e-d: [this and the above two together mean that you will get local hints first before generic ones.]
+	if player is in Flesh Shelf: [this and the above two together mean that you will get local hints first before generic ones.]
 		if bread is part of the sandwich:
 			try objhinting sandwich instead;
 	if Enclosure is unvisited:
@@ -1985,16 +1985,10 @@ understand "drink [something]" as drinking.
 rule for supplying a missing noun while drinking: now the noun is the player.
 
 instead of drinking:
-	if noun is phial or noun is lube:
-		say "The lube looks sort of like mercury, now you think of it. Ugh." instead;
-	if noun is oils:
-		say "The oils seem too valuable for that. You're not thirsty, anyway." instead;
-	if noun is beer:
-		say "It's almost water, in its own way, but it's still probably much worse. Or it was. The can is empty." instead;
-	if noun is drainage:
-		say "Eww, don't even." instead;
-	if noun is dots:
-		say "But your tongue might get stuck!" instead;
+	if noun is phial or noun is lube, say "The lube looks sort of like mercury, now you think of it. Ugh." instead;
+	if noun is oils, say "The oils seem too valuable for that. You're not thirsty, anyway, and they wouldn't help if you were." instead;
+	if noun is beer, say "It's almost water, in its own way, but it's still probably much worse. Or it was. The can is empty." instead;
+	if noun is drainage or noun is skin sink, say "Eww, don't even." instead;
 	say "I show no kind grin on drinking!"
 
 instead of waking up:
@@ -6147,50 +6141,58 @@ to say glasstype:
 to say nosey:
 	say "[one of]a fake warty witch's conker[or]a fake parrot beak[or]a red plastic ball under his glasses[or]a fake pig snout[or]a Pinocchio-style wooden rod sprouting from his face[or]a pickle-shaped and -colored schnoz[at random]"
 
-chapter Stored Er Dots
+chapter Flesh Shelf
 
-s-e-d is west of Self-ID Fields. s-e-d is in Forest. s-e-d is privately-named. printed name of s-e-d is "Stored, er, Dots". understand "stored dots" and "stored er dots" as s-e-d.
+Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Forest.
 
-first-sed-yet is a truth state that varies.
+the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink."
 
-after choosing notable locale objects when player is in s-e-d:
+the iciest cities are useless scenery in Flesh Shelf. "They are spooky and all, but thankfully, they're too far away."
+
+instead of doing something with iciest cities:
+	if action is procedural, continue the action;
+	say "The cities are too far away to do anything with. Or to do anything to you."
+
+instead of going down in Flesh Shelf: try going west instead;
+
+first-fs-yet is a truth state that varies.
+
+after choosing notable locale objects when player is in Flesh Shelf:
 	set the locale priority of the sandwich to 1;
 
-rule for printing a locale paragraph about a thing in s-e-d when first-sed-yet is false:
+rule for printing a locale paragraph about a thing in Flesh Shelf when first-fs-yet is false:
 	say "You notice the flesh shelf contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
 	[now scantier canister is mentioned;]
 	now sandwich is mentioned;
 	now all glopmeats are mentioned;
-	now dots are mentioned;
-	now flesh shelf is mentioned;
 	now the player is mentioned;
-	now first-sed-yet is true;
+	now first-fs-yet is true;
 	the rule succeeds;
 
-[rule for printing a locale paragraph about a thing in s-e-d:
+[rule for printing a locale paragraph about a thing in Flesh Shelf:
 	say "PING [the item described] [if the item described is mentioned]ment[else]not ment[end if].";
 	continue the action;]
 
-rule for printing a locale paragraph about a glopmeat when s-e-d is visited:
+rule for printing a locale paragraph about a glopmeat when Flesh Shelf is visited:
 	if the item described is not mentioned:
-		say "The [list of glopmeats] [if number of glopmeats in s-e-d is 1]is[else]are[end if] still on the flesh shelf.";
+		say "The [list of glopmeats] [if number of glopmeats in Flesh Shelf is 1]is[else]are[end if] still in the skin sink.";
 		now all glopmeats are mentioned;
 		the rule succeeds;
 
-check going nowhere in s-e-d:
-	say "You can only go back east." instead;
+check going nowhere in Flesh Shelf:
+	say "It's too steep down every way except back east." instead;
 
 section canister / red ring
 
-the scantier canister is a fixed in place container in s-e-d. initial appearance is "[can-desc]."
+the scantier canister is a fixed in place container in Flesh Shelf. initial appearance is "[can-desc]."
 
 description of canister is "It's small, nowhere near the size of a cistern. It's got a red ring you can put stuff in, and you can see a grinder of sabled blades inside. The grinder reads [i]team meat, tame [']em at...[r] and appears to have no switch or anything. MASH SHAM HAMS is written on it[if number of glopmeats in lalaland is 1]. It's about half full[end if]."
 
 to say can-desc:
 	if livers are not off-stage:
-		say "The canister you broke sits on the flesh shelf";
+		say "The canister you broke sits here";
 	else:
-		say "A scantier canister sits on the flesh shelf[if number of glopmeats in canister is 1], containinig the [list of glopmeats in canister][one of]. You can probably call it a can without hurting its feelings[or][stopping]";
+		say "A scantier canister sits here[if number of glopmeats in canister is 1], containinig the [list of glopmeats in canister][one of]. You can probably call it a can without hurting its feelings[or][stopping]";
 
 understand "can" as canister.
 
@@ -6256,7 +6258,7 @@ check inserting into the scantier canister:
 		say "Interesting thought, but you don't need to make a casserole." instead;
 	if noun is a glopmeat:
 		if player does not have chisel and player does not have noun:
-			say "There's no way to peel the meat off the flesh shelf, yet." instead;
+			say "There's no way to peel the meat off, yet." instead;
 		if player has chisel and player does not have glopmeat:
 			say "(peeling the [noun] off the wall first)[line break]";
 		if number of glopmeats in lalaland is 1:
@@ -6291,30 +6293,9 @@ check switching on the canister:
 check switching off the canister:
 	say "There appear to be no buttons to switch it on or off."
 
-section flesh shelf
-
-the flesh shelf is useless scenery in s-e-d.
-
-initial appearance of flesh shelf is "[if number of things on flesh shelf is 0]You've taken everything from the shelf[else]You see [a list of things on flesh shelf] on the shelf[end if]."
-
-check taking flesh shelf:
-	say "It's too heavy, and nobody, um, helfs you (that's a Far Side reference)." instead;
-
-description of flesh shelf is "NO SHAM HAMS ON FLESH SHELF is traced into its top[if number of things on flesh shelf is 0]. It's clear of items[else]. You can see [a list of things on flesh shelf] on it[end if]."
-
-description of s-e-d is "This is a storing area with various unpalatable-looking meats on a flesh shelf. Dots are all over the shelf too."
-
-the dots are useless scenery in s-e-d. "They are probably just ice, but they, er, fit in."
-
-check taking dots:
-	say "[one of]You touch one, and it melts. But there are plenty others[or]The next dot would just melt, too[stopping]." instead;
-
-check examining the flesh shelf:
-	ignore the examine supporters rule.
-
 section sandwich
 
-a sandwich is in s-e-d. initial appearance is "A sandwich lies on the flesh shelf. It doesn't seem as stuck to the shelf as the livers[if number of glopmeats in s-e-d < 2] were[end if]."
+a sandwich is in Flesh Shelf. initial appearance is "A sandwich lies on the ground here. It doesn't seem as stuck as the livers[if number of glopmeats in Flesh Shelf < 2] were[end if]."
 
 instead of pulling sandwich:
 	try opening sandwich;
@@ -6416,13 +6397,13 @@ does the player mean inserting the cur-liv into:
 		it is very unlikely;
 	it is likely.
 
-The River Ville liver is a glopmeat in s-e-d.
+The River Ville liver is a glopmeat in Flesh Shelf.
 
 understand "riverville" and "riverville liver" as river ville liver.
 
 printed name of River Ville liver is "RiverVille Liver". indefinite article of River Ville liver is "a".
 
-The viler liver is a glopmeat in s-e-d.
+The viler liver is a glopmeat in Flesh Shelf.
 
 description of a glopmeat is usually "[if item described is not in canister]It's ugly and frozen and stamped 100% amalgamatable[else]It's all chopped up in the canister right now[end if]."
 
@@ -6453,7 +6434,7 @@ check putting Spam on bread:
 	say "No sense remaking the sandwich." instead;
 
 to say chiz-chiz:
-	say ". But you look through your inventory, and that chisel [if number of glopmeats in s-e-d is 2]looks made for scraping stuff. It easily peels the liver, which you take[else]looks up to the task again. It works[end if]"
+	say ". But you look through your inventory, and that chisel [if number of glopmeats in Flesh Shelf is 2]looks made for scraping stuff. It easily peels the liver, which you take[else]looks up to the task again. It works[end if]"
 
 instead of eating a glopmeat:
 	say "Uggh. No way[if noun is examined]. Even though someone stamped it as eatable[end if]."
@@ -6649,7 +6630,7 @@ check going in Ghouls' Slough:
 	say "Useless without any sort of guide to look at[if player has maps]. Hey, those maps might be useful[end if]." instead;
 
 check examining maps in Ghouls' Slough:
-	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride. Then the chilling cries of 'BRAAINS, SABRINA!' distract you, until you look up in horror at one of the iciest cities...";
+	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
 	move player to Frost Forts instead;
 
 chapter Frost Forts
@@ -12156,7 +12137,7 @@ check wearing the beard:
 report wearing the beard:
 	if player wore the beard:
 		say "You adjust the disguise you're already wearing." instead;
-	say "It's suitably silly to fit in with the folks passing through the turnstile[if player is in trodes] to the west[else if player is in s-e-d] to the east[end if], but different enough you're not conforming.";
+	say "It's suitably silly to fit in with the folks passing through the turnstile[if player is in trodes] to the west[else if player is in Flesh Shelf] to the east[end if], but different enough you're not conforming.";
 	the rule succeeds;
 
 check putting it on(this is the disguise-piece creation rule):
@@ -13170,10 +13151,10 @@ does the player mean peeling with the chisel: it is likely.
 
 does the player mean doing something with the cur-liv (this is the use-cur-liv rule):
 	if the current action is peelxing:
-		if cur-liv is not in s-e-d:
+		if cur-liv is not in Flesh Shelf:
 			it is very unlikely;
 	if the current action is peeling with:
-		if cur-liv is not in s-e-d:
+		if cur-liv is not in Flesh Shelf:
 			it is very unlikely;
 	it is likely.
 
@@ -13215,7 +13196,7 @@ carry out peeling it with:
 		say "That doesn't need to be scraped. Try something stuck to something." instead;
 	if noun is in canister:
 		say "The chisel and the blades would have a big fight first." instead;
-	if noun is not in s-e-d:
+	if noun is not in Flesh Shelf:
 		say "You already peeled it off." instead;
 	say "Cr-r-r-r-k. The chisel successfully leverages the freezer-burned [noun] from the wall.";
 	now player has noun;
@@ -13502,7 +13483,7 @@ carry out sring:
 					now i2 entry is in sf;
 					now i1 entry is in rf;
 	if player is in self-id fields:
-		if trodes is visited or s-e-d is visited:
+		if trodes is visited or Flesh Shelf is visited:
 			say "This shouldn't be a problem, but you've explored some other rooms after hitting the fields.";
 		else:
 			say "Zapping you back to the Trips Strip, with new directions to plow through.";
@@ -14414,7 +14395,7 @@ to unsolve-forest:
 	now nose is off-stage;
 	now beard is off-stage;
 	now shades are off-stage;
-	now sandwich is in s-e-d;
+	now sandwich is in Flesh Shelf;
 	now bread is part of sandwich;
 	now spam is part of sandwich;
 	now maps are off-stage;

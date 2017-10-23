@@ -157,8 +157,11 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "west"	435124866	--	--	first-two-forest rule	"[forest-no]."
 "east"	329377911	--	--	first-two-forest rule	"[forest-no]."
 "eat"	233103945	--	teas	--	"[forest-no]. Anyway, it doesn't smell like just one tea."
-"undead"	346065420	--	line of no life	--	"[no-un]."
-"undeads"	442339386	--	line of no life	--	"[no-un]."
+"line"	295520302	self-id	--	--	"They're dead and not interfering with you."
+"life"	253127690	self-id	--	--	"They're dead and not interfering with you."
+"lineof"	396387775	self-id	--	--	"They're dead and not interfering with you."
+"undead"	346065420	self-id	--	--	"[no-un]."
+"undeads"	442339386	self-id	--	--	"[no-un]."
 "shell"	368990052	sorted trodes	--	--	"[in-sort of dashes]."
 "bucket"	426379602	sorted trodes	--	--	"[in-sort of ones]."
 "bubble"	341982470	sorted trodes	--	--	"[in-sort of noughts]."
@@ -178,17 +181,13 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "naughts"	445467118	--	noughts	--	"[nau-zer-enuf]."
 "nought"	421357911	--	noughts	--	"There's more than one nought."
 "turnstile"	788443914	--	turnstile	--	"You don't need to do anything with the turnstile except get through it."
+"shelf"	341691109	Flesh Shelf	--	--	"The shelf is frozen that way. Ba dum bum."
 "sandwich"	397613884	--	sandwich	--	"It would be easier to just pick it apart physically, without anything fancy."
 "canister"	547607653	--	grinder	--	"The canister [if canister is not broken]is too solid[else]has suffered enough abuse. No need to break it further[end if]."
 "grinder"	465982860	--	grinder	--	"The grinder is too solid."
 "grin"	231823859	--	grinder	--	"The ring does not bend."
 "hams"	199819236	--	canister	--	"You think 'Hm, as...' but don't know what to do. Maybe that is just writing, and [if canister is broken]in any case, you broke the canister, anyway[else]you just put stuff in the canister[end if]."
-"bleads"	319529726	s-e-d	--	--	"The blades, buried in the grinder, remain lifeless."
-"shelf"	341691109	s-e-d	--	--	"The shelf is frozen that way. Ba dum bum."
-"dots"	294765650	--	dots	--	"The dots are really just ice. And you don't need ice or water."
-"line"	295520302	self-id	--	--	"They're dead and not interfering with you."
-"life"	253127690	self-id	--	--	"They're dead and not interfering with you."
-"lineof"	396387775	self-id	--	--	"They're dead and not interfering with you."
+"bleads"	319529726	Flesh Shelf	--	--	"The blades, buried in the grinder, remain lifeless."
 "meat"	297179098	--	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	--	see-meats rule	"[spec-meat]."
 "liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is in lalaland or viler liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
@@ -210,7 +209,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "selfid"	370430745	self-id	--	--	"[loc-rej]."
 "werewolves"	1016216878	--	wolves	--	"They won't be changed with magic. Thankfully, you've got something more direct."
 "lupine"	482092068	--	wolves	--	"They are the lupine lineup from your notes, but for your purpose, they're wolves."
-"storde"	507895562	--	--	no-d rule	"You didn't need to do anything to store D in the strip, and you don't now--it'd be weird if store D fit in store F, anyway."
 "cruel"	391055143	Enclosure	--	--	"[loc-rej]."
 "ones"	367340160	Enclosure	--	--	"[loc-rej]."
 "enclosure"	758395303	Enclosure	--	--	"[loc-rej]."
@@ -693,12 +691,12 @@ this is the first-two-forest rule:
 	the rule fails;
 
 this is the see-meats rule:
-	if River Ville is visible or Spam is visible or viler liver is visible or player is in s-e-d, the rule succeeds;
+	if River Ville is visible or Spam is visible or viler liver is visible or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
 
 this is the liv-vis rule:
 	if number of carried glopmeats > 0, the rule succeeds;
-	if player is in s-e-d and number of glopmeats in s-e-d > 1, the rule succeeds;
+	if player is in Flesh Shelf and number of glopmeats in Flesh Shelf > 1, the rule succeeds;
 	the rule fails;
 
 to say bothlivers:
@@ -719,7 +717,7 @@ to say marsh-lake:
 section sortie nudges
 
 this is the no-d rule:
-	if player is in trodes or player is in fields or player is in s-e-d, the rule succeeds;
+	if player is in trodes or player is in fields or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
 
 this is the sf-or-rf rule:
