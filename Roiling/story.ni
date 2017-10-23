@@ -26912,6 +26912,7 @@ reg-needed	yux
 --	"LISTENing in various places?"
 --	"ATTACKing various NPCs?"
 --	"Asking for a HINT in the Inclosure?"
+--	"reading Roiling Mistakes.i7x for other 'clever' 'jokes?'"
 routes	"Cursing twice in the Cleric Circle? Or once in the Cripple Clipper?"
 --	"[if routes is solved]Or[else]Cursing[end if] anywhere?"
 --	"Feeling BANE around the bean?"

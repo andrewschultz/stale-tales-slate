@@ -190,6 +190,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "shelf"	341691109	Flesh Shelf	--	--	"The shelf is frozen that way. Ba dum bum." [FLESH SHELF START]
 "skin"	263107498	Flesh Shelf	--	--	"The skin sink is frozen that way. Ba dum bum."
 "ink"	166833532	Flesh Shelf	--	--	"The skin sink is frozen that way. Ba dum bum."
+"cities"	436181370	Flesh Shelf	--	--	"some text"
+"city"	289467701	Flesh Shelf	--	--	"some text"
 "sandwich"	397613884	--	sandwich	--	"It would be easier to just pick it apart physically, without anything fancy."
 "canister"	547607653	--	grinder	--	"The canister [if canister is not broken]is too solid[else]has suffered enough abuse. No need to break it further[end if]."
 "grinder"	465982860	--	grinder	--	"The grinder is too solid."

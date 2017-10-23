@@ -264,7 +264,9 @@ use MAX_PROP_TABLE_SIZE of 240000.
 
 section compiler adjust constant section - not for release
 
-use MAX_VERBS of 410.
+use MAX_VERBS of 430.
+
+use MAX_VERBSPACE of 4600.
 
 section about the player
 
@@ -5684,7 +5686,7 @@ description of store c is "[one of]It's bolted up but seems to be advertising a 
 
 Store D is a sto. understand "store/ 4/four" as store d.
 
-description of store d is "[na]"
+description of store d is "On store D, you see some scratch work scrawled:[paragraph break]OLD STORE F ROOM NAMES[line break]Stored, Er, Dots[line break]Sorted Trodes[paragraph break]But other than that, it doesn't seem particularly lively."
 
 Store E is a sto. understand "store/ 5/five" as store e.
 
@@ -6162,16 +6164,26 @@ after choosing notable locale objects when player is in Flesh Shelf:
 
 rule for printing a locale paragraph about a thing in Flesh Shelf when first-fs-yet is false:
 	say "You notice the skin sink contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
-	[now scantier canister is mentioned;]
+	now scantier canister is mentioned;
 	now sandwich is mentioned;
 	now all glopmeats are mentioned;
 	now the player is mentioned;
 	now first-fs-yet is true;
 	the rule succeeds;
 
-[rule for printing a locale paragraph about a thing in Flesh Shelf:
-	say "PING [the item described] [if the item described is mentioned]ment[else]not ment[end if].";
-	continue the action;]
+rule for printing a locale paragraph about a thing in Flesh Shelf when first-fs-yet is true:
+	now scantier canister is mentioned;
+	now sandwich is mentioned;
+	now all glopmeats are mentioned;
+	now the player is mentioned;
+	let Q be number of sinky things in flesh shelf;
+	say "The skin sink still contains [if livers are not off-stage]that canister you broke[else]a scantier canister[end if][if number of glopmeats in canister is 1] (half full of liver)[end if][if Q > 0], as well as [list of sinky things in flesh shelf][end if].";
+	continue the action;
+
+definition: a thing (called t) is sinky:
+	if t is a glopmeat, yes;
+	if t is sandwich, yes;
+	no;
 
 rule for printing a locale paragraph about a glopmeat when Flesh Shelf is visited:
 	if the item described is not mentioned:
@@ -6184,7 +6196,7 @@ check going nowhere in Flesh Shelf:
 
 section canister / red ring
 
-the scantier canister is a fixed in place container in Flesh Shelf. initial appearance is "[can-desc]."
+the scantier canister is a fixed in place container in Flesh Shelf.
 
 description of canister is "It's small, nowhere near the size of a cistern. It's got a red ring you can put stuff in, and you can see a grinder of sabled blades inside. The grinder reads [i]team meat, tame [']em at...[r] and appears to have no switch or anything. MASH SHAM HAMS is written on it[if number of glopmeats in lalaland is 1]. It's about half full[end if]."
 
@@ -6451,12 +6463,17 @@ understand "glop" and "glob" as livers.
 
 chapter Gnarliest Triangles
 
-Gnarliest Triangles is east of Self-ID Fields. "Computery things are organized here. A notes stone over a stack of tacks relates some sort of silly myth that's probably relevant to you. [container-desc]. You can go back west.". Gnarliest Triangles is in Forest.
+Gnarliest Triangles is east of Self-ID Fields. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
+
+to decide whether still-need-in-triangles:
+	if ones are in bucket, yes;
+	if dashes are in shell, yes;
+	if noughts are in bubble, yes;
+	no;
 
 instead of singing in Gnarliest Triangles, say "Alas, the notes stone does not interact favorably with your tones."
 
-check going nowhere in Gnarliest Triangles:
-	say "You can only go back west." instead;
+check going nowhere in Gnarliest Triangles: say "You can only go back west." instead;
 
 the stick figures are amusing scenery in Gnarliest Triangles. understand "stick/ figure" as stick figures.
 
@@ -6479,9 +6496,9 @@ description of notes stone is "'[i]Attention, word-boy/girl/woman/man! You may t
 
 to say container-desc:
 	if number of containers in Gnarliest Triangles is 0:
-		say "You've pretty much ransacked this place. There's nothing much left";
-		the rule succeeds;
-	say "You see [number of containers in Gnarliest Triangles in words] container[if number of containers in Gnarliest Triangles > 1]s[end if] here: [a list of the containers in Gnarliest Triangles]";
+		say "You've looted the triangle of the bucket, shell and bubble";
+		continue the action;
+	say "Placed in a triangle here are [a list of the containers in Gnarliest Triangles]";
 
 after choosing notable locale objects when player is in Gnarliest Triangles:
 	repeat with item running through containers in Gnarliest Triangles:
@@ -6632,7 +6649,7 @@ check going in Ghouls' Slough:
 	say "Useless without any sort of guide to look at[if player has maps]. Hey, those maps might be useful[end if]." instead;
 
 check examining maps in Ghouls' Slough:
-	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
+	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
 	move player to Frost Forts instead;
 
 chapter Frost Forts
@@ -13262,6 +13279,7 @@ metros	"Scanning the deadbeat?"
 metros	"Asking the beats anything?"
 metros	"The following anagrams in the metros where appropriate: sap, asp, smitten, trounce, stalker, snores, senors, tar, reins, risen, lair(s), lira, liar(s), bates[nfi]"
 --	"the following anagrams in the resort where (in)appropriate: slite, poser, prose, achin, roister, sex it"
+--	"reading Shuffling Around Mistakes.i7x for other 'clever' 'jokes?'"
 --	"Converting the sprig to prigs in the Rived Drive?"
 --	"Any anagrams I missed? Let me know. I'll credit you. Or if you find another silly joke to throw in, tell me. I enjoy them."
 
@@ -14775,6 +14793,7 @@ carry out foing:
 		the rule succeeds;
 	let GGG be a random visible guider;
 	try going godir of GGG;
+	consider the notify score changes rule;
 	the rule succeeds;
 
 chapter dscing

@@ -2,6 +2,11 @@ Version 1/171011 of Shuffling Mistakes by Andrew Schultz begins here.
 
 volume Shuffling Mistakes
 
+definition: a thing (called t) is quickvis:
+	if player carries t, yes;
+	if t is in location of player, yes;
+	no;
+
 book general
 
 understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.")
@@ -50,7 +55,7 @@ chapter dry yard
 understand "dray" as a mistake ("You don't have enough possessions to need a cart. You probably need somewhere to go, instead.") when player is in Dry Yard.
 
 [def=yard-door]
-understand "rood" as a mistake ("[if yard-door is visible]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in dry yard.
+understand "rood" as a mistake ("[if yard-door is in dry yard]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in dry yard.
 
 chapter thickest thickets
 
@@ -58,7 +63,7 @@ understand "sandler" as a mistake ("I award you zero points for that anagramming
 
 understand "landers" as a mistake ("There will be better hints than a manners advice column once you move on[if darn-slan is false], though the darnels make you see red for a bit[end if].") when player is in Thickest Thickets.
 
-understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is visible.
+understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is quickvis.
 
 understand "gato" as a mistake ("Nice try, but wrong language. Another animal would be more likely to eat through the thickets.") when player is in thickets.
 
@@ -68,7 +73,7 @@ understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Ega
 
 understand "mist" as a mistake ("No, those TMIs on the broad board are useful.") when player is in notices section.
 
-understand "bactine" as a mistake ("The cabinet bit you, but there was no lasting damage.") when cabinet is visible and cabinet-bit-me is true.
+understand "bactine" as a mistake ("The cabinet bit you, but there was no lasting damage.") when cabinet is quickvis and cabinet-bit-me is true.
 
 understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.") when phial is visible.
 
@@ -126,19 +131,39 @@ chapter Flesh Shelf
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in Flesh Shelf.
 
-understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or player has bread.
+understand "inks" as a mistake ("The skin sink bleeds no color.") when player is in flesh shelf.
 
-understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in trips strip]behind store M[else]in the Metros[end if] anyway.") when Spam is visible or maps are visible.
+understand "helf" and "helfs" as a mistake ("While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'") when player is in Flesh Shelf.
+
+understand "kin" and "kins" as a mistake ("Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers .") when player is in flesh shelf.
+
+understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is quickvis.
+
+understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in trips strip]behind store M[else]in the Metros[end if] anyway.") when Spam is quickvis or maps are quickvis.
 
 chapter Gnarliest Triangles
 
-understand "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can EXAMINE.") when player is in Gnarliest Triangles.
+understand "integral" and "integrals" as a mistake ("I think this game is hard enough without bringing Calculus into it.") when player is in Gnarliest Triangles.
+
+understand "reslating" as a mistake("While you have all the time in the world, there's no sense deliberately putting things off.") when player is in Gnarliest Triangles.
+
+understand "relating" as a mistake("This isn't really a game about emotional connections.") when player is in Gnarliest Triangles.
+
+understand "alerting" and "alertings" as a mistake ("There's nobody to alert here.") when player is in Gnarliest Triangles.
+
+understand "altering" and "alterings" as a mistake ("No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.") when player is in Gnarliest Triangles.
+
+understand "teraglin" and "teraglins" as a mistake ("But where would the fish go?") when player is in Gnarliest Triangles.
+
+understand "tanglier" as a mistake ("Things are mixed up enough!") when player is in Gnarliest Triangles.
+
+understand "tone" and "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can EXAMINE.") when player is in Gnarliest Triangles.
 
 understand "gnu" as a mistake ("Shotgun: gnu? Tosh!") when player has shotgun.
 
-understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or location of player is location of ones.
+understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or ones are quickvis.
 
-understand "gunshot" as a mistake ("[if noughts are visible]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is visible and silver is off-stage], but you don't have a bullet yet[else if shotgun is visible and player has silver], but you need to load it first[end if].") when noughts are visible or shotgun is visible.
+understand "gunshot" as a mistake ("[if noughts are visible]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is visible and silver is off-stage], but you don't have a bullet yet[else if shotgun is visible and player has silver], but you need to load it first[end if].") when noughts are quickvis or shotgun is quickvis.
 
 chapter cruel ones enclosure
 
