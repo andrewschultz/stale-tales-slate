@@ -74,6 +74,8 @@ understand "angel" as a mistake ("You've got enough practical help. You don't ne
 
 understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.") when cabinet is in location of player.
 
+understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.") when show hows tag is visible.
+
 book stores
 
 chapter trips strip
@@ -120,7 +122,7 @@ understand "olefin" as a mistake ("Organic chemistry involves shuffling things a
 
 understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in self-id fields.
 
-chapter stored er dots
+chapter Flesh Shelf
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in Flesh Shelf.
 
@@ -128,17 +130,15 @@ understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep y
 
 understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in trips strip]behind store M[else]in the Metros[end if] anyway.") when Spam is visible or maps are visible.
 
-chapter sorted trodes
+chapter Gnarliest Triangles
 
-understand "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can EXAMINE.") when player is in trodes.
+understand "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can EXAMINE.") when player is in Gnarliest Triangles.
 
 understand "gnu" as a mistake ("Shotgun: gnu? Tosh!") when player has shotgun.
 
 understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or location of player is location of ones.
 
 understand "gunshot" as a mistake ("[if noughts are visible]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is visible and silver is off-stage], but you don't have a bullet yet[else if shotgun is visible and player has silver], but you need to load it first[end if].") when noughts are visible or shotgun is visible.
-
-understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.") when show hows tag is visible.
 
 chapter cruel ones enclosure
 

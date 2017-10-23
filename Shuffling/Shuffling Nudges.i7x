@@ -2,7 +2,9 @@ Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
 
 volume nudges
 
-[remember to sort with nud.pl after changes]
+[remember to sort with nud.pl after changes or, perhaps, before release. NUD.PL organizes the "to say" and "rule" in the same order they appear in the table.]
+
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take random priority over others. For instance, you can go west or east from Self-ID Fields, or north or south from Undesired Underside.]
 
 book nudge tables
 
@@ -146,7 +148,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 
 table of Forest nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
-"conifer"	446903324	--	--	first-two-forest rule	"[no-con]."	[forest nudges]
+"conifer"	446903324	--	--	first-two-forest rule	"[no-con]." [START OF SOFTER FOREST]
 "conifers"	543177290	--	--	first-two-forest rule	"[no-con]."
 "rambling"	370319574	--	rambling shout	--	"[guider-content]."
 "whiff"	243239710	--	whiff of stew	--	"[guider-content]."
@@ -157,23 +159,27 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "west"	435124866	--	--	first-two-forest rule	"[forest-no]."
 "east"	329377911	--	--	first-two-forest rule	"[forest-no]."
 "eat"	233103945	--	teas	--	"[forest-no]. Anyway, it doesn't smell like just one tea."
+"rest"	412513896	rf	--	--	"[loc-rej]." [START OF REST OF FOREST]
+"selfid"	370430745	self-id	--	--	"[loc-rej]." [START SELF-ID FIELDS]
 "line"	295520302	self-id	--	--	"They're dead and not interfering with you."
 "life"	253127690	self-id	--	--	"They're dead and not interfering with you."
 "lineof"	396387775	self-id	--	--	"They're dead and not interfering with you."
 "undead"	346065420	self-id	--	--	"[no-un]."
 "undeads"	442339386	self-id	--	--	"[no-un]."
-"shell"	368990052	sorted trodes	--	--	"[in-sort of dashes]."
-"bucket"	426379602	sorted trodes	--	--	"[in-sort of ones]."
-"bubble"	341982470	sorted trodes	--	--	"[in-sort of noughts]."
-"elegy"	464385011	sorted trodes	--	--	"The elegy doesn't need to be twisted any more."
-"tacks"	273510565	sorted trodes	--	--	"[tack-heap]."
-"tack"	177236599	sorted trodes	--	--	"[tack-heap]."
-"notes"	470450178	sorted trodes	--	--	"The notes are just for reading."
-"note"	374176212	sorted trodes	--	--	"The notes are just for reading."
+"triangle"	518741643	Gnarliest Triangles	--	--	"some text"
+"triangles"	615015609	Gnarliest Triangles	--	--	"some text"
+"shell"	368990052	Gnarliest Triangles	--	--	"[in-sort of dashes]."
+"bucket"	426379602	Gnarliest Triangles	--	--	"[in-sort of ones]."
+"bubble"	341982470	Gnarliest Triangles	--	--	"[in-sort of noughts]."
+"elegy"	464385011	Gnarliest Triangles	--	--	"The elegy doesn't need to be twisted any more."
+"tacks"	273510565	Gnarliest Triangles	--	--	"[tack-heap]."
+"tack"	177236599	Gnarliest Triangles	--	--	"[tack-heap]."
+"notes"	470450178	Gnarliest Triangles	--	--	"The notes are just for reading."
+"note"	374176212	Gnarliest Triangles	--	--	"The notes are just for reading."
 "muzzle"	596740144	--	shotgun	--	"You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough."
-"stick"	316315593	trodes	--	--	"[vand-art]."
-"figure"	422343163	trodes	--	--	"[vand-art]."
-"figures"	518617129	trodes	--	--	"[vand-art]."
+"stick"	316315593	Gnarliest Triangles	--	--	"[vand-art]."
+"figure"	422343163	Gnarliest Triangles	--	--	"[vand-art]."
+"figures"	518617129	Gnarliest Triangles	--	--	"[vand-art]."
 "zeros"	506726073	--	noughts	--	"They're noughts, not zeros."
 "zeroes"	634532182	--	noughts	--	"They're noughts, not zeroes."
 "eon"	271066194	--	ones	--	"They're ones, not a one."
@@ -193,12 +199,17 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is in lalaland or viler liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
 "ville"	387591453	--	river ville liver	--	"[rivliv]."
 "river"	450611381	--	river ville liver	--	"[rivliv]."
+"cruel"	391055143	Enclosure	--	--	"[loc-rej]." [START OF CRUEL ONES ENCLOSURE]
+"ones"	367340160	Enclosure	--	--	"[loc-rej]."
+"enclosure"	758395303	Enclosure	--	--	"[loc-rej]."
 "cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
 "snow"	347468824	frost forts	--	--	"[froz-ha-ha]."
+"slough"	399428190	slough	--	--	"[loc-rej]." [START OF GHOULS' SLOUGH]
 "marsh"	285143039	slough	--	--	"[marsh-lake]."
 "lake"	236740944	slough	--	--	"[marsh-lake]."
+"frost"	385575260	frost	--	--	"[loc-rej]." [START OF FROST FORTS]
 "capital"	306763883	--	vowels	--	"You need to deal with all the capitals. And they're specific letters."
 "capitals"	403037849	--	vowels	--	"They aren't just any capitals. They're specific letters."
 "icecap"	294463902	frost forts	--	--	"[froz-ha-ha]."
@@ -206,17 +217,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "iced"	212833629	--	iced dice	--	"[froz-ha-ha]."
 "ice"	191804540	--	iced dice	--	"[froz-ha-ha]."
 "sleet"	508810041	frost forts	--	--	"[froz-ha-ha]."
-"selfid"	370430745	self-id	--	--	"[loc-rej]."
 "werewolves"	1016216878	--	wolves	--	"They won't be changed with magic. Thankfully, you've got something more direct."
 "lupine"	482092068	--	wolves	--	"They are the lupine lineup from your notes, but for your purpose, they're wolves."
-"cruel"	391055143	Enclosure	--	--	"[loc-rej]."
-"ones"	367340160	Enclosure	--	--	"[loc-rej]."
-"enclosure"	758395303	Enclosure	--	--	"[loc-rej]."
-"slough"	399428190	slough	--	--	"[loc-rej]."
-"frost"	385575260	frost	--	--	"[loc-rej]."
-"forest"	513381369	--	--	sf-or-rf rule	"[loc-rej]."
-"rest"	412513896	rf	--	--	"[loc-rej]."
-"fortes"	513381369	--	--	degen-true rule	"[reg-rej]."
+"forest"	513381369	--	--	degen-true rule	"[if self-id fields is visited][reg-rej][else][loc-rej][end if]."
 
 table of Sortie nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -717,7 +720,7 @@ to say marsh-lake:
 section sortie nudges
 
 this is the no-d rule:
-	if player is in trodes or player is in fields or player is in Flesh Shelf, the rule succeeds;
+	if player is in Gnarliest Triangles or player is in fields or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
 
 this is the sf-or-rf rule:

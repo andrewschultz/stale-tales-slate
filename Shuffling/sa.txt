@@ -128,7 +128,7 @@ They're in the side areas.
 PUT SHADES ON NOSE
 PUT NOSE ON BEARD
 WEAR DISGUISE.N
->>Sorted Trodes
+>>Gnarliest Triangles
 ?What do I do with the ones?
 They become a NOSE.
 ?What do I do with the noughts?

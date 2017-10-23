@@ -1216,7 +1216,7 @@ to say nxt-g:
 
 to say snb:
 	let ostage be the number of off-stage disguise-pieces;
-	say "[if ostage is 0]can be combined with the other two pieces. PUT X ON Y[else if ostage is 1]can be combined with that other piece you have and one you don't have[else]needs a couple other things from Sorted Trodes to become something[end if]"
+	say "[if ostage is 0]can be combined with the other two pieces. PUT X ON Y[else if ostage is 1]can be combined with that other piece you have and one you don't have[else]needs a couple other things[i-gt] to become something[end if]"
 
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry
@@ -1325,9 +1325,9 @@ River Ville liver	"[put-can]"
 viler liver	"[put-can]"
 canister	"You can put meat in the canister."
 livers	"[one of]Transforming the livers is necessary. The gadget shows all reds, but actually, that's because it's 'easy' another way. [plus][or]If you shift all the letters over one, LIVERS become SLIVER. [minus][cycling]"
-dashes	"[one of]The dashes [i-s-t]can be changed to a disguise piece. [plus][or]You have the beard and nose, so you need something for your eyes. [plus][or]Impractical, but... SHADES. [minus][cycling]"
+dashes	"[one of]The dashes[i-gt] can be changed to a disguise piece. [plus][or]You have the beard and nose, so you need something for your eyes. [plus][or]Impractical, but... SHADES. [minus][cycling]"
 pattern	"The pattern clues what the shades can become."
-noughts	"[one of]The zeroes [i-s-t]aren't quite zeroes. They're noughts.[plus][or]The zeroes aren't quite zeroes. They're NOUGHTS. [minus][cycling]"
+noughts	"[one of]The zeroes[i-gt] aren't quite zeroes. They're noughts.[plus][or]The zeroes aren't quite zeroes. They're NOUGHTS. [minus][cycling]"
 ones	"[one of]The ones are pretty yes-or-no. [plus][or]Flip a few bits and you have something else. [plus][or]The ones become a NOSE. [minus][cycling]"
 bubble	--	noughts
 bucket	--	ones
@@ -1528,8 +1528,8 @@ to say put-can:
 to say i-fle:
 	say "[if player is not in Flesh Shelf] in Flesh Shelf[end if]";
 
-to say i-s-t:
-	say "[if player is in Sorted Trodes][else]in Sorted Trodes [end if]";
+to say i-gt:
+	say "[if player is in Gnarliest Triangles][else] in Gnarliest Triangles[end if]";
 
 section forest
 
@@ -1539,13 +1539,13 @@ carry out forest-hinting:
 			all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random visible guider instead;
 	if location of player is Self-ID Fields:
-		if Sorted Trodes is unvisited:
+		if Gnarliest Triangles is unvisited:
 			all-say "Go east and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
 		if Flesh Shelf is unvisited:
 			all-say "Go west and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
 		if ones are off-stage or shades are off-stage:
 			all-say "You need to solve a puzzle to the east." instead;
-	if player is in trodes:
+	if player is in Gnarliest Triangles:
 		if nose is off-stage:
 			try objhinting ones instead;
 		if beard is off-stage:
@@ -6161,7 +6161,7 @@ after choosing notable locale objects when player is in Flesh Shelf:
 	set the locale priority of the sandwich to 1;
 
 rule for printing a locale paragraph about a thing in Flesh Shelf when first-fs-yet is false:
-	say "You notice the flesh shelf contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
+	say "You notice the skin sink contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
 	[now scantier canister is mentioned;]
 	now sandwich is mentioned;
 	now all glopmeats are mentioned;
@@ -6449,20 +6449,22 @@ the livers are plural-named things. description of livers is "Amalgamated well e
 
 understand "glop" and "glob" as livers.
 
-chapter Sorted Trodes
+chapter Gnarliest Triangles
 
-Sorted Trodes is east of Self-ID Fields. "Computery things are organized here. A notes stone over a stack of tacks relates some sort of silly myth that's probably relevant to you. [container-desc]. You can go back west.". Trodes is in Forest.
+Gnarliest Triangles is east of Self-ID Fields. "Computery things are organized here. A notes stone over a stack of tacks relates some sort of silly myth that's probably relevant to you. [container-desc]. You can go back west.". Gnarliest Triangles is in Forest.
 
-check going nowhere in Sorted Trodes:
+instead of singing in Gnarliest Triangles, say "Alas, the notes stone does not interact favorably with your tones."
+
+check going nowhere in Gnarliest Triangles:
 	say "You can only go back west." instead;
 
-the stick figures are amusing scenery in Sorted Trodes. understand "stick/ figure" as stick figures.
+the stick figures are amusing scenery in Gnarliest Triangles. understand "stick/ figure" as stick figures.
 
 description of stick figures is "Each one's not particularly detailed, but it probably provides a clue as to the stuff in each bucket."
 
-the notes stone is scenery in Sorted Trodes. understand "myth" as notes stone.
+the notes stone is scenery in Gnarliest Triangles. understand "myth" as notes stone.
 
-the stack of tacks is amusing scenery in Sorted Trodes. "[bug-report]"
+the stack of tacks is amusing scenery in Gnarliest Triangles. "[bug-report]"
 
 instead of doing something with the stack of tacks:
 	if action is procedural:
@@ -6476,22 +6478,22 @@ Instead of taking the notes stone:
 description of notes stone is "'[i]Attention, word-boy/girl/woman/man! You may think letters are the basic building blocks of everything, but the computer age has shown it's 1[']s and 0[']s! We don't stow twos here! You won't find simpler piles, Mr.! Or a simpler pile, Mrs.![r]'"
 
 to say container-desc:
-	if number of containers in Sorted Trodes is 0:
+	if number of containers in Gnarliest Triangles is 0:
 		say "You've pretty much ransacked this place. There's nothing much left";
 		the rule succeeds;
-	say "You see [number of containers in Sorted Trodes in words] container[if number of containers in Sorted Trodes > 1]s[end if] here: [a list of the containers in Sorted Trodes]";
+	say "You see [number of containers in Gnarliest Triangles in words] container[if number of containers in Gnarliest Triangles > 1]s[end if] here: [a list of the containers in Gnarliest Triangles]";
 
-after choosing notable locale objects when player is in Sorted Trodes:
-	repeat with item running through containers in Sorted Trodes:
+after choosing notable locale objects when player is in Gnarliest Triangles:
+	repeat with item running through containers in Gnarliest Triangles:
 		set the locale priority of the item to 0;
 
-the bucket is an opaque container in Sorted Trodes. printed name of bucket is "bucket[if ones are in bucket] full of ones[end if]".
+the bucket is an opaque container in Gnarliest Triangles. printed name of bucket is "bucket[if ones are in bucket] full of ones[end if]".
 
-the shell is a container in Sorted Trodes. printed name of shell is "shell[if dashes are in shell] full of dashes[end if]".
+the shell is a container in Gnarliest Triangles. printed name of shell is "shell[if dashes are in shell] full of dashes[end if]".
 
-the bubble is a container in Sorted Trodes. the printed name of bubble is "bubble[if noughts are in bubble] full of noughts[end if]".
+the bubble is a container in Gnarliest Triangles. the printed name of bubble is "bubble[if noughts are in bubble] full of noughts[end if]".
 
-check scaning when player is in trodes (this is the scan what's in trodes containers rule):
+check scaning when player is in Gnarliest Triangles (this is the scan what's in Gnarliest Triangles containers rule):
 	if noun is bucket and ones are in bucket:
 		say "The bucket registers four lights, so it is probably the ones inside.";
 		try scaning ones instead;
@@ -6532,11 +6534,11 @@ check inserting into:
 check examining (this is the ignore-container-examine rule):
 	if noun is sack or noun is cask:
 		ignore the examine containers rule;
-	if noun is a container in Sorted Trodes:
+	if noun is a container in Gnarliest Triangles:
 		ignore the examine containers rule.
 
 Rule for printing room description details:
-	if location of player is Sorted Trodes:
+	if location of player is Gnarliest Triangles:
 		omit contents in listing;
 		stop.
 
@@ -12137,7 +12139,7 @@ check wearing the beard:
 report wearing the beard:
 	if player wore the beard:
 		say "You adjust the disguise you're already wearing." instead;
-	say "It's suitably silly to fit in with the folks passing through the turnstile[if player is in trodes] to the west[else if player is in Flesh Shelf] to the east[end if], but different enough you're not conforming.";
+	say "It's suitably silly to fit in with the folks passing through the turnstile[if player is in Gnarliest Triangles] to the west[else if player is in Flesh Shelf] to the east[end if], but different enough you're not conforming.";
 	the rule succeeds;
 
 check putting it on(this is the disguise-piece creation rule):
@@ -12304,7 +12306,7 @@ check listening:
 	if player is in notices:
 		if gateman is visible:
 			say "'Y'can't have anything worth listening to without anything to ask me about!' says Nat Egam." instead;
-	if player is in Sorted Trodes:
+	if player is in Gnarliest Triangles:
 		say "The notes stone contains written, not musical, notes." instead;
 	if player is in frost forts:
 		say "AAAIIIEEE...OOOUUUOOO..." instead;
@@ -13483,7 +13485,7 @@ carry out sring:
 					now i2 entry is in sf;
 					now i1 entry is in rf;
 	if player is in self-id fields:
-		if trodes is visited or Flesh Shelf is visited:
+		if Gnarliest Triangles is visited or Flesh Shelf is visited:
 			say "This shouldn't be a problem, but you've explored some other rooms after hitting the fields.";
 		else:
 			say "Zapping you back to the Trips Strip, with new directions to plow through.";
