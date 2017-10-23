@@ -35509,7 +35509,7 @@ blurb
 "Add-ins I Disdain, on third-party software." [x]
 "Advice from a sod tent and tot dens: don't set dot-nets." [x]
 "Ah, info's FASHION." []
-"Alerting that Triangle Altering and Integral Relating lead to the gnarliest integrals." [x]
+"Alerting! Triangle Altering? Integral Relating? Tanglier, tanglier!" [x]
 "Analysis of the Carter Crater Tracer." [x]
 "Another I Rethank a Thinker section." [x]
 "Another page in a big long boring source course." [x]

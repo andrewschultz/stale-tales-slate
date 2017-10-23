@@ -3630,6 +3630,7 @@ to solve-region (sre - a region):
 			now nestor is in lalaland;
 			now tokers are in lalaland;
 			now smoke cloud is in lalaland;
+	if min-score of mrlp > poss-score of mrlp, say "NOTE: somehow the minimum score processed by the code exceeded the possible score. If you are able to, and you can cut/paste the game transcript, I'd appreciate seeing it at [email] so I can fix it. This won't affect the game, but all the same--it's a nuisance bug. Thanks!";
 	if player is not in Strip of Profits:
 		d "player not currently in Strip of Profits. Player moved from [location of player].";
 		move player to Strip of Profits;

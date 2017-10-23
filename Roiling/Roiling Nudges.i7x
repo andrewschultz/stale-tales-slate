@@ -2,7 +2,9 @@ Version 1/151226 of Roiling Nudges by Andrew Schultz begins here.
 
 volume table of nudges
 
-[remember to sort with nud.pl after changes]
+[remember to sort with nud.pl after changes or, perhaps, before release. NUD.PL organizes the "to say" and "rule" in the same order they appear in the table.]
+
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Frontage, Pool (easier than barn), Barn, north/south rooms, Alcoves, Inclosure. Others skips Gates Stage, the last room to visit, with the Swell Wells below being second-last.]
 
 book the tables themselves
 
@@ -920,6 +922,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of others nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
+"rustic"	453812025	rustic citrus	--	--	"You can't change this clearing or Curtis, but you don't need to." [RUSTIC CITRUS start]
+"border"	412254286	rustic citrus	--	--	"[border-arbor]."
+"arbored"	414442104	rustic citrus	--	--	"[border-arbor]."
 "arugula"	386324594	--	arugula	--	"The arugula is just for eating, so you can change something else that's been stumping you."
 "pear"	296783689	--	spear	--	"[plur-fruit]."
 "plum"	304460758	--	lumps	--	"[plur-fruit]."
@@ -956,11 +961,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "needle"	527168763	--	compass	--	"The needle is working fine. No need to meddle."
 "tekno"	427109390	--	tekno-token	--	"There's enough credit on the token. Don't get greedy."
 "icon"	207258516	--	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
+"singed"	391609220	--	singed design	--	"The design is sort of glommed onto the coin[if coins are visible]s[end if]. So you should figure what to do, there."
 "lola"	184168073	--	dr lola	degen-true rule	"[count-enuf]."
 "drol"	234519308	--	lord al	degen-true rule	"[count-enuf]."
 "droll"	288333147	--	dollar	degen-true rule	"[count-enuf]."
 "dollar"	290520965	--	dollar	degen-true rule	"[count-enuf]."
-"riot"	307779244	--	riot cap	--	"[whole-item]." [swell wells]
+"well"	343368560	swell wells	--	--	"[locname]." [SWELL WELLS START]
+"wells"	439642526	swell wells	--	--	"[locname]."
+"riot"	307779244	--	riot cap	--	"[whole-item]."
 "silly"	371253742	--	silly shirt	--	"[shirt-sez]."
 "shirt"	366982932	--	silly shirt	--	"[shirt-sez]."
 "sillyshirt"	738236674	--	silly shirt	--	"[shirt-sez]."
@@ -975,7 +983,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ruble"	390468463	--	miser ruble	--	"[whole-item]."
 "bluer"	390468463	--	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
 "designs"	487883186	--	singed design	--	"The design doesn't need changing. It's what the design's on."
-"foliage"	362267787	--	foliage	--	"Alas, the foliage also blocks your magical powers and not just your explorations, but [if number of flippable things in filed field > 0]there's plenty else to work at[else]no big deal. You took care of everything else[end if] here." [filed field]
+"fidle"	274156779	filed field	--	--	"[locname]." [FILED FIELD START]
+"foliage"	362267787	--	foliage	--	"Alas, the foliage also blocks your magical powers and not just your explorations, but [if number of flippable things in filed field > 0]there's plenty else to work at[else]no big deal. You took care of everything else[end if] here."
 "fail"	127509399	Filed Field	--	--	"There's no way to chop the foliage down, but you don't need to."
 "eog"	234758388	Filed Field	--	--	"There's no way to chop the foliage down, but you don't need to."
 "barriers"	545651053	--	b-w	--	"The barriers['] westness is important."
@@ -996,7 +1005,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "briar"	236247175	--	briar screen	--	"[whole-item]."
 "briars"	332521141	--	briar screen	--	"[whole-item]."
 "screen"	525123080	--	briar screen	--	"[whole-item]."
-"len"	250527456	clearing	--	--	"[len-part]." [clearing]
+"clearing"	434637210	clangier	--	--	"[locname]." [CLANGIER CLEARING START]
+"len"	250527456	clearing	--	--	"[len-part]."
 "craig"	184109754	clearing	--	--	"[len-part]."
 "price"	358594302	clearing	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already took care of stuff[end if]."
 "among"	242122758	--	--	need-mango rule	"Not quite the right way."
@@ -1010,6 +1020,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "guava"	249245965	--	guava	--	"[just-c]."
 "kumquat"	516923398	--	kumquat	--	"[just-c]."
 "banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it." [scape space]
+"space"	326739437	scape space	--	--	"[locname]." [SCAPE SPACE START]
 "trader"	424780640	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
 "art"	190621639	--	Art Erd	--	"[1st-name]."
 "red"	234159001	--	Art Erd	--	"[1st-name]."
@@ -1022,22 +1033,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "passport"	620454066	--	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "review"	601028460	--	passport	--	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 "popstar"	524180100	--	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
+"gates"	361977613	gates stage	--	--	"[no-gate]." [GATES STAGE START]
+"gate"	265703647	gates stage	--	--	"[no-gate]."
 "halt"	196393974	gates stage	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
-"singed"	391609220	--	singed design	--	"The design is sort of glommed onto the coin[if coins are visible]s[end if]. So you should figure what to do, there."
 "arena"	286413056	gates stage	--	--	"[stad-chg]."
 "nera"	284225238	gates stage	--	--	"[stad-chg]."
 "stadium"	436774697	gates stage	--	--	"[stad-chg]."
 "admit"	235394924	gates stage	--	--	"[stad-chg]."
-"well"	343368560	swell wells	--	--	"[locname]."
-"wells"	439642526	swell wells	--	--	"[locname]."
-"fidle"	274156779	filed field	--	--	"[locname]."
-"clearing"	434637210	clangier	--	--	"[locname]."
-"rustic"	453812025	rustic citrus	--	--	"You can't change this clearing or Curtis, but you don't need to."
-"border"	412254286	rustic citrus	--	--	"[border-arbor]."
-"arbored"	414442104	rustic citrus	--	--	"[border-arbor]."
-"space"	326739437	scape space	--	--	"[locname]."
-"gates"	361977613	gates stage	--	--	"[no-gate]."
-"gate"	265703647	gates stage	--	--	"[no-gate]."
 "roping"	387642395	Gates Stage	--	--	"You don't need to grapple with the roping, and you don't need the roping to grapple with you."
 "other"	427874806	--	--	degen-true rule	"[not-the-reg]."
 "storeh"	524148772	--	--	degen-true rule	"[not-the-reg]."
@@ -1045,6 +1047,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of demo dome nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "demo"	287262928	--	--	degen-true rule	"Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over."
+"peek"	390011355	peek keep	--	--	"[dome-rm]." [PEEK KEEP START]
 "flashed"	364908016	peek keep	--	--	"[its-a-museum]."
 "shefl"	341691109	peek keep	--	--	"[its-a-museum]."
 "design"	391609220	peek keep	--	--	"[its-a-museum]."
@@ -1062,9 +1065,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "display"	422122769	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
 "spy"	300099177	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
 "dial"	122023592	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
+"evoc"	328329091	evoc-cove	--	--	"[dome-rm]." [EVOC COVE START]
 "novella"	488046510	evoc-cove	--	--	"[no-no]"
 "lol"	181980255	evoc-cove	--	--	"[no-no]."
 "neva"	306066255	evoc-cove	--	--	"[no-no]."
+"hows"	315843615	hows show	--	--	"[dome-rm]."
 "codewall"	459943629	hows show	--	--	"[its-a-museum]."
 "codewalls"	556217595	hows show	--	--	"[its-a-museum]."
 "coed"	242193360	hows show	--	--	"[its-a-museum]."
@@ -1080,6 +1085,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "chicloner"	530490151	ned's	--	--	"[no-no]!"
 "icch"	120286315	ned's	--	--	"[no-no]!"
 "ernol"	410203836	ned's	--	--	"[no-no]!"
+"intel"	398630320	intel inlet	--	--	"[dome-rm]." [INTEL INLET START]
+"calendar"	380261569	intel inlet	--	--	"[these-docs]."
+"thesis"	505739204	intel inlet	--	--	"[these-docs]."
+"sparse"	489331621	sparse spares	--	--	"[dome-rm]." [SPARSE SPARES START]
+"spare"	393057655	Sparse Spares	--	--	"[dome-rm]."
 "boltcase"	494968817	sparse spares	--	--	"[its-a-museum]."
 "best"	345608998	sparse spares	--	--	"[its-a-museum]."
 "calo"	149359819	sparse spares	--	--	"[its-a-museum]."
@@ -1093,17 +1103,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rudest"	538648792	sparse spares	--	--	"[its-a-museum]."
 "ladder"	311189747	sparse spares	--	--	"[its-a-museum]."
 "bulk"	230271729	sparse spares	--	--	"Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that."
-"calendar"	380261569	intel inlet	--	--	"[these-docs]."
-"thesis"	505739204	intel inlet	--	--	"[these-docs]."
-"peek"	390011355	peek keep	--	--	"[dome-rm]."
-"evoc"	328329091	evoc-cove	--	--	"[dome-rm]."
-"hows"	315843615	hows show	--	--	"[dome-rm]."
-"sparse"	489331621	sparse spares	--	--	"[dome-rm]."
-"intel"	398630320	intel inlet	--	--	"[dome-rm]."
 
 table of general nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"elvira"	421289235	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [start GENERAL STUFF]
+"elvira"	421289235	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [GENERAL STUFF START]
 "yorpwald"	548467110	--	--	degen-true rule	"You can't just unjumble Yorpwald with just one word. You need to deal with individual things."
 "settler"	697243862	--	settler	--	"[no-set]."
 "mark"	204519952	--	settler	--	"[no-set]."
