@@ -389,13 +389,15 @@ understand "roister" as a mistake ("That's what's causing the riot, and it's up 
 
 understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not in lalaland], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are in hotspot.
 
+understand "romans" as a mistake ("This is not a history game.") when player is in hotspot and ransom manors are in hotspot.
+
 chapter means manse
 
 understand "blamer" as a mistake ("No, we know who's to blame. He's done with. Time to move on.") when player is in Means Manse.
 
 understand "amen" and "name" as a mistake ("Use the plural, here.") when player is in Means Manse.
 
-understand "mensa" and "name" as a mistake ("No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey wass not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.") when player is in Means Manse.
+understand "mensa" as a mistake ("No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.") when player is in Means Manse.
 
 understand "sex it" as a mistake ("[if player is not in means manse]Quit screwing around and focus on yourself. NO, not like THAT. Geez[else]You're not even up for THAT, now. You just want to BE[end if].")
 

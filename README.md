@@ -22,14 +22,17 @@ All PERL files should run with any version of PERL. There should be little need 
 
 cheapbotsdonequick.com hosts both anagram bots found in Roiling: @AnagramBookBot has books from Roiling's 3 shelves. @AnagramTauntBot has taunts from both Shuffling (crowd and Red Bull Burdell) and Roiling (8 places where the game heckles you).
 
-Note for if I modify a puzzle, which is unlikely, but I need to write it somewhere. Check the following files:
-* \writing\dict\wmet.txt (run wmet.pl)
+Note for if I modify a puzzle, which is unlikely, but I need to write it somewhere. Check the following files, which are in the source directory unless indicated otherwise:
+* \writing\dict\wmet.txt (run \writing\dict\wmet.pl)
+* release notes (batch file ni sr / ni rr)
+* \writing\dict\otz.py (sa/roi) check to make sure old puzzle is eliminated
 * Roiling specific
-**(roiling)-logic.txt (if cheat gives ?)
-**(roiling-thruc.txt (if cheat gives ?)
-** roi.txt (invisiclues)
-** settler.txt
+**logic.htm (if cheat gives ?)
+**walkthrough.txt (add to release notes)
+** roi.txt (invisiclues edit/rerun)
+** reds.txt
+** (\writing\dict\)settler.txt
 * Shuffling specific
 ** sa.txt (invisiclues)
-** rg.txt
-** shuf-walkthrough.txt
+** rg.txt (to check stuff)
+** walkthrough.txt
