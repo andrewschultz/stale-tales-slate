@@ -834,7 +834,7 @@ Make it RESTING.
 Strati Strait and Salted Deltas.
 Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing there.
 Baldest Blasted Saltbed and Unblest Sunbelt have scenery that gives LLPs.
-Nude Dune and Lost Lots have pastries (and, in the Lots, an LLP) but nothing critical.
+Nude Dune and Lost Lots have pastries and an LLP each, but nothing critical.
 Of course, you must pass through one of the Strait/Deltas and Saltbed/Sunbelt. But you don't have to visit both to solve the Towers area or even get maximum points.
 >>SCOPE COPSE
 ?What's the scope for?
@@ -880,11 +880,16 @@ Have you seen anyone by that name?
 Dr. Yow is locked up in the subsector.
 You can't move Dr. Yow to the Shaven Havens, but you can move his voice.
 The duck might trust that.
->>LOST LOTS
+>>NUDE DUNE
 ?What can I do about the strudel?
 You can just take it. Or you can take it with style.
 Doing so is a last lousy point.
 It can be RUSTLED.
+>>LOST LOTS
+?What can I do about the fluster-self rut?
+It is agitated, and it agitates you.
+How can you calm things down?
+Make everything more RESTFUL.
 ?How do I get past the gasfield?
 Well, you don't need to.
 And you can't.

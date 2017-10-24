@@ -599,6 +599,8 @@ chapter lost lots
 
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
+understand "fluters" as a mistake ("This game has no soundtrack, and if I made one, it wouldn't be very good.") when player is in Lost Lots and fluster self rut is in lost lots.
+
 chapter obscurest subsector
 
 understand "olga" as a mistake ("Even if the goal could become a person, they'd be kind of wooden.") when player is in Obscurest Subsector.

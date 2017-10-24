@@ -124,7 +124,7 @@ Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 36. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
 
-Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 48. min-score of towers is 25.
+Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 49. min-score of towers is 25.
 [Necessary points:
 4 for regular warriors
 1 for Ray Eck
@@ -142,6 +142,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 3 for the extra warriors
 1 for not using x-ray vision to clear every guardian NON-ANAGRAM
 1 for strudel
+1 for fluster self rut
 1 for the yurts
 5 for the H/I beyond needing to clear the coastlines
 2 for the ingrates/natives
@@ -4155,6 +4156,7 @@ diners	"The diners glare at you, then look up at the sky, slightly worried."
 pirates	"The pirates blanch a bit but quickly regain their swagger."
 serpent	"The serpent shakes its head and tail a bit."
 man covered	"The man picks at his paint, as if he could almost peel it off."
+fluster self rut	"You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will."
 strudel	"You almost expect the strudel to hop up[if player does not have strudel] into your arms[end if], but the moment passes."
 ingrates	"The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up."
 fissure	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is visible], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if]."
@@ -9228,6 +9230,7 @@ raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	"The saver shines a
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
 iPrune	iPrune	false	513602032	--	"punier"	"punier"	"Instead of being worried about how much the iPrune would block you when full-grown, you wonder about if it were the size of a normal banana. It works. The iPrune kicks you ineffectually as you walk past, then runs and hides in embarrassment."
 arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
+fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 an admirer	an admirer	false	430738621	--	"married"	"married" or "mardier"	"[response-based]. You're slapped sidearm for having misread them, but you're spared spouse opuses."
 natives	natives	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
@@ -20697,7 +20700,7 @@ book side-path rooms
 
 chapter Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. A gadflies['] gasfield surrounds you every way except back north."
+Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot[if fluster self rut is in lost lots]--well, unless you count that A fluster-self rut here upsets you more than you should. You probably don't need to dispose of it, but MAN, you'd like to[end if]. A gadflies['] gasfield surrounds you every way except back north."
 
 after looking in lost lots:
 	if strudel is carried by player or strudel is in lalaland, set the pronoun it to gasfield;
@@ -20707,6 +20710,24 @@ the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the
 
 check opening a hintpastry:
 	say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
+
+section fluster self rut
+
+the fluster self rut is LLPish scenery in lost lots. "Just looking at it makes you feel agitated. Maybe there's a way to calm it down."
+
+a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of strudel is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
+
+chapter Nude Dune
+
+Nude Dune is west of Anemic Cinema. Nude Dune is in Towers. "A nude dune spans north, west and south. It's pretty neutral-naturel. But going any way other than east might leave you too far from the Curst Palace."
+
+some solve-a-loaves are an edible plural-named hintpastry in Nude Dune. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
+
+understand "loaves" and "loaf" as solve-a-loaves.
+
+check going in Nude Dune:
+	if noun is north or noun is south or noun is west:
+		say "Wait! You do see something through the dune! But it's a rested desert, which deters you." instead;
 
 section strudel
 
@@ -20721,24 +20742,12 @@ check scaning strudel:
 		say "You already rustled it." instead;
 	say "You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.";
 
-The sled rut is auxiliary scenery in Lost Lots. "It's flecked with red, oddly[if strudel is in Lost Lots], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
+The sled rut is auxiliary scenery in Outer Route. "It's flecked with red, oddly[if strudel is in Outer Route], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
 
 a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of sled rut is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x".
 
 check taking sled rut:
-	say "[if strudel is in Lost Lots]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
-
-chapter Nude Dune
-
-Nude Dune is west of Anemic Cinema. Nude Dune is in Towers. "A nude dune spans north, west and south. It's pretty neutral-naturel. But going any way other than east might take you far away from the Curst Palace anyway."
-
-some solve-a-loaves are an edible plural-named hintpastry in Nude Dune. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
-
-understand "loaves" and "loaf" as solve-a-loaves.
-
-check going in Nude Dune:
-	if noun is north or noun is south or noun is west:
-		say "Wait! You do see something through the dune! But it's a rested desert, which deters you." instead;
+	say "[if strudel is in Outer Route]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
 
 book rawest waters
 
