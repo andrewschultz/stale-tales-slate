@@ -297,16 +297,13 @@ north,east,south,west are ordinal.
 before going (this is the reject diagonals rule):
 	if location is Means Manse, say "[one of]You don't feel like getting up. Suddenly you're in the middle of an exitstential crisis.[or]You've had it with doing and going[or]Sit, ex-adventurer.[or]Where would you go? Texis? You see red at the thought![or]Seeing exits just makes you want to...[or]Come on, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here![stopping]" instead;
 	if noun is a diagonal:
-		if player is in busiest subsite:
-			say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
-		if trips strip is visited:
-			say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
+		if player is in busiest subsite, say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
+		if trips strip is visited, say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
 
 section dropping
 
 check dropping:
-	if noun is shotgun:
-		say "You[if wolves are visible] probably [else]'re going to [end if] need that gun." instead;
+	if noun is shotgun, say "You[if wolves are visible] probably [else]'re going to [end if] need that gun." instead;
 	say "You shouldn't need to drop [if noun is plural-named]those[else]that[end if]. You have enough hands and pockets." instead;
 
 to say tag-status:
@@ -481,10 +478,8 @@ to say reject:
 				now last-hash is hashkey entry;
 				continue the action;
 	now num-in-row is 0;
-	if regtab of mrlp is hash-found:
-		continue the action;
-	if table of general nudges is hash-found:
-		continue the action;
+	if regtab of mrlp is hash-found, continue the action;
+	if table of general nudges is hash-found, continue the action;
 	say "[verb-cue]."
 
 to say verb-cue: say "That's not something you can say, do or see here. For a list of common verbs, type VERBS"
@@ -711,12 +706,9 @@ chat-rand is a truth state that varies.
 talk-quiet is a truth state that varies.
 
 every turn (this is the process random dialogue rule):
-	if current action is mainhelping:
-		do nothing instead;
-	if current action is hinting:
-		do nothing instead;
-	if current action is fliptoing:
-		do nothing instead;
+	if current action is mainhelping, do nothing instead;
+	if current action is hinting, do nothing instead;
+	if current action is fliptoing, do nothing instead;
 	now chat-rand is true;
 	consider the find-blather rule;
 	now chat-rand is false;
@@ -728,8 +720,7 @@ this is the find-blather rule:
 			if there is a go-ahead entry:
 				consider the go-ahead entry;
 				if the rule succeeded:
-					if chat-rand is true and talk-quiet is true and done-once entry is true:
-						the rule succeeds;
+					if chat-rand is true and talk-quiet is true and done-once entry is true, the rule succeeds;
 					if showtabname is true:
 						say "([mytab entry])";
 					now done-once entry is true;
@@ -951,8 +942,7 @@ to say minus:
 to say plus: say "[one of](+) [italic type][bracket]NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[close bracket][r][or](+)[stopping]";
 
 carry out hinting:
-	if location of player is busiest subsite:
-		say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out." instead;
+	if location of player is busiest subsite, say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out." instead;
 	if have-objhinted is false:
 		now have-objhinted is true;
 		say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
@@ -971,63 +961,14 @@ to say got-r: say "[if store r is prefigured]already guessed right--it's a resor
 blot-first is a truth state that varies.
 
 carry out mainhelping:
-	if hintsoff is true:
-		all-say "You elected to turn hints off for the remainder of the game. You'll need to restart to change that." instead;
-	if player is in busiest:
-		all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if above-sign is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
-	if player is in Dry Yard:
-		if odor is visible:
-			try objhinting odor instead;
-		if bolt is visible and bulge is visible:
-			if blot-first is true:
-				try objhinting bolt instead;
-			try objhinting bulge instead;
-		if bugle is visible and bugle-played is false:
-			try objhinting bugle instead;
-		try objhinting yard-door instead;
-	if player is in thickest thickets:
-		if toga is visible:
-			try objhinting toga instead;
-		all-say "You can just go IN, now." instead;
-	if player is in notices section:
-		if gateman is not visible:
-			try objhinting magenta nametag instead;
-		if lube-asked is false:
-			all-say "You need to ASK GATEMAN ABOUT CABINET." instead;
-		if player does not have gadget:
-			all-say "You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL." instead;
-		all-say "You can just enter the gate now." instead;
-	if location of player is trips strip:
-		if forest is solved and sortie is solved and metros is solved:
-			if r-p is visible:
-				all-say "You've opened all the stores you can." instead;
-			else:
-				all-say "Store R is your last challenge." instead;
-		if you-can-advance:
-			if store r is visible:
-				if store r is prefigured:
-					all-say "You already figured what this is--a resort." instead;
-				try objhinting store r instead;
-			all-say "The way is clear[if store m is visible or store f is visible or store i is visible]. You could try the remaining store, but it's not necessary[end if]." instead;
-		if store f is visible:
-			try objhinting store f instead;
-		if store i is visible:
-			try objhinting store i instead;
-		if store m is visible:
-			try objhinting store m instead;
-		if store r is visible:
-			try objhinting store r instead;
-		else:
-			all-say "[bug-report] Somehow you flipped the resort before solving other areas you needed to." instead;
-	if mrlp is forest:
-		try forest-hinting instead;
-	if mrlp is metros:
-		try metros-hinting instead;
-	if mrlp is sortie:
-		try sortie-hinting instead;
-	if mrlp is resort:
-		try resort-hinting instead;
-	all-say "Bug text. Should not appear.";
+	if hintsoff is true, all-say "You elected to turn hints off for the remainder of the game. You'll need to restart to change that." instead;
+	if mrlp is intro, try intro-hinting instead;
+	if mrlp is stores, try stores-hinting instead;
+	if mrlp is forest, try forest-hinting instead;
+	if mrlp is metros, try metros-hinting instead;
+	if mrlp is sortie, try sortie-hinting instead;
+	if mrlp is resort, try resort-hinting instead;
+	all-say "[bug-report] Bug text. Should not appear.";
 	the rule succeeds;
 
 to all-say (a - indexed text):
@@ -1045,6 +986,8 @@ outline-print is a truth state that varies. outline-print is usually true.
 
 the file of shufhints is called "shufhints".
 
+intro-hinting is an action applying to nothing.
+stores-hinting is an action applying to nothing.
 forest-hinting is an action applying to nothing.
 metros-hinting is an action applying to nothing.
 sortie-hinting is an action applying to nothing.
@@ -1064,9 +1007,7 @@ does the player mean objasking generically when noun is enclosed by location of 
 
 does the player mean objasking about when second noun is enclosed by location of the player: it is very likely.
 
-check objhinting red bull burdell:
-	if red bull burdell is off-stage:
-		say "You haven't found him yet!" instead;
+check objhinting red bull burdell: if red bull burdell is off-stage, say "You haven't found him yet!" instead.
 
 check objhinting a deregioned object: say "That's not something in this region[one of]--note: locations are not available to hint[or][stopping]." instead;
 
@@ -1142,34 +1083,24 @@ a thing can be realized. a thing is usually not realized.
 cur-item is a thing that varies.
 
 carry out objhinting:
-	if hintsoff is true:
-		say "Hints are disabled for this session." instead;
+	if hintsoff is true, say "Hints are disabled for this session." instead;
 	now ever-obj-hinted is true;
 	now cur-item is noun;
-	if noun is location:
-		all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
-	if location of noun is nothing and noun is not a backdrop:
-		all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
-	if noun is in lalaland:
-		all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
+	if noun is location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
+	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
+	if noun is in lalaland, all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
 	if noun is not a backdrop and noun is not scenery:
-		if mrlp is not map region of location of noun:
-			all-say "That doesn't seem to be in this region." instead;
-	if noun is realized:
-		all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
-	if noun is amusing:
-		all-say "[if noun is plural-named]That is[else]Those are[end if] in there for general silliness." instead;
-	if noun is useless:
-		all-say "[if noun is plural-named]That is[else]Those are[end if] in there for local flavor and scenery." instead;
+		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
+	if noun is realized, all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
+	if noun is amusing, all-say "[if noun is plural-named]That is[else]Those are[end if] in there for general silliness." instead;
+	if noun is useless, all-say "[if noun is plural-named]That is[else]Those are[end if] in there for local flavor and scenery." instead;
 	if there is hint-entry of noun in the table of hintobjs:
 		choose row with hint-entry of noun in the table of hintobjs;
-		if there is a parallel-entry entry:
-			try objhinting parallel-entry entry instead;
+		if there is a parallel-entry entry, try objhinting parallel-entry entry instead;
 		all-say "[advice-entry entry]" instead;
 	if noun is a portal:
 		all-say "You can just enter it.";
-	if noun is unimportant:
-		all-say "[noun]: that isn't needed to solve the game. It's probably just there for local flavor." instead;
+	if noun is unimportant, all-say "[noun]: that isn't needed to solve the game. It's probably just there for local flavor." instead;
 	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
 
 to say no-sto: say "Nothing is hidden in that store";
@@ -1489,18 +1420,50 @@ to say i-fle: say "[if player is not in Flesh Shelf] in Flesh Shelf[end if]";
 
 to say i-gt: say "[if player is in Gnarliest Triangles][else] in Gnarliest Triangles[end if]";
 
+section intro
+
+carry out intro-hinting:
+	if player is in busiest subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if above-sign is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
+	if player is in Dry Yard:
+		if odor is visible, try objhinting odor instead;
+		if bolt is visible and bulge is visible:
+			if blot-first is true, try objhinting bolt instead;
+			try objhinting bulge instead;
+		if bugle is visible and bugle-played is false, try objhinting bugle instead;
+		try objhinting yard-door instead;
+	if player is in thickest thickets:
+		if toga is visible, try objhinting toga instead;
+		all-say "You can just go IN, now." instead;
+	if player is in notices section:
+		if gateman is not in notices section, try objhinting magenta nametag instead;
+		if player does not have gadget, all-say "You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL." instead;
+		if lube-asked is false, all-say "You need to ASK GATEMAN ABOUT CABINET." instead;
+		all-say "You can just enter the gate now." instead;
+
+section stores
+
+carry out stores-hinting:
+	if you-can-advance:
+		if store r is in Trips Strip:
+			if store r is prefigured, all-say "You already figured what this is--a resort." instead;
+			try objhinting store r instead;
+		all-say "The way is clear[if store m is in Trips Strip or store f is in Trips Strip or store i is in Trips Strip]. You could try the remaining store, but it's not necessary[end if]." instead;
+	if forest-x is in Trips Strip or sortie-x is in Trips Strip or metros-x is in Trips Strip, say "You can just enter the [list of portals in trips strip]. If you want or need help with a particular store, HINT STORE Q." instead;
+	if store f is in Trips Strip, try objhinting store f instead;
+	if store i is in Trips Strip, try objhinting store i instead;
+	if store m is in Trips Strip, try objhinting store m instead;
+	if store r is in Trips Strip, try objhinting store r instead;
+	all-say "[bug-report] I should be able to hint something for you, but I can't. I'd like to know how this happened, so I can fix it.." instead;
+
 section forest
 
 carry out forest-hinting:
 	if location of player is rf or location of player is sf:
-		if number of visible guiders is not 1:
-			all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
+		if number of visible guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random visible guider instead;
 	if location of player is Self-ID Fields:
-		if Gnarliest Triangles is unvisited:
-			all-say "Go east and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
-		if Flesh Shelf is unvisited:
-			all-say "Go west and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
+		if Gnarliest Triangles is unvisited, all-say "Go east and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
+		if Flesh Shelf is unvisited, all-say "Go west and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
 		if ones are off-stage or shades are off-stage:
 			all-say "You need to solve a puzzle to the east." instead;
 	if player is in Gnarliest Triangles:
@@ -6920,8 +6883,7 @@ description of tortilla is "Flat circular dough[if number of things that are par
 
 understand "tortilla" as taco.
 
-instead of eating the tortilla:
-	say "[if ingredients-in-tort is 0]Too plain by itself. Put something in it?[else if ingredients-in-tort is 1]It's still too plain to eat.[else if ingredients-in-tort is 2]It's about halfway to being something nice.[else if ingredients-in-tort is 3]It looks pretty good but needs one more ingredient.[else][bug-report][end if]";
+instead of eating the tortilla: say "[if ingredients-in-tort is 0]Too plain by itself. Put something in it?[else if ingredients-in-tort is 1]It's still too plain to eat.[else if ingredients-in-tort is 2]It's about halfway to being something nice.[else if ingredients-in-tort is 3]It looks pretty good but needs one more ingredient.[else][bug-report][end if]".
 
 check putting something on an ingredient (this is the funnel kitchen activity to ingredients rule):
 	ignore the can't put what's not held rule;
