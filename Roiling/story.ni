@@ -2783,6 +2783,7 @@ sitar	"Oh, right. You bought it from Trisa Israt." [means manse]
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
+cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red." [routes]
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
@@ -7541,8 +7542,6 @@ check singing:
 			now lyre-dest is true;
 			say "Unexpectedly, Ed pulls out a lyre from somewhere and yells 'LYRE! DIE!' like he's in some medieval heavy metal band or something. He's really seeing red as he stomps it to dust." instead;
 		say "You don't want to push your luck. His yelling LYRE DIE and seeing red kind of weirded you out." instead;
-	if warning sign is visible:
-		say "Wrong area for that." instead;
 	if clam is visible:
 		say "If you could sing, it might settle the clam down. But you can't, so it doesn't." instead;
 	if the-hostile is visible:
@@ -9727,7 +9726,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		now grey gyre is mapped south of Phat Path;
 		now Phat Path is mapped north of grey gyre;
 		if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
-		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]A warning sign lies beyond where the wall was. You give a 'PHT!' as you wind up at...";
+		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as you wind up at...";
 		move player to Phat Path;
 		continue the action;
 	else if noun is prai or noun is rivets:
@@ -13472,7 +13471,7 @@ instead of doing something to the runed book:
 
 book Idle Deli
 
-Idle Deli is an innie room in Routes. "This restaurant has no customers, and that's no surprise, what with the seed pit in the back ruining the ambiance--not even pie crust pictures by Stu Price. It's seedy, even without the warning sign, but at least ants be absent. You can go back out to the outback, err, the Same Mesa."
+Idle Deli is an innie room in Routes. "This restaurant has no customers, and that's no surprise, what with the seed pit in the back ruining the ambiance--not even pie crust pictures by Stu Price. But there are craving carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa."
 
 after looking in idle deli:
 	set the pronoun him to pat;
@@ -13489,11 +13488,11 @@ check exiting in Idle Deli:
 check going outside in Idle Deli:
 	try exiting instead;
 
-chapter seed pit and warning sign
+chapter seed pit and cravings carvings
 
-The warning sign is auxiliary scenery in Idle Deli. "'Every time someone enters, PETS DIE.'"
+The cravings carvings is auxiliary scenery in Idle Deli. "All sorts of food doodles are here, and if you READ them, they might form a message, too."
 
-a-text of warning sign is "RYRRYRY". b-text of warning sign is "RGRRYRG". parse-text of warning sign is "x[sp]e[sp]x[sp]x[sp]i[sp]x[sp]e".
+a-text of cravings carvings is "RYRRYRY". b-text of cravings carvings is "RGRRYRG". parse-text of cravings carvings is "x[sp]e[sp]x[sp]x[sp]i[sp]x[sp]e".
 
 some mushrooms are a quest-item. description of mushrooms is "They have all different lengths of stems, and you're not sure which are poisonous and which aren't."
 
@@ -13505,7 +13504,7 @@ instead of eating mushrooms:
 the seed pit is reflexive scenery in Idle Deli. "[if mushrooms are off-stage]It's ugly and moldy but you find yourself thinking, if I had just one reason to go in there, against any warnings...[otherwise]You got through okay once, but you don't want to know what might sit deep in there.[end if]"
 
 after fliptoing mushrooms:
-	now warning sign is clue-used;
+	now cravings carvings is clue-used;
 	continue the action;
 
 understand "seedpit" as seed pit.
@@ -26231,7 +26230,7 @@ a trashy ashtray	--	pipe soot
 pipe soot	"[if pipe soot is not in adobe abode]You got the pipe soot.[else][one of]You can't just walk over to the ashtray and get the pipe soot. Oscar wants you facing him.[plus][or]How can you face someone and be far away?[plus][or]Be completely OPPOSITE.[minus][cycling]"	--	"OPPOSITE"
 seed pit	"[one of]Pat's not going to let you have the mushrooms you probably need from the seed pit.[plus][or]However, Pat mentions a lot are worthless. The seed pit is too dangerous. You need to say something to ignore the seed pit warning.[plus][or]Tell Pat you'll go in DESPITE the warnings.[minus][cycling]"	--	"DESPITE"
 mushrooms	"The mushrooms are part of the spiers['] potion that will help let people see directions again[if circle is unvisited]. But you need to get into the cleric circle first[end if]."
-warning sign	"The warning sign clues how to get into the seed pit."
+cravings carvings	"The cravings carvings clue how to get into the seed pit."
 huge thing	"[one of]The huge thing form may be what was needed.[plus][or]But it's a thing form above.[plus][or]Does that sentence 'huge thing form' read wrong? Or feel funny? It should.[plus][or]A thing FROM above will have landed.[plus][or]So, yeah, type FROM to bring the thing down.[minus][cycling]"	--	"FROM"
 drama armada	"They're just there to watch, or help you once you figure where to look, by THE BEAN."
 the-b	"[one of]The Bean has given you a place to go or look--or, rather, a not-quite-direction.[plus][or]The ground feels a little shakier since the bean landed, but not enough to go straight down.[plus][or]PUSHing the Bean seems useless.[plus][or]You can go BENEATH the bean.[minus][cycling]"	--	"BENEATH"

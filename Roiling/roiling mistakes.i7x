@@ -192,6 +192,8 @@ understand "atp" as a mistake ("No need for biochemistry, here.") when player is
 
 understand "apt" as a mistake ("Actually, Pat's advice may not be apt[if seed pit is reflexive]. Look to the seed pit[end if].") when player is in idle deli.
 
+understand "scarving" as a mistake ("Changing the restaurant to a clothes boutique isn't helpful.") when player is in idle deli.
+
 chapter harms marsh
 
 understand "around" as a mistake("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is visible and player is in Harms Marsh.

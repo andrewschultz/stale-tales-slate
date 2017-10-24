@@ -188,6 +188,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "seed"	372915273	idle deli	--	--	"[pit-full]."
 "pit"	229568823	idle deli	--	--	"[pit-full]."
 "putcries"	663084093	idle deli	--	--	"The pictures aren't here, and they're not what you need[if mushrooms are not off-stage]ed[end if] to deal with, anyway."
+"carvings"	456456048	idle deli	--	--	"[no-carv]."
+"carving"	360182082	idle deli	--	--	"[no-carv]."
 "oscar"	277143749	adobe abode	--	--	"You don't need to do anything with Oscar[if pipe soot is in adobe abode and list o toils is examined], but maybe you can sneak the pipe soot away[else if pipe soot is not in abode], and you already got the pipe soot[end if]."
 "ashtray"	448724974	--	ashtray	--	"[ash-soot]."
 "trashy"	446537156	--	ashtray	--	"[ash-soot]."
@@ -1348,6 +1350,9 @@ to say not-stripe:
 
 to say pit-full:
 	say "[if mushrooms are off-stage]The whole seed pit[else]You already got the mushrooms[end if]"
+
+to say no-carv:
+	say "It's not the carvings that need changing[if mushrooms are not off-stage]. You got the mushrooms from the seed pit, and that's what's important[end if]"
 
 to say chanty:
 	say "The chant doesn't change. Chants are good at that"
