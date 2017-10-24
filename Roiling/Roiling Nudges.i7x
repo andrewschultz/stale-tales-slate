@@ -1253,7 +1253,7 @@ this is the stable-visible rule:
 	the rule fails;
 
 to say curtain-block:
-	say "The act-ruin currtain is unmoved. Maybe the stuff that blocked it could help you more, here";
+	say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
 
 to say hisin:
 	say "The high sign is a clue. Bad idea to change it"
@@ -1305,10 +1305,10 @@ to say just-smoke:
 	say "It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it"
 
 to say lec-un:
-	say "The lecturer is unchangeable in his views, but maybe he is physically moveable"
+	say "The lecturer is unchangeable in his views, but maybe he is physically movable"
 
 to say ian-un:
-	say "Ian is unchangeable, but maybe he is moveable";
+	say "Ian is unchangeable, but maybe he is movable";
 
 section routes nudges
 
@@ -1804,7 +1804,7 @@ this is the cppc rule:
 	the rule fails.
 
 to say adj-needs-ly:
-	say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley"
+	say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley"
 
 this is the cinders-gone rule:
 	if cinders are in lalaland, the rule succeeds;

@@ -1,6 +1,6 @@
 A Roiling Original, release 4 notes
 
-This was largely a maintenance release, spurred on by one bug Sean M. Shore found during testing of release 3. It was too complex to fix. Then one thing led to another, and so forth.
+This was largely a maintenance release, spurred on by one bug Sean M. Shore found during testing of release 3. It was too complex to fix. Then one thing led to another, and so forth, and I browsed my text file of anagrams just one more time...
 
 There are some items which give a hint what to do next. If you have used the hints, or if you've pre-figured things, those items may be used up with no real benefit.
 
@@ -42,10 +42,12 @@ Store W:
 --a few more clues for the Lone Duck.
 --the smart kid is now female if you are.
 --Dr. Yow is now female if you are.
---the jetskis are replaced with a conveyance more appropriate to the game.
+--the jetskis are replaced with a conveyance more appropriate to the game: a boat.
 --the once-sad deacons have been replaced by gender-specific blockers.
 --the man in the costume is replaced by a deal seer, male or female, gender specific too.
 --the oddly rewired robot has been replaced by bluster butlers, but the robot's flip is now moved elsewhere for a Last Lousy Point.
+--a fluster-self rut is now a LLP in a previously useless room.
+--rooms are shifted around, with more boundary scenery to make it believable you have to go back the way you came.
 
 Store V:
 --there are now two more rooms in the sequence.

@@ -206,7 +206,7 @@ understand "hips" as a mistake ("Unfortunately, nothing can become hoorays. So t
 
 understand "pish" as a mistake ("Pretending you don't want to get on the ship won't help you get on the ship.") when player is in ripe pier.
 
-understand "abroad" as a mistake ("You can't go abroad til you get--well, you can figure it out.") when player is in ripe pier.
+understand "abroad" as a mistake ("You can't go abroad [']til you get--well, you can figure it out.") when player is in ripe pier.
 
 book troves
 
@@ -290,7 +290,7 @@ understand "bleep" as a mistake ("I don't know what you said, but it's vulgar, I
 
 chapter burnt brunt
 
-understand "tard" as a mistake ("[if Rand is visible]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Self-pity that harsh--especially a potential slur--isn't the way to get the dart. This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possbilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[stopping].") when player is in brunt and dart is in dumpster.
+understand "tard" as a mistake ("[if Rand is visible]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Self-pity that harsh--especially a potential slur--isn't the way to get the dart. This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[stopping].") when player is in brunt and dart is in dumpster.
 
 understand "tars" as a mistake ("That'd make the star stickier--or reduce it to awful glop.") when star is in Burnt Brunt.
 
@@ -431,7 +431,7 @@ understand "hoser" as a mistake ("Saying that does not help you take off to the 
 
 understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Hero's shore.
 
-understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on wordgames.") when player is in Hero's shore.
+understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Hero's shore.
 
 understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in hero's shore and player is in hero's shore.
 
@@ -581,7 +581,7 @@ chapter anemic cinema
 
 understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in anemic cinema.
 
-understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.") when ingrates are visible.
+understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't [']til they're gone.") when ingrates are visible.
 
 chapter treading gradient
 
