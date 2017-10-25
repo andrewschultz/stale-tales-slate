@@ -291,7 +291,8 @@ while ( $line = <A> ) {
   }
   if ( !defined( $tableTo{$tableAbbr} ) ) {
     print
-"WARNING $tableAbbr after $outputChunk doesn't map anywhere (check $txtfile), line $.\n"
+"WARNING $tableAbbr after $outputChunk doesn't map anywhere (check $txtfile), line $. best guess = "
+      . bestGuess($tableAbbr) . "\n"
       if $warnings <= $maxWarnShow;
     print "Reached maximum, only showing major errors\n"
       if $warnings == $maxWarnShow;
@@ -849,6 +850,33 @@ sub readMapFile {
   }
 
   close(A);
+}
+
+sub bestGuess {
+  my $you       = $_[0];
+  my $minLength = 999;
+  my $minString = "";
+
+  for $x ( keys %tableTo ) {
+    $you = $_[0];
+    my $me = $x;
+    for $y ( 'a' .. 'z' ) {
+      while ( ( $me =~ /$y/i ) && ( $you =~ /$y/i ) ) {
+        $me =~ s/$y//i;
+        $you =~ s/$y//i;
+      }
+    }
+    if ( length("$me$you") < $minLength ) {
+
+      # print "$y new min string $x/$you\n";
+      $minString = "$x";
+      $minLength = length("$me$you");
+    }
+    elsif ( length("$me$you") < $minLength ) {
+      $minString .= " $x";
+    }
+  }
+  return "$minString ($minLength)";
 }
 
 sub addString {
