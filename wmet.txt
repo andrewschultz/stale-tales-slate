@@ -85,14 +85,14 @@ Store H (min)
 limes/grapes/pears/plums/compass
 apples/apricot/nabana/gonear
 cheap/cripes/solemn/solemn
-rhubarb/tamarind/tangerine/nectarine
+rhubarb/tamarind/tangerines/nectarine
 raspberry/pineapple/reversed/mango
 sonic/icons/prep/review
 Store H (max)
 limes/grapes/pears/plums/compass
 apples/apricot/nabana/gonear/mulberries/coconuts
-cheap/cripes/solemn/solemn
-rhubarb/tamarind/tangerine/nectarine
+cheap/cripes/solemn/molen
+rhubarb/tamarind/tangerines/nectarine
 raspberry/pineapple/reversed/mango/persimmon
 sonic/icons/research/review
 blackberries/blueberries/strawberries/cantaloupe
