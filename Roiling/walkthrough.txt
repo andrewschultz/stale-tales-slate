@@ -44,7 +44,7 @@ STORE V
 STORE W
 STORE Y
 
-Also, I don't cover Last Lousy Points in any section. These are hintable in-game but I also ROT13'd them at the end. Also, for release 3, I wrote up some metrics of how big areas are. They should be included in metrics.htm.
+Also, I don't cover Last Lousy Points (LLPs) in any section. These are hintable in-game but I also ROT13'd them at the end. Also, for release 3, I wrote up some metrics of how big areas are. They should be included in metrics.htm.
 
 The MEANS MANSE has three ways through. I'll list them all.
 
@@ -1091,6 +1091,8 @@ Okay, how to get out of here? The UBS must be really universal. Because it can a
 
 STORE W has the most puzzles, with some of the longest words, but a ton of them are optional. Also, you can figure what to do with the Curst Palace Castle Apcur right away, but you still have to get there.
 
+The GT command may be particularly useful here to save dealing with trivia.
+
 > TOWERS
 > ENTER TOWERS
 
@@ -1161,15 +1163,14 @@ Okay. Ray Eck, a yacker. Keycar. Lots of red.
 
 > CREAKY
 
-You can pick off the strudel if you are clever. There is taking it, and then there is taking it the right way for a LLP. You can even use the right adjective once you have it.
-
 Also, if you want, you can
 
-(ALT) > GET TOASTER
+(XTR) > GET START TARTS
+(XTR) > GET TOASTER
 
 The toaster allows you to eat stuff which can XRAY stuff you need to look at. Though with this walkthrough, you won't need it.
 
-The next part doesn't need to be ALL done. You can deep-six all but, uh, five of the guardians. (Leave an H shape. Or an I. And you need to clear the Actionless Coastline.)
+The next part doesn't need to be ALL done. You can deep-six all but, uh, five of the guardians. (Leave an H shape. Or an I--H rotated by 90 degrees. And you need to clear both guardians in the Actionless Coastline.)
 
 > N
 
@@ -1177,7 +1178,7 @@ If you want to see a map in the Scope Copse,
 
 > X SCOPE
 
-It updates as you knock off guardians. You can check this after your first challenges. The map in the upper right is hopefully handy, too.
+It updates as you knock off guardians. You can check this after your first challenges.
 
 The yurts are an LLP. I'll let you guess.
 
@@ -1221,11 +1222,11 @@ The alarming grailman is good at his job.
 
 > MARGINAL
 
-The Reed's Ale man can't decide if he should stay or go.
+The Reed's Ale vendor (differs if you're male or female) can't decide if he should stay or go. To break Lars/Else free from obligations,
 
 > RELEASED
 
-(ALT) > RESEALED (to get his costume to fit)
+(ALT) > RESEALED (to get Lars's/Elsa's costume to fit)
 
 > E
 
@@ -1244,7 +1245,7 @@ The natives won't budge, but maybe you can convince them to move...
 > VAINEST
 (ALT) > NAIVEST
 
-There's no real difference. Also, there's nothing really to the south except a hint-pastry, which you won't need with this walkthrough. You don't even get a point for taking it, because I'm miserly like that.
+There's no real difference. Also, there's nothing really to the south except a hint-pastry, which you won't need with this walkthrough. But you can get an LLP point in the Lost Lots to the south, getting rid of the fluster-self rut.
 
 The bonker is working fine until it's...
 
@@ -1264,7 +1265,7 @@ You'll need Dr. Yow's voice for later.
 
 > PUSH RETAPE
 
-But Dr. Yow can also be something else.
+Dr. Yow can also be something else, but you don't need that, yet.
 
 > W
 
@@ -1296,6 +1297,8 @@ The ingrates were angriest, but now they're...
 
 > ANGSTIER
 
+Now you can detour for an LLP. There are two ways to take the Strudel in Nude Dune.
+
 The admirer is unattached until...
 
 > MARRIED
@@ -1306,15 +1309,13 @@ or, if you're mean,
 
 (As with the natives, choosing one over the other has no effect on gameplay.)
 
-To the west is another pastry, but to the north is someone--well, something--important.
-
 > N
 
 > PUSH REPEAT
 
 The duck hears Dr. Yow's voice, and that establishes trust.
 
-(Note: you can GO TO somewhere if you want to shave off a few turns. In this case, GO TO SUBSECTOR or GO TO YOW or even GT YOW. So let's do that now. It's easier than S.S.S.E.E.E etc.)
+(Note: you can GO TO somewhere if you want to shave off a few turns. In this case, GO TO SUBSECTOR or GO TO YOW or even GT YOW. So let's do that now. It's easier than S.S.S.E.E.E etc. You save a few keystrokes and maybe a second or two.)
 
 > GT YOW
 
@@ -1324,7 +1325,7 @@ The fissure can be messed with, and so can the (locked) gate.
 
 > FUSSIER makes the duck curious enough to poke at the fissure and unlock it, too.
 
-(Note that, strictly, GT COPSE doesn't save keystrokes here. Btu you may find it more convenient.)
+(Note that, strictly, GT COPSE actually takes more keystrokes here. But you may find it more convenient.)
 
 > W
 > W
@@ -1333,7 +1334,7 @@ The fissure can be messed with, and so can the (locked) gate.
 
 > PUT DAGGER IN REPAIR
 
-(GT KID is possible instead of the below moves, too.)
+(GT KID is possible instead of the below moves, too. It actually saves keystrokes!)
 
 > E
 > E
@@ -1355,6 +1356,8 @@ Now for something to listen to that's interesting.
 
 > ROWDY
 
+Science! It's so exciting!
+
 > W
 > N
 > N
@@ -1363,7 +1366,7 @@ Incidentally, you can do something with the raves saver, since it calls itself a
 
 > GIVE GIZMO TO KID
 
-Now there are two ways to do things. You can repair the boat all the way, or you can get stuck in the water.
+Now there are two ways to do things. You can repair the boat all the way, or you fix it one way and get stuck in the water. Each way gives the same amount of points.
 
 > STABLER
 > ROBUST
@@ -1466,7 +1469,9 @@ The cinders are a bonus point. DISCERN will help you get a free pass anywhere, o
 
 > W
 
-How to help Gretta ward off the macks? There are seven things they say, divided into pods. You have 7-word and 8-word adverbs with and without repeating letters, 9-word adverbs, 10-word adverbs and a 12-word adverb. Since these are random for each playthrough, guesswork probably doesn't work right away. But one in each pod will. If you're curious, the strategy requiring the fewest keys to type in involves guessing the 12- and 11-letter words, then either the duplicate or unique seven-letter words.
+How to help Gretta ward off the macks? There are seven things they say, divided into pods. You have 7-word and 8-word adverbs with and without repeating letters, 9-word adverbs, 10-word adverbs and a 12-word adverb. Since these are random for each playthrough, randomly picking one word in each pod won't work. If you're curious, the strategy requiring the fewest keys to type in involves guessing the 12- and 11-letter words, then either the duplicate or unique seven-letter words.
+
+You only need three of the seven words.
 
 This twelve-letter adverb always works:
 > DESPAIRINGLY
@@ -1514,8 +1519,8 @@ Here are the duplicate-letter seven-word adverbs:
 Now we're going to skip the conversation, here, but you may wish to work through it. Gretta describes what sort of allies work best against Elvira and why.
 
 > 3
-> Y
 
+(ALT) > Y
 (ALT) > 1
 (ALT) > 1
 (ALT) > 1
@@ -1524,6 +1529,8 @@ Now we're going to skip the conversation, here, but you may wish to work through
 (ALT) > 1
 (ALT) > 1
 (ALT) > 1
+
+> N
 
 > N
 
@@ -1541,13 +1548,13 @@ Now you can get rid of the moat.
 
 The next part with Mr. Lee is an alternate solution, or just a way to get full points. Longer words, though.
 
-> S
+(XTR) > S
 
-> ALTHOUGH
+(XTR) > ALTHOUGH
 
-> HOWEVER
+(XTR) > HOWEVER
 
-> N
+(XTR) > N
 
 Okay, back to the main line.
 
@@ -1573,7 +1580,7 @@ The other animals follow this, uh, mechanic. You only need three of them, but wh
 
 Leopard, Ocelots, Satyr, Badger.
 
-> PAROLED
+> GARBED
 
 > COOLEST
 
@@ -1581,7 +1588,7 @@ Leopard, Ocelots, Satyr, Badger.
 
 You don't need to change the fourth animal, but why not.
 
-> GARBED
+(XTR) > PAROLED
 
 You may notice one of your medals has changed now.
 
@@ -1593,9 +1600,10 @@ You may notice one of your medals has changed now.
 
 You need to get by the shrewin' whiners. Three ways to do that. But, as above, any pair works the same.
 
-> LOATHINGLY
 > TERSELY
-(ALT) > STOICALLY
+> STOICALLY
+
+(ALT) > LOATHINGLY
 
 > S
 
@@ -1607,15 +1615,15 @@ Nails, thrones, pines, corona. You actually only need three of these, but I hope
 
 > SNAIL
 
-> HORNETS
-
 > SNIPE
-
-You don't need to change the fourth non-animal, but why not.
 
 > RACOON
 
 (Two c's works, too.)
+
+You don't need to change the fourth non-animal, but why not.
+
+(XTR) > HORNETS
 
 You may notice the other of your medals changing as you summon these animals.
 
@@ -1631,7 +1639,9 @@ You have enough allies now. Time to kill the hardy hydra.
 
 > W
 
-Hmm, what could beat a hydra? Something you already saw! Something like...what the parrot was!
+You can get an LLP shutting Elmer and Merle up before getting rid of them, if you want.
+
+But hmm, what could beat a hydra? Something you already saw! Something like...what the parrot was!
 
 > RAPTOR
 
@@ -1700,6 +1710,8 @@ And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even..
 STORE H
 
 This is a sort of catch-all area that I hope is still entertaining. Some of the puzzles are a bit obscure, but they're intended to be, since you only need to "get" 20 basic ones, and you can probably guess the category. I left out the tougher ones for expedience.
+
+You can actually win Store H/Others without visiting the Clangier Clearing, if you plan right, but I figure I'd give the whole panoramic view.
 
 If you've already completed the game, you can
 
@@ -1792,6 +1804,7 @@ Woohoo! A popstar's passport! Maybe it can get you through the gate!
 
 (You can also note you get called a perp if you go north. That gives a third verb you should have no problem guessing. But you only need two, and, in fact, that's what the game will let you have. Note none of these are meant to be too hard, since you're really just putting ER at the end to RE at the start.)
 
+(ALT) > N
 (ALT) > PERP
 
 > N
@@ -1861,20 +1874,20 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
  * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
  * release 2: Lawl Wall replaces Horned Hedron (moved to Oyster) with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.
  * release 3: some causality is fixed in this release. It may have more to do with the hints than the actual puzzles, but that should be clearer, now. The escaroles allow an alternative path to bring the yak over. You no longer have to read the textbook.
- * release 4: the HAWT THAW is now zappable.
+ * release 4: the HAWT THAW is now zappable. The Volt Maze/Nowt Town now has two different ways to win, with the longer word getting more points.
 4 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where he makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. You also need to make the kid stop fidgeting before talking about Dr. Yow. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker.
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. You also need to make the kid stop fidgeting before talking about Dr. Yow. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is now an LLP.
  5 TROVES
  * release 2: you now have a new possible action at the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs STEW)
- * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added.
+ * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the room that kept changing its name.
 6 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
- * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering.
-  * release 4: I added yet a few more ways the macks were annoying, because it was fun.
-6 OTHERS was an added area for release 2, so there are really no comparisons from release 1 to release 2. Other than that I hid it for release 1 a week before the deadline because I realized it was extraneous.
+ * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
+  * release 4: I added yet a few more ways the macks were annoying, because it was fun for me.
+6 OTHERS was an added area for release 2, so there are really no comparisons from release 1 to release 2. Other than that I hid it for release 1 a week before the deadline because I realized it wasn't a good introduction, and I wanted to put it somewhere, but I didn't know where.
  * release 3: added persimmon and breadfruit. I forget if Curtis gave you the token right away in release 2, or you had to wait.
  * release 4: added coconuts and other fruits. New puzzle for tangerine, and melons/lemons each have their own word now.
 7 DEMO DOME was added in release 3, so there are no comparisons before.
@@ -1953,7 +1966,7 @@ Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough,
 
 LAST LOUSY POINTS
 
-Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, can't really help you go forward. Often they will seem superfluous or even slightly hidden.
+Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, can't really help you go forward. Often they will seem superfluous or even slightly hidden.
 
 Hints are in ROT13. If you aren't sure what ROT13 is, it can be translated at ROT13.com.
 
@@ -1985,19 +1998,26 @@ TOWERS:
 
 Note that five of the guardians can be left alone.
 
-The denim can be ZVARQ for a new pastry.
-The strudel can be EHFGYRQ for an extra point, though you can just take it.
+In the Scope Copse:
 The yurts can be LHEGF.
 
+Next to the Scope Copse:
 The docile old ice can be PBVYRQ.
+HAERNY or CHYFRF for the neural pulses. Yes, the second isn't right for the region, but it's an LLP. So what the heck, alternate solution.
+
+In the Treading Gradient:
+The denim can be ZVARQ for a new pastry.
 The replay player can be CRNEYL.
-HAERNY or CHYFRF for the neural pulses. Yes, the second isn't right for the region, but it's an LLP.
+
+In the corner rooms:
+The strudel can be EHFGYRQ for an extra point, though you can just take it.
+The fluster-self rut can be ERFGSHY.
 
 The smart kid can also be made NGGRAGVIR in the Subsector.
 
-You can even fix the boat a bit. The weirder red wire can be ERJVERQ.
+You can even fix the boat a bit more in Actionless Coastlines. The weirder red wire can be ERJVERQ.
 
-Across the pond, the serpent can be CERFRAG, the crocus (dying) can become QVATL, and Ed Yerg can become GREY(ED).
+Across Leak Lake, the serpent can be CERFRAG, the crocus (dying) can become QVATL, and Ed Yerg can become GREY(ED).
 
 You also get a final last lousy point for ABG HFVAT K-ENL IVFVBA. VS LBH NGR N CNFGEL LBH PNA FGVYY TRG GUVF CBVAG.
 
@@ -2013,3 +2033,71 @@ FJVCR wipes, FJRNG (over waste,) PYRNA lance, FUNCR heaps (not necessary for the
 
 OTHERS:
 Don't use the arugula to "guru" any item successfully.
+
+Fruits not covered in walkthrough:
+
+First, the ones you can't directly name.
+
+SCAPE SPACE
+
+Banana:
+> ANO NA N
+
+Orange:
+> TB ARNE
+
+CLANGIER CLEARING
+
+Mango:
+> NZBAT
+
+Peach:
+> PURNC
+
+Quince:
+> PVADHR
+
+The "reserved" sign
+> ERIREFRQ
+
+Now for the fruits that can be directly named.
+
+RUSTIC CITRUS
+
+Harmonicas:
+> ZNENFPUVAB
+
+Mad Train:
+> GNZNEVAQ
+
+SWELL WELLS
+
+Green Stain:
+> GNATREVARF
+
+Miser Ruble:
+> ZHYOREEVRF
+
+FILED FIELD
+
+Barren cries:
+> PENAOREEVRF
+
+Breadfruit:
+> OERNQSEHVG
+
+Mean trowel:
+> JNGREZRYBA
+
+Rapt figure:
+> TENCRSEHVG
+
+SCAPE SPACE
+
+Pugnacious plant:
+> EUHONEO
+
+CLANGIER CLEARING
+
+PAY ASAP:
+> CNCNLNF
