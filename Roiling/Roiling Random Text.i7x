@@ -35566,7 +35566,6 @@ blurb
 "A Ego-Log of LeGoGo's dominance as a search engine over SlyCo and OohYa." [x]
 "Electric atrial article recital. Critical! Relate!" []
 "Enumeration mountaineer? Mean routine!"
-"Esoteric Coteries to join." [x]
 "An essay on looking to the future asks, programs or Gramps?" [x]
 "Examples of bad UI from Dubai to Baidu." [x]
 "Excerpts from [i]Open Source Uprose Once[r], by Enos Couper & Ponce Rouse." [x]

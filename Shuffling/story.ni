@@ -8150,6 +8150,39 @@ a gardenia is a flower.
 
 description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if elf row's flowers are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
 
+section metallic door
+
+The metallic door is a door. it is east of underside and west of Anti-Cool Location.
+
+check putting keycard on metallic door when player is in underside: try putting keycard on sensor instead.
+check putting keycard on metallic door when player is in anti-cool location: try going west instead.
+
+the initial appearance of the metallic door is "A large metallic door is to the [if player is in Anti-Cool Location]west. It's got no sensor on this side, so you can probably just walk back through it[else]east. It has an warding drawing repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
+
+to say prob-reads: say "[if Anti-Cool Location is unvisited]. Probably reads something-or-other to let you in[end if]"
+
+description of metallic door is "It's very solid[if metallic door is open] when it's closed[end if][if player is in underside], and a warding drawing gives it some semblance of character[end if]."
+
+the warding drawing is part of the metallic door. understand "sod" and "figure" and "stick figure" and "stick-figure" as warding drawing. the warding drawing is amusing.
+
+instead of taking the warding drawing: say "Since it's part of the door, you take the warding drawing in the metaphorical sense and vow not to act like the poor schelps depicted on it.".
+
+description of warding drawing is "It's a red circle with a line through it, below the text 'Special Place is Special.' The poor struck-through sods in the center appear to be stick-figure parodies of stupid people. You note one [one of]stuffing a metal fork in a toaster[or]moving a rook pawn to start a chess game[or]thought-bubbling that 8+8=17[or]picking his nose[or]with his arm around Clippy[or]reading a tabloid magazine[or]hitting a computer that is not plugged in[or]about to walk over an open manhole[or]about to misplace a square manhole[or]watching a sporting event on TV[or]with a barbell crushing his neck[or]carrying a boombox[or]driving an SUV[or]getting an easy Sudoku all wrong[or]wearing a baseball hat backwards[or]wearing a sports jersey[or]drinking and smoking[or]feeding a shark[or]getting a tattoo[in random order]. Then you lose where it was in all the dizzying variety."
+
+The sensor is scenery in undesired underside. description of the sensor is "It has a small red optical beam."
+
+check scaning sensor: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead.
+
+to say want-wanted:
+	if player has tulip:
+		say "got the tulip from";
+	else if Anti-Cool Location is visited:
+		say "guard the tulip";
+	else:
+		say "want to see"
+
+understand "senser" as sensor.
+
 chapter Bile Libe
 
 there is a room called Bile Libe. it is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. The only way out is back east."
@@ -9073,41 +9106,11 @@ after printing the locale description for Anti-Cool when Anti-Cool is unvisited:
 	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.";
 	continue the action;
 
-description of Anti-Cool Location is "It's free of pure noise here, mostly due to the soundproofed walls. It'd make a nice mob combine, but it's more an anti-cool location[one of]. You suspect the actual entertainment center's in back, and you'd have to learn a secret handshake or something to get there. But you've got a city to save[or][stopping]."
+description of Anti-Cool Location is "It's free of pure noise here, mostly due to the soundproofed walls. It'd make a nice mob combine, but it's more an anti-cool location. Esoteric coteries lie everywhere but back west."
 
 soundproofed walls are plural-named scenery in Anti-Cool Location. "They've got those perpendicular ridges in sets of three that kill sound. The nerds won't shut up, though."
 
-check going nowhere in Anti-Cool Location: say "There's nowhere to go but back west. Well, okay, the nerds have a few cool secret passages you won't get to see, but those don't count." instead.
-
-The metallic door is a door. it is east of underside and west of Anti-Cool Location.
-
-check putting keycard on metallic door: try putting keycard on sensor instead.
-
-the initial appearance of the metallic door is "A large metallic door is to the [if player is in Anti-Cool Location]west. It's got no sensor on this side, so you can probably just walk back through it[else]east. It has an warding drawing repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
-
-to say prob-reads: say "[if Anti-Cool Location is unvisited]. Probably reads something-or-other to let you in[end if]"
-
-description of metallic door is "It's very solid[if metallic door is open] when it's closed[end if][if player is in underside], and a warding drawing gives it some semblance of character[end if]."
-
-the warding drawing is part of the metallic door. understand "sod" and "figure" and "stick figure" and "stick-figure" as warding drawing. the warding drawing is amusing.
-
-instead of taking the warding drawing: say "Since it's part of the door, you take the warding drawing in the metaphorical sense and vow not to act like the poor schelps depicted on it.".
-
-description of warding drawing is "It's a red circle with a line through it, below the text 'Special Place is Special.' The poor struck-through sods in the center appear to be stick-figure parodies of stupid people. You note one [one of]stuffing a metal fork in a toaster[or]moving a rook pawn to start a chess game[or]thought-bubbling that 8+8=17[or]picking his nose[or]with his arm around Clippy[or]reading a tabloid magazine[or]hitting a computer that is not plugged in[or]about to walk over an open manhole[or]about to misplace a square manhole[or]watching a sporting event on TV[or]with a barbell crushing his neck[or]carrying a boombox[or]driving an SUV[or]getting an easy Sudoku all wrong[or]wearing a baseball hat backwards[or]wearing a sports jersey[or]drinking and smoking[or]feeding a shark[or]getting a tattoo[in random order]. Then you lose where it was in all the dizzying variety."
-
-The sensor is scenery in undesired underside. description of the sensor is "It has a small red optical beam."
-
-check scaning sensor: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead.
-
-to say want-wanted:
-	if player has tulip:
-		say "got the tulip from";
-	else if Anti-Cool Location is visited:
-		say "guard the tulip";
-	else:
-		say "want to see"
-
-understand "senser" as sensor.
+check going nowhere in Anti-Cool Location: say "The esoteric coteries are not for you. You have enough thinking to do, here, anyway." instead.
 
 the priv-camp is a privately-named backdrop. the priv-camp is in underside and cramped red camp. understand "camp" as priv-camp.
 
@@ -9273,6 +9276,16 @@ to say nerd-dark:
 		now player is in underside;
 	else:
 		say "'What?! We gave you the tulip! We can't solve all you dumb people's problems. We have our own!' They go on to bemoan how only dumb people seem to enter politics.[run paragraph on]";
+
+section esoteric coteries
+
+esoteric coteries are plural-named useless scenery in anti-cool location. "You can only imagine what the coteries are like."
+
+understand "esoteric coterie" and "coterie" as esoteric coteries.
+
+instead of doing something with esoteric coteries:
+	if action is procedural, continue the action;
+	say "You can't do anything meaningful with the esoteric coteries. They're for the nerds."
 
 chapter Elm Train Terminal
 
@@ -11700,14 +11713,11 @@ to say die-die-die:
 	end the story;
 
 instead of waiting:
-	if player is in frost forts:
-		say "[one of]Ish. Very shivery.[or]Looks like you have a Mexican standoff, if Mexico were in Greenland.[or]The wolves get antsy. I mean, they don't turn into ants. You are getting colder.[or]Your blood runs cold as the wolves inch closer. These aren't totally causally related.[or]If you don't do something cold-blooded, you'll be too cold-blooded to do anything.[or][die-die-die][stopping]" instead;
-	if player is in Means Manse:
-		say "Well, you sort of almost have it, but you want to (not) do something with the exits." instead;
-	if player is in Dry Yard and goat is not visible:
-		say "There's something important to do here. But what?" instead;
-	say "[one of]Time passes... [no line break][or][stopping]";
-	say "[one of]A mist seeps...[or]I see stamps...[or]Me, sit? Passe![or]Sit, see maps...[at random]";
+	if player is in frost forts, say "[one of]Ish. Very shivery.[or]Looks like you have a Mexican standoff, if Mexico were in Greenland.[or]The wolves get antsy. I mean, they don't turn into ants. You are getting colder.[or]Your blood runs cold as the wolves inch closer. These aren't totally causally related.[or]If you don't do something cold-blooded, you'll be too cold-blooded to do anything.[or][die-die-die][stopping]" instead;
+	if player is in Means Manse, say "Well, you sort of almost have it, but you want to (not) do something with the exits." instead;
+	if player is in Dry Yard and goat is not visible, say "There's something important to do here. But what?" instead;
+	if player is in anti-cool location, say "The anti-cool location becomes a lo-action location for a bit." instead;
+	say "[one of]Time passes... [no line break][or][stopping][one of]A mist seeps...[or]I see stamps...[or]Me, sit? Passe![or]Sit, see maps...[at random]";
 
 book senses
 

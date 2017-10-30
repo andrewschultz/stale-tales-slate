@@ -430,6 +430,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "noise"	412333006	--	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
 "bag"	53206425	--	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
 "anticool"	440722768	anti-cool	--	--	"[loc-rej]."
+"esoteric"	678671013	anti-cool	--	--	"[coterie-no]."
+"coterie"	582397047	anti-cool	--	--	"[coterie-no]."
 "nerd"	303066509	anti-cool	--	--	"[nerd-nah]."
 "nerds"	399340475	anti-cool	--	--	"[nerd-nah]."
 "dorks"	329912613	anti-cool	--	--	"[nnww]."
@@ -828,6 +830,9 @@ to say ug-bug:
 this is the angst rule:
 	if player has emitter and emitter is angstgnatted, the rule succeeds;
 	the rule fails;
+
+to say coterie-no:
+	say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough[else]. Maybe the nerds could help you another way, though[end if]"
 
 to say nerd-nah:
 	say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
