@@ -1888,7 +1888,7 @@ blurb
 "A slick 'I slack.'"
 "Slowing up? Lo, upswing!"
 "So, don't do tons."
-"So idle? Iíd lose!"
+"So idle? I'd lose!"
 "Sod do's." []
 "'Sorties? I rest, so.'"
 "Stamina? Man, I sat."
@@ -12036,7 +12036,7 @@ blurb	prio
 "Essric Scries Crises[r], by Crisse Iscser"
 "Estimated Dematteis Meditates Admittees[r], by Tami Deets"
 "Estrange Grantees, Sergeant[r], by Stan Eger" []
-"Et Voil‡, Violate a Violet[r], by Avi Leto" [x]
+"Et Voil√†, Violate a Violet[r], by Avi Leto" [x]
 "Eternise, Teensier[r], by Teri Nees"
 "Ethically, I Yell-Chat[r], by Tacey Hill"
 "Ethics Itches[r], by Chessie Titch"	60

@@ -311,6 +311,11 @@ sub sortTheTable {
         $totBad++;
         $badError .= ("Uh-oh, smart quote found at $short line $., bailing.");
       }
+      if ( $a =~ /\x92/ ) {
+        $totBad++;
+        $badError .=
+          ("Uh-oh, smart apostrophe found at $short line $., bailing.");
+      }
 
       #print "Final = $a";
       last;

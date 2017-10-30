@@ -2053,7 +2053,7 @@ blurb
 "Fun feuds to snuffed out: nut OFFED us!"
 "Fun to redo? Often dour underfoot."
 "Future days: a rusty feud, a deft usury."
-"Fêters fester."
+"FÃªters fester."
 "Gad! Elk of fake gold!"
 "Gaea's a Sage."
 "Gal's Ruin: a Ruling's Singular."
@@ -2444,7 +2444,7 @@ blurb
 "The new wet hen, he went then. Ew!"
 "News Story? To wryness, worst yens."
 "Newt mold won't meld, melt down."
-"Newton went on. ‘Net now!’ Not new."
+"Newton went on. 'Net now!' Not new."
 "A nice spew: wee panics? Epics anew: Peace wins!"
 "Nice water, twine race, enact wire."
 "Nicest eras: resistance sat sincere."
@@ -3614,7 +3614,7 @@ blurb
 "Someone agrees with Kramer's remarks entirely, whatever they are." [x]
 "Someone asks if they can arrest that starer." [x]
 "Someone babbles about a new frozen fish that filets itself. Fliest!" [x]
-"Someone bemoans the cheese sechée." [x]
+"Someone bemoans the cheese sechÃ©e." [x]
 "Someone complains about the rudest duster they ever employed." [x]
 "Someone complains they've never had a plainer praline than THIS." [x]
 "Someone decries a reckless clerkess who is lucky to have a job." [x]
