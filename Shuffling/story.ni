@@ -295,10 +295,9 @@ northeast,southeast,northwest,southwest are diagonal.
 north,east,south,west are ordinal.
 
 before going (this is the reject diagonals rule):
-	if location is Means Manse, say "[one of]You don't feel like getting up. Suddenly you're in the middle of an exitstential crisis.[or]You've had it with doing and going[or]Sit, ex-adventurer.[or]Where would you go? Texis? You see red at the thought![or]Seeing exits just makes you want to...[or]Come on, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here![stopping]" instead;
 	if noun is a diagonal:
 		if player is in busiest subsite, say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
-		if trips strip is visited, say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
+		say "[one of](NOTE: you never have to go in a diagonal direction in this game.)[paragraph break][or][stopping][one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
 
 section dropping
 
@@ -1115,7 +1114,7 @@ table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry
 yourself	"[if cur-score of intro is 0]Try hinting objects around you instead[else]You have the ability to anagram things[end if]."
 redness	"Redness means all the letters in a word are wrong, compared to what something should become. E.g. GNAT <-> TANG."
-dope tan notepad	"You wil write procedural things in your notepad as you get them."
+dope tan notepad	"You will write procedural things in your notepad as you get them."
 acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems animated, almost an animal. [plus][or]This is a LLP and maybe a slightly tricky one. [plus][or]It feels almost kind, mammalian, and the bits read CAN BITE which is in red. [plus][or]NICE BAT. [minus][cycling]"
 cratered bits	"The cratered bits clue what the cabinet can become[if strip is unvisited] once you start your main quest[end if]."
 name list	"The list hints what Shuffling Around is all about."
@@ -1134,7 +1133,7 @@ shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what y
 brush	--	shrub
 snarled darnels	"[if darn-slan is true]You've already vented your frustrations on the darnels.[else][one of]You don't need to do anything with the darnels, but you'll get an extra point out of it. [plus][or]It may be useful to get mad at them, maybe even say something nasty or nonsensical. For the good of society. [plus][or]It's a bit early for a puzzle this long, but you can import intentions to the plants that aren't there. I think we've all done it. [plus][or]You can SLANDER the darnels. [minus][cycling][end if]"
 goat	"The goat's done its job."
-magenta nametag	"[one of]The magenta nametag needs to become something. Something that can help with the gateway. [plus][or]The broad board, along with trying to enter the gateway, gives hints. [plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up omore or note you're dealing with a gate. [plus][or]Thus, you must summon a GATE MAN. With or without the space. [minus][cycling]"
+magenta nametag	"[one of]The magenta nametag needs to become something. Something that can help with the gateway. [plus][or]The broad board, along with trying to enter the gateway, gives hints. [plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate. [plus][or]Thus, you must summon a GATE MAN. With or without the space. [minus][cycling]"
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
 gadget-screen	"Data will flash up once you CERTIFY or RECTIFY."
 blurb	"Just a riff on what's going on with the gadget."
@@ -1350,9 +1349,9 @@ red optical beam	"[if keycard-put is true]You already figured how to swipe the k
 antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The condo owner seems to own the antlers. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
 driveway	"The driveway leads to the condo[if cake is not in condo], where you're not welcome[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."
-deadbeat	"[if dry cake is in condo]The deadbeat would like you to take a stand against the condo before you take anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refilll.[else]The deadbeat is useless to you now."
+deadbeat	"[if dry cake is in condo]The deadbeat would like you to take a stand against the condo before you take anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
 keycard	"[if brocade is in flowers]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
-brocade	"[one of]The brocade isn't really magic, but it can become technological magic. [plus][or]What else is white and black? [plus][or]You can make a BAR CODE, no space necessay. [minus][cycling]"
+brocade	"[one of]The brocade isn't really magic, but it can become technological magic. [plus][or]What else is white and black? [plus][or]You can make a BAR CODE, no space necessary. [minus][cycling]"
 adhesive backing	"Useful once you find something to attach the barcode to."
 barcode	"[if barcode is part of the keycard]The barcode is now fully scannable[else if player does not have keycard]You need to find something that will hold the barcode[else]PUT BARCODE ON KEYCARD[end if]."
 merchandise	"You only need the heaths or begonias."
@@ -1400,7 +1399,7 @@ outcroppings	"These clue what the toolshed can become."
 u-lock	"Just there to keep you out of the toolshed. Which you can change."
 protest	"[one of]Three people are still a protest. How can you cut them down? [plus][or]They have REAL jobs. They make something, they say! [plus][or]Apparently they use clay and say 'It's kiln me!' [plus][or]The people in the PROTEST are really POTTERS. [minus][cycling]"
 riot	"[one of]It's a riot! Way more than three people! [plus][or]How would you cut it down to three? [plus][or]Make them a TRIO. [minus][cycling]"
-links	"[one of]The potters need something to do with their hands. [plus][or]The chain links have been dropped. Perhaps you could use them for less violent purposes. [plus][or]They can becoem something fragile, for a bonus point you can guess.. [plus][or]They can become KILNS. [minus][cycling]"
+links	"[one of]The potters need something to do with their hands. [plus][or]The chain links have been dropped. Perhaps you could use them for less violent purposes. [plus][or]They can become something fragile, for a bonus point you can guess.. [plus][or]They can become KILNS. [minus][cycling]"
 final-exits	"[one of]Just one thing to do. Or not do. [plus][or]You want to do something that completely ignores the EXITS. [plus][or]Another verb. [plus][or]Your work's done. Time to EXIST. [minus][cycling]"
 potters	"[if kilns are off-stage]The potters need something to work with--those chain links aren't doing much right now[else]The potters are happy with their kilns[end if]."
 kilns	"[if potters are off-stage]They need people to operate them--perhaps the ones around you can be changed[else]Just fine as they are now[end if]."
@@ -3224,7 +3223,7 @@ tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool sh
 riot	protest	"trio"	"riot"	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
 protest	potters	"potters/potter"	"protest" or "riot"	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
 links	china	"china"	"china"	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
-links	kilns	"kilns/kiln"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! Him! Good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
+links	kilns	"kilns/kiln"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
 
 chapter say commands from anagrams
 
@@ -3339,7 +3338,7 @@ to say cur-has:
 
 the toad pen is part of the dope tan notepad. the toad pen is amusing.
 
-description of the toad pen is "It's green, and it hasn't croaked yet, thus 'toad.' It's securely clasped over the pedanto-notepad.."
+description of the toad pen is "It's green, and it hasn't croaked yet, thus 'toad.' It's securely clasped over the pedanto-notepad."
 
 instead of taking a person: say "Your power isn't superhuman strength."
 
@@ -4189,9 +4188,9 @@ understand "billboard" as broad board.
 
 section mega-ant
 
-the mega ant is a thing. description is "Boy, is it bright red! And fierce! It's clicking aggressively at you.". "A mega-ant now guards the gateway! It's too tough for you, so you may need someone to dispell it."
+the mega ant is a thing. description is "Boy, is it bright red! And fierce! It's clicking aggressively at you.". "A mega-ant now guards the gateway! It's too tough for you, so you may need someone to dispel it."
 
-check taking the mega ant: say "You can't take it, either in the figurative or literal/fight-ual sence." instead.
+check taking the mega ant: say "You can't take it, either in the figurative or literal/fight-ual sense." instead.
 
 understand "mega-ant" as mega ant.
 
@@ -5096,7 +5095,7 @@ carry out gleaning:
 		all-say "Words morph into a sword that overpowers the beast." instead;
 	if mrlp is resort:
 		if player is in Astral Altars:
-			all-say "You watch as the tiles shring from a large land mass to a smaller one." instead;
+			all-say "You watch as the tiles shrink from a large land mass to a smaller one." instead;
 		if player is in Isle:
 			all-say "You see yourself either swimming or flying east, but not without proper gear." instead;
 		if player is in Rived Drive:
@@ -5983,7 +5982,7 @@ to say can-desc:
 	if livers are not off-stage:
 		say "The canister you broke sits here";
 	else:
-		say "A scantier canister sits here[if number of glopmeats in canister is 1], containinig the [list of glopmeats in canister][one of]. You can probably call it a can without hurting its feelings[or][stopping]";
+		say "A scantier canister sits here[if number of glopmeats in canister is 1], containing the [list of glopmeats in canister][one of]. You can probably call it a can without hurting its feelings[or][stopping]";
 
 understand "can" as canister.
 
@@ -8984,7 +8983,7 @@ check switching on the termite emitter:
 			say "There's nobody here worth bumming out with the angst gnats." instead;
 		if player has lit-up tulip:
 			say "You already have the tulip. That'd be mean." instead;
-		say "The angst gnats rise, fitful, like fruit-flies or as furies flit. The nerds go from woots to ows, but it isn't til they start complaining to each other or worrying about the poor repressed deadbeats they didn't do enough for that you snatch the lit-up tulip as they scalp-clasp and flail about.[paragraph break]Angered, enraged nerdage! En garde! (Gee, darn, no grenade.) 'Why didn't you ASK about the DARKNESS?' one moans as he swipes for the tulip--but only knocks the keycard out of your hand.[paragraph break]They continue moaning, but now it is about economic equality. You hear one point out that all this sensitivity to social stuff will make them more sensitive for the ladies. Then another one argues that it's a Heisenberg Uncertainty Principle sort of thing that if people know you might be angling for that emo stuff, it won't work.[paragraph break]You're almost sucked in, until you realize you have a city to save, and you chuck your keycard at them in frustration over how dumb smart people can be before running out.";
+		say "The angst gnats rise, fitful, like fruit-flies or as furies flit. The nerds go from woots to ows, but it isn't [']til they start complaining to each other or worrying about the poor repressed deadbeats they didn't do enough for that you snatch the lit-up tulip as they scalp-clasp and flail about.[paragraph break]Angered, enraged nerdage! En garde! (Gee, darn, no grenade.) 'Why didn't you ASK about the DARKNESS?' one moans as he swipes for the tulip--but only knocks the keycard out of your hand.[paragraph break]They continue moaning, but now it is about economic equality. You hear one point out that all this sensitivity to social stuff will make them more sensitive for the ladies. Then another one argues that it's a Heisenberg Uncertainty Principle sort of thing that if people know you might be angling for that emo stuff, it won't work.[paragraph break]You're almost sucked in, until you realize you have a city to save, and you chuck your keycard at them in frustration over how dumb smart people can be before running out.";
 		now nerds-unwelcome is true;
 		now player has the lit-up tulip;
 		now keycard is in lalaland;
@@ -9314,7 +9313,7 @@ instead of climbing the down escalator: try going up instead.
 
 check going up in Elm Train Terminal: try climbing the fuzzy looking wall instead.
 
-check going up in underside: say "Everything starts okay, but just as you get a glimpse of the top, the escalator starts speeding down more quickly. You try jumping a step, but it doesn't matter. Eventually, you're thrown to the bottom of the escalator, a bit more tired than before. Well, it was fun til it got impossible." instead.
+check going up in underside: say "Everything starts okay, but just as you get a glimpse of the top, the escalator starts speeding down more quickly. You try jumping a step, but it doesn't matter. Eventually, you're thrown to the bottom of the escalator, a bit more tired than before. Well, it was fun [']til it got impossible." instead.
 
 power-shut is a truth state that varies. power-shut is usually false.
 
@@ -9533,7 +9532,7 @@ the leis are scenery in isle. "Looking at them, you half forget you came through
 
 to say lei-lala: now leis are in lalaland.
 
-check taking the leis: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms un unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead.
+check taking the leis: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead.
 
 section scenery
 
@@ -9715,7 +9714,7 @@ check going east in Rived Drive:
 		now ropes are in lalaland;
 		now player is in Potshot Hotspot instead;
 	if player has ropes and player has grips:
-		say "Tying the rope around your waist, throwing it til it catches on a rock above, and using the grips, you make it up the slope. What you see makes you drop them in surprise!";
+		say "Tying the rope around your waist, throwing it [']til it catches on a rock above, and using the grips, you make it up the slope. What you see makes you drop them in surprise!";
 		now grips are in lalaland;
 		now ropes are in lalaland;
 		now player is in potshot hotspot instead;
@@ -10099,7 +10098,7 @@ section intro
 
 to say blurby:
 	if location of player is notices section:
-		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you straing to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
+		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
 		continue the action;
 	if location of player is Dry Yard:
 		say "A magnet [if goat is visible]wouldn't have helped you[else]won't help you[end if] get past the thickets[if goat is not visible]. Right idea, though. Wrong item[end if].[run paragraph on]";
@@ -10514,7 +10513,7 @@ carry out scaning:
 		if liches are visible:
 			say "The banshee's annoying but not as obstructive as the liches. In fact, you can't tell where it is." instead;
 	if noun is tulip and nerds are visible:
-		say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sorr of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
+		say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sort of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
 	if noun is faeries:
 		say "You sense that would be a breach of some magical etiquette you don't understand." instead;
 	if noun is jail cell graffiti or noun is grate:
@@ -10528,7 +10527,7 @@ carry out scaning:
 		say "[one of]You feel a bit self-conscious waving your gadget around such intrinsically magical beings. But they do not seem to mind.[paragraph break][or][stopping]";
 	if noun is poem and poem is not folded:
 		if smilies are visible:
-			say "Your gadget doesn't do much til it's over the smilies. So you look more closely at those.";
+			say "Your gadget doesn't do much [']til it's over the smilies. So you look more closely at those.";
 			try scaning smilies instead;
 	if noun is tinfoil info-lit:
 		say "Nothing happens. Which just proves the paper's premise that this is all too ridiculous, amirite?" instead;
@@ -10562,7 +10561,7 @@ carry out scaning:
 			say "Before your gadget gets close, you begin to pick something up. Perhaps it isn't the doll house you need to do something with. Something ambient--like the static. So you do that.";
 			try scaning static instead;
 		else:
-			say "[bug-report] One of attics and static sould be visible." instead;
+			say "[bug-report] One of attics and static should be visible." instead;
 	if noun is part of the gadget:
 		say "If that part of the gadget were detectable, you'd have gone crazy from the beeping by now." instead;
 	if noun is gadget:
@@ -10881,7 +10880,7 @@ gateman	attics	"'[if attics are off-stage]Yes. Do--whatever it is--to make them 
 gateman	blue lube	"[about-lube]"
 gateman	phail phial	"[about-lube]"
 gateman	prep paper	"'No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start.'"
-gateman	Red Bull Burdell	"[one of]'Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called 'Leveling up.' Maximizing stuff called hit points and magic points. Things went awry before we were wary.' You sense there's more, if you can bear it.[or]'Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned...' His eyes grow mistened. 'Ten dimes say it's end times. We've waited for an upturn to turn up...'[or]'The time for talk is over.'[stopping][one of][line break][rbb][or][stopping]"
+gateman	Red Bull Burdell	"[one of]'Like he was thought up by a demonic comedian. Made a desirable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called 'Leveling up.' Maximizing stuff called hit points and magic points. Things went awry before we were wary.' You sense there's more, if you can bear it.[or]'Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned...' His eyes grow mistened. 'Ten dimes say it's end times. We've waited for an upturn to turn up...'[or]'The time for talk is over.'[stopping][one of][line break][rbb][or][stopping]"
 gateman	tip	"[tip-dialogue]"
 gateman	tinfoil info-lit	"'Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent.'"
 gateman	Bud Helm	"'Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now.'"
@@ -10908,7 +10907,7 @@ gateman	gadget	"'[one of]Powerful. Not as a weapon. Won't be many fights. But yo
 gateman	s-r	"'Could make things tougher at first, but then easier for you. Forces you into only CERTIFYing or RECTIFYing if you push it. But you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so.'[pad-sec]"
 gateman	noise bag	"'Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it.'" [!! HACK ... NOISE BAG comes before NOISE]
 gateman	saltine	"'Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix.'"
-gateman	cabinet	"'[if lube-asked is false][lubeit]It's kind of picky and defensive. Might not give you everything til I tell it.' He goes over to the cabinet, pats it on its top, and returns. 'Now you should be able to get everything from there.[else]Everything in there's yours.[end if]'"
+gateman	cabinet	"'[if lube-asked is false][lubeit]It's kind of picky and defensive. Might not give you everything [']til I tell it.' He goes over to the cabinet, pats it on its top, and returns. 'Now you should be able to get everything from there.[else]Everything in there's yours.[end if]'"
 peasant	hay	"'Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand...'"
 peasant	poem	"'I try my best at it.'"
 peasant	straw	"'Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though.'"
@@ -10928,7 +10927,7 @@ faeries	drainage	"'Perhaps you can turn something in this city into a flower. We
 faeries	gardenia	"[if drainage is in underside]You don't have a gardenia, yet. But you can find or make one.[else][faery-flower][end if]"
 faeries	heaths	"[if player has begonias or player has noise bag]The faeries have been generous enough.[else][faery-flower][end if]"
 faeries	begonias	"[if player has sheath or player has heaths]The faeries have been generous enough.[else][faery-flower][end if]"
-faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The faires wonder aloud what sort of magic could conjure a sheath.[end if]"
+faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The fairies wonder aloud what sort of magic could conjure a sheath.[end if]"
 faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The faires wonder aloud what sort of magic could conjure a noise bag.[end if]"
 faeries	merchandise	"[faery-flower]"
 faeries	beats	"'It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around.'"
@@ -10938,7 +10937,7 @@ faeries	tomato	"'A putrid vegetable! [if player has tomato]We should kick you ou
 faeries	tulip	"'Some flower that is!'"
 faeries	deadbeat	"The fairies buzz and give superior sniffs."
 faeries	nerds	"The fairies buzz and give superior sniffs."
-nerds	beats	"'Anyone can be smart enough to build noise cancelling homes to get rid of the beats!'"
+nerds	beats	"'Anyone can be smart enough to build noise canceling homes to get rid of the beats!'"
 nerds	controls	"[if player does not have controls]The nerds might be experts on technical stuff, but they'd be over your head.[else]'Oh! These are simple controls! You don't even need to know about induction and charges and anything. Just slap them in where there's something missing. Pf, barely worth the time to ASK NERDS about.[end if]"
 nerds	deadbeat	"The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet."
 nerds	faeries	"The nerds assure you science is better than magic."
@@ -10996,7 +10995,7 @@ gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
 masses	"You can't think of any small talk. Not that you're trying hard to."
-nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they's not here.'[paragraph break]'Maybe they's a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they doen't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit. As you do, you are hit with a book[book-in-nerds]![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
+nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit. As you do, you are hit with a book[book-in-nerds]![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
 night thing	"'NYURGH! HUNGRY!' Easier to argue a grue away."
 peasant	"'I don't know much about that, that's sure. But I know from hay, being an abler baler.'"
 red bull burdell	"Your pale plea meets with strung grunts."
@@ -11922,11 +11921,11 @@ understand "credits" and "credit" as creditsing.
 carry out creditsing:
 	if cur-score of Intro is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
+	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player yes-consents:
-		say "John Nitchals = Wade Clarke.[line break]Gavin Myers-Leman = Melvin Rangasamy.[line break]Tomie Campf = Kevin Jackson-Mead, who used 'Pam Comfite' as an anagram of 'IFComp Meta' the year before--it's worth checking out the 2011 competition for those games alone.[paragraph break]Hulk Handsome is also a cool pseudonym, but it's one he uses lots of places. Oh, and I guess 'Lupe Lea' could've been an anagram for Paul Lee, but I never asked him, and I didn't have my anagram name cranker til I got serious with Roiling."
+		say "John Nitchals = Wade Clarke.[line break]Gavin Myers-Leman = Melvin Rangasamy.[line break]Tomie Campf = Kevin Jackson-Mead, who used 'Pam Comfite' as an anagram of 'IFComp Meta' the year before--it's worth checking out the 2011 competition for those games alone.[paragraph break]Hulk Handsome is also a cool pseudonym, but it's one he uses lots of places. Oh, and I guess 'Lupe Lea' could've been an anagram for Paul Lee, but I never asked him, and I didn't have my anagram name cranker [']til I got serious with Roiling."
 
 part releaseing
 
@@ -11939,11 +11938,11 @@ understand "release" as releaseing.
 carry out releaseing:
 	say "Each version of Shuffling Around should contain release notes, but here is a brief summary:[paragraph break]";
 	say "Shuffling Around's first release was for IFComp 2012, on September 29th.";
-	say "Shuffling Around's second release was mushier--I intended to make an open beta, but that didn't work, so we'll call it January 2013. It included Heartless Zombie's hash tables.";
-	say "Shuffling Around's third release went out in August of 2014. It was on the back burner a bit, but I refined the hash tables, added error checking, and also nailed down things like Last Lousy Points and in-game hints, both with the paper and with item descriptions. I finally fixed some blocker bugs in Store M, and I also normalized random text, adding things like map locations in Store F.";
-	say "Shuffling Around's fourth release went out in March of 2015. It was largely a maintenance release, but it simplified the introduction, put a random puzzle in Store F, and added object-based hinting.";
-	say "[line break]The current edition of Shuffling Around should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release.";
-	say "The project 'super-secret' code names are A Purged Upgrade (2), Version I Revision (3), Le Redux Deluxer (4), and Few Neat New Feat (5). The last is a spoonerism, but I was running out of options.";
+	say "[line break]Shuffling Around's second release was mushier--I intended to make an open beta, but that didn't work, so we'll call it January 2013. It included Heartless Zombie's hash tables.";
+	say "[line break]Shuffling Around's third release went out in August of 2014. It was on the back burner a bit, but I refined the hash tables, added error checking, and also nailed down things like Last Lousy Points and in-game hints, both with the paper and with item descriptions. I finally fixed some blocker bugs in Store M, and I also normalized random text, adding things like map locations in Store F.";
+	say "[line break]Shuffling Around's fourth release went out in March of 2015. It was largely a maintenance release, but it simplified the introduction, put a random puzzle in Store F, and added object-based hinting.";
+	say "[line break]The current edition of Shuffling Around should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, new area names, and a list of changes from the previous release. It's planned to be the last significant release, though there are always bug fixes.";
+	say "[line break]For amusement, yhe project 'super-secret' code names are A Purged Upgrade (2), Version I Revision (3), Le Redux Deluxer (4), and Few Neat New Feat (5). The last is a spoonerism, so it feels kind of trivial, but I was running out of options.";
 
 part teching
 
@@ -11954,7 +11953,7 @@ understand the command "tech" as something new.
 understand "tech" as teching.
 
 carry out teching:
-	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into this game's sequel[if cur-score of intro > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present [']til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into this game's sequel[if cur-score of intro > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
 	say "And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
@@ -12020,7 +12019,7 @@ carry out possing:
 		now possibles is false;
 	else:
 		now possibles is true;
-	say "Switching [if possibles is true]on[else]off[end if] minimum/maximum available point notification in the status line. [one of][paragraph break][i][bracket]Note: this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.[no line break][r][close bracket][or][stopping][line break]";
+	say "Switching [if possibles is true]on[else]off[end if] minimum/maximum available point notification in the status line. [one of][paragraph break][i][bracket]Note: this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an Easter egg. Or watching the minimum score increase may mean you found one.[no line break][r][close bracket][or][stopping][line break]";
 	the rule succeeds;
 
 report requesting the score for the first time: poss-display.

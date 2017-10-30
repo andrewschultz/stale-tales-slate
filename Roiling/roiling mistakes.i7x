@@ -595,6 +595,10 @@ understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anywa
 
 understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is visible.
 
+chapter danger garden
+
+understand "ranged" as a mistake ("The garden does not get any bigger.") when player is in danger garden.
+
 chapter lost lots
 
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.

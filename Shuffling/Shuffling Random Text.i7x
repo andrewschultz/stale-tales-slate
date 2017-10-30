@@ -1380,8 +1380,8 @@ blurb
 "the AH! Heath"
 "All-Bots-Lost Lab"
 "All-Down Lowland"
-"the all-grey gallery"
 "Any-Con Canyon"
+"Bare Bear Brae"
 "the asp spa"
 "Back-To-Me Cake Tomb"
 "Bad-Ego Bodega"
@@ -2234,7 +2234,7 @@ blurb
 "I, reopening pioneering in one gripe."
 "I report a repair to eat, prior."
 "I sally a silly, ill say. Ail, sly!"
-"I sent off fine sotf feints of one stiff info fest!"
+"I sent off fine soft feints of one stiff info fest!"
 "I square a squire!"
 "I Stare at Sire."
 "I, Thug of Hugo, fit, if tough."
@@ -2963,7 +2963,7 @@ blurb
 "A tiff now, fan of wit? Waft info!"
 "Tike Sol likes to lose Kit."
 "The times smit thee!" []
-"Tiny scoured countryside, ionduce story!"
+"Tiny scoured countryside, induce story!"
 "Tipsy elf felt yips, self-pity. Fly, spite!" []
 "Tirade. Read it!"
 "[']Tis Red, Direst Sir Ted!"

@@ -1977,7 +1977,7 @@ muscly hulk	--
 lois the hostile	--
 hostile-is-he lot	--
 natives	--
-snider diners	"'We are EATING,' they exclaim, drily. You'd like to rain on their parade, even a little. You seem to have interrupted their talk, and maybe LISTENing would help."
+snider diners	"'We are EATING,' they exclaim, dryly. You'd like to rain on their parade, even a little. You seem to have interrupted their talk, and maybe LISTENing would help."
 sweatier wait-seer	--
 arid den	--
 bluster butlers	--
