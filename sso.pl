@@ -741,22 +741,16 @@ sub dumpUnquoted {
       }
       $procString = lc($procString);
       $procString =~ s/[,\.!]//g;
-      $squash = $procString;
-      $squash =~ s/ //g;
-      $squash =~ s/\+//;
-      print B "====================$a/$procString/$squash\n";
-      print "Processing $procString"
-        . ( ( $squash ne $procString ) ? " (squashed to $squash)" : "" )
-        . ", #$tries at line $....\n";
-      print B `anan.pl $squash`;
-      print B `myan.pl 3 $squash`;
-      print B `gr $procString`;
-
-      if ( $a =~ /\+/ ) {
-        print "Processing $procString (modified to ${squash}s)...\n";
-        print B `anan.pl s$squash`;
-        print B `myan.pl 3 s$squash`;
+      for my $anaWord ( toAry($procString) ) {
+        print B "====================$a/$procString/$anaWord\n";
+        print "Processing $anaWord"
+          . ( ( $anaWord ne $procString ) ? " (changed from $procString)" : "" )
+          . ", #$tries at line $....\n";
+        print B `anan.pl $squash`;
+        print B `myan.pl 3 $squash`;
+        print B `gr $procString`;
       }
+
     }
     else {
       print A2 $a;
@@ -899,6 +893,23 @@ sub addString {
   close(B);
   close(A);
   copy( $bkup, $orig ) if compare( $bkup, $orig );
+}
+
+sub toAry {
+  my $temp;
+  if ( $_[0] =~ /\+/ ) {
+    $temp = $a;
+    $temp =~ s/\+//;
+    return ( $temp, $temp + "s" );
+  }
+  return ( $_[0] ) if ( $_[0] !~ /\// );
+  my @ary = split( "/", $_[0] );
+  my @retAry = ( $_[0] );
+  my $suffix;
+  for $suffix ( 1 .. $#ary ) {
+    push( @retAry, $_[0] + $suffix );
+  }
+  return @retAry;
 }
 
 sub usage {
