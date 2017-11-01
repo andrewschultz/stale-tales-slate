@@ -48,6 +48,8 @@ understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a m
 
 chapter largely all-grey gallery
 
+understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
+
 understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
 understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is in lalaland]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is visible.
@@ -90,7 +92,7 @@ understand "throes" as a mistake ("No, you are not in your last throes. Neither 
 
 understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is unexamined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is visible.
 
-understand "stroke" as a mistake ("You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.") when player is in strip and smoke cloud is off-stage.
+understand "stroke" as a mistake ("You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.") when player is in strip and mangiest steaming is off-stage.
 
 understand "stoner" as a mistake ("[if nestor is visible]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' You hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something[move-toners].[or]You've teased him enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
 

@@ -472,13 +472,13 @@ use MAX_SYMBOLS of 140000.
 
 use SYMBOLS_CHUNK_SIZE of 15000.
 
-use ALLOC_CHUNK_SIZE of 36000.
+use ALLOC_CHUNK_SIZE of 37500.
 
 use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 650.
+use MAX_VERBS of 660.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -494,7 +494,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 670.
+use MAX_VERBS of 680.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -1288,7 +1288,7 @@ carry out gotoing:
 	if noureg is not mrlp:
 		say "You can't jump across game regions." instead;
 	if noun is lectures and player is in strip of profits:
-		say "[if stores is solved]You already took care of things there[else]Just enter the smoke cloud[end if]." instead;
+		say "[if stores is solved]You already took care of things there[else]Just enter the mangiest steaming[end if]." instead;
 	if noun is strip and mrlp is not stores:
 		say "This is equivalent to the RETRY command, so that's what I'll do.";
 		try retrying instead;
@@ -2274,7 +2274,7 @@ nestor	tokers	"[if tokers are visible]Nestor gives them a thumbs-up, they cheer 
 tokers	Store K	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 tokers	Elvira	"'A bummer of authoritarianism, dude! She says her personality is all the drug you need!'"
 tokers	nestor	"[if nestor is visible]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
-tokers	smoke cloud	"[if cruelest lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. You'd probably have SOME sort of experience going through those fumes[end if]."
+tokers	mangiest steaming	"[if cruelest lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. You'd probably have SOME sort of experience going through those fumes[end if]."
 lecturer	Elvira	"You probably know he's in favor of her."
 lecturer	lecturer	"Oh, his good-for-society rant has enough of his own experiences sprinkled in."
 Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
@@ -3618,11 +3618,11 @@ to solve-region (sre - a region):
 	if wiped-any-out is true:
 		say "(You wipe out writing in your notepad that probably only applied to this region.)";
 	if lecturer is reflexed: [have to get rid of them before moving the player, but we want to print a note AFTER going. So, tap dance with code a bit.]
-		if smoke cloud is in profits:
+		if mangiest steaming is in profits:
 			now tokers-home is true;
 			now nestor is in lalaland;
 			now tokers are in lalaland;
-			now smoke cloud is in lalaland;
+			now mangiest steaming is in lalaland;
 	if min-score of mrlp > poss-score of mrlp, say "NOTE: somehow the minimum score processed by the code exceeded the possible score. If you are able to, and you can cut/paste the game transcript, I'd appreciate seeing it at [email] so I can fix it. This won't affect the game, but all the same--it's a nuisance bug. Thanks!";
 	if player is not in Strip of Profits:
 		d "player not currently in Strip of Profits. Player moved from [location of player].";
@@ -8896,10 +8896,10 @@ after fliptoing when player is in rustic citrus (this is the Curtis pleased rule
 	continue the action;
 
 to say check-tokers:
-	say "[if tokers are in Strip of Profits]motion to the smoke cloud.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][otherwise]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
+	say "[if tokers are in Strip of Profits]motion to the mangiest steaming.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][otherwise]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
 
 to say check-nestor:
-	now smoke cloud is in Strip of Profits;
+	now mangiest steaming is in Strip of Profits;
 	say "[paragraph break][if nestor is in Strip of Profits]What's more, you seem to have rescued their friend, Nestor! 'Hey, dudes, I like went back to the wrong store or something.'[no line break][otherwise]They spend some time complaining about their one toker friend who like went out to get the really good stuff and never like reappeared.[no line break][end if]"
 
 after fliptoing when player is in stores (this is the reunite gang rule) :
@@ -9533,7 +9533,7 @@ to say ahoy-eh:
 	say "The ship hovers a bit, then chugs through the stripe. 'Ahoy, eh? ... Oh, yeah!' you cry as the underground lake expands until the ceiling disappears. The water begins rushing, and you are thrown to the floor of your boat. When you wake up, you find that you are back at the Strip of Profits";
 
 after fliptoing lecturer:
-	now smoke cloud is not maingame;
+	now mangiest steaming is not maingame;
 	now list-headache is true;
 	continue the action;
 
@@ -9642,7 +9642,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 	continue the action;
 
 after fliptoing tokers:
-	now smoke cloud is in Strip of Profits;
+	now mangiest steaming is in Strip of Profits;
 	set the pronoun her to tokers;
 	continue the action;
 
@@ -10494,17 +10494,33 @@ rule for supplying a missing noun when entering:
 [x current room]
 Largely All-Grey Gallery is a stairy innie room in Means Manse. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
-the ISBN bins are LLPish scenery in All-Grey Gallery. "[if bins are reflexed]The bins are now locked and a bit securer[else]The ISBN bins are very red and very unlocked. One of them says NIBS (in another shade of red), an embarrassing reference to how fawned over you once gave all sorts of embarrassing sobriquets you didn't want[end if]."
+diorama is in dusty study and Largely All-Grey Gallery. [this is written in here after defining the gallery as a room]
+
+section isbn bins and snib
+
+the ISBN bins are plural-named LLPish reflexive scenery in All-Grey Gallery. "[if bins are reflexed]The bins are now locked and a bit securer with the snib[else]The ISBN bins are very red and very unlocked. One of them says NIBS (in another shade of red), an embarrassing reference to how fawned over you once gave all sorts of embarrassing sobriquets you didn't want[end if]."
 
 instead of doing something with ISBN bins:
 	if action is procedural, continue the action;
 	say "You don't have much time to meddle in depth with the bins, [if bins are reflexed]now you've made them secure[else]but you could make them a bit more secure[end if].";
 
-understand "snib" as ISBN bins when ISBN bins are reflexed.
+after fliptoing ISBN bins:
+	move snib to largely all-grey gallery;
+	continue the action;
 
-a-text of ISBN bins is "RRYR". b-text of stria is "RRYR". parse-text of ISBN bins is "x[sp]x[sp]i[sp]x". stria is parse-spoilable.
+understand "bin" and "ISBN bin" as ISBN bins.
 
-diorama is in dusty study and Largely All-Grey Gallery.
+the snib is useless scenery. "The snib is holding your bins together. That might make it snibs, but let's just pretend it sort of links all the bins together so even if they can't be broken into, someone would have to move them all at once."
+
+instead of doing something with snib:
+	if action is procedural, continue the action;
+	say "The snib is secure enough. No need to tinker with it.";
+
+understand "snibs" as snib.
+
+a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text of ISBN bins is "x[sp]x[sp]i[sp]x". ISBN bins are parse-spoilable.
+
+section evac-cave
 
 the evac-cave is scenery in Largely All-Grey Gallery. "It's a bit small, but you can enter it, or go inside."
 
@@ -10515,6 +10531,8 @@ instead of doing something with evac-cave:
 	if current action is entering:
 		try going inside instead;
 	say "You probably just want to enter the cave or go IN.";
+
+section stria
 
 the stria are plural-named vanishing LLPish scenery in Largely All-Grey Gallery. "You never knew what they were until [gtmn] told you. 'You'll be glad one day, maybe,' he said. They're like veins, vines." [stria are LLPish because if you're in the Largely All-Grey Gallery you don't need to attack them]
 
@@ -12088,12 +12106,12 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 			if diffic of EP < curdif:
 				now RP is EP;
 				now curdif is diffic of EP;
-		say "[line break]The[if RP is e-s], er, spot[else if RP is oyster-x] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is smoke cloud], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
+		say "[line break]The[if RP is e-s], er, spot[else if RP is oyster-x] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
 		if the player direct-consents:
 			try entering RP instead;
 		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
-	if smoke cloud is in strip:
-		try entering smoke cloud instead;
+	if mangiest steaming is in strip:
+		try entering mangiest steaming instead;
 	say "There's nothing you can enter--the plain old stores don't count. You don't have time to shop." instead;
 
 last-loc of Stores is Strip of Profits.
@@ -12234,24 +12252,24 @@ a-text of Store K is "RYRYRR". b-text of Store K is "RYRYRR". parse-text of stor
 
 description of Store K is "[one of]A peculiar smell of smoke and incense seeps from Store K, but that's probably not the BIG reason this place went downhill. 'Hey! stop violating our privacy, Dude, or we will maybe, like, insult you next time![or]'Dude! We're trying to REST, OK?' someone looks briefly at you through bloodshot eyes.[or]Someone with bloodshot red eyes begins blasting the truly awful music of K. T. Rose.[or]You wonder how they can rest okay while listening to the music of K. T. Rose.[stopping]"
 
-section smoke cloud
+section mangiest steaming
 
-the smoke cloud is a not maingame not lumpable portal. diffic of smoke cloud is 1. "The tokers['] smoke cloud hovers--[if lectures is visited]but you don't want to go back[else]maybe there's a small 'adventure' inside[end if]."
+the mangiest steaming is a not maingame not lumpable portal. diffic of mangiest steaming is 1. "The tokers['] mangiest steaming hovers--[if lectures is visited]but you don't want to go back[else]maybe there's a small 'adventure' inside[end if]."
 
-description of smoke cloud is "It hangs all around the tokers[if lectures is visited]. You don't really want to go back[otherwise]. But it probably can't harm you. Maybe it even leads to a small adventure if you ENTER it. I promise it won't kill you[end if]."
+description of mangiest steaming is "It hangs all around the tokers, a product of their, umm, activity[if lectures is visited]. You don't really want to go back[otherwise]. But it probably won't kill too many brain cells to ENTER it. You might even expand your consciousness[end if]."
 
-go-region of smoke cloud is stores.
+go-region of mangiest steaming is stores.
 
-check entering smoke cloud:
+check entering mangiest steaming:
 	if nestor is off-stage:
 		say "'Dude, we, like, can't share these righteous fumes unless you help us. Maybe find our friend or something.'" instead;
 	if lecturer is reflexive:
-		say "The tokers begin singing 'Oh sigh, so high,' then 'TO PHONY TYPHOON!' and you're all 'Rest. OK?' You step into the smoke cloud and find yourself on a way high highway. (Proof that stuff's an entry drug.) You wind up saving lands similar to Yorpwald which speak Spanish, French, German and Italian.[paragraph break]Well, in a dream, anyway. Then you wake up. A policeman towers over, asking if you're on drugs: 'Don't cop a lie, man. No jukein['] on, junkie.'[paragraph break]After a stern lecture about how using drugs makes you miss obvious details (other than, well, a WANTED poster of you that you see) and you druggies think you're special but there's nothing magical about drugs, the no-[crap] narc-op pushes you to an anti-drug seminar.";
+		say "The tokers begin singing 'Oh sigh, so high,' then 'TO PHONY TYPHOON!' and you're all 'Rest. OK?' You step into the mangiest steaming and find yourself on a way high highway. (Proof that stuff's an entry drug.) You wind up saving lands similar to Yorpwald which speak Spanish, French, German and Italian.[paragraph break]Well, in a dream, anyway. Then you wake up. A policeman towers over, asking if you're on drugs: 'Don't cop a lie, man. No jukein['] on, junkie.'[paragraph break]After a stern lecture about how using drugs makes you miss obvious details (other than, well, a WANTED poster of you that you see) and you druggies think you're special but there's nothing magical about drugs, the no-[crap] narc-op pushes you to an anti-drug seminar.";
 		min-up;
 		now player is in lectures instead;
 	say "Oh, no. Not that again. Country'll have a new alphabet the next time. And a worse lecture." instead;
 
-check smelling when smoke cloud is visible:
+check smelling when mangiest steaming is visible:
 	say "Err. I can't tell you exactly how the smoke smells. I wouldn't know." instead;
 
 section tokers
@@ -12293,10 +12311,10 @@ a-text of Store N is "RYRRYR". b-text of Store N is "RYRRYR". parse-text of stor
 
 section nestor
 
-Nestor is a person. description of nestor is "[if tokers are visible or smoke cloud is visible]Nestor is somewhere among the tokers, you'd guess[otherwise]Nestor pines for his most bummedly lost friends[end if].". initial appearance of Nestor is "Nestor mopes around, hoping his friends drop by."
+Nestor is a person. description of nestor is "[if tokers are visible or mangiest steaming is visible]Nestor is somewhere among the tokers, you'd guess[otherwise]Nestor pines for his most bummedly lost friends[end if].". initial appearance of Nestor is "Nestor mopes around, hoping his friends drop by."
 
 rule for printing a locale paragraph about nestor:
-	if smoke cloud is visible or tokers are visible:
+	if mangiest steaming is visible or tokers are visible:
 		do nothing instead;
 	continue the action;
 
@@ -12542,7 +12560,7 @@ book Cruelest Lectures
 Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium[one of]. People stare at a lecturer as if they've been drugged. Um, hypnotized[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E."
 
 check looking in lectures for the first time:
-	say "As you march through the smoke, you hear 'Freeze! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'IAN. A DRUG GUARDIAN. QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. We finger fringe like you. [if smoke cloud is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
+	say "As you march through the smoke, you hear 'Freeze! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'IAN. A DRUG GUARDIAN. QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. We finger fringe like you. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
 
 check exiting in Cruelest Lectures:
 	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [i]tedious[r][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The lecturer isn't as tedious as coworker chitchat, but you never pulled yourself away from THAT, either[or]Tedious, tedious, tedious[or]Your eyes wander to the top of the screen. Um, the screen behind the lecturer, that sort of blends in with the room[stopping]." instead;
@@ -22355,8 +22373,8 @@ to say lee-or-eels:
 
 to clean-for-roving:
 	now roved is true;
-	if smoke cloud is in strip:
-		move smoke cloud to lalaland;
+	if mangiest steaming is in strip:
+		move mangiest steaming to lalaland;
 	if tokers are in strip:
 		move tokers to lalaland;
 	if nestor is in strip:
@@ -25357,7 +25375,7 @@ obser [from chic loner chronicle] [tdm4]
 "I even found it easy to add new or break-off tables. For instance, the schematic catechism (one of the last anagrams I wanted to do something with but I didn't know what) originally just had random ideas. Then it had research topics. Then it had Brainy People. Again, none of this would've happened if I hadn't also written code that let me shift between tables."
 "Once the anagrams started flowing, and I started adding alternate solutions, ARO started taking a long time to compile. Like 30 seconds. So I tried to place in random text and so forth while I built, since that was low-risk for recompiling. I had one rather bad bug which the Inform 6.32 compiler didn't track (http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6Xexecutables.html got the new version) but mostly it was just a matter of writing stuff down and feeding it to a computer. It was much more fun procrastination than others. I found stuff to do (book reading) while something compiled, and that made having to raise an in-program constant less unbearable."
 "Many of the puzzles just didn't make sense in the first version. But I was able to sort them out by ones that needed to be changed and ones that would be nice to. I found a lot of times I had to let a tester's observation sit for about two weeks before changing something: gee, it'd be nice to..."
-"Perhaps the last thing I enjoyed looking up was that my data roughly obeyed both Zipf's and Benford's Law. I put the megachatter table rows and byte totals as data points into a graph at http://benford.jplusplus.org/, and while each looked pretty good by itself, together they gave a very low z-statistic. Zipf's law was a little trickier--the upper and lower halves of the data had different trend lines. I impart this to how I just sort of added a bunch of tables late, so of course thouse would sink to the bottom. While a few later tables gained traction (posse bosses, lame talk shows and comedians,) many were just neat to get to ten, and I didn't add to them."
+"Perhaps the last thing I enjoyed looking up was that my data roughly obeyed both Zipf's and Benford's Law. I put the megachatter table rows and byte totals as data points into a graph at http://benford.jplusplus.org/, and while each looked pretty good by itself, together they gave a very low z-statistic. Zipf's law was a little trickier--the upper and lower halves of the data had different trend lines. I impart this to how I just sort of added a bunch of tables late, so of course those would sink to the bottom. While a few later tables gained traction (posse bosses, lame talk shows and comedians,) many were just neat to get to ten, and I didn't add to them."
 "I also found that, by the end, I spent more time adding anagrams than actual bug fixes to Shuffling and Roiling. But it was fun, and I felt I was doing something every day. Still, it got to be time consuming, and it took a while before I figured a way to add stuff to a separate text file, push a button, and add it to source."
 "Learned Helplessness is a powerful thing, and you can always be sucked back down into it: there's that silly voice in my head saying 'Haven't you gotten enough shortcuts?' Larry Wall's delightful oversimplification of the three programming virtues has helped me a lot, here, but I think the real way to frame things is: with the tools I have now, X would be too tough. I don't see how to fix it, yet, but I will."
 "One thing I wish I'd done earlier, that would've given me more shortcuts, was setting up my GitHub account. The simple graph of what you've done today (green vs. grey) is great motivation to do something/anything, and if it isn't much, that's motivation to do more next time."
@@ -25784,7 +25802,7 @@ carry out objhinting (this is the pick object to hint rule) :
 				if player is in shack:
 					say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try [spoil-entry entry]." instead;
 				else:
-					say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!";
+					say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!";
 				if scams is false:
 					decrement swears;
 				now undo-code is 1;
@@ -26107,7 +26125,7 @@ patcher	"[one of]The patcher can be used to skip certain areas. It's a bit fourt
 f-o-b	"You may be able to guess what you need to do with the barley once you get there, but you can't do anything until you get past the otters."
 Nestor	"[if tokers are off-stage]Nestor's pals are in store K[else]Nestor's back with his pals. Not much to do with him now[end if]."
 tokers	"[if nestor is off-stage]You can find the tokers['] friend in store N[else if lecturer is reflexive]They'll give you a treat if you solve the side quest[else]They're of no use to you now[end if]."
-smoke cloud	"[if lecturer is reflexive]You can enter the cloud for a mini-side-quest[else]You've been in the cloud. You can't go back. You don't need to[end if]."
+mangiest steaming	"[if lecturer is reflexive]You can enter the steaming for a mini-side-quest[else]You've been in the steaming. After how you upended things, it'd be unwise to go back[end if]."
 passage	"If you go there, you'll get a big hint."
 heartfelt reflections	"They are completely useless for actual life lessons, but the settler on 'cheat' mode will knock a word out."
 idg	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't work here.[plus][or]Ian's brochure is a hint.[plus][or]TEDIOUS + I USED TO will give you a lot of clues. Studio E will give a clincher.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
@@ -26174,7 +26192,7 @@ rivets	"[one of]Those rivets stand out.[plus][or][if prai is reflexed]You alread
 statue	--	rivets
 secure door	"Useful for keeping people out[if noise is in Upscale Capsule], though the vanity may provide more hints what (not) to do[end if]."
 plasm lamps	"Useful for working late at the Upscale Capsule but not for solving silly word puzzles."
-Desk Sked	"Useful for organizing tasks much tricker than playing dumb computer games."
+Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 big important desk	"Just part of the scenery."
 lager	"[one of]The Large Regal Lager [if player is in boredom bedroom]here [end if]in Boredom Bedroom serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager.[minus][cycling]"	--	"GLARE"
 skyscraper	"[if pernod is off-stage]You can't think of getting into the skyscraper until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the skyscraper.[end if]"
@@ -26221,7 +26239,7 @@ alert letters	"[one of]The sign indicates you may want to get rid of Rand and Le
 log ons letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say SO LONG.[minus][cycling]"
 ought letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say TOUGH.[minus][cycling]"
 ether	"[if Rand is not eager or Leo is not eager]You'll need friends to get through there. Try making them down by the dumpster.[else if boing is reflexive or dart is not in popgun]Muscle isn't enough. You need a weapon.[else][one of]You can sort of make out stuff through the ether.[plus][or]If you could give Rand and Leo a word before Rand and Leo walked in, it'd be a big help.[plus][or]What to yell, so they know where to look?[plus][or]THERE.[minus][cycling][end if]"	--	"THERE"
-lawl wall	"[one of]The wall can't be changed on its own.[plus][or]But the keys or hogs can be...dealt with.Try hinting either of them.[minus][cycling]"	--	"[if goshy is true]GOSH[else]SYKE[end if]"
+lawl wall	"[one of]The wall can't be changed on its own.[plus][or]But the keys or hogs can be...dealt with. Try hinting either of them.[minus][cycling]"	--	"[if goshy is true]GOSH[else]SYKE[end if]"
 hogs	"[one of]The hogs find it funny you can't get the keys.[plus][or]If you expressed your disappointment, the hogs might get overconfident.[plus][or]GOSH.[minus][cycling]"	--	"GOSH"
 keys	"[one of]You really want the keys, and there's no way to pretend you don't.[plus][or]Maybe you can pretend, sort of, and annoy the hogs.[plus][or]SYKE.[minus][cycling]"	--	"SYKE"
 mount um-not	"Mount Um-Not is just scenery."
@@ -26279,7 +26297,7 @@ capers recaps	"[casp-cap]"
 gins sign	"[if i-sung is true]You already managed to SING.[else][one of]The gins sign is a last lousy point, but it's one that introduces what to do in the area.[plus][or]The drinks are named after depressing puns on popular music.[plus][or]This is a last lousy point, but because it is a hint, I'll tell you what it is next.[plus][or]You can SING.[minus][cycling][end if]"
 clam	"[one of]The clam is agitated. It probably doesn't want to attack you.[plus][or]You need to settle the clam down.[plus][or]I mean CALM it.[minus][cycling]"
 urn	"[one of]You can't walk away from the urn. You need to do something more decisive.[plus][or]You should RUN from the urn.[minus][cycling]"
-Shoer Osher	"You might've learnt something from Shoer Osher's publicist before Elvira came by, but for the game's purposes, Shoer Osher is just there for decoration and amusement."
+Shoer Osher	"You might've learned something from Shoer Osher's publicist before Elvira came by, but for the game's purposes, Shoer Osher is just there for decoration and amusement."
 river	"[one of]There are two ways across the river.[plus][or]You can get the boats' attention--one verb--or get on the raft, which requires two.[plus][or]Hint the boats or raft individually.[minus][cycling]"
 raft	"[one of]Just getting on the raft is no fun. You want it to, well. move.[plus][or]Those oars on the raft would be a drag to pull around.[plus][or]Hint the oars if you can't figure out what to do with them.[minus][cycling]"
 boats	"[one of]The sailors aboard the boats seem to like a good chat about accomplishments.[plus][or]How could you get the boats['] attention with your own bragging or self-promotion?[plus][or]BOAST.[minus][cycling]"
@@ -27308,21 +27326,15 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	now miss-room is lalaland;
 	if needsolve is true and myreg is not solved, continue the action;
 	if myreg is means manse:
-		if giant pin is in dusty study:
-			say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
-		if t-b is in dusty study:
-			say "[2dmiss of myreg]you could've made the ten beams into a BASEMENT.";
-		if tables are in dusty study:
-			say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
-		else if sitar is in Farming Framing:
-			say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing/[end if]stria in the gallery into a STAIR.";
-		if niche is in dusty study:
-			say "[2dmiss of myreg]you could've changed 'my niche' into a CHIMNEY.";
-		else if pram is in heights:
-			say "[2dmiss of myreg]you could've changed the pram into a RAMP[if heights is unvisited], if you'd gone up from the study[end if].";
-		if t-b is in dusty study:
-			say "[2dmiss of myreg]you could've changed the ten beams in the study to a BASEMENT.";
-	else if myreg is stores:
+		if giant pin is in dusty study, say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
+		if t-b is in dusty study, say "[2dmiss of myreg]you could've made the ten beams into a BASEMENT.";
+		if tables are in dusty study, say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
+		if sitar is not in lalaland, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing/[end if]stria in the gallery into a STAIR.";
+		if niche is in dusty study, say "[2dmiss of myreg]you could've changed 'my niche' into a CHIMNEY.";
+		if pram is in heights, say "[2dmiss of myreg]you could've changed the pram into a RAMP[if heights is unvisited], if you'd gone up from the study[end if].";
+		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a SNIB on the ISBN bins.";
+		if t-b is in dusty study, say "[2dmiss of myreg]you could've changed the ten beams in the study to a BASEMENT.";
+	if myreg is stores:
 		if store B is in stores, say "[2dmiss of myreg]Store B could've given you some SORBET.";
 		if store K is in stores, say "[2dmiss of myreg]Store K could've made some TOKERS.";
 		if store N is in stores, say "[2dmiss of myreg]NESTOR was hiding in Store K.";
@@ -27331,10 +27343,10 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if store P is in stores, say "[2dmiss of myreg]PRESTO would've opened Store P.";
 		if store Y is in stores, say "[2dmiss of myreg]The OYSTER was in Store Y.";
 		if store W is in stores, say "[2dmiss of myreg]TOWERS were in Store W.";
-	else if myreg is routes:
+	if myreg is routes:
 		if worst ad is in same mesa:
 			say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
-	else if myreg is troves:
+	if myreg is troves:
 		if Pa Egg Pea is reflexive:
 			say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if what-a-bee is reflexive:
@@ -27353,7 +27365,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2drm of upscale capsule]you could've tried to BOLSTER yourself to deserve lobster.";
 		if DIVORCES is not in lalaland:
 			say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
-	else if myreg is presto:
+	if myreg is presto:
 		if lamb is in Grey Gyre:
 			say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2:
@@ -27370,7 +27382,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage:
 			say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
-	else if myreg is oyster:
+	if myreg is oyster:
 		if you-used-pills is true:
 			say "[how-pills-used].";
 		if number of entries in shop-hint-items > 2:
@@ -27395,7 +27407,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed:
 			say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
-	else if myreg is Towers:
+	if myreg is Towers:
 		let xxx be Ray Eck;
 		if number of guardians not in lalaland > 0:
 			repeat with gua running through guardians not in lalaland:
@@ -27440,7 +27452,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of pinko warriors > 0:
 			repeat with pk running through pinko warriors:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
-	else if myreg is otters:
+	if myreg is otters:
 		if cinders are not in lalaland:
 			say "[2dmiss of myreg]you could've tried to DISCERN the cinders or even RESCIND them.";
 		else if rescind-cinders is false:
@@ -27457,7 +27469,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of reflexive animals in wire deck > 0:
 			repeat with A running through flippable things in wire deck:
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
-	else if myreg is others:
+	if myreg is others:
 		if spear is not in lalaland:
 			say "[2drm of Rustic Citrus]the spear could've become pears.";
 		if lumps are not in lalaland:
@@ -27471,74 +27483,42 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if drinks stand is unexamined:
 			say "[2drm of Rustic Citrus]you could've examined the drinks stand to find more pre-fruits.";
 		else:
-			if eerie blurbs are not in lalaland:
-				say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
-			if slime is not in lalaland:
-				say "[2drm of Rustic Citrus]the slime could've become LIMES.";
-			if peanut cola is not in lalaland:
-				say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
-			if mopeage rant is not in lalaland:
-				say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
-			if videotape collection is not in lalaland:
-				say "The videotape collection's movies could've become a PERSIMMON.";
-		if apples are not in lalaland: [swell wells]
-			say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES.";
-		if green stain is not in lalaland:
-			say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
-		if miser ruble is not in lalaland:
-			say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
-		if riot cap is not in lalaland:
-			say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";
-		if sorer bogey is not in lalaland:
-			say "[2drm of Swell Wells]the sorer bogey could've become a GOOSEBERRY.";
-		if stucco is not in lalaland:
-			say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
-		if rapt figure is not in lalaland: [filed field]
-			say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT.";
-		if pipe panel fence is not in lalaland:
-			say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
-		if b-w are not in lalaland:
-			say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
-		if briar screen is not in lalaland:
-			say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
-		if b-r is not in lalaland:
-			say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
-		if pryer bars are not in lalaland:
-			say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
-		if barber sickle is not in lalaland:
-			say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
-		if mean trowel is not in lalaland:
-			say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";
-		if lemons are not in lalaland: [clearing]
-			say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons.";
-		if melon is not in lalaland:
-			say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
-		if papayas are not in lalaland:
-			say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
-		if mango is not in lalaland:
-			say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
-		if peach is not in lalaland:
-			say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
-		if l-o-p is not reflexed:
-			say "[2drm of Clangier Clearing]you could've said CRIPES at the prices.";
-		if quince is not in lalaland:
-			say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
-		if nectarine is not in lalaland:
-			say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
-		if orange is not in lalaland: [scape space]
-			say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange.";
-		if banana is not in lalaland:
-			say "[2drm of Scape Space]you could've tried to NAB AN A for a banana.";
-		if pugnacious plant is not in lalaland:
-			say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
-		if reserved sign is not in lalaland:
-			say "[2drm of Scape Space]you could've made the reserved sign REVERSED.";
-		if did-guru is true:
-			say "[2da]going a-la-guru from the arugula lost you a final point.";
-	else if myreg is demo dome:
+			if eerie blurbs are not in lalaland, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
+			if slime is not in lalaland, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
+			if peanut cola is not in lalaland, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
+			if mopeage rant is not in lalaland, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
+			if videotape collection is not in lalaland, say "[2drm of Rustic Citrus]The videotape collection's movies could've become a PERSIMMON.";
+		if apples are not in lalaland, say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES."; [swell wells]
+		if green stain is not in lalaland, say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
+		if miser ruble is not in lalaland, say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
+		if riot cap is not in lalaland, say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";
+		if sorer bogey is not in lalaland, say "[2drm of Swell Wells]the sorer bogey could've become a GOOSEBERRY.";
+		if stucco is not in lalaland, say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
+		if rapt figure is not in lalaland, say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT."; [filed field]
+		if pipe panel fence is not in lalaland, say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
+		if b-w are not in lalaland, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
+		if briar screen is not in lalaland, say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
+		if b-r is not in lalaland, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
+		if pryer bars are not in lalaland, say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
+		if barber sickle is not in lalaland, say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
+		if mean trowel is not in lalaland, say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";
+		if lemons are not in lalaland, say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons."; [clangier clearing]
+		if melon is not in lalaland, say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
+		if papayas are not in lalaland, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
+		if mango is not in lalaland, say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
+		if peach is not in lalaland, say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
+		if l-o-p is not reflexed, say "[2drm of Clangier Clearing]you could've said CRIPES at the prices.";
+		if quince is not in lalaland, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
+		if nectarine is not in lalaland, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
+		if orange is not in lalaland, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [scape space]
+		if banana is not in lalaland, say "[2drm of Scape Space]you could've tried to NAB AN A for a banana.";
+		if pugnacious plant is not in lalaland, say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
+		if reserved sign is not in lalaland, say "[2drm of Scape Space]you could've made the reserved sign REVERSED.";
+		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
+	if myreg is demo dome:
 		say "No points in the Demo Dome, so nothing to find.";
-	else:
-		say "Region not found."
+		continue the action;
+	say "Region not found."
 
 rule for showing what the player missed: [there may be a way to do things without all this if you could read through a table]
 	say "An all-feat leaflet flutters over the fourth wall.";

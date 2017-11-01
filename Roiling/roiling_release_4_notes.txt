@@ -23,6 +23,12 @@ There was also other miscellaneous stuff and even a few features that fell out w
 --all items have individual clues if you try to change them and you fail, and all items should give individual messages if they don't need to be changed.
 --much more scenery is added, mostly to explain why you can't just go any old direction, but I hope the names amuse you.
 
+Means Manse:
+--very silly LLP in the All-Grey Gallery.
+
+Stores:
+--smoke cloud renamed, as is the seating in Cruelest Lectures
+
 Store H:
 --new fruits in the Field and Wells.
 --changed one puzzle to be a little less abstruse (green stain in Wells).
@@ -30,13 +36,22 @@ Store H:
 --there's now the augural arugula that provides a clue if you GURU.
 
 Store P:
---the volt maze now has a name: Nowt Town. This gives you an easy way through, but the original way is still viable and gets you an extra point. The final room of the maze also has a different name.
+--the volt maze now has a name: Nowt Town. This gives you an easy way through, one that's marginally in Store P's spirit, but it won't get you full points like original way does. The final room of the maze also has a different name.
 --the Phat Path is now Saps' Pass before you get rid of the baddies.
+
+Store T:
+--the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 letters with or without repeating letters, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming.
+--the Imp is now of indeterminate gender.
+--the raw bulk bulwark is now the Edictal Citadel.
 
 Store U:
 --the scenery in the Same Mesa is now better-named.
 --the Sun-Spared Underpass is still that, only the official name is Harms Marsh, full of Sheol Holes.
 --Pat is now female if you are. /goes to watch Saturday Night Live.
+
+Store V:
+--there are now two more rooms in the sequence.
+--FiefCo Office is renamed Upscale Capsule.
 
 Store W:
 --a few more clues for the Lone Duck.
@@ -48,15 +63,6 @@ Store W:
 --the oddly rewired robot has been replaced by bluster butlers, but the robot's flip is now moved elsewhere for a Last Lousy Point.
 --a fluster-self rut is now a LLP in a previously useless room.
 --rooms are shifted around, with more boundary scenery to make it believable you have to go back the way you came.
-
-Store V:
---there are now two more rooms in the sequence.
---FiefCo Office is renamed Upscale Capsule.
-
-Store T:
---the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 letters with or without repeating letters, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming.
---the Imp is now of indeterminate gender.
---the raw bulk bulwark is now the Edictal Citadel.
 
 Store Y:
 --the rude door is replaced with Span Pans.

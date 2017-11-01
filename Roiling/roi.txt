@@ -88,10 +88,15 @@ The pram can become a RAMP.
 ?How do I use the closest closets?
 Enter them to go back to the study. You'll see them everywhere in your manor once you know where to look.
 Or if in you're the study, you go to the heights.
->>Basement
+>>LARGELY ALL-GREY GALLERY
 ?Stria?!
 Above you...an odd word, but another way to walk around.
 STAIR.
+?What are the ISBN bins for?
+Well, you can ignore them and still win. They don't add anything.
+Except a last lousy point for an odd word.
+They're unlocked, but you can change that.
+Make a SNIB.
 ?Anything remaining to do in the basement?
 Figure how the letters settler works, though you don't have to, as you'll get a tutorial.
 Then go IN.
@@ -210,8 +215,9 @@ KT Rose is a clue and it should be enough, abstractly...
 You need to figure the guy's name.
 Again the settler logics this one, but clues like underwater and Tintin may help.
 NESTOR.
-?What's in the cloud?
-The start of your "quest." Enter it to find out.
+?What's the mangiest steaming? What's in it?
+The steaming is a byproduct of the tokers' activities.
+Inside the steaming is the start of a small unnecessary side quest. Enter it to find out.
 >>>CRUELEST LECTURES
 ?What's with the tedious lecture and studio E and "I used to?"
 They're clues to how to disrupt this whole joint. Ha ha. Joint, geddit?

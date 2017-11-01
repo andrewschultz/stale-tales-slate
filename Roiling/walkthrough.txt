@@ -115,6 +115,8 @@ You can't go IN right now, as the game tells you to look at the settler. So,
 
 Mess around with what you want. There's a tutorial anyway.
 
+You can also do something with the ISBN bins. That's a last lousy point.
+
 > IN
 
 Oh no. You're under the gun. Err, the rifle.
@@ -299,7 +301,7 @@ TOKERS are the people in store K.
 
 > TOKERS
 
-> ENTER CLOUD
+> ENTER STEAMING
 
 Now, a clue is how the tokers spoke. What did they use while speaking? Adjectives. You can look around at Studio E and the 'I Used To' pamphlet to figure you need to go...
 

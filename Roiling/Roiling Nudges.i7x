@@ -119,9 +119,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "patcher"	456181591	--	patcher	--	"The patcher doesn't need to be changed. It does the changing if you point it."
 "field"	274156779	--	f-o-b	--	"[not-at-barley]."
 "barley"	409909726	--	f-o-b	--	"[not-at-barley][barley-check]."
-"smoke"	415440983	--	smoke cloud	--	"[just-smoke]."
-"cloud"	273306897	--	smoke cloud	--	"[just-smoke]."
-"smokecloud"	688747880	--	smoke cloud	--	"[just-smoke]."
+"mangiest"	688747880	--	mangiest steaming	--	"You can't do anything with the mangiest steaming other than enter it for a side adventure."
 "seats"	425651877	lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
 "highway"	384638989	cruelest	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
 "example"	569923068	--	lecturer	--	"[lec-un]."
@@ -1301,9 +1299,6 @@ to say barley-check:
 			say ". Still, that seems right, if you get there";
 			preef b-b;
 			continue the action;
-
-to say just-smoke:
-	say "It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it"
 
 to say lec-un:
 	say "The lecturer is unchangeable in his views, but maybe he is physically movable"
