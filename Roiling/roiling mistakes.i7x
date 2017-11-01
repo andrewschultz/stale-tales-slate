@@ -256,6 +256,10 @@ understand "once" as a mistake ("Yes! You only need a chance! Once! To get insid
 
 understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
+chapter econ cone
+
+understand "penrod" as a mistake ("Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!") when player is in Econ Cone and Pernod is in Econ Cone.
+
 chapter upscale capsule
 
 understand "fren" as a mistake ("That's not the right way to make friends. You have to, like, impress actual people.") when player is in upscale capsule.

@@ -41,7 +41,7 @@ islet/cork/wings/toeholds/slope/ropes/grips/trio/potters/kilns/chain/getout/exis
 Manor (min)
 lamp/satchel/stable/stair/flier/staple/stapler
 Manor (max)
-lamp/satchel/basement/stable/chimney/ramp/painting/stair/flier/staple/stapler
+lamp/satchel/basement/stable/chimney/ramp/painting/stair/snib/flier/staple/stapler
 Stores (min)
 routes/troves/otters
 Stores (max)

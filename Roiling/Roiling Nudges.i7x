@@ -12,9 +12,6 @@ table of means manse nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future[end if] knock at the door."
 "study"	447878132	dusty study	--	--	"[locname]."
-"gallery"	477904362	Gallery	--	--	"[locname]."
-"all"	109815496	Gallery	--	--	"[locname-part]."
-"grey"	368088866	Gallery	--	--	"[locname-part]."
 "framing"	324601726	Farming Framing	--	--	"[locname]."
 "highest"	479347239	highest heights	--	--	"[locname]."
 "height"	383073273	highest heights	--	--	"[locname]."
@@ -74,7 +71,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	--	sad ads	--	"[w-twi]."
+"gallery"	477904362	Gallery	--	--	"[locname]."
+"all"	109815496	Gallery	--	--	"[locname-part]."
+"grey"	368088866	Gallery	--	--	"[locname-part]."
 "evac"	256164332	Gallery	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
+"bni"	132319259	all-grey gallery	--	--	"[if ISBN bins are reflexed]You already fixed the bins[else]No, all the bins[end if]."
 "manse"	359250554	--	--	degen-true rule	"[not-the-reg]."
 
 table of stores nudges
