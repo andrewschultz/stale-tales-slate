@@ -219,12 +219,18 @@ NESTOR.
 The steaming is a byproduct of the tokers' activities.
 Inside the steaming is the start of a small unnecessary side quest. Enter it to find out.
 >>>CRUELEST LECTURES
+?Can I take advantage of the teasing seating?
+No. But you don't need to.
+It is TEASING seating, after all.
+?What's the pamphlet good for?
+Well, it has a clue.
+I USED TO jibes with other things the lecturer says.
 ?What's with the tedious lecture and studio E and "I used to?"
 They're clues to how to disrupt this whole joint. Ha ha. Joint, geddit?
 This is a wild card word.
 Your settler gives a huge clue if you look in studio E.
 OUTSIDE.
-?What's with the munchies?
+?What's with the munchies now I'm back in the strip?
 They aren't an actual game item, but they will help you use the slider on the settler more often.
 >>STORE B
 ?What's in here?
@@ -239,12 +245,12 @@ Interjections are what work here.
 ?Poor lamb! What can I do?
 Maybe you can scare him off without being mean.
 Turning him into balm won't give him balm.
-You can, however, make a scary noise.
+You _can_, however, make a scary noise.
 BLAM.
 ?How to get over the hump?
 You're grunting wrong.
 UMPH.
->Do I have to tackle that maze to the north?
+?Do I have to tackle that maze to the north?
 You don't even have to set foot in it, if you figure the right word. It's a tricky one, but there are a lot of clues. You may even wish to eat the crust once you've cleared everything else.
 See the Volt Maze section below.
 ?The maze is gone now. Why can't I go north?

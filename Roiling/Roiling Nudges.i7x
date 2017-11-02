@@ -120,15 +120,15 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "field"	274156779	--	f-o-b	--	"[not-at-barley]."
 "barley"	409909726	--	f-o-b	--	"[not-at-barley][barley-check]."
 "mangiest"	688747880	--	mangiest steaming	--	"You can't do anything with the mangiest steaming other than enter it for a side adventure."
-"seats"	425651877	lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
-"highway"	384638989	cruelest	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
+"seating"	425651877	cruelest lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
+"mangiets"	688747880	cruelest lectures	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
 "example"	569923068	--	lecturer	--	"[lec-un]."
 "lecture"	621971270	--	lecturer	--	"[lec-un]."
 "lectures"	718245236	--	lecturer	--	"[lec-un]."
 "ian"	116088172	--	idg	--	"[ian-un]."
 "guardian"	362334391	--	idg	--	"[ian-un]."
-"heartfelt"	666954909	cruelest	--	--	"[hfre]."
-"reflections"	827907256	cruelest	--	--	"[hfre]."
+"pamphlets"	647481120	cruelest	--	--	"[pamph-ana]."
+"pamphlet"	551207154	cruelest	--	--	"[pamph-ana]."
 "strip"	411166592	profits	--	--	"[locname]."
 "profits"	512034065	strip of profits	--	--	"[locname]."
 "profit"	415760099	strip of profits	--	--	"[locname]."
@@ -1308,7 +1308,7 @@ to say ian-un:
 
 section routes nudges
 
-to say hfre:
+to say pamph-ana:
 	say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
 
 to say name-worry:

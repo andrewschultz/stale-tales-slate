@@ -1343,7 +1343,7 @@ carry out gotoing:
 					say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug." instead;
 	if noun is shunned:
-		if noun is Hardest Trashed Dearths, 	say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
+		if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
 		if noun is Dourest Detours, say "You got rid of the ant. Nothing more to do there." instead;
 		say "That's off-limits." instead;
 	if location of player is Dourest Detours:
@@ -2265,7 +2265,7 @@ him-who	person-subj	him-say
 Elmo	settler	"This shouldn't be available." [start INTRO]
 idg	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
 idg	Elvira	"'She didn't get to her position of power by using DRUGS.'"
-idg	idg	"The heartfelt reflections Ian gave you will say enough."
+idg	idg	"The pamphlets Ian gave you will say enough."
 nestor	Elvira	"'So bogusly repressive!'"
 nestor	Store N	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 nestor	tokers	"[if tokers are visible]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
@@ -7269,11 +7269,10 @@ rule for supplying a missing noun when entering:
 	if location of player is Strip of Profits and number of visible portals is 1:
 		now noun is a random visible portal;
 	if location of player is Cruelest Lectures:
-		if the player's command matches the text "sit":
-			now noun is seats;
-		if e-revealed is true:
-			now noun is seats;
-		now noun is passage.
+		if e-revealed is true or the player's command matches the text "sit":
+			now noun is teasing seating;
+		else:
+			now noun is passage.
 
 chapter waiting
 
@@ -12555,7 +12554,7 @@ instead of doing something with windows:
 
 book Cruelest Lectures
 
-Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium[one of]. People stare at a lecturer as if they've been drugged. Um, hypnotized[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E."
+Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium. There's some teasing seating, but you're not sure it'd improve the experience[one of]. People stare at a lecturer as if they've been drugged. Um, hypnotized[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E."
 
 check looking in lectures for the first time:
 	say "As you march through the smoke, you hear 'Freeze! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'IAN. A DRUG GUARDIAN. QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. We finger fringe like you. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
@@ -12565,21 +12564,26 @@ check exiting in Cruelest Lectures:
 
 section seats
 
-the seats are useless plural-named scenery in lectures. "'If you'd gotten here earlier, you might've gotten one,' growls Ian. You're not sure that'd make sense even if you actually [i]were[r] stoned."
+tried-seating is a truth state that varies.
 
-instead of doing something to the seats:
-	if current action is scaning:
-		say "You consider scanning them, but it'd freak out the audience. Or Ian. Or the lecturer." instead;
+to say seat-try:
+	now tried-seating is true;
+
+the teasing seating is useless scenery in lectures. "Some of it is open, but you just "
+
+instead of doing something to the teasing seating:
+	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or Ian. Or the lecturer." instead;
+	if current action is entering or current action is climbing, say "[seat-try]'If you'd gotten here earlier, you might've gotten one,' growls Ian, as you move towards empty seating. You're not sure that'd make sense even if you actually [i]were[r] stoned. The seating is apparently reserved for others. Or maybe nobody's allowed to sit in it, to show how drugs make you miss out on life." instead;
 	if action is procedural, continue the action;
-	try examining seats instead;
+	try examining teasing seating instead;
 
 section passage
 
-the passage is scenery in lectures. "[if e-revealed is true]You don't want to go back. You already got the YYRRGRG clue[else]The passage that leads to Studio E seems unguarded. Maybe you could sneak in there[end if]."
+the passage is scenery in lectures. "[if e-revealed is true]You don't want to go back. You already got the YYRRGRG clue for Studio E[else]The passage that leads to Studio E seems unguarded. Maybe you could sneak in there[end if]."
 
 instead of scaning passage:
 	if e-revealed is true:
-		say "You already got YYRRGRG from it.";
+		say "You already got YYRRGRG for Studio E from it.";
 	else:
 		say "Be brave! ENTER the passage!";
 
@@ -12627,27 +12631,28 @@ instead of doing something with idg:
 		say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
 	if current action is attacking:
 		say "He's too big for you." instead;
-	if player does not have heartfelt reflections:
-		say "Before you can do anything with or to Ian, he thrusts a sheet of heartfelt reflections on drug use at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take it?";
+	if player does not have pamphlets:
+		say "Before you can do anything with or to Ian, he thrusts pamphlets about drug use at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take them?";
 		if the player yes-consents:
-			now player has heartfelt reflections;
+			now player has pamphlets;
 			say "'Good choice. Say, if they're good enough, do you think you could put in a word for me--to a lecturer like THAT?" instead;
 		otherwise:
 			say "Ian looks hurt, then blames it on the lack of attention span from the drugs you've been taking. That cheers him up." instead;
 	otherwise:
 		if action is procedural, continue the action;
-		say "Before you can do anything, Ian points at the heartfelt reflections he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
+		say "Before you can do anything, Ian points at the pamphlets he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
 
 section reflections
 
-The heartfelt reflections are plural-named thing.
+The help stamp hemp SPLAT pamphlets are a plural-named thing.
 
-after doing something with reflections:
-	set pronoun it to reflections;
+after doing something with pamphlets:
+	set pronoun it to pamphlets;
+	continue the action;
 
-description of reflections is "It's a list of thirty-odd sentences beginning I USED TO. It's in hard-hitting simple language but no less painful to read for all that. I will spare you the details--a brochure's such a borer."
+description of pamphlets is "It's a list of thirty-odd sentences beginning I USED TO. It's in hard-hitting simple language but no less painful to read for all that. I will spare you the details--a brochure's such a borer."
 
-a-text of reflections is "YYRRYRY". b-text of reflections is "YGRRYRY". parse-text of reflections is "-[sp]u[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of pamphlets is "YYRRYRY". b-text of pamphlets is "YGRRYRY". parse-text of pamphlets is "-[sp]u[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 volume routes
 
@@ -17864,8 +17869,8 @@ the eeks are vanishing scenery in Hardest Trashed Dearths.
 Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
 
 after looking in Lean Lane:
-	if tea tray is in hostel, set the pronoun it to tea tray;
-	if wipes are in hostel, set the pronoun them to wipes;
+	if tea tray is in lean lane, set the pronoun it to tea tray;
+	if wipes are in lean lane, set the pronoun them to wipes;
 	continue the action;
 
 Aunt Tuna is a female person in Lean Lane. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is visible]. She occasionally motions to the tea tray she laid out for you[end if]."
@@ -19483,7 +19488,7 @@ chapter outsideing
 outside-warned is a truth state that varies.
 
 after fliptoing lecturer (this is the disable the macks slightly too rule) :
-	now reflections are in lalaland;
+	now pamphlets are in lalaland;
 	increase headaches by 10;
 	now lectures is shunned;
 	if t-tediously is in otters:
@@ -26125,7 +26130,7 @@ Nestor	"[if tokers are off-stage]Nestor's pals are in store K[else]Nestor's back
 tokers	"[if nestor is off-stage]You can find the tokers['] friend in store N[else if lecturer is reflexive]They'll give you a treat if you solve the side quest[else]They're of no use to you now[end if]."
 mangiest steaming	"[if lecturer is reflexive]You can enter the steaming for a mini-side-quest[else]You've been in the steaming. After how you upended things, it'd be unwise to go back[end if]."
 passage	"If you go there, you'll get a big hint."
-heartfelt reflections	"They are completely useless for actual life lessons, but the settler on 'cheat' mode will knock a word out."
+pamphlets	"They are completely useless for actual life lessons, but the settler on 'cheat' mode will knock a vowel out from I USED TO."
 idg	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't work here.[plus][or]Ian's brochure is a hint.[plus][or]TEDIOUS + I USED TO will give you a lot of clues. Studio E will give a clincher.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
 lecturer	--	idg	[end stores hinting]
 poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[plus][or][if cur-score of routes > 0]You've already figured one word[else]It's a certain sort of word[end if].[plus][or]Directions are confusing here, and standard ones don't work, but there's another way to get around.[plus][or]PREPOSITIONS.[minus][cycling]"
@@ -27372,7 +27377,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
 		else if waste is not in lalaland:
 			say "[2dmiss of myreg]you could've tried to SWEAT to remove the waste.";
-		else if lance is not cleaned,
+		else if lance is not cleaned:
 			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
 		else if Dourest Detours is visited and ant is not in lalaland:
 			say "[2dmiss of myreg]you could've tried to TAN the ant.";

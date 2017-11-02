@@ -120,6 +120,12 @@ chapter cruelest lectures
 
 understand "ani" and "nia" as a mistake ("Ian's had a big life change, but that might be too big for him!") when player is in Cruelest Lectures.
 
+understand "easting" as a mistake ("Compass directions aren't relevant here. You need to upset everything, somehow.") when player is in Cruelest Lectures.
+
+understand "eatings" and "tangies" as a mistake ("You might be suspected of having the munchies if you tried that.") when player is in Cruelest Lectures.
+
+understand "ingates" as a mistake ("More like, you could use out-gates to leave, amirite?") when player is in Cruelest Lectures.
+
 book routes
 
 understand "among" as a mistake ("Maybe if there were mango trees around.") when mrlp is routes.
