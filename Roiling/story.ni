@@ -1343,8 +1343,8 @@ carry out gotoing:
 					say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug." instead;
 	if noun is shunned:
-		if noun is Lean Lane:
-			say "Now you've visited the Helots' Hostel, you don't want to hang around Lean Lane more than you need to." instead;
+		if noun is Hardest Trashed Dearths:
+			say "Now you've visited the Helots' Hostel, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
 		if noun is Dourest Detours:
 			say "You got rid of the ant. Nothing more to do there." instead;
 		say "That's off-limits." instead;
@@ -5227,8 +5227,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if haunter is in anger range and haunter is reflexive:
 				now noun is haunter;
 				continue the action;
-		if player is in lean lane:
-			if cans are in lean lane:
+		if player is in Hardest Trashed Dearths:
+			if cans are in Hardest Trashed Dearths:
 				now noun is cans;
 			else:
 				now noun is eeks;
@@ -5460,7 +5460,7 @@ check scaning location of the player (this is the location scan rule):
 		try scaning trolls instead;
 	if location of player is freight:
 		try scaning pale plea instead;
-	if location of player is lean lane:
+	if location of player is Hardest Trashed Dearths:
 		say "The air's full of eeks, which your settler picks up." instead;
 		try scaning eeks instead;
 	if location of player is plains:
@@ -6200,7 +6200,7 @@ to decide which thing is oyster-item:
 			decide on skis;
 		if knob is reflexive:
 			decide on knob;
-	if player is in Lean Lane:
+	if player is in Hardest Trashed Dearths:
 		if eeks are visible:
 			decide on eeks;
 	if player is in Shadier Airshed:
@@ -6260,7 +6260,7 @@ carry out oyster-hinting:
 	else if player is in Arches:
 		if bubble wrap is off-stage:
 			all-say "You need to go [if Helots' Hostel is visited]back to the Helots' Hostel[else]east of Anger Range[end if] for a small gift.";
-	else if player is in anger range and eeks are in lean lane:
+	else if player is in anger range and eeks are in Hardest Trashed Dearths:
 		all-say "You may want to visit the trout to the east.";
 	else if player is in Rascal Craals and player does not have the digger:
 		all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet.";
@@ -7062,7 +7062,7 @@ Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens 
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
-Lean Lane	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
+Hardest Trashed Dearths	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
 Helots' Hostel	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
@@ -17820,18 +17820,18 @@ carry out searching:
 		say "The portal has nothing." instead;
 	say "You're not able to find anything hidden." instead;
 
-book Lean Lane
+book Hardest Trashed Dearths
 
-Lean Lane is a room in oyster. Lean Lane is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him.[paragraph break]You do hear something, though[if cans are visible], and the ground is littered with cans[end if]."
+Hardest Trashed Dearths is a room in oyster. Hardest Trashed Dearths is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him.[paragraph break]You do hear something, though[if cans are visible], and the ground is littered with cans[end if]."
 
-after looking in lean lane:
+after looking in Hardest Trashed Dearths:
 	set the pronoun them to eeks;
-	if cans are in lean lane, set the pronoun them to cans;
+	if cans are in Hardest Trashed Dearths, set the pronoun them to cans;
 	continue the action;
 
 scan-cans is a truth state that varies.
 
-the cans are vanishing flippable LLPish scenery in Lean Lane. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
+the cans are vanishing flippable LLPish scenery in Hardest Trashed Dearths. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
 
 a-text of cans is "RRYR". b-text of cans is "RRYR". parse-text of cans is "x[sp]x[sp]a[sp]x".
 
@@ -17840,7 +17840,7 @@ check taking the cans:
 
 check scaning the cans (this is the bonus point rule) :
 	if the player's command includes "scan":
-		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up Lean Lane.";
+		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths.";
 		min-and;
 		now cans are in lalaland instead;
 	say "You're over-thinking this one.";
@@ -17850,7 +17850,7 @@ to say wipes-too:
 	if wipes are on drawer:
 		say ", and you notice some wipes on it";
 
-the eeks are plural-named scenery in Lean Lane. "[bug-report]"
+the eeks are plural-named scenery in Hardest Trashed Dearths. "[bug-report]"
 
 a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "x[sp]e[sp]e[sp]x". eeks are parse-spoilable.
 
@@ -17861,7 +17861,7 @@ instead of doing something to eeks:
 		say "Can't do much more than listen, to find how to follow.";
 	try listening instead;
 
-the eeks are vanishing scenery in Lean Lane.
+the eeks are vanishing scenery in Hardest Trashed Dearths.
 
 Helots' Hostel is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
 
@@ -17919,12 +17919,12 @@ to say oy-can-win:
 
 after fliptoing eeks:
 	bowl-to-home;
-	if cans are in lean lane:
+	if cans are in Hardest Trashed Dearths:
 		poss-d;
 	continue the action;
 
 to bowl-to-home:
-	now Lean Lane is shunned;
+	now Hardest Trashed Dearths is shunned;
 	change the east exit of anger range to Helots' Hostel;
 	change the west exit of Helots' Hostel to anger range;
 
@@ -27344,69 +27344,44 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if store Y is in stores, say "[2dmiss of myreg]The OYSTER was in Store Y.";
 		if store W is in stores, say "[2dmiss of myreg]TOWERS were in Store W.";
 	if myreg is routes:
-		if worst ad is in same mesa:
-			say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
+		if worst ad is in same mesa, say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
 	if myreg is troves:
-		if Pa Egg Pea is reflexive:
-			say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
-		if what-a-bee is reflexive:
-			say "[2drm of boarded roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
-		if bee's head is reflexive:
-			say "[2drm of boarded roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
-		if lager is not in lalaland:
-			say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
-		if rivets are reflexive:
-			say "[2drm of econ cone]you could've tried to STRIVE by the statue of Trevis Vister.";
-		if prai is reflexive:
-			say "[2drm of econ cone]you could've tried to ASPIRE for praise by the statue of Trevis Vister.";
-		if stream is reflexive:
-			say "[2drm of upscale capsule]you could've tried to MASTER the stream photograph.";
-		if lobster is in Upscale Capsule:
-			say "[2drm of upscale capsule]you could've tried to BOLSTER yourself to deserve lobster.";
-		if DIVORCES is not in lalaland:
-			say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
+		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
+		if what-a-bee is reflexive, say "[2drm of boarded roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
+		if bee's head is reflexive, say "[2drm of boarded roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
+		if lager is not in lalaland, say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
+		if rivets are reflexive, say "[2drm of econ cone]you could've tried to STRIVE by the statue of Trevis Vister.";
+		if prai is reflexive, say "[2drm of econ cone]you could've tried to ASPIRE for praise by the statue of Trevis Vister.";
+		if stream is reflexive, say "[2drm of upscale capsule]you could've tried to MASTER the stream photograph.";
+		if lobster is in Upscale Capsule, say "[2drm of upscale capsule]you could've tried to BOLSTER yourself to deserve lobster.";
+		if DIVORCES is not in lalaland, say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
 	if myreg is presto:
-		if lamb is in Grey Gyre:
-			say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
-		if maze-points < 2:
-			say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
-		else if maze-points is 2:
-			say "[2drm of Grey Gyre]you missed a point for scanning a guy in Nowt Town.";
-		if phooeyed is false:
-			say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
-		if hawt thaw is in phat path:
-			say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
-		if rom sticks are off-stage:
-			say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
-		if t-key is reflexive:
-			say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
-		if casserole is off-stage:
-			say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
+		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
+		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
+		if maze-points is 2, say "[2drm of Grey Gyre]you missed a point for scanning a guy in Nowt Town.";
+		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
+		if hawt thaw is in phat path, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
+		if rom sticks are off-stage, say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
+		if t-key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
+		if casserole is off-stage, say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
 	if myreg is oyster:
-		if you-used-pills is true:
-			say "[how-pills-used].";
-		if number of entries in shop-hint-items > 2:
-			say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";
-		if cans are not in lalaland:
-			say "[2dmiss of myreg]you could've tried to SCAN the cans.";
-		if dent is not in lalaland:
-			say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
-		if heaps are reflexive and heaps are in Shadier Airshed:
-			say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
+		if you-used-pills is true, say "[how-pills-used].";
+		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";
+		if cans are not in lalaland, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
+		if dent is not in lalaland, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
+		if heaps are reflexive and heaps are in Shadier Airshed, say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
 		if wipes are on raw red drawer:
 			say "[2dmiss of myreg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
 		else if waste is not in lalaland:
 			say "[2dmiss of myreg]you could've tried to SWEAT to remove the waste.";
-		else if lance is not cleaned:
+		else if lance is not cleaned,
 			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
 		else if Dourest Detours is visited and ant is not in lalaland:
 			say "[2dmiss of myreg]you could've tried to TAN the ant.";
 		else if ant is not in lalaland:
 			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
-		if bogus-plains are reflexive:
-			say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
-		if lever is not reflexed:
-			say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
+		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
+		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	if myreg is Towers:
 		let xxx be Ray Eck;
 		if number of guardians not in lalaland > 0:
@@ -27421,48 +27396,31 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
 				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
-			if number of guardians not in lalaland > 1:
-				say "(that's all for the guardians)[line break]";
-		if strudel is reflexive:
-			say "[2dmiss of myreg]the strudel could've become RUSTLED.";
-		if pulses are not in lalaland:
-			say "[2dmiss of myreg]the neural pulses in the Unblest Sunbelt could've become UNREAL.";
-		if old ice are not reflexed:
-			say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
-		if denim is not in lalaland:
-			say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
-		if saver is reflexive:
-			say "[2dmiss of myreg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
-		if kid-atten is false:
-			say "[2dmiss of myreg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
-		if weirder red wire is part of bot boat:
-			say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
-		if flowerpot is reflexive:
-			say "[2dmiss of myreg]you could've made the succor crocus DINGY to stop it dying.";
+			if number of guardians not in lalaland > 1, say "(that's all for the guardians)[line break]";
+		if strudel is reflexive, say "[2dmiss of myreg]the strudel could've become RUSTLED.";
+		if pulses are not in lalaland, say "[2dmiss of myreg]the neural pulses in the Unblest Sunbelt could've become UNREAL.";
+		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
+		if denim is not in lalaland, say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
+		if saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
+		if kid-atten is false, say "[2dmiss of myreg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
+		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
+		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the succor crocus DINGY to stop it dying.";
 		if serpent is in Mislit Limits:
 			say "[2dmiss of myreg]you could've made the serpent PRESENT and maybe saved the fellow who died happy.";
 		else if ed yerg is reflexive:
 			say "[2dmiss of myreg]you could've made Ed Yerg in the Solo Den behind the serpent GREYED.";
 		else if flowerpot is not in lalaland:
 			say "[2dmiss of myreg]you could've given Ed Yerg the flowerpot, though that would only give you a few hints.";
-		if used-ray is true:
-			say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
-		if no-pastries is true:
-			say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
+		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
+		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 		if number of pinko warriors > 0:
 			repeat with pk running through pinko warriors:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 	if myreg is otters:
-		if cinders are not in lalaland:
-			say "[2dmiss of myreg]you could've tried to DISCERN the cinders or even RESCIND them.";
-		else if rescind-cinders is false:
-			say "[2dmiss of myreg]you could've tried to RESCIND the cinders.";
-		if eels are not reflexed:
-			say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
-		if p-2 is not in lalaland:
-			say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said HOWEVER to gain Mr. Lee's trust.";
-		if Merle is reflexive:
-			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
+		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not in lalaland]DISCERN or even [end if]RESCIND the cinders.";
+		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
+		if p-2 is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said HOWEVER to gain Mr. Lee's trust.";
+		if Merle is reflexive, say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
 		if number of flippable things in perverse preserve > 0:
 			repeat with A running through flippable things in perverse preserve:
 				say "[2dmiss of myreg]you could've turned the [A] into [if A is plural-named]some[else]a[end if] [the-to corresponding to a the-from of A in the table of otters anagrams].";
@@ -27470,16 +27428,11 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			repeat with A running through flippable things in wire deck:
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
 	if myreg is others:
-		if spear is not in lalaland:
-			say "[2drm of Rustic Citrus]the spear could've become pears.";
-		if lumps are not in lalaland:
-			say "[2drm of Rustic Citrus]the lumps could've become plums.";
-		if mad train is not in lalaland:
-			say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
-		if harmonicas are not in lalaland:
-			say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
-		if grapes are not in lalaland:
-			say "[2drm of Rustic Citrus]the pagers could've become grapes.";
+		if spear is not in lalaland, say "[2drm of Rustic Citrus]the spear could've become pears.";
+		if lumps are not in lalaland, say "[2drm of Rustic Citrus]the lumps could've become plums.";
+		if mad train is not in lalaland, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
+		if harmonicas are not in lalaland, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
+		if grapes are not in lalaland, say "[2drm of Rustic Citrus]the pagers could've become grapes.";
 		if drinks stand is unexamined:
 			say "[2drm of Rustic Citrus]you could've examined the drinks stand to find more pre-fruits.";
 		else:
@@ -27630,7 +27583,7 @@ index map with hero's shore mapped east of olde lode.
 index map with fighter freight mapped east of hero's shore.
 index map with achers' arches mapped north of posh hops shop.
 index map with Helots' Hostel mapped east of Lapsin' Plains.
-index map with lean lane mapped east of Helots' Hostel.
+index map with Hardest Trashed Dearths mapped east of Helots' Hostel.
 index map with tenfold mapped north of horned hedron.
 index map with Dourest Detours mapped east of tenfold.
 index map with end den mapped east of Dourest Detours.

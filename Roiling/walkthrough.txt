@@ -1866,11 +1866,11 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 1 MANSE/MANOR:
   * release 2: the chimney is now available for escape. Gunter's options are different. Elmo's are too. Elmo is moved, as are the plaster and plates. Elmo has a tutorial.
   * release 3: Gunter does not stop by until you examine a few things. So you have more time to activate the two new areas, and you also can figure what you're supposed to be doing. Plus you are forced to talk to Gunter for an overview, but you can skip the rest. You can also freely flip diorama things but nothing else, but flipping something that should create an exit brings Gunter closer. Elmo's tutorial is tuned up.
-  * release 4: MANOR is now MANSE.
+  * release 4: MANOR is now MANSE. New LLP in the Gallery with the ISBN bins.
 2 OYSTER:
   * release 1 (deprecated) : you DESTROY Oyster D at the end and can pull the lever if you want. No yapper.
   * release 2: you can now do something with the sign in the initial area, and there's a new verb for you to get out, which relies on people there and not the bar name. Also, you need to get 3 of 5 verbs. The sign in the shore is gone, but the raft is visible and has a two-part solution with oars. You no longer need to ARRIVE--there's a better verb since there are boats. The portal moved from the plains to the hideout. You no longer need to SHAPE the heaps--the tubs, instead. The papery yapper is not present to bribe. The pills are now available to skip a puzzle. There is a side area to put an item to frame the walleyes less implausibly. There is also a side quest that starts in the Fishbowl and ends just before the final location, which is named differently. It involves wipes, waste, a lance, an ant and, optionally, the heaps, re-purposed. You also get killed a lot less by the haunter. The game gives a warning.
-  * release 3: it's now 3 of 6 verbs to learn in the Hops Shop (renamed in release 2) though 2 relate to the jukebox, along with an LLP in the Handsome Sand Home (ex-fishbowl) (dent) and in the plains (general) with a LLP in the Lean Lane. You also have another puzzle and location if you get on the boats (LEAP).
+  * release 3: it's now 3 of 6 verbs to learn in the Hops Shop (renamed in release 2) though 2 relate to the jukebox, along with an LLP in the Handsome Sand Home (ex-fishbowl) (dent) and in the plains (general) with a LLP in Lean Lane. You also have another puzzle and location if you get on the boats (LEAP).
   * release 4: you now don't use the lever at all. You replace the pins. You can SPIN or SNIP them. The rude door was replaced by span-pans, which you need to SNAP at to get past.
 3 PRESTO:
  * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
@@ -1970,11 +1970,15 @@ LAST LOUSY POINTS
 
 Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, can't really help you go forward. Often they will seem superfluous or even slightly hidden.
 
-Hints are in ROT13. If you aren't sure what ROT13 is, it can be translated at ROT13.com.
+Hints are in ROT13. If you aren't sure what ROT13 is, or you don't want to do the translation in your head, it can be translated at ROT13.com.
+
+MANOR:
+
+FAVO for the ISBN bins.
 
 STORES:
 
-FBEORG from Store B. Note that the side trip to Cruelest Lectures means 3 extra points, but doing so gives you a hint item.
+FBEORG from Store B. Note that the side trip to Cruelest Lectures means 3 extra points, and doing so gives you a hint item.
 
 PRESTO:
 

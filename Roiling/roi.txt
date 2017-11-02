@@ -1106,7 +1106,7 @@ Say, a rigged digger.
 ?How do I calm the ghost down once he's here?
 He is a SAUSAGE.
 ASSUAGE him.
->>LEAN LANE
+>>HARDEST TRASHED DEARTHS
 ?What do I do with the cans?
 You don't have to do anything.
 This is maybe the second-easiest LLP in the game to Peg A. Page's revolting book.
@@ -1115,11 +1115,7 @@ SCAN the cans.
 ?No one's here but I hear something.
 They're EEKS.
 Try to SEEK them.
->>HELOTS' HOSTEL
-?What is a helot?
-A serf or slave.
-In this case, it's used to show Tortu the Trout is from modest means, which probably contributes to his being bullied.
-This was the Handsome Sand Home until release 4. ##regignore
+>>LEAN LANE
 ?What does Aunt Tuna want me to do?
 She informs you her nephew the trout's name is Tortu. He hates bullies.
 He needs to be taught.
@@ -1147,6 +1143,8 @@ It's what the ghost is after.
 ?Can I fix the dent?
 Yes and no. You can't FIX it. That's only three letters...
 ...but you can TEND it.
+?Can I go back to the Hardest Trashed Dearths?
+No, but you don't need to.
 >>LAPSIN' PLAINS
 ?How do I unlock the snap pans?
 The skis and knob are in the way.

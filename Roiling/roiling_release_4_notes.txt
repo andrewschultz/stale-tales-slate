@@ -66,10 +66,11 @@ Store W:
 
 Store Y:
 --the rude door is replaced with Span Pans.
---three rooms are renamed
+--several rooms are renamed
   --Scum Ant Sanctum is Dourest Detours.
   --Collapsed Old Places is now Rascal Craals. Well, until you figure what to do in the Craals. Then they're seen as Collapsed Old Places you can't enter.
   --Uh at a Hut is now the Shadier Airshed, which makes it easier to fit all those items in there.
+  --Lean Lane is now where you find Tortu, and the old Lean Lane is renamed to Hardest Trashed Dearths.
 --there is a different thing to do near the end. Not a hard one, but a different one. It involves pins.
 
 Meta-stuff:
