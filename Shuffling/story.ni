@@ -8336,7 +8336,7 @@ the dead beat deadbeat is a male person in Cramped Red Camp. "A deadbeat is sitt
 check scaning (this is the antlers and deadbeat silliness rule):
 	if noun is antlers:
 		say "You scan the antlers all sneaky-like, so nobody thinks you're trying anything subversive. They look useless, but you get a reading.";
-	if noun is deadbeat or noun is deadbeat-shirt or noun is goatee:
+	if noun is deadbeat or noun is designer reedings:
 		say "'Whoah, don't tase me, bro. I have civil rights!'" instead;
 
 check giving to deadbeat:
@@ -8358,19 +8358,13 @@ to say are-were:
 	else:
 		say "[']re";
 
-description of deadbeat is "He's wearing some of the hardest-trashed threads you've seen. You know he's a deadbeat because his t-shirt says DEAD BEAT DEADBEAT. Which fits in with this world, yes, but about as half-donkeyed as possible. Oh, and he has a ridiculous goatee, too."
+description of deadbeat is "He's wearing designer reedings."
 
-the ridiculous goatee is part of the deadbeat. the goatee is amusing.
+the designer reedings are amusing scenery.
 
-description of the ridiculous goatee is "It seems half braided and wretchedly uneven, only partially by design. 'Babes like my chillin['] ill chin.' he says.".
+instead of taking designer reedings: say "Bad idea. The deadbeat likes no suds with the sounds."
 
-instead of taking the goatee: say "It looks kind of icky. And you don't need to start a fight." instead.
-
-the deadbeat-shirt is amusing and privately-named. the deadbeat wears the deadbeat-shirt. understand "threads" and "t-shirt" and "shirt" as deadbeat-shirt.
-
-instead of taking deadbeat-shirt: say "Bad idea. He likes no suds with the sounds."
-
-description of deadbeat-shirt is "The DEAD BEAT DEADBEAT text is as teleological as most of the shirt wearer's arguments, you suspect."
+description of designer reedings is "GREED: SIN is written on them."
 
 the posh shop is amusing scenery in cramped red camp. "It's apparently called ELF ROW'S FLOWERS with a sub-slogan: 'Go floral or go fall!'"
 

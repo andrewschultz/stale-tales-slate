@@ -400,8 +400,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "yadr"	230899962	red camp	--	--	"[drivwy]."
 "view"	387898548	red camp	--	--	"[drivwy]."
 "harps"	302533845	red camp	--	--	"The harps are kind of annoying, but they've got nothing on the beats."
-"threads"	473013102	--	deadbeat	--	"[beat-man]."
-"thread"	376739136	--	deadbeat	--	"[beat-man]."
+"reedings"	473013102	--	deadbeat	--	"[beat-man]."
+"reeding"	376739136	--	deadbeat	--	"[beat-man]."
 "lost"	327550400	--	lost corn	--	"It's not just that it's lost, it's CORN[dead-help]."
 "corn"	247589473	--	lost corn	--	"It's not just that it's corn, it's LOST too[dead-help]."
 "glove"	395737047	--	velcro	--	"[mits-are]."
@@ -853,7 +853,7 @@ to say drivwy:
 	say "[if dry cake is in condo]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
 
 to say beat-man:
-	say "He hasn't let the MAN change his clothes, and he won't let you"
+	say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
 
 to say dead-help:
 	if condo-evac is true:
