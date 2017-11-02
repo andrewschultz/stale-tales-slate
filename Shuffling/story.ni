@@ -8509,6 +8509,14 @@ the instructions are part of the controls.
 
 description of instructions is "[if controls are in op]They served you well. No need to reread.[else]Surprisingly readable, enough so you could just stuff these controls somewhere appropriate and things would get working. Some days you're just lucky, eh?[end if]"
 
+section noisome moonies
+
+the noisome moonies are scenery in Cramped Red Camp.
+
+Include (-
+	has transparent animate
+-) when defining noisome moonies.
+
 chapter cordoned red condo
 
 The Cordoned Red Condo is north of Cramped Red Camp. Condo is in Metros.
@@ -11782,6 +11790,7 @@ carry out smelling:
 		say "You've smelled worse, but the night thing's [if night thing is not visible]lingering stench is [end if]pretty bad." instead;
 	if noun is slough:
 		say "I suppose it's a smell of nearby evil or something." instead;
+	if noun is noisome moonies, say "Sadly, you already can without trying." instead;
 	if noun is frost forts:
 		say "Decayin[']. Cyanide. Nice day? Nay, ICED." instead;
 	if location of player is dry yard:
@@ -11819,15 +11828,9 @@ check listening:
 	if mrlp is metros:
 		if player is in Bile Libe:
 			if words are visible:
-				if player has heaths:
-					say "'That's just words. Shift them to a weapon, and you'll have something!'" instead;
-				if player has sheath:
-					say "'Talk is cheap! Now, weapons, there's something valuable!'" instead;
-				if player has begonias or player has noise bag:
-					if words are not in bag:
-						say "'Put a bag over it!' you hear." instead;
-					else:
-						say "The semi-sheltered Bile Libe offers some respite from the beats, especially with the words gone. But not enough." instead;
+				if player has heaths, say "'That's just words. Shift them to a weapon, and you'll have something!'" instead;
+				if player has sheath, say "'Talk is cheap! Now, weapons, there's something valuable!'" instead;
+				if player has begonias or player has noise bag, say "[if words are not in bag]'Put a bag over it!' you hear.[else]The semi-sheltered Bile Libe offers some respite from the beats, especially with the words gone. But not enough.[end if]" instead;
 				say "The words drown out the beats for the moment. They're sharp words, attacking words, hard to shield yourself from, but they're local enough they can't be twisted." instead;
 		if player is in red camp, try examining music instead;
 		if night thing is visible, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
@@ -11836,39 +11839,22 @@ check listening:
 		say "[one of]Acoustics so caustic.[or]Phoniest hip tones.[or]Fatal a-flat.[or]Thumping's SUMPTHING.[or]Ouch! Hearin['] Hernia.[in random order]" instead;
 	if player is in Busiest Subsite:
 		say "[one of][thissy].[or]'That lecture'll fix your helpless spells, eh?' someone walking by asks.[or]'A resume masseur!' someone exclaims.[or]'Boy, I need to re-care about my career,' someone actually says with a straight face.[or]'Tell yourself I'M PRE PRIME!'[cycling]" instead;
-	if player is in thickest thickets:
-		if goat is visible:
-			say "The goat snores slightly as he half-naps, but that's it." instead;
-		else:
-			say "The toga flutters in some wind you can't quite feel." instead;
-	if player is in notices:
-		if gateman is visible:
-			say "'Y'can't have anything worth listening to without anything to ask me about!' says Nat Egam." instead;
-	if player is in Gnarliest Triangles:
-		say "The notes stone contains written, not musical, notes." instead;
-	if player is in frost forts:
-		say "AAAIIIEEE...OOOUUUOOO..." instead;
-	if player is in moor:
-		if anapest is visible:
-			try listening to the anapest instead;
-		if peasant is visible:
-			say "With less, he whistles, eh?" instead;
-	if player is in Rived Drive:
-		say "You hear something from above the [p-s] to the east, but you'll need to get closer to make out details." instead;
-	if player is in kitchen:
-		say "[one of]A song with the chorus 'He oft partook of the okra pot.' The tune and the thought of okra make you gag, even when you realize it's a novelty song and not serious.[or]It's actually sort of catchy, if you think about it.[or][no-you]ou hate the stupid okra song, again. You need to get cooking on something else.[stopping]" instead;
-	if player is in slough:
-		say "[one of]Far arf[or]You can't hear the dog any more. You're not sure if you want to[or]You realize you'll be freaked out whether or not you can hear the dog[stopping]." instead;
+	if player is in thickest thickets, say "[if goat is in thickest thickets]The goat snores slightly as he half-naps, but that's it[else]The toga flutters in some wind you can't quite feel[end if]." instead;
+	if player is in notices and gateman is in notices, say "'Y'can't have anything worth listening to without anything to ask me about!' says Nat Egam." instead;
+	if player is in Gnarliest Triangles, say "The notes stone contains written, not musical, notes." instead;
+	if player is in frost forts, say "AAAIIIEEE...OOOUUUOOO..." instead;
+	if player is in moor and anapest is in moor, try listening to the anapest instead;
+	if player is in moor and peasant is in moor, say "With less, he whistles, eh?" instead;
+	if player is in Rived Drive, say "You hear something from above the [p-s] to the east, but you'll need to get closer to make out details." instead;
+	if player is in kitchen, say "[one of]A song with the chorus 'He oft partook of the okra pot.' The tune and the thought of okra make you gag, even when you realize it's a novelty song and not serious.[or]It's actually sort of catchy, if you think about it.[or][no-you]ou hate the stupid okra song, again. You need to get cooking on something else.[stopping]" instead;
+	if player is in slough, say "[one of]Far arf[or]You can't hear the dog any more. You're not sure if you want to[or]You realize you'll be freaked out whether or not you can hear the dog[stopping]." instead;
 	if doll house is visible:
 		if static is visible:
 			say "You hear static coming from the doll house." instead;
 		else:
 			say "Each attic is tacit now." instead;
-	if player is in astral altars:
-		say "You hear mumblings you aren't in the ELITE LISTS. They make you see red." instead;
-	if player is in sf or player is in rf:
-		if shout is visible:
-			say "You still hear that shout[one of], and if you listen again, you could get a couple of words.[or] that turns you red from its silliness: [one of]'Hut! SO!'[or]'Uh?! SOT!'[or]'Us, HOT!'[in random order][stopping]" instead;
+	if player is in astral altars, say "You hear mumblings you aren't in the ELITE LISTS. They make you see red." instead;
+	if shout is in location of player, say "You still hear that shout[one of], and if you listen again, you could get a couple of words.[or] that turns you red from its silliness: [one of]'Hut! SO!'[or]'Uh?! SOT!'[or]'Us, HOT!'[in random order][stopping]" instead;
 	say "[one of]Silent[or]Quite quiet[cycling]." instead;
 
 to say no-you: say "[one of]No, y[or]Y[stopping]".

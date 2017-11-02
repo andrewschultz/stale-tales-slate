@@ -81,6 +81,8 @@ understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT
 
 understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.") when show hows tag is visible.
 
+understand "elastin" and "nailset" as a mistake ("That would make the saltine less edible.") when player has saltine.
+
 book stores
 
 chapter trips strip
@@ -389,13 +391,15 @@ understand "roister" as a mistake ("That's what's causing the riot, and it's up 
 
 understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not in lalaland], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are in hotspot.
 
-understand "romans" as a mistake ("This is not a history game.") when player is in hotspot and ransom manors are in hotspot.
+understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.") when player is in hotspot and ransom manors are in hotspot.
+
+understand "morans" and "moran" as a mistake ("A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!") when player is in hotspot and ransom manors are in hotspot.
 
 chapter means manse
 
 understand "blamer" as a mistake ("No, we know who's to blame. He's done with. Time to move on.") when player is in Means Manse.
 
-understand "amen" and "name" as a mistake ("Use the plural, here.") when player is in Means Manse.
+understand "amen" and "name" as a mistake ("I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.") when player is in Means Manse.
 
 understand "mensa" as a mistake ("No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.") when player is in Means Manse.
 
