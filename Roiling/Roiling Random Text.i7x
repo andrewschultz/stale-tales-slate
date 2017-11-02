@@ -502,11 +502,11 @@ this is the insult-over-girls rule:
 	the rule fails;
 
 this is the ohai-tuna rule:
-	if player is in helots' hostel, the rule succeeds;
+	if player is in Lean Lane, the rule succeeds;
 	the rule fails;
 
 this is the gossip-over-chatter rule:
-	if location of player is not helots' hostel:
+	if location of player is not Lean Lane:
 		the rule fails;
 	if go-with-first of table of tuna gossip and table of aunt tuna chatter, the rule succeeds;
 	the rule fails;

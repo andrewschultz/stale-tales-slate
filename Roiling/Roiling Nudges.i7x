@@ -498,12 +498,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "carp"	187983165	--	carps	--	"[all-fish]."
 "haunter"	529723362	--	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but [to-dig]you probably aren't doing it quite right.[else]The haunter needs to be dealt with otherwise.[end if]"
 "howler"	486513400	--	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
-"lean"	252715274	lean lane	--	--	"You would upset countless people named Lena or Neal." [LEAN LANE]
+"hardest"	473013102	hardest trashed dearths	--	--	"[locname]."
+"hardet"	376739136	hardest trashed dearths	--	--	"[locname]."
 "can"	90100911	--	cans	--	"Getting rid of one can would still leave a mess. Maybe you can deal with them all."
 "cans"	186374877	--	cans	--	"You glance at your settler, wondering what to do with the cans. Maybe you've overlooked something obvious."
 "eek"	308545396	--	eeks	--	"You try to eke out an eek, but you only have one data point, and that's not enough."
-"helots"	492638808	helots' hostel	--	--	"[locname]." [HELOTS' HOSTEL]
-"helot"	396364842	helots' hostel	--	--	"[locname]."
+"lean"	252715274	lean lane	--	--	"You would upset countless people named Lena or Neal." [LEAN LANE]
 "reward"	429605395	--	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
 "bubble"	341982470	--	bubble wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	--	bubble wrap	--	"It's just wrap, really."

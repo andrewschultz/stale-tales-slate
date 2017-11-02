@@ -1343,10 +1343,8 @@ carry out gotoing:
 					say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug." instead;
 	if noun is shunned:
-		if noun is Hardest Trashed Dearths:
-			say "Now you've visited the Helots' Hostel, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
-		if noun is Dourest Detours:
-			say "You got rid of the ant. Nothing more to do there." instead;
+		if noun is Hardest Trashed Dearths, 	say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
+		if noun is Dourest Detours, say "You got rid of the ant. Nothing more to do there." instead;
 		say "That's off-limits." instead;
 	if location of player is Dourest Detours:
 		say "Aw, c'mon, the ant should be no problem." instead;
@@ -6208,14 +6206,14 @@ to decide which thing is oyster-item:
 			decide on tubs;
 		if prod is visible:
 			decide on prod;
-		if aunt-tuna-cross is false or wipes are not in Helots' Hostel: [hint the side quest ONLY IF you can still get the wipes]
+		if aunt-tuna-cross is false or wipes are not in Lean Lane: [hint the side quest ONLY IF you can still get the wipes]
 			if waste is in Shadier Airshed:
 				decide on waste;
 			if lance is not cleaned and lance is in Shadier Airshed:
 				decide on lance;
 			if heaps are reflexive and heaps are in Shadier Airshed:
 				decide on heaps;
-	if player is in Helots' Hostel:
+	if player is in Lean Lane:
 		if tea tray is visible:
 			decide on tea tray;
 		if trout is reflexive:
@@ -6259,7 +6257,7 @@ carry out oyster-hinting:
 		all-say "You need to show the haunter where the ruby is buried, now.";
 	else if player is in Arches:
 		if bubble wrap is off-stage:
-			all-say "You need to go [if Helots' Hostel is visited]back to the Helots' Hostel[else]east of Anger Range[end if] for a small gift.";
+			all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift.";
 	else if player is in anger range and eeks are in Hardest Trashed Dearths:
 		all-say "You may want to visit the trout to the east.";
 	else if player is in Rascal Craals and player does not have the digger:
@@ -6267,7 +6265,7 @@ carry out oyster-hinting:
 	else if location of player is Rascal Craals and ruby is off-stage:
 		all-say "This would be a good place to bury something, but you're not sure what.";
 	else if location of player is End Den:
-		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Helots' Hostel contain them[end if].[minus][cycling]";
+		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Lean Lane contain them[end if].[minus][cycling]";
 	else:
 		all-say "There's nothing to do with anything in this location. Maybe hint something specific from your inventory or move to another place.";
 	the rule succeeds;
@@ -6728,7 +6726,7 @@ this is the trailing-a rule:
 		if the player's command exactly matches the text "a rec":
 			say "You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.";
 			the rule succeeds;
-	else if location of player is Helots' Hostel:
+	else if location of player is Lean Lane:
 		if the player's command exactly matches the text "a nut":
 			say "That's not nice. You are a guest.";
 			the rule succeeds;
@@ -7063,7 +7061,7 @@ Austerer Treasure	"The treasure room has no secret passages, so you can only go 
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Hardest Trashed Dearths	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
-Helots' Hostel	"Though you are a guest, probably best not to go poking around. You can go back west."
+Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
@@ -7391,7 +7389,7 @@ check eating fretful truffle:
 	now spoilit is false instead;
 
 rule for supplying a missing noun when eating:
-	if player is in Helots' Hostel and tea tray is in Helots' Hostel:
+	if player is in Lean Lane and tea tray is in Lean Lane:
 		now the noun is the tea tray;
 
 check eating (this is the try to eat a hint tart rule) :
@@ -7455,8 +7453,8 @@ check buying:
 			say "You have nothing [greedy-person] wants." instead;
 	if player has tekno-token:
 		say "This isn't a place of commerce." instead;
-	if player is in Helots' Hostel:
-		if wipes are in Helots' Hostel:
+	if player is in Lean Lane:
+		if wipes are in Lean Lane:
 			say "You can't pay for the wipes, but maybe you don't need to." instead;
 	say "There's nothing to buy, and there's nothing to buy it with[if player has ruby]. The ruby's kind of priceless[else if player has pearl]. The pearl isn't really tradeable[end if]." instead;
 
@@ -8039,7 +8037,7 @@ instead of swearing obscenely:
 		if hogs are visible:
 			say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
 		say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
-	if player is in Helots' Hostel:
+	if player is in Lean Lane:
 		say "You don't want Aunt Tuna to perform a tsk task." instead;
 	if location of player is cleric circle:
 		if curse-warned is false:
@@ -9086,7 +9084,7 @@ wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt T
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
 a-s	a-s	false	367879580	--	"search"	"search"	"'Reach, acher,' you say, stretching a bit more to find something interesting."
 o-t	a-p	false	400254014	--	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."
-eeks	eeks	false	404819362	Helots' Hostel	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
+eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 tubs	waste	false	322908696	--	"bust"	"bust"	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
 waste	lance	false	437312684	--	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. It's a bit too dirty to take."
@@ -17104,12 +17102,12 @@ carry out spilling:
 		unless the player yes-consents:
 			do nothing instead;
 		say "Okay.";
-	if player is in Helots' Hostel:
+	if player is in Lean Lane:
 		if bubble wrap is off-stage:
 			if produce-redo-cup is false:
 				if dent-tend is false:
 					poss-d; [can't fix dent again]
-				if wipes are in Helots' Hostel:
+				if wipes are in Lean Lane:
 					decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
 			now player has wrap;
 			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
@@ -17717,7 +17715,7 @@ every turn (this is the track haunter rule):
 [of such extreme action that you may wind up using extra nouns at your own risk]
 
 after fliptoing carps:
-	now trout is in Helots' Hostel;
+	now trout is in Lean Lane;
 	now carps are in lalaland;
 	now pikes are in lalaland;
 	now scrawl is in anger range;
@@ -17863,18 +17861,18 @@ instead of doing something to eeks:
 
 the eeks are vanishing scenery in Hardest Trashed Dearths.
 
-Helots' Hostel is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
+Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
 
-after looking in helots' hostel:
+after looking in Lean Lane:
 	if tea tray is in hostel, set the pronoun it to tea tray;
 	if wipes are in hostel, set the pronoun them to wipes;
 	continue the action;
 
-Aunt Tuna is a female person in Helots' Hostel. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is visible]. She occasionally motions to the tea tray she laid out for you[end if]."
+Aunt Tuna is a female person in Lean Lane. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is visible]. She occasionally motions to the tea tray she laid out for you[end if]."
 
 does the player mean eating the tea tray: it is very likely;
 
-The tea tray is edible flippable scenery in Helots' Hostel. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
+The tea tray is edible flippable scenery in Lean Lane. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
 
 a-text of tea tray is "YYR". b-text of tea tray is "YYR". parse-text of tea is "e[sp]a[sp]t". tea tray is parse-spoilable.
 
@@ -17925,8 +17923,8 @@ after fliptoing eeks:
 
 to bowl-to-home:
 	now Hardest Trashed Dearths is shunned;
-	change the east exit of anger range to Helots' Hostel;
-	change the west exit of Helots' Hostel to anger range;
+	change the east exit of anger range to Lean Lane;
+	change the west exit of Lean Lane to anger range;
 
 chapter enlargeing
 
@@ -18278,7 +18276,7 @@ check fliptoing d2:
 book bubble wrap and drawer
 
 check fliptoing bubble wrap:
-	if player is in Helots' Hostel:
+	if player is in Lean Lane:
 		if trout is reflexive:
 			say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'" instead;
 
@@ -18303,7 +18301,7 @@ instead of doing something with the raw red drawer:
 	if action is procedural, continue the action;
 	say "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].";
 
-the raw red drawer is scenery in Helots' Hostel. the raw red drawer is a supporter.
+the raw red drawer is scenery in Lean Lane. the raw red drawer is a supporter.
 
 understand "raw/-- red/-- warder drawer" as raw red drawer when trout is reflexive.
 understand "raw/-- red/-- reward drawer" as raw red drawer when trout is reflexed.
@@ -26344,7 +26342,7 @@ a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go 
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
 round bay boundary	"It's just there to provide a boundary in the Rascal Craals."
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
-paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Helots' Hostel.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
+paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
 ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or]TAN the ant.[minus][cycling]"
 yapper	"[one of]The settler on cheat mode gives confusing readings here because PAPERY and YAPPER clash.[plus][or]So if you use the settler, you may note that five of the letters are right. But maybe you want to solve this the old-fashioned way.[plus][or]He seems to be asking for a bribe and not asking for one at the same time. He needs to be compensated before he lets you do anything.[plus][or]If you give the yapper an item, he indicates he could be bribed...if it were valuable. He likes the pearl.[plus][or]You can just PREPAY the yapper.[minus][cycling]"
@@ -26605,7 +26603,7 @@ to say name-the-lance:
 
 to say lance-hints:
 	if player does not have lance:
-		say "[one of]The lance is part of an optional quest. It isn't clean enough to take.[plus][or]You need an item to make the lance less dirty.[plus][or]The wipes in the Helots' Hostel can do that.[plus][or][if player has wipes]Now you need to apply the wipes the right way[else]You should be able to get the wipes unless you used the pills on Aunt Tuna. You need to take them quickly. HINT them if you need more clues[end if].[plus][or]CLEAN the lance once you have the wipes.[minus][cycling]";
+		say "[one of]The lance is part of an optional quest. It isn't clean enough to take.[plus][or]You need an item to make the lance less dirty.[plus][or]The wipes in Lean Lane can do that.[plus][or][if player has wipes]Now you need to apply the wipes the right way[else]You should be able to get the wipes unless you used the pills on Aunt Tuna. You need to take them quickly. HINT them if you need more clues[end if].[plus][or]CLEAN the lance once you have the wipes.[minus][cycling]";
 	else:
 		say "[one of]The detour past the Horned Hedron entry opens up if you have the lance.[plus][or]Once you get there, you have an animal to defeat, which should not be hard.[minus][cycling]"
 
@@ -26668,7 +26666,7 @@ to say once-now:
 	say "[if keyboard is on slab and disk is in hard drive]now[else]once[end if]"
 
 to say a-t-check:
-	say "[if Helots' Hostel is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
+	say "[if Lean Lane is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
 
 chapter talky tests - not for release
 
@@ -27582,8 +27580,8 @@ index map with olde lode mapped east of posh hops shop.
 index map with hero's shore mapped east of olde lode.
 index map with fighter freight mapped east of hero's shore.
 index map with achers' arches mapped north of posh hops shop.
-index map with Helots' Hostel mapped east of Lapsin' Plains.
-index map with Hardest Trashed Dearths mapped east of Helots' Hostel.
+index map with Lean Lane mapped east of Lapsin' Plains.
+index map with Hardest Trashed Dearths mapped east of Lean Lane.
 index map with tenfold mapped north of horned hedron.
 index map with Dourest Detours mapped east of tenfold.
 index map with end den mapped east of Dourest Detours.

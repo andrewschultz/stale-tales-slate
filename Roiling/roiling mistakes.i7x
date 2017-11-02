@@ -445,13 +445,17 @@ understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive
 
 understand "boast" as a mistake ("Batso.") when player is not in shore.
 
+chapter hardest trashed dearths
+
+understand "hatred" and "hatreds" as a mistake ("There's enough of that going around.") when player is in hardest trashed dearths.
+
+understand "thread" and "threads" as a mistake ("There are no clothing stores around, nor is there anything physical to lead you to where the trout is.") when player is in hardest trashed dearths.
+
 chapter lean lane
 
 understand "neal" as a mistake ("You aren't looking for anyone named Neal. Unless the trout is named Neal. (Spoiler: he's not.) Maybe you should figure how to find the eeks.") when player is in Lean Lane.
 
-understand "elan" as a mistake ("Lean Lane will never be pretty, even [if cans are visible]if those cans disappeared[else]with those cans gone[end if]. You're looking for someone. Or maybe you should be listening.") when player is in Lean Lane.
-
-chapter helots' hostel
+understand "elan" as a mistake ("Lean Lane will never be pretty, and it doesn't need to be.") when player is in Lean Lane.
 
 understand "ate" as a mistake ("You're getting ahead of yourself here.") when tea tray is visible.
 
@@ -461,7 +465,7 @@ understand "eta" as a mistake ("ETA's one move later now that you went fishing f
 
 understand "wrap [text]" as a mistake ("The bubble wrap is already covering something.") when player has wrap.
 
-understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when player is in helots' hostel.
+understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when player is in lean lane.
 
 chapter lapsin' plains
 
