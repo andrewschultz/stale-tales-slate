@@ -374,7 +374,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "control"	478865907	--	controls	--	"You've already changed the lost corn into the controls, and you don't need to do more."
 "leavse"	515052661	--	clover	--	"It's the whole clover you need to change."
 "fuzzy"	499919191	--	clover	--	"The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover."
-"string"	431207843	--	velcro	--	"No need to mess with the string joining the velcro mittens."
+"string"	431207843	--	velcro	--	"No need to mess with the string joining the Velcro mittens."
 "cordoned"	491806337	cordoned red condo	--	--	"[loc-rej]."
 "condo"	257647336	cordoned red condo	--	--	"[loc-rej]."
 "candelabra"	400868292	cordoned red condo	--	--	"Interior decorating is not your strength."
@@ -399,7 +399,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "driveway"	618798510	red camp	--	--	"[drivwy]."
 "yadr"	230899962	red camp	--	--	"[drivwy]."
 "view"	387898548	red camp	--	--	"[drivwy]."
-"harps"	302533845	red camp	--	--	"The harps are kind of annoying, but they've got nothing on the beats."
+"harps"	302533845	red camp	--	--	"[harp-annoy]."
+"harp"	206259879	red camp	--	--	"[harp-annoy]."
 "reedings"	473013102	--	deadbeat	--	"[beat-man]."
 "reeding"	376739136	--	deadbeat	--	"[beat-man]."
 "lost"	327550400	--	lost corn	--	"It's not just that it's lost, it's CORN[dead-help]."
@@ -851,6 +852,9 @@ to say faded-ad:
 
 to say drivwy:
 	say "[if dry cake is in condo]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
+
+to say harp-annoy:
+	say "The harps are kind of annoying, but they've got nothing on the beats"
 
 to say beat-man:
 	say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "

@@ -8505,11 +8505,17 @@ description of instructions is "[if controls are in op]They served you well. No 
 
 section noisome moonies
 
-the noisome moonies are scenery in Cramped Red Camp.
+the noisome moonies are amusing plural-named scenery in Cramped Red Camp. description is "They all have that 'I'm so ONE' look about them."
 
 Include (-
 	has transparent animate
 -) when defining noisome moonies.
+
+instead of doing something with moonies:
+	set the pronoun them to moonies;
+	if current action is objasking or current action is objasking about, say "They're too busy chanting to talk to you, but they have nothing to say." instead;
+	if action is procedural, continue the action;
+	say "The noisome moonies are too wrapped up in themselves to matter.";
 
 chapter cordoned red condo
 
