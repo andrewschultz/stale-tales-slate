@@ -152,7 +152,7 @@ for my $idx ( 0 .. $#ARGV ) {
     /^-?s$/  && do { $doShuf   = 1; $doRoil    = 0; next; };
     /^-?r$/  && do { $doShuf   = 0; $doRoil    = 1; next; };
     /^-?m$/ && do { matchHash("shuffling"); matchHash("roiling"); exit; };
-    /\// && do {
+    /\\/ && do {
       $tabString = $this;
       $tabString =~ s/\//\t/g;
       $tabString =~ s/_/ /g;
@@ -166,12 +166,13 @@ for my $idx ( 0 .. $#ARGV ) {
         "TEMPLATE string hashval region room? whatseen? rule? gametext:\n";
       next;
     };
-    if ( $this =~ /[a-z]\+[a-z]/ ) {
-      my @these = split( /\+/, $this );
+    if ( $this =~ /^[a-z]+\// ) {
+      $this .= "s" if $this =~ /\/$/;
+      my @these = split( /\//, $this );
       my $i;
       my $j;
       for $i ( 0 .. $#these ) {
-        push( @toHash, $these[$i] );
+        push( @toHash, $these[$i] ) if length( $these[$i] ) >= 3;
         for $j ( $i + 1 .. $#these ) {
           push( @toHash, join( '', @these[ $i .. $j ] ) );
         }

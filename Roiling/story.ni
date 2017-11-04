@@ -4051,7 +4051,7 @@ plebe	"The plebe looks confused, as if you garbled what you said."
 Leo	"There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force."
 Rand	"There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force."
 wzup	"You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it."
-ether	"[if ether is prefigured]No, you definitely need to say THERE. You just need to have backup and maybe weapons[else]The ether pulses, but you still can't see through it[end if]."
+ether	"[if ether is prefigured]No, you definitely need to say THERE. You just need to have backup and maybe weapons[else]The ether pulsates, but you still can't see through it[end if]."
 ye hoop	"The hoop dips a bit as if to taunt you."
 boing	"You try something that doesn't [i]quite[r] work, but now you're that much closer to an a-ha moment."
 maze walls	"The maze walls rumble a bit."
@@ -4170,7 +4170,7 @@ ropins	"The ropins remains secure, with no easy way to open it."
 smart kid	"[kid-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 atblock	"[kid-first] seems a little more focused, but [he-she] could maybe do even better."
 denim	"The denim bends and warps, but you hear no tearing noise."
-pulses	"The pulses seem less there and less negative for a moment."
+sporties' ripostes	"The ripostes seem less cutting for a moment."
 old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
 blaster	"[jet-nq]."
@@ -7834,10 +7834,9 @@ before listening (this is the you can hear stuff some places rule):
 		if the-b is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 	if player is in cleric circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
 	if player is in ripe pier, say "Someone calling out they need help to go ABROAD." instead;
-	if player is in Loftier Trefoil: [towers]
-		if sir rodney is visible, say "Ugh. Sir Rodney is a dry one, barking out complaints." instead;
-		say "Nobody has anything to say. Perhaps the fear remains." instead; [code should not be reached]
+	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead; [towers]
 	if player is in Danger Garden, say "[if bonker is visible]A menacing silence spews from the bonker. Or maybe it's just your imagination[else]Honk, honk[end if]." instead;
+	if player is in unblest sunbelt and sporties' ripostes are in unblest sunbelt, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference[if dandier arid den is in unblest sunbelt]. You're also dreadin['] the next sales pitch from the dandier arid den[end if]." instead;
 	if dandier arid den is in location of player, say "You're dreadin['] the next mechanical sales pitch from the dandier arid den." instead;
 	if natives are visible:
 		say "The natives' babble doesn't stop.";
@@ -9405,11 +9404,6 @@ to say xtra-help:
 
 instead of fliptoing latches:
 	say "The satchel shakes a bit, but since you removed the settler, it probably can't fully reform the latches. Well, you don't need them."
-
-to say if-plus:
-	if word number 1 in the player's command is "pluses":
-		say "You worry about changing stuff to stuff, and how that violates SHATTER-THREATS, but it's abstract all around, so nobody can detect it. You feel your brain crackle with increased problem-solving skills and realize the pulses may be unreal. ";
-	say "You recognize that any neural pain can be unreal if you only have the right mindset and that the pulses can be pluses, making you more pat/apt to act, cat.[no line break]";
 
 unset-not-remap is a truth state that varies.
 
@@ -19092,7 +19086,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else:
-		say "[if rayx is smart kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is pulses]UNREAL[else if rayx is palace]SPECTACULAR[else if rayx is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves saver]PEARLY[else]BUG[end if]";
+		say "[if rayx is smart kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is sporties' ripostes]PROSIEST[else if rayx is palace]SPECTACULAR[else if rayx is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves saver]PEARLY[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -19771,7 +19765,7 @@ check scaning cliff:
 
 book unblest sunbelt
 
-Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if pulses are visible], though you can hear sporties['] ripostes taunting you. It'd be nice, but probably not critical, to get rid of them[end if][tow-dirs]."
+Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if sporties' ripostes are visible], though you can hear sporties['] ripostes taunting you. It'd be nice, but probably not critical, to get rid of them[end if][tow-dirs]."
 
 after printing the locale description for Unblest Sunbelt when Unblest Sunbelt is unvisited:
 	if inapt paint is prodded and arid den is prodded:
@@ -20746,7 +20740,7 @@ to towers-min-adj: [this is when you leave the mainland]
 	d "Left [number of guardians not in lalaland] guardians.";
 	if denim is in Scope Copse, d "Left denim.";
 	if old ice is not in lalaland, d "Left old ice.";
-	if sporties' ripostes are not in lalaland, d "Left pulses.";
+	if sporties' ripostes are not in lalaland, d "Left sporties['] ripostes.";
 	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
 	unless turbos are reflexed and blaster is reflexed:
