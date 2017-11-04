@@ -186,7 +186,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "naught"	349193152	--	noughts	--	"[nau-zer-enuf]."
 "naughts"	445467118	--	noughts	--	"[nau-zer-enuf]."
 "nought"	421357911	--	noughts	--	"There's more than one nought."
-"turnstile"	788443914	--	turnstile	--	"You don't need to do anything with the turnstile except get through it."
+"crosse"	499036006	--	Corses Crosse	--	"[crosse-to-you]."
+"cross"	371229897	--	Corses Crosse	--	"[crosse-to-you]."
+"crose"	402762040	--	Corses Crosse	--	"[crosse-to-you]."
 "shelf"	341691109	Flesh Shelf	--	--	"The shelf is frozen that way. Ba dum bum." [FLESH SHELF START]
 "skin"	263107498	Flesh Shelf	--	--	"The skin sink is frozen that way. Ba dum bum."
 "ink"	166833532	Flesh Shelf	--	--	"The skin sink is frozen that way. Ba dum bum."
@@ -689,6 +691,9 @@ to say vand-art:
 
 to say nau-zer-enuf:
 	say "The naughts, err, noughts seem zero-y enough to contain an o";
+
+to say crosse-to-you:
+	say "Whatever you could do to Corses Crosse, it might do worse to you"
 
 to say spec-meat:
 	say "You'll need to be more specific about the meat to poke at"

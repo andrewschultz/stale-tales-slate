@@ -1208,7 +1208,7 @@ whiff of stew	"[one of]The stew is a clue which way to go. [plus][or]You should 
 thorn	"[one of]The thorn is a clue which way to go. [plus][or]You should go NORTH. [minus][cycling]"
 rambling shout	"[one of]The shout is a clue which way to go. [plus][or]You should go SOUTH. [minus][cycling]"
 aroma of teas	"[one of]The aroma of teas is a clue which way to go. [plus][or]You should go EAST. [minus][cycling]"
-turnstile	"[if Enclosure is visited]You can come and go as you need[else]You need a way through the turnstile--perhaps you should learn to fit in[end if]."
+Corses Crosse	"[if Enclosure is visited]You can come and go as you need[else]You need a way through Corses Crosse--perhaps you should learn to fit in[end if]."
 bread	"[one of]The bread can be changed. [plus][or]It becomes a BEARD. [minus][cycling]"
 sandwich	"[one of]The sandwich[i-fle] is useful for two puzzles. It has 'the usual two parts.' [plus][or]Take BREAD to separate the sandwich from the Flesh Shelf into bread and Spam. [minus][cycling]"
 chisel	"[one of]That chisel might be handy for some items[if player is in Enclosure] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers[i-fle]. [minus][cycling]"
@@ -1461,8 +1461,8 @@ carry out forest-hinting:
 		if number of visible guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random visible guider instead;
 	if location of player is Self-ID Fields:
-		if Gnarliest Triangles is unvisited, all-say "Go east and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
-		if Flesh Shelf is unvisited, all-say "Go west and look around a bit. There're only three rooms to start, and passing the turnstile needs stuff from each side room." instead;
+		if Gnarliest Triangles is unvisited, all-say "Go east and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
+		if Flesh Shelf is unvisited, all-say "Go west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
 		if ones are off-stage or shades are off-stage, all-say "You need to solve a puzzle to the east." instead;
 	if player is in Gnarliest Triangles:
 		if nose is off-stage:
@@ -1479,7 +1479,7 @@ carry out forest-hinting:
 			now coe-clue is true;
 			try objhinting line of no life instead;
 		if player has beard and shades are part of beard and nose is part of beard:
-			all-say "You've got what you need for the next bit[if player wears beard]. You are even wearing it[else]. You should just WEAR it, now[end if]. Then go through the turnstile." instead;
+			all-say "You've got what you need for the next bit[if player wears beard]. You are even wearing it[else]. You should just WEAR it, now[end if]. Then go through Corses Crosse." instead;
 		if nose is off-stage:
 			try objhinting ones instead;
 		if bread is part of the sandwich:
@@ -1489,7 +1489,7 @@ carry out forest-hinting:
 		if shades are off-stage:
 			try objhinting dashes instead;
 		if beard is not wearable:
-			all-say "You have everything you need to enter the turnstile, now. You can worry about stuff to the west later. PUT (item) ON (item) to create the full disguise." instead;
+			all-say "You have everything you need to enter Corses Crosse, now. You can worry about stuff to the west later. PUT (item) ON (item) to create the full disguise." instead;
 		all-say "You should be able to walk NORTH from the Self-ID Fields now [if beard is worn]with your disguise[else]once you wear your disguise[end if]." instead;
 	if chisel is off-stage:
 		try objhinting liches instead;
@@ -5015,7 +5015,7 @@ carry out gleaning:
 		if Self-ID Fields is unvisited:
 			all-say "You see yourself considering all four compass directions before picking the right one." instead;
 		if Enclosure is unvisited:
-			all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through the turnstile with ease." instead;
+			all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
 		if livers are off-stage:
 			all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
 		if sliver is off-stage:
@@ -5194,7 +5194,7 @@ to decide which number is regions-to-clue:
 
 table of iconmaps
 icon-rule	icon-text
-forest-unsolved rule	"Near Store F, you see yourself walking past innumerable trees, wearing a disguise through a turnstile, and finally creating some sort of explosion somewhere very cold"
+forest-unsolved rule	"Near Store F, you see yourself walking past innumerable trees, wearing a disguise through a sort of archway, and finally creating some sort of explosion somewhere very cold"
 sortie-unsolved rule	"Near Store I, you see yourself making food, entering a sacred area behind a secret passage, and creating some sort of fireworks that seem to land on a castle without harming it"
 metros-unsolved rule	"Near Store M, you see yourself picking up several hours and taking a light source into a very deep place underground. You seem to have a hand over one ear in each picture"
 resort-ready rule	"Near Store R, you see yourself hopping from one island to another, climbing a plateau, and dispersing an angry crowd before quaking in fear"
@@ -5856,7 +5856,7 @@ the forest-leaves are in rf and sf.
 
 chapter Self-ID Fields
 
-Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes through a turnstile at regular intervals in a silent rut to the north."
+Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north."
 
 after looking in Self-ID Fields:
 	set the pronoun it to gy;
@@ -5867,7 +5867,7 @@ after looking in Self-ID Fields:
 
 check going inside in Self-ID Fields: try going north instead.
 
-check going nowhere in Self-ID Fields: say "No going back. Storing's west, sorting's east and that turnstile's north." instead.
+check going nowhere in Self-ID Fields: say "No going back. Storing's west, sorting's east, and Corses Crosse is north." instead.
 
 Include (-
 	has transparent animate
@@ -5903,19 +5903,19 @@ instead of doing something with line of no life:
 	if action is procedural, continue the action;
 	say "The line of no life is too incorporeal to interact with[if cruel ones' enclosure is unvisited], but maybe you can imitate it partially to go north[end if].";
 
-turnstile is scenery in Self-ID Fields. "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP."
+Corses Crosse is scenery in Self-ID Fields. "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP."
 
-instead of entering turnstile: try going north.
+instead of entering Corses Crosse: try going north.
 
 beard-unmade is a truth state that varies. beard-unmade is usually false.
 
 section random ID field text
 
-every turn when player is in Self-ID Fields (this is the turnstile-guys-through rule):
+every turn when player is in Self-ID Fields (this is the crosse-guys-through rule):
 	if Enclosure is unvisited:
 		say "[guy-by-description]";
 
-to say guy-by-description: say "Dude, an undead! It's got [burns] and is wearing [glasstype] and [nosey]. The turnstile glows briefly as the undead walks through."
+to say guy-by-description: say "Dude, an undead! It's got [burns] and is wearing [glasstype] and [nosey]. Corses Crosse glows briefly as the undead walks through."
 
 to say burns: say "[one of]muttonchop sideburns[or]a fu-manchu mustache[or]a glorious handlebar mustache[or]a carefully-trimmed Vandyke[or]a mustache your high school buddies derisively referred to as a 'molestache'[or]general patchy scuzz[or]one of those thin beards mostly along the jawline[or]a pencil-thin mustache[or]a soul patch[or]a goatee, no mustache[at random]"
 
@@ -6359,7 +6359,7 @@ instead of doing something with has-been:
 	else:
 		continue the action.
 
-turnstile-score is a truth state that varies. turnstile-score is usually false.
+can-pass-crosse is a truth state that varies. can-pass-crosse is usually false.
 
 to say agn: say "[one of][or] again[stopping]".
 
@@ -6371,12 +6371,12 @@ check going north in Self-ID Fields:
 			now player wears the beard;
 	if player wears the beard:
 		say "You are[agn] 'recognized' and let through. A voice whispers 'Many vowels, one flow.'";
-		if turnstile-score is false:
+		if can-pass-crosse is false:
 			reg-inc;
-			now turnstile-score is true;
+			now can-pass-crosse is true;
 		continue the action;
 	else:
-		say "The turnstile jams. There's no way to jump over it. Maybe it doesn't like your face[if number of things that are part of beard is 2]. Perhaps that disguise could fool it[end if]." instead;
+		say "Corses Crosse blocks you invisibly. There's no way around it. Maybe it doesn't like your face[if number of things that are part of beard is 2]. Perhaps that disguise could fool it[end if]." instead;
 
 to check-score (a - indexed text):
 	say "We need to zap the Check-Score for [a] for the new version.";
@@ -11200,7 +11200,7 @@ some maps are plural-named things.
 
 understand "map" as some maps when mrlp is forest.
 
-description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet--[randbla] and [randbla] seem scary, though.[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog--[randbla] and [randbla] seem scary, though. Maybe if you get past the turnstile they'll make more sense.[end if]"
+description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet--[randbla] and [randbla] seem scary, though.[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog--[randbla] and [randbla] seem scary, though. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
 
 the Spam is flippable.
 
@@ -11691,7 +11691,7 @@ check wearing the beard:
 report wearing the beard:
 	if player wore the beard:
 		say "You adjust the disguise you're already wearing." instead;
-	say "It's suitably silly to fit in with the folks passing through the turnstile[if player is in Gnarliest Triangles] to the west[else if player is in Flesh Shelf] to the east[end if], but different enough you're not conforming.";
+	say "It's suitably silly to fit in with the folks passing through Corses Crosse[if player is in Gnarliest Triangles] to the west[else if player is in Flesh Shelf] to the east[end if], but different enough you're not conforming.";
 	the rule succeeds;
 
 check putting it on(this is the disguise-piece creation rule):
@@ -12226,7 +12226,7 @@ does the player mean knocking the black door: it is very likely.
 does the player mean knocking the cabinet: it is very likely.
 does the player mean knocking the yard-door: it is very likely.
 does the player mean knocking the metallic: it is very likely.
-does the player mean knocking the turnstile: it is very likely.
+does the player mean knocking Corses Crosse: it is very likely.
 does the player mean knocking a portal:
 	if cabinet is visible:
 		it is unlikely;
@@ -12243,7 +12243,7 @@ carry out knocking:
 		say "[if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You brush against the bulge as you knock[end if]. You get no response." instead;
 	if noun is metallic door:
 		say "[if player has tulip]You don't need to go back[else if Anti-Cool Location is visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
-	if noun is turnstile:
+	if noun is Corses Crosse:
 		say "A good way to scrape your knuckles, seeing how quickly it turns." instead;
 	say "Knock, knock. Who's there? Conkk, conkk." instead;
 	the rule succeeds;
@@ -13549,7 +13549,7 @@ section talk-testing
 
 test gman with "in/goat/in/gateman/ask about abc/ask about him" in subsite.
 
-test alltalk with "ask about me/ask about xyz/in/door/blot/in/goat/in/ask about me/ask about xyz/north/ask about me/ask about xyz/gateman/ask about me/ask about xyz/gonear deadbeat/ask about me/ask about xyz/gonear faeries/ask about me/ask about xyz/gonear night thing/ask about me/ask about xyz/gonear nerds/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz/ask about xyz/peasant/ask about me/ask about xyz/gonear talkers/ask about me/ask about xyz/gonear Astral Altars/islet/cork/e/grips/ropes/slope/u/ask about me/ask about xyz/trio/ask about me/ask about xyz/potters/kilns/ask about me/ask about xyz/gonear frost forts/ask about me/ask about xyz/gonear frost forts/wolves/ask about me/ask about xyz/gonear turnstile/ask about me/ask about xyz/gonear liches/ask about me/ask about xyz/" in subsite.
+test alltalk with "ask about me/ask about xyz/in/door/blot/in/goat/in/ask about me/ask about xyz/north/ask about me/ask about xyz/gateman/ask about me/ask about xyz/gonear deadbeat/ask about me/ask about xyz/gonear faeries/ask about me/ask about xyz/gonear night thing/ask about me/ask about xyz/gonear nerds/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz/ask about xyz/peasant/ask about me/ask about xyz/gonear talkers/ask about me/ask about xyz/gonear Astral Altars/islet/cork/e/grips/ropes/slope/u/ask about me/ask about xyz/trio/ask about me/ask about xyz/potters/kilns/ask about me/ask about xyz/gonear frost forts/ask about me/ask about xyz/gonear frost forts/wolves/ask about me/ask about xyz/gonear crosse/ask about me/ask about xyz/gonear liches/ask about me/ask about xyz/" in subsite.
 
 test default-talk with "gonear red bull/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz" in subsite.
 

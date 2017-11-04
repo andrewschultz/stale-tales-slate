@@ -129,6 +129,8 @@ understand "olefin" as a mistake ("Organic chemistry involves shuffling things a
 
 understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in self-id fields.
 
+understand "scorse" as a mistake ("You can't trade with the dead.") when player is in self-id fields.
+
 chapter Flesh Shelf
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in Flesh Shelf.
