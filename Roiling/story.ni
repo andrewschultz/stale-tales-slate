@@ -146,7 +146,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for the yurts
 5 for the H/I beyond needing to clear the coastlines
 2 for the ingrates/natives
-3 for the denim, neural pulses and old ice
+3 for the denim, sporties' ripostes and old ice
 1 for the replay player
 1 for tentative
 1 for rewired (bot-boat)
@@ -9116,8 +9116,7 @@ fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You re
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 an admirer	an admirer	false	430738621	--	"married"	"married" or "mardier"	"[response-based]. You're slapped sidearm for having misread them, but you're spared spouse opuses."
 natives	natives	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
-neural pulses	neural pulses	false	443144884	--	"unreal"	"unreal" or "pluses"	"[if-plus]"
-neural pulses	neural pulses	false	560739646	--	"pluses"	"unreal" or "pluses"	"[if-plus]"
+sporties' ripostes	sporties' ripostes	false	709599244	--	"prosiest"	"prosiest"	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is true]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak."
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
@@ -18558,7 +18557,7 @@ understand "snap" as snaping.
 carry out snaping:
 	if player is in lapsin' plains:
 		if span pans are in lalaland:
-			say "Yeah, it feels like it was a snap, now." instead;
+			say "After a bit of thought, you decide against 'losing it.'" instead;
 		try fliptoing span pans instead;
 	say "This isn't the time or place to snap. With your fingers or with your brain.";
 	the rule succeeds;
@@ -19772,7 +19771,7 @@ check scaning cliff:
 
 book unblest sunbelt
 
-Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if pulses are visible], though you feel [i]neural pulses[r] you'd love to get rid of[end if][tow-dirs]."
+Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if pulses are visible], though you can hear sporties['] ripostes taunting you. It'd be nice, but probably not critical, to get rid of them[end if][tow-dirs]."
 
 after printing the locale description for Unblest Sunbelt when Unblest Sunbelt is unvisited:
 	if inapt paint is prodded and arid den is prodded:
@@ -19787,14 +19786,16 @@ after printing the locale description for Unblest Sunbelt when Unblest Sunbelt i
 	now inapt paint is prodded;
 	continue the action;
 
-the neural pulses are plural-named LLPish vanishing scenery in Unblest Sunbelt.
+the sporties' ripostes are plural-named LLPish vanishing scenery in Unblest Sunbelt.
 
-check taking neural pulses:
-	say "You don't need or want to--they just flow through either way." instead;
+instead of doing something with sporties' ripostes:
+	if action is procedural, continue the action;
+	if current action is taking, say "Actually, you want to find a way to say, you're NOT going to take them any more." instead;
+	say "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way."
 
-description of neural pulses is "They seem to cause neural shocks when you get too close. And they make you see red when you think of...Lauren. Man, she was beyond fake. What did [if player is male]other [end if]guys see in her?"
+description of sporties' ripostes is "They're mocking you, not enough to feel like you have a right to be mad, but enough to annoy you. Both clever and dumb at the same time, they're also very quick and don't drag it out."
 
-a-text of neural pulses is "YRRYYR". b-text of neural pulses is "YRRYGP". parse-text of pulses is "-[sp]x[sp]x[sp]-[sp]a[sp]l". pulses are cheat-spoilable.
+a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
 book Anemic Cinema
 
@@ -20745,7 +20746,7 @@ to towers-min-adj: [this is when you leave the mainland]
 	d "Left [number of guardians not in lalaland] guardians.";
 	if denim is in Scope Copse, d "Left denim.";
 	if old ice is not in lalaland, d "Left old ice.";
-	if pulses are not in lalaland, d "Left pulses.";
+	if sporties' ripostes are not in lalaland, d "Left pulses.";
 	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
 	unless turbos are reflexed and blaster is reflexed:
@@ -26371,7 +26372,7 @@ pester'n serpent	"[one of]Until the serpent can be described differently, you wo
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
 Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
 iPrune	"[one of]The iPrune is decidedly UNRIPE, and yet it's still too big for you.[plus][or]Any way to make the veggie/fruit smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
-neural pulses	"[one of]They are both neural and pulses.[plus][or]You can't see them, but you know they're there, and they're slight negatives.[plus][or]If the pulses were all in your mind, or something more positive, it'd be nice.[plus][or]Make them UNREAL. Or PLUSES.[minus][cycling]"
+sporties' ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
 muscly hulk	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
 sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]He doesn't seem to be getting tired, the wait-seer.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
@@ -27049,7 +27050,6 @@ examp
 "Attacking the pikes/carps."
 "[bold type](towers)[r] The admirer reacts differently to TALKing/KISSing, etc."
 "The rapier repair reminds you of Boy/Girl Scouts."
-"Examining the neural pulses and your opinion of Lauren."
 "The ego drains drain you a bit more if you're female."
 "The smart kid is Dirk Stam or Kim Darst, with a (sic) for when the kid makes a bot-boat."
 "Dr. Yow is male/female, and people's insults for Mr. or Ms. Yow are different."
@@ -27401,7 +27401,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
 			if number of guardians not in lalaland > 1, say "(that's all for the guardians)[line break]";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel could've become RUSTLED.";
-		if pulses are not in lalaland, say "[2dmiss of myreg]the neural pulses in the Unblest Sunbelt could've become UNREAL.";
+		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in the Unblest Sunbelt could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
 		if denim is not in lalaland, say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
 		if saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
@@ -29113,7 +29113,7 @@ carry out gzing:
 		increment min-score of towers;
 	if old ice is reflexed:
 		increment min-score of towers;
-	if neural pulses are reflexed:
+	if sporties' ripostes are reflexed:
 		increment min-score of towers;
 
 chapter diing

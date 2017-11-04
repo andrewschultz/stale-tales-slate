@@ -188,6 +188,8 @@ chapter adobe abode
 
 understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in adobe abode.
 
+understand "poopiest" as a mistake ("This is the wrong area for adjectives. And [if player is not in adobe abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in adobe abode or player has pipe soot.
+
 chapter idle deli
 
 understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already[if seed pit is reflexive], and he's not letting you in that seed pit without argument[end if].") when player is in idle deli.
@@ -451,6 +453,8 @@ understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive
 
 understand "boast" as a mistake ("Batso.") when player is not in shore.
 
+understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in anger range or location of player is location of haunter.
+
 chapter hardest trashed dearths
 
 understand "hatred" and "hatreds" as a mistake ("There's enough of that going around.") when player is in hardest trashed dearths.
@@ -548,8 +552,6 @@ chapter loftier trefoil
 understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is visible.
 
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is visible.
-
-understand "lauren" as a mistake ("You briefly remember a random acquaintance. If your name actually is Lauren, you savor the awkward and neat feeling of the first other Lauren you meant. Life is like that.") when neural pulses are visible.
 
 understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
 

@@ -3,9 +3,10 @@ out=roiling-invisiclues.htm
 ->c:/games/inform/roiling Materials/Release
 >General
 ?Does the male/female option have any practical difference?
-Well, one. It changes one guardian in one area. It also changes the names/genders of some people you'll meet or hear of.
+Well, one. It changes two guardians behind Store W. It also changes the names/genders of some people you'll meet or hear of.
 Spoilers ahead, but not really.
 Dr. Yow's gender is the same as yours.
+So is Pat's.
 The tarred trader is Red Rat Art Erd or Dr. Tera Darter.
 The smart kid is Dirk Stam or Kim Darst.
 The person on A Droll Dollar is Lord Al Ollard or Dr. Lola Ollard.
@@ -315,7 +316,7 @@ You need to get a few points and figure out what's going on.
 ?Do I need to go through the volt maze? How many times?
 No. You need to figure a word or phrase. There are two. The easy and hard way.
 The maze entry zany meter should give some clues.
-The zany-1 and zany-2 ways get toy through
+The zany-1 is the easiest, at four letters, but the harder one is eight.
 ?What's the easy way?
 Nowt Town can be dispelled with a specific word.
 It's not strictly a common interjection, but interjections are used to show intense emotion. Many interjections were once one word, or two words squashed together.
@@ -326,7 +327,7 @@ This is a tricky one, but there are a lot of clues.
 Touching the walls or reading E-Z Ol' Av will give a clue.
 Scanning the fellows in the Unwary Runway helps, too. There are three. When you scan the first two with cheats on, a new one will appear next time through.
 There should be some clues about Yiddish language or phrases.
-You can say MAZEL TOV at any time.
+You can say MAZEL TOV at any time. With or without spaces.
 ?Is there any advantage to the hard way?
 You get an extra point, if you're interested in that sort of thing.
 ?I took the hard way but still lost a point from the maximum. What gives?
@@ -843,11 +844,11 @@ How to lower its energy?
 Make it RESTING.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
-Strati Strait and Salted Deltas.
+Strati Strait and Salted Deltas have nothing else, though you'll probably wind up going through both of them.
 Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing there.
 Baldest Blasted Saltbed and Unblest Sunbelt have scenery that gives LLPs.
 Nude Dune and Lost Lots have pastries and an LLP each, but nothing critical.
-Of course, you must pass through one of the Strait/Deltas and Saltbed/Sunbelt. But you don't have to visit both to solve the Towers area or even get maximum points.
+Of course, you must pass through one of the Strait/Deltas and Saltbed/Sunbelt. But you don't have to visit both to solve the Towers area or even get maximum points. Though they make getting around a bit quicker.
 >>SCOPE COPSE
 ?What's the scope for?
 It shows you where you need to go.
@@ -855,6 +856,17 @@ It also creates a map in the upper window that lasts until you cross the lake.
 ?What are the yurts doing? How can I get rid of them?
 They're quite eco-friendly, or seem to be. They seem well build enough.
 Unless, or until, they're RUSTY.
+>>BALDEST BLASTED SALTBED
+?What's the docile old ice for?
+An LLP.
+You can change it to something more interesting.
+Make it COILED.
+>>UNBLEST SUNBELT
+?What are the sporties' ripostes for?
+An LLP.
+You can make them less incisive.
+They're almost like poetry.
+So change them to the PROSIEST you've heard.
 >>OUTER ROUTE
 ?What's the campiest campsite for?
 To hold the rapier repair.

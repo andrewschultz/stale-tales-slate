@@ -649,7 +649,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wears"	419526469	--	Nerd-Aid	--	"You suppress a swear as the sales pitch wears on you."
 "bottles"	576885432	--	Nerd-Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 "tapin"	300664149	--	man covered in	--	"It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney."
-"neuralpulses"	1003884530	--	neural pulses	--	"Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components."
+"riposte"	613325278	--	sporties' ripostes	--	"You may find it easier to deal with all the ripostes at once."
 "gradient"	485956893	Treading Gradient	--	--	"[rav-rej]." [TREADING GRADIENT 2 2]
 "scalier"	429403966	--	Éclairs	--	"[eat-pastry]."
 "eclair"	333130000	--	Éclairs	--	"[not-singular-hp]."
