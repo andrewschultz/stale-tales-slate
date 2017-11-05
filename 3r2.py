@@ -3,6 +3,8 @@ import re
 import sys
 from collections import defaultdict
 
+min_to_print = 3
+
 ignore_duplicates = True
 
 alfs = defaultdict(str)
@@ -49,7 +51,7 @@ def scour(a):
             for alf_entry in this_hash.keys():
                 aa = alfy(alf_entry)
                 next_hash[aa] = next_hash[aa] + 1
-                if next_hash[aa] == 2:
+                if next_hash[aa] == min_to_print:
                     l = re.sub(" +", " ", l)
                     print(aa, "(", sums[aa], ") had more than 1", count, ":", l)
             if ignore_duplicates:
