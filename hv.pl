@@ -50,7 +50,8 @@ my %ary = (
   "z" => 122969618
 );
 
-my $printIfThere = 0;
+my $printIfThere  = 0;
+my $forceNoLaunch = 0;
 
 my @alf = (
   "e", "z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n",
@@ -75,7 +76,7 @@ my $doShuf = 1;
 my $doRoil = 1;
 my $doLoc  = 1;
 
-my $openPost     = 0;
+my $openPost     = 1;
 my $anyFound     = 0;
 my $worthOpening = 0;
 my $forcePost    = 0;
@@ -129,7 +130,7 @@ for my $idx ( 0 .. $#ARGV ) {
       `$cmd`;
       exit;
     };
-    /^-?[o]$/ && do {
+    /^-?o$/ && do {
       $cmd =
 "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt";
       `$cmd`;
@@ -143,7 +144,8 @@ for my $idx ( 0 .. $#ARGV ) {
       if ( !$rm ) { $rm = "myrm"; }
       next;
     };
-    /^-?p$/ && do { $printIfThere = 1; next; };
+    /^-?p$/ && do { $printIfThere  = 1; next; };
+    /^-?x$/ && do { $forceNoLaunch = 1; next; };
     /^[0-9]+$/ && do { wordit($this); next; };
 
 #  /-o/ && do { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; } # deprecated
@@ -247,7 +249,16 @@ for my $this (@toHash) {
 }
 
 close(B);
-if ( $worthOpening && $openPost ) { `c:/writing/dict/hv.txt`; }
+
+if ( $worthOpening && $forceNoLaunch ) {
+  print
+"There is new stuff added, but launching is disabled. Use -ff or -o to open the auxiliary file.\n";
+  exit();
+}
+if ( $worthOpening && $openPost ) {
+  print "Opening post-processing. Use -x to disable this.\n";
+  `c:/writing/dict/hv.txt`;
+}
 elsif ( $forcePost && $openPost ) {
   print "Nothing new but forcing opening anyway.\n";
 }
@@ -417,6 +428,7 @@ sub usage {
 -oREGION = force region name (deprecated)
 -c = run cleanup test on hv.txt
 -f = file open after (-ff = force even if nothing open)
+-x = don't open post processing (default is to open if anything is added)
 -s = Shuffling only
 -r = Roiling only
 comma separated list gives several words
