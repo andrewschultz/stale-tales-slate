@@ -7524,7 +7524,13 @@ book metros
 
 chapter Undesired Underside
 
-Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if red camp is visited]the camp, again[else]what looks like a camp[end if]. You see the down escalator you came by. [if Hotel is visible]The Ol['] Hotel is west[else]A building to the west advertises itself as The Ol['] Hotel[end if]."
+Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if red camp is visited]the camp, again[else]what looks like a camp[end if]. You see the down escalator you came by. Tilting titling advertises the Ol' Hotel to the west."
+
+the tilting titling is scenery in Undesired Underside. description is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if hotel is visited], where you've already been[end if]."
+
+instead of doing something with tilting titling:
+	if action is procedural, continue the action;
+	say "You can't do much with the titling, and you don't need to."
 
 check going inside in Undesired Underside: say "That's ambiguous with the hotel west and the metal door east." instead.
 
@@ -7538,9 +7544,7 @@ description of down escalator is "It's the down escalator you came here by. You 
 
 instead of climbing down escalator: try going up instead.
 
-the drainage is in Undesired Underside. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. You see [letter-or-flier] in it. Cleaning it up would help take this city back."
-
-drainage is fixed in place.
+the drainage is in Undesired Underside. It is fixed in place. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. You see [letter-or-flier] in it. Cleaning it up would help take this city back."
 
 instead of taking drainage: say "It smells too powerful to even consider taking in its present form. Looks bad, too.".
 
@@ -8346,7 +8350,7 @@ chapter The Ol' Hotel
 
 There is a room called The Ol' Hotel.
 
-Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. Everything's boarded up. The only way out is east.". Hotel is in Metros.
+The Ol' Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HOTE HELOT scribbled about. The only way out is east.". Hotel is in Metros.
 
 The Night Thing is a neuter person in Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
 
@@ -8388,7 +8392,7 @@ check inserting into the bottle: say "Ketchup bottles have those narrow necks, s
 
 instead of eating the ketchup: say "You don't know where it's been. Oh, wait, even worse, you DO.".
 
-check going nowhere in Hotel: say "Bad idea to explore further. This place should've probably been condemned long ago." instead.
+check going nowhere in Hotel: say "You don't want to find that L'Hote Helot is The Hell, Too. Better to find a way to fix it, or the city." instead.
 
 check going outside in Hotel: try going east instead.
 
@@ -12216,7 +12220,7 @@ understand "sc1" as sc1ing.
 
 carry out sc1ing:
 	if player does not have tagged gadget, say "Giving you the gadget." instead;
-		now player has tagged gadget;
+	now player has tagged gadget;
 	repeat with ABC running through visible things:
 		say "Scanning [ABC]:[line break]";
 		try scaning ABC;

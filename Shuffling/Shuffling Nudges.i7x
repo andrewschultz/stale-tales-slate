@@ -343,6 +343,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "metros"	550941626	--	--	degen-true rule	"[reg-rej]."
 "metro"	454667660	--	--	degen-true rule	"[reg-rej]."
 "undesired"	698274326	underside	--	--	"[loc-rej]."
+"titling"	451526777	underside	--	--	"No, the tilting titling is unstable enough."
 "sensor"	548937929	underside	--	--	"You don't have the skill to hack the sensor electronically."
 "door"	255058046	underside	--	--	"It can't be that easy to change. Maybe some random door in the wilderness."
 "optical"	378928642	underside	--	--	"Changing the beam is way out of your league."
