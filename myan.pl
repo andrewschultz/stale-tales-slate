@@ -10,13 +10,16 @@ use warnings;
 
 my @wordAry = ();
 my $anno    = "c:/writing/dict/anagram-notes.txt";
+my $anaHtm  = "c:/writing/dict/anagram-htm.htm";
 
 use Time::HiRes qw(time);
 use POSIX qw(strftime);
 
+# options
 my $toFile     = 1;
 my $checkAfter = 1;
 my $checkNames = 1;
+my $htmOut     = 1;
 
 #global initializations
 my @isWord;
@@ -46,6 +49,7 @@ while ( $count <= $#ARGV ) {
     /^-?p$/  && do { $printTimer = 1; $count++; next; };
     /^-?f$/  && do { $toFile     = 1; $count++; next; };
     /^-?nf$/ && do { $toFile     = 1; $count++; next; };
+    /^-?h$/  && do { $htmOut     = 1; $count++; next; };
     /^-?r$/  && do {
       my @mma = split( /,/, $b );
       $minWords = $mma[0];
@@ -127,6 +131,10 @@ sub anfind {
   print "Trying $_[0]...$myBase\n";
 
   open( C, ">>$anno" );
+  if ($htmOut) {
+    open( D, ">$anaHtm" );
+    print D "<html>\n<body>\n<table border=1>\n<tr>";
+  }
 
   while ( $a = <A> ) {
     $a = lc($a);
@@ -172,6 +180,11 @@ sub anfind {
 
   }
   close(C);
+  if ($htmOut) {
+    print D "\n</tr>\n</table>\n</body>\n</html>";
+    close(D);
+    `$anaHtm`;
+  }
 
   if ($printTimer) {
     $af = time() - $b4;
@@ -181,6 +194,10 @@ sub anfind {
 
 sub printUp {
   if ($toFile) { print C $_[0]; }
+  if ( $anaHtm && ( length( $_[0] ) > 1 ) ) {
+    print D "<td>$_[0]</td>";
+    print D "</tr>\n<tr>" if ( ( $count > 1 ) && ( $count % 15 == 1 ) );
+  }
   print $_[0];
 }
 
@@ -194,8 +211,8 @@ sub findAna
   if ( ( !$_[0] ) && ( $_[3] == $curMax ) ) {
     $anag = $_[1];
     $anag =~ s/^-//g;
-    if    ( $count % 10 ) { printUp(" "); }
-    elsif ($count)        { printUp("\n"); }
+    if ( ( $count % 10 != 1 ) && ( $count > 1 ) ) { printUp(" "); }
+    elsif ( $count > 1 ) { printUp("\n"); }
     $count++;
     printUp("$anag, $_[3]");
     print B "$anag\n";
