@@ -9184,7 +9184,7 @@ ram3	ram3	false	716493096	--	"tersely"	"tersely"	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--but Rev. Howe said...he would watch over the ghoul hat I was forced to wear.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. He points to the picture of Rev. Howe. He's suddenly doubting it's for his safety, now. "
 p-2	p-2	false	667670490	--	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the painting, but as you talk, he bends a little more. Yes--it was Elvira who put the painting there. Or her agents. To make sure he didn't use his magic powers unwisely. You promise to re-bran what is barren. He perks up. 'Then you're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]As you two rip up the poster for fun, he also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."
 sea cube	sea cube	false	496604299	--	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
-eels	eels	false	405700023	--	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if power-back is true] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."
+eels	eels	false	405700023	--	"else"	"else"	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."
 atmo-moat	atmo-moat	false	243725566	--	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Even if they weren't long words, that took a bit of energy. However, there's probably even more danger inside."
 t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin macks 7]
 t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."
@@ -13497,22 +13497,13 @@ book Ripe Pier
 
 Ripe Pier is a room in Routes. "You see mist on this pier where a brighter rig berth should be. You don't know if you can go any farther without help. There's a sign before the mist. You wonder what you can yell to get on a ship, or find the right way to one."
 
+after looking in ripe pier for the first time:
+	say "A man walks by, mumbling. 'Sad Tim sat, dim... da mist, it's mad...'
 after looking in ripe pier:
 	set the pronoun it to pier sign;
 	continue the action;
 
 chapter two ways out
-
-section pier sign
-
-the pier sign is vanishing scenery in ripe pier. "You can't see much of the actual pier, but you can smell it. Thankfully, the pier sign offers some advice. 'Ripe pier! Boat rides past a RAD BOA! Disclaimer. Da mist: SAD, TIM? IT'S MAD.'[paragraph break]Hmm. The all caps words are in red. There may be more than one way to get by."
-
-check taking pier sign:
-	say "Take its advice instead." instead;
-
-after fliptoing pier sign:
-	pad-rec-q "hit win button";
-	continue the action;
 
 section da mist
 
@@ -13580,35 +13571,6 @@ instead of doing something with the free reef:
 	set the pronoun him to thor;
 	set the pronoun them to free reef;
 	say "You can't do much but look from here. The one free reef has Thor, looking for a hug. The other has a new beet that seems to have been wet recently--it is still dripping. They are rather close together, and it will be a squeeze to get by, but you probably know what to do by now. You may want to concentrate on one reef, Thor or the beet.";
-
-chapter thor
-
-Thor is reflexive scenery in Cripple Clipper. "He's looking for a hug. Arms opened wide. Grinning disturbingly."
-
-instead of doing something to thor:
-	if action is procedural, continue the action;
-	say "You can't do much to him without getting near him, which would be inadvisable."
-
-thor-hug is a truth state that varies.
-
-check scaning thor:
-	if thor-hug is true:
-		now thor-hug is false;
-	else:
-		now thor-hug is true;
-	say "Thor booms [if thor-hug is true]'Thor hug[else]'Hug Thor[end if]!' as you point the settler at him.";
-
-a-text of thor is "RRRYYRR". b-text of thor is "[if thor-hug is false]RRRYYRR[else]PPRYYRR[end if]". parse-text of thor is "[if thor-hug is false]x[sp]x[sp]x[sp]-[sp]-[sp]x[sp]x[else]t[sp]h[sp]x[sp]-[sp]-[sp]x[sp]x[end if]".
-
-chapter new beet
-
-the new beet is reflexive scenery in Cripple Clipper. "It's dripping something gross and purple, which lands in the water with a hiss. With your navigation skills, you'd probably get too close to it or Thor."
-
-a-text of new beet is "RYRRYYR". b-text of new beet is "RGRRGGR". parse-text of new beet is "x[sp]e[sp]x[sp]x[sp]e[sp]e[sp]x".
-
-instead of doing something to new beet:
-	if action is procedural, continue the action;
-	say "You can't do much to the beet without getting near it and getting drenched in acidic beet juice."
 
 book sonancy canyons
 
@@ -22963,12 +22925,25 @@ check fliptoing p-2:
 
 chapter loop pool
 
-Loop Pool is a room in Otters. Loop Pool is north of frontage. "A pool encases a small island. The atmo-moat around the island babbles[if le mer is visible] pretentiously, [i]'Je suis le mer!'[r][else].[end if] You can go back south."
+Loop Pool is a room in Otters. Loop Pool is north of frontage. "Here a wire weir bars you from [one of]a loop pool[or]the loop pool containing the allot atoll[stopping] and restricts you going every way except back south."
+
+after looking in loop pool for the first time:
+	say "You hear whispering ... 'Le Mer guards the allot atoll from the not worth yet.' Well, it's good to know what to call the center of the loop pool.";
+	continue the action;
+
+section le mer
+
+Le Mer is a person in loop pool. description is "You can't locate where, exactly, Le Mer is."
 
 after choosing notable locale objects when player is in loop pool:
 	set the locale priority of Le Mer to 0;
 
-Le Mer is a person in loop pool. description is "You can't locate where, exactly, Le Mer is."
+instead of doing something with le mer:
+	if action is asking generically or action is objasking generically or action is objasking it about, continue the action;
+	if action is procedural, continue the action;
+	say "You can't do much with Le Mer."
+
+section sea cube
 
 the sea cube is a transparent vanishing container in loop pool. description is "You see eels in the cube.". "Eels float inside a sea cube here, just across the loop pool[eels-them].".
 
@@ -22989,6 +22964,8 @@ Instead of doing something with the sea cube:
 		continue the action;
 	say "You aren't getting across the pool to do anything with the sea cube." instead;
 
+section eels
+
 the eels are a plural-named reflexive person in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here[end if]."
 
 a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "e[sp]x[sp]x[sp]e". eels are cheat-spoilable.
@@ -23008,6 +22985,25 @@ check fliptoing sea cube:
 	if player does not have medals:
 		say "[nuh-uh]";
 		preef sea cube instead;
+
+section allot atoll
+
+the allot atoll is scenery in Loop Pool. "[if eels are reflexed]You've been there. You don't need to go back[else]It doesn't look like a place everyone's allowed to go. Maybe you can be worthy of getting there[end if].[paragraph break]It's nothing to LOL at.".
+
+instead of doing something with allot atoll:
+	if the action is procedural, continue the action;
+	if current action is entering, say "Too far." instead;
+	say "The allot atoll is behind the wire weir. [if eels are reflexed]You don't need to worry about it[else]It doesn't seem like a place you just visit for yucks[end if]."
+
+section wire weir
+
+The wire weir is scenery in Loop Pool. "It's there to prevent you from falling into the loop pool."
+
+instead of doing something with wire weir:
+	if the action is procedural, continue the action;
+	if current action is climbing, say "Tht would be dangerous even without the eels ready to zap intruders[if eels are reflexed]--yes, intruders they already helped[end if]." instead;
+	if current action is touching, say "That might get you zapped a bit." instead;
+	say "The wire weir is there to keep you from going anywhere but back south. No need to mess with it."
 
 section otters flipto and min points
 
@@ -23104,15 +23100,6 @@ check going north in Anger Pit:
 book wickeder wire deck
 
 Wickeder Wire Deck is north of Tapering Anger Pit. Wickeder Wire Deck is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
-
-section wire weir
-
-The wire weir is scenery in Wickeder Wire Deck. "It's there to prevent you from falling into somewhere much more dangerous."
-
-instead of doing something with wire weir:
-	if the action is procedural, continue the action;
-	if current action is climbing, say "You would probably fall if you managed to climb over." instead;
-	say "The wire weir is there to keep you from going anywhere but back south. No need to mess with it."
 
 chapter ocelots
 
