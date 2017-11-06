@@ -695,7 +695,7 @@ to say dick:
 to say dick-u:
 	say "[if censor-minor is true]----[else]Dick[end if]";
 
-[these 'say' the same thing but I wanted to put them here so my checker didn't go off-base. They're a bit too strong of swears.]
+[these 'say' the same thing but I wanted to put them here so my spell- and anagram-checker didn't go off-base. They're a bit too strong of swears.]
 
 to say f-w:
 	say "****";
@@ -7771,11 +7771,15 @@ the you can hear stuff some places rule is listed before the block listening rul
 to say a-r:
 	say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
 
+to say next-sonancy:
+	say "[if hurt hog is in lalaland]the final step[else if newt bee is reflexed]the hurt hog[else]the hog and the bee[end if]"
+
 before listening (this is the you can hear stuff some places rule):
 	if player is in dusty study: [means manse]
 		if dusty study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is in lalaland][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
+	if player is in sonancy canyons: say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
 		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!' [in random order]You see red a bit at getting no direct help, yourself." instead;
@@ -13606,6 +13610,28 @@ instead of doing something to new beet:
 	if action is procedural, continue the action;
 	say "You can't do much to the beet without getting near it and getting drenched in acidic beet juice."
 
+book sonancy canyons
+
+Sonancy Canyons is a room in Routes. "[if patters are in canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a wee bent newt bee buzzing 'We be TEN!' block your progress ahead[else]The hurt hog and wee bent newt bee are gone now. But there is red writing in their place[end if]."
+
+chapter hurt hog
+
+the hurt hog is reflexive scenery in sonancy canyons.
+
+chapter wee bent newt bee
+
+the wee bent newt bee is reflexive scenery in sonancy canyons.
+
+chapter raptest patters
+
+the raptest patters are vanishing LLPish scenery in Routes. "[bug]"
+
+instead of doing something with the raptest patters:
+	if current action is listening, continue the action;
+	if current action is examining, try listening instead;
+	if action is procedural, continue the action;
+	say "All you can do with the patters is LISTEN.";
+
 volume troves
 
 book very basics
@@ -17853,8 +17879,7 @@ a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "x[sp]
 instead of doing something to eeks:
 	if action is procedural, continue the action;
 	if current action is seeking, continue the action;
-	if current action is not listening:
-		say "Can't do much more than listen, to find how to follow.";
+	if current action is not listening, say "Can't do much more than listen, to find how to follow.";
 	try listening instead;
 
 the eeks are vanishing scenery in Hardest Trashed Dearths.
