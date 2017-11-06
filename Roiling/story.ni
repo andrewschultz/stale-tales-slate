@@ -116,7 +116,7 @@ last-loc of Means Manse is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
+Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
 Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
 
@@ -8755,6 +8755,7 @@ carry out fliptoing:
 			if ff is true:
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
 				say "[the-to entry] to [the-from entry] denied! Push ff to change this![line break]" instead;
+			d "OK, [the-from entry] to [the-to entry].";
 			if the-from entry is reflexive:
 				now the-from entry is reflexed;
 			now the-from entry is unfigured;
@@ -8937,16 +8938,17 @@ elbow	Rude 'N Nuder	false	382326203	--	"below"	"below"	"You watch how the giant 
 bench	old giant	false	350259676	--	"against"	"against"	"Quakes squeak as the giant approaches, and you back off, because he is a lot bigger than you. He sits down and begins some angst-ail, which segues into tirades. 'Tantrums! Must rant!' The buggin['] biggun wants you to listen."
 pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
-Rude 'N Nuder	runed book	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal...a runed book! Well, this could be useful."
+Rude 'N Nuder	runed book	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal...a runed book![paragraph break]Well, that was clever. Hide something REALLY taboo under something moderately taboo. Brother Horbert will be glad to see the runed ."
 huge thing	the-b	false	250266429	--	"from"	"from"	"The huge thing form above turns into a huge thing FROM above. You watch a blot bloat as it gets closer. You notice it is shaped like a bean and duck. You don't hear the thud.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
 darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. Compass directions are still out."
 narrow cracks	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
-un-road	cracks	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
+un-road	along-bogus	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' You protest--you need someone to show you the way. 'You will learn from my sorrow,' says No-Gal Logan. You don't want to be an ol['] nag, so you sit and wait."
 thickness sketchins	thickness sketchins	false	329930229	Sonancy Canyons	"above"	"above"	"You look around. Oh, hey, there's the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction. The bad oar helps you on your way..."
 hurt hog	hurt hog	false	475056505	--	"through"	"through"	"You realize it's time to move on. So you do."
 newt bee	newt bee	false	681789531	--	"between"	"between"	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
+raptest patters	raptest patters	false	575888338	--	"without"	"without"	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
 yob den	yob den	false	432873440	Strip of Profits	"beyond"	"beyond"	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface."
 
 table of troves anagrams
@@ -12897,7 +12899,9 @@ the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian l
 to say ast:
 	say "[if screenread is true] ** [end if]"
 
-a-text of dingy dwelling is "YRRYRR". b-text of dingy dwelling is "YRRYRP". parse-text of dingy dwelling is "-[sp]x[sp]x[sp]-[sp]x[sp]s".
+instead of scaning dingy dwelling:
+	say "The lairage regalia gives a reading.";
+	try scaning lairage regalia instead;
 
 a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYRP". parse-text of lairage regalia is "-[sp]x[sp]x[sp]-[sp]x[sp]s".
 
@@ -12916,6 +12920,10 @@ check entering grubby restaurant:
 		try fliptoing signboard instead;
 	say "You walk back into Pat's idle deli more confidently the second time. The building does not shift.";
 	now player is in Idle Deli instead;
+
+instead of scaning grubby restaurant:
+	say "The adsorbing signboard gives a reading.";
+	try scaning adsorbing signboard instead;
 
 after fliptoing signboard:
 	now grubby restaurant is clue-used;
@@ -13445,6 +13453,10 @@ to decide whether told-of-logan:
 	if un-road is in Harms Marsh, decide no;
 	decide yes;
 
+chapter along-bogus
+
+the along-bogus is a useless privately-named thing. description is "[bug-report]".
+
 book Ripe Pier
 
 Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be.  No-Gal's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
@@ -13500,7 +13512,7 @@ after looking in cripple clipper:
 
 chapter thickness sketchins
 
-the thickness sketchins are plural-named scenery in cripple clipper. "They're thick, both physically (big letters) and in content.[paragraph break][bold type]OBOE AVE BEV BE OVA['] BEAV-O!"
+the thickness sketchins are plural-named vanishing scenery in cripple clipper. "They're thick, both physically (big letters) and in content.[paragraph break][bold type]OBOE AVE BEV BE OVA['] BEAV-O![roman type]"
 
 after fliptoing thickness sketchins:
 	now bad oar is in lalaland;
@@ -13517,11 +13529,19 @@ instead of doing something with the free reef:
 
 book sonancy canyons
 
-Sonancy Canyons is a room in Routes. "[if patters are in canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a wee bent newt bee buzzing 'We be TEN!' block your progress ahead[else]The hurt hog and wee bent newt bee are gone now. But there is red writing in their place[end if]."
+Sonancy Canyons is a room in Routes. "[if patters are in canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if yob den is in canyons]The yob den nearby now provides most of the noise[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a wee bent newt bee buzzing 'We be TEN!' block your progress ahead[else]The hurt hog and wee bent newt bee are gone now. But there is red writing in their place[end if]."
 
 chapter hurt hog
 
 the hurt hog is reflexive scenery in sonancy canyons.
+
+after fliptoing hurt hog:
+	now newt bee is in lalaland;
+	now hurt hog is in lalaland;
+	now yob den is in canyons;
+	set the pronoun it to yob den;
+	set the pronoun them to yob den;
+	continue the action;
 
 chapter wee bent newt bee
 
@@ -13539,7 +13559,7 @@ instead of doing something with the raptest patters:
 
 chapter yob den
 
-the yob den is scenery.
+the yob den is vanishing scenery.
 
 volume troves
 
@@ -27996,7 +28016,7 @@ chapter routes
 
 test fixed with "ts/routes/in/inside/x list/pad/pad reagents/pad"
 
-test routes with "routes/enter routes/towards/inside/x list/x ali/y/g/g/z/out/against/astride/below/under/past/ask about xyz/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/aboard/within/through/coff"
+test routes with "routes/enter routes/towards/inside/x list/out/against/astride/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/amidst/above/without/between/through/beyond/coff"
 
 test routesord with "routes/enter routes/towards/astride/inside/x list/out/under/below/astride/against/under/below/astride/under/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/aboard/within/through/coff"
 

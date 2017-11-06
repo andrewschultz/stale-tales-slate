@@ -1,3 +1,9 @@
+###########################
+#
+# sq.py
+# uses sq.txt to parse through all the puzzles
+#
+
 import re
 
 sq = 'sq.txt'
