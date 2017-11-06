@@ -240,6 +240,8 @@ for writing a paragraph about a lumpable portal (called ptl) :
 	now all lumpable portals in location of the player are mentioned;
 	continue the action;
 
+to say fill-in-here: say "!!!!!!" [this is just so I can compile and concentrate on other things]
+
 chapter guardians
 
 a guardian is a kind of person. a guardian is usually vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
@@ -3681,8 +3683,8 @@ this is the check final region action rule:
 
 table of end-flips
 thisflip	thatflip	warned-yet	my-prog	pointwarn
+yob den	yob den	false	routes-left rule	"The raptest patters are still slightly a nuisance, if you want to fix them."
 USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
-thor	new beet	false	degen-false rule	"You should never see this, because the only LLP was in the Mesa."
 troend1	troend2	false	troves-left rule	"You tidied your upscale capsule up pretty well, but you could do a bit more."
 d2	d2	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
 curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that flowerpot you got from Daltho."
@@ -3705,45 +3707,36 @@ to say to-clean-otters: [hells bells this is ugly]
 
 [here, the rules succeed if there's still stuff left to do]
 
+this is the routes-left rule:
+	if patters are in sonancy canyons, the rule succeeds;
+	the rule fails;
+
 this is the otters-left rule:
-	if p-2 is reflexive or eels are reflexive:
-		the rule succeeds;
-	if elmer is reflexive:
-		the rule succeeds;
-	if cinders are not in lalaland:
-		the rule succeeds;
+	if p-2 is reflexive or eels are reflexive, the rule succeeds;
+	if elmer is reflexive, the rule succeeds;
+	if cinders are not in lalaland, the rule succeeds;
 	the rule fails.
 
 this is the towers-left rule:
-	if flowerpot is not in lalaland:
-		the rule succeeds;
+	if flowerpot is not in lalaland, the rule succeeds;
 	the rule fails;
 
 this is the oyster-left rule:
-	if lever is reflexive:
-		the rule succeeds;
-	if aunt-tuna-cross is false and lance is not in lalaland:
-		the rule succeeds;
-	if bogus-plains is reflexive:
-		the rule succeeds;
+	if lever is reflexive, the rule succeeds;
+	if aunt-tuna-cross is false and lance is not in lalaland, the rule succeeds;
+	if bogus-plains is reflexive, the rule succeeds;
 	the rule fails;
 
 this is the presto-left rule:
-	if usb is off-stage: [note 2 things flip to USB, the code and the USB, so this gives 'debug' a pass]
-		the rule fails;
-	if trim socks are in shack:
-		the rule succeeds;
-	if escaroles are in shack:
-		the rule succeeds;
+	if usb is off-stage, the rule fails; [note 2 things flip to USB, the code and the USB, so this gives 'debug' a pass]
+	if trim socks are in shack, the rule succeeds;
+	if escaroles are in shack, the rule succeeds;
 	the rule fails;
 
 this is the troves-left rule:
-	if Pa Egg Pea is reflexive:
-		the rule succeeds;
-	if lobster is reflexive or stream is reflexive:
-		the rule succeeds;
-	if divorces is not in lalaland:
-		the rule succeeds;
+	if Pa Egg Pea is reflexive, the rule succeeds;
+	if lobster is reflexive or stream is reflexive, the rule succeeds;
+	if divorces is not in lalaland, the rule succeeds;
 	the rule fails;
 
 chapter zaping (with patcher)
@@ -4014,10 +4007,9 @@ un-road	"The un-road seems to lead somewhere, but you couldn't quite make it out
 darkness	"You feel it's ALMOST the right time for the darkness to lift."
 narrow cracks	"The cracks almost seem to lead somewhere."
 mist	"Hmm, you almost see a way through the mist."
-pier sign	"You plot a zigzag past the sign, but you don't have full confidence in it, yet."
-ship controls	"The ship controls seem to adjust themselves slightly, but not enough."
-Thor	"Thor seems to gesture you by for a second."
-new beet	"The new beet seems to spin slightly away from Thor for a second."
+hurt hog	"The hog grunts."
+newt bee	"The newt-bee buzzes, extra."
+yob den	"Some different noises from the yob den."
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
 cold	"You think you feel less cold for a second. But you need to make it last."
 heat	"Meh. Maybe you're closer than you think to motivation. How to make that matter?"
@@ -4352,12 +4344,8 @@ pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
 narrow cracks	"The underground is already lit. Un-unlit."
 un-road	"You know where the un-road is, but how to navigate it?"
-pier sign	"You try to follow the instructions on the pier sign, but maybe you'd wind up in the water."
 da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost in da mist. Oh, and that you get lost enough."
-ship controls	"No, on to Thor or the new beet."
-hit win	"No, on to Thor or the new beet."
-Thor	--
-New Beet	--
+hurt hog	"The newt bee is still buzzing. Maybe look at that."
 Pa Egg Pea	"You probably did what you could. Or not-did." [troves]
 heat	"Don't need to overheat, or overhate."
 fretful truffle	"Caring and all its offshoots only go so far."
@@ -5013,11 +5001,6 @@ definition: a room (called myrm) is ominous:
 last-wall is a thing that varies. last-wall is usually owl decal code wall.
 
 when play begins (this is the hint and other randomization rule):
-	if a random chance of 1 in 2 succeeds: [routes random clues]
-		now pier-first is true;
-	if a random chance of 1 in 2 succeeds:
-		now thor-first is true;
-	now wibe-count is a random number between 0 and 1; [within/behind]
 	if a random chance of 1 in 2 succeeds: [troves random clues]
 		now bee-head-first is true;
 	if a random chance of 1 in 2 succeeds:
@@ -5407,8 +5390,8 @@ check scaning cold:
 check scaning location of the player (this is the location scan rule):
 	d "scaning player location.";
 	if location of player is Cripple Clipper:
-		if ship controls are reflexive:
-			say "You scan, trying to find [one of]where the hit win button is, and you get [hit-win][or]where Ben hid the button, and you get [ben-hid][in random order]." instead;
+		say "Only the thickness sketchins pick up anything.";
+		try scaning thickness sketchins instead;
 	if location of player is Loather Rathole: [start troves]
 		if cold is visible:
 			try scaning cold instead;
@@ -5505,7 +5488,6 @@ niche	false	false	false	true	"[cheatfid]."
 t-b	false	false	false	true	"[cheatfid]."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
-controls	false	false	false	false	"This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win."
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
@@ -6057,16 +6039,9 @@ carry out routes-hinting:
 			try objhinting narrow cracks instead;
 		try objhinting un-road instead;
 	if location of player is ripe pier:
-		if pier-first is true:
-			try objhinting pier sign instead;
-		else:
-			try objhinting da mist instead;
+		try objhinting da mist instead;
 	if location of player is Cripple Clipper:
-		if ship controls are reflexive:
-			try objhinting ship controls instead;
-		if thor-is-hinted:
-			try objhinting thor instead;
-		try objhinting beet instead;
+		try objhinting thickness sketchins instead;
 	if list o toils is unexamined:
 		all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
 	if player has mushrooms and player has runed book and player has pipe soot:
@@ -6083,23 +6058,6 @@ carry out routes-hinting:
 			if QQ is runed book:
 				all-say "You need to work out how to sit all over the giant's bench for the runed book." instead;
 	all-say "I can't give you any advice right now. You may want to hint individual items or even let me know via a transcript (or even a save file) at [email]." instead;
-
-thor-first is a truth state that varies.
-
-to decide whether thor-is-hinted:
-	if thor is reflexed:
-		decide no;
-	if beet is reflexive and thor-first is false:
-		decide no;
-	decide yes.
-
-pier-first is a truth state that varies.
-
-wibe-count is a number that varies.
-
-to say wi-be:
-	now wibe-count is 1 - wibe-count;
-	say "[if wibe-count is 1]WITHIN[else]BEHIND[end if]";
 
 book troves-hinting
 
@@ -7779,7 +7737,7 @@ before listening (this is the you can hear stuff some places rule):
 		if dusty study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is in lalaland][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
-	if player is in sonancy canyons: say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
+	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
 		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!' [in random order]You see red a bit at getting no direct help, yourself." instead;
@@ -8764,11 +8722,10 @@ check fliptoing when player is in dusty study and gunter is off-stage (this is t
 					do nothing instead;
 
 check fliptoing (this is the reject flipping with distractions around rule):
-	if noun is thor or noun is beet:
-		if ship controls are reflexive:
-			say "That'll be tricky, moving through or between Thor and the New Beet without being sure of the ship controls.";
-			preef noun;
-			do nothing instead;
+	if noun is hurt hog and newt bee is reflexive:
+		say "The hog and newt don't trust you to go by.";
+		preef noun;
+		do nothing instead;
 	if noun is alert or noun is log ons or noun is ought:
 		if Rand is not visible and noun is visible:
 			say "You remember having more fun than you thought you'd have, bashing about with Leo and Rand. It was more fun than you realized at the time. But you have a mission to accomplish." instead;
@@ -8985,13 +8942,12 @@ huge thing	the-b	false	250266429	--	"from"	"from"	"The huge thing form above tur
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
 darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. Compass directions are still out."
 narrow cracks	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
-un-road	cracks you followed	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
-da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"You plan how to look through the mist--how wide it is, where walkways seem to protrude, and how to avoid a long walk off a short pier--until you feel safe entering it. [logan-hi]"
-pier sign	pier sign	false	203500010	Cripple Clipper	"aboard"	"aboard"	"'ABOARD!' you call out. 'ABROAD!' you hear. That must be No-Gal Logan. His verbal signal aligns you with the right zigzag path to the ship. [logan-hi]"
-ship controls	hit win	false	318436756	--	"behind"	"behind/within"	"[hit-win-behind]"
-ship controls	hit win	false	407220290	--	"within"	"behind/within"	"[hit-win-behind]"
-thor	thor	false	475056505	Strip of Profits	"through"	"through"	"[ahoy-eh]."
-beet	beet	false	681789531	Strip of Profits	"between"	"between"	"[ahoy-eh]."
+un-road	cracks	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
+da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' You protest--you need someone to show you the way. 'You will learn from my sorrow,' says No-Gal Logan. You don't want to be an ol['] nag, so you sit and wait."
+thickness sketchins	thickness sketchins	false	329930229	Sonancy Canyons	"above"	"above"	"You look around. Oh, hey, there's the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction. The bad oar helps you on your way..."
+hurt hog	hurt hog	false	475056505	--	"through"	"through"	"You realize it's time to move on. So you do."
+newt bee	newt bee	false	681789531	--	"between"	"between"	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
+yob den	yob den	false	432873440	Strip of Profits	"beyond"	"beyond"	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface."
 
 table of troves anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -9538,11 +9494,6 @@ after fliptoing da mist:
 	continue the action;
 
 behinded is a truth state that varies.
-
-after fliptoing hit win button:
-	if the player's command includes "behind":
-		now behinded is true;
-	continue the action;
 
 after fliptoing when mrlp is others (this is the slot and singed design appear rule):
 	if noun is iconic:
@@ -11784,9 +11735,10 @@ bench	routes	"Find a way to be fearless so you can lean AGAINST the bench." [rou
 elbow	routes	"You can go BELOW the giant's elbow once he swings it around."
 narrow cracks	routes	"You can look AROUND to find the un-road."
 un-road	routes	"You can go ALONG the un-road...once you find it."
-thor	routes	"You can go THROUGH [if controls are reflexed]now[else]if[end if] the ship controls are working."
-new beet	routes	"You can go BETWEEN [if controls are reflexed]now[else]if[end if] the ship controls are working."
-Pa Egg Pea	--	"You can GAPE at a particularly bad page you may come across in the future."
+hurt hog	routes	"You can go THROUGH [if newt bee is reflexed]once[else]now[end if] you've managed to deal with the newt bee."
+newt bee	routes	"You can go BETWEEN the hurt hog and newt bee."
+yob den	routes	"You need to go BEYOND the yob den."
+Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."
 stop post	troves	"You can't focus enough to SPOT, yet."
 salt	troves	"You can LAST [if stream is reflexed or lobster is in lalaland]now[else]once[end if] you have confidence in your skills."
 lobster	troves	"You can BOLSTER yourself to eat the lobster."
@@ -13495,12 +13447,14 @@ to decide whether told-of-logan:
 
 book Ripe Pier
 
-Ripe Pier is a room in Routes. "You see mist on this pier where a brighter rig berth should be. You don't know if you can go any farther without help. There's a sign before the mist. You wonder what you can yell to get on a ship, or find the right way to one."
+Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be.  No-Gal's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
 
 after looking in ripe pier for the first time:
-	say "A man walks by, mumbling. 'Sad Tim sat, dim... da mist, it's mad...'
+	say "A man walks by, mumbling. 'Da mist! Da mist!' Ah, so it's not just mist. But his next babbling leaves you seeing red before he walks off. Sad Tim sat, dim... it's mad...' You see red at such nonsense.";
+	continue the action;
+
 after looking in ripe pier:
-	set the pronoun it to pier sign;
+	set the pronoun it to da mist;
 	continue the action;
 
 chapter two ways out
@@ -13510,15 +13464,12 @@ section da mist
 da mist is vanishing scenery in ripe pier. "My, It's misty. It phases through shapes, but there's a sign in front of it."
 
 a-text of da mist is "YRYRRR". b-text of da mist is "YRYRPP". parse-text of da mist is "x[sp]-[sp]x[sp]-[sp]s[sp]t". da mist is parse-spoilable.
-a-text of pier sign is "YRYYRR". b-text of pier sign is "GPYYRP". parse-text of pier sign is "a[sp]b[sp]r[sp]o[sp]a[sp]d". pier sign is parse-spoilable.
 
-instead of entering mist:
-	say "Part of you admits it will be tricky to figure out. Maybe if you entered the right way, with a good plan...or a bad..."
+instead of entering mist, say "Part of you admits it will be tricky to figure out. Maybe if you entered the right way, with a good plan...or a bad..."
 
 instead of doing something to mist:
 	if action is procedural, continue the action;
-	if current action is taking:
-		say "Mistake. Ha ha ha." instead;
+	if current action is taking, say "Mistake. Ha ha ha." instead;
 	try examining noun instead;
 
 after fliptoing mist:
@@ -13538,39 +13489,31 @@ before going inside in Ripe Pier:
 
 book Cripple Clipper
 
-Cripple Clipper is a room in Routes. "You see a free reef ahead and to each side. You aren't much of a sailor, [if hit win button is visible]and the hit win button didn't even do everything[else]but maybe you can somehow hit win on the ship controls[end if]."
+Cripple Clipper is a room in Routes. "Oh, no! You see a free reef in the distance, but you just realized you have no clue how to operate any sort of boat. About all you can see here are thickness sketchins[']."
+
+the bad oar is a thing. "It looks weird, but hey, it got you aboard the Cripple Clipper.";
 
 after looking in cripple clipper:
-	set the pronoun it to ship controls;
-	set the pronoun them to ship controls;
+	set the pronoun it to free reef;
+	set the pronoun them to thickness sketchins;
 	continue the action;
 
-chapter controls
+chapter thickness sketchins
 
-the ship controls are reflexive scenery in Cripple Clipper. "They're on-deck, but conked. [one of]I rag a rig, you note. [or][stopping]You've no clue how to [if ship controls are reflexive]find where Ben hid the Hit Win button[else]operate them[end if]."
+the thickness sketchins are plural-named scenery in cripple clipper. "They're thick, both physically (big letters) and in content.[paragraph break][bold type]OBOE AVE BEV BE OVA['] BEAV-O!"
 
-check taking controls:
-	say "You need a more thematic way to, err, take control." instead;
+after fliptoing thickness sketchins:
+	now bad oar is in lalaland;
+	continue the action;
 
-a-text of ship controls is "RYR??R". b-text of ship controls is "?G???P". parse-text of ship controls is "x[sp]?[sp]?[sp]?[sp]?[sp]x"
-
-chapter hit win button
-
-the hit win button is scenery. "Well, pushing it alone won't work. You'll need one last flourish."
-
-instead of doing something to the hit win button:
-	if action is procedural, continue the action;
-	say "[if ship controls are reflexed]Just pushing it isn't going to solve your problems. Or, your final problem, here.[else]Where is it? You need to find it. Or where Ben hid it.[end if]"
+chapter free reef
 
 the free reef is scenery in Cripple Clipper. the free reef is undesc.
 
 instead of doing something with the free reef:
-	if current action is scaning:
-		say "You may want to pick a reef--Thor or the new beet. They're too far apart to scan both at once." instead;
-	set the pronoun it to new beet;
-	set the pronoun him to thor;
-	set the pronoun them to free reef;
-	say "You can't do much but look from here. The one free reef has Thor, looking for a hug. The other has a new beet that seems to have been wet recently--it is still dripping. They are rather close together, and it will be a squeeze to get by, but you probably know what to do by now. You may want to concentrate on one reef, Thor or the beet.";
+	if current action is scaning, say "The reef is too far away to scan." instead;
+	if action is procedural, continue the action;
+	say "The reef is far away. You need to find a way to navigate to it." instead;
 
 book sonancy canyons
 
@@ -13586,13 +13529,17 @@ the wee bent newt bee is reflexive scenery in sonancy canyons.
 
 chapter raptest patters
 
-the raptest patters are vanishing LLPish scenery in Routes. "[bug]"
+the raptest patters are vanishing LLPish scenery in Sonancy Canyons. "[bug-report]"
 
 instead of doing something with the raptest patters:
 	if current action is listening, continue the action;
 	if current action is examining, try listening instead;
 	if action is procedural, continue the action;
 	say "All you can do with the patters is LISTEN.";
+
+chapter yob den
+
+the yob den is scenery.
 
 volume troves
 
@@ -22939,7 +22886,7 @@ after choosing notable locale objects when player is in loop pool:
 	set the locale priority of Le Mer to 0;
 
 instead of doing something with le mer:
-	if action is asking generically or action is objasking generically or action is objasking it about, continue the action;
+	if current action is asking generically or current action is objasking generically or current action is objasking or current action is asking about, continue the action;
 	if action is procedural, continue the action;
 	say "You can't do much with Le Mer."
 
@@ -26005,7 +25952,7 @@ bench	"You got the giant to the bench. Now you need to deal with the giant."
 bench-end	"You positioned yourself well to duck the giant and put up with his elbow. Try something else."
 giant's elbow	"You ducked the giant's elbow successfully. Now about that book..."
 seed pit	"You got what you needed from the seed pit."
-ship controls	"The ship controls are working. You need to figure how to shoot the gap, now." [end ROUTES]
+hurt hog	"[fill-in-here]" [end ROUTES]
 dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if seminar is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]." [start PRESTO]
 star	"[if seminar is visited]The star has done its duty[else]Wearing the star may help you get the authority to get by someone else who knows about decorations[end if]."
 boing	"The boing mechanism works fine now."
@@ -26174,14 +26121,12 @@ sheol holes	"They're just there as an agent to make you find the right way out. 
 darkness	"[one of]'Unlit...' is a clue. What would the magic preposition be to make light?[plus][or]How to say this area was unlit, but now it is?[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
 narrow cracks	"[one of]You need to search for No-Gal Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
 un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
-No-Gal's boat	"[one of]So, you want to go abroad, eh?[plus][or]But you need to follow proper protocol to enter?[plus][or]'All ------!'[plus][or]ABOARD.[minus][cycling]"	--	"ABOARD"
-pier sign	--	No-Gal's boat	"ABOARD"
-mist	--	No-Gal's boat	"ABOARD"
+mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"You need to get by what's on either free reef."
-hit win button	"You don't need to hit the button again to get through the reef."
-ship controls	"[one of]There are two solutions to find the Hit Win button Ben Hid.[plus][or]The Letters Settler should let you logically derive either Hit Win or Ben Hid--or, you can realize there are not many prepositions left.[plus][or]Where might something be hidden?[plus][or][wi-be]. Or...[plus][or]You may be able to look [wi-be].[minus][cycling]"	--	"[wi-be]"
-thor	"[one of]Thor won't let you past--oops, used that one already.[plus][or]You don't want to hug Thor. Or a Thor-hug.[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
-new beet	"[one of]Tough to get past the beet--oops, used that one already.[plus][or]The strait is narrow, and you need to get by it, but 'by' isn't a fancy enough word.[plus][or]You don't want to have been wet.[plus][or]BETWEEN.[minus][cycling]"	--	"BETWEEN"	[end ROUTES hinting]
+newt bee	"You don't need to hit the button again to get through the reef."
+hurt hog	"[one of]The hurt hog won't let you by. You [if newt bee is reflexed]dealt with the newt bee[else]need to deal with the newt bee[end if].[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
+newt bee	"[one of]The newt bee feels nervous the hog is about to attack it. Maybe you could play peacemaker?[plus][or]Make it so there's something dividing them.[plus][or]Or, perhaps, BETWEEN.[minus][cycling]"	--	"BETWEEN"
+yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
 cold	"[one of]Even negative emotions can warm a person and give needed heat, even for a short while. But they may cause more trouble later.[plus][or]HATE is useful for short-term goals at best.[minus][cycling]"	--	"HATE"	[start TROVES hinting]
 heat	"[one of]Emotional investment is necessary to win [i]a rat race or a foot race[r][plus][or]You need to CARE or you will waste effort[minus][cycling]."	--	"CARE"
@@ -27222,13 +27167,10 @@ to say remap-unset:
 	say "[if remapped is true]UNSET the tunes[else]REMAP the perma-amper[end if]";
 
 rule for showing alternate routes:
-	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The Means Manse has no mutually exclusive solutions, and Presto only has one alternative, for the hoop. This list overlaps very little with the MISSED list which shows actual points missed.";
+	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The Means Manse and Routes have no mutually exclusive solutions. This list overlaps very little with the MISSED list which shows actual points missed.";
 	d "[list of solved regions].";
 	if routes is solved:
-		say "[eq2][b]ROUTES[r][eq2][line break]";
-		say "[2da]you could've gone [if misted is true]AMIDST[else]ABOARD[end if] in Ripe Pier.";
-		say "[2da]you could've looked [if behinded is true]WITHIN[else]BEHIND[end if] on the Cripple Clipper.";
-		say "[2da]you could've gone [if thor is reflexed]BETWEEN[else]THROUGH[end if] after finding the button on the Cripple Clipper.";
+		say "[eq2][b]ROUTES[r] has no alternate, um, routes.";
 	if troves is solved:
 		say "[eq2][b]TROVES[r][eq2][line break]";
 		say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
@@ -27236,6 +27178,7 @@ rule for showing alternate routes:
 	if presto is solved:
 		if phooeyed is true:
 			say "[eqls]PRESTO[line break][2da]you could've said POOH instead of PHOOEY, which would've meant one less point.";
+		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out for Nowt Town, but for fewer points[end if].";
 		say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
 		say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
 	if oyster is solved:
