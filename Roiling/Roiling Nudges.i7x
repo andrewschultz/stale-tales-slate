@@ -581,8 +581,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "oldhat"	291775640	--	--	got-pot rule	"You don't have time to think about, or change, Old Hat Daltho. [if flowerpot is in lalaland]You got his present to his friend[else if ed yerg is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he sent the gift to, anyway[end if]."
 "toaster"	592164309	--	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
-"rya"	209870873	--	ray eck	--	"[ray-part]."
-"eck"	199744872	--	ray eck	--	"[ray-part]."
 "start"	390005623	--	start tarts	--	"[eat-pastry]."
 "tart"	293731657	--	start tarts	--	"[not-singular-hp]."
 "copse"	398904196	--	spec-o-scope	--	"[cop-sco]." [COPSE SCOPE 1 1]
@@ -609,7 +607,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "baldest"	422639744	saltbed	--	--	"[towersloc]." [BALDEST BLASTED SALTBED 1 2]
 "cliff"	170842062	--	cliff	--	"The cliff remains motionless. Perhaps it's useful, after all, to block off some ways to go. This area looks big enough."
 "pirate"	444886553	--	pirates	--	"[plutry of pirates]Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s."
-"prune"	468609186	--	iPrune	--	"It's officially an iPrune, not a prune."
+"erip"	339588717	--	unripe ur-pine	--	"It's officially an ur-pine, not a pine."
 "old"	149195505	--	old ice	--	"No, all the old ice."
 "ice"	191804540	--	old ice	--	"No, all the old ice."
 "cinema"	326975019	anemic cinema	--	--	"[towersloc]." [ANEMIC CINEMA 1 3]

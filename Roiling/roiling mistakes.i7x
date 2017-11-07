@@ -212,11 +212,11 @@ understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far en
 
 chapter ripe pier
 
-understand "hips" as a mistake ("Unfortunately, nothing can become hoorays. So that doesn't help.") when player is in ripe pier.
+understand "abroad" and "aboard" as a mistake ("Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.") when player is in cripple clipper.
 
-understand "pish" as a mistake ("Pretending you don't want to get on the ship won't help you get on the ship.") when player is in ripe pier.
+chapter cripple clipper
 
-understand "abroad" as a mistake ("You can't go abroad [']til you get--well, you can figure it out.") when player is in ripe pier.
+understand "feer" as a mistake ("Fearing won't help, here.") when player is in cripple clipper.
 
 book troves
 
@@ -569,7 +569,7 @@ understand "occurs" as a mistake ("You need to make something occur.") when play
 
 chapter topside deposit
 
-understand "dopiest" as a mistake ("You sense that Ray Eck [if ray eck is in Topside Deposit]is[else]was[end if] one of the easier people to deal with, here, but you don't want to overstate it.") when player is in topside.
+understand "dopiest" as a mistake ("You sense that the ur-pine [if ur-pine is in Topside Deposit]is[else]was[end if] one of the easier people to deal with, here, but you don't want to overstate it.") when player is in topside.
 
 understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in topside.
 

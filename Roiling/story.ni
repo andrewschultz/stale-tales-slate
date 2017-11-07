@@ -124,10 +124,10 @@ Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 36. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
 
-Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 49. min-score of towers is 25.
+Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
 4 for regular warriors
-1 for Ray Eck
+1 for unripe ur-pine
 1 for subtler
 1 for admirer
 1 for bonker, 1 for stinger
@@ -146,6 +146,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for the yurts
 5 for the H/I beyond needing to clear the coastlines
 2 for the ingrates/natives
+1 for keycar wherever it appears
 3 for the denim, sporties' ripostes and old ice
 1 for the replay player
 1 for tentative
@@ -1971,7 +1972,6 @@ walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them i
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"[serp-say]."
-Ray Eck	"Don't get him started."
 inapt paint	--
 muscly hulk	--
 lois the hostile	--
@@ -1981,9 +1981,9 @@ snider diners	"'We are EATING,' they exclaim, dryly. You'd like to rain on their
 sweatier wait-seer	--
 arid den	--
 bluster butlers	--
-unripe iPrune	--
+unripe ur-pine	--
 pirates	--
-Ray Eck	--
+keycar	--
 grailman	--
 Lars Eede	--
 Elsa Erde	--
@@ -2013,7 +2013,7 @@ badger	"[if badger is reflexive]It covers its exposed parts and turns away[else]
 sly imp	"It nods its head as if to say it's all right and it knew you'd ask."
 haunter	"It makes ghostly noises and talks about how it wants its jewel back."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
-Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than iPrunes or those discussing yorpberries.'"
+Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than ur-pines or those discussing yorpberries.'"
 Len Craig	"'I'm a businessman. A trader. Lots of stuff if you know how to haggle.'"
 Art Erd	"'Traded a dead rat...' he mumbles."
 Dr Tera	"'Traded a dead rat...' she mumbles."
@@ -2120,7 +2120,6 @@ Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thank
 drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move."
 muscly hulk	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
-iPrune	"[one of]'I?! Prune?!' it cries, turning red at a perceived slight[or]'I may be UNRIPE, but I'm bigger than you!' it cries. 'If I was the same size, maybe you could use words to get me to let you by. But we aren't, so I'm not.' Hmph[cycling]."
 bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in Danger Garden]north[else]south[end if][if Danger Garden is visited and Strati Strait is visited], especially since you walked around before[end if]."
@@ -2131,7 +2130,6 @@ admirer	"They claim they never thought they'd love someone the way they love you
 man covered in inapt paint	"He ignores your conversation. '[one of]They done wrong to ol['] [kno-mel]. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait-seer	"'Trees! [one of]Aw, I[or]I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
-Ray Eck	"'Hmm? That's not as interesting as my bright red keycar, here.'"
 duck	"It quacks."
 ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
 pester'n serpent	"[serp-say]."
@@ -2392,15 +2390,9 @@ yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
 yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
 yapper	h-h	"'That's where we are.'"
-Ray Eck	start tarts	"'Not mine.'" [start TOWERS]
-Ray Eck	Elvira	"He blathers on about what's wrong about her so annoyingly you almost sympathize with her."
-Ray Eck	toaster	"'Not nearly as sophisticated as my keycar.'"
-Ray Eck	keycar	"Ray Eck proceeds to [one of][or]re-[stopping]tell you about its features and so forth. What a YACKER, you think, seeing red."
-Ray Eck	settler	"Ray Eck just won't shut up about what the settler could be for, and why it doesn't do anything. You notice its colors don't change even when you switch it to and from cheat mode, which--well, that's a pretty big help."
-butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'"
+butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'" [start TOWERS]
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
 muscly hulk	Elvira	"The hulk blinks and shrugs and grunts."
-iPrune	Elvira	"'The longer she rules, the bigger plants like me will grow!'"
 pirates	Elvira	"The pirates explain colorfully how Elvira's rule has been good for piracy. Not the software or music sort that deserves jail time, but the stuff that takes real guts."
 sweatier	Elvira	"The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end."
 sweatier	curst palace	"The wait-seer points to the palace and shrugs, as if to say, why?"
@@ -2791,7 +2783,6 @@ gleaner	"The gleaner was made by Al Green, written in red."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read KC AYER in red."
-iPrune	"InPure industries[one of]. Yep, you heard rumors Elvira was involved with them, too[or][stopping]."
 Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads LOST? HIE! THE LOIS![else][one of]Written in red on the Hatchery is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the Thearchy Hatchery in red.[stopping][end if]"
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
 blaster	"ALBERT'S."
@@ -4106,8 +4097,7 @@ dialer	"[di-cli]."
 lever	"You look at the lever, wishing it would be a little more fun to pull."
 d2	"[di-cli]."
 yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
-Ray Eck	"The keycar slows down for a minute. Ray Eck frowns at you." [START towers]
-Andres	"Andres looks a bit more tied up at the moment."
+Andres	"Andres looks a bit more tied up at the moment." [START towers]
 Andrew	"Andrew suddenly looks as if he's been told he did something wrong."
 Archie	"Archie looks a bit pained."
 Barney	"Barney looks around a bit."
@@ -4144,7 +4134,7 @@ fissure	"Bizarre animal noises continue to emanate from the fissure. It is beyon
 bonker	"'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!'"
 weeds	"The weeds almost seem to shrug."
 saver	"The 'replay player' letters brighten for a second."
-iPrune	"The iPrune shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
+ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 muscly	"The hulk stumbles for a moment."
 organised	"The drains sizzle slightly but go back to menacing quiet."
 admirer	"Your admirer looks askance, then returns to their puppy-love expression."
@@ -5503,12 +5493,10 @@ pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and 
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
-Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you." [towers]
-bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
+bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out." [towers]
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
-iPrune	true	true	false	false	"Hm. That one blinky letter is pretty weird. Maybe you can start there, or try to annoy the iPrune."
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. MAybe it's the brand you can/should worry about."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
 hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
@@ -7026,7 +7014,7 @@ Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you c
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
-Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if Ray Eck is visible], and Ray Eck's in the way right now[end if]."
+Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if unripe ur-pine is visible], and the ur-pine's in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [kid-first] will let you enter[end if]."
 Nude Dune	"Unorg'd ground is every way except back east."
@@ -7170,8 +7158,7 @@ skis	"You give them a whack, and it hurts much more than it should. You wonder i
 span pans	"Well, you need to do something to the pans."
 yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. He could take out a rock-man or two, you bet."
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
-Ray Eck	"Not even his cousin, Kim Eck, deserves that." [START towers]
-campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
+campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything." [START towers]
 rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
 denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's thickly packed denim, for sure."
 sweatier wait-seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
@@ -7612,12 +7599,8 @@ check giving something to:
 	if second noun is a guardian: [towers]
 		if second noun is serpent:
 			say "You are present enough to present a present--but which present is most important or effective in this area? That is the question.[paragraph break]Plus, the whole no hands thing.";
-		if second noun is iPrune:
-			say "[one of]'Maybe that's how they do things IN PERU!' the hybrid fruit booms, turning red[or]Nah, you don't want that IN PERU lecture again[stopping]." instead;
 		if second noun is pirates:
 			say "'Tips are...' one says and shakes his head. You blush red at the meager gift you offered." instead;
-		if second noun is ray eck:
-			say "'That's real generous, but I got my hands full with this keycar!'" instead;
 		say "No response. It looks like a gift won't be enough to get by. But you won't need one, based on what you've done so far." instead;
 	if second noun is kid:
 		if noun is a hintpastry:
@@ -9071,7 +9054,7 @@ stinger	stinger	false	559013952	--	"resting"	"resting"	"The stinger whirs around
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
-iPrune	iPrune	false	513602032	--	"punier"	"punier"	"Instead of being worried about how much the iPrune would block you when full-grown, you wonder about if it were the size of a normal banana. It works. The iPrune kicks you ineffectually as you walk past, then runs and hides in embarrassment."
+ur-pine	ur-pine	false	513602032	--	"punier"	"punier"	"The ur-pine shrinks and flails. It flails so much, it rolls all the way into the fire-torn frontier, where it may help rebalance the ecosystem into a more forgiving climate, or something."
 arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -9083,7 +9066,7 @@ an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"margina
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
-ray eck	ray eck	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."
+keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
 denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
@@ -11360,7 +11343,6 @@ wzup	"a pair of hands patting Leo and Rand on the back" [presto]
 pre-haun	"an outline of where something is buried" [oyster]
 eeks	"some cartoony representation of EEKS"
 atblock	"an aura of tentativeness about [kid-first]" [towers]
-keycar	"Ray Eck's keycar"
 smart kid	"[kid-first]"
 Merle	"Elmer and Merle" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
@@ -19089,9 +19071,6 @@ check xraying:
 			say "You realize [kid-first] could be GIFTED and fidget less.";
 		else if kid is in Obscurest Subsector and atblock is in Obscurest Subsector:
 			say "You realize [kid-first] could be a little more ATTENTIVE.";
-	if noun is keycar:
-		say "It zips around, and you wind up focusing on Ray Eck instead...";
-		try xraying ray eck instead;
 	if noun is sled rut:
 		if strudel is visible:
 			try xraying strudel instead;
@@ -19317,7 +19296,7 @@ Mislit Limits	4	0
 book basic guardian work
 
 for writing a paragraph about a guardian (called gua):
-	if gua is ray eck or gua is reed's ale:
+	if gua is unripe ur-pine or gua is reed's ale:
 		continue the action;
 	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
@@ -19499,35 +19478,29 @@ check going down in Loftier Trefoil:
 
 book Topside Deposit
 
-Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. [if ray eck is in lalaland]With Ray Eck gone, you should have no problems doing so. There's not much to do here[else]Unfortunately, [one of]a yacker[or]Ray Eck[stopping] is blocking the way[end if]. The curst palace is barely visible in the distance."
+Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. There's not much to do here except figure how to get past [one of]the unripe ur-pine to the north. The curst palace is barely visible in the distance."
 
 for printing a locale paragraph about a thing (called nongua) in topside deposit:
 	if nongua is start tarts and toaster is in Topside Deposit:
 		now start tarts are mentioned;
 	continue the action:
 
-Ray Eck is a proper-named purple guardian in Topside Deposit.  description is "He doesn't look particularly wealthy or elitist, but he sure does like watching his keycar go round and round.". "[one of]The yacker[or]Ray Eck still[stopping] controls his keycar remotely here, making it zoom around."
-
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
-a-text of ray eck is "RRYYRO". b-text of ray eck is "RRYYRO". parse-text of ray eck is "x[sp]x[sp]-[sp]-[sp]x[sp]y". ray eck is cheat-spoilable.
+the yacker keycar is LLPish vanishing scenery. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
 
-the keycar is auxiliary scenery in Topside Deposit. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
+[?? talk to the keycar]
 
 check taking keycar:
-	say "Ray Eck laughs as it zips around out of your grasp. What a jerk." instead;
+	say "The keycar zooms around, bantering about how it's a bit too fast for you." instead;
 
-after fliptoing ray eck:
-	move keycar to lalaland;
-	continue the action;
-
-a-text of keycar is "RRYYRO". b-text of keycar is "RRYYRO". parse-text of keycar is "x[sp]x[sp]-[sp]-[sp]x[sp]y".
+a-text of keycar is "RRYYRO". b-text of keycar is "RRYYRO". parse-text of keycar is "x[sp]x[sp]-[sp]-[sp]x[sp]y". keycar is cheat-spoilable.
 
 inside of Topside Deposit is nowhere.
 
 check going north in Topside Deposit:
-	if player does not have Rosetta Toaster and ray eck is not visible:
+	if player does not have Rosetta Toaster and unripe ur-pine is not visible:
 		say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
 
 a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here."
@@ -19610,11 +19583,11 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  !      *
 [line break]  [pc of admirer]~~~~~~
 [line break]+[pc of ingrates].[pc of wait-seer].[pc of atheists].~ +
-[line break]  [pc of iPrune] [pc of grailman] [if player is male][pc of hostile-is-he lot][else][pc of lois the hostile][end if]~
+[line break]  [pc of trendies] [pc of grailman] [if player is male][pc of hostile-is-he lot][else][pc of lois the hostile][end if]~
 [line break]  .[pc of butlers].[if player is male][pc of lars eede][else][pc of elsa erde][end if].~
 [line break]  [pc of muscly] [pc of man covered in inapt paint] [pc of ego drains]~
 [line break]![pc of pirates].[pc of diners].[pc of arid den].[pc of bonker]!
-[line break]  [pc of Ray Eck]   [pc of natives]
+[line break]  [pc of ur-pine]   [pc of natives]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
 
 to say pc of (gg - a guardian): [passage character]
@@ -21148,18 +21121,6 @@ book Towers specific verbs
 
 chapter guardian stubs
 
-report taking in Topside:
-	if noun is toaster:
-		say "[if Ray Eck is in topside]'A neat gadget. But not as fun as my keycar.'[else]You won a free toaster once, in a raffle. But getting this toaster feels cooler.[end if]";
-	else if noun is tarts and ray eck is in topside:
-		say "Ray Eck babbles on about how that food's been on the ground, even if it's been in a wrapper, and it probably has all these preservatives. But he's not stopping you taking it!";
-	else:
-		say "[if number of visible guardians > 0]The [random visible Guardian] can't resist eye-rolling when you pick up something seemingly so worthless.[else][one of]Even though no one is watching, you still feel a bit silly taking something this goofy.[or]What the heck, free [foods of noun] is free [foods of noun].[stopping][end if]";
-	the rule succeeds;
-
-to say foods of (myf - a thing):
-	say "[if myf is a hintpastry]food[else]stuff[end if]";
-
 to say gd of (zz - a guardian):
 	if zz is the-hostile:
 		say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
@@ -21208,11 +21169,13 @@ a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-
 
 section baldest blasted saltbed
 
-the unripe iPrune is a red guardian. understand "prune" and "unripe prune" as iprune. "An iPrune--unripe--is too much of an obstacle as-is to the [psgdir of iprune]."
+the unripe ur-pine is a red guardian. understand "prune" and "unripe prune" as ur-pine. "An unripe ur-pine blocks your way north."
 
-description of iPrune is "It's almost impossibly big for being unripe and disturbingly animated. You knew Elvira was a bit too into genetic mutations, and combining weird technology and biology, but this is crazy. It's branded with red writing."
+description of ur-pine is "Well, an ur-pine naturally swells to block people from going past, but ... it can't be that hard, can it? It's a tangle of greens and browns, and its ability to spread out is more defensive than anything.[paragraph break]You reckon you could just repeatedly try to run past it or attack it to maybe see how to get by[one of]. Or, well, examine it[else].[paragraph break]You see red as you wonder whether you would see anything this ridiculous in Peru[stopping]."
 
-a-text of iPrune is "RYRYYR". b-text of iPrune is "RYR?YR". parse-text of iPrune is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
+instead of attacking unripe ur-pine, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]"
+
+a-text of ur-pine is "RYRYYR". b-text of ur-pine is "RYRGYR". parse-text of ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
 
 some pirates are plural-named red guardians. "Pirates probably won't let you go [psgdir of pirates] unless you can get rid of them.". description of pirates is "Sun-burnt and proud of it. They traipse, unlikely to hand you a piastre or discuss the REST API[one of]. If you look again, you might remember what the dance they're doing is[or]. You blush as you recall their dance is the Star Pie Traipse[stopping]."
 
@@ -21385,10 +21348,11 @@ chapter guardian org table
 
 table of guard-org [organized going 1st north then east. W, N, E.]
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
+Ur-Pine	Topside Deposit	north	"The ur-pine, not fully ripe, is VERY flexible and VERY big. It expands sideways to block you from heading north[one of]. Frustrating! If you try to run by, you might REALLY see red[or]. You see the ur-pine rein up, and that makes you see red[stopping]."	"From what you know about ur-pines, they're pretty flexible when young. They are impossible to get by but not harmful."
 muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
 bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme."	"Maybe if the butlers were quieter, they'd have a better place to guard than here."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
-iPrune	Blasted Saltbed	north	"The iPrune rumbles over to block your way. [one of]It asks where you're going, and you mumble, red-faced, 'Er, up in...' but you can't say where, ultimately[or]'REIN UP!' it yells, making you see red[in random order][one of]. Maybe if you tried to pass again, both sides could have their say[or][stopping]."	"Looking at the iPrune, you are intimidated by how unnaturally big it is. Maybe the solution is easier than you're worried it is."
+Resident Trendies	Blasted Saltbed	north	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
 pirates	Blasted Saltbed	east	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
@@ -21398,7 +21362,6 @@ arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing devic
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 grailman	Treading Gradient	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
-Ray Eck	Topside Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger."
@@ -21418,9 +21381,11 @@ after fliptoing reed's ale:
 	continue the action;
 
 after fliptoing a guardian (this is the guardian taunt rule) :
-	if noun is ray eck, continue the action;
 	if number of guardians in location of player is 0:
-		continue the action; [save a bit of time why not]
+		if keycar is off-stage and player is not in Topside Deposit and player is not in actionless coastlines:
+			say "A keycar speeds into view with all the guardians gone! And not just any keycar. An annoying yacker keycar, a novelty toy whose sales helped make Elvira rich, before she sponsored a campaign to fine reckless keycar users--well, okay, there's no PROOF of kickbacks.[paragraph break]The keycar's probably not going to stop you going anywhere, but it'd be nice to get rid of.";
+			now keycar is in location of player;
+		continue the action;
 	repeat through table of ggt:
 		if guaname entry is in location of player and guaname entry is not prevtaunt:
 			deliver-taunt guaname entry and noun;
@@ -21453,7 +21418,7 @@ ego drains	"The ego-drains make a flushing and slurping noise. Another rival gua
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
 stinger	"The stinger continues to fizz and buzz."
 natives	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
-iPrune	"The iPrune rears up and seems bigger for a second."
+ur-pine	"The ur-pine rears up and seems bigger for a second."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
 Lars Eede	"[reedale].'"
@@ -21511,7 +21476,7 @@ to shuffle-guardians (goner - a guardian):
 			now G is opposite of blockdir entry;
 		now  MR is the room G of location of player;
 	now goner is prodded;
-	if goner is ray eck:
+	if goner is unripe ur-pine:
 		now topside is accessible;
 		now copse is accessible;
 		continue the action;
@@ -26344,7 +26309,7 @@ denim	"[one of]The denim can't quite be cut through by something like a dagger.[
 pester'n serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
 Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
-iPrune	"[one of]The iPrune is decidedly UNRIPE, and yet it's still too big for you.[plus][or]Any way to make the veggie/fruit smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
+ur-pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 sporties' ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
 muscly hulk	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
@@ -26352,8 +26317,7 @@ sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
 lois the hostile	"[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
 hostile-is-he lot	--	lois the hostile
-Ray Eck	"[one of]Ray Eck and his car are in tip-top shape, but maybe you can change that.[plus][or][minus][cycling]"
-keycar	--	Ray Eck
+keycar	--	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
 smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if Dr Yow is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in Obscurest Subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"
@@ -27357,7 +27321,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	if myreg is Towers:
-		let xxx be Ray Eck;
+		let xxx be unripe ur-pine;
 		if number of guardians not in lalaland > 0:
 			repeat with gua running through guardians not in lalaland:
 				if player is male:
@@ -27906,7 +27870,7 @@ test rand-v with "z/z/z/z/x ethics/g/g/g/hate/care/l/l/l/l/observe/spot/reason/b
 
 test rand-y with "ask casper about xyz/g/g/g/g/g/g/g/sing/inset/remap/stroll/calm/run/boast/leap/z/z/z/z/z/z/z/z/spike/e/scan cans/seek/ask tuna about tuna/g/g/g/g/g/g/g/tutor/eat/w/w/warp/search/n/x theses/g/g/g/retry"
 
-test rand-w with "z/z/z/z/gonear ray eck/creaky/n/rinsed/e/himself/n/sewed/get all/s/w/weirder/w/put dagger in repair/x dagger/g/g/g/g/g/retry"
+test rand-w with "z/z/z/z/gonear unripe/punier/n/rinsed/e/himself/n/sewed/get all/s/w/weirder/w/put dagger in repair/x dagger/g/g/g/g/g/retry"
 
 [capturing Elvira's text is done in test twi]
 
