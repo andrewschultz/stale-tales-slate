@@ -19,11 +19,11 @@ maps/wolves
 Store M (min)
 gardenia/tomato/keycard
 sheath/sword/barcode/controls/velcro/darkness/opening
-resin/beast/sword
+resin/beast
 Store M (max)
 gardenia/tomato/rentals/keycard
 sheath/sword/barcode/controls/velcro/darkness/opening
-resin/beast/sword
+resin/beast
 Store I (min)
 sixteen/kitchen/straw/sack/tortilla/lettuce/steak/parmesan/hotsauce
 coat/shoes/moor/peasant/hallway/soil
@@ -38,18 +38,19 @@ islet/cork/slope/ropes/grips/trio/potters/kilns/getout/exist
 Store R (max)
 islet/cork/wings/toeholds/slope/ropes/grips/trio/potters/kilns/chain/getout/exist
 ========
-Manor (min)
+Means Manse (min)
 lamp/satchel/stable/stair/flier/staple/stapler
-Manor (max)
+Means Manse (max)
 lamp/satchel/basement/stable/chimney/ramp/painting/stair/snib/flier/staple/stapler
 Stores (min)
 routes/troves/otters
 Stores (max)
 routes/troves/presto/oyster/towers/otters/others/sorbet/nestor/tokers/outside
 Store U (min)
-inside/against/astride/below/under/past/despite/across/opposite/inside/from/beneath/until/around/along/aboard/within/through
+inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
 Store U (max)
-towards/inside/against/astride/below/under/past/despite/across/opposite/inside/from/beneath/until/around/along/aboard/within/through
+inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
+towards/without
 Store V (min)
 hate/care/observe/spot/reason/recall/despair/deal/desire/aspire/ponder/ignore/master/last/decide
 Store V (max)
@@ -84,9 +85,9 @@ punier/subtler/holiest/married/hastiest/broken/resting/sewed
 # other stuff to do (robust < nearest)
 wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
-rusty/pastier/rewired/angstier/mined/prosiest/naivest/attentive/present/greyed/triste/spectacular
-# LLPs
-restful/rustled/creaky/pearly/rewired/greyed/
+rusty/rewired/angstier/mined/prosiest/naivest/attentive/restful/rustled/creaky/pearly/
+# more LLPs
+present/greyed/triste
 Store T (min) (adjusted)
 bare/reedi/seedi/steami/tedious/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
 Store T (max) (adjusted)
@@ -98,7 +99,7 @@ barely/rescind/reedily/sobbingly/emotionally/despairingly/because/else/atom/alth
 Store H (min)
 limes/grapes/pears/plums/compass
 apples/apricot/nabana/gonear
-cheap/cripes/solemn/solemn
+cheap/cripes/solemn/molen
 rhubarb/tamarind/tangerines/nectarine
 raspberry/pineapple/reversed/mango
 sonic/icons/prep/review

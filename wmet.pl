@@ -16,7 +16,7 @@ my $inFile  = "c:\\writing\\dict\\wmet.txt";
 my $outFile = "c:\\writing\\dict\\metrics.htm";
 
 #####options
-my $printSettler = 1;
+my $printSettler = 0;
 my $settlerToo   = 1;
 my $debug        = 0;
 my $launch       = 1;
@@ -31,16 +31,22 @@ my $thislog, my $thisset;
 my $header;
 my $inHere = 0;
 
-if ( defined( $ARGV[0] ) ) {
-  my $shortarg = lc( $ARGV[0] );
-  $shortarg =~ s/^-//;
+my %notedYet;
+my %thisTime;
 
-  if ( $shortarg eq "e" ) { `$inFile`; exit(); }
-  elsif ( $shortarg eq "d" ) { $debug  = 1; }
-  elsif ( $shortarg eq "l" ) { $launch = 1; }
-  else {
+my $count = 0;
+
+while ( $count <= $#ARGV ) {
+  my $arg = $ARGV[$count];
+
+  for ($arg) {
+    /^-?e$/ && do { `$inFile`; exit(); };
+    /^-?d$/  && do { $debug  = 1; $count++; next; };
+    /^-?nd$/ && do { $debug  = 1; $count++; next; };
+    /^-?l$/  && do { $launch = 1; $count++; next; };
+    /^-?nl$/ && do { $launch = 0; $count++; next; };
     print
-"USAGE\n================\n-e = edit data file\n-d=debug text\n-l=launch\n";
+"USAGE\n================\n-e = edit data file\n-d=debug text\n-l=launch\n-nl=don't launch\n";
     exit();
   }
 }
@@ -62,8 +68,13 @@ while ( $a = <A> ) {
   if ($debug)       { print "$a\n"; }
   if ( $a =~ /^;/ ) { last; }
   if ( $a =~ /^#/ ) { next; }
+  if ( $a =~ /^====/ ) {
+    %notedYet = ();
+    print "Resetting the hash\n" if $debug;
+  }
   if ( $a !~ /^[a-z]+/ )    #ignore if there is just one item on a line
   {
+    %thisTime = ();
     evaluate();
     $header = $a;
     if ( $a =~ /^==/ ) {
@@ -178,7 +189,8 @@ sub combos {
 
 # Technically, $sett refers to the tagged gadget's better setting, CERTIFY, and not RECTIFY, which is too tricky to calculate anyway
     $sett = perms($tempWord);
-    print( "%s/%s=%6d/%6d", $tempWord, $_[0], $poss, $sett ) if $printSettler;
+    print( "%s/%s=%6d/%6d", $tempWord, $_[0], $poss, $sett )
+      if $printSettler && !defined( $notedYet{ $_[0] } );
   }
   else {
     ( my $vowels = $_[0] ) =~ s/[^aeiou]//g;
@@ -186,8 +198,13 @@ sub combos {
     $sett = perms($vowels) * perms($cons);
 
     # we don't need to track Y's, because the Y's must be fixed
-    printf( "%-13s= %6d/%9d\n", $_[0], $sett, $poss ) if ($printSettler);
+    printf( "%-13s= %6d/%9d/%.2f\n", $_[0], $sett, $poss, $poss / $sett )
+      if ( $printSettler && !defined( $notedYet{ $_[0] } ) );
   }
+
+  print "$_[0] duplicated in $header.\n" if ( defined( $thisTime{ $_[0] } ) );
+  $notedYet{ $_[0] } = 1;
+  $thisTime{ $_[0] } = 1;
 
   #print "$_[0] -> $poss $sett\n";
   return ( $poss, $sett );
