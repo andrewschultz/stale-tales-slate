@@ -1523,7 +1523,7 @@ blurb
 "The notes? Not these."
 "Sad yodel so deadly!"
 "Sing here? Eh, resign."
-"Sing-ings is NG." [x]
+"Sing-ings is NG."
 "Sing out in gusto? It's, UG, No." []
 "So atonal. Nasal, too!"
 "So chanty? Yo, STANCH!"
@@ -1779,6 +1779,7 @@ blurb
 "Act, cat!"
 "'Actin[']? I can't!'"
 "Ah, so: net no haste."
+"Actions as tonic? I so can't!"
 "Ahh, paused? Push ahead!"
 "Any gelid delaying: yield nag."
 "Apathy: phat, ay!"
@@ -1868,7 +1869,8 @@ blurb
 "Oh, told to hold."
 "On, ho? No! Oh!"
 "Oy, Lotza Too-Lazy."
-"Pacin['] beats panic, but you still feel samely and measly." [x]
+"Pacin['] beats panic."
+"Samely? Measly? Slay me!"
 "Paroles? Reposal."
 "Pass time? A misstep!"
 "Passivity pays visit."
@@ -2010,6 +2012,7 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Acne-Plus Clean Ups"	false
 "Adeline's Sane Deli"	false
 "Adless Slade's"	false
+"Gus Troy Go-Try-Us Yogurts"
 "Aethers-Heaters"	false []
 "Agnello Galleon"	false
 "Agramonte Matronage"	false
@@ -19195,7 +19198,6 @@ blurb
 "A document that would turn your settler PGRYRYGP makes you blush." [x]
 "An Erotic Creation." [x]
 "Everbond lube is on sale." [x]
-"Gus Troy Yogurts"
 "Hef-T-Sins Fishnets are this season's hot item." [x]
 "'Helpin['] you deuces seduce!'" [x]
 "HIDEOUS ID-HOUSE and HERPES PHEERS SPHERE are spray-painted here." [x]
@@ -25413,7 +25415,7 @@ blurb
 "'So yeah, Yo, he's a...'"
 "'Soaking? Go in, ask...'"
 "'Socked him? I'm shocked.'"
-"'Solid ol['] Sid is Old.'" []
+"'Solid ol['] Sid is Old. Soil'd.'" []
 "'Solver Les...oversells.'"
 "'Some food? Doom, foes!'"
 "'Sordid dis, Rod!'" []
