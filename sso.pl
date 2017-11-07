@@ -57,7 +57,8 @@ my %secondDefault;
 my %tableTo;
 my %tableAdd;
 my %tableAdd2;
-my $warnings = 0;
+my $warnings              = 0;
+my $warningsBeforeBailing = 0;
 
 my %lump;
 
@@ -152,12 +153,16 @@ while ( $count <= $#ARGV ) {
     };
     /^-?ol$/ && do { openThis(-1); exit(); };
     /^-?q$/ && do { readMapFile(); quickCheck($arg2); exit(); };
-    /^-?f$/  && do { $copyBack    = 1; $count++; next; };
-    /^-?p$/  && do { $postProcess = 1; $count++; next; };
-    /^-?n$/  && do { $numbers     = 1; $count++; next; };
-    /^-?sa$/ && do { $showAdd     = 1; $count++; next; };
-    /^-?dw(l)$/
-      && do { $dieOnWarnings = 1 + ( $arg =~ /l/ ); $count++; next; };
+    /^-?f$/ && do { $copyBack    = 1; $count++; next; };
+    /^-?p$/ && do { $postProcess = 1; $count++; next; };
+    /^-?n$/ && do { $numbers     = 1; $count++; next; };
+    /^-?nf$/ && do { $readIn = $arg2; $count += 2; next; };
+    /^-?sa$/ && do { $showAdd = 1; $count++; next; };
+    /^-?dw(l)$/ && do {
+      $dieOnWarnings = 1 + ( $arg =~ /l/ );
+      $count++;
+      next;
+    };
     /^-?mw$/ && do { $maxWarnShow = $arg2; $count++; next; };
     /^-?s$/  && do { $statsOpen   = 1;     $count++; next; };
     /^-?te$/ && do {
@@ -228,6 +233,7 @@ my $x;
 
 OUTER:
 while ( $line = <A> ) {
+  next if ( $maxWarnShow > 0 ) && ( $wob >= $maxWarnShow );
   if ( $line !~ /^\"/ ) { $unusedString .= $line; next; }
   $quo = () = $line =~ /"/g;
   if ( ( $quo == 0 ) && ( $line =~ /[\[\]]/ ) ) {
@@ -487,7 +493,6 @@ sub meaningful {
 }
 
 sub checkAnagram {
-  print "$_[0] $_[1]\n";
   my %freq;
   if ( ( $_[1] == 0 ) && ( $_[0] !~ /^\"/ ) ) { return 0; }
   my $ags = lc( $_[0] );
@@ -500,7 +505,6 @@ sub checkAnagram {
   #############################get rid of between paren, non ascii below
   $ags =~ s/\[[^\]]*\]//g;
   $ags =~ s/[^a-z ]//g;
-  print "$ags\n";
   my $firstBad = "";
   my @ang = split( //, $ags );
   for (@ang) {
@@ -521,14 +525,14 @@ sub checkAnagram {
       $tempAna =~ s/^(a|an|the) //i;
 
       # print "Sub-anagram $tempAna\n";
-      return 0 if checkAnagram( $tempAna, 1 ) == 0;
+      return checkAnagram( $tempAna, 1 );
     }
 
     # todo: multiple backslashes
     if ( $_[0] =~ /\[(p|x|px)\]/ ) { return 0; }
     if ( $_[1] == -1 )             { return -1; }
     $wob++;
-    print "Wobbly anagram $wob/$ags line $., probably $firstBad: $_[0]: ";
+    print "Wobbly anagram $wob line $. = $ags, probably $firstBad: $_[0]: ";
     for my $k ( sort keys %freq ) { print "$k$freq{$k}"; }
     print ".\n";
     return -1;
@@ -934,11 +938,12 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -n adds a line of numbers to the stats file.
 -s opens the stats after.
 -pu gives a popup if the sorting file has removed all its unevaluated text
--dw dies on warnings e.g. an invalid has at the end of quoted text
+-dw dies on warnings e.g. an invalid hash at the end of quoted text, l launches, # after = # of warnings
 -^ converts title case
 -mw is maximum warnings
 -sa is show default column add details
 -p post processes
+-nf (file name) defines a new file
 -q quick checks for a pattern for a character
 -u(dq)(l)(#) dump unquoted, l = launch, d/q = any flags
 SPECIFIC USAGE:
