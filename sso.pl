@@ -253,6 +253,7 @@ while ( $line = <A> ) {
   $tableAbbr = $outputChunk;
   $tableAbbr =~ s/^\".*\"([^ \t]*).*/$1/;
   $outputChunk =~ s/(^\".*\")([^ \t]*)(.*)/$1$3/;
+  my $useSlashComments = 0;
   if ( $line =~ /\\/ ) {
     my $i = 0;
     my @chunks = split( /\\/, $line );
@@ -266,12 +267,14 @@ while ( $line = <A> ) {
     my @c2 = grep { $i++ % 2 } @chunks;
     $outputChunk =~ s/\\//g;
     $anagramChunk = join( " ", @c2 );
+    $useSlashComments = 1;
+    $outputChunk =~ s/$/ \[x: $anagramChunk\]/;
   }
   else {
     $anagramChunk = $outputChunk;
     $anagramChunk =~ s/\"[^\"]*$/\"/;
   }
-  if ( checkAnagram( $anagramChunk, 0 ) == -1 ) {
+  if ( checkAnagram( $anagramChunk, $useSlashComments ) == -1 ) {
     $anagramLine = $.;
     $unusedString .= $line;
     next;
@@ -319,6 +322,7 @@ while ( $line = <A> ) {
 
 $warnLine = $majorWarnLine if ($majorWarnLine);
 
+print "$wob wobbly anagrams.\n"     if $wob;
 print "$warnings total warnings.\n" if $warnings;
 
 print "$addSecondCol default second columns added.\n"
@@ -483,6 +487,7 @@ sub meaningful {
 }
 
 sub checkAnagram {
+  print "$_[0] $_[1]\n";
   my %freq;
   if ( ( $_[1] == 0 ) && ( $_[0] !~ /^\"/ ) ) { return 0; }
   my $ags = lc( $_[0] );
@@ -495,6 +500,7 @@ sub checkAnagram {
   #############################get rid of between paren, non ascii below
   $ags =~ s/\[[^\]]*\]//g;
   $ags =~ s/[^a-z ]//g;
+  print "$ags\n";
   my $firstBad = "";
   my @ang = split( //, $ags );
   for (@ang) {
