@@ -55,15 +55,14 @@ print B
 "<tr><th>test run<th>Anagrams<th>Letters<th>&Sigma;Letters^2<th>Average<th>RMS<th>&Sigma;Log(poss., no device)<th>Average<th>&Sigma;Log(poss. with gadget)<th>Average\n";
 
 $fact[0] = 1;
-for ( 1 .. 12 ) { $fact[$_] = $_ * $fact[ $_ - 1 ]; }
+for ( 1 .. 20 ) { $fact[$_] = $_ * $fact[ $_ - 1 ]; }
 
 while ( $a = <A> ) {
   chomp($a);    #$a = lc($a);
   if ($debug)       { print "$a\n"; }
   if ( $a =~ /^;/ ) { last; }
-  if ( $a =~ /^#/ ) { last; }
-  if ( $a !~
-    /\// ) #this is risky code but it catches if there is just 1 item on a line.
+  if ( $a =~ /^#/ ) { next; }
+  if ( $a !~ /^[a-z]+/ )    #ignore if there is just one item on a line
   {
     evaluate();
     $header = $a;
@@ -80,7 +79,7 @@ while ( $a = <A> ) {
       $lg = length($_);
       $t1 += $lg;
       $t2 += $lg**2;    #print "To $t1 $t2\n";
-      $poss = perms($_);
+      ( $poss, $sett ) = combos($_);
       $thislog += log($poss);
       $thisset += log($sett);
       $inHere++;
@@ -164,34 +163,43 @@ sub torgb {
   return $retStr;
 }
 
-sub perms {
-  my @ary    = split( //, $_[0] );
+sub combos {
+  my @ary    = split( //, lc( $_[0] ) );
   my $vowels = 0;
   my $cons   = 0;
   my $ys     = 0;
   my %let;
 
-  for (@ary) {
-    $let{$_}++;
-    if    ( $_ =~ /[aeiou]/ ) { $vowels++; }
-    elsif ( $_ =~ /[y]/i )    { $ys++; }
-    else                      { $cons++; }
-  }
-
-  my $poss = $fact[ length( $_[0] ) ];
+  my $poss = perms( $_[0] );
+  my $sett = 0;
   if ( $header =~ /^sa/ ) {
-    $sett = $fact[ length( $_[0] ) - 2 ];
+    ( my $tempWord = $_[0] ) =~ s/^.//;
+    $tempWord =~ s/.$//;
+
+# Technically, $sett refers to the tagged gadget's better setting, CERTIFY, and not RECTIFY, which is too tricky to calculate anyway
+    $sett = perms($tempWord);
+    print( "%s/%s=%6d/%6d", $tempWord, $_[0], $poss, $sett ) if $printSettler;
   }
   else {
-    $sett = $fact[$vowels] * $fact[$cons] * $fact[$ys];
-    if ($printSettler) { print "$_[0] = $sett\n"; }
-  }
-  for $k ( keys %let ) {
-    $sett /= $fact[ $let{$k} ];
-    $poss /= $fact[ $let{$k} ];
-    $let{$k} = 0;
+    ( my $vowels = $_[0] ) =~ s/[^aeiou]//g;
+    ( my $cons   = $_[0] ) =~ s/[aeiouy]//g;
+    $sett = perms($vowels) * perms($cons);
+
+    # we don't need to track Y's, because the Y's must be fixed
+    printf( "%-13s= %6d/%9d\n", $_[0], $sett, $poss ) if ($printSettler);
   }
 
   #print "$_[0] -> $poss $sett\n";
-  return $poss;
+  return ( $poss, $sett );
+}
+
+sub perms {
+  my $retVal = $fact[ length( $_[0] ) ];
+  my @x = split( "", $_[0] );
+  my %countage;
+  $countage{$_}++ for (@x);
+
+  $retVal /= $fact[ $countage{$_} ] for ( keys %countage );
+
+  return $retVal;
 }
