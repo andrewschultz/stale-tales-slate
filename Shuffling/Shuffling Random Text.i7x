@@ -3602,6 +3602,7 @@ blurb
 "People sound grateful the condo serves no cod." [x]
 "'Pools-Perch Prep School? Poor schlep!'"
 "'Porcelain replica? NO! Nicer opal!'"
+"'Pros, eh? Posher hopers!'"
 "'Prate APTER!'" []
 "'Rare dim Dr. Marie: married?!'"
 "'Serf! Got frets? Go! Forgets! Erg, SOFT!'"
@@ -3796,7 +3797,7 @@ blurb
 "'A math trick? Karmic, that!'"
 "'MatLab alt? BAM!'"
 "'Max fills? Small fix.'"
-"'Mediums are for dummies!'" [x]
+"'Dummies['] mediums? Dim muse.'" [x]
 "'Mental math, hmm? A talent!'"
 "'Merry Devon? Myron Dever? Very modern nerdy mover.'"
 "'Microsoft, son? So conformist!'"
@@ -3818,7 +3819,7 @@ blurb
 "A nerd says WLOG with a glow." [x]
 "The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learning Girl Anne, Bytes Betsy, Learned Darlene the Nerd-Ale girl, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain, or Gamer Marge." [x]
 "The nerds argue details of Art's Tech Chatters." [x]
-"The nerds argue how minuter runtime is, um, inert." [x]
+"'Minuter runtime? Um, inert!'"
 "The nerds babble, 'Obtuse? Use bot to be us!'" [x]
 "The nerds believe the Discworld crowd slid." [x]
 "The nerds berate naif slobs['] final-boss info slabs." [x]

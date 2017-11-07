@@ -276,6 +276,16 @@ while ( $line = <A> ) {
     $useSlashComments = 1;
     $outputChunk =~ s/$/ \[x: $anagramChunk\]/;
   }
+  elsif ( $line =~ />/ ) {
+    $anagramChunk = $outputChunk;
+    $outputChunk =~ s/.*>//;
+    $anagramChunk =~ s/\".*//;
+  }
+  elsif ( $line =~ /</ ) {
+    $anagramChunk = $outputChunk;
+    $outputChunk =~ s/<.*//;
+    $anagramChunk =~ s/\".*//;
+  }
   else {
     $anagramChunk = $outputChunk;
     $anagramChunk =~ s/\"[^\"]*$/\"/;
@@ -938,7 +948,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -n adds a line of numbers to the stats file.
 -s opens the stats after.
 -pu gives a popup if the sorting file has removed all its unevaluated text
--dw dies on warnings e.g. an invalid hash at the end of quoted text, l launches, # after = # of warnings
+-dw dies on warnings e.g. an invalid hash at the end of quoted text, l launches
 -^ converts title case
 -mw is maximum warnings
 -sa is show default column add details
@@ -949,9 +959,11 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
-wa is writeadded, l = launch, o = only. WALPO = general test before
+wa is writeadded, l = launch, o = only.
 =============popular use
-pu uql 20 is good for a day's work to check
+sso.pl -nf xes.txt -mw 50 for 50 warnings in an auxiliary file
+sso.pl pu uql 20 is good for a day's work to check
+sso.pl WALPO = good general test before copy over
 sso.pl wa f = process sorted/sortable anagrams
 EOT
   exit;
