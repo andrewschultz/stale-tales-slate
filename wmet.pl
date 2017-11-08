@@ -24,6 +24,7 @@ my $printSettler = 0;
 my $settlerToo   = 1;
 my $debug        = 0;
 my $launch       = 1;
+my $showMaxMin   = 0;
 
 #####vars
 my @fact;    # factorial array so don't have to keep recalculating
@@ -38,6 +39,9 @@ my $inHere = 0;
 my %notedYet;
 my %thisTime;
 
+my %maxes;
+my %mins;
+
 my $count = 0;
 
 initFactorial();
@@ -47,10 +51,12 @@ while ( $count <= $#ARGV ) {
 
   for ($arg) {
     /^-?e$/ && do { `$inFile`; exit(); };
-    /^-?d$/  && do { $debug  = 1; $count++; next; };
-    /^-?nd$/ && do { $debug  = 1; $count++; next; };
-    /^-?l$/  && do { $launch = 1; $count++; next; };
-    /^-?nl$/ && do { $launch = 0; $count++; next; };
+    /^-?d$/      && do { $debug      = 1; $count++; next; };
+    /^-?nd$/     && do { $debug      = 0; $count++; next; };
+    /^-?l$/      && do { $launch     = 1; $count++; next; };
+    /^-?nl$/     && do { $launch     = 0; $count++; next; };
+    /^-?sm(m)?$/ && do { $showMaxMin = 1; $count++; next; };
+    /^-?nm(m)?$/ && do { $showMaxMin = 0; $count++; next; };
     /^-?tow$/ && do { towers_analyze(); exit(); };
     print
 "USAGE\n================\n-e = edit data file\n-d=debug text\n-l=launch\n-nl=don't launch\n";
@@ -90,6 +96,8 @@ while ( $a = <A> ) {
   }
   else {
     my @b = split( /[\/,]/, $a );
+
+    # print "$a = " . (scalar @b) . " total.\n";
     for (@b) {
       $lg = length($_);
       $t1 += $lg;
@@ -108,6 +116,11 @@ print B
 "</table></center>\n(NOTE 1: more logical possibilities does not mean something is tougher, especially since there may be alternate clues elsewhere, so this is only meant as an estimate. Some areas' themes are more restrictive than others'.)\n<br>(NOTE 2: Store T's theme helps cut possibilities, and H's theme should be a big hint)\n<br>(NOTE 3: Some maximum averages may be higher than minimum averages due to side quests or LLPs that are easier than the main puzzles.)</body>\n</html>\n";
 
 close(B);
+
+if ($showMaxMin) {
+  print "List of stuff under the heat map:\n";
+  print "$_: $mins{$_} to $maxes{$_}\n" for ( sort keys %maxes );
+}
 
 if ($launch) { `$outFile`; }
 
@@ -159,7 +172,8 @@ sub evaluate {
 sub torgb {
   my $x = 255 - floor( ( $_[0] - $_[1] ) * 255 / ( $_[2] - $_[1] ) );
   my $retStr;
-  print "$_[0], $_[1], $_[2]: $x\n";
+
+  # print "$_[0], $_[1], $_[2]: $x\n";
   if ( $x < 0 ) {
     print
 "WARNING $_[3] ($header) gives $_[0] not within $_[1]-$_[2] for rgb of $x < 0, rounding to 0\n";
@@ -175,6 +189,16 @@ sub torgb {
   }
   else {
     $retStr = sprintf( "td bgcolor=ff%02x00", $x );
+  }
+  if ( $maxes{ $_[3] } ) {
+    $mins{ $_[3] }  = $_[0] if $_[0] < $mins{ $_[3] };
+    $maxes{ $_[3] } = $_[0] if $_[0] > $maxes{ $_[3] };
+  }
+  else {
+    $mins{ $_[3] }  = $_[0];
+    $maxes{ $_[3] } = $_[0];
+
+    # torgb( $inHere, 3, 47.01, "total puzzles in region" ),
   }
   return $retStr;
 }
@@ -238,7 +262,9 @@ sub towers_analyze {
   # and FLUSTER with ORGANISED to see what it would've been previously
 
   my @words = sort {
-    length($a) <=> length($b) || perm_set($a) <=> perm_set($b) || $a cmp $b
+         length($a) <=> length($b)
+      || perm_set($a) <=> perm_set($b)
+      || $a cmp $b
     } (
     "clumsy",   "rinsed",   "pastier",  "himself", "drained", "fluster",
     "released", "nerdiest", "grailman", "sweatier"
@@ -276,7 +302,9 @@ sub towers_analyze {
   # print "$_ $noSet{$_} $withSet{$_}\n" for ( sort @words );
   while ( my $c = $iter->next ) {
     my @d = sort {
-      length($a) <=> length($b) || perm_set($a) <=> perm_set($b) || $a cmp $b
+           length($a) <=> length($b)
+        || perm_set($a) <=> perm_set($b)
+        || $a cmp $b
     } array_diff( @$c, @words );
 
     # print "$count @$c\n";

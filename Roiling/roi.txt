@@ -1008,11 +1008,10 @@ Can't make it so it REPENTS. That's a verb.
 You can't make it go away.
 But you can neutralize it.
 It'll be calmer if it's just PRESENT.
-?What's with the crocus?
-It's not fully necessary, either. You can't touch it when it's so bright and radioactive looking.
-If you read the flowerpot, you may note a hint.
-The crocus is DYING, but maybe you can make it...
-DINGY.
+?What's with the unripe ur-pine?
+It's too big, and it's covering something up.
+Maybe if it were smaller...
+...or PUNIER.
 ?There aren't many hints here for the curst palace!
 If you opened the solo den, you can return, talk to Ed Yerg, and come back. There'll be new clues.
 Scan them all and eventually you can narrow it down.
@@ -1030,7 +1029,7 @@ He could shrug off the veneer of false youth...
 ...if he were GREYED.
 ?How do I get any useful concrete information from Ed Yerg?
 Give him a gift.
-If the crocus is no longer dying, and it is in the flowerpot, you can do so.
+If you found the crocus behind the unripe ur-pine, you can do so.
 >STORE Y
 >>POSH HOPS SHOP
 ?Why do the pills have a warning?
