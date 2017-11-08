@@ -260,18 +260,18 @@ while ( $line = <A> ) {
   $tableAbbr =~ s/^\".*\"([^ \t]*).*/$1/;
   $outputChunk =~ s/(^\".*\")([^ \t]*)(.*)/$1$3/;
   my $useSlashComments = 0;
-  if ( $line =~ /\\/ ) {
+  if ( $line =~ /[\\`]/ ) {
     my $i = 0;
-    my @chunks = split( /\\/, $line );
+    my @chunks = split( /[\\`]/, $line );
     if ( $#chunks % 2 ) {
       $majorWarnLine = $. if ( !$majorWarnLine );
       $unusedString .= $line;
       chomp($line);
-      print "$line wrong # of backslashes";
+      print "$line wrong # of backslashes\n";
       next;
     }
     my @c2 = grep { $i++ % 2 } @chunks;
-    $outputChunk =~ s/\\//g;
+    $outputChunk =~ s/[\\`]//g;
     $anagramChunk = join( " ", @c2 );
     $useSlashComments = 1;
     $outputChunk =~ s/$/ \[x: $anagramChunk\]/;

@@ -151,7 +151,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for the replay player
 1 for tentative
 1 for rewired (bot-boat)
-1 for giving Ed the flowerpot NON-ANAGRAM
+1 for giving Triste Sitter the flowerpot NON-ANAGRAM
 3 for dying crocus/serpent/ed yerg]
 
 Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 30. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
@@ -26112,7 +26112,7 @@ mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][
 free reef	"You need to get by what's on either free reef."
 bent ewe	"[one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling]"
 hurt hog	"[one of]The hurt hog won't let you by. You [if newt bee is reflexed]dealt with the newt bee[else]need to deal with the newt bee[end if].[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
-newt bee	"[one of]The newt bee feels nervous the hog is about to attack it. Maybe you could play peacemaker?[plus][or]Make it so there's something dividing them.[plus][or]Or, perhaps, BETWEEN.[minus][cycling]"	--	"BETWEEN"
+bent ewe	"[one of]The bent ewe feels nervous the hog is about to attack it. Maybe you could play peacemaker?[plus][or]Make it so there's something dividing them.[plus][or]Or, perhaps, BETWEEN.[minus][cycling]"	--	"BETWEEN"
 yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
 cold	"[one of]Even negative emotions can warm a person and give needed heat, even for a short while. But they may cause more trouble later.[plus][or]HATE is useful for short-term goals at best.[minus][cycling]"	--	"HATE"	[start TROVES hinting]
@@ -26317,7 +26317,7 @@ sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
 lois the hostile	"[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
 hostile-is-he lot	--	lois the hostile
-keycar	--	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
+keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
 smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if Dr Yow is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in Obscurest Subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"

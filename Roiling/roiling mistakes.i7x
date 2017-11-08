@@ -743,6 +743,8 @@ understand "slain" and "as nil" as a mistake ("[if nails are visible]The nails a
 
 chapter reclusion inclosure
 
+understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in inclosure.
+
 understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in inclosure.
 
 understand "rule scion" as a mistake ("Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.[uurrgg]") when player is in inclosure.

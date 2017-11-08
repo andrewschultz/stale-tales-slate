@@ -3602,8 +3602,8 @@ blurb
 "People sound grateful the condo serves no cod." [x]
 "'Pools-Perch Prep School? Poor schlep!'"
 "'Porcelain replica? NO! Nicer opal!'"
-"'Pros, eh? Posher hopers!'"
 "'Prate APTER!'" []
+"'Pros, eh? Posher hopers!'"
 "'Rare dim Dr. Marie: married?!'"
 "'Serf! Got frets? Go! Forgets! Erg, SOFT!'"
 "Silken coo. 'Loose Nick looks nice!'"
@@ -3713,6 +3713,7 @@ blurb
 "'A driver arrived? Rad! I rev! Rare vid!'"
 "'Dub THEM the dumb!'"
 "A duet rips Purist Ed DuPriest. 'Sit, prude!' / 'Stupider disputer!'"
+"'Dummies['] mediums? Dim muse.'" [x]
 "'Ecosystem? Comets? YES!'"
 "'Edu'd, dude!'"
 "'Eh, cite the Ice-Techie.'"
@@ -3797,12 +3798,13 @@ blurb
 "'A math trick? Karmic, that!'"
 "'MatLab alt? BAM!'"
 "'Max fills? Small fix.'"
-"'Dummies['] mediums? Dim muse.'" [x]
+"'Mensa's ***, men!'"
 "'Mental math, hmm? A talent!'"
 "'Merry Devon? Myron Dever? Very modern nerdy mover.'"
 "'Microsoft, son? So conformist!'"
 "'Mind-meld. Mild mend?'"
 "'Mine of info, me!'"
+"'Minuter runtime? Um, inert!'"
 "'Mirth-goals algorithms['] glamor hits!'"
 "'Montrose? Tons More Moron Set!'"
 "More chats. Some chart. Math score. Smart echo." []
@@ -3819,7 +3821,6 @@ blurb
 "A nerd says WLOG with a glow." [x]
 "The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learning Girl Anne, Bytes Betsy, Learned Darlene the Nerd-Ale girl, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain, or Gamer Marge." [x]
 "The nerds argue details of Art's Tech Chatters." [x]
-"'Minuter runtime? Um, inert!'"
 "The nerds babble, 'Obtuse? Use bot to be us!'" [x]
 "The nerds believe the Discworld crowd slid." [x]
 "The nerds berate naif slobs['] final-boss info slabs." [x]
@@ -3844,7 +3845,6 @@ blurb
 "The nerds extol the simple cleverness of the show 'Dave, a Dev.'" [x]
 "The nerds fantasize about Dr. Irene and her I-Render-Nerdier makeovers." [x]
 "The nerds find AnyBizNet byzantine." [x]
-"The nerds give amens that MENSA Manse isn't as smart as they are." [x]
 "The nerds gush over the new Mac program, Grammar Cop, by Margo Cramp." [x]
 "The nerds jock Dr. Blane, of the Blander Nerd-Lab." [x]
 "The nerds jokingly design a No-Art-a-Tron. Or is it a No-Tar-a-Tron?" [x]
@@ -4203,7 +4203,7 @@ blurb
 "'Fumble? Flub? ME?'"
 "'Give out, yo! I've got you!'"
 "'Goddamn era...armageddon...'"
-"'GOTCHA! ACT, HOG!' he yells, prematurely." [x]
+"'GOTCHA! ACT, HOG!'"
 "'Gr, nice cringe!'"
 "Great skill strike? GALL!"
 "'GRIN? EAT GRANITE, INGRATE!'"

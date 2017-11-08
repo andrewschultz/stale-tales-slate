@@ -1778,8 +1778,8 @@ table of wait responses [xxg10]
 blurb
 "Act, cat!"
 "'Actin[']? I can't!'"
-"Ah, so: net no haste."
 "Actions as tonic? I so can't!"
+"Ah, so: net no haste."
 "Ahh, paused? Push ahead!"
 "Any gelid delaying: yield nag."
 "Apathy: phat, ay!"
@@ -1870,7 +1870,6 @@ blurb
 "On, ho? No! Oh!"
 "Oy, Lotza Too-Lazy."
 "Pacin['] beats panic."
-"Samely? Measly? Slay me!"
 "Paroles? Reposal."
 "Pass time? A misstep!"
 "Passivity pays visit."
@@ -1883,6 +1882,7 @@ blurb
 "Rest off efforts."
 "Restin['] is Sinister!"
 "Runt! Evade adventure?"
+"Samely? Measly? Slay me!"
 "Sit-around durations." []
 "Sit? Lo, TOILS!" []
 "Sit no mo[']! MOTIONS!"
@@ -2012,7 +2012,6 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Acne-Plus Clean Ups"	false
 "Adeline's Sane Deli"	false
 "Adless Slade's"	false
-"Gus Troy Go-Try-Us Yogurts"
 "Aethers-Heaters"	false []
 "Agnello Galleon"	false
 "Agramonte Matronage"	false
@@ -2748,6 +2747,7 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Gumpy's Gypsum"	false
 "Gus Elem Legumes"	false
 "Gus McNiff McGuffins"	false
+"Gus Troy Go-Try-Us Yogurts"
 "Guthounds['] Doughnuts"	false
 "Guy Bass Buys Gas!"	true
 "Gwen Idds Weddings"	false
@@ -14715,7 +14715,7 @@ blurb	prio
 "On, Zebras So Brazen[r], by [if player is male]Rob Saenz[else]Zoe Barns[end if]"
 "Once is So Nice[r], by Sconie Enciso" []
 "One Aid, No Idea[r], by Ian Doe"
-"One Art Near To Ornate[r], by Torean Renato, Atoner"
+"One Art Near To Ornate[r], by Torean Tarone"
 "One Bro's Sober? No[r], by Ben Roos" []
 "One Byte, Teen Boy[r], by Tony Bee & Ben Toye"
 "One Dogma, Good Name[r], by Don Omega"
@@ -16881,7 +16881,6 @@ blurb	prio
 "Tremont's Torments[r], by Tom Stern"
 "A Trench Chanter[r], by [if player is male]Art Chen[else]Cher Tan[end if]"
 "Trench-Wise Winchester[r], by [if player is male]Erwin Tesch[else]Cristen Hew[end if]" []
-"Trendies['] Nerdiest Resident[r], by Sid Treen" []
 "Trey Had the Yard[r], by Thad Rey"
 "A Trial or Toil: Oratorial Lit[r], by Lorita Tailor"
 "Trials, Trails[r], by Larissa Trilt"
