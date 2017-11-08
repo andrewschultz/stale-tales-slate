@@ -709,13 +709,13 @@ understand "simply" as a mistake ("It's already simply annoying, so that has no 
 
 understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is visible
 
-understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release it from its captivity[end if].") when player is in deck.
+understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release it from its captivity[end if].") when player is in girding ridging.
 
-understand "preload" and "pre-load" and "pre load" as a mistake ("The leopard is plenty powerful as-is, [if leopard is reflexed]and it's already on your side[else]but you need to get it on your side[end if].") when player is in deck.
+understand "preload" and "pre-load" and "pre load" as a mistake ("The leopard is plenty powerful as-is, [if leopard is reflexed]and it's already on your side[else]but you need to get it on your side[end if].") when player is in girding ridging.
 
-understand "barged" as a mistake ("You don't want the badger to have barged into you. Clothed or not.") when player is in Deck.
+understand "barged" as a mistake ("You don't want the badger to have barged into you. Clothed or not.") when player is in girding ridging.
 
-understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflexive]already[else]no longer[end if] feels second-rate, so [if badger is reflexive]you need another way to help it[else]it needs no more help[end if].") when player is in Deck.
+understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflexive]already[else]no longer[end if] feels second-rate, so [if badger is reflexive]you need another way to help it[else]it needs no more help[end if].") when player is in girding ridging.
 
 understand "stary" as a mistake ("What good would the satyr be, staring all the time?") when satyr is visible.
 

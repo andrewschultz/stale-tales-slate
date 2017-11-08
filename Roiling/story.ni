@@ -481,7 +481,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 660.
+use MAX_VERBS of 670.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -497,7 +497,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 680.
+use MAX_VERBS of 690.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -8610,7 +8610,7 @@ book fliptoing
 fliptoing is an action applying to one visible thing.
 
 check fliptoing when mrlp is otters and power-back is false:
-	if player is in wickeder or player is in preserve:
+	if player is in ridging girding or player is in perverse preserve:
 		say "[inhib]" instead;
 
 preserve-animals is a number that varies.
@@ -9054,7 +9054,7 @@ stinger	stinger	false	559013952	--	"resting"	"resting"	"The stinger whirs around
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
-ur-pine	ur-pine	false	513602032	--	"punier"	"punier"	"The ur-pine shrinks and flails. It flails so much, it rolls all the way into the fire-torn frontier, where it may help rebalance the ecosystem into a more forgiving climate, or something."
+ur-pine	ur-pine	false	513602032	--	"punier"	"punier"	"The ur-pine shrinks and flails.  As it does, a succor crocus rolls out from under. You take the succor crocus and put it in the welt-proof flowerpot."
 arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -9067,6 +9067,7 @@ Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle 
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair."
+trendies	trendies	false	675249448	--	"nerdiest"	"nerdiest"	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
 denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
@@ -9104,7 +9105,6 @@ Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	"Terrance suddenly re
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
 Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
-flowerpot	flowerpot	false	289888397	--	"dingy"	"dingy"	"The crocus doesn't look a great shade of green, but it doesn't look dried out any more. It looks safer to pick up, so you do, and you put it in the flowerpot[unless player is in solo den][else if ed yerg is reflexive]. Ed sniffs--it still doesn't seem valuable[else]Ed looks longingly at the plant[end if]."
 Ed Yerg	Ed Yerg	false	516924064	--	"greyed"	"greyed"	"[yergy]."
 Ed Yerg	Ed Yerg	false	368088866	--	"grey"	"grey"	"[yergy]"
 yurts	brownies	true	512172846	--	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
@@ -19023,8 +19023,8 @@ to say big-hint of (rayx - a thing) :
 	if rayx is a guardian or rayx is a warrior:
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
-	else:
-		say "[if rayx is smart kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is sporties' ripostes]PROSIEST[else if rayx is palace]SPECTACULAR[else if rayx is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves saver]PEARLY[else]BUG[end if]";
+	else: [only for non guardians/non warriors] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
+		say "[if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is smart kid]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is ed yerg]GREEDY[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -19478,7 +19478,7 @@ check going down in Loftier Trefoil:
 
 book Topside Deposit
 
-Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. There's not much to do here except figure how to get past [one of]the unripe ur-pine to the north. The curst palace is barely visible in the distance."
+Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. That way's [if ur-pine is in deposit]un[end if]blocked."
 
 for printing a locale paragraph about a thing (called nongua) in topside deposit:
 	if nongua is start tarts and toaster is in Topside Deposit:
@@ -21004,6 +21004,28 @@ after printing the locale description for Mislit Limits when Mislit Limits is un
 
 Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? There's also a den to the west."
 
+chapter unripe ur-pine
+
+the unripe ur-pine is vanishing LLPish scenery in Mislit Limits. understand "pine/urpine" and "unripe pine/urpine" as ur-pine. "It covers a lot of ground[if crocus is not off-stage], but there's probably nothing else beneath it. [one of]Maybe it's hiding something. [or]You see red wondering if you'd see anything as ridiculous in Peru[stopping][end if]."
+
+instead of attacking unripe ur-pine, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]"
+
+a-text of ur-pine is "RYRYYR". b-text of ur-pine is "RYRGYR". parse-text of ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
+
+chapter pester'n serpent
+
+understand the command "present" as something new.
+
+A pester'n serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pester'n serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pester'n serpent is "It's coiled and ready to strike anyone who tries to go by it."
+
+rule for supplying a missing second noun when showing:
+	if pester'n serpent is visible:
+		now second noun is pester'n serpent.
+
+a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRY??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
+
+chapter curst palace
+
 The Curst Palace is a reflexive backdrop.
 
 after fliptoing Curst Palace (this is the overall Towers LLP rule):
@@ -21105,18 +21127,6 @@ check going west in mislit limits:
 	if pester'n serpent is in Mislit Limits:
 		say "'Step near a serpent... you muse, then 'TRAP SEEN.'" instead;
 
-section serpent
-
-understand the command "present" as something new.
-
-A pester'n serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pester'n serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pester'n serpent is "It's coiled and ready to strike anyone who tries to go by it."
-
-rule for supplying a missing second noun when showing:
-	if pester'n serpent is visible:
-		now second noun is pester'n serpent.
-
-a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRY??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
-
 book Towers specific verbs
 
 chapter guardian stubs
@@ -21169,15 +21179,11 @@ a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-
 
 section baldest blasted saltbed
 
-the unripe ur-pine is a red guardian. understand "prune" and "unripe prune" as ur-pine. "An unripe ur-pine blocks your way north."
+some Resident Trendies are plural-named red guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
 
-description of ur-pine is "Well, an ur-pine naturally swells to block people from going past, but ... it can't be that hard, can it? It's a tangle of greens and browns, and its ability to spread out is more defensive than anything.[paragraph break]You reckon you could just repeatedly try to run past it or attack it to maybe see how to get by[one of]. Or, well, examine it[else].[paragraph break]You see red as you wonder whether you would see anything this ridiculous in Peru[stopping]."
+a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
 
-instead of attacking unripe ur-pine, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]"
-
-a-text of ur-pine is "RYRYYR". b-text of ur-pine is "RYRGYR". parse-text of ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
-
-some pirates are plural-named red guardians. "Pirates probably won't let you go [psgdir of pirates] unless you can get rid of them.". description of pirates is "Sun-burnt and proud of it. They traipse, unlikely to hand you a piastre or discuss the REST API[one of]. If you look again, you might remember what the dance they're doing is[or]. You blush as you recall their dance is the Star Pie Traipse[stopping]."
+some traipse pirates are plural-named red guardians. "Traipse pirates dance to the [psgdir of pirates].". description of pirates is "Sun-burnt and proud of it. They're unlikely to hand you a piastre or discuss the REST API."
 
 understand "pirate" as pirates.
 
@@ -23162,7 +23168,7 @@ after fliptoing an animal:
 			now random pre-animal in perverse preserve is llpish;
 		else if temp is 5:
 			min-up;
-	if noun is reflexed and location of player is wickeder:
+	if noun is reflexed and location of player is ridging girding:
 		increment adjsolve;
 	continue the action;
 
@@ -26111,7 +26117,7 @@ un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been ARO
 mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"You need to get by what's on either free reef."
 bent ewe	"[one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling]"
-hurt hog	"[one of]The hurt hog won't let you by. You [if newt bee is reflexed]dealt with the newt bee[else]need to deal with the newt bee[end if].[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
+hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt with the newt bee[else]need to deal with the newt bee[end if].[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
 bent ewe	"[one of]The bent ewe feels nervous the hog is about to attack it. Maybe you could play peacemaker?[plus][or]Make it so there's something dividing them.[plus][or]Or, perhaps, BETWEEN.[minus][cycling]"	--	"BETWEEN"
 yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
