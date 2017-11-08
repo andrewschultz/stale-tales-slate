@@ -151,8 +151,8 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for the replay player
 1 for tentative
 1 for rewired (bot-boat)
-1 for giving Triste Sitter the flowerpot NON-ANAGRAM
-3 for dying crocus/serpent/ed yerg]
+1 for giving Tetris Sitter the flowerpot NON-ANAGRAM
+3 for dying crocus/serpent/triste]
 
 Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 30. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
 
@@ -1613,12 +1613,12 @@ persuasion rule for asking pester'n serpent to try doing something:
 	say "The serpent needs a change of attitude, and speaking won't do it.";
 	persuasion fails;
 
-persuasion rule for asking Ed Yerg to try doing something:
-	if ed yerg is reflexive:
-		say "Ed Yerg motions for money--money you don't have.";
+persuasion rule for asking Triste Sitter to try doing something:
+	if Tetris Sitter is reflexive:
+		say "The Tetris Sitter ignores you and continues smiling and working on her high score.";
 		persuasion fails;
-	say "Ed seems to want to sit and babble on.";
-	try asking Ed Yerg about "xyzzy" instead;
+	say "St. Teri seems to want to sit and babble on.";
+	try asking Tetris Sitter about "xyzzy" instead;
 	persuasion fails;
 
 persuasion rule for asking a guardian to try doing something:
@@ -1993,7 +1993,7 @@ organised	--
 admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 Atheists	--
-Ed Yerg	"Ed Yerg mentions [if flowerpot is in lalaland]how happy he is you helped him. So happy, if you go out and come in, he might give you help with that palace[else if ed yerg is reflexive]his advice isn't cheap[else]he needs something to cheer him up[end if]."
+Tetris Sitter	"[if flowerpot is in lalaland]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
 Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]."
 whiners	--
 macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
@@ -2164,7 +2164,7 @@ Terrance	"[war-duh]"
 Tyson	"[war-duh]"
 Wade	"[war-duh]"
 Sir Rodney	"This standoff won't be resolved with diplomacy."
-Ed Yerg	"[if ed yerg is reflexive]Ed Yerg babbles about how he's not GREEDY (and here he sees red) like Reg Edy, but if you're looking to restore the palace, he would like an assistant's fee. Or if you want to buy his land, it will cost a bit. Not that you seem to have anything valuable enough in your inventory[else if flowerpot is reflexed]Ed laments the fall of the curst palace--as lifeless as that succor crocus you're carrying[else if player has crocus]Ed looks at the crocus while wondering if you might be The One[else]'Old clues, eh?' He colludes--babbles, spectacled, avuncular, a polite ole tip about the palace. Make it [3-random]? 'No closure, counselor,' you lament, but his general tone and how he says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
+Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if flowerpot is reflexed]St. Teri looks at your flowerpot, sadly[else if player has crocus]St. Teri looks at your flowerpot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
@@ -2433,11 +2433,11 @@ Dr Yow	lake	"[doc-on-lake]"
 Dr Yow	kid	"[if kid is in actionless coastlines]'It would be fun to tutor someone!'[else if kid is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
-Ed Yerg	Elvira	"'[if ed yerg is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
-Ed Yerg	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but Ed's pep talk was a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
-Ed Yerg	crocus	"[if ed yerg is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is in lalaland]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
-Ed Yerg	flowerpot	"[if ed yerg is reflexive]'Worthless, with or without a flower in it.'[else]'From Daltho, eh? Very nice.'[end if]"
-Ed Yerg	Old Hat Daltho	"[if ed yerg is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
+Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
+Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but Ed's pep talk was a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
+Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is in lalaland]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
+Tetris Sitter	flowerpot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Daltho, eh? Very nice.'[end if]"
+Tetris Sitter	Old Hat Daltho	"[if Tetris Sitter is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
 macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
@@ -3999,7 +3999,7 @@ darkness	"You feel it's ALMOST the right time for the darkness to lift."
 narrow cracks	"The cracks almost seem to lead somewhere."
 mist	"Hmm, you almost see a way through the mist."
 hurt hog	"The hog grunts."
-bent ewe	"The newt-bee buzzes, extra."
+bent ewe	"The bent ewe stretches a bit."
 yob den	"Some different noises from the yob den."
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
 cold	"You think you feel less cold for a second. But you need to make it last."
@@ -4158,7 +4158,7 @@ turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
 serpent	"The serpent calms down for a split-second[doc-try]."
-Ed Yerg	"Ed looks slightly less avaricious."
+Tetris Sitter	"Ed looks slightly less avaricious."
 flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
@@ -4335,7 +4335,7 @@ seed pit	"That'd be a double negative, to re-enter. Your argument would be so wo
 narrow cracks	"The underground is already lit. Un-unlit."
 un-road	"You know where the un-road is, but how to navigate it?"
 da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost in da mist. Oh, and that you get lost enough."
-hurt hog	"The bent ewe is still buzzing. Maybe look at that."
+bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
 Pa Egg Pea	"You probably did what you could. Or not-did." [troves]
 heat	"Don't need to overheat, or overhate."
 fretful truffle	"Caring and all its offshoots only go so far."
@@ -4407,7 +4407,7 @@ smart kid	"Fiddling with [kid-first] too much that way might undo the good you d
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
-Ed Yerg	"Ed's attitude is changed enough for the better."
+Tetris Sitter	"St. Teri's back in the real world, now."
 b-b	"You've dealt with the barley. You can move around a lot more, now." [otters]
 eels	"The eels have done enough."
 Merle	"[i]Fine, be beefin[r], you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really."
@@ -6294,10 +6294,10 @@ carry out towers-hinting:
 	if player is in solo den:
 		if player has flowerpot and flowerpot is reflexive:
 			try objhinting crocus instead;
-		if ed yerg is reflexive:
-			try objhinting ed yerg instead;
+		if Tetris Sitter is reflexive:
+			try objhinting Tetris Sitter instead;
 		if player has flowerpot:
-			all-say "You should GIVE the succor crocus to Ed Yerg for hints." instead;
+			all-say "You should GIVE the succor crocus to the Triste Sitter for hints." instead;
 	if player is in mislit limits:
 		try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
@@ -7169,7 +7169,7 @@ log gaol	"[which-sharp]----but there is probably nothing beyond in the Badlands 
 Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow,' which isn't quite an anagram, but suddenly remember a fellow called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
 lone duck	"The poor thing doesn't have a clonk due. You can see red at this, if you want."
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
-Ed Yerg	"Ye dreg!"
+Tetris Sitter	"Rest it! (Feel free to see red at this.)"
 ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red." [START otters]
 macks	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
 Mr Lee	"Be nice. He's on your side."
@@ -7612,15 +7612,10 @@ check giving something to:
 		unless noun is gizmo:
 			say "That's not technical enough for the kid." instead;
 		continue the action;
-	if second noun is ed yerg:
-		say "[if ed yerg is reflexive]He mumbles, nonsensically, 'Eeg, dry,' and rejects your offer. You go red-faced at offering such a paltry gift--and his reaction[else]Ed is a reformed character. He needs no gifts of monetary value[end if]." instead;
 	if noun is flowerpot:
-		if second noun is smart kid:
-			say "He's more physical sciences than biological." instead;
-		if second noun is Dr Yow:
-			say "[one of]Dr. Yow puts the flowerpot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
-		if second noun is a guardian:
-			say "You remember Old Hat Daltho's friend was across the water. So it can't be anyone guarding things over here." instead;
+		if second noun is smart kid, say "He's more physical sciences than biological." instead;
+		if second noun is Dr Yow, say "[one of]Dr. Yow puts the flowerpot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
+		if second noun is a guardian, 	say "You remember Old Hat Daltho's friend was across the water. So it can't be anyone guarding things over here." instead;
 	if second noun is Curtis: [others]
 		say "Curtis shrugs. That won't help him with his big fruit empire." instead;
 	say "Hm. Nah. [if second noun is plural-named]They don't[else if second noun is female]She doesn't[else if second noun is male]He doesn't[else]It doesn't[end if] want that--or, it seems, anything of yours." instead;
@@ -9105,8 +9100,7 @@ Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	"Terrance suddenly re
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
 Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
-Ed Yerg	Ed Yerg	false	516924064	--	"greyed"	"greyed"	"[yergy]."
-Ed Yerg	Ed Yerg	false	368088866	--	"grey"	"grey"	"[yergy]"
+Tetris Sitter	Tetris Sitter false	560616760	--	"triste"	"triste"	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can."
 yurts	brownies	true	512172846	--	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."
@@ -9377,8 +9371,8 @@ after fliptoing lamp (this is the move lamp rule):
 	continue the action;
 
 to say what-about-ed:
-	if Ed Yerg is reflexed:
-		say "Ed Yerg comes out to see the results of your magicking. 'Did OK, kiddo!' he yells, shaking your hand";
+	if Tetris Sitter is reflexed:
+		say "St. Teri comes out to see the results of your magicking. 'Did OK, kiddo!' she yells, shaking your hand";
 	else if serpent is reflexive:
 		say "The serpent slinks away behind the den to the west, to avoid the rumbling";
 	else:
@@ -9420,9 +9414,6 @@ to say bored-robed:
 	else:
 		say "clerically garbed, like he just became,";
 		now bredo-bored is false;
-
-to say yergy:
-	say "Ed Yerg must have been using Grecian Formula 44! As his hair turns grey, his features become softer. He leers a lot less, mentioning he got caught up in the general wave of jealousy around Yorpwald. He admits, embarrassed, he can't help you, but maybe he can give general support. Embarrassed, he admits his retirement is closer than he said, and he's been saving up a while. Perhaps he's been saving too much, sitting around here and wasting his life. He decides to live and be nice while he still has time";
 
 to say rec-der:
 	say "You take time, and ";
@@ -11673,7 +11664,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
 "xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
 "hit/ win/ button/" or "ben/ hid"	false	"Ben hid a HIT WIN button somewhere. Where?"	"hit win button"	false	routes
-"scenery"	false	"Ed Yerg told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
+"scenery"	false	"St. Teri told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
@@ -13455,7 +13446,7 @@ chapter two ways out
 
 section da mist
 
-da mist is vanishing scenery in ripe pier. "My, It's misty. It phases through shapes, but there's a sign in front of it."
+da mist is vanishing scenery in ripe pier. "My, It's misty. It phases through shapes, and there doesn't seem to be any clear way through."
 
 a-text of da mist is "YRYRRR". b-text of da mist is "YRYRPP". parse-text of da mist is "x[sp]-[sp]x[sp]-[sp]s[sp]t". da mist is parse-spoilable.
 
@@ -13513,7 +13504,7 @@ instead of doing something with the free reef:
 
 book sonancy canyons
 
-Sonancy Canyons is a room in Routes. "[if patters are in canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if yob den is in canyons]The yob den nearby now provides most of the noise[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe buzzing 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if]."
+Sonancy Canyons is a room in Routes. "[if patters are in canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if yob den is in canyons]The yob den nearby now provides most of the noise[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if]."
 
 chapter hurt hog
 
@@ -19024,11 +19015,11 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else: [only for non guardians/non warriors] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is smart kid]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is ed yerg]GREEDY[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+		say "[if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is smart kid]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
-check giving hintpastry to Ed Yerg:
+check giving hintpastry to Triste Sitter:
 	say "He's used to loftier meals than that." instead;
 
 check giving hintpastry to a guardian:
@@ -20771,7 +20762,7 @@ clue-index is a number that varies.
 
 after going to mislit limits:
 	if flip-final-clue is true:
-		say "You notice something [if clue-index > 0]else [end if]you wouldn't have seen without Ed Yerg's help.[run paragraph on]";
+		say "You notice something [if clue-index > 0]else [end if]you wouldn't have seen without St. Teri's help.[run paragraph on]";
 		if clue-index > 0:
 			move entry clue-index in nextclue to lalaland;
 		increment clue-index;
@@ -20872,14 +20863,21 @@ the shoals aslosh are a useless plural-named backdrop. they are in salted deltas
 
 chapter Old One's Solo Den
 
-Solo Den is west of Mislit Limits. printed name of Solo Den is "[if ed yerg is reflexive]Lone Sod[else]Old One's[end if] Solo Den". Solo Den is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
+[lone sod/old one's]
 
-Ed Yerg is an LLPish person in Solo Den. description is "[if ed is reflexive]Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
+Solo Den is west of Mislit Limits. printed name of Solo Den is "[if Tetris Sitter is reflexive]Lone Sod[else]Old One's[end if] Solo Den". Solo Den is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
-a-text of ed yerg is "RRYYRO". b-text of ed yerg is "RRYGRO". parse-text of ed yerg is "x[sp]x[sp]e[sp]y[sp]e[sp]x". ed yerg is cheat-spoilable.
+the Tetris Sitter is an LLPish person in Solo Den. description is "[if Tetris Sitter reflexive]Absorbed
+Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
+
+the itster is scenery in Solo Den.
+
+after fliptoing tetris sitter:
+	now itster is in lalaland;
+	continue the action;
 
 check going east in solo den (this is the force give flowerpot rule):
-	if player has flowerpot and flowerpot contains crocus and Ed Yerg is reflexed:
+	if player has flowerpot and flowerpot contains crocus and Tetris Sitter is reflexed:
 		say "Before you leave, you remember Old Hat Daltho's speech--the flowerpot seems like a nice gift for Ed, now that Ed is nicer. You give it to him.[paragraph break]'Come back if you need help with Castle Apcur!' he says, as he goes to set the crocus out somewhere nice.";
 		now flowerpot is in lalaland;
 	continue the action;
@@ -20894,32 +20892,19 @@ before showing the crocus to:
 
 understand "flower" as crocus.
 
-check giving to Ed Yerg:
+check giving to Triste Sitter:
 	if second noun is crocus:
-		try giving flowerpot to Ed Yerg;
-	if ed yerg is reflexive:
-		say "With an edgy 'Er...' that makes you see red, Ed turns his nose up at your meager offering[if noun is flowerpot] but mentions he might've liked it when he was less ambitious[end if]." instead;
-	unless noun is flowerpot:
-		say "Ed thanks you, but that's not quite what he wants[if flowerpot is in lalaland]. The flowerpot was probably enough[end if]." instead;
-	if flowerpot is reflexive:
-		say "You consider giving the flowerpot to Ed Yerg, but there's nothing in it, yet. You think back to the crocus you saw outside." instead;
-	say "Ed smiles at the flowerpot and looks less tense. He realizes whom the gift must be from. He sighs, nods hangs his new flower out back where it can get better, then returns, thanking you.";
+		try giving flowerpot to Triste Sitter instead;
+	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
+		if noun is not flowerpot, say "She mumbles '[']S trite,' [if noun is flowerpot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
+	unless noun is flowerpot, say "St. Teri thanks you, but [if flowerpot is in lalaland]the flowerpot was probably enough[else]that's not quite what she wants[end if]." instead;
+	if flowerpot is reflexive, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
+	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
 	now flowerpot is in lalaland instead;
 
 check going outside in solo den:
 	try going east instead;
-
-Ed Yerg is a LLPish reflexive person in Solo Den. "[if ed yerg is reflexive][one of]'What?! You got by my pester'n serpent?! Ah, good, you didn't kill it. Say, I bet I know who you must be. I'm Ed Yerg. I'll give you some valuable advice--for the right price.' You realize you have nothing of material value--and also, he's the friend Daltho told you about.[or]Ed Yerg is still here, looking greedy[stopping][else]Ed Yerg is waiting here, looking [edlook].[end if]"
-
-to say edlook:
-	if flowerpot is in lalaland:
-		say "content";
-		continue the action;
-	else if crocus is not in flowerpot:
-		say "at your flowerpot";
-	else:
-		say "at your [if flowerpot is reflexive]dying [end if]crocus";
 
 the welt-proof flowerpot is a reflexive and LLPish container. description of flowerpot is "You don't know what good welt-proofing will do, but it might help you read the red writing on the flowerpot a bit better[if-crocus]."
 
@@ -25893,10 +25878,10 @@ check objhinting a quest-item when mrlp is routes (this is the redirect hints in
 		say "[The noun] is part of the spiers['] potion that will help let people see directions again[if circle is unvisited]. But you need to get into the cleric circle first[end if]." instead;
 
 to say yerg-ok:
-	say "[if ed yerg is reflexed]though his advice seems cryptic[else]but you'd have to get through to him first[end if]"
+	say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
 
 to say give-croc:
-		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if solo den is unvisited]You can, but you don't have to, visit the den to the west[else if ed yerg is reflexive]You need to make Ed Yerg nicer, first[else]You need to give Ed Yerg the crocus[end if]"
+		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if solo den is unvisited]You can, but you don't have to, visit the den to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
 
 to say if-cro:
 	if flowerpot is reflexive:
@@ -25963,7 +25948,7 @@ gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figur
 lever	"The lever was designed not to give extra points for pulling it too much."	[end OYSTER]
 turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
 blaster	"You fixed the blaster. Now maybe try the turbos."
-Ed Yerg	"Now Ed's not greedy, [if flowerpot is in lalaland]and you gave him a gift, he's happy[else]maybe you can give him a priceless gift of sorts. From Daltho[end if]." [end TOWERS]
+Triste Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is in lalaland]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
 b-b	"You've cut it down enough. Leave some for next year's crop." [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Elmer	"You can't take on Merle and Elmer by yourself--you need some allies."
@@ -26117,7 +26102,7 @@ un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been ARO
 mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"You need to get by what's on either free reef."
 bent ewe	"[one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling]"
-hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt with the newt bee[else]need to deal with the newt bee[end if].[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
+hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt[else]need to deal[end if] with the bent ewe[end if].[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
 bent ewe	"[one of]The bent ewe feels nervous the hog is about to attack it. Maybe you could play peacemaker?[plus][or]Make it so there's something dividing them.[plus][or]Or, perhaps, BETWEEN.[minus][cycling]"	--	"BETWEEN"
 yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
@@ -26314,7 +26299,7 @@ old ice	"[if old ice is reflexed]You made the old ice coiled, already.[else][one
 denim	"[one of]The denim can't quite be cut through by something like a dagger.[or]You won't find anything sharp enough to cut the denim.[or]You can, however, cheat to strip the denim away.[or]The denim can be MINED.[cycling]"
 pester'n serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
-Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
+Tetris Sitter	"[if Tetris Sitter is reflexive][one of]The Tetris Sitter seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has flowerpot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]The succor crocus behind the unripe ur-pine may help her feel better about herself.[plus][or]Give it to her[if-cro].[minus][cycling]"
 ur-pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 sporties' ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
 muscly hulk	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
@@ -26395,7 +26380,7 @@ Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.
 succor crocus	"[if flowerpot is reflexive][one of]The crocus looks like it is--well, dying. He just needs a little healthy color back, not a ton.[plus][or]Or he could lose the livid color he has.[plus][or]From DYING to...[plus][or]...DINGY.[minus][cycling][else][one of]You can give the crocus to someone.[plus][or][give-croc].[minus][cycling][end if]"
 flowerpot	--	succor crocus
 Old Hat Daltho	"[if crocus is not in lalaland]The succor crocus Daltho gave you may be of some use.[else]You've taken care of Old Hat Daltho's gift.[end if]"
-Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]Ed Yerg might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
+Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
 b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [mackiness-hint].[minus][cycling]"	--	"the macks can talk [mackiness-hint]"
@@ -27349,12 +27334,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if kid-atten is false, say "[2dmiss of myreg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the succor crocus DINGY to stop it dying.";
-		if serpent is in Mislit Limits:
-			say "[2dmiss of myreg]you could've made the serpent PRESENT and maybe saved the fellow who died happy.";
-		else if ed yerg is reflexive:
-			say "[2dmiss of myreg]you could've made Ed Yerg in the Solo Den behind the serpent GREYED.";
-		else if flowerpot is not in lalaland:
-			say "[2dmiss of myreg]you could've given Ed Yerg the flowerpot, though that would only give you a few hints.";
+		if flowerpot is not in lalaland, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the serpent PRESENT to go west[else if Tetris Sitter is reflexive]made the Tetris Sitter in the Solo Den behind the serpent GREYED[else if flowerpot is not in lalaland]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 		if number of pinko warriors > 0:

@@ -578,7 +578,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pot"	258928554	--	flowerpot	--	"[flow-fine]."
 "proof"	342009812	--	flowerpot	--	"[flow-fine]."
 "welt"	392664739	--	flowerpot	--	"[flow-fine]."
-"oldhat"	291775640	--	--	got-pot rule	"You don't have time to think about, or change, Old Hat Daltho. [if flowerpot is in lalaland]You got his present to his friend[else if ed yerg is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he sent the gift to, anyway[end if]."
+"oldhat"	291775640	--	--	got-pot rule	"You don't have time to think about, or change, Old Hat Daltho. [if flowerpot is in lalaland]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
 "toaster"	592164309	--	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	--	start tarts	--	"[eat-pastry]."

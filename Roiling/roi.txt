@@ -523,23 +523,27 @@ You're on your way to finding him, now.
 Then, you need to go ALONG.
 >>>RIPE PIER
 ?What's with the mist?
-Well, it's also DA MIST, if you read the sign. That allows for two solutions.
+Well, it's also DA MIST, if you listen to Sad Tim. Some of his babbling leaves you red-eyed.
 One is thinking of DA MIST helps you feel more familiar, and you can go...
 AMIDST.
-The other is to listen to the voice yelling ABROAD.
-Again, not much is shuffled.
-ABOARD.
 >>>CRIPPLE CLIPPER
-?What do I need to look for?
-The Hit Win button Ben hid.
-There are two solutions here.
-WITHIN will reveal it.
-As will BEHIND.
-?How do I get past those two--things?
-You don't want a Thor-Hug, and the New Beet looks lethal, too.
-Again, you have a choice of two things to focus on.
-THROUGH will get you past Thor and the beet.
-BETWEEN will get you past the beet and Thor.
+?How do I need to go?
+Logan's poem will give you some
+?How do I get past those two animals?
+The order matters.
+The bent ewe comes first.
+Guard it from the hurt hog.
+BETWEEN.
+Then the hurt hog.
+You can leave it now.
+Go THROUGH.
+>Should I enter the yob den?
+No. It's a final last distraction.
+You want to go BEYOND.
+>Are the raptest patters important?
+If you want a full score, yes.
+Actually, they're best ignored. Aggressively.
+Or done WITHOUT.
 >STORE V
 >>LOATHER RATHOLE
 ?What do I do here?
@@ -1013,21 +1017,22 @@ It's too big, and it's covering something up.
 Maybe if it were smaller...
 ...or PUNIER.
 ?There aren't many hints here for the curst palace!
-If you opened the solo den, you can return, talk to Ed Yerg, and come back. There'll be new clues.
+If you opened the premise(s), you can return, talk to St. Teri/the Tetris Sitter, and come back. There'll be new clues.
 Scan them all and eventually you can narrow it down.
 ?Eleven letters for the curst palace? Really?
 It is a big castle. And it's a final puzzle.
-Ed Yerg, once friendly, seems to indicate it inspires generic superlatives.
+St. Teri seems to indicate it inspires generic superlatives.
 Like fantastic, incredible...
 ...remember, it was great once...
 ...SPECTACULAR.
 >>LONE SOD'S/OLD ONE'S SOLO DEN
 ?Do I actually need to be here?
 Only if you want full points.
-?Ed Yerg sure is greedy!
-He could shrug off the veneer of false youth...
-...if he were GREYED.
-?How do I get any useful concrete information from Ed Yerg?
+?The Tetris Sitter seems happy as-is!
+Not really. Just wasting time, guessing she is happy.
+Maybe you could get her back to real emotions ...
+... by making her TRISTE.
+?How do I get any useful concrete information from the (ex-)Tetris Sitter?
 Give him a gift.
 If you found the crocus behind the unripe ur-pine, you can do so.
 >STORE Y
