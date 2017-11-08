@@ -11,6 +11,8 @@ use POSIX;
 use strict;
 use warnings;
 
+use Algorithm::Combinatorics qw(combinations);
+
 #####constants
 my $inFile  = "c:\\writing\\dict\\wmet.txt";
 my $outFile = "c:\\writing\\dict\\metrics.htm";
@@ -36,6 +38,8 @@ my %thisTime;
 
 my $count = 0;
 
+initFactorial();
+
 while ( $count <= $#ARGV ) {
   my $arg = $ARGV[$count];
 
@@ -45,6 +49,7 @@ while ( $count <= $#ARGV ) {
     /^-?nd$/ && do { $debug  = 1; $count++; next; };
     /^-?l$/  && do { $launch = 1; $count++; next; };
     /^-?nl$/ && do { $launch = 0; $count++; next; };
+    /^-?tow$/ && do { towers_analyze(); exit(); };
     print
 "USAGE\n================\n-e = edit data file\n-d=debug text\n-l=launch\n-nl=don't launch\n";
     exit();
@@ -59,9 +64,6 @@ print B
 
 print B
 "<tr><th>test run<th>Anagrams<th>Letters<th>&Sigma;Letters^2<th>Average<th>RMS<th>&Sigma;Log(poss., no device)<th>Average<th>&Sigma;Log(poss. with gadget)<th>Average\n";
-
-$fact[0] = 1;
-for ( 1 .. 20 ) { $fact[$_] = $_ * $fact[ $_ - 1 ]; }
 
 while ( $a = <A> ) {
   chomp($a);    #$a = lc($a);
@@ -193,9 +195,7 @@ sub combos {
       if $printSettler && !defined( $notedYet{ $_[0] } );
   }
   else {
-    ( my $vowels = $_[0] ) =~ s/[^aeiou]//g;
-    ( my $cons   = $_[0] ) =~ s/[aeiouy]//g;
-    $sett = perms($vowels) * perms($cons);
+    $sett = perm_set( $_[0] );
 
     # we don't need to track Y's, because the Y's must be fixed
     printf( "%-13s= %6d/%9d/%.2f\n", $_[0], $sett, $poss, $poss / $sett )
@@ -210,6 +210,8 @@ sub combos {
   return ( $poss, $sett );
 }
 
+# given an array of letters, this gives all unique combinations
+
 sub perms {
   my $retVal = $fact[ length( $_[0] ) ];
   my @x = split( "", $_[0] );
@@ -219,4 +221,68 @@ sub perms {
   $retVal /= $fact[ $countage{$_} ] for ( keys %countage );
 
   return $retVal;
+}
+
+sub perm_set {
+  ( my $vowels = $_[0] ) =~ s/[^aeiou]//g;
+  ( my $cons   = $_[0] ) =~ s/[aeiouy]//g;
+  return perms($vowels) * perms($cons);
+}
+
+sub towers_analyze {
+  my @words = sort( (
+      "clumsy",  "rinsed",   "nerdiest", "pastier", "himself", "drained",
+      "fluster", "released", "grailman", "sweatier"
+  ) );
+  my %withSet;
+  my %noSet;
+
+  $nsfudge = 120;
+  $wsfudge = 24;
+
+  $noSet{$_}   = perms($_) / $nsfudge    for (@words);
+  $withSet{$_} = perm_set($_) / $wsfudge for (@words);
+
+  my $iter = combinations( \@words, 5 );
+
+  my $count = 0;
+  my $x;
+
+  my $totalLength = 0;
+  $totalLength += length($_) for @words;
+
+  my $totalProd = 1;
+  $totalProd *= $noSet{$_} for @words;
+
+  my $totalCheat = 1;
+  $totalCheat *= $withSet{$_} for @words;
+
+  print "$_ $noSet{$_} $withSet{$_}\n" for ( sort @words );
+  while ( my $c = $iter->next ) {
+    $count++;
+
+    # print "$count @$c\n";
+    my $product      = 1;
+    my $lengths      = 1;
+    my $cheatProduct = 1;
+    for $x (@$c) {
+      $product      *= $noSet{$x};
+      $cheatProduct *= $withSet{$x};
+      $lengths += length($x);
+    }
+    my $l2 = abs( $totalLength - ( $lengths * 2 ) );
+    my $p2 = $totalProd /  ( $product**2 );
+    my $c2 = $totalCheat / ( $cheatProduct**2 );
+    printf("$count ");
+    printf( "%9s", $_ ) for (@$c);
+    printf( " %11d/%5.2f %11d/%5.2f %3d/%d\n",
+      $product, $p2, $cheatProduct, $c2, $lengths, $l2 );
+  }
+  print "no settler fudge=$nsfudge with settler fudge=$wsfudge\n";
+  print "$_ $noSet{$_} $withSet{$_}\n" for ( sort @words );
+}
+
+sub initFactorial {
+  $fact[0] = 1;
+  for ( 1 .. 20 ) { $fact[$_] = $_ * $fact[ $_ - 1 ]; }
 }
