@@ -75,19 +75,20 @@ punier/subtler/holiest/married/hastiest/broken/resting/sewed
 # other stuff to do (robust < nearest)
 wordy/rowdy/unlocked/grained/stabler/robust/spectacular
 Store W (max)
+# 7 warriors
 ashen/coyer/weedy/tenser/achier/recreant/yonder
-# North/H guardians
-clumsy/nerdiest/pastier/resealed/organised
-# East/I guardians
+# guardians you have to get (7)
+sadder/subtler/holiest/married/hastiest/broken/resting
+# North/H guardians (5)
+clumsy/nerdiest/pastier/resealed/restful
+# East/I guardians (5 extra)
 rinsed/himself/drained/alarming/sweatier
-# guardians you have to get
-punier/subtler/holiest/married/hastiest/broken/resting/sewed
 # other stuff to do (robust < nearest)
-wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
+sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
-rusty/rewired/angstier/mined/prosiest/naivest/attentive/restful/rustled/creaky/pearly/
+rusty/naivest/angstier/mined/creaky/pearly/docile/rustled/organised/prosiest/attentive/rewired/
 # more LLPs
-present/greyed/triste
+punier/present/triste
 Store T (min) (adjusted)
 bare/reedi/seedi/steami/tedious/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
 Store T (max) (adjusted)

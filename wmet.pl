@@ -11,7 +11,9 @@ use POSIX;
 use strict;
 use warnings;
 
+use Math::Prime::Util::GMP qw(gcd);
 use Algorithm::Combinatorics qw(combinations);
+use Array::Utils qw(array_diff);
 
 #####constants
 my $inFile  = "c:\\writing\\dict\\wmet.txt";
@@ -125,13 +127,13 @@ sub evaluate {
     my $toB = sprintf(
 "<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
       $header,
-      torgb( $inHere, 3, 42.01, "total puzzles in region" ),
+      torgb( $inHere, 3, 47.01, "total puzzles in region" ),
       $inHere,
       torgb( $t1, 18, 321.1, "total letters in puzzles" ),
       $t1,
       torgb( $t2, 97, 2715, "puzzle letter square sum" ),
       $t2,
-      torgb( $t1a, 4, 8, "average letters in puzzle" ),
+      torgb( $t1a, 4, 7.84, "average letters in puzzle" ),
       $t1a,
       torgb( $t2b, 4, 8.14, "root mean square of letters in puzzle" ),
       $t2b,
@@ -157,6 +159,7 @@ sub evaluate {
 sub torgb {
   my $x = 255 - floor( ( $_[0] - $_[1] ) * 255 / ( $_[2] - $_[1] ) );
   my $retStr;
+  print "$_[0], $_[1], $_[2]: $x\n";
   if ( $x < 0 ) {
     print
 "WARNING $_[3] ($header) gives $_[0] not within $_[1]-$_[2] for rgb of $x < 0, rounding to 0\n";
@@ -230,15 +233,28 @@ sub perm_set {
 }
 
 sub towers_analyze {
-  my @words = sort( (
-      "clumsy",  "rinsed",   "nerdiest", "pastier", "himself", "drained",
-      "fluster", "released", "grailman", "sweatier"
-  ) );
+
+  # note that we can replace NERDIEST with PUNIER
+  # and FLUSTER with ORGANISED to see what it would've been previously
+
+  my @words = sort {
+    length($a) <=> length($b) || perm_set($a) <=> perm_set($b) || $a cmp $b
+    } (
+    "clumsy",   "rinsed",   "pastier",  "himself", "drained", "fluster",
+    "released", "nerdiest", "grailman", "sweatier"
+    );
+
+  # for (@words) { print "$_ " . perm_set($_) . "\n"; }
+  # exit();
+
+  my $my_length = 0;
+  for (@words) { $my_length += length($_); print "$_ $my_length\n"; }
+
   my %withSet;
   my %noSet;
 
-  $nsfudge = 120;
-  $wsfudge = 24;
+  my $nsfudge = 120;
+  my $wsfudge = 24;
 
   $noSet{$_}   = perms($_) / $nsfudge    for (@words);
   $withSet{$_} = perm_set($_) / $wsfudge for (@words);
@@ -257,32 +273,79 @@ sub towers_analyze {
   my $totalCheat = 1;
   $totalCheat *= $withSet{$_} for @words;
 
-  print "$_ $noSet{$_} $withSet{$_}\n" for ( sort @words );
+  # print "$_ $noSet{$_} $withSet{$_}\n" for ( sort @words );
   while ( my $c = $iter->next ) {
-    $count++;
+    my @d = sort {
+      length($a) <=> length($b) || perm_set($a) <=> perm_set($b) || $a cmp $b
+    } array_diff( @$c, @words );
 
     # print "$count @$c\n";
     my $product      = 1;
-    my $lengths      = 1;
+    my $lengths      = 0;
     my $cheatProduct = 1;
-    for $x (@$c) {
-      $product      *= $noSet{$x};
-      $cheatProduct *= $withSet{$x};
-      $lengths += length($x);
+    for (@$c) {
+      $product      *= $noSet{$_};
+      $cheatProduct *= $withSet{$_};
+      $lengths += length($_);
     }
-    my $l2 = abs( $totalLength - ( $lengths * 2 ) );
-    my $p2 = $totalProd /  ( $product**2 );
-    my $c2 = $totalCheat / ( $cheatProduct**2 );
-    printf("$count ");
-    printf( "%9s", $_ ) for (@$c);
-    printf( " %11d/%5.2f %11d/%5.2f %3d/%d\n",
-      $product, $p2, $cheatProduct, $c2, $lengths, $l2 );
+    my $dlength = 0;
+    $dlength += length($_) for (@d);
+
+    if ( $product > 10000000000000 ) {
+      print("Skipping product of $product for @$c\n");
+      next;
+    }
+    $lengths -= $dlength;
+    my @temp  = frac( $product, $totalProd, 1 );
+    my $nume  = $temp[0];
+    my $denom = $temp[1];
+    next if $nume < $denom;
+    $count++;
+    printf( "%3d", $count );
+    printf("@$c VS @d");
+    ( $nume, $denom ) = ( $denom, $nume ) if $nume < $denom;
+    printf( " REG: " . join( "/", @temp ) . " " );
+    @temp = frac( $cheatProduct, $totalCheat, 1 );
+    printf( "CHEAT: " . join( "/", @temp ) . " " );
+    @temp = sort { $b <=> $a } (@temp);
+    $nume  *= $temp[0];
+    $denom *= $temp[1];
+    @temp = frac( $nume, $denom, 0 );
+    printf( "total fraction: " . join( "/", @temp ) . " " );
+    printf( abs($lengths) . "\n" );
   }
   print "no settler fudge=$nsfudge with settler fudge=$wsfudge\n";
   print "$_ $noSet{$_} $withSet{$_}\n" for ( sort @words );
 }
 
+sub frac {
+  my $gcd = gcd( $_[0], $_[1] );
+  my $t1  = $_[0] / $gcd;
+  my $t2  = $_[1] / $gcd;
+
+  return ( $t1, $t2 ) if !$_[2];
+
+  $t1 = $_[0] * $t1;
+  $gcd = gcd( $t1, $t2 );
+
+  return ( $t1 / $gcd, $t2 / $gcd );
+}
+
 sub initFactorial {
   $fact[0] = 1;
   for ( 1 .. 20 ) { $fact[$_] = $_ * $fact[ $_ - 1 ]; }
+}
+
+sub difference {
+  my @x = @{ $_[0] };
+  my @y = @{ $_[1] };
+  my %y_not_x_hash;
+  my @retAry = ();
+
+  $y_not_x_hash{$_}++ for (@y);
+  $y_not_x_hash{$_}++ for (@x);
+  for ( keys %y_not_x_hash ) {
+    push( @retAry, $_ ) if ( $y_not_x_hash{$_} == 1 );
+  }
+  return @retAry;
 }
