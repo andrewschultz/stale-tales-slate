@@ -56,12 +56,9 @@ while ( $cur <= $#ARGV ) {
     /^-?np$/ && do { $showPoss   = 0; $cur++; next; };
     /^-?nr$/ && do { $showRemain = 0; $cur++; next; };
     /^-?\?$/ && do { usage(); exit(); };
-    /\./ && do {
+    /\.txt/ && do {
       print
-"Just to check, period means file name to search, not wild card. Use comma (,) for wild card.\n";
-      $fileName = $ARGV[$cur];
-      $cur++;
-      next;
+"Just to check, period means a blank space, not a file name. Use -f for a file.\n";
     };
     /^[a-z]/ && do {
       if ( $firstString eq "" ) { $firstString = $cur; }
@@ -123,6 +120,17 @@ sub oneRed {
   }
 
   @perm = split( //, "$array[0]" );
+
+  for $j ( 1 .. $#array ) {
+    next if $array[$j] eq "%";
+    next if length( $array[$j] ) eq length( $array[0] );
+    next
+      if ( length( $array[$j] ) eq length( $array[0] ) + 2 )
+      && ( $array[$j] =~ /^1-/ );
+    die(
+"$array[$j] (word #$j) has wrong number of characters. Use .'s to fill out a word. Bailing."
+    );
+  }
 
   for $j ( 1 .. $#array ) {
     if ( $array[$j] eq "%" ) {

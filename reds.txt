@@ -76,6 +76,7 @@ compile,melcopi
 keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
 ###############towers
+punier,unrIpe,urpIne
 unable,bluena
 docile,idleco,liedoc,olecid,cledio,ecolid
 weirder,drewrie
@@ -87,8 +88,6 @@ rustled,dreltus,sledrut
 drained,edindar,rindade
 angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas,nitregas,sanergit,iregnats
 # female talk to elmo
-#see red when lauren = f?
-unreal,lauren
 # female, fix up
 porcine,openric,ernopic,recopin,oncerip,reponic,nicepro,repinco,nicerop,incoper,ceoinpr
 mistier,stimeri
