@@ -578,7 +578,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pot"	258928554	--	flowerpot	--	"[flow-fine]."
 "proof"	342009812	--	flowerpot	--	"[flow-fine]."
 "welt"	392664739	--	flowerpot	--	"[flow-fine]."
-"oldhat"	291775640	--	--	got-pot rule	"You don't have time to think about, or change, Old Hat Daltho. [if flowerpot is in lalaland]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
+"oldhat"	291775640	--	--	got-pot rule	"You don't have time to think about, or change, Old Hat Daltho. [if flowerpot is in lalaland]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if mesprise premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
 "toaster"	592164309	--	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	--	start tarts	--	"[eat-pastry]."
@@ -747,12 +747,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "talc"	178117260	--	talc spa cure	--	"[focus-castle]."
 "aps"	179927743	--	talc spa cure	--	"[focus-castle]."
 "cure"	337241304	--	talc spa cure	--	"[focus-castle]."
-"noodles"	516535665	solo den	--	--	"[towersloc]." [OLD ONE'S SOLO DEN]
-"solo"	298792959	solo den	--	--	"[locname-part]."
-"odl"	149195505	solo den	--	--	"[locname-part]."
-"one"	271066194	solo den	--	--	"[locname-part]."
-"dne"	217742706	solo den	--	--	"[locname-part]."
-"ones"	367340160	solo den	--	--	"[locname-part]."
+"mesprise"	724017911	mesprise premises	--	--	"[towersloc]." [MESPRISE PREMISES]
+"emprise"	627743945	mesprise premises	--	--	"[towersloc]." [EMPRISE PREMISES]
 
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -1766,7 +1762,7 @@ this is the got-pot rule:
 	the rule fails;
 
 to say towersloc:
-	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is mislit limits]right by you[else if location of player is solo den]nearby[else]across Leak Lake[end if]";
+	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is mislit limits]right by you[else if location of player is mesprise premises]nearby[else]across Leak Lake[end if]";
 	if number of guardians in location of player > 0:
 		say ". You might also want to try to deal with [the list of guardians in location of player]";
 

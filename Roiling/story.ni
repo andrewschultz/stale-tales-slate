@@ -1409,7 +1409,7 @@ Fighter Freight	4	--	"You don't really want to revisit the crays."
 loftier trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
 --	2	towers	"You don't want to cross Leak Lake again."
 rawest waters	3	--	"Leak Lake wasn't fun the first time."
-solo den	4
+Mesprise Premises	4
 mislit limits	4	[towers]
 
 [note:
@@ -6291,7 +6291,7 @@ carry out towers-hinting:
 			try objhinting turbos instead;
 		if blaster is reflexive:
 			try objhinting blaster instead;
-	if player is in solo den:
+	if player is in Mesprise Premises:
 		if player has flowerpot and flowerpot is reflexive:
 			try objhinting crocus instead;
 		if Tetris Sitter is reflexive:
@@ -7828,7 +7828,7 @@ before smelling (this is the you can smell some stuff some places rule):
 	if player is in Den Loft, say "Old heat. Loathed hot lead." instead;
 	if ingrates are in location of player, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
 	if leak lake is visible, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
-	if player is in solo den, say "Noodles so olden." instead;
+	if player is in Mesprise Premises, say "Noodles so olden." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
 	if dandier arid den is in location of player, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if deli rye is visible or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
@@ -19171,7 +19171,7 @@ to decide which number is palace-let: [I could've defined a new variable but it'
 	if location of player is treading gradient or location of player is obscurest subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is Anemic Cinema, decide on 7;
 	if location of player is salted deltas or location of player is Strati Strait, decide on 8;
 	if location of player is actionless coastlines or location of player is rawest waters, decide on 9;
-	if location of player is solo den, decide on 10;
+	if location of player is Mesprise Premises, decide on 10;
 	if location of player is Mislit Limits, decide on 11;
 	decide on 2;
 
@@ -20849,34 +20849,20 @@ definition: a thing is followy:
 
 the impressive cliff is a useless backdrop. it is in Blasted Saltbed, anemic cinema, Unblest Sunbelt, danger garden. "It's impressive enough to inspire you to do something impressive, full of scaly clays."
 
-Leak Lake is a useless backdrop. it is in salted deltas, Actionless Coastlines, Strati Strait. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
+chapter Mesprise/Emprise Premise(s)
 
-instead of drinking leak lake:
-	say "Too icky." instead;
+Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
-check entering leak lake:
-	if player is in actionless coastlines and bot boat is in actionless coastlines:
-		try entering bot boat instead;
-	say "Go out, eh? Too huge!" instead;
-
-the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Strati Strait. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
-
-chapter Old One's Solo Den
-
-[lone sod/old one's]
-
-Solo Den is west of Mislit Limits. printed name of Solo Den is "[if Tetris Sitter is reflexive]Lone Sod[else]Old One's[end if] Solo Den". Solo Den is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
-
-the Tetris Sitter is an LLPish person in Solo Den. description is "[if Tetris Sitter reflexive]Absorbed
+the Tetris Sitter is an LLPish person in Mesprise Premises. description is "[if Tetris Sitter reflexive]Absorbed
 Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
 
-the itster is scenery in Solo Den.
+the itster is scenery in Mesprise Premises.
 
 after fliptoing tetris sitter:
 	now itster is in lalaland;
 	continue the action;
 
-check going east in solo den (this is the force give flowerpot rule):
+check going east in Mesprise Premises (this is the force give flowerpot rule):
 	if player has flowerpot and flowerpot contains crocus and Tetris Sitter is reflexed:
 		say "Before you leave, you remember Old Hat Daltho's speech--the flowerpot seems like a nice gift for Ed, now that Ed is nicer. You give it to him.[paragraph break]'Come back if you need help with Castle Apcur!' he says, as he goes to set the crocus out somewhere nice.";
 		now flowerpot is in lalaland;
@@ -20903,7 +20889,7 @@ check giving to Triste Sitter:
 	min-and;
 	now flowerpot is in lalaland instead;
 
-check going outside in solo den:
+check going outside in Mesprise Premises:
 	try going east instead;
 
 the welt-proof flowerpot is a reflexive and LLPish container. description of flowerpot is "You don't know what good welt-proofing will do, but it might help you read the red writing on the flowerpot a bit better[if-crocus]."
@@ -21044,7 +21030,7 @@ check scaning curst palace (this is the nab a few letters rule) :
 		now max-pal-seen is palace-let;
 
 check fliptoing curst palace when player is not in mislit limits:
-	say "Your word, stupendous as it is, has no effect. Yet. You [if player is in solo den]may just need to go back outside[else]are probably not close enough[end if].";
+	say "Your word, stupendous as it is, has no effect. Yet. You [if player is in Mesprise Premises]may just need to go back outside[else]are probably not close enough[end if].";
 	preef curst palace;
 	the rule fails;
 
@@ -21111,6 +21097,31 @@ check going in Mislit Limits:
 check going west in mislit limits:
 	if pester'n serpent is in Mislit Limits:
 		say "'Step near a serpent... you muse, then 'TRAP SEEN.'" instead;
+
+book Leak Lake (backdrop)
+
+Leak Lake is a useless backdrop. It is in salted deltas, Actionless Coastlines, Strati Strait, Mislit Limits. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
+
+instead of doing something with leak lake:
+	if the action is procedural, continue the action;
+	if the current action is smelling, continue the action;
+	if the current action is drinking, say "Yo, sick! So icky!" instead;
+	if the current action is entering:
+		if player is in actionless coastlines and bot boat is in actionless coastlines, try entering bot boat instead;
+		say "Go out, eh? Too huge!" instead;
+	say "Leak Lake is just there. Not much to do with it. You [if player is in mislit limits]found[else]need[end if] a way to cross it.";
+
+book shoals aslosh (backdrop)
+
+the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Strati Strait, leak lake. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
+
+instead of doing something with leak lake:
+	if the action is procedural, continue the action;
+	if the current action is drinking, say "Yo, sick! So icky!" instead;
+	if the current action is entering:
+		if player is in actionless coastlines and bot boat is in actionless coastlines, try entering bot boat instead;
+		say "Go out, eh? Too huge!" instead;
+	say "The shoals aslosh are just there. Not much to do with it. You [if player is in mislit limits]found[else]need[end if] a way to cross Leak Lake.";
 
 book Towers specific verbs
 
@@ -25881,7 +25892,7 @@ to say yerg-ok:
 	say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
 
 to say give-croc:
-		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if solo den is unvisited]You can, but you don't have to, visit the den to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
+		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if Mesprise Premises is unvisited]You can, but you don't have to, visit the den to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
 
 to say if-cro:
 	if flowerpot is reflexive:
@@ -27334,7 +27345,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if kid-atten is false, say "[2dmiss of myreg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the succor crocus DINGY to stop it dying.";
-		if flowerpot is not in lalaland, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the serpent PRESENT to go west[else if Tetris Sitter is reflexive]made the Tetris Sitter in the Solo Den behind the serpent GREYED[else if flowerpot is not in lalaland]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
+		if flowerpot is not in lalaland, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the serpent PRESENT to go west[else if Tetris Sitter is reflexive]made the Tetris Sitter in the Mesprise Premises behind the serpent GREYED[else if flowerpot is not in lalaland]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 		if number of pinko warriors > 0:

@@ -659,9 +659,9 @@ understand "repents" as a mistake ("The serpent remains kinda chaotic evil looki
 
 understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is in mislit limits and player is in mislit limits.
 
-chapter old one's solo den
+chapter mesprise premises
 
-understand "gyre" as a mistake ("Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.") when player is in solo den.
+understand "titres" and "titers" as a mistake ("No physical sciences are necessary here.") when player is in mesprise premises.
 
 book otters
 
