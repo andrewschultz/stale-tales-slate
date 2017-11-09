@@ -1969,7 +1969,7 @@ walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them i
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"[serp-say]."
-inapt paint	--
+Mel Fish	--
 muscly hulk	--
 lois the hostile	--
 hostile-is-he lot	--
@@ -2124,7 +2124,7 @@ pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
-man covered in inapt paint	"He ignores your conversation. '[one of]They done wrong to ol['] [kno-mel]. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
+Mel Fish	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait-seer	"'Trees! [one of]Aw, I[or]I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
 duck	"It quacks."
@@ -2398,7 +2398,7 @@ admirer	Elvira	"'I'm not sure if she's even better than you, or you're even bett
 admirer	curst palace	"'It's not good enough for you-ou-ou!'"
 grailman	Elvira	"'Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure.'"
 grailman	curst palace	"'You can get there without getting by me, I bet!'"
-inapt paint	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
+Mel Fish	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
 Lars Eede	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 Elsa Erde	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 arid den	Nerd-Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
@@ -5497,7 +5497,6 @@ sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to 
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. MAybe it's the brand you can/should worry about."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
 hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
-man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
 old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
 ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
@@ -9040,7 +9039,7 @@ ingrates	ingrates	false	561201770	--	"angstier"	"angstier"	"The ingrates suddenl
 ego drains	ego drains	false	553473418	--	"grandiose"	"grandiose"	"The ego-drains suddenly leave you with too absurd of a vision of self-pity. It becomes amusing, and you almost enjoy walking among them. This is too embarrassing for them, and they vanish, having had their own egos dented."
 sweatier wait-seer	sweatier wait-seer	false	695435442	--	"weariest"	"weariest"	"The wait-seer blinks as if enlightened, then shakes his head. He's only getting older and so forth. He decides to go find somewhere more scenic to block."
 hulk	hulk	false	460633602	--	"clumsy"	"clumsy"	"The hulk's muscles shrink, and he loses coordination. 'A hokey KO. Yeah.' But he still stumbles away in embarrassment."
-man covered in inapt paint	man covered in inapt paint	false	450759108	--	"himself"	"himself"	"The fellow has a think. 'I'm flesh!' he yells, 'and that's all that matters!' He rejects labels and such, recalling aloud a horrible incident when someone, probably a Burmese bemuser, ungrammatically called him selfish for being hisself. He vows to insult bad grammar more in the future. Then he thanks you and leaves."
+Mel Fish	Mel Fish	false	450759108	--	"himself"	"himself"	"Mel Fish has a think. 'I'm flesh!' he yells, 'and that's all that matters!' He rejects labels and such, recalling aloud a horrible incident when someone, probably a Burmese bemuser, ungrammatically called him selfish for being hisself. He vows to insult bad grammar more in the future. Then he thanks you and leaves."
 bonker	bonker	false	427742080	--	"broken"	"broken"	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. The way east is clear now."
 stinger	stinger	false	559013952	--	"resting"	"resting"	"The stinger whirs around, wheezes, then flops on the ground and rolls off. Your path east is clear now!"
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
@@ -19581,7 +19580,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]+[pc of ingrates].[pc of wait-seer].[pc of atheists].~ +
 [line break]  [pc of trendies] [pc of grailman] [if player is male][pc of hostile-is-he lot][else][pc of lois the hostile][end if]~
 [line break]  .[pc of butlers].[if player is male][pc of lars eede][else][pc of elsa erde][end if].~
-[line break]  [pc of muscly] [pc of man covered in inapt paint] [pc of ego drains]~
+[line break]  [pc of muscly] [pc of Mel Fish] [pc of ego drains]~
 [line break]![pc of pirates].[pc of diners].[pc of arid den].[pc of bonker]!
 [line break]  [pc of ur-pine]   [pc of natives]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
@@ -19692,19 +19691,6 @@ book unblest sunbelt
 
 Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if sporties' ripostes are visible], though you can hear sporties['] ripostes taunting you. It'd be nice, but probably not critical, to get rid of them[end if][tow-dirs]."
 
-after printing the locale description for Unblest Sunbelt when Unblest Sunbelt is unvisited:
-	if inapt paint is prodded and arid den is prodded:
-		continue the action;
-	if inapt paint is prodded:
-		say "Boy. You don't want to look, but you can't, at all the flavors of Nerd-Aid in the arid den.";
-	else if arid den is prodded:
-		say "Hm, that inapt paint--nah, it'd be a tap-in by itself, according to Old Hat Daltho. Must be the actual words.";
-	else:
-		say "Over the mechanical voice from the arid den hawking NERD-AID, you consider Old Hat Daltho's advice: the inapt paint can't be a tap-in.";
-	now arid den is prodded;
-	now inapt paint is prodded;
-	continue the action;
-
 the sporties' ripostes are plural-named LLPish vanishing scenery in Unblest Sunbelt.
 
 instead of doing something with sporties' ripostes:
@@ -19746,11 +19732,6 @@ to say we-g:
 
 every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient:
 	say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
-
-after printing the locale description for Treading Gradient when Treading Gradient is unvisited:
-	if inapt paint is unprodded:
-		say "Hm, that inapt paint--nah, it'd be a tap-in by itself, must be the actual words.";
-		now inapt paint is prodded;
 
 before going down in Treading Gradient:
 	say "[if denim is in Treading Gradient]The denim is too thick[else]You try to look into the dark where the denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
@@ -21238,34 +21219,13 @@ a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text
 
 section unblest sunbelt
 
-The man covered in inapt paint is a blue guardian. "A man to the [psgdir of inapt paint] covered in inapt paint mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.'"
+Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.'"
 
-description is "He has, in inapt paint on his chest, FLEMISH. He cries out 'I'm not Flemish! Nothing against [']em! It's just not me!'"
+description is "On his chest, he has the word FLEMISH crossed out in red. It's good to know what he's against. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
-understand "mel fish" and "mel/fish" as man covered in inapt paint.
+a-text of Mel Fish is "RYRRYRR". b-text of Mel Fish is "RYRRYRR". parse-text of Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
-mel-known is a truth state that varies.
-
-to say kno-mel:
-	say "Mel Fish";
-	now mel-known is true;
-
-the i-p is part of the man covered in inapt paint. the i-p is privately-named. printed name of i-p is "inapt paint". understand "inapt/paint" and "inapt paint" as i-p.
-
-does the player mean doing something with inapt paint: it is very likely.
-
-after doing something with paint:
-	set the pronoun him to man covered in inapt paint;
-	continue the action;
-
-instead of scaning i-p:
-	try scaning inapt paint instead;
-
-description of i-p is "Didn't need a pint to spell out FLEMISH."
-
-a-text of man covered in inapt paint is "RYRRYRR". b-text of man covered in inapt paint is "RYRRYRR". parse-text of man covered in inapt paint is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
-
-understand "flemish/painted" and "flemish/painted man" as man covered in inapt paint.
+understand "flemish/painted" and "flemish/painted man" as Mel Fish.
 
 The dandier arid den is a blue neuter guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
 
@@ -21367,7 +21327,7 @@ fluster-self rut	Blasted Saltbed	east	xxx
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
-man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
+man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and being defined by others."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
@@ -21423,7 +21383,7 @@ guaname	guatext
 bluster butlers	"The bluster butlers loudly mention the strength of working in teams to guard important places."
 muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
-inapt paint	"[if mel-known is true]Mel Fish[else]The man to the [n-s-rav][end if] mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's [kno-mel], but who am I, really?'"
+Mel Fish	"Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
 ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
@@ -26338,8 +26298,7 @@ yurts	"[one of]They look out of place, made of weird metals.[plus][or]You can co
 arid den	"[one of]The dandier arid den sells a lot of Nerd-Aid. It appears to be at full power.[plus][or]How could you lessen its power?[plus][or]Try smelling, examining the merchandise for endorsements, etc.[plus][or]DRAINED.[minus][cycling]"
 Nerd-Aid	"The Nerd-Aid gives you a better idea of how to change the arid den, by its name and by seeing who endorses Nerd-Aid."
 weeds	"[one of]The weeds might be less effective if tied together.[plus][or]Or, more accurately, SEWED.[minus][cycling]"
-man covered in inapt paint	"[one of]The inapt paint says the man's FLEMISH, but he's sick of this nationality bit. He wants individuality.[plus][or]What could be more individual than...[plus][or]HIMSELF?[minus][cycling]"
-i-p	--	man covered in inapt paint
+Mel Fish	"[one of]Mel Fish says SMH Life, but he's rather tired of his old gig. He wants individuality. Being Flemish or saying I'm Flesh won't work, either.[plus][or]What could be more individual than...[plus][or]HIMSELF?[minus][cycling]"
 Atheists	"[one of]The atheists are willing to explain everything very slowly to you. That's not good. You'd like them to be frustrated with you, to move on.[plus][or]How can you make them super-impatient?[plus][or]Make them HASTIEST.[minus][cycling]"
 bonker	"[one of]The bonker is working just great. How to gum it up?[plus][or]Busted...or...[plus][or]BROKEN.[minus][cycling]"
 stinger	"[one of]The stinger doesn't need to be so active. How could it become calmer?[plus][or][plus][or]BROKEN.[minus][cycling]"
