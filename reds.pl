@@ -78,7 +78,10 @@ if ( !$fileName ) {
   @letArray     = split( //, "$ARGV[$firstString]" );
   @array        = @ARGV;
   for ( 1 .. $firstString ) { shift(@array); }
-  oneRed();
+
+  my @la = (@letArray);
+  my $aryIdx;
+  for $aryIdx ( 0 .. $#array ) { oneRed($aryIdx); }
 }
 else {
   $printResults = 0;
@@ -98,7 +101,7 @@ else {
       if ( !$foundPct ) { @array = ( @array, "%" ); }
     }
     @letArray = split( //, $array[0] );
-    oneRed();
+
   }
   close(A);
 }
@@ -111,14 +114,13 @@ sub oneRed {
 
   my @lets = sort(@letArray);
 
-  my $p_iterator = Algorithm::Permute->new( \@letArray );
-
   my $checkForDup = 0;
 
   for ( 0 .. $#lets - 1 ) {
     if ( $lets[$_] eq $lets[ $_ + 1 ] ) { $checkForDup = 1; }
   }
 
+  print "Removing $_[0] $array[$_[0]]\n" if ( $_[0] );
   @perm = split( //, "$array[0]" );
 
   for $j ( 1 .. $#array ) {
@@ -133,6 +135,7 @@ sub oneRed {
   }
 
   for $j ( 1 .. $#array ) {
+    next if $j eq $_[0];
     if ( $array[$j] eq "%" ) {
       $array[$j] = "";
       for $i ( 0 .. $#perm ) {
@@ -150,7 +153,7 @@ sub oneRed {
     #if ($array[$j] =~ /[^0-9%]/) { die ("Bad input $j, $array[$j]"); }
   }
 
-  if ( my $temp = isOops( $array[0] ) ) {
+  if ( my $temp = isOops( $array[0], $_[0] ) ) {
     die "Test failed at word "
       . ( $temp & 0xff )
       . " character "
@@ -171,6 +174,10 @@ sub oneRed {
     }
   }
 
+  my @la         = @letArray;
+  my $p_iterator = Algorithm::Permute->new( \@la );
+
+  %dupHash = ();
   while ( @perm = $p_iterator->next ) {
     $j = join( "", @perm );
     if ( $checkForDup == 1 ) {
@@ -178,22 +185,23 @@ sub oneRed {
       else                  { $dupHash{$j} = 1; }
     }
 
-    if ( !isOops($j) ) {
+    # print "@perm / $j / $_[0] / $array[$_[0]]\n";
+    if ( !isOops( $j, $_[0] ) ) {
       $succ++;
 
       for ( 0 .. $#perm ) { $statFin{"$perm[$_]-$_"}++; }
       if ( $succ <= $myMax ) {
-        if ($printResults) { print "$succ: $j is ok.\n"; }
+        if ( ( $_[0] == 0 ) && $printResults ) { print "$succ: $j is ok.\n"; }
       }
     }
 
   }
 
-  if ( ( $succ > $myMax ) || ( !$printResults ) ) {
-    print "$array[0]: $succ found total.\n";
+  if ( ( $succ > $myMax ) || ( !$printResults ) || ( $_[0] != 0 ) ) {
+    print "$array[0] ($array[$_[0]]): $succ found total.\n";
   }
 
-  if ($printResults) {
+  if ( ( $_[0] == 0 ) && $printResults ) {
     if ( $succ > 1 ) {
       print "Stats:";
 
@@ -263,6 +271,7 @@ sub isOops # does this contradict the clues we are given e.g. ARGV[1] ... ARGV[A
     $count++
     ) # remember to start at 1 because we want to disqualify the first entry as it's the one we want to solve
   {
+    next if ( $count == $_[1] );
     $gotone = 0;
 
     #print "$_[0]: THIS: $this PERM(L) $perm[$_[0]]\n";
