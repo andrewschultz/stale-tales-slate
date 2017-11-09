@@ -601,11 +601,6 @@ to choose-male:
 	now Dr Tera is off-stage;
 	now greedy-person is Red Rat;
 
-after fliptoing the-hostile (this is the holiest for testing purposes rule) :
-	now lois the hostile is in lalaland;
-	now hostile-is-he lot is in lalaland;
-	continue the action;
-
 to decide whether (cho - a number) is irrelevant:
 	if cho is 70 or cho is 102, decide no;
 	if cho is 77 or cho is 109, decide no;
@@ -12533,6 +12528,22 @@ check entering passage:
 
 [strudel/lsd-ture and joke if eat after visiting]
 
+chapter outsideing
+
+outside-warned is a truth state that varies.
+
+after fliptoing lecturer (this is the disable the macks slightly too rule) :
+	now pamphlets are in lalaland;
+	increase headaches by 10;
+	now lectures is shunned;
+	if t-tediously is in otters:
+		let A be pod-num of t-tediously;
+		now pod-num of t-tediously is 0; [disable "tediously" in otters]
+		let B be a random number from 1 to mack-count of A;
+		place-a-mack A and B;
+	move player to Strip of Profits;
+	continue the action;
+
 chapter lecturer
 
 the lecturer is a reflexive person in Cruelest Lectures. "A lecturer lectures lecturingly about why his wasting your time is better for society than how you waste your time. And how the sooner you agree, the less you'll waste HIS time, and the golden rule and stuff."
@@ -12583,6 +12594,11 @@ a-text of pamphlets is "YYRRYRY". b-text of pamphlets is "YGRRYRY". parse-text o
 volume routes
 
 last-loc of routes is Same Mesa.
+
+check going outside:
+	if mrlp is routes and outside-warned is false and cur-score of routes > 0:
+		say "(That's a preposition, but it's not one you need.)";
+		now outside-warned is true;
 
 book quest-items
 
@@ -15450,7 +15466,7 @@ to say my-auth:
 	say "[author of random visible badbook]";
 
 after choosing notable locale objects when player is in shack:
-	set locale priority of slab to 9;
+	set locale priority of slab to 9; [slab should appear first]
 
 to say a-the:
 	say "[one of]a[or]the[stopping]";
@@ -19404,26 +19420,16 @@ to say tow-dirs:
 	if number of entries in golist > 0:
 		say ". You have clear passage [golist]";
 
-chapter outsideing
+chapter keycar
 
-outside-warned is a truth state that varies.
+the yacker keycar is LLPish vanishing scenery. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
 
-after fliptoing lecturer (this is the disable the macks slightly too rule) :
-	now pamphlets are in lalaland;
-	increase headaches by 10;
-	now lectures is shunned;
-	if t-tediously is in otters:
-		let A be pod-num of t-tediously;
-		now pod-num of t-tediously is 0; [disable "tediously" in otters]
-		let B be a random number from 1 to mack-count of A;
-		place-a-mack A and B;
-	move player to Strip of Profits;
-	continue the action;
+[?? talk to the keycar]
 
-check going outside:
-	if mrlp is routes and outside-warned is false and cur-score of routes > 0:
-		say "(That's a preposition, but it's not one you need.)";
-		now outside-warned is true;
+check taking keycar:
+	say "The keycar zooms around, bantering about how it's a bit too fast for you." instead;
+
+a-text of keycar is "RRYYRO". b-text of keycar is "RRYYRO". parse-text of keycar is "x[sp]x[sp]-[sp]-[sp]x[sp]y". keycar is cheat-spoilable.
 
 book Loftier Trefoil
 
@@ -19473,7 +19479,7 @@ book Topside Deposit
 
 Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. That way's [if ur-pine is in deposit]un[end if]blocked."
 
-for printing a locale paragraph about a thing (called nongua) in topside deposit:
+for printing a locale paragraph about a thing (called nongua) in topside deposit (this is the lump tarts with toaster rule):
 	if nongua is start tarts and toaster is in Topside Deposit:
 		now start tarts are mentioned;
 	continue the action:
@@ -19485,19 +19491,12 @@ chapter dreads adders
 
 The dreads adders are a plural-named purple guardian. "Dreads adders may or may not be lethal, but you're scared of passing them to the north."
 
-the yacker keycar is LLPish vanishing scenery. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
-
-[?? talk to the keycar]
-
-check taking keycar:
-	say "The keycar zooms around, bantering about how it's a bit too fast for you." instead;
-
-a-text of keycar is "RRYYRO". b-text of keycar is "RRYYRO". parse-text of keycar is "x[sp]x[sp]-[sp]-[sp]x[sp]y". keycar is cheat-spoilable.
+a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-text of dreads adders is "x[sp]-[sp]?[sp]x[sp]-[sp]x".
 
 inside of Topside Deposit is nowhere.
 
 check going north in Topside Deposit:
-	if player does not have Rosetta Toaster and unripe ur-pine is not visible:
+	if player does not have Rosetta Toaster and dreads adders are not visible:
 		say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
 
 a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here."
@@ -21397,6 +21396,7 @@ after fliptoing a guardian (this is the guardian taunt rule) :
 			say "A keycar speeds into view with all the guardians gone! And not just any keycar. An annoying yacker keycar, a novelty toy whose sales helped make Elvira rich, before she sponsored a campaign to fine reckless keycar users--well, okay, there's no PROOF of kickbacks.[paragraph break]The keycar's probably not going to stop you going anywhere, but it'd be nice to get rid of.";
 			now keycar is in location of player;
 		continue the action;
+	if chum of guardian is not dreads adders, now chum of guardian is in lalaland;
 	repeat through table of ggt:
 		if guaname entry is in location of player and guaname entry is not prevtaunt:
 			deliver-taunt guaname entry and noun;
@@ -21615,12 +21615,8 @@ to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
 		if guy entry is not in lalaland:
-			if player is male:
-				if guy entry is lois the hostile or guy entry is Elsa Erde:
-					next;
-			if player is female:
-				if guy entry is hostile-is-he lot or guy entry is Lars Eede:
-					next;
+			if player is male and guy entry is fem, next;
+			if player is female and guy entry is mas, next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
 				if there is an aux entry:
