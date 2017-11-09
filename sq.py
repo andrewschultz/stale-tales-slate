@@ -3,8 +3,11 @@
 # sq.py
 # uses sq.txt to parse through all the puzzles
 #
+# s= syntax for specifying a section so things go quicker
+#
 
 import re
+import sys
 
 sq = 'sq.txt'
 
@@ -31,9 +34,8 @@ def show_settler(ls):
             normal.append('o')
         else:
             normal.append('r')
-    backup = re.sub(" ", "", ls[1])
     backup = re.sub("-", "", ls[1])
-    backup = re.sub("'", "", ls[1])
+    backup = re.sub("'", "", backup)
     difs = backup.split(' ')
     if not item_name:
         item_name = re.sub("-", " ", ls[1])
@@ -52,14 +54,31 @@ def show_settler(ls):
     print('a-text of', item_name, 'is \"' + ''.join(normal).upper() + '\".', 'b-text of', item_name, 'is \"' + ''.join(cheat).upper() + '\".' + ( " [" + vague_clue + " <=> " + ls[0] +"]" if vague_clue else ''))
     return
 
+current_section = ""
+section_list = []
+
+if len(sys.argv) > 1:
+    count = 1
+    while count < len(sys.argv):
+        arg = sys.argv[count]
+        if arg.startswith("s="):
+            section_list = re.sub("^s=", "", arg).split(",")
+        count = count + 1
+
 with open(sq) as file:
     for line in file:
+        if line.startswith("s:"):
+            current_section = re.sub("^s:", "", line.strip().lower())
+            continue
+        if line.startswith("s="):
+            current_section = re.sub("^s=", "", line.strip().lower())
+            continue
         if line.startswith("#"):
-            if line.startswith("########"):
-                print(line.strip())
             continue
         if line.startswith(";"):
             break
+        if len(section_list) > 0 and current_section not in section_list:
+            continue
         line = line.strip().lower()
         ls = line.split('/')
         show_settler(ls)
