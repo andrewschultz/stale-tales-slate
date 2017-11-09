@@ -247,6 +247,8 @@ chapter guardians
 
 a guardian is a kind of person. a guardian is usually vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
+a guardian has a guardian called chum. The chum of a guardian is usually dreads adders.
+
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
 a guardian has text called retrytext.
@@ -19479,6 +19481,10 @@ for printing a locale paragraph about a thing (called nongua) in topside deposit
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
+chapter dreads adders
+
+The dreads adders are a plural-named purple guardian. "Dreads adders may or may not be lethal, but you're scared of passing them to the north."
+
 the yacker keycar is LLPish vanishing scenery. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
 
 [?? talk to the keycar]
@@ -19908,8 +19914,7 @@ Danger Garden is a room in Towers. Danger Garden is east of Unblest Sunbelt. pri
 understand "danger/gander/ garden" as Danger Garden when mrlp is towers.
 
 after printing the locale description for Danger Garden when Danger Garden is unvisited:
-	say "The natives look, well, restless, as if they might want to find a more important territory to guard[if ego drains are unprodded]. Also, the ego drains seem to put ideas into your mind that you really don't need or deserve to go north, and maybe you can just go around--and, well, it makes a lot of sense as-is unless you think too much about it and get depressed[end if].";
-	now ego drains are prodded;
+	say "The natives look, well, restless, as if they might want to find a more important territory to guard.";
 	continue the action;
 
 the geese are useless plural-named scenery. description of geese is "You can't get a glimpse of the geese for all their noise."
@@ -20542,9 +20547,19 @@ the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the
 check opening a hintpastry:
 	say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
 
+section organised ego drains
+
+the organised ego drains are plural-named LLPish scenery in Lost Lots. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise, with no clever fun way to escape them."
+
+	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
+
+description of organised ego drains is "You recognize the ego drains as odd spirits that make you feel bad about yourself and your purpose."
+
+a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
+
 section fluster self rut
 
-the fluster self rut is LLPish scenery in lost lots. "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down."
+the fluster self rut is a red guardian. "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down."
 
 instead of doing something with the fluster self rut:
 	if the action is procedural, continue the action;
@@ -21310,12 +21325,6 @@ a-text of atheists is "RYRRYYRR". b-text of atheists is "RYRRGYRR". parse-text o
 
 section danger garden
 
-the organised ego drains are a plural-named red guardian. "Ego-drains bubble up to the [psgdir of ego drains]."
-
-description of organised ego drains is "You recognize the ego drains as odd spirits that make you feel bad about yourself and your purpose."
-
-a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
-
 some natives are a plural-named white guardian. indefinite article of natives is "several". "Some natives block your way [psgdir of natives], though you don't really see anything interesting there."
 
 understand "native" as natives.
@@ -21348,27 +21357,27 @@ a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR
 
 chapter guardian org table
 
-table of guard-org [organized going 1st north then east. W, N, E.]
+table of guard-org [organized going 1st north then east. W, N, E, S in each room, depending on what's not covered.]
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
-Ur-Pine	Topside Deposit	north	"The ur-pine, not fully ripe, is VERY flexible and VERY big. It expands sideways to block you from heading north[one of]. Frustrating! If you try to run by, you might REALLY see red[or]. You see the ur-pine rein up, and that makes you see red[stopping]."	"From what you know about ur-pines, they're pretty flexible when young. They are impossible to get by but not harmful."
-muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
+Dreads Adders	Topside Deposit	north	"The ur-pine, not fully ripe, is VERY flexible and VERY big. It expands sideways to block you from heading north[one of]. Frustrating! If you try to run by, you might REALLY see red[or]. You see the ur-pine rein up, and that makes you see red[stopping]."	"From what you know about ur-pines, they're pretty flexible when young. They are impossible to get by but not harmful."
 bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme."	"Maybe if the butlers were quieter, they'd have a better place to guard than here."
+muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
-Resident Trendies	Blasted Saltbed	north	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
-pirates	Blasted Saltbed	east	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
+pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
+fluster-self rut	Blasted Saltbed	east	xxx
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
-wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
+Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
+wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
-grailman	Treading Gradient	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
-ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
-bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
-stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger."
-natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
 Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
+grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
+bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
+stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in mislit limits, but I need this hack for it to replace the bonker]
+natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
 lois the hostile	Strati Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
 hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."	"Boy! The Lot sure could use some down-home kindness."
 
