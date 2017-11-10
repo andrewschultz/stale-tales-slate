@@ -8791,6 +8791,7 @@ blurb
 "'Ungrateful, rueful gnat!'"
 "'Upstaged? Upset? Gad!'"
 "'Venerable? Never able!'"
+"'Violated! Violated! Dovetail, vile toad!'"
 "'Viper to tip over!'"
 "'We throng the wrong!'" []
 "'We trap a twerp!'"

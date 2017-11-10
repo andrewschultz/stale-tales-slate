@@ -589,7 +589,7 @@ understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral 
 
 chapter unblest sunbelt
 
-understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when man covered is visible.
+understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when Mel Fish is visible.
 
 chapter outer route
 
@@ -603,7 +603,7 @@ understand "granites" and "granite" as a mistake ("They're already stonewalling 
 
 chapter treading gradient
 
-understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if man covered is in Treading Gradient]. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in Treading Gradient and weeds are in Treading Gradient.
+understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is in Treading Gradient]. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in Treading Gradient and weeds are in Treading Gradient.
 
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in Treading Gradient and player is in Treading Gradient.
 
