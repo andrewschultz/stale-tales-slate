@@ -247,7 +247,7 @@ chapter guardians
 
 a guardian is a kind of person. a guardian is usually vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
-a guardian has a guardian called chum. The chum of a guardian is usually dreads adders.
+a guardian has a person called chum. The chum of a guardian is usually dreads adders.
 
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
@@ -1610,7 +1610,7 @@ persuasion rule for asking pester'n serpent to try doing something:
 	say "The serpent needs a change of attitude, and speaking won't do it.";
 	persuasion fails;
 
-persuasion rule for asking Triste Sitter to try doing something:
+persuasion rule for asking Tetris Sitter to try doing something:
 	if Tetris Sitter is reflexive:
 		say "The Tetris Sitter ignores you and continues smiling and working on her high score.";
 		persuasion fails;
@@ -1969,7 +1969,7 @@ walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them i
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"[serp-say]."
-Mel Fish	--
+inapt paint	--
 muscly hulk	--
 lois the hostile	--
 hostile-is-he lot	--
@@ -2124,7 +2124,7 @@ pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
-Mel Fish	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
+man covered in inapt paint	"He ignores your conversation. '[one of]They done wrong to ol['] [kno-mel]. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait-seer	"'Trees! [one of]Aw, I[or]I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
 duck	"It quacks."
@@ -2398,7 +2398,7 @@ admirer	Elvira	"'I'm not sure if she's even better than you, or you're even bett
 admirer	curst palace	"'It's not good enough for you-ou-ou!'"
 grailman	Elvira	"'Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure.'"
 grailman	curst palace	"'You can get there without getting by me, I bet!'"
-Mel Fish	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
+inapt paint	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
 Lars Eede	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 Elsa Erde	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 arid den	Nerd-Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
@@ -5497,6 +5497,7 @@ sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to 
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. MAybe it's the brand you can/should worry about."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
 hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
+man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
 old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
 ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
@@ -6293,7 +6294,7 @@ carry out towers-hinting:
 		if Tetris Sitter is reflexive:
 			try objhinting Tetris Sitter instead;
 		if player has flowerpot:
-			all-say "You should GIVE the succor crocus to the Triste Sitter for hints." instead;
+			all-say "You should GIVE the succor crocus to the Tetris Sitter for hints." instead;
 	if player is in mislit limits:
 		try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
@@ -9034,6 +9035,7 @@ dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. '
 
 table of towers anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
+dreads adders	dreads adders	false	353649874	--	"sadder"	"sadder"	"The adders suddenly become less aggressive. You wonder if they feel bad about all the other people they may've obstructed, as they slide harmlessly away."
 snider diners	snider diners	false	444333321	--	"rinsed"	"rinsed"	"The diners['] dry wit and mood dampen as a water spray erupts from nowhere--and gets them! Their outdoor dining experience has been ruined. They skulk away to somewhere safer."
 ingrates	ingrates	false	561201770	--	"angstier"	"angstier"	"The ingrates suddenly develops the mooniest emotions--why bother to stop you from doing whatever? After a final snit-rage about you not caring about their problems, they decide to go whine by themselves."
 ego drains	ego drains	false	553473418	--	"grandiose"	"grandiose"	"The ego-drains suddenly leave you with too absurd of a vision of self-pity. It becomes amusing, and you almost enjoy walking among them. This is too embarrassing for them, and they vanish, having had their own egos dented."
@@ -9096,7 +9098,7 @@ Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	"Terrance suddenly re
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
 Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
-Tetris Sitter	Tetris Sitter false	560616760	--	"triste"	"triste"	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can."
+Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can."
 yurts	brownies	true	512172846	--	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."
@@ -19032,11 +19034,11 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else: [only for non guardians/non warriors] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is smart kid]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+		say "[if rayx is adders]SADDER[else if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is smart kid]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
-check giving hintpastry to Triste Sitter:
+check giving hintpastry to Tetris Sitter:
 	say "He's used to loftier meals than that." instead;
 
 check giving hintpastry to a guardian:
@@ -19580,7 +19582,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]+[pc of ingrates].[pc of wait-seer].[pc of atheists].~ +
 [line break]  [pc of trendies] [pc of grailman] [if player is male][pc of hostile-is-he lot][else][pc of lois the hostile][end if]~
 [line break]  .[pc of butlers].[if player is male][pc of lars eede][else][pc of elsa erde][end if].~
-[line break]  [pc of muscly] [pc of Mel Fish] [pc of ego drains]~
+[line break]  [pc of muscly] [pc of man covered in inapt paint] [pc of ego drains]~
 [line break]![pc of pirates].[pc of diners].[pc of arid den].[pc of bonker]!
 [line break]  [pc of ur-pine]   [pc of natives]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
@@ -19691,6 +19693,19 @@ book unblest sunbelt
 
 Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if sporties' ripostes are visible], though you can hear sporties['] ripostes taunting you. It'd be nice, but probably not critical, to get rid of them[end if][tow-dirs]."
 
+after printing the locale description for Unblest Sunbelt when Unblest Sunbelt is unvisited:
+	if inapt paint is prodded and arid den is prodded:
+		continue the action;
+	if inapt paint is prodded:
+		say "Boy. You don't want to look, but you can't, at all the flavors of Nerd-Aid in the arid den.";
+	else if arid den is prodded:
+		say "Hm, that inapt paint--nah, it'd be a tap-in by itself, according to Old Hat Daltho. Must be the actual words.";
+	else:
+		say "Over the mechanical voice from the arid den hawking NERD-AID, you consider Old Hat Daltho's advice: the inapt paint can't be a tap-in.";
+	now arid den is prodded;
+	now inapt paint is prodded;
+	continue the action;
+
 the sporties' ripostes are plural-named LLPish vanishing scenery in Unblest Sunbelt.
 
 instead of doing something with sporties' ripostes:
@@ -19732,6 +19747,11 @@ to say we-g:
 
 every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient:
 	say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
+
+after printing the locale description for Treading Gradient when Treading Gradient is unvisited:
+	if inapt paint is unprodded:
+		say "Hm, that inapt paint--nah, it'd be a tap-in by itself, must be the actual words.";
+		now inapt paint is prodded;
 
 before going down in Treading Gradient:
 	say "[if denim is in Treading Gradient]The denim is too thick[else]You try to look into the dark where the denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
@@ -20529,11 +20549,7 @@ check opening a hintpastry:
 
 section organised ego drains
 
-the organised ego drains are plural-named LLPish scenery in Lost Lots. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise, with no clever fun way to escape them."
-
-	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
-
-description of organised ego drains is "You recognize the ego drains as odd spirits that make you feel bad about yourself and your purpose."
+the organised ego drains are plural-named LLPish scenery in Lost Lots. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise, with no clever fun way to escape them.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
 
 a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
@@ -20848,10 +20864,9 @@ chapter Mesprise/Emprise Premise(s)
 
 Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
-the Tetris Sitter is an LLPish person in Mesprise Premises. description is "[if Tetris Sitter reflexive]Absorbed
-Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
+the Tetris Sitter is an LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, playing Tetris. She seems rather good at it."
 
-the itster is scenery in Mesprise Premises.
+the itster is scenery in Mesprise Premises. description is "It's red, and MAN what a high score the Tetris Sitter has."
 
 after fliptoing tetris sitter:
 	now itster is in lalaland;
@@ -20873,9 +20888,9 @@ before showing the crocus to:
 
 understand "flower" as crocus.
 
-check giving to Triste Sitter:
+check giving to Tetris Sitter:
 	if second noun is crocus:
-		try giving flowerpot to Triste Sitter instead;
+		try giving flowerpot to Tetris Sitter instead;
 	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
 		if noun is not flowerpot, say "She mumbles '[']S trite,' [if noun is flowerpot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
 	unless noun is flowerpot, say "St. Teri thanks you, but [if flowerpot is in lalaland]the flowerpot was probably enough[else]that's not quite what she wants[end if]." instead;
@@ -21219,13 +21234,34 @@ a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text
 
 section unblest sunbelt
 
-Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.'"
+Mel Fish is a blue guardian. "A man to the [psgdir of inapt paint] covered in inapt paint mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.'"
 
-description is "On his chest, he has the word FLEMISH crossed out in red. It's good to know what he's against. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
+description is "He has, in inapt paint on his chest, FLEMISH. He cries out 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
-a-text of Mel Fish is "RYRRYRR". b-text of Mel Fish is "RYRRYRR". parse-text of Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+understand "mel fish" and "mel/fish" as man covered in inapt paint.
 
-understand "flemish/painted" and "flemish/painted man" as Mel Fish.
+mel-known is a truth state that varies.
+
+to say kno-mel:
+	say "Mel Fish";
+	now mel-known is true;
+
+the i-p is part of the man covered in inapt paint. the i-p is privately-named. printed name of i-p is "inapt paint". understand "inapt/paint" and "inapt paint" as i-p.
+
+does the player mean doing something with inapt paint: it is very likely.
+
+after doing something with paint:
+	set the pronoun him to man covered in inapt paint;
+	continue the action;
+
+instead of scaning i-p:
+	try scaning inapt paint instead;
+
+description of i-p is "Didn't need a pint to spell out FLEMISH."
+
+a-text of man covered in inapt paint is "RYRRYRR". b-text of man covered in inapt paint is "RYRRYRR". parse-text of man covered in inapt paint is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+
+understand "flemish/painted" and "flemish/painted man" as man covered in inapt paint.
 
 The dandier arid den is a blue neuter guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
 
@@ -21323,11 +21359,11 @@ bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all 
 muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
-fluster-self rut	Blasted Saltbed	east	xxx
+fluster self rut	Blasted Saltbed	east	"Maybe you can make the fluster-self rut less active."	"You should be able to make it over the rut, but you can't. It's just active enough to brush you back."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
-man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and being defined by others."
+man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
@@ -21356,7 +21392,7 @@ after fliptoing a guardian (this is the guardian taunt rule) :
 			say "A keycar speeds into view with all the guardians gone! And not just any keycar. An annoying yacker keycar, a novelty toy whose sales helped make Elvira rich, before she sponsored a campaign to fine reckless keycar users--well, okay, there's no PROOF of kickbacks.[paragraph break]The keycar's probably not going to stop you going anywhere, but it'd be nice to get rid of.";
 			now keycar is in location of player;
 		continue the action;
-	if chum of guardian is not dreads adders, now chum of guardian is in lalaland;
+	if chum of noun is not dreads adders, now chum of noun is in lalaland;
 	repeat through table of ggt:
 		if guaname entry is in location of player and guaname entry is not prevtaunt:
 			deliver-taunt guaname entry and noun;
@@ -21383,7 +21419,7 @@ guaname	guatext
 bluster butlers	"The bluster butlers loudly mention the strength of working in teams to guard important places."
 muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
-Mel Fish	"Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
+inapt paint	"[if mel-known is true]Mel Fish[else]The man to the [n-s-rav][end if] mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's [kno-mel], but who am I, really?'"
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
 ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
@@ -21571,11 +21607,16 @@ after going (this is the guardian reposition after rule):
 
 chapter reposition-guardians
 
+definition: a guardian (called gu) is mas:
+	if gu is lars eede, yes;
+	if gu is hostile-is-he lot, yes;
+	no;
+
 to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
 		if guy entry is not in lalaland:
-			if player is male and guy entry is fem, next;
+			if player is male and guy entry is female, next;
 			if player is female and guy entry is mas, next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
@@ -25924,7 +25965,7 @@ gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figur
 lever	"The lever was designed not to give extra points for pulling it too much."	[end OYSTER]
 turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
 blaster	"You fixed the blaster. Now maybe try the turbos."
-Triste Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is in lalaland]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
+Tetris Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is in lalaland]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
 b-b	"You've cut it down enough. Leave some for next year's crop." [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Elmer	"You can't take on Merle and Elmer by yourself--you need some allies."
@@ -26078,7 +26119,7 @@ un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been ARO
 mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"You need to get by what's on either free reef."
 bent ewe	"[one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling]"
-hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt[else]need to deal[end if] with the bent ewe[end if].[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
+hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt[else]need to deal[end if] with the bent ewe.[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
 bent ewe	"[one of]The bent ewe feels nervous the hog is about to attack it. Maybe you could play peacemaker?[plus][or]Make it so there's something dividing them.[plus][or]Or, perhaps, BETWEEN.[minus][cycling]"	--	"BETWEEN"
 yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
@@ -26298,7 +26339,8 @@ yurts	"[one of]They look out of place, made of weird metals.[plus][or]You can co
 arid den	"[one of]The dandier arid den sells a lot of Nerd-Aid. It appears to be at full power.[plus][or]How could you lessen its power?[plus][or]Try smelling, examining the merchandise for endorsements, etc.[plus][or]DRAINED.[minus][cycling]"
 Nerd-Aid	"The Nerd-Aid gives you a better idea of how to change the arid den, by its name and by seeing who endorses Nerd-Aid."
 weeds	"[one of]The weeds might be less effective if tied together.[plus][or]Or, more accurately, SEWED.[minus][cycling]"
-Mel Fish	"[one of]Mel Fish says SMH Life, but he's rather tired of his old gig. He wants individuality. Being Flemish or saying I'm Flesh won't work, either.[plus][or]What could be more individual than...[plus][or]HIMSELF?[minus][cycling]"
+man covered in inapt paint	"[one of]The inapt paint says the man's FLEMISH, but he's sick of this nationality bit. He wants individuality.[plus][or]What could be more individual than...[plus][or]HIMSELF?[minus][cycling]"
+i-p	--	man covered in inapt paint
 Atheists	"[one of]The atheists are willing to explain everything very slowly to you. That's not good. You'd like them to be frustrated with you, to move on.[plus][or]How can you make them super-impatient?[plus][or]Make them HASTIEST.[minus][cycling]"
 bonker	"[one of]The bonker is working just great. How to gum it up?[plus][or]Busted...or...[plus][or]BROKEN.[minus][cycling]"
 stinger	"[one of]The stinger doesn't need to be so active. How could it become calmer?[plus][or][plus][or]BROKEN.[minus][cycling]"

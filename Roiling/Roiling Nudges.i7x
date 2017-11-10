@@ -44,7 +44,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "books"	316331203	study	--	--	"[the-books]."
 "book"	220057237	study	--	--	"[the-books]."
 "shelf"	341691109	study	--	--	"[the-books]."
-"reading"	382846875	study	--	--	"You don't have time for literary criticism."
 "dark"	161473888	--	--	dark-study rule	"[dark-palm]."
 "darkness"	550735437	--	--	dark-study rule	"[dark-palm]."
 "bowling"	401020150	--	giant pin	--	"[g-pin]."
