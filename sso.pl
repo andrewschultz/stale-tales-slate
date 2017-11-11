@@ -163,8 +163,8 @@ while ( $count <= $#ARGV ) {
       $count++;
       next;
     };
-    /^-?mw$/ && do { $maxWarnShow = $arg2; $count++; next; };
-    /^-?s$/  && do { $statsOpen   = 1;     $count++; next; };
+    /^-?mw$/ && do { $maxWarnShow = $arg2; $count += 2; next; };
+    /^-?s$/ && do { $statsOpen = 1; $count++; next; };
     /^-?te$/ && do {
       $useTestFile = 1;
       $readIn      = $test;
@@ -215,7 +215,9 @@ print "Read mapping file...\n";
 
 readMapFile();
 
-open( A, $readIn ) || die();
+open( A, $readIn )
+  || open( A, "$roil/$readIn" )
+  || die("Couldn't find $readIn in current or Roiling directory.");
 
 my $unusedString = "";
 
@@ -275,21 +277,31 @@ while ( $line = <A> ) {
     $anagramChunk = join( " ", @c2 );
     $useSlashComments = 1;
     $outputChunk =~ s/$/ \[x: $anagramChunk\]/;
+
+    # print "> Chunk $. = $anagramChunk\n";
   }
   elsif ( $line =~ />/ ) {
     $anagramChunk = $outputChunk;
-    $outputChunk =~ s/.*>//;
+    $anagramChunk =~ s/.*>//;
     $anagramChunk =~ s/\".*//;
+
+    # print "> Chunk $. = $anagramChunk\n";
+    $outputChunk = $anagramChunk;
   }
   elsif ( $line =~ /</ ) {
     $anagramChunk = $outputChunk;
-    $outputChunk =~ s/<.*//;
-    $anagramChunk =~ s/\".*//;
+    $anagramChunk =~ s/^\"//;
+    $anagramChunk =~ s/<.*//;
+
+    # print "< Chunk $. = $anagramChunk\n";
+    $outputChunk = $anagramChunk;
   }
   else {
     $anagramChunk = $outputChunk;
     $anagramChunk =~ s/\"[^\"]*$/\"/;
+    $outputChunk = $anagramChunk;
   }
+  $anagramChunk =~ s/(\[r\]|')(,)? by//;
   if ( checkAnagram( $anagramChunk, $useSlashComments ) == -1 ) {
     $anagramLine = $.;
     $unusedString .= $line;
@@ -640,7 +652,6 @@ sub doAnagrams {
   }
   close(A);
   if ( $count < $_[0] ) { print "Only got $count of $_[0].\n"; }
-  die();
 }
 
 sub openThis {
