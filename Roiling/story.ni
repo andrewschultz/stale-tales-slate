@@ -1970,7 +1970,8 @@ yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid 
 smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"[serp-say]."
 Mel Fish	--
-muscly hulk	--
+muscly luc sym	--
+muscly ms lucy	--
 lois the hostile	--
 hostile-is-he lot	--
 natives	--
@@ -2116,7 +2117,8 @@ smart kid	"[if duck is not returned]'Hey! Do you know anything about making stuf
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
 drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move."
-muscly hulk	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
+muscly luc sym	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
+muscly ms lucy	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
 bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in Danger Garden]north[else]south[end if][if Danger Garden is visited and Strati Strait is visited], especially since you walked around before[end if]."
@@ -2389,7 +2391,8 @@ yapper	Elvira	"'She's called on the dialer a few times.'"
 yapper	h-h	"'That's where we are.'"
 butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'" [start TOWERS]
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
-muscly hulk	Elvira	"The hulk blinks and shrugs and grunts."
+muscly sym luc	Elvira	"Sym Luc blinks and shrugs and grunts."
+muscly ms lucy	Elvira	"Ms. Lucy blinks and shrugs and grunts."
 pirates	Elvira	"The pirates explain colorfully how Elvira's rule has been good for piracy. Not the software or music sort that deserves jail time, but the stuff that takes real guts."
 sweatier	Elvira	"The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end."
 sweatier	curst palace	"The wait-seer points to the palace and shrugs, as if to say, why?"
@@ -4132,7 +4135,8 @@ bonker	"'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!
 weeds	"The weeds almost seem to shrug."
 saver	"The 'replay player' letters brighten for a second."
 ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
-muscly	"The hulk stumbles for a moment."
+muscly luc sym	"Luc Sym stumbles for a moment."
+muscly	"Ms. Lucy stumbles for a moment."
 organised	"The drains sizzle slightly but go back to menacing quiet."
 admirer	"Your admirer looks askance, then returns to their puppy-love expression."
 natives	"The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
@@ -21119,13 +21123,19 @@ description of bluster butlers is "Bluster butlers are known for handling undesi
 
 a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R*RRR**". parse-text of bluster butlers is "x[sp]?[sp]x[sp]x[sp]x[sp]?[sp]?".
 
-The muscly hulk is a red guardian. "A muscly hulk flexes as it guards the way [psgdir of muscly hulk].".
+muscly luc sym is a red guardian. "[one of]Someone muscly named [or][stopping]Luc Sym flexes while guarding the way [psgdir of muscly luc sym].".
 
-description of muscly hulk is "He's certainly muscly. He looks relatively light on his toes for his size, too."
+description of luc sym is "He's certainly muscly. He looks relatively light on his toes for his size, too."
 
-a-text of muscly is "RRYRRO". b-text of muscly is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
+a-text of muscly luc sym is "RRYRRO". b-text of muscly luc sym is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
 
 The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
+
+muscly ms lucy is a red guardian. "[one of]Someone muscly named [or][stopping]Luc Sym flexes while guarding the way [psgdir of muscly ms lucy].".
+
+description of muscly ms lucy is "She's certainly muscly. She looks relatively light on her toes for her size, too."
+
+a-text of muscly ms lucy is "RRYRRO". b-text of muscly luc sym is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
 
 understand "diner" as diners.
 
@@ -21283,6 +21293,7 @@ table of guard-org [organized going 1st north then east. W, N, E, S in each room
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
 Dreads Adders	Topside Deposit	north	"The ur-pine, not fully ripe, is VERY flexible and VERY big. It expands sideways to block you from heading north[one of]. Frustrating! If you try to run by, you might REALLY see red[or]. You see the ur-pine rein up, and that makes you see red[stopping]."	"From what you know about ur-pines, they're pretty flexible when young. They are impossible to get by but not harmful."
 bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme."	"Maybe if the butlers were quieter, they'd have a better place to guard than here."
+muscly Luc Sym	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
 muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
@@ -26246,7 +26257,8 @@ Snider Diners	"[one of]The snider diners have dry wit! They don't want to be int
 Tetris Sitter	"[if Tetris Sitter is reflexive][one of]The Tetris Sitter seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has flowerpot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]The succor crocus behind the unripe ur-pine may help her feel better about herself.[plus][or]Give it to her[if-cro].[minus][cycling]"
 ur-pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 sporties' ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
-muscly hulk	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
+muscly luc sym	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
+muscly ms lucy	"[one of]Muscly is nice, but if you could tangle her up...[plus][or]Maybe if she weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
 sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]He doesn't seem to be getting tired, the wait-seer.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"

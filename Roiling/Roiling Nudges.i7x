@@ -586,8 +586,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "copse"	398904196	--	spec-o-scope	--	"[cop-sco]." [COPSE SCOPE 1 1]
 "spec"	324551619	--	spec-o-scope	--	"[cop-sco]."
 "butler"	493578481	--	bluster butlers	--	"You need to deal with all the butlers. Not just one."
-"hulk"	249135123	--	muscly hulk	--	"You make some helpless-sounding noises, trying to form a sensible word. The hulk looks slightly annoyed, but completely--and rightfully--unworried. As Daltho said, four letters would be too simple."
-"musclyhulk"	709768725	--	muscly hulk	--	"You wrack your brain but quickly get the sense you're over-thinking how to ju-jitsu the hulk's strength."
 "diner"	348059355	--	diners	--	"[plutry of diners]There's more than one diner blocking you."
 "yurt"	415898880	--	yurts	--	"There's more than one yurt there."
 "brownie"	527736521	--	brownies	--	"[not-singular-hp]."

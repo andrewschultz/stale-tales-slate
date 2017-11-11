@@ -585,7 +585,7 @@ understand "copes" as a mistake ("You find it easier to cope, here, with the spe
 
 understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in scope copse.
 
-understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly hulk is visible.
+understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly ms lucy is visible or muscly luc sym is visible.
 
 chapter unblest sunbelt
 
