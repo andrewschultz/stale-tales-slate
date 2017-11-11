@@ -7074,7 +7074,7 @@ instead of attacking: [this takes responses for general types. The table below i
 	if player has lance:
 		say "[if noun is a person]Wrong enemy for the lance[else]." instead;
 	if noun is a guardian:
-		say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder[end if]." instead;
+		say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Bland Sad Badlands is evil[end if]." instead;
 	say "[randbla][line break]" instead;
 
 sign-other is a truth state that varies.
@@ -8880,7 +8880,7 @@ thickness sketchins	thickness sketchins	false	329930229	Sonancy Canyons	"athwart
 hurt hog	hurt hog	false	475056505	--	"through"	"through"	"You realize it's time to move on. So you do."
 bent ewe	bent ewe	false	681789531	--	"between"	"between"	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
 raptest patters	raptest patters	false	575888338	--	"without"	"without"	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
-yob den	yob den	false	432873440	Strip of Profits	"beyond"	"beyond"	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface."
+yob den	yob den	false	432873440	Strip of Profits	"beyond"	"beyond"	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface. And you do... it's much quicker than you'd think! You turn around, and there's the yob den, cheering for you. A drama armada is also there, applauding you. You realize you're just outside of the poison stripe, and it turns a final shade of bright green before it winks out and vanishes. 'Pardone...a pro end! One, pard!' It's Brother Horbert. 'These other people, well, they promoted me to an Aproned Padrone. I hope I'm up to it. But I know you have other places to be ... thank you...[paragraph break]As you work your way back to Old Warpy, you notice No-Gal Logan has joined the crowd waving to you."
 
 table of troves anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -12973,7 +12973,7 @@ does the player mean doing something with Rude 'N Nuder when Nuder is visible:
 
 section U NERD ENDUR REDUN
 
-U NERD ENDUR REDUN is an uncluing quest-item. description of U NERD ENDUR REDUN is "It's definitely runed. A glimpse on the inside, though, gives you a pretty good idea that even if you understood the runes['] basic meaning, you aren't the one to grasp the subtleties needed to use it and invoke its powers. After all, ENDUR = ender or endure, and REDUN = redone, readin['] or redundant. Whew!". "U NERD ENDUR REDUN should always be in your possession."
+U NERD ENDUR REDUN is a proper-named uncluing quest-item. description of U NERD ENDUR REDUN is "It's definitely runed. A glimpse on the inside, though, gives you a pretty good idea that even if you understood the runes['] basic meaning, you aren't the one to grasp the subtleties needed to use it and invoke its powers. After all, ENDUR = ender or endure, and REDUN = redone, readin['] or redundant. Whew!". "U NERD ENDUR REDUN should always be in your possession."
 
 printed name of U NERD ENDUR REDUN is "U NERD: ENDUR (REDUN)".
 
@@ -13082,7 +13082,9 @@ check going in Cleric Circle:
 
 chapter brother horbert
 
-Brother Horbert is a person in Cleric Circle. description is "Slightly anxious, and in the usual black clerical garb.". "[one of]You see a man muttering, 'Only hope? Holy peon!' He turns and blinks. 'Greetings! I am Brother Horbert. Father Hafter and Veteran Rev. [n-t] are not here to help with the colossal local SOS from the previous viperous pious rev.'[paragraph break]'Some people call me the Oopsin['] Priest because...oops!'[or]Brother Horbert, the oopsin['] priest, paces about here.[stopping]"
+Brother Horbert Berroth is a person in Cleric Circle. description is "Slightly anxious, and in the usual black clerical garb.". "[one of]You see a man muttering, 'Only hope? Holy peon!' He turns and blinks. 'Greetings! I am Brother Horbert Berroth. Father Hafter and Veteran Rev. [n-t] are not here to help with the colossal local SOS from the previous viperous pious rev.'[paragraph break]'Some people call me the Oopsin['] Priest because...oops!'[or]Brother Horbert, the oopsin['] priest, paces about here.[stopping]"
+
+printed name of Brother Horbert is "Brother Horbert".
 
 understand "oopsin priest" and "oopsin/priest" as Brother Horbert
 
@@ -21127,7 +21129,7 @@ muscly luc sym is a red guardian. "[one of]Someone muscly named [or][stopping]Lu
 
 description of luc sym is "He's certainly muscly. He looks relatively light on his toes for his size, too."
 
-a-text of muscly luc sym is "RRYRRO". b-text of muscly luc sym is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
+a-text of muscly luc sym is "RRYRRO". b-text of muscly luc sym is "RRYRR?". parse-text of muscly luc sym is "x[sp]x[sp]u[sp]x[sp]x[sp]?".
 
 The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
 
@@ -21135,7 +21137,7 @@ muscly ms lucy is a red guardian. "[one of]Someone muscly named [or][stopping]Lu
 
 description of muscly ms lucy is "She's certainly muscly. She looks relatively light on her toes for her size, too."
 
-a-text of muscly ms lucy is "RRYRRO". b-text of muscly luc sym is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
+a-text of muscly ms lucy is "RRYRRO". b-text of muscly ms lucy is "RRYRRB". parse-text of muscly ms lucy is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
 
 understand "diner" as diners.
 
@@ -21293,8 +21295,8 @@ table of guard-org [organized going 1st north then east. W, N, E, S in each room
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
 Dreads Adders	Topside Deposit	north	"The ur-pine, not fully ripe, is VERY flexible and VERY big. It expands sideways to block you from heading north[one of]. Frustrating! If you try to run by, you might REALLY see red[or]. You see the ur-pine rein up, and that makes you see red[stopping]."	"From what you know about ur-pines, they're pretty flexible when young. They are impossible to get by but not harmful."
 bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme."	"Maybe if the butlers were quieter, they'd have a better place to guard than here."
-muscly Luc Sym	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
-muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at the muscly hulk, you briefly remember the giant's paradox, about trading off strength and dexterity."
+muscly Luc Sym	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity."
+muscly Ms Lucy	Scope Copse	north	"She shows surprising dexterity for someone so muscly as she forces you back."	"Looking again at muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 fluster self rut	Blasted Saltbed	east	"Maybe you can make the fluster-self rut less active."	"You should be able to make it over the rut, but you can't. It's just active enough to brush you back."
@@ -21355,7 +21357,8 @@ section generic taunts
 table of ggt - guardian generic taunts
 guaname	guatext
 bluster butlers	"The bluster butlers loudly mention the strength of working in teams to guard important places."
-muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
+muscly Luc Sym	"Luc Sym beats his chest for NOT being removed like that."
+muscly Ms Lucy	"Ms. Lucy beats her chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
 Mel Fish	"Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
