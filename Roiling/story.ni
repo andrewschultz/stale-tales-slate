@@ -247,7 +247,7 @@ chapter guardians
 
 a guardian is a kind of person. a guardian is usually vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
-a guardian has a person called chum. The chum of a guardian is usually dreads adders.
+a guardian has a person called other-g. The other-g of a guardian is usually dreads adders.
 
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
@@ -565,6 +565,9 @@ to general-gender-towers:
 	if lars eede is not in lalaland and elsa erde is not in lalaland:
 		now lars eede is off-stage;
 		now elsa erde is off-stage;
+	if luc sym is not in lalaland and ms lucy is not in lalaland:
+		now luc sym is off-stage;
+		now ms lucy is off-stage;
 	if mrlp is towers, reposition-guardians;
 
 to choose-female:
@@ -19218,12 +19221,15 @@ to draw-towers-map:
 		now myy is tow-y-start + (tow-delta * my-y entry) - square-from-center;
 		draw a rectangle (current foreground-color) in current graphics window at myx by myy with size sqsz by sqsz;
 	repeat through table of guard-org:
-		if guy entry is stinger: [skip the stinger because it's artificially placed a bit]
-			next;
+		if guy entry is stinger and bonker is not in lalaland, next; [the stinger is tricky because it's artificially placed a bit]
+		unless guy entry gendermatches, next;
 		if guy entry is in lalaland:
 			change current foreground-color to (R 42 G 210 B 42);
 		else:
 			change current foreground-color to (R 210 G 42 B 42);
+		if guy entry is stinger:
+			draw-line obscurest subsector and west;
+			continue the action;
 		draw-line loc entry and blockdir entry;
 
 to draw-line (lcc - a room) and (bd - a direction):
@@ -19550,12 +19556,21 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  [pc of ur-pine]   [pc of natives]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
 
-to say pc of (gg - a guardian): [passage character]
-	if gg is in lalaland:
-		say "[if guadir of gg is west or guadir of gg is east]-[else]|[end if]";
-	else:
-		say "x";
-	[say "[if gg is blue]B[else if gg is red]R[else if gg is purple]P[else]W";]
+to decide whether (g - a guardian) gendermatches:
+	if g is female and player is male, decide no;
+	if g is male and player is female and other-g of g is not dreads adders, decide no;
+	decide yes;
+
+to say pc of (myr - a room) and (myd - a direction): [passage character]
+	let maybe be true;
+	repeat through table of guard-org:
+		now maybe is false;
+		if myr is loc entry and myd is blockdir entry, now maybe is true;
+		if myr is the room myd of loc entry and myd is opposite of blockdir entry, now maybe is true;
+		if maybe is true and guy entry gendermatches:
+			say "[if guy entry is not in lalaland]x[else if myd is west or myd is east]-[else]|[end if]";
+			continue the action;
+	say "?[run paragraph on]"
 
 book Outer Route
 
@@ -21139,6 +21154,10 @@ description of muscly ms lucy is "She's certainly muscly. She looks relatively l
 
 a-text of muscly ms lucy is "RRYRRO". b-text of muscly ms lucy is "RRYRRB". parse-text of muscly ms lucy is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
 
+printed name of muscly ms lucy is "Muscly Ms. Lucy".
+
+other-g of luc sym is ms lucy. other-g of ms lucy is luc sym.
+
 understand "diner" as diners.
 
 a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-text of diners is "x[sp]?[sp]?[sp]x[sp]?[sp]x".
@@ -21239,6 +21258,8 @@ Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde 
 
 description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
 
+other-g of lars eede is elsa erde. other-g of elsa erde is lars eede.
+
 understand "deal seer" and "deal/seer" as Lars Eede when player is male.
 
 understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
@@ -21288,6 +21309,8 @@ The Hostile-Is-He Lot is a plural-named purple guardian. "The Hostile-is-He Lot,
 understand "hostile/ is/ he/ lot" as hostile-is-he when player is male.
 
 a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?".
+
+other-g of Lois the Hostile is hostile-is-he lot. other-g of hostile-is-he lot is Lois the Hostile.
 
 chapter guardian org table
 
@@ -26929,7 +26952,9 @@ examp
 "[bold type](routes)[r] Cursing in Cleric Circle."
 "Going a direction in Same Mesa."
 "[bold type](troves)[r] catching the thief."
-"Reading LEAD, or saying ACRE."
+"Saying ACRE."
+"Reading DEAL."
+"When entering the Upscale Capsule."
 "[bold type](presto)[r] The plebe stops you or lets you by with different text."
 "[bold type](oyster)[r] The win-text for the OYSTER region."
 "Shoer Osher changes gender too."
@@ -26937,11 +26962,11 @@ examp
 "[bold type](towers)[r] The admirer reacts differently to TALKing/KISSing, etc."
 "The rapier repair reminds you of Boy/Girl Scouts."
 "The ego drains drain you a bit more if you're female."
-"The smart kid is Dirk Stam or Kim Darst, with a (sic) for when the kid makes a bot-boat."
+"The Coasting Agnostic has a different name, with a (sic) on making the bot-boat."
 "Dr. Yow is male/female, and people's insults for Mr. or Ms. Yow are different."
-"Trying to run through the ego drains."
-"[bold type](troves)[r] Reading DEAL."
-"When entering the Upscale Capsule."
+"Lars Eede/Elsa Erde has the Reed's Ale east of Treading Gradient."
+"Luc Sym or Ms. Lucy guards north of the Scope Copse."
+"The Hostile-is-He Lot or Lois the Hostile guards south of Actionless Coastline."
 "[bold type](otters)[r] KISSing, EXAMINEing the macks, talking/dispelling/attacking or leaving while they're in the Frontage."
 "KISSing Gretta or taking to her with the macks around."
 "Elvira calls you (Ach,) Mr. Charm or Ms. Arch-Charms."
