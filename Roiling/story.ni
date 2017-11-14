@@ -2439,8 +2439,8 @@ arid den	curst palace	"If the den could talk, it would find a way to say it's mo
 Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
 Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but Ed's pep talk was a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
 Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is in lalaland]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
-Tetris Sitter	flowerpot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Daltho, eh? Very nice.'[end if]"
-Tetris Sitter	Old Hat Daltho	"[if Tetris Sitter is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
+Tetris Sitter	flowerpot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
+Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
 macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
@@ -3681,7 +3681,7 @@ yob den	yob den	false	routes-left rule	"The raptest patters are still slightly a
 USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
 troend1	troend2	false	troves-left rule	"You tidied your upscale capsule up pretty well, but you could do a bit more."
 d2	d2	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
-curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that flowerpot you got from Daltho."
+curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that flowerpot you got from Renato."
 Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
 
 to say to-clean-otters: [hells bells this is ugly]
@@ -7571,7 +7571,7 @@ check giving something to:
 	if noun is flowerpot:
 		if second noun is smart kid, say "He's more physical sciences than biological." instead;
 		if second noun is Dr Yow, say "[one of]Dr. Yow puts the flowerpot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
-		if second noun is a guardian, 	say "You remember Old Hat Daltho's friend was across the water. So it can't be anyone guarding things over here." instead;
+		if second noun is a guardian, 	say "You remember Ornate Atoner Renato's friend was across the water. So it can't be anyone guarding things over here." instead;
 	if second noun is Curtis: [others]
 		say "Curtis shrugs. That won't help him with his big fruit empire." instead;
 	say "Hm. Nah. [if second noun is plural-named]They don't[else if second noun is female]She doesn't[else if second noun is male]He doesn't[else]It doesn't[end if] want that--or, it seems, anything of yours." instead;
@@ -7643,7 +7643,7 @@ instead of thinking:
 	else if mrlp is troves:
 		say "Yes, how you think is extra important here." instead;
 	else if mrlp is towers and topside is visited:
-		say "Old Hat Daltho's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
+		say "Ornate Atoner Renato's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
 	if mrlp is demo dome:
 		try requesting the score instead;
 	say "Nothing immediate comes up. If you need help, just say HINT. K?";
@@ -9032,7 +9032,7 @@ atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps fur
 turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [kid-full] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [kid-full] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [kid-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
-eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."
+eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
 Andres	Andres	false	401528293	--	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
 Archie	Archie	false	316598460	--	"achier"	"achier"	"Archie begins grabbing his joints and moaning 'I reach!' then 'I crack a crick!' until Rodney yells at him to get out. Which he does."
@@ -9058,7 +9058,7 @@ Shane	Shane	false	332457700	--	"ashen"	"ashen"	"Suddenly, the color rushes from 
 Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
-Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
+Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
 Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can."
 yurts	brownies	true	512172846	--	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
@@ -11627,7 +11627,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
-"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
+"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
 "guru"	false	"You can GURU something [if arugula is in lalaland]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 
 to say xray-help:
@@ -14786,7 +14786,7 @@ check burning:
 	if noun is bot boat:
 		say "Destroy a possible way to the Palace and hurt a kid's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
 	if noun is flowerpot or noun is crocus:
-		say "Daltho would be so upset." instead;
+		say "Renato would be so upset." instead;
 	if noun is yurts:
 		say "Perhaps another more natural way of decomposition would work better." instead;
 	if noun is curst palace:
@@ -14870,7 +14870,7 @@ the block throwing at rule is not listed in any rulebook.
 
 carry out plainthrowing:
 	if noun is flowerpot:
-		say "But it's Daltho's. You don't have to help him out, but it'd be best not to give up." instead;
+		say "But it's Renato's. You don't have to help him out, but it'd be best not to give up." instead;
 	if noun is dart:
 		say "The dart was more made for shooting than throwing.";
 		the rule succeeds;
@@ -19444,7 +19444,7 @@ check going outside in Loftier Trefoil:
 	if Sir Rodney is visible:
 		say "Sir Rodney is blocking the way." instead;
 	else:
-		say "BUG! you should have been kicked out after talking to Daltho.";
+		say "BUG! you should have been kicked out after talking to Renato.";
 
 check going up in Loftier Trefoil:
 	say "One stare at the rates for an overnight room almost leads you to tears. You exit the large inn with a lean grin and no learning." instead;
@@ -20853,11 +20853,11 @@ after fliptoing tetris sitter:
 
 check going east in Mesprise Premises (this is the force give flowerpot rule):
 	if player has flowerpot and flowerpot contains crocus and Tetris Sitter is reflexed:
-		say "Before you leave, you remember Old Hat Daltho's speech--the flowerpot seems like a nice gift for Ed, now that Ed is nicer. You give it to him.[paragraph break]'Come back if you need help with Castle Apcur!' he says, as he goes to set the crocus out somewhere nice.";
+		say "Before you leave, you remember Ornate Atoner Renato's speech--the flowerpot seems like a nice gift for Ed, now that Ed is nicer. You give it to him.[paragraph break]'Come back if you need help with Castle Apcur!' he says, as he goes to set the crocus out somewhere nice.";
 		now flowerpot is in lalaland;
 	continue the action;
 
-Old Hat Daltho is an undesc.
+Ornate Atoner Renato is an undesc.
 
 before giving the crocus to:
 	try giving flowerpot to second noun instead;
@@ -26374,7 +26374,7 @@ Tyson	"[one of]Tyson seems quite cheery about this whole adventure, like it's fu
 Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.[minus][cycling]"
 succor crocus	"[if flowerpot is reflexive][one of]The crocus looks like it is--well, dying. He just needs a little healthy color back, not a ton.[plus][or]Or he could lose the livid color he has.[plus][or]From DYING to...[plus][or]...DINGY.[minus][cycling][else][one of]You can give the crocus to someone.[plus][or][give-croc].[minus][cycling][end if]"
 flowerpot	--	succor crocus
-Old Hat Daltho	"[if crocus is not in lalaland]The succor crocus Daltho gave you may be of some use.[else]You've taken care of Old Hat Daltho's gift.[end if]"
+Ornate Atoner Renato	"[if mislit limits is unvisited]You don't need to worry about Renato's gift until the very end[else if crocus is off-stage]You may find something to put in the flowerpot behind the unripe ur-pine[else if player has crocus]The crocus can be given to someone else[else]You've taken care of Ornate Atoner Renato's gift[end if]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
 b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"

@@ -578,7 +578,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "proof"	342009812	--	flowerpot	--	"[flow-fine]."
 "welt"	392664739	--	flowerpot	--	"[flow-fine]."
 "adder"	257375908	--	dreads adders	--	"You need to take care of all the adders."
-"oldhat"	291775640	--	--	got-pot rule	"You don't have time to think about, or change, Old Hat Daltho. [if flowerpot is in lalaland]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if mesprise premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
+"renato"	461687833	--	--	got-pot rule	"You don't have time to think about, or change, Renato. [if flowerpot is in lalaland]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if mesprise premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
 "toaster"	592164309	--	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	--	start tarts	--	"[eat-pastry]."
@@ -634,7 +634,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "aid"	68209753	--	Nerd-Aid	--	"[nerd-a]."
 "wears"	419526469	--	Nerd-Aid	--	"You suppress a swear as the sales pitch wears on you."
 "bottles"	576885432	--	Nerd-Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
-"tapin"	300664149	--	Mel Fish	--	"It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney."
 "riposte"	613325278	--	sporties' ripostes	--	"You may find it easier to deal with all the ripostes at once."
 "gradient"	485956893	Treading Gradient	--	--	"[rav-rej]." [TREADING GRADIENT 2 2]
 "scalier"	429403966	--	Éclairs	--	"[eat-pastry]."

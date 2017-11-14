@@ -55,6 +55,7 @@ Store V:
 --FiefCo Office is renamed Upscale Capsule.
 
 Store W:
+--Old Hat Daltho is now Ornate Atoner Renato.
 --a few more clues for the Lone Duck.
 --the smart kid is now female if you are. In fact, the smart kid isn't a smart kid any more, and you have to help it a different way.
 --Dr. Yow is now female if you are.
