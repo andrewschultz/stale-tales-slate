@@ -56,16 +56,17 @@ Store V:
 
 Store W:
 --a few more clues for the Lone Duck.
---the smart kid is now female if you are.
+--the smart kid is now female if you are. In fact, the smart kid isn't a smart kid any more, and you have to help it a different way.
 --Dr. Yow is now female if you are.
+--The Muscly Hulk now mirrors your gender and has a name either way.
+--the once-sad deacons have been replaced by gender-specific blockers as well.
 --the jetskis are replaced with a conveyance more appropriate to the game: a boat.
---the once-sad deacons have been replaced by gender-specific blockers.
 --the man in the costume is replaced by a deal seer, male or female, gender specific too.
---the oddly rewired robot has been replaced by bluster butlers, but the robot's flip is now moved elsewhere for a Last Lousy Point.
---a fluster-self rut is now a LLP in a previously useless room.
+--the oddly rewired robot has been replaced by bluster butlers, but what to do with the robot is moved elsewhere for a Last Lousy Point.
+--a fluster-self rut is now a guardian, with the ego drains shifting to an LLP.
 --sporties' ripostes are an LLP replacing the neural pulses.
 --rooms are shifted around, with more boundary scenery to make it believable you have to go back the way you came.
---the final quest is redone so the anagrams are more sensible. Ed Yerg is gone, and the succor crocus is hidden in the Mislit Limits.
+--the final quest is redone so the anagrams are hopefully more sensible and natural. Ed Yerg is gone, and the succor crocus is hidden in the Mislit Limits.
 
 Store Y:
 --the rude door is replaced with Span Pans.

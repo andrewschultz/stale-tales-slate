@@ -69,11 +69,11 @@ sing/spit/inset/stroll/calm/run/boast/leap/scrap/scan/seek/eat/tutor/tend/swipe/
 Store W (min)
 awed/coyer/weedy/yonder
 # North/H guardians
-clumsy/nerdiest/pastier/resealed/organised
+clumsy/nerdiest/pastier/resealed/restful
 # guardians you have to get
 punier/subtler/holiest/married/hastiest/broken/resting/sewed
 # other stuff to do (robust < nearest)
-wordy/rowdy/unlocked/grained/stabler/robust/spectacular
+wordy/rowdy/fussier/grained/stabler/robust/spectacular
 Store W (max)
 # 7 warriors
 ashen/coyer/weedy/tenser/achier/recreant/yonder
@@ -86,7 +86,7 @@ rinsed/himself/drained/alarming/sweatier
 # other stuff to do (robust < nearest)
 sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
-rusty/naivest/angstier/mined/creaky/pearly/docile/rustled/organised/prosiest/attentive/rewired/
+rusty/naivest/angstier/mined/creaky/pearly/docile/rustled/grandiose/prosiest/attentive/rewired/
 # more LLPs
 punier/present/triste
 Store T (min) (adjusted)
