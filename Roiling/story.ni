@@ -1645,9 +1645,9 @@ persuasion rule for asking smart kid to try gotoing subsector:
 	try objasking smart kid about Dr Yow instead;
 
 persuasion rule for asking smart kid to try doing something (this is the block kid going to obscurest subsector rule) :
-	if the player's command matches the regular expression "gizmo" and kid is reflexive and player has gizmo:
+	if the player's command matches the regular expression "gizmo" and player has gizmo:
 		try giving gizmo to smart kid instead;
-	if the player's command matches the regular expression "(boat|bot)" and kid is reflexive:
+	if the player's command matches the regular expression "(boat|bot)" and bot boat is in coastlines:
 		try objasking smart kid about bot boat instead;
 	if the player's command matches the regular expression "\b(doctor|dr|yow)":
 		if Obscurest Subsector is unvisited:
@@ -2230,7 +2230,7 @@ to say doc-on-lake:
 	if kid is in Obscurest Subsector:
 		say "The kid almost seems to interrupt you saying the lake isn't THAT far across.";
 		continue the action;
-	if kid is reflexive:
+	if dinger is in coastlines:
 		say "'It's treacherous to get across the lake. I am too physically tired to make anything[if Dr Yow is in ropins] even if I escaped[end if]. I could use an apprentice. Maybe you. Or you can find me one.'";
 		continue the action;
 	say "'My student will help you--there may be some risk. The carelessness of youth. You may be surprised what he can overlook.'[run paragraph on]"
@@ -6227,7 +6227,7 @@ carry out towers-hinting:
 		all-say "The kid will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless Dr Yow has been rowdy:
 		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the kid.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
-	if kid is reflexive:
+	if dinger is in coastlines:
 		all-say "[one of]The kid is too tentative to listen to Dr. Yow.[or]What can [he-she] become?[or]This is slightly tricky, even with three t's. You need to focus, so the kid can focus.[or]ATTENTIVE.[cycling]" instead;
 	if Outer Route is not visited:
 		all-say "You need to visit west of the Copse Scope[if butlers are not in lalaland]. The bluster butlers guard that area[end if]." instead;
@@ -9007,7 +9007,7 @@ stinger	stinger	false	559013952	--	"resting"	"resting"	"The stinger whirs around
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
-ur-pine	ur-pine	false	513602032	--	"punier"	"punier"	"The ur-pine shrinks and flails.  As it does, a succor crocus rolls out from under. You take the succor crocus and put it in the welt-proof flowerpot."
+ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	"The ur-pine shrinks and flails.  As it does, a succor crocus rolls out from under. You take the succor crocus and put it in the welt-proof flowerpot."
 arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -9019,7 +9019,7 @@ an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"margina
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
-reading a dinger	reading a dinger	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated author's name. 'Ugh,' says the smart kid. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN.'"
+dinger	dinger	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated author's name. 'Ugh,' says the smart kid. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN.'"
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair."
 trendies	trendies	false	675249448	--	"nerdiest"	"nerdiest"	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
@@ -19223,6 +19223,7 @@ to draw-towers-map:
 		draw a rectangle (current foreground-color) in current graphics window at myx by myy with size sqsz by sqsz;
 	repeat through table of guard-org:
 		if guy entry is stinger and bonker is not in lalaland, next; [the stinger is tricky because it's artificially placed a bit]
+		[if debug-state is true, say "Gendermatching [guy entry].";]
 		unless guy entry gendermatches, next;
 		if guy entry is in lalaland:
 			change current foreground-color to (R 42 G 210 B 42);
@@ -19231,6 +19232,7 @@ to draw-towers-map:
 		if guy entry is stinger:
 			draw-line obscurest subsector and west;
 			continue the action;
+		[if debug-state is true, say "[loc entry] [blockdir entry] [current foreground-color].";]
 		draw-line loc entry and blockdir entry;
 
 to draw-line (lcc - a room) and (bd - a direction):
@@ -19280,6 +19282,8 @@ for writing a paragraph about a guardian (called gua):
 		continue the action;
 	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
+		if myg is mas and player is female, next;
+		if myg is female and player is male, next;
 		if so-far > 0, say "[line break]";
 		guar-pro myg;
 		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg]";
@@ -19393,7 +19397,9 @@ to say tow-dirs:
 
 chapter keycar
 
-the yacker keycar is LLPish vanishing scenery. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
+the yacker keycar is a LLPish vanishing thing. description of keycar is "The yacker keycar zips around randomly, probably just to distract you from bigger things. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". "The yacker keycar continues to zip back and forth here, but it's not actually blocking you."
+
+understand "key" and "key car" and "car" as keycar.
 
 [?? talk to the keycar]
 
@@ -19458,9 +19464,15 @@ for printing a locale paragraph about a thing (called nongua) in topside deposit
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
+the fire torn frontier is scenery in Topside Deposit.
+
+instead of doing something with fire torn frontier:
+	if action is procedural, continue the action;
+	say "The frontier is just there to block and intimidate you. You can't do anything with it. [if adders are in topside deposit]You should probably find a way past the adders[else]You got rid of the adders, and that's all you need to do[end if].";
+
 chapter dreads adders
 
-The dreads adders are a plural-named purple guardian. "Dreads adders may or may not be lethal, but you're scared of passing them to the north."
+The dreads adders are a plural-named purple guardian in Topside Deposit. "Dreads adders may or may not be lethal, but you're scared of passing them to the north." [unfortunately the move-to rule fires before the reorg-guardians rule so we need to specify where the dreads adders are]
 
 a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-text of dreads adders is "x[sp]-[sp]?[sp]x[sp]-[sp]x".
 
@@ -19548,16 +19560,17 @@ check examining spec-o-scope:
 
 description of spec-o-scope is "You look into the scope and see:[paragraph break][fixed letter spacing]
 [line break]  !      *
-[line break]  [pc of admirer]~~~~~~
-[line break]+[pc of ingrates].[pc of wait-seer].[pc of atheists].~ +
-[line break]  [pc of trendies] [pc of grailman] [if player is male][pc of hostile-is-he lot][else][pc of lois the hostile][end if]~
-[line break]  .[pc of butlers].[if player is male][pc of lars eede][else][pc of elsa erde][end if].~
-[line break]  [pc of muscly] [pc of Mel Fish] [pc of ego drains]~
-[line break]![pc of pirates].[pc of diners].[pc of arid den].[pc of bonker]!
-[line break]  [pc of ur-pine]   [pc of natives]
+[line break]  [pc of cinema and north]~~~~~~
+[line break]+[pc of cinema and west].[pc of cinema and east].[pc of deltas and east].~ +
+[line break]  [pc of saltbed and north] [pc of gradient and north] [pc of strati and north]~
+[line break]  .[pc of saltbed and east].[pc of gradient and east].~
+[line break]  [pc of copse and north] [pc of sunbelt and north] [pc of garden and north]~
+[line break]![pc of copse and west].[pc of copse and east].[pc of sunbelt and east].[pc of garden and east]!
+[line break]  [pc of topside and north]   [pc of garden and south]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
 
 to decide whether (g - a guardian) gendermatches:
+	if g is admirer, yes;
 	if g is female and player is male, decide no;
 	if g is male and player is female and other-g of g is not dreads adders, decide no;
 	decide yes;
@@ -19917,27 +19930,23 @@ to say meet-kid:
 	now met-kid is true.
 
 to say kid-full-fid:
-	say "[if kid is male]Dirk [if-fid] Stam[else]Kim [if-fid] Darst[end if]"
+	say "[if kid is male]Dirk Stam[else]Kim Darst[end if]"
 
 to say kid-full:
 	say "[if kid is male]Dirk Stam[else]Kim Darst[end if]"
 
-to say if-fid:
-	if smart kid is reflexive:
-		say "'Fidget'"
-
 to say kid-first:
 	say "[if kid is male]Dirk[else]Kim[end if]"
 
-a smart kid is a reflexive person. "[kid-full] smiles [if smart kid is reflexive]nervously[else]happily[end if] at you, lost in technical abstract thought."
+a smart kid is a person. "[kid-full] [if dinger is in coastlines]continues to read listlessly[else]smiles happily[end if] half lost in technical abstract thought."
 
 check objhinting smart kid:
 	if player is in subsector and smart kid is in subsector, try objhinting atblock instead;
 
-before objasking smart kid about when smart kid is reflexive:
+before objasking smart kid about when dinger is in coastlines:
 	kid-fid instead;
 
-before asking smart kid about when smart kid is reflexive:
+before asking smart kid about when dinger is in coastlines:
 	kid-fid instead;
 
 to kid-fid:
@@ -20004,9 +20013,9 @@ check sbing smart kid:
 check scaning smart kid:
 	if smart kid is reflexed:
 		say "'Oh! Yeah! I bet I could make one of those, one day." instead;
-	if smart kid is reflexive and smart kid is in Obscurest Subsector:
-		say "[kid-full] continues to fidget as you scan [him-her].";
-		say "[line break]";
+	if dinger is in coastlines:
+		say "Nothing, but that book...[paragraph break]";
+		try scaning dinger instead;
 		continue the action;
 	if player is in Obscurest Subsector and atblock is in Obscurest Subsector:
 		say "[kid-full] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
@@ -20058,9 +20067,10 @@ to say heat-remain:
 
 check giving gizmo to smart kid:
 	if Dr Yow is in lalaland:
-		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in the garden[end if]--the toaster would've caused an electric shock in the water anyway. After frantic craftin['], the spare parts just allow [him-her] craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
+		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in the garden[end if]--the toaster would've caused an electric shock in the water anyway. After frantic craftin['], the spare parts just allow [him-her] to craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
 		now smart kid has gizmo;
 		now toaster is in lalaland;
+		now bot boat is in actionless coastlines;
 		now blaster is part of bot boat;
 		now turbos are part of bot boat instead;
 	else:
@@ -20079,8 +20089,9 @@ to check-agnostic:
 	if smart kid is off-stage:
 		if atheists are in lalaland and the-hostile are in lalaland:
 			now smart kid is in actionless coastlines;
+			now dinger is in actionless coastlines;
 			if player is in actionless coastlines:
-				say "Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller R[i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read. I don't have anything more constructive to do. Plus the book's so well put together'";
+				say "Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
 				guar-pro smart kid;
 			else:
 				say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Strati Strait]north[else]east[end if].";
@@ -20106,9 +20117,9 @@ after fliptoing atheists:
 
 chapter reading a dinger
 
-a thing called Reading a Dinger is scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves silliness like someone figuring out world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. This wouldn't happen in saner places."
+a thing called Reading a Dinger is vanishing scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves silliness like someone figuring out world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. This wouldn't happen in saner places."
 
-a-text of reading a dinger is "RRYYRYR". b-text of reading a dinger is "RR?YR?R".
+a-text of dinger is "RRYYRYR". b-text of dinger is "RR?YR?R".
 
 book Strati Strait
 
@@ -20147,7 +20158,7 @@ instead of doing something with savager ravages:
 havens-visit is a truth state that varies.
 
 after printing the locale description for shaven havens when havens-visit is false:
-	ital-say "you may wish to GO TO DUCK to get back here with less hassle.";
+	ital-say "you may wish to GO TO DUCK or even GT DUCK to get back here with less hassle.";
 	now havens-visit is true;
 	continue the action;
 
@@ -20181,7 +20192,7 @@ the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
 chapter Obscurest Subsector
 
-Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]lie here useless, thanks to the duck[else]are holding someone in captivity[end if]. A log-gaol keeps the subsector obscurest and keeps you from going anywhere back west.".
+Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]lie here useless, thanks to the duck[else]are holding someone in captivity[end if]. The ropins hold together a log-gaol that keeps the subsector obscurest and you from going anywhere except back west.".
 
 a log gaol is scenery in obscurest subsector. "It surrounds the subsector on four sides, helping keep it obscure."
 
@@ -20420,12 +20431,7 @@ carry out rowdying:
 		reg-inc;
 	now Dr Yow is rowdy;
 	now doc-cool is 3;
-	if kid is visible:
-		now doc-cool is 0;
-		if kid is reflexive:
-			say "[line break][kid-first] is too star-struck to listen carefully. It's hard not to be tentative in the presence of such a great genius. [he-she-c]'s unstabler than a subaltern of a great thinker like Dr. Yow needs to be.";
-		otherwise:
-			kid-gets-it instead;
+	if kid is in location of player, kid-gets-it instead;
 	the rule succeeds;
 
 [rowdy -> attentive]
@@ -20443,7 +20449,6 @@ to kid-gets-it:
 		now kid-atten is false;
 	now atblock is in lalaland;
 	now kid is in Actionless Coastlines;
-	now bot boat is in actionless coastlines;
 
 section wordying
 
@@ -20506,7 +20511,7 @@ book side-path rooms
 
 chapter Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot[if fluster self rut is in lost lots]--well, unless you count that A fluster-self rut here upsets you more than you should. You probably don't need to dispose of it, but MAN, you'd like to[end if]. A gadflies['] gasfield surrounds you every way except back north."
+Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if organised ego drains are in lost lots], and worse, organised ego drains proliferate the lots[end if]."
 
 after looking in lost lots:
 	if strudel is carried by player or strudel is in lalaland, set the pronoun it to gasfield;
@@ -20519,7 +20524,7 @@ check opening a hintpastry:
 
 section organised ego drains
 
-the organised ego drains are plural-named LLPish scenery in Lost Lots. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise, with no clever fun way to escape them.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
+the organised ego drains are plural-named LLPish vanishing scenery in Lost Lots. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
 
 a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
@@ -20547,7 +20552,7 @@ check going in Nude Dune:
 
 section strudel
 
-the strudel is a LLPish reflexive hintpastry in Lost Lots. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
+some strudel is a LLPish reflexive hintpastry in Lost Lots. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
 understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is visible
 
@@ -20610,6 +20615,10 @@ instead of doing something with spray:
 
 chapter a bot boat
 
+check going inside when player is in Actionless Coastlines:
+	if bot boat is in Actionless Coastlines, try entering bot boat instead;
+	say "You can't make up your mind which of the natatorium and hatchery would annoy you less, so you opt for neither. They can't be relevant." instead;
+
 check examining bot boat:
 	if turbos are not part of bot boat:
 		say "The bot boat seem bare-bones at the moment, not ready to ride." instead;
@@ -20638,7 +20647,7 @@ no-pastries is a truth state that varies.
 
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
-	d "Left [number of guardians not in lalaland] guardians.";
+	d "Left [number of guardians not in lalaland] guardians: [list of guardians not in lalaland].";
 	if denim is in Scope Copse, d "Left denim.";
 	if old ice is not in lalaland, d "Left old ice.";
 	if sporties' ripostes are not in lalaland, d "Left sporties['] ripostes.";
@@ -20834,7 +20843,7 @@ chapter Mesprise/Emprise Premise(s)
 
 Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
-the Tetris Sitter is an LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, playing Tetris. She seems rather good at it."
+the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it[else if flowerpot is in lalaland]happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
 the itster is scenery in Mesprise Premises. description is "It's red, and MAN what a high score the Tetris Sitter has."
 
@@ -20864,9 +20873,10 @@ check giving to Tetris Sitter:
 	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
 		if noun is not flowerpot, say "She mumbles '[']S trite,' [if noun is flowerpot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
 	unless noun is flowerpot, say "St. Teri thanks you, but [if flowerpot is in lalaland]the flowerpot was probably enough[else]that's not quite what she wants[end if]." instead;
-	if flowerpot is reflexive, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
+	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
 	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
+	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area."
 	now flowerpot is in lalaland instead;
 
 check going outside in Mesprise Premises:
@@ -20909,7 +20919,7 @@ instead of taking crocus:
 		say "It looks a bit TOO colorful for a flower, almost radioactive. In fact, from what you know about the species, that means it's close to DYING. Maybe you could tone it down." instead;
 	say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]."
 
-the succor crocus is an LLPish flippable thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
+the succor crocus is an LLPish flippable thing. "A succor crocus lies here, full of livid colors that don't make you happier."
 
 description of crocus is "[if flowerpot is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
 
@@ -20980,7 +20990,7 @@ chapter curst palace
 The Curst Palace is a reflexive backdrop.
 
 after fliptoing Curst Palace (this is the overall Towers LLP rule):
-	if used-ray is false and no-pastries is false:
+	if used-ray is false and no-pastries is false and cur-score of towers is max-score of towers - 1:
 		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere!";
 		increment cur-score of towers;
 	continue the action;
@@ -21149,7 +21159,7 @@ a-text of muscly luc sym is "RRYRRO". b-text of muscly luc sym is "RRYRR?". pars
 
 The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
 
-muscly ms lucy is a red guardian. "[one of]Someone muscly named [or][stopping]Luc Sym flexes while guarding the way [psgdir of muscly ms lucy].".
+muscly ms lucy is a female red guardian. "[one of]Someone muscly named [or][stopping]Ms Lucy flexes while guarding the way [psgdir of muscly ms lucy].".
 
 description of muscly ms lucy is "She's certainly muscly. She looks relatively light on her toes for her size, too."
 
@@ -21251,11 +21261,11 @@ a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text o
 to say deal-seer:
 	say "[one of]'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale[stopping]"
 
-Lars Eede is a guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
+Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
 
 description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
 
-Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer].". Elsa Erde is female.
+Elsa Erde is a red guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer].". Elsa Erde is female.
 
 description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
 
@@ -21317,13 +21327,13 @@ chapter guardian org table
 
 table of guard-org [organized going 1st north then east. W, N, E, S in each room, depending on what's not covered.]
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
-Dreads Adders	Topside Deposit	north	"The ur-pine, not fully ripe, is VERY flexible and VERY big. It expands sideways to block you from heading north[one of]. Frustrating! If you try to run by, you might REALLY see red[or]. You see the ur-pine rein up, and that makes you see red[stopping]."	"From what you know about ur-pines, they're pretty flexible when young. They are impossible to get by but not harmful."
+Dreads Adders	Topside Deposit	north	"The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads."	"From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think."
 bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme."	"Maybe if the butlers were quieter, they'd have a better place to guard than here."
 muscly Luc Sym	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity."
 muscly Ms Lucy	Scope Copse	north	"She shows surprising dexterity for someone so muscly as she forces you back."	"Looking again at muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
-fluster self rut	Blasted Saltbed	east	"Maybe you can make the fluster-self rut less active."	"You should be able to make it over the rut, but you can't. It's just active enough to brush you back."
+fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
@@ -21333,12 +21343,12 @@ wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
-grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
+grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"This is the first grailman you've ever met, but he seems more than adequate enough to block your way."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in mislit limits, but I need this hack for it to replace the bonker]
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
 lois the hostile	Strati Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
-hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."	"Boy! The Lot sure could use some down-home kindness."
+hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers."	"Boy! The Lot sure could use some down-home kindness."
 
 chapter guardian taunt tables
 
@@ -21356,7 +21366,7 @@ after fliptoing a guardian (this is the guardian taunt rule) :
 			say "A keycar speeds into view with all the guardians gone! And not just any keycar. An annoying yacker keycar, a novelty toy whose sales helped make Elvira rich, before she sponsored a campaign to fine reckless keycar users--well, okay, there's no PROOF of kickbacks.[paragraph break]The keycar's probably not going to stop you going anywhere, but it'd be nice to get rid of.";
 			now keycar is in location of player;
 		continue the action;
-	if chum of noun is not dreads adders, now chum of noun is in lalaland;
+	if other-g of noun is not dreads adders, now other-g of noun is in lalaland;
 	repeat through table of ggt:
 		if guaname entry is in location of player and guaname entry is not prevtaunt:
 			deliver-taunt guaname entry and noun;
@@ -21386,19 +21396,19 @@ muscly Ms Lucy	"Ms. Lucy beats her chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
 Mel Fish	"Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
-ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
 stinger	"The stinger continues to fizz and buzz."
 natives	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
-ur-pine	"The ur-pine rears up and seems bigger for a second."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
+fluster self rut	"The fluster self rut buzzes to remind you that, well, you haven't cleared EVERYONE and EVERYTHING."
 Lars Eede	"[reedale].'"
 Elsa Erde	"[reedale].'"
 lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT."
 hostile-is-he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
 admirer	"Your admirer claps far too fervently at your accomplishment."
+trendies	"The resident trendies whisper that they're too cool to be disappeared like that."
 wait-seer	"The wait-seer coolly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
 
@@ -21448,7 +21458,7 @@ to shuffle-guardians (goner - a guardian):
 			now G is opposite of blockdir entry;
 		now  MR is the room G of location of player;
 	now goner is prodded;
-	if goner is unripe ur-pine:
+	if goner is dreads adders:
 		now topside is accessible;
 		now copse is accessible;
 		continue the action;
@@ -21480,7 +21490,8 @@ to shuffle-guardians (goner - a guardian):
 	if can-see-map:
 		draw-my-loc;
 	let RG be number of red guardians not in lalaland;
-	unless Lars Eede is in lalaland or Elsa Erde is in lalaland, increment RG;
+	if Lars Eede is in lalaland or Elsa Erde is in lalaland, decrement RG; [Lars and Elsa both go]
+	if Ms Lucy is in lalaland or Luc Sym is in lalaland, decrement RG; [both musclies go]
 	let BG be number of blue guardians not in lalaland;
 	d "Reds left = [list of red guardians not in lalaland].";
 	d "Blues left = [list of blue guardians not in lalaland].";
@@ -21575,13 +21586,14 @@ chapter reposition-guardians
 definition: a guardian (called gu) is mas:
 	if gu is lars eede, yes;
 	if gu is hostile-is-he lot, yes;
+	if gu is luc sym, yes;
 	no;
 
 to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
 		if guy entry is not in lalaland:
-			if player is male and guy entry is female, next;
+			if guy entry is not admirer and player is male and guy entry is female, next;
 			if player is female and guy entry is mas, next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
@@ -21645,6 +21657,7 @@ after fliptoing a warrior (this is the trefoil exit rule):
 			decrease poss-score of towers by vw;
 		now all visible warriors are in lalaland;
 		now player has flowerpot;
+		reposition-guardians;
 		continue the action;
 	else if vw < 4:
 		min-up;
@@ -27247,7 +27260,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if pram is in heights, say "[2dmiss of myreg]you could've changed the pram into a RAMP[if heights is unvisited], if you'd gone up from the study[end if].";
 		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a SNIB on the ISBN bins.";
 		if t-b is in dusty study, say "[2dmiss of myreg]you could've changed the ten beams in the study to a BASEMENT.";
-	if myreg is stores:
+	else if myreg is stores:
 		if store B is in stores, say "[2dmiss of myreg]Store B could've given you some SORBET.";
 		if store K is in stores, say "[2dmiss of myreg]Store K could've made some TOKERS.";
 		if store N is in stores, say "[2dmiss of myreg]NESTOR was hiding in Store K.";
@@ -27256,9 +27269,9 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if store P is in stores, say "[2dmiss of myreg]PRESTO would've opened Store P.";
 		if store Y is in stores, say "[2dmiss of myreg]The OYSTER was in Store Y.";
 		if store W is in stores, say "[2dmiss of myreg]TOWERS were in Store W.";
-	if myreg is routes:
+	else if myreg is routes:
 		if worst ad is in same mesa, say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
-	if myreg is troves:
+	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if what-a-bee is reflexive, say "[2drm of boarded roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
 		if bee's head is reflexive, say "[2drm of boarded roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
@@ -27268,7 +27281,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if stream is reflexive, say "[2drm of upscale capsule]you could've tried to MASTER the stream photograph.";
 		if lobster is in Upscale Capsule, say "[2drm of upscale capsule]you could've tried to BOLSTER yourself to deserve lobster.";
 		if DIVORCES is not in lalaland, say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
-	if myreg is presto:
+	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
 		if maze-points is 2, say "[2drm of Grey Gyre]you missed a point for scanning a guy in Nowt Town.";
@@ -27277,7 +27290,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if rom sticks are off-stage, say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage, say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
-	if myreg is oyster:
+	else if myreg is oyster:
 		if you-used-pills is true, say "[how-pills-used].";
 		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";
 		if cans are not in lalaland, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
@@ -27295,7 +27308,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
-	if myreg is Towers:
+	else if myreg is Towers:
 		let xxx be unripe ur-pine;
 		if number of guardians not in lalaland > 0:
 			repeat with gua running through guardians not in lalaland:
@@ -27310,21 +27323,26 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				now rm2 is the room guadir of gua from rm2;
 				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
 			if number of guardians not in lalaland > 1, say "(that's all for the guardians)[line break]";
+		if yurts are in scope copse, say "[2dmiss of myreg]the yurts could've become RUSTY.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel could've become RUSTLED.";
+		if ego drains are not in lalaland, say "[2dmiss of myreg]the organised ego drains could've become GRANDIOSE.";
 		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in the Unblest Sunbelt could've become PROSIEST.";
+		if ingrates are not in lalaland, say "[2dmiss of myreg]the ingrates could've been turned ANGSTIER.";
+		if natives are not in lalaland, say "[2dmiss of myreg]the natives could've been turned VAINEST or NAIVEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
 		if denim is not in lalaland, say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
 		if saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
 		if kid-atten is false, say "[2dmiss of myreg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
-		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the succor crocus DINGY to stop it dying.";
-		if flowerpot is not in lalaland, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the serpent PRESENT to go west[else if Tetris Sitter is reflexive]made the Tetris Sitter in the Mesprise Premises behind the serpent GREYED[else if flowerpot is not in lalaland]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
+		if keycar is not in lalaland, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
+		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
+		if flowerpot is not in lalaland, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west[else if mesprise is unvisited]gone west for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 		if number of pinko warriors > 0:
 			repeat with pk running through pinko warriors:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
-	if myreg is otters:
+	else if myreg is otters:
 		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not in lalaland]DISCERN or even [end if]RESCIND the cinders.";
 		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
 		if p-2 is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said HOWEVER to gain Mr. Lee's trust.";
@@ -27335,7 +27353,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of reflexive animals in ridging girding > 0:
 			repeat with A running through flippable things in ridging girding:
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
-	if myreg is others:
+	else if myreg is others:
 		if spear is not in lalaland, say "[2drm of Rustic Citrus]the spear could've become pears.";
 		if lumps are not in lalaland, say "[2drm of Rustic Citrus]the lumps could've become plums.";
 		if mad train is not in lalaland, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
@@ -27376,10 +27394,10 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if pugnacious plant is not in lalaland, say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
 		if reserved sign is not in lalaland, say "[2drm of Scape Space]you could've made the reserved sign REVERSED.";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
-	if myreg is demo dome:
+	else if myreg is demo dome:
 		say "No points in the Demo Dome, so nothing to find.";
-		continue the action;
-	say "Region not found."
+	else:
+		say "Region not found."
 
 rule for showing what the player missed: [there may be a way to do things without all this if you could read through a table]
 	say "An all-feat leaflet flutters over the fourth wall.";
