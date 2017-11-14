@@ -5154,7 +5154,7 @@ blurb
 "Hi-Snark Krishna Rashkin-Harkins"
 "Hilarious Isaih Rulo"
 "Hilarious Luis O'Hair" []
-"Huck Taft" [x]
+"Huck Taft" [x: REDACTED]
 "Hysterical [if player is male]Rich Staley[else]Alyce Hirst[end if]"
 "I-For-Fun Ruffino"
 "Idle Raw Wired Al"
@@ -5611,7 +5611,7 @@ blurb
 "Smarmy [if player is male]Mr. Mays[else]Ms. Mary[end if]"
 "Smarmy-Hit Mary Smith"
 "Snappier [if player is male]Pip Arens[else]Erin Sapp[end if]"
-"Snide-Elf" [x]
+"Snide-Elf" [x: Seinfeld]
 "Snot Al Slaton"
 "Snot Albert Rosenblatt"
 "Snot Amie Maisonet"
@@ -8079,7 +8079,7 @@ blurb
 "Fakin['], a Fink"
 "Far Punk Rap Funk Fun Park"
 "Fat Chance Chant Cafe"
-"Fat Duck" [x]
+"Fat Duck" [x: REDACTED]
 "Fear Me, Framee"
 "Feel a Cup, Peaceful" []
 "Feel, Hit: the Life"
@@ -8106,7 +8106,7 @@ blurb
 "From Mo, For Mom"
 "Fun Style Fly Tunes"
 "Funk Row Fun Work"
-"FunkCo" [x]
+"FunkCo" [x: REDACTED]
 "Funkiest Tikes['] Fun"
 "Fur Aline, Fraulein"
 "The Fury Turf, Hey"
@@ -8230,7 +8230,7 @@ blurb
 "I, Punk, Pukin['] Up Ink"
 "I Rap Oft: A Profit"
 "I Re-Tag a Tiger" []
-"I Shatter a ... geez" [x] [p]
+"I Shatter a ****er" [x: REDACTED]
 "I Smack Down Wacko Minds"
 "I Smoked Some Kid"
 "I Snatch a Snitch"

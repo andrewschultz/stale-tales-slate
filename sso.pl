@@ -661,11 +661,13 @@ sub openThis {
   my $numQuotes  = 0;
   my $line;
   my $x;
+  my $uncommentYet = 0;
 
   $_[0] = 1 if ( $_[0] == 0 && $_[1] == 0 );
 
   open( A, $orig ) || die("Uh oh... $orig didn't open. That's bad.");
   while ( $line = <A> ) {
+    $lineToOpen = $. if $lineToOpen == 0 && ( $line !~ /^#/ );
     if ( $_[0] eq -2 ) {
       if ( $line =~ /^[a-z]/i ) {
         $lineToOpen = $.;

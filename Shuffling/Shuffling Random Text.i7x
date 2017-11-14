@@ -3531,7 +3531,6 @@ blurb
 "'Us, on in unions!'"
 "'Us, slurp surplus?!'"
 "'USA be ABUSE!'"
-"'Violated? Dovetail!'"
 "'Vitamins? Nativism!'"
 "'Viva Aviv!'"
 "'Vogt: GOTV!!'"

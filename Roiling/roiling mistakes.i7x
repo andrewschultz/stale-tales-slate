@@ -171,7 +171,7 @@ understand "night" as a mistake ("The thing can't block out THAT much of the sky
 
 understand "bane" as a mistake("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
 
-understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when runed book is visible or elbow is visible.
+understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when rude 'n nuder is visible or player has u nerd or elbow is visible.
 
 understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
 
