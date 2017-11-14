@@ -40,27 +40,35 @@ my $fileName      = "";
 my $firstString   = 0;
 my $sectionIgnore = 0;
 my $settler       = 0;
+my $checkExclude  = 1;
+
+my @wordArray;
 
 while ( $cur <= $#ARGV ) {
-  for ( $ARGV[$cur] ) {
+  my $arg = $ARGV[$cur];
+  my $arg2 = ( defined( $ARGV[ $cur + 1 ] ) ? $ARGV[ $cur + 1 ] : "" );
+  for ($arg) {
 
     #/^-?a$/ && do { $lookDif = 1; $cur++; next; };
     #the above is an option I don't know what it's for
-    /^-?f$/ && do { $fileName = $ARGV[ $cur + 1 ]; $cur += 2; next; };
+    /^-?f$/ && do { $fileName = $arg2; $cur += 2; next; };
     /^-?y$/
       && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 1; $cur++; next; };
     /^-?n$/
       && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 0; $cur++; next; };
-    /^-?l$/ && do { $maxLetters = $ARGV[ $cur + 1 ]; $cur += 2; next; };
-    /^-?m$/ && do { $myMax      = $ARGV[ $cur + 1 ]; $cur += 2; next; };
-    /^-?np$/ && do { $showPoss   = 0; $cur++; next; };
-    /^-?nr$/ && do { $showRemain = 0; $cur++; next; };
+    /^-?l$/ && do { $maxLetters = $arg2; $cur += 2; next; };
+    /^-?m$/ && do { $myMax      = $arg2; $cur += 2; next; };
+    /^-?np$/ && do { $showPoss     = 0; $cur++; next; };
+    /^-?nr$/ && do { $showRemain   = 0; $cur++; next; };
+    /^-?nx$/ && do { $checkExclude = 0; $cur++; next; };
+    /^-?x$/  && do { $checkExclude = 1; $cur++; next; };
     /^-?\?$/ && do { usage(); exit(); };
     /\.txt/ && do {
       print
 "Just to check, period means a blank space, not a file name. Use -f for a file.\n";
     };
-    /^[a-z]/ && do {
+    /^[\.%a-z]/ && do {
+      push( @wordArray, $arg );
       if ( $firstString eq "" ) { $firstString = $cur; }
       $cur++;
       next;
@@ -70,18 +78,21 @@ while ( $cur <= $#ARGV ) {
 }
 
 if ( !$fileName ) {
-  if ( $#ARGV == -1 ) {
+  if ( $#wordArray == -1 ) {
     usage();
     exit();
   }
   $printResults = 1;
-  @letArray     = split( //, "$ARGV[$firstString]" );
-  @array        = @ARGV;
+  @letArray     = split( //, "$wordArray[$firstString]" );
+  @array        = @wordArray;
   for ( 1 .. $firstString ) { shift(@array); }
 
   my @la = (@letArray);
   my $aryIdx;
-  for $aryIdx ( 0 .. $#array ) { oneRed($aryIdx); }
+
+  my $iter = ( $checkExclude ? $#array : 0 );
+
+  for $aryIdx ( 0 .. $iter ) { oneRed($aryIdx); }
 }
 else {
   $printResults = 0;
@@ -106,6 +117,10 @@ else {
   close(A);
 }
 
+###########################################
+# subroutines
+#
+
 sub oneRed {
 
   my $i, my $j, my $x, my $z;    # iterator variables
@@ -120,7 +135,7 @@ sub oneRed {
     if ( $lets[$_] eq $lets[ $_ + 1 ] ) { $checkForDup = 1; }
   }
 
-  print "Removing $_[0] $array[$_[0]]\n" if ( $_[0] );
+  print "Removing arg # $_[0] $array[$_[0]]: " if ( $_[0] );
   @perm = split( //, "$array[0]" );
 
   for $j ( 1 .. $#array ) {
@@ -243,8 +258,8 @@ sub oneRed {
         print( length($thisString) > 1 ? "($thisString)" : uc($thisString) );
       }
 
+      print "\n";
       if ($showRemain) {
-        print "\n";
         for ( 0 .. $#poss ) { print "" . ( $_ + 1 ) . ": $poss[$_] "; }
       }
 
@@ -320,6 +335,7 @@ reds.pl abcd bcda
     Should give 9
 reds.pl abcdef bcdeaf
     Should give an error since the f's match up
+-x/-nx turns on/off checking if you exclude one of the strings (default is on)
 EOT
   exit();
 }

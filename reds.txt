@@ -76,6 +76,7 @@ compile,melcopi
 keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
 ###############towers
+sadder,dreads,%,drsade,edsard
 punier,unrIpe,urpIne
 unable,bluena
 docile,idleco,liedoc,olecid,cledio,ecolid
