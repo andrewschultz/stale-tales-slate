@@ -692,7 +692,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "yow"	304646602	--	Dr Yow	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
 "doctor"	377173649	--	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
-"tentative"	788195264	--	--	kid-can-learn rule	"[kid-first] is fully attentive. Don't ruin a good thing!"
+"tentative"	788195264	--	--	agnostic-can-learn rule	"[agnostic-first] is fully attentive. Don't ruin a good thing!"
 "strati"	434998469	Strati Strait	--	--	"[towersloc]." [STRATI STRAIT 3 2]
 "could"	273306897	Strati Strait	--	--	"[could-cloud]."
 "coulds"	369580863	Strati Strait	--	--	"[could-cloud]."
@@ -700,13 +700,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "coastline"	590450266	Actionless Coastlines	--	--	"[towersloc]."
 "maturation"	653353366	--	natatorium	--	"The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway"
 "thearchy"	534357183	--	hatchery	--	"The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway"
-"dirkstam"	469925871	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
-"smart"	350970758	--	smart kid	--	"[smart-kid-no]."
-"kid"	118955113	--	smart kid	--	"[smart-kid-no]."
-"dirk"	204278916	--	--	kid-male rule	"[smart-kid-no]."
-"stam"	265646955	--	--	kid-male rule	"[smart-kid-no]."
-"kim"	162001177	--	--	kid-female rule	"[smart-kid-no]."
-"darst"	307924694	--	--	kid-female rule	"[smart-kid-no]."
+"coasting"	441430020	--	agnostic	--	"[Agnostic] looks at you curiously. You probably don't need to change [his-her] name or intelligence."
+"scot"	292742146	--	--	agnostic-male rule	"[smart-agnostic-no]."
+"agin"	148687874	--	--	agnostic-male rule	"[smart-agnostic-no]."
+"staci"	265570233	--	--	agnostic-female rule	"[smart-agnostic-no]."
+"ong"	175859787	--	--	agnostic-female rule	"[smart-agnostic-no]."
 "bot"	195881500	--	bot boat	--	"[fix-boat-parts]."
 "baot"	198069318	--	bot boat	--	"[fix-boat-parts]."
 "boatbot"	393950818	--	bot boat	--	"[fix-boat-parts]."
@@ -1716,19 +1714,19 @@ this is the bonker-gone rule:
 	if player is in Danger Garden and bonker is in lalaland, the rule succeeds;
 	the rule fails;
 
-this is the kid-can-learn rule:
-	if player is in subsector and smart kid is in subsector and kid-atten is true, the rule succeeds;
+this is the agnostic-can-learn rule:
+	if player is in subsector and agnostic is in subsector and agnostic-atten is true, the rule succeeds;
 	the rule fails.
 
-to say smart-kid-no:
-	say "[kid-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";
+to say smart-agnostic-no:
+	say "[agnostic-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";
 
-this is the kid-male rule:
-	if smart kid is visible and smart kid is male, the rule succeeds;
+this is the agnostic-male rule:
+	if agnostic is visible and agnostic is male, the rule succeeds;
 	the rule fails;
 
-this is the kid-female rule:
-	if smart kid is visible and smart kid is female, the rule succeeds;
+this is the agnostic-female rule:
+	if agnostic is visible and agnostic is female, the rule succeeds;
 	the rule fails;
 
 to say giz-tex:

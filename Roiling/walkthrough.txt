@@ -1280,7 +1280,7 @@ The atheists can talk nice and slow and patiently, until you disrupt them a bit.
 
 > HASTIEST
 
-The small kid will help you later.
+The Coasting Agnostic will help you later.
 
 > W
 
@@ -1339,7 +1339,7 @@ The fissure can be messed with, and so can the (locked) gate.
 
 > PUT DAGGER IN REPAIR
 
-(GT KID is possible instead of the below moves, too. It actually saves keystrokes!)
+(GT AGNOSTIC is possible instead of the below moves, too. Again, it may cost a few keystrokes!)
 
 > E
 > E
@@ -1347,15 +1347,15 @@ The fissure can be messed with, and so can the (locked) gate.
 > N
 > N
 
-Help the kid not fidget.
+The Coasting Agnostic is engrossed in a faux-intellectual book. Let's give 'em something better to do by making the book less palatable.
 
-> GIFTED
+> GRAINED
 
-> TELL KID ABOUT YOW
+> TELL AGNOSTIC ABOUT YOW
 
 (There are other ways to do this, but this is the most straightforward...I think.)
 
-The kid's still having a little trouble concentrating, but nothing big. Tentative. LLP time!
+The Coasting Agnostic's still having a little trouble concentrating, but nothing big. Tentative. LLP time!
 
 Now for something to listen to that's interesting.
 
@@ -1369,7 +1369,7 @@ Science! It's so exciting!
 
 Incidentally, you can do something with the raves saver, since it calls itself a replay player. It's a purely aesthetic LLP.
 
-> GIVE GIZMO TO KID
+> GIVE GIZMO TO AGNOSTIC
 
 Now there are two ways to do things. You can repair the boat all the way, or you fix it one way and get stuck in the water. Each way gives the same amount of points.
 
@@ -1889,7 +1889,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 6 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where he makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. You also need to make the kid stop fidgeting before talking about Dr. Yow. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegate to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor. Dreads Adders now block your way at the start.
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegate to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor. Dreads Adders now block your way at the start.
 7 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
@@ -2024,7 +2024,7 @@ In the corner rooms:
 The strudel can be EHFGYRQ for an extra point, though you can just take it.
 The organised ego drains can be TENAQVBFR.
 
-The smart kid can also be made NGGRAGVIR in the Subsector.
+The Coasting Agnostic can also be made NGGRAGVIR in the Subsector.
 
 You can even fix the boat a bit more in Actionless Coastlines. The weirder red wire can be ERJVERQ.
 

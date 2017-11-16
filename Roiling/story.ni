@@ -326,7 +326,7 @@ when play begins (this is the disambig-pastry rule) :
 understand "pastry" as a hintpastry.
 
 check objasking about a hintpastry when mrlp is towers:
-	if noun is Dr Yow or noun is smart kid, say "You might get a lecture about all the gross chemicals in there." instead;
+	if noun is Dr Yow or noun is agnostic, say "You might get a lecture about all the gross chemicals in there." instead;
 	if second noun is visible:
 		say "You offer the hint-pastry as a gift, instead.";
 		try giving the second noun to the noun;
@@ -577,7 +577,7 @@ to choose-female:
 	now Pat is female; [begin routes changes]
 	now the admirer is male; [begin towers changes]
 	general-gender-towers;
-	now smart kid is female;
+	now agnostic is female;
 	now Dr Yow is female;
 	now Elsa Erde has Reed's Ale;
 	now Dr Lola is part of droll dollar; [begin others changes]
@@ -594,7 +594,7 @@ to choose-male:
 	now Pat is male; [begin routes changes]
 	now the admirer is female; [begin towers changes]
 	general-gender-towers;
-	now smart kid is male;
+	now agnostic is male;
 	now Dr Yow is male;
 	now Lars Eede has Reed's Ale;
 	now Lord Al is part of droll dollar; [begin others changes]
@@ -1633,28 +1633,28 @@ persuasion rule for asking Dr Yow to try doing something:
 	say "Dr. Yow [if ropins is reflexive]mopes silently. [he-she-c]'s already in prison--no need to order [him-her][else]still looks exhausted from [his-her] ordeal. Maybe you should just let [him-her] be [him-her]self[end if].";
 	persuasion fails;
 
-[here are some shortcuts to solve kid puzzles. I suspect there are more, but we'll see]
+[here are some shortcuts to speed up moving the agnostic around. I suspect there are more, but we'll see]
 
-persuasion rule for asking smart kid to try gotothinging Dr Yow:
-	try objasking smart kid about Dr Yow instead;
+persuasion rule for asking agnostic to try gotothinging Dr Yow:
+	try objasking agnostic about Dr Yow instead;
 
-persuasion rule for asking smart kid to try gotothinging prison ropins:
-	try objasking smart kid about Dr Yow instead;
+persuasion rule for asking agnostic to try gotothinging prison ropins:
+	try objasking agnostic about Dr Yow instead;
 
-persuasion rule for asking smart kid to try gotoing subsector:
-	try objasking smart kid about Dr Yow instead;
+persuasion rule for asking agnostic to try gotoing subsector:
+	try objasking agnostic about Dr Yow instead;
 
-persuasion rule for asking smart kid to try doing something (this is the block kid going to obscurest subsector rule) :
+persuasion rule for asking agnostic to try doing something (this is the block agnostic going to obscurest subsector rule) :
 	if the player's command matches the regular expression "gizmo" and player has gizmo:
-		try giving gizmo to smart kid instead;
+		try giving gizmo to agnostic instead;
 	if the player's command matches the regular expression "(boat|bot)" and bot boat is in coastlines:
-		try objasking smart kid about bot boat instead;
+		try objasking agnostic about bot boat instead;
 	if the player's command matches the regular expression "\b(doctor|dr|yow)":
 		if Obscurest Subsector is unvisited:
 			say "You don't know about that area yet.";
 			persuasion fails;
-		try objasking smart kid about Dr Yow instead;
-	say "The kid is good at mechanical stuff but not so good at following orders.";
+		try objasking agnostic about Dr Yow instead;
+	say "The agnostic is good at mechanical stuff but not so good at following orders.";
 	persuasion fails;
 
 [otters]
@@ -1970,7 +1970,7 @@ aunt tuna	"She's talking about herself every move, pretty much[if trout is refle
 sardine	"[one of]The sardine spends time babbling about his sensitive hearing, saying you couldn't possibly understand. But you sort of do[or]You don't want to hear the sardine on himself again[stopping]."
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
-smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
+agnostic	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"[serp-say]."
 Mel Fish	--
 muscly luc sym	--
@@ -2116,7 +2116,7 @@ ant	"The ant twitches silently but menacingly."
 dialer	"Your voice would be recognized as not evil enough, even if you got through."
 intercom	"Your voice would be recognized as not evil enough, even if you got through."
 spec-o-scope	"Try looking in it instead."
-smart kid	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]" [begin TOWERS]
+agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]" [begin TOWERS]
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
 drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move."
@@ -2203,7 +2203,7 @@ to say hostile-red:
 	say " about something irrelevant to what you asked and sees red: [one of]the soil[or]the oils[or]St. Helio[in random order]. Hostile"
 
 to say boat-works:
-	say "[if kid has gizmo]could make a bot boat here[else]could see if that boat works[end if]";
+	say "[if agnostic has gizmo]could make a bot boat here[else]could see if that boat works[end if]";
 
 casper-talk is a truth state that varies.
 
@@ -2227,15 +2227,15 @@ to say pal-yak:
 		say "'My mouf? Oh, a yak, not a yap.'";
 
 to say doc-on-lake:
-	if kid is in Obscurest Subsector:
-		say "The kid almost seems to interrupt you saying the lake isn't THAT far across.";
+	if agnostic is in Obscurest Subsector:
+		say "The agnostic almost seems to interrupt you saying the lake isn't THAT far across.";
 		continue the action;
 	if dinger is in coastlines:
 		say "'It's treacherous to get across the lake. I am too physically tired to make anything[if Dr Yow is in ropins] even if I escaped[end if]. I could use an apprentice. Maybe you. Or you can find me one.'";
 		continue the action;
 	say "'My student will help you--there may be some risk. The carelessness of youth. You may be surprised what he can overlook.'[run paragraph on]"
 
-before objasking kid about bot boat:
+before objasking agnostic about bot boat:
 	if bot boat is off-stage:
 		say "'Ooh, I'd like to make one. I just don't know enough, yet.'" instead;
 	try entering bot boat instead;
@@ -2417,23 +2417,23 @@ natives	Elvira	"The natives mention she says everyone deserves their own place, 
 natives	curst palace	"'Why go there when you could live in the Badlands?'"
 bonker	Elvira	"'She has increased bonker production by 1000%!'"
 bonker	curst palace	"'It must be guarded by a thousand like me!'"
-kid	Dr Yow	"[if kid is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
-kid	Elvira	"'I don't get why other kids say she's so cool. Maybe I'm not cool enough to.'"
-kid	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
-kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
-kid	curst palace	"'It's big and scary! But it'd be fun to live in if it weren't.'"
-kid	Atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
-kid	hostile-is-he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
-kid	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
-kid	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is visible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
-kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the kid, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The kid'll use it better anyway."
-kid	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
-kid	toaster	"[if toaster is in actionless coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but [he-she] says [he-she][']d feel guilty taking it before actually helping you.[end if]"
+agnostic	Dr Yow	"[if agnostic is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if agnostic is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [ag-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if agnostic is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
+agnostic	Elvira	"'I don't get why other kids say she's so cool. Maybe I'm not cool enough to.'"
+agnostic	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
+agnostic	keycar	"'Those things are annoying! But it'd be neat to know how they worked.'"
+agnostic	curst palace	"'It's big and scary! But it'd be fun to live in if it weren't.'"
+agnostic	Atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
+agnostic	hostile-is-he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
+agnostic	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
+agnostic	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is visible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
+agnostic	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the agnostic, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The agnostic'll use it better anyway."
+agnostic	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
+agnostic	toaster	"[if toaster is in actionless coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the agnostic, as a nice gift, if you ever leave.[else]You show the toaster to the agnostic, who's very interested, but [he-she] says [he-she][']d feel guilty taking it before actually helping you.[end if]"
 Dr Yow	duck	"[if havens is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in Obscurest Subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
 Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]'I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
 Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
 Dr Yow	lake	"[doc-on-lake]"
-Dr Yow	kid	"[if kid is in actionless coastlines]'It would be fun to tutor someone!'[else if kid is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
+Dr Yow	agnostic	"[if agnostic is in actionless coastlines]'It would be fun to tutor someone!'[else if agnostic is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
@@ -2511,34 +2511,34 @@ to say mean-fish:
 to say fish-these-days:
 	say "Aunt Tuna probably has a lecture prepared about fish these days. One that won't help you go hunt a hangout";
 
-kid-cheat is a truth state that varies. kid-cheat is false.
-kid-guar is a person that varies. [kid-guar is usually nothing.]
+ag-cheat is a truth state that varies. ag-cheat is false.
+ag-guar is a person that varies. [ag-guar is usually nothing.]
 
-check objasking kid about (this is the kid can spoil rule):
-	if second noun is lois the hostile and kid is male:
+check objasking agnostic about (this is the agnostic can spoil rule):
+	if second noun is lois the hostile and agnostic is male:
 		say "'Wow! It woulda been too much to have anyone more snooping around.'" instead;
-	if second noun is hostile-is-he lot and kid is female:
+	if second noun is hostile-is-he lot and agnostic is female:
 		say "'Wow! It woulda been too much to have anyone more snooping around." instead;
 	if second noun is in lalaland:
 		if second noun is not atheists and second noun is not the-hostile and second noun is not lois:
 			say "That's out of the way." instead;
 		else:
-			say "The kid doesn't want to be reminded, probably." instead;
+			say "The agnostic doesn't want to be reminded, probably." instead;
 	unless second noun is guardian or second noun is curst palace:
 		continue the action;
-	if kid-cheat is false:
+	if ag-cheat is false:
 		if second noun is curst palace:
-			say "[kid-first] puts [his-her] hand to [his-her] face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
+			say "[ag-first] puts [his-her] hand to [his-her] face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
 		choose row with the-from of second noun in the table of towers anagrams;
-		now kid-guar is the-from entry;
-		now kid-cheat is true;
-		say "[kid-first] sits and thinks a few seconds after you tell [him-her] where you were stuck. 'Yeah, you just say [right-word entry in upper case]. That'll do it.' [he-she-c] looks kind of bored, though. Probably not nice to push [him-her].";
+		now ag-guar is the-from entry;
+		now ag-cheat is true;
+		say "[ag-first] sits and thinks a few seconds after you tell [him-her] where you were stuck. 'Yeah, you just say [right-word entry in upper case]. That'll do it.' [he-she-c] looks kind of bored, though. Probably not nice to push [him-her].";
 		preef the-from entry instead;
 	else:
-		if kid-guar is not noun:
-			say "[kid-first] mumbles [he-she]'s bored with word games." instead;
-		if kid-guar is in lalaland:
-			say "You thank [kid-first] for helping you out." instead;
+		if ag-guar is not noun:
+			say "[ag-first] mumbles [he-she]'s bored with word games." instead;
+		if ag-guar is in lalaland:
+			say "You thank [ag-first] for helping you out." instead;
 
 doc-cheat is a truth state that varies. doc-cheat is false.
 doc-guar is a person that varies. [doc-guar is usually nothing.]
@@ -2649,7 +2649,7 @@ topic	right-region	him-say
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
 
-to decide which number is kid-moves: [hacky but simple and easy to prove. Inapt/swarm = force you 2W. SWSE or WSSE are only possible 4-movers. 2 + 2 * how many squares west you must go to go all the way south.] [??re-sort things]
+to decide which number is ag-moves: [hacky but simple and easy to prove. Inapt/swarm = force you 2W. SWSE or WSSE are only possible 4-movers. 2 + 2 * how many squares west you must go to go all the way south.] [??re-sort things]
 	if ego drains are in lalaland:
 		decide on 2;
 	if Mel Fish is not in lalaland:
@@ -2658,16 +2658,16 @@ to decide which number is kid-moves: [hacky but simple and easy to prove. Inapt/
 		decide on 4;
 	decide on 6;
 
-to say kid-fol: [h]
-	if kid-moves is 2:
+to say ag-fol: [h]
+	if ag-moves is 2:
 		say "It's a quick walk back to the subsector with [relig-mf] and ego-drains gone.";
-	else if kid-moves is 4:
+	else if ag-moves is 4:
 		say "You loop around a bit past guardians you haven't cleared.";
-	else if kid-moves is 6:
-		say "You regret not clearing more guardians--the kid is nice, but [he-she] sure can TALK and loves to kibitz about who's hanging around, and how and why you could've figured things out, leaving you a bit too exhausted to show HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the kid sit and listen. You hope.";
-	now kid is found;
+	else if ag-moves is 6:
+		say "You regret not clearing more guardians--the agnostic is nice, but [he-she] sure can TALK and loves to kibitz about who's hanging around, and how and why you could've figured things out, leaving you a bit too exhausted to show HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the agnostic sit and listen. You hope.";
+	now agnostic is found;
 	now atblock is in Obscurest Subsector;
-	move kid to obscurest subsector;
+	move agnostic to obscurest subsector;
 	move player to obscurest subsector;
 
 chapter basic nonos
@@ -4153,8 +4153,8 @@ atheists	"The atheists momentarily ditch their timed snark for a few quick hitte
 lois the hostile	"Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress."
 hostile-is-he lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
 ropins	"The ropins remains secure, with no easy way to open it."
-smart kid	"[kid-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
-atblock	"[kid-first] seems a little more focused, but [he-she] could maybe do even better."
+agnostic	"[ag-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
+atblock	"[ag-first] seems a little more focused, but [he-she] could maybe do even better."
 denim	"The denim bends and warps, but you hear no tearing noise."
 sporties' ripostes	"The ripostes seem less cutting for a moment."
 old ice	"The old ice seems to glimmer a bit."
@@ -4407,7 +4407,7 @@ Claire's Scalier	--
 raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You'd have to drop the strudel on the ground and get it germy to try that again. Eww."
 prison ropins	"It already is. Dr. Yow is free."
-smart kid	"Fiddling with [kid-first] too much that way might undo the good you did [him-her]."
+agnostic	"Fiddling with [ag-first] too much that way might undo the good you did [him-her]."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
@@ -6221,14 +6221,13 @@ carry out towers-hinting:
 		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
 		all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is in lalaland and atheists are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
-	if kid is lonely:
-		all-say "[one of]Hm, the kid [if player is not in actionless coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
-	if kid is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
-		all-say "The kid will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
+	if agnostic is lonely:
+		all-say "[one of]Hm, the agnostic [if player is not in actionless coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
+	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
+		all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless Dr Yow has been rowdy:
-		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the kid.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
-	if dinger is in coastlines:
-		all-say "[one of]The kid is too tentative to listen to Dr. Yow.[or]What can [he-she] become?[or]This is slightly tricky, even with three t's. You need to focus, so the kid can focus.[or]ATTENTIVE.[cycling]" instead;
+		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
+	if dinger is in coastlines, try objhinting dinger instead;
 	if Outer Route is not visited:
 		all-say "You need to visit west of the Copse Scope[if butlers are not in lalaland]. The bluster butlers guard that area[end if]." instead;
 	if player is in Outer Route:
@@ -6972,7 +6971,7 @@ Tenfold	"While you can go back outside, you can just finish things here[unless-m
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if unripe ur-pine is visible], and the ur-pine's in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
-Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [kid-first] will let you enter[end if]."
+Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [ag-first] will let you enter[end if]."
 Nude Dune	"Unorg'd ground is every way except back east."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
@@ -7481,7 +7480,7 @@ before kissing:
 		say "It's cute and all, but it also doesn't trust you." instead;
 	if noun is Dr Yow:
 		say "[he-she-c] is not the touchy feely kind." instead;
-	if noun is smart kid:
+	if noun is agnostic:
 		say "Okay, we're close to creepy territory here.";
 	if noun is Elvira:
 		say "'[if player is female]Superwoman? Wane, rum sop![else]Me? Spurn a superman?[end if]' She flatters you for admitting you were wrong about her, not recognizing she was socially out of your league. As she talks ('I lure! I rule!') suddenly you realize what your quest was about. Your test run showed SHATTER-THREATS was not enough...you are talked into being [if player is female]Chuck-Ms.-Schmuck[else]Mr. Arty Martyr[end if] for a newer better Yorpwald. The last thing you hear is Elvira saying: 'A big help? Pah! Bilge!'";
@@ -7558,18 +7557,16 @@ check giving something to:
 		if second noun is pirates:
 			say "'Tips are...' one says and shakes his head. You blush red at the meager gift you offered." instead;
 		say "No response. It looks like a gift won't be enough to get by. But you won't need one, based on what you've done so far." instead;
-	if second noun is kid:
-		if noun is a hintpastry:
-			say "Giving sweets to kids? Really." instead;
+	if second noun is agnostic:
 		if Dr Yow is not in lalaland:
-			say "The kid seems like [he-she]'d rather have the gift of knowledge." instead;
+			say "The agnostic seems like [he-she]'d rather have the gift of knowledge." instead;
 		if noun is settler:
-			say "The kid seems impressed, but [he-she]'s more mechanically than magically inclined." instead;
+			say "The agnostic seems impressed, but [he-she]'s more mechanically than magically inclined." instead;
 		unless noun is gizmo:
-			say "That's not technical enough for the kid." instead;
+			say "That's not technical enough for the agnostic." instead;
 		continue the action;
 	if noun is flowerpot:
-		if second noun is smart kid, say "He's more physical sciences than biological." instead;
+		if second noun is agnostic, say "He's more physical sciences than biological." instead;
 		if second noun is Dr Yow, say "[one of]Dr. Yow puts the flowerpot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
 		if second noun is a guardian, 	say "You remember Ornate Atoner Renato's friend was across the water. So it can't be anyone guarding things over here." instead;
 	if second noun is Curtis: [others]
@@ -7942,7 +7939,7 @@ instead of swearing obscenely:
 		the rule succeeds;
 	if player is in posh hops shop:
 		say "This is the place for it, but you can't bring yourself to be heard." instead;
-	if smart kid is in location of player:
+	if agnostic is in location of player:
 		say "Some example you are." instead;
 	if player is in frontage and macks are in frontage:
 		say "The conversation is horrid enough." instead;
@@ -9019,7 +9016,7 @@ an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"margina
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
-dinger	dinger	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated author's name. 'Ugh,' says the smart kid. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN.'"
+dinger	dinger	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated author's name. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN.'"
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair."
 trendies	trendies	false	675249448	--	"nerdiest"	"nerdiest"	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
@@ -9027,11 +9024,10 @@ old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, 
 denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
-smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down a bit. 'Man! My mind is clearer now! Did you...? Well, if you did or didn't, I'm still, wow.' [he-she-c] asks you, 'Could you give me help building a bot-boat?' You shake your head. 'Do you know anyone?'[paragraph break]Hmm, not any of the guardians blocking your way, but maybe you could get someone to show [kid-full] how to. Then maybe you could cross Leak Lake and get closer to the Curst Palace."
-atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps further to attention, even more eager than before!"
+atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[ag-full] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
-weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [kid-full] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [kid-full] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [kid-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
+weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [ag-full] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [ag-full] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [ag-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
 Andres	Andres	false	401528293	--	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
@@ -9901,7 +9897,7 @@ answer-warn is a truth state that varies.
 check answering:
 	if answer-warn is false:
 		now answer-warn is true;
-		say "This game generally uses ASK X ABOUT Y instead, unless you are in a conversation with numbered choices[if haunter is visible or kid is visible]. However, the X, Y syntax can work here[end if]." instead;
+		say "This game generally uses ASK X ABOUT Y instead, unless you are in a conversation with numbered choices[if haunter is visible or agnostic is visible]. However, the X, Y syntax can work here[end if]." instead;
 	else:
 		try asking noun to try taking inventory instead;
 
@@ -11057,8 +11053,8 @@ chapter letters settler
 
 The Letters Settler is a warpable thing. understand "recoded decoder" and "recoded/decoder" and "revised/deviser" and "revised deviser" as letters settler. understand "device" as letters settler.
 
-instead of showing settler to smart kid:
-	try objasking kid about settler;
+instead of showing settler to agnostic:
+	try objasking agnostic about settler;
 
 after examining settler for the first time:
 	say "You figure up some heuristics to make the settler easier to use and write them in your notepad.";
@@ -11292,8 +11288,8 @@ rivets	"the rivets spelling PRAISE"
 wzup	"a pair of hands patting Leo and Rand on the back" [presto]
 pre-haun	"an outline of where something is buried" [oyster]
 eeks	"some cartoony representation of EEKS"
-atblock	"an aura of tentativeness about [kid-first]" [towers]
-smart kid	"[kid-first]"
+atblock	"an aura of tentativeness about [ag-first]" [towers]
+agnostic	"[ag-first]"
 Merle	"Elmer and Merle" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
 an-a	"the A you can maybe grab somehow"
@@ -14784,7 +14780,7 @@ check burning:
 	if noun is ropins:
 		say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
 	if noun is bot boat:
-		say "Destroy a possible way to the Palace and hurt a kid's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
+		say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
 	if noun is flowerpot or noun is crocus:
 		say "Renato would be so upset." instead;
 	if noun is yurts:
@@ -17158,7 +17154,7 @@ a-text of urn is "RYR". b-text of urn is "RYP". parse-text of urn is "x[sp]u[sp]
 description of urn is "It's--well, beautiful, like you could take it and forget all about this quest."
 
 check taking urn:
-	say "As you take the urn and peek inside, the cursed wealth inside possesses your mind. You spend the rest of your free time gazing at it, until Elvira's goons catch you. A-ha! Proof you were a greedbag! Your loot is confiscated--for the public good, of course. A small fraction of it is donated to endow a scholarship to the kid who writes the best essay about why you should never have been trusted in the first place.";
+	say "As you take the urn and peek inside, the cursed wealth inside possesses your mind. You spend the rest of your free time gazing at it, until Elvira's goons catch you. A-ha! Proof you were a greedbag! Your loot is confiscated--for the public good, of course. A small fraction of it is donated to endow a scholarship to the agnostic who writes the best essay about why you should never have been trusted in the first place.";
 	now joke-death is true;
 	get-dead;
 	follow the shutdown rules instead;
@@ -19003,7 +18999,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else: [only for non guardians/non warriors] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is smart kid]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+		say "[if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -19045,9 +19041,9 @@ check xraying:
 		say "You remember, from somewhere behind a fourth wall, reading you could just say [right-word entry in upper case]." instead;
 	if noun is the player:
 		say "You might expose yourself to harmful rays and stuff, looking that close." instead;
-	if noun is kid:
+	if noun is agnostic:
 		if Dinger is in Actionless Coastlines, try xraying Dinger instead;
-		if kid is in Obscurest Subsector and atblock is in Obscurest Subsector, say "You realize [kid-first] could be a little more ATTENTIVE.";
+		if agnostic is in Obscurest Subsector and atblock is in Obscurest Subsector, say "You realize [ag-first] could be a little more ATTENTIVE.";
 	if noun is sled rut:
 		if strudel is visible:
 			try xraying strudel instead;
@@ -19342,7 +19338,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 		else:
 			d "Room not defined but not critical";
 	if player is in actionless coastlines:
-		if smart kid is off-stage:
+		if agnostic is off-stage:
 			say "You think you hear rustling off to the side, as if someone or something is hiding from the [random visible guardian].[paragraph break]";
 	continue the action;
 
@@ -19782,7 +19778,7 @@ check pushing retape button:
 		if number of visible guardians > 0:
 			say "Nothing on your saver is abrasive enough to move a guardian out of your way." instead;
 	if Dr Yow is visible:
-		if kid is visible:
+		if agnostic is visible:
 			say "You don't need to record the two of them, now." instead;
 		if Dr Yow is calm:
 			say "Recording the awkward silence with Dr. Yow around would do little." instead;
@@ -19806,8 +19802,8 @@ check pushing retape button:
 			say "The duck's already on the saver." instead;
 		say "You record the geese's honks[prev-rec].";
 		now raves saver is goosey instead;
-	if kid is visible:
-		say "'Whoah! That thing looks ancient!' the kid yells before you push the button[if saver is yow-talk or saver is yow-yell]. Maybe you meant to push repeat...the kid is interested in science, and Dr. Yow's voice is in the recorder[end if]." instead;
+	if agnostic is visible:
+		say "'Whoah! That thing looks ancient!' the agnostic yells before you push the button[if saver is yow-talk or saver is yow-yell]. Maybe you meant to push repeat...the agnostic is interested in science, and Dr. Yow's voice is in the recorder[end if]." instead;
 	say "There's nothing that seems worth re-taping here, so you decide against doing so." instead;
 
 to say prev-rec:
@@ -19816,12 +19812,12 @@ to say prev-rec:
 check pushing repeat button:
 	if rawest waters is visited or Mislit Limits is visited:
 		say "The saver has suffered permanent water damage. It doesn't even make any weird warpy noises." instead;
-	if smart kid is visible:
+	if agnostic is visible:
 		if raves saver is goosey or raves saver is ducky:
 			say "'Yawn. The zoo is kind of boring. I like making stuff.'" instead;
 		if raves saver is yow-yell or raves saver is yow-talk:
-			try objasking smart kid about Dr Yow instead;
-		say "'Whoah! That thing looks ancient!' the kid yells before you push the button." instead;
+			try objasking agnostic about Dr Yow instead;
+		say "'Whoah! That thing looks ancient!' the agnostic yells before you push the button." instead;
 	if Dr Yow is visible:
 		if raves saver is yow-yell or raves saver is yow-talk:
 			say "Dr. Yow doesn't need to be mimicked." instead;
@@ -19926,43 +19922,36 @@ description of s-d is "[bug-report]".
 instead of doing something with s-d:
 	say "The salted deltas are scenery. No need to futz."
 
-to say meet-kid:
-	now met-kid is true.
+to say agnostic-first:
+	say "[if agnostic is male]Scot[else]Staci[end if]"
 
-to say kid-full-fid:
-	say "[if kid is male]Dirk Stam[else]Kim Darst[end if]"
+the Coasting Agnostic is a person. "[Agnostic], the Coasting Agnostic, [if dinger is in coastlines]continues to read listlessly[else]smiles happily[end if] half lost in technical abstract thought."
 
-to say kid-full:
-	say "[if kid is male]Dirk Stam[else]Kim Darst[end if]"
+understand "idk/kid" and "idk kid" as Coasting Agnostic.
 
-to say kid-first:
-	say "[if kid is male]Dirk[else]Kim[end if]"
+printed name of Coasting Agnostic is "[if player is male]Scot Agin[else]Staci Ong[end if]"
 
-a smart kid is a person. "[kid-full] [if dinger is in coastlines]continues to read listlessly[else]smiles happily[end if] half lost in technical abstract thought."
+check objhinting agnostic:
+	if player is in subsector and agnostic is in subsector, try objhinting atblock instead;
 
-check objhinting smart kid:
-	if player is in subsector and smart kid is in subsector, try objhinting atblock instead;
+before objasking agnostic about when dinger is in coastlines:
+	ag-fid instead;
 
-before objasking smart kid about when dinger is in coastlines:
-	kid-fid instead;
+before asking agnostic about when dinger is in coastlines:
+	ag-fid instead;
 
-before asking smart kid about when dinger is in coastlines:
-	kid-fid instead;
-
-to kid-fid:
-	say "[kid-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart. Anyway, I'd f'get...'[paragraph break]Fidget, fidget, fidget.";
-
-a-text of smart kid is "RYRRYR". b-text of smart kid is "RGRRGR". parse-text of smart kid is "x[sp]i[sp]x[sp]x[sp]e[sp]d".
+to ag-fid:
+	say "[ag-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart. Anyway, I'd f'get...'[paragraph break]Fidget, fidget, fidget.";
 
 every turn when player is in actionless coastlines and dinger is in actionless coastlines:
-	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. 'I'd f'get...' Fidget, fidget, fidget."
+	say "[ag-full] continues to fidget and mutter a wish to be just a BIT smarter. 'I'd f'get...' Fidget, fidget, fidget."
 
 the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness". description is "[bug-report]".
 
-kid-atten is a truth state that varies.
+ag-atten is a truth state that varies.
 
 after fliptoing atblock:
-	now kid-atten is true;
+	now ag-atten is true;
 	continue the action;
 
 understand "atblock" as atblock when debug-state is true.
@@ -19998,44 +19987,34 @@ to say if-tent:
 	if player is in Obscurest Subsector:
 		say ", looking [if atblock is in lalaland]attentive[else]tentative[end if]"
 
-check answering smart kid that:
+check answering agnostic that:
 	if the player's command matches the regular expression "\b(doctor|dr|yow)\b":
-		try objasking smart kid about Dr Yow instead;
+		try objasking agnostic about Dr Yow instead;
 
-[gotoing subsector is kiddoing.
-
-talking to Dr Yow is kiddoing.]
-
-check sbing smart kid:
-	if smart kid is in Obscurest Subsector and atblock is in Obscurest Subsector:
+check sbing agnostic:
+	if agnostic is in Obscurest Subsector and atblock is in Obscurest Subsector:
 		try sbing atblock instead;
 
-check scaning smart kid:
-	if smart kid is reflexed:
+check scaning agnostic:
+	if agnostic is reflexed:
 		say "'Oh! Yeah! I bet I could make one of those, one day." instead;
 	if dinger is in coastlines:
 		say "Nothing, but that book...[paragraph break]";
 		try scaning dinger instead;
 		continue the action;
 	if player is in Obscurest Subsector and atblock is in Obscurest Subsector:
-		say "[kid-full] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
+		say "[ag-full] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
 		try scaning atblock instead;
 
-met-kid is a truth state that varies.
-
-to say what-kid-sez:
-	say "[if kid has gizmo][kid-full] stands proudly by a bot-boat [he-she] made. [he-she-c] looks nervously at you--[he-she] can't bring [him-her]self to ask you to try them.[no line break][else]The smart kid potters around here. 'Aww man! I have a wicked awesome plan for a bot-boat! But I don't have the right tools.' [he-she-c] kicks at the ground[end if]";
-	now met-kid is true;
-
-understand "dirk stam" and "dirk/stam" as smart kid when player is male.
-understand "kim darst" and "kim/darst" as smart kid when player is female.
+to say what-ag-sez:
+	say "[if agnostic has gizmo][ag-full] stands proudly by a bot-boat [he-she] made. [he-she-c] looks nervously at you--[he-she] can't bring [him-her]self to ask you to try them.[no line break][else]The Coasting Agnostic potters around here. 'Aww man! I have a wicked awesome plan for a bot-boat! But I don't have the right tools.' [he-she-c] kicks at the ground[end if]";
 
 before taking gizmo:
-	if smart kid has gizmo:
-		say "That'd be mean, since you just gave it to the kid." instead;
+	if agnostic has gizmo:
+		say "That'd be mean, since you gave it to the agnostic in the first place." instead;
 
-check giving hintpastry to smart kid:
-	say "[he-she-c] knows better than to take sweets from strangers." instead;
+check giving hintpastry to agnostic:
+	say "[he-she-c] has had enough empty short-term gratification with [i]Reading: a Dinger[r]." instead;
 
 check giving hintpastry to Dr Yow:
 	say "[he-she-c] doesn't seem hungry." instead;
@@ -20043,8 +20022,8 @@ check giving hintpastry to Dr Yow:
 check giving hintpastry to duck:
 	say "It turns away as if to say, yuck." instead;
 
-check giving raves saver to smart kid:
-	say "[one of][he-she-c] frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' [he-she] pauses awkwardly.[or]That won't help the kid build anything.[stopping]" instead;
+check giving raves saver to agnostic:
+	say "[one of][he-she-c] frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' [he-she] pauses awkwardly.[or]That won't help the agnostic build anything.[stopping]" instead;
 
 before giving something to Dr Yow when Dr Yow is in prison ropins:
 	say "Nothing fits through the fence." instead;
@@ -20056,8 +20035,8 @@ check objasking Dr Yow about gizmo when player has gizmo:
 check giving gizmo to Dr Yow:
 	say "'A bit too applied for me.'" instead;
 
-check objasking smart kid about gizmo:
-	try giving gizmo to smart kid instead;
+check objasking agnostic about gizmo:
+	try giving gizmo to agnostic instead;
 
 to say heat-remain:
 	if number of hintpastries carried by the player > 0:
@@ -20065,45 +20044,46 @@ to say heat-remain:
 	now xrayvision is true;
 	now all carried hintpastries are heated;
 
-check giving gizmo to smart kid:
+check giving gizmo to agnostic:
 	if Dr Yow is in lalaland:
 		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in the garden[end if]--the toaster would've caused an electric shock in the water anyway. After frantic craftin['], the spare parts just allow [him-her] to craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
-		now smart kid has gizmo;
+		now agnostic has gizmo;
 		now toaster is in lalaland;
 		now bot boat is in actionless coastlines;
 		now blaster is part of bot boat;
 		now turbos are part of bot boat instead;
+		now agnostic is following;
 	else:
 		say "'Wow! That'd be neat if I had something to build.'" instead;
 
-description of smart kid is "Freckly-faced and buck-toothed and talking to [him-her]self[if Dr Yow is visible]. [he-she-c]'s visibly [i][at-ten][r] just being around Dr. Yow[end if].";
+description of agnostic is "Freckly-faced and buck-toothed and talking to [him-her]self[if Dr Yow is visible]. [he-she-c]'s visibly [i][at-ten][r] just being around Dr. Yow[end if].";
 
 to say at-ten:
-	say "[if kid is reflexed]attentive[else]tentative[end if]"
+	say "[if agnostic is reflexed]attentive[else]tentative[end if]"
 
-the smart kid can be lonely or following or found. smart kid is lonely.
+the agnostic can be lonely or following or found. agnostic is lonely.
 
-section kid shows up
+section agnostic shows up
 
 to check-agnostic:
-	if smart kid is off-stage:
+	if agnostic is off-stage:
 		if atheists are in lalaland and the-hostile are in lalaland:
-			now smart kid is in actionless coastlines;
+			now agnostic is in actionless coastlines;
 			now dinger is in actionless coastlines;
 			if player is in actionless coastlines:
 				say "Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
-				guar-pro smart kid;
+				guar-pro agnostic;
 			else:
 				say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Strati Strait]north[else]east[end if].";
 		else:
 			say "You hear [if the-hostile are not in lalaland]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
-to say what-kid-does:
+to say what-ag-does:
 	if dinger is in actionless coastlines:
 		say "nodding at the trashy [i]Reading a Dinger[r]";
 		continue the action;
-	if smart kid is in obscurest subsector:
-		say "looking [if smart kid is reflexed]attentive[else]tentative[end if]ly at Dr. Yow";
+	if agnostic is in obscurest subsector:
+		say "looking [if agnostic is reflexed]attentive[else]tentative[end if]ly at Dr. Yow";
 		continue the action;
 	say "[if bot boat is in coastlines]looking proud of [his-her] bot bot boat[else]pacing slightly, looking for more than a silly bestseller could ever give [him-her]"
 
@@ -20162,7 +20142,7 @@ after printing the locale description for shaven havens when havens-visit is fal
 	now havens-visit is true;
 	continue the action;
 
-The lone duck is an animal in Shaven Havens. "[if lone duck is friendly]That[otherwise]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if smart kid is visible], and it's ignoring the kid[end if]."
+The lone duck is an animal in Shaven Havens. "[if lone duck is friendly]That[otherwise]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if agnostic is visible], and it's ignoring the agnostic[end if]."
 
 a-text of lone duck is "YRRYRRYR". b-text of lone duck is "YRRYRRYR". parse-text is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -20431,24 +20411,24 @@ carry out rowdying:
 		reg-inc;
 	now Dr Yow is rowdy;
 	now doc-cool is 3;
-	if kid is in location of player, kid-gets-it instead;
+	if agnostic is in location of player, ag-gets-it instead;
 	the rule succeeds;
 
 [rowdy -> attentive]
 
-to kid-gets-it:
-	say "The kid's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.";
-	if kid-atten is false:
-		say "[line break]It seems to take a bit longer than it should, but Dr. Yow is patient and even having fun. You wonder if you could've helped a bit more, but you did enough--and [kid-first] will find [his-her] own clever life hacks to focus more.";
+to ag-gets-it:
+	say "The agnostic's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.";
+	if ag-atten is false:
+		say "[line break]It seems to take a bit longer than it should, but Dr. Yow is patient and even having fun. You wonder if you could've helped a bit more, but you did enough--and [ag-first] will find [his-her] own clever life hacks to focus more.";
 	else:
-		say "[line break]The lecture goes extra quickly with [kid-first] attentive! So much common sense, but there's lots of deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
-	say "[line break]The lecture over, [kid-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][kid-full] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! Kid! I have this lots-o-tools stool...' but the kid's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
+		say "[line break]The lecture goes extra quickly with [ag-first] attentive! So much common sense, but there's lots of deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
+	say "[line break]The lecture over, [ag-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][ag-full] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! I have this lots-o-tools stool...' but the agnostic's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
 	now Dr Yow is in lalaland;
 	now duck is in lalaland;
 	if atblock is in Obscurest Subsector:
-		now kid-atten is false;
+		now ag-atten is false;
 	now atblock is in lalaland;
-	now kid is in Actionless Coastlines;
+	now agnostic is in Actionless Coastlines;
 
 section wordying
 
@@ -20465,13 +20445,13 @@ carry out wordying:
 	if Dr Yow is wordy:
 		say "You recharge Dr. Yow's wordiness.";
 	otherwise:
-		say "[if smart kid is visible]Dr. Yow starts discussing Wry Do too theoretical for adolescent ears to appreciate. You hear the kid mutter 'Ow. Dry.'[line break][else]Dr. Yow just starts talking about stuff like the weather, etc. It's drivel, a nice version of Dr. Evil[wordy-hinty].[end if]";
+		say "[if agnostic is visible]Dr. Yow starts discussing Wry Do too theoretical for adolescent ears to appreciate. You hear the agnostic mutter 'Ow. Dry.'[line break][else]Dr. Yow just starts talking about stuff like the weather, etc. It's drivel, a nice version of Dr. Evil[wordy-hinty].[end if]";
 	unless Dr Yow has been wordy:
 		reg-inc;
 	now Dr Yow is wordy;
 	now doc-cool is 3;
-	if kid is visible:
-		say "[line break][if Dr Yow was wordy]Dr. Yow's wordiness isn't helping the kid[else]The kid initially seems excited as Dr. Yow begins to talk, but it's all a bit too wonky, y'know? It quickly becomes dry--ok, dorky. Perhaps if the presentation were more exciting[end if].";
+	if agnostic is visible:
+		say "[line break][if Dr Yow was wordy]Dr. Yow's wordiness isn't helping the agnostic[else]The agnostic initially seems excited as Dr. Yow begins to talk, but it's all a bit too wonky, y'know? It quickly becomes dry--ok, dorky. Perhaps if the presentation were more exciting[end if].";
 	the rule succeeds;
 
 to say wordy-hinty:
@@ -20582,7 +20562,7 @@ after printing the locale description for Rawest Waters when Rawest Waters is un
 
 the eastern shore is reflexive scenery in rawest waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
 
-southwestern shore is scenery in rawest waters. "You can barely see it--the kid isn't there either."
+southwestern shore is scenery in rawest waters. "You can barely see it--the agnostic isn't there either."
 
 northern shore is scenery in rawest waters. "You can barely see it--it's as far as the eastern shore--but it seems darker and more foreboding.". northern shore is undesc.
 
@@ -20625,9 +20605,9 @@ check examining bot boat:
 
 description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[otherwise]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across the river[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[otherwise]The blaster hums and shakes erratically[end if].[paragraph break][if bot boat is reflexed]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
 
-the turbos are a reflexive plural-named thing. description of turbos is "You're not sure how they should work, but [if turbos are reflexed]you managed to[else]maybe you can[end if] counter the kid's technical knowledge by tweaking it."
+the turbos are a reflexive plural-named thing. description of turbos is "You're not sure how they should work, but [if turbos are reflexed]you managed to[else]maybe you can[end if] counter the agnostic's technical knowledge by tweaking it."
 
-the blaster is a reflexive thing. description of blaster is "You're not sure how it should work, but [if blaster is reflexed]you managed to[else]maybe you can[end if] counter the kid's technical knowledge by tweaking it. You see red writing on it."
+the blaster is a reflexive thing. description of blaster is "You're not sure how it should work, but [if blaster is reflexed]you managed to[else]maybe you can[end if] counter the agnostic's technical knowledge by tweaking it. You see red writing on it."
 
 t-or-b is a thing that varies.
 
@@ -20666,7 +20646,7 @@ to say mrmamu:
 
 check taking toaster:
 	if toaster is in actionless coastlines:
-		say "Best leave it with the kid." instead;
+		say "Best leave it with the agnostic." instead;
 
 check taking bot boat:
 	try entering bot boat instead;
@@ -20675,7 +20655,7 @@ check entering bot boat:
 	if turbos are not part of bot boat:
 		say "'It's not even built yet, [mrmaam]! I need a tool to get the blaster and turbos working!'" instead;
 	if player has toaster:
-		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' [he-she-c]'s right[if number of carried hintpastries > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the kid could do some cool stuff with it. It will be a decent enough payment for [his-her] time and efforts. The kid leaves the toaster on the sand.[line break]";
+		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' [he-she-c]'s right[if number of carried hintpastries > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the agnostic could do some cool stuff with it. It will be a decent enough payment for [his-her] time and efforts. The agnostic leaves the toaster on the sand.[line break]";
 		now all carried hintpastries are heated;
 		now toaster is in actionless coastlines;
 	else if toaster is visible:
@@ -20683,10 +20663,10 @@ check entering bot boat:
 			say "You heat up the food you found since you were last here.";
 		now all carried hintpastries are heated;
 	if turbos are reflexive and blaster is reflexive:
-		say "[one of]'Go, [mrmaam]!' The boat sinks as you enter it. You fiddle with the controls--but they choke. The turbos conk out, and the blaster fizzes, too. 'Dang! What do I need to do?' the kid mutters to herself.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
-	say "BRRRRM! The boat works great. 'I'll make a glider girdle next!' the kid shouts, out of view.";
+		say "[one of]'Go, [mrmaam]!' The boat sinks as you enter it. You fiddle with the controls--but they choke. The turbos conk out, and the blaster fizzes, too. 'Dang! What do I need to do?' the agnostic mutters to herself.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
+	say "BRRRRM! The boat works great. 'I'll make a glider girdle next!' the agnostic shouts, out of view.";
 	if turbos are reflexed and blaster is reflexed:
-		say "You speed across the deeps of the rawest waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the kid anyway. You've made it!";
+		say "You speed across the deeps of the rawest waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!";
 		towers-min-adj;
 		now player is in Mislit Limits instead;
 	say "Then you hear a voice call AIR FLUE FAILURE as you hear the [if turbos are reflexive]turbos go burst-o[otherwise]blaster, er, blast[end if]. You fall in the waters, about halfway to the opposite shore.";
@@ -26307,7 +26287,7 @@ hostile-is-he lot	--	lois the hostile
 keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
-smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if Dr Yow is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in Obscurest Subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"
+agnostic	"[if obscurest subsector is unvisited][ag-full]'s not important right now.[else if Dr Yow is in prison ropins][ag-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][ag-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][ag-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [ag-first] something to build with. A tool.[else][ag-first]'s bot boat is more important.[end if]"
 Reed's Ale	"[one of]Poor [el-la-f]! Having to dress like that. They either want to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-f]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-f].[minus][cycling]"
 Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
@@ -26327,15 +26307,15 @@ retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"
 ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if Shaven Havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
 raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT is the PLAY button.[plus][or]RETAPE is the RECORD button.[plus][or]Combining RETAPE and REPEAT can bring a sound from one end of this region's map to another.[minus][cycling]"
-gizmo	"[if kid has gizmo][kid-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][kid-full] in Actionless Coastlines.[plus][or][kid-yow-lect], but now [he-she] needs a tool.[plus][or]Give [kid-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
+gizmo	"[if agnostic has gizmo][ag-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][ag-full] in Actionless Coastlines.[plus][or][ag-yow-lect], but now [he-she] needs a tool.[plus][or]Give [ag-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
 ID Tag	"[if Obscurest Subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
 log gaol	"It's just there to block you from going anywhere else."
-atblock	"[one of][kid-first] can do a bit better, but this LLP is not critical for the game.[plus][or][kid-first] is tentative. Not able to focus.[plus][or]Or pay full attention.[plus][or]Make [kid-first] ATTENTIVE.[minus][cycling]"
+atblock	"[one of][ag-first] can do a bit better, but this LLP is not critical for the game.[plus][or][ag-first] is tentative. Not able to focus.[plus][or]Or pay full attention.[plus][or]Make [ag-first] ATTENTIVE.[minus][cycling]"
 lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
 savager ravages	"The ravages make sure you have to go back to the main area."
-rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the Treading Gradient[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the kid build something.[minus][cycling]"
+rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the Treading Gradient[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the agnostic build something.[minus][cycling]"
 Thearchy Hatchery	"The Thearchy Hatchery is just sort of there, for a clue. You don't need to do anything with it."
 Maturation Natatorium	"The maturation natatorium is just sort of there, for a clue. You don't need to do anything with it."
 bot boat	"Two parts of a bot boat are broken. The blaster and turbos."
@@ -26536,7 +26516,7 @@ to say lance-hints:
 	else:
 		say "[one of]The detour past the Horned Hedron entry opens up if you have the lance.[plus][or]Once you get there, you have an animal to defeat, which should not be hard.[minus][cycling]"
 
-to say kid-yow-lect:
+to say ag-yow-lect:
 	say "[if yow is in lalaland]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
 
 to say medals-do:
@@ -27332,7 +27312,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
 		if denim is not in lalaland, say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
 		if saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
-		if kid-atten is false, say "[2dmiss of myreg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
+		if ag-atten is false, say "[2dmiss of myreg]you could've made [ag-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if keycar is not in lalaland, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
 		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
@@ -27932,15 +27912,15 @@ chapter towers
 
 [* this includes tests for towers, towers with mistakes, towers min-points and towers max-points]
 
-test towers with "seed 1/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/get tarts/creaky/n/rusty/weirder/clumsy/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/himself/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
+test towers with "seed 1/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/get tarts/creaky/n/rusty/weirder/clumsy/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/himself/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
 
-test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/clumsy/rinsed/n/punier/weirder/coiled/n/married/weariest/angstier/e/marginal/s/himself/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
+test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/clumsy/rinsed/n/punier/weirder/coiled/n/married/weariest/angstier/e/marginal/s/himself/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
 
-test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/clumsy/ysmulc/redriew/weirder/redriew/reitsim/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/himself/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask kid about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
+test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/clumsy/ysmulc/redriew/weirder/redriew/reitsim/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/himself/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask agnostic about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
 
-test towers-h with "fixtow/poss/towers/towers/enter towers/docile/n/punier/n/weirder/e/get all/e/resealed/e/grandiose/s/married/e/wordy/push retape/w/n/w/w/clumsy/n/unable/n/push repeat/s/s/e/e/s/e/unlocked/w/n/pastier/n/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/stabler/robust/take skis/nearest/gone/lardy/bleak/olden/yonder/out/spectacular"
+test towers-h with "fixtow/poss/towers/towers/enter towers/docile/n/punier/n/weirder/e/get all/e/resealed/e/grandiose/s/married/e/wordy/push retape/w/n/w/w/clumsy/n/unable/n/push repeat/s/s/e/e/s/e/unlocked/w/n/pastier/n/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/stabler/robust/take skis/nearest/gone/lardy/bleak/olden/yonder/out/spectacular"
 
-test towers-i with "fixtow/poss/towers/towers/enter towers/docile/n/greyed/e/himself/n/get all/s/drained/e/married/e/wordy/push retape/w/w/n/marginal/n/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/n/n/holiest/e/ask kid about doctor/w/s/s/e/e/attentive/rowdy/w/w/n/n/e/robust/enter boat/eastern/gone/lardy/bleak/olden/yonder/out/spectacular"
+test towers-i with "fixtow/poss/towers/towers/enter towers/docile/n/greyed/e/himself/n/get all/s/drained/e/married/e/wordy/push retape/w/w/n/marginal/n/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/n/n/holiest/e/ask agnostic about doctor/w/s/s/e/e/attentive/rowdy/w/w/n/n/e/robust/enter boat/eastern/gone/lardy/bleak/olden/yonder/out/spectacular"
 
 test towers-part with "towers/towers/enter towers/docile/n/poncier/greyed/punier/n/clumsy/weirder/n/unable/weariest/angstier/e/marginal/s/himself/resealed/get dagger and saver/w/s/w/put dagger in rapier repair/e/e/drained/e/rusty/grandiose/married/e/wordy/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/pastier/n/holiest"
 
@@ -29215,11 +29195,11 @@ carry out skiing:
 		say "You need to be in Towers for this test command.";
 	else:
 		now all guardians are in lalaland;
-		now smart kid is in actionless coastlines;
+		now agnostic is in actionless coastlines;
 		now gizmo is in lalaland;
 		now bot boat is in actionless coastlines;
 		move player to actionless coastlines;
-		ital-say "moving south or west from here will make the game kind of goofy. Also, the score is wrong, because this is a test command. You pretty much want to get the skis from the kid." instead;
+		ital-say "moving south or west from here will make the game kind of goofy. Also, the score is wrong, because this is a test command. You pretty much want to get on the bot-boat once the Coasting Agnostic creates it." instead;
 	the rule succeeds;
 
 chapter tkturbo

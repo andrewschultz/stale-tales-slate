@@ -105,7 +105,6 @@ holiest,liestho,sthelio,thesoil,theoils,thisole
 himself,melfish,shelfim,smhlife,ehfilms,flemish
 weariest,ewitears,treesawi,treesiaw,iwestare
 nearest,ernesta,strenae,stearne
-dingy,gydin
 #################others
 coins,nisco
 icons,nisco

@@ -8,7 +8,7 @@ Spoilers ahead, but not really.
 Dr. Yow's gender is the same as yours.
 So is Pat's.
 The tarred trader is Red Rat Art Erd or Dr. Tera Darter.
-The smart kid is Dirk Stam or Kim Darst.
+The Coasting Agnostic is Scot Agin or Staci Ong.
 The person on A Droll Dollar is Lord Al Ollard or Dr. Lola Ollard.
 The south exit from the Coastline, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
 The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
@@ -765,19 +765,23 @@ Make it PUNIER.
 ?How many do I need to clear?
 Eleven, minimum, including the serpent.
 There are eighteen total including the serpent.
-You must clear five guardians to reach and leave certain corners (NW-N, SE-E, and by the copse,) and you must clear both guardians by the coastline so the smart kid is not scared.
+You must clear five guardians to reach and leave certain corners (NW-N, SE-E, and by the copse,) and you must clear both guardians by the coastline so the Coasting Agnostic comes out and has a bit of peace by the seashore.
+?What's the quickest way?
 To get to the Coastline and clear it, you must zap at least seven guardians. You can actually avoid visiting (saltbed and strait) or (sunbelt and deltas).
 The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. The H corresponds to clearing the west and east sides, as well as west and east in the Treading Gradient. The I corresponds to the north and south sides, as well as north and south in the Treading Gradient. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
 You must clear two guardians from the Coastline, one from the Garden, and one from the Cinema. You must clear one from the Copse, and one from/to the Treading Gradient. All these exclude each other.
 The quick and dirty observation is that the one path from the Treading Gradient can connect to the Copse or Coastline, but not both. Then there's no way to connect anything else.
 To grind through things, let's take the path you chose from the Copse. Assume it's to the north. It must hook up to the one you chose from the Cinema or Treading Gradient. If it hooks up to the Treading Gradient, the Cinema can hook south (missing the Coastline) or east (missing the Copse.) Note we didn't even worry about the Garden, here.
 We can mirror this reasoning across a line northeast from the copse (proof by symmetry) to eliminate the path east of the Copse, too.
+The game is balanced so that both the h-shaped path and the i-shaped path through the main square in Towers are approximately equal. Or the words to anagram have roughly the same total complexity or number of possibilities.
+To be precise, there are 3/4 as many cheat-based possibilities in the I as the H, but there are 3/2 as many non-cheat-based possibilities. Given that we're working with numbers in the thousands, that's pretty close. Oh, and the total number of letters is equal whichever way you go, too.
+Yeah, I was bored and wrote a PERL program to figure it out. It was actually pretty fun.
 ?Can I walk around guardians I can't solve?
 For the most part, yes, eventually, except those guarding corners.
 ?How can I figure guardians a bit more easily?
 Trying to walk past, attack or talk to them may give clues.
 Of course, you can x-ray them.
-The kid and Dr. Yow also give one clue.
+The agnostic and Dr. Yow also give one clue.
 >>>Specific guardians (alphabetical order)
 ?Admirer
 (S)he'd have less of a crush on you...
@@ -952,12 +956,12 @@ The lone duck can't be unlocked, but it seems to know to go to the fissure.
 Alternatively, making the fissure FUSSIER causes the duck to go over.
 ?Is Dr. Yow good for anything else?
 Yes. Don't go on til you see someone new on the coastline.
-The kid is interested in technical stuff.
+The agnostic is interested in technical stuff.
 Playing the raves saver isn't enough.
-?How should Dr. Yow lecture the kid?
-WORDY has been done. This is an exciting lecture. Or it needs to be. Kids get bored easily!
+?How should Dr. Yow lecture the agnostic?
+WORDY has been done. This is an exciting lecture. Or it needs to be. The agnostic still is shaking off the effects of time wasted by the Actionless Coastlines.
 ROWDY.
-?The kid looks tentative. Can I change that?
+?The agnostic looks tentative. Can I change that?
 This is an LLP. It was part of the main puzzle before I felt it was a bit arbitrary. The word was too long, and it was too easy in cheat mode.
 TENTATIVE can become...
 ...ATTENTIVE.
@@ -968,16 +972,17 @@ There's no way to enter.
 ?Somebody seems to be hiding. What gives?
 The hastiest atheists and Lois the Hostile, or the Hostile-is-He Lot, are hard to hang with.
 You need to get rid of them both. When they do, someone new will appear.
-?Does the kid have to FIDGET so much?
-He can't. He would love to be a bit smarter.
-You can calm him down and help him focus by making him...
-...GIFTED.
-?What's the kid interested in?
+?Does the agnostic really like that book so much?
+No. It's something to do, something he/she guesses smart people do.
+Maybe if it were less enthralling to look at.
+_Reading a Dinger_ can become...
+...GRAINED.
+?What's the agnostic interested in?
 Technical stuff. Like Dr. Yow knows. Dr. Yow's in the subsector.
-ASK KID ABOUT DOCTOR once you rescued the doctor.
-?The kid needs a tool. What's a good one?
+ASK AGNOSTIC ABOUT DOCTOR once you rescued the doctor.
+?The agnostic needs a tool. What's a good one?
 The gizmo will be useful. It baffles you--and, well, me, to be honest. I just sort of take the best anagrams available.
-GIVE GIZMO TO KID.
+GIVE GIZMO TO AGNOSTIC.
 ?Is the, uh, a bot-boat safe?
 Not even close, to start.
 The turbos and blaster are broken.
