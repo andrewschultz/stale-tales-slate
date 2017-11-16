@@ -229,6 +229,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reef"	367450917	cripple clipper	--	--	"The reef is not changed. Perhaps you can deal with what's on it."
 "sketchin"	550311509	cripple clipper	--	--	"No need to alter them. Worth looking at, though."
 "sketchins"	646585475	cripple clipper	--	--	"No need to alter them. Worth looking at, though."
+"canyon"	355720248	sonancy canyons	--	--	"[locname]."
+"canyons"	451994214	sonancy canyons	--	--	"[locname]."
+"patter"	503003725	--	raptest patters	--	"[pat-cont]."
+"patters"	599277691	--	raptest patters	--	"[pat-cont]."
 "storeu"	591972280	--	--	degen-true rule	"[not-the-reg]."
 "rouet"	495698314	--	--	degen-true rule	"[not-the-reg]."
 
@@ -1372,6 +1376,9 @@ to say sheol-c:
 
 to say py-glow:
 	say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan"
+
+to say pat-cont:
+	say "It's more the content of the patters that you could deal with, if you wanted"
 
 to say no-spoil:
 	say "[if cur-score of troves is 0]You've got the right idea...sort of...but you're not worthy of big thoughts, yet[else]You can change Spoiloplis by thinking, but not like that. One idea at a time[end if]"

@@ -6033,6 +6033,10 @@ carry out routes-hinting:
 		try objhinting da mist instead;
 	if location of player is Cripple Clipper:
 		try objhinting thickness sketchins instead;
+	if location of player is Sonancy Canyons:
+		if bent ewe is reflexive, try objhinting bent ewe instead;
+		if hurt hog is reflexive, try objhinting hurt hog instead;
+		try objhitning yob den instead;
 	if list o toils is unexamined:
 		all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
 	if player has mushrooms and player has U NERD ENDUR REDUN and player has pipe soot:
@@ -6047,7 +6051,7 @@ carry out routes-hinting:
 			if QQ is pipe soot:
 				all-say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] Oscar's for the pipe soot." instead;
 			if QQ is U NERD ENDUR REDUN:
-				all-say "You need to work out how to sit all over the giant's bench for U NERD ENDUR REDUN." instead;
+				all-say "You need to work out how to sit all over the giant's bench to get Rude [']N Nuder (which is, trivial spoiler, the runed book)." instead;
 	all-say "I can't give you any advice right now. You may want to hint individual items or even let me know via a transcript (or even a save file) at [email]." instead;
 
 book troves-hinting
@@ -6684,8 +6688,9 @@ section commands to skip previously solved areas
 
 table of skipcmds
 lastcmd	storedest	portdest	old-rel [old release is last one where this command worked. If 0, it currently works]
-"through"	store u	routes-x	0
-"between"	store u	routes-x	0
+"through"	store u	routes-x	3
+"between"	store u	routes-x	3
+"beyond"	store u	routes-x	0
 "bus"	store p	e-s	0
 "sub"	store p	e-s	0
 "debug"	store p	e-s	1
@@ -25438,28 +25443,17 @@ check hinting:
 				ital-say "you can type NO HINT to disable hints for this session, or NOTHIN to disable them fully."
 
 carry out hinting:
-	if mrlp is demo dome:
-		say "You're already in my clue lyceum." instead;
-	[if hintblock is true:
-		all-say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
-	if mrlp is Means Manse:
-		try means-hinting instead;
-	if mrlp is stores:
-		try stores-hinting instead;
-	if mrlp is others:
-		try others-hinting instead;
-	if mrlp is troves:
-		try troves-hinting instead;
-	if mrlp is oyster:
-		try oyster-hinting instead;
-	if mrlp is routes:
-		try routes-hinting instead;
-	if mrlp is presto:
-		try presto-hinting instead;
-	if mrlp is towers:
-		try towers-hinting instead;
-	if mrlp is otters:
-		try otters-hinting instead;
+	if mrlp is demo dome, say "You're already in my clue lyceum." instead;
+	if mrlp is Means Manse, try means-hinting instead;
+	if mrlp is stores, try stores-hinting instead;
+	if mrlp is others, try others-hinting instead;
+	if mrlp is troves, try troves-hinting instead;
+	if mrlp is oyster, try oyster-hinting instead;
+	if mrlp is routes, try routes-hinting instead;
+	if mrlp is presto, try presto-hinting instead;
+	if mrlp is towers, try towers-hinting instead;
+	if mrlp is otters, try otters-hinting instead;
+	[if hintblock is true, all-say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
 	all-say "No hints for this region yet. Sorry. I need to work on that, don't I?";
 	the rule succeeds;
 
@@ -26076,9 +26070,9 @@ narrow cracks	"[one of]You need to search for No-Gal Logan. But you need to find
 un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
 mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"You need to get by what's on either free reef."
-bent ewe	"[one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling]"
+raptest patters	"[one of]'Thou wit!' You don't really need the flattery, but it won't really derail you.[plus][or]It might be better to ignore them.[plus][or]Or not put up with them.[plus][or]Or do WITHOUT.[minus][cycling]"	--	"WITHOUT"
+bent ewe	"[one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling]"	--	"BETWEEN"
 hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt[else]need to deal[end if] with the bent ewe.[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
-bent ewe	"[one of]The bent ewe feels nervous the hog is about to attack it. Maybe you could play peacemaker?[plus][or]Make it so there's something dividing them.[plus][or]Or, perhaps, BETWEEN.[minus][cycling]"	--	"BETWEEN"
 yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
 cold	"[one of]Even negative emotions can warm a person and give needed heat, even for a short while. But they may cause more trouble later.[plus][or]HATE is useful for short-term goals at best.[minus][cycling]"	--	"HATE"	[start TROVES hinting]
