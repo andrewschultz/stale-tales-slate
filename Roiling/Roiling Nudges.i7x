@@ -1722,7 +1722,7 @@ this is the bonker-gone rule:
 	the rule fails;
 
 this is the agnostic-can-learn rule:
-	if player is in subsector and agnostic is in subsector and agnostic-atten is true, the rule succeeds;
+	if player is in subsector and agnostic is in subsector and ag-atten is true, the rule succeeds;
 	the rule fails.
 
 to say smart-agnostic-no:

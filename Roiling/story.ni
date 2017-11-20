@@ -6036,7 +6036,7 @@ carry out routes-hinting:
 	if location of player is Sonancy Canyons:
 		if bent ewe is reflexive, try objhinting bent ewe instead;
 		if hurt hog is reflexive, try objhinting hurt hog instead;
-		try objhitning yob den instead;
+		try objhinting yob den instead;
 	if list o toils is unexamined:
 		all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
 	if player has mushrooms and player has U NERD ENDUR REDUN and player has pipe soot:
@@ -9029,10 +9029,10 @@ old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, 
 denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
-atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[ag-full] snaps further to attention, even more eager than before!"
+atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[agnostic] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
-weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [ag-full] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [ag-full] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [ag-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
+weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [ag-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
 Andres	Andres	false	401528293	--	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
@@ -19936,6 +19936,12 @@ understand "idk/kid" and "idk kid" as Coasting Agnostic.
 
 printed name of Coasting Agnostic is "[if player is male]Scot Agin[else]Staci Ong[end if]"
 
+understand "staci/ong" and "staci ong" as Agnostic when player is female.
+understand "scot/agin" and "scot agin" as Agnostic when player is male.
+
+to say ag-first:
+	say "[if player is female]Staci[else]Scot[end if]"
+
 check objhinting agnostic:
 	if player is in subsector and agnostic is in subsector, try objhinting atblock instead;
 
@@ -19949,7 +19955,7 @@ to ag-fid:
 	say "[ag-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart. Anyway, I'd f'get...'[paragraph break]Fidget, fidget, fidget.";
 
 every turn when player is in actionless coastlines and dinger is in actionless coastlines:
-	say "[ag-full] continues to fidget and mutter a wish to be just a BIT smarter. 'I'd f'get...' Fidget, fidget, fidget."
+	say "[agnostic] continues perusing [i]Reading a Dinger[r], not looking particularly thrilled."
 
 the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness". description is "[bug-report]".
 
@@ -20008,11 +20014,11 @@ check scaning agnostic:
 		try scaning dinger instead;
 		continue the action;
 	if player is in Obscurest Subsector and atblock is in Obscurest Subsector:
-		say "[ag-full] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
+		say "[agnostic] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
 		try scaning atblock instead;
 
 to say what-ag-sez:
-	say "[if agnostic has gizmo][ag-full] stands proudly by a bot-boat [he-she] made. [he-she-c] looks nervously at you--[he-she] can't bring [him-her]self to ask you to try them.[no line break][else]The Coasting Agnostic potters around here. 'Aww man! I have a wicked awesome plan for a bot-boat! But I don't have the right tools.' [he-she-c] kicks at the ground[end if]";
+	say "[if agnostic has gizmo][agnostic] stands proudly by a bot-boat [he-she] made. [he-she-c] looks nervously at you--[he-she] can't bring [him-her]self to ask you to try them.[no line break][else]The Coasting Agnostic potters around here. 'Aww man! I have a wicked awesome plan for a bot-boat! But I don't have the right tools.' [he-she-c] kicks at the ground[end if]";
 
 before taking gizmo:
 	if agnostic has gizmo:
@@ -20427,7 +20433,7 @@ to ag-gets-it:
 		say "[line break]It seems to take a bit longer than it should, but Dr. Yow is patient and even having fun. You wonder if you could've helped a bit more, but you did enough--and [ag-first] will find [his-her] own clever life hacks to focus more.";
 	else:
 		say "[line break]The lecture goes extra quickly with [ag-first] attentive! So much common sense, but there's lots of deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
-	say "[line break]The lecture over, [ag-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][ag-full] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! I have this lots-o-tools stool...' but the agnostic's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
+	say "[line break]The lecture over, [ag-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][agnostic] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! I have this lots-o-tools stool...' but the agnostic's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
 	now Dr Yow is in lalaland;
 	now duck is in lalaland;
 	if atblock is in Obscurest Subsector:
@@ -20861,7 +20867,7 @@ check giving to Tetris Sitter:
 	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
 	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
-	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area."
+	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	now flowerpot is in lalaland instead;
 
 check going outside in Mesprise Premises:
@@ -23995,7 +24001,7 @@ the apricot is a fruit. "It's a regular apricot. Nothing special."
 
 instead of doing something with riot cap:
 	if action is procedural, continue the action;
-	say "You wouldn't want to make the riot cap parotic--you can't imagine violence ahead."
+	say "The riot cap is pretty sturdy, and less useful for you than the moss cap, unless or until you can change it into a fruit."
 
 chapter apples
 
@@ -26281,7 +26287,7 @@ hostile-is-he lot	--	lois the hostile
 keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
-agnostic	"[if obscurest subsector is unvisited][ag-full]'s not important right now.[else if Dr Yow is in prison ropins][ag-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][ag-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][ag-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [ag-first] something to build with. A tool.[else][ag-first]'s bot boat is more important.[end if]"
+agnostic	"[if obscurest subsector is unvisited][agnostic]'s not important right now.[else if Dr Yow is in prison ropins][agnostic] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][ag-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][ag-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [ag-first] something to build with. A tool.[else][ag-first]'s bot boat is more important.[end if]"
 Reed's Ale	"[one of]Poor [el-la-f]! Having to dress like that. They either want to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-f]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-f].[minus][cycling]"
 Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
@@ -26301,7 +26307,7 @@ retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"
 ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if Shaven Havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
 raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT is the PLAY button.[plus][or]RETAPE is the RECORD button.[plus][or]Combining RETAPE and REPEAT can bring a sound from one end of this region's map to another.[minus][cycling]"
-gizmo	"[if agnostic has gizmo][ag-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][ag-full] in Actionless Coastlines.[plus][or][ag-yow-lect], but now [he-she] needs a tool.[plus][or]Give [ag-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
+gizmo	"[if agnostic has gizmo][ag-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][agnostic] in Actionless Coastlines.[plus][or][ag-yow-lect], but now [he-she] needs a tool.[plus][or]Give [ag-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
 ID Tag	"[if Obscurest Subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
@@ -27306,7 +27312,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
 		if denim is not in lalaland, say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
 		if saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
-		if ag-atten is false, say "[2dmiss of myreg]you could've made [ag-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
+		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if keycar is not in lalaland, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
 		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";

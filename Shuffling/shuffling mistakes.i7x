@@ -231,6 +231,8 @@ chapter ROOM
 
 understand "shoe" as a mistake ("You need more than one shoe.") when player is in roomroom and hoses are in roomroom.
 
+understand "hoes" as a mistake ("One, there's more than one shoe. Two, this isn't that sort of game. Innuendo only, if you please!") when player is in roomroom and hoses are in roomroom.
+
 chapter Stiller Trellis
 
 understand "tillers" as a mistake ("You aren't going to sea in this game.") when player is in Trellis and archings are not in Trellis.
@@ -244,6 +246,10 @@ understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
 understand "reset" and "reset button" as a mistake ("[reset-goof].") when player is in moor and panel is part of silo.
+
+understand "stere" as a mistake ("Units of measurements are abstract. We need something concrete.") when player is in moor and panel is part of silo.
+
+understand "reest" as a mistake ("You are noisily uncooperative for a minute. With what, I don't know. But you are.") when player is in moor and panel is part of silo.
 
 understand "terse" as a mistake ("[if trees button is visible]All five wrong[else]Already good[end if].") when player is in moor and panel is part of silo.
 

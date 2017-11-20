@@ -169,7 +169,7 @@ understand "gnash" as a mistake ("You gnash your teeth a bit thinking about how 
 
 understand "night" as a mistake ("The thing can't block out THAT much of the sky. You've got the wrong word.") when thing form is visible.
 
-understand "bane" as a mistake("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
+understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when rude 'n nuder is visible or player has u nerd or elbow is visible.
 
@@ -206,7 +206,9 @@ understand "scarving" as a mistake ("Changing the restaurant to a clothes boutiq
 
 chapter harms marsh
 
-understand "around" as a mistake("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is visible and player is in Harms Marsh.
+understand "helos" as a mistake ("Helicopters can't make it underground.") when player is in Harms Marsh.
+
+understand "around" as a mistake ("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is visible and player is in Harms Marsh.
 
 understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
 
@@ -485,7 +487,7 @@ understand "cater" as a mistake ("No use catering to an enemy you can't see. Bes
 
 understand "prat" as a mistake ("Yes, whoever[if crate is reflexed or crate is in lalaland]was[else]'s[end if] lobbing crates isn't very nice, but name calling's no good.") when player is in lapsin' plains.
 
-understand "trap" as a mistake("Yes, the tarp part is almost surely a trap, but identifying it as such doesn't help.") when player is in lapsin' plains
+understand "trap" as a mistake ("Yes, the tarp part is almost surely a trap, but identifying it as such doesn't help.") when player is in lapsin' plains
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
 

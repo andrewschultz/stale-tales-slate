@@ -266,7 +266,7 @@ section compiler adjust constant section - not for release
 
 use MAX_VERBS of 430.
 
-use MAX_VERBSPACE of 4600.
+use MAX_VERBSPACE of 4700.
 
 section about the player
 
