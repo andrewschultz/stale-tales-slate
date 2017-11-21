@@ -220,6 +220,10 @@ chapter cripple clipper
 
 understand "feer" as a mistake ("Fearing won't help, here.") when player is in cripple clipper.
 
+chapter sonancy canyons
+
+understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in canyons and hurt hog is in canyons.
+
 book troves
 
 chapter Loather Rathole
@@ -413,6 +417,8 @@ understand "bat" as a mistake ("You don't want to take a bat to the keyboard. Or
 book oyster
 
 chapter posh hops shop
+
+understand "nites" as a mistake ("Misspellings don't work, here.") when stein is in hops shop and player is in hops shop.
 
 understand "insert" as a mistake ("Almost, with the stein, there.") when stein is in hops shop and player is in hops shop.
 

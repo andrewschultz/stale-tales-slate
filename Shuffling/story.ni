@@ -254,7 +254,7 @@ use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 390.
+use MAX_VERBS of 400.
 
 use MAX_VERBSPACE of 4500.
 
@@ -264,7 +264,7 @@ use MAX_PROP_TABLE_SIZE of 240000.
 
 section compiler adjust constant section - not for release
 
-use MAX_VERBS of 430.
+use MAX_VERBS of 440.
 
 use MAX_VERBSPACE of 4700.
 

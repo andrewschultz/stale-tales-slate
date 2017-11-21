@@ -4331,7 +4331,7 @@ lairage regalia	"You twist your mind a bit, but no, there's probably only one wa
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
 bench	"[if old giant is in lalaland][giant-over][else]You leaned on the bench right. Time to get on it[end if]."
-bench-end	"[if old giant is in lalaland][giant-over][else if nuder is in mesa]Maybe deal with Runde ['N] Nuder, now[else]You got on the bench right. Time to start ducking[end if]."
+bench-end	"[if old giant is in lalaland][giant-over][else if nuder is in mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the bench right. Time to start ducking[end if]."
 giant's elbow	"[if old giant is in lalaland][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert probably knows what to do with that."
@@ -12989,6 +12989,8 @@ understand "runed/book" and "runed book" as U NERD ENDUR REDUN.
 
 does the player mean doing something with U NERD ENDUR REDUN when U NERD ENDUR REDUN is visible: it is likely.
 
+before listing contents while taking inventory: group quest-items together.
+
 chapter worst ad
 
 the worst ad is LLPish vanishing scenery in Same Mesa. "Dang it, a giant ad for RADWOST, and it's all in red, but it's too lousy to determine what RADWOST is about. Maybe if you point your settler at it, you can pick it up. You're not sure how best to approach it, with all these twisty roads. You're not sure if you need to, really."
@@ -13004,9 +13006,9 @@ check taking worst ad:
 
 chapter huge thing
 
-the huge thing form above is a flippable thing. description is "It's huge all right. And it's a thing. It could cloud the stripe for a while. Perhaps it is what the priest summoned. If you could bring it down, maybe you could see what it is.". "[one of]A huge thing form above just[or]That huge thing form above still[stopping] HANGS there. It doesn't quite make sense, physically or grammatically. You'll probably want to deal with it before going anywhere."
+the MORF FORM is a flippable thing. description is "It's huge all right. And it's a thing. It could cloud the stripe for a while. Perhaps it is what the priest summoned. If you could bring it down, maybe you could see what it is.". "[one of]Oh no! Above, you see a MORF-FORM! Those things are scary! Just the threat of them coming near is often worse than them being near[or]The MORF-FORM hangs menacingly above. You can't just leave it there[stopping]."
 
-check taking huge thing:
+check taking MORF FORM:
 	say "It'd crush you. You need another way to bring it down." instead;
 
 check going when huge thing is visible:
@@ -13245,7 +13247,7 @@ to say list-o-toils-text:
 		otherwise:
 			now missing-one is true;
 			say "(N) ";
-		say "[QQ]";
+		say "[if qq is u nerd]runed bool[else][QQ][end if]";
 	if read-list is false and missing-one is true and Brother Horbert is visible:
 		say "[line break]";
 		pad-rec "reagents";
@@ -13362,7 +13364,7 @@ after looking in harms marsh:
 	set the pronoun it to sheol holes;
 	continue the action;
 
-description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is visible]And this area seems like it was always unlit... but things don't always have to be in the past...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
+description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is visible][paragraph break]And this area seems like it was always unlit... but you intuit null about how to change that...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
 
 section Sheol Holes
 
@@ -13425,7 +13427,7 @@ book Ripe Pier
 Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be.  No-Gal's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
 
 after looking in ripe pier for the first time:
-	say "A man walks by, mumbling. 'Da mist! Da mist!' Ah, so it's not just mist. But his next babbling leaves you seeing red before he walks off. Sad Tim sat, dim... it's mad...' You see red at such nonsense.";
+	say "A man walks by, mumbling. 'Da mist! Da mist!' Ah, so it's not just mist. But his next babbling leaves you seeing red before he walks off. 'Sad Tim sat, dim... it's mad...' You see red at such nonsense.";
 	continue the action;
 
 after looking in ripe pier:
@@ -13477,6 +13479,8 @@ chapter thickness sketchins
 
 the thickness sketchins are plural-named vanishing scenery in cripple clipper. "They're thick, both physically (big letters) and in content, and you suspect they are Logan's opus about all his travels. They read:[paragraph break][bold type]WHAT, TAR? TA, WRATH THAT RAW! ART, THAW![roman type]"
 
+understand "sketchin" and "thickness sketchin" as thickness sketchins.
+
 after fliptoing thickness sketchins:
 	now bad oar is in lalaland;
 	continue the action;
@@ -13498,7 +13502,7 @@ Sonancy Canyons is a room in Routes. "[if patters are in canyons]Raptest patters
 
 chapter hurt hog
 
-the hurt hog is reflexive scenery in sonancy canyons.
+the hurt hog is reflexive scenery in sonancy canyons. "The hog [if bent ewe is reflexed]seems more relaxed than before[else]is staring the poor bent ewe down. Maybe you can act as peacemaker[end if]."
 
 after fliptoing hurt hog:
 	now bent ewe is in lalaland;
@@ -13510,7 +13514,7 @@ after fliptoing hurt hog:
 
 chapter bent ewe
 
-the bent ewe is reflexive scenery in sonancy canyons.
+the bent ewe is reflexive scenery in sonancy canyons. "The bent ewe [if bent ewe is reflexed]seems freer now with you blocking the hog's view[else]seems frozen by the hurt hog's gaze[end if]."
 
 chapter raptest patters
 
@@ -13524,7 +13528,7 @@ instead of doing something with the raptest patters:
 
 chapter yob den
 
-the yob den is vanishing scenery.
+the yob den is vanishing scenery. "You're not sure the best way to deal with the yob den is to enter it. But what's a good way to avoid it?"
 
 volume troves
 

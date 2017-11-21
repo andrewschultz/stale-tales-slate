@@ -1372,7 +1372,7 @@ to say pier-sign:
 	say "That may not help you through the mist. Maybe read the sign instead"
 
 to say sheol-c:
-	say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice may help"
+	say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help"
 
 to say py-glow:
 	say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan"
