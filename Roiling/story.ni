@@ -1301,8 +1301,8 @@ carry out gotoing:
 				say "You can't run from the giant!" instead;
 			if the-b is in mesa:
 				say "You can't go anywhere with the bean and the crowd around!" instead;
-			if thing form above is in mesa:
-				say "The thing form above is too big to ignore or walk out on." instead;
+			if MORF FORM is in mesa:
+				say "The MORF-FORM is too big to ignore or walk out on." instead;
 	if mrlp is troves: [TROVES]
 		say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead;
 	if noun is unvisited and mrlp is noureg:
@@ -3993,7 +3993,7 @@ adsorbing signboard	"You struggle a bit. The signboard should be pretty simple, 
 bench	"You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should."
 bench-end	"Oof! You fail to jump on the bench end. Try mixing things up from what you just did."
 giant's elbow	"[if bench-end is reflexive]You're nowhere close to the giant's elbow[else]You seem like you should be able to avoid the elbow, but you may need to mix things up a bit[end if]."
-huge thing form	"The huge thing form rocks in the air, as if it's about to fall."
+MORF FORM	"The MORF-FORM rocks in the air, as if it's about to fall."
 pipe soot	"The soot smells a bit stronger than before for a moment."
 seed pit	"The seed pit seems to bubble slightly."
 Nuder	"The pages of Rude [']N Nuder flutter a bit."
@@ -4911,8 +4911,8 @@ carry out exitsing:
 		if player is in mesa:
 			if old giant is in mesa:
 				say "You probably aren't going anywhere with that giant around." instead;
-			if huge thing is not off-stage:
-				say "You probably don't want to go anywhere with that [if huge thing is in mesa]thing[else]bean[end if] around." instead;
+			if MORF FORM is not off-stage:
+				say "You probably don't want to go anywhere with that [if MORF FORM is in mesa]thing[else]bean[end if] around." instead;
 			say "There are plenty of ways to go, but they don't seem to lead anywhere. [if cleric circle is visited or idle deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
 		if player is in deli or player is in adobe or player is in circle:
 			say "You can go back out." instead;
@@ -5146,8 +5146,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if the-b is in mesa:
 				now noun is the-b;
 				continue the action;
-			if thing form is in mesa:
-				now noun is thing form;
+			if MORF FORM is in mesa:
+				now noun is MORF FORM;
 				continue the action;
 	else if mrlp is troves:
 		if player is in loather rathole:
@@ -5482,7 +5482,8 @@ niche	false	false	false	true	"[cheatfid]."
 t-b	false	false	false	true	"[cheatfid]."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
-ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
+MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
+ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [trives]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
@@ -5979,9 +5980,9 @@ does the player mean objhinting the grouchy giant when mrlp is routes:
 carry out routes-hinting:
 	if cur-score of routes is 0 and prep-spoil is false:
 		all-say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
-	if huge thing is in Same Mesa:
+	if MORF FORM is in Same Mesa:
 		if player is in same mesa:
-			try objhinting huge thing instead;
+			try objhinting MORF FORM instead;
 		all-say "[if spoilit is true]The spoon points[else]You should go[end if] outside to the commotion.";
 		now spoilit is false instead;
 	if the-b is in Same Mesa and Harms Marsh is unvisited:
@@ -8875,7 +8876,7 @@ bench	old giant	false	350259676	--	"against"	"against"	"Quakes squeak as the gia
 pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
 Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
-huge thing	the-b	false	250266429	--	"from"	"from"	"The huge thing form above turns into a huge thing FROM above. You watch a blot bloat as it gets closer. You notice it is shaped like a bean and duck. You don't hear the thud.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
+MORF FORM	the-b	false	250266429	--	"from"	"from"	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
 darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. Compass directions are still out."
 narrow cracks	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
@@ -12644,9 +12645,9 @@ carry out insideing:
 check fliptoing when player is in same mesa (this is the armada keeps you in rule):
 	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
 		if drama armada is in mesa or the-b is in mesa:
-			say "But... [if the-b is in mesa]THE BEAN[else]the huge thing[end if]! What to do with it[if armada is in mesa]? The armada mumbles nervously.[else]?[end if]" instead;
-		if huge thing is in mesa:
-			say "That huge thing is distracting you. Maybe you should deal with it now." instead;
+			say "But... [if the-b is in mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in mesa]? The armada mumbles nervously.[else]?[end if]" instead;
+		if MORF FORM is in mesa:
+			say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
 
 check fliptoing when player is in same mesa (this is the check giant is not in mesa rule):
 	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
@@ -13004,17 +13005,19 @@ a-text of worst ad is "RYRYRRR". b-text of worst ad is "RGRYRRR". parse-text of 
 check taking worst ad:
 	say "You'd need to get closer." instead;
 
-chapter huge thing
+chapter MORF FORM
 
 the MORF FORM is a flippable thing. description is "It's huge all right. And it's a thing. It could cloud the stripe for a while. Perhaps it is what the priest summoned. If you could bring it down, maybe you could see what it is.". "[one of]Oh no! Above, you see a MORF-FORM! Those things are scary! Just the threat of them coming near is often worse than them being near[or]The MORF-FORM hangs menacingly above. You can't just leave it there[stopping]."
+
+printed name of MORF FORM is "MORF-FORM"
 
 check taking MORF FORM:
 	say "It'd crush you. You need another way to bring it down." instead;
 
-check going when huge thing is visible:
-	say "That huge thing is distracting you. Maybe you can deal with it now." instead;
+check going when MORF FORM is visible:
+	say "That MORF-FORM is lingering threateningly. Maybe you should deal with it now." instead;
 
-a-text of thing form is "RRYR". b-text of thing form is "PRYP". parse-text of thing form is "f[sp]r[sp]o[sp]m". thing form is cheat-spoilable.
+a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY>?". parse-text of MORF FORM is "x[sp]r[sp]o[sp]x". MORF FORM is cheat-spoilable.
 
 chapter THE BEAN
 
@@ -13067,7 +13070,7 @@ after looking in Cleric Circle:
 		pad-rec "No-Gal Logan";
 		now Brother Horbert is in lalaland;
 		pad-del "reagents";
-		now huge thing form above is in Same Mesa;
+		now MORF FORM is in Same Mesa;
 		if worst ad is not in lalaland:
 			poss-d;
 	continue the action;
@@ -13414,7 +13417,7 @@ understand "unroad" as un-road.
 
 to decide whether told-of-logan:
 	if mrlp is not routes, decide no;
-	if huge thing form is off-stage, decide no;
+	if MORF FORM is off-stage, decide no;
 	if un-road is in Harms Marsh, decide no;
 	decide yes;
 
@@ -26071,7 +26074,7 @@ pipe soot	"[if pipe soot is not in adobe abode]You got the pipe soot.[else][one 
 seed pit	"[one of]Pat's not going to let you have the mushrooms you probably need from the seed pit.[plus][or]However, Pat mentions a lot are worthless. The seed pit is too dangerous. You need to say something to ignore the seed pit warning.[plus][or]Tell Pat you'll go in DESPITE the warnings.[minus][cycling]"	--	"DESPITE"
 mushrooms	"The mushrooms are part of the spiers['] potion that will help let people see directions again[if circle is unvisited]. But you need to get into the cleric circle first[end if]."
 cravings carvings	"The cravings carvings clue how to get into the seed pit."
-huge thing	"[one of]The huge thing form may be what was needed.[plus][or]But it's a thing form above.[plus][or]Does that sentence 'huge thing form' read wrong? Or feel funny? It should.[plus][or]A thing FROM above will have landed.[plus][or]So, yeah, type FROM to bring the thing down.[minus][cycling]"	--	"FROM"
+MORF FORM	"[one of]The MORF-FORM may be what was needed.[plus][or]It needs to change physically. What it is, and where it is.[plus][or]MORF is spelled wrong on purpose.[plus][or]It's threatening, where it will be. How can you not worry about where it will be?[plus][or]Make it FROM.[minus][cycling]"	--	"FROM"
 drama armada	"They're just there to watch, or help you once you figure where to look, by THE BEAN."
 the-b	"[one of]The Bean has given you a place to go or look--or, rather, a not-quite-direction.[plus][or]The ground feels a little shakier since the bean landed, but not enough to go straight down.[plus][or]PUSHing the Bean seems useless.[plus][or]You can go BENEATH the bean.[minus][cycling]"	--	"BENEATH"
 sheol holes	"They're just there as an agent to make you find the right way out. Oh, Sheol is the Old Testament name for Hell, if you were wondering. TMYK!"

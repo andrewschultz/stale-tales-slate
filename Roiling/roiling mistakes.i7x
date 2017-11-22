@@ -165,10 +165,6 @@ understand "ptas" as a mistake ("Concerned parents won't be able to help you her
 
 understand "under" as a mistake ("[if grouchy old giant is visible]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in mesa and Rude 'N Nuder is not visible.
 
-understand "gnash" as a mistake ("You gnash your teeth a bit thinking about how threatening the form is. It is probably going to fall some time. Maybe you can get it over with.") when huge thing is visible.
-
-understand "night" as a mistake ("The thing can't block out THAT much of the sky. You've got the wrong word.") when thing form is visible.
-
 understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when rude 'n nuder is visible or player has u nerd or elbow is visible.
