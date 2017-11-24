@@ -8,10 +8,18 @@ from collections import defaultdict
 ag = defaultdict(str)
 all_words = defaultdict(bool)
 
+def on_off(a):
+    return ". Default=" + ['off', 'on'][a]
+
+def usage():
+    print("-o/no = only anagram, or add/lose a letter" + on_off(only_anagram))
+    print("-p/np = plurals, or no plurals" + on_off(plural))
+    print("-v/nv = verbose or not" + on_off(verbose))
+    print("-? = this usage message")
+    exit()
+
 def alfy(a):
     return ''.join(sorted(list(a)))
-
-verbose = False
 
 def see_anagram_or_close(x, oa):
     adds = 0
@@ -65,28 +73,54 @@ with open("c:/writing/dict/brit-1word.txt") as file:
         all_words[line] = True
         ag[l2] = ag[l2] + ' ' + line
 
-print(sys.argv)
-
 if len(sys.argv) is 1:
     print("Need an argument")
     exit()
 
-only_anagram = False
-plural = False
+only_anagram = True
+plural = True
+verbose = False
+
+new_arg = []
 
 for x in sys.argv[1:]:
-    if x == 'ing':
-        do_ings()
-        exit()
     if x == 'o' or x == '-o':
+        print("Checking only-anagram, no +/- 1 letter")
         only_anagram = True
         continue
     if x == 'p' or x == '-p':
+        print("Checking plurals")
         plural = True
         continue
     if x is 'v' or x is '-v':
+        print("Verbose checking")
         verbose = True
         continue
+    if x == 'no' or x == '-no':
+        print("Not checking only-anagram, no +/- 1 letter")
+        only_anagram = False
+        continue
+    if x == 'np' or x == '-np':
+        print("Checking plurals")
+        plural = False
+        continue
+    if x is 'nv' or x is '-nv':
+        print("Not verbose checking")
+        verbose = False
+        continue
+    if x is '?' or x is '-?':
+        usage()
+        exit()
+    new_arg.append(x)
+
+for x in new_arg:
+    if x == 'ing':
+        do_ings()
+        exit()
+    if len(x) < 3 or (x.startswith("-") and len(x) < 4):
+        print(x, "is an invalid flag.")
+        usage()
+        exit()
     see_anagram_or_close(x, only_anagram)
     if x.endswith("ing"):
         x2 = re.sub("g$", "", x, 1)
