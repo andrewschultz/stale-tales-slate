@@ -157,6 +157,8 @@ understand "indies" as a mistake ("You don't need to worry about art, here.") wh
 
 understand "taps" as a mistake ("You have no bugle. Well, not in this game.") when player is in Same Mesa or player is in Idle Deli.
 
+understand "apts" as a mistake ("Pat's is a local small business, not nameless, faceless real estate.") when player is in Same Mesa or player is in Idle Deli.
+
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
 understand "psat" as a mistake ("You have enough word juggling now. You don't need a standardized test, too.") when player is in Same Mesa or player is in Idle Deli.
@@ -591,13 +593,13 @@ understand "pecos" as a mistake ("This game ain't a dadgum Western.") when playe
 
 understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly ms lucy is visible or muscly luc sym is visible.
 
-chapter unblest sunbelt
-
-understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when Mel Fish is visible.
-
 chapter outer route
 
 understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].") when player is in outer route.
+
+chapter unblest sunbelt
+
+understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when Mel Fish is visible.
 
 chapter anemic cinema
 
@@ -605,9 +607,13 @@ understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your lif
 
 understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't [']til they're gone.") when ingrates are visible.
 
+chapter fringe finger
+
+understand "refing" as a mistake ("You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.")
+
 chapter treading gradient
 
-understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is in Treading Gradient]. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in Treading Gradient and weeds are in Treading Gradient.
+understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is in Treading Gradient]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in Treading Gradient and weeds are in Treading Gradient.
 
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in Treading Gradient and player is in Treading Gradient.
 

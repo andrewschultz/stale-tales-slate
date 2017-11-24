@@ -137,11 +137,11 @@ version 3 March 2015</history>
 			<objects at="n" custom="yes" customRight="-44" customDown="3">Weeds    Denim</objects>
 		</room>
 		<room id="52" name="Danger/Gander Garden" subtitle="(bonker/stinger)" x="352" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
-		<room id="53" name="Nude Dune" subtitle="" x="-32" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-36" customDown="0">Solve-a-Loaves</objects>
+		<room id="53" name="Fringe Finger" subtitle="" x="-32" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+			<objects custom="yes" customRight="-36" customDown="0">Strudel (LLP)</objects>
 		</room>
 		<room id="54" name="Lost Lots" subtitle="" x="352" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-38" customDown="0">Scalier Eclairs</objects>
+			<objects custom="yes" customRight="-54" customDown="0">Organised Ego Drains (LLP)|Solve-a-Loaves</objects>
 		</room>
 		<room id="55" name="Shaven Havens" subtitle="Lone Duck" x="96" y="160" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="n" custom="yes" customRight="-30" customDown="0" />

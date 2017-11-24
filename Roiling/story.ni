@@ -6187,7 +6187,7 @@ to say to-center:
 		if the room mydir of location of player is treading gradient:
 			say "[mydir]";
 			continue the action;
-	say "[if player is in actionless coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Nude Dune]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
+	say "[if player is in actionless coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Fringe Finger]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
 
 carry out towers-hinting:
 	if number of visible warriors > 0:
@@ -6967,10 +6967,13 @@ Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens 
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
+Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in lode]clam[else]urn[end if] isn't that complex."
+Hero's Shore	"The matterless streamlets don't matter. You need to cross the big
+Fighter Freight	"There's no direction to go. You need some sort of action."
 Hardest Trashed Dearths	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
-Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
+Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
@@ -6978,7 +6981,7 @@ Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[el
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if unripe ur-pine is visible], and the ur-pine's in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [ag-first] will let you enter[end if]."
-Nude Dune	"Unorg'd ground is every way except back east."
+Fringe Finger	"Unorg'd ground is every way except back east."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
@@ -17137,9 +17140,6 @@ book Olde Lode
 
 Olde Lode is a room in Oyster. "You've reached what was probably an old mining pit. As in the Hops Shop, you can't tell one direction from another--you probably just want to keep things from blowing up and get out."
 
-check going nowhere in olde lode:
-	say "[if clam is visible]The clam cuts you off. It's faster than you. You need to help it relax[else]You try and walk off, but the urn draws you back[end if]." instead;
-
 after looking in olde lode:
 	if clam is in olde lode, set the pronoun it to clam;
 	continue the action;
@@ -19161,7 +19161,7 @@ book which room is how far
 to decide which number is palace-let: [I could've defined a new variable but it's nice to have this in one place. This shows how many letters the settler gives.]
 	if location of player is topside deposit or location of player is Outer Route, decide on 4;
 	if location of player is Scope Copse, decide on 5;
-	if location of player is lost lots or location of player is Nude Dune or location of player is unblest sunbelt or location of player is baldest blasted saltbed, decide on 6;
+	if location of player is lost lots or location of player is Fringe Finger or location of player is unblest sunbelt or location of player is baldest blasted saltbed, decide on 6;
 	if location of player is treading gradient or location of player is obscurest subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is Anemic Cinema, decide on 7;
 	if location of player is salted deltas or location of player is Strati Strait, decide on 8;
 	if location of player is actionless coastlines or location of player is rawest waters, decide on 9;
@@ -19267,7 +19267,7 @@ to draw-line (lcc - a room) and (bd - a direction):
 table of towers-locs [arranged n to s then w to e]
 my-loc	my-x	my-y
 shaven havens	1	0
-Nude Dune	0	1
+Fringe Finger	0	1
 anemic cinema	1	1
 salted deltas	2	1
 actionless coastlines	3	1
@@ -19386,7 +19386,7 @@ Strati Strait	6	--
 shaven havens	--	"You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form."
 obscurest subsector	--	"You're going side-to-side to see the curst palace, but hooray to seeing some other person. Even if he is locked up."
 lost lots	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
-Nude Dune	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
+Fringe Finger	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
 actionless coastlines	7	--
 rawest waters	8	--
 
@@ -20536,21 +20536,17 @@ instead of doing something with the fluster self rut:
 
 a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
 
-chapter Nude Dune
+chapter Fringe Finger
 
-Nude Dune is west of Anemic Cinema. Nude Dune is in Towers. "A nude dune spans north, west and south. It's pretty neutral-naturel. But going any way other than east might leave you too far from the Curst Palace."
+Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This fringe finger leads to a dead end pretty much every which way. So there's not much to do except go back east."
 
-some solve-a-loaves are an edible plural-named hintpastry in Nude Dune. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
+some solve-a-loaves are an edible plural-named hintpastry in Fringe Finger. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
 
 understand "loaves" and "loaf" as solve-a-loaves.
 
-check going in Nude Dune:
-	if noun is north or noun is south or noun is west:
-		say "Wait! You do see something through the dune! But it's a rested desert, which deters you." instead;
-
 section strudel
 
-some strudel is a LLPish reflexive hintpastry in Lost Lots. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
+some strudel is a LLPish reflexive hintpastry in Fringe Finger. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
 understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is visible
 
@@ -21443,7 +21439,7 @@ to shuffle-guardians (goner - a guardian):
 	let G be up;
 	let MR be Topside Deposit;
 	if goner is ingrates:
-		now MR is Nude Dune;
+		now MR is Fringe Finger;
 	else if goner is natives:
 		now MR is lost lots;
 	else:

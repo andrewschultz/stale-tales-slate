@@ -143,6 +143,8 @@ understand "kin" and "kins" as a mistake ("Whether you're hoping to see a deceas
 
 understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is quickvis.
 
+understand "debar" as a mistake ("If there are any lawyers here, they've already been debarred.") when player has beard or bread is quickvis.
+
 understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in trips strip]behind store M[else]in the Metros[end if] anyway.") when Spam is quickvis or maps are quickvis.
 
 chapter Gnarliest Triangles

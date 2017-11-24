@@ -619,11 +619,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rampant"	407258077	--	admirer	--	"No, just an admirer, really."
 "womantrap"	589545427	--	--	see-female-admirer rule	"No, just an admirer, really."
 "ingrate"	464927804	--	ingrates	--	"[plutry of ingrates]There's more than one ingrate blocking you."
-"dune"	322848513	Nude Dune	--	--	"[towersloc]." [NUDE DUNE 0 3]
+"finger"	386144864	Fringe Finger	--	--	"[towersloc]." [FRINGE FINGER 0 3]
 "solve"	459411311	--	solve-a-loaves	--	"[eat-pastry]."
 "loaves"	461599129	--	solve-a-loaves	--	"[eat-pastry]."
 "loaf"	156869130	--	solve-a-loaves	--	"[not-singular-hp]."
-"desert"	561349094	Nude Dune	--	--	"Can't change the desert behind the dunes."
 "shaven"	439622520	shaven havens	--	--	"[towersloc]." [SHAVEN HAVENS 1 4]
 "haven"	343348554	shaven havens	--	--	"[towersloc]."
 "lone"	324880033	--	lone duck	--	"It's not just any lone animal. It's a lone DUCK."
