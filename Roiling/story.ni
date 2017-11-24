@@ -13892,12 +13892,20 @@ instead of taking lager:
 
 book Browse Bowers
 
-Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side. In fact, for someone so recently poor as yourself, you'd feel guilty walking around and looking. So there's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the shmoe homes you can look out on. The ones you're better than now, you hope.[paragraph break]There's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
 
 after fliptoing ltb:
 	set the pronoun it to brochure;
 	set the pronoun them to browse bowers;
 	continue the action;
+
+chapter shmoe homes
+
+the shmoe homes are useless scenery in Browse Bowers. "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!"
+
+instead of doing something with shmoe homes:
+	if action is procedural, continue the action;
+	say "You DON'T want to do anything with the shmoe homes except let out oh-mes at the thought of ever being associated with them. The brochure may suggest a way to move beyond them for good."
 
 chapter dour tan rotunda
 

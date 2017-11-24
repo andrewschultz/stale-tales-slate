@@ -277,6 +277,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dour"	285811276	browse bowers	--	--	"[rotun]."
 "tan"	174205344	browse bowers	--	--	"[rotun]."
 "brochure"	552618888	--	brochure	--	"It's more the blurb at the end than the brochure."
+"shmoe"	399790104	browse bowers	--	--	"[shmoe-homes]."
+"home"	303516138	browse bowers	--	--	"[shmoe-homes]."
 "cone"	290071779	Econ Cone	--	--	"[cone-rec]."
 "recent"	531959132	Econ Cone	--	--	"[cone-rec]."
 "skyline"	567086698	Econ Cone	--	--	"You don't want to mess with the skyline. You want to get in the skyscraper!"
@@ -1398,6 +1400,9 @@ this is the glaring-futile rule:
 
 to say rotun:
 	say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
+
+to say shmoe-homes:
+	say "The people living in them don't want to change. You can't make them. You need to change something for YOU"
 
 to say cone-rec:
 	say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if prai is reflexed and rivets are reflexed]how to go west[else if prai is reflexive and rivets are reflexive]how to be inspired by that statue[else]going west or, maybe, that statue again[end if]"
