@@ -17321,6 +17321,14 @@ check fliptoing raft:
 		preef raft;
 		the rule succeeds;
 
+section matterless streamlets
+
+the matterless streamlets are plural-named useless scenery in Hero's Shore. "The streamlets flow everywhere. They actually HAVE matter, but they don't, um, matter."
+
+instead of doing something with matterless streamlets:
+	if action is procedural, continue the action;
+	say "The streamlets are nice to look at, but they're not good for much."
+
 chapter sobating (joke reject verb)
 
 sobating is an action applying to one thing.

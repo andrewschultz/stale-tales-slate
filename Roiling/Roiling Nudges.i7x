@@ -468,6 +468,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "canoe"	292259597	--	canoe	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
 "hoser"	421038754	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats." [HERO'S SHORE]
 "hero"	324764788	hero's shore	--	--	"You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
+"streamlet"	763506833	Hero's shore	--	--	"[strmlet]."
+"streamlets"	859780799	Hero's shore	--	--	"[strmlet]."
 "soak"	225747539	Hero's shore	--	--	"[raft-is]."
 "oak"	129473573	Hero's shore	--	--	"[raft-is]."
 "fish"	205064007	Hero's shore	--	--	"T'fish won't shift nowt."
@@ -1575,6 +1577,9 @@ this is the clam-gone rule:
 
 to say dest-esc:
 	say "Destroying the boat would be a bad idea. You need to escape it"
+
+to say strmlet:
+	say "The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything"
 
 to say raft-is:
 	say "No, best concentrate on what the raft is"
