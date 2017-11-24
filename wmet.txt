@@ -46,11 +46,6 @@ Stores (min)
 routes/troves/otters
 Stores (max)
 routes/troves/presto/oyster/towers/otters/others/sorbet/nestor/tokers/outside
-Store U (min)
-inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
-Store U (max)
-inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
-towards/without
 Store V (min)
 hate/care/observe/spot/reason/recall/despair/deal/desire/aspire/ponder/ignore/master/last/decide
 Store V (max)
@@ -58,6 +53,11 @@ hate/care/gape
 observe/spot/believe/reason/derive
 despair/glare/deal/desire/aspire/strive
 ponder/ignore/master/bolster/discover/last/decide
+Store U (min)
+inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
+Store U (max)
+inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
+towards/without
 Store P (min)
 wont/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
 Store P (max)

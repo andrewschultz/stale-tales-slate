@@ -352,6 +352,134 @@ And you get something for later. The munchies let you use the slider more often.
 
 
 
+STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, at fifteen, though it and STORE U both have the same number of maximum puzzles.
+
+> TROVES
+> ENTER TROVES
+
+Oh, look, you get a self-help book about thinking right! And how, if you think right, doing the right thing will come naturally. You're paralyzed by the hustle and bustle of the city and all that modernist stuff.
+
+At any time, you can get a point from Peg A. Page's book.
+
+Since the game mentions you can't do anything actively, and you need warmth and heat, you can...
+
+> HATE
+
+Oh no! Hate blinded you to your wallet getting stolen! But you can't race because you don't feel up to it, yet.
+
+> CARE
+
+There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
+
+> OBSERVE
+> SPOT
+
+This helps you move on a bit to the Boarded Roadbed, but oh no! An evil bee, so near! You only need to turn it into a vile bee. Do both and it's a live bee. So either of the two below will work. They are polar opposites but both equally valuable to positive thinking, you see. Using both gets you an extra point, so why not?
+
+> REASON
+> BELIEVE
+
+Now you need to get in the cellar. You saw how the thief got there, but you can't remember.
+
+You can not-quite-remember the cellar, or listen to "I'd Veer":
+
+> RECALL
+or
+(ALT) > DERIVE
+
+So after either of these you're in the Drain Nadir.
+
+You've hit rock bottom, and you need to bring yourself up.
+
+> DESPAIR
+
+Boredom Bedroom! You may be able to figure what to do with the lager, but it's a Last Lousy Point. The main thing is, you believe you can lead, but you can't. That book by Dale Elda and Leda Adle may help.
+
+> DEAL
+
+From the Browse Bowers, you need somewhere to reside.
+
+> DESIRE
+
+In the Econ-Cone, you need to enter the godlings' lodgings. But it's for people who are the very best, because they wanted to be. People whom PRAISE RIVETS, as the statue of Trevis Vister says.
+
+> ASPIRE
+or
+> STRIVE
+(or both, for a bonus point!)
+
+Hm, that Pernod dropped in the fray is tempting. But you can't enter the lodgings with your current sales pitch.
+
+> PONDER
+
+Wow! An office. Now you need to focus on your region! And not the guy you chucked out of here! So, before you do anything else,
+
+> IGNORE
+
+DIVORCES magazine is a bonus point.
+
+Then you need to do one of the two below to have confidence you can do your job. There's the lobster and the photograph of the stream.
+
+> MASTER
+or
+> BOLSTER
+(or both, for a bonus point!)
+
+What to do now? To be worth your salt?
+
+> LAST
+
+You're tired. You'd rather be that -singer- Regis N. Grines. Or wait! You can think of Eddie C., 'I'd cede.'
+
+> RESIGN
+or
+> DECIDE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 STORE U is the one with the fewest puzzles to win.
 
 > ROUTES
@@ -452,137 +580,7 @@ There's a chance for the LLP with the patters. Not changing patters but their co
 
 > BEYOND
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-STORE V holds troves. Troves of riches! The sort you have to think and earn!
-
-> TROVES
-> ENTER TROVES
-
-Oh, look, you get a self-help book about thinking right! And how, if you think right, doing the right thing will come naturally. You're paralyzed by the hustle and bustle of the city and all that modernist stuff.
-
-At any time, you can get a point from Peg A. Page's book.
-
-Since the game mentions you can't do anything actively, and you need warmth and heat, you can...
-
-> HATE
-
-Oh no! Hate blinded you to your wallet getting stolen! But you can't race because you don't feel up to it, yet.
-
-> CARE
-
-There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
-
-> OBSERVE
-> SPOT
-
-This helps you move on a bit to the Boarded Roadbed, but oh no! An evil bee, so near! You only need to turn it into a vile bee. Do both and it's a live bee. So either of the two below will work. They are polar opposites but both equally valuable to positive thinking, you see. Using both gets you an extra point, so why not?
-
-> REASON
-> BELIEVE
-
-Now you need to get in the cellar. You saw how the thief got there, but you can't remember.
-
-You can not-quite-remember the cellar, or listen to "I'd Veer":
-
-> RECALL
-or
-(ALT) > DERIVE
-
-So after either of these you're in the Drain Nadir.
-
-You've hit rock bottom, and you need to bring yourself up.
-
-> DESPAIR
-
-Boredom Bedroom! You may be able to figure what to do with the lager, but it's a Last Lousy Point. The main thing is, you believe you can lead, but you can't. That book by Dale Elda and Leda Adle may help.
-
-> DEAL
-
-From the Browse Bowers, you need somewhere to reside.
-
-> DESIRE
-
-In the Econ-Cone, you need to enter the skyscraper. But it's for people who want to be better. People whom PRAISE RIVETS, as the statue of Trevis Vister says.
-
-> ASPIRE
-or
-> STRIVE
-(or both, for a bonus point!)
-
-Hm, that Pernod dropped in the fray is tempting. But you can't enter the skyscraper with your current sales pitch.
-
-> PONDER
-
-Wow! An office. Now you need to focus on your region! And not the guy you chucked out of here! So, before you do anything else,
-
-> IGNORE
-
-DIVORCES magazine is a bonus point.
-
-Then you need to do one of the two below to have confidence you can do your job. There's the lobster and the photograph of the stream.
-
-> MASTER
-or
-> BOLSTER
-(or both, for a bonus point!)
-
-What to do now? To be worth your salt?
-
-> LAST
-
-You're tired. You'd rather be that -singer- Regis N. Grines. Or wait! You can think of Eddie C., 'I'd cede.'
-
-> RESIGN
-or
-> DECIDE
-
-You can now zap stores with the patcher or switch the patcher to reach Otters, if you wish to skip to the end of the game.
-
-
+That will do it! Since you've solved two store regions, you can now zap stores with the patcher or switch the patcher to reach Otters, if you wish to skip to the end of the game.
 
 
 
@@ -1248,7 +1246,7 @@ The natives won't budge, but maybe you can convince them to move...
 > VAINEST
 (ALT) > NAIVEST
 
-There's no real difference. Also, there's nothing really to the south except a hint-pastry, which you won't need with this walkthrough. But you can get an LLP point in the Lost Lots to the south, getting rid of the fluster-self rut.
+There's no real difference. Also, there's nothing really to the south except a hint-pastry, which you won't need with this walkthrough. But you can get an LLP point in the Lost Lots to the south, taking the strudel the right way.
 
 The bonker is working fine until it's...
 
@@ -1870,12 +1868,12 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
   * release 2: the chimney is now available for escape. Gunter's options are different. Elmo's are too. Elmo is moved, as are the plaster and plates. Elmo has a tutorial.
   * release 3: Gunter does not stop by until you examine a few things. So you have more time to activate the two new areas, and you also can figure what you're supposed to be doing. Plus you are forced to talk to Gunter for an overview, but you can skip the rest. You can also freely flip diorama things but nothing else, but flipping something that should create an exit brings Gunter closer. Elmo's tutorial is tuned up.
   * release 4: MANOR is now MANSE. New LLP in the Gallery with the ISBN bins.
-2 ROUTES:
-  * release 4: optional ways through various areas are now disabled. The end puzzle is now in a room past the Cripple Clipper and requires both commands as well as an additional one, with different barriers to winning. ABOARD is no longer a solution. The raptest patters are a new LLP.
-3 TROVES
+2 TROVES
  * release 2: you now have a new possible action at the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
- * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs STEW)
- * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the room that kept changing its name.
+ * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs WEST)
+ * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the room that kept changing its name. The skyscraper is now the godlings' lodgings.
+3 ROUTES:
+  * release 4: optional ways through various areas are now disabled. The end puzzle is now in a room past the Cripple Clipper and requires both commands as well as an additional one, with different barriers to winning. ABOARD is no longer a solution. The raptest patters are a new LLP.
 4 PRESTO:
  * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
  * release 2: Lawl Wall replaces Horned Hedron (moved to Oyster) with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.

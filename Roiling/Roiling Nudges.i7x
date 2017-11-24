@@ -281,8 +281,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "home"	303516138	browse bowers	--	--	"[shmoe-homes]."
 "cone"	290071779	Econ Cone	--	--	"[cone-rec]."
 "recent"	531959132	Econ Cone	--	--	"[cone-rec]."
-"skyline"	567086698	Econ Cone	--	--	"You don't want to mess with the skyline. You want to get in the skyscraper!"
-"skyscraper"	768953439	Econ Cone	--	--	"[scrapery]!"
+"skyline"	567086698	Econ Cone	--	--	"You don't want to mess with the skyline. You want to get in the godlings['] lodgings!"
+"godling"	328295263	Econ Cone	--	--	"[scrapery]!"
+"godlings"	424569229	Econ Cone	--	--	"[scrapery]!"
+"skyscrapre"	768953439	Econ Cone	--	--	"[scrapery]!"
 "perky"	469888301	Econ Cone	--	--	"[scrapery]!"
 "crass"	299065138	Econ Cone	--	--	"[scrapery]!"
 "statue"	537593736	--	astute statue	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if prai is reflexed and rivets are reflexed]You did what you could, anyway[else if prai is reflexive and rivets are reflexive]Maybe grok the writing on the statue[else]You could find another way to follow the statue's message, but it's not necessary[end if]."
@@ -1408,7 +1410,7 @@ to say cone-rec:
 	say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if prai is reflexed and rivets are reflexed]how to go west[else if prai is reflexive and rivets are reflexive]how to be inspired by that statue[else]going west or, maybe, that statue again[end if]"
 
 to say scrapery:
-	say "If you brought down the skyscraper like that somehow, mass panic would ensue. Destroy it from within";
+	say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
 
 this is the ignore-ignored rule:
 	if player is in Upscale Capsule and noise is in lalaland, the rule succeeds;

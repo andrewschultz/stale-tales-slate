@@ -116,9 +116,9 @@ last-loc of Means Manse is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
-
 Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
+
+Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
@@ -4019,7 +4019,7 @@ Pernod	"The bottle of Pernod seems to rattle and spin slightly."
 large regal lager	"No...that is not quite the way to fight the temptation of the wicked brew."
 brochure	"Your longing increases...but not enough."
 prai	"That's not quite the way to look forward to praise. But it may be a start."
-skyscraper	"The skyscraper almost seems to laugh at you, for being close, yet far."
+godlings' lodgings	"The godlings['] lodgings almost seem to laugh at you, for being close, yet far."
 noise	"The noise seems almost bearable."
 tan ivy vanity	"You try to not pay attention to the babble behind the door, but you're trying too hard, and you fail. Still, you're on the right track."
 lobster	"That's not quite the way to deserve that lobster[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
@@ -7223,7 +7223,7 @@ check climbing (this is the generic silly climbing reject rule):
 			move player to study instead;
 	if noun is the-b: [routes]
 		say "It's too slippery and round." instead;
-	if noun is skyscraper: [troves]
+	if noun is godlings' lodgings: [troves]
 		say "Your thought and efforts may lead you to the top, not a physical feat." instead;
 	if noun is mount: [start presto]
 		say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead;
@@ -8908,7 +8908,7 @@ ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with glob
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 prai	prai	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
-pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"
+pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
 salt	playbill	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
 stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
@@ -12302,7 +12302,7 @@ instead of doing something with roads:
 
 a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
-the routes-x are a privately-named plural-named portal. diffic of routes-x is 2. understand "routes" as routes-x. the printed name of routes-x is "routes extending many confusing directions". initial appearance of routes-x is "odd winding routes".
+the routes-x are a privately-named plural-named portal. diffic of routes-x is 3. understand "routes" as routes-x. the printed name of routes-x is "routes extending many confusing directions". initial appearance of routes-x is "odd winding routes".
 
 description of routes-x is "They appear to branch out in all directions."
 
@@ -12318,7 +12318,7 @@ a-text of voters is "RRYRYR". b-text of voters is "RRYRYP". parse-text of voters
 
 a-text of Store V is "RRYRYR". b-text of Store V is "RRGRGR". parse-text of store v is "x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
-troves-x are a privately-named plural-named portal. diffic of troves-x is 3. understand "troves/jewels" as troves-x. printed name of troves-x is "troves of glittering jewels". go-region of troves-x is troves. initial appearance of troves-x is "[if Loather Rathole is visited]empty troves[else]troves of too-good-to-be-true jewels[end if] glisten here.". understand "trove" as troves-x. description of troves-x is "[if Loather Rathole is unvisited]Shiny. Tempting. You have enough room for a few jewels your super purse[else]You could probably go through the ordeal of them vanishing to get back to Spoiloplis[end if]."
+troves-x are a privately-named plural-named portal. diffic of troves-x is 2. understand "troves/jewels" as troves-x. printed name of troves-x is "troves of glittering jewels". go-region of troves-x is troves. initial appearance of troves-x is "[if Loather Rathole is visited]empty troves[else]troves of too-good-to-be-true jewels[end if] glisten here.". understand "trove" as troves-x. description of troves-x is "[if Loather Rathole is unvisited]Shiny. Tempting. You have enough room for a few jewels your super purse[else]You could probably go through the ordeal of them vanishing to get back to Spoiloplis[end if]."
 
 chapter store w
 
@@ -13926,7 +13926,7 @@ instead of taking brochure:
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the perky crass skyscraper in the center forms the top of the skyline, which is itself a cone. It's quieter here than the lot or rathole. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Your sense of direction is still borked, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the skyscraper[end if]."
+Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Your sense of direction is still borked, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
 
 understand "econ-cone" as Econ Cone.
 
@@ -13939,28 +13939,27 @@ after looking in econ cone:
 	if pernod is in econ cone, set pronoun it to pernod;
 	continue the action;
 
-chapter skyline and scenery
+chapter godlings['] lodgings
 
-the skyline is useless scenery in Econ Cone. understand "cone" as skyline when player is in Econ Cone. the skyline is undesc.
+understand "skyline" as godlings' lodgings
 
-instead of doing something with the skyline:
-	say "The most interesting part of the skyline is the perky crass skyscraper! You feel pulled to it. The rest is...well, okay for other people, but not you.";
+the godlings' lodgings are plural-named scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%."
 
-the perky crass skyscraper is scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%."
+understand "godling/lodging" and "godlings/godling lodging/lodgings" as godlings' lodgings.
 
-after fliptoing skyscraper:
+after fliptoing godlings' lodgings:
 	consider the region-knock rule;
 	continue the action;
 
-check fliptoing skyscraper:
+check fliptoing godlings' lodgings:
 	if prai is reflexive and rivets are reflexive: [stri is false and asp is false:]
 		say "You sit and ponder for a bit. But it is just general complaining. The whole mish-mosh about people approximately as unfortunate as you. No wish for [i]praise rivets[r] you enough for you to ponder positively." instead;
 
-check scaning skyscraper:
+check scaning godlings' lodgings:
 	if pernod is off-stage:
-		say "The skyscraper shows nothing. Which is sort of a relief, though it probably means you haven't found what you need to focus on.[paragraph break]Anyway, you'd hate to spend all that time however many possibilities 'skyscraper' would give. You dream of hiring some mathy dweeb to figure that out stuff like that (it's 725760. Uh, some guy told me, then I took his lunch money.)[paragraph break]" instead;
+		say "The godlings' lodgings shows nothing. Which is sort of a relief, though it probably means you haven't found what you need to focus on. Perhaps something will come along that you can focus on." instead;
 	else:
-		say "Your settler seems to give the same reading for the Pernod as for the skyscraper.";
+		say "Your settler seems to give the same reading for the Pernod as for the lodgings.";
 		try scaning pernod instead;
 
 chapter astute statue
@@ -26135,10 +26134,10 @@ plasm lamps	"Useful for working late at the Upscale Capsule but not for solving 
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 big important desk	"Just part of the scenery."
 lager	"[one of]The Large Regal Lager [if player is in boredom bedroom]here [end if]in Boredom Bedroom serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager.[minus][cycling]"	--	"GLARE"
-skyscraper	"[if pernod is off-stage]You can't think of getting into the skyscraper until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the skyscraper.[end if]"
+godlings' lodgings	"[if pernod is off-stage]You can't think of getting into the godlings' lodgings until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the godlings' lodgings.[end if]"
 Pernod	"[one of]Expensive alcohol is for high class reflection, and stuff. Or it advertises itself that way. That is what the Pernod claims to do.[plus][or]In this case, you have two more clues, which is what is on the front of the note tied to the Pernod and the back. 'Derp on, Epdorn.'[plus][or]'Dr. Peno and Ned Orp.'[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
-card	"The card gives a clue, along with the Pernod, of how to get into the skyscraper."
-label	"If you peel the label (by taking it,) you will get another clue what to do to get in the skyscraper."
+card	"The card gives a clue, along with the Pernod, of how to get into the godlings' lodgings."
+label	"If you peel the label (by taking it,) you will get another clue what to do to get in the godlings' lodgings."
 DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
 vanity	"[one of]The vanity is not just for prestige. It labels your region in red.[plus][or]You must learn to IGNORE silly distractions of people below/beneath you[minus][cycling]."	--	"IGNORE"
 noise	"You need to not pay attention to the noise. See the vanity for details."
@@ -26778,9 +26777,8 @@ reg-needed	yux
 --	"Asking for a HINT in the Inclosure?"
 --	"reading Roiling Mistakes.i7x for other 'clever' 'jokes?'"
 routes	"Cursing twice in the Cleric Circle? Or once in the Cripple Clipper?"
---	"[if routes is solved]Or[else]Cursing[end if] anywhere?"
---	"Feeling BANE around the bean?"
-troves	"SCANing the skyscraper before figuring what to do with the statue?"
+routes	"[if routes is solved]Or[else]Cursing[end if] anywhere?"
+routes	"Feeling BANE around the bean?"
 troves	"Anagramming the astute STATUE?"
 presto	"Calling the cola POP or SODA?"
 presto	"Anagramming caffeine with the cola? Or the bad book in the shack, or the crust?"
