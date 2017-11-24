@@ -270,7 +270,7 @@ Say POOH...
 Onyx is out, as is onyx censer.
 The green semi-text on black may be a clue.
 It becomes a SCREEN.
->>BURNT BRUNT
+>>CHAR ARCH
 ?What's in the dumpster?
 A dart. It's frustrating to get. You'll probably get it as soon as you give up.
 Or say DRAT.
@@ -283,7 +283,7 @@ You need to gain the yak's trust. It looks herbivorous.
 Seen anything eatable and plant-y?
 The flea, when changed to a leaf, is edible. Well, for a yak.
 But you don't just want to give the leaf to the yak.
-If you've got the skid, you can put the leaf on the skid, then push the skid south to the brunt. The yak will walk on it.
+If you've got the skid, you can put the leaf on the skid, then push the skid south to the Char Arch. The yak will walk on it.
 ?The yak's moveable now, but how to get rid of the yoke?
 The yoke has a safety, so if it's jarred, it'll snap.
 There are three ways to do things.
@@ -414,7 +414,7 @@ Switch the skid back to the disk, too, and you're ready--but there's a stupid er
 There's a TO BE OR button. You want to push it, but you're not sure what it's for.
 Once the disk is in, and the keyboard's attached, REBOOT or PUSH REBOOT.
 ?How do I get a keyboard?
-See the Burnt Brunt section.
+See the Char Arch section.
 ?Great. I have the drab yoke. What to do with it?
 Its scratchings contain 26 letters, all the numbers and punctuation.
 It can become a KEYBOARD.

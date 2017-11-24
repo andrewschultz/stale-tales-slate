@@ -1320,7 +1320,7 @@ carry out gotoing:
 			say "Saps['] Pass is sort of the Phat Path, now." instead;
 		if noun is dirge ridge:
 			if Leo is dismissed:
-				post-wall-brunt;
+				post-wall-arch;
 				do nothing instead;
 		if player is in shack:
 			consider the shack-south rule;
@@ -2214,7 +2214,7 @@ to say add-hangout:
 
 Leo-traveled is a truth state that varies.
 
-after going north in burnt brunt when Leo is eager:
+after going north in Char Arch when Leo is eager:
 	now Leo-traveled is true;
 	continue the action;
 
@@ -5818,7 +5818,7 @@ carry out presto-hinting:
 			try objhinting ye hoop instead;
 		if spoilit is false:
 			all-say "You are done here in Austerer Treasure." instead;
-	if star is visible and star is in Burnt Brunt:
+	if star is visible and star is in Char Arch:
 		try objhinting star instead;
 	if dart is visible and dart is in dumpster:
 		try objhinting dart instead;
@@ -5863,10 +5863,10 @@ carry out presto-hinting:
 				if dart is not in popgun or boing is reflexive or Leo is not in gyre:
 					all-say "The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through." instead;
 			try objhinting ether instead;
-	if player is in Grey Gyre or player is in Burnt Brunt:
+	if player is in Grey Gyre or player is in Char Arch:
 		if hacks' shack is unvisited:
 			if spoilit is false:
-				all-say "You're all done here for now[if player is in Burnt Brunt] (the yak can be helped later,)[else],[end if] so you maybe should [if saps' pass is unvisited]go north[else if phat path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+				all-say "You're all done here for now[if player is in Char Arch] (the yak can be helped later,)[else],[end if] so you maybe should [if saps' pass is unvisited]go north[else if phat path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
 	if player is in Saps' Pass:
 		try objhinting lawl wall instead;
 	if player is in phat path:
@@ -6640,7 +6640,7 @@ this is the trailing-a rule:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
 			the rule succeeds;
-	else if player is in burnt brunt:
+	else if player is in Char Arch:
 		if the player's command exactly matches the text "a gps":
 			say "A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.";
 			the rule succeeds;
@@ -6962,7 +6962,7 @@ Boredom Bedroom	"You need to look at something that would inspire you to move, i
 Browse Bowers	"You are definitely going places, but the only place you'd get walking from here is the Save-Aves. Not ritzy enough! Maybe you should focus on that brochure."
 Econ Cone	"That could lead to ransom manors."
 Upscale Capsule	"You're at the very top. You don't really want to change that without really good motivation."
-Burnt Brunt	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
+Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
@@ -7608,7 +7608,7 @@ check pushing the skid to (this is the yak-oof rule):
 		now drab yoke is in hacks' shack;
 		move player to hacks' shack;
 		the rule succeeds;
-	if player was in brunt and second noun is south and yak is on skid:
+	if player was in Char Arch and second noun is south and yak is on skid:
 		try going south instead;
 	if player was in gyre:
 		if second noun is west:
@@ -8672,7 +8672,7 @@ check fliptoing (this is the reject flipping with distractions around rule):
 
 check fliptoing (this is the by Rand and Leo rule):
 	if noun is log ons or noun is alert or noun is ought:
-		if Leo is in brunt:
+		if Leo is in Char Arch:
 			say "You mumble other words to shoo Rand and Leo, but you sort of miss them. Maybe you can get them to provide some muscle." instead;
 	continue the action;
 
@@ -14576,19 +14576,19 @@ after fliptoing ether:
 	now grey gyre is mapped south of saps' pass;
 	continue the action;
 
-book Burnt Brunt
+book Char Arch
 
-Burnt Brunt is a room in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
+Char Arch is a room in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
 
 leaf-clue is a truth state that varies.
 
-after printing the locale description for burnt brunt when leaf-clue is false:
+after printing the locale description for Char Arch when leaf-clue is false:
 	if player has leaf:
 		say "The yak briefly tries to nibble at your leaf. You pull the leaf away.";
 		now leaf-clue is true;
 		continue the action;
 
-a mad dam is useless scenery in Burnt Brunt. "The mad dam pours water on itself. The waterfall's flaws alter as you watch, though you can't do much with it. Beautiful in its own way."
+a mad dam is useless scenery in Char Arch. "The mad dam pours water on itself. The waterfall's flaws alter as you watch, though you can't do much with it. Beautiful in its own way."
 
 check taking dam:
 	say "You take in the dam's beauty for a moment." instead;
@@ -14597,9 +14597,9 @@ instead of doing something to mad dam:
 	if action is procedural, continue the action;
 	try examining mad dam instead;
 
-Burnt Brunt is south of Grey Gyre.
+Char Arch is south of Grey Gyre.
 
-some gasp gaps are useless plural-named scenery in burnt brunt. "You can't see much of the gaps, but you know you don't want to get close to them. Because you'd have to fall to get there."
+some gasp gaps are useless plural-named scenery in Char Arch. "You can't see much of the gaps, but you know you don't want to get close to them. Because you'd have to fall to get there."
 
 understand "gasp-gaps" as gasp gaps.
 
@@ -14607,7 +14607,7 @@ instead of doing something to gaps:
 	if action is procedural, continue the action;
 	try examining gaps instead;
 
-The bored yak is a neuter animal in Burnt Brunt. "[one of]A yak languishes here. It looks bored, and that drab yoke around it doesn't help[or]The bored yak with the drab yoke is still hanging around[stopping]."
+The bored yak is a neuter animal in Char Arch. "[one of]A yak languishes here. It looks bored, and that drab yoke around it doesn't help[or]The bored yak with the drab yoke is still hanging around[stopping]."
 
 after doing something with the bored yak:
 	set the pronoun him to the bored yak;
@@ -14711,13 +14711,13 @@ to yak-and-yoke:
 	now leaf is in lalaland;
 	now yak is in lalaland;
 
-check going south in Burnt Brunt:
+check going south in Char Arch:
 	if Leo is visible:
 		say "'I don't wanna go back dere, boss. I wants adventureses. Fightses.' says [l-r]." instead;
 	if Leo is dismissed:
-		post-wall-brunt instead;
+		post-wall-arch instead;
 
-to post-wall-brunt:
+to post-wall-arch:
 	if casserole is in lalaland:
 		say "You don't have another workout for Rand and Leo.";
 		continue the action;
@@ -14741,7 +14741,7 @@ to post-wall-brunt:
 
 section dumpster
 
-the dumpster is scenery in Burnt Brunt. the dumpster is an opaque container.
+the dumpster is scenery in Char Arch. the dumpster is an opaque container.
 
 check taking dumpster:
 	say "Way too heavy." instead;
@@ -14819,7 +14819,7 @@ to say way-tow:
 		say "way ";
 
 instead of burning the dumpster:
-	say "That would be a dumpster fire of an idea. Plus the burnt brunt is burnt enough already."
+	say "That would be a dumpster fire of an idea. Plus the Char Arch is burnt enough already."
 
 instead of entering dumpster:
 	say "It's potentially too toxic to enter, what with the permadust and spumed tar and other dreamt-ups inside."
@@ -14828,9 +14828,9 @@ description of dumpster is "Property of Sinbad's Sad Bins, it reeks of bad sins-
 
 a thing can be irrelevant. a thing is usually not irrelevant.
 
-some permadust is irrelevant scenery in burnt brunt. "It's settled nicely in the dumpster, blending with the spumed tar."
+some permadust is irrelevant scenery in Char Arch. "It's settled nicely in the dumpster, blending with the spumed tar."
 
-some spumed tar is irrelevant scenery in burnt brunt. "It's settled nicely in the dumpster, blending with the permadust."
+some spumed tar is irrelevant scenery in Char Arch. "It's settled nicely in the dumpster, blending with the permadust."
 
 instead of doing something with an irrelevant thing:
 	if action is procedural, continue the action;
@@ -14894,20 +14894,20 @@ carry out plainthrowing:
 
 section star
 
-a decorative star is a reflexive wearable thing in Burnt Brunt. "A decorative star--the sort you pin to your clothes--is lodged in a red stump here. Sort of like how Excalibur was stuck in a stone. Or not."
+a decorative star is a reflexive wearable thing in Char Arch. "A decorative star--the sort you pin to your clothes--is lodged in a red stump here. Sort of like how Excalibur was stuck in a stone. Or not."
 
 check scaning stump:
 	if star is reflexive:
 		say "Nothing, until you aim at the star.";
 		try scaning star instead;
 
-the red stump is scenery in burnt brunt. "It's [if star is in stump]cracked where the star was[else]got a star wedged in it."
+the red stump is scenery in Char Arch. "It's [if star is in stump]cracked where the star was[else]got a star wedged in it."
 
 a-text of decorative star is "RYRR". b-text of decorative star is "RYRR". parse-text of star is "x[sp]a[sp]x[sp]x". star is cheat-spoilable.
 
 description of decorative star is "It's not some paper gold star from Mrs. Crabtree's third grade class. It's actual dull metal. Shows you are a tsar of some sort of arts."
 
-instead of doing something to decorative star when star is in Burnt Brunt:
+instead of doing something to decorative star when star is in Char Arch:
 	if current action is taking:
 		say "It's wedged in just enough to frustrate you. You mutter 'bad star' under your breath, but that's almost a bit too harsh even for this area. You figure you'll probably see how to get it once you give up, but you can't give up just to take it." instead;
 	if action is procedural, continue the action;
@@ -14922,7 +14922,7 @@ instead of taking off decorative star:
 
 book Dirge Ridge
 
-Dirge Ridge is a room in Presto. Dirge Ridge is south of Burnt Brunt. "A vile veil covers any way except back north."
+Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "It's sort of sad here, leaving you thinking and saying 'Erg ... I'd ...'. A vile veil covers any way except back north."
 
 the vile veil is scenery in Dirge Ridge. it is undesc.
 
@@ -25843,7 +25843,7 @@ to say dio-part:
 	say "Not a puzzle per se but helps you understand what to do with [if settler is off-stage]an analytical object you may uncover[else]the settler[end if]"
 
 to say yak-worry:
-	say "You don't need to worry about the yak for a long time[if Leo is not visible]. You may want to go to the Vile Veil south of the Burnt Brunt for companions[else if phat path is not visited]. You need to go north of the gyre and the maze, first[end if]"
+	say "You don't need to worry about the yak for a long time[if Leo is not visible]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if phat path is not visited]. You need to go north of the gyre and the maze, first[end if]"
 
 check objhinting old giant:
 	if bench is reflexive:
@@ -26157,7 +26157,7 @@ star	"[one of]The star is stuck in the stump, and taking it doesn't work.[plus][
 red stump	--	star
 permadust
 hump	"[one of]Hm, you can't get over the hump.[plus][or]What's a good word before you give a bunch of effort?[plus][or]UMPH.[minus][cycling]"	--	"UMPH"
-plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has star or player wears star]You've got something that will impress him[otherwise]You need to find something to impress the plebe--you may want to go visit the Burnt Brunt to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has star or player wears star]now[otherwise]once[end if] you have the star.[minus][cycling]"	--	"BLEEP"
+plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has star or player wears star]You've got something that will impress him[otherwise]You need to find something to impress the plebe--you may want to go visit the Char Arch to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has star or player wears star]now[otherwise]once[end if] you have the star.[minus][cycling]"	--	"BLEEP"
 Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost, but you can do a bit better.[plus]What can YE HOOP anagram to?[minus][cycling]"	--	"POOH"
 Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
 Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
@@ -26798,7 +26798,7 @@ presto	"PRESTO:"
 presto	"ENEMY TZAR around the maze entry in the Grey Gyre?"
 presto	"ELO or EOL by Leo?"
 presto	"ASSWHUP or WHUPASS when Leo and Rand are commiserating?"
-presto	"SPAG or A GPS by the gasp-gaps in Burnt Brunt?"
+presto	"SPAG or A GPS by the gasp-gaps in Char Arch?"
 presto	"PTAH in the Phat Path?"
 presto	"IDKS or KIDS around the disk or skid?"
 presto	"BAT by the keyboard's TBA key?"
@@ -26824,7 +26824,7 @@ others	"OTHERS:"
 others	"making GAPERS around the pagers or grapes?"
 others	"SILT or SLIT around the list in the clearing?"
 --	"[i][bracket]NOTE: [super-rude].[r][close bracket]"	presto-or-others rule
-presto	"TARD while getting the dart in Presto/Burnt Brunt?"
+presto	"TARD while getting the dart in Presto/Char Arch?"
 others	"RETARD at the Tarred Trader, [greedy-person], in Others's Scape Space?"
 
 to say super-rude:

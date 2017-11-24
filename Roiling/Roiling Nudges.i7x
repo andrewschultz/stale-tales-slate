@@ -331,17 +331,17 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
-"mad"	87292060	brunt	--	--	"[no-scen]."
-"maddam"	174584120	brunt	--	--	"[no-scen]."
-"amaddam"	176771938	brunt	--	--	"[no-scen]."
-"amad"	89479878	brunt	--	--	"[no-scen]."
-"themad"	355490486	brunt	--	--	"[no-scen]."
-"gasp"	212527445	burnt brunt	--	--	"You try, but fail, to make something out of nothing."
-"gpa"	116253479	Burnt Brunt	--	--	"You try, but fail, to make something out of nothing."
-"adumpster"	686377722	burnt brunt	--	--	"Not even you can make that icky stuff in the dumpster worthwhile[if dart is not in dumpster], and besides, you got the dart anyway[else if dumpster is unexamined], but maybe there's something useful inside[else], but maybe you could reach for the dart[end if]."
-"dumpster"	684189904	burnt brunt	--	--	"The dumpster and red stump are both pretty sturdy[if dart is in dumpster and star is in brunt], but maybe you could pull out what's in them[else if dart is in dumpster], but you might be able to get what's in the dumpster[else if star is in brunt], but maybe you could pull the star from the stump[else], but you got something from both of them, anyway[end if]."
-"spumed"	495756083	burnt brunt	--	--	"[spumed-no]."
-"tar"	190621639	burnt brunt	--	--	"[spumed-no]."
+"mad"	87292060	Char Arch	--	--	"[no-scen]."
+"maddam"	174584120	Char Arch	--	--	"[no-scen]."
+"amaddam"	176771938	Char Arch	--	--	"[no-scen]."
+"amad"	89479878	Char Arch	--	--	"[no-scen]."
+"themad"	355490486	Char Arch	--	--	"[no-scen]."
+"gasp"	212527445	Char Arch	--	--	"You try, but fail, to make something out of nothing."
+"gpa"	116253479	Char Arch	--	--	"You try, but fail, to make something out of nothing."
+"adumpster"	686377722	Char Arch	--	--	"Not even you can make that icky stuff in the dumpster worthwhile[if dart is not in dumpster], and besides, you got the dart anyway[else if dumpster is unexamined], but maybe there's something useful inside[else], but maybe you could reach for the dart[end if]."
+"dumpster"	684189904	Char Arch	--	--	"The dumpster and red stump are both pretty sturdy[if dart is in dumpster and star is in Char Arch], but maybe you could pull out what's in them[else if dart is in dumpster], but you might be able to get what's in the dumpster[else if star is in Char Arch], but maybe you could pull the star from the stump[else], but you got something from both of them, anyway[end if]."
+"spumed"	495756083	Char Arch	--	--	"[spumed-no]."
+"tar"	190621639	Char Arch	--	--	"[spumed-no]."
 "bigm"	160086606	r10	--	--	"[just-letter]."
 "bign"	164918961	r00	--	--	"[just-letter]."
 "bigo"	170364030	r01	--	--	"[just-letter]."
@@ -434,7 +434,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "drive"	386316667	shack	--	--	"[no-dsk]."
 "harddrive"	532139676	shack	--	--	"[no-dsk]."
 "grye"	368088866	grey gyre	--	--	"[locname]."
-"brunt"	380866041	burnt brunt	--	--	"[locname]."
+"char"	143799505	Char Arch	--	--	"[locname]."
 "dirge"	311751549	dirge ridge	--	--	"[locname]."
 "marines"	489567203	marines seminar	--	--	"[locname]."
 "marine"	393293237	marines seminar	--	--	"[locname]."
@@ -754,6 +754,7 @@ table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
 "bare"	233736635	--	b-b	--	"[adj-needs-ly]."
+"burtn"	380866041	--	nude dune	"[loc-rej]."
 "dune"	322848513	--	nude dune	--	"You can't really shift the dune, but you don't need to."
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
 "cinders"	463338906	--	--	cinders-gone rule	"The cinders are gone for good."
@@ -1449,10 +1450,10 @@ to say is-boing:
 	say "[if boing is reflexive]The number's got more numerals than letters[else]You got the boing mechanism working[end if]";
 
 to say no-scen:
-	say "Here in the Brunt, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
+	say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
 
 to say spumed-no:
-	say "The spumed tar does nothing[if star is in brunt or dart is in brunt]. Maybe focus on something else[end if]"
+	say "The spumed tar does nothing[if star is in Char Arch or dart is in Char Arch]. Maybe focus on something else[end if]"
 
 to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze"

@@ -62,7 +62,7 @@ version 3 March 2015</history>
 		<room id="21" name="Grey Gyre" subtitle="Start Presto" x="-416" y="64" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="#FFA0A0" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-36" customDown="0">Plebe Lamb Ether|</objects>
 		</room>
-		<room id="22" name="Burnt Brunt" subtitle="" x="-416" y="160" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="22" name="Char Arch" subtitle="" x="-416" y="160" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="w" custom="yes" customRight="0" customDown="-18">Yak|Star|Dumpster</objects>
 		</room>
 		<room id="23" name="Dirge Ridge" subtitle="" x="-416" y="256" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
@@ -163,7 +163,7 @@ version 3 March 2015</history>
 		<room id="62" name="Emprise/ Mesprise Premise(s)" subtitle="" x="352" y="160" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="n" custom="yes" customRight="-32" customDown="0">Tetris Sitter</objects>
 		</room>
-		<room id="63" name="Bleary Barley" subtitle="Start Otters" x="480" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="(start OTTERS)" roomFill="#C040FF" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="63" name="Bleary Barley/ Burnt Brunt" subtitle="Start Otters" x="480" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="(start OTTERS)" roomFill="#C040FF" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="wsw" />
 		</room>
 		<room id="64" name="Gent-Fora/ Frat-Gone Frontage" subtitle="" x="352" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
@@ -606,7 +606,7 @@ version 3 March 2015</history>
 			<dock index="0" id="184" port="e" />
 			<dock index="1" id="18" port="w" />
 		</line>
-		<room id="188" name="Sonancy Canyon" subtitle="Hog, Bee, Den" x="480" y="64" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<room id="188" name="Sonancy Canyons" subtitle="Hog, Bee, Den" x="480" y="64" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
 		<line id="189" name="" description="" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="14" port="e" />
 			<dock index="1" id="188" port="w" />

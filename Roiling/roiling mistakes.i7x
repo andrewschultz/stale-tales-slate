@@ -308,25 +308,25 @@ understand "balm" as a mistake ("Giving the lamb balm might be an option, if the
 
 understand "bleep" as a mistake ("I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.") when plebe is not visible and mrlp is presto
 
-chapter burnt brunt
+chapter Char Arch
 
-understand "tard" as a mistake ("[if Rand is visible]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Self-pity that harsh--especially a potential slur--isn't the way to get the dart. This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[stopping].") when player is in brunt and dart is in dumpster.
+understand "tard" as a mistake ("[if Rand is visible]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Self-pity that harsh--especially a potential slur--isn't the way to get the dart. This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[stopping].") when player is in Char Arch and dart is in dumpster.
 
-understand "tars" as a mistake ("That'd make the star stickier--or reduce it to awful glop.") when star is in Burnt Brunt.
+understand "tars" as a mistake ("That'd make the star stickier--or reduce it to awful glop.") when star is in Char Arch.
 
-understand "tsar" and "arts" as a mistake ("Being an arts tsar won't help. You need a word that shows anger.") when star is in Burnt Brunt.
+understand "tsar" and "arts" as a mistake ("Being an arts tsar won't help. You need a word that shows anger.") when star is in Char Arch.
 
-understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when star is in Burnt Brunt.
+understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when star is in Char Arch.
 
 understand "rats" as a mistake ("[if star is in lalaland]You miss that star of yours[else]") when star is not visible.
 
-understand "spag" as a mistake ("You don't have time to read text-adventuring magazines right now. You're too busy living them.") when player is in burnt brunt.
+understand "spag" as a mistake ("You don't have time to read text-adventuring magazines right now. You're too busy living them.") when player is in Char Arch.
 
-understand "gpa" and "gpas" as a mistake ("You're not being graded here. I mean, you are getting a score, but this isn't school or anything.") when player is in burnt brunt.
+understand "gpa" and "gpas" as a mistake ("You're not being graded here. I mean, you are getting a score, but this isn't school or anything.") when player is in Char Arch.
 
-understand "mad" as a mistake ("How can you feel mad, looking at such a beautiful work of nature?") when player is in Burnt Brunt.
+understand "mad" as a mistake ("How can you feel mad, looking at such a beautiful work of nature?") when player is in Char Arch.
 
-understand "cafe" as a mistake ("You don't need caffeine or food here.") when player is in Burnt Brunt.
+understand "cafe" as a mistake ("You don't need caffeine or food here.") when player is in Char Arch.
 
 understand "okey" as a mistake ("You try to make things okey (sic) but you aren't enough of a bard to.") when yoke is visible.
 
