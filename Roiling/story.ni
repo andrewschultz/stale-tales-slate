@@ -1403,7 +1403,7 @@ ripe pier	3	--	"You have no idea how to turn the cripple clipper around, and you
 cripple clipper	4	-- [routes]
 posh hops shop	1	--	"The trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
 olde lode	2	--	"You don't want to go back near that urn[if progval of location of player > 3], and it'd be hard, being on the other side of the shore[end if]."
-Hero's shore	3	--	"No sense crossing back. There's more on this side of the shore."
+Disease Seaside	3	--	"No sense crossing back. There's more on this side of the shore."
 Fighter Freight	4	--	"You don't really want to revisit the crays."
 --	5	oyster	[oyster]
 loftier trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
@@ -6117,7 +6117,7 @@ to decide which thing is oyster-item:
 	if player is in lode:
 		if clam is in lode, decide on clam;
 		if urn is in lode, decide on urn;
-	if player is in hero's shore, decide on boats;
+	if player is in Disease Seaside, decide on boats;
 	if player is on raft:
 		if raft is reflexed, decide on oars;
 		decide on raft;
@@ -6624,7 +6624,7 @@ after reading a command:
 section special cases
 
 this is the trailing-a rule:
-	if location of player is hero's shore:
+	if location of player is Disease Seaside:
 		if the player's command exactly matches the text "a cone":
 			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.";
 			the rule succeeds;
@@ -6968,7 +6968,7 @@ Austerer Treasure	"The treasure room has no secret passages, so you can only go 
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in lode]clam[else]urn[end if] isn't that complex."
-Hero's Shore	"The matterless streamlets don't matter. You need to cross the big
+Disease Seaside	"The matterless streamlets don't matter. You need to cross to the north for more action."
 Fighter Freight	"There's no direction to go. You need some sort of action."
 Hardest Trashed Dearths	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
@@ -7173,7 +7173,7 @@ to say which-sharp:
 chapter entering
 
 rule for supplying a missing noun when entering:
-	if location of player is Hero's shore:
+	if location of player is Disease Seaside:
 		try entering raft;
 	if location of player is Strip of Profits and number of visible portals is 1:
 		now noun is a random visible portal;
@@ -7714,7 +7714,7 @@ before listening (this is the you can hear stuff some places rule):
 	if wait-seer is visible, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in rawest waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in Achers' Arches, say "Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU." instead;
-	if player is in Hero's shore, say "You hear voices from the boats talking about great accomplishments. The raft makes unpleasant, disturbing noises." instead;
+	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The raft makes unpleasant, disturbing noises." instead;
 	if player is in lode and clam is in lode, say "You hear the clam snapping." instead;
 	if player is in freight, try examining the pale plea instead;
 	if player is in anger range and carps are in lalaland and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
@@ -7783,7 +7783,7 @@ before smelling (this is the you can smell some stuff some places rule):
 	if player is in a mazeroom or player is in Unwary Runway, say "'You smell a gefilte and think 'get a life.'" instead;
 	if player is in shack and casserole is in shack, say "That casserole doesn't smell very good, but it's not toxic." instead;
 	if player is in Posh Hops Shop, say "You catch a whiff of some mokes['] smoke." instead; [oyster]
-	if player is in Hero's shore, say "Say, spare sea spray." instead;
+	if player is in Disease Seaside, say "Say, spare sea spray." instead;
 	if player is in Achers' Arches and sardine is in achers' Arches, say "Sea rind." instead;
 	if aunt tuna is visible, say "Antiseptic spice taint." instead;
 	if player is in Rascal Craals, say "This situation only stinks in general, not literally." instead;
@@ -8965,7 +8965,7 @@ tines	tines	false	441090447	--	"inset"	"inset" or "inset stein/tines"	"You place
 recaps	recaps	false	412063240	--	"scrape"	"scrape"	"Skr-r-r-r. You give [i]Capers Recaps[r] a good scratch. The fish in the bar, including the trolls, all whip around. You're the only suspect, since you are the only one with anything resembling nails. Casper shoots you an inspired, snide rip. The other patrons glare at you for doing so, too."
 trolls	trolls	false	466688042	olde lode	"stroll"	"stroll" or "stroll past/by trolls"	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"
 clam	clam	false	139082395	--	"calm"	"calm"	"You try some odd combination of singing and storytelling and jokes which really shouldn't work at all, but then, clams aren't very smart, so it goes over okay. The clam ...(cl)ambulates...off. You notice what it was guarding so aggressively: a beautiful urn you feel pulled to and you can't walk away from!"
-urn	urn	false	259337118	Hero's shore	"run"	"run"	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."
+urn	urn	false	259337118	Disease Seaside	"run"	"run"	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."
 boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boats"	"You start yelling about how great you are and how you deserve a free ride. A beat-foil lifeboat (not shippish) passes you by, but eventually a fighter freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"
 pale plea	pale plea	false	265273725	Anger Range	"leap"	"leap" or "leap at plea" or "leap at pale plea"	"You're a bit scared to jump, but when it's a majestic leap--whee! You jump overboard, and nobody can really follow you, since the boat is moving away, and they don't want to be left behind. Even if they could swim better. Your super purse remains water-tight, so no possessions get soaked."
 oars	oars	false	258138164	Anger Range	"soar"	"soar"	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
@@ -17216,16 +17216,16 @@ understand the command "run" as something new.
 
 understand "run [direction]" as going.
 
-book Hero's Shore
+book Disease Seaside
 
-Hero's Shore is a room in Oyster. "A super cult sculpture of Shoer Osher sits on this side of a river. One you can just begird or bridge. Boats block the whole river, and there's a raft docked here. A canoe too!"
+Disease Seaside is a room in Oyster. "A super cult sculpture of Shoer Osher sits on this side of a river. One you can just begird or bridge. Boats block the whole river, and there's a raft docked here. A canoe too!"
 
-after looking in hero's shore:
+after looking in Disease Seaside:
 	set the pronoun them to boats;
 	set the pronoun it to raft;
 	continue the action;
 
-the canoe is scenery in Hero's shore. "The canoe is all red and has a fish carved into it. The fish seems to be trying to cut...a tree?!"
+the canoe is scenery in Disease Seaside. "The canoe is all red and has a fish carved into it. The fish seems to be trying to cut...a tree?!"
 
 check taking canoe:
 	try entering canoe instead;
@@ -17241,20 +17241,13 @@ instead of doing something with fish:
 
 a-text of canoe is "YRYYR". b-text of canoe is "YRYYR". parse-text of canoe is "-[sp]x[sp]-[sp]-[sp]x".
 
-Shoer Osher is scenery in Hero's Shore. "Everyone knows the story of Shoer Osher and [if player is male]his[else]her[end if] rise to fame from humble farm life, and everyone knows it's sort of fake, but nobody can say much. The statue itself improves Osher's looks and muscle tone. It's quite frankly creepy enough, making you wonder if perhaps you should be looking in the river instead for ways to cross it."
-
-Understand "sculpture" and "super/ cult/ sculpture" as Osher.
-
-check taking Osher:
-	say "You have enough heroism by yourself."
-
 joke-death is a truth state that varies.
 
 to say uurrgg:
 	now joke-death is true;
 	get-dead;
 
-The boats are vanishing plural-named scenery in Hero's shore.
+The boats are vanishing plural-named scenery in Disease Seaside.
 
 check fliptoing boats when raft is reflexed:
 	say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
@@ -17273,7 +17266,7 @@ instead of doing something with boats:
 
 description of boats is "They're boats, not shippish, and too dense to swim through[if player is on raft]. Probably even to raft through[else][end if][if clam is in lalaland]. You can hear loud voices from the boats[end if]."
 
-a river is scenery in Hero's shore. "Boats pass on the river. A raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
+a river is scenery in Disease Seaside. "Boats pass on the river. A raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
 
 check taking river:
 	say "The river drips through your fingers." instead;
@@ -17281,12 +17274,12 @@ check taking river:
 instead of entering river:
 	say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll avoid all those boats. Or at least their potentially lethal undersides."
 
-check going in Hero's Shore:
+check going in Disease Seaside:
 	if noun is north:
 		say "You can't cross the river on your own. One of the boats would hit you." instead;
 	say "You're not sure how to get back to the Posh Hops Shop, and you're not sure it's worth it. The boats seem hard to get by, and you're not amphibious enough to speed through the deeps." instead;
 
-the raft is an enterable reflexive supporter in Hero's shore. the raft is fixed in place.
+the raft is an enterable reflexive supporter in Disease Seaside. the raft is fixed in place.
 
 instead of taking raft:
 	say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically.";
@@ -17330,7 +17323,7 @@ check fliptoing raft:
 
 section matterless streamlets
 
-the matterless streamlets are plural-named useless scenery in Hero's Shore. "The streamlets flow everywhere. They actually HAVE matter, but they don't, um, matter."
+the matterless streamlets are plural-named useless scenery in Disease Seaside. "The streamlets flow everywhere. They actually HAVE matter, but they don't, um, matter."
 
 instead of doing something with matterless streamlets:
 	if action is procedural, continue the action;
@@ -17400,6 +17393,8 @@ carry out leaping:
 book Anger Range
 
 Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping]."
+
+printed name of Anger Range is "[if haunter is in lalaland]Disease Seaside[else]Anger Range[end if]"
 
 after looking in anger range:
 	if trout is in anger range, set the pronoun it to trout;
@@ -17478,8 +17473,16 @@ check going east in anger range:
 		say "Not after you so rudely spilled those pills." instead;
 
 check going in anger range:
-	if carps are in anger range:
-		say "Have some heart. That trout's getting bullied! You could probably take the carps or the pikes." instead;
+	if carps are in anger range, say "Nagger-rage fills you as you notice the trout's getting bullied. You could probably take the carps or the pikes or, well, both, really. You're bigger than they are." instead;
+
+chapter Shoer Osher
+
+Shoer Osher is scenery. "Everyone knows the story of Shoer Osher and [if player is male]his[else]her[end if] rise to fame from humble farm life, and everyone knows it's sort of fake, but nobody can say much. The statue itself improves Osher's looks and muscle tone. It's quite frankly creepy enough, making you wonder if perhaps you should be looking in the river instead for ways to cross it."
+
+Understand "sculpture" and "super/ cult/ sculpture" as Osher.
+
+check taking Osher:
+	say "You have enough heroism by yourself." instead;
 
 chapter scraping
 
@@ -22103,6 +22106,8 @@ to say if-ed:
 	say "[if ed riley is in bleary barley]You can go west past where Ed Riley was[else]Ed Riley is still blocking the way west[end if]"
 
 Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though the barley's too thick to the east, north and south are okay[end if]."
+
+printed name of Bleary Barley is "[if nude dune is in bleary barley]Burnt Brunt[else]Bleary Barley[end if]"
 
 check going east in Bleary Barley when b-b is reflexed:
 	say "The barley is a bit too thick that way[if ed riley is in Bleary Barley]--it almost looks more like marsh plants than barley[end if]." instead;
@@ -27515,8 +27520,8 @@ index map with stadium mapped north of scape space.
 
 index map with posh hops shop mapped east of cruelest lectures.
 index map with olde lode mapped east of posh hops shop.
-index map with hero's shore mapped east of olde lode.
-index map with fighter freight mapped east of hero's shore.
+index map with Disease Seaside mapped east of olde lode.
+index map with fighter freight mapped east of Disease Seaside.
 index map with achers' arches mapped north of posh hops shop.
 index map with Lean Lane mapped east of Lapsin' Plains.
 index map with Hardest Trashed Dearths mapped east of Lean Lane.

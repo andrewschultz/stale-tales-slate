@@ -1089,7 +1089,7 @@ Perhaps you can CALM it.
 Taking it kills you.
 You need to do something faster than walk.
 You need to RUN.
->>HEROS' SHORE
+>>DISEASE SEASIDE
 ?What're the boats for?
 You can make some noise to get their attention.
 If you SOB AT them, they're not interested.
@@ -1107,7 +1107,7 @@ Well, to see ALL the game, yes.
 You can turn it into an ocean...
 ...but that's counterproductive.
 It's just a dumb joke/Monty Python reference. You can undo the silly death.
->>FIGHTER FRIGATE
+>>FIGHTER FREIGHT
 ?How do I get out of here?
 Once you're on the fighter frigate, your next action should be pretty clear.
 The scary crays aren't going to help, but the pale plea might.

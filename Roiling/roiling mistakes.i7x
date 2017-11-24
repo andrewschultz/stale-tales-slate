@@ -435,6 +435,18 @@ understand "parsec" as a mistake ("Casper doesn't take too kindly to sci-fi term
 
 understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop
 
+chapter disease seaside
+
+understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Hero's shore.
+
+understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Hero's shore.
+
+understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in hero's shore and player is in hero's shore.
+
+understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Hero's shore.
+
+understand "boast" as a mistake ("Batso.") when player is not in shore.
+
 chapter anger range
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
@@ -447,19 +459,9 @@ understand "kepis" as a mistake ("If only it were that easy, to have a basket to
 
 understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Hero's shore.
 
-understand "horse" as a mistake ("A horse can't cross water! You obviously did not play enough Oregon Trail in elementary school. There are plenty of craft to help you across.") when player is in Hero's shore
+understand "horse" as a mistake ("A horse can't cross water! You obviously did not play enough Oregon Trail in elementary school. There are plenty of craft to help you across.") when player is in Hero's shore and haunter is in lalaland.
 
-understand "hoser" as a mistake ("Saying that does not help you take off to the north.") when player is in Hero's shore
-
-understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Hero's shore.
-
-understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Hero's shore.
-
-understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in hero's shore and player is in hero's shore.
-
-understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Hero's shore.
-
-understand "boast" as a mistake ("Batso.") when player is not in shore.
+understand "hoser" as a mistake ("Saying that does not help you take off to the north.") when player is in Hero's shore and haunter is in lalaland.
 
 understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in anger range or location of player is location of haunter.
 
