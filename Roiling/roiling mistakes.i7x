@@ -46,6 +46,8 @@ understand "basement [text]" and "[text] basement [text]" and "[text] basement" 
 
 understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in dusty study and latches are not off-stage.
 
+understand "trestle" as a mistake ("The settler is pretty powerful, but it can't build bridges.") when player has settler.
+
 chapter largely all-grey gallery
 
 understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
@@ -688,6 +690,8 @@ understand "reedy" as a mistake ("No, the adverb.") when player is in barley and
 understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into laziness.") when player is in barley and Ed Riley is in barley.
 
 understand "lied" as a mistake ("You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.") when player is in barley and Ed Riley is in barley.
+
+understand "end u" as a mistake ("No, end *U*![paragraph break][uurrgg]") when player is in barley and nude dune is in barley.
 
 chapter coevals alcoves
 

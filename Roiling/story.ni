@@ -9071,7 +9071,7 @@ Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"specta
 
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
-b-b	b-b	false	409909726	--	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. The barley to the east is still too thick but looks a bit different now, and cinders remain from all around."
+b-b	nude dune	false	409909726	--	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect a beryl."
 cinders	cinders	false	463338906	--	"rescind"	"rescind"	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
@@ -22093,10 +22093,9 @@ description of sober robes is "Elmer and Merle don't stylize zestily."
 book bleary barley
 
 to say if-ed:
-	if ed riley is visible:
-		say ", or you could if a steward weren't keeping you eastward";
+	say "[if ed riley is in bleary barley]You can go west past where Ed Riley was[else]Ed Riley is still blocking the way west[end if]"
 
-Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else]You can go west past where Ed Riley was[if-ed], and though the barley's too thick to the east, north and south are okay[end if]."
+Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though the barley's too thick to the east, north and south are okay[end if]."
 
 check going east in Bleary Barley when b-b is reflexed:
 	say "The barley is a bit too thick that way[if ed riley is in Bleary Barley]--it almost looks more like marsh plants than barley[end if]." instead;
@@ -22115,6 +22114,8 @@ check going in Bleary Barley:
 			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
 			continue the action;
 
+chapter b-b
+
 b-b is privately-named proper-named reflexive scenery in Bleary Barley. the printed name of b-b is "the bleary barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[otherwise]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
 
 after fliptoing b-b:
@@ -22131,6 +22132,18 @@ a-text of b-b is "RYRYRO". b-text of b-b is "P??YRB". parse-text of b-b is "b[sp
 
 instead of taking b-b:
 	say "[if b-b is reflexed]It'll be barely useful[otherwise]Your inventory doesn't expand infinitely[end if]."
+
+chapter nude dune
+
+the nude dune is useless scenery. "It is impressive and blocks your way east."
+
+instead of doing something with nude dune:
+	if action is procedural, continue the action;
+	if current action is entering, say "That would END U. See what I did there?" instead;
+	if current action is climbing, say "There's nothing on the other side. You would probably just slide back down if you tried to climb it" instead;
+	say "The dune is just there, blocking your way east. And you don't need to go east."
+
+chapter Ed Riley
 
 Ed Riley is a vanishing man. description is "'You won't get past Ed Riley, yielder!' he booms. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye."
 
