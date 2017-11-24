@@ -10506,7 +10506,7 @@ check going inside in Largely All-Grey Gallery:
 
 book carven cavern
 
-Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in cavern and plaster is in cavern]Palest pastel plates sit on a plaster psalter[else if plates are in cavern]Palest pastel plates lie here[else if plaster is in cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is in lalaland]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain[else]A curtain may be covering up a passage[end if]. You probably don't want to go back outside."
+Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in cavern and plaster is in cavern]Palest pastel plates sit on a plaster psalter[else if plates are in cavern]Palest pastel plates lie here[else if plaster is in cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is in lalaland]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in cavern]A curtain may be covering up a passage[else]The psalter looks like it could be blocking something[end if]. You probably don't want to go back outside."
 
 after looking in carven cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in carven cavern, set the pronoun them to palest pastel plates;
@@ -26814,10 +26814,10 @@ presto	"PTAH in the Phat Path?"
 presto	"IDKS or KIDS around the disk or skid?"
 presto	"BAT by the keyboard's TBA key?"
 oyster	"OYSTER:"
-oyster	"Making a HORSE in Heros['] Shore?"
 oyster	"Changing the canoe to an OCEAN?"
 oyster	"CARET in the plains?"
 oyster	"PALINS in the plains?"
+oyster	"Making a HORSE in Heros['] Shore?"
 towers	"TOWERS:"
 towers	"KALE by Leak Lake?"
 towers	"ICEMAN by Anemic Cinema?"

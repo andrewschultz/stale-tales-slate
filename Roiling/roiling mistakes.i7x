@@ -437,17 +437,19 @@ understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll
 
 chapter disease seaside
 
-understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Hero's shore.
+understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Disease Seaside.
 
-understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Hero's shore.
+understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Disease Seaside.
 
-understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in hero's shore and player is in hero's shore.
+understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in Disease Seaside and player is in Disease Seaside.
 
-understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Hero's shore.
+understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
 
-understand "boast" as a mistake ("Batso.") when player is not in shore.
+understand "boast" as a mistake ("Batso.") when player is not in Disease Seaside.
 
-chapter anger range
+understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Disease Seaside.
+
+chapter anger range / hero's shore
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
 
@@ -457,11 +459,9 @@ understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player
 
 understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in anger range and player is in anger range.
 
-understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Hero's shore.
+understand "horse" as a mistake ("A horse won't help you explore the Hedron.") when player is in Anger Range and haunter is in lalaland.
 
-understand "horse" as a mistake ("A horse can't cross water! You obviously did not play enough Oregon Trail in elementary school. There are plenty of craft to help you across.") when player is in Hero's shore and haunter is in lalaland.
-
-understand "hoser" as a mistake ("Saying that does not help you take off to the north.") when player is in Hero's shore and haunter is in lalaland.
+understand "hoser" as a mistake ("It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.") when player is in Anger Range and haunter is in lalaland.
 
 understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in anger range or location of player is location of haunter.
 

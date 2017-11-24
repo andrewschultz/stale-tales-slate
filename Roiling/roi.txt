@@ -1113,7 +1113,7 @@ Once you're on the fighter frigate, your next action should be pretty clear.
 The scary crays aren't going to help, but the pale plea might.
 You need to LEAP.
 ?I didn't get here. How do you?
-BOAST instead of using the raft at Hero's Shore.
+BOAST instead of using the raft at Disease Seaside.
 >>ANGER RANGE
 ?How to stop the bullies?
 Hmm. Carps and Pikes.
@@ -1138,6 +1138,10 @@ Say, a rigged digger.
 ?How do I calm the ghost down once he's here?
 He is a SAUSAGE.
 ASSUAGE him.
+?Why did Anger Range change names?
+Well, nobody's angry any more. So there's no point.
+Also, Hero's Shore is the old name of the Disease Seaside.
+So I moved it over.
 >>HARDEST TRASHED DEARTHS
 ?What do I do with the cans?
 You don't have to do anything.

@@ -21,7 +21,7 @@ There was also other miscellaneous stuff and even a few features that fell out w
   --the game also tracks better if it is a complete spoiler, and the commands to check off are clearer
 --VERB/VERBS and PAD VERBS now give general help.
 --all items have individual clues if you try to change them and you fail, and all items should give individual messages if they don't need to be changed.
---much more scenery is added, mostly to explain why you can't just go any old direction, but I hope the names amuse you.
+--much more scenery is added, mostly boundaries to explain why you can't just go any old direction, but I hope the names amuse you.
 
 Means Manse:
 --very silly LLP in the All-Grey Gallery.
@@ -66,7 +66,7 @@ Store W:
 --the oddly rewired robot has been replaced by bluster butlers, but what to do with the robot is moved elsewhere for a Last Lousy Point.
 --a fluster-self rut is now a guardian, with the ego drains shifting to an LLP.
 --sporties' ripostes are an LLP replacing the neural pulses.
---rooms are shifted around, with more boundary scenery to make it believable you have to go back the way you came.
+--rooms are shifted around, with more boundary scenery to make it believable you have to go back the way you came. There are a few new room names, such as Fringe Finger.
 --the final quest is redone so the anagrams are hopefully more sensible and natural. Ed Yerg is gone, and the succor crocus is hidden in the Mislit Limits.
 
 Store Y:
@@ -77,6 +77,7 @@ Store Y:
   --Uh at a Hut is now the Shadier Airshed, which makes it easier to fit all those items in there.
   --Lean Lane is now where you find Tortu, and the old Lean Lane is renamed to Hardest Trashed Dearths.
 --there is a different thing to do near the end. Not a hard one, but a different one. It involves pins.
+--Hero's Shore is now Disease Seaside, and Anger Range changes its name to Hero's Shore once the haunter is gone.
 
 Meta-stuff:
 --introductory region is renamed.

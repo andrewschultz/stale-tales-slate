@@ -469,9 +469,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are in posh hops shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "lode"	277001614	olde lode	--	--	"[locname]." [OLDE LODE]
 "calm"	139082395	--	--	clam-gone rule	"Odd, how you feel a need to panic and flee after calming the clam."
-"canoe"	292259597	--	canoe	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
-"streamlet"	763506833	Disease Seaside	--	--	"[strmlet]." [Disease Seaside]
+"seaside"	516369903	Disease Seaside	--	--	"[locname]." [Disease Seaside]
+"streamlet"	763506833	Disease Seaside	--	--	"[strmlet]."
 "streamlets"	859780799	Disease Seaside	--	--	"[strmlet]."
+"canoe"	292259597	Disease Seaside	--	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
 "soak"	225747539	Disease Seaside	--	--	"[raft-is]."
 "oak"	129473573	Disease Seaside	--	--	"[raft-is]."
 "fish"	205064007	Disease Seaside	--	--	"T'fish won't shift nowt."
@@ -490,7 +491,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "crays"	325150424	fighter freight	--	--	"[no-cray]."
 "cray"	228876458	fighter freight	--	--	"[no-cray]."
 "anger"	316824940	anger range	--	--	"[locname]." [ANGER RANGE]
-"hoser"	421038754	--	--	now-shore rule	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
+"hoser"	421038754	--	--	now-shore rule	"You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better."
 "hero"	324764788	--	--	now-shore rule	"You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
 "scrawl"	364539784	--	scrawl	--	"It's probably not just any scrawl. What the scrawl says may be important."
 "pike"	307198092	--	pikes	--	"[all-fish]."
@@ -758,7 +759,7 @@ table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
 "bare"	233736635	--	b-b	--	"[adj-needs-ly]."
-"burtn"	380866041	--	nude dune	"[loc-rej]."
+"burtn"	380866041	--	nude dune	--	"[locname]."
 "dune"	322848513	--	nude dune	--	"You can't really shift the dune, but you don't need to."
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
 "cinders"	463338906	--	--	cinders-gone rule	"The cinders are gone for good."
@@ -1634,6 +1635,10 @@ to say ache-plur:
 to say to-dig:
 	say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
 
+this is the now-shore rule:
+	if player is in anger range and haunter is in lalaland, the rule succeeds;
+	the rule fails;
+
 this is the is-hauntable rule:
 	if player is in anger range and haunter is off-stage, the rule succeeds;
 	if haunter is visible, the rule succeeds;
@@ -1753,14 +1758,7 @@ to say giz-tex:
 	say "It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better"
 
 to say fix-boat-parts:
-	if blaster is reflexed and turbos are reflexed:
-		say "You fixed what you can of the boat";
-	else if turbos are reflexed:
-		say "You fixed the turbos, so maybe you can tackle the blaster";
-	else if blaster is reflexed:
-		say "You fixed the blaster, so maybe you can tackle the turbos";
-	else:
-		say "Hmm. It might be better to fix parts of the boat--the turbos and blaster";
+	say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
 
 this is the serpent-hiding rule:
 	if player is in limits and serpent is in lalaland, the rule succeeds;
