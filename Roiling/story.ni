@@ -6944,23 +6944,23 @@ check going nowhere (this is the spam can't go that way rule) :
 
 table of nowheres [tnw]
 theloc	thereject
-Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond."
+Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [means manse]
 Farming Framing	"No time for mooching around Means Manse. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
 highest heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is visible]to get the pram out of the way[else]going DOWN the ramp[end if]."
-Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [means manse]
-Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. You can, however, TRY to go outside."
+Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [stores]
+Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. There must be a generic way to leave!"
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat." [routes]
 Harms Marsh	"Far into a rift? No. You can't [if darkness is visible]see far enough to [end if]rely on directions, here[if darkness is visible]. You just need to find No-Gal Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Drowning ails or roils a sailor.[end if]"
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
-Loather Rathole	"[if cold is reflexive]You're too cold. While haste heats, the new random direction would offer no more [i]heat[r] than here.[else]You've got to race after that guy, but you wonder if it really matters.[end if]" [troves]
+Loather Rathole	"[if cold is not in lalaland]You're too cold. While haste heats, the new random direction would offer no more [i]heat[r] than here.[else]You've got to race after the thief, whatever direction they went, but you wonder if it really matters.[end if]" [troves]
 Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. Besides, you might wind up in ruts: Rustin['] Ruin St."
-Drain Nadir	"You're so low, you can picture yourself slipping on a rind or dinar. You need to build yourself up here, somehow."
-Boredom Bedroom	"You need to look at something that would inspire you to move, instead."
+Drain Nadir	"You're so low, you can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow."
+Boredom Bedroom	"Directions won't work. Running into a wall would leave your bod more red: boom! Study your surroundings."
 Browse Bowers	"You are definitely going places, but the only place you'd get walking from here is the Save-Aves. Not ritzy enough! Maybe you should focus on that brochure."
-Econ Cone	"That could lead to ransom manors."
+Econ Cone	"That could lead to Save Aves. A well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there."
 Upscale Capsule	"You're at the very top. You don't really want to change that without really good motivation."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
@@ -12457,7 +12457,7 @@ tried-seating is a truth state that varies.
 to say seat-try:
 	now tried-seating is true;
 
-the teasing seating is useless scenery in lectures. "Some of it is open, but you just "
+the teasing seating is useless scenery in lectures. "Some of it is open, but you figure it's reserved, or someone will peg you back. "
 
 instead of doing something to the teasing seating:
 	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or Ian. Or the lecturer." instead;
@@ -13926,9 +13926,15 @@ instead of taking brochure:
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Your sense of direction is still borked, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
+Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]While save aves branch out each way, the statue nearby looks so much more important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
 
 understand "econ-cone" as Econ Cone.
+
+save aves are useless scenery in Econ Cone. "They lead out every way to less affluent and powerful places."
+
+instead of doing something with save aves:
+	if action is procedural, continue the action;
+	say "The save aves are good enough for other people, but not you. You want the best!"
 
 check going inside in Econ Cone:
 	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking. You have not achieved it yet. Your eyes turn [if astute statue is examined]back [end if]to the astute statue." instead;

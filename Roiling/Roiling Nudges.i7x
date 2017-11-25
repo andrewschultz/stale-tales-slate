@@ -279,7 +279,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "brochure"	552618888	--	brochure	--	"It's more the blurb at the end than the brochure."
 "shmoe"	399790104	browse bowers	--	--	"[shmoe-homes]."
 "home"	303516138	browse bowers	--	--	"[shmoe-homes]."
-"cone"	290071779	Econ Cone	--	--	"[cone-rec]."
+"cone"	290071779	Econ Cone	--	--	"[cone-rec]." [start econ cone]
+"ave"	237158747	Econ Cone	--	--	"No sense changing them. You must change yourself."
+"aves"	333432713	Econ Cone	--	--	"No sense changing them. You must change yourself."
 "recent"	531959132	Econ Cone	--	--	"[cone-rec]."
 "skyline"	567086698	Econ Cone	--	--	"You don't want to mess with the skyline. You want to get in the godlings['] lodgings!"
 "godling"	328295263	Econ Cone	--	--	"[scrapery]!"
