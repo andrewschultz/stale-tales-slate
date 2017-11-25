@@ -495,7 +495,7 @@ the pockets are part of the player. the pockets are plural-named and useless.
 
 description of pockets is "This shouldn't be here since any action gives a default message."
 
-instead of doing something with the pockets: say "[if location of player is busiest subsite]That would be unprofessional in future job interviews[else if location of player is Dry Yard]You fidget nervously with your pockets for a bit .There's not much else you can do with them[else][one of]Your pockets have no holes. But r[or]R[stopping]eal adventurers don't futz with their pockets. Or pocket-equivalents[end if]."
+instead of doing something with the pockets: say "[if location of player is busiest subsite]That would be unprofessional in future job interviews[else if location of player is Rested Desert]You fidget nervously with your pockets for a bit .There's not much else you can do with them[else][one of]Your pockets have no holes. But r[or]R[stopping]eal adventurers don't futz with their pockets. Or pocket-equivalents[end if]."
 
 chapter done rejects
 
@@ -1423,7 +1423,7 @@ section intro
 
 carry out intro-hinting:
 	if player is in busiest subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if above-sign is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
-	if player is in Dry Yard:
+	if player is in Rested Desert:
 		if odor is visible, try objhinting odor instead;
 		if bolt is visible and bulge is visible:
 			if blot-first is true, try objhinting bolt instead;
@@ -2746,7 +2746,7 @@ check fliptoing (this is the should we bother flipping rule):
 			now noise bag is open;
 			continue the action;
 		d "[noun] can't seem to be flipped.";
-		say "You can't see anything here like that[if toga is not in Dry Yard], or changeable into that[end if]." instead;
+		say "You can't see anything here like that[if toga is not in Rested Desert], or changeable into that[end if]." instead;
 
 check fliptoing silver:
 	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
@@ -3541,13 +3541,13 @@ check going inside in Busiest Subsite:
 	say "Someone tugs you by the arm. 'Can't you read? It says NO ENTRY! Quit dawdling and get to the DEBRIEFING already!'[paragraph break]You check and make sure. No, still NONE TRY. As you brush him off, you hear 'Nice. Smart. Miscreant!'[paragraph break][wfak]";
 	say "The voice cuts off. The passage behind is gone. You shake off a momentary fear missing the lecture will go in your life file.";
 	set the pronoun it to odor;
-	now player is in Dry Yard instead;
+	now player is in Rested Desert instead;
 
 instead of thinking: say "Yes, I hope this game makes you do a little of this, but nothing painful[one of] (if you need hints, HINT will work better, or HINT (OBJECT)[or][stopping]."
 
 check dropping magenta nametag:
 	if player is in subsite, say "Enough people have discarded their nametags carelessly. No littering please." instead;
-	if player is in Dry Yard, say "Littering in a nature-filled area like this is not a good idea." instead;
+	if player is in Rested Desert, say "Littering in a nature-filled area like this is not a good idea." instead;
 
 dirs-missed is a number that varies. dirs-missed is 0.
 
@@ -3602,7 +3602,7 @@ check taking off magenta nametag (this is the remove your tag or gadget tag rule
 report taking off magenta nametag when player has gadget: say "You remove the magenta nametag, which seems safer and easier than futzing with the gadget's [if tag is examined]show hows [end if]tag.".
 
 to say nametag-desc:
-	if player is in Dry Yard:
+	if player is in Rested Desert:
 		say "[one of]You were the only person stuck with this color. Others got plain white or grey. Surely that can't mean anything...can it?[paragraph break]Because it seems totally useless now [if player wears nametag]on your shirt[else]it's detached[end if][if goat is visible]. But after what you did to the goat, maybe it'll be useful somewhere[else]. You'd like it to be useful for more than identification[end if][or]An ugly magenta[stopping].[no line break]";
 		continue the action;
 	if broad board is examined:
@@ -3620,36 +3620,36 @@ check wearing the magenta nametag:
 	if player wears the magenta nametag, say "You already are." instead;
 	say "It's lost most of its sticky stuff on the back side. It'd just be a gnarled dangler if you reattached it." instead;
 
-chapter A Dry Yard
+chapter Rested Desert
 
-There is a room called A Dry Yard. It is in intro.
+Rested Desert is a room in intro.
 
-instead of exiting in Dry Yard:
+instead of exiting in Rested Desert:
 	if thorn is visible:
 		say "It looks like there's a passage beyond that thorn, but you'll need to get rid of it, first.";
 	else:
 		say "You feel a sudden sense of vertigo as you walk towards the passage where the thorn was. You realize you have lost your sense of direction, and for whatever reason, you're preoccupied with finding it before you can continue. So, which way is the thorn?"
 
-report looking in Dry Yard for the first time: say "[i]So what was that lecture supposed to be about? One word changing how we look at things, how things are? Rubbish. It has to be. You think.[line break][r]"
+report looking in Rested Desert for the first time: say "[i]So what was that lecture supposed to be about? One word changing how we look at things, how things are? Rubbish. It has to be. You think.[line break][r]"
 
-every turn when player is in dry yard and odor is in dry yard and player was in dry yard (this is the clue odor to door rule) :
+every turn when player is in Rested Desert and odor is in Rested Desert and player was in Rested Desert (this is the clue odor to door rule) :
 	if current action is not objhinting:
 		say "[one of]You imagine a swordsman changing to sandworms, and back.[or]You confuse latitude and altitude for a second. Odd.[or]An inner voice briefly espouses your latent talent.[or]You suddenly find waterskiing awestriking.[or]You're seized with sudden fervor that there's only one way to spell centimeters. Or centimetres.[or]You hear a voice for a moment: demanding, maddening.[or]You think back to the NO ENTRY, err, NONE TRY sign. Odd that you saw the two letters switch. The odor smells a bit different.[or]The odor reminds you of crazy-huge organic isomers that become different if you exchange two arms. But maybe you can think simpler than that.[or][final-hint][stopping]"
 
 to say final-hint: say "[one of]You know you need to find the right thing to think, [i]or do[r].[or]You suddenly wish someone would come by to help, so you could be all [one of]'Dr.! Oo!'[or]'Oo! Dr.!'[cycling][cycling]"
 
-description of Dry Yard is "This is the center of a wide-open space. There's only a shrub and brush for vegetation[if odor is visible]. You definitely smell an odor, though[else]. A door stands here, too[end if]."
+description of Rested Desert is "This is the center of a wide-open space. There's only a shrub and brush for vegetation[if odor is visible]. You definitely smell an odor, though[else]. A door stands here, too[end if]."
 
-the shrub is scenery in Dry Yard. "[shru-bru]."
+the shrub is scenery in Rested Desert. "[shru-bru]."
 
 to say shru-bru: say "It's as unremarkable as the [if the item described is shrub]brush[else]shrub. You sort of wonder about that [oddo], though"
 
-check taking when player is in Dry Yard:
+check taking when player is in Rested Desert:
 	if noun is shrub or noun is brush, say "That'd be as useless and cumbersome as taking the [if noun is brush]shrub[else]brush[end if]. It wouldn't seem to help with the [oddo], either." instead;
 
-the brush is scenery in Dry Yard. "[shru-bru]."
+the brush is scenery in Rested Desert. "[shru-bru]."
 
-to say oddo: say "[if odor is in Dry Yard]odor[else]door[end if]"
+to say oddo: say "[if odor is in Rested Desert]odor[else]door[end if]"
 
 The gateman is a person. "Nat Egam, the tan mage/gateman, is grousing around here.".
 
@@ -3667,7 +3667,7 @@ after fliptoing gateman:
 		now bugle is in lalaland;
 	continue the action;
 
-the odor is scenery. the odor is undesc. it is in Dry Yard. rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
+the odor is scenery. the odor is undesc. it is in Rested Desert. rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
 
 understand "smell" and "breeze" as odor.
 
@@ -3762,7 +3762,7 @@ instead of taking odor: say "Impossible."
 
 instead of examining odor: try smelling instead.
 
-check going inside in Dry Yard:
+check going inside in Rested Desert:
 	if yard-door is visible, try entering yard-door instead;
 
 chapter thickest thickets
@@ -9457,7 +9457,7 @@ to say blurby:
 	if location of player is notices section:
 		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
 		continue the action;
-	if location of player is Dry Yard:
+	if location of player is Rested Desert:
 		say "A magnet [if goat is visible]wouldn't have helped you[else]won't help you[end if] get past the thickets[if goat is not visible]. Right idea, though. Wrong item[end if].[run paragraph on]";
 		continue the action;
 	say "[reject][run paragraph on]";
@@ -9586,7 +9586,7 @@ Rule for printing a parser error when the latest parser error is didn't understa
 	say "[reject]";
 	reject the player's command;
 
-check going nowhere in Dry Yard:
+check going nowhere in Rested Desert:
 	if yard-door is off-stage, say "You wander around a bit, but outside of the shrub and brush, there's nothing. It would be too easy to get totally lost. And it's not like you NEED to get away from the odor." instead;
 	if bugle-played is true or blot is visible, say "You just unlocked that door[if bugle-played is true and blot is visible], not once, but twice[end if]. Walking away from it would be copping out." instead;
 	if yard-door is visible, say "That'd feel a bit odd, making a door then walking away from it. Maybe there's a way to unlock it, maybe as easy as changing it from an odor in the first place." instead;
@@ -10101,7 +10101,7 @@ check objasking it about (This is the check for object information rule):
 	repeat through table of default-sub-blather:
 		if noun is gateman:
 			if second noun is not goat:
-				if second noun is in Dry Yard, say "'In the past now. Nothing more to learn from that.'" instead;
+				if second noun is in Rested Desert, say "'In the past now. Nothing more to learn from that.'" instead;
 				if second noun is in subsite, say "You'd know more about that than he would." instead;
 			if second noun is visible, say "Examining would probably work better." instead;
 		if noun is him-who entry, say "[him-say entry][line break]" instead;
@@ -10659,7 +10659,7 @@ carry out roomgoing:
 		say "That'd be hyperwarping to another region. Sorry." instead;
 	if myrm is unvisited, say "You haven't gotten there yet." instead;
 	if myrm is subsite, say "Goodness, no." instead; [start intro]
-	if myrm is Dry Yard, say "You can't see the door to get back." instead;
+	if myrm is Rested Desert, say "You can't see the door to get back." instead;
 	if myrm is Thickets, say "You can't see the passage back." instead; [end intro]
 	if myrm is sf or myrm is rf, say "You can't retrace your steps." instead; [start forest]
 	if player is in slough, say "You've done all you could in the enclosure and before. Onward." instead;
@@ -10792,7 +10792,7 @@ to decide which number is player-rank:
 	if mrlp is resort:
 		if resort is solved, decide on number of rows in table of ranks;
 		decide on number of rows in table of ranks - 1;
-	if Dry Yard is not visited, decide on 1;
+	if Rested Desert is not visited, decide on 1;
 	if notices section is not visited, decide on 2;
 	if trips strip is not visited, decide on 3;
 	let temp-rank be 3;
@@ -10924,7 +10924,7 @@ to say die-die-die:
 instead of waiting:
 	if player is in frost forts, say "[one of]Ish. Very shivery.[or]Looks like you have a Mexican standoff, if Mexico were in Greenland.[or]The wolves get antsy. I mean, they don't turn into ants. You are getting colder.[or]Your blood runs cold as the wolves inch closer. These aren't totally causally related.[or]If you don't do something cold-blooded, you'll be too cold-blooded to do anything.[or][die-die-die][stopping]" instead;
 	if player is in Means Manse, say "Well, you sort of almost have it, but you want to (not) do something with the exits." instead;
-	if player is in Dry Yard and goat is not visible, say "There's something important to do here. But what?" instead;
+	if player is in Rested Desert and goat is not visible, say "There's something important to do here. But what?" instead;
 	if player is in anti-cool location, say "The anti-cool location becomes a lo-action location for a bit." instead;
 	say "[one of]Time passes... [no line break][or][stopping][one of]A mist seeps...[or]I see stamps...[or]Me, sit? Passe![or]Sit, see maps...[at random]";
 
@@ -10968,7 +10968,7 @@ carry out smelling:
 	if noun is slough, say "I suppose it's a smell of nearby evil or something." instead;
 	if noun is noisome moonies, say "Sadly, you already can without trying." instead;
 	if noun is frost forts, say "Decayin[']. Cyanide. Nice day? Nay, ICED." instead;
-	if location of player is dry yard, say "[if yard-door is not in Dry Yard]It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?[paragraph break]You repress a four-letter word. Well, if things are that simple, it's probably a [i]nicer[r] four-letter word[else]The door is of some odd wood you don't recognize[end if]." instead;
+	if location of player is Rested Desert, say "[if yard-door is not in Rested Desert]It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?[paragraph break]You repress a four-letter word. Well, if things are that simple, it's probably a [i]nicer[r] four-letter word[else]The door is of some odd wood you don't recognize[end if]." instead;
 	if location of player is trips strip, say "There's a mixture of smells coming from the shops. You could probably go up to one and examine it." instead;
 	if location is kitchen, say "The smell of delicious fried comfort foods. You'll probably not want to make anything too nutritious here." instead;
 	if location of player is cedars, say "Still strong and pleasant. Better than ample maple or an a-ok oak. Those cedars." instead;
@@ -11487,7 +11487,7 @@ carry out blowing:
 carry out playing:
 	if noun is not bugle, say "That's not an instrument you can play." instead;
 	if player is in notices section, say "[if mega ant is in notices section]The mega ant is not moved[else]Nothing seems to happen to the gateway[end if][if bugle-played is true]. Maybe you need to do something different than play the bugle here[end if]." instead;
-	if player is not in Dry Yard, say "You should not have the bugle at this point, so this is a [bug-report]" instead;
+	if player is not in Rested Desert, say "You should not have the bugle at this point, so this is a [bug-report]" instead;
 	if bugle-played is false:
 		say "The note from the bugle causes the door to swing back and forth, [if bolt is in lalaland]just as when you got rid of the bolt[else]even with the bolt in place. You can probably enter now[end if].";
 		now bugle-played is true;
@@ -11971,8 +11971,8 @@ volume in-game map
 [intro region]
 index map with notices section mapped east of trips strip.
 index map with thickets mapped east of notices section.
-index map with dry yard mapped east of thickets.
-index map with subsite mapped south of dry yard.
+index map with Rested Desert mapped east of thickets.
+index map with subsite mapped south of Rested Desert.
 
 [roster]
 index map with Astral Altars mapped south of Trips Strip.
@@ -12168,7 +12168,7 @@ carry out askthruing:
 	repeat with the-thingamabob running through the list of things in subsite:
 		say "Asking about [the-thingamabob].";
 		try objasking gateman about the-thingamabob;
-	repeat with the-thingamabob running through the list of things in Dry Yard:
+	repeat with the-thingamabob running through the list of things in Rested Desert:
 		say "Asking about [the-thingamabob].";
 		try objasking gateman about the-thingamabob;
 	the rule succeeds;
@@ -12309,8 +12309,8 @@ understand "ts" as tsing.
 carry out tsing:
 	if trips strip is visited, say "Already beat intro. RETRY to get back." instead;
 	increase the cur-score of intro by 4;
-	if Dry Yard is unvisited:
-		move player to Dry Yard, without printing a room description;
+	if Rested Desert is unvisited:
+		move player to Rested Desert, without printing a room description;
 	if notices section is unvisited:
 		move player to notices section, without printing a room description;
 	now nametag is in lalaland;
@@ -12321,7 +12321,7 @@ carry out tsing:
 	now player has the saltine;
 	now player has the phial;
 	now intro is solved;
-	if a random chance of 1 in 2 succeeds: [this is a silly randomization for what you could've solved at A Dry Yard]
+	if a random chance of 1 in 2 succeeds: [this is a silly randomization for what you could've solved at Rested Desert]
 		move bugle to lalaland;
 	else:
 		move bolt to lalaland;

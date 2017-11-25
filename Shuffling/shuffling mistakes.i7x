@@ -50,12 +50,10 @@ understand "try" as a mistake ("[if player is in subsite]You're sure the lecture
 to say if-sign-x:
 	say "[if above-sign is not examined]. Maybe the sign means something different[end if]"
 
-chapter dry yard
+chapter rested desert
 
-understand "dray" as a mistake ("You don't have enough possessions to need a cart. You probably need somewhere to go, instead.") when player is in Dry Yard.
-
-[def=yard-door]
-understand "rood" as a mistake ("[if yard-door is in dry yard]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in dry yard.
+[def=desert-door]
+understand "rood" as a mistake ("[if yard-door is in rested desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in rested desert.
 
 chapter thickest thickets
 
