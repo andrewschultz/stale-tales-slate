@@ -6981,7 +6981,7 @@ Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[el
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if unripe ur-pine is visible], and the ur-pine's in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [ag-first] will let you enter[end if]."
-Fringe Finger	"Unorg'd ground is every way except back east."
+Fringe Finger	"Unorg'd ground is every way except back east. Falling there off the fringe finger would result in ... grief'n."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."

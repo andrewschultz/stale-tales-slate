@@ -501,7 +501,7 @@ chapter done rejects
 
 table of done rejects [tdr]
 donething	donemsg
-yard-door	"The door is probably the way out. Best not change it into something else." [intro]
+desert-door	"The door is probably the way out. Best not change it into something else." [intro]
 bugle	"The bugle emits a sad 'don't change me back' noise."
 gateman	"Don't scramble the gateman. He's here to help."
 nose	"Don't get that nose bent out of shape."
@@ -1126,7 +1126,7 @@ bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the d
 bolt	"[one of]You don't have any key, but that bolt is stopping the door from opening.[plus][or]You want to change the bolt into a BLOT. [minus][cycling]"
 blot	"The blot is a clue what the bulge could become. It's not useful by itself."
 bugle	"You should PLAY the bugle."
-yard-door	"You can just ENTER the door[if bugle-played is false and bolt is visible] once you figure how to open it[end if]."
+desert-door	"You can just ENTER the door[if bugle-played is false and bolt is visible] once you figure how to open it[end if]."
 toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or][or]What could the toga become that might eat through the darnels?[plus][or]The toga can become a GOAT. [minus][cycling]"
 toga-writing	--	toga
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
@@ -1429,7 +1429,7 @@ carry out intro-hinting:
 			if blot-first is true, try objhinting bolt instead;
 			try objhinting bulge instead;
 		if bugle is visible and bugle-played is false, try objhinting bugle instead;
-		try objhinting yard-door instead;
+		try objhinting desert-door instead;
 	if player is in thickest thickets:
 		if toga is visible, try objhinting toga instead;
 		all-say "You can just go IN, now." instead;
@@ -2864,7 +2864,7 @@ chapter the anagram table
 table of Intro anagrams [toa] [NOTE: PUT NON SCENERY FIRST]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
-odor	yard-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
+odor	desert-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
 bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
 toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
 nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
@@ -3676,29 +3676,29 @@ instead of taking odor: say "Impossible."
 instead of examining odor: try smelling instead.
 
 to say bul-blo:
-	if bulge is part of the yard-door and blot is part of the yard-door:
+	if bulge is part of the desert-door and blot is part of the desert-door:
 		say "bulge and a blot";
-	else if bulge is part of the yard-door:
+	else if bulge is part of the desert-door:
 		say "bulge and a bolt";
-	else if blot is part of the yard-door:
+	else if blot is part of the desert-door:
 		say "blot";
 	else:
 		say "bolt"
 
-yard-door is a privately-named fixed in place thing. understand "door" and "improbable" as yard-door when odor is visible or yard-door is visible. printed name of yard-door is "the door".
+desert-door is a privately-named fixed in place thing. understand "door" and "improbable" as desert-door when odor is visible or desert-door is visible. printed name of desert-door is "the door".
 
-after fliptoing yard-door:
+after fliptoing desert-door:
 	if min-alert is false:
 		poss-display;
 	continue the action;
 
-initial appearance of yard-door is "That weird door you summoned is here. It has a [bul-blo] on it."
+initial appearance of desert-door is "That weird door you summoned is here. It has a [bul-blo] on it."
 
-the musical chord is part of the yard-door. description is "[if bugle-played is true]It was probably just to clue the bugle[else if bulge is part of the yard-door]It seems to suggest music would be a good idea. Hmm[else]You can't tell what note it is, but maybe it's just a clue to play anything on your bugle[end if]."
+the musical chord is part of the desert-door. description is "[if bugle-played is true]It was probably just to clue the bugle[else if bulge is part of the desert-door]It seems to suggest music would be a good idea. Hmm[else]You can't tell what note it is, but maybe it's just a clue to play anything on your bugle[end if]."
 
 instead of taking the musical chord: say "It's engraved in the door.".
 
-the bolt is part of the yard-door. description is "It sticks out from the door."
+the bolt is part of the desert-door. description is "It sticks out from the door."
 
 check taking bolt: say "It's like there's an invisible force field around the bolt." instead.
 
@@ -3711,7 +3711,7 @@ the blot is a thing. description of blot is "It almost looks like a musical chor
 instead of taking the blot: say "It's pretty much bled into the door."
 
 after fliptoing blot:
-	now blot is part of yard-door;
+	now blot is part of desert-door;
 	if bulge is in lalaland:
 		min-up;
 	continue the action;
@@ -3721,7 +3721,7 @@ after fliptoing bugle:
 		min-up;
 	continue the action;
 
-the bulge is part of the yard-door. rgtext of bulge is "[gcn][gc][rc][rc][gc]". lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E".
+the bulge is part of the desert-door. rgtext of bulge is "[gcn][gc][rc][rc][gc]". lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E".
 
 description of the bulge is "It's shaped like a narrow rectangle with rounded corners. It has an upper corner that fans out. There's no way to pry it from the door. [run paragraph on][bugle-clue]."
 
@@ -3733,9 +3733,9 @@ the bugle is a thing. description of bugle is "It's brass, you guess, and it pro
 
 understand "horn" as bugle when bugle is visible.
 
-understand "doorway" as yard-door when yard-door is visible.
+understand "doorway" as desert-door when desert-door is visible.
 
-description of yard-door is "[rut-descri]."
+description of desert-door is "[rut-descri]."
 
 to say rut-descri:
 	if bugle-played is true:
@@ -3743,16 +3743,16 @@ to say rut-descri:
 		the rule succeeds;
 	say "It's got a big musical chord painted on the front above [if bulge is visible]a bulge which doesn't seem to belong on the door[else]where the bulge was[end if]. [if bolt is visible]A bolt's sticking out, too, not locked into anything[else]It's covered by a blot, too[end if]. You have no clue where the door could lead [if blot is visible or bugle-played is true]now you've opened it[else]even if you figure how to open it[end if]"
 
-check opening yard-door:
-	if bugle-played is false and bolt is visible, say "There's no real handle to grab[if bulge is part of the yard-door]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
+check opening desert-door:
+	if bugle-played is false and bolt is visible, say "There's no real handle to grab[if bulge is part of the desert-door]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
 	say "You already unlocked it. Would you like to walk through?";
-	if the player yes-consents, try entering yard-door instead;
+	if the player yes-consents, try entering desert-door instead;
 	say "There's nowhere else to go, though." instead;
 
-check entering yard-door:
+check entering desert-door:
 	if player has bugle and bugle-played is false, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
 	if blot is off-stage, say "The door seems stuck by an invisible force[if bolt is visible]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
-	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of yard-door]Without the bolt, the door swings open easily. [end if]";
+	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of desert-door]Without the bolt, the door swings open easily. [end if]";
 	say "You can't see what's behind, but fortunately it's just a small tumble[if player has bugle], though the bugle gets caught on an outgrowth on the way down[end if]...[wfak]";
 	if player has bugle, now bugle is in lalaland;
 	if blot is off-stage and bugle is off-stage, poss-d;
@@ -3763,7 +3763,7 @@ instead of taking odor: say "Impossible."
 instead of examining odor: try smelling instead.
 
 check going inside in Rested Desert:
-	if yard-door is visible, try entering yard-door instead;
+	if desert-door is visible, try entering desert-door instead;
 
 chapter thickest thickets
 
@@ -4890,7 +4890,7 @@ instead of unlocking:
 		say "Forget it. It's good and shut.";
 	else if noun is metallic door:
 		say "It has no visible keyholes. The only possible interface seems to be the sensor.";
-	else if noun is yard-door:
+	else if noun is desert-door:
 		say "[if bugle-played is true]You already did when you played the bugle.[else if bolt is in lalaland]You already got rid of the bolt.[else]No keyholes. Maybe you can break it down some other way?[end if]";
 	else:
 		say "You don't need to.";
@@ -9587,13 +9587,10 @@ Rule for printing a parser error when the latest parser error is didn't understa
 	reject the player's command;
 
 check going nowhere in Rested Desert:
-	if yard-door is off-stage, say "You wander around a bit, but outside of the shrub and brush, there's nothing. It would be too easy to get totally lost. And it's not like you NEED to get away from the odor." instead;
-	if bugle-played is true or blot is visible, say "You just unlocked that door[if bugle-played is true and blot is visible], not once, but twice[end if]. Walking away from it would be copping out." instead;
-	if yard-door is visible, say "That'd feel a bit odd, making a door then walking away from it. Maybe there's a way to unlock it, maybe as easy as changing it from an odor in the first place." instead;
+	say "The size of the desert, um, deters you. You're steer'd back to the [if desert-door is off-stage]odor[else]door[end if] is[if bugle-played is true or blot is visible]. The one you can probably go through[end if]." instead;
 
 check going nowhere:
-	say "This is a generic message to say you can't go that way. It should be changed to add variety and flavor.";
-	the rule succeeds;
+	say "This is a generic message to say you can't go that way. It should be changed to add variety and flavor. [if number of viable directions is 1]You can only go [list of viable directions][else of number of viable directions is 0]You can't seem to go any direction, so there is probably a puzzle to solve[else]Here is a list of ways you can go: [list of viable directions][end if]." instead;
 
 book parsing
 
@@ -9876,7 +9873,7 @@ carry out scaning:
 			try scaning warts instead;
 		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
 	if noun is gateman, say "The gadget buzzes.[paragraph break]'What?! Were you hoping to change me back?' harrumphs Nat Egam. 'Maybe ask me questions instead.'" instead;
-	if noun is the yard-door:
+	if noun is the desert-door:
 		say "You see no activity until you wave your gadget over the bulge. So you leave it there, and you pick something up.[line break]";
 		try scaning bulge instead;
 	if noun is sandwich, say "Your gadget refuses to remain stable. As if it's trying to read two things at once. Perhaps if you pulled the components apart?" instead;
@@ -10939,7 +10936,7 @@ before smelling the player: say "As good-smelling as ever. You remembered your d
 instead of entering mattress: try sleeping instead.
 
 carry out smelling:
-	if noun is yard-door, say "It doesn't smell any more." instead;
+	if noun is desert-door, say "It doesn't smell any more." instead;
 	if noun is clover:
 		if player has clover, say "Still got that planty smell, though it's more the touch that's important." instead;
 		say "It's too close to the ground, and the smell doesn't matter." instead;
@@ -10968,7 +10965,7 @@ carry out smelling:
 	if noun is slough, say "I suppose it's a smell of nearby evil or something." instead;
 	if noun is noisome moonies, say "Sadly, you already can without trying." instead;
 	if noun is frost forts, say "Decayin[']. Cyanide. Nice day? Nay, ICED." instead;
-	if location of player is Rested Desert, say "[if yard-door is not in Rested Desert]It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?[paragraph break]You repress a four-letter word. Well, if things are that simple, it's probably a [i]nicer[r] four-letter word[else]The door is of some odd wood you don't recognize[end if]." instead;
+	if location of player is Rested Desert, say "[if desert-door is not in Rested Desert]It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?[paragraph break]You repress a four-letter word. Well, if things are that simple, it's probably a [i]nicer[r] four-letter word[else]The door is of some odd wood you don't recognize[end if]." instead;
 	if location of player is trips strip, say "There's a mixture of smells coming from the shops. You could probably go up to one and examine it." instead;
 	if location is kitchen, say "The smell of delicious fried comfort foods. You'll probably not want to make anything too nutritious here." instead;
 	if location of player is cedars, say "Still strong and pleasant. Better than ample maple or an a-ok oak. Those cedars." instead;
@@ -11377,7 +11374,7 @@ understand "knock on [something]" as knocking.
 
 does the player mean knocking the black door: it is very likely.
 does the player mean knocking the cabinet: it is very likely.
-does the player mean knocking the yard-door: it is very likely.
+does the player mean knocking the desert-door: it is very likely.
 does the player mean knocking the metallic: it is very likely.
 does the player mean knocking Corses Crosse: it is very likely.
 does the player mean knocking a portal:
@@ -11389,7 +11386,7 @@ carry out knocking:
 	if noun is a portal, say "Better just to try to enter." instead;
 	if noun is cabinet, say "That's potentially an act of violence." instead;
 	if noun is black door, say "[if black door is part of silo]Nobody answers, unsurprisingly[else]How polite! And ineffective[end if]." instead;
-	if noun is yard-door, say "[if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You brush against the bulge as you knock[end if]. You get no response." instead;
+	if noun is desert-door, say "[if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You brush against the bulge as you knock[end if]. You get no response." instead;
 	if noun is metallic door, say "[if player has tulip]You don't need to go back[else if Anti-Cool Location is visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
 	if noun is Corses Crosse, say "A good way to scrape your knuckles, seeing how quickly it turns." instead;
 	say "Knock, knock. Who's there? Conkk, conkk." instead;
@@ -12964,7 +12961,7 @@ to unsolve-sortie:
 to unsolve-forest:
 	now last-loc of forest is sf;
 	now odor is in forest-x;
-	now bulge is part of yard-door;
+	now bulge is part of desert-door;
 	now bugle is off-stage;
 	now nose is off-stage;
 	now beard is off-stage;

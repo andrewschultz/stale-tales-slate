@@ -67,7 +67,7 @@ while ( $cur <= $#ARGV ) {
       print
 "Just to check, period means a blank space, not a file name. Use -f for a file.\n";
     };
-    /^[\.%a-z]/ && do {
+    /^[\.%a-z]/i && do {
       push( @wordArray, $arg );
       if ( $firstString eq "" ) { $firstString = $cur; }
       $cur++;
