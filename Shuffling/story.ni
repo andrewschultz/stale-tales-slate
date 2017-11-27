@@ -1167,12 +1167,8 @@ store b	"[one of]Store B offers some sort of food that will boost your spirits. 
 marquee	--	store b
 store f	"[one of]Store F has some real earth tones. [plus][or]Trees, leaves, mud. [plus][or]There's a FOREST behind it. [minus][cycling]"
 roadsign	"The road sign gives a clue as to the nature of Store F."
-store i	"[one of]The outline of a trap door is what you need to get to. what word is a synonym for exit and missile launch? [plus][or][if player has gadget]If you scan the Tories, that and the store give you half the answer--more, since it eliminates some of the later letters. You can use both modes of the gadget[else]Unfortunately, without any devices from the cabinet, this is tricky, if you draw a blank on synonyms[end if]. [plus][or]You need to create a SORTIE. [minus][cycling]"
+store i	"[one of]The outline of a trap door is what you need to get to. what word is a synonym for exit and missile launch? [plus]The small poem has red writing which will clear which letters don't fit where.[or]You can also use both settings of the gadget to get four letter placements. [plus][or]You need to create a SORTIE. [minus][cycling]"
 td	"Go down to see what lurks behind store I."
-Tories	"The Tories aren't a political statement, just another clue what to do with Store I."
-Margaret Thatcher	"One of three Tories."
-Winston Churchill	--	Thatcher
-Benjamin Disraeli	--	Churchill
 store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for Store M. It looks like you need to get to a subway station or something. [plus][or][if gadget is cert]The gadget tells you M----- if you scan both the store and the map of Mt. Rose[else if gadget is rect]M----S is only so helpful here, but remember a city and its transport system are being portrayed[else]A city and its transport system are being portrayed[end if]. [plus][or]You need to discover the METROS. [minus][cycling]."
 subway map	"The subway map gives a hint as to what Store M can be."
 store r	"[if you-can-advance][one of]You need to get into store R. [plus][or]The roster provides a hint. Where's a place you can rest? [plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word. [plus][or]You want to go to a RESORT. [minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r][end if]."
@@ -3017,7 +3013,6 @@ to say tool-clue:
 		say ". The combination of grips and ropes is probably enough to make climbing gear[if tool shed is visible]. You can probably try to mess with the tool shed, but it doesn't seem like you need to[end if]";
 
 to say trap-check:
-	now tories are in lalaland;
 	if td is visible:
 		say ", collapsing the trap door";
 	else:
@@ -5125,29 +5120,7 @@ description of store h is "Inside store H you see such a miscellany that you dou
 
 Store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]". cert-text of store i is "S[d1][d1][d1][d1][d1]". rect-text of store i is "S[d1][d1][d1][d1][ast]E".
 
-the Tories are plural-named auxiliary scenery in trips strip. lgth of tories is 6. gpos of tories is 6. rpos of tories is 5. rgtext of tories is "[rcn][gc][gc][rc][rc][rc]". cert-text of tories is "-[ast]O[ast]R[d1][d1][d1]". rect-text of tories is "S[d1][d1][d1][d1][ast]E".
-
-description of tories is "A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories."
-
-understand "pictures/picture" and "prime/ minister/ministers" as tories when tories are visible.
-
-[note we need to activate TORIES]
-
-description of store i is "Store I has pictures of famous political figures in the window--Winston Churchill, Benjamin Disraeli and that great charmer, Margaret Thatcher[one of] (*)[or][stopping]. You think you remember what party they belonged to. The pictures are big enough to obscure--almost--the outline of a trap door behind them[one of].[paragraph break](*) semantically, too good to pass up. Feel free and welcome to picture it being said sarcastically[or][stopping]."
-
-after examining store i for the first time:
-	say "[one of][i][bracket]NOTE: this is not a political statement on their party.[close bracket][r][line break][or][stopping]";
-	now td is in trips strip;
-
-Margaret Thatcher is part of the Tories. description of Margaret is "Her looks are not important. Okay, the Iron Lady, etc[tory-clue].".
-
-Winston Churchill is part of the Tories. description of Winston Churchill is "His looks are not important. Okay, bulldogish face, cigar, etc[tory-clue].".
-
-Benjamin Disraeli is part of the Tories. description of Benjamin Disraeli is "He's wearing one of those long coats with vest and pocket-watch you guess were popular in Victorian times. You know you should know who he is more than you do, but his face is familiar[tory-clue].".
-
-to say tory-clue:
-	if player has gadget:
-		say "[one of][or]. Scanning the pictures for clues physically is all well and good, but maybe your gadget would help[or]. You bring your gadget too close to the pictures, and it begins behaving weirdly[or][cycling]";
+description of store i is "Store I has something written on it. You think you see--almost--the outline of a trap door behind them[one of]. Perhaps there is something behind, to get you out of here."
 
 Store J is a sto. understand "store/ 10/ten" as store j.
 
@@ -9980,7 +9953,6 @@ table of kibitzes
 kib	helpy
 motto	"Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO."
 tall trio	"You scanned each of the tall trio, and the readout didn't change."
-tories	"Six letters to Store I--probably mainly important they're Tories."
 drainage	"[if gadget is cert]Uh, oh. Not really helpful at all[else]Not bad, but still[end if]. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage."
 magenta nametag	"[if gadget is cert]The sixth light starts red, then flashes to green and back[else]Hmm, two aspects to the magenta nametag to consider[end if][check-other-nt]."
 

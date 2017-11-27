@@ -93,6 +93,8 @@ understand "presto" as a mistake ("Your magic is not advanced enough to change s
 
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in trips strip.
 
+understand "tories" as a mistake ("!") when player is in trips strip.
+
 understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]") when player is in trips strip.
 
 understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]") when player is in trips strip.

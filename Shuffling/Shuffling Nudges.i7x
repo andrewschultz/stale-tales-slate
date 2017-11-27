@@ -136,12 +136,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "roadsign"	425667309	--	store f	--	"[road-sign]."
 "road"	182893287	--	store f	--	"[road-sign]."
 "sign"	242774022	--	store f	--	"[road-sign]."
-"winston"	564479196	--	store i	--	"[dead-pols]."
-"churchill"	455625902	--	store i	--	"[dead-pols]."
-"benjamin"	444256372	--	store i	--	"[dead-pols]."
-"disraeli"	476420316	--	store i	--	"[dead-pols]."
-"margaret"	502614224	--	store i	--	"[dead-pols]."
-"thatcher"	515107949	--	store i	--	"[dead-pols]."
 "subway"	452280521	--	store m	--	"[no-store-m]."
 "subwaymap"	600009451	--	store m	--	"[no-store-m]."
 
