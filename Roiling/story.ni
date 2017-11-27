@@ -6990,7 +6990,7 @@ Shaven Havens	"Any direction but back east might drive you too far from the pala
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Loop Pool	"The pool is wide and long. You can only go back south."
-Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even more unbearable for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
+Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
@@ -13632,6 +13632,8 @@ a-text of heat is "RYRY". b-text of heat is "RGRG". parse-text of heat is "[sp]x
 book Bustle Sublet
 
 Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is visible]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
+
+check going nowhere in Bustle Sublet: say "You might find even reastier arteries there. Stay here and figure what to do." instead;
 
 after looking in bustle sublet:
 	set the pronoun it to sob ever verbose;
@@ -23100,7 +23102,15 @@ check going north in Anger Pit:
 
 book ridging girding
 
-Ridging Girding is north of Tapering Anger Pit. ridging girding is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
+Ridging Girding is north of Tapering Anger Pit. ridging girding is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard where there might be a hole in the girding."
+
+understand "ridging/girding" and "ridging girding" as saturnic curtains when player is in ridging girding.
+
+the saturnic curtains are useless scenery in ridging girding. "They shine metallically. You know better than to touch them. They are effective at keeping everything in one place."
+
+instead of doing something with saturnic curtains:
+	if action is procedural, continue the action;
+	say "Saturnic means infected with lead poisoning, so you don't want to do too much with them.";
 
 chapter ocelots
 

@@ -857,6 +857,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "scowl"	351380740	--	sober robes	--	"[e-m-prank]."
 "cowl"	255106774	--	sober robes	--	"[e-m-prank]."
 "low"	236101189	--	owls	--	"You probably want the owls not to swoop low. And you'll want to take care of them all."
+"saturnic"	524907351	myrm	--	--	"The curtains are too solid to change."
+"aturnic"	428633385	myrm	--	--	"Even one curtain is too solid to change."
 "clipons"	438812280	--	slopinc	--	"The ocelots would still be awkward even if they lost the clip-ons."
 "kool"	255452171	--	look-kool	--	"You're not here to mess with fashion."
 "shades"	380853247	ridging girding	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
