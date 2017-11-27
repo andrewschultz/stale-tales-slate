@@ -595,21 +595,25 @@ understand "copes" as a mistake ("You find it easier to cope, here, with the spe
 
 understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in scope copse.
 
-understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly ms lucy is visible or muscly luc sym is visible.
+understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly ms lucy is in location of player or muscly luc sym is in location of player.
 
 chapter outer route
 
 understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].") when player is in outer route.
 
+chapter baldest blasted saltbed
+
+understand "fluters" as a mistake ("This game has no soundtrack, and if I made one, it wouldn't be very good.") when fluster self rut is in location of player.
+
 chapter unblest sunbelt
 
-understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when Mel Fish is visible.
+understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when Mel Fish is in location of player.
 
 chapter anemic cinema
 
 understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in anemic cinema.
 
-understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't [']til they're gone.") when ingrates are visible.
+understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't [']til they're gone.") when ingrates are in location of player.
 
 chapter fringe finger
 
@@ -617,15 +621,15 @@ understand "refing" as a mistake ("You're not sure what sort of ref'ing would wo
 
 chapter treading gradient
 
-understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is in Treading Gradient]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in Treading Gradient and weeds are in Treading Gradient.
+understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is in Treading Gradient]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are in location of player.
 
-understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in Treading Gradient and player is in Treading Gradient.
+understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in location of player.
 
 chapter shoals aslosh
 
 understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is visible.
 
-understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is visible.
+understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is in location of player.
 
 chapter danger garden
 
@@ -635,7 +639,7 @@ chapter lost lots
 
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
-understand "fluters" as a mistake ("This game has no soundtrack, and if I made one, it wouldn't be very good.") when player is in Lost Lots and fluster self rut is in lost lots.
+understand "prosties" as a mistake ("Not that sort of game. There's some suggestive stuff, but nothing like that.") when ripostes are in location of player.
 
 chapter obscurest subsector
 

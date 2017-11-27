@@ -616,7 +616,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gizmo"	338989896	--	gizmo	--	"[giz-tex]."
 "zomg"	293997050	--	gizmo	--	"[giz-tex]."
 "baldest"	422639744	saltbed	--	--	"[towersloc]." [BALDEST BLASTED SALTBED 1 2]
-"cliff"	170842062	--	cliff	--	"The cliff remains motionless. Perhaps it's useful, after all, to block off some ways to go. This area looks big enough."
 "pirate"	444886553	--	pirates	--	"[plutry of pirates]Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s."
 "erip"	339588717	--	unripe ur-pine	--	"It's officially an ur-pine, not a pine."
 "old"	149195505	--	old ice	--	"No, all the old ice."

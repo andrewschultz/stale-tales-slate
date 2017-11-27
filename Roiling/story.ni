@@ -503,6 +503,10 @@ use MAX_VERBS of 690.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
+use MAX_OBJECTS of 940.
+
+use MAX_PROP_TABLE_SIZE of 570000.
+
 section debug on - not for release
 
 [needs to be near the top--well, could place it before all other when play begins rules]
@@ -7737,7 +7741,7 @@ before listening (this is the you can hear stuff some places rule):
 	if player is in ripe pier, say "Someone calling out they need help to go ABROAD." instead;
 	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead; [towers]
 	if player is in Danger Garden, say "[if bonker is visible]A menacing silence spews from the bonker. Or maybe it's just your imagination[else]Honk, honk[end if]." instead;
-	if player is in unblest sunbelt and sporties' ripostes are in unblest sunbelt, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference[if dandier arid den is in unblest sunbelt]. You're also dreadin['] the next sales pitch from the dandier arid den[end if]." instead;
+	if player is in lost lots and sporties' ripostes are in lost lots, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
 	if dandier arid den is in location of player, say "You're dreadin['] the next mechanical sales pitch from the dandier arid den." instead;
 	if natives are visible:
 		say "The natives' babble doesn't stop.";
@@ -19699,17 +19703,14 @@ Baldest Blasted Saltbed is in Towers.
 check going west in Baldest Blasted Saltbed:
 	say "[if old ice is reflexed]Even though you made it look cooler, t[else]T[end if]he old ice is in the way[if old ice is reflexive], but maybe you could prettify it a bit[end if]." instead;
 
+section old ice
+
 the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if]."
 
 a-text of old ice is "RYYRYR". b-text of old ice is "R?YRYR". parse-text is "x[sp]?-[sp]x[sp]-[sp]x"
 
 check taking old ice:
 	say "You'd get your hands stuck. And I won't double dog dare you." instead;
-
-check scaning cliff:
-	if old ice is reflexive:
-		say "Nothing happens until you also flick across the old ice.";
-		try scaning old ice instead;
 
 book unblest sunbelt
 
@@ -20557,16 +20558,6 @@ description of sporties' ripostes is "They're mocking you, not enough to feel li
 
 a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
-section fluster self rut
-
-the fluster self rut is a red guardian. "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down."
-
-instead of doing something with the fluster self rut:
-	if the action is procedural, continue the action;
-	say "You can't do much with the fluster self rut. Well, nothing exciting."
-
-a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
-
 chapter Fringe Finger
 
 Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This fringe finger leads to a dead end pretty much every which way. So there's not much to do except go back east."
@@ -21170,11 +21161,13 @@ to say mb-also:
 
 the initial appearance of a guardian is usually "[gd of the item described]."
 
-chapter who are the guardians?
+book who are the guardians?
 
-[this is arranged from east to werst, then south to north, the first place you can see a guardian.]
+[this is arranged from south to north, then east to west, the first place you can see a guardian.]
 
-section scope copse
+chapter scope copse
+
+section bluster butlers
 
 the bluster butlers are a plural-named neuter purple guardian. understand "bluster butler" and "butler" as bluster butlers. "Bluster butlers, masters of direct intimidation, guard the way [psgdir of bluster butlers]."
 
@@ -21182,11 +21175,15 @@ description of bluster butlers is "Bluster butlers are known for handling undesi
 
 a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R*RRR**". parse-text of bluster butlers is "x[sp]?[sp]x[sp]x[sp]x[sp]?[sp]?".
 
+section muscly
+
 muscly luc sym is a red guardian. "[one of]Someone muscly named [or][stopping]Luc Sym flexes while guarding the way [psgdir of muscly luc sym].".
 
 description of luc sym is "He's certainly muscly. He looks relatively light on his toes for his size, too."
 
 a-text of muscly luc sym is "RRYRRO". b-text of muscly luc sym is "RRYRR?". parse-text of muscly luc sym is "x[sp]x[sp]u[sp]x[sp]x[sp]?".
+
+section snider diners
 
 The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
 
@@ -21204,11 +21201,19 @@ understand "diner" as diners.
 
 a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-text of diners is "x[sp]?[sp]?[sp]x[sp]?[sp]x".
 
-section baldest blasted saltbed
+chapter baldest blasted saltbed
 
-some Resident Trendies are plural-named red guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
+section fluster self rut
 
-a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
+the fluster self rut is a red guardian. "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down."
+
+instead of doing something with the fluster self rut:
+	if the action is procedural, continue the action;
+	say "You can't do much with the fluster self rut. Well, nothing exciting."
+
+a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
+
+section traipse pirates
 
 some traipse pirates are plural-named red guardians. "Traipse pirates dance to the [psgdir of pirates].". description of pirates is "Sun-burnt and proud of it. They're unlikely to hand you a piastre or discuss the REST API."
 
@@ -21226,15 +21231,25 @@ every turn when pirates are visible:
 
 a-text of pirates is "RYRRYYR". b-text of pirates is "PYRRYGR". parse-text of pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". pirates are cheat-spoilable.
 
-section anemic cinema
+chapter anemic cinema
 
-The ingrates are plural-named white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
+section resident trendies
+
+some Resident Trendies are plural-named red guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
+
+a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
+
+section ingrates
+
+some ingrates are plural-named white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
 
 understand "ingrate" as ingrates.
 
 description of ingrates is "They're spouting some of the [i]angriest[r] ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
 
 a-text of ingrates is "YRRRRYYR". b-text of ingrates is "?PPRRYGR". parse-text of ingrates is "?[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
+
+section admirer
 
 An admirer is a female purple guardian. "An admirer to the [psgdir of admirer] would rather you stay here and listen to their flattery than go anywhere new."
 
@@ -21245,15 +21260,7 @@ description of admirer is "[if admirer is male]He[else]She[end if] seems to be g
 to say admsex:
 	say "[if admirer is male]he[else]she[end if]"
 
-The sweatier wait-seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait-seer]."
-
-understand "wait/ seer" as wait-seer.
-
-description of sweatier wait-seer is "He is sweatier than anyone else you have run across here. But as-is, he has more than enough energy to beat you up. He mutters 'I...we...stare,' turning red, as you look at him."
-
-a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text of wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
-
-section unblest sunbelt
+chapter unblest sunbelt
 
 Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.'"
 
@@ -21262,6 +21269,8 @@ description is "On his chest, he has the word FLEMISH crossed out in red. It's g
 a-text of Mel Fish is "RYRRYRR". b-text of Mel Fish is "RYRRYRR". parse-text of Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 understand "flemish/painted" and "flemish/painted man" as Mel Fish.
+
+section dandier arid den
 
 The dandier arid den is a blue neuter guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
 
@@ -21281,13 +21290,27 @@ instead of doing something with the nerd-aid:
 	if action is procedural, continue the action;
 	say "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.";
 
-section Treading Gradient
+chapter Treading Gradient
 
-the alarming grailman is a blue guardian. understand "liam/ garn/" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
+section alarming grailman
+
+the alarming grailman is a red guardian. understand "liam/ garn/" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
 
 description of grailman is "You could probably take a below-average grailman, but this one's a cut above. He seems to be flexing his muscles a lot, waiting for someone to try going by."
 
 a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text of alarming is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
+
+section sweatier wait-seer
+
+The sweatier wait-seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait-seer]."
+
+understand "wait/ seer" as wait-seer.
+
+description of sweatier wait-seer is "He is sweatier than anyone else you have run across here. But as-is, he has more than enough energy to beat you up. He mutters 'I...we...stare,' turning red, as you look at him."
+
+a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text of wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
+
+section reed's ale
 
 to say deal-seer:
 	say "[one of]'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale[stopping]"
@@ -21312,7 +21335,9 @@ description of Reed's Ale is "It's open and, from [el-la-f]'s frequent swigs, ap
 
 rese is a truth state that varies.
 
-section salted deltas
+chapter salted deltas
+
+section atheists
 
 the Asset-Hit Atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will."
 
@@ -21320,7 +21345,9 @@ understand "atheist" as atheists.
 
 a-text of atheists is "RYRRYYRR". b-text of atheists is "RYRRGYRR". parse-text of atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 
-section danger garden
+chapter danger garden
+
+section natives
 
 some natives are a plural-named white guardian. indefinite article of natives is "several". "Some natives block your way [psgdir of natives], though you don't really see anything interesting there."
 
@@ -21330,21 +21357,29 @@ description of natives is "They're not, like, a particular skin color or with a 
 
 a-text of natives is "RYYRYRR". b-text of natives is "?GYRYRR". parse-text of natives is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
+section bonker
+
 The bonker is a purple guardian. "You recognize a huge bonker to the [psgdir of bonker][one of]. They're usually more bark than bite, but this one's certainly in the way, and they aren't just hired out for fun. Gotta be something interesting that way[or][stopping].". description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. While it's not quite as violent as a boot-o-bot or space-taking as Obst-Bots, its presence indicates something important to the east[or][stopping]."
 
 a-text of bonker is "RRYRYR". b-text of bonker is "PRYPGR". parse-text of bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
 
 retrytext of bonker is ", poised to re-bonk"
 
+section stinger
+
 The stinger is a purple guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it."
 
 a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]x[sp]x[sp]x[sp]x[sp]x[sp]x".
 
-section Strati Strait
+chapter Strati Strait
+
+section lois the hostile
 
 Lois the Hostile is a female proper-named purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She doesn't exactly look happy, but she doesn't look irredeemably evil."
 
 a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR".
+
+section hostile is he lot
 
 The Hostile-Is-He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile-is-he lot].". description is "It's amazing, the variety of hostile expressions!"
 
@@ -27360,7 +27395,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if yurts are in scope copse, say "[2dmiss of myreg]the yurts could've become RUSTY.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel could've become RUSTLED.";
 		if ego drains are not in lalaland, say "[2dmiss of myreg]the organised ego drains could've become GRANDIOSE.";
-		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in the Unblest Sunbelt could've become PROSIEST.";
+		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in the Lost Lots could've become PROSIEST.";
 		if ingrates are not in lalaland, say "[2dmiss of myreg]the ingrates could've been turned ANGSTIER.";
 		if natives are not in lalaland, say "[2dmiss of myreg]the natives could've been turned VAINEST or NAIVEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";

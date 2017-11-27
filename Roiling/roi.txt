@@ -821,6 +821,10 @@ Well, by letting him be HIMSELF.
 Currently the ANGRIEST.
 If the madness became whining...
 ...they could be ANGSTIER.
+?The fluster-self rut
+It is agitated, and it agitates you.
+How can you calm things down?
+Make everything more RESTFUL.
 ?Muscly (Luc Sym/Ms. Lucy)
 Strength doesn't matter without dexterity.
 So make him or her CLUMSY.
@@ -833,9 +837,6 @@ Neither is better or worse than the other.
 They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
 Make them feel differently.
 Make them the HOLIEST.
-?Organised Ego-Drains
-They make you feel like you can't do anything, and they're very reasonable and not overdone.
-You can laugh at them if they become GRANDIOSE.
 ?Pirates
 They have impressive tans they're proud of.
 How to make the pirates lose them?
@@ -857,6 +858,7 @@ How to lower its energy?
 Make it RESTING.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
+While you have to go through the Scope Copse, and you have to pick off the guardians there, there's nothing critical. Though having the map is helpful.
 Strati Strait and Salted Deltas have nothing else, though you'll probably wind up going through both of them.
 Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing there.
 Baldest Blasted Saltbed and Unblest Sunbelt have scenery that gives LLPs.
@@ -875,11 +877,9 @@ An LLP.
 You can change it to something more interesting.
 Make it COILED.
 >>UNBLEST SUNBELT
-?What are the sporties' ripostes for?
-An LLP.
-You can make them less incisive.
-They're almost like poetry.
-So change them to the PROSIEST you've heard.
+?What are the organised ego drains doing?
+They make you feel like you can't do anything, and they're very reasonable and not overdone.
+You can laugh at them if they become GRANDIOSE.
 >>OUTER ROUTE
 ?What's the campiest campsite for?
 To hold the rapier repair.
@@ -923,10 +923,11 @@ You can just take it. Or you can take it with style.
 Doing so is a last lousy point.
 It can be RUSTLED.
 >>LOST LOTS
-?What can I do about the fluster-self rut?
-It is agitated, and it agitates you.
-How can you calm things down?
-Make everything more RESTFUL.
+?What are the sporties' ripostes for?
+An LLP.
+You can make them less incisive.
+They're almost like poetry.
+So change them to the PROSIEST you've heard.
 ?How do I get past the gasfield?
 Well, you don't need to.
 And you can't.
@@ -1024,11 +1025,12 @@ You can't make it go away.
 But you can neutralize it.
 It'll be calmer if it's just PRESENT.
 ?What's with the unripe ur-pine?
+It's not critical to solving this area, but it'll help with Renato's quest.
 It's too big, and it's covering something up.
 Maybe if it were smaller...
 ...or PUNIER.
 ?There aren't many hints here for the curst palace!
-If you opened the premise(s), you can return, talk to St. Teri/the Tetris Sitter, and come back. There'll be new clues.
+If you opened the premise(s), you can return, talk to the person inside once you gained their trust, and come back. There'll be new clues.
 Scan them all and eventually you can narrow it down.
 ?Eleven letters for the curst palace? Really?
 It is a big castle. And it's a final puzzle.
