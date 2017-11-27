@@ -75,7 +75,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "grey"	368088866	Gallery	--	--	"[locname-part]."
 "evac"	256164332	Gallery	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
 "bni"	132319259	all-grey gallery	--	--	"[if ISBN bins are reflexed]You already fixed the bins[else]No, all the bins[end if]."
-"manse"	359250554	--	--	degen-true rule	"[not-the-reg]."
+"manse"	359250554	--	--	degen-true rule	"[not-the-reg]." [end-manse]
 
 table of stores nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -130,7 +130,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pamphlet"	551207154	cruelest	--	--	"[pamph-ana]."
 "strip"	411166592	profits	--	--	"[locname]."
 "profits"	512034065	strip of profits	--	--	"[locname]."
-"profit"	415760099	strip of profits	--	--	"[locname]."
+"profit"	415760099	strip of profits	--	--	"[locname]." [end-stores]
 
 table of routes nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -234,7 +234,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "patter"	503003725	--	raptest patters	--	"[pat-cont]."
 "patters"	599277691	--	raptest patters	--	"[pat-cont]."
 "storeu"	591972280	--	--	degen-true rule	"[not-the-reg]."
-"rouet"	495698314	--	--	degen-true rule	"[not-the-reg]."
+"rouet"	495698314	--	--	degen-true rule	"[not-the-reg]." [end-r]
 
 table of troves nudges [?? used lot/pallid li'l pad / rustin ruin st in ruts]
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -312,7 +312,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "playbill"	430866297	--	playbill	--	"You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "troev"	497757327	--	--	degen-true rule	"[not-the-reg]."
-"storev"	594031293	--	--	degen-true rule	"[not-the-reg]."
+"storev"	594031293	--	--	degen-true rule	"[not-the-reg]." [end-v]
 
 table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -448,7 +448,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "phat"	224046094	phat path	--	--	"[locname]."
 "shakc"	207682846	shack	--	--	"[locname]."
 "hack"	111408880	shack	--	--	"[locname]."
-"storep"	568332432	--	--	degen-true rule	"[not-the-reg]."
+"storep"	568332432	--	--	degen-true rule	"[not-the-reg]." [end-p]
 
 table of oyster nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -564,7 +564,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "necklace"	471465731	--	yapper	--	"[its-msg]."
 "intercom"	587573599	--	intercom	--	"[i-com]."
 "not"	246370103	--	intercom	--	"Changing the intercom to a ton-crime intercom would be the opposite of what you want to do."
-"crime"	341203496	--	intercom	--	"[i-com]."
+"crime"	341203496	--	intercom	--	"[i-com]." [end-y]
 
 table of towers nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -733,6 +733,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "east"	329377911	rawest waters	--	--	"Hmm. Concentrate on a shore--northern or eastern--not a direction."
 "southwest"	851249533	rawest waters	--	--	"[diag-dir-rej]."
 "mislit"	407258668	mislit limits	--	--	"[towersloc]." [MISLIT LIMITS 4 4]
+"clays"	293640460	Mislit Limits	--	--	"[clay-pal]."
+"caly"	197366494	Mislit Limits	--	--	"[clay-pal]."
 "pester"	621785964	--	serpent	--	"The serpent doesn't just pester, it's pester'n."
 "present"	690693472	--	--	serpent-hiding rule	"The serpent is taken care of."
 "occurs"	399067323	--	crocus	--	"[if flowerpot is reflexive]You realize you can't change the crocus to something, but you can change its condition--it's dying[else]The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it[end if]."
@@ -755,7 +757,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "aps"	179927743	--	talc spa cure	--	"[focus-castle]."
 "cure"	337241304	--	talc spa cure	--	"[focus-castle]."
 "mesprise"	724017911	mesprise premises	--	--	"[towersloc]." [MESPRISE PREMISES]
-"emprise"	627743945	mesprise premises	--	--	"[towersloc]." [EMPRISE PREMISES]
+"emprise"	627743945	mesprise premises	--	--	"[towersloc]." [EMPRISE PREMISES] [end-w]
 
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -908,7 +910,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "moot"	315890325	Anteroom	--	callos-gone rule	"[locname-part]."
 "preserve"	838970678	perverse preserve	--	--	"[locname]."
 "ottre"	493702525	--	--	degen-true rule	"[not-the-reg]."
-"storet"	589976491	--	--	degen-true rule	"[not-the-reg]."
+"storet"	589976491	--	--	degen-true rule	"[not-the-reg]." [end-t]
 
 ["disrupt"	537301488	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."
 "studip"	451977685	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."]
@@ -1035,7 +1037,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "admit"	235394924	gates stage	--	--	"[stad-chg]."
 "roping"	387642395	Gates Stage	--	--	"You don't need to grapple with the roping, and you don't need the roping to grapple with you."
 "other"	427874806	--	--	degen-true rule	"[not-the-reg]."
-"storeh"	524148772	--	--	degen-true rule	"[not-the-reg]."
+"storeh"	524148772	--	--	degen-true rule	"[not-the-reg]." [end-h]
 
 table of demo dome nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -1095,7 +1097,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "scalper"	465877079	sparse spares	--	--	"[its-a-museum]."
 "rudest"	538648792	sparse spares	--	--	"[its-a-museum]."
 "ladder"	311189747	sparse spares	--	--	"[its-a-museum]."
-"bulk"	230271729	sparse spares	--	--	"Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that."
+"bulk"	230271729	sparse spares	--	--	"Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that." [end-dome]
 
 table of general nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -1179,7 +1181,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "opts"	355202520	--	--	degen-true rule	"[meta-rej]"
 "options"	543455451	--	--	degen-true rule	"[meta-rej]"
 "version"	604821629	--	--	degen-true rule	"[meta-rej]"
-"something"	649400178	--	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
+"something"	649400178	--	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on." [end-gen]
 
 book text details
 
@@ -1786,6 +1788,9 @@ to say rapier-mach:
 
 to say diag-dir-rej:
 	say "This game doesn't require you to mess with diagonal directions[if player is in waters], so maybe you should consider the other shores[else], so I hope that's a relief[end if]";
+
+to say clay-pal:
+	say "Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead"
 
 to say focus-castle:
 	say "Nah, that's just garbage. It's the curst palace you need to focus on"

@@ -6918,8 +6918,6 @@ check going nowhere (this is the towers-mis-go rule): [?? inside in Mislit Limit
 	if mrlp is towers:
 		if noun is inside or noun is outside:
 			say "You can't go in, here." instead;
-		if cliff is visible:
-			say "The cliff is in the way. There's no way to climb it--the scope in the copse [if spec-o-scope is unexamined]may point where you need to go[else]didn't indicate you needed to[end if]." instead;
 		if shoals are visible:
 			say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
 
@@ -6985,6 +6983,7 @@ Fringe Finger	"Unorg'd ground is every way except back east. Falling there off t
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
+Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even more unbearable for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
@@ -13550,7 +13549,7 @@ chapter Pa Egg Pea (book)
 
 Pa Egg Pea is a proper-named reflexive LLPish thing. printed name of Pa Egg Pea is "Pa, Egg, Pea"
 
-after printing the name of Pa Egg Pea while taking inventory, say " ([if pa egg pea is reflexive]un[else]grokked[end if])";
+after printing the name of Pa Egg Pea while taking inventory, say " ([if pa egg pea is reflexive]un[end if]grokked)";
 
 does the player mean doing something with pa egg pea when mrlp is troves: it is likely.
 does the player mean doing something with ltb when mrlp is troves: it is very likely.
@@ -14170,7 +14169,7 @@ chapter the noise (IGNORE)
 
 every turn while player is in Upscale Capsule (this is the region-knock rule):
 	if noise is in Upscale Capsule:
-		say "[one of]'Er...go in?' cries a voice not worth your attention[or]You hear the voice cry '[one of]Erin! Go[or]Go, Erin[cycling]!' which makes you see red. YOU'RE in charge here[or]Your 'visitor' seems to be plotting...he says 'One: rig...' but you tune the rest out, seeing red[or]'No! I...erg!' your adversary rages[in random order].[paragraph break]If only you could tune that out!";
+		say "[one of]'Er...go in?' cries a voice not worth your attention[or]You hear the voice cry '[one of]Erin! Go[or]Go, Erin[cycling]!' which makes you see red. YOU'RE in charge here[or]Your 'visitor' seems to be plotting... you hear 'One: rig...' but you tune the rest out, seeing red[or]'No! I...erg!' your adversary rages[in random order].[paragraph break]If only you could tune that out!";
 
 the noise is vanishing scenery in Upscale Capsule. "It's noise from the person you locked out."
 
@@ -19486,7 +19485,7 @@ check going down in Loftier Trefoil:
 
 book Topside Deposit
 
-Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. That way's [if ur-pine is in deposit]un[end if]blocked."
+Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. That way's [if adders are in deposit]un[end if]blocked."
 
 for printing a locale paragraph about a thing (called nongua) in topside deposit (this is the lump tarts with toaster rule):
 	if nongua is start tarts and toaster is in Topside Deposit:
@@ -19697,9 +19696,8 @@ Baldest Blasted Saltbed is north of Scope Copse. "This is a dreary place that do
 
 Baldest Blasted Saltbed is in Towers.
 
-instead of doing something to the cliff:
-	if action is procedural, continue the action;
-	say "Looking at the cliff, you spend moments in awe of it unclimbable verticality--and of how Inform 7 lets you implement backdrops that can be in several rooms at once." instead;
+check going west in Baldest Blasted Saltbed:
+	say "[if old ice is reflexed]Even though you made it look cooler, t[else]T[end if]he old ice is in the way[if old ice is reflexive], but maybe you could prettify it a bit[end if]." instead;
 
 the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if]."
 
@@ -19715,18 +19713,20 @@ check scaning cliff:
 
 book unblest sunbelt
 
-Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if sporties' ripostes are visible], though you can hear sporties['] ripostes taunting you. It'd be nice, but probably not critical, to get rid of them[end if][tow-dirs]."
+Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if]. Organised ego drains block your way south[if ego drains are reflexive]. You might not be able to step over them, but maybe you could neutralize them[else]Though they're neutralized, you know better than to step over then[end if][tow-dirs]."
 
-the sporties' ripostes are plural-named LLPish vanishing scenery in Unblest Sunbelt.
+section organised ego drains
 
-instead of doing something with sporties' ripostes:
+the organised ego drains are plural-named LLPish reflexive scenery in Unblest Sunbelt. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
+
+a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
+
+instead of doing something with organised ego drains:
 	if action is procedural, continue the action;
-	if current action is taking, say "Actually, you want to find a way to say, you're NOT going to take them any more." instead;
-	say "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way."
+	say "The ego drains are there, just waiting to mess with your mind. You [if ego drains are reflexed]dealt with them as well as you could[else]may be able to deal with them partially, though[end if]."
 
-description of sporties' ripostes is "They're mocking you, not enough to feel like you have a right to be mad, but enough to annoy you. Both clever and dumb at the same time, they're also very quick and don't drag it out."
-
-a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
+check going south in unblest sunbelt:
+	say "Not wise to mess with the ego drains, whether or not they're at full power." instead;
 
 book Anemic Cinema
 
@@ -20533,7 +20533,7 @@ book side-path rooms
 
 chapter Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if organised ego drains are in lost lots], and worse, organised ego drains proliferate the lots[end if]."
+Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if organised ego drains are in lost lots], and worse, sporties['] ripostes mock you[end if]."
 
 after looking in lost lots:
 	if strudel is carried by player or strudel is in lalaland, set the pronoun it to gasfield;
@@ -20544,11 +20544,18 @@ the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the
 check opening a hintpastry:
 	say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
 
-section organised ego drains
+section sporties' ripostes
 
-the organised ego drains are plural-named LLPish vanishing scenery in Lost Lots. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
+the sporties' ripostes are plural-named LLPish vanishing scenery in Lost Lots.
 
-a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
+instead of doing something with sporties' ripostes:
+	if action is procedural, continue the action;
+	if current action is taking, say "Actually, you want to find a way to say, you're NOT going to take them any more." instead;
+	say "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way."
+
+description of sporties' ripostes is "They're mocking you, not enough to feel like you have a right to be mad, but enough to annoy you. Both clever and dumb at the same time, they're also very quick and don't drag it out."
+
+a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
 section fluster self rut
 
@@ -20855,8 +20862,6 @@ definition: a thing is followy:
 	if it is a warrior and it is visible, yes;
 	no.
 
-the impressive cliff is a useless backdrop. it is in Blasted Saltbed, anemic cinema, Unblest Sunbelt, danger garden. "It's impressive enough to inspire you to do something impressive, full of scaly clays."
-
 chapter Mesprise/Emprise Premise(s)
 
 Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
@@ -20981,13 +20986,27 @@ after printing the locale description for Mislit Limits when Mislit Limits is un
 	if player has strudel and strudel is not reflexed:
 		increment poss-score of towers;
 
-Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? There's also a den to the west."
+Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if mesprise premises are visited]where it looks like someone might be living[else]which houses [tet-ter][end if][if ur-pine is in limits]. An unripe ur-pine also stands here, intimidatingly big[end if]."
+
+to say tet-ter:
+	say "[if tetris sitter is reflexed]the Tetris Sitter[else]St. Teri[end if]"
+
+chapter scaly clays
+
+the scaly clays are plural-named scenery in Mislit Limits. "They rise up at such an angle they'd be dangerous to climb. The curst palace is sprawled out on top of them."
+
+instead of doing something with scaly clays:
+	if action is procedural, continue the action;
+	say "The scaly clays just block you. But you don't need to deal with them to fix the curst palace.";
 
 chapter unripe ur-pine
 
 the unripe ur-pine is vanishing LLPish scenery in Mislit Limits. understand "pine/urpine" and "unripe pine/urpine" as ur-pine. "It covers a lot of ground[if crocus is not off-stage], but there's probably nothing else beneath it. [one of]Maybe it's hiding something. [or]You see red wondering if you'd see anything as ridiculous in Peru[stopping][end if]."
 
-instead of attacking unripe ur-pine, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]"
+instead of doing something with ur-pine:
+	if action is procedural, continue the action;
+	if current action is attacking, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]" instead;
+	say "The unripe ur-pine just sits there, almost impossibly big."
 
 a-text of ur-pine is "RYRYYR". b-text of ur-pine is "RYRGYR". parse-text of ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
 
@@ -21094,17 +21113,11 @@ instead of entering curst palace:
 description of Curst Palace is "The curst palace Castle Apcur towers high enough to see across the lake. But perhaps it could be much nicer...with just one word..."
 
 check going inside in Mislit Limits:
-	if serpent is visible:
-		say "You can't risk sneaking by the serpent--Castle Apcur is right here, waiting to be changed! Just one (long) word! Though maybe if you could get rid of the serpent, it might help." instead;
+	say "(assuming the way west, since Castle Apcur is too high up)[paragraph break]";
 	try going west instead;
 
-check going in Mislit Limits:
-	if noun is not inside and noun is not west:
-		say "No. Your destiny is here[if serpent is visible], though the serpent may be guarding some help to the west[else], though maybe you can go west for help[end if]. One big, powerful word and the castle will be restored!" instead;
-
-check going west in mislit limits:
-	if pester'n serpent is in Mislit Limits:
-		say "'Step near a serpent... you muse, then 'TRAP SEEN.'" instead;
+check going west in Mislit Limits:
+	if serpent is in mislit limits, say "[one of]You can't risk sneaking by the serpent--Castle Apcur is right here, waiting to be changed! Just one (long) word! Though maybe if you could get rid of the serpent, it might help.[or]'Step near a serpent... you muse, then 'TRAP SEEN.'[cycling]" instead;
 
 book Leak Lake (backdrop)
 
