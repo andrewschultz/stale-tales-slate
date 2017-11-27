@@ -53,7 +53,7 @@ to say if-sign-x:
 chapter rested desert
 
 [def=desert-door]
-understand "rood" as a mistake ("[if yard-door is in rested desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in rested desert.
+understand "rood" as a mistake ("[if desert-door is in rested desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in rested desert.
 
 chapter thickest thickets
 

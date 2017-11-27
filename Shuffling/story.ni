@@ -2658,6 +2658,11 @@ carry out fliptoing (this is the main flipping rule) :
 		try mainhelping;
 		now just-print is true;
 	consider the notify score changes rule;
+	if the-to entry is plural-named, set the pronoun them to the-to entry;
+	set the pronoun it to the-to entry;
+	if the-to entry is a person:
+		set the pronoun him to the-to entry;
+		set the pronoun her to the-to entry;
 	if mything is the player:
 		say "Something went wrong here. It should not have, but it did. [bug-report]";
 	the rule succeeds;
@@ -5529,23 +5534,21 @@ first-fs-yet is a truth state that varies.
 
 after choosing notable locale objects when player is in Flesh Shelf: set the locale priority of the sandwich to 1.
 
-rule for printing a locale paragraph about a thing in Flesh Shelf when first-fs-yet is false:
-	say "You notice the skin sink contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
-	now scantier canister is mentioned;
-	now sandwich is mentioned;
-	now all glopmeats are mentioned;
-	now the player is mentioned;
-	now first-fs-yet is true;
-	the rule succeeds;
-
-rule for printing a locale paragraph about a thing in Flesh Shelf when first-fs-yet is true:
-	now scantier canister is mentioned;
-	now sandwich is mentioned;
-	now all glopmeats are mentioned;
-	now the player is mentioned;
-	let Q be number of sinky things in flesh shelf;
-	say "The skin sink still contains [if livers are not off-stage]that canister you broke[else]a scantier canister[end if][if number of glopmeats in canister is 1] (half full of liver)[end if][if Q > 0], as well as [list of sinky things in flesh shelf][end if].";
-	continue the action;
+for printing a locale paragraph about a thing (called sinkthing) in Flesh Shelf:
+	if sinkthing is not mentioned and sinkthing is not scenery:
+		if first-fs-yet is false:
+			say "You notice the skin sink contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
+			now first-fs-yet is true;
+		else:
+			let Q be number of sinky things in flesh shelf;
+			say "The skin sink still contains [if livers are not off-stage]that canister you broke[else]a scantier canister[end if][if number of glopmeats in canister is 1] (half full of liver)[end if][if Q > 0], as well as [a list of sinky things in flesh shelf][end if].";
+		now scantier canister is mentioned;
+		now sandwich is mentioned;
+		now all glopmeats are mentioned;
+		now the player is mentioned;
+		now all sinky things in flesh shelf are mentioned;
+		the rule succeeds;
+	now sinkthing is mentioned;
 
 definition: a thing (called t) is sinky:
 	if t is a glopmeat, yes;
@@ -5768,7 +5771,7 @@ does the player mean taking River Ville liver when River Ville liver is held and
 check taking a glopmeat:
 	if player has noun, say "You've already got it." instead;
 	if noun is in canister, say "You shouldn't put your fingers near the blades." instead;
-	say "It's stuck, well, frozen to the wall[if player does not have chisel]. And you can't change that. Well, not with what you've got[end if][if player has chisel][chiz-chiz][end if].";
+	say "It's stuck, well, frozen to the sink[if player does not have chisel]. And you can't change that. Well, not with what you've got[end if][if player has chisel][chiz-chiz][end if].";
 	if player has chisel:
 		now player has noun;
 	the rule succeeds;
@@ -5799,6 +5802,8 @@ chapter Gnarliest Triangles
 
 Gnarliest Triangles is east of Self-ID Fields. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
 
+Gnarliest Triangles is in Forest.
+
 to decide whether still-need-in-triangles:
 	if ones are in bucket, yes;
 	if dashes are in shell, yes;
@@ -5824,7 +5829,7 @@ instead of doing something with the stack of tacks:
 
 Instead of taking the notes stone: say "it seems to be glued to the tacks stack. Anyway, you probably only need it for its information."
 
-description of notes stone is "'[i]Attention, word-boy/girl/woman/man! You may think letters are the basic building blocks of everything, but the computer age has shown it's 1[']s and 0[']s! We don't stow twos here! You won't find simpler piles, Mr.! Or a simpler pile, Mrs.![r]'"
+description of notes stone is "'[b]Attention, word-boy/girl/woman/man! You may think letters are the basic building blocks of everything, but the computer age has shown it's 1[']s and 0[']s! We don't stow twos here! You won't find simpler piles, Mr.! Or a simpler pile, Mrs.![r]'"
 
 to say container-desc:
 	if number of containers in Gnarliest Triangles is 0:
@@ -5903,7 +5908,7 @@ after looking in Enclosure:
 
 to say d-s: say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]".
 
-check going nowhere in Enclosure: say "There seems to be nothing, or worse than nothing, that way." instead.
+check going nowhere in Enclosure: say "You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north." instead.
 
 Include (-
 	has transparent animate
@@ -5967,7 +5972,7 @@ description of marshlake is "On almost all sides. You worry you may get sucked d
 
 nowhere is south of Ghouls' Slough.
 
-check going in Ghouls' Slough: say "Useless without any sort of guide to look at[if player has maps]. Hey, those maps might be useful[end if]." instead.
+check going in Ghouls' Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead.
 
 check examining maps in Ghouls' Slough:
 	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
@@ -5975,7 +5980,7 @@ check examining maps in Ghouls' Slough:
 
 chapter Frost Forts
 
-Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]All exits seem to lead somewhere even darker[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if][one of]. You steel yourself against the sleet[or][stopping]."
+Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if][one of]. You steel yourself against the sleet[or][stopping]."
 
  after printing the locale description for forts when forts is unvisited:
 	set the pronoun them to vowels;
@@ -6000,6 +6005,8 @@ the frowns are part of the fos. the frowns are amusing.
 
 description of fos is "Frowny, as if they want you to fry now. Also, impassable. They have no doors but you're worried something will jump at you from them."
 
+check entering fos: say "They would provide no protection from the final conflict you face." instead;
+
 description of frowns is "Probably either sharp or decaying teeth behind them, but the wolves won't get near you."
 
 Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
@@ -6022,9 +6029,13 @@ to say vowel-desc:
 	else:
 		say "A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) 'We're vowels!' Yup, even the Y. The vowels also have bumps where they end.[no line break]"
 
+the gnash hangs are scenery in Frost Forts. "They menace you from all around, ready to jump if you try to escape. The ones you see stay still, but you can hear the ones behind you snapping."
+
+instead of doing something with the gnash hangs: say "The gnash hangs are just there for atmosphere, to force you into the final conflict."
+
 the bumps are part of the vowels. the bumps are plural-named. description of bumps is "They look almost like fangs or very long nails."
 
-check going in Frost Forts: say "[if vowels are in frost forts]The rest of the area seems even more forbidding. You sense the vowels would roll after you and crush you if you tried. You have no idea how to get back to warmer climates[else]The werewolves will catch you easily[end if]." instead.
+check going in Frost Forts: say "[if vowels are in frost forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]." instead.
 
 book Sortie
 
@@ -7953,6 +7964,20 @@ instead of doing something with moonies:
 	if action is procedural, continue the action;
 	say "The noisome moonies are too wrapped up in themselves to matter.";
 
+section snakebit beatniks
+
+the snakebit beatniks are amusing plural-named scenery in Cramped Red Camp. description is "They all be astink (figuratively and literally) ."
+
+Include (-
+	has transparent animate
+-) when defining snakebit beatniks.
+
+instead of doing something with beatniks:
+	set the pronoun them to beatniks;
+	if current action is objasking or current action is objasking about, say "They're too busy chanting to talk to you, but they have nothing to say." instead;
+	if action is procedural, continue the action;
+	say "The snakebit beatniks are too wrapped up in themselves to matter.";
+
 chapter cordoned red condo
 
 The Cordoned Red Condo is north of Cramped Red Camp. Condo is in Metros.
@@ -9590,7 +9615,7 @@ check going nowhere in Rested Desert:
 	say "The size of the desert, um, deters you. You're steer'd back to the [if desert-door is off-stage]odor[else]door[end if] is[if bugle-played is true or blot is visible]. The one you can probably go through[end if]." instead;
 
 check going nowhere:
-	say "This is a generic message to say you can't go that way. It should be changed to add variety and flavor. [if number of viable directions is 1]You can only go [list of viable directions][else of number of viable directions is 0]You can't seem to go any direction, so there is probably a puzzle to solve[else]Here is a list of ways you can go: [list of viable directions][end if]." instead;
+	say "This is a generic message to say you can't go that way. It should be changed to add variety and flavor. [if number of viable directions is 1]You can only go [list of viable directions][else if number of viable directions is 0]You can't seem to go any direction, so there is probably a puzzle to solve[else]Here is a list of ways you can go: [list of viable directions][end if]." instead;
 
 book parsing
 
@@ -10403,9 +10428,7 @@ check telling about:
 
 part wolves-vowels
 
-the wolves are neuter people. "Slavering werewolves aren't quite advancing on you. They're waiting for the first sucker to step forward and get shot. You think."
-
-the wolves are plural-named.
+the wolves are plural-named neuter people. "Slavering werewolves aren't quite advancing on you. They're waiting for the first sucker to step forward and get shot. You think."
 
 Include (-
 	has transparent animate
