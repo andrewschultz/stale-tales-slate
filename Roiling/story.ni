@@ -6958,7 +6958,7 @@ Harms Marsh	"Far into a rift? No. You can't [if darkness is visible]see far enou
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Drowning ails or roils a sailor.[end if]"
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
-Loather Rathole	"[if cold is not in lalaland]You're too cold. While haste heats, the new random direction would offer no more [i]heat[r] than here.[else]You've got to race after the thief, whatever direction they went, but you wonder if it really matters.[end if]" [troves]
+Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not in lalaland]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
 Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. Besides, you might wind up in ruts: Rustin['] Ruin St."
 Drain Nadir	"You're so low, you can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow."
@@ -13575,7 +13575,18 @@ check examining Pa Egg Pea for the first time:
 
 book Loather Rathole
 
-Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, there are plenty of potholes about.". last-loc of troves is Loather Rathole.
+Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru.". last-loc of troves is Loather Rathole.
+
+the hurt thru is bounding scenery in Loather Rathole. "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue]."
+
+understand "hurt thrus" and "thrus" as hurt thru.
+
+instead of doing something with hurt thru:
+	if action is procedural, continue the action;
+	say "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
+
+to say care-hate-clue:
+	say ". [if colr is in lalaland]Race after the thief, somehow[else]find a way to generate hate[end if]"
 
 after looking in loather rathole:
 	set the pronoun it to cold;

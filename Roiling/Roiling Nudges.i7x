@@ -240,6 +240,8 @@ table of troves nudges [?? used lot/pallid li'l pad / rustin ruin st in ruts]
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "spoiloplis"	701798374	--	--	degen-true rule	"[no-spoil]."
 "spoil"	350899187	--	--	degen-true rule	"[no-spoil]."
+"hurt"	330821927	Loather Rathole	--	--	"[no-hurt]."
+"hurts"	427095893	Loather Rathole	--	--	"[no-hurt]."
 "pothole"	552183378	rathole	--	--	"[p-hole]."
 "potholes"	648457344	rathole	--	--	"[p-hole]."
 "rathole"	483876463	rathole	--	--	"[locname]."
@@ -1394,6 +1396,9 @@ to say py-glow:
 
 to say pat-cont:
 	say "It's more the content of the patters that you could deal with, if you wanted"
+
+to say no-hurt:
+	say "No way you could change even one hurt thru on your own. You just need to get by"
 
 to say no-spoil:
 	say "[if cur-score of troves is 0]You've got the right idea...sort of...but you're not worthy of big thoughts, yet[else]You can change Spoiloplis by thinking, but not like that. One idea at a time[end if]"
