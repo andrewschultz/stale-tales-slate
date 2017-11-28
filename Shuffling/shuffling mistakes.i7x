@@ -201,11 +201,11 @@ understand "steel" as a mistake ("You'd be crushed if the sleet turned to steel.
 
 book store i
 
-chapter centrifuge
+chapter Trap Part
 
-understand "a lid" as a mistake ("[if centrifuge-stopped is true]You don't need to deal with the dial, now[else]Changing the dial would leave you stuck[end if].") when player is in Centrifuge.
+understand "a lid" as a mistake ("[if centrifuge-stopped is true]You don't need to deal with the dial, now[else]Changing the dial would leave you stuck[end if].") when player is in Trap Part.
 
-understand "turn [text]" as a mistake ("[if player is in centrifuge and centrifuge-stopped is false]You can probably TURN the dial to a number, e.g. 99[else]You can probably just SWITCH something with two text settings[end if].").
+understand "turn [text]" as a mistake ("[if player is in Trap Part and centrifuge-stopped is false]You can probably TURN the dial to a number, e.g. 99[else]You can probably just SWITCH something with two text settings[end if].").
 
 chapter the nick
 

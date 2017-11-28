@@ -1629,7 +1629,7 @@ carry out objhinting cask when sack is off-stage: all-say "[one of]The cask is v
 carry out objhinting an ingredient: all-say "[The noun] can become part of a meal." instead.
 
 carry out sortie-hinting:
-	if player is in Centrifuge:
+	if player is in Trap Part:
 		if numset of dial is 16, all-say "You don't need to do anything else here." instead;
 		try objhinting dial instead;
 	if location of player is the nick, try objhinting great instead;
@@ -1715,7 +1715,7 @@ book silly verbs
 
 before exiting:
 	if red bull burdell is visible, say "You may believe in brawns over brain, but I don't. I believe in you! And your ability to exploit what Red Bull keeps repeating!" instead;
-	if player is in Centrifuge and centrifuge-stopped is false, try going west instead;
+	if player is in Trap Part and centrifuge-stopped is false, try going west instead;
 
 chapter don't get a rifle
 
@@ -2528,7 +2528,7 @@ retried is a truth state that varies. retried is usually false.
 carry out retrying:
 	if location of player is trips strip:
 		if retried is true, say "This is the place you go after retrying--as you probably know. So nothing happens." instead;
-		say "Nothing happens. Perhaps this is where you'd be sent back to [if sf is visited or underside is visited or Centrifuge is visited]after going somewhere like you've been[else]once you're able to look around[end if]." instead;
+		say "Nothing happens. Perhaps this is where you'd be sent back to [if sf is visited or underside is visited or Trap Part is visited]after going somewhere like you've been[else]once you're able to look around[end if]." instead;
 	if trips strip is unvisited, say "You haven't been to the Trips Strip yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying the busiest subsite." instead;
 	if mrlp is resort:
 		if red bull burdell is in hotspot, say "No wimping out now. You can do it!" instead;
@@ -2642,6 +2642,11 @@ carry out fliptoing (this is the main flipping rule) :
 							move the-from entry to bullpen;
 						else:
 							move the-from entry to lalaland;
+			if the-to entry is plural-named, set the pronoun them to the-to entry;
+			set the pronoun it to the-to entry;
+			if the-to entry is a person:
+				set the pronoun him to the-to entry;
+				set the pronoun her to the-to entry;
 	if player does not have the noun and noun is not visible:
 		if noun is shoes:
 			move noun to lalaland;
@@ -2654,11 +2659,6 @@ carry out fliptoing (this is the main flipping rule) :
 		try mainhelping;
 		now just-print is true;
 	consider the notify score changes rule;
-	if the-to entry is plural-named, set the pronoun them to the-to entry;
-	set the pronoun it to the-to entry;
-	if the-to entry is a person:
-		set the pronoun him to the-to entry;
-		set the pronoun her to the-to entry;
 	if mything is the player:
 		say "Something went wrong here. It should not have, but it did. [bug-report]";
 	the rule succeeds;
@@ -2876,7 +2876,7 @@ table of Stores anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
 store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
-store i	sortie-x	"sortie"	"store i"	"The store rumbles, destroying the portraits of famous Tories (enjoy this, if you wish) and revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
+store i	sortie-x	"sortie"	"store i"	"The store rumbles, revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	metros-x	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see an escalator leading--well, somewhere populated."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'I know what you're looking at!' calls some random well-wisher. 'The Means Manse! You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
 cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
@@ -3275,7 +3275,7 @@ when play begins (this is the don't use any other besides status window when pla
 	repeat with Q running through things:
 		if Q is a sto:
 			move Q to Trips Strip;
-	now last-loc of sortie is Centrifuge;
+	now last-loc of sortie is Trap Part;
 	now last-loc of resort is Astral Altars;
 	now last-loc of metros is underside;
 	now last-loc of forest is sf;
@@ -5120,7 +5120,7 @@ description of store h is "Inside store H you see such a miscellany that you dou
 
 Store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]". cert-text of store i is "S[d1][d1][d1][d1][d1]". rect-text of store i is "S[d1][d1][d1][d1][ast]E".
 
-description of store i is "Store I has something written on it. You think you see--almost--the outline of a trap door behind them[one of]. Perhaps there is something behind, to get you out of here."
+description of store i is "Store I has something written on it. You think you see--almost--the outline of a trap door behind them. Perhaps there is something behind, to get you out of here."
 
 Store J is a sto. understand "store/ 10/ten" as store j.
 
@@ -6012,27 +6012,33 @@ check going in Frost Forts: say "[if vowels are in frost forts]The gnash hangs w
 
 book Sortie
 
-chapter Ug, Frenetic Centrifuge
+check going inside when mrlp is sortie:
+	if player is in nick, say "You're already inside. You need a way out, but you can't just walk out." instead;
+	if player is in moor, continue the action;
+	say "There's nothing to go inside, here. You'll need to specify a cardinal direction." instead;
 
-Frenetic Centrifuge is a room in Sortie. "[if centrifuge-stopped is true]A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
+chapter Trap Part
 
-[Ug is chopped on to the printed name, because of Inform language conventions]
+Trap Part is a room in Sortie. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge. Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
 
 check scaning dial when centrifuge-stopped is false: say "You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, [if gadget is cert]all red except for the middle that flashes green[else]green flashing between 5 and 7, red flashing between 1 and 6[end if]. Hm, exits plus two letters. What number could that be, or become." instead.
 
+check going nowhere in trap part:
+	if centrifuge-stopped is false, say "That'd be running into a wall, and besides, you have to stop the centrifuge, first." instead;
+	say "[dmm]. You can only go north to the kitchen or east[if roomroom is visited] to the (plain) room[end if]." instead;
+
 to say maybe-shift: say "[if kitchen is unvisited and roomroom is unvisited], and you're pretty sure they won't fake you out at the last minute[else], and they've been behaving since you fixed that dial[end if]".
 
-the cfuge is privately-named scenery in Centrifuge. understand "centrifuge" as cfuge.
+the cfuge is privately-named scenery in Trap Part. understand "centrifuge" as cfuge.
 
 description of cfuge is "[if centrifuge-stopped is false]You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it[else]Nothing's spinning any more, thankfully[end if]."
 
-the printed name of Frenetic Centrifuge is "[if centrifuge-stopped is true]A Round Den, Unadorned[else]Ug, Frenetic Centrifuge[end if]".
+understand "round/den" and "round den" and "unadorned" as Trap Part when centrifuge-stopped is true.
+understand "frenetic/centrifuge" and "frenetic centrifuge" as Trap Part when centrifuge-stopped is false.
 
-understand "round/den" and "round den" and "unadorned" as Centrifuge when centrifuge-stopped is true.
+The dial is in Trap Part. The dial has a number called numset. The numset of the dial is 0. the dial is fixed in place. the dial is flippable.
 
-The dial is in Centrifuge. The dial has a number called numset. The numset of the dial is 0. the dial is fixed in place. the dial is flippable.
-
-the ufcex are privately-named plural-named scenery in Centrifuge. understand "exits" and "angle" as ufcex when player is in Centrifuge. "[ufcex-descrip].". printed name of ufcex is "exits".
+the ufcex are privately-named plural-named scenery in Trap Part. understand "exits" and "angle" as ufcex when player is in Trap Part. "[ufcex-descrip].". printed name of ufcex is "exits".
 
 to say ufcex-descrip:
 	if numset of dial is 16:
@@ -6091,21 +6097,21 @@ numming is an action applying to one number.
 
 understand the command "turn [number]" as something new.
 
-understand "turn [number]" as numming when player is in Centrifuge and centrifuge-stopped is false.
+understand "turn [number]" as numming when player is in Trap Part and centrifuge-stopped is false.
 
 understand the command "set [number]" as something new
 
-understand "set [number]" as numming when player is in Centrifuge and centrifuge-stopped is false.
+understand "set [number]" as numming when player is in Trap Part and centrifuge-stopped is false.
 
 understand the command "[number]" as something new.
 
-understand "[number]" as numming when player is in Centrifuge.
+understand "[number]" as numming when player is in Trap Part.
 
-does the player mean examining a sto when player is in Centrifuge: it is unlikely.
+does the player mean examining a sto when player is in Trap Part: it is unlikely.
 
 check numming: try dialsetting dial to number understood instead.
 
-before going in Centrifuge:
+before going in Trap Part:
 	if centrifuge-stopped is false, say "You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.[paragraph break]Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to." instead;
 
 numset-ever-greater is a truth state that varies. numset-ever-greater is false.
@@ -6122,7 +6128,7 @@ check dialsetting it to:
 		say "The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it![paragraph break][if dial is unexamined]You glance at the dial, see EXITS N E and wonder if it was always there[else]The flipping bits in the dial lock in to say EXITS N E[end if]. And you see, yes, exits are north and east now. My hat, that was mathy.[paragraph break]You find yourself in a round den, unadorned.";
 		reg-inc;
 		now dial is in lalaland;
-		now lid is in centrifuge;
+		now lid is in Trap Part;
 		now centrifuge-stopped is true;
 		the rule succeeds;
 	if numset of dial > 17:
@@ -6181,8 +6187,8 @@ check setting the dial to: say "Try a number instead. Or, if you typed out a num
 
 centrifuge-stopped is a truth state that varies. centrifuge-stopped is usually false.
 
-check looking in Centrifuge:
-	if player was not in Centrifuge:
+check looking in Trap Part:
+	if player was not in Trap Part:
 		if centrifuge-stopped is false:
 			say "You climb down a larded ladder, slip, and hear people chattering about Mean Old Mondale-Doleman, finances fan since... once a money yeoman, the frugalest till the fear gluts, but who'd nag nary a granny for late fees. Generous? Gone sour. Got antsy, then nasty... more garnish, less sharing... stern rents, a splinter should rent slip... a testier treatise from his Taxman, Tan Max... claiming to feel raw and that the welfare era flew! 'No grace in ignorance, caring one!' A cold clod, now. He may even have aborted a debtor...";
 			say "[wfak]You hear cases for destroying his castle and for showing love. Then someone comes along, introduces himself as Patt Parr. 'Rapt, rapt!' he says, telling you how to get to Mondale-Doleman. You follow his advice...";
@@ -6286,7 +6292,7 @@ to say gad: say "Your gadget's not near anything, but it's registering ".
 
 chapter Kitchen
 
-Kitchen is north of Centrifuge. Kitchen is in Sortie.
+Kitchen is north of Trap Part. Kitchen is in Sortie.
 
 after choosing notable locale objects when player is in kitchen:
 	if straw is in kitchen and straw is not enclosed by player:
@@ -6328,7 +6334,7 @@ instead of doing something other than listening to the tune:
 
 description of tune is "You should be listening instead.".
 
-check going nowhere in Kitchen: say "You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
+check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
 
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -6658,9 +6664,9 @@ check scaning location (this is the air scan rule):
 	if player is in the nick or player is in Anti-Cool Location or player is in moor or player is in roomroom or player is in means manse:
 		if player has gadget, try examining gadget instead;
 
-instead of going nowhere in roomroom: say "You can only go west back to the centrifuge or north[if Trellis is visited] to the trellis[end if].".
+instead of going nowhere in roomroom: say "Dud, mum mud blocks your way [noun]. You can only go west back to the trap part or north[if Trellis is visited] to the trellis[end if].".
 
-roomroom is east of Centrifuge.
+roomroom is east of Trap Part.
 
 the sack is a transparent reversible container. "A sack is here. It's made of some rough material. Call it burlap. That's a safe one."
 
@@ -6987,7 +6993,10 @@ check going east in Trellis:
 	if scraped wall is visible, say "You're going to have to do something about that wall, first[if scraped wall is hayfilled]. You already have, but just one more thing[end if]." instead;
 	if caskfillings is 2, say "The rubble from the archings is too high and too solid." instead;
 
-check going nowhere in Trellis: say "You can only go west or south[if the room east of Trellis is sacred cedars] or, since you opened the hallway, east[end if]." instead.
+to say dmm:
+	say "Mum, dud mud blocks your way"
+
+check going nowhere in Trellis: say "[dmm]. You can only go west or south[if the room east of Trellis is sacred cedars and scraped wall is not in stiller trellis] or, since you opened the hallway, east[end if]." instead.
 
 check inserting into scraped wall:
 	if noun is not straw and noun is not hay, say "That doesn't seem to fit. You need something stuffing-like." instead;
@@ -9670,7 +9679,7 @@ after reading a command:
 		if the player's command matches "\b?i<mfr>\b":
 			say "[reject]";
 			reject the player's command;]
-	if player is in centrifuge and centrifuge-stopped is false:
+	if player is in Trap Part and centrifuge-stopped is false:
 		if the player's command matches the regular expression "^<0-9>+$":
 			say "(turning the dial)[line break]";
 	if location of player is trips strip:
@@ -11981,7 +11990,7 @@ index map with Frost Forts mapped west of slough.
 index map with slough mapped north of enclosure.
 
 [sortie]
-index map with centrifuge mapped north of notices section.
+index map with Trap Part mapped north of notices section.
 index map with the nick mapped north of kitchen.
 index map with moor mapped east of roomroom.
 
@@ -12139,8 +12148,8 @@ carry out ufcing:
 	decrement the cur-score of sortie;
 	d "Resetting centrifuge.";
 	now the numset of the dial is 0;
-	if player is not in centrifuge:
-		move player to centrifuge;
+	if player is not in Trap Part:
+		move player to Trap Part;
 	the rule succeeds;
 
 chapter askthruing
@@ -12427,7 +12436,7 @@ carry out rjing:
 	if rj is 1:
 		move player to sf;
 	if rj is 2:
-		move player to Centrifuge;
+		move player to Trap Part;
 	if rj is 3:
 		move player to undesired underside;
 	if rj is 4:
@@ -12902,7 +12911,7 @@ to unsolve-metros:
 	now cur-score of metros is 0;
 
 to unsolve-sortie:
-	now last-loc of sortie is Centrifuge;
+	now last-loc of sortie is Trap Part;
 	now centrifuge-stopped is false;
 	now warts are off-stage;
 	now warts are not flipped-yet;

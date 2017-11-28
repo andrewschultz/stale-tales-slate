@@ -225,7 +225,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "sortie"	531859319	--	--	degen-true rule	"[reg-rej]."	[sortie nudges]
 "centrifuge"	741172383	--	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	--	--	b4-cent rule	"[loc-rej]."
-"dial"	122023592	Centrifuge	--	--	"[if centrifuge-stopped is false]Messing up the dial would leave you trapped here[else]The dial did its part for you[end if]."
+"dial"	122023592	Trap Part	--	--	"[if centrifuge-stopped is false]Messing up the dial would leave you trapped here[else]The dial did its part for you[end if]."
 "sextien"	681664637	--	--	cent-spin rule	"The spinning seems to slow a bit."
 "exitsnw"	661793301	--	--	cent-spin rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
 "exitssw"	689159759	--	--	cent-spin rule	"The room seems to spin faster, as if you are totally on the wrong track."
@@ -734,7 +734,7 @@ this is the sf-or-rf rule:
 	the rule fails;
 
 this is the cent-spin rule:
-	if the player is in Centrifuge and centrifuge-stopped is false, the rule succeeds;
+	if the player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
 
 this is the nick-visit rule:
@@ -803,13 +803,13 @@ this is the got-plane rule:
 	the rule fails;
 
 this is the b4-cent rule:
-	if player is in Centrifuge and centrifuge-stopped is false, the rule succeeds;
+	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
 
 section metros nudges
 
 this is the af-cent rule:
-	if player is in Centrifuge and centrifuge-stopped is true, the rule succeeds;
+	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
 	the rule fails;
 
 to say no-hot:
@@ -919,7 +919,7 @@ to say no-2:
 	say "You can't really second-guess the help on the prep paper";
 
 this is the past-strip rule:
-	if self-id fields is visited or underside is visited or Centrifuge is visited:
+	if self-id fields is visited or underside is visited or Trap Part is visited:
 		decide yes;
 	decide no;
 
