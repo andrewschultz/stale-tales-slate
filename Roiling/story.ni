@@ -18361,13 +18361,13 @@ book Lapsin' Plains
 to say knob-link:
 	say "[if knob is in plains], linked by a knob,[end if]"
 
-Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. A tarp part covers every direction except back south and inside to the huts."
+Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. Sloppy polyps make travel advisable everywhere except past [if pans are in plains]the pans[else]where the pans were[end if] and back south."
 
-the tarp part is bounding scenery in Lapsin' Plains. "Maybe it's holding the plains together, but crossing it would be inadvisable. You can guess why."
+the sloppy polyps are plural-named bounding scenery in Lapsin' Plains. "Maybe it's holding the plains together, but crossing it would be inadvisable. You can guess why."
 
-instead of doing something with the tarp part:
+instead of doing something with the sloppy polyps:
 	if action is procedural, continue the action;
-	say "The trap part may actually be keeping the lapsin['] plains from further erosion. You don't need to meddle with it."
+	say "It's more likely the sloppy polyps would do something with you instead of the other way around. You don't need to go beyond."
 
 c2 is vanishing privately-named scenery in Lapsin' Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
 

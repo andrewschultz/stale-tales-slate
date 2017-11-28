@@ -517,6 +517,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wipe"	362199687	--	wipes	--	"It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring."
 "pearl"	350597528	--	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 "plain"	251367970	plains	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]" [LAPSIN PLAINS]
+"polyp"	413457586	lapsin' plains	--	--	"[polyp-no]."
+"polyps"	509731552	lapsin' plains	--	--	"[polyp-no]."
 "inthere"	595228692	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "isk"	194199990	--	skis	--	"But you need to remove both skis."
 "open"	352532153	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
@@ -857,11 +859,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "scowl"	351380740	--	sober robes	--	"[e-m-prank]."
 "cowl"	255106774	--	sober robes	--	"[e-m-prank]."
 "low"	236101189	--	owls	--	"You probably want the owls not to swoop low. And you'll want to take care of them all."
-"saturnic"	524907351	myrm	--	--	"The curtains are too solid to change."
-"aturnic"	428633385	myrm	--	--	"Even one curtain is too solid to change."
+"saturnic"	524907351	ridging girding	--	--	"The curtains are too solid to change."
+"aturnic"	428633385	ridging girding	--	--	"Even one curtain is too solid to change."
+"shades"	380853247	ridging girding	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
 "clipons"	438812280	--	slopinc	--	"The ocelots would still be awkward even if they lost the clip-ons."
 "kool"	255452171	--	look-kool	--	"You're not here to mess with fashion."
-"shades"	380853247	ridging girding	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
 "laminas"	332438948	alcoves	--	--	"[no-lam]."
 "lamina"	236164982	alcoves	--	--	"[no-lam]."
 "forces"	429276936	alcoves	--	--	"[fresc]."
@@ -1627,6 +1629,9 @@ to say knob-skis:
 
 to say prob-ov:
 	say "You are probably over-thinking it. There's a more direct way to tackle the span pans"
+
+to say polyp-no:
+	say "You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further"
 
 to say crate-frag:
 	say "[if crate is reflexed]Not worth messing with the fragments any more[else]They're fragments of a crate--this may or may not help[end if]"

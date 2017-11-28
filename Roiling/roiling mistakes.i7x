@@ -493,10 +493,6 @@ understand "caret" as a mistake ("You need[if crate is reflexed]ed[end if] to sh
 
 understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is visible or c2 is visible.
 
-understand "prat" as a mistake ("Yes, whoever[if crate is reflexed or crate is in lalaland]was[else]'s[end if] lobbing crates isn't very nice, but name calling's no good.") when player is in lapsin' plains.
-
-understand "trap" as a mistake ("Yes, the tarp part is almost surely a trap, but identifying it as such doesn't help.") when player is in lapsin' plains
-
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
 
 understand "lapins" as a mistake ("Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.") when player is in Lapsin' Plains
@@ -640,6 +636,10 @@ chapter lost lots
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
 understand "prosties" as a mistake ("Not that sort of game. There's some suggestive stuff, but nothing like that.") when ripostes are in location of player.
+
+understand "tripose" and "triposes" as a mistake ("No organic chemistry, please.") when ripostes are in location of player.
+
+understand "reposit" and "reposits" as a mistake ("You can't just push the ripostes aside. There must be a way to change them.") when ripostes are in location of player.
 
 chapter obscurest subsector
 
