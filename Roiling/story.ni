@@ -13023,7 +13023,7 @@ check taking MORF FORM:
 check going when MORF FORM is visible:
 	say "That MORF-FORM is lingering threateningly. Maybe you should deal with it now." instead;
 
-a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY>?". parse-text of MORF FORM is "x[sp]r[sp]o[sp]x". MORF FORM is cheat-spoilable.
+a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of MORF FORM is "x[sp]r[sp]o[sp]x". MORF FORM is cheat-spoilable.
 
 chapter THE BEAN
 
