@@ -21255,13 +21255,13 @@ a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY
 
 section ingrates
 
-some ingrates are plural-named white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
+some angriest ingrates are plural-named white guardians. "Angriest ingrates whining about any old thing block the way [psgdir of ingrates]."
 
-understand "ingrate" as ingrates.
+understand "ingrate" and "angriest ingrate" as ingrates.
 
-description of ingrates is "They're spouting some of the [i]angriest[r] ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
+description of angriest ingrates is "They're spouting some of the angriest ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
 
-a-text of ingrates is "YRRRRYYR". b-text of ingrates is "?PPRRYGR". parse-text of ingrates is "?[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
+a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRRY?R". parse-text of ingrates is "-[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 section admirer
 

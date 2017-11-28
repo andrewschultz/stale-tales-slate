@@ -53,6 +53,8 @@ if len(t2):
 
 if not show_count and count > 0:
     print(count, "logic file comments needed.")
+elif count == 0:
+    print("TEST SUCCEEDED: logic file comments from source")
 
 t3 = [x for x in got_logic.keys() if x not in need_logic.keys()]
 
@@ -62,3 +64,9 @@ if len(t3):
     for y in t3:
         count = count + 1
         print(count, y, "is commented in the logic file but is not in the source.")
+
+if not show_count and count > 0:
+    print(count, "logic file comments needed.")
+elif count == 0:
+    print("TEST SUCCEEDED: logic file comments from logic.htm")
+
