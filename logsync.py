@@ -23,8 +23,12 @@ with open("story.ni") as file:
         count = count + 1
         if 'a-text' in line and 'b-text' in line and 'parse-text' in line:
             if re.search("b-text.*\?.*parse-text", line):
-                scanned = re.sub(" is \".*", "", line.strip().lower())
-                scanned = re.sub("a-text of ", "", scanned)
+                if re.search("is a mack-idea", line):
+                    scanned = re.sub(" is a mack-idea.*", "", line.strip().lower())
+                    scanned = re.sub("t-", "", scanned)
+                else:
+                    scanned = re.sub(" is \".*", "", line.strip().lower())
+                    scanned = re.sub("a-text of ", "", scanned)
                 need_logic[scanned] = count
 
 with open("logic.htm") as file:
@@ -46,6 +50,9 @@ if len(t2):
             print(count, y, "is in the source but needs to be commented in the logic file.")
         if show_code:
             print("<!-- logic for", y, "-->")
+
+if not show_count and count > 0:
+    print(count, "logic file comments needed.")
 
 t3 = [x for x in got_logic.keys() if x not in need_logic.keys()]
 

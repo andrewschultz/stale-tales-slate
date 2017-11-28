@@ -2794,9 +2794,11 @@ fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make
 Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads LOST? HIE! THE LOIS![else][one of]Written in red on the Hatchery is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the Thearchy Hatchery in red.[stopping][end if]"
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
 blaster	"ALBERT'S."
+cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work, and you see red being jealous of herds who know what's what[in random order]."
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
+eerie blurbs	--	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
 riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
@@ -4234,7 +4236,7 @@ pugnacious plant	"The plant seems to adopt a defensive position with its arms/br
 orange	"The orange seems a bit closer for a bit."
 an-a	"The A shines for a split-second."
 lumps	"The lumps seem almost ready to burst."
-reserved sign	"You seem to read the sign backwards for a second."
+inapt paint	"You seem to read the inapt paint backwards for a second."
 coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close."
 coins	"The coins rattle and hum promisingly."
 icons	"The icons rattle and hum promisingly."
@@ -5759,7 +5761,7 @@ field-hintables is a list of things variable. field-hintables is { pryer bars, p
 
 clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, l-o-p, lemons, auction caution, nectarine }.
 
-scapespace-hintables is a list of things variable. scapespace-hintables is { an-a, orange, pugnacious plant, reserved sign }
+scapespace-hintables is a list of things variable. scapespace-hintables is { an-a, orange, pugnacious plant, inapt paint }
 
 to hintlistproc (j - a list of things):
 	repeat with hobj running through j:
@@ -9164,7 +9166,7 @@ rapt figure	grapefruit	true	694430761	--	"grapefruit"	"grapefruit"	"The figure g
 mean trowel	watermelon	true	815317707	--	"watermelon"	"watermelon"	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."
 nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."
 green stain	tangerines	true	757915387	--	"tangerines"	"tangerines/tangerine"	"The green stain coalesces and brightens...and becomes a few tangerines! It changed color, too. Every single one ain't green."
-reserved	guava	true	778533808	--	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. [greedy-person] nods, impressed."
+inapt paint	guava	true	778533808	--	"reversed"	"reversed"	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
 pugnacious plant	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner, and the plant begins to ... vegetate. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Or, well, stuff that's prepared like a fruit."
 b-r	breadfruit	true	619813094	--	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."
 briar screen	cranberries	true	761370255	--	"cranberries"	"cranberries"	"The prickly screen turns into (you hope) less prickly cranberries."
@@ -13494,7 +13496,7 @@ after fliptoing thickness sketchins:
 	now bad oar is in lalaland;
 	continue the action;
 
-a-text of thickness sketchins is "YRRRYRR". b-text of thickness sketchins is "?RRR?RR". [whattar tawrath thatraw artthaw <=> athwart]
+a-text of thickness sketchins is "YRRRYRR". b-text of thickness sketchins is "?RRR?RR". parse-text of thickness sketchins is "a[sp]x[sp]x[sp]x[sp]a[sp]x[sp]x[sp]". [whattar tawrath thatraw artthaw <=> athwart]
 
 chapter free reef
 
@@ -19717,9 +19719,9 @@ check going west in Baldest Blasted Saltbed:
 
 section old ice
 
-the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if]."
+the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if][one of]. Another look and you'll remember where you saw a beautiful carved ice sculpture[or]. You see red remembering an LiedCo sculpture that showed this[stopping]."
 
-a-text of old ice is "RYYRYR". b-text of old ice is "R?YRYR". parse-text is "x[sp]?-[sp]x[sp]-[sp]x"
+a-text of docile old ice is "RYYRYR". b-text of docile old ice is "R?YRYR". parse-text of docile old ice is "x[sp]?-[sp]x[sp]-[sp]x"
 
 check taking old ice:
 	say "You'd get your hands stuck. And I won't double dog dare you." instead;
@@ -20019,7 +20021,7 @@ the weirder red wire is part of the bot boat. description is "You know, it's not
 
 the weirder red wire is LLPish and vanishing.
 
-a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "RGRYR*R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
+a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "RGRYR?R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
 
 check scaning bot boat (this is the scan boat components and not boat rule):
 	[showme whether or not blaster is reflexive;
@@ -21185,7 +21187,7 @@ the bluster butlers are a plural-named neuter purple guardian. understand "blust
 
 description of bluster butlers is "Bluster butlers are known for handling undesirables roughly. Their employers (or alma mater) are sewn into what they're wearing: [i]Trebul's[r]."
 
-a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R*RRR**". parse-text of bluster butlers is "x[sp]?[sp]x[sp]x[sp]x[sp]?[sp]?".
+a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R?RRR??". parse-text of bluster butlers is "x[sp]?[sp]x[sp]x[sp]x[sp]?[sp]?".
 
 section muscly
 
@@ -21310,7 +21312,7 @@ the alarming grailman is a red guardian. understand "liam/ garn/" as grailman. "
 
 description of grailman is "You could probably take a below-average grailman, but this one's a cut above. He seems to be flexing his muscles a lot, waiting for someone to try going by."
 
-a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text of alarming is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
+a-text of alarming grailman is "RYRRYRYR". b-text of alarming grailman is "RYRRYR?R". parse-text of alarming grailman is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
 
 section sweatier wait-seer
 
@@ -21989,7 +21991,7 @@ Include (-
 	has transparent talkable
 -) when defining cinders.
 
-description of cinders is "You feel a wave of power as you [if player has cinders]finger through[else]get close to[end if] them. Nothing dangerous, but power to see how to do something, if you think right. But also power to believe you can do it all on your own."
+description of cinders is "You feel a wave of power as you [if player has cinders]finger through[else]get close to[end if] them. Nothing dangerous, but power to see how to do something, if you think right. But also power to believe you can do it all on your own. You could READ them if you were willing to suffer a headache to learn what to do with them."
 
 check dropping cinders:
 	say "You may be able to get rid of them, but they're holy and powerful and you may need some sort of ritualistic action." instead;
@@ -22788,7 +22790,7 @@ t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text is "RRYRRRO". b-tex
 [pod 3 is 8-letters repeating]
 t-blearily is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRYPB". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
 
-t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "PYRPYRRO". parse-text is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "?YR?YRRO". parse-text is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
 
 t-coitally is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRO". b-text is "RGYRYRRB". parse-text is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
 
@@ -23951,18 +23953,12 @@ after examining abandoned drinks stand (this is the three fruits in drinks stand
 
 chapter blueberries
 
-the eerie blurbs are part of the abandoned drinks stand. description is "A weird blue-purple. The worst of them reads BIEBER RULES.[paragraph break]Yup, this place needs help."
+the eerie blurbs are part of the abandoned drinks stand. description is "A weird blue-purple. None of them make sense, but you can read them."
 
-instead of taking blurbs:
-	say "[if blurbs are examined]You're a FAN of his? Baby, baby, baby, no![else]They're probably better off as something else. For the environment's sake. And art.";
-
-a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "?RYYRYRRY?P". parse-text of eerie blurbs is "b[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]s".
+a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "RRYYRYRRYYP". parse-text of eerie blurbs is "b[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]s".
 
 check scaning blurbs when cheat-on is true:
-	let a1 be b-text of eerie blurbs;
-	let a2 be "PRYYRYPRYGP";
-	now blurbs are examined;
-	say "They read [spacies of a1], except for 'Bieber Rules,' which says [spacies of a2]." instead;
+	say "You just generally scan the blurbs, not noting them, and it turns up one positive..."
 
 the blueberries are a plural-named fruit. description is "Yes, they're really more purple, I know."
 
@@ -24721,20 +24717,38 @@ The basket of blackberries is a fruit. description is "It's from Bickerers['] La
 
 book Scape Space
 
-Scape Space is an innie room in Others. Scape Space is below Swell Wells.
+Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair[if inapt paint is in scape space]. You notice inapt paint on one wall."
 
-The reserved sign is scenery in Scape Space. "RESERVED for the DESERVER."
+chapter paint/guava
 
-check taking reserved sign:
-	say "[greedy-s] yells at you to be a little more subtle trying to steal stuff." instead;
+The inapt paint is scenery in Scape Space. "DESERVER RESERVED."
+
+instead of taking inapt paint: say
+
+instead of doing something with inapt paint:
+	if action is procedural, continue the action;
+	if current action is taking, say "It's stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something." instead;
+	say "The paint is just there. There's got to be some way to get rid of it."
+
+a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?".  parse-text of reserved is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
 
 the guava is a fruit.
 
-a-text of reserved sign is "RYRYRRYR". b-text of reserved sign is "?GRGPRG?".  parse-text of reserved is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
-
-description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair."
+chapter banana/a
 
 an-a is a privately-named thing in Scape Space. printed name of the an-a is "An a". "An a is here, waiting for you to take it. Well, take it the right way.". description of an-a is "Greenish, then golden, then a nasty dark brown.". understand "the/an a" and "a" as an-a.
+
+check scaning an-a:
+	say "There should be only three letters, but you see more.";
+
+Instead of taking an-a:
+	say "You feel something ban you from taking an a. The a almost seems to say 'Na-Naa-B' as you take it.";
+
+a-text of an-a is "RYRYRY". b-text of an-a is "YGRYRY". parse-text of an-a is "x[sp]a[sp]x[sp]a[sp]n[sp]a". an-a is parse-spoilable.
+
+The small yellow banana is a fruit.
+
+chapter rhubarb
 
 the pugnacious plant is a thing in Scape Space. "A pugnacious plant looms here, just waiting for you to do something with it."
 
@@ -24750,15 +24764,7 @@ instead of doing something with the pugnacious plant:
 			continue the action;
 	say "The plant senses you trying to do something with it and whips a burr at you. [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the plant's reflexive attack[or]'Bub...' [greedy-s] distracts you. 'Arrh!' you cry, as you pick out a burr the plant shot at you[in random order]." instead;
 
-check scaning an-a:
-	say "There should be only three letters, but you see more.";
-
-Instead of taking an-a:
-	say "You feel something ban you from taking an a. The a almost seems to say 'Na-Naa-B' as you take it.";
-
-a-text of an-a is "RYRYRY". b-text of an-a is "YGRYRY". parse-text of an-a is "x[sp]a[sp]x[sp]a[sp]n[sp]a". an-a is parse-spoilable.
-
-The small yellow banana is a fruit.
+chapter gender dependent greedy person
 
 greedy-person is a person that varies.
 
@@ -26563,7 +26569,7 @@ quince	"[if quince is reflexed][frootz][else][one of]How do you count in Italian
 an-a	"[one of]You need to take an a the right way.[plus][or]An a, not the a--and it's six letters if you scan it. It's also very yellow, part of a bunch of letters.[plus][or]If you NAB AN A, everything else comes out and you find a banana underneath.[minus][cycling]" [scape space fruit hints]
 orange	"[if player has orange][frootz][else][one of]You can't just take the orange directly.[plus][or]You probably need to get closer to it slowly.[plus][or]GO NEAR to get the orange.[minus][cycling]"
 pugnacious plant	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]It seems to be making a weird mumbling.[plus][or]RHUBARB.[minus][cycling]"
-reserved sign	"[one of]RESERVED for a DESERVER.[plus][or]The settler makes the sign pretty clear.[plus][or]However, if you take or examine the sign, you're told it's the opposite of an invitation to take it.[plus][or]How do you make the sign the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
+inapt paint	"[one of]DESERVER-RESERVED.[plus][or]The settler makes the vowels in the paint pretty clear.[plus][or]How do you make the paint the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
 augural arugula	"The augural arugula will help you GURU something."
 miser ruble	"[one of]It's purplish.[plus][or]And to think that a change could happen on such-and-such street.[plus][or]MULBERRIES.[minus][cycling]"
 streperous superstore	"It's just there as a device to block further exploration."
@@ -27481,7 +27487,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if orange is not in lalaland, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [scape space]
 		if banana is not in lalaland, say "[2drm of Scape Space]you could've tried to NAB AN A for a banana.";
 		if pugnacious plant is not in lalaland, say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
-		if reserved sign is not in lalaland, say "[2drm of Scape Space]you could've made the reserved sign REVERSED.";
+		if inapt paint is not in lalaland, say "[2drm of Scape Space]you could've made the inapt paint ('DESERVER RESERVED') REVERSED.";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
 	else if myreg is demo dome:
 		say "No points in the Demo Dome, so nothing to find.";
