@@ -2789,11 +2789,11 @@ scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
 gleaner	"The gleaner was made by Al Green, written in red."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
-keycar	"When the car slows a bit, you read KC AYER in red."
+keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order] in red. Maybe the other side has more information."
+fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads LOST? HIE! THE LOIS![else][one of]Written in red on the Hatchery is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the Thearchy Hatchery in red.[stopping][end if]"
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
 blaster	"ALBERT'S."
-welt-proof flowerpot	"GYDIN['], >> 'Y/N, dig?'"
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
@@ -14959,9 +14959,10 @@ check going to Dirge Ridge for the first time:
 	say "A rather big fellow has his back to you, wishfully blubbing 'Oblige Big Leo. I want a twin.' He turns around and sees...you, a lot smaller than him. 'Sneak! Snake!' Leo runs at you! He's a bit slow, fortunately. But he's a bit mad you caught him in a less-than-macho moment."
 
 after fliptoing a fightin person:
-	if noun is Leo:
+	if noun is Rand:
 		now Rand is in dirge ridge;
 		set the pronoun him to Rand;
+		set the pronoun them to wzup;
 	now noun is washed up;
 	continue the action;
 
@@ -15048,7 +15049,13 @@ to say lrblab:
 
 chapter whassuping
 
-the wzup is privately-named vanishing scenery in Dirge Ridge. printed name of wzup is "Leo and Rand". description of wzup is "bug".
+the wzup is privately-named reflexive scenery in Dirge Ridge. printed name of wzup is "Leo and Rand". description of wzup is "bug".
+
+instead of doing something with wzup:
+	if current action is scaning, continue the action;
+	if current action is objhinting, continue the action;
+	if current action is fliptoing, continue the action;
+	say "You don't need to refer to Rand and Leo at once. Referring to one is as good as referring to the other.";
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -20898,14 +20905,14 @@ check giving to Tetris Sitter:
 check going outside in Mesprise Premises:
 	try going east instead;
 
-the welt-proof flowerpot is a reflexive and LLPish container. description of flowerpot is "You don't know what good welt-proofing will do, but it might help you read the red writing on the flowerpot a bit better[if-crocus]."
+the welt-proof flowerpot is a reflexive and LLPish container. description of flowerpot is "You don't know what good welt-proofing will do, but it seems pretty sturdy[if-crocus]."
 
 check examining welt-proof flowerpot:
 	ignore the examine containers rule;
 
 to say if-crocus:
 	if crocus is in flowerpot:
-		say "[if flowerpot is reflexed], though it's probably less useful now with the crocus in decent shape[else], which can maybe help with the dying crocus[end if]";
+		say ". It's got the succor crocus you found under the ur-pine";
 	else:
 		say ". The flowerpot is empty";
 
@@ -21207,7 +21214,7 @@ chapter baldest blasted saltbed
 
 section fluster self rut
 
-the fluster self rut is a red guardian. "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down."
+the fluster self rut is a red guardian. "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not."
 
 instead of doing something with the fluster self rut:
 	if the action is procedural, continue the action;
