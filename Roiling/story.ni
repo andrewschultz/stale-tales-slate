@@ -19516,7 +19516,10 @@ instead of doing something with fire torn frontier:
 
 chapter dreads adders
 
-The dreads adders are a plural-named purple guardian in Topside Deposit. "Dreads adders may or may not be lethal, but you're scared of passing them to the north." [unfortunately the move-to rule fires before the reorg-guardians rule so we need to specify where the dreads adders are]
+The dreads adders are a plural-named purple guardian in Topside Deposit. "Dreads adders may or may not be lethal, but you're scared of passing them to the north. [one of]If you look at them again, you may remember the two people who created them[or][sade-sard][stopping]." [unfortunately the move-to rule fires before the reorg-guardians rule so we need to specify where the dreads adders are]
+
+to say sade-sard:
+	say "[one of]Dr. Sade[or]Ed Sard[in random order] was one of their creators, you remember now, as you see red"
 
 a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-text of dreads adders is "x[sp]-[sp]?[sp]x[sp]-[sp]x".
 
