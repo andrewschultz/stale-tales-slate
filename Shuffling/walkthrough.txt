@@ -201,8 +201,8 @@ The banshee can be disposed of and made a thing of the past for a last lousy poi
 
 store i
 
-> scan pictures (they are TORIES)
 > scan store i
+> read store i
 > sortie
 > d
 > sixteen

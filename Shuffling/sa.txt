@@ -100,7 +100,8 @@ Green and brown, earth tones.
 FOREST.
 ?Store I?
 It's an exit.
-Scan the Tories for an additional clue.
+The writing gives some ideas as well.
+You can flip the gadget to get four letters, which makes the remaining two trivial.
 SORTIE.
 ?Store M?
 Mt. Rose gives a clue.

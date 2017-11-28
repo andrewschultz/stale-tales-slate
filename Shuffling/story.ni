@@ -11015,7 +11015,7 @@ check listening:
 	if player is in moor and anapest is in moor, try listening to the anapest instead;
 	if player is in moor and peasant is in moor, say "With less, he whistles, eh?" instead;
 	if player is in Rived Drive, say "You hear something from above the [p-s] to the east, but you'll need to get closer to make out details." instead;
-	if player is in kitchen, say "[one of]A song with the chorus 'He oft partook of the okra pot.' The tune and the thought of okra make you gag, even when you realize it's a novelty song and not serious.[or]It's actually sort of catchy, if you think about it.[or][no-you]ou hate the stupid okra song, again. You need to get cooking on something else.[stopping]" instead;
+	if player is in kitchen, say "Dietist ditties pipe through from somewhere unseen. They're kind of catchy but really distracting." instead;
 	if player is in slough, say "[one of]Far arf[or]You can't hear the dog any more. You're not sure if you want to[or]You realize you'll be freaked out whether or not you can hear the dog[stopping]." instead;
 	if doll house is visible:
 		if static is visible, say "You hear static coming from the doll house." instead;

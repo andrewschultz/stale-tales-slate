@@ -93,7 +93,7 @@ understand "presto" as a mistake ("Your magic is not advanced enough to change s
 
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in trips strip.
 
-understand "tories" as a mistake ("!") when player is in trips strip.
+understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in trips strip.
 
 understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]") when player is in trips strip.
 
@@ -200,6 +200,13 @@ understand "unpile" as a mistake ("They'd be much less dangerous left in a pile.
 understand "steel" as a mistake ("You'd be crushed if the sleet turned to steel.") when player is in frost forts
 
 book store i
+
+understand "dumdum/dum" and "dum dum" as a mistake ("The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].") when in-i-box
+
+to decide whether in-i-box:
+	unless mrlp is sortie, no;
+	if player is in nick or player is in moor or player is in sacred cedars, no;
+	yes;
 
 chapter Trap Part
 
