@@ -11016,7 +11016,6 @@ check listening:
 	if player is in moor and peasant is in moor, say "With less, he whistles, eh?" instead;
 	if player is in Rived Drive, say "You hear something from above the [p-s] to the east, but you'll need to get closer to make out details." instead;
 	if player is in kitchen, say "Dietist ditties pipe through from somewhere unseen. They're kind of catchy but really distracting." instead;
-	if player is in slough, say "[one of]Far arf[or]You can't hear the dog any more. You're not sure if you want to[or]You realize you'll be freaked out whether or not you can hear the dog[stopping]." instead;
 	if doll house is visible:
 		if static is visible, say "You hear static coming from the doll house." instead;
 		say "Each attic is tacit now." instead;
@@ -11438,6 +11437,7 @@ check reading (this is the reading is almost examining rule):
 	if noun is toga, try examining the toga-writing instead;
 	if noun is gadget, try examining tag instead;
 	if noun is gadget-screen, try scaning location of player instead;
+	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!";
 	if noun is op and controls are not in op, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
 	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
 	try examining the noun instead;

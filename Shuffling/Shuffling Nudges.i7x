@@ -241,7 +241,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "ditties"	541314892	kitchen	--	--	"Don't let the songs distract you from your mission."
 "fridge"	338266445	kitchen	--	--	"The fridge is just a fridge."
 "obligatory"	611511337	kitchen	--	--	"The fridge will always be what it is. Generally what is or was inside is more interesting, anyway."
-"mud"	190210049	--	--		"The mud is just there. You can't change it."
+"mud"	190210049	--	--	in-i-main rule	"The mud is just there. You can't change it."
 "middle"	332746125	--	tall trio	--	"[to-trio]."
 "left"	311244862	--	tall trio	--	"[to-trio]."
 "right"	303308668	--	tall trio	--	"[to-trio]."
@@ -811,6 +811,10 @@ section metros nudges
 
 this is the af-cent rule:
 	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
+	the rule fails;
+
+this is the in-i-main rule:
+	if in-i-box, the rule succeeds;
 	the rule fails;
 
 to say no-hot:

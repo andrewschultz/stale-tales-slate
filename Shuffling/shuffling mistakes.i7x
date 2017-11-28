@@ -201,7 +201,7 @@ understand "steel" as a mistake ("You'd be crushed if the sleet turned to steel.
 
 book store i
 
-understand "dumdum/dum" and "dum dum" as a mistake ("The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].") when in-i-box
+understand "dumdum" and "dum" and "dum dum" as a mistake ("The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].") when in-i-box
 
 to decide whether in-i-box:
 	unless mrlp is sortie, no;
