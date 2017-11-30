@@ -1341,7 +1341,7 @@ lost corn	"[one of]You haven't done anything with the lost corn yet. [plus][or]T
 discolored buttons	--	kernels
 yellow kernels	"The different colored kernels may clue what the lost corn should be."
 dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something that will be. [plus][or]The cake becomes a KEYCARD. [minus][cycling]"
-red optical beam	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the beam and the metallic door[end if]."
+optical beam	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the beam and the metallic door[end if]."
 antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The condo owner seems to own the antlers. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
 driveway	"The driveway leads to the condo[if cake is not in condo], where you're not welcome[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."
@@ -7615,7 +7615,7 @@ instead of taking the warding drawing: say "Since it's part of the door, you tak
 
 description of warding drawing is "It's a red circle with a line through it, below the text 'Special Place is Special.' The poor struck-through sods in the center appear to be stick-figure parodies of stupid people. You note one [one of]stuffing a metal fork in a toaster[or]moving a rook pawn to start a chess game[or]thought-bubbling that 8+8=17[or]picking his nose[or]with his arm around Clippy[or]reading a tabloid magazine[or]hitting a computer that is not plugged in[or]about to walk over an open manhole[or]about to misplace a square manhole[or]watching a sporting event on TV[or]with a barbell crushing his neck[or]carrying a boombox[or]driving an SUV[or]getting an easy Sudoku all wrong[or]wearing a baseball hat backwards[or]wearing a sports jersey[or]drinking and smoking[or]feeding a shark[or]getting a tattoo[in random order]. Then you lose where it was in all the dizzying variety."
 
-The sensor is scenery in undesired underside. description of the sensor is "It has a small red optical beam."
+The sensor is scenery in undesired underside. description of the sensor is "It has a small optical beam."
 
 check scaning sensor: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead.
 
@@ -8521,7 +8521,7 @@ the priv-camp is a privately-named backdrop. the priv-camp is in underside and c
 
 description of priv-camp is "It's pretty dirty and meager[if red camp is visited], as you already saw[else], but maybe you'll get help there[end if]."
 
-the red optical beam is part of the sensor. description of red optical beam is "I wouldn't advise staring into it, but you could put something on it."
+the optical beam is part of the sensor. description of optical beam is "I wouldn't advise staring into it, but you could put something on it."
 
 instead of inserting into the beam: try putting noun on beam.
 
@@ -8597,12 +8597,12 @@ check opening the metallic door:
 	if location of player is undesired and keycard is off-stage, say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
 	say "The metallic door's got no handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
 
-check putting on the red optical beam:
+check putting on the optical beam:
 	ignore the can't put onto what's not a supporter rule;
 	try putting noun on sensor instead;
 
 check putting it on:
-	if second noun is the red optical beam, try putting noun on sensor instead;
+	if second noun is the optical beam, try putting noun on sensor instead;
 
 ever-shut is a truth state that varies.
 

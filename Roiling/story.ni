@@ -2798,7 +2798,7 @@ cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
-eerie blurbs	--	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
+eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
 riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
@@ -24733,8 +24733,6 @@ Scape Space is an innie room in Others. Scape Space is below Swell Wells. descri
 chapter paint/guava
 
 The inapt paint is scenery in Scape Space. "DESERVER RESERVED."
-
-instead of taking inapt paint: say
 
 instead of doing something with inapt paint:
 	if action is procedural, continue the action;
