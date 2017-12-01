@@ -52,6 +52,7 @@ my $checkExclude   = 1;
 my $verbose        = 0;
 my $onlyCheckReds  = 0;
 my $auditString    = "";
+my @extraArray     = ();
 
 my @wordArray;
 
@@ -90,13 +91,19 @@ while ( $cur <= $#ARGV ) {
       redSource( "roiling",   $whatToDo );
       exit();
     };
-    /^-?a(n)?$/ && do {
-      $disableSettler = ( $arg =~ /^n/i );
-      $auditString    = $arg2;
-      $fileName       = $reds if !$fileName;
+    /^-?a(n)?(\+[a-z,]*)?$/ && do {
+      $disableSettler = ( $arg =~ /^a(n)?/i );
+      if ( $arg =~ /\+/ ) {
+        my $a2 = $arg;
+        $a2 =~ s/.*\+//;
+        @extraArray = split( ",", $a2 );
+      }
+      $auditString = $arg2;
+      $fileName = $reds if !$fileName;
       $cur += 2;
       next;
     };
+    /^-?e$/ && do { `$reds`; exit(); $cur++; next; };
     /^-?l$/ && do { $maxLetters = $arg2; $cur += 2; next; };
     /^-?m$/ && do { $myMax      = $arg2; $cur += 2; next; };
     /^-?np$/ && do { $showPoss     = 0; $cur++; next; };
@@ -155,11 +162,13 @@ else {
 
     if ($auditString) {
       next if ( index( $a, "$auditString," ) == -1 );
+      print "Found something at line $.: $a\n";
       close(A);
       @wordArray     = split( /,/, $a );
       $firstString   = 0;
       $checkExclude  = 1;
       $onlyCheckReds = 0;
+      @wordArray     = ( @wordArray, @extraArray );
       push( @wordArray, "%" ) if $roilingYet && !$disableSettler;
       goto PRINTRESULTS;
     }
@@ -442,10 +451,26 @@ sub redSource {
   my $count = 0;
   my %wordAfter;
   my $outString;
+  my $inReadables = 0;
 
   print "" . ( "=" x 40 ) . "Trying $file\n";
   open( A, $file ) || die("No file $file");
   while ( $line = <A> ) {
+    if ( $inReadables && $line !~ /[a-z]/i ) {
+      $inReadables = 0;
+      $outString .= "" . ( "=" x 40 ) . " END READABLES\n";
+      next;
+    }
+    if ( $a =~ /^table of readables/ ) {
+      <A>;
+      $inReadables = 1;
+      next;
+    }
+    if ($inReadables) {
+      $count++;
+      $outString .= "$count: $line";
+      next;
+    }
     if ( $line =~
 /\bred\b (?!(camp|condo|bull|wire|guardian|guardians|rat|asp|ring|drawer)\b)/i
       )    # red objects are specifically removed from consideration
@@ -530,6 +555,7 @@ reds.pl -fr
 Looks at c:/writing/dict/reds.txt
 -x/-nx turns on/off checking if you exclude one of the strings (default is on)
 reds.pl rs runs the reds-in-source. v=verbose, b=redo base file, c=redo compare file
+reds.pl -a STRING looks for a string. reds.pl -a+GRINTS STRING adds GRINTS as a potential red.
 EOT
   exit();
 }

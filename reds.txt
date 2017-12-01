@@ -131,15 +131,17 @@ deeply,edplye,...L.
 #rustic citrus
 blueberries,ereisrubble,reelrisebub,rubberielse,rublebeesir,reelrusebib
 tamarind,drnimata
+persimmon,mrpinsome,onemrspim,monisperm,nopemrsim,rompsinme,mosirpenm
 #swell wells
 apricot,patrico,captori,itrapco
 gooseberry,yeborersgo
 #clangier clearing
 among,mango,goman
+#filed field
+watermelon,meantrowel,newtlamore,mrowenlate,moanerwelt
 #scape space
 orange,rageon
 rhubarb,burrbah
-persimmon,mrpinsome,onemrspim,monisperm,nopemrsim
 #coins sequence
 coins,nisco
 icons,nisco
