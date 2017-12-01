@@ -21,7 +21,10 @@ show_code = True
 with open("story.ni") as file:
     for line in file:
         count = count + 1
-        if 'a-text' in line and 'b-text' in line and 'parse-text' in line:
+        if 'a-text' in line and 'b-text' in line:
+            if 'parse-text' not in line and not line.startswith("\t"):
+                print("NEED PARSE-TEXT:", line.strip())
+                continue
             if re.search("b-text.*\?.*parse-text", line):
                 if re.search("is a mack-idea", line):
                     scanned = re.sub(" is a mack-idea.*", "", line.strip().lower())
@@ -36,7 +39,7 @@ with open("logic.htm") as file:
         count = count + 1
         if '<!--' in line and '-->' in line and 'logic for' in line:
             scanned = re.sub(".*logic for ", "", line.strip().lower())
-            scanned = re.sub(" -->.*", "", scanned)
+            scanned = re.sub("( )?-->.*", "", scanned)
             got_logic[scanned] = count
 
 t2 = [x for x in need_logic.keys() if x not in got_logic.keys()]

@@ -1,4 +1,6 @@
 <html>
+<title>Logic document for A Roiling Original</title>
+<!--logsync.py makes sure that I've made a swipe at everything with ? in the settler -->
 <body>
 You can figure out what the settler does by talking to Elmo. But what if you do not get that far, or you want to skip over it? I hope this clarifies the hard work of what to do with the settler. This document will help with that, as well as with other things. Much of the logic isn't trivial, and it confused enough intelligent players and testers that I wanted to spell out all I could. I hope it answers your questions, but if not, email me (urglecrunheonblay@ailgmay.omcay), and I can add clarification. I also wrote out the Volt Maze in its own section, since it is probably the trickiest blocker puzzle in the whole game, but it is logically reducible with the clues, if you notice them all. Or you can just eat the crust!
 <p><center><a href="#fig">FIGURING THE SETTLER</a>|<a href="#qm">CHEAT MODE QUESTION MARKS</a>|<a href="#stores">INTRO</a>|<a href="#stores">STORES</a>|<a href="#oyster">OYSTER</a>|<a href="#troves">TROVES</a>|<a href="#presto">PRESTO</a>|<a href="#routes">ROUTES</a>|<a href="#towers">TOWERS</a>|<a href="#otters">OTTERS</a>|<a href="#others">OTHERS</a>|<a href="#example">VOLT MAZE</a></center>
@@ -343,13 +345,26 @@ So letter 1 is s or w, and letter 6 is i or e. So the settler alone is not a big
 <!-- logic for arid den -->
 The dandier arid den appears to give two annoying question marks to start in cheat mode. In normal mode, the endorsers should wrap things up, but cheat mode's two question marks make things fall out.
 <p>??YYRGR means -----E-. But notice something: there are two known consonants and three known vowels. The remaining two spaces must be consonants, so A or D = D, and A or R = R. Well, that makes things easier! DR---E-. #3 can't be I, so it's A, leaving I for 4. DRAI-E-. But then D in 5 and N in 7 won't work. DRAINED.
+<p>
+<!-- logic for hostile-is-he lot -->
 <p>Lois the Hostile and the Hostile-Is-He Lot each have their own wrinkles. The cheat settings help here, despite--or because of--the questions.
 <p>The Hostile-Is-He Lot has ??RYYR?. Now this looks like a mess, until you realize that there must be two consonants and one vowel in the questions. So where are the consonants?
 <p>If they're in the first two characters, then we have HS----E. That's a mess! The vowels must be I and O, in order, since letter 5 can't be O. That leaves HS(LT)IO(LT)E, or nonsense.
 <p>But that means T is in the right place, and that also means that letter 3 can't be S or H so it's L. That's one letter down! Now, if we assume letter 2 is the consonant, the question mean ISL---T. ISLOEHT is it, because E can't be in slot 4. This doesn't make sense.
 <p>HOL---T. The only consonant left is S, but then we can't have an E in slot 4, thus HOLIEST.
 <p>
+<!-- logic for lois the hostile -->
 <p>Lois the Hostile also has a question mark to start. The -GRYYR means it starts with H or L, but the O must be right. I cannot be in slot 5, so it's E. (HL)O(HLT)IE(ST)(HLST).  We can eliminate what #7 should be pretty easily. H gives LOTIESH, L gives HOTIESL, and S gives (LH)O(LH)IETS which doesn't work, but HOLIEST does. You could also listen to what Lois is saying, to see red, to eliminate things quicker.
+<p>
+<!-- logic for atheists -->
+The asset-hit atheists are tricky. You can see the fifth entry must be a vowel, because the third and eighth must be consonants. That's a decent start, but the rest is tricky.
+--(SH)-I--(ST)
+
+hastiest
+setithas
+<p>
+<!-- logic for dinger -->
+READING: A DINGER gives a couple question marks, but they must be vowels, to make three vowels total. That gives us --(AI)--E-, or filling in the final vowel, --(AI)(AI)-E-. This doesn't solve everything, but it does help you narrow down the first letter: N or D would clog with NG or DG, so G comes first. Then you can either look at the coauthors or note .....EN doesn't make a good adjective.
 <p>
 <!-- logic for saver -->
 Now the raves saver is an odd one. The six letters are for "REPLAY PLAYER." But there are lots of ?'s.
