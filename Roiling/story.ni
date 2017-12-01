@@ -2792,9 +2792,9 @@ strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order] in a different shade of red than the car. Maybe the other side has more information."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
-prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
+prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
-cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work, and you see red being jealous of herds who know what's what[in random order]."
+cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
@@ -7136,7 +7136,7 @@ bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're no
 prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
 log gaol	"[which-sharp]----but there is probably nothing beyond in the Badlands anyway."
 Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow,' which isn't quite an anagram, but suddenly remember a fellow called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
-lone duck	"The poor thing doesn't have a clonk due. You can see red at this, if you want."
+lone duck	"The poor thing at least doesn't have a clonk due. You can see red at this, if you want."
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
 Tetris Sitter	"Rest it! (Feel free to see red at this.)"
 ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red." [START otters]

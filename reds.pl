@@ -21,6 +21,8 @@ use warnings;
 my %dupHash;
 my %statFin;
 
+my $reds = "c:/writing/dict/reds.txt";
+
 my @letArray;
 my @array;
 my @onematch;
@@ -41,13 +43,15 @@ my $checkForDup = 0;
 
 my $cur = 0;
 
-my $fileName      = "";
-my $firstString   = 0;
-my $sectionIgnore = 0;
-my $settler       = 0;
-my $checkExclude  = 1;
-my $verbose       = 0;
-my $onlyCheckReds = 0;
+my $disableSettler = 0;
+my $fileName       = "";
+my $firstString    = 0;
+my $sectionIgnore  = 0;
+my $settler        = 0;
+my $checkExclude   = 1;
+my $verbose        = 0;
+my $onlyCheckReds  = 0;
+my $auditString    = "";
 
 my @wordArray;
 
@@ -59,18 +63,18 @@ while ( $cur <= $#ARGV ) {
     #/^-?a$/ && do { $lookDif = 1; $cur++; next; };
     #the above is an option I don't know what it's for
     /^-?(fr|rf)$/
-      && do { $fileName = "c:/writing/dict/reds.txt"; $cur++; next; };
+      && do { $fileName = $reds; $cur++; next; };
     /^-?f$/ && do { $fileName = $arg2; $cur += 2; next; };
     /^-?y$/
       && do {
-      $fileName = "c:/writing/dict/reds.txt";
+      $fileName = $reds;
       $settler  = 1;
       $cur++;
       next;
       };
     /^-?n$/
       && do {
-      $fileName = "c:/writing/dict/reds.txt";
+      $fileName = $reds;
       $settler  = 0;
       $cur++;
       next;
@@ -85,6 +89,13 @@ while ( $cur <= $#ARGV ) {
       redSource( "shuffling", $whatToDo );
       redSource( "roiling",   $whatToDo );
       exit();
+    };
+    /^-?a(n)?$/ && do {
+      $disableSettler = ( $arg =~ /^n/i );
+      $auditString    = $arg2;
+      $fileName       = $reds if !$fileName;
+      $cur += 2;
+      next;
     };
     /^-?l$/ && do { $maxLetters = $arg2; $cur += 2; next; };
     /^-?m$/ && do { $myMax      = $arg2; $cur += 2; next; };
@@ -114,6 +125,7 @@ if ( !$fileName ) {
     usage();
     exit();
   }
+PRINTRESULTS:
   $printResults = 1;
   @letArray     = split( //, "$wordArray[$firstString]" );
   @array        = @wordArray;
@@ -127,6 +139,7 @@ if ( !$fileName ) {
   for $aryIdx ( 0 .. $iter ) { oneRed($aryIdx); }
 }
 else {
+  my $roilingYet = 0;
   $printResults  = 0;
   $onlyCheckReds = 1;
   $checkExclude  = 0;
@@ -134,10 +147,23 @@ else {
   print "Searching $fileName for (errant) red text...\n";
   while ( $a = <A> ) {
     chomp($a);
-    if ( $a =~ /^\|/ ) { $sectionIgnore = !$sectionIgnore; next; }
-    if ( $a =~ /^##/ ) { $sectionIgnore = 0;               next; }
-    if ( $a =~ /^#/ )  { next; }
-    if ( $a =~ /^;/ )  { last; }
+    if ( $a =~ /^\|/ )          { $sectionIgnore = !$sectionIgnore; next; }
+    if ( $a =~ /^##/ )          { $sectionIgnore = 0;               next; }
+    if ( $a =~ /^#roil-start/ ) { $roilingYet    = 1;               next; }
+    if ( $a =~ /^#/ )           { next; }
+    if ( $a =~ /^;/ )           { last; }
+
+    if ($auditString) {
+      next if ( index( $a, "$auditString," ) == -1 );
+      close(A);
+      @wordArray     = split( /,/, $a );
+      $firstString   = 0;
+      $checkExclude  = 1;
+      $onlyCheckReds = 0;
+      push( @wordArray, "%" ) if $roilingYet && !$disableSettler;
+      goto PRINTRESULTS;
+    }
+
     if ($sectionIgnore) { next; }
 
     @array = split( /,/, $a );
@@ -230,25 +256,7 @@ sub oneRed {
     }
   }
 
-  if ( my $temp = isOops( $array[0], $_[0] ) ) {
-    die "Test failed at word "
-      . ( $temp & 0xff )
-      . " character "
-      . ( ( $temp >> 8 ) + 1 )
-      . ".\n$array[0]\n"
-      . ( ' ' x ( $temp >> 8 ) )
-      . "*\n$array[$temp & 0xff]\n";
-  }
-
-  for $j ( 1 .. $#array ) {
-    if ( $array[$j] =~ /^1-/ ) {
-      $array[$j] =~ s/^1-//g;
-      $onematch[$j] = 1;
-    }
-    else { $onematch[$j] = 0; }
-
-    #if ($array[$j] =~ /[^0-9%]/) { die ("Bad input $j, $array[$j]"); }
-  }
+  assign_onematches();
 
   if ( my $temp = isOops( $array[0], $_[0] ) ) {
     die "Test failed at word "
@@ -493,6 +501,20 @@ sub redSource {
   if ($verbose) {
     print "$_ -> $wordAfter{$_}\n" for ( sort keys %wordAfter );
   }
+}
+
+sub assign_onematches {
+  my $j;
+  for $j ( 1 .. $#array ) {
+    if ( $array[$j] =~ /^1-/ ) {
+      $array[$j] =~ s/^1-//g;
+      $onematch[$j] = 1;
+    }
+    else { $onematch[$j] = 0; }
+
+    #if ($array[$j] =~ /[^0-9%]/) { die ("Bad input $j, $array[$j]"); }
+  }
+
 }
 
 sub usage {

@@ -1,5 +1,6 @@
 sortie,riseto
-###################################end shuffling start roiling
+#this line below is important because it lets you use the settler by default
+#roil-start
 ################manor
 stable,tables,ablest,bleats,labset,belast
 flier,irelf,efril
@@ -91,7 +92,7 @@ rusty,tryus
 #pastries
 strudel,dreltus
 holiest,thelois,sithole
-unlocked,dunkelco,loudneck,conklude
+unlocked,dunkelco,loudneck,conklude,loneduck,elcundok
 #long
 grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
 rustled,dreltus,sledrut
@@ -115,6 +116,8 @@ himself,melfish,shelfim,smhlife,ehfilms,flemish
 weariest,ewitears,treesawi,treesiaw,iwestare
 nearest,ernesta,strenae,stearne
 ################otters
+discern,nrdices,icnerds,srindec
+rescind,nrdices,icnerds,srindec
 however,eehrowv,veerhow,revhowe,whereov
 honestly,lhenyost,elsynoth,ethylsno,sthoylen
 hornets,shorten
@@ -123,18 +126,24 @@ hornets,shorten
 although,ghoulhat,holathug,ughohalt
 #gloathuh/hotlaugh work
 reedily,lyredie,drilyee
-#deeply,edplye
+deeply,edplye,...L.
 #################others
-coins,nisco
-icons,nisco
-sonic,nisco
-apricot,patrico,captori
-among,mango,goman
+#rustic citrus
+blueberries,ereisrubble,reelrisebub,rubberielse,rublebeesir,reelrusebib
 tamarind,drnimata
+#swell wells
+apricot,patrico,captori,itrapco
+gooseberry,yeborersgo
+#clangier clearing
+among,mango,goman
+#scape space
 orange,rageon
 rhubarb,burrbah
 persimmon,mrpinsome,onemrspim,monisperm,nopemrsim
-gooseberry,yeborersgo
+#coins sequence
+coins,nisco
+icons,nisco
+sonic,nisco
 ;
 spectacular,cactuspearl,pearlcactus,capsulecart,acurstplace
 nerdiest treedsin % dinester ridesten sitender endtries steenrid sterndie edenstir drsteine eternids
