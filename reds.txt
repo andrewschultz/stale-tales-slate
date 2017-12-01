@@ -1,10 +1,14 @@
 sortie,riseto
-#this line below is important because it lets you use the settler by default
+################forest
+################sortie
+################metros
+################resort
+#this line below is important because it notifies reds.pl to let you use the settler by default, so DON'T DELETE IT
 #roil-start
 ################manor
 stable,tables,ablest,bleats,labset,belast
 flier,irelf,efril
-stair,trisa,israt
+stair,trisa,israt,ratsi
 ramp,mrpa
 staple,epstal
 ################stores
@@ -41,19 +45,24 @@ discover,rodsvice,revdisco,veridocs,scorediv
 decide,iceded,cdedei,ecedid
 resign,sireng,grines,singer,snegri,nregis,isnerg
 ################presto
-whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
-mazeltov,ezolavtm,vztlameo,zvtlameo,ltovmaze,olavmetz,zemovalt
-##solong,logons
+#grey gyre
+blam,lamb
 there,ether
-keys,syke
-goldurn,lurndog,drulong,ndroglu,rungdol,lgrundo
-alert,later
-tough,ought
-disk,skid,idks
-skid,disk,idks
+mazeltov,ezolavtm,vztlameo,zvtlameo,ltovmaze,olavmetz,zemovalt
+#austerer treasure
+phooey,oyehop
+#char arch
 drat,tard
 rats,star
-blam,lamb
+#dirge ridge
+whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
+#phat path/saps pass
+keys,syke
+alert,later
+tough,ought
+#hacks shack
+disk,skid,idks
+skid,disk,idks
 compile,melcopi
 keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
@@ -68,85 +77,105 @@ soar,oars
 #anger range
 unearth,haunter,etahnru,nearhut
 spike,pikes
-#part of quest
-enlarge,algreen
+#lean lane
 swipe,ispew,wipes
+enlarge,algreen
 #dourest detours
 tan,ant
 #den loft
-prepay,rapyep
+prepay,rapyep,yaperp
 #airshed
 bust,stub
 derail,ialder,laired
 redial,ialder,laired
 ###############towers
+#topside deposit
 sadder,dreads,drsade,edsard
+#scope copse
+subtler,lesburt
+rusty,tryus
+rinsed,isdern,drenis,nerdis
+#(random anywhere)
 creaky,kcayer,rayeck,keycar,yacker
+weariest,treesawi,treesiaw,sitweare,ewitears
 restful,truself,furlets
-punier,unrIpe,urpIne
-unable,bluena
 docile,idleco,liedoc,olecid,cledio,ecolid
+#hintpastries
+strudel,dreltus
+#obscurest subsector
+unlocked,dunkelco,loudneck,conklude,loneduck,elcundok
+#note "mardier" alternate solution doesn't quite work
+married,iraderm,edmirra,redirma
+#long
+rustled,dreltus,sledrut
+#saltbed
+pastier,airpest,reapsit,tipsare,spareit
+broken,rebonk
+#anemic cinema
+angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas,nitregas,sanergit,iregnats
+#unblest sunbelt
+himself,melfish,shelfim,smhlife,ehfilms,flemish
+grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
+drained,edindar,rindade
+#treading gradient
+released,dreleesa,eredeals,lardeese,edsleare
+weariest,ewitears,treesawi,treesiaw,iwestare
+#danger garden
+vainest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
+naivest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
+#actionless coastlines
+holiest,thelois,sithole,liestho,sthelio,thesoil,theoils,thisole
 weirder,drewrie
 stabler,alberts
-rusty,tryus
-#pastries
-strudel,dreltus
-holiest,thelois,sithole
-unlocked,dunkelco,loudneck,conklude,loneduck,elcundok
-#long
-grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
-rustled,dreltus,sledrut
-drained,edindar,rindade
-angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas,nitregas,sanergit,iregnats
-# female talk to elmo
-# female, fix up
-porcine,openric,ernopic,recopin,oncerip,reponic,nicepro,repinco,nicerop,incoper,ceoinpr
-mistier,stimeri
-pastier,airpest,reapsit,tipsare
-punier,inpure,iprune,inperu
-released,dreleesa,eredeals,lardeese,edsleare
-greyed,eegdry,edyerg,regedy
-broken,rebonk
-###fix gender below
-married,iraderm,edmirra,redirma
-#note mardier doesn't jibe with i-rad-erm
-#mardier,iraderm,edmirra,redirma
-holiest,liestho,sthelio,thesoil,theoils,thisole
-himself,melfish,shelfim,smhlife,ehfilms,flemish
-weariest,ewitears,treesawi,treesiaw,iwestare
+hastiest,setithas,thiseats
+#rawest waters
 nearest,ernesta,strenae,stearne
+#mislit limits
+punier,inpure,iprune,inperu,unrIpe,urpIne
+spectacular,cactuspearl,pearlcactus,capsulecart,acurstplace
+#mesprise premises
+triste,restit
 ################otters
+#blearu barley/burnt brunt
+reedily,lyredie,drilyee
 discern,nrdices,icnerds,srindec
 rescind,nrdices,icnerds,srindec
-however,eehrowv,veerhow,revhowe,whereov
-honestly,lhenyost,elsynoth,ethylsno,sthoylen
-hornets,shorten
-#too long, can comment
-#wearingly,lawyering
+#frontage
+wearingly,lawyering
+modestly,ed my lost,styledom,yet old ms,ty sod mel
+#loop pool
+#bran barn
 although,ghoulhat,holathug,ughohalt
-#gloathuh/hotlaugh work
-reedily,lyredie,drilyee
-deeply,edplye,...L.
+however,eehrowv,veerhow,revhowe,whereov
+#coevals alcoves
+honestly,lhenyost,elsynoth,sthoylen,ethylsno,shytolen,......LY
+#perverse preserve
+hornets,shorten
+#girding ridging
+#gloathuh/hotlaugh work but don't give red
+deeply,edplye,....L.
 #################others
 #rustic citrus
 blueberries,ereisrubble,reelrisebub,rubberielse,rublebeesir,reelrusebib
 tamarind,drnimata
 persimmon,mrpinsome,onemrspim,monisperm,nopemrsim,rompsinme,mosirpenm
 #swell wells
-apricot,patrico,captori,itrapco
+mulberries,bemireslur
+tangerines,greenstain,resentgain
+apricot,patrico,captori,itarpco
 gooseberry,yeborersgo
+coconuts,scoutcon,onstucco,suncotco
 #clangier clearing
 among,mango,goman
 #filed field
 watermelon,meantrowel,newtlamore,mrowenlate,moanerwelt
 #scape space
-orange,rageon
+gonear,anogre,onearg,engaro
 rhubarb,burrbah
 #coins sequence
 coins,nisco
 icons,nisco
 sonic,nisco
 ;
-spectacular,cactuspearl,pearlcactus,capsulecart,acurstplace
 nerdiest treedsin % dinester ridesten sitender endtries steenrid sterndie edenstir drsteine eternids
 grained diregan % regdain nedriga indegar

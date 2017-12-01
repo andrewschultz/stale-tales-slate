@@ -53,6 +53,7 @@ my $verbose        = 0;
 my $onlyCheckReds  = 0;
 my $auditString    = "";
 my @extraArray     = ();
+my $includeLY      = 0;
 
 my @wordArray;
 
@@ -91,8 +92,11 @@ while ( $cur <= $#ARGV ) {
       redSource( "roiling",   $whatToDo );
       exit();
     };
-    /^-?a(n)?(\+[a-z,]*)?$/ && do {
-      $disableSettler = ( $arg =~ /^a(n)?/i );
+    /^-?a[nl]*(\+[a-z,%]*)?$/ && do {
+      my $prefix = $arg;
+      $prefix =~ s/\+.*//;
+      $disableSettler = ( $prefix =~ /n/i );
+      $includeLY      = ( $prefix =~ /l/i );
       if ( $arg =~ /\+/ ) {
         my $a2 = $arg;
         $a2 =~ s/.*\+//;
@@ -164,17 +168,21 @@ else {
       next if ( index( $a, "$auditString," ) == -1 );
       print "Found something at line $.: $a\n";
       close(A);
+      $a =~ s/ //g;
       @wordArray     = split( /,/, $a );
       $firstString   = 0;
       $checkExclude  = 1;
       $onlyCheckReds = 0;
       @wordArray     = ( @wordArray, @extraArray );
+      push( @wordArray, "" . ( "." x ( length( $wordArray[0] ) - 2 ) ) . "LY" )
+        if $includeLY;
       push( @wordArray, "%" ) if $roilingYet && !$disableSettler;
       goto PRINTRESULTS;
     }
 
     if ($sectionIgnore) { next; }
 
+    $a =~ s/ //g;
     @array = split( /,/, $a );
     if ($settler) {
       my $foundPct = 0;
@@ -195,7 +203,8 @@ else {
 "Line $. has $array[0] vs $array[$q] letters shouldn't match but do at position $idx\n"
           );
         }
-        if ( ( $a2[$idx] eq uc( $a2[$idx] ) )
+        if ( ( ord( $a2[$idx] ) <= 90 )
+          && ( ord( $a2[$idx] ) >= 65 )
           && ( lc( $a2[$idx] ) ne $letArray[$idx] ) )
         {
           print(
@@ -556,6 +565,7 @@ Looks at c:/writing/dict/reds.txt
 -x/-nx turns on/off checking if you exclude one of the strings (default is on)
 reds.pl rs runs the reds-in-source. v=verbose, b=redo base file, c=redo compare file
 reds.pl -a STRING looks for a string. reds.pl -a+GRINTS STRING adds GRINTS as a potential red.
+  l = LY in otters, n = no additional settler clues
 EOT
   exit();
 }
