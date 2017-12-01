@@ -2784,14 +2784,14 @@ drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
-tumblers	"The PITS is written in red on the bottom of one tumbler."
+tumblers	"PITS is written in red on the bottom of some tumblers."
 scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
 gleaner	"The gleaner was made by Al Green, written in red."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
-keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order] in red. Maybe the other side has more information."
+keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order] in a different shade of red than the car. Maybe the other side has more information."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
-Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads LOST? HIE! THE LOIS![else][one of]Written in red on the Hatchery is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the Thearchy Hatchery in red.[stopping][end if]"
+Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
 blaster	"ALBERT'S."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work, and you see red being jealous of herds who know what's what[in random order]."
@@ -16629,7 +16629,7 @@ instead of doing something with patrons:
 		continue the action;
 	say "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if]."
 
-the stumbler tumblers are reflexive plural-named scenery in posh hops shop. "They are labeled TIPS but don't have any money in them. Some red writing is at the bottom of one."
+the stumbler tumblers are reflexive plural-named scenery in posh hops shop. "They are labeled TIPS in red but don't have any money in them. Some red writing is at the bottom of one."
 
 instead of taking tumblers:
 	say "The people who didn't give tips would notice your rudeness.";
@@ -19454,7 +19454,7 @@ to say tow-dirs:
 
 chapter keycar
 
-the yacker keycar is a LLPish vanishing thing. description of keycar is "The yacker keycar zips around randomly, probably just to distract you from bigger things. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". "The yacker keycar continues to zip back and forth here, but it's not actually blocking you."
+the yacker keycar is a LLPish vanishing thing. description of keycar is "The yacker keycar zips around randomly, probably just to distract you from bigger things. It's red, but it has entirely different red writing all around. You'd be able to read it with out too much difficulty.". "The red yacker keycar continues to zip back and forth here, but it's not actually blocking you."
 
 understand "key" and "key car" and "car" as keycar.
 

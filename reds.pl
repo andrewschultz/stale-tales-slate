@@ -1,6 +1,6 @@
 #reds.pl
 #
-# usage: reds.pl reds.txt (for all the files)
+# usage: reds.pl -f reds.txt (for all the files)
 # reds.pl knob bonk (to check individual reds)
 # requires: reds.txt
 #
@@ -11,6 +11,7 @@
 #
 
 use List::Util qw(reduce);
+use File::Compare;
 
 use Algorithm::Permute;
 
@@ -46,6 +47,7 @@ my $sectionIgnore = 0;
 my $settler       = 0;
 my $checkExclude  = 1;
 my $verbose       = 0;
+my $onlyCheckReds = 0;
 
 my @wordArray;
 
@@ -56,6 +58,8 @@ while ( $cur <= $#ARGV ) {
 
     #/^-?a$/ && do { $lookDif = 1; $cur++; next; };
     #the above is an option I don't know what it's for
+    /^-?(fr|rf)$/
+      && do { $fileName = "c:/writing/dict/reds.txt"; $cur++; next; };
     /^-?f$/ && do { $fileName = $arg2; $cur += 2; next; };
     /^-?y$/
       && do {
@@ -71,12 +75,15 @@ while ( $cur <= $#ARGV ) {
       $cur++;
       next;
       };
-    /^-?rs(v)?$/ && do {
+    /^-?rs[cbv]*$/ && do {
       $verbose |= ( $arg =~ /v/ );
-      redSource("shuffling");
-      exit();
-      redSource("roiling");
-      $cur++;
+      my $whatToDo = 0;
+      if ( $arg =~ /b/ ) { $whatToDo = 2; }
+      if ( $arg =~ /c/ ) { $whatToDo = 1; }
+      die("Can't define both base and checkoff.")
+        if ( $arg =~ /b/ ) && ( $arg =~ /c/ );
+      redSource( "shuffling", $whatToDo );
+      redSource( "roiling",   $whatToDo );
       exit();
     };
     /^-?l$/ && do { $maxLetters = $arg2; $cur += 2; next; };
@@ -120,14 +127,19 @@ if ( !$fileName ) {
   for $aryIdx ( 0 .. $iter ) { oneRed($aryIdx); }
 }
 else {
-  $printResults = 0;
+  $printResults  = 0;
+  $onlyCheckReds = 1;
+  $checkExclude  = 0;
   open( A, $fileName ) || die("No $fileName");
+  print "Searching $fileName for (errant) red text...\n";
   while ( $a = <A> ) {
     chomp($a);
     if ( $a =~ /^\|/ ) { $sectionIgnore = !$sectionIgnore; next; }
-    if ( $a =~ /^#/ )  { $sectionIgnore = 0;               next; }
+    if ( $a =~ /^##/ ) { $sectionIgnore = 0;               next; }
+    if ( $a =~ /^#/ )  { next; }
     if ( $a =~ /^;/ )  { last; }
     if ($sectionIgnore) { next; }
+
     @array = split( /,/, $a );
     if ($settler) {
       my $foundPct = 0;
@@ -137,6 +149,26 @@ else {
       if ( !$foundPct ) { @array = ( @array, "%" ); }
     }
     @letArray = split( //, $array[0] );
+    @perm     = split( //, $array[0] );
+    for my $q ( 1 .. $#array ) {
+      die("Unequal lengths $array[0] vs $array[$q] at line $.")
+        if length( $array[0] ) != length( $array[$q] );
+      my @a2 = split( //, $array[$q] );
+      for my $idx ( 0 .. $#letArray ) {
+        if ( $letArray[$idx] eq $a2[$idx] ) {
+          print(
+"Line $. has $array[0] vs $array[$q] letters shouldn't match but do at position $idx\n"
+          );
+        }
+        if ( ( $a2[$idx] eq uc( $a2[$idx] ) )
+          && ( lc( $a2[$idx] ) ne $letArray[$idx] ) )
+        {
+          print(
+"Line $. has $array[0] vs $array[$q] letters should match but don't at position $idx\n"
+          );
+        }
+      }
+    }
 
   }
   close(A);
@@ -159,18 +191,6 @@ sub oneRed {
 
   my %theDups;
 
-  for ( 0 .. $#lets ) {
-    $checkForDup = 1 if defined( $theDups{ $lets[$_] } );
-    $theDups{ $lets[$_] }++;
-  }
-  my $poss = factorial( scalar(@lets) );
-  for ( keys %theDups ) {
-    $poss /= factorial( $theDups{$_} );
-  }
-
-  print "Removing arg # $_[0] $array[$_[0]]: " if ( $_[0] );
-  @perm = split( //, "$array[0]" );
-
   for $j ( 1 .. $#array ) {
     next if $array[$j] eq "%";
     next if length( $array[$j] ) eq length( $array[0] );
@@ -181,7 +201,23 @@ sub oneRed {
 "$array[$j] (word #$j) has wrong number of characters. Use .'s to fill out a word. Bailing."
     );
   }
+  if ($onlyCheckReds) {
+    print join( "/", @_ ) . " parsed okay\n" if $verbose;
+    return;
+  }
 
+  for ( 0 .. $#lets ) {
+    $checkForDup = 1 if defined( $theDups{ $lets[$_] } );
+    $theDups{ $lets[$_] }++;
+  }
+  my $poss = factorial( scalar(@lets) );
+  for ( keys %theDups ) {
+    $poss /= factorial( $theDups{$_} );
+  }
+
+  print "Removing arg # $_[0] $array[$_[0]]: " if ( $_[0] );
+
+  @perm = split( //, "$array[0]" );
   for $j ( 1 .. $#array ) {
     next if $j eq $_[0];
     if ( $array[$j] eq "%" ) {
@@ -192,6 +228,16 @@ sub oneRed {
         else                             { $array[$j] .= "#"; }
       }
     }
+  }
+
+  if ( my $temp = isOops( $array[0], $_[0] ) ) {
+    die "Test failed at word "
+      . ( $temp & 0xff )
+      . " character "
+      . ( ( $temp >> 8 ) + 1 )
+      . ".\n$array[0]\n"
+      . ( ' ' x ( $temp >> 8 ) )
+      . "*\n$array[$temp & 0xff]\n";
   }
 
   for $j ( 1 .. $#array ) {
@@ -376,32 +422,74 @@ sub factorial {
   return $fact;
 }
 
+# 0 = STDOUT
+# 1 = red-base
+# 2 = red-var
+
 sub redSource {
-  my $file = "c:/games/inform/$_[0].inform/source/story.ni";
+  my $file    = "c:/games/inform/$_[0].inform/source/story.ni";
+  my $base    = "c:/games/inform/$_[0].inform/source/red-base.txt";
+  my $compare = "c:/games/inform/$_[0].inform/source/red-var.txt";
   my $line;
   my $count = 0;
   my %wordAfter;
-  print "Trying $file\n";
+  my $outString;
+
+  print "" . ( "=" x 40 ) . "Trying $file\n";
   open( A, $file ) || die("No file $file");
   while ( $line = <A> ) {
     if ( $line =~
 /\bred\b (?!(camp|condo|bull|wire|guardian|guardians|rat|asp|ring|drawer)\b)/i
-      )
+      )    # red objects are specifically removed from consideration
     {
       $count++;
-      print "$count: $line";
+      $outString .= "$count: $line";
       chomp($line);
-      my @reds = split( /red[^a-z]*/, $line );
+      my @reds = split( /red[^a-z]*/, $line )
+        ; # note that this may pick up "red"'s flagged above, but it isn't a really big deal
       for (@reds) {
         $_ =~ s/[^a-z].*//i;
         $wordAfter{$_}++ if ($_);
       }
     }
 
-    #if ($line =~ /\bred\b/i) { print $line; }
   }
-  print("$count total.\n");
+
   close(A);
+
+  $outString .= "$count total.\n";
+
+  if ( $_[1] == 0 )    # stdout
+  {
+    print $outString;
+  }
+  elsif ( $_[1] == 1 )    # to VAR file
+  {
+    print "Writing to compare file $compare\n";
+    open( A, ">$compare" );
+    print A $outString;
+    close(A);
+    if ( compare( $compare, $base ) ) {
+      print("Warning $compare != $base\n\n");
+      system("wm $compare $base");
+    }
+    else {
+      print("No changes in red text since last.\n\n");
+    }
+  }
+  elsif ( $_[1] == 2 )    # to BASE file
+  {
+    print "Writing to base file $base\n";
+    open( A, ">$base" );
+    print A $outString;
+    close(A);
+  }
+  else {
+    die(
+      "Bad parameter passed to redSource function. Check script and try again."
+    );
+  }
+
   if ($verbose) {
     print "$_ -> $wordAfter{$_}\n" for ( sort keys %wordAfter );
   }
@@ -416,7 +504,10 @@ reds.pl abcd bcda
 Should give 9
 reds.pl abcdef bcdeaf
 Should give an error since the f's match up
+reds.pl -fr
+Looks at c:/writing/dict/reds.txt
 -x/-nx turns on/off checking if you exclude one of the strings (default is on)
+reds.pl rs runs the reds-in-source. v=verbose, b=redo base file, c=redo compare file
 EOT
   exit();
 }

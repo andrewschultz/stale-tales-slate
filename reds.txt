@@ -1,8 +1,11 @@
+sortie,riseto
+###################################end shuffling start roiling
 ################manor
 stable,tables,ablest,bleats,labset,belast
 flier,irelf,efril
 stair,trisa,israt
 ramp,mrpa
+staple,epstal
 ################stores
 sorbet,oberts,restbo,bestor
 towers,westor,restow
@@ -12,55 +15,33 @@ nestor,storen,toners
 presto,sopert
 routes,sureto,setour
 oyster,toyers
-################otters
-however,eehrowv,veerhow,revhowe,whereov
-honestly,lhenyost,elsynoth,ethylsno,sthoylen
-hornets,shorten
-#too long, can comment
-#wearingly,lawyering
-although,ghoulhat,holathug,ughohalt
-#gloathuh/hotlaugh work
-reedily,lyredie,drilyee
-#deeply,edplye
 ################routes
 inside,diesin
 towards,radwost
 along,nogal,logan
 beneath,thebean,hatbeen
 astride,itsared,edastir,staider
-despite,speedit
+despite,speedit,sitdeep
 ################troves
 hate,thea,ateh,ehat
 care,rAcE
 spot,posT,StOp
+observe,evesbro,boevers
 recall,cEllar
 derive,idveer,viered,everid
-discover,rodsvice,revdisco,veridocs,scorediv
 ignore,ergnio,onregi,region,goerin
-glare,regal,lager,ergal,agler
 reason,noears,sorena,anorse,oasner,asnero
-decide,iceded,cdedi,ecedid
-observe,evesbro,boevers
+#drain nadir
+glare,regal,lager,ergal,agler
 strive,trevis,vister
+ponder,derpon,epdorn,drpeno,nedorp
+discover,rodsvice,revdisco,veridocs,scorediv
+#upscale capsule
+decide,iceded,cdedei,ecedid
 resign,sireng,grines,singer,snegri,nregis,isnerg
-;
-################oyster
-ocean,canoe
-enlarge,algreen
-soar,oars
-spit,tips,pits
-tan,ant
-prepay,rapyep
-bust,stub
-unearth,haunter,etahnru,nearhut
-spike,pikes
-swipe,ispew,wipes
-spill,lilps
-derail,ialder,laired
-redial,ialder,laired
 ################presto
 whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
-mazeltov,ezolavtm,vztlameo,zvtlameo,ltovmaze
+mazeltov,ezolavtm,vztlameo,zvtlameo,ltovmaze,olavmetz,zemovalt
 ##solong,logons
 there,ether
 keys,syke
@@ -75,14 +56,42 @@ blam,lamb
 compile,melcopi
 keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
+################oyster
+#hops shop
+spill,lilps
+spit,tips,pits
+inset,tiens
+#disease seaside
+ocean,canoe
+soar,oars
+#anger range
+unearth,haunter,etahnru,nearhut
+spike,pikes
+#part of quest
+enlarge,algreen
+swipe,ispew,wipes
+#dourest detours
+tan,ant
+#den loft
+prepay,rapyep
+#airshed
+bust,stub
+derail,ialder,laired
+redial,ialder,laired
 ###############towers
-sadder,dreads,%,drsade,edsard
+sadder,dreads,drsade,edsard
+creaky,kcayer,rayeck,keycar,yacker
+restful,truself,furlets
 punier,unrIpe,urpIne
 unable,bluena
 docile,idleco,liedoc,olecid,cledio,ecolid
 weirder,drewrie
 stabler,alberts
 rusty,tryus
+#pastries
+strudel,dreltus
+holiest,thelois,sithole
+unlocked,dunkelco,loudneck,conklude
 #long
 grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
 rustled,dreltus,sledrut
@@ -105,6 +114,16 @@ holiest,liestho,sthelio,thesoil,theoils,thisole
 himself,melfish,shelfim,smhlife,ehfilms,flemish
 weariest,ewitears,treesawi,treesiaw,iwestare
 nearest,ernesta,strenae,stearne
+################otters
+however,eehrowv,veerhow,revhowe,whereov
+honestly,lhenyost,elsynoth,ethylsno,sthoylen
+hornets,shorten
+#too long, can comment
+#wearingly,lawyering
+although,ghoulhat,holathug,ughohalt
+#gloathuh/hotlaugh work
+reedily,lyredie,drilyee
+#deeply,edplye
 #################others
 coins,nisco
 icons,nisco
