@@ -1997,7 +1997,7 @@ ingrates	--
 organised	--
 admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
-Atheists	--
+Atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
 Tetris Sitter	"[if flowerpot is in lalaland]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
 Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]."
 whiners	--
@@ -2133,9 +2133,9 @@ pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
-Mel Fish	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
+Mel Fish	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im![or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
-sweatier wait-seer	"'Trees! [one of]Aw, I[or]I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
+sweatier wait-seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
 duck	"It quacks."
 ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
 pester'n serpent	"[serp-say]."
@@ -2792,6 +2792,7 @@ strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order] in a different shade of red than the car. Maybe the other side has more information."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
+Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."
@@ -2799,7 +2800,7 @@ p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
-riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
+riot cap	"It's red and [one of]made of I-TARP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
 orange	"It's stamped with the word ENGARO in red."
@@ -5489,7 +5490,7 @@ t-b	false	false	false	true	"[cheatfid]."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
-ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [trives]
+ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
@@ -9030,7 +9031,7 @@ an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"margina
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
-dinger	dinger	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated author's name. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN.'"
+dinger	dinger	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN.'"
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair."
 trendies	trendies	false	675249448	--	"nerdiest"	"nerdiest"	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
@@ -18851,7 +18852,7 @@ instead of taking sheets:
 instead of scaning sheets:
 	say "The words on the theses can certainly be twisted into something worse, but the sheets cannot be changed for the better."
 
-description of theses sheets is "[one of]They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan (OH, ENTER NOT HERE) one[or]Another[stopping] point reads: [randbla]"
+description of theses sheets is "[one of]They could be a heists thesis except they're definitely not shiest. They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan (OH, ENTER NOT HERE) one[or]Another[stopping] point reads: [randbla]"
 
 chapter ol trap and portal
 
@@ -20167,7 +20168,10 @@ chapter reading a dinger
 
 a thing called Reading a Dinger is vanishing scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves silliness like someone figuring out world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. This wouldn't happen in saner places."
 
-a-text of dinger is "RRYYRYR". b-text of dinger is "RR?YR?R".
+check taking dinger:
+	say "You hear a rage din from the coasting agnostic. They might not like the book, but they like being robbed even less." instead;
+
+a-text of dinger is "RRYYRYR". b-text of dinger is "RR?YR?R". parse-text of dinger is "x[sp]x[sp]?[sp]-[sp]x[sp]?[sp]x".
 
 book Strati Strait
 
@@ -21287,9 +21291,9 @@ to say admsex:
 
 chapter unblest sunbelt
 
-Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.'"
+Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.' You recognize him...wait, it's Mel Fish, the former reality show star who always kept trying crazier and crazier ways to be an individual, before he burned out!"
 
-description is "On his chest, he has the word FLEMISH crossed out in red. It's good to know what he's against. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
+description of Mel Fish is "On his chest, Mel Fish has the word FLEMISH crossed out in red. It's good to know what he's against. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
 a-text of Mel Fish is "RYRRYRR". b-text of Mel Fish is "RYRRYRR". parse-text of Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
@@ -21368,7 +21372,7 @@ the Asset-Hit Atheists are plural-named purple guardians. "Atheists to the [psgd
 
 understand "atheist" as atheists.
 
-a-text of atheists is "RYRRYYRR". b-text of atheists is "RYRRGYRR". parse-text of atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
+a-text of atheists is "RYRRYYRR". b-text of atheists is "RY?R?YR?". parse-text of atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 
 chapter danger garden
 
@@ -21394,7 +21398,7 @@ section stinger
 
 The stinger is a purple guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it."
 
-a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]x[sp]x[sp]x[sp]x[sp]x[sp]x".
+a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 chapter Strati Strait
 
@@ -21402,7 +21406,7 @@ section lois the hostile
 
 Lois the Hostile is a female proper-named purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She doesn't exactly look happy, but she doesn't look irredeemably evil."
 
-a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR".
+a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR". parse-text of lois the hostile is "?[sp]O[sp]x[sp]-[sp]-[sp]x[sp]x".
 
 section hostile is he lot
 
@@ -21410,7 +21414,7 @@ The Hostile-Is-He Lot is a plural-named purple guardian. "The Hostile-is-He Lot,
 
 understand "hostile/ is/ he/ lot" as hostile-is-he when player is male.
 
-a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?".
+a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?". parse-text of hostile-is-he lot is "-[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
 other-g of Lois the Hostile is hostile-is-he lot. other-g of hostile-is-he lot is Lois the Hostile.
 
@@ -24048,15 +24052,18 @@ s-w are privately-named scenery in swell wells. printed name of s-w is "the well
 
 to say what-clear:
 	if sorer bogey is not in swell wells and stucco is not in swell wells:
-		say "You got rid of some of it, but that's probably all there is";
+		say "You got rid of some of it, and that's probably all you need to";
 	else if stucco is not in swell wells:
 		say "'Ye Borers, go!' is written in red";
 	else if sorer bogey is not in swell wells:
-		say "The advertisement for ScoutCon is on stucco and in red";
+		say "An advertisement for [stucco-ad] is on stucco and in red";
 	else:
-		say "Two prominent ones in red: 'Ye borers, go!' and ScoutCon on stucco"
+		say "Two prominent ones in red: 'Ye borers, go!' and [stucco-ad] on stucco"
 
-the stucco is scenery in swell wells. "There's an advertisement for ScoutCon, whatever that is, in red, on stucco, on the side of one of the wells.".
+the stucco is scenery in swell wells. "One of two advertisements is for [stucco-ad], whatever that is, in red, on stucco, on the side of one of the wells.".
+
+to say stucco-ad:
+	say "[one of]ScoutCon[or]SunCotCo[in random order]"
 
 a-text of stucco is "RYRYRYRR". b-text of stucco is "RYRYRYRR". parse-text of stucco is "x[sp]-[sp]x[sp]o[sp]x[sp]-[sp]x[sp]x".
 
@@ -24521,7 +24528,7 @@ check fliptoing papayas when papayas are in lalaland:
 
 the auction caution is reflexive scenery in Clangier Clearing. "It's pretty clear: PAY ASAP covers over half of it. That probably applies to non-auctions, too.". understand "banner" as auction caution.
 
-a-text of auction caution is "RYRYOYR". b-text of auction caution is "RYRYOYR".
+a-text of auction caution is "RYRYOYR". b-text of auction caution is "RYRYOYR". parse-text of auction caution is "x[sp]a[sp]x[sp]a[sp]y[sp]a[sp]x".
 
 some papayas are a plural-named fruit. description is "Goldish and gourdish."
 
@@ -24853,7 +24860,7 @@ check closing slot:
 
 the ENGARO orange is a reflexive fruit in Scape Space. "An orange lies here next to the tarred trader. It looks like you could read the orange to find its brand name."
 
-description of ENGARO is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it."
+description of ENGARO is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping]."
 
 a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO is "RY*RYYR". parse-text is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 

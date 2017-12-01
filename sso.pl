@@ -137,7 +137,7 @@ while ( $count <= $#ARGV ) {
     /^-?=$/ && do { openThis( -2, 0, 1 ); exit(); };
     /^-?e$/         && do { `$orig`;    exit(); };
     /^-?(c|ce|ec)$/ && do { np($code);  exit(); };
-    /^-?e?r$/       && do { `$txtfile`; exit(); };    # forcing options first
+    /^-?(e?)r$/     && do { `$txtfile`; exit(); };    # forcing options first
     /^-?d$/ && do { $copyBack = 0; $count++; next; };
     /^-?o(f)?[0-9]+$/ && do {
       my $temp = $arg =~ /f/;
@@ -955,7 +955,6 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 + adds string to tosort.txt (- = space)
 -c is compare post-run
 -d is demo mode. The file doesn't change.
--e edits tosort.txt, -ec edits source code, -er/r edits suffix-to-table file
 -f is force copy. It is the opposite of demo mode.
 -o1/ol opens 1st or last quoted undone
 -n adds a line of numbers to the stats file.
@@ -973,6 +972,7 @@ SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
 wa is writeadded, l = launch, o = only.
+-e edits tosort.txt, -ec edits source code, -er/r edits suffix-to-table file
 =============popular use
 sso.pl -nf xes.txt -mw 50 for 50 warnings in an auxiliary file
 sso.pl pu uql 20 is good for a day's work to check
