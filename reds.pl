@@ -102,7 +102,7 @@ while ( $cur <= $#ARGV ) {
         $a2 =~ s/.*\+//;
         @extraArray = split( ",", $a2 );
       }
-      $auditString = $arg2;
+      $auditString = lc($arg2);
       $fileName = $reds if !$fileName;
       $cur += 2;
       next;
@@ -150,6 +150,7 @@ PRINTRESULTS:
   for $aryIdx ( 0 .. $iter ) { oneRed($aryIdx); }
 }
 else {
+  my $gotAnyAna  = 0;
   my $roilingYet = 0;
   $printResults  = 0;
   $onlyCheckReds = 1;
@@ -165,7 +166,14 @@ else {
     if ( $a =~ /^;/ )           { last; }
 
     if ($auditString) {
-      next if ( index( $a, "$auditString," ) == -1 );
+      next
+        if ( ( index( lc($a), "$auditString," ) == -1 )
+        && ( index( lc($a), ",$auditString" ) == -1 ) );
+      $gotAnyAna = 1;
+      if ( index( lc($a), lc($auditString) ) > 0 ) {
+        print("$auditString found in $a at line $. but is not main anagram.\n");
+        next;
+      }
       print "Found something at line $.: $a\n";
       close(A);
       $a =~ s/ //g;
@@ -216,6 +224,7 @@ else {
 
   }
   close(A);
+  print "$auditString turned up nothing.\n" if ( $auditString && !$gotAnyAna );
 }
 
 ###########################################
