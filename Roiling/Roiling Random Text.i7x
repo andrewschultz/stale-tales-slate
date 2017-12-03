@@ -16254,7 +16254,7 @@ blurb	prio
 "Stink-Stone Token Snits[r], by InesKnotts"
 "The Stink Think Set[r], by Kent Tish"
 "Stipender President[r], by Trip Edens" []
-"Stir, Cool Cortisol[r], by Loo Crist"
+"Stir, Cool Cortisol Colorist[r], by Loo Crist"
 "A Stir: I Star[r], by Trista Aris" []
 "Stogy Odor, Good Story[r], by Gordy Soto"
 "Stoic From Microsoft[r], by Tom Frisco"

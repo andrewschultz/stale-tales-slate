@@ -1288,8 +1288,8 @@ taco	"[one of]The taco can become something more substantial for adventuring. [p
 coat	"The coat will keep you warm as-is. No need to do much."
 anapest	"[one of]The poem you hear is an ANAPEST. [plus][or]It's so snotty and elitist, you'd like to change it. [plus][or]Change it to a PEASANT. [minus][cycling]"
 expo flier	"The flier helps you figure what to change the anapest into."
-sc	"The holy verse on the cedar walls gives a rough idea what to do."
-holy verse	--	sc
+sc	"The serve verse on the cedar walls gives a rough idea what to do."
+serve verse	--	sc
 oils	"[if soil is in lalaland][one of]The OILS can be a couple things, but you may want to make a foundation first. [plus][or]The moor's ground won't support anything... [plus][or]...until it becomes more stable SOIL. [minus][cycling][else][one of]The SOIL can now support a structure. [plus][or]A structure that could hold farm stuff, or maybe feed. [plus][or]That'd be a SILO. [minus][cycling]"
 lois	"Lois is the provider of oils."
 crashing archings	"Lois caused that, to help you not look backwards."
@@ -7430,11 +7430,11 @@ to say door-clue:
 
 chapter Sacred Cedars
 
-Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the stiller trellis. Oddly, you feel no reason to be scared. You see drawings and holy verse on the walls.". Cedars is in Sortie.
+Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the stiller trellis. Oddly, you feel no reason to be scared. Serve verse veers from drawings on the walls.". Cedars is in Sortie.
 
 after looking in sacred cedars:
 	set the pronoun them to drawings;
-	set the pronoun it to holy verse;
+	set the pronoun it to serve verse;
 	continue the action;
 
 to say what-to-ask-lois:
@@ -7478,15 +7478,15 @@ understand "lanced candle" and "lanced/candle" as drawings.
 
 check going to sacred cedars for the first time: say "You follow the haywrought throughway..."
 
-the holy verse is scenery in sacred cedars.
+the serve verse is scenery in sacred cedars.
 
-description of holy verse is "It's all calligraphic, and it reads[paragraph break][i]From here, where lumbers slumber, is, lo! Purest oil snout erupts: solution! Ground unsod becomes sound. Lovely volley. A stone atones![paragraph break]  --LOIS[r]"
+description of serve verse is "It's all calligraphic, and it reads[paragraph break][i]From here, where lumbers slumber, is, lo! Purest oil snout erupts: solution! Ground unsod becomes sound. Lovely volley. A stone atones![paragraph break]  --LOIS[r]"
 
 check going nowhere in sacred cedars: say "There is no other secret door. You can only go back west." instead.
 
 the sc are privately-named plural-named scenery in sacred cedars. printed name of sc is "cedar wall/walls". understand "cedars" and "cedar/ wall/walls" as sc.
 
-description of sc is "They look nice and even smell nice. A holy verse is carved on one."
+description of sc is "They look nice and even smell nice. Serve verse is on one side."
 
 the spout is scenery in sacred cedars. description of spout is "It can be used to FILL the appropriate receptacle here.".
 

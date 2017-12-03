@@ -13587,7 +13587,7 @@ instead of doing something with hurt thru:
 	say "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
 
 to say care-hate-clue:
-	say ". [if colr is in lalaland]Race after the thief, somehow[else]find a way to generate hate[end if]"
+	say ". [if cold is in lalaland]Race after the thief, somehow[else]find a way to generate hate[end if]"
 
 after looking in loather rathole:
 	set the pronoun it to cold;

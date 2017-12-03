@@ -49,12 +49,12 @@
 		<room id="16" name="Kitchen" subtitle="" x="96" y="-224" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects>Fridge</objects>
 		</room>
-		<room id="17" name="Moor" subtitle="End Sortie" x="352" y="-128" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-24" customDown="0">Woeful Pat|Roadblock</objects>
-		</room>
 		<room id="18" name="Stiller Trellis (Crashing Archings)" subtitle="" x="224" y="-224" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
-		<room id="19" name="Room" subtitle="" x="224" y="-128" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="17" name="Room" subtitle="" x="224" y="-128" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-12" customDown="0">Cask</objects>
+		</room>
+		<room id="19" name="Moor" subtitle="End Sortie" x="352" y="-128" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+			<objects custom="yes" customRight="-24" customDown="0">Woeful Pat|Roadblock</objects>
 		</room>
 		<room id="20" name="Sacred Cedars" subtitle="" x="352" y="-224" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="n" custom="yes" customRight="-26" customDown="0">Stoup/Spout|(Oils) (Lois)</objects>
@@ -102,7 +102,7 @@
 			<objects custom="yes" customRight="-16" customDown="0">Exits</objects>
 		</room>
 		<line id="35" name="" description="" color="#000000">
-			<dock index="0" id="19" port="n" />
+			<dock index="0" id="17" port="n" />
 			<dock index="1" id="18" port="s" />
 		</line>
 		<line id="36" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="in">
@@ -111,7 +111,7 @@
 		</line>
 		<line id="37" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="14" port="e" />
-			<dock index="1" id="19" port="w" />
+			<dock index="1" id="17" port="w" />
 		</line>
 		<line id="38" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="(maps)">
 			<dock index="0" id="12" port="e" />
@@ -214,8 +214,8 @@
 			<dock index="1" id="4" port="e" />
 		</line>
 		<line id="64" name="" description="" color="#000000" style="dashed">
-			<dock index="0" id="19" port="e" />
-			<dock index="1" id="17" port="w" />
+			<dock index="0" id="17" port="e" />
+			<dock index="1" id="19" port="w" />
 		</line>
 		<line id="65" name="" description="" color="#000000">
 			<dock index="0" id="16" port="e" />

@@ -319,7 +319,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "drawing"	362975539	cedars	--	--	"[best-not-defile]."
 "drawings"	459249505	cedars	--	--	"[best-not-defile]."
 "verse"	544374807	cedars	--	--	"[best-not-defile]."
-"holyverse"	832182774	cedars	--	--	"[best-not-defile]."
 "spout"	460308327	cedars	--	--	"[best-not-defile]."
 "pout"	364034361	cedars	--	--	"[best-not-defile]."
 "minerva"	500458057	cedars	--	--	"[best-not-defile]."
