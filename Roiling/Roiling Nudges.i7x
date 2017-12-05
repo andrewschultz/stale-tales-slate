@@ -4,7 +4,9 @@ volume table of nudges
 
 [remember to sort with nud.pl after changes or, perhaps, before release. NUD.PL organizes the "to say" and "rule" in the same order they appear in the table.]
 
-[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Frontage, Pool (easier than barn), Barn, north/south rooms, Alcoves, Inclosure. Others skips Gates Stage, the last room to visit, with the Swell Wells below being second-last.]
+[nuch.py makes sure that all the nudges have a test case assigned]
+
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Frontage, Pool (easier than barn), Barn, north/south rooms, Alcoves, Inclosure. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
 
 book the tables themselves
 

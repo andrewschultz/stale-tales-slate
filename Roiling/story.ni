@@ -483,7 +483,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 670.
+use MAX_VERBS of 680.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -499,7 +499,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 690.
+use MAX_VERBS of 700.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 

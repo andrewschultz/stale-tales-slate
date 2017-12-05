@@ -7430,7 +7430,7 @@ to say door-clue:
 
 chapter Sacred Cedars
 
-Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the stiller trellis. Oddly, you feel no reason to be scared. Serve verse veers from drawings on the walls.". Cedars is in Sortie.
+Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the stiller trellis. Oddly, you feel no reason to be scared. Serve verse veers around drawings on the walls.". Cedars is in Sortie.
 
 after looking in sacred cedars:
 	set the pronoun them to drawings;
@@ -7486,7 +7486,7 @@ check going nowhere in sacred cedars: say "There is no other secret door. You ca
 
 the sc are privately-named plural-named scenery in sacred cedars. printed name of sc is "cedar wall/walls". understand "cedars" and "cedar/ wall/walls" as sc.
 
-description of sc is "They look nice and even smell nice. Serve verse is on one side."
+description of sc is "They look nice and even smell nice. Serve verse veers all over them."
 
 the spout is scenery in sacred cedars. description of spout is "It can be used to FILL the appropriate receptacle here.".
 
