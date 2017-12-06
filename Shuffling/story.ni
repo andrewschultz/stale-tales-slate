@@ -230,7 +230,7 @@ a thing can be flipped-yet. a thing is usually not flipped-yet.
 
 a thing can be flippable, auxiliary or inflexible. a thing is usually inflexible.
 
-a thing can be universal, useless, amusing, unimportant, abstract or practical. a thing is usually practical.
+a thing can be universal, useless, amusing, unimportant, abstract, bounding or practical. a thing is usually practical.
 
 a disguise-piece is a kind of thing. a disguise-piece has a number called elevation.
 
@@ -1081,6 +1081,9 @@ a thing can be realized. a thing is usually not realized.
 
 cur-item is a thing that varies.
 
+to say that-those-is-are of (x - a thing):
+	say "[if x is plural-named]That is[else]Those are[end if]"
+
 carry out objhinting:
 	if hintsoff is true, say "Hints are disabled for this session." instead;
 	now ever-obj-hinted is true;
@@ -1090,9 +1093,10 @@ carry out objhinting:
 	if noun is in lalaland, all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
 	if noun is not a backdrop and noun is not scenery:
 		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
-	if noun is realized, all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
-	if noun is amusing, all-say "[if noun is plural-named]That is[else]Those are[end if] in there for general silliness." instead;
-	if noun is useless, all-say "[if noun is plural-named]That is[else]Those are[end if] in there for local flavor and scenery." instead;
+	if noun is bounding, all-say "[that-those-is-are of noun] there to establish game boundaries." instead;
+	if noun is realized, all-say "[that-those-is-are of noun] no longer part of a puzzle." instead;
+	if noun is amusing, all-say "[that-those-is-are of noun] in there for general silliness." instead;
+	if noun is useless, all-say "[that-those-is-are of noun] in there for local flavor and scenery." instead;
 	if there is hint-entry of noun in the table of hintobjs:
 		choose row with hint-entry of noun in the table of hintobjs;
 		if there is a parallel-entry entry, try objhinting parallel-entry entry instead;
@@ -5422,7 +5426,7 @@ the forest-leaves are in rf and sf.
 
 chapter Self-ID Fields
 
-Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north."
+Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes from a selves vessel to the south through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north."
 
 after looking in Self-ID Fields:
 	set the pronoun it to gy;
@@ -5474,6 +5478,18 @@ Corses Crosse is scenery in Self-ID Fields. "It's one of those full-height deals
 instead of entering Corses Crosse: try going north.
 
 beard-unmade is a truth state that varies. beard-unmade is usually false.
+
+section selves vessel
+
+The selves vessel is bounding scenery in Self-ID Fields.
+
+instead of doing something with selves vessel:
+	if action is procedural, continue the action;
+	if current action is entering, try going south instead;
+	say "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it."
+
+check going south in Self-ID Fields:
+	say "Given that the people leaving the selves vessel look dead, you probably don't want to go in." instead;
 
 section random ID field text
 

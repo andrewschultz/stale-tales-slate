@@ -156,6 +156,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "eat"	233103945	--	teas	--	"[forest-no]. Anyway, it doesn't smell like just one tea."
 "rest"	412513896	rf	--	--	"[loc-rej]." [START OF REST OF FOREST]
 "selfid"	370430745	self-id	--	--	"[loc-rej]." [START SELF-ID FIELDS]
+"selves"	609138809	self-id	--	--	"The selves vessel is much too sturdy to manipulate."
+"vesel"	512864843	self-id	--	--	"The selves vessel is much too sturdy to manipulate."
 "line"	295520302	self-id	--	--	"They're dead and not interfering with you."
 "life"	253127690	self-id	--	--	"They're dead and not interfering with you."
 "lineof"	396387775	self-id	--	--	"They're dead and not interfering with you."
