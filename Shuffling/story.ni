@@ -1035,9 +1035,6 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is beats:
 		if mrlp is metros, decide yes;
 		decide no;
-	if hintcand is priv-camp:
-		if player is in camp or player is in underside, decide yes;
-		decide no;
 	if hintcand is warding drawing:
 		if player is in anti-cool or player is in underside, decide yes;
 		decide no;
@@ -1340,7 +1337,7 @@ fuzzy looking wall	"You can climb up the wall with [if player has Velcro]your Ve
 gardenia	"[if player is in flowers]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
 building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
 sensor	"The sensor probably needs something electronic to read."
-priv-camp	"The deadbeat is the main person you need to deal with, here."
+red camp	"It's just scenery telling you something is north of the underside."
 lost corn	"[one of]You haven't done anything with the lost corn yet. [plus][or]The kernels look like buttons. [plus][or]The 'lost' adjective is important. [plus][or]The lost corn can become CONTROLS. [minus][cycling]"
 discolored buttons	--	kernels
 yellow kernels	"The different colored kernels may clue what the lost corn should be."
@@ -1523,7 +1520,7 @@ carry out metros-hinting:
 	if player has begonias, try objhinting begonias instead;
 	if player is in underside:
 		if drainage is in underside, try objhinting drainage instead;
-		if elf row's flowers is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the red camp." instead;
+		if elf row's flowers is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
 		if bile libe is not visited, all-say "You can go west from the camp to a library." instead;
 		if dry cake is in condo, all-say "You should try going [if condo is visited]back north to the condo[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Anti-Cool Location is not visited:
@@ -1534,13 +1531,13 @@ carry out metros-hinting:
 				if barcode is part of the keycard, all-say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the sensor." instead;
 				try objhinting keycard instead;
 			if player has barcode:
-				if dry cake is in condo, all-say "You need something to put the barcode on. Maybe check out the condo north of the red camp." instead;
+				if dry cake is in condo, all-say "You need something to put the barcode on. Maybe check out the condo north of the Roarings Garrison." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
 		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in flowers and begonias are in flowers]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
 		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
 	if player is in Roarings Garrison:
-		if dry cake is in condo, all-say "You need to clear out the condo to gain the red camp's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
+		if dry cake is in condo, all-say "You need to clear out the condo to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
 		if clover is in camp, all-say "You can take the clover for later, or you can figure what it should be." instead;
 		if lost corn is in camp, all-say "The lost corn will be useful as something else." instead;
 		all-say "You've gotten everything you need here. There are no hidden puzzles." instead;
@@ -1787,7 +1784,7 @@ instead of waving hands:
 	if player is in busiest subsite, say "You don't see any friends nearby, sadly. It's all a bit awkward." instead;
 	if player is in notices and gateman is in notices, say "You've already introduced yourself. Just ask him about what you want/need." instead;
 	if player is in hotel and night thing is in hotel, say "Bad idea. Don't know what might make it charge." instead;
-	if player is in red camp, say "He nods in return." instead;
+	if player is in Roarings Garrison, say "The dead beat deadbeat nods in return." instead;
 	if player is in condo and talkers are in condo, say "They pointedly ignore you." instead;
 	if beast is in abyss and player is in abyss, say "It's not very friendly at all." instead;
 	if goat is in thickets and player is in thickets, say "Do you expect it to wave back? It'd probably fall over trying." instead;
@@ -3534,7 +3531,7 @@ check going west in Busiest Subsite:
 	say "The Caterers['] Terraces are west. They're rendin['] dinner. You see someone sweating over a bizarre brazier, hear how this next lecture will 'Prep us for supper,' and promptly lose your will to do anything for a minute.";
 	been-check west instead;
 
-the brazier is amusing scenery in subsite. "It's a brazier. [bug-report]"
+the bizarre brazier is amusing scenery in subsite. "It's a brazier. [bug-report]"
 
 instead of doing something with the brazier when brazier is visible: say "Next meal's too far off, and you've got no business on the terraces.".
 
@@ -5511,7 +5508,7 @@ Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, o
 
 the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink."
 
-the iciest cities are useless scenery in Flesh Shelf. "They are spooky and all, but thankfully, they're too far away."
+the iciest cities are bounding scenery in Flesh Shelf. "They are spooky and all, but thankfully, they're too far away."
 
 instead of doing something with iciest cities:
 	if action is procedural, continue the action;
@@ -6018,7 +6015,7 @@ to say vowel-desc:
 	else:
 		say "A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) 'We're vowels!' Yup, even the Y. The vowels also have bumps where they end.[no line break]"
 
-the gnash hangs are scenery in Frost Forts. "They menace you from all around, ready to jump if you try to escape. The ones you see stay still, but you can hear the ones behind you snapping."
+the gnash hangs are bounding scenery in Frost Forts. "They menace you from all around, ready to jump if you try to escape. The ones you see stay still, but you can hear the ones behind you snapping."
 
 instead of doing something with the gnash hangs: say "The gnash hangs are just there for atmosphere, to force you into the final conflict."
 
@@ -6248,7 +6245,7 @@ after looking in kitchen for the first time:
 	now warts are part of the player;
 	now startmod5 is the remainder after dividing (turn count + 4) by 5;
 
-The great grate is scenery in The Nick.
+The great grate is bounding scenery in The Nick.
 
 the branding is part of the great grate. description of branding is "The grate seems to be made by [first custom style]HECK TIN[r]. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.". understand "brand" as branding.
 
@@ -6339,16 +6336,6 @@ after printing the locale description for kitchen when kitchen is unvisited:
 does the player mean putting an ingredient on the tortilla: it is very likely.
 
 description of Kitchen is "This is a kitchen, though it's a bit bare, except for the obligatory fridge. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
-
-the tune is amusing scenery in the kitchen.
-
-instead of doing something other than listening to the tune:
-	unless current action is objhinting:
-		continue the action;
-	say "You can't do anything other than listen to it, so you do for a bit.";
-	try listening instead;
-
-description of tune is "You should be listening instead.".
 
 check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
 
@@ -7038,7 +7025,7 @@ chapter moor
 
 Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mire all around leaves you feeling a bit trapped, even though you know you could go back the way you came[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if]."
 
-the rime mire is scenery in moor. "The moor you're on has stable enough footing, but the rime mire seems much more treacherous."
+the rime mire is bounding scenery in moor. "The moor you're on has stable enough footing, but the rime mire seems much more treacherous."
 
 understand "rime-mire" as rime mire.
 
@@ -7533,7 +7520,7 @@ book metros
 
 chapter Undesired Underside
 
-Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if red camp is visited]the camp, again[else]what looks like a camp[end if]. You see the down escalator you came by. Tilting titling advertises the Ol' Hotel to the west."
+Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You see the down escalator you came by. Tilting titling advertises the Ol' Hotel to the west."
 
 the tilting titling is scenery in Undesired Underside. description is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if hotel is visited], where you've already been[end if]."
 
@@ -7611,6 +7598,10 @@ instead of doing something with the arena dig flier:
 a gardenia is a flower.
 
 description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if elf row's flowers are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
+
+section cramped red camp
+
+the cramped red camp is useless scenery in Undesired Underside. "It's pretty dirty and meager[if Roarings Garrison is visited], as you already saw[else], but maybe you'll get help there[end if]."
 
 section metallic door
 
@@ -7736,7 +7727,7 @@ instead of eating tomato: say "That might give you a gas saga. Or a hardier diar
 
 chapter Roarings Garrison
 
-Roarings Garrison is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red condo]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the condo, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Red Camp is in Metros. Red Camp is north of Underside.
+Roarings Garrison is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red condo]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the condo, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros. Roarings Garrison is north of Underside.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -7769,7 +7760,7 @@ check going north in self-id fields when Enclosure is unvisited and player has g
 			now button-locked is true;
 			say "You hear a click from the gadget. You fumble around a bit and note the SECURE/RECUSE button is locked in place."
 
-the music is useless scenery in red camp. "Wretchedly sharp harps, fake-smile upbeat protest stuff, but a change from the beats. It clashes with the general chanting."
+the music is useless scenery in Roarings Garrison. "Wretchedly sharp harps, fake-smile upbeat protest stuff, but a change from the beats. It clashes with the general chanting."
 
 voice-count is a number that varies.
 
@@ -7777,7 +7768,7 @@ the driveway is scenery in Roarings Garrison. "It's immaculate compared to the r
 
 the yard view is useless scenery in Roarings Garrison. "You can't see much of it until you're on the driveway, what with the buildings in the way, but once you're on the driveway, you'll need to move it or get nicked for loitering. Too bad. It's probably even nicer than the driveway."
 
-the tents are useless scenery in red camp. understand "commune" as tents.
+the tents are useless scenery in Roarings Garrison. understand "commune" as tents.
 
 description of tents is "Decorated with a corny crayon-a-crony."
 
@@ -7999,7 +7990,7 @@ Include (-
 	has transparent animate
 -) when defining talkers.
 
-description of talkers is "They're obviously part of the upper crust. They speak disdainfully of the red camp outside and how if they can't tolerate the beats, they can just buy a condo too."
+description of talkers is "They're obviously part of the upper crust. They speak disdainfully of the Roarings Garrison outside and how if they can't tolerate the beats, they can just buy a condo too."
 
 does the player mean throwing the tomato at the talkers: it is likely.
 
@@ -8458,7 +8449,7 @@ check switching on the termite emitter:
 	if condo-evac is true, say "It's empty now." instead;
 	now termite emitter is switched off;
 	if location is Hotel, say "This place has seen enough abuse. Maybe find one that hasn't?" instead;
-	if location is red camp, say "That'd be kind of cruel." instead;
+	if location is Roarings Garrison, say "That'd be kind of cruel." instead;
 	if location is Bile Libe, say "The termites are the wrong sort of pest for the Bile Libe." instead;
 	if location is elf row's flowers, say "Trust me. You don't want to know what the faeries would do back to you." instead;
 	if location is Anti-Cool Location, say "You're being watched too closely." instead;
@@ -8532,10 +8523,6 @@ description of Anti-Cool Location is "It's free of pure noise here, mostly due t
 soundproofed walls are plural-named scenery in Anti-Cool Location. "They've got those perpendicular ridges in sets of three that kill sound. The nerds won't shut up, though."
 
 check going nowhere in Anti-Cool Location: say "The esoteric coteries are not for you. You have enough thinking to do, here, anyway." instead.
-
-the priv-camp is a privately-named backdrop. the priv-camp is in underside and Roarings Garrison. understand "camp" as priv-camp.
-
-description of priv-camp is "It's pretty dirty and meager[if red camp is visited], as you already saw[else], but maybe you'll get help there[end if]."
 
 the optical beam is part of the sensor. description of optical beam is "I wouldn't advise staring into it, but you could put something on it."
 
@@ -11018,7 +11005,7 @@ check listening:
 				if player has sheath, say "'Talk is cheap! Now, weapons, there's something valuable!'" instead;
 				if player has begonias or player has noise bag, say "[if words are not in bag]'Put a bag over it!' you hear.[else]The semi-sheltered Bile Libe offers some respite from the beats, especially with the words gone. But not enough.[end if]" instead;
 				say "The words drown out the beats for the moment. They're sharp words, attacking words, hard to shield yourself from, but they're local enough they can't be twisted." instead;
-		if player is in red camp, try examining music instead;
+		if player is in Roarings Garrison, try examining music instead;
 		if night thing is visible, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
 		if player is in cordoned red condo, say "The conversation changes subject rapidly and randomly." instead;
 		if player is in elf row's flowers, say "The faeries have managed to block out the beats here, which is nice." instead;
@@ -12878,10 +12865,10 @@ to unsolve-metros:
 	now gardenia is off-stage;
 	now can of beer is in underside;
 	place-random-garbage;
-	now lost corn is off-stage;	[red camp]
+	now lost corn is off-stage;	[Roarings Garrison]
 	now lost corn is not flipped-yet;
 	now controls are off-stage;
-	now red camp is unvisited;
+	now Roarings Garrison is unvisited;
 	now clover is in camp;
 	now clover is not flipped-yet;
 	now Velcro is off-stage;
