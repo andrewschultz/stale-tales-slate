@@ -366,6 +366,8 @@ understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a
 
 understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when popgun is in location of player.
 
+understand "pilots" as a mistake ("You don't need to fly anywhere.") when player has popgun.
+
 chapter nowt town
 
 understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in nowt town.

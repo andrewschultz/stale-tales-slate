@@ -6975,7 +6975,7 @@ Posh Hops Shop	"[if noun is not outside]You just got here, so direction means no
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets don't matter. You need to cross to the north for more action."
 Fighter Freight	"There's no direction to go. You need some sort of action."
-Hardest Trashed Dearths	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
+Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
@@ -17794,7 +17794,13 @@ carry out searching:
 
 book Hardest Trashed Dearths
 
-Hardest Trashed Dearths is a room in oyster. Hardest Trashed Dearths is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him.[paragraph break]You do hear something, though[if cans are visible], and the ground is littered with cans[end if]."
+Hardest Trashed Dearths is a room in oyster. Hardest Trashed Dearths is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him. With all the crackling and general blurriness, you suspect you are surrounded by potentially lethal spark parks, with no quick directional way out.[paragraph break]You do hear something, though[if cans are visible], and the ground is littered with cans[end if]."
+
+the spark parks are plural-named bounding scenery in Hardest Trashed Dearths. "You can't clearly see or feel the spark parks, and it might hurt if you got close. But you know they're there."
+
+instead of doing something with spark parks:
+	if action is procedural, continue the action;
+	say "You don't want to do anything with the spark parks, as they might do something to you. You need to find a safe way out."
 
 after looking in Hardest Trashed Dearths:
 	set the pronoun them to eeks;
@@ -23554,8 +23560,6 @@ to elvira-flee-taunt:
 		continue the action;
 	say "You leave her sin shrine [if current action is not going east]with extra quickness [end if]before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
 	now Elvira-delay is 0;
-
-the roarings garrison is amusing scenery in Inclosure. garrison is undesc.
 
 the warpish warship is amusing scenery in Inclosure. warship is undesc.
 
