@@ -4407,7 +4407,7 @@ this is the x-psa rule:
 	the rule fails;
 
 this is the with-hippies rule:
-	if player is in cramped red camp, the rule succeeds;
+	if player is in Roarings Garrison, the rule succeeds;
 	the rule fails;
 
 this is the talk-in-condo rule:

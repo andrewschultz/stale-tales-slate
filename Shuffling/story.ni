@@ -1539,7 +1539,7 @@ carry out metros-hinting:
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
 		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in flowers and begonias are in flowers]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
 		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
-	if player is in cramped red camp:
+	if player is in Roarings Garrison:
 		if dry cake is in condo, all-say "You need to clear out the condo to gain the red camp's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
 		if clover is in camp, all-say "You can take the clover for later, or you can figure what it should be." instead;
 		if lost corn is in camp, all-say "The lost corn will be useful as something else." instead;
@@ -7734,15 +7734,15 @@ the description of the tomato is "It's as rotten as the motto of Pa Otto's you e
 
 instead of eating tomato: say "That might give you a gas saga. Or a hardier diarrhea."
 
-chapter Cramped Red Camp
+chapter Roarings Garrison
 
-Cramped Red Camp is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red condo]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the condo, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Red Camp is in Metros. Red Camp is north of Underside.
+Roarings Garrison is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red condo]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the condo, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Red Camp is in Metros. Red Camp is north of Underside.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
 metros-warn is a truth state that varies.
 
-check going east in cramped red camp when flowers is unvisited and player has gadget and tag is part of the gadget:
+check going east in Roarings Garrison when flowers is unvisited and player has gadget and tag is part of the gadget:
 	if metros-warn is false and button-locked is false:
 		now metros-warn is true;
 		say "[gadact] once you go east. Do you continue?";
@@ -7773,9 +7773,9 @@ the music is useless scenery in red camp. "Wretchedly sharp harps, fake-smile up
 
 voice-count is a number that varies.
 
-the driveway is scenery in cramped red camp. "It's immaculate compared to the rest of the city[if condo-evac is true], but you probably shouldn't follow it again[end if]."
+the driveway is scenery in Roarings Garrison. "It's immaculate compared to the rest of the city[if condo-evac is true], but you probably shouldn't follow it again[end if]."
 
-the yard view is useless scenery in cramped red camp. "You can't see much of it until you're on the driveway, what with the buildings in the way, but once you're on the driveway, you'll need to move it or get nicked for loitering. Too bad. It's probably even nicer than the driveway."
+the yard view is useless scenery in Roarings Garrison. "You can't see much of it until you're on the driveway, what with the buildings in the way, but once you're on the driveway, you'll need to move it or get nicked for loitering. Too bad. It's probably even nicer than the driveway."
 
 the tents are useless scenery in red camp. understand "commune" as tents.
 
@@ -7787,7 +7787,7 @@ understand "drive/ way/" as driveway when driveway is visible.
 
 instead of following driveway: try going north.
 
-the dead beat deadbeat is a male person in Cramped Red Camp. "A deadbeat is sitting on the ground here, looking dead beat[if condo-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. Despite your heroism with the cake in the condo, he barely acknowledges you[end if]."
+the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if condo-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. Despite your heroism with the cake in the condo, he barely acknowledges you[end if]."
 
 check scaning (this is the antlers and deadbeat silliness rule):
 	if noun is antlers:
@@ -7820,20 +7820,20 @@ instead of taking designer reedings: say "Bad idea. The deadbeat likes no suds w
 
 description of designer reedings is "GREED: SIN is written on them."
 
-the posh shop is amusing scenery in cramped red camp. "It's apparently called ELF ROW'S FLOWERS with a sub-slogan: 'Go floral or go fall!'"
+the posh shop is amusing scenery in Roarings Garrison. "It's apparently called ELF ROW'S FLOWERS with a sub-slogan: 'Go floral or go fall!'"
 
-the library is scenery in cramped red camp. "Libraries aren't supposed to be beautiful, but man, this one looks ugly!".
+the library is scenery in Roarings Garrison. "Libraries aren't supposed to be beautiful, but man, this one looks ugly!".
 
-the barrier is useless scenery in cramped red camp. "[if dry cake is in red condo]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
+the barrier is useless scenery in Roarings Garrison. "[if dry cake is in red condo]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
 
-check going north in Cramped Red Camp:
+check going north in Roarings Garrison:
 	if condo-evac is true, say "You'd probably be recognized and arrested." instead;
 
-check going nowhere in cramped red camp:
+check going nowhere in Roarings Garrison:
 	if noun is up or noun is down, continue the action;
 	say "There're condos north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south." instead;
 
-the fuzzy clover is a thing in Cramped Red Camp. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3. cert-text of clover is "-[d1][d1][d1][d1][d1]". rect-text of clover is "V[d1][d1][d1][d1][ast]O".
+the fuzzy clover is a thing in Roarings Garrison. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3. cert-text of clover is "-[d1][d1][d1][d1][d1]". rect-text of clover is "V[d1][d1][d1][d1][ast]O".
 
 description of clover is "You touch the leaves a bit, and they seem to hook into your skin. You count two layers of five leaves each."
 
@@ -7900,12 +7900,12 @@ before doing something with the mattress:
 before pushing:
 	if noun is buttons or noun is lost corn, say "Maybe if the corn were hooked up to something it could do something to. And it weren't, well, lost corn." instead;
 
-the corner is useless scenery in cramped red camp. description of corner is "[if corn is in cramped red camp]It's not very interesting, but that's where the corn rolled[else]You don't even remember which corner the corn rolled into, now[end if]."
+the corner is useless scenery in Roarings Garrison. description of corner is "[if corn is in Roarings Garrison]It's not very interesting, but that's where the corn rolled[else]You don't even remember which corner the corn rolled into, now[end if]."
 
-check going to cramped red camp:
+check going to Roarings Garrison:
 	if lost corn is off-stage:
 		say "As you walk north, you run into someone who is carrying a basket full of corn. You help him pick everything up. Or so you think. As he runs off, cursing you, you look in a corner--a corn ear!";
-		now lost corn is in cramped red camp;
+		now lost corn is in Roarings Garrison;
 
 description of lost corn is "It's got a bunch of different kernels, and some look like buttons because they're not yellow[if player has corn]. The deadbeat might have something to say about it, if you could put up with him. His information would certainly be off the mark, but in Yorpwald, that's better than maybe being wrong[end if]."
 
@@ -7950,7 +7950,7 @@ description of instructions is "[if controls are in op]They served you well. No 
 
 section noisome moonies
 
-the noisome moonies are amusing plural-named scenery in Cramped Red Camp. description is "They all have that 'I'm so ONE' look about them."
+the noisome moonies are amusing plural-named scenery in Roarings Garrison. description is "They all have that 'I'm so ONE' look about them."
 
 Include (-
 	has transparent animate
@@ -7964,7 +7964,7 @@ instead of doing something with moonies:
 
 section snakebit beatniks
 
-the snakebit beatniks are amusing plural-named scenery in Cramped Red Camp. description is "They all be astink (figuratively and literally) ."
+the snakebit beatniks are amusing plural-named scenery in Roarings Garrison. description is "They all be astink (figuratively and literally) ."
 
 Include (-
 	has transparent animate
@@ -7978,7 +7978,7 @@ instead of doing something with beatniks:
 
 chapter cordoned red condo
 
-The Cordoned Red Condo is north of Cramped Red Camp. Condo is in Metros.
+The Cordoned Red Condo is north of Roarings Garrison. Condo is in Metros.
 
 check going inside in cordoned red condo: say "You're already inside." instead.
 
@@ -8135,7 +8135,7 @@ check inserting barcode into keycard: try putting barcode on keycard instead.
 
 chapter Elf Row's Flowers
 
-Elf Row's Flowers is east of Cramped Red Camp. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp."
+Elf Row's Flowers is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp."
 
 Elf Row's Flowers is in Metros.
 
@@ -8533,7 +8533,7 @@ soundproofed walls are plural-named scenery in Anti-Cool Location. "They've got 
 
 check going nowhere in Anti-Cool Location: say "The esoteric coteries are not for you. You have enough thinking to do, here, anyway." instead.
 
-the priv-camp is a privately-named backdrop. the priv-camp is in underside and cramped red camp. understand "camp" as priv-camp.
+the priv-camp is a privately-named backdrop. the priv-camp is in underside and Roarings Garrison. understand "camp" as priv-camp.
 
 description of priv-camp is "It's pretty dirty and meager[if red camp is visited], as you already saw[else], but maybe you'll get help there[end if]."
 

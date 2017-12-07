@@ -325,7 +325,7 @@ Spoilers of what to change things to are ahead.
 The KEYCARD and BARCODE.
 PUT BARCODE ON KEYCARD.
 PUT KEYCARD ON SENSOR.
->>Cramped Red Camp
+>>Roarings Garrison
 ?What do I do with the clover?
 It has hooks...
 ...like VELCRO.

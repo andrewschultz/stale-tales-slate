@@ -309,9 +309,9 @@ understand "senors" as a mistake ("The senors you [want-wanted] are behind the d
 [def=nerd door w]
 understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
 
-chapter cramped red camp
+chapter Roarings Garrison
 
-understand "stent" as a mistake ("Medical procedures aren't necessary here. The noise is too distracting anyway.") when player is in cramped red camp
+understand "stent" as a mistake ("Medical procedures aren't necessary here. The noise is too distracting anyway.") when player is in Roarings Garrison.
 
 understand "smitten" as a mistake ("No matter how hard you try to convince yourself they[are-were] useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.") when player has Velcro.
 
