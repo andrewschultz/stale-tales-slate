@@ -8702,7 +8702,7 @@ check going nowhere in Elm Train Terminal: say "The tracks lead down, and the ci
 
 the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims TRANSIT FOR ARTISAN AND TSARINA and also that it's an anti-sot station."
 
-Pa's PSA is scenery in Elm Train Terminal. "[randbla]."
+Pa's PSA is amusing scenery in Elm Train Terminal. "[randbla]."
 
 after examining Pa's PSA for the first time:
 	say "'I'm learnt,' you think, after reading that.";
@@ -8837,9 +8837,20 @@ every turn when player is in Abyss:
 
 to say rieuw: say "[if siren is visible][one of].[paragraph break]A siren off to the side kicks in, to make things even more head-achingly techno up in here. Too loud to get near[or]. And still, that stupid siren near you[stopping][end if]".
 
-check going nowhere in Bassy Abyss: say "There's no easy way out. But you sense you have what you need[if siren is visible]. Or you can get that last bit[end if]." instead.
+check going nowhere in Bassy Abyss: say "You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]." instead.
+
+section aligns signal
+
+the aligns signal is bounding scenery in Bassy Abyss.
+
+instead of doing something with aligns signal:
+	if action is procedural, continue the action;
+	say "The aligns signal probably comes from the [b-b]. So it's best just to destroy the [b-b] first."
 
 section beats-beast
+
+to say b-b:
+	say "[if beast is in bassy abyss]beast[else]beats[end if]"
 
 the beats are a plural-named backdrop. rgtext of beats is "[gcn][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. cert-text of beats is "B[ast]E[ast]A[d1][d1]". rect-text of beats is "B[d1][d1][d1][ast]T".
 
