@@ -12,12 +12,8 @@ book the tables themselves
 
 table of means manse nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
+"study"	447878132	dusty study	--	--	"[locname]." [START DUSTY STUDY]
 "rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future[end if] knock at the door."
-"study"	447878132	dusty study	--	--	"[locname]."
-"framing"	324601726	Farming Framing	--	--	"[locname]."
-"highest"	479347239	highest heights	--	--	"[locname]."
-"height"	383073273	highest heights	--	--	"[locname]."
-"cavern"	410395643	carven cavern	--	--	"[locname]."
 "pin"	195366313	--	giant pin	--	"It's one big giant pin."
 "giant"	251797892	--	giant pin	--	"It's one big giant pin."
 "abstract"	429617931	--	abstract painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining."
@@ -60,7 +56,17 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tenbeams"	608585586	--	--	basement-visible rule	"You probably just want to go DOWN to the [if gallery is visited]gallery[else]basement[end if]."
 "stable"	401610655	--	--	stable-visible rule	"You probably just want to go IN to the stable."
 "satchel"	439479634	--	satchel	--	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
-"terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
+"chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
+"rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
+"sad"	119490873	--	sad ads	--	"[w-twi]."
+"framing"	324601726	Farming Framing	--	--	"[locname]." [start farming framing]
+"highest"	479347239	highest heights	--	--	"[locname]." [start highest heights]
+"height"	383073273	highest heights	--	--	"[locname]."
+"gallery"	477904362	Gallery	--	--	"[locname]." [start largely all-grey gallery]
+"all"	109815496	Gallery	--	--	"[locname-part]."
+"grey"	368088866	Gallery	--	--	"[locname-part]."
+"evac"	256164332	Gallery	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
+"bni"	132319259	all-grey gallery	--	--	"[if ISBN bins are reflexed]You already fixed the bins[else]No, all the bins[end if]."
 "high"	152157146	--	high sign	--	"[hisin]."
 "highsign"	394931168	--	high sign	--	"[hisin]."
 "sign"	242774022	--	high sign	--	"[hisin]."
@@ -69,18 +75,15 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gun"	206613017	--	rifle	--	"It's not a gun but a rifle. And a gnu would be a gnu-sance anyway."
 "flier"	338451493	--	--	elmo-chat rule	"Better to pump Elmo for information."
 "elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle in lalaland] that needed changing[end if]."
-"chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
-"rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
-"sad"	119490873	--	sad ads	--	"[w-twi]."
-"gallery"	477904362	Gallery	--	--	"[locname]."
-"all"	109815496	Gallery	--	--	"[locname-part]."
-"grey"	368088866	Gallery	--	--	"[locname-part]."
-"evac"	256164332	Gallery	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
-"bni"	132319259	all-grey gallery	--	--	"[if ISBN bins are reflexed]You already fixed the bins[else]No, all the bins[end if]."
+"cavern"	410395643	carven cavern	--	--	"[locname]." [start carven cavern]
+"terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
 "manse"	359250554	--	--	degen-true rule	"[not-the-reg]." [end-manse]
 
 table of stores nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
+"strip"	411166592	profits	--	--	"[locname]." [start strip of profits]
+"profits"	512034065	strip of profits	--	--	"[locname]."
+"profit"	415760099	strip of profits	--	--	"[locname]."
 "window"	425151566	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "windows"	521425532	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "storea"	489054291	--	store a	--	"[no-cand]."
@@ -121,18 +124,15 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "field"	274156779	--	f-o-b	--	"[not-at-barley]."
 "barley"	409909726	--	f-o-b	--	"[not-at-barley][barley-check]."
 "mangiest"	688747880	--	mangiest steaming	--	"You can't do anything with the mangiest steaming other than enter it for a side adventure."
+"lectures"	718245236	--	lecturer	--	"[lec-un]." [start cruelest lectures]
+"lecture"	621971270	--	lecturer	--	"[lec-un]."
 "seating"	425651877	cruelest lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
 "mangiets"	688747880	cruelest lectures	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
 "example"	569923068	--	lecturer	--	"[lec-un]."
-"lecture"	621971270	--	lecturer	--	"[lec-un]."
-"lectures"	718245236	--	lecturer	--	"[lec-un]."
 "ian"	116088172	--	idg	--	"[ian-un]."
 "guardian"	362334391	--	idg	--	"[ian-un]."
 "pamphlets"	647481120	cruelest	--	--	"[pamph-ana]."
-"pamphlet"	551207154	cruelest	--	--	"[pamph-ana]."
-"strip"	411166592	profits	--	--	"[locname]."
-"profits"	512034065	strip of profits	--	--	"[locname]."
-"profit"	415760099	strip of profits	--	--	"[locname]." [end-stores]
+"pamphlet"	551207154	cruelest	--	--	"[pamph-ana]." [end-stores]
 
 table of routes nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -225,13 +225,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "hole"	293254824	harms marsh	--	--	"[sheol-c]."
 "pyrites"	661331953	--	pyrites	--	"[py-glow]."
 "pyrite"	565057987	--	pyrites	--	"[py-glow]."
-"pier"	339588717	ripe pier	--	--	"[locname]."
+"pier"	339588717	ripe pier	--	--	"[locname]." [start ripe pier]
 "mist"	308451983	--	mist	--	"Nothing happens. It's DA mist, after all."
-"clipper"	493874100	cripple clipper	--	--	"[locname]."
+"clipper"	493874100	cripple clipper	--	--	"[locname]." [start cripple clipper]
 "reef"	367450917	cripple clipper	--	--	"The reef is not changed. Perhaps you can deal with what's on it."
 "sketchin"	550311509	cripple clipper	--	--	"No need to alter them. Worth looking at, though."
 "sketchins"	646585475	cripple clipper	--	--	"No need to alter them. Worth looking at, though."
-"canyon"	355720248	sonancy canyons	--	--	"[locname]."
+"canyon"	355720248	sonancy canyons	--	--	"[locname]." [start sonancy canyons]
 "canyons"	451994214	sonancy canyons	--	--	"[locname]."
 "patter"	503003725	--	raptest patters	--	"[pat-cont]."
 "patters"	599277691	--	raptest patters	--	"[pat-cont]."
@@ -240,20 +240,20 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of troves nudges [?? used lot/pallid li'l pad / rustin ruin st in ruts]
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
+"rathole"	483876463	rathole	--	--	"[locname]." [start loather rathole]
 "spoiloplis"	701798374	--	--	degen-true rule	"[no-spoil]."
 "spoil"	350899187	--	--	degen-true rule	"[no-spoil]."
 "hurt"	330821927	Loather Rathole	--	--	"[no-hurt]."
 "hurts"	427095893	Loather Rathole	--	--	"[no-hurt]."
 "pothole"	552183378	rathole	--	--	"[p-hole]."
 "potholes"	648457344	rathole	--	--	"[p-hole]."
-"rathole"	483876463	rathole	--	--	"[locname]."
 "pagepage"	488119176	--	Pa Egg	--	"[ei2pg]."
 "egg"	193005513	--	Pa Egg	--	"[ei2pg]."
 "pea"	211459886	--	Pa Egg	--	"[ei2pg]."
 "peg"	241871770	--	Pa Egg	--	"You pause, then note the author's middle initial, which seems annoyingly important."
 "truffle"	528189368	--	truffle	--	"You can't change the truffle. It can help you change things, though. Or how you see things."
 "cold"	168201090	--	cold	--	"Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat."
-"bustle"	504528644	Bustle Sublet	--	--	"[locname]."
+"bustle"	504528644	Bustle Sublet	--	--	"[locname]." [start bustle sublet]
 "messhole"	677684018	Bustle Sublet	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
 "boor"	252447862	Bustle Sublet	--	--	"[boor-grub]."
 "grub"	241448217	Bustle Sublet	--	--	"[boor-grub]."
@@ -265,18 +265,18 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "veer"	448100841	--	sob ever verbose	--	"No, you'll want to zone out the whole verbose distraction."
 "laid"	122023592	Bustle Sublet	--	--	"[sidewalk-oops]."
 "stop"	355202520	--	stop post	--	"[if stop post is reflexive]You're not seeing[else]You already saw[end if] the right way to see the stop post, here."
-"roadbed"	350147390	Boarded Roadbed	--	--	"[locname]."
+"roadbed"	350147390	Boarded Roadbed	--	--	"[locname]." [start Boarded Roadbed]
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee's head is reflexive and what-a-bee is reflexive]n[end if] [what-a-bee][if bee's head is reflexed and what-a-bee is reflexed]! Though, really, you've already given it the business.[else]![end if]"
-"nadir"	222441064	Drain Nadir	--	--	"[locname]."
+"nadir"	222441064	Drain Nadir	--	--	"[locname]." [start drain nadir]
 "pictuer"	566810127	Drain Nadir	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
 "sda"	119490873	Drain Nadir	--	--	"It's a sad pier."
 "pire"	339588717	Drain Nadir	--	--	"It's a sad pier."
-"bedroom"	465358213	Boredom Bedroom	--	--	"[locname]."
+"bedroom"	465358213	Boredom Bedroom	--	--	"[locname]." [start boredom bedroom]
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
+"bowers"	510110133	--	browse bowers	--	"[locname]." [start browse bowers]
 "bower"	413836167	--	browse bowers	--	"[locname]."
-"bowers"	510110133	--	browse bowers	--	"[locname]."
 "rotunda"	460016620	browse bowers	--	--	"[rotun]."
 "dour"	285811276	browse bowers	--	--	"[rotun]."
 "tan"	174205344	browse bowers	--	--	"[rotun]."
@@ -297,7 +297,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if]."
 "label"	256040510	--	label	--	"It's not the label but what's on it."
 "noise"	412333006	--	noise	--	"Hmm, no, focusing so directly on the noise to block it out is counterproductive."
-"upscale"	485659083	Upscale Capsule	--	--	"[locname]."
+"upscale"	485659083	Upscale Capsule	--	--	"[locname]." [start upscale capsule]
 "office"	319186909	Upscale Capsule	--	--	"[locname]."
 "fief"	225828747	Upscale Capsule	--	--	"[locname-part]."
 "ignore"	433982545	--	--	ignore-ignored rule	"Now that you've ignored the distraction, you want to forget it."
@@ -321,6 +321,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
+"grye"	368088866	grey gyre	--	--	"[locname]." [start grey gyre]
 "entry"	507506690	--	zany meter	--	"[mz-chg]."
 "mazeentry"	824545388	--	zany meter	--	"[mz-chg]."
 "zany"	316424196	--	zany meter	--	"[mz-chg]."
@@ -329,18 +330,19 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "mazeltov"	655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if phat path is visited]back [end if]north."
 "mazeroom"	615142808	--	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
+"bigm"	160086606	r10	--	--	"[just-letter]." [start nowt town]
+"bign"	164918961	r00	--	--	"[just-letter]."
+"bigo"	170364030	r01	--	--	"[just-letter]."
+"bigp"	177477412	r02	--	--	"[just-letter]."
+"bigq"	180417070	r12	--	--	"[just-letter]."
+"bigr"	181335256	r22	--	--	"[just-letter]."
+"bigs"	192285419	r32	--	--	"[just-letter]."
+"bigt"	199121471	r33	--	--	"[just-letter]."
+"bigu"	201117260	r23	--	--	"[just-letter]."
+"unwary"	491818961	myrm	--	--	"[locname]." [start unwary runway]
+"bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "dreidl"	353994775	Unwary Runway	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
-"decorative"	712778774	--	decorative star	--	"[if player wears star]The star's snazzy enough as-is[else]You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude[end if]."
-"liev"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
-"camo"	159621133	marines seminar	--	--	"[ca-co]."
-"force"	333002970	marines seminar	--	--	"[ca-co]."
-"forcefield"	607159749	marines seminar	--	--	"[ca-co]."
-"fiedl"	274156779	marines seminar	--	--	"[ca-co]."
-"forcefields"	703433715	marines seminar	--	--	"[ca-co]."
-"fields"	370430745	marines seminar	--	--	"[ca-co]."
-"serial"	410398381	--	popgun	--	"[is-boing]."
-"number"	469637285	--	popgun	--	"[is-boing]."
-"stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
+"char"	143799505	Char Arch	--	--	"[locname]." [start char arch]
 "mad"	87292060	Char Arch	--	--	"[no-scen]."
 "maddam"	174584120	Char Arch	--	--	"[no-scen]."
 "amaddam"	176771938	Char Arch	--	--	"[no-scen]."
@@ -352,20 +354,27 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dumpster"	684189904	Char Arch	--	--	"The dumpster and red stump are both pretty sturdy[if dart is in dumpster and star is in Char Arch], but maybe you could pull out what's in them[else if dart is in dumpster], but you might be able to get what's in the dumpster[else if star is in Char Arch], but maybe you could pull the star from the stump[else], but you got something from both of them, anyway[end if]."
 "spumed"	495756083	Char Arch	--	--	"[spumed-no]."
 "tar"	190621639	Char Arch	--	--	"[spumed-no]."
-"bigm"	160086606	r10	--	--	"[just-letter]."
-"bign"	164918961	r00	--	--	"[just-letter]."
-"bigo"	170364030	r01	--	--	"[just-letter]."
-"bigp"	177477412	r02	--	--	"[just-letter]."
-"bigq"	180417070	r12	--	--	"[just-letter]."
-"bigr"	181335256	r22	--	--	"[just-letter]."
-"bigs"	192285419	r32	--	--	"[just-letter]."
-"bigt"	199121471	r33	--	--	"[just-letter]."
-"bigu"	201117260	r23	--	--	"[just-letter]."
-"bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
+"decorative"	712778774	--	decorative star	--	"[if player wears star]The star's snazzy enough as-is[else]You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude[end if]."
+"dirge"	311751549	dirge ridge	--	--	"[locname]." [start dirge ridge]
+"liev"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
+"leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
+"ole"	255972525	--	--	Leo-mad rule	"There are only six possibilities. Leo's not too bright, and he can figure it out." [?? run test to see about flips before/after ole]
+"darn"	177448218	--	--	Rand-mad rule	"Use the settler. This is a, err, regional word." [?? run test to see about flips before/after darn]
+"austerer"	732937433	austerer	--	--	"[locname]." [start austerer treasure]
+"marines"	489567203	marines seminar	--	--	"[locname]." [start marines seminar]
+"marine"	393293237	marines seminar	--	--	"[locname]."
+"camo"	159621133	marines seminar	--	--	"[ca-co]."
+"force"	333002970	marines seminar	--	--	"[ca-co]."
+"forcefield"	607159749	marines seminar	--	--	"[ca-co]."
+"fiedl"	274156779	marines seminar	--	--	"[ca-co]."
+"forcefields"	703433715	marines seminar	--	--	"[ca-co]."
+"fields"	370430745	marines seminar	--	--	"[ca-co]."
+"serial"	410398381	--	popgun	--	"[is-boing]."
+"number"	469637285	--	popgun	--	"[is-boing]."
+"stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
-"leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 "harpings"	449033901	--	harpings phrasing	--	"[harphr]."
 "harping"	352759935	--	harpings phrasing	--	"[harphr]."
 "rebuff"	389684416	shack	--	--	"The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise."
@@ -407,17 +416,20 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bingo"	239271538	--	--	gun-broken rule	"Not quite. You're close to an a-ha moment, though."
 "spa"	179927743	--	clock sap	--	"C'est [i]pas[r] sap. C'est du CLOCK SAP."
 "fountain"	494078978	--	fount	--	"It's too small to be a fountain--really, just a fount."
-"ole"	255972525	--	--	Leo-mad rule	"There are only six possibilities. Leo's not too bright, and he can figure it out."
-"darn"	177448218	--	--	Rand-mad rule	"Use the settler. This is a, err, regional word."
 "lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
-"saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
-"mount"	415551063	phat path	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
-"deil"	247641883	phat path	--	--	"[d-sli]."
-"deils"	343915849	phat path	--	--	"[d-sli]."
-"hog"	144234578	phat path	--	--	"You need to deal with all the hogs."
+"ssap"	276201709	saps' pass	--	"[locname]." [saps' pass]
+"mount"	415551063	--	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
+"deil"	247641883	--	--	path-pass rule	"[d-sli]."
+"deils"	343915849	--	--	path-pass rule	"[d-sli]."
+"hog"	144234578	--	--	path-pass rule	"You need to deal with all the hogs."
 "key"	303098539	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
+"phat"	224046094	phat path	--	--	"[locname]." [start phat path]
+"saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
 "entyr"	507506690	phat path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
+"shack"	207682846	--	priv-shack	--	"You'll need to [if shack is visited]re-[end if]enter the shack to take care of things here."
+"shakc"	207682846	shack	--	--	"[locname]." [start hacks shack]
+"hack"	111408880	shack	--	--	"[locname]."
 "algorithm"	497738055	shack	--	--	"[no-txtbk]."
 "algorithms"	594012021	shack	--	--	"[no-txtbk]."
 "labs"	170694528	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
@@ -428,7 +440,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reboot"	483363989	shack	--	--	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
 "nottobe"	570057712	shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "debug"	304959612	--	--	time-to-debug rule	"You need to budge the letters about."
-"shack"	207682846	--	priv-shack	--	"You'll need to [if shack is visited]re-[end if]enter the shack to take care of things here."
 "caps"	198933328	--	caps lock	--	"[caps-no]."
 "lock"	200105179	--	caps lock	--	"[caps-no]."
 "scratch"	362189074	--	scratch paper	--	"[scrapap]."
@@ -443,15 +454,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "hard"	145823009	shack	--	--	"[no-dsk]."
 "drive"	386316667	shack	--	--	"[no-dsk]."
 "harddrive"	532139676	shack	--	--	"[no-dsk]."
-"grye"	368088866	grey gyre	--	--	"[locname]."
-"char"	143799505	Char Arch	--	--	"[locname]."
-"dirge"	311751549	dirge ridge	--	--	"[locname]."
-"marines"	489567203	marines seminar	--	--	"[locname]."
-"marine"	393293237	marines seminar	--	--	"[locname]."
-"austerer"	732937433	austerer	--	--	"[locname]."
-"phat"	224046094	phat path	--	--	"[locname]."
-"shakc"	207682846	shack	--	--	"[locname]."
-"hack"	111408880	shack	--	--	"[locname]."
 "storep"	568332432	--	--	degen-true rule	"[not-the-reg]." [end-p]
 
 table of oyster nudges
@@ -504,8 +506,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "carp"	187983165	--	carps	--	"[all-fish]."
 "haunter"	529723362	--	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but [to-dig]you probably aren't doing it quite right.[else]The haunter needs to be dealt with otherwise.[end if]"
 "howler"	486513400	--	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
-"hardest"	473013102	hardest trashed dearths	--	--	"[locname]."
-"hardet"	376739136	hardest trashed dearths	--	--	"[locname]."
+"hardest"	473013102	Hardest Trashed Dearths	--	--	"[locname]." [HARDEST TRASHED DEARTHS]
+"hardet"	376739136	Hardest Trashed Dearths	--	--	"[locname]."
+"spark"	318184724	Hardest Trashed Dearths	--	--	"You don't need or want to destabilize the spark parks."
+"park"	221910758	Hardest Trashed Dearths	--	--	"You don't need or want to destabilize the spark parks."
 "can"	90100911	--	cans	--	"Getting rid of one can would still leave a mess. Maybe you can deal with them all."
 "cans"	186374877	--	cans	--	"You glance at your settler, wondering what to do with the cans. Maybe you've overlooked something obvious."
 "eek"	308545396	--	eeks	--	"You try to eke out an eek, but you only have one data point, and that's not enough."
@@ -534,7 +538,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "shut"	341772090	plains	--	--	"[if Shadier Airshed is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
 "hut"	245498124	plains	--	--	"[if Shadier Airshed is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
 "bonk"	214612168	--	knob	--	"That isn't quite the right way to hit the knob."
-"airshed"	414895930	Shadier Airshed	--	--	"some text"[SHADIER AIRSHED]
+"airshed"	414895930	Shadier Airshed	--	--	"[locname]." [SHADIER AIRSHED]
 "heap"	248742185	--	heaps	--	"[if heaps are reflexed]You don't need or want to futz with one heap to make things super-extra-perfect.[else]Change ALL the heaps![end if]"
 "ubt"	226634730	--	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	--	tubs	--	"That didn't make anything go boom."
@@ -767,15 +771,29 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
+"bleary"	409909726	--	b-b	--	"[locname]." [start bleary barley]
 "bare"	233736635	--	b-b	--	"[adj-needs-ly]."
-"burtn"	380866041	--	nude dune	--	"[locname]."
+"burtn"	380866041	--	nude dune	--	"[locname]." [altname bleary barley]
 "dune"	322848513	--	nude dune	--	"You can't really shift the dune, but you don't need to."
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
 "cinders"	463338906	--	--	cinders-gone rule	"The cinders are gone for good."
 "lyier"	434295849	--	Ed Riley	--	"Ed's full name, please!"
 "reedi"	406957956	--	Ed Riley	--	"[adj-needs-ly]."
 "reedy"	484324362	--	Ed Riley	--	"[adj-needs-li]."
+"steward"	543665576	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
+"asteward"	545853394	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
+"rye"	335489164	--	deli rye	--	"[del-ry]."
+"lied"	247641883	--	deli rye	--	"[del-ry]."
+"sandwich"	397613884	--	deli rye	--	"[del-ry]."
 "citadel"	371945304	--	Edictal Citadel	--	"The whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
+"frontage"	520802431	frontage	--	--	"[locname]." [start frontage]
+"gent"	332423337	--	--	frontage-before rule	"[locname-part]."
+"fora"	188379094	--	--	frontage-before rule	"[locname-part]."
+"frat"	217136535	--	--	frontage-after rule	"[locname-part]."
+"gone"	303665896	--	--	frontage-after rule	"[locname-part]."
+"gents"	428697303	--	macks	--	"They aren't (spiritually) gents, and you can't change them but their arguments."
+"iq"	129398463	--	medals	--	"[both-medals]."
+"lucky"	353217661	--	medals	--	"[both-medals]."
 "bossy"	407678666	--	t-bossily	--	"[adj-needs-li]."
 "bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]."
 "nasti"	315472156	--	t-nastily	--	"[adj-needs-ly]."
@@ -813,13 +831,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "drawling"	416789378	--	t-drawlingly	--	"[adj-needs-ly]."
 "emotional"	613598445	--	t-emotionally	--	"[adj-needs-ly]."
 "despairing"	605579646	--	t-despairingly	--	"[adj-needs-ly]."
-"lit"	201916703	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
-"tail"	204104521	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
-"steward"	543665576	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
-"asteward"	545853394	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
-"rye"	335489164	--	deli rye	--	"[del-ry]."
-"lied"	247641883	--	deli rye	--	"[del-ry]."
-"sandwich"	397613884	--	deli rye	--	"[del-ry]."
+"medal"	268912008	--	medals	--	"It's what the medals say that makes them special."
+"medals"	365185974	--	medals	--	"It's what the medals say that makes them special."
+"tapering"	546393763	Tapering Anger Pit	--	--	"[locname]." [start tapering]
+"angre"	316824940	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
+"pti"	229568823	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
+"inert"	430140284	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
+"gap"	116253479	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
 "simply"	462981015	--	sly imp	--	"It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving."
 "sly"	272447057	--	sly imp	--	"[imp-sly]."
 "imp"	190533958	--	sly imp	--	"[imp-sly]."
@@ -829,6 +847,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "angry"	311378083	--	imp2	--	"[add-ly]."
 "angri"	234011677	--	imp2	--	"[add-ly]."
 "enraged"	465660138	--	imp3	--	"[add-ly]."
+"anteroom"	600115563	Anteroom	--	--	"[locname]." [start anteroom]
+"rote"	390592507	Anteroom	--	callos-here rule	"[locname-part]."
+"moan"	209523056	Anteroom	--	callos-here rule	"[locname-part]."
+"near"	284225238	Anteroom	--	callos-gone rule	"[locname-part]."
+"moot"	315890325	Anteroom	--	callos-gone rule	"[locname-part]."
 "loathing"	417246607	--	ram1	--	"[add-ly]."
 "stoic"	337734992	--	ram2	--	"Usually, you'd need to add two letters, but here you'd need to add four."
 "stoical"	393736649	--	ram2	--	"[add-ly]."
@@ -836,22 +859,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "mack"	138201734	--	macks	--	"If you messed with one mack, the others would gang up on you. Work on the argument, instead."
 "macks"	234475700	--	macks	--	"Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if]."
 "gretta"	454137468	--	Gretta	--	"Gretta's been manipulated enough[if macks are visible]. Deal with the macks['] arguments, instead[end if]."
-"frontage"	520802431	frontage	--	--	"[locname]."
-"gent"	332423337	--	--	frontage-before rule	"[locname-part]."
-"fora"	188379094	--	--	frontage-before rule	"[locname-part]."
-"frat"	217136535	--	--	frontage-after rule	"[locname-part]."
-"gone"	303665896	--	--	frontage-after rule	"[locname-part]."
-"gents"	428697303	--	macks	--	"They aren't (spiritually) gents, and you can't change them but their arguments."
-"iq"	129398463	--	medals	--	"[both-medals]."
-"lucky"	353217661	--	medals	--	"[both-medals]."
+"pool"	283984952	loop pool	--	--	"[locname]." [start loop pool]
 "allot"	287278091	loop pool	--	--	"[if eels are reflexed]You already made it there, and you don't need to go back[else]You don't need to change it, and the eels might not like it if you did[end if]."
 "wier"	366057531	loop pool	--	--	"The wire weir doesn't need to be changed."
 "sea"	226267893	--	sea cube	--	"[cube-whole]."
 "cube"	270336406	--	sea cube	--	"[cube-whole]."
+"barn"	174838034	bran barn	--	--	"[locname]." [start bran barn]
 "rev"	320294732	--	p-2	--	"The [i]whole[r] picture."
 "howe"	347375758	--	p-2	--	"The [i]whole[r] picture."
-"medal"	268912008	--	medals	--	"It's what the medals say that makes them special."
-"medals"	365185974	--	medals	--	"It's what the medals say that makes them special."
 "averts"	521866534	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
 "avert"	425592568	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
 "monstery"	742208386	alcoves	--	--	"[w-change]."
@@ -872,21 +887,25 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "lamina"	236164982	alcoves	--	--	"[no-lam]."
 "forces"	429276936	alcoves	--	--	"[fresc]."
 "forec"	333002970	alcoves	--	--	"[fresc]."
-"hydra"	268182261	--	--	hydra-know rule	"[if player is in Inclosure]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
+"preserve"	838970678	perverse preserve	--	--	"[locname]." [start perverse preserve]
+"lit"	201916703	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
+"tail"	204104521	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "pine"	323172422	--	pines	--	"So many pines, hard to pick one. Might as well take care of them all."
 "nail"	169902011	--	nails	--	"So many nails, hard to pick one. Might as well take care of them all."
 "critters"	664946148	perverse preserve	--	--	"[restrictr]."
 "critter"	568672182	perverse preserve	--	--	"[restrictr]."
 "raccoon"	343135453	preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
-"ocelot"	452440705	--	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
 "throne"	496782314	--	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
+"ridging"	330445496	ridging girding	--	--	"[locname]." [start girding ridging]
+"ocelot"	452440705	--	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
 "weltish"	 571213850	--	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
 "crone"	375395582	Inclosure	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act."
-"inclosure"	675582040	inclosure	--	--	"You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help."
+"alcoves"	480604714	alcoves	--	--	"[locname]." [start coevals' alcoves]
+"alcove"	384330748	alcoves	--	--	"[locname]."
+"hydra"	268182261	--	--	hydra-know rule	"[if player is in Inclosure]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
+"inclosure"	675582040	inclosure	--	--	"You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help." [start reclusion inclosure]
 "tripod"	410274292	inclosure	--	--	"[Inclosure-scen]."
 "becharm"	354099672	inclosure	--	--	"[Inclosure-scen]."
-"roarings"	489962023	inclosure	--	--	"[Inclosure-scen]."
-"roaring"	393688057	inclosure	--	--	"[Inclosure-scen]."
 "nacht"	230493228	Inclosure	--	--	"It's annoying and unswayable, like most chants."
 "stocked"	494510522	Inclosure	--	--	"[no-stockade]."
 "vats"	308736622	Inclosure	--	--	"[Inclosure-scen]."
@@ -900,22 +919,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "shaper"	430339954	Inclosure	--	--	"[one-toy]."
 "purple"	534981476	Inclosure	--	--	"[elv-mach]."
 "oranger"	476501320	Inclosure	--	--	"[elv-mach]."
-"alcove"	384330748	alcoves	--	--	"[locname]."
-"alcoves"	480604714	alcoves	--	--	"[locname]."
-"pool"	283984952	loop pool	--	--	"[locname]."
-"barn"	174838034	bran barn	--	--	"[locname]."
-"ridging"	330445496	ridging girding	--	--	"[locname]."
-"tapering"	546393763	Tapering Anger Pit	--	--	"[locname]."
-"angre"	316824940	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
-"pti"	229568823	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
-"inert"	430140284	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
-"gap"	116253479	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
-"anteroom"	600115563	Anteroom	--	--	"[locname]."
-"rote"	390592507	Anteroom	--	callos-here rule	"[locname-part]."
-"moan"	209523056	Anteroom	--	callos-here rule	"[locname-part]."
-"near"	284225238	Anteroom	--	callos-gone rule	"[locname-part]."
-"moot"	315890325	Anteroom	--	callos-gone rule	"[locname-part]."
-"preserve"	838970678	perverse preserve	--	--	"[locname]."
 "ottre"	493702525	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	--	degen-true rule	"[not-the-reg]." [end-t]
 
@@ -1021,9 +1024,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "banner"	371551651	--	caution	--	"[papay]."
 "guava"	249245965	--	guava	--	"[just-c]."
 "kumquat"	516923398	--	kumquat	--	"[just-c]."
-"banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it." [scape space]
 "space"	326739437	scape space	--	--	"[locname]." [SCAPE SPACE START]
 "trader"	424780640	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
+"banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it."
 "art"	190621639	--	Art Erd	--	"[1st-name]."
 "red"	234159001	--	Art Erd	--	"[1st-name]."
 "tera"	318427748	--	Tera Darter	--	"[1st-name]."
@@ -1083,7 +1086,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tools"	401902977	hows show	--	--	"[its-a-museum]."
 "allowlots"	619653246	hows show	--	--	"[its-a-museum]."
 "wall"	217750269	hows show	--	--	"[its-a-museum]."
-"neds"	314016672	ned's dens	--	--	"You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!"
+"neds"	314016672	ned's dens	--	--	"You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!" [NED'S DENS START]
 "chicloner"	530490151	ned's	--	--	"[no-no]!"
 "icch"	120286315	ned's	--	--	"[no-no]!"
 "ernol"	410203836	ned's	--	--	"[no-no]!"
@@ -1541,6 +1544,10 @@ this is the gun-broken rule:
 	if player does not have popgun:
 		the rule fails;
 	the rule succeeds;
+
+this is the path-pass rule:
+	if player is in phat path or player is in saps' pass, the rule succeeds;
+	the rule fails;
 
 this is the Leo-mad rule:
 	if player is in dirge ridge:
