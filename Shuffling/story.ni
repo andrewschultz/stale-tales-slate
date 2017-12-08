@@ -8672,7 +8672,7 @@ to say nerd-dark:
 
 section esoteric coteries
 
-esoteric coteries are plural-named useless scenery in anti-cool location. "You can only imagine what the coteries are like."
+esoteric coteries are plural-named bounding scenery in anti-cool location. "You can only imagine what the coteries are like."
 
 understand "esoteric coterie" and "coterie" as esoteric coteries.
 
@@ -8698,7 +8698,7 @@ check scaning in Elm Train Terminal (this is the can't scan some things til you 
 
 check going west in Elm Train Terminal: say "The big fuzzy wall is that way." instead.
 
-check going nowhere in Elm Train Terminal: say "The tracks lead down, and the city is back north." instead.
+check going nowhere in Elm Train Terminal: say "The tracks lead down east, and the city is back north." instead.
 
 the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims TRANSIT FOR ARTISAN AND TSARINA and also that it's an anti-sot station."
 
@@ -8728,7 +8728,7 @@ check going down in Elm Train Terminal: try going east instead.
 
 check going east in Elm Train Terminal:
 	now down-tried is true;
-	if power-shut is false, say "There may be an evil lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are in lalaland]. Even those rubber shoes won't insulate you[end if]." instead;
+	if power-shut is false, say "There may be an rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are in lalaland]. Even those rubber shoes won't insulate you[end if]." instead;
 	if player does not have tulip, say "You go east but reach a thin ledge. It needs to be lightened before you go further. You have no item to help with that." instead;
 	if player does not have sheath and player does not have noise bag, say "You hear an even worse roaring than usual. Nothing you're carrying seems up to defeating it. You double back." instead;
 	if player has noise bag and noise bag does not contain words, say "You hear an even worse noise as you walk across the tracks. You run back across where you can reflect how it would be nice if you had something in that noise bag to combat...whatever it is there." instead;
@@ -9196,7 +9196,7 @@ check going nowhere in potshot hotspot: say "The only way you want to try to go 
 
 section roman manors
 
-ransom manors are scenery in Potshot Hotspot. "They're off to the east. Your Means Manse must be there somewhere. You'll probably find it with a bit of exploration[if red bull burdell is not in lalaland]. But first, you need to deal with the distraction at hand[end if]."
+ransom manors are bounding scenery in Potshot Hotspot. "They're off to the east. Your Means Manse must be there somewhere. You'll probably find it with a bit of exploration[if red bull burdell is not in lalaland]. But first, you need to deal with the distraction at hand[end if]."
 
 instead of entering ransom manors: try going east instead.
 

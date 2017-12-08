@@ -13920,7 +13920,7 @@ after fliptoing ltb:
 
 chapter shmoe homes
 
-the shmoe homes are useless scenery in Browse Bowers. "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!"
+the shmoe homes are bounding scenery in Browse Bowers. "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!"
 
 instead of doing something with shmoe homes:
 	if action is procedural, continue the action;
@@ -13949,7 +13949,7 @@ Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've
 
 understand "econ-cone" as Econ Cone.
 
-save aves are useless scenery in Econ Cone. "They lead out every way to less affluent and powerful places."
+save aves are boundng scenery in Econ Cone. "They lead out every way to less affluent and powerful places."
 
 instead of doing something with save aves:
 	if action is procedural, continue the action;
@@ -14620,7 +14620,7 @@ after printing the locale description for Char Arch when leaf-clue is false:
 		now leaf-clue is true;
 		continue the action;
 
-a mad dam is useless scenery in Char Arch. "The mad dam pours water on itself. The waterfall's flaws alter as you watch, though you can't do much with it. Beautiful in its own way."
+a mad dam is bounding scenery in Char Arch. "The mad dam pours water on itself. The waterfall's flaws alter as you watch, though you can't do much with it. Beautiful in its own way."
 
 check taking dam:
 	say "You take in the dam's beauty for a moment." instead;
@@ -14631,7 +14631,7 @@ instead of doing something to mad dam:
 
 Char Arch is south of Grey Gyre.
 
-some gasp gaps are useless plural-named scenery in Char Arch. "You can't see much of the gaps, but you know you don't want to get close to them. Because you'd have to fall to get there."
+some gasp gaps are bounding plural-named scenery in Char Arch. "You can't see much of the gaps, but you know you don't want to get close to them. Because you'd have to fall to get there."
 
 understand "gasp-gaps" as gasp gaps.
 
@@ -14956,7 +14956,7 @@ book Dirge Ridge
 
 Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "It's sort of sad here, leaving you thinking and saying 'Erg ... I'd ...'. A vile veil covers any way except back north."
 
-the vile veil is scenery in Dirge Ridge. it is undesc.
+the vile veil is bounding scenery in Dirge Ridge. it is undesc.
 
 after looking in dirge ridge:
 	set the pronoun it to vile veil;
@@ -15195,7 +15195,7 @@ after printing the locale description for seminar when seminar is unvisited:
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to give him amnesty, when you can, once Elvira's out of the way.";
 	continue the action;
 
-the camo coma force fields are plural-named scenery in seminar. they are undesc.
+the camo coma force fields are plural-named bounding scenery in seminar. they are undesc.
 
 understand "camo-coma" and "force field" and "field" as camo coma force fields.
 
@@ -15286,14 +15286,14 @@ Saps' Pass is a room in Presto. "This path cuts between two lethally beautiful a
 check going south in saps' pass:
 	say "The hogs snicker as you walk away.";
 
-Mount Um-Not is scenery in Saps' Pass. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't." [climb it ??]
+Mount Um-Not is bounding scenery in Saps' Pass. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't." [climb it ??]
 
 check taking um-not:
 	say "Stronger adventurers than you couldn't take Mount Um-Not." instead;
 
 [	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead; ?? ]
 
-Deil's Slide is scenery in Saps' Pass. "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
+Deil's Slide is bounding scenery in Saps' Pass. "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
 
 check taking Deil's Slide:
 	say "The Deil's Slide is more likely to take YOU." instead;
@@ -17355,7 +17355,7 @@ check fliptoing raft:
 
 section matterless streamlets
 
-the matterless streamlets are plural-named useless scenery in Disease Seaside. "The streamlets flow everywhere. They actually HAVE matter, but they don't, um, matter."
+the matterless streamlets are plural-named bounding scenery in Disease Seaside. "The streamlets flow everywhere. They actually HAVE matter, but they don't, um, matter."
 
 instead of doing something with matterless streamlets:
 	if action is procedural, continue the action;
@@ -17828,7 +17828,7 @@ to say wipes-too:
 	if wipes are on drawer:
 		say ", and you notice some wipes on it";
 
-the eeks are plural-named scenery in Hardest Trashed Dearths. "[bug-report]"
+the eeks are plural-named vanishing scenery in Hardest Trashed Dearths. "[bug-report]"
 
 a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "x[sp]e[sp]e[sp]x". eeks are parse-spoilable.
 
@@ -17837,8 +17837,6 @@ instead of doing something to eeks:
 	if current action is seeking, continue the action;
 	if current action is not listening, say "Can't do much more than listen, to find how to follow.";
 	try listening instead;
-
-the eeks are vanishing scenery in Hardest Trashed Dearths.
 
 Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
 
@@ -18720,7 +18718,7 @@ check going in Achers' Arches:
 	if noun is west or noun is south:
 		say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
 
-the handsome sand home is scenery in Achers' Arches. "It's definitely not mean-shod. But you probaby don't want to disturb a private residence."
+the handsome sand home is bounding scenery in Achers' Arches. "It's definitely not mean-shod. But you probaby don't want to disturb a private residence."
 
 instead of doing something with handsome sand home:
 	if action is procedural, continue the action;
@@ -18740,7 +18738,7 @@ instead of doing something with h-h:
 		try examining h-h instead;
 	continue the action;
 
-the a-s are plural-named privately-named reflexive scenery in arches. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
+the a-s are plural-named privately-named reflexive scenery in achers' arches. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
 
 check taking a-s:
 	say "[if a-s are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
@@ -18961,7 +18959,7 @@ Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron wor
 
 section round bay boundary
 
-the round bay boundary is scenery in rascal craals. "It's pretty scenic, and it's also big enough to keeping you from going any way except back east."
+the round bay boundary is bounding scenery in rascal craals. "It's pretty scenic, and it's also big enough to keeping you from going any way except back east."
 
 instead of doing something with round bay boundary:
 	if action is procedural, continue the action;
@@ -19528,7 +19526,7 @@ for printing a locale paragraph about a thing (called nongua) in topside deposit
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
-the fire torn frontier is scenery in Topside Deposit.
+the fire torn frontier is bounding scenery in Topside Deposit.
 
 instead of doing something with fire torn frontier:
 	if action is procedural, continue the action;
@@ -20652,7 +20650,7 @@ a-text of eastern shore is "RYYRYRR". b-text of eastern shore is "RYYRGRR". pars
 every turn when player is in rawest waters:
 	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
 
-the raspy spray is scenery in rawest waters. the spray is undesc.
+the raspy spray is bounding scenery in rawest waters. the spray is undesc.
 
 does the player mean drinking the spray:
 	it is very likely.
@@ -21019,7 +21017,7 @@ to say tet-ter:
 
 chapter scaly clays
 
-the scaly clays are plural-named scenery in Mislit Limits. "They rise up at such an angle they'd be dangerous to climb. The curst palace is sprawled out on top of them."
+the scaly clays are plural-named bounding scenery in Mislit Limits. "They rise up at such an angle they'd be dangerous to climb. The curst palace is sprawled out on top of them."
 
 instead of doing something with scaly clays:
 	if action is procedural, continue the action;
@@ -22140,13 +22138,13 @@ check going when player is in alcoves:
 	if noun is outside:
 		try going east instead;
 
-the forces fresco is scenery in Alcoves. description of forces fresco is "One glance tells you it deserves an f-score, with or without recs of disturbing violence and amorality."
+the forces fresco is scenery in Coevals' Alcoves. description of forces fresco is "One glance tells you it deserves an f-score, with or without recs of disturbing violence and amorality."
 
 instead of doing something with the forces fresco:
 	if current action is examining, continue the action;
 		say "The fresco is just there to taunt and annoy people not aligned with Elvira."
 
-the laminas are useless scenery in alcoves. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". understand "animals/lamina/animal" as laminas.
+the laminas are useless scenery in Coevals' Alcoves. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". understand "animals/lamina/animal" as laminas.
 
 instead of doing something with laminas:
 	if action is procedural, continue the action;
@@ -22181,7 +22179,7 @@ description of Elmer is "He wears sober robes. His mouth smiles on the left and 
 
 description of Merle is "He wears sober robes. His mouth smiles on the right and frowns on the left."
 
-the sober robes are plural-named scenery in Alcoves.
+the sober robes are plural-named scenery in Coevals' Alcoves.
 
 instead of doing something to sober robes:
 	if action is procedural, continue the action;
@@ -23033,7 +23031,7 @@ instead of doing something with allot atoll:
 
 section wire weir
 
-The wire weir is scenery in Loop Pool. "It's there to prevent you from falling into the loop pool."
+The wire weir is bounding scenery in Loop Pool. "It's there to prevent you from falling into the loop pool."
 
 instead of doing something with wire weir:
 	if the action is procedural, continue the action;
@@ -23139,7 +23137,7 @@ Ridging Girding is north of Tapering Anger Pit. ridging girding is a room in Ott
 
 understand "ridging/girding" and "ridging girding" as saturnic curtains when player is in ridging girding.
 
-the saturnic curtains are useless scenery in ridging girding. "They shine metallically. You know better than to touch them. They are effective at keeping everything in one place."
+the saturnic curtains are bounding scenery in ridging girding. "They shine metallically. You know better than to touch them. They are effective at keeping everything in one place."
 
 instead of doing something with saturnic curtains:
 	if action is procedural, continue the action;
@@ -23341,7 +23339,7 @@ to say dsknow:
 
 know-restrict is a truth state that varies.
 
-the critters restrict is scenery in Perverse Preserve. "You can't see it, but it doesn't just restrict critters. It restricts you, too."
+the critters restrict is bounding scenery in Perverse Preserve. "You can't see it, but it doesn't just restrict critters. It restricts you, too."
 
 instead of doing something with critters restrict:
 	if action is procedural, continue the action;
@@ -23522,7 +23520,7 @@ after printing the locale description for Inclosure when Inclosure is unvisited:
 
 Reclusion Inclosure is an innie room in Otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east."
 
-the torpid tripod is amusing scenery in Inclosure. tripod is an undesc.
+the torpid tripod is amusing scenery in Reclusion Inclosure. tripod is an undesc.
 
 to say one-more-evil:
 	say "It's too far away to do anything with and survive. For your purposes, it's just one more bit of evil scenery"
@@ -23530,22 +23528,22 @@ to say one-more-evil:
 instead of doing something with the torpid tripod:
 	say "[one-more-evil]."
 
-the enerve veneer is amusing scenery in Inclosure. veneer is an undesc.
+the enerve veneer is amusing scenery in Reclusion Inclosure. veneer is an undesc.
 
 instead of doing something with enerve veneer:
 	say "[one-more-evil]."
 
-the becharm chamber is amusing scenery in Inclosure. chamber is an undesc.
+the becharm chamber is amusing scenery in Reclusion Inclosure. chamber is an undesc.
 
 instead of doing something with the becharm chamber:
 	say "It's too far away to do anything with. For your purposes, it's just one more bit of evil scenery."
 
-the nacht chant is amusing scenery in Inclosure. chant is undesc.
+the nacht chant is amusing scenery in Reclusion Inclosure. chant is undesc.
 
 instead of doing something with nacht chant:
 	say "You--you're almost getting used to the nacht chant."
 
-the vast vats are amusing plural-named scenery in Inclosure. vats are undesc.
+the vast vats are amusing plural-named scenery in Reclusion Inclosure. vats are undesc.
 
 instead of doing something with vast vats:
 	say "The vats are far away, but you can smell sulfinyl in them reeking sinfully--no silly fun."
@@ -23561,7 +23559,7 @@ to elvira-flee-taunt:
 	say "You leave her sin shrine [if current action is not going east]with extra quickness [end if]before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
 	now Elvira-delay is 0;
 
-the warpish warship is amusing scenery in Inclosure. warship is undesc.
+the warpish warship is amusing scenery in Reclusion Inclosure. warship is undesc. [?? check all the sceneries]
 
 instead of doing something with warship:
 	say "You'll never do anything with the warship on your own. But defeating Elvira will probably disable it."
@@ -24204,7 +24202,7 @@ instead of giving something to gs:
 
 section gropin' roping
 
-the gropin' roping is scenery in Gates Stage. "The gropin['] roping guards you from going west or east."
+the gropin' roping is bounding scenery in Gates Stage. "The gropin['] roping guards you from going west or east."
 
 instead of doing something with the halt lath:
 	if action is procedural, continue the action;
@@ -24473,7 +24471,7 @@ after looking in clangier clearing:
 
 the nameless salesmen are scenery in clangier clearing. "The nameless salesmen are, well, nondescript but numerous. They ignore you, and none seems as interesting as Len Craig."
 
-the streperous superstore is scenery in Clangier Clearing. "It's big and intimidating and you would probably get lost there. It's one of Elvira's biggest inventions, and though she's gone, you can't just go blowing it up. Not with people inside, and employed by it."
+the streperous superstore is bounding scenery in Clangier Clearing. "It's big and intimidating and you would probably get lost there. It's one of Elvira's biggest inventions, and though she's gone, you can't just go blowing it up. Not with people inside, and employed by it."
 
 check going inside when player is in clangier clearing:
 	try going east instead;
@@ -24618,7 +24616,7 @@ chapter where it is, and scenery
 
 Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
-the ego fail foliage is useless scenery in filed field. "It'll still block you going anywhere but back east, even with the more man-made obstacles gone."
+the ego fail foliage is bounding scenery in filed field. "The ego fail foliage will still block you going anywhere but back east, even with the more man-made obstacles gone."
 
 printed name of ego fail foliage is "ego-fail foliage"
 
@@ -26277,7 +26275,6 @@ wzup	"[wash-up]"	--	"WHASSUP"
 vile veil	"The vile veil is just a cheapo to explain why you can only go back north in Dirge Ridge."
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
-camo coma	"The camo-coma is just a barrier to prevent you going any way but west from the seminar."
 harpings phrasing	"[one of]The sign gives you three ways to tell Rand and Leo they've done their job[if rebuked is true], and they've been persistently loyal, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
 alert letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say LATER.[minus][cycling]"
 log ons letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say SO LONG.[minus][cycling]"
@@ -26458,7 +26455,6 @@ bot boat	"Two parts of a bot boat are broken. The blaster and turbos."
 blaster	"[one of]The blaster isn't quite as solid as it could be.[plus][or]Maybe you could make the blaster STABLER?[minus][cycling]"
 turbos	"[one of]The turbos aren't quite as solid as they could be.[plus][or]Maybe you could make the turbos ROBUST?[minus][cycling]"
 weirder red wire	"[one of]The weirder red wire is organized wrong. Perhaps it can be reorganized, redone, rejigged, redesigned...[plus][or]REWIRED.[minus][cycling]"
-spray	"The spray isn't as important as any of the shores you need to reach."
 eastern	"[one of]Oh dear, it's a choice between the northern and eastern and southwest shores.[plus][or]The letters settler gives seven letters, which lets you eliminate all but one shore.[plus][or]The eastern shore remains. What to do with it? How do you move to it?[plus][or]Or move the eastern shore to you?[plus][or]Make the eastern shore the NEAREST.[minus][cycling]"
 northern	--	eastern
 southwestern	--	eastern
