@@ -1032,8 +1032,11 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is in lalaland, decide no;
 	if hintcand is in bullpen, decide yes;
 	if hintcand is location of player, decide no;
-	if hintcand is beats:
+	if hintcand is beats: [start of backdrops which will throw errors otherwise]
 		if mrlp is metros, decide yes;
+		decide no;
+	if hintcand is mum dud mud:
+		if in-i-box, decide yes;
 		decide no;
 	if hintcand is warding drawing:
 		if player is in anti-cool or player is in underside, decide yes;
@@ -1046,10 +1049,10 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide no;
 	if hintcand is m2:
 		if player is in moor, decide yes;
+		decide no; [end of backdrops]
+	if debug-state is true and hintcand is a backdrop:
+		say "WARNING [hintcand] not flagged as backdrop.";
 		decide no;
-[	if hintcand is a backdrop or hintcand is scenery:
-		if hintcand is visible, decide yes;
-		if hintcand is not visible, decide no;] [throws error]
 	let reg1 be map region of location of hintcand;
 	let reg2 be mrlp;
 	if reg1 is not reg2, decide no;
@@ -3866,12 +3869,7 @@ instead of going outside in notices section: try going north instead.
 
 check going inside in notices section: try entering getaway instead.
 
-check going nowhere in Notices Section:
-	if getaway is visible:
-		say "That'd be a cop-out, running away. You'd break Nat Egam's heart, too. You probably want to go in and enter the gateway.";
-	else:
-		say "You can't even remember the way you came through the thickets. And the gateway's right in front of you. You sense it's probably where you want to go.";
-	the rule succeeds;
+check going nowhere in Notices Section: say "You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[unless gateman is in notices section], though it'd be nice to have some help." instead;
 
 section broad board
 
@@ -4741,7 +4739,7 @@ chapter Trips Strip
 
 [yeah, redundancy but...]
 
-Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores."
+Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks exit."
 
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
 	if forest-x is in Trips strip, set the locale priority of forest-x to 6;
@@ -4862,8 +4860,6 @@ check going inside in trips strip:
 	if number of visible available portals is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
 	say "That's ambiguous--you can currently enter [the list of visible available portals] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
 
-check going nowhere in trips strip: say "You'd probably get lost. There's a long expanse of nothing. Best to browse through the stores. Examine them a bit." instead.
-
 cool-index is a number that varies.
 
 the wooden sign is scenery in the Trips Strip. description of wooden sign is "'A store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'"
@@ -4871,6 +4867,19 @@ the wooden sign is scenery in the Trips Strip. description of wooden sign is "'A
 instead of taking the wooden sign: say "It's too heavy. And besides, what would you do with it?"
 
 instead of singing in the Trips Strip: say "The sign seems to vibrate. Not enough to pick it up. It's too heavy[if score is 0]. But still, curious[end if]."
+
+section hubs bush
+
+the hubs bush is bounding scenery. "The hubs bush encircles the entire Trips Strip, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if sf is visited or trap part is visited or underside is visited]nother[end if] store."
+
+instead of doing something with hubs bush:
+	if action is procedural, continue the action;
+	say "The hubs bush is there now, forcing you back to the stores to focus on whatever it is you need to do."
+
+check going nowhere in trips strip:
+	if hubs bush is in trips strip, say "The hubs bush forces you back to the center of the trip and the stores." instead;
+	move hubs bush to trips strip;
+	say "As you try to flee the strip, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip." instead;
 
 section stos
 
@@ -5787,6 +5796,8 @@ understand "glop" and "glob" as livers.
 chapter Gnarliest Triangles
 
 Gnarliest Triangles is east of Self-ID Fields. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
+
+check going nowhere in gnarliest triangles: say "You don't need an alert sign to know running into the walls any direction but east would cause a real sting." instead;
 
 Gnarliest Triangles is in Forest.
 
@@ -7485,7 +7496,7 @@ the serve verse is scenery in sacred cedars.
 
 description of serve verse is "It's all calligraphic, and it reads[paragraph break][i]From here, where lumbers slumber, is, lo! Purest oil snout erupts: solution! Ground unsod becomes sound. Lovely volley. A stone atones![paragraph break]  --LOIS[r]"
 
-check going nowhere in sacred cedars: say "There is no other secret door. You can only go back west." instead.
+check going nowhere in sacred cedars: say "There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads." instead.
 
 the sc are privately-named plural-named scenery in sacred cedars. printed name of sc is "cedar wall/walls". understand "cedars" and "cedar/ wall/walls" as sc.
 
@@ -7515,6 +7526,14 @@ carry out taping:
 	say "PUSH may be the synonym you want, here." instead;
 
 does the player mean taping the spout: it is very likely.
+
+chapter mud
+
+the mum dud mud is a backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen.
+
+instead of doing something with mum dud mud:
+	if action is procedural, continue the action;
+	say "The mum dud mud isn't easily movable, and it might cause a cave-in if you can. You have enough to explore here."
 
 book metros
 
@@ -8728,7 +8747,7 @@ check going down in Elm Train Terminal: try going east instead.
 
 check going east in Elm Train Terminal:
 	now down-tried is true;
-	if power-shut is false, say "There may be an rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are in lalaland]. Even those rubber shoes won't insulate you[end if]." instead;
+	if power-shut is false, say "There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are in lalaland]. Even those rubber shoes won't insulate you[end if]." instead;
 	if player does not have tulip, say "You go east but reach a thin ledge. It needs to be lightened before you go further. You have no item to help with that." instead;
 	if player does not have sheath and player does not have noise bag, say "You hear an even worse roaring than usual. Nothing you're carrying seems up to defeating it. You double back." instead;
 	if player has noise bag and noise bag does not contain words, say "You hear an even worse noise as you walk across the tracks. You run back across where you can reflect how it would be nice if you had something in that noise bag to combat...whatever it is there." instead;

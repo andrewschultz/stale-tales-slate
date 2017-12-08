@@ -139,7 +139,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "road"	182893287	--	store f	--	"[road-sign]."
 "sign"	242774022	--	store f	--	"[road-sign]."
 "subway"	452280521	--	store m	--	"[no-store-m]."
-"subwaymap"	600009451	--	store m	--	"[no-store-m]." [end-stores]
+"subwaymap"	600009451	--	store m	--	"[no-store-m]."
+"hubs"	257080977	--	hubs bush	--	"[hub-stur]."
+"buh"	160807011	--	hubs bush	--	"[hub-stur]." [end-stores]
 
 table of Forest nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -464,8 +466,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "beats"	347796816	--	--	no-beats rule	"The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here."
 "beta"	251522850	--	beats	--	"This racket isn't just one beat."
 "bassy"	335513907	abyss	--	--	"[loc-rej]." [start bassy abyss]
-"aligns"	298775679	myrm	--	--	"[aligns-no]."
-"align"	202501713	myrm	--	--	"[aligns-no]."
+"aligns"	298775679	abyss	--	--	"[aligns-no]."
+"align"	202501713	abyss	--	--	"[aligns-no]."
 "resin"	423304232	--	--	resin-lala rule	"The dust is dust now." [end-m]
 
 table of Resort nudges
@@ -520,7 +522,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "extis"	484951020	Means Manse	--	--	"That's not quite the right sort of nothing."
 "marble"	351625627	Means Manse	--	--	"[ennui]."
 "spire"	435862683	Means Manse	--	--	"[ennui]."
-"toaster"	592164309	Means Manse	--	--	"[ennui]." [
+"toaster"	592164309	Means Manse	--	--	"[ennui]." [end-r]
 
 table of general nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -668,6 +670,9 @@ to say dead-pols:
 
 to say no-store-m:
 	say "No, it's a map of something behind Store M, it looks like."
+
+to say hub-stur:
+	say "The hubs bush is too sturdy. You can't escape the Trips Strip"
 
 section forest nudges
 
