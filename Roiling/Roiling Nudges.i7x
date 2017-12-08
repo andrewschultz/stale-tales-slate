@@ -124,6 +124,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "field"	274156779	--	f-o-b	--	"[not-at-barley]."
 "barley"	409909726	--	f-o-b	--	"[not-at-barley][barley-check]."
 "mangiest"	688747880	--	mangiest steaming	--	"You can't do anything with the mangiest steaming other than enter it for a side adventure."
+"husb"	257080977	--	hubs bush	--	"[hub-stur]."
+"bhu"	160807011	--	hubs bush	--	"[hub-stur]."
 "lectures"	718245236	--	lecturer	--	"[lec-un]." [start cruelest lectures]
 "lecture"	621971270	--	lecturer	--	"[lec-un]."
 "seating"	425651877	cruelest lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
@@ -339,7 +341,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bigs"	192285419	r32	--	--	"[just-letter]."
 "bigt"	199121471	r33	--	--	"[just-letter]."
 "bigu"	201117260	r23	--	--	"[just-letter]."
-"unwary"	491818961	myrm	--	--	"[locname]." [start unwary runway]
+"unwary"	491818961	Unwary Runway	--	--	"[locname]." [start unwary runway]
 "bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "dreidl"	353994775	Unwary Runway	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
 "char"	143799505	Char Arch	--	--	"[locname]." [start char arch]
@@ -418,7 +420,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "fountain"	494078978	--	fount	--	"It's too small to be a fountain--really, just a fount."
 "lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
-"ssap"	276201709	saps' pass	--	"[locname]." [saps' pass]
+"ssap"	276201709	saps' pass	--	--	"[locname]." [saps' pass]
 "mount"	415551063	--	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
 "deil"	247641883	--	--	path-pass rule	"[d-sli]."
 "deils"	343915849	--	--	path-pass rule	"[d-sli]."
@@ -1304,16 +1306,19 @@ to say barley-check:
 			preef b-b;
 			continue the action;
 
+to say hub-stur:
+	say "The hubs bush is too sturdy. You can't escape the Strip of Profits"
+
 to say lec-un:
 	say "The lecturer is unchangeable in his views, but maybe he is physically movable"
 
 to say ian-un:
 	say "Ian is unchangeable, but maybe he is movable";
 
-section routes nudges
-
 to say pamph-ana:
 	say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
+
+section routes nudges
 
 to say name-worry:
 	say "Perhaps it's better to focus on the proper names instead. Simpler, too";

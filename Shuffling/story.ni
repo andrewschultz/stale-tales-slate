@@ -4739,7 +4739,7 @@ chapter Trips Strip
 
 [yeah, redundancy but...]
 
-Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks exit."
+Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks your way out."
 
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
 	if forest-x is in Trips strip, set the locale priority of forest-x to 6;
@@ -4877,9 +4877,9 @@ instead of doing something with hubs bush:
 	say "The hubs bush is there now, forcing you back to the stores to focus on whatever it is you need to do."
 
 check going nowhere in trips strip:
-	if hubs bush is in trips strip, say "The hubs bush forces you back to the center of the trip and the stores." instead;
+	if hubs bush is in trips strip, say "The hubs bush forces you back to the center of the strip and the stores." instead;
 	move hubs bush to trips strip;
-	say "As you try to flee the strip, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip." instead;
+	say "As you try to flee the Trips Strip, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip." instead;
 
 section stos
 

@@ -9835,7 +9835,7 @@ carry out denialing:
 	if player is not in dusty study, say "You need to do this at the start." instead;
 	if Gunter is not off-stage, say "You need to reset the game to before when Gunter knocks at the door." instead;
 	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
-	say "Warping space and time, you move back to the Trips Strip...";
+	say "Warping space and time, you move back to the Strip of Profits...";
 	get-cool-stuff;
 	now denial is true;
 	move player to strip of profits;
@@ -11942,7 +11942,7 @@ check taking a sto:
 
 book Strip of Profits
 
-Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others].[else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here.[end if]"
+Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if hubs bush is in strip]. The hubs bush that sprang up when you tried to escape still blocks your way out.."
 
 understand "trips/profit" as strip of profits when debug-state is true.
 
@@ -12010,6 +12010,19 @@ last-loc of Stores is Strip of Profits.
 to say i-u:
 	if magneto montage is unexamined:
 		say ", which looks like a directory of some sort,"
+
+section hubs bush
+
+the hubs bush is bounding scenery. "The hubs bush encircles the entire Strip of Profits, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if same mesa is visited or loather rathole is visited or loftier trefoil is visited or posh hops shop is visited or grey gyre is visited or bleary barley is visited]nother[end if] store."
+
+instead of doing something with hubs bush:
+	if action is procedural, continue the action;
+	say "The hubs bush is there now, forcing you back to the stores to focus on whatever it is you need to do."
+
+check going nowhere in strip of profits:
+	if hubs bush is in strip of profits, say "The hubs bush forces you back to the center of the strip and the stores." instead;
+	move hubs bush to strip of profits;
+	say "As you try to flee the Strip of Profits, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Strip of Profits." instead;
 
 section describing the Strip
 
@@ -13647,11 +13660,19 @@ book Bustle Sublet
 
 Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is visible]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
 
-check going nowhere in Bustle Sublet: say "You might find even reastier arteries there. Stay here and figure what to do." instead;
+check going nowhere in Bustle Sublet: say "The reastier arteries lead nowhere good. Stay here and figure what to do." instead;
 
 after looking in bustle sublet:
 	set the pronoun it to sob ever verbose;
 	continue the action;
+
+section reastier arteries
+
+the reastier arteries are bounding scenery in Bustle Sublet.
+
+instead of doing something with reastier arteries:
+	if action is procedural, continue the action;
+	say "The reastier arteries will only distract you. Concentrate on what's here."
 
 chapter useless scenery
 
@@ -13949,7 +13970,7 @@ Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've
 
 understand "econ-cone" as Econ Cone.
 
-save aves are boundng scenery in Econ Cone. "They lead out every way to less affluent and powerful places."
+save aves are bounding scenery in Econ Cone. "They lead out every way to less affluent and powerful places."
 
 instead of doing something with save aves:
 	if action is procedural, continue the action;
@@ -28222,7 +28243,7 @@ test dome-all with "demo dome/x ad shelf/test dome-inlet/test dome-show/test dom
 
 chapter coffing
 
-[* COFF 1 tests if you are in the trips strip, handy if you want to test if something's solved, and forces you to the strip so you can do another test. It logs things, too.]
+[* COFF 1 tests if you are in the strip of profits, handy if you want to test if something's solved, and forces you to the strip so you can do another test. It logs things, too.]
 
 coffing is an action applying to one number.
 
