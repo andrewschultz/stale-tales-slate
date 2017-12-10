@@ -327,6 +327,8 @@ understand "gab" as a mistake ("That's not a powerful enough noise to fight the 
 
 understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when location of  player is elf row's flowers.
 
+understand "recount" as a mistake ("The faeries aren't interested in what you've done so far, only what you can do.") when location of  player is elf row's flowers.
+
 chapter tramline terminal
 
 understand "gip" as a mistake ("Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.") when player is in terminal and neon pig is in terminal.

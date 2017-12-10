@@ -1363,7 +1363,7 @@ words	"[if player is in abyss]This is the place to change the words[else if bego
 sword	"[if beast is visible and siren is not visible]Attack the beast[else if beast is visible]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 soundproofed walls	"Not useful for you but for the nerds, so they can think."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
-scratchings	"They indicate the brocade [if brocade is in elf row's flowers]is[else]was[end if] free."
+torn cue	"It indicates the brocade [if brocade is in elf row's flowers]is[else]was[end if] free."
 sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
 controls	"The controls need to fit into a recess[if neon pig is in lalaland], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
@@ -1938,7 +1938,7 @@ rule for supplying a missing noun while buying:
 
 check buying:
 	if location of player is elf row's flowers:
-		if noun is brocade, say "The scratchings said the brocade was free." instead;
+		if noun is brocade, say "The torn cue said the brocade was free." instead;
 		if fairy-worthy is true:
 			if player has heaths or player has sheath or player has begonias or player has noise bag, say "You've already traded them a favor. Plus, you have no money." instead;
 			say "You can just take the flowers you want, since you did the faeries a favor.";
@@ -8290,8 +8290,8 @@ check taking:
 				say "The faeries buzz around for a bit, peeved at your boldness. 'Well, maybe you will do something for us some day.'";
 			else:
 				say "'It is the least we can do for you! Thank you for helping us!'";
-			say "[line break]The FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if] scratching by the brocade vanishes as you take it. Nice magic touch, that.";
-			now scratchings are in lalaland;
+			say "[line break]The FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if] torn cue by the brocade vanishes as you take it. Nice magic touch, that.";
+			now torn cue is in lalaland;
 			now player has brocade instead;
 		if noun is begonias:
 			if player has heaths or player has sheath, say "[greedy-greedy]" instead;
@@ -8301,7 +8301,7 @@ check taking:
 
 to say greedy-greedy: say "The faeries cry 'We already gave you one clump of flowers for your one flower! So unfair, sour naif!'".
 
-the brocade is a thing in Elf Row's Flowers. "A small piece of brocade is discarded away from the merchandise below the counter. You see scratchings above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
+the brocade is a thing in Elf Row's Flowers. "A small piece of brocade is discarded away from the merchandise below the counter. You see a torn cue above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
 
 the merchandise is scenery in elf row's flowers. "All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, [if begonias are not in elf row's flowers and heaths are not in elf row's flowers]but you've got something for your troubles[else if fairy-worthy is true]but you can probably take the heaths or begonias[else]but maybe if you help the faeries, they'll give you something[end if]."
 
@@ -8309,15 +8309,15 @@ does the player mean objasking the faeries about the merchandise: it is likely.
 
 understand "flowers/seeds/flower/seed" as merchandise when merchandise is visible.
 
-description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. Scratchings above it indicate it's not part of the normal merchandise[end if]."
+description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. A torn cue above it indicate it's not part of the normal merchandise[end if]."
 
-scratchings are plural-named scenery in Elf Row's Flowers.
+the torn cue is scenery in Elf Row's Flowers.
 
-description of scratchings is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
+description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
 
-the counter is useless scenery in Elf Row's Flowers.
+the cornute counter is bounding scenery in Elf Row's Flowers.
 
-description of counter is "It divides you from the faeries. It doesn't divide them from you, though, since they can fly[if brocade is in elf row's flowers]. There's a brocade here, under some scratchings[else]."
+description of cornute counter is "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in elf row's flowers]. A torn cue is written into the counter, next to a brocade[else]."
 
 the barcode is a thing. understand "code" and "bar" as barcode when barcode is visible.
 
@@ -12674,7 +12674,7 @@ section tester-scripts
 
 [*mostly paul lee's cool tries]
 
-test pl9m with "test intro/metros/d/beast/gardenia/x gardenia/n/Velcro/ask deadbeat about himself/ask deadbeat about cake/e/ask faeries about clover/give clover to faeries/ask faeries about heaths/ask faeries about begonias/ask faeries about gardenias/x brocade/x scratchings/barcode/x flowers/w/get lost corn/w/x garbage/smell/smell garbage/smell tomato/beats/sword/e/e/sheath/w/w/e/n/throw tomato/s/s/w/throw tomato/get emitter/e/n/n/switch emitter/get cake/keycard/s/get corn/" in subsite
+test pl9m with "test intro/metros/d/beast/gardenia/x gardenia/n/Velcro/ask deadbeat about himself/ask deadbeat about cake/e/ask faeries about clover/give clover to faeries/ask faeries about heaths/ask faeries about begonias/ask faeries about gardenias/x brocade/x torn cue/barcode/x flowers/w/get lost corn/w/x garbage/smell/smell garbage/smell tomato/beats/sword/e/e/sheath/w/w/e/n/throw tomato/s/s/w/throw tomato/get emitter/e/n/n/switch emitter/get cake/keycard/s/get corn/" in subsite
 
 [u/u/jump/]
 
