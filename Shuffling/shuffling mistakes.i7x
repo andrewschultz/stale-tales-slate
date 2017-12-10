@@ -321,13 +321,15 @@ chapter cordoned red condo
 
 understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.") when player is in condo and talkers are in condo.
 
-chapter elf row's flowers
+chapter Fo Real Florae
 
 understand "gab" as a mistake ("That's not a powerful enough noise to fight the beats.") when player has noise bag.
 
-understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when location of  player is elf row's flowers.
+understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that." when player is in Fo Real Florae.
 
-understand "recount" as a mistake ("The faeries aren't interested in what you've done so far, only what you can do.") when location of  player is elf row's flowers.
+understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when player is in Fo Real Florae.
+
+understand "recount" as a mistake ("The faeries aren't interested in what you've done so far, only what you can do.") when player is in Fo Real Florae.
 
 chapter tramline terminal
 

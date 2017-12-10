@@ -320,7 +320,7 @@ GARDENIA.
 ?Can I go east? How?
 Yes. It's probably the big puzzle for this section.
 You need an ID. It's built from items from two other places.
-One thing is from the condo. The other is from Elf Row Flowers.
+One thing is from the condo. The other is from Fo' Real Florae.
 Spoilers of what to change things to are ahead.
 The KEYCARD and BARCODE.
 PUT BARCODE ON KEYCARD.
@@ -375,7 +375,7 @@ KEYCARD.
 Pretentious. Presumptuous. Far too expensive to own.
 But not critical to the game.
 They are RENTALS.
->>Elf Row Flowers
+>>Fo' Real Florae
 ?What do the faeries want?
 A flower.
 There's one in the Underside.

@@ -883,7 +883,7 @@ rule for showing what the player missed:
 		if antlers are in cordoned red condo:
 			say "[2da of metros]the antlers in the Cordoned Red Condo could've become RENTALS.";
 		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
-		say "[2dn]the [if begonias are in elf row's flowers]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
+		say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them[or]you could also try [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
 
@@ -1337,7 +1337,7 @@ hooks	--	Velcro
 motto	"[one of]The, I mean, a motto probably belongs in the trash in the long term. But it's helpful to you. [plus][or]Who's it by? Too-Apt Pa Otto. How does the song go?[or]Potato, ...[or]TOMATO. [minus][cycling]"
 neon pig	"[one of]That neon pig needs to go. For aesthetic and technical reasons. [plus][or]You can scan it, and that gives you some information. [plus][or]You'd rather have nothing there than the pig, too. [plus][or]It can become an OPENING. [minus][cycling]"
 fuzzy looking wall	"You can climb up the wall with [if player has Velcro]your Velcro[else]something sticky or clingy[end if]."
-gardenia	"[if player is in flowers]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
+gardenia	"[if player is in Fo Real Florae]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
 building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
 sensor	"The sensor probably needs something electronic to read."
 red camp	"It's just scenery telling you something is north of the underside."
@@ -1350,7 +1350,7 @@ antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but
 driveway	"The driveway leads to the condo[if cake is not in condo], where you're not welcome[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."
 deadbeat	"[if dry cake is in condo]The deadbeat would like you to take a stand against the condo before you take anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
-keycard	"[if brocade is in flowers]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
+keycard	"[if brocade is in Fo Real Florae]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
 brocade	"[one of]The brocade isn't really magic, but it can become technological magic. [plus][or]What else is white and black? [plus][or]You can make a BAR CODE, no space necessary. [minus][cycling]"
 adhesive backing	"Useful once you find something to attach the barcode to."
 barcode	"[if barcode is part of the keycard]The barcode is now fully scannable[else if player does not have keycard]You need to find something that will hold the barcode[else]PUT BARCODE ON KEYCARD[end if]."
@@ -1359,11 +1359,11 @@ heaths	"[one of]You can change the heaths into something that can hold something
 stems	"The stems clue what the heaths can be."
 begonias	"[one of]Two words on the gadget. Something that holds something. [plus][or]Also, one word is related to sound. [plus][or]Create a NOISE BAG. [minus][cycling]"
 noise bag	"[if player is in Bile Libe and words are in Bile Libe]OPEN the noise bag to get the words.[else if words are in Bile Libe]The noise bag, if opened, can contain sounds.[else if player is in abyss and beast is in abyss]You can OPEN the noise bag to defeat the beast.[else if player is in abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
-words	"[if player is in abyss]This is the place to change the words[else if begonias are in flowers and heaths are in flowers]What you do with the words depends on what reward you get from the fairies[else if heaths are in flowers]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
+words	"[if player is in abyss]This is the place to change the words[else if begonias are in Fo Real Florae and heaths are in Fo Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
 sword	"[if beast is visible and siren is not visible]Attack the beast[else if beast is visible]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 soundproofed walls	"Not useful for you but for the nerds, so they can think."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
-torn cue	"It indicates the brocade [if brocade is in elf row's flowers]is[else]was[end if] free."
+torn cue	"It indicates the brocade [if brocade is in Fo Real Florae]is[else]was[end if] free."
 sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
 controls	"The controls need to fit into a recess[if neon pig is in lalaland], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
@@ -1523,7 +1523,7 @@ carry out metros-hinting:
 	if player has begonias, try objhinting begonias instead;
 	if player is in underside:
 		if drainage is in underside, try objhinting drainage instead;
-		if elf row's flowers is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
+		if Fo Real Florae is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
 		if bile libe is not visited, all-say "You can go west from the camp to a library." instead;
 		if dry cake is in condo, all-say "You should try going [if condo is visited]back north to the condo[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Anti-Cool Location is not visited:
@@ -1537,18 +1537,18 @@ carry out metros-hinting:
 				if dry cake is in condo, all-say "You need something to put the barcode on. Maybe check out the condo north of the Roarings Garrison." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
-		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in flowers and begonias are in flowers]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
+		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
 		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
 	if player is in Roarings Garrison:
 		if dry cake is in condo, all-say "You need to clear out the condo to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
 		if clover is in camp, all-say "You can take the clover for later, or you can figure what it should be." instead;
 		if lost corn is in camp, all-say "The lost corn will be useful as something else." instead;
 		all-say "You've gotten everything you need here. There are no hidden puzzles." instead;
-	if location of player is elf row's flowers:
+	if location of player is Fo Real Florae:
 		if player does not have brocade and barcode is off-stage, all-say "The brocade is free, whether or not you've helped the faeries. Why not take it?" instead;
 		if fairy-worthy is false, try objhinting faeries instead;
 		if player has gardenia, try objhinting gardenia instead;
-		if heaths are in flowers and begonias are in flowers, all-say "Take a flower. Either flower." instead;
+		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, all-say "Take a flower. Either flower." instead;
 		if player has sheath or player has noise bag, all-say "You've transformed your flower[if words are not in Bile Libe], and you've gotten the words from the Bile Libe. So you're done here[else], but you need to use your new item in the Bile Libe[end if]." instead;
 		all-say "Take a flower. Either flower." instead;
 	if player is in Bile Libe:
@@ -1559,7 +1559,7 @@ carry out metros-hinting:
 		if player has sheath, try objhinting sheath instead;
 		if player has begonias, try objhinting begonias instead;
 		if player has noise bag, try objhinting noise bag instead;
-		if heaths are in flowers and begonias are in flowers, all-say "Pick a reward from the faeries, then come back here." instead;
+		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, all-say "Pick a reward from the faeries, then come back here." instead;
 		all-say "You don't have much to do here right now." instead;
 	if player is in Anti-Cool Location:
 		if player has lit-up tulip, all-say "Nothing more to do here." instead;
@@ -1930,14 +1930,14 @@ check exiting:
 chapter buying
 
 rule for supplying a missing noun while buying:
-	if player is in elf row's flowers:
-		if heaths are in elf row's flowers:
+	if player is in Fo Real Florae:
+		if heaths are in Fo Real Florae:
 			now noun is heaths;
-		if begonias are in elf row's flowers:
+		if begonias are in Fo Real Florae:
 			now noun is begonias;
 
 check buying:
-	if location of player is elf row's flowers:
+	if location of player is Fo Real Florae:
 		if noun is brocade, say "The torn cue said the brocade was free." instead;
 		if fairy-worthy is true:
 			if player has heaths or player has sheath or player has begonias or player has noise bag, say "You've already traded them a favor. Plus, you have no money." instead;
@@ -7618,7 +7618,7 @@ instead of doing something with the arena dig flier:
 
 a gardenia is a flower.
 
-description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if elf row's flowers are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
+description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if Fo Real Florae are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
 
 section cramped red camp
 
@@ -7716,7 +7716,7 @@ check opening noise bag:
 			the rule succeeds;
 		say "The words currently caught in the bag would do no good here.";
 		the rule succeeds;
-	if player is in flowers, say "The faeries are not making noise." instead;
+	if player is in Fo Real Florae, say "The faeries are not making noise." instead;
 	if player is in camp, say "The chants are disjointed and not really forceful or annoying anyone. They're talk without action." instead;
 	if player is not in Bassy, say "Nothing's quite focused enough here to go pouring in the bag. The beats are too amorphous, and there're no clear words." instead;
 
@@ -7832,7 +7832,7 @@ instead of taking designer reedings: say "Bad idea. The deadbeat likes no suds w
 
 description of designer reedings is "GREED: SIN is written on them."
 
-the posh shop is amusing scenery in Roarings Garrison. "It's apparently called ELF ROW'S FLOWERS with a sub-slogan: 'Go floral or go fall!'"
+the posh shop is amusing scenery in Roarings Garrison. "It's apparently called Fo Real Florae with a sub-slogan: 'Go floral or go fall!'"
 
 the library is scenery in Roarings Garrison. "Libraries aren't supposed to be beautiful, but man, this one looks ugly!".
 
@@ -8145,13 +8145,15 @@ check putting barcode on:
 
 check inserting barcode into keycard: try putting barcode on keycard instead.
 
-chapter Elf Row's Flowers
+chapter Fo Real Florae
 
-Elf Row's Flowers is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp."
+Fo Real Florae is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp."
 
-Elf Row's Flowers is in Metros.
+printed name of Fo Real Florae is "Fo['] Real Florae Fare, Lo"
 
-check going to elf row's flowers for the first time: say "'Main goal, magnolia... what low serf seeks for all floral?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'".
+Fo Real Florae is in Metros.
+
+check going to Fo Real Florae for the first time: say "'Main goal, magnolia... what low serf seeks for all floral?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'".
 
 after choosing notable locale objects when player is in elf row's: set the locale priority of the faeries to 2.
 
@@ -8161,19 +8163,19 @@ rule for printing a locale paragraph about faeries:
 	now heaths are mentioned;
 	now begonias are mentioned;
 
-check going nowhere in Elf Row's Flowers: say "The only safe way is back west." instead.
+check going nowhere in Fo Real Florae: say "The only safe way is back west." instead.
 
 violets is a truth state that varies.
 
-report going west in Elf Row's Flowers when violets is false:
+report going west in Fo Real Florae when violets is false:
 	if player has noise bag or player has begonias or player has heaths or player has sheath:
 		say "Apropos of nothing, the faeries say 'Violet? Love it!'";
 		now violets is true;
 	continue the action;
 
-check going east in Elf Row's Flowers: say "[one of]'Back rooms? Smack boor!' you imagine the faeries saying[or]You wouldn't want to disturb them while they're measuring geraniums or anything back there[or]That's where all the magic happens. It'll happen to you if you get nosy[at random]." instead.
+check going east in Fo Real Florae: say "[one of]'Back rooms? Smack boor!' you imagine the faeries saying[or]You wouldn't want to disturb them while they're measuring geraniums or anything back there[or]That's where all the magic happens. It'll happen to you if you get nosy[at random]." instead.
 
-Some freesia faeries are people in Elf Row's Flowers. "Freesia faeries fly around here [if heaths are in flowers and begonias are in flowers]anxiously[else]randomly[end if]."
+Some freesia faeries are people in Fo Real Florae. "Freesia faeries fly around here [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]anxiously[else]randomly[end if]."
 
 understand "freesia/ fairies/" as faeries.
 
@@ -8199,7 +8201,7 @@ instead of doing something with the wands:
 	say "The wands are the faeries[']. Best not meddle.";
 
 to say he-be:
-	if heaths are in flowers or begonias are in flowers:
+	if heaths are in Fo Real Florae or begonias are in Fo Real Florae:
 		if heaths are in lalaland or begonias are in lalaland:
 			say "You have performed your magic admirably on our gift. Go and slay the beast![no line break]";
 		else:
@@ -8207,9 +8209,9 @@ to say he-be:
 	else:
 		say "'You may take one of the groups of flowers if you bring us some. They are the last of the batch from before the Night Thing came.'";
 
-to say sure-you: say "[if heaths are not in flowers or begonias are not in flowers]! We are sure you can do something with your reward[end if]".
+to say sure-you: say "[if heaths are not in Fo Real Florae or begonias are not in Fo Real Florae]! We are sure you can do something with your reward[end if]".
 
-some heaths are a plural-named flower in Elf Row's Flowers. they are not fixed in place. rgtext of heaths is "[rcn][rc][rc][rc][rc][rc]". lgth of heaths is 6. gpos of heaths is 6. rpos of heaths is 5. cert-text of heaths is "-[d1][d1][d1][d1][d1]". rect-text of heaths is "S[d1][d1][d1][d1][ast]H".
+some heaths are a plural-named flower in Fo Real Florae. they are not fixed in place. rgtext of heaths is "[rcn][rc][rc][rc][rc][rc]". lgth of heaths is 6. gpos of heaths is 6. rpos of heaths is 5. cert-text of heaths is "-[d1][d1][d1][d1][d1]". rect-text of heaths is "S[d1][d1][d1][d1][ast]H".
 
 understand "heath" as heaths.
 
@@ -8233,7 +8235,7 @@ check taking off sheath: say "It'd be too awkward to carry." instead.
 
 description of sheath is "It's a dull grey, with the words FOR GREAT QUIETNESS inscribed in some Gothic font."
 
-some begonias are a plural-named flower in Elf Row's Flowers. they are not fixed in place. rgtext of begonias is "[rcn][rc][rc][rc][rc][rc][gc][rc]". lgth of begonias is 8. gpos of begonias is 5. rpos of begonias is 3. cert-text of begonias is "-[d1][d1][d1][d1][d1][ast]A[d1]". rect-text of begonias is "N[d1][d1][d1][d1][d1][d1][ast]G".
+some begonias are a plural-named flower in Fo Real Florae. they are not fixed in place. rgtext of begonias is "[rcn][rc][rc][rc][rc][rc][gc][rc]". lgth of begonias is 8. gpos of begonias is 5. rpos of begonias is 3. cert-text of begonias is "-[d1][d1][d1][d1][d1][ast]A[d1]". rect-text of begonias is "N[d1][d1][d1][d1][d1][d1][ast]G".
 
 understand "begonia" as begonias.
 
@@ -8263,7 +8265,7 @@ check giving to faeries:
 instead of showing to faeries: try giving noun to faeries.
 
 check giving gardenia to faeries:
-	say "They're visibly impressed. 'Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one[if brocade is in elf row's flowers]. And take the brocade, too[end if]. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need.'";
+	say "They're visibly impressed. 'Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one[if brocade is in Fo Real Florae]. And take the brocade, too[end if]. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need.'";
 	now the gardenia is in lalaland;
 	now fairy-worthy is true instead;
 
@@ -8284,7 +8286,7 @@ check taking:
 		now player has Spam;
 		now sandwich is in lalaland;
 	if noun is in fridge, say "If it's in the fridge, it's probably someone's property. Even if it's someone you don't know or like[if noun is grits or noun is pancake], and even though you made it edible[end if]." instead;
-	if location of player is Elf Row's Flowers:
+	if location of player is Fo Real Florae:
 		if noun is brocade:
 			if fairy-worthy is false:
 				say "The faeries buzz around for a bit, peeved at your boldness. 'Well, maybe you will do something for us some day.'";
@@ -8297,13 +8299,13 @@ check taking:
 			if player has heaths or player has sheath, say "[greedy-greedy]" instead;
 		if noun is heaths:
 			if player has begonias or player has noise bag, say "[greedy-greedy]" instead;
-		if fairy-worthy is false, say "The faeries buzz around a bit. 'Bring us a gift first, human! [one of]New florae, loafer. Fo['] real[or]No loaner for a loner[cycling]!' they cry." instead;
+		if fairy-worthy is false, say "The faeries buzz around a bit. 'Bring us a gift first, human! A loner? No real loaner!' they cry." instead;
 
 to say greedy-greedy: say "The faeries cry 'We already gave you one clump of flowers for your one flower! So unfair, sour naif!'".
 
-the brocade is a thing in Elf Row's Flowers. "A small piece of brocade is discarded away from the merchandise below the counter. You see a torn cue above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
+the brocade is a thing in Fo Real Florae. "A small piece of brocade is discarded away from the merchandise below the counter. You see a torn cue above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
 
-the merchandise is scenery in elf row's flowers. "All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, [if begonias are not in elf row's flowers and heaths are not in elf row's flowers]but you've got something for your troubles[else if fairy-worthy is true]but you can probably take the heaths or begonias[else]but maybe if you help the faeries, they'll give you something[end if]."
+the merchandise is scenery in Fo Real Florae. "All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, [if begonias are not in Fo Real Florae and heaths are not in Fo Real Florae]but you've got something for your troubles[else if fairy-worthy is true]but you can probably take the heaths or begonias[else]but maybe if you help the faeries, they'll give you something[end if]."
 
 does the player mean objasking the faeries about the merchandise: it is likely.
 
@@ -8311,13 +8313,13 @@ understand "flowers/seeds/flower/seed" as merchandise when merchandise is visibl
 
 description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. A torn cue above it indicate it's not part of the normal merchandise[end if]."
 
-the torn cue is scenery in Elf Row's Flowers.
+the torn cue is scenery in Fo Real Florae.
 
 description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
 
-the cornute counter is bounding scenery in Elf Row's Flowers.
+the cornute counter is bounding scenery in Fo Real Florae.
 
-description of cornute counter is "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in elf row's flowers]. A torn cue is written into the counter, next to a brocade[else]."
+description of cornute counter is "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo Real Florae]. A torn cue is written into the counter, next to a brocade[else]."
 
 the barcode is a thing. understand "code" and "bar" as barcode when barcode is visible.
 
@@ -8336,9 +8338,9 @@ section propflipping Elf Row
 to say rude: say "You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is"
 
 check fliptoing sheath:
-	if player is in Elf Row's Flowers:
+	if player is in Fo Real Florae:
 		if fairy-worthy is false, say "The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof." instead;
-		if begonias are not in elf row's flowers, say "You already got the begonias--don't mess with the merchandise." instead;
+		if begonias are not in Fo Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
 		if player does not have heaths:
 			try taking heaths;
 		say "[rude].[line break]";
@@ -8347,14 +8349,14 @@ check fliptoing barcode:
 	if player does not have the brocade:
 		say "You take the brocade first--you're a bit embarrassed your magic seems more, well, applied than theirs.";
 		try taking brocade;
-	if player is in Elf Row's Flowers:
+	if player is in Fo Real Florae:
 		say "[rude].[line break]";
 
 check fliptoing noise bag:
 	if the player's command does not include "noise", say "Yes, the begonias should become a bag, but you need to state what sort fully. Magic isn't THAT easy." instead;
-	if player is in Elf Row's Flowers:
+	if player is in Fo Real Florae:
 		if fairy-worthy is false, say "The begonias are (still) merchandise. You don't want to know what faeries do to vandals." instead;
-		if heaths are not in elf row's flowers, say "You already got the heaths--don't mess with the merchandise." instead;
+		if heaths are not in Fo Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
 		if player does not have begonias:
 			try taking begonias;
 		say "[rude].[line break]";
@@ -8374,7 +8376,7 @@ instead of buying:
 		say "Awfully generous, but your quest-aiding items here are all free." instead;
 	if noun is tulip and nerds are visible, say "You have nothing to barter with. Either find what to ask, or outflank them somehow." instead;
 	if location of player is trips strip, say "Your job is presumably to raise property values here, not take advantage of them." instead;
-	if player is in elf row's flowers:
+	if player is in Fo Real Florae:
 		if noun is brocade, say "It is free." instead;
 		if noun is heaths or noun is begonias, say "You don't have any money[if fairy-worthy is true], and the faeries don't seem to want to barter any more[else], but perhaps if you gave the faeries a flower, they would be willing to trade[end if]." instead;
 	if peasant is visible and noun is hay, say "Maybe there's something you can give him, instead." instead;
@@ -8472,7 +8474,7 @@ check switching on the termite emitter:
 	if location is Hotel, say "This place has seen enough abuse. Maybe find one that hasn't?" instead;
 	if location is Roarings Garrison, say "That'd be kind of cruel." instead;
 	if location is Bile Libe, say "The termites are the wrong sort of pest for the Bile Libe." instead;
-	if location is elf row's flowers, say "Trust me. You don't want to know what the faeries would do back to you." instead;
+	if location is Fo Real Florae, say "Trust me. You don't want to know what the faeries would do back to you." instead;
 	if location is Anti-Cool Location, say "You're being watched too closely." instead;
 	if location of player is cordoned red condo:
 		if condo-evac is true, say "It's already crawling with termites." instead;
@@ -9769,7 +9771,7 @@ after reading a command:
 		if the player's command matches the regular expression "\bgoat\b":
 			say "[one of]The goat is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
 			reject the player's command;
-	if player is in elf row's flowers:
+	if player is in Fo Real Florae:
 		if the player's command matches the text "fairies":
 			say "[one of]Something you did or thought causes the freesia faeries to buzz...I guess they're magical enough to detect your misspellings. You feel a tingling, but it passes[or]They can see in your eyes you're spelling things wrong, but they'll have to deal.[or][run paragraph on][stopping]";
 	if word number 1 in the player's command is "chisel" and player has chisel:
@@ -9904,7 +9906,7 @@ carry out scaning:
 		try scaning location of player instead;
 	if noun is night thing, say "No way you're getting close enough." instead;
 	if noun is nerds, say "[one of]'Whoah! Hey! What's this, a Skansder?' You turn red, explaining you don't know what that is. 'You didn't make that, did you? Don't know the specifications? Thought not.'[or]'Still messing with technology over your head, eh? Like that Skansder you don't know what it is.'[stopping][paragraph break]As the nerds ask other questions, the gadget lights up, and you notice [nerdsask], until the nerds ask no more. Then it goes back to [asknerds] as you think how, why and what to ask nerds." instead;
-	if location of player is Elf Row's Flowers:
+	if location of player is Fo Real Florae:
 		say "[one of]You feel a bit self-conscious waving your gadget around such intrinsically magical beings. But they do not seem to mind.[paragraph break][or][stopping]";
 	if noun is poem and poem is not folded:
 		if smilies are visible:
@@ -11048,7 +11050,7 @@ check listening:
 		if player is in Roarings Garrison, try examining music instead;
 		if night thing is visible, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
 		if player is in cordoned red condo, say "The conversation changes subject rapidly and randomly." instead;
-		if player is in elf row's flowers, say "The faeries have managed to block out the beats here, which is nice." instead;
+		if player is in Fo Real Florae, say "The faeries have managed to block out the beats here, which is nice." instead;
 		say "[one of]Acoustics so caustic.[or]Phoniest hip tones.[or]Fatal a-flat.[or]Thumping's SUMPTHING.[or]Ouch! Hearin['] Hernia.[in random order]" instead;
 	if player is in Busiest Subsite, say "[one of][thissy].[or]'That lecture'll fix your helpless spells, eh?' someone walking by asks.[or]'A resume masseur!' someone exclaims.[or]'Boy, I need to re-care about my career,' someone actually says with a straight face.[or]'Tell yourself I'M PRE PRIME!'[cycling]" instead;
 	if player is in thickest thickets, say "[if goat is in thickest thickets]The goat snores slightly as he half-naps, but that's it[else]The toga flutters in some wind you can't quite feel[end if]." instead;
@@ -12918,14 +12920,14 @@ to unsolve-metros:
 	now keycard is off-stage;
 	now antlers are in condo;
 	now antlers are not flipped-yet;
-	now brocade is in elf row's flowers;	[elf row's flowers]
+	now brocade is in Fo Real Florae;	[Fo Real Florae]
 	now brocade is not flipped-yet;
 	now barcode is in trips strip;
 	now barcode is off-stage;
-	now heaths are in elf row's flowers;
+	now heaths are in Fo Real Florae;
 	now heaths are not flipped-yet;
 	now sheath is off-stage;
-	now begonias are in elf row's flowers;
+	now begonias are in Fo Real Florae;
 	now begonias are not flipped-yet;
 	now noise bag is off-stage;
 	now fairy-worthy is false;
