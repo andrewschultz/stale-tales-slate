@@ -3970,7 +3970,6 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Wolters Low-Rest Trowels"	false
 "Wong's Gowns"	false
 "Wood Farm's Warm Foods"	false
-"Woodland's Downloads"	false
 "Wormscribe Microbrews"	false
 "Worst Gin: It's WRONG!"	true
 "Wreathing Nightwear"	false

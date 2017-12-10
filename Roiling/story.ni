@@ -27203,7 +27203,7 @@ cur-reg is a region that varies. cur-reg is usually lll.
 
 rule for showing regional lists:
 	let myrow be 0;
-	if others is not solved and word number 1 in the player's command is "ly":
+	if others is not solved and word number 1 in the player's command is "lh":
 		say "I can't show you the list for Store H, yet. You haven't solved it.";
 		the rule succeeds;
 	repeat through table of regabr:
