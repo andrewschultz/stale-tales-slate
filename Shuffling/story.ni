@@ -1797,8 +1797,10 @@ instead of waving hands:
 instead of jumping:
 	if player is in subsite, say "Apparently, it's your career that needs the jump, not you." instead;
 	if player is on fuzzy wall, say "Bad idea. Just climb down instead." instead;
-	if player is in Rived Drive, say "You don't get anywhere close to over the [if slope is visible]slope[else]poles[end if]. Perhaps it's better to [if poles are visible]try to [end if]CLIMB." instead;
+	if player is in Rived Drive, say "You don't get anywhere close to over the [slo-po]. Perhaps it's better to [if poles are visible]try to [end if]CLIMB." instead;
 	say "What am I supposed to do with THAT four-letter mess?"
+
+to say slo-po: say [if slope is visible]slope[else]poles[end if]
 
 understand the command "eat [something]" as something new.
 understand "eat [something]" as eating.
@@ -9045,6 +9047,14 @@ does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
 
 check going nowhere in Rived Drive: say "You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s] seems worth seeing." instead.
+
+section blow bowl
+
+the blow bowl is bounding scenery in rived drive. "You can a (different) blow bowl whipping around in pretty much any direction except up the [slo-po]."
+
+instead of doing something with blow bowl:
+	if action is procedural, continue the action;
+	say "You don't want to mess with a blow bowl. You can't do much with those letters. There are other things here in Rived Drive."
 
 section poles-slope
 

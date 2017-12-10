@@ -478,13 +478,14 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "tile"	329722812	Astral Altars	--	--	"No, all the tiles."
 "leis"	322886760	Isle	--	--	"[loc-rej]." [start leis isle]
 "lie"	226612794	Isle	--	--	"[loc-rej]."
+"woodland"	423607270	Isle	--	--	"[loc-rej]."
 "sand"	188398381	Isle	--	--	"[the-sand]."
 "thesand"	456596807	Isle	--	--	"[the-sand]."
 "islet"	425996778	Isle	--	--	"Nothing happens. You may need to deal with something specific on the Leis Isle to leave."
 "eter"	444046039	Isle	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
 "oflat"	259979148	Isle	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
-"drive"	386316667	rived drive	--	--	"[loc-rej]." [start rived drive]
-"woodland"	423607270	rived drive	--	--	"[loc-rej]."
+"drive"	386316667	Rived Drive	--	--	"[loc-rej]." [start rived drive]
+"blow"	254520094	Rived Drive	--	--	"You don't need to make any blow bowl more chaotic."
 "tool"	305629011	--	tool shed	--	"Hm, no, the whole tool shed."
 "shed"	282391463	--	tool shed	--	"Hm, no, the whole tool shed."
 "ashed"	284579281	--	tool shed	--	"A shed may provide shade, but you need a way up."
