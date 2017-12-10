@@ -380,13 +380,27 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "leavse"	515052661	--	clover	--	"It's the whole clover you need to change."
 "fuzzy"	499919191	--	clover	--	"The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover."
 "string"	431207843	--	velcro	--	"No need to mess with the string joining the Velcro mittens."
-"cordoned"	491806337	cordoned red condo	--	--	"[loc-rej]." [boastin-obtains bastion]
-"condo"	257647336	cordoned red condo	--	--	"[loc-rej]."
-"candelabra"	400868292	cordoned red condo	--	--	"Interior decorating is not your strength."
-"carpets"	515173258	cordoned red condo	--	--	"Interior decorating is not your strength."
-"carpet"	418899292	cordoned red condo	--	--	"Interior decorating is not your strength."
-"talkers"	521448731	cordoned red condo	--	--	"You can't change who they are. They probably can't, either. It's sad."
-"talker"	425174765	cordoned red condo	--	--	"You can't change who they are. They probably can't, either. It's sad."
+"cordoned"	491806337	Roarings Garrison	--	--	"[condo-visit]."
+"condo"	257647336	Roarings Garrison	--	--	"[condo-visit]."
+"redtents"	733366620	Roarings Garrison	--	--	"Not nice. It's the only home the deadbeats have."
+"harps"	302533845	Roarings Garrison	--	--	"[harp-annoy]."
+"harp"	206259879	Roarings Garrison	--	--	"[harp-annoy]."
+"reedings"	473013102	--	deadbeat	--	"[beat-man]."
+"reeding"	376739136	--	deadbeat	--	"[beat-man]."
+"lost"	327550400	--	lost corn	--	"It's not just that it's lost, it's CORN[dead-help]."
+"corn"	247589473	--	lost corn	--	"It's not just that it's corn, it's LOST too[dead-help]."
+"glove"	395737047	--	velcro	--	"[mits-are]."
+"gloves"	492011013	--	velcro	--	"[mits-are]."
+"mitten"	512001652	--	velcro	--	"[mits-are]."
+"mittens"	608275618	--	velcro	--	"[mits-are]."
+"library"	412420266	Roarings Garrison	--	--	"The library could use renovation, but that's out of the scope of your quest, now."
+"boastin"	408243638	Obtains Boastin Bastion	--	--	"[loc-rej]." [boastin-obtains bastion]
+"obtain"	311969672	Obtains Boastin Bastion	--	--	"[loc-rej]."
+"candelabra"	400868292	Obtains Boastin Bastion	--	--	"Interior decorating is not your strength."
+"carpets"	515173258	Obtains Boastin Bastion	--	--	"Interior decorating is not your strength."
+"carpet"	418899292	Obtains Boastin Bastion	--	--	"Interior decorating is not your strength."
+"talkers"	521448731	Obtains Boastin Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
+"talker"	425174765	Obtains Boastin Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
 "caek"	201932690	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "rental"	441149095	--	antlers	--	"One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers."
@@ -400,21 +414,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lucre"	391055143	--	ulcer	--	"You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway."
 "emitter"	656224056	--	emitter	--	"Whatever icky stuff is/was in there might come out. Eww."
 "ganst"	303079012	--	--	angst rule	"You don't get rid of angst with just a word."
-"redtents"	733366620	Roarings Garrison	--	--	"Not nice. It's the only home the deadbeats have."
-"driveway"	618798510	Roarings Garrison	--	--	"[drivwy]."
-"yadr"	230899962	Roarings Garrison	--	--	"[drivwy]."
-"view"	387898548	Roarings Garrison	--	--	"[drivwy]."
-"harps"	302533845	Roarings Garrison	--	--	"[harp-annoy]."
-"harp"	206259879	Roarings Garrison	--	--	"[harp-annoy]."
-"reedings"	473013102	--	deadbeat	--	"[beat-man]."
-"reeding"	376739136	--	deadbeat	--	"[beat-man]."
-"lost"	327550400	--	lost corn	--	"It's not just that it's lost, it's CORN[dead-help]."
-"corn"	247589473	--	lost corn	--	"It's not just that it's corn, it's LOST too[dead-help]."
-"glove"	395737047	--	velcro	--	"[mits-are]."
-"gloves"	492011013	--	velcro	--	"[mits-are]."
-"mitten"	512001652	--	velcro	--	"[mits-are]."
-"mittens"	608275618	--	velcro	--	"[mits-are]."
-"library"	412420266	Roarings Garrison	--	--	"The library could use renovation, but that's out of the scope of your quest, now."
 "bile"	245031699	Bile Libe	--	--	"[loc-rej]."
 "librayr"	412420266	Bile Libe	--	--	"[loc-rej]."
 "plaque"	454785149	Bile Libe	--	--	"It's more, it's A MOTTO."
@@ -839,6 +838,9 @@ to say no-hot:
 to say ded-chg:
 	say "He may mumble about change, but he's amazingly resistant to change, himself"
 
+to say condo-visit:
+	say "[if dry cake is in bastion]You should probably just go north to look at the condo instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
+
 to say kern-push:
 	say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
 
@@ -874,7 +876,7 @@ to say aligns-no:
 	say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
 
 to say drivwy:
-	say "[if dry cake is in condo]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
+	say "[if dry cake is in Obtains Boastin Bastion]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
 
 to say harp-annoy:
 	say "The harps are kind of annoying, but they've got nothing on the beats"
@@ -883,14 +885,14 @@ to say beat-man:
 	say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
 
 to say dead-help:
-	if condo-evac is true:
+	if bastion-evac is true:
 		say ". Perhaps you can ask the deadbeat about the lost corn for more help";
 
 to say mits-are:
 	say "The mittens are as comfortable as they're going to be"
 
 this is the no-beats rule:
-	if player is in anti-cool or player is in red condo, the rule succeeds;
+	if player is in anti-cool location or player is in Obtains Boastin Bastion, the rule succeeds;
 	the rule fails;
 
 this is the resin-lala rule:

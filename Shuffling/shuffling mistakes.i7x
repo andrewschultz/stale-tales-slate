@@ -317,9 +317,9 @@ understand "smitten" as a mistake ("No matter how hard you try to convince yours
 
 understand "tang" and "tangs" as a mistake ("How the angst gnats taste doesn't matter.") when emitter is angstgnatted.
 
-chapter cordoned red condo
+chapter Obtains Boastin Bastion
 
-understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.") when player is in condo and talkers are in condo.
+understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.") when player is in Obtains Boastin Bastion and talkers are in Obtains Boastin Bastion.
 
 chapter Fo Real Florae
 

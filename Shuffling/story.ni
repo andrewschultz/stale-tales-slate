@@ -880,8 +880,8 @@ rule for showing what the player missed:
 		if grits are off-stage:
 			say "[2da of sortie]the grist in the fridge could've become GRITS.";
 	if metros is solved:
-		if antlers are in cordoned red condo:
-			say "[2da of metros]the antlers in the Cordoned Red Condo could've become RENTALS.";
+		if antlers are in Obtains Boastin Bastion:
+			say "[2da of metros]the antlers in the Obtains Boastin Bastion could've become RENTALS.";
 		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
 		say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
@@ -1346,10 +1346,10 @@ discolored buttons	--	kernels
 yellow kernels	"The different colored kernels may clue what the lost corn should be."
 dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something that will be. [plus][or]The cake becomes a KEYCARD. [minus][cycling]"
 optical beam	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the beam and the metallic door[end if]."
-antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The condo owner seems to own the antlers. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
-driveway	"The driveway leads to the condo[if cake is not in condo], where you're not welcome[end if]."
+antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The antlers seem like a centerpiece to the Bastion. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
+driveway	"The cordoned red condo is an area [if cake is not in Obtains Boastin Bastion]where you're not welcome[else]with an item you need[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."
-deadbeat	"[if dry cake is in condo]The deadbeat would like you to take a stand against the condo before you take anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
+deadbeat	"[if dry cake is in Obtains Boastin Bastion]The deadbeat would like you to take a stand against the Bastion to the north before you earn anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
 keycard	"[if brocade is in Fo Real Florae]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
 brocade	"[one of]The brocade isn't really magic, but it can become technological magic. [plus][or]What else is white and black? [plus][or]You can make a BAR CODE, no space necessary. [minus][cycling]"
 adhesive backing	"Useful once you find something to attach the barcode to."
@@ -1379,7 +1379,7 @@ resin	"With the resin on your hands, you can get a better grip on things. You do
 hilt	"[if siren is in abyss]The hilt is too slippery to grab[else]Now that you got the resin, you can grab the hilt--and the sword[end if]."
 beats	"[if player is not in abyss]Nothing to do about the beats until you get to the source.[else]The beats can be changed into a BEAST.[end if]"
 beast	"You need to attack the beast with a weapon! You [if sword is off-stage]don't have one[else]can use your sword[end if]."
-emitter	"[if dry cake is in condo]The emitter is useful to lower property values. Specifically, the condo's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
+emitter	"[if dry cake is in Obtains Boastin Bastion]The emitter is useful to lower property values. Specifically, the Bastion's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
 tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]
 stile	"[one of]The tiles provide a visual clue, but the stile is just to reinforce things.[plus][or]It's reddish tinged, so you know all the letters are wrong.[plus][or]The TILES/STILE become an ISLET. [minus][cycling]"
 leis	"They're not what you want to be after. You may or may not notice an anagram, here."
@@ -1518,14 +1518,14 @@ carry out metros-hinting:
 		if night thing is in Hotel, try objhinting night thing instead;
 		if player has termite emitter, all-say "Your work in the ol['] hotel is done." instead;
 		all-say "Why not search the mattress? Something's in there." instead;
-	if player is in condo, try objhinting dry cake instead;
+	if player is in Obtains Boastin Bastion, try objhinting dry cake instead;
 	if player has heaths, try objhinting heaths instead;
 	if player has begonias, try objhinting begonias instead;
 	if player is in underside:
 		if drainage is in underside, try objhinting drainage instead;
 		if Fo Real Florae is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
 		if bile libe is not visited, all-say "You can go west from the camp to a library." instead;
-		if dry cake is in condo, all-say "You should try going [if condo is visited]back north to the condo[else]north[end if]. There are several places to visit and people to deal with." instead;
+		if dry cake is in Obtains Boastin Bastion, all-say "You should try going [if Obtains Boastin Bastion is visited]back north to the Obtains Boastin Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Anti-Cool Location is not visited:
 			if keycard-put is true, say "Just go east." instead;
 			if player has dry cake, try objhinting dry cake instead;
@@ -1534,13 +1534,13 @@ carry out metros-hinting:
 				if barcode is part of the keycard, all-say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the sensor." instead;
 				try objhinting keycard instead;
 			if player has barcode:
-				if dry cake is in condo, all-say "You need something to put the barcode on. Maybe check out the condo north of the Roarings Garrison." instead;
+				if dry cake is in Obtains Boastin Bastion, all-say "You need something to put the barcode on. Maybe check out what's north of the Roarings Garrison." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
 		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
 		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
 	if player is in Roarings Garrison:
-		if dry cake is in condo, all-say "You need to clear out the condo to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
+		if dry cake is in Obtains Boastin Bastion, all-say "You need to clear out the Bastion to the north to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
 		if clover is in camp, all-say "You can take the clover for later, or you can figure what it should be." instead;
 		if lost corn is in camp, all-say "The lost corn will be useful as something else." instead;
 		all-say "You've gotten everything you need here. There are no hidden puzzles." instead;
@@ -1571,7 +1571,7 @@ carry out metros-hinting:
 		if player is not wearing Velcro and player is not on fuzzy looking wall, all-say "You can WEAR the Velcro to climb the wall." instead;
 		if neon pig is in Elm Train Terminal, try objhinting neon pig instead;
 		if controls are off-stage:
-			if condo-evac is false, all-say "You need to [if camp is unvisited]see someone up north[else]please the deadbeat[end if] to get an item to replace the neon pig in the opening." instead;
+			if bastion-evac is false, all-say "You need to [if camp is unvisited]see someone up north[else]please the deadbeat[end if] to get an item to replace the neon pig in the opening." instead;
 			try objhinting lost corn instead;
 		if controls are not in op, try objhinting op instead;
 		all-say "You're done here. You can just go east [if tulip is in anti-cool]once you've got light[else if words are in Bile Libe]once you have a weapon[else]for the final confrontation[end if]." instead;
@@ -1583,7 +1583,7 @@ carry out metros-hinting:
 		if beats are visible, try objhinting beats instead;
 		if player has noise bag, try objhinting noise bag instead;
 		all-say "[bug-report] I let you in with an item I should not have." instead;
-	if player is in cordoned red condo:
+	if player is in Obtains Boastin Bastion:
 		if player has dry cake, all-say "You've got the cake. You can just leave." instead;
 		if player does not have emitter, all-say "There's something in the Ol['] Hotel that will upset the residents here, if you use it." instead;
 		try objhinting emitter instead;
@@ -1788,7 +1788,7 @@ instead of waving hands:
 	if player is in notices and gateman is in notices, say "You've already introduced yourself. Just ask him about what you want/need." instead;
 	if player is in hotel and night thing is in hotel, say "Bad idea. Don't know what might make it charge." instead;
 	if player is in Roarings Garrison, say "The dead beat deadbeat nods in return." instead;
-	if player is in condo and talkers are in condo, say "They pointedly ignore you." instead;
+	if player is in Obtains Boastin Bastion and talkers are in Obtains Boastin Bastion, say "They pointedly ignore you." instead;
 	if beast is in abyss and player is in abyss, say "It's not very friendly at all." instead;
 	if goat is in thickets and player is in thickets, say "Do you expect it to wave back? It'd probably fall over trying." instead;
 	if number of visible people > 1, say "There's someone else here, but just TALK TO them or ASK them about something instead." instead;
@@ -2939,7 +2939,7 @@ heaths	sheath	"sheath"	"heaths"	"The heath grows, tangles around itself, and lum
 begonias	noise bag	"noise bag"	"begonias"	"The begonias twirl and create a bag. One with weird triangular spikes on the inside. You exclaim surprise at it--the bag whooshes every time you say something."	true	465539431
 brocade	barcode	"barcode" or "bar code"	"brocade"	"The brocade schlurps and reorganizes into something flatter, but with the same pattern[if player does not have brocade and player does not have barcode]. You pick it up. [end if]."	true	348123886
 dry cake	keycard	"keycard" or "key card"	"dry cake"	"The dry metallic cake turns into a dry metallic keycard[if player does not have dry cake and player does not have keycard], which you take for yourself. Hooray, technology[end if]."	true	430644834
-antlers	rentals	"rentals" or "rental"	"antlers"	"Suddenly, a man walks in, points to his watch, takes the antlers down with a twist of his screwdriver, and walks off with them[if condo-evac is true]. You smile and nod, but he has already left. Shame on the hosts, for pretending that ugly expensive thing was theirs[else]. People mumble but stay. The free food and alcohol overcome moral imperatives to shun the fake-rich, for now[end if]."	false	537423061
+antlers	rentals	"rentals" or "rental"	"antlers"	"Suddenly, a pair of workers walk in, point to their watches, takes the antlers down with a twist of his screwdriver, and walks off with them[if bastion-evac is true]. You smile and nod, but he has already left. Shame on the hosts, for pretending that ugly expensive thing was theirs[else]. People mumble but stay. The free food and alcohol overcome moral imperatives to shun the fake-rich, for now[end if]."	false	537423061
 neon pig	op	"opening"	"neon pig"	"[if player is on fuzzy looking wall]Remembering basic electric safety rules and common sense, you move to the side before trying your magic. This saves your bacon. [run paragraph on][end if]The neon pig goes on the fritz, sparking first, then making a big POP. The neon is none! It appears you've created an opening. Now you're bakin[']. Uh, cookin[']. (Okay, no more hamming it up.)"	false	499032209
 siren	resin	"resin"	"siren"	"The siren makes some even more spastic noises before grinding into resin powder. You scoop it up and put some on your hands, which feel sticky now. You feel your chances of defeating the [beast-beats] has risen, unless you rinse."	false	423304232
 beats	beast	"beast"	"beats"	"'Our beats! Saboteur!' you hear as a beast replaces the thumping with roaring, which stops when the thing needs to breathe. It's an improvement. For your chance to best a beast."	false	347796816
@@ -3363,7 +3363,7 @@ to set-other-default: now cask is not flipped-yet.
 
 when play begins (this is the initialise anagrams pad and beats rule) :
 	now all rooms in metros are noisy;
-	now red condo is not noisy;
+	now Obtains Boastin Bastion is not noisy;
 	now anti-cool is not noisy;
 	move beats backdrop to all noisy rooms;
 	repeat through table of pad-stuff:
@@ -3415,7 +3415,7 @@ check taking inventory:
 	if number of things worn by player > 0, say "You are also wearing [list of things worn by player].";
 	the rule succeeds;
 
-after printing the name of the emitter while taking inventory: say " ([if emitter is angstgnatted]full of angst gnats[else if condo-evac is false]full. Uh, you think[else]nothing inside[end if])".
+after printing the name of the emitter while taking inventory: say " ([if emitter is angstgnatted]full of angst gnats[else if bastion-evac is false]full. Uh, you think[else]nothing inside[end if])".
 
 after taking inventory:
 	if stickyhanded is true and player is in abyss, say "You also have sticky hands." instead;
@@ -4189,7 +4189,7 @@ carry out xmxing:
 	if noun is antlers:
 		say "You take care not to drop any crackers on the rug. A large FOR RENT sign seems to obscure the antlers for a moment.";
 		ditch-saltine instead;
-	if noun is dry cake and condo-evac is false, say "Someone coughs 'discreetly' as you stare at the cake. If they were gone, you might be able to look at it more closely." instead;
+	if noun is dry cake and bastion-evac is false, say "Someone coughs 'discreetly' as you stare at the cake. If they were gone, you might be able to look at it more closely." instead;
 	if noun is nerds or noun is tulip:
 		if player does not have tulip:
 			say "You suddenly feel darkness, along with an urge to ask the nerds about it.";
@@ -4696,7 +4696,7 @@ carry out gleaning:
 		all-say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
 	if mrlp is metros:
 		if night thing is in Hotel, all-say "You see yourself giving something reddish to [if Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
-		if cake is in condo, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
+		if cake is in Obtains Boastin Bastion, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
 		if player has heaths, all-say "You see a weapon at your side, as if tied to a belt." instead;
 		if player has begonias, all-say "You are holding a bag with one hand and plugging an ear with another." instead;
 		if neon pig is in Elm Train Terminal and Elm Train Terminal is visited, all-say "You see the neon pig exploding, the empty space being filled with--an ear of corn?!" instead;
@@ -7748,7 +7748,7 @@ instead of eating tomato: say "That might give you a gas saga. Or a hardier diar
 
 chapter Roarings Garrison
 
-Roarings Garrison is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red condo]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the condo, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros. Roarings Garrison is north of Underside.
+Roarings Garrison is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red Obtains Boastin Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin Bastion].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The Obtains Boastin Bastion you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros. Roarings Garrison is north of Underside.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -7785,7 +7785,7 @@ the music is useless scenery in Roarings Garrison. "Wretchedly sharp harps, fake
 
 voice-count is a number that varies.
 
-the driveway is scenery in Roarings Garrison. "It's immaculate compared to the rest of the city[if condo-evac is true], but you probably shouldn't follow it again[end if]."
+the driveway is scenery in Roarings Garrison. "It's immaculate compared to the rest of the city[if bastion-evac is true], but you probably shouldn't follow it again[end if]."
 
 the yard view is useless scenery in Roarings Garrison. "You can't see much of it until you're on the driveway, what with the buildings in the way, but once you're on the driveway, you'll need to move it or get nicked for loitering. Too bad. It's probably even nicer than the driveway."
 
@@ -7799,7 +7799,7 @@ understand "drive/ way/" as driveway when driveway is visible.
 
 instead of following driveway: try going north.
 
-the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if condo-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. Despite your heroism with the cake in the condo, he barely acknowledges you[end if]."
+the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if bastion-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. Despite your heroism with the cake in the Bastion, he barely acknowledges you[end if]."
 
 check scaning (this is the antlers and deadbeat silliness rule):
 	if noun is antlers:
@@ -7836,10 +7836,10 @@ the posh shop is amusing scenery in Roarings Garrison. "It's apparently called F
 
 the library is scenery in Roarings Garrison. "Libraries aren't supposed to be beautiful, but man, this one looks ugly!".
 
-the barrier is useless scenery in Roarings Garrison. "[if dry cake is in red condo]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
+the barrier is useless scenery in Roarings Garrison. "[if dry cake is in Obtains Boastin Bastion]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
 
 check going north in Roarings Garrison:
-	if condo-evac is true, say "You'd probably be recognized and arrested." instead;
+	if bastion-evac is true, say "You'd probably be recognized and arrested." instead;
 
 check going nowhere in Roarings Garrison:
 	if noun is up or noun is down, continue the action;
@@ -7922,15 +7922,15 @@ check going to Roarings Garrison:
 description of lost corn is "It's got a bunch of different kernels, and some look like buttons because they're not yellow[if player has corn]. The deadbeat might have something to say about it, if you could put up with him. His information would certainly be off the mark, but in Yorpwald, that's better than maybe being wrong[end if]."
 
 check fliptoing keycard:
-	if condo-evac is false and dry cake is visible:
+	if bastion-evac is false and dry cake is visible:
 		say "[one of]The chatterers would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]Still gotta clear out the condo residents first[stopping].";
 		preef dry cake instead;
 
 check fliptoing controls:
-	if condo-evac is false and lost corn is visible, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
+	if bastion-evac is false and lost corn is visible, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
 
 check taking lost corn:
-	if condo-evac is false, say "The deadbeat almost gets up[one of]. 'Hey, Man, like, how do we know someone undisreputable doesn't, like, like the Man, man? Hey? Hey?' he says, with no dearth of hatred as he[or]but just[stopping] jerks his thumb north. He might not do anything, but his friends might pour out from their tents. You don't need a fight right now.[paragraph break]Maybe you need to strike a blow against some rich people to show you belong." instead;
+	if bastion-evac is false, say "The deadbeat almost gets up[one of]. 'Hey, Man, like, how do we know someone undisreputable doesn't, like, like the Man, man? Hey? Hey?' he says, with no dearth of hatred as he[or]but just[stopping] jerks his thumb north. He might not do anything, but his friends might pour out from their tents. You don't need a fight right now.[paragraph break]Maybe you need to strike a blow against some rich people to show you belong." instead;
 
 the yellow kernels are part of the lost corn. understand "buttons" as kernels.
 
@@ -7988,15 +7988,17 @@ instead of doing something with beatniks:
 	if action is procedural, continue the action;
 	say "The snakebit beatniks are too wrapped up in themselves to matter.";
 
-chapter cordoned red condo
+chapter Obtains Boastin Bastion
 
-The Cordoned Red Condo is north of Roarings Garrison. Condo is in Metros.
+Obtains Boastin Bastion is north of Roarings Garrison. Obtains Boastin Bastion is in Metros.
 
-check going inside in cordoned red condo: say "You're already inside." instead.
+printed name of Obtains Boastin Bastion is "Obtains/Boastin['] Bastion"
 
-check going outside in cordoned red condo: try going south instead.
+check going inside in Obtains Boastin Bastion: say "You're already inside." instead.
 
-the talkers are plural-named amusing scenery in cordoned red condo. understand "talker" as talkers.
+check going outside in Obtains Boastin Bastion: try going south instead.
+
+the talkers are plural-named amusing scenery in Obtains Boastin Bastion. understand "talker" as talkers.
 
 after looking in condo:
 	if talkers are in condo, set the pronoun them to talkers;
@@ -8017,7 +8019,7 @@ does the player mean throwing the tomato at the talkers: it is likely.
 
 instead of throwing tomato at talkers: say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them."
 
-the antlers are plural-named scenery in cordoned red condo. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
+the antlers are plural-named scenery in Obtains Boastin Bastion. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
 
 instead of taking the antlers: say "They are utterly useless, even for impressing people. Actually, they're all just here for the free food, too."
 
@@ -8029,7 +8031,7 @@ description of the rentals is "The antlers are gone."
 
 check going to condo for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
 
-A barnacled candelabra is amusing scenery in Cordoned Red Condo.
+A barnacled candelabra is amusing scenery in Obtains Boastin Bastion.
 
 description of candelabra is "It's tasteful and clever, as much as you hate to admit it."
 
@@ -8039,9 +8041,9 @@ instead of doing something with candelabra:
 	else:
 		say "You couldn't even jump to get close to it. But it's not important. Someone just put it there because they could.";
 
-description of cordoned red condo is "[if condo-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. The talkers seem to take you for a stalker, but nobody wants to get too close[end if]. A barnacled candelabra hangs above[if antlers are visible], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if condo-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
+description of Obtains Boastin Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. The talkers seem to take you for a stalker, but nobody wants to get too close[end if]. A barnacled candelabra hangs above[if antlers are visible], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
 
-the carpets are plural-named useless scenery in cordoned red condo. understand "spectra" and "carpet" as carpets.
+the carpets are plural-named useless scenery in Obtains Boastin Bastion. understand "spectra" and "carpet" as carpets.
 
 after doing something with carpets:
 	set the pronoun it to carpets;
@@ -8053,25 +8055,25 @@ instead of looking under carpets: say "This is a tribute to Nord and Bert, not Z
 
 instead of taking carpets: say "Too bulky, and what if they turned into something precast?"
 
-to say cake-blab: say "You probably want to [if cake is in red condo]take the cake and run[else]get going before everyone gets back[end if]"
+to say cake-blab: say "You probably want to [if cake is in Obtains Boastin Bastion]take the cake and run[else]get going before everyone gets back[end if]"
 
-before going nowhere in cordoned red condo:
-	if condo-evac is true, say "Best not hang around the scene of the crime." instead;
+before going nowhere in Obtains Boastin Bastion:
+	if bastion-evac is true, say "Best not hang around the scene of the crime." instead;
 
-check going north in cordoned red condo: say "It's dark that way. You step on a pliers and turn back before hitting any more perils." instead.
+check going north in Obtains Boastin Bastion: say "It's dark that way. You step on a pliers and turn back before hitting any more perils." instead.
 
-check going west in cordoned red condo: say "'Private rave pit!' yells someone as they push you back out." instead.
+check going west in Obtains Boastin Bastion: say "'Private rave pit!' yells someone as they push you back out." instead.
 
-check going east in cordoned red condo: say "Ladies with ideals grab your garb. 'Step, pest!' they cry. 'You'll startle a starlet!' Tatlers." instead.
+check going east in Obtains Boastin Bastion: say "Ladies with ideals grab your garb. 'Step, pest!' they cry. 'You'll startle a starlet!' Tatlers." instead.
 
-check going down in cordoned red condo: say "An officious water informs you this area is reserved for actors and a costar named Castro." instead.
+check going down in Obtains Boastin Bastion: say "An officious water informs you this area is reserved for actors and a costar named Castro." instead.
 
-check going up in cordoned red condo: say "You hear a warden being warned of a wander, and soon you're routed to a detour back where you started." instead.
+check going up in Obtains Boastin Bastion: say "You hear a warden being warned of a wander, and soon you're routed to a detour back where you started." instead.
 
-check going in cordoned red condo:
+check going in Obtains Boastin Bastion:
 	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
 
-Some dry cake is a singular-named thing in Cordoned Red Condo. "Some dry cake is here[if talkers are visible]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
+Some dry cake is a singular-named thing in Obtains Boastin Bastion. "Some dry cake is here[if talkers are visible]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
 
 indefinite article of dry cake is "some".
 
@@ -8082,7 +8084,7 @@ Instead of eating the dry cake:
 		say "It's in no state to taste[if cake is unexamined], as mentioned earlier[end if], and it won't be.";
 
 check taking the dry cake:
-	if condo-evac is false, say "[one of]You overhear steal-tales and think, alas, settle. [or]You feel a slap on your hand from someone who mentions Doc Bleak gave a creep a crepe once. A bold cake blockade! [or]Someone shakes a can of Best Cola and points it at you. Obstacle! [or]'Greedbag! Er, bad egg!' someone calls out. [or][cycling]Someone else takes a turn watching you." instead;
+	if bastion-evac is false, say "[one of]You overhear steal-tales and think, alas, settle. [or]You feel a slap on your hand from someone who mentions Doc Bleak gave a creep a crepe once. A bold cake blockade! [or]Someone shakes a can of Best Cola and points it at you. Obstacle! [or]'Greedbag! Er, bad egg!' someone calls out. [or][cycling]Someone else takes a turn watching you." instead;
 
 after taking dry cake: say "You take care not to let the cake tear as you pick it up.".
 
@@ -8092,8 +8094,8 @@ condo-barred is a truth state that varies. condo-barred is usually false.
 
 after taking the lost corn: say "'All yours, man,' says the deadbeat. 'It's some pretty good corn, too. Ask me if you like want details.'".
 
-check going south in Cordoned Red Condo:
-	if condo-evac is true:
+check going south in Obtains Boastin Bastion:
+	if bastion-evac is true:
 		if player does not have dry cake and player does not have keycard:
 			say "A caveat before you vacate: some loot here may be a tool later. [run paragraph on]";
 			try taking the dry cake;
@@ -8441,15 +8443,15 @@ the termite emitter can be ungnatted, angstgnatted or doubleused. the termite em
 
 does the player mean switching on the termite emitter: it is very likely.
 
-instead of opening termite emitter: say "You can't figure how. There's a reason for that[if condo-evac is true and flies-in-emitter is false], and it's empty anyway[else]. Better to switch it, probably[end if]."
+instead of opening termite emitter: say "You can't figure how. There's a reason for that[if bastion-evac is true and flies-in-emitter is false], and it's empty anyway[else]. Better to switch it, probably[end if]."
 
-description of termite emitter is "It's a black box the side of maybe two CD cases stacked[if condo-evac is true]. It's empty now, you hope[else]. It probably holds a lot of termites. You can switch it when you need to[end if]. Someone has scratched a circle with a line through it over a dollar sign[if condo-evac is false]. You can't hear or see the termites that should be in there, but hey, faith[else if flies-in-emitter is true]. The deadbeat put some angst gnats in it for you[else]. It's probably empty after your hijinks[end if]. It's Mr. Eet-It brand. Of course.".
+description of termite emitter is "It's a black box the side of maybe two CD cases stacked[if bastion-evac is true]. It's empty now, you hope[else]. It probably holds a lot of termites. You can switch it when you need to[end if]. Someone has scratched a circle with a line through it over a dollar sign[if bastion-evac is false]. You can't hear or see the termites that should be in there, but hey, faith[else if flies-in-emitter is true]. The deadbeat put some angst gnats in it for you[else]. It's probably empty after your hijinks[end if]. It's Mr. Eet-It brand. Of course.".
 
 check examining the termite emitter: ignore the examine devices rule.
 
 understand "black/ box/" and "machine" as termite emitter.
 
-condo-evac is a truth state that varies. condo-evac is usually false.
+bastion-evac is a truth state that varies. bastion-evac is usually false.
 
 flies-in-emitter is a truth state that varies. flies-in-emitter is false.
 
@@ -8469,16 +8471,16 @@ check switching on the termite emitter:
 		reg-inc;
 		now emitter is doubleused;
 		move player to underside instead;
-	if condo-evac is true, say "It's empty now." instead;
+	if bastion-evac is true, say "It's empty now." instead;
 	now termite emitter is switched off;
 	if location is Hotel, say "This place has seen enough abuse. Maybe find one that hasn't?" instead;
 	if location is Roarings Garrison, say "That'd be kind of cruel." instead;
 	if location is Bile Libe, say "The termites are the wrong sort of pest for the Bile Libe." instead;
 	if location is Fo Real Florae, say "Trust me. You don't want to know what the faeries would do back to you." instead;
 	if location is Anti-Cool Location, say "You're being watched too closely." instead;
-	if location of player is cordoned red condo:
-		if condo-evac is true, say "It's already crawling with termites." instead;
-		now condo-evac is true;
+	if location of player is Obtains Boastin Bastion:
+		if bastion-evac is true, say "It's already crawling with termites." instead;
+		now bastion-evac is true;
 		now talkers are in lalaland;
 		reg-inc;
 		say "You activate. They vacate it. 'Raiders, dear sir!' It's like a petard--those who prated, depart and ratchet down the chatter. The emitter shuts with a click after the last termite escapes." instead;
@@ -9683,7 +9685,7 @@ the block answering rule is not listed in any rulebook.
 does the player mean answering the player that: it is very likely.
 
 instead of answering:
-	if noun is deadbeat and condo-evac is true and the player's command includes "emitter", try giving emitter to deadbeat instead;
+	if noun is deadbeat and bastion-evac is true and the player's command includes "emitter", try giving emitter to deadbeat instead;
 	say "This game doesn't support PERSON, X very well. It's better to ASK about a SUBJECT, instead.";
 
 the block asking rule is not listed in any rulebook.
@@ -10071,7 +10073,7 @@ section gateman subjects
 instead of answering that: say "This game prefers you to just write the word if you need to say something, or you can ASK X ABOUT Y or TELL X ABOUT Y."
 
 persuasion rule for asking deadbeat to try doing something:
-	if condo-evac is false:
+	if bastion-evac is false:
 		say "You don't need to order people around in this game, and the deadbeat is not friendly enough.";
 		the rule fails;
 	if player has emitter and the player's command includes "emitter":
@@ -10266,13 +10268,13 @@ peasant	Mean Old	"Used to be much nicer, back when we knew him by his first name
 woeful pat	Mean Old	"'He does not censor my art. He cannot be that bad!'"
 woeful pat	peasant	"'There is one who tries his best. But he is too...obvious.'"
 woeful pat	anapest	"[if anapest-clued is false][anapest-clue][run paragraph on][else][one of]'A mere creative writing teacher could educate you as to the pedantic details of writing doggerel that mimics my epic's flow!'[or]You didn't REALLY want the anapest explanation again, did you?[ana-true][stopping][end if]"
-deadbeat	beats	"'They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, [if condo-evac is true]dude[else]you square, yo[end if].'"
+deadbeat	beats	"'They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, [if bastion-evac is true]dude[else]you square, yo[end if].'"
 deadbeat	nerds	"The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots."
 deadbeat	faeries	"The deadbeat doesn't believe in magic, now. But he did as a kid."
 deadbeat	red bull burdell	"'He is oppressive, man, but he is just a symptom of disparity and malaise.'"
 deadbeat	talkers	"[if talkers are in lalaland]'You showed them, dude!'[else]The deadbeat starts up some nonsense pseudo-sociological mumblings.[end if]"
-deadbeat	lost corn	"[if condo-evac is false]'Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?'[else if lost corn is visible]'Oh, yeah, it's yours, man, I guess. It's real corn, not that genetically modified stuff from,' he sees red for a sentence, '[first custom style]SLORNTCO[r] or that nasty dried stuff from [first custom style]ST ROLCNO[r].'[else]'Whoah. You must've like did something with that corn. Biosustainibility, man.'"
-deadbeat	termite emitter	"[if player does not have emitter]'What? Do you know something?' he looks furtively around, more convinced than ever you're with The Man, man.[else if condo-evac is false]'Whoah. No fingerprints, no proof it's mine.' He clearly doesn't trust you, yet.[else][try-flies][no line break][end if]"
+deadbeat	lost corn	"[if bastion-evac is false]'Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?'[else if lost corn is visible]'Oh, yeah, it's yours, man, I guess. It's real corn, not that genetically modified stuff from,' he sees red for a sentence, '[first custom style]SLORNTCO[r] or that nasty dried stuff from [first custom style]ST ROLCNO[r].'[else]'Whoah. You must've like did something with that corn. Biosustainibility, man.'"
+deadbeat	termite emitter	"[if player does not have emitter]'What? Do you know something?' he looks furtively around, more convinced than ever you're with The Man, man.[else if bastion-evac is false]'Whoah. No fingerprints, no proof it's mine.' He clearly doesn't trust you, yet.[else][try-flies][no line break][end if]"
 faeries	drainage	"'Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?'"
 faeries	gardenia	"[if drainage is in underside]You don't have a gardenia, yet. But you can find or make one.[else][faery-flower][end if]"
 faeries	heaths	"[if player has begonias or player has noise bag]The faeries have been generous enough.[else][faery-flower][end if]"
@@ -10337,7 +10339,7 @@ Red Bull Burdell	"'Ego? Tut!' you mumble, but it has nothing on action."
 banshee	"'I strip spirit!' it wails, then, 'Rather be breather!'"
 beast	"It cares not for conversation, only noise."
 beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act."
-deadbeat	"He mumbles something about [if condo-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Anti-Cool Location is visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
+deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Anti-Cool Location is visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
 faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'You are our hero! Thank you so much[sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
 goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
 gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the gateway[if getaway is visible] once you change it. It's not too hard, for seven letters, but I can't tell you[end if]. You'll learn by doing.'[stopping]"
@@ -10715,7 +10717,7 @@ carry out roomgoing:
 	if player is in cedars:
 		block-cedars;
 	if myrm is cedars and caskfillings is 2, say "You can't go back there." instead; [end sortie]
-	if myrm is condo and condo-evac is true, say "You wouldn't be welcome." instead; [start metros]
+	if myrm is condo and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
 	if myrm is anti-cool location and player has tulip, say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
 	if player is in abyss, say "No going back now. This is the final confrontation." instead; [end metros]
 	if mrlp is resort:
@@ -11049,7 +11051,7 @@ check listening:
 				say "The words drown out the beats for the moment. They're sharp words, attacking words, hard to shield yourself from, but they're local enough they can't be twisted." instead;
 		if player is in Roarings Garrison, try examining music instead;
 		if night thing is visible, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
-		if player is in cordoned red condo, say "The conversation changes subject rapidly and randomly." instead;
+		if player is in Obtains Boastin Bastion, say "The conversation changes subject rapidly and randomly." instead;
 		if player is in Fo Real Florae, say "The faeries have managed to block out the beats here, which is nice." instead;
 		say "[one of]Acoustics so caustic.[or]Phoniest hip tones.[or]Fatal a-flat.[or]Thumping's SUMPTHING.[or]Ouch! Hearin['] Hernia.[in random order]" instead;
 	if player is in Busiest Subsite, say "[one of][thissy].[or]'That lecture'll fix your helpless spells, eh?' someone walking by asks.[or]'A resume masseur!' someone exclaims.[or]'Boy, I need to re-care about my career,' someone actually says with a straight face.[or]'Tell yourself I'M PRE PRIME!'[cycling]" instead;
@@ -11331,7 +11333,7 @@ before going up:
 before going down in busiest subsite: say "You're not waiting for the elevator back down. And the only stairs are fire stairs, which will set off an alarm." instead.
 
 before going down:
-	if player is in busiest subsite or player is in cordoned red condo, continue the action;
+	if player is in busiest subsite or player is in Obtains Boastin Bastion, continue the action;
 	if player is on fuzzy looking wall, try getting off the fuzzy looking wall instead;
 	if player is in trips strip:
 		if sortie-x is visible or metros-x is visible, continue the action;
@@ -12914,7 +12916,7 @@ to unsolve-metros:
 	now clover is in camp;
 	now clover is not flipped-yet;
 	now Velcro is off-stage;
-	now condo-evac is false; [condo]
+	now bastion-evac is false; [Obtains Boastin Bastion]
 	now dry cake is in condo;
 	now dry cake is not flipped-yet;
 	now keycard is off-stage;
