@@ -5848,11 +5848,11 @@ carry out presto-hinting:
 			if spoilit is true:
 				now spoilit is false;
 			try objhinting popgun instead;
-	if player is in marines seminar:
+	if player is in Marines Seminar Remains:
 		if spoilit is true:
 			now spoilit is false;
 			all-say "Ugh. The crust feels like army rations. Not now." instead;
-		all-say "The popgun [if player has popgun]was[else]is[end if] all the seminar has to offer." instead;
+		all-say "The popgun [if player has popgun]was[else]is[end if] all the Marines Seminar Remains has to offer." instead;
 	if player is in a mazeroom or player is in nowt town or player is in Unwary Runway:
 		if spoilit is false:
 			all-say "[maze-solve]." instead;
@@ -5863,7 +5863,7 @@ carry out presto-hinting:
 		if ether is not in lalaland:
 			if spoilit is false:
 				if player does not have popgun:
-					all-say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the marines seminar.[cycling]" instead;
+					all-say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the Marines Seminar Remains.[cycling]" instead;
 				if Rand is not eager or Leo is not eager:
 					all-say "[one of]If you've gone through the ether alone, you'll see you've been outnumbered.[or]You'll need allies to even up the numbers in the ether to the north.[or]Anyone here you seen who likes a fight?[or]Fetch the fellows by the dumpster, first.[cycling]" instead;
 			else:
@@ -6970,11 +6970,11 @@ Upscale Capsule	"You're at the very top. You don't really want to change that wi
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
-Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
+Marines Seminar Remains	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets don't matter. You need to cross to the north for more action."
-Fighter Freight	"There's no direction to go. You need some sort of action."
+Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
@@ -7625,7 +7625,7 @@ check pushing the skid to (this is the yak-oof rule):
 		if second noun is east:
 			if plebe is in gyre:
 				say "The plebe stands strong. You don't have the heart to run it over." instead;
-			say "There's nothing in the Marines Seminar. Pushing the sled there would be a waste of time." instead;
+			say "There's nothing in the Marines Seminar Remains. Pushing the sled there would be a waste of time." instead;
 	if player was not in shack:
 		say "[if yak is on skid]Oof! Urg! The yak makes the skid a bit heavy, but you manage.[else]The skid grinds across the snowless ground with slowness.[end if]";
 	continue the action.
@@ -15208,24 +15208,25 @@ description of keyboard is "[if caps lock is part of keyboard]It's complete, now
 
 a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]x[sp]x[sp]x". hump is cheat-spoilable.
 
-book Marines Seminar
+book Marines Seminar Remains
 
-Marines Seminar is in presto. Marines Seminar is east of Grey Gyre. "The seminar must be on break now, because [if popgun is in seminar]nothing besides a popgun[else]not much[end if] remains. Camo-Coma forcefields surround you every way except back west. You can't see them very well, but then, you'll feel them if you run into them."
+Marines Seminar Remains is in presto. Marines Seminar Remains is east of Grey Gyre. "You recognize a camo-coma field as evidence this was a Marines Seminar. But the seminar's over, because [if popgun is in Marines Seminar Remains]nothing besides a popgun[else]not much[end if] is left. Camo-Coma forcefields surround you every way except back west. You can't see them very well, but then, you'll feel them if you run into them."
 
-after printing the locale description for seminar when seminar is unvisited:
+after printing the locale description for Marines Seminar Remains when Marines Seminar Remains is unvisited:
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to give him amnesty, when you can, once Elvira's out of the way.";
 	continue the action;
 
-the camo coma force fields are plural-named bounding scenery in seminar. they are undesc.
+the camo coma force fields are plural-named bounding scenery in Marines Seminar Remains. description is "As you get close, you hear 'Snare [']im.' / 'Amen, sir!' You back off.".
 
 understand "camo-coma" and "force field" and "field" as camo coma force fields.
 
 printed name of camo coma force fields is "camo-coma force fields".
 
 instead of doing something with camo coma:
+	if action is procedural, continue the action;
 	say "You can't do anything with the forcefields. The controls are probably far from here."
 
-The PG-on-up popgun is a container in Marines Seminar.
+The PG-on-up popgun is a container in Marines Seminar Remains.
 
 after printing the name of the popgun while taking inventory:
 	say " ([if dart is in popgun]loaded with the dart[else]unloaded[end if])";
@@ -26061,8 +26062,8 @@ bench-end	"You positioned yourself well to duck the giant and put up with his el
 giant's elbow	"You ducked the giant's elbow successfully. Now about that book..."
 seed pit	"You got what you needed from the seed pit."
 hurt hog	"[fill-in-here]" [end ROUTES]
-dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if seminar is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]." [start PRESTO]
-star	"[if seminar is visited]The star has done its duty[else]Wearing the star may help you get the authority to get by someone else who knows about decorations[end if]."
+dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if marines seminar remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]." [start PRESTO]
+star	"[if marines seminar remains is visited]The star has done its duty[else]Wearing the star may help you get the authority to get by someone else who knows about decorations[end if]."
 boing	"The boing mechanism works fine now."
 maze walls	"The walls hold no great secrets beyond a clue to volt maze's essence itself."
 log ons letters	"[other-let]."

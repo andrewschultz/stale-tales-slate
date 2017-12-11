@@ -352,7 +352,7 @@ And you get something for later. The munchies let you use the slider more often.
 
 
 
-STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, at fifteen, though it and STORE U both have the same number of maximum puzzles.
+STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though it and STORE U both have the same number of maximum puzzles.
 
 > TROVES
 > ENTER TROVES

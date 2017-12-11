@@ -362,9 +362,11 @@ understand "pheyoo" as a mistake ("But nothing really smells in here. Perhaps yo
 
 chapter marines seminar
 
-understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is in location of player.
+understand "smearin" as a mistake ("That may've happened during the seminar, but you don't need that sort of violence here and now.") when player is in marines seminar.
 
-understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when popgun is in location of player.
+understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when player has popgun or popgun is in location of player.
+
+understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when player has popgun or popgun is in location of player.
 
 understand "pilots" as a mistake ("You don't need to fly anywhere.") when player has popgun.
 

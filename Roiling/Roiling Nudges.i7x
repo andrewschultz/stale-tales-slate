@@ -363,14 +363,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ole"	255972525	--	--	Leo-mad rule	"There are only six possibilities. Leo's not too bright, and he can figure it out." [?? run test to see about flips before/after ole]
 "darn"	177448218	--	--	Rand-mad rule	"Use the settler. This is a, err, regional word." [?? run test to see about flips before/after darn]
 "austerer"	732937433	austerer	--	--	"[locname]." [start austerer treasure]
-"marines"	489567203	marines seminar	--	--	"[locname]." [start marines seminar]
-"marine"	393293237	marines seminar	--	--	"[locname]."
-"camo"	159621133	marines seminar	--	--	"[ca-co]."
-"force"	333002970	marines seminar	--	--	"[ca-co]."
-"forcefield"	607159749	marines seminar	--	--	"[ca-co]."
-"fiedl"	274156779	marines seminar	--	--	"[ca-co]."
-"forcefields"	703433715	marines seminar	--	--	"[ca-co]."
-"fields"	370430745	marines seminar	--	--	"[ca-co]."
+"marines"	489567203	marines seminar remains	--	--	"[locname]." [start marines seminar remains]
+"marine"	393293237	marines seminar remains	--	--	"[locname]."
+"camo"	159621133	marines seminar remains	--	--	"[ca-co]."
+"force"	333002970	marines seminar remains	--	--	"[ca-co]."
+"forcefield"	607159749	marines seminar remains	--	--	"[ca-co]."
+"fiedl"	274156779	marines seminar remains	--	--	"[ca-co]."
+"forcefields"	703433715	marines seminar remains	--	--	"[ca-co]."
+"fields"	370430745	marines seminar remains	--	--	"[ca-co]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
@@ -1544,7 +1544,7 @@ this is the volt-maze-visible rule:
 this is the gun-broken rule:
 	if boing mechanism is reflexed:
 		the rule fails;
-	if marines seminar is unvisited:
+	if marines seminar remains is unvisited:
 		the rule fails;
 	if player does not have popgun:
 		the rule fails;

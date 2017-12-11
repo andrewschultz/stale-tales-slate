@@ -184,7 +184,7 @@ P-E--O with the settler on cheat mode. And you can eliminate others to get...
 ?What does store T become?
 Some kind of water animal.
 OTTERS.
-?Why can't I enter store T?
+?Why can't I enter store T right away?
 It's the final scenario, where Elvira waits.
 Well, one store has to be.
 ?What does store U become?
@@ -291,7 +291,7 @@ First, you can just push the skid back north. The narrow/magnetic entry will unl
 Second, if you flipped the escaroles, they become good food for Leo and Rand. You can go south and give them a workout!
 Third, you can take the bad book from the shack and give it to the yak, who gets indigestion.
 You may or may not know what to do with the drab yoke. The exciting conclusion is in the Shack section.
->>MARINES SEMINAR
+>>MARINES SEMINAR REMAINS
 ?What do I do with the pop-gun?
 It's PG-on-up, but twiddling that does nothing.
 The boing mechanism could use a moment of discovery.
