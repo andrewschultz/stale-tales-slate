@@ -1093,7 +1093,7 @@ carry out objhinting:
 	if noun is in lalaland, all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
 	if noun is not a backdrop and noun is not scenery:
 		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
-	if noun is bounding, all-say "[that-those-is-are of noun] there to establish game boundaries." instead;
+	if noun is bounding, all-say "[that-those-is-are of noun] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is realized, all-say "[that-those-is-are of noun] no longer part of a puzzle." instead;
 	if noun is amusing, all-say "[that-those-is-are of noun] in there for general silliness." instead;
 	if noun is useless, all-say "[that-those-is-are of noun] in there for local flavor and scenery." instead;
@@ -2939,7 +2939,7 @@ heaths	sheath	"sheath"	"heaths"	"The heath grows, tangles around itself, and lum
 begonias	noise bag	"noise bag"	"begonias"	"The begonias twirl and create a bag. One with weird triangular spikes on the inside. You exclaim surprise at it--the bag whooshes every time you say something."	true	465539431
 brocade	barcode	"barcode" or "bar code"	"brocade"	"The brocade schlurps and reorganizes into something flatter, but with the same pattern[if player does not have brocade and player does not have barcode]. You pick it up. [end if]."	true	348123886
 dry cake	keycard	"keycard" or "key card"	"dry cake"	"The dry metallic cake turns into a dry metallic keycard[if player does not have dry cake and player does not have keycard], which you take for yourself. Hooray, technology[end if]."	true	430644834
-antlers	rentals	"rentals" or "rental"	"antlers"	"Suddenly, a pair of workers walk in, point to their watches, takes the antlers down with a twist of his screwdriver, and walks off with them[if bastion-evac is true]. You smile and nod, but he has already left. Shame on the hosts, for pretending that ugly expensive thing was theirs[else]. People mumble but stay. The free food and alcohol overcome moral imperatives to shun the fake-rich, for now[end if]."	false	537423061
+antlers	rentals	"rentals" or "rental"	"antlers"	"Suddenly, a pair of workers walk in, point to their watches, takes the antlers down with a twist of a screwdriver, and walk off with them[if bastion-evac is true]. You smile and nod, but they has already left. Shame on the hosts, for pretending that ugly expensive thing was theirs[else]. People mumble but stay. The free food and alcohol overcome moral imperatives to shun the fake-rich, for now[end if]."	false	537423061
 neon pig	op	"opening"	"neon pig"	"[if player is on fuzzy looking wall]Remembering basic electric safety rules and common sense, you move to the side before trying your magic. This saves your bacon. [run paragraph on][end if]The neon pig goes on the fritz, sparking first, then making a big POP. The neon is none! It appears you've created an opening. Now you're bakin[']. Uh, cookin[']. (Okay, no more hamming it up.)"	false	499032209
 siren	resin	"resin"	"siren"	"The siren makes some even more spastic noises before grinding into resin powder. You scoop it up and put some on your hands, which feel sticky now. You feel your chances of defeating the [beast-beats] has risen, unless you rinse."	false	423304232
 beats	beast	"beast"	"beats"	"'Our beats! Saboteur!' you hear as a beast replaces the thumping with roaring, which stops when the thing needs to breathe. It's an improvement. For your chance to best a beast."	false	347796816
@@ -8935,7 +8935,7 @@ instead of doing something with scenery in Altars:
 
 chapter Isle
 
-Isle is a room in Resort. "[if leis are in isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]You can see land way to the east[if leis are not in isle], and now the leis here were exposed, you probably want to get going that way, too[end if]."
+Isle is a room in Resort. "[if leis are in isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if leis are not in isle], and now the leis here were exposed, you probably want to get going that way, too[end if]."
 
 printed name of Isle is "[if Leis are in Isle]Leis[else]Lies[end if] Isle"
 
@@ -8950,7 +8950,21 @@ to say lei-lala: now leis are in lalaland.
 
 check taking the leis: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead.
 
-section scenery
+section an odd low woodland
+
+woodland-revealed is a truth state that varies.
+
+an odd low woodland is scenery in Isle. "[if woodland-revealed is false]You stare at it for a while, and eventually the word DOWNLOAD... starts blinking. Hmm. It doesn't seem real at all[woodrev][else]It still seems computer-generated, wrong[end if]."
+
+to say woodrev:
+	now woodland-revealed is true;
+
+instead of doing something with odd low woodland:
+	if action is procedural, continue the action;
+	if woodland-revealed is true, say "You already know it's a bit hosed. You don't need to do anything with it." instead;
+	say "It seems imposing. You're not sure you want anything to do with it." instead;
+
+section nonbounding scenery
 
 the sand is useless scenery in Isle.
 

@@ -25805,7 +25805,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
 	if spoilit is false:
 		d "[noun] hinting.";
-	if noun is bounding, say "That's there just to provide barriers in various directions, and for local flavor." instead;
+	if noun is bounding, say "That's there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is a room:
 		say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
 	if noun is a fruit and player has noun, say "[frootz]" instead;
