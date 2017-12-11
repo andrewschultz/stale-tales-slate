@@ -1347,7 +1347,7 @@ yellow kernels	"The different colored kernels may clue what the lost corn should
 dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something that will be. [plus][or]The cake becomes a KEYCARD. [minus][cycling]"
 optical beam	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the beam and the metallic door[end if]."
 antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The antlers seem like a centerpiece to the Bastion. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
-driveway	"The cordoned red condo is an area [if cake is not in Obtains Boastin Bastion]where you're not welcome[else]with an item you need[end if]."
+cordoned red condo	"The cordoned red condo is an area [if cake is not in Obtains Boastin Bastion]where you're not welcome[else]with an item you need[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."
 deadbeat	"[if dry cake is in Obtains Boastin Bastion]The deadbeat would like you to take a stand against the Bastion to the north before you earn anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
 keycard	"[if brocade is in Fo Real Florae]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
@@ -7659,7 +7659,7 @@ understand "senser" as sensor.
 
 chapter Roarings Garrison
 
-Roarings Garrison is north of Underside. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin Bastion].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The Obtains Boastin Bastion you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros.
+Roarings Garrison is north of Underside. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin Bastion].[paragraph break]A cordoned red condois north[else].[paragraph break]The Obtains Boastin Bastion you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -7696,19 +7696,13 @@ the music is useless scenery in Roarings Garrison. "Wretchedly sharp harps, fake
 
 voice-count is a number that varies.
 
-the driveway is scenery in Roarings Garrison. "It's immaculate compared to the rest of the city[if bastion-evac is true], but you probably shouldn't follow it again[end if]."
-
-the yard view is useless scenery in Roarings Garrison. "You can't see much of it until you're on the driveway, what with the buildings in the way, but once you're on the driveway, you'll need to move it or get nicked for loitering. Too bad. It's probably even nicer than the driveway."
+the cordoned red condo is scenery in Roarings Garrison. "It's immaculate compared to the rest of the city[if bastion-evac is true], but you aren't welcome there any more[end if]."
 
 the tents are useless scenery in Roarings Garrison. understand "commune" as tents.
 
 description of tents is "Decorated with a corny crayon-a-crony."
 
 instead of doing something with the tents: say "Probably a long-hair halo ring in the tents. Less helpful than the deadbeat."
-
-understand "drive/ way/" as driveway when driveway is visible.
-
-instead of following driveway: try going north.
 
 the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if bastion-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. Despite your heroism with the cake in the Bastion, he barely acknowledges you[end if]."
 
