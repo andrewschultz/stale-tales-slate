@@ -325,7 +325,7 @@ chapter Fo Real Florae
 
 understand "gab" as a mistake ("That's not a powerful enough noise to fight the beats.") when player has noise bag.
 
-understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that." when player is in Fo Real Florae.
+understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that.") when player is in Fo Real Florae.
 
 understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when player is in Fo Real Florae.
 

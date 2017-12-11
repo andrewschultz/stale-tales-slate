@@ -1800,7 +1800,7 @@ instead of jumping:
 	if player is in Rived Drive, say "You don't get anywhere close to over the [slo-po]. Perhaps it's better to [if poles are visible]try to [end if]CLIMB." instead;
 	say "What am I supposed to do with THAT four-letter mess?"
 
-to say slo-po: say [if slope is visible]slope[else]poles[end if]
+to say slo-po: say "[if slope is visible]slope[else]poles[end if]"
 
 understand the command "eat [something]" as something new.
 understand "eat [something]" as eating.
@@ -7657,98 +7657,9 @@ to say want-wanted:
 
 understand "senser" as sensor.
 
-chapter Bile Libe
-
-there is a room called Bile Libe. it is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. The only way out is back east."
-
-check going nowhere in Bile Libe: say "Only way out's back east." instead.
-
-some words are a thing in Bile Libe. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
-
-description of words is "They're not visible[if words are in bag], but you can feel them pulsing against the bag[else], but they certainly sound angry. Sharp. Pointed. Lethal.[end if]."
-
-the sword is a thing. it is not fixed in place.
-
-description of sword is "[if sword is in sheath]It's sheathed now. It's not really worth admiring. The handle looks slippery[else]It's for great justice, you're sure. But instead of blood gutters it's shaped more like a microphone. Odd[end if]."
-
-the hilt is part of the sword.
-
-description of hilt is "It's bright and polished and slippery-looking, [if stickyhanded is true]but with your sticky hands, maybe you could grab it[else]and you probably couldn't hold onto it for long right now[end if]."
-
-instead of taking hilt: try taking sword.
-
-check taking sword:
-	if stickyhanded is false, say "The sword slips from your hands[if player wears Velcro], and there's nothing the Velcro mittens can hook onto[end if][if resin is not visible]. Hmm, you haven't found anything that'd help you grasp it[end if]." instead;
-	say "The sword is yours, and you grab it firmly in your resined hands!";
-	now player has sword instead;
-
-check fliptoing sword:
-	if player is in Bile Libe:
-		if player does not have sheath:
-			if player has noise bag:
-				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the words, though, being a noise bag.";
-				preef sword instead;
-			say "The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.";
-			preef sword instead;
-		continue the action;
-	if player is not in Abyss and player does not have sheath, say "The words are sharp enough, but you have nothing to hold a sword in." instead;
-	if player is not in Bassy Abyss, say "[if player has noise bag]The time's not right, yet. There's no threat near you[else]You can't go carrying a sword about the city. You don't need to attract attention[end if]." instead;
-
-check opening noise bag:
-	if player is in Bile Libe:
-		if words are in Bile Libe and player has noise bag:
-			now words are in noise bag;
-			say "You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it." instead;
-	if words are in bag:
-		if location of player is Anti-Cool Location:
-			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later.";
-			now keycard is in lalaland;
-			now player has the lit-up tulip;
-			reg-inc;
-			choose row 2 in the table of tulip-acq;
-			now chosen entry is true;
-			move player to underside instead;
-		if location of player is Abyss:
-			if beast is visible:
-				say "The beast has no time for words! You need to attack it more directly, with something else.";
-			else:
-				say "The beats will drown the words out.";
-			the rule succeeds;
-		say "The words currently caught in the bag would do no good here.";
-		the rule succeeds;
-	if player is in Fo Real Florae, say "The faeries are not making noise." instead;
-	if player is in camp, say "The chants are disjointed and not really forceful or annoying anyone. They're talk without action." instead;
-	if player is not in Bassy, say "Nothing's quite focused enough here to go pouring in the bag. The beats are too amorphous, and there're no clear words." instead;
-
-for printing a locale paragraph about the words: set the locale priority of the words to 0.
-
-the words are scenery in Bile Libe.
-
-the sword is a thing.
-
-section motto-tomato
-
-A motto is a thing in Bile Libe. "A motto lies here, the only thing close to literature. On initial inspection, it doesn't seem like a very good motto, since A MOTTO in big bold letter takes up half of the plaque, but it's better than nothing."
-
-understand "plaque" as motto when player is in bile libe.
-
-rgtext of motto is "[rcn][rc][rc][rc][gc][gc]". lgth of motto is 6. gpos of motto is 4. rpos of motto is 6. cert-text of motto is "-[d1][d1][d1][ast]T[ast]O". rect-text of motto is "T[d1][d1][d1][d1][ast]O".
-
-description of the motto is "It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.[paragraph break]I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable."
-
-after taking the motto: say "You manage take the motto without taking it to heart. Whew! That was close.".
-
-instead of eating motto: say "I hope you're not dumb enough to swallow that. Figuratively or literally.".
-
-understand "rotten tomato" and "rotten" as tomato.
-
-the description of the tomato is "It's as rotten as the motto of Pa Otto's you extracted it from. It is probably even more rotten on the inside, not that you have the bravery to check. Yet it also has that staying power. It doesn't have any mold on it, yet."
-
-instead of eating tomato: say "That might give you a gas saga. Or a hardier diarrhea."
-
 chapter Roarings Garrison
 
-Roarings Garrison is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red Obtains Boastin Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin Bastion].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The Obtains Boastin Bastion you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros. Roarings Garrison is north of Underside.
+Roarings Garrison is north of Underside. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin Bastion].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The Obtains Boastin Bastion you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -7988,6 +7899,95 @@ instead of doing something with beatniks:
 	if action is procedural, continue the action;
 	say "The snakebit beatniks are too wrapped up in themselves to matter.";
 
+chapter Bile Libe
+
+Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. The only way out is back east."
+
+check going nowhere in Bile Libe: say "Only way out's back east." instead.
+
+some words are a thing in Bile Libe. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
+
+description of words is "They're not visible[if words are in bag], but you can feel them pulsing against the bag[else], but they certainly sound angry. Sharp. Pointed. Lethal.[end if]."
+
+the sword is a thing. it is not fixed in place.
+
+description of sword is "[if sword is in sheath]It's sheathed now. It's not really worth admiring. The handle looks slippery[else]It's for great justice, you're sure. But instead of blood gutters it's shaped more like a microphone. Odd[end if]."
+
+the hilt is part of the sword.
+
+description of hilt is "It's bright and polished and slippery-looking, [if stickyhanded is true]but with your sticky hands, maybe you could grab it[else]and you probably couldn't hold onto it for long right now[end if]."
+
+instead of taking hilt: try taking sword.
+
+check taking sword:
+	if stickyhanded is false, say "The sword slips from your hands[if player wears Velcro], and there's nothing the Velcro mittens can hook onto[end if][if resin is not visible]. Hmm, you haven't found anything that'd help you grasp it[end if]." instead;
+	say "The sword is yours, and you grab it firmly in your resined hands!";
+	now player has sword instead;
+
+check fliptoing sword:
+	if player is in Bile Libe:
+		if player does not have sheath:
+			if player has noise bag:
+				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the words, though, being a noise bag.";
+				preef sword instead;
+			say "The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.";
+			preef sword instead;
+		continue the action;
+	if player is not in Abyss and player does not have sheath, say "The words are sharp enough, but you have nothing to hold a sword in." instead;
+	if player is not in Bassy Abyss, say "[if player has noise bag]The time's not right, yet. There's no threat near you[else]You can't go carrying a sword about the city. You don't need to attract attention[end if]." instead;
+
+check opening noise bag:
+	if player is in Bile Libe:
+		if words are in Bile Libe and player has noise bag:
+			now words are in noise bag;
+			say "You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it." instead;
+	if words are in bag:
+		if location of player is Anti-Cool Location:
+			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later.";
+			now keycard is in lalaland;
+			now player has the lit-up tulip;
+			reg-inc;
+			choose row 2 in the table of tulip-acq;
+			now chosen entry is true;
+			move player to underside instead;
+		if location of player is Abyss:
+			if beast is visible:
+				say "The beast has no time for words! You need to attack it more directly, with something else.";
+			else:
+				say "The beats will drown the words out.";
+			the rule succeeds;
+		say "The words currently caught in the bag would do no good here.";
+		the rule succeeds;
+	if player is in Fo Real Florae, say "The faeries are not making noise." instead;
+	if player is in camp, say "The chants are disjointed and not really forceful or annoying anyone. They're talk without action." instead;
+	if player is not in Bassy, say "Nothing's quite focused enough here to go pouring in the bag. The beats are too amorphous, and there're no clear words." instead;
+
+for printing a locale paragraph about the words: set the locale priority of the words to 0.
+
+the words are scenery in Bile Libe.
+
+the sword is a thing.
+
+section motto-tomato
+
+A motto is a thing in Bile Libe. "A motto lies here, the only thing close to literature. On initial inspection, it doesn't seem like a very good motto, since A MOTTO in big bold letter takes up half of the plaque, but it's better than nothing."
+
+understand "plaque" as motto when player is in bile libe.
+
+rgtext of motto is "[rcn][rc][rc][rc][gc][gc]". lgth of motto is 6. gpos of motto is 4. rpos of motto is 6. cert-text of motto is "-[d1][d1][d1][ast]T[ast]O". rect-text of motto is "T[d1][d1][d1][d1][ast]O".
+
+description of the motto is "It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.[paragraph break]I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable."
+
+after taking the motto: say "You manage take the motto without taking it to heart. Whew! That was close.".
+
+instead of eating motto: say "I hope you're not dumb enough to swallow that. Figuratively or literally.".
+
+understand "rotten tomato" and "rotten" as tomato.
+
+the description of the tomato is "It's as rotten as the motto of Pa Otto's you extracted it from. It is probably even more rotten on the inside, not that you have the bravery to check. Yet it also has that staying power. It doesn't have any mold on it, yet."
+
+instead of eating tomato: say "That might give you a gas saga. Or a hardier diarrhea."
+
 chapter Obtains Boastin Bastion
 
 Obtains Boastin Bastion is north of Roarings Garrison. Obtains Boastin Bastion is in Metros.
@@ -8000,8 +8000,8 @@ check going outside in Obtains Boastin Bastion: try going south instead.
 
 the talkers are plural-named amusing scenery in Obtains Boastin Bastion. understand "talker" as talkers.
 
-after looking in condo:
-	if talkers are in condo, set the pronoun them to talkers;
+after looking in Obtains Boastin Bastion:
+	if talkers are in Obtains Boastin Bastion, set the pronoun them to talkers;
 	continue the action;
 
 after doing something with talkers:
@@ -8029,7 +8029,7 @@ the rentals are plural-named useless scenery.
 
 description of the rentals is "The antlers are gone."
 
-check going to condo for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
+check going to Obtains Boastin Bastion for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
 
 A barnacled candelabra is amusing scenery in Obtains Boastin Bastion.
 
@@ -8157,7 +8157,7 @@ Fo Real Florae is in Metros.
 
 check going to Fo Real Florae for the first time: say "'Main goal, magnolia... what low serf seeks for all floral?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'".
 
-after choosing notable locale objects when player is in elf row's: set the locale priority of the faeries to 2.
+after choosing notable locale objects when player is in Fo Real Florae: set the locale priority of the faeries to 2.
 
 rule for printing a locale paragraph about faeries:
 	say "Faeries buzz around here, [if fairy-worthy is false]guarding some heaths and begonias[else if heaths are in lalaland]guarding the begonias you declined[else if begonias are in lalaland]guarding the heaths you declined[else]waiting for you to choose between the heaths and begonias[end if].";
@@ -8313,7 +8313,7 @@ does the player mean objasking the faeries about the merchandise: it is likely.
 
 understand "flowers/seeds/flower/seed" as merchandise when merchandise is visible.
 
-description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. A torn cue above it indicate it's not part of the normal merchandise[end if]."
+description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. A torn cue above it indicates it's not part of the normal merchandise[end if]."
 
 the torn cue is scenery in Fo Real Florae.
 
@@ -10717,7 +10717,7 @@ carry out roomgoing:
 	if player is in cedars:
 		block-cedars;
 	if myrm is cedars and caskfillings is 2, say "You can't go back there." instead; [end sortie]
-	if myrm is condo and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
+	if myrm is Obtains Boastin Bastion and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
 	if myrm is anti-cool location and player has tulip, say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
 	if player is in abyss, say "No going back now. This is the final confrontation." instead; [end metros]
 	if mrlp is resort:
@@ -11323,7 +11323,7 @@ up-nearby is a truth state that varies.
 
 before going up:
 	if player is in Rived Drive, try going east instead;
-	if player is in Elm Train Terminal or player is in condo or player is in underside or player is on fuzzy looking wall, continue the action;
+	if player is in Elm Train Terminal or player is in Obtains Boastin Bastion or player is in underside or player is on fuzzy looking wall, continue the action;
 [	if up-nearby is true:
 		say "[if cur-score of Intro is 0]I, uh, lied. There's nowhere you can go up in the game. Or nearby. But that was a clue[else]Well, since you've scored a point, you might guess why 'I'd go nearby or up' is a hint[end if].";
 		now up-nearby is false instead;]
@@ -12917,10 +12917,10 @@ to unsolve-metros:
 	now clover is not flipped-yet;
 	now Velcro is off-stage;
 	now bastion-evac is false; [Obtains Boastin Bastion]
-	now dry cake is in condo;
+	now dry cake is in bastion;
 	now dry cake is not flipped-yet;
 	now keycard is off-stage;
-	now antlers are in condo;
+	now antlers are in bastion;
 	now antlers are not flipped-yet;
 	now brocade is in Fo Real Florae;	[Fo Real Florae]
 	now brocade is not flipped-yet;

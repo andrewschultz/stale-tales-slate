@@ -7,7 +7,7 @@ mytab	eturn	curidx	maxidx	go-ahead	descr	prefix	suffix	lasties	maxbeforepause (n
 table of evil locations	false	0	30	reading-the-map rule	"Evil map locations (F)"	""	""	"(worst and last) Hell's Shell[post-brk]"	20	false	0	1	0 [p]
 table of poem codas	true	0	30	pat-poem rule	"Pat's verse-ends (I)"	"You cringe as Pat ends a verse with [i]"	"[r]"	"'O Scant Cantos!' cries Pat. He asks what you thought of his Marsh Poet Metaphors. 'Souly,' you say. 'It's...THY.'[paragraph break]He thanks you and begins again, direr, drier. 'Verse. I revise.'[line break]"	--	false	0
 table of camp chants	true	0	30	with-hippies rule	"Roarings Garrison chants (M)"	"[one of]Emosion (sic)[or]Mo['] noise[stopping] from the noisome Moonies: "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
-table of condo dialogue	true	0	30	talk-in-condo rule	"Condo chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
+table of bastion dialogue	true	0	30	talk-in-bastion rule	"Obtains Boastin Bastion chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
 table of psas	false	0	30	x-psa rule	"Every last Pa's PSA in Elm Train Terminal (M)"	"You watch for the next Pa's PSA[one of] (and yeah, they're kind of paternalistic and probably can't help you one bit)[or][stopping]: "	""	"DON'T PIRATE TRAIN DEPOT POINTED ART is the last one[post-brk]"
 table of nerd natter	true	0	30	in-mensa rule	"Anti-Cool Location chatter (M)"	"[one of]Wits fly swiftly. [or]Brainy brayin[']. [or][if showtabname is true]BLANK. [end if][in random order]"	""	"For a second the Anti-Cool Location ain't loco. Then, LO, ACTION.[line break]"
 table of job searcher names	false	0	100	x-namelist rule	"Names of other job applicants (intro)"	""	""	". That's the last. Boy--you can't imagine you'll ever fit in[make-cycle]"	--	--	--	5
@@ -3554,7 +3554,7 @@ blurb
 "'Yuck, one coy nuke!'"
 "'Zeal's sin. LAZINESS!'"
 
-table of condo dialogue [xxms2]
+table of bastion dialogue [xxms2]
 blurb
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their act: chattier, theatric."
@@ -4410,8 +4410,8 @@ this is the with-hippies rule:
 	if player is in Roarings Garrison, the rule succeeds;
 	the rule fails;
 
-this is the talk-in-condo rule:
-	if player is in condo and talkers are in condo, the rule succeeds;
+this is the talk-in-bastion rule:
+	if player is in bastion and talkers are in bastion, the rule succeeds;
 	the rule fails;
 
 this is the in-mensa rule:
