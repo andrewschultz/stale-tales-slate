@@ -7895,7 +7895,7 @@ instead of doing something with beatniks:
 
 chapter Bile Libe
 
-Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. The only way out is back east."
+Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. A lease easel covers every direction except back east."
 
 check going nowhere in Bile Libe: say "Only way out's back east." instead.
 
@@ -7962,17 +7962,23 @@ the words are scenery in Bile Libe.
 
 the sword is a thing.
 
+section lease easel
+
+the lease easel is scenery in Bile Libe. "It reads PROPERTY OF ELEAS & LEESA SEALE and gives lots of 'profitable' advice (largely on e-sale) starting 'SEE, AL...'[paragraph break][if motto is in bile libe]Somehow clinging to the lease easel is A MOTTO[else]You got a motto from it, and it's pretty much bare now[end if]."
+
+instead of doing something with lease easel:
+	if action is procedural, continue the action;
+	say "The lease easel is part of the Bile Libe. It[if motto is in bile libe]'s[else]was[end if] there to hold the motto and to block you from exploring...well, anywhere else."
+
 section motto-tomato
 
-A motto is a thing in Bile Libe. "A motto lies here, the only thing close to literature. On initial inspection, it doesn't seem like a very good motto, since A MOTTO in big bold letter takes up half of the plaque, but it's better than nothing."
-
-understand "plaque" as motto when player is in bile libe.
+A motto is a thing in Bile Libe. "A MOTTO (it says it is, in big bold letters) is somehow stuck to the lease easel. On initial inspection, it doesn't seem like a very good motto, but it still is."
 
 rgtext of motto is "[rcn][rc][rc][rc][gc][gc]". lgth of motto is 6. gpos of motto is 4. rpos of motto is 6. cert-text of motto is "-[d1][d1][d1][ast]T[ast]O". rect-text of motto is "T[d1][d1][d1][d1][ast]O".
 
 description of the motto is "It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.[paragraph break]I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable."
 
-after taking the motto: say "You manage take the motto without taking it to heart. Whew! That was close.".
+check taking motto: say "It seems stuck to the lease easel in its current form. Maybe if you could change it, it would fall off. As-is, it's not worth taking, both physically, or the advice therein." instead;
 
 instead of eating motto: say "I hope you're not dumb enough to swallow that. Figuratively or literally.".
 
@@ -8054,15 +8060,12 @@ to say cake-blab: say "You probably want to [if cake is in Obtains Boastin Basti
 before going nowhere in Obtains Boastin Bastion:
 	if bastion-evac is true, say "Best not hang around the scene of the crime." instead;
 
-check going north in Obtains Boastin Bastion: say "It's dark that way. You step on a pliers and turn back before hitting any more perils." instead.
-
-check going west in Obtains Boastin Bastion: say "'Private rave pit!' yells someone as they push you back out." instead.
-
-check going east in Obtains Boastin Bastion: say "Ladies with ideals grab your garb. 'Step, pest!' they cry. 'You'll startle a starlet!' Tatlers." instead.
-
-check going down in Obtains Boastin Bastion: say "An officious water informs you this area is reserved for actors and a costar named Castro." instead.
-
-check going up in Obtains Boastin Bastion: say "You hear a warden being warned of a wander, and soon you're routed to a detour back where you started." instead.
+check going in Obtains Boastin Bastion:
+	if noun is north, say "A guard pushes you away from the SIN BOAT." instead;
+	if noun is east, say "You're pushed away for not respecting Saint Bo." instead;
+	if noun is west, say "You're rudely pushed away as someone says 'SOB... ain't...'" instead;
+	if noun is up, say "You're pushed back. As you leave, someone baits on. You aren't allowed anywhere except the main area." instead;
+	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
 
 check going in Obtains Boastin Bastion:
 	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
