@@ -380,6 +380,8 @@ chapter Leis Isle
 
 understand "lies" and "lie" as a mistake ("'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made [if leis are in lalaland]have dissolved[else]dissolve[end if]. You see the isle for what it is[lei-lala].") when player is in isle and leis are in isle.
 
+understand "download" as a mistake ("[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if leis are not in isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].") when player is in isle.
+
 chapter rived drive
 
 understand "verdi" as a mistake ("You don't need a musical score for this adventure.") when player is in Rived Drive.

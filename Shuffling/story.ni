@@ -8955,6 +8955,12 @@ check taking the leis: say "[lei-lala]The leis wither as you touch them. 'I SEE 
 
 section an odd low woodland
 
+check going nowhere in isle:
+	say "[if woodland-revealed is true]No, you already saw the woodland was faked[else]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if].";
+
+to say lei-down:
+	say "[if leis are not in isle], but then, the leis were fake, too"
+
 woodland-revealed is a truth state that varies.
 
 an odd low woodland is scenery in Isle. "[if woodland-revealed is false]You stare at it for a while, and eventually the word DOWNLOAD... starts blinking. Hmm. It doesn't seem real at all[woodrev][else]It still seems computer-generated, wrong[end if]."
@@ -8964,8 +8970,7 @@ to say woodrev:
 
 instead of doing something with odd low woodland:
 	if action is procedural, continue the action;
-	if woodland-revealed is true, say "You already know it's a bit hosed. You don't need to do anything with it." instead;
-	say "It seems imposing. You're not sure you want anything to do with it." instead;
+	say "[if woodland-revealed is true]You already know it's a bit hosed. You don't need to do anything with it[else]It seems imposing. You're not sure you want anything to do with it[end if]." instead;
 
 section nonbounding scenery
 
