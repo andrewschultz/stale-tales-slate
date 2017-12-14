@@ -134,7 +134,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "storez"	609836091	--	store z	--	"[no-way]."
 "marquee"	596710416	trips strip	--	--	"You don't need to change the marquee[unless sorbet is in lalaland], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
 "stairs"	428162417	--	sortie-x	--	"No way. That's how you get to the sortie."
-"escalator"	564061533	--	metros-x	--	"No way. It's your way down to the metros."
+"scented"	563938384	--	scented descent 	--	"No way. It's your way down to the metros." [make disappear once done]
 "roadsign"	425667309	--	store f	--	"[road-sign]."
 "road"	182893287	--	store f	--	"[road-sign]."
 "sign"	242774022	--	store f	--	"[road-sign]."
