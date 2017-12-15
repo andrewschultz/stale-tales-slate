@@ -220,8 +220,6 @@ a portal is a kind of thing. a portal is usually fixed in place.
 
 a portal can be fake-enterable. a portal is usually fake-enterable.
 
-a portal can be checkedoff or available. a portal is usually available.
-
 a portal can be enter-clued. a portal is usually not enter-clued.
 
 a thing can be examined or unexamined. a thing is usually unexamined.
@@ -907,7 +905,7 @@ sol	chosen
 book section-victory
 
 to metro-victory:
-	say "You draw your sword with the improvised battle cry 'At fencing I'm magnificent!' doing your best impression of St. Abe, or is it St. Bea?[paragraph break]Whichever, the beast scratches you, which you sort of deserve, but then your sword acts as a microphone, converting the beast's remaining beats to equally horrendous lyrics and providing feedback that makes it wince. It gives an owly yowl, tone-deaf: 'Fate! Done!' and runs off.[paragraph break]People can finally think again, so they figure how to find you quickly in the abyss![paragraph break]'How? Who? Ohh wow. You merit this mitre!' someone says. But all you want is to get on with your quest. The scented descent in the Undesired Underside is rigged to go up. You note the ol['] hotel (L'Hote Helot) is now Le Hot Hotel, the terminal lean, trim. You then turn your sore to a rose, lead a pared parade and, for slower fun, plant a sunflower before returning to the Trips Strip.[paragraph break]You wonder if you could've just tried to SAY BS to get rid of the metros without trying. Maybe it'd be useful in a future alternate universe.";
+	say "You draw your sword with the improvised battle cry 'At fencing I'm magnificent!' doing your best impression of St. Abe, or is it St. Bea?[paragraph break]Whichever, the beast scratches you, which you sort of deserve, but then your sword acts as a microphone, converting the beast's remaining beats to equally horrendous lyrics and providing feedback that makes it wince. It gives an owly yowl, tone-deaf: 'Fate! Done!' and runs off.[paragraph break]People can finally think again, so they figure how to find you quickly in the abyss![paragraph break]'How? Who? Ohh wow. You merit this mitre!' someone says. But all you want is to get on with your quest. The trade tread in the Undesired Underside reveals itself again. You note the ol['] hotel (L'Hote Helot) is now Le Hot Hotel, the terminal lean, trim. You then turn your sore to a rose, lead a pared parade and, for slower fun, plant a sunflower before returning to the Trips Strip.[paragraph break]You wonder if you could've just tried to SAY BS to get rid of the metros without trying. Maybe it'd be useful in a future alternate universe.";
 	now stickyhanded is false;
 	reg-inc;
 	solve-region metros;
@@ -1179,7 +1177,7 @@ store r	"[if you-can-advance][one of]You need to get into store R. [plus][or]The
 roster	"The roster is a bit more of a clue for Store R. If you CERTIFY it, it will make things a bit clearer."
 forest-x	"Just enter."
 sortie-x	"Just enter."
-scented descent	"Just enter."
+trade tread	"Just enter."
 r-p	"Just enter."
 store a	"[no-sto]."
 store d	"[no-sto]."
@@ -1446,7 +1444,7 @@ carry out stores-hinting:
 			if store r is prefigured, all-say "You already figured what this is--a resort." instead;
 			try objhinting store r instead;
 		all-say "The way is clear[if store m is in Trips Strip or store f is in Trips Strip or store i is in Trips Strip]. You could try the remaining store, but it's not necessary[end if]." instead;
-	if forest-x is in Trips Strip or sortie-x is in Trips Strip or scented descent is in Trips Strip, say "You can just enter the [list of portals in trips strip]. If you want or need help with a particular store, HINT STORE Q." instead;
+	if forest-x is in Trips Strip or sortie-x is in Trips Strip or trade tread is in Trips Strip, say "You can just enter the [list of portals in trips strip]. If you want or need help with a particular store, HINT STORE Q." instead;
 	if store f is in Trips Strip, try objhinting store f instead;
 	if store i is in Trips Strip, try objhinting store i instead;
 	if store m is in Trips Strip, try objhinting store m instead;
@@ -2562,7 +2560,7 @@ table of lastlocs
 r	l	first-text	return-text
 Forest	forest-x	"You go to the forest."	"You return to the forest."
 Sortie	sortie-x	"You return to the [if last-loc of sortie is moor]moor[else]weird underground area[end if]."
-Metros	scented descent	"You return to the hustle, bustle, etc."
+Metros	trade tread	"You return to the hustle, bustle, etc."
 
 a region has a room called last-loc.
 
@@ -2882,8 +2880,8 @@ the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
 store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
 store i	sortie-x	"sortie"	"store i"	"The store rumbles, revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
-store m	scented descent	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see and smell a scented descent leading--well, somewhere populated."	false	550941626
-store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'I know what you're looking at!' calls some random well-wisher. 'The Means Manse! You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
+store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
+store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
 cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
 
 table of Forest anagrams
@@ -3134,7 +3132,7 @@ topic (topic)	known	blurb	short	verify
 "access"	true	"ACCESS toggles screen reader accessibility."	"access"	false
 "space/spaces"	false	"SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) ON/SON forces it on, while NO SPACE(S)/NOS forces it off."	"spaces"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
-"store/stores/malls/shop/shops/lots/mall"	false	"--[if forest-x is visible]Forest[found-status of forest][else]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][else]Store I[end if][line break]--[if scented descent is visible]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
+"store/stores/malls/shop/shops/lots/mall"	false	"--[if forest-x is visible]Forest[found-status of forest][else]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is visible]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
 "poss"	false	"POSS toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points."	"poss"
 "store 6/six/f" or "6/six/f"	false	"Store F is very leafy and woodsy."	"store f"
@@ -4622,7 +4620,7 @@ carry out recuseing:
 	if metros is unsolved:
 		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
 		now store m is in lalaland;
-		now scented descent is in lalaland;
+		now trade tread is in lalaland;
 		now metros is bypassed instead;
 	say "You don't seem to have any regions to recuse yourself from. From which to recuse yourself. And you don't get to skip [if store r is visible]store R[else]the resort[end if]." instead;
 	the rule succeeds;
@@ -4745,7 +4743,7 @@ Trips Strip is a room. "You see what was once a bunch of small malls. Most lots 
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
 	if forest-x is in Trips strip, set the locale priority of forest-x to 6;
 	if sortie-x is in Trips strip, set the locale priority of sortie-x to 7;
-	if scented descent is in Trips strip, set the locale priority of scented descent to 8;
+	if trade tread is in Trips strip, set the locale priority of trade tread to 8;
 	if cabinet is in Trips strip, set the locale priority of cabinet to 9;
 
 Trips Strip is in Stores. last-loc of Stores is Trips Strip.
@@ -4847,12 +4845,12 @@ section direction redirection
 
 check going down in trips strip:
 	if metros is solved and sortie is solved, say "You've solved both the metros and sorties." instead;
-	if scented descent is visible and sortie-x is visible:
+	if trade tread is visible and sortie-x is visible:
 		if metros is solved, try entering sortie-x instead;
-		if sortie is solved, try entering scented descent instead;
+		if sortie is solved, try entering trade tread instead;
 		say "You've opened two ways down, so you'll specifically need to ENTER SORTIE or ENTER METROS instead." instead;
-	if scented descent is not visible and sortie-x is not visible, say "You can't find any place to go down[if sortie is solved or metros is solved] that you need to any more[end if][if sortie is not solved or metros is not solved], but there's at least one to find[end if]." instead;
-	if scented descent is visible, try entering scented descent instead;
+	if trade tread is not visible and sortie-x is not visible, say "You can't find any place to go down[if sortie is solved or metros is solved] that you need to any more[end if][if sortie is not solved or metros is not solved], but there's at least one to find[end if]." instead;
+	if trade tread is visible, try entering trade tread instead;
 	if sortie-x is visible, try entering sortie-x instead;
 	say "Unfortunately, there are no cool hidden passages beneath the stores. That you can see. Yet." instead;
 
@@ -5300,7 +5298,7 @@ to say sortie-have:
 	if sortie is solved:
 		say ". But you already did. It's not worth revisiting.";
 	else:
-		say ". Though you probably want to ENTER it to exit the strips[if scented descent is not visible]. Or go DOWN[end if].[no line break]"
+		say ". Though you probably want to ENTER it to exit the strips[if trade tread is not visible]. Or go DOWN[end if].[no line break]"
 
 check entering sortie-x:
 	if sortie is unsolved:
@@ -5312,18 +5310,18 @@ check entering sortie-x:
 
 section metros portal
 
-the scented descent is a portal. "A scented descent leads down here[if metros is solved], but it's not worth revisiting the metros[end if]."
+the trade tread is a portal. "A trade tread leads down here[if metros is solved], but it's not worth revisiting the metros[end if]."
 
-description of scented descent is "You can't see where it ends."
+description of trade tread is "You can't see where it ends."
 
-check climbing scented descent: try entering scented descent instead.
+check climbing trade tread: try entering trade tread instead.
 
 to check-2-of-3:
 	if button-locked is true:
 		if number of solved regions is 3:
 			say "You think you hear oohing and aahing in the background at the adventurer who has decided to do more than the bare minimum.[paragraph break][i][bracket]Fourth wall note: you can UNDO and recuse if you want to.[close bracket][r][line break]"
 
-check entering scented descent:
+check entering trade tread:
 	if metros is not unsolved, say "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you." instead;
 	check-2-of-3;
 	say "The elevator's descent is rapidly scented worse. After you pass [one of]a[or]that[stopping] 'Tasers? You bet! Asters? Out, bye!' billboard, an automated voice announces that Mt. Rose has made its freedom more def, so ordinary citizens are motivated to level up and money farm just like Red Bull Burdell, and a funky thumping beat helps them to action.[paragraph break]You jog down the elevator to escape it, but of course it's coming from the city[if drainage is in underside]. And you step into some drainage at the bottom. Eww[end if][if underside is visited]. Which you should've remembered from last time[end if].[wfak]";
@@ -7534,7 +7532,7 @@ book metros
 
 chapter Undesired Underside
 
-Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You see the down escalator you came by. Tilting titling advertises the Ol' Hotel to the west."
+Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises the Ol' Hotel to the west."
 
 the tilting titling is scenery in Undesired Underside. description is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if hotel is visited], where you've already been[end if]."
 
@@ -7547,12 +7545,6 @@ check going inside in Undesired Underside: say "That's ambiguous with the hotel 
 check going outside in undesired underside: say "You already are in the not-so-great outdoors." instead.
 
 the building is scenery in underside. understand "hotel" as building. description of building is "[if drainage is in underside]It says L'HOTE HELOT[else][first custom style]AND I RAGE[r] is written in red.[end if]"
-
-the down escalator is scenery in underside.
-
-description of down escalator is "It's the down escalator you came here by. You can't see the end of it, way above."
-
-instead of climbing down escalator: try going up instead.
 
 the drainage is in Undesired Underside. It is fixed in place. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. You see [letter-or-flier] in it. Cleaning it up would help take this city back."
 
@@ -8729,11 +8721,7 @@ the fuzzy looking wall is scenery in Elm Train Terminal. "The wall looks and fee
 
 the fuzzy looking wall is a supporter.
 
-instead of climbing the down escalator: try going up instead.
-
 check going up in Elm Train Terminal: try climbing the fuzzy looking wall instead.
-
-check going up in underside: say "Everything starts okay, but just as you get a glimpse of the top, the escalator starts speeding down more quickly. You try jumping a step, but it doesn't matter. Eventually, you're thrown to the bottom of the escalator, a bit more tired than before. Well, it was fun [']til it got impossible." instead.
 
 power-shut is a truth state that varies. power-shut is usually false.
 
@@ -9818,7 +9806,7 @@ table of warpcmds
 warp-cmd (indexed text)	mystore	myport	myreg	warp-result
 "logoi"	store f	forest-x	forest	"You convince the powers that be that you remember all the words from Store F and the forest."
 "sooth"	store i	sortie-x	sortie	"You convince the powers that be that, in sooth, you really did run through Store I and the sortie earlier."
-"say bs"	store m	scented descent	metros	"You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense."
+"say bs"	store m	trade tread	metros	"You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense."
 
 definition: a thing (called x) is takeable:
 	if x is not visible, decide no;
@@ -11281,12 +11269,9 @@ to solve-region (sre - a region):
 	consider the notify score changes rule;
 	say "[line break][sre] node: done! A bump-up, bam![wfak]";
 	now sre is solved;
-	if sre is forest:
-		now forest-x is checkedoff;
-	if sre is sortie:
-		now sortie-x is checkedoff;
-	if sre is metros:
-		now scented descent is checkedoff;
+	if sre is forest, now forest-x is in lalaland;
+	if sre is sortie, now sortie-x is in lalaland;
+	if sre is metros, now trade tread is in lalaland;
 	item-warp;
 	move player to trips strip;
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
@@ -11345,7 +11330,7 @@ before going down:
 	if player is in busiest subsite or player is in Obtains Boastin Bastion, continue the action;
 	if player is on fuzzy looking wall, try getting off the fuzzy looking wall instead;
 	if player is in trips strip:
-		if sortie-x is visible or scented descent is visible, continue the action;
+		if sortie-x is visible or trade tread is visible, continue the action;
 		say "You can't see any [if sortie is solved or metros is solved]other [end if]way down[if sortie is not solved or metros is not solved][else] any more[end if]." instead;
 	say "You see no clear way down. Usually there'll be stairs, if you need to." instead;
 
@@ -12555,8 +12540,8 @@ carry out sking:
 				now sortie-x is in lalaland;
 		if my-reg is metros:
 			now store m is in trips strip;
-			if scented descent is in trips strip:
-				now scented descent is in lalaland;
+			if trade tread is in trips strip:
+				now trade tread is in lalaland;
 	else:
 		now my-reg is solved;
 		if my-reg is forest:
@@ -12567,7 +12552,7 @@ carry out sking:
 			now sortie-x is in lalaland;
 		if my-reg is metros:
 			now store m is in lalaland;
-			now scented descent is in lalaland;
+			now trade tread is in lalaland;
 	say "Now [my-reg] is [if A is true]not [end if]solved.";
 	the rule succeeds;
 
