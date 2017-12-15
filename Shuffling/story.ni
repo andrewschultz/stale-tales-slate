@@ -1175,7 +1175,7 @@ store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for S
 subway map	"The subway map gives a hint as to what Store M can be."
 store r	"[if you-can-advance][one of]You need to get into store R. [plus][or]The roster provides a hint. Where's a place you can rest? [plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word. [plus][or]You want to go to a RESORT. [minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r][end if]."
 roster	"The roster is a bit more of a clue for Store R. If you CERTIFY it, it will make things a bit clearer."
-forest-x	"Just enter."
+scented descent	"Just enter."
 sortie-x	"Just enter."
 trade tread	"Just enter."
 r-p	"Just enter."
@@ -1444,7 +1444,7 @@ carry out stores-hinting:
 			if store r is prefigured, all-say "You already figured what this is--a resort." instead;
 			try objhinting store r instead;
 		all-say "The way is clear[if store m is in Trips Strip or store f is in Trips Strip or store i is in Trips Strip]. You could try the remaining store, but it's not necessary[end if]." instead;
-	if forest-x is in Trips Strip or sortie-x is in Trips Strip or trade tread is in Trips Strip, say "You can just enter the [list of portals in trips strip]. If you want or need help with a particular store, HINT STORE Q." instead;
+	if scented descent is in Trips Strip or sortie-x is in Trips Strip or trade tread is in Trips Strip, say "You can just enter the [list of portals in trips strip]. If you want or need help with a particular store, HINT STORE Q." instead;
 	if store f is in Trips Strip, try objhinting store f instead;
 	if store i is in Trips Strip, try objhinting store i instead;
 	if store m is in Trips Strip, try objhinting store m instead;
@@ -2558,7 +2558,7 @@ a thing can be warpable. a thing is usually not warpable.
 
 table of lastlocs
 r	l	first-text	return-text
-Forest	forest-x	"You go to the forest."	"You return to the forest."
+Forest	scented descent	"You go to the forest."	"You return to the forest."
 Sortie	sortie-x	"You return to the [if last-loc of sortie is moor]moor[else]weird underground area[end if]."
 Metros	trade tread	"You return to the hustle, bustle, etc."
 
@@ -2878,7 +2878,7 @@ attics	static	"static"	--	"You undo your artistic work for perhaps more practica
 table of Stores anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
-store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
+store f	scented descent	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
 store i	sortie-x	"sortie"	"store i"	"The store rumbles, revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
@@ -3132,7 +3132,7 @@ topic (topic)	known	blurb	short	verify
 "access"	true	"ACCESS toggles screen reader accessibility."	"access"	false
 "space/spaces"	false	"SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) ON/SON forces it on, while NO SPACE(S)/NOS forces it off."	"spaces"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
-"store/stores/malls/shop/shops/lots/mall"	false	"--[if forest-x is visible]Forest[found-status of forest][else]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is visible]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
+"store/stores/malls/shop/shops/lots/mall"	false	"--[if scented descent is visible]Forest[found-status of forest][else]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is visible]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
 "poss"	false	"POSS toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points."	"poss"
 "store 6/six/f" or "6/six/f"	false	"Store F is very leafy and woodsy."	"store f"
@@ -4610,7 +4610,7 @@ carry out recuseing:
 	if forest is unsolved:
 		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store F[else]the forest you didn't get through[end if]. As if in a blur, you see werewolves in ice being shot, and you hear distant applause.";
 		now store f is in lalaland;
-		now forest-x is in lalaland;
+		now scented descent is in lalaland;
 		now forest is bypassed instead;
 	if sortie is unsolved:
 		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
@@ -4741,7 +4741,7 @@ chapter Trips Strip
 Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks your way out."
 
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
-	if forest-x is in Trips strip, set the locale priority of forest-x to 6;
+	if scented descent is in Trips strip, set the locale priority of scented descent to 6;
 	if sortie-x is in Trips strip, set the locale priority of sortie-x to 7;
 	if trade tread is in Trips strip, set the locale priority of trade tread to 8;
 	if cabinet is in Trips strip, set the locale priority of cabinet to 9;
@@ -5242,7 +5242,7 @@ description of td is "There's a message on it. You have to move around to see al
 
 instead of opening td: say "You can't get in the store[if cur-score of stores is 0]. It might be easier to try your luck/skill in Store F first.[else]. How did you find a passage through [other-store], again?[end if]".
 
-to say other-store: say "[if forest-x is visible]Store F[else]that other store[end if]".
+to say other-store: say "[if scented descent is visible]Store F[else]that other store[end if]".
 
 section general portal checks
 
@@ -5260,19 +5260,19 @@ Rule for supplying a missing noun while entering (this is the other stuff to ent
 
 section forest portal
 
-does the player mean entering the forest-x: it is likely. [forest is first in alphabet and easiest]
+does the player mean entering the scented descent: it is likely. [forest is first in alphabet and easiest]
 
-the forest-x is a proper-named privately-named thing. it is fixed in place. the printed name of forest-x is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". forest-x is a portal. forest-x is fixed in place.
+the scented descent is a proper-named privately-named thing. it is fixed in place. the printed name of scented descent is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". scented descent is a portal. scented descent is fixed in place.
 
-understand "forest" as forest-x.
+understand "forest" as scented descent.
 
-description of forest-x is "[if forest is solved]It's real verdant, yeah. I could tell you about what's inside, but you've been through it[else]It's bigger on the inside than the outside, you're sure, or something like that[end if]."
+description of scented descent is "[if forest is solved]It's real verdant, yeah. I could tell you about what's inside, but you've been through it[else]It's bigger on the inside than the outside, you're sure, or something like that[end if]."
 
 button-locked is a truth state that varies.
 
 secure-warn is a truth state that varies.
 
-check entering the forest-x:
+check entering the scented descent:
 	if Forest is solved, say "You already solved the forest. Maybe you should look elsewhere?" instead;
 	check-2-of-3;
 	if last-loc of forest is rf and rf is unvisited:
@@ -5310,9 +5310,7 @@ check entering sortie-x:
 
 section metros portal
 
-the trade tread is a portal. "A trade tread leads down here[if metros is solved], but it's not worth revisiting the metros[end if]."
-
-description of trade tread is "You can't see where it ends."
+the trade tread is a portal. "A trade tread leads off [if underside is visited]back to the underside[else]somewhere[end if]." description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
 
 check climbing trade tread: try entering trade tread instead.
 
@@ -9804,7 +9802,7 @@ tell-flag is a truth state that varies.
 
 table of warpcmds
 warp-cmd (indexed text)	mystore	myport	myreg	warp-result
-"logoi"	store f	forest-x	forest	"You convince the powers that be that you remember all the words from Store F and the forest."
+"logoi"	store f	scented descent	forest	"You convince the powers that be that you remember all the words from Store F and the forest."
 "sooth"	store i	sortie-x	sortie	"You convince the powers that be that, in sooth, you really did run through Store I and the sortie earlier."
 "say bs"	store m	trade tread	metros	"You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense."
 
@@ -11269,7 +11267,7 @@ to solve-region (sre - a region):
 	consider the notify score changes rule;
 	say "[line break][sre] node: done! A bump-up, bam![wfak]";
 	now sre is solved;
-	if sre is forest, now forest-x is in lalaland;
+	if sre is forest, now scented descent is in lalaland;
 	if sre is sortie, now sortie-x is in lalaland;
 	if sre is metros, now trade tread is in lalaland;
 	item-warp;
@@ -12532,8 +12530,8 @@ carry out sking:
 		now my-reg is unsolved;
 		if my-reg is forest:
 			now store f is in trips strip;
-			if forest-x is in trips strip:
-				now forest-x is in lalaland;
+			if scented descent is in trips strip:
+				now scented descent is in lalaland;
 		if my-reg is sortie:
 			now store i is in trips strip;
 			if sortie-x is in trips strip:
@@ -12546,7 +12544,7 @@ carry out sking:
 		now my-reg is solved;
 		if my-reg is forest:
 			now store f is in lalaland;
-			now forest-x is in lalaland;
+			now scented descent is in lalaland;
 		if my-reg is sortie:
 			now store i is in lalaland;
 			now sortie-x is in lalaland;
@@ -13005,9 +13003,6 @@ to unsolve-sortie:
 
 to unsolve-forest:
 	now last-loc of forest is sf;
-	now odor is in forest-x;
-	now bulge is part of desert-door;
-	now bugle is off-stage;
 	now nose is off-stage;
 	now beard is off-stage;
 	now shades are off-stage;
@@ -13025,6 +13020,12 @@ to unsolve-forest:
 	now sliver is off-stage;
 	now forest is unsolved;
 	now cur-score of forest is 0;
+
+to unsolve-intro:
+	now odor is off-stage;
+	now bulge is part of desert-door;
+	now bugle is off-stage;
+	now cur-score of intro is 0;
 
 chapter uaing
 
