@@ -133,8 +133,11 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "storey"	609225725	--	store y	--	"[no-mb]."
 "storez"	609836091	--	store z	--	"[no-way]."
 "marquee"	596710416	trips strip	--	--	"You don't need to change the marquee[unless sorbet is in lalaland], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
-"stairs"	428162417	--	sortie-x	--	"No way. That's how you get to the sortie."
-"scented"	563938384	--	scented descent 	--	"No way. It's your way down to the metros." [make disappear once done]
+"depot"	407763752	--	posted depots	--	"You can't do anything to the depots besides ENTER them."
+"depots"	504037718	--	posted depots	--	"You can't do anything to the depots besides ENTER them."
+"scented"	563938384	--	scented descent 	--	"No way. It's your way down to the forest."
+"trade"	339456837	--	trade tread	--	"No, you can just FOLLOW or ENTER the trade tread."
+"trades"	435730803	--	trade tread	--	"No, you can just FOLLOW or ENTER the trade tread."
 "roadsign"	425667309	--	store f	--	"[road-sign]."
 "road"	182893287	--	store f	--	"[road-sign]."
 "sign"	242774022	--	store f	--	"[road-sign]."

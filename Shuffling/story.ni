@@ -254,7 +254,7 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 400.
 
-use MAX_VERBSPACE of 4500.
+use MAX_VERBSPACE of 4600.
 
 use MAX_SYMBOLS of 33000.
 
@@ -264,7 +264,7 @@ section compiler adjust constant section - not for release
 
 use MAX_VERBS of 440.
 
-use MAX_VERBSPACE of 4700.
+use MAX_VERBSPACE of 4800.
 
 section about the player
 
@@ -4855,9 +4855,11 @@ check going down in trips strip:
 	say "Unfortunately, there are no cool hidden passages beneath the stores. That you can see. Yet." instead;
 
 check going inside in trips strip:
-	if number of visible available portals is 1, try entering a random visible available portal instead;
-	if number of visible available portals is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
-	say "That's ambiguous--you can currently enter [the list of visible available portals] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
+	if number of portals in location of player is 1:
+		let Q be a random portal in location of player;
+		try entering Q instead;
+	if number of portals in location of player is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
+	say "That's ambiguous--you can currently enter [the list of portals in location of player] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
 
 cool-index is a number that varies.
 
@@ -5251,10 +5253,10 @@ Rule for supplying a missing noun while entering (this is the other stuff to ent
 		now the noun is the passage;
 		continue the activity;
 	if location is trips strip:
-		let Q be number of visible available portals;
-		if Q > 1, say "That's ambiguous--you can currently enter [the list of visible available portals] to explore areas you haven't solved yet." instead;
+		let Q be number of portals in location of player;
+		if Q > 1, say "That's ambiguous--you can currently enter [the list of portals in location of player] to explore areas you haven't solved yet." instead;
 		if Q is 0, say "You don't have anywhere to enter." instead;
-		now the noun is a random visible available portal;
+		now the noun is a random portal in location of player;
 		continue the activity;
 	continue the activity.
 
@@ -5308,7 +5310,7 @@ check entering posted depots:
 
 section metros portal
 
-the trade tread is a portal. "A trade tread leads off [if underside is visited]back to the underside[else]somewhere[end if]." description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
+the trade tread is a portal. "A trade tread leads off [if underside is visited]back to the underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
 
 check climbing trade tread: try entering trade tread instead.
 
@@ -7600,6 +7602,14 @@ instead of doing something with the arena dig flier:
 a gardenia is a flower.
 
 description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if Fo Real Florae are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
+
+section a reading
+
+a-reading is a privately named thing. printed name of a-reading is "a reading". "[one of]A reading has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage[stopping].". description is "It says A READING in bold red, with AID ANGER below it. The rest seems like nonsense."
+
+instead of doing something with a-reading:
+	if action is procedural, continue the action;
+	say "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc."
 
 section cramped red camp
 

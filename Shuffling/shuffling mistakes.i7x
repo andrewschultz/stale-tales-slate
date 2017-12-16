@@ -105,19 +105,23 @@ understand "destro" as a mistake ("It's going to get evil enough even without a 
 
 understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Trips Strip.
 
-understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in Flesh Shelf.
+understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.") when player is in Trips Strip and trade tread is in Trips Strip.
+
+understand "dater" as a mistake ("This is not a romance game.") when player is in Trips Strip and trade tread is in Trips Strip.
+
+understand "despot" as a mistake ("[one of]Summoning Red Bull Burdell would be unwise. Best not try it again.[or]Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak]So [']dept.[stopping]") when player is in Trips Strip and posted depots are in Trips Strip.
 
 book store f
 
-understand "fire [something] at [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want.") when player has shotgun
+understand "fire [something] at [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want.") when player has shotgun.
 
-understand "shoot [something] with [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.") when player has shotgun
+understand "shoot [something] with [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.") when player has shotgun.
 
 chapter random forests
 
-understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is visible.
+understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is in location of player.
 
-understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is visible.
+understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is in location of player.
 
 chapter self-id fields
 
@@ -132,6 +136,8 @@ understand "lien" as a mistake ("If they owe something, that's their business. I
 understand "scorse" as a mistake ("You can't trade with the dead.") when player is in self-id fields.
 
 chapter Flesh Shelf
+
+understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in Flesh Shelf.
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in Flesh Shelf.
 
@@ -308,6 +314,8 @@ understand "senors" as a mistake ("The senors you [want-wanted] are behind the d
 
 [def=nerd door w]
 understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
+
+understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a-reading is in underside.
 
 chapter Roarings Garrison
 
