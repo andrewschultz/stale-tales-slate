@@ -825,7 +825,7 @@ chapter gates stage
 
 understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest Home Videos right now.") when player is in gates stage.
 
-understand "poring" as a mistake ("You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the arena to the north.") when player is in gates stage.
+understand "poring" as a mistake ("You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.") when player is in gates stage.
 
 chapter clangier clearing
 

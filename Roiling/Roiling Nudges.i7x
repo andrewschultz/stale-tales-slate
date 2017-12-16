@@ -1043,10 +1043,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gates"	361977613	gates stage	--	--	"[no-gate]." [GATES STAGE START]
 "gate"	265703647	gates stage	--	--	"[no-gate]."
 "halt"	196393974	gates stage	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
-"arena"	286413056	gates stage	--	--	"[stad-chg]."
-"nera"	284225238	gates stage	--	--	"[stad-chg]."
-"stadium"	436774697	gates stage	--	--	"[stad-chg]."
-"admit"	235394924	gates stage	--	--	"[stad-chg]."
+"arena"	286413056	gates stage	--	--	"[val-chg]."
+"nera"	284225238	gates stage	--	--	"[val-chg]."
+"valence"	506691788	Gates Stage	--	--	"[val-chg]."
 "roping"	387642395	Gates Stage	--	--	"You don't need to grapple with the roping, and you don't need the roping to grapple with you."
 "other"	427874806	--	--	degen-true rule	"[not-the-reg]."
 "storeh"	524148772	--	--	degen-true rule	"[not-the-reg]." [end-h]
@@ -1996,11 +1995,8 @@ to say border-arbor:
 to say no-gate:
 	say "The gate needs to be unlocked some other way"
 
-to say stad-chg:
-	if near arena is not examined:
-		now near arena is examined;
-		say "As you concentrate, you realize it's not just any arena, but the Admit-Us Stadium! ";
-	say "Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead";
+to say val-chg:
+	say "The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too"
 
 to say dome-rm:
 	say "You don't need to flip anything here, really. Certainly not a room"

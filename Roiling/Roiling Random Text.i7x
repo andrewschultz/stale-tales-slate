@@ -34735,7 +34735,6 @@ blurb
 "Done a Fib, Bona Fide"
 "Doodles, Old Odes"
 "Double, Ole Bud" []
-"Dourest Detours, Rousted" []
 "Down, Burden, Rundown Bed"
 "Dreadfully Dull, Frayed"
 "Drier, Direr"

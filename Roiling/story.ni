@@ -4740,7 +4740,7 @@ carry out requesting the score:
 			if mrlp is means manse:
 				say ". You should go IN to the Strip of Profits, now";
 			else if mrlp is others:
-				say ". You can go NORTH to Admit-Us Stadium";
+				say ". You can go NORTH to the Valence Enclave";
 			else if mrlp is stores:
 				say ". You have access to all the sub-areas";
 			else:
@@ -4777,7 +4777,7 @@ to say lomax of (re - a region):
 
 to check-guru:
 	if did-guru is false and cur-score of others is 41:
-		say "[line break]Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Stadium [if player is not in gates stage]north of the Gates Stage[else]to the north[end if] without using GURU."
+		say "[line break]Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Valence Enclave [if player is not in gates stage]north of the Gates Stage[else]to the north[end if] without using GURU."
 
 possibles is a truth state that varies. min-alert is a truth state that varies.
 
@@ -11308,7 +11308,7 @@ agnostic	"[ag-first]"
 Merle	"Elmer and Merle" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
 an-a	"the A you can maybe grab somehow"
-perp-priv	"the words 'PERP' forming outside the Admit-Us Stadium"
+perp-priv	"the words 'PERP' forming outside the Valence Enclave"
 coins	"Curtis's coins"
 icons	"the icons you made"
 
@@ -24165,7 +24165,7 @@ the apples are plural-named fruit.
 
 book gates stage
 
-Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The swell wells are back south, and important-looking gates, [if halt lath is in gates stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. Behind them you see [if arena is examined]the Admit-Us Stadium[else]a near arena[end if].". Gates Stage is in Others.
+Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The swell wells are back south, and important-looking gates, [if halt lath is in gates stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. [one of]What could be behind them? A near arena? You take a step back. Yes...it looks like you have found a secret rear entrance to the Valence Enclave, where great political debates and pronouncements are always held![else]The Valence Enclave lies ahead[end if].". Gates Stage is in Others.
 
 after looking in gates stage (this is the retract halt lath rule):
 	if halt lath is in gates stage and player has popstar's passport:
@@ -24176,15 +24176,16 @@ after looking in gates stage (this is the retract halt lath rule):
 check going inside in gates stage:
 	try going north instead;
 
-section a near arena
+section valence enclave
 
-A near arena is scenery in Gates Stage. "[one of]It looks familiar--wait--it's Yorpwald's famous, enormous Admit-Us Stadium! What's more, you hear a hubbub that means some event must be going on[or]The Admit-Us Stadium stands behind the gate, a hubbub still indicating that something important must be going on[stopping]."
+the Valence Enclave is scenery in Gates Stage. "Almost as big as Yorpwald's famous, enormous Admit-Us Stadium, it's reserved for very special events indeed! Whatever could be inside?"
 
-understand "stadium/admit" and "admit us" as arena when arena is examined.
+understand "near arena" and "near/arena" as valence enclave.
 
-instead of doing something with a near arena:
+instead of doing something with valence enclave:
 	if action is procedural, continue the action;
-	say "You can't do much but look at the arena."
+	if current action is entering, try going north instead;
+	say "You can't do much but look at the Valence Enclave. Or try to enter it."
 
 section gs = gates
 
@@ -24257,10 +24258,10 @@ check going north in Gates Stage:
 		now perp-check is true;
 		now perp-priv is part of the passport;
 	if gate-level is 0:
-		say "You try to sneak through--you're backstage at the Admit-Us Stadium! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
+		say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
-		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
-	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.";
+		say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
+	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.";
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
 		min-and;
@@ -24451,18 +24452,15 @@ to decide which number is gate-level:
 		increment A;
 	decide on A.
 
-to say n-gates:
-	say "[if arena is examined]in the Admit-Us Stadium[else]to the north[end if]"
-
 check fliptoing when gate-level is 2:
 	if noun is part of the passport:
 		say "No need to over-study or over-think. Through the gates!" instead;
 
 to upgrade-passport:
 	if gate-level is 2:
-		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies [n-gates], now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
+		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 	else if gate-level is 1:
-		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to tackle what lies [n-gates], now. Even if you didn't get anywhere, the failure might teach you something.";
+		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
 	continue the action;
 
 chapter reviewing
@@ -24471,10 +24469,6 @@ after fliptoing when player has passport (this is the part-of-passport rule):
 	if noun is searcher or noun is viewer or noun is perp-priv:
 		upgrade-passport;
 	continue the action.
-
-book Admit-Us Stadium
-
-Admit-Us Stadium is north of gates stage. Admit-Us Stadium is privately-named. "You've reached the Admit-Us Stadium, but you shouldn't be seeing this text, because it is not part of the game."
 
 book Clangier Clearing
 
@@ -26629,8 +26623,8 @@ Dr Lola	"[ollard-hint]"
 tekno-token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
 lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are in lalaland]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
 halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has so-great storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
-passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Admit-Us Stadium safely. The viewer and searcher can help, as can the message if you go north and fail."
-a near arena	"You can't change the [if near arena is examined]arena[else]Admit-Us Stadium[end if], but you can enter it  via the gates."
+passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Valence Enclave safely. The viewer and searcher can help, as can the message if you go north and fail."
+Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
 gropin' roping	"It's just there to establish you can't walk any which way."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"	[end others hinting]
@@ -27632,7 +27626,7 @@ index map with mislit limits mapped north of rawest waters.
 
 index map with filed field mapped south of cripple clipper.
 index map with scape space mapped north of clangier clearing.
-index map with stadium mapped north of scape space.
+[index map with stadium mapped north of scape space.]
 
 [start oyster]
 
@@ -28267,9 +28261,9 @@ carry out coffing:
 		else:
 			append "Test passed for [last-solved-region].[line break]" to the file of debuggery;
 	else if number understood is 2:
-		if cur-score of  mrlp is max-score of mrlp:
+		if cur-score of mrlp is max-score of mrlp:
 			append "Test passed for [mrlp]: maximum score achieved![line break]" to the file of debuggery;
-		else if cur-score of  mrlp < max-score of mrlp:
+		else if cur-score of mrlp < max-score of mrlp:
 			append "Test failed for [mrlp]: only got [cur-score of mrlp] of [max-score of mrlp] points![line break]" to the file of debuggery;
 		else:
 			append "Test failed for [mrlp]: somehow got a whopping [cur-score of mrlp] of [max-score of mrlp] ponts![line break]" to the file of debuggery;
