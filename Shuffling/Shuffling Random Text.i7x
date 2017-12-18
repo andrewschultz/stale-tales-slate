@@ -1428,7 +1428,6 @@ blurb
 "Droppin['] RIP Pond"
 "Dry-Ravage Graveyard"
 "Eco-Slops Cesspool"
-"Ego Fail Foliage"
 "Elf-Ghoul Gulf-Hole"
 "Emptiness-Stem Pines"
 "Envy-Fear Navy Reef"

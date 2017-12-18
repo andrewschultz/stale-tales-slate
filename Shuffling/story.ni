@@ -252,7 +252,7 @@ use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 400.
+use MAX_VERBS of 410.
 
 use MAX_VERBSPACE of 4600.
 
@@ -262,7 +262,7 @@ use MAX_PROP_TABLE_SIZE of 240000.
 
 section compiler adjust constant section - not for release
 
-use MAX_VERBS of 440.
+use MAX_VERBS of 450.
 
 use MAX_VERBSPACE of 4800.
 
@@ -5478,7 +5478,7 @@ beard-unmade is a truth state that varies. beard-unmade is usually false.
 
 section selves vessel
 
-The selves vessel is bounding scenery in Self-ID Fields.
+The selves vessel is bounding scenery in Self-ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south."
 
 instead of doing something with selves vessel:
 	if action is procedural, continue the action;
@@ -7520,7 +7520,7 @@ does the player mean taping the spout: it is very likely.
 
 chapter mud
 
-the mum dud mud is a backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen.
+the mum dud mud is a backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen. description is "Well, it's mud, and not very exciting mud at that."
 
 instead of doing something with mum dud mud:
 	if action is procedural, continue the action;
@@ -7605,7 +7605,7 @@ description of gardenia is "It's white, and it's just one flower instead of the 
 
 section a reading
 
-a-reading is a privately named thing. printed name of a-reading is "a reading". "[one of]A reading has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage[stopping].". description is "It says A READING in bold red, with AID ANGER below it. The rest seems like nonsense."
+a-reading is a privately-named thing. printed name of a-reading is "a reading". "[one of]A reading has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage[stopping].". description is "It says A READING in bold red, with AID ANGER below it. The rest seems like nonsense."
 
 instead of doing something with a-reading:
 	if action is procedural, continue the action;
@@ -8850,7 +8850,7 @@ check going nowhere in Bassy Abyss: say "You try to flee, but you feel a sharp h
 
 section aligns signal
 
-the aligns signal is bounding scenery in Bassy Abyss.
+the aligns signal is bounding scenery in Bassy Abyss. "You can't see the aligns signal, but you'll probably feel it if you try to cross it. Maybe if you vanquish the [b-b], it'll vanish."
 
 instead of doing something with aligns signal:
 	if action is procedural, continue the action;
@@ -8905,11 +8905,13 @@ book resort
 
 chapter Astral Altars
 
-Astral Altars is a room in Resort. "Well, maybe you won't find your vacation spot right away. It's not an ugly place, but it's not especially fun. Perhaps if it were covered, it would be a shiner shrine.[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
+Astral Altars is a room in Resort. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if shiner shrine is in astral altars]. You've discovered a shiner shrine restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
-check going nowhere in astral altars: say "As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'LEAVE NOT THE SHINER SHRINE ON FOOT!'" instead.
+check going nowhere in astral altars:
+	now shiner shrine is in astral altars;
+	say "[one of]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE SHINER SHRINE![or]No, the shiner shrine is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]" instead;
 
 tiles are plural-named flippable scenery in Astral Altars. "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
@@ -8922,6 +8924,14 @@ gpos of stile is 3. rpos of stile is 2. lgth of stile is 5. the rgtext of stile 
 instead of doing something with scenery in Altars:
 	if action is procedural, continue the action;
 	say "You probably need to do something with, or to, the stile and tiles."
+
+section shiner shrine
+
+The shiner shrine is bounding scenery. "It's all around the astral altars, but it's not where you want to be."
+
+instead of doing something with shiner shrine:
+	if action is procedural, continue the action;
+	say "The shiner shrine is just there, and it's not what or where you ultimately want to be. You'll want to try your luck with what's on the altars."
 
 chapter Isle
 
@@ -13344,7 +13354,7 @@ carry out hintalling:
 	repeat with VTH running through all things:
 		now should-hint is true;
 		now times-in-table is 0;
-		if VTH is useless or VTH is amusing or VTH is abstract:
+		if VTH is useless or VTH is amusing or VTH is abstract or VTH is bounding:
 			now should-hint is false;
 		repeat through table of hintobjs:
 			if hint-entry entry is VTH, increment times-in-table;

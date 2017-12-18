@@ -351,7 +351,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "door"	255058046	underside	--	--	"It can't be that easy to change. Maybe some random door in the wilderness."
 "optical"	378928642	underside	--	--	"Changing the beam is way out of your league."
 "beam"	212487985	underside	--	--	"Changing the beam is way out of your league."
-"escalatro"	564061533	underside	--	--	"No way. It's your way up from the metros. Once you fix things."
 "building"	389860542	underside	--	--	"[no-hot]."
 "special"	425546122	underside	--	--	"[if anti-cool is visited]You don't need to perform any tricks, now you've gotten to the Anti-Cool Location[else]That's not the way to get to the special place. You need special ID[end if]."
 "theol"	396364842	underside	--	--	"[no-hot]."
@@ -480,6 +479,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "resort"	572190276	--	--	degen-true rule	"[reg-rej]."
 "astral"	342897262	Astral Altars	--	--	"[loc-rej]." [start astral altars]
 "altar"	246623296	Astral Altars	--	--	"[loc-rej]."
+"shiner"	460586531	--	shiner shrine	--	"You don't need to change the shrine around the altars. Maybe what's on the altars, instead."
 "tile"	329722812	Astral Altars	--	--	"No, all the tiles."
 "leis"	322886760	Isle	--	--	"[loc-rej]." [start leis isle]
 "lie"	226612794	Isle	--	--	"[loc-rej]."
