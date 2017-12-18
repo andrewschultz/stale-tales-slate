@@ -22380,7 +22380,7 @@ carry out playing:
 				say "OK." instead;
 			say "As you blow the whistle, you feel a deep vibration on the ground. You hear a cacophony of animal noises in the distance. '[randbla]!' Elvira's voice still lilts as she calls for slayer layers relays. 'Gash, hags! Groupies, uprise! Go!'[paragraph break]'Ahh, get the hag!' you yell. The battle is on!";
 			say "[lee-or-eels][wfak]";
-			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock find valence in this enclave: [twiddle of table of animal friends and 5]. Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
+			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock construe trounces and rifest strife: [twiddle of table of animal friends and 5]. Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
 			now otters is solved;
 			now last-solved-region is otters;
 			first-status;
@@ -24165,7 +24165,7 @@ the apples are plural-named fruit.
 
 book gates stage
 
-Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The swell wells are back south, and important-looking gates, [if halt lath is in gates stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. [one of]What could be behind them? A near arena? You take a step back. Yes...it looks like you have found a secret rear entrance to the Valence Enclave, where great political debates and pronouncements are always held![else]The Valence Enclave lies ahead[end if].". Gates Stage is in Others.
+Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The swell wells are back south, and important-looking gates, [if halt lath is in gates stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. [one of]What could be behind them? A near arena? You take a step back. Yes...it looks like you have found a secret rear entrance to the Valence Enclave, where great political debates and pronouncements are always held![or]The Valence Enclave lies ahead[stopping].". Gates Stage is in Others.
 
 after looking in gates stage (this is the retract halt lath rule):
 	if halt lath is in gates stage and player has popstar's passport:
@@ -24286,6 +24286,7 @@ check going north in Gates Stage:
 	now final response activity entry is showing regional lists;
 	choose the row with final response activity of ddming in the table of final question options;
 	now final response activity entry is demo dome moding;
+	now left hand status line is "VALENCE ENCLAVE";
 	end the story finally saying "A Giddy Route: You Did Great" instead;
 
 every turn when player is in gates stage and perp-check is true and perp-priv is not reflexed (this is the perp-clue rule):
@@ -24986,8 +24987,12 @@ carry out demoing:
 	now demo-dome is true;
 	move player to peek keep;
 	now red writing is examined; [this is a silly hack to make sure sparse spares is tracked ok]
-	now right hand status line is "Poking Around";
+	demo-dome-status;
 	the rule succeeds;
+
+to demo-dome-status:
+	now left hand status line is "[location of player]";
+	now right hand status line is "Wander, Warden!";
 
 chapter Peek Keep
 
@@ -27128,6 +27133,7 @@ rule for demo dome moding:
 	say "You stumble on a small museum chock full of meta-information about your quest.";
 	move the player to Peek Keep;
 	now all held things are in lalaland;
+	demo-dome-status;
 	the rule succeeds;
 
 curlistnum is a number that varies.
