@@ -14139,6 +14139,15 @@ check fliptoing when player is in Upscale Capsule and noise is in Upscale Capsul
 		preef noun;
 		do nothing instead;
 
+chapter Trance Nectra
+
+the Trance Nectar is a vanishing thing.
+
+a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x".
+
+[clap back black cap ??]
+[trance nectar --	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this." 406340841 ??]
+
 chapter silly Upscale Capsule scenery
 
 section nerf fern
