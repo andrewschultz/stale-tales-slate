@@ -48,8 +48,22 @@ initFactorial();
 
 while ( $count <= $#ARGV ) {
   my $arg = $ARGV[$count];
+  my $arg2 = ( $count <= $#ARGV ? $ARGV[ $count + 1 ] : "" );
 
   for ($arg) {
+    /^-?p$/ && do {
+      my @argAry = split( /,/, $arg2 );
+      for (@argAry) {
+        printf( "%13s %13s %13s\n", $_, perm_set($_), perms($_) );
+        if ( $_ =~ /ly$/i ) {
+          my $ly = $_;
+          $ly =~ s/ly$//;
+          printf( "%13s %13s %13s LY ASSUMED\n",
+            $ly, perm_set($ly), perms($ly) );
+        }
+      }
+      exit();
+    };
     /^-?e$/ && do { `$inFile`; exit(); };
     /^-?d$/      && do { $debug      = 1; $count++; next; };
     /^-?nd$/     && do { $debug      = 0; $count++; next; };
@@ -58,8 +72,8 @@ while ( $count <= $#ARGV ) {
     /^-?sm(m)?$/ && do { $showMaxMin = 1; $count++; next; };
     /^-?nm(m)?$/ && do { $showMaxMin = 0; $count++; next; };
     /^-?tow$/ && do { towers_analyze(); exit(); };
-    print
-"USAGE\n================\n-e = edit data file\n-d=debug text\n-l=launch\n-nl=don't launch\n";
+    print "Invalid flag $arg.\n\n";
+    usage();
     exit();
   }
 }
@@ -376,4 +390,17 @@ sub difference {
     push( @retAry, $_ ) if ( $y_not_x_hash{$_} == 1 );
   }
   return @retAry;
+}
+
+sub usage {
+  print <<EOT;
+USAGE
+================
+-e = edit data file
+-d=debug text
+-l=launch
+-nl=don't launch
+-p=print possibilities (settler and non)
+EOT
+  exit();
 }

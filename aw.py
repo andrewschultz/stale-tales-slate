@@ -28,7 +28,8 @@ def see_anagram_or_close(x, oa):
         if ag[alfy(x)] == ' ' + x:
             print(x,"IS A WORD BUT NO ANAGRAMS")
         else:
-            print("ORIG ANAGRAM(S):" + ag[alfy(x)])
+            a2 = ag[alfy(x)].replace(' ' + x, '')
+            print(x, "ORIG ANAGRAM(S):" + a2)
     else:
         print(x, "ANAGRAMLESS NON-WORD.")
     if oa is True:
