@@ -9117,6 +9117,7 @@ t-tediously	t-tediously	false	748843503	--	"tediously"	"tediously"	"The macks be
 t-wearingly	t-wearingly	false	645925650	--	"wearingly"	"wearingly"	"They start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."
 t-drawlingly	t-drawlingly	false	592962469	--	"drawlingly"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved." [begin MACKS 10-11]
 t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	"Their matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."
+t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	"The macks['] deep stares no longer look profound, but a bit creepy and needy. Their concentration is broken."
 t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks." [begin MACKS 12]
 Merle	Merle	false	683905568	--	"honestly"	"honestly"	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
@@ -22517,7 +22518,7 @@ instead of climbing sad elm:
 	else:
 		say "Yorpwald's still up a tree. Don't join it."
 
-the macks are plural-named flippable reflexive people in frontage. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]desperately trying to captivate[end if] Gretta."
+the macks are plural-named flippable reflexive people in frontage. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
 understand "mack" as macks.
 
@@ -22874,10 +22875,12 @@ t-wearingly is a mack-idea. pod-num is 5. pod-ord is 4. a-text is "RYYRYRRRO". b
 
 t-tediously is a mack-idea. pod-num is 5. pod-ord is 5. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". parse-text is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'You! Idlest!' You see red.". mack-brief is "disparaging a lousy diet". [not alphabetical, but due to lazy coding I wand this last. Tediously has to disappear.]
 
-[pod 6 is 10 letters.]
+[pod 6 is 10-11 letters.]
 t-drawlingly is a mack-idea. pod-num is 6. pod-ord is 1. a-text is "RRYRRYRRRO". b-text is "PPYPRYRRRO". parse-text is "d[sp]r[sp]-[sp]w[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
 
 t-emotionally is a mack-idea. pod-num is 6. pod-ord is 2. a-text is "YRYRYYRYRRO". b-text is "YRYRYYRYRRO". parse-text is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
+
+t-desperately is a mack-idea. pod-num is 6. pod-ord is 3. a-text is "RYRRYRYRYRO". b-text is "RYRRGRYRYRB". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". mack-move is "The macks stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". mack-brief is "behaving desperately".
 
 [pod5 is a trivial pod. You will always get "despairingly," but you will also get 2 7's and 2 8's]
 t-despairingly is a mack-idea. pod-num is 7. pod-ord is 1. a-text is "RYRRYYRYRRRO". b-text is "RGRRYYRYRRRO". parse-text is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
