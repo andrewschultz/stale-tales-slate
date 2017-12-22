@@ -6970,7 +6970,7 @@ Upscale Capsule	"You're at the very top. You don't really want to change that wi
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
-Marines Seminar Remains	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
+Marines Seminar Remains	"The sport ports would provide a challenge you're ill-equipped for. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets don't matter. You need to cross to the north for more action."
@@ -15220,21 +15220,17 @@ a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]
 
 book Marines Seminar Remains
 
-Marines Seminar Remains is in presto. Marines Seminar Remains is east of Grey Gyre. "You recognize a camo-coma field as evidence this was a Marines Seminar. But the seminar's over, because [if popgun is in Marines Seminar Remains]nothing besides a popgun[else]not much[end if] is left. Camo-Coma forcefields surround you every way except back west. You can't see them very well, but then, you'll feel them if you run into them."
+Marines Seminar Remains is in presto. Marines Seminar Remains is east of Grey Gyre. "The only way out is back west. The sport ports in the other directions indicate this WAS a busy seminar, but you aren't and won't be equipped to handle them. Nothing [if popgun is in Marines Seminar Remains]besides a popgun[else]else[end if] is left."
 
 after printing the locale description for Marines Seminar Remains when Marines Seminar Remains is unvisited:
-	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to give him amnesty, when you can, once Elvira's out of the way.";
+	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to lobby for his amnesty once Elvira's out of the way.";
 	continue the action;
 
-the camo coma force fields are plural-named bounding scenery in Marines Seminar Remains. description is "As you get close, you hear 'Snare [']im.' / 'Amen, sir!' You back off.".
+the sport ports are plural-named bounding scenery in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest."
 
-understand "camo-coma" and "force field" and "field" as camo coma force fields.
-
-printed name of camo coma force fields is "camo-coma force fields".
-
-instead of doing something with camo coma:
+instead of doing something with sport ports:
 	if action is procedural, continue the action;
-	say "You can't do anything with the forcefields. The controls are probably far from here."
+	say "The sport ports would probably do something unfavorable to you. You don't need to do anything with them."
 
 The PG-on-up popgun is a container in Marines Seminar Remains.
 
@@ -23116,7 +23112,7 @@ after fliptoing eels:
 
 book Tapering Anger Pit
 
-Tapering Anger Pit is an innie room in Otters. Tapering Anger Pit is north of Bleary Barley. printed name of Tapering Anger Pit is "Tapering [if sly imp is in Anger Pit]Anger Pit[else]Inert Gap[end if]". "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]."
+Tapering Anger Pit is an innie room in Otters. Tapering Anger Pit is north of Bleary Barley. printed name of Tapering Anger Pit is "Tapering [if sly imp is in Anger Pit]Anger Pit[else]Inert Gap[end if]". "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west."
 
 understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
@@ -23328,7 +23324,7 @@ after fliptoing an animal:
 
 book Rote Moan Anteroom
 
-Rote Moan Anteroom is south of Bleary Barley. Anteroom is a room in Otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]."
+Rote Moan Anteroom is south of Bleary Barley. Anteroom is a room in Otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west."
 
 understand "near/moot" and "near moot" as anteroom when whiners are in lalaland.
 
@@ -23355,6 +23351,8 @@ a-text of ram3 is "RYYRRYRRRO". b-text of ram3 is "RYYRRYRRRO". parse-text of ra
 book perverse preserve
 
 Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is a room in Otters. "[pre-desc]"
+
+printed name of perverse preserve is "[if nounsolve < 3]Perverse Preserve[else]Uprates Pasture[end if]"
 
 to say pre-desc:
 	if number of animals in perverse preserve is 1:
