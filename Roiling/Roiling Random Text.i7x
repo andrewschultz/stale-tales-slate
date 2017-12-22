@@ -33858,8 +33858,6 @@ blurb
 "Social-Pro Acropolis" []
 "Solved-it-All Oldest Villa"
 "Some Niche Nice Homes"
-"Spark Parks"
-"Sportsport"
 "A Spot So Pat" []
 "St. Care-Caster" []
 "St. Eli Islet"

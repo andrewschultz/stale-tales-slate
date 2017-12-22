@@ -880,9 +880,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "scowl"	351380740	--	sober robes	--	"[e-m-prank]."
 "cowl"	255106774	--	sober robes	--	"[e-m-prank]."
 "low"	236101189	--	owls	--	"You probably want the owls not to swoop low. And you'll want to take care of them all."
-"saturnic"	524907351	ridging girding	--	--	"The curtains are too solid to change."
-"aturnic"	428633385	ridging girding	--	--	"Even one curtain is too solid to change."
-"shades"	380853247	ridging girding	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
+"saturnic"	524907351	Lamer Realm	--	--	"The curtains are too solid to change."
+"aturnic"	428633385	Lamer Realm	--	--	"Even one curtain is too solid to change."
+"shades"	380853247	Lamer Realm	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
 "clipons"	438812280	--	slopinc	--	"The ocelots would still be awkward even if they lost the clip-ons."
 "kool"	255452171	--	look-kool	--	"You're not here to mess with fashion."
 "laminas"	332438948	alcoves	--	--	"[no-lam]."
@@ -898,7 +898,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "critter"	568672182	perverse preserve	--	--	"[restrictr]."
 "raccoon"	343135453	preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
 "throne"	496782314	--	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
-"ridging"	330445496	ridging girding	--	--	"[locname]." [start girding ridging]
+"lamer"	333206722	Lamer Realm	--	--	"[locname]." [start lamer realm]
 "ocelot"	452440705	--	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
 "weltish"	 571213850	--	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
 "crone"	375395582	Inclosure	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act."

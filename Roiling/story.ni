@@ -1476,7 +1476,7 @@ persuasion rule for asking an animal to try doing something:
 	if noun is lamb:
 		say "The lamb doesn't understand orders, or full sentences.";
 		persuasion fails;
-	if player is in ridging girding:
+	if player is in Lamer Realm:
 		say "[if noun is reflexive]You don't have its trust[else]It perks up as if looking for something to attack but settles down again[end if].";
 		persuasion fails;
 	if player is in perverse preserve:
@@ -2506,7 +2506,7 @@ to say endorse-aid:
 	say "it's endorsed by [one of]Adi Dern[or]Red Dina[or]Ned Radi[or]Ed Nardi[or]Ed Indar[or]Ed Darin[or]Nerd Ida, of course[or]--well, you can Add Erin, Reid, Dan to the list of endorsers[cycling]--they see red when you ask who THAT is"
 
 check objasking Elvira about an animal:
-	if second noun is in ridging girding or second noun is in perverse preserve:
+	if second noun is in Lamer Realm or second noun is in perverse preserve:
 		say "'Elvira scrunches her face up. 'Oh! I love animals! They help me in many...WAYS. Even if they're just...wimpy.'" instead;
 
 to say mean-fish:
@@ -4472,7 +4472,7 @@ to say good-enuf of (goody - a thing):
 		say "[just-c].[no line break]";
 		continue the action;
 	if goody is an animal:
-		if goody is in perverse preserve or goody is in ridging girding:
+		if goody is in perverse preserve or goody is in Lamer Realm:
 			if goody is not the parrot:
 				say "No need to tweak [the goody] again. [if goody is plural-named]They're[else if goody is neuter]It's[else if goody is female]She's[else]He's[end if] fine as is.[no line break]";
 				continue the action;
@@ -5264,7 +5264,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in preserve and raptor is in preserve:
 			now noun is raptor;
 			continue the action;
-		if player is in ridging girding and owls are in ridging girding:
+		if player is in Lamer Realm and owls are in Lamer Realm:
 			now noun is owls;
 			continue the action;
 		if player is in alcoves and parrot is in alcoves:
@@ -6337,8 +6337,8 @@ to decide which thing is otters-cur-item:
 	if player is in anteroom:
 		if whiners are in anteroom:
 			decide on whiners;
-	if player is in ridging girding:
-		if owls are in ridging girding:
+	if player is in Lamer Realm:
+		if owls are in Lamer Realm:
 			decide on owls;
 		if number of visible reflexive animals > 1:
 			decide on animal-to-hint;
@@ -6409,14 +6409,14 @@ carry out otters-hinting:
 		all-say "The path north is cleared[tho-work].";
 	else if player is in Anteroom:
 		all-say "The path south is cleared[tho-work].";
-	else if player is in ridging girding or player is in perverse preserve:
+	else if player is in Lamer Realm or player is in perverse preserve:
 		if power-back is false:
 			all-say "You need to get your powers back before you do anything. Look around [if frontage is visited]the frontage[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
 		else:
 			if player is in perverse preserve:
 				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if].";
 			else:
-				all-say "You've helped all the animals you need to[if number of reflexive animals in ridging girding > 0], but you can still try to help the [random visible reflexive animal][end if].";
+				all-say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random visible reflexive animal][end if].";
 	else if player is in alcoves:
 		all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight.";
 	else:
@@ -8573,7 +8573,7 @@ book fliptoing
 fliptoing is an action applying to one visible thing.
 
 check fliptoing when mrlp is otters and power-back is false:
-	if player is in ridging girding or player is in perverse preserve:
+	if player is in Lamer Realm or player is in perverse preserve:
 		say "[inhib]" instead;
 
 preserve-animals is a number that varies.
@@ -22126,7 +22126,7 @@ carry out discerning:
 			say "You discern what you can still rescue. [if racoon is off-stage]A racoon. [end if][if nails are in preserve]A snail. [end if][if thrones are in preserve]Hornets. [end if][if pines are in preserve]A snipe. [end if][line break]";
 		else:
 			now do-i-dis is false;
-	else if player is in ridging girding:
+	else if player is in Lamer Realm:
 		if owls are visible:
 			say "You discern that you make the owls slow[if power-back is false] with your powers back[end if].";
 		else if adjsolve < 4:
@@ -22145,7 +22145,7 @@ carry out discerning:
 		if whistle is reflexive:
 			say "You discern you may need [if player is in Inclosure]to leave the inclosure [end if]to see how to make the whistle play DEEPLY.";
 		else if nounsolve < 3 or adjsolve < 3:
-			say "You discern you may not have enough allies after you blow the whistle and have them go quickly. You left some behind in [if nounsolve > 3]the ridging girding[else if adjsolve >= 3]the preserves[else]the preserves and ridging girding[end if].";
+			say "You discern you may not have enough allies after you blow the whistle and have them go quickly. You left some behind in [if nounsolve > 3]the Lamer Realm[else if adjsolve >= 3]the preserves[else]the preserves and Lamer Realm[end if].";
 			now do-i-dis is false;
 		else:
 			say "You discern you need to play the whistle [if player is in Inclosure]here[else]in the inclosure[end if].";
@@ -23165,13 +23165,11 @@ check going north in Anger Pit:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
 
-book ridging girding
+book Lamer Realm
 
-Ridging Girding is north of Tapering Anger Pit. ridging girding is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard where there might be a hole in the girding."
+Lamer Realm is north of Tapering Anger Pit. Lamer Realm is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
 
-understand "ridging/girding" and "ridging girding" as saturnic curtains when player is in ridging girding.
-
-the saturnic curtains are bounding scenery in ridging girding. "They shine metallically. You know better than to touch them. They are effective at keeping everything in one place."
+the saturnic curtains are bounding scenery in Lamer Realm. "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place."
 
 instead of doing something with saturnic curtains:
 	if action is procedural, continue the action;
@@ -23222,19 +23220,19 @@ the satyr is a reflexive male animal. description is "[if satyr is reflexed]He l
 
 a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "a[sp]x[sp]t[sp]x[sp]y". satyr is cheat-spoilable.
 
-the owls are plural-named terse vanishing animals in ridging girding. description of owls is "Their big owly eyes follow you.". "[one of]You hear hooting and a flapping of wings. You've probably triggered some sort of trap. You look up to see owls swooping. You can duck the first blow, and you maybe have time to look at your settler, but they're too speedy en masse[or]All those animals are nice, but the owls about to dive-bomb you here mean you'll need to think fast. I think[stopping]."
+the owls are plural-named terse vanishing animals in Lamer Realm. description of owls is "Their big owly eyes follow you.". "[one of]You hear hooting and a flapping of wings. You've probably triggered some sort of trap. You look up to see owls swooping. You can duck the first blow, and you maybe have time to look at your settler, but they're too speedy en masse[or]All those animals are nice, but the owls about to dive-bomb you here mean you'll need to think fast. I think[stopping]."
 
 after fliptoing owls:
-	now ocelots are in ridging girding;
-	now badger is in ridging girding;
-	now satyr is in ridging girding;
-	now leopard is in ridging girding;
+	now ocelots are in Lamer Realm;
+	now badger is in Lamer Realm;
+	now satyr is in Lamer Realm;
+	now leopard is in Lamer Realm;
 	continue the action;
 
 a-text of owls is "RRYR". b-text of owls is "RRYR". parse-text of owls is "x[sp]x[sp]o[sp]x". owls are cheat-spoilable.
 
-check going south in ridging girding:
-	if owls are in ridging girding:
+check going south in Lamer Realm:
+	if owls are in Lamer Realm:
 		say "[if power-back is false]You're not ready to deal with the owls yet[else]You'll deal with the owls later[end if].";
 
 check going north in perverse:
@@ -23286,7 +23284,7 @@ to say inhib:
 	say "You can't summon the energy to do that. It seems it should work, but it doesn't. You may need a recharge.";
 
 after fliptoing an animal:
-	if location of player is ridging girding:
+	if location of player is Lamer Realm:
 		let temp be number of visible reflexed animals;
 		if temp is 1:
 			say "The LUCKY medal you're wearing clanks against the IQ medal. It looks a bit clearer, now.";
@@ -23304,12 +23302,12 @@ after fliptoing an animal:
 			now random pre-animal in perverse preserve is llpish;
 		else if temp is 5:
 			min-up;
-	if noun is reflexed and location of player is ridging girding:
+	if noun is reflexed and location of player is Lamer Realm:
 		increment adjsolve;
 	continue the action;
 
 [carry out animaling:
-	if location of player is not ridging girding:
+	if location of player is not Lamer Realm:
 		say "[reject]" instead;
 	if owls are not slowed:
 		say "Deal with the owls first." instead;
@@ -23498,14 +23496,14 @@ check fliptoing raptor:
 every turn when parrot is visible (this is the parrot-chat rule):
 	if location of player is alcoves:
 		say "The parrot hides out of sight of Elmer and Merle, eyeing them fearfully.";
-	else if location of player is ridging girding:
+	else if location of player is Lamer Realm:
 		let vra be number of visible reflexive animals;
 		if owl is in lalaland and vra is 0:
 			say "'Awwk! Happy animals! They might do something for you some day, adventurer!'";
 			continue the action;
 		if vra > 0:
 			say "The parrot notes the [list of reflexive animals] [if number of visible reflexive animals > 1]don't[else]doesn't[end if] look happy.";
-	else if location of player is ridging girding:
+	else if location of player is Lamer Realm:
 		if number of visible animals >= 5:
 			say "The parrot flies happily among all the animals.";
 		else:
@@ -23544,7 +23542,7 @@ check going west in Alcoves (this is the need quick rule):
 after printing the locale description for Inclosure when Inclosure is unvisited:
 	if Inclosure is unvisited:
 		say "'Proceedings precognised. Rats, the...eh, start the arts,' Elvira mutters as she pulls out the Ultimate Mutilate-It Amulet! A blast of energy flies at you, and reflexively, you yell 'Ail ME? Tut!' The ray fizzles.[paragraph break]'Ooh! Stout! ... Shootout!' She pulls out her phrase shape phaser, but you hum an e-sharp to deflect it. 'Won't kill a know-it-all.'[paragraph break]'Intact? It can't! SPAWN, Pawns!' she cries. 'P. S. Naw,' you say.[paragraph break]Elvira gives a crusty curtsy. 'Oh! Most smooth,' she says, with indulga-languid calm, i.e. malice, and hi-grade hid rage. And the sort of tinkly laugh you always felt forced to trust. 'You temporarily disabled my purple pulper and oranger groaner. I can't attack you first--but, details! You have to admit it was clever, filling Yorpwald with annoying anagrams to frame you!'[paragraph break]And you almost do. She has that glibness blessing! You're almost suckered, yourself. You may need fighters impervious to her charms to get rid of her for good.[paragraph break](Push any key.)[wfak]";
-		say "'Gah, hag!' you say.[paragraph break]'Neat ante. Gas [']em, mages!' But they aren't there. 'Me, cry mercy?'[paragraph break]Stalemate. Lame state. Unless you have a way to kill her[if number of reflexive animals in ridging girding > 1 or number of pre-animal things in preserve > 1]. Or round up more troops[end if].";
+		say "'Gah, hag!' you say.[paragraph break]'Neat ante. Gas [']em, mages!' But they aren't there. 'Me, cry mercy?'[paragraph break]Stalemate. Lame state. Unless you have a way to kill her[if number of reflexive animals in Lamer Realm > 1 or number of pre-animal things in preserve > 1]. Or round up more troops[end if].";
 		if do-i-chat is true:
 			now qbc_litany is litany of Elvira;
 		else:
@@ -26045,15 +26043,15 @@ to decide whether one-whine-down:
 to say medal-help:
 	say "The medals look less than perfect. ";
 	if nounsolve is 0 and adjsolve is 0:
-		say "Maybe you can find someone, or something, to help. You should [if player is in ridging girding or player is in preserve]see what you can do here[else if player is in tapering anger pit or player is in anteroom]go north or south[else]explore north or south of the barley[end if]";
+		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in preserve]see what you can do here[else if player is in tapering anger pit or player is in anteroom]go north or south[else]explore north or south of the barley[end if]";
 	else if nounsolve >= 3:
-		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in ridging girding] is optional now,)[else],[end if] but maybe you can go [if ridging girding is unvisited]north[else]to the ridging girding[end if] to do more";
+		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in Lamer Realm] is optional now,)[else],[end if] but maybe you can go [if Lamer Realm is unvisited]north[else]to the Lamer Realm[end if] to do more";
 	else if adjsolve >= 3:
-		say "You've done good work in the ridging girding, but maybe you can go [if ridging girding is unvisited]north[else]to the preserve[end if] to do more";
+		say "You've done good work in the Lamer Realm, but maybe you can go [if Lamer Realm is unvisited]north[else]to the preserve[end if] to do more";
 	else if nounsolve is 0 or adjsolve is 0:
-		say "You've done something in the [if nounsolve is 0]ridging girding[else]preserve[end if], but not enough. And then there's [if nounsolve is 0]south[else]north[end if] of the barley, too";
+		say "You've done something in the [if nounsolve is 0]Lamer Realm[else]preserve[end if], but not enough. And then there's [if nounsolve is 0]south[else]north[end if] of the barley, too";
 	else:
-		say "You've done work in the ridging girding and preserve, but not enough"
+		say "You've done work in the Lamer Realm and preserve, but not enough"
 
 [ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"]
 
@@ -26548,7 +26546,7 @@ satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of i
 badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be clothed?[plus][or]Or GARBED?[minus][cycling]"	--	"you can make the badger GARBED"
 leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound together by some invisible handcuffs.[plus][or]Like the leopard's in jail. Well, it sort of is.[plus][or]But the leopard's been well behaved. Can you get them out early?[plus][or]Yup. If they're PAROLED.[minus][cycling]"	--	"you can make the leopard PAROLED"
 ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"	--	"you can make the ocelots COOLEST"
-wire weir	"It's just there to provide a boundary in the ridging girding."
+wire weir	"It's just there to provide a boundary in the Lamer Realm."
 raptor	"[one of]You need to be quick here. The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring, doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make the raptor a PARROT"
 nails	"[one of]The nails are arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
 pines	"[one of]The pines are shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
@@ -26690,13 +26688,13 @@ to say medals-do:
 to say need-refurb:
 	say "need refurbishing. Maybe in the ";
 	if nounsolve >= 3:
-		say "[if ridging girding is visited]ridging girding[else]area north of the barley[end if]";
+		say "[if Lamer Realm is visited]Lamer Realm[else]area north of the barley[end if]";
 	else if adjsolve >= 3:
 		say "[if preserve is visited]Perverse Preserve[else]area south of the barley[end if]";
-	else if ridging girding is unvisited and preserve is visited:
+	else if Lamer Realm is unvisited and preserve is visited:
 		say "Preserve or north of the barley";
-	else if preserve is unvisited and ridging girding is visited:
-		say "Ridging Girding or south of the barley";
+	else if preserve is unvisited and Lamer Realm is visited:
+		say "Lamer Realm or south of the barley";
 	else:
 		say "areas north and south of the barley";
 
@@ -27495,8 +27493,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of flippable things in perverse preserve > 0:
 			repeat with A running through flippable things in perverse preserve:
 				say "[2dmiss of myreg]you could've turned the [A] into [if A is plural-named]some[else]a[end if] [the-to corresponding to a the-from of A in the table of otters anagrams].";
-		if number of reflexive animals in ridging girding > 0:
-			repeat with A running through flippable things in ridging girding:
+		if number of reflexive animals in Lamer Realm > 0:
+			repeat with A running through flippable things in Lamer Realm:
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
 	else if myreg is others:
 		if spear is not in lalaland, say "[2drm of Rustic Citrus]the spear could've become pears.";
