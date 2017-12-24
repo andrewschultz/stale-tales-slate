@@ -122,7 +122,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 36. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 37. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
@@ -8931,6 +8931,7 @@ star	star	true	286895605	--	"rats"	"rats"	"You're frustrated you can't reach tha
 dart	dart	true	211650728	--	"drat"	"drat"	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."
 plebe	plebe	false	409310921	--	"bleep"	"bleep"	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[otherwise]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"
 boing	boing	false	239271538	--	"bingo"	"bingo"	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. But now, to load it."
+sport ports	sport ports	false	440526323	--	"prost"	"prost"	"You mentally toast the abilities of people able to navigate the sport ports. It feels good, this act of sportsmanship."
 Leo	Leo	false	255972525	--	"ole"	"ole"	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."
 Rand	Rand	false	177448218	--	"darn"	"darn"	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble. 'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
@@ -10958,6 +10959,14 @@ check going outside in Farming Framing:
 check going inside in dusty study:
 	if tables are in dusty study:
 		say "Hm, maybe those tables on the wall provide a clue where 'in' leads[if study is not lit], or they would, if you could see them[end if]." instead;
+
+section girding ridging
+
+the girding ridging is bounding scenery in Farming Framing. description is "It blocks your way out, but on the other hand, it blocks a mob's way in, which is more important right now."
+
+instead of doing something with girding ridging:
+	if action is procedural, continue the action;
+	say "The girding ridging is probably holding people back from entering. You don't need to do anything. You need a hidden escape[if gallery is visited], like in the gallery below[end if]."
 
 book highest heights
 
@@ -15226,7 +15235,7 @@ after printing the locale description for Marines Seminar Remains when Marines S
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to lobby for his amnesty once Elvira's out of the way.";
 	continue the action;
 
-the sport ports are plural-named bounding scenery in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest."
+the sport ports are plural-named reflexive LLPish scenery in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest."
 
 instead of doing something with sport ports:
 	if action is procedural, continue the action;
