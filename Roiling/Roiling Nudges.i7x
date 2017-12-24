@@ -60,6 +60,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	--	sad ads	--	"[w-twi]."
 "framing"	324601726	Farming Framing	--	--	"[locname]." [start farming framing]
+"ridging"	330445496	Farming Framing	--	--	"If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you."
 "highest"	479347239	highest heights	--	--	"[locname]." [start highest heights]
 "height"	383073273	highest heights	--	--	"[locname]."
 "gallery"	477904362	Gallery	--	--	"[locname]." [start largely all-grey gallery]
@@ -879,6 +880,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bore"	305901394	--	sober robes	--	"[e-m-prank]."
 "scowl"	351380740	--	sober robes	--	"[e-m-prank]."
 "cowl"	255106774	--	sober robes	--	"[e-m-prank]."
+"lamer"	333206722	Lamer Realm	--	--	"[locname]." [start lamer realm]
+"blest"	399422837	--	--	realm-saved rule	"[locname]."
+"belt"	303148871	--	--	realm-saved rule	"[locname]."
+"ocelot"	452440705	--	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
 "low"	236101189	--	owls	--	"You probably want the owls not to swoop low. And you'll want to take care of them all."
 "saturnic"	524907351	Lamer Realm	--	--	"The curtains are too solid to change."
 "aturnic"	428633385	Lamer Realm	--	--	"Even one curtain is too solid to change."
@@ -890,6 +895,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "forces"	429276936	alcoves	--	--	"[fresc]."
 "forec"	333002970	alcoves	--	--	"[fresc]."
 "preserve"	838970678	perverse preserve	--	--	"[locname]." [start perverse preserve]
+"uprate"	504999514	--	--	preserve-saved rule	"[locname]."
+"uprates"	601273480	--	--	preserve-saved rule	"[locname]."
 "lit"	201916703	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "tail"	204104521	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "pine"	323172422	--	pines	--	"So many pines, hard to pick one. Might as well take care of them all."
@@ -898,8 +905,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "critter"	568672182	perverse preserve	--	--	"[restrictr]."
 "raccoon"	343135453	preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
 "throne"	496782314	--	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
-"lamer"	333206722	Lamer Realm	--	--	"[locname]." [start lamer realm]
-"ocelot"	452440705	--	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
 "weltish"	 571213850	--	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
 "crone"	375395582	Inclosure	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act."
 "alcoves"	480604714	alcoves	--	--	"[locname]." [start coevals' alcoves]
@@ -1932,6 +1937,16 @@ this is the callos-gone rule:
 	if player is in anteroom:
 		if whiners are not in anteroom, the rule succeeds;
 	the rule fails;
+
+this is the realm-saved rule:
+	if player is in lamer realm and adjsolve >= 3, the rule succeeds;
+	the rule fails;
+
+this is the preserve-saved rule:
+	if player is in perverse preserve and nounsolve >= 3, the rule succeeds;
+	the rule fails;
+
+section others nudges
 
 to say plur-fruit:
 	say "Well, you don't technically need plurals for this, but you're on the right track"
