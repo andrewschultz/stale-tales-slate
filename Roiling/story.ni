@@ -2780,6 +2780,7 @@ DIVORCES	"All sorts of articles that make you see red. This one's about [one of]
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
 playbill	"[one of]S. Negri and N. Regis are the band. And there's a promotions company to read about, too[or]Isnerg promotions[cycling]."
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
+sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
@@ -4041,6 +4042,7 @@ volt maze	"The volt maze crackles with increased energy, almost ready to break d
 dart	"The dart seems a bit closer, but...dang! Not quite."
 decorative star	"The star seems to wiggle a bit, but not enough to pull it out."
 plebe	"The plebe looks confused, as if you garbled what you said."
+sport ports	"The sport ports seem even shinier for a second."
 Leo	"There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force."
 Rand	"There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force."
 wzup	"You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it."
@@ -4364,6 +4366,7 @@ star	"No need for additional arts."	[presto]
 dart	"The dart's just fine as-is."
 onyx censer	"You may need to change the censer differently."
 boing mechanism	"You can't force another revelation, but you don't need to."
+sport ports	"You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism."
 popgun	"If you overthought things, you might break it again."
 Leo	"Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
 Rand	"Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
@@ -15235,12 +15238,6 @@ after printing the locale description for Marines Seminar Remains when Marines S
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to lobby for his amnesty once Elvira's out of the way.";
 	continue the action;
 
-the sport ports are plural-named reflexive LLPish scenery in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest."
-
-instead of doing something with sport ports:
-	if action is procedural, continue the action;
-	say "The sport ports would probably do something unfavorable to you. You don't need to do anything with them."
-
 The PG-on-up popgun is a container in Marines Seminar Remains.
 
 after printing the name of the popgun while taking inventory:
@@ -15315,6 +15312,16 @@ check fliptoing boing mechanism (this is the take popgun to fix it rule) :
 	if player does not have the PG-on-up popgun and popgun is visible:
 		say "(taking the popgun first while you mess with the boing mechanism)[paragraph break]";
 		now player has popgun;
+
+chapter sport ports LLP
+
+the sport ports are plural-named reflexive LLPish scenery in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest, and [if sport ports are reflexed]yet, you feel there may be a right way to salute them and the challenge they provide[else]you already showed them some respect[end if]. You can READ the firm who made them."
+
+a-text of sport ports is "RRYRR". b-text of sport ports is "?R?R?. parse-text of sport ports is "?[sp]x[sp]?[sp]x[sp]?".
+
+instead of doing something with sport ports:
+	if action is procedural, continue the action;
+	say "The sport ports would probably do something unfavorable to you. You don't need to do anything with them."
 
 book Saps' Pass
 
@@ -15811,6 +15818,8 @@ after fliptoing scratch paper:
 		poss-d;
 	if lamb is in Grey Gyre:
 		poss-d;
+	if sport ports are reflexive:
+		poss-d;
 	if player has rom sticks:
 		now rom sticks are in lalaland;
 	continue the action;
@@ -15851,6 +15860,9 @@ to check-trivial-presto-llp:
 		if yak is in lalaland and player is in hacks' shack:
 			if keyboard is in hacks' shack or keyboard is on slab:
 				if lamb is in gyre:
+					poss-d;
+					now pt-discounted is true;
+				if sport ports are reflexed:
 					poss-d;
 					now pt-discounted is true;
 				if hawt thaw is in phat path:
@@ -27436,6 +27448,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
 		if maze-points is 2, say "[2drm of Grey Gyre]you missed a point for scanning a guy in Nowt Town.";
 		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
+		if sport ports are reflexive, say "[2drm of Austerer Treasure]you could've said PROST (a German word to toast someone) to the Sport Ports.";
 		if hawt thaw is in phat path, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
 		if rom sticks are off-stage, say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";

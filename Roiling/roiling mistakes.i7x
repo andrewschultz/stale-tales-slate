@@ -370,7 +370,7 @@ understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, t
 
 understand "pilots" as a mistake ("You don't need to fly anywhere.") when player has popgun.
 
-understand "strop" as a mistake ("That's not the kind of weapon you need.") when player is in marines seminar remains.
+understand "strop" as a mistake ("That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.") when player is in marines seminar remains.
 
 chapter nowt town
 
