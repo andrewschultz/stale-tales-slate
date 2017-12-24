@@ -15,7 +15,7 @@ The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
 Also, if any animals are referred to as male, let me know, as that's a potential bug. I tried to leave them gender-neutral.
 >MEANS MANSE
->>Study
+>>DUSTY STUDY
 ?What do I do here?
 Just examine stuff to get an idea of what the game is about.
 And what your powers are.
@@ -111,7 +111,7 @@ Now that you've shown your powers, your former (apparent) antagonist will be mor
 ?What can Elmo tell me? Do I need to listen?
 You can solve the game without Elmo, but he can tell you how to use the settler if you're not sure. It's a de facto tutorial about the settler
 You can also ask Elmo about the areas ahead.
->>Carven Cavern
+>>CARVEN CAVERN
 ?What's with the plates?
 They appear to be embedded in the plaster.
 They are sort of square, with metal trim around them.
@@ -878,6 +878,7 @@ You can change it to something more interesting.
 Make it COILED.
 >>UNBLEST SUNBELT
 ?What are the organised ego drains doing?
+You can't actually dispel them so you can get past them, but you can still hit them up for a Last Lousy Point.
 They make you feel like you can't do anything, and they're very reasonable and not overdone.
 You can laugh at them if they become GRANDIOSE.
 >>OUTER ROUTE
@@ -1397,6 +1398,8 @@ The leopard can be PAROLED.
 The ocelots can be COOLEST.
 The badger can be GARBED.
 The satyr can be ARTSY.
+?Help! Why did the room name change?
+Because you did enough to make it a nice place.
 >>PERVERSE PRESERVE
 ?Whoah! A raptor!
 Brute force won't work.
@@ -1413,6 +1416,8 @@ They have no spine...
 They're not a SNIPE.
 ?The corona is spooky!
 It can be a RACOON.
+?Help! Why did the room name change?
+Because you did enough to make it a nice place.
 >>COEVALS' ALCOVES
 ?Why are Elmer and Merle doing things on the sly?
 You can get the truth out of them.
@@ -1513,7 +1518,7 @@ GOOSEBERRY.
 MULBERRIES.
 ?And the green stain?
 TANGERINES.
->>Filed Field
+>>FILED FIELD
 ?Anything besides fruit here?
 No.
 ?Where is Fidel?
@@ -1535,7 +1540,7 @@ RASPBERRY.
 ?The rapt figure?
 White and pink with a weird spoon.
 GRAPEFRUIT.
->>Scape Space
+>>SCAPE SPACE
 ?How do I trade for the storage?
 Got any seedy currency?
 Did you try giving the trader a coin?
@@ -1560,7 +1565,7 @@ RHUBARB.
 ?What's the RESERVED sign for?
 It can be REVERSED for a fruit.
 A guava, again, something hard to anagram.
->>Clangier Clearing
+>>CLANGIER CLEARING
 ?What do I do with Len Craig?
 You can just trade with him, but general talking won't work.
 You'll have to specify the fruits you want or how you want them.
@@ -1597,7 +1602,7 @@ The kumquat is just a random fruit that was hard to anagram.
 A price, or a number,
 Uno, duo, tre, quattre, ...
 CINQUE.
->>Gates Stage
+>>GATES STAGE
 ?What's behind the gates?
 The happy ending.
 ?How to get through the gates?

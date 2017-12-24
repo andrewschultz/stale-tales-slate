@@ -61,7 +61,7 @@ towards/without
 Store P (min)
 wont/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
 Store P (max)
-blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/what/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/rom sticks/casserole/reboot/tab/sleep/compile/debug/sub
+blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/prost/there/syke/what/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/rom sticks/casserole/reboot/tab/sleep/compile/debug/sub
 Store Y (min)
 spill/stroll/calm/run/fart/soar/scrap/seek/eat/tutor/kiss/trace/react/bonk/snap/bust/drop/warp/bury/unearth/assuage/search/enlarge/patrol/prepay/derail/spin/redial
 Store Y (max)

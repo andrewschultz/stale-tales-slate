@@ -21,7 +21,8 @@ There was also other miscellaneous stuff and even a few features that fell out w
   --the game also tracks better if it is a complete spoiler, and the commands to check off are clearer
 --VERB/VERBS and PAD VERBS now give general help.
 --all items have individual clues if you try to change them and you fail, and all items should give individual messages if they don't need to be changed.
---much more scenery is added, mostly boundaries to explain why you can't just go any old direction, but I hope the names amuse you.
+--much more scenery is added. While most of it is just boundaries to explain why you can't just go any old direction, there may be a Last Lousy Point in there, and I hope the names amuse you.
+--there are some room name changes once you've done all you need to.
 
 Means Manse:
 --very silly LLP in the All-Grey Gallery.
@@ -32,20 +33,24 @@ Stores:
 Store H:
 --new fruits in the Field and Wells.
 --changed one puzzle to be a little less abstruse (green stain in Wells).
+--The melons/lemons puzzles are no longer duplicates of each other.
 --the trader is now female if you are, with a new name.
 --there's now the augural arugula that provides a clue if you GURU.
 
 Store P:
 --the volt maze now has a name: Nowt Town. This gives you an easy way through, one that's marginally in Store P's spirit, but it won't get you full points like original way does. The final room of the maze also has a different name.
 --the Phat Path is now Saps' Pass before you get rid of the baddies.
+--a new Last Lousy Point in the Marines Seminar (renamed Marines Seminar Remains)
 
 Store T:
---the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 letters with or without repeating letters, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming.
+--the macks' idiocy in Store T is now refactored to be drawn from seven pods (7 with or without repeating letters, 8 with or without repeating letters, 9, 10 or 11, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming.
+--a new 11 letter clue which has enough repeated letters it's about as tough as the 10 letter clues.
 --the Imp is now of indeterminate gender.
 --the raw bulk bulwark is now the Edictal Citadel.
+--the Wickeder Wire Deck is repurposed as bounding scenery, and the animal rooms now change names when you've save enough of them.
 
 Store U:
---the scenery in the Same Mesa is now better-named.
+--the scenery in the Same Mesa is now more thematically named.
 --the Sun-Spared Underpass is still that, only the official name is Harms Marsh, full of Sheol Holes.
 --Pat is now female if you are. /goes to watch Saturday Night Live.
 --there is a new location, the Sonancy Canyons, with a new final puzzle.
@@ -57,17 +62,18 @@ Store V:
 Store W:
 --Old Hat Daltho is now Ornate Atoner Renato.
 --a few more clues for the Lone Duck.
---the smart kid is now female if you are. In fact, the smart kid isn't a smart kid any more, and you have to help it a different way.
+--the smart kid is now female if you are. In fact, the smart kid isn't a smart kid any more, but a Coasting Agnostic, who requires slightly different help.
 --Dr. Yow is now female if you are.
 --The Muscly Hulk now mirrors your gender and has a name either way.
 --the once-sad deacons have been replaced by gender-specific blockers as well.
---the jetskis are replaced with a conveyance more appropriate to the game: a boat.
+--the jetskis are replaced with a conveyance more appropriate to the game: a boat. What kind of boat? Maybe you can guess.
 --the man in the costume is replaced by a deal seer, male or female, gender specific too.
---the oddly rewired robot has been replaced by bluster butlers, but what to do with the robot is moved elsewhere for a Last Lousy Point.
+--the oddly rewired robot has been replaced by bluster butlers, but what to do with the robot is moved elsewhere and reversed for a Last Lousy Point.
 --a fluster-self rut is now a guardian, with the ego drains shifting to an LLP.
 --sporties' ripostes are an LLP replacing the neural pulses.
 --rooms are shifted around, with more boundary scenery to make it believable you have to go back the way you came. There are a few new room names, such as Fringe Finger.
 --the final quest is redone so the anagrams are hopefully more sensible and natural. Ed Yerg is gone, and the succor crocus is hidden in the Mislit Limits.
+--the Obscurest Subsector is now more heavily guarded.
 
 Store Y:
 --the rude door is replaced with Span Pans.
@@ -76,7 +82,8 @@ Store Y:
   --Collapsed Old Places is now Rascal Craals. Well, until you figure what to do in the Craals. Then they're seen as Collapsed Old Places you can't enter.
   --Uh at a Hut is now the Shadier Airshed, which makes it easier to fit all those items in there.
   --Lean Lane is now where you find Tortu, and the old Lean Lane is renamed to Hardest Trashed Dearths.
---there is a different thing to do near the end. Not a hard one, but a different one. It involves pins.
+--there is a different thing to do in the ending room. Not a hard one, but a different one. It involves pins.
+--the side quest now has another verb for the final bit, and solving it doesn't kick you right to the end room without your permission. ??
 --Hero's Shore is now Disease Seaside, and Anger Range changes its name to Hero's Shore once the haunter is gone.
 
 Meta-stuff:
