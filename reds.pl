@@ -21,7 +21,9 @@ use warnings;
 my %dupHash;
 my %statFin;
 
-my $reds = "c:/writing/dict/reds.txt";
+my $redsource = __FILE__;
+my $reds      = $redsource;
+$reds =~ s/pl$/txt/;
 
 my @letArray;
 my @array;
@@ -35,6 +37,9 @@ my $permMod = 5000;
 
 my $myMax      = 1000;
 my $maxLetters = 20;
+
+my $launchErrors = 0;
+my $lineToOpen   = 0;
 
 my $showPoss   = 1;
 my $showRemain = 1;
@@ -59,15 +64,27 @@ my $setQYet = 0;
 
 my @wordArray;
 
-while ( $cur <= $#ARGV ) {
-  my $arg = $ARGV[$cur];
-  my $arg2 = ( defined( $ARGV[ $cur + 1 ] ) ? $ARGV[ $cur + 1 ] : "" );
+my @av;
+
+for (@ARGV) {
+  @av = ( @av, split( ",", $_ ) );
+}
+
+while ( $cur <= $#av ) {
+  my $arg = $av[$cur];
+  my $arg2 = ( defined( $av[ $cur + 1 ] ) ? $av[ $cur + 1 ] : "" );
   for ($arg) {
 
     #/^-?a$/ && do { $lookDif = 1; $cur++; next; };
     #the above is an option I don't know what it's for
-    /^-?(fr|rf)$/
-      && do { $fileName = $reds; $cur++; next; };
+    /^-?(fr|rf)(o)?$/
+      && do {
+      $fileName = $reds;
+      if ( $arg =~ /o/ ) { $launchErrors = 1; }
+      if ( $arg =~ /n/ ) { $launchErrors = 0; }
+      $cur++;
+      next;
+      };
     /^-?f$/ && do { $fileName = $arg2; $cur += 2; next; };
     /^-?y$/
       && do {
@@ -109,7 +126,8 @@ while ( $cur <= $#ARGV ) {
       $cur += 2;
       next;
     };
-    /^-?e$/ && do { `$reds`; exit(); $cur++; next; };
+    /^-?e$/  && do { `$reds`;         exit(); $cur++; next; };
+    /^-?ef$/ && do { `np $redsource`; exit(); $cur++; next; };
     /^-?l$/ && do { $maxLetters = $arg2; $cur += 2; next; };
     /^-?m$/ && do { $myMax      = $arg2; $cur += 2; next; };
     /^-?np$/ && do { $showPoss     = 0; $cur++; next; };
@@ -124,7 +142,7 @@ while ( $cur <= $#ARGV ) {
 "Just to check, period means a blank space, not a file name. Use -f for a file.\n";
     };
     /^[roygbv\?]+=/i && do {
-      die("Redefined a settler clue $arg over $ARGV[$setQYet]") if $setQYet;
+      die("Redefined a settler clue $arg over $av[$setQYet]") if $setQYet;
 
       # print("Q-settler clue $arg\n");
       push( @wordArray, $arg );
@@ -163,6 +181,10 @@ PRINTRESULTS:
   }
 }
 else {
+  my $thisLineErrs = 0;
+  my $errs         = 0;
+  my $succ         = 0;
+
   my $gotAnyAna  = 0;
   my $roilingYet = 0;
   $printResults  = 0;
@@ -202,6 +224,8 @@ else {
 
     if ($sectionIgnore) { next; }
 
+    $thisLineErrs = 0;
+
     $a =~ s/ //g;
     @array = split( /,/, $a );
     if ($settler) {
@@ -214,11 +238,21 @@ else {
     @letArray = split( //, $array[0] );
     @perm     = split( //, $array[0] );
 
+    if ( $#array < 1 ) {
+      $lineToOpen = $. if !$lineToOpen;
+      print( $array[0] =~ /=/
+        ? "WARNING line $. needs a comma before the question clue.\n"
+        : "WARNING line $. has only one argument.\n" );
+    }
+
     for my $q ( 1 .. $#array ) {
 
       if ( questionClue( $array[$q] ) ) {
-        print "$array[0]/$array[$q] bad Qmatch.\n"
-          if ( quesMatch( $array[0], $array[$q] ) == -1 );
+
+        if ( quesMatch( $array[0], $array[$q] ) == -1 ) {
+          print "$array[0]/$array[$q] bad Qmatch at line $..\n";
+          $errs++;
+        }
         next;
       }
       die("Unequal lengths $array[0] vs $array[$q] at line $.")
@@ -235,6 +269,7 @@ else {
           print(
 "Line $. has $array[0] vs $array[$q] letters shouldn't match but do at position $idx\n"
           );
+          $thisLineErrs++;
         }
         if ( ( ord( $a2[$idx] ) <= 90 )
           && ( ord( $a2[$idx] ) >= 65 )
@@ -243,12 +278,19 @@ else {
           print(
 "Line $. has $array[0] vs $array[$q] letters should match but don't at position $idx\n"
           );
+          $thisLineErrs++;
         }
       }
     }
 
+    $errs += $thisLineErrs;
+    $succ += !$thisLineErrs;
   }
   close(A);
+  print( $errs == 0
+    ? "EVERYTHING WORKED! YAY!"
+    : "$errs errors, $succ successes.\n" )
+    if !$auditString;
   print "$auditString turned up nothing.\n" if ( $auditString && !$gotAnyAna );
 }
 
@@ -511,7 +553,7 @@ sub quesMatch {
       }
       elsif ( $qAry[$pos] eq 'O' ) {
         return -1 if ( $matchAry[$pos] eq $tAry[$pos] );
-        return -1 if ( $matchAry[$pos] eq 'y' );
+        return -1 if ( $matchAry[$pos] ne 'y' );
       }
       elsif ( $qAry[$pos] eq 'P' ) {
         return -1 if ( $matchAry[$pos] ne $tAry[$pos] );
@@ -536,11 +578,16 @@ sub quesMatch {
 }
 
 sub questionClue {
-  return 0 unless $_[0] =~ /^[roygbv\?]+=/i;
+  return 0 unless $_[0] =~ /^[roygbp\?]+=/i;
   my @ary = split( /=/, $_[0] );
   for ( 1 .. $#ary ) {
-    die("$_ not equal to length of clue")
-      if length( $ary[$_] ) != length( $ary[0] );
+    die(
+      sprintf(
+        "$_ not equal to length of clue: %d vs %d(arg $_)",
+        length( $ary[0] ),
+        length( $ary[$_] )
+      )
+    ) if length( $ary[$_] ) != length( $ary[0] );
   }
   return 1;
 }
@@ -657,6 +704,7 @@ sub usage {
   print <<EOT;
 ==================USAGE FOR REDS.PL==================
 Examples:
+-e = open reds.txt, -ef = open source file
 reds.pl abcde %
 Should give 6*2 12 possibilities (% means we know where the vowels/consonants/y are and we have 3 consonants, 2 vowels))
 reds.pl abcd bcda
@@ -665,8 +713,10 @@ reds.pl abcdef bcdeaf
 Should give an error since the f's match up
 reds.pl -fr
 Looks at c:/writing/dict/reds.txt
+reds.pl -a(nl)+(auditstring) audits a specific puzzle-answer string to look for
 -x/-nx turns on/off checking if you exclude one of the strings (default is on)
 reds.pl rs runs the reds-in-source. v=verbose, b=redo base file, c=redo compare file
+reds.pl rf runs through the reds.txt file, rfo = open first error, rfn = suppress, default = off
 reds.pl -a STRING looks for a string. reds.pl -a+GRINTS STRING adds GRINTS as a potential red.
   l = LY in otters, n = no additional settler clues
 EOT
