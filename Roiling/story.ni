@@ -13970,7 +13970,7 @@ instead of doing something with the dour tan rotunda:
 
 chapter brochure
 
-a brochure is vanishing scenery in Browse Bowers. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads RESIDE! RESIDE! RESIDE!"
+a brochure is vanishing scenery in Browse Bowers. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads:[paragraph break]RESIDE! RESIDE! RESIDE! - Sir Dee."
 
 a-text of brochure is "RYRYRY". b-text of brochure is "R???RG". parse-text of brochure is "x[sp]e[sp]s[sp]i[sp]x[sp]e". brochure is cheat-spoilable.
 
@@ -18796,6 +18796,7 @@ understand "achers/arches" and "achers arches" as a-s.
 
 understand "a-s" as a-s when debug-state is true. [for showme a-s]
 
+[note that they can be CHASER arches too, hence the question mark. Need to check that cheat-scanning mentions CHASER too. ??]
 a-text of a-s is "RYYRRR". b-text of a-s is "RY?RRR". parse-text of a-s is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
 does the player mean searching the a-s: it is very likely.
@@ -19782,9 +19783,9 @@ Baldest Blasted Saltbed is in Towers.
 check going west in Baldest Blasted Saltbed:
 	say "[if old ice is reflexed]Even though you made it look cooler, t[else]T[end if]he old ice is in the way[if old ice is reflexive], but maybe you could prettify it a bit[end if]." instead;
 
-section old ice
+section docile old ice
 
-the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if][one of]. Another look and you'll remember where you saw a beautiful carved ice sculpture[or]. You see red remembering an LiedCo sculpture that showed this[stopping]."
+the docile old ice is LLPish reflexive scenery in Baldest Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if][one of]. Another look and you'll remember where you saw a beautiful carved ice sculpture[or]. You see red remembering an LiedCo sculpture that showed this[stopping]."
 
 a-text of docile old ice is "RYYRYR". b-text of docile old ice is "R?YRYR". parse-text of docile old ice is "x[sp]?-[sp]x[sp]-[sp]x"
 
@@ -20086,7 +20087,7 @@ the weirder red wire is part of the bot boat. description is "You know, it's not
 
 the weirder red wire is LLPish and vanishing.
 
-a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "RGRYR?R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
+a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "?GRYR?R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
 
 check scaning bot boat (this is the scan boat components and not boat rule):
 	[showme whether or not blaster is reflexive;
@@ -21093,7 +21094,7 @@ rule for supplying a missing second noun when showing:
 	if pester'n serpent is visible:
 		now second noun is pester'n serpent.
 
-a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRY??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
+a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRG??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
 chapter curst palace
 
@@ -24794,7 +24795,7 @@ instead of doing something with inapt paint:
 	if current action is taking, say "It's stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something." instead;
 	say "The paint is just there. There's got to be some way to get rid of it."
 
-a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?".  parse-text of reserved is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
+a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?".  parse-text of inapt paint is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
 
 the guava is a fruit.
 

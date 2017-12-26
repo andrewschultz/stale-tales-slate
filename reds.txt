@@ -11,6 +11,7 @@ flier,irelf,efril
 stair,trisa,israt,ratsi
 ramp,mrpa
 staple,epstal
+staple,RR?RRY=pastel=plates
 ################stores
 sorbet,oberts,restbo,bestor
 towers,westor,restow
@@ -18,19 +19,28 @@ tokers,restok,ktrose,stroke
 others,hoster,ershot,esroth
 nestor,storen,toners
 presto,sopert
+presto,??YRRY=tropes=poster
 routes,sureto,setour
 oyster,toyers
 ################routes
+#same mesa
 inside,diesin
 towards,radwost
-along,nogal,logan
+under,YRPG?=ruden=nuder
+from,?RY?=morf=form
 beneath,thebean,hatbeen
 astride,itsared,edastir,staider
+#pat's
 despite,speedit,sitdeep
+#harms marsh
+along,nogal,logan
+#cripple clipper
+athwart,?RRR?RR=whattar=tawrath=thatraw=artthaw
 ################troves
+gape,??R?=paeg=gpea=pega=page
 hate,thea,ateh,ehat
 care,rAcE
-spot,posT,StOp
+spot,?R??=stop=post
 observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers
 recall,cEllar
@@ -39,12 +49,19 @@ ignore,ergnio,onregi,region,goerin
 reason,noears,sorena,anorse,oasner,asnero
 #drain nadir
 glare,regal,lager,ergal,agler
+#boredom bedroom
+deal,???R=lead=dale=elda=leda=adle
+#econ cone
 strive,trevis,vister
 ponder,derpon,epdorn,drpeno,nedorp
-discover,rodsvice,revdisco,veridocs,scorediv
+#browse bowers
+desire,R???RG=sirdee=reside
 #upscale capsule
+discover,rodsvice,revdisco,veridocs,scorediv
+last,R?R?=stal=salt
 decide,iceded,cdedei,ecedid
 resign,sireng,grines,singer,snegri,nregis,isnerg
+recant,R??YRR=trance=nectar
 ################presto
 #grey gyre
 blam,lamb
@@ -55,12 +72,16 @@ phooey,oyehop
 #char arch
 drat,tard
 rats,star
+#marines seminar remains
+prost,?R?R?=sport=ports
 #dirge ridge
 whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
 #phat path/saps pass
 keys,syke
-alert,later
+later,RY???=alert=alter=retre=atall
+later,alert
 tough,ought
+what,R???=hawt=thaw
 #hacks shack
 disk,skid,idks
 skid,disk,idks
@@ -69,6 +90,10 @@ keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
 ################oyster
 #hops shop
+sing,?G?R=gins=sign
+remap,R?RYR=perma=amper
+scrape,?RRYRY=casper=spacer
+scrape,RRR??Y=capers=recaps
 spill,lilps
 spit,tips,pits
 inset,tiens
@@ -80,10 +105,17 @@ unearth,haunter,etahnru,nearhut
 spike,pikes
 #lean lane
 swipe,ispew,wipes
+enlarge,YRR??RY=general=gleaner
 enlarge,algreen
+#achers arches
+search,RY?RRR=chaser=achers=arches
+#lapsin plains
+splain,RRRY??=lapsin=plains
+snap,?R?R=span=pans
 #dourest detours
 tan,ant
 #den loft
+prepay,?RY?Y?=papery=yapper
 prepay,rapyep,yaperp
 #airshed
 bust,stub
@@ -95,8 +127,11 @@ sadder,RY?RYR=dreads=adders
 sadder,dreads,drsade,edsard
 #scope copse
 subtler,lesburt
-rusty,tryus
+subtler,R?RRR??=bluster=butlers
+rinsed,R??R?R=snider=diners
 rinsed,isdern,drenis,nerdis
+clumsy,RRYRR?=muscly=lucsym
+rusty,tryus
 #(random anywhere)
 creaky,kcayer,rayeck,keycar,yacker
 weariest,treesawi,treesiaw,sitweare,ewitears
@@ -111,40 +146,61 @@ married,iraderm,edmirra,redirma
 #long
 rustled,dreltus,sledrut
 #saltbed
+coiled,R?YRYR=docile=oldice
 pastier,airpest,reapsit,tipsare,spareit
 broken,rebonk
 #anemic cinema
+angstier,?PPRRY?R=angriest=ingrates
 angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas,nitregas,sanergit,iregnats
 #unblest sunbelt
 himself,melfish,shelfim,smhlife,ehfilms,flemish
 grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
 drained,edindar,rindade
+drained,??YYRGR=dandier=aridden
+marginal,RYRRYR?R=alarming=grailman
 #treading gradient
+pearly,???RR?=replay=player
 released,dreleesa,eredeals,lardeese,edsleare
 weariest,ewitears,treesawi,treesiaw,iwestare
 #danger garden
 vainest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
 naivest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
+#lost lots
+prosiest,RR?RYYRR=sporties=ripostes
 #actionless coastlines
+hastiest,RY?R?YR?=assethit=atheists
+grained,RR?YR?R=reading=adinger
+rewired,?GRYR?R=weirder=redwire
 holiest,thelois,sithole,liestho,sthelio,thesoil,theoils,thisole
+holiest,?GRYYRR=loisthe=hostile
+holiest,??RYYR?=hostile=ishelot
 weirder,drewrie
 stabler,alberts
 hastiest,setithas,thiseats
 #rawest waters
 nearest,ernesta,strenae,stearne
 #mislit limits
+present,?RYRG??=pestern=serpent
 punier,inpure,iprune,inperu,unrIpe,urpIne
 spectacular,cactuspearl,pearlcactus,capsulecart,acurstplace
 #mesprise premises
 triste,restit
+#unsorted
+weariest,?YYRY?RR=sweatier=waitseer
+restful,R?RRR?R=fluster=selfrut
+nerdiest,R?RRY?R?=resident=trendies
 ################otters
-#blearu barley/burnt brunt
+#bleary barley/burnt brunt
+barely,P??YRB=bleary=barley
 reedily,lyredie,drilyee
 discern,nrdices,icnerds,srindec
 rescind,nrdices,icnerds,srindec
 #frontage
+steamily,?RYYRY?O=mayislet=mistyale=slimytea
+formally,?YR?YRRO=flymoral=allyfrom=myfloral
 wearingly,lawyering
 modestly,ed my lost,styledom,yet old ms,ty sod mel
+atom,??YR=atmo=moat
 #loop pool
 #bran barn
 although,ghoulhat,holathug,ughohalt
@@ -172,9 +228,11 @@ among,mango,goman
 #filed field
 watermelon,meantrowel,newtlamore,mrowenlate,moanerwelt
 #scape space
+reversed,?GRGPRG?=reserved=deserver
 gonear,anogre,onearg,engaro
 rhubarb,burrbah
 #coins sequence
+icons,YRY??=sonic=coins
 coins,nisco
 icons,nisco
 sonic,nisco
