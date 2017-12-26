@@ -215,6 +215,12 @@ else {
     @perm     = split( //, $array[0] );
 
     for my $q ( 1 .. $#array ) {
+
+      if ( questionClue( $array[$q] ) ) {
+        print "$array[0]/$array[$q] bad Qmatch.\n"
+          if ( quesMatch( $array[0], $array[$q] ) == -1 );
+        next;
+      }
       die("Unequal lengths $array[0] vs $array[$q] at line $.")
         if length( $array[0] ) != length( $array[$q] );
       if ( $q =~ /^[rygpob\?]*$/i ) {
@@ -288,8 +294,8 @@ sub oneRed {
     $poss /= factorial( $theDups{$_} );
   }
 
-  return if $_[0] == 1 && $#array == 0;
-  print "Removing arg # $_[0] $array[$_[0]]: " if ( $_[0] );
+  return if $_[0] == 1 && $#array < 2;
+  print "Removing arg # $_[0] of $array[$_[0]]: " if ( $_[0] );
 
   @perm = split( //, "$array[0]" );
   for $j ( 1 .. $#array ) {
@@ -530,11 +536,11 @@ sub quesMatch {
 }
 
 sub questionClue {
-  return 0 unless $_[0] =~ /^[roygbv]+=/;
+  return 0 unless $_[0] =~ /^[roygbv\?]+=/i;
   my @ary = split( /=/, $_[0] );
   for ( 1 .. $#ary ) {
     die("$_ not equal to length of clue")
-      if length( $ary[$_] ) != length( $ary[$0] );
+      if length( $ary[$_] ) != length( $ary[0] );
   }
   return 1;
 }

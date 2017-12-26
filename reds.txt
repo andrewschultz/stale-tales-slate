@@ -31,6 +31,7 @@ despite,speedit,sitdeep
 hate,thea,ateh,ehat
 care,rAcE
 spot,posT,StOp
+observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers
 recall,cEllar
 derive,idveer,viered,everid
@@ -90,6 +91,7 @@ derail,ialder,laired
 redial,ialder,laired
 ###############towers
 #topside deposit
+sadder,RY?RYR=dreads=adders
 sadder,dreads,drsade,edsard
 #scope copse
 subtler,lesburt
