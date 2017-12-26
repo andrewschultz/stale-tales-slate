@@ -55,6 +55,8 @@ my $auditString    = "";
 my @extraArray     = ();
 my $includeLY      = 0;
 
+my $setQYet = 0;
+
 my @wordArray;
 
 while ( $cur <= $#ARGV ) {
@@ -121,6 +123,15 @@ while ( $cur <= $#ARGV ) {
       print
 "Just to check, period means a blank space, not a file name. Use -f for a file.\n";
     };
+    /^[roygbv\?]+=/i && do {
+      die("Redefined a settler clue $arg over $ARGV[$setQYet]") if $setQYet;
+
+      # print("Q-settler clue $arg\n");
+      push( @wordArray, $arg );
+      $setQYet = $cur;
+      $cur++;
+      next;
+    };
     /^[\.%a-z]/i && do {
       push( @wordArray, $arg );
       if ( $firstString eq "" ) { $firstString = $cur; }
@@ -147,7 +158,9 @@ PRINTRESULTS:
 
   my $iter = ( $checkExclude ? $#array : 0 );
 
-  for $aryIdx ( 0 .. $iter ) { oneRed($aryIdx); }
+  for $aryIdx ( 0 .. $iter ) {
+    oneRed($aryIdx);
+  }
 }
 else {
   my $gotAnyAna  = 0;
@@ -164,7 +177,6 @@ else {
     if ( $a =~ /^#roil-start/ ) { $roilingYet    = 1;               next; }
     if ( $a =~ /^#/ )           { next; }
     if ( $a =~ /^;/ )           { last; }
-
     if ($auditString) {
       next
         if ( ( index( lc($a), "$auditString," ) == -1 )
@@ -201,9 +213,16 @@ else {
     }
     @letArray = split( //, $array[0] );
     @perm     = split( //, $array[0] );
+
     for my $q ( 1 .. $#array ) {
       die("Unequal lengths $array[0] vs $array[$q] at line $.")
         if length( $array[0] ) != length( $array[$q] );
+      if ( $q =~ /^[rygpob\?]*$/i ) {
+        die("$q conflicts with cheat settings $setQYet $array[$setQYet]")
+          if $setQYet;
+        $setQYet = $q;
+        next;
+      }
       my @a2 = split( //, $array[$q] );
       for my $idx ( 0 .. $#letArray ) {
         if ( $letArray[$idx] eq $a2[$idx] ) {
@@ -245,6 +264,7 @@ sub oneRed {
   my %theDups;
 
   for $j ( 1 .. $#array ) {
+    next if $j == $setQYet;
     next if $array[$j] eq "%";
     next if length( $array[$j] ) eq length( $array[0] );
     next
@@ -268,6 +288,7 @@ sub oneRed {
     $poss /= factorial( $theDups{$_} );
   }
 
+  return if $_[0] == 1 && $#array == 0;
   print "Removing arg # $_[0] $array[$_[0]]: " if ( $_[0] );
 
   @perm = split( //, "$array[0]" );
@@ -286,6 +307,7 @@ sub oneRed {
   assign_onematches();
 
   if ( my $temp = isOops( $array[0], $_[0] ) ) {
+    die("Settler-Q test failed.") if ( $temp == -1 );
     die "Test failed at word "
       . ( $temp & 0xff )
       . " character "
@@ -324,7 +346,6 @@ sub oneRed {
       }
     }
 
-    # print "@perm / $j / $_[0] / $array[$_[0]]\n";
     if ( !isOops( $j, $_[0] ) ) {
       $succ++;
 
@@ -413,6 +434,11 @@ sub isOops # does this contradict the clues we are given e.g. ARGV[1] ... ARGV[A
     ) # remember to start at 1 because we want to disqualify the first entry as it's the one we want to solve
   {
     next if ( $count == $_[1] );
+
+    if ( $setQYet == $count ) {
+      return ( quesMatch( $_[0], $array[$setQYet] ) );
+    }
+
     $gotone = 0;
 
     #print "$_[0]: THIS: $this PERM(L) $perm[$_[0]]\n";
@@ -450,6 +476,67 @@ sub isOops # does this contradict the clues we are given e.g. ARGV[1] ... ARGV[A
     }
   }
   return 0;
+}
+
+sub quesMatch {
+  my @matchAry = split( //,  $_[0] );
+  my @argsAry  = split( /=/, $_[1] );
+  my @qAry     = split( //,  $argsAry[0] );
+  my $pos;
+  my $arg;
+  my @sums;
+
+  push( @sums, 0 ) for ( 0 .. $#matchAry );
+  for $arg ( 1 .. $#argsAry ) {
+    my @tAry = split( //, $argsAry[$arg] );
+    for $pos ( 0 .. $#tAry ) {
+
+      # print "$argsAry[$arg], @tAry, $pos\n";
+      if ( $qAry[$pos] eq '?' ) {
+        $sums[$pos] += ( $tAry[$pos] eq $matchAry[$pos] );
+      }
+      elsif ( $qAry[$pos] eq 'R' ) {
+        return -1 if ( $matchAry[$pos] eq $tAry[$pos] );
+        return -1 if ( $matchAry[$pos] =~ /[aeiouy]/ );
+      }
+      elsif ( $qAry[$pos] eq 'Y' ) {
+        return -1 if ( $matchAry[$pos] eq $tAry[$pos] );
+        return -1 if ( $matchAry[$pos] !~ /[aeiou]/ );
+      }
+      elsif ( $qAry[$pos] eq 'O' ) {
+        return -1 if ( $matchAry[$pos] eq $tAry[$pos] );
+        return -1 if ( $matchAry[$pos] eq 'y' );
+      }
+      elsif ( $qAry[$pos] eq 'P' ) {
+        return -1 if ( $matchAry[$pos] ne $tAry[$pos] );
+        return -1 if ( $matchAry[$pos] =~ /[aeiouy]/ );
+      }
+      elsif ( $qAry[$pos] eq 'G' ) {
+        return -1 if ( $matchAry[$pos] ne $tAry[$pos] );
+        return -1 if ( $matchAry[$pos] !~ /[aeiou]/ );
+      }
+      elsif ( $qAry[$pos] eq 'B' ) {
+        return -1 if ( $matchAry[$pos] ne $tAry[$pos] );
+        return -1 if ( $matchAry[$pos] ne 'y' );
+      }
+    }
+  }
+  for $pos ( 0 .. $#matchAry ) {
+    if ( $qAry[$pos] eq "?" ) {
+      return -1 if ( ( $sums[$pos] == 0 ) || ( $sums[$pos] == $#qAry ) );
+    }
+  }
+  return 0;
+}
+
+sub questionClue {
+  return 0 unless $_[0] =~ /^[roygbv]+=/;
+  my @ary = split( /=/, $_[0] );
+  for ( 1 .. $#ary ) {
+    die("$_ not equal to length of clue")
+      if length( $ary[$_] ) != length( $ary[$0] );
+  }
+  return 1;
 }
 
 sub factorial {
@@ -562,11 +649,12 @@ sub assign_onematches {
 
 sub usage {
   print <<EOT;
+==================USAGE FOR REDS.PL==================
 Examples:
 reds.pl abcde %
-Should give 12 possibilities (% means we know where the vowels/consonants/y are)
+Should give 6*2 12 possibilities (% means we know where the vowels/consonants/y are and we have 3 consonants, 2 vowels))
 reds.pl abcd bcda
-Should give 9
+Should give 9 (bcda can't match anything)
 reds.pl abcdef bcdeaf
 Should give an error since the f's match up
 reds.pl -fr
