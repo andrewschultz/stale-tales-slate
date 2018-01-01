@@ -296,7 +296,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "skyscrapre"	768953439	Econ Cone	--	--	"[scrapery]!"
 "perky"	469888301	Econ Cone	--	--	"[scrapery]!"
 "crass"	299065138	Econ Cone	--	--	"[scrapery]!"
-"statue"	537593736	--	astute statue	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if prai is reflexed and rivets are reflexed]You did what you could, anyway[else if prai is reflexive and rivets are reflexive]Maybe grok the writing on the statue[else]You could find another way to follow the statue's message, but it's not necessary[end if]."
+"statue"	537593736	--	astute statue	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if]."
 "bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if]."
 "label"	256040510	--	label	--	"It's not the label but what's on it."
 "noise"	412333006	--	noise	--	"Hmm, no, focusing so directly on the noise to block it out is counterproductive."
@@ -1434,7 +1434,7 @@ to say shmoe-homes:
 	say "The people living in them don't want to change. You can't make them. You need to change something for YOU"
 
 to say cone-rec:
-	say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if prai is reflexed and rivets are reflexed]how to go west[else if prai is reflexive and rivets are reflexive]how to be inspired by that statue[else]going west or, maybe, that statue again[end if]"
+	say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter the godlings['] lodgings[else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the airhow to be inspired by that statue[else]entering the godlings['] lodgings or being sure you deserve to[end if]"
 
 to say scrapery:
 	say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";

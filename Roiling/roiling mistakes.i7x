@@ -270,7 +270,7 @@ chapter browse bowers
 
 understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They don't crave...") when player is in Browse Bowers
 
-understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if rivets is reflexive and prai is reflexive]You are almost enthused enough[else]You're enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
+understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if rivets is reflexive and praise is reflexive]You are almost enthused enough[else]You're enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
 understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
