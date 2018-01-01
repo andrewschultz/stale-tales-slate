@@ -81,6 +81,8 @@ if len(sys.argv) is 1:
 only_anagram = True
 plural = True
 verbose = False
+minus_ones = False
+minus_twos = False
 
 new_arg = []
 
@@ -96,6 +98,16 @@ for x in sys.argv[1:]:
     if x is 'v' or x is '-v':
         print("Verbose checking")
         verbose = True
+        continue
+    if x == '12':
+        minus_ones = True
+        minus_twos = True
+        continue
+    if x == '1':
+        minus_ones = True
+        continue
+    if x == '2':
+        minus_twos = True
         continue
     if x == 'no' or x == '-no':
         print("Not checking only-anagram, no +/- 1 letter")
@@ -121,6 +133,33 @@ for x in new_arg:
     if len(x) < 3 or (x.startswith("-") and len(x) < 4):
         print(x, "is an invalid flag.")
         usage()
+        exit()
+    if minus_twos is True:
+        remove_hash = defaultdict(bool)
+        twos_count = 0
+        print("Results from skipping 2 letters...")
+        see_anagram_or_close(x, only_anagram)
+        for i in range(0, len(x)):
+            for j in range(i+1, len(x)):
+                if remove_hash[x[i]+x[j]] or remove_hash[x[j]+x[i]]:
+                    if verbose: print("Skipping", x[i], x[j], "already done")
+                    continue
+                twos_count = twos_count + 1
+                temp = x[:i] + x[i+1:j] + x[j+1:]
+                see_anagram_or_close(temp, only_anagram)
+                remove_hash[x[j]+x[i]] = True
+                remove_hash[x[i]+x[j]] = True
+                if verbose: print("Zapping", x[i], x[j])
+                # print(temp)
+        xc2 = len(x) * (len(x) - 1) // 2
+        if twos_count != xc2:
+            print("Repeats mean we checked only", twos_count, "unique word combos of", xc2, "total.")
+    if minus_ones is True:
+        print("Results from skipping 1 letter...")
+        see_anagram_or_close(x, only_anagram)
+        for i in range(0, len(x)):
+            see_anagram_or_close(x[:i] + x[i+1:], only_anagram)
+    if minus_ones or minus_twos:
         exit()
     see_anagram_or_close(x, only_anagram)
     if x.endswith("ing"):
