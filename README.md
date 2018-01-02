@@ -23,6 +23,9 @@ All PERL files should run with any version of PERL. There should be little need 
 cheapbotsdonequick.com hosts both anagram bots found in Roiling: @AnagramBookBot has books from Roiling's 3 shelves. @AnagramTauntBot has taunts from both Shuffling (crowd and Red Bull Burdell) and Roiling (8 places where the game heckles you).
 
 Note for if I modify a puzzle, which is unlikely, but I need to write it somewhere. Check the following files, which are in the source directory unless indicated otherwise:
+
+* maximum/minimum points for the region
+* story.ni "showing what the player missed"
 * \writing\dict\wmet.txt (run \writing\dict\wmet.pl)
 * release notes (batch file ni sr / ni rr)
 * \writing\dict\otz.py (sa/roi) check to make sure old puzzle is eliminated

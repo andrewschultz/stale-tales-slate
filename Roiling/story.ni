@@ -9452,11 +9452,9 @@ after fliptoing da mist:
 behinded is a truth state that varies.
 
 after fliptoing when mrlp is others (this is the slot and singed design appear rule):
-	if noun is iconic:
-		now singed design is part of the noun;
-	if noun is s-i or noun is s-c:
-		if player has so-great storage:
-			slot-appear;
+	if noun is iconic, now singed design is part of the noun;
+	if noun is s-i or noun is s-c,
+		if player has so-great storage, slot-appear;
 	continue the action;
 
 after fliptoing a-p:
@@ -9472,9 +9470,12 @@ after fliptoing prod:
 	now waste is in Shadier Airshed;
 	continue the action;
 
+after fliptoing diapers:
+	if sister tressi is in drain nadir, poss-d;
+	continue the action;
+
 after fliptoing ltb:
-	if lager is in Boredom Bedroom:
-		poss-d;
+	if lager is in Boredom Bedroom, poss-d;
 	continue the action;
 
 after fliptoing b-b:
@@ -27453,6 +27454,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if what-a-bee is reflexive, say "[2drm of boarded roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
 		if bee's head is reflexive, say "[2drm of boarded roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
+		if sister tressi is not in lalaland, say "[2drm of drain nadir]you could've tried to RESIST Sister Tressi.";
 		if lager is not in lalaland, say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
 		if rivets are reflexive, say "[2drm of econ cone]you could've tried to STRIVE by the statue of Trevis Vister.";
 		if praise is reflexive, say "[2drm of econ cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";

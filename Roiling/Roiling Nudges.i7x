@@ -276,6 +276,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
 "sda"	119490873	Drain Nadir	--	--	"It's a sad pier."
 "pire"	339588717	Drain Nadir	--	--	"It's a sad pier."
+"likeness"	668807521	--	Sister Tressi	--	"It's whom the likeness is that matters--Sister Tressi, here."
 "bedroom"	465358213	Boredom Bedroom	--	--	"[locname]." [start boredom bedroom]
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
 "bowers"	510110133	--	browse bowers	--	"[locname]." [start browse bowers]
