@@ -116,7 +116,7 @@ last-loc of Means Manse is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
+Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 22. min-score of Troves is 15. [Pa Egg Pea, Sister Tressi, lager, lobster/stream, bee, astute statue, DIVORCES]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
@@ -5496,6 +5496,7 @@ MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gi
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
+sister tressi	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
 rivets	false	false	false	true	"[rivet-help]."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
@@ -8914,6 +8915,7 @@ bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that s
 what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee's head is reflexed]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
 cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]."
 cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
+sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! And yet...there's still something more to do here. You still need to bottom out in your own way."
 diapers	diapers	false	459079590	Boredom Bedroom	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
@@ -13882,7 +13884,17 @@ check fliptoing cellar door:
 
 book Drain Nadir
 
-Drain Nadir is a room in Troves. "You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][else]. They all point to a rock bottom you haven't hit yet, but it may be necessary now[end if]."
+Drain Nadir is a room in Troves. "You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][else]. They all point to a rock bottom you haven't hit yet, but it may be necessary now[end if][if sister tressi is in drain nadir]. A likeness of Sister Tressi also stares down at you, guilt-tripping you into feeling you didn't do nearly as much as you could or should have[end if]."
+
+chapter sister tressi
+
+the likeness of sister tressi is vanishing LLPish scenery in Drain Nadir. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling."
+
+a-text of sister tressi is "RYRYRR". b-text of sister tressi is "RY?Y?R". parse-text of sister tressi is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
+
+instead of doing something with sister tressi:
+	if action is procedural, continue the action;
+	say "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how." instead;
 
 chapter adeiprs
 

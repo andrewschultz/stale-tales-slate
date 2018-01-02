@@ -296,6 +296,12 @@ You may or may not know what to do with the drab yoke. The exciting conclusion i
 It's PG-on-up, but twiddling that does nothing.
 The boing mechanism could use a moment of discovery.
 So say BINGO to get it working.
+?Are the Sport Ports important?
+To get all the points in the area, yes.
+To complete the game, no.
+This is a slightly obscure word, but it is a toast in German.
+The settler's clue (plus STROP giving red) may tell what it is.
+PROST.
 >>DIRGE RIDGE
 ?Who's this Leo and how can I avoid him?
 He's too clumsy to get you, but maybe you can get him good.
@@ -590,6 +596,10 @@ But you can RECALL. There's another solution, too. You can listen.
 I'd veer...ever I'd--a way to figure where it was?
 DERIVE.
 >>DRAIN NADIR
+?Is Sister Tressi relevant?
+Only for an LLP.
+She looks down at you as if you say you're a failure.
+You can RESIST.
 ?A spider, sad pier, diapers...
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.

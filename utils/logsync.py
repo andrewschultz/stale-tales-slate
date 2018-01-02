@@ -13,6 +13,9 @@ got_logic = defaultdict(int)
 
 scanned = ""
 
+# this is for oddly or privately named items
+abbrevs = { "a-s": "achers' arches" }
+
 count = 0
 
 show_count = False
@@ -32,7 +35,7 @@ with open("story.ni") as file:
                 else:
                     scanned = re.sub(" is \".*", "", line.strip().lower())
                     scanned = re.sub("a-text of ", "", scanned)
-                need_logic[scanned] = count
+                need_logic[abbrevs[scanned] if scanned in abbrevs.keys() else scanned] = count
 
 with open("logic.htm") as file:
     for line in file:

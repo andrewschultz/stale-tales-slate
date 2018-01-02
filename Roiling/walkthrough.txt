@@ -33,16 +33,16 @@ You can also access the new area(s) that appeared in releases 2 and 3 by playing
 
 --------------------------------------------------------------------------------------
 
-I recommend that you search for the section you want to visit--this document is divided that way. It's a bit of a spoiler what the sections are. For now, I would say you can search for
+I recommend that you search for the section you want to visit--this document is divided that way. The stores are organized in alphabetical order. I put in whitespace so one store doesn't spoil the next. Currently, you can search for
 
 MEANS MANSE
-STORE H
 STORE P
 STORE T
 STORE U
 STORE V
 STORE W
 STORE Y
+STORE H
 
 Also, I don't cover Last Lousy Points (LLPs) in any section. These are hintable in-game but I also ROT13'd them at the end. Also, for release 3, I wrote up some metrics of how big areas are. They should be included in metrics.htm.
 
@@ -227,7 +227,7 @@ manor -> others -> 2 of (p u v w y) if you use the patcher -> t. K/N is an optio
 
 Also, if you are curious about the main "theme" of each store, I have it in ROT13 below.
 
-The optional stores are organized starting with the shortest, with the final Store T coming last, so you may wish to search for Store P/U/V/W/Y if you don't want to be spoiled by scrolling. I think I've put in enough carriage return buffers.
+The optional stores are organized alphabetically, so you may wish to search for store (letter). The exception: H is a post-victory store, so I put it at the end.
 
 You will get a warning before solving an area if you can still gain a few points. But if something is unachievable, then the game will not warn you. This may happen in store V, where there are a few with points you may miss. POSS will trigger when you miss them.
 
@@ -389,7 +389,7 @@ or
 
 So after either of these you're in the Drain Nadir.
 
-You've hit rock bottom, and you need to bring yourself up.
+You've hit rock bottom, and you need to bring yourself up. If you want, you can take a flap at Sister Tressi, but you don't need to.
 
 > DESPAIR
 
@@ -932,6 +932,8 @@ If you try going north, you still get smoked. Even if you know what to do with t
 
 > BLEEP
 > E
+
+Now you can do something with the Sport Ports for a last lousy point. It's an obscure word, and in fact it's an interjection I didn't know until I started really poking around, but it turned up and felt appropriate.
 
 Gun doesn't go boing?
 
@@ -1871,7 +1873,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 2 TROVES
  * release 2: you now have a new possible action at the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs WEST)
- * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the room that kept changing its name. The skyscraper is now the godlings' lodgings.
+ * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the room that kept changing its name. The skyscraper is now the godlings' lodgings. Sister Tressi in the Drain Nadir is a Last Lousy Point.
 3 ROUTES:
   * release 4: optional ways through various areas are now disabled. The end puzzle is now in a room past the Cripple Clipper and requires both commands as well as an additional one, with different barriers to winning. ABOARD is no longer a solution. The raptest patters are a new LLP.
 4 PRESTO:
@@ -1991,6 +1993,8 @@ JUNG gets rid of the hawt thaw. (Neat ROT13, eh?)
 
 The trim socks become EBZ FGVPXF--no space needed. The last letter is optional, too. The escaroles become PNFFREBYR. This allows an alternate way through.
 
+You can say CEBFG to the sport ports.
+
 ROUTES:
 
 Go GBJNEQF the worst ad.
@@ -1998,6 +2002,9 @@ Go GBJNEQF the worst ad.
 TROVES:
 
 TNCR at Simple Impels by Peg A. Page.
+
+ERFVFG at Sister Tressi.
+
 TYNER at the lager (again, interesting ROT13.)
 QVFPBIRE something about Divorces magazine. There actually is a magazine named this LLP, and it's pretty well-known. Or it was. It's much less fluffy than Divorces.
 

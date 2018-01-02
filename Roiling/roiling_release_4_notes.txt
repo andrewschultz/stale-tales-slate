@@ -56,7 +56,7 @@ Store U:
 --there is a new location, the Sonancy Canyons, with a new final puzzle.
 
 Store V:
---there are now two more rooms in the sequence.
+--there are now two more rooms in the sequence. Sister Tressi is a last lousy point in one of them.
 --FiefCo Office is renamed Upscale Capsule.
 
 Store W:

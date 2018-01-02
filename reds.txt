@@ -45,6 +45,7 @@ observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers
 recall,cEllar
 derive,idveer,viered,everid
+resist,RY?Y?R=sister=tressi
 ignore,ergnio,onregi,region,goerin
 reason,noears,sorena,anorse,oasner,asnero
 #drain nadir
