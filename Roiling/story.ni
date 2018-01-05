@@ -14168,9 +14168,9 @@ check fliptoing when player is in Upscale Capsule and noise is in Upscale Capsul
 		preef noun;
 		do nothing instead;
 
-chapter Trance Nectra
+chapter Trance Nectar
 
-the Trance Nectar is a vanishing thing.
+the Trance Nectar is a vanishing thing. "It's guaranteed to keep you focused on what you need to do, if not thrilled about it."
 
 a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x".
 
@@ -14295,9 +14295,11 @@ instead of taking lobster meal:
 
 section stream painting
 
+The ME ARTS is reflexive scenery in Upscale Capsule. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it."
+
 The painting of the stream is reflexive scenery in Upscale Capsule. "It's labeled as PRACTICAL RELAXATION FOR TODAY'S LEADERS. The stream is about all there is to it. It shimmers based on how you stare at it[if stream is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
 
-a-text of stream is "RYRRYR". b-text of stream is "RYRRYR". parse-text of stream is "x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
 
 after fliptoing stream:
 	if lobster is in Upscale Capsule, now lobster is LLPish;
