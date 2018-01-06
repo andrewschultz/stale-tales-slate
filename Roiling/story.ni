@@ -6709,8 +6709,8 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 "redial"	store y	oyster-x	0
 "destroy"	store y	oyster-x	1
 "spectacular"	store w	towers-x	0
-"decide"	store v	troves-x	0
-"resign"	store v	troves-x	0
+"decide"	store v	troves-x	3
+"resign"	store v	troves-x	3
 "quickly"	store t	otters-x	-1
 
 book errors
@@ -8917,6 +8917,7 @@ cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]
 cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
 sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! And yet...there's still something more to do here. You still need to bottom out in your own way."
 diapers	diapers	false	459079590	Boredom Bedroom	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
+song	troend1	false	361668827	Strip of Profits	"decide"	"decide"	"[troend]"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
@@ -8928,8 +8929,7 @@ salt	playbill	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin.
 stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. After all, the cost of the lobster is probably less a percent of YOUR income than your underlings['] food is of theirs."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
-song	troend1	false	361668827	Strip of Profits	"decide"	"decide"	"[troend]"
-playbill	troend2	false	455903934	Strip of Profits	"resign"	"resign"	"[troend]"
+trance nectar trance nectra	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
 table of presto anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -14170,12 +14170,13 @@ check fliptoing when player is in Upscale Capsule and noise is in Upscale Capsul
 
 chapter Trance Nectar
 
-the Trance Nectar is a vanishing thing. "It's guaranteed to keep you focused on what you need to do, if not thrilled about it."
+the Trance Nectar is a vanishing thing. "You notice some trance nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive.". description is "It's guaranteed to keep you focused on what you need to do, if not thrilled about it."
+
+check drinking trance nectar: say "No. That can't be it. You want a way to exit, to say this is not me." instead;
 
 a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x".
 
 [clap back black cap ??]
-[trance nectar --	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this." 406340841 ??]
 
 chapter silly Upscale Capsule scenery
 
@@ -26295,6 +26296,7 @@ cellar door	"[one of]To open the cellar, you need not REMEMBER anything and ever
 spider	--	sad pier
 sad pier	"[one of]The objects in the Drain Nadir should give you a clue what to do next, since they're all anagrams.[plus][or]Examining yourself, you need to hit total rock bottom.[plus][or]DESPAIR.[minus][cycling]"
 diapers	"[one of]One page after saying you don't want to make any big mistakes, there's a bit about how you may need to hit rock bottom before finding your way back up[plus][or]There's lots of mumbo-jumbo about observing sentimental objects until you get sick of them, but please be sure to forget them once they've served their purpose[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
+Eddie's Song	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
 ltb	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
 brochure	"[one of]It is no sin to want a better place to RESIDE.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
 dour tan rotunda	"It's what the Browse Bowers used to be called."
@@ -26316,7 +26318,6 @@ noise	"You need to not pay attention to the noise. See the vanity for details."
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
 lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if stream is reflexive]. NB: finding what to do with the stream also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
 stream	"[one of]The picture of the stream should relax you to feel on top of things[if lobster is reflexive]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
-Eddie's Song	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
 playbill	"[one of]Hm, the playbill mentions no song. Just the singer.[plus][or]More people hint what to do if you READ the playbill. Lots in red.[plus][or]You want to give up and move on after reading.[plus][or]You've got no time to negotiate a severance package. You're a busy adventurer! You can just RESIGN.[minus][cycling]"	--	"RESIGN"	[end TROVES hinting]
 curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
