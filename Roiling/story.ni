@@ -1975,6 +1975,7 @@ sardine	"[one of]The sardine spends time babbling about his sensitive hearing, s
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 agnostic	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
+dreads adders	"The adders sit around and look intimidating."
 pester'n serpent	"[serp-say]."
 Mel Fish	--
 muscly luc sym	--
@@ -1993,6 +1994,7 @@ grailman	--
 Lars Eede	--
 Elsa Erde	--
 bonker	--
+stinger	--
 ingrates	--
 organised	--
 admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
@@ -2642,7 +2644,7 @@ idg	"vitamins/nativism" or "nativism vitamins"	"'Nice an crunchy. Taste good too
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.]
 person-subj	right-region	him-say
-Elvira	--	"Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way."
+Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way.'"
 settler	--	"You don't think anyone can help you [if Elmo is in lalaland]more than Elmo did [end if]with that."
 pedanto-notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get there[end if]!'"
@@ -8929,7 +8931,7 @@ salt	playbill	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin.
 stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. After all, the cost of the lobster is probably less a percent of YOUR income than your underlings['] food is of theirs."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
-trance nectar trance nectra	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
+trance nectar	trance nectar	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
 table of presto anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -9453,7 +9455,7 @@ behinded is a truth state that varies.
 
 after fliptoing when mrlp is others (this is the slot and singed design appear rule):
 	if noun is iconic, now singed design is part of the noun;
-	if noun is s-i or noun is s-c,
+	if noun is s-i or noun is s-c:
 		if player has so-great storage, slot-appear;
 	continue the action;
 
@@ -13687,7 +13689,7 @@ after looking in bustle sublet:
 
 section reastier arteries
 
-the reastier arteries are bounding scenery in Bustle Sublet.
+the reastier arteries are bounding scenery in Bustle Sublet. "They lead other places even worse, more likely. You need to focus on what to do here."
 
 instead of doing something with reastier arteries:
 	if action is procedural, continue the action;
@@ -19595,7 +19597,7 @@ for printing a locale paragraph about a thing (called nongua) in topside deposit
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
-the fire torn frontier is bounding scenery in Topside Deposit.
+the fire torn frontier is bounding scenery in Topside Deposit. description is "It's pretty rough. You don't know what's beyond it, but it can't be anything useful."
 
 instead of doing something with fire torn frontier:
 	if action is procedural, continue the action;
@@ -19603,7 +19605,7 @@ instead of doing something with fire torn frontier:
 
 chapter dreads adders
 
-The dreads adders are a plural-named purple guardian in Topside Deposit. "Dreads adders may or may not be lethal, but you're scared of passing them to the north. [one of]If you look at them again, you may remember the two people who created them[or][sade-sard][stopping]." [unfortunately the move-to rule fires before the reorg-guardians rule so we need to specify where the dreads adders are]
+The dreads adders are a plural-named purple guardian in Topside Deposit. "Dreads adders may or may not be lethal, but you're scared of passing them to the north. [one of]If you look at them again, you may remember the two people who created them[or][sade-sard][stopping].". description is "They look like they're trying to invoke fear, but perhaps there's another emotion?" [unfortunately the move-to rule fires before the reorg-guardians rule so we need to specify where the dreads adders are. And it'd take longer to rewrite the rules than just to add what room the adders are in.]
 
 to say sade-sard:
 	say "[one of]Dr. Sade[or]Ed Sard[in random order] was one of their creators, you remember now, as you see red"
@@ -21307,7 +21309,7 @@ chapter baldest blasted saltbed
 
 section fluster self rut
 
-the fluster self rut is a red guardian. "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not."
+the fluster self rut is a red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut]."
 
 instead of doing something with the fluster self rut:
 	if the action is procedural, continue the action;
@@ -21364,9 +21366,9 @@ to say admsex:
 
 chapter unblest sunbelt
 
-Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.' You recognize him...wait, it's Mel Fish, the former reality show star who always kept trying crazier and crazier ways to be an individual, before he burned out!"
+Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.' You recognize him...wait, it's Mel Fish, the former reality show star ('SMH, Life'--the name still makes you see red) who always kept trying crazier and crazier ways to be an individual, before he burned out!"
 
-description of Mel Fish is "On his chest, Mel Fish has the word FLEMISH crossed out in red. It's good to know what he's against. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
+description of Mel Fish is "On his chest, Mel Fish has the word FLEMISH crossed out in red. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
 a-text of Mel Fish is "RYRRYRR". b-text of Mel Fish is "RYRRYRR". parse-text of Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
@@ -21505,7 +21507,7 @@ fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
-Mel Fish	Unblest Sunbelt	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
+Mel Fish	Unblest Sunbelt	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
@@ -23719,7 +23721,7 @@ to check-fruit-min:
 
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
 
-a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored"
+a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if]."
 
 instead of doing something with a border arbored:
 	if action is procedural, continue the action;
@@ -27730,7 +27732,7 @@ section instructions
 [* this is a simple list of instructions cluing a5 hintvis and ts]
 
 when play begins:
-	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.";
+	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.[line break]--[b]warwar[r] wipes out the warriors in Store W.";
 
 book cheatage
 
