@@ -310,7 +310,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "vanity"	448722262	--	tan ivy vanity	--	"[if noise is in lalaland]You really don't need to rearrange the vanity[else if vanity is unexamined]You don't need to deal with it as much as the person outside--but maybe examining will give you a clue[else]You may want to deal with the person outside, instead of this, but examining it may've helped a bit[end if]."
 "lamps"	297816735	--	plasm lamps	--	"You need that light for late-night work sessions."
 "lamp"	201542769	--	plasm lamps	--	"You already did something with a lamp, and you don't need to do anything with the plasm lamps."
-"picteur"	566810127	--	stream	--	"It's not just any old picture. There's a stream."
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
 "fern"	308552316	Upscale Capsule	--	--	"The fern is mentally, if not physically, unmalleable."
 "sked"	298042342	Upscale Capsule	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."

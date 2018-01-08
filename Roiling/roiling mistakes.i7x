@@ -282,7 +282,7 @@ chapter upscale capsule
 
 understand "fren" as a mistake ("That's not the right way to make friends. You have to, like, impress actual people.") when player is in upscale capsule.
 
-understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when stream is in location of player.
+understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when ME ARTS is in location of player.
 
 understand "slat" as a mistake ("You're not in the window making business.") when salt is in location of player.
 

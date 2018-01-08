@@ -116,7 +116,7 @@ last-loc of Means Manse is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 22. min-score of Troves is 15. [Pa Egg Pea, Sister Tressi, lager, lobster/stream, bee, astute statue, DIVORCES]
+Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 22. min-score of Troves is 15. [Pa Egg Pea, Sister Tressi, lager, lobster/ME ARTS, bee, astute statue, DIVORCES]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
@@ -3739,7 +3739,7 @@ this is the presto-left rule:
 
 this is the troves-left rule:
 	if Pa Egg Pea is reflexive, the rule succeeds;
-	if lobster is reflexive or stream is reflexive, the rule succeeds;
+	if lobster is reflexive or ME ARTS is reflexive, the rule succeeds;
 	if divorces is not in lalaland, the rule succeeds;
 	the rule fails;
 
@@ -4033,7 +4033,7 @@ godlings' lodgings	"The godlings['] lodgings almost seem to laugh at you, for be
 noise	"The noise seems almost bearable."
 tan ivy vanity	"You try to not pay attention to the babble behind the door, but you're trying too hard, and you fail. Still, you're on the right track."
 lobster	"That's not quite the way to deserve that lobster[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
-stream	"That's not quite the way to focus on the stream[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
+ME ARTS	"That's not quite the way to focus on the ME ARTS[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
 salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
 Eddie's Song	"You try to groove to Eddie's song, but that's not quite it."
@@ -4362,7 +4362,7 @@ cellar door	"How inefficient! You already know where it is."
 box of diapers	"Don't twist yourself into knots to/from REAL despair."
 praise	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
-painting of the stream	"The stream has nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
+ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
 Eddie's Song	"You've lasted long enough. There are new things to look at, now."
 star	"No need for additional arts."	[presto]
 dart	"The dart's just fine as-is."
@@ -5431,7 +5431,7 @@ check scaning location of the player (this is the location scan rule):
 			try scaning noise instead;
 		if salt is not visible:
 			try scaning song instead;
-		if stream is reflexed or lobster is in lalaland:
+		if ME ARTS is reflexed or lobster is in lalaland:
 			try scaning salt instead;
 	if location of player is hacks' shack and compiled code is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
@@ -6099,11 +6099,11 @@ carry out troves-hinting:
 		try objhinting Pernod instead;
 	if location of player is Upscale Capsule:
 		if noise is in Upscale Capsule, try objhinting vanity instead;
-		if stream is reflexive and lobster is in Upscale Capsule:
+		if ME ARTS is reflexive and lobster is in Upscale Capsule:
 			if lobster-first is true, try objhinting lobster instead;
-			try objhinting stream instead;
+			try objhinting ME ARTS instead;
 		if lobster is in Upscale Capsule, try objhinting lobster instead;
-		if stream is in upscale capsule, try objhinting stream instead;
+		if ME ARTS is in upscale capsule, try objhinting ME ARTS instead;
 		if salt is in Upscale Capsule, try objhinting salt instead;
 		if song-first is true, try objhinting song instead;
 		try objhinting playbill instead;
@@ -8928,8 +8928,8 @@ rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to str
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
 salt	playbill	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
-stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
-lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. After all, the cost of the lobster is probably less a percent of YOUR income than your underlings['] food is of theirs."
+ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
+lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and a lobster meal will be less a percent of YOUR income than your underlings['] food is of theirs!"
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
 trance nectar	trance nectar	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
@@ -9527,15 +9527,15 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 			min-up;
 			set the pronoun it to pernod;
 		continue the action;
-	else if noun is lobster or noun is stream:
-		if stream is reflexed and lobster is in lalaland:
+	else if noun is lobster or noun is ME ARTS:
+		if ME ARTS is reflexed and lobster is in lalaland:
 			say "You feel your arch-greed recharged.";
 			min-up;
 		continue the action;
 	else if noun is troend1 or noun is troend2:
 		let temp be 0;
 		if lobster is prefigured, increment temp;
-		if stream is prefigured, increment temp;
+		if ME ARTS is prefigured, increment temp;
 		if divorces is prefigured, increment temp;
 		if temp > 0, say "(NOTE: before moving on, you much with some stuff to get a few extra points.)[paragraph break]";
 		increase min-score of troves by temp;
@@ -11706,9 +11706,9 @@ bent ewe	routes	"You can go BETWEEN the hurt hog and bent ewe."
 yob den	routes	"You need to go BEYOND the yob den."
 Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."
 stop post	troves	"You can't focus enough to SPOT, yet."
-salt	troves	"You can LAST [if stream is reflexed or lobster is in lalaland]now[else]once[end if] you have confidence in your skills."
+salt	troves	"You can LAST [if ME ARTS is reflexed or lobster is in lalaland]now[else]once[end if] you have confidence in your skills."
 lobster	troves	"You can BOLSTER yourself to eat the lobster."
-stream	troves	"You can MASTER the relaxation technique seen with the stream."
+ME ARTS	troves	"You can MASTER the relaxation technique seen with the ME ARTS."
 song	troves	"You can DECIDE once you've paid your dues."
 playbill	troves	"You can RESIGN once you've paid your dues."
 DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
@@ -14152,7 +14152,7 @@ to say trev:
 
 book Upscale Capsule
 
-Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, this FiefCo Office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still, and the playbill is on the desk, too[else]. A shaker of salt sits on the vanity, too[end if]."
+Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, this FiefCo Office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still, and the playbill is on the desk, too[else]. A shaker of salt sits on the vanity, too[end if]."
 
 after looking in Upscale Capsule:
 	if noise is in Upscale Capsule, set the pronoun it to noise;
@@ -14236,7 +14236,7 @@ instead of scaning vanity:
 	if noise is in Upscale Capsule:
 		say "You note the noise and that you can read the vanity[if vanity is examined] again[end if].";
 		try scaning noise instead;
-	if lobster is in Upscale Capsule and stream is reflexive:
+	if lobster is in Upscale Capsule and ME ARTS is reflexive:
 		say "Your settler picks up a signal when it moves to the lobster.";
 		try scaning lobster instead;
 	if salt is in Upscale Capsule:
@@ -14282,12 +14282,12 @@ chapter how to last (1 of 2)
 
 section lobster
 
-an extra fancy lobster meal is in Upscale Capsule. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if stream is reflexed]--though you are feeling confident enough, having dealt with the stream[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
+an extra fancy lobster meal is in Upscale Capsule. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is reflexed]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
 
 a-text of lobster is "RYRRRYR". b-text of lobster is "RGRPPGP". parse-text of lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
 
 after fliptoing lobster:
-	if stream is in Upscale Capsule, now stream is LLPish;
+	if ME ARTS is in Upscale Capsule, now ME ARTS is LLPish;
 	continue the action;
 
 instead of eating lobster meal:
@@ -14296,21 +14296,19 @@ instead of eating lobster meal:
 instead of taking lobster meal:
 	say "A big executive like you shouldn't worry about procedural details like taking something before eating it."
 
-section stream painting
+section ME ARTS
 
-The ME ARTS is reflexive scenery in Upscale Capsule. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it."
-
-The painting of the stream is reflexive scenery in Upscale Capsule. "It's labeled as PRACTICAL RELAXATION FOR TODAY'S LEADERS. The stream is about all there is to it. It shimmers based on how you stare at it[if stream is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
+The ME ARTS is vanishing scenery in Upscale Capsule. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if ME ARTS is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
 
 a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
 
-after fliptoing stream:
+after fliptoing ME ARTS:
 	if lobster is in Upscale Capsule, now lobster is LLPish;
 	continue the action;
 
-instead of doing something to painting of the stream:
+instead of doing something to ME ARTS:
 	if action is procedural, continue the action;
-	say "It doesn't need to be physically futzed with[if painting of the stream is reflexive]. In fact, you've already gotten use out of it[end if].";
+	say "It doesn't need to be physically futzed with[if ME ARTS is reflexive]. In fact, you've already gotten use out of it[end if].";
 
 chapter St Al Salt
 
@@ -14334,7 +14332,7 @@ a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]
 chapter final action 1 of 2
 
 check fliptoing playbill:
-	if lobster is in Upscale Capsule and stream is reflexive:
+	if lobster is in Upscale Capsule and ME ARTS is in Upscale Capsule:
 		say "Man. That seems right. But you haven't improved yourself enough to last, yet.";
 		preef salt;
 		do nothing instead;
@@ -26105,7 +26103,7 @@ bee's head	"[by-bee]."
 diapers	"[by-bee]."
 praise	"[by-rivets]."
 rivets	"[by-rivets]."
-painting of the stream	"The painting inspired you enough, [if lobster is in lalaland]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
+ME ARTS	"The ME ARTS inspired you enough, [if lobster is in lalaland]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
 bench	"You got the giant to the bench. Now you need to deal with the giant."
 bench-end	"You positioned yourself well to duck the giant and put up with his elbow. Try something else."
@@ -26318,8 +26316,8 @@ DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, b
 vanity	"[one of]The vanity is not just for prestige. It labels your region in red.[plus][or]You must learn to IGNORE silly distractions of people below/beneath you[minus][cycling]."	--	"IGNORE"
 noise	"You need to not pay attention to the noise. See the vanity for details."
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
-lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if stream is reflexive]. NB: finding what to do with the stream also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
-stream	"[one of]The picture of the stream should relax you to feel on top of things[if lobster is reflexive]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
+lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is reflexive]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
+ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is reflexive]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
 playbill	"[one of]Hm, the playbill mentions no song. Just the singer.[plus][or]More people hint what to do if you READ the playbill. Lots in red.[plus][or]You want to give up and move on after reading.[plus][or]You've got no time to negotiate a severance package. You're a busy adventurer! You can just RESIGN.[minus][cycling]"	--	"RESIGN"	[end TROVES hinting]
 curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
@@ -27463,7 +27461,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if lager is not in lalaland, say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
 		if rivets are reflexive, say "[2drm of econ cone]you could've tried to STRIVE by the statue of Trevis Vister.";
 		if praise is reflexive, say "[2drm of econ cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
-		if stream is reflexive, say "[2drm of upscale capsule]you could've tried to MASTER the stream photograph.";
+		if ME ARTS is reflexive, say "[2drm of upscale capsule]you could've tried to MASTER the ME ARTS.";
 		if lobster is in Upscale Capsule, say "[2drm of upscale capsule]you could've tried to BOLSTER yourself to deserve lobster.";
 		if DIVORCES is not in lalaland, say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
 	else if myreg is presto:
