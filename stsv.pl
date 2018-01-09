@@ -8,54 +8,57 @@
 use strict;
 use warnings;
 
-my $verbose  = 0;
-my $showGood = 0;
-my %ary;
+# options
+my $anagramCheck = 0;
+my $verbose      = 0;
+my $showGood     = 0;
+my $tryDetail    = 0;
+my $maxLetters   = 6;
+my $showEveryX   = 1000000;
 
-$ary{"a"} = 2187818;
-$ary{"b"} = 18418905;
-$ary{"c"} = 19005585;
-$ary{"d"} = 21029089;
-$ary{"e"} = 127806109;
-$ary{"f"} = 26514896;
-$ary{"g"} = 32599702;
-$ary{"h"} = 37282299;
-$ary{"i"} = 44992846;
-$ary{"j"} = 48960525;
-$ary{"k"} = 52933178;
-$ary{"l"} = 53813839;
-$ary{"m"} = 64075153;
-$ary{"n"} = 68907508;
-$ary{"o"} = 74352577;
-$ary{"p"} = 81465959;
-$ary{"q"} = 84405617;
-$ary{"r"} = 85323803;
-$ary{"s"} = 96273966;
-$ary{"t"} = 103110018;
-$ary{"u"} = 105105807;
-$ary{"v"} = 107164820;
-$ary{"w"} = 107934773;
-$ary{"x"} = 112768081;
-$ary{"y"} = 122359252;
-$ary{"z"} = 122969618;
+# default is to do both. There's little good reason just to do one, but just in case...
+my $doShuf   = 1;
+my $doRoil   = 1;
+my $byLength = 0;
+
+# the hash
+my %ary = (
+  "a" => 2187818,
+  "b" => 18418905,
+  "c" => 19005585,
+  "d" => 21029089,
+  "e" => 127806109,
+  "f" => 26514896,
+  "g" => 32599702,
+  "h" => 37282299,
+  "i" => 44992846,
+  "j" => 48960525,
+  "k" => 52933178,
+  "l" => 53813839,
+  "m" => 64075153,
+  "n" => 68907508,
+  "o" => 74352577,
+  "p" => 81465959,
+  "q" => 84405617,
+  "r" => 85323803,
+  "s" => 96273966,
+  "t" => 103110018,
+  "u" => 105105807,
+  "v" => 107164820,
+  "w" => 107934773,
+  "x" => 112768081,
+  "y" => 122359252,
+  "z" => 122969618
+);
 
 my %quickHashRef;
 
-my @revHashOrd     = sort { $ary{$b} <=> $ary{$a} } keys %ary;
+my @revHashOrd = sort { $ary{$b} <=> $ary{$a} } keys %ary;
 my $foundSomething = 0;
-my $tryDetail      = 0;
-my $maxLetters     = 6;
-my $showEveryX     = 1000000;
-
-# default is to do both. There's little good reason just to do one, but just in case...
-
-my $doShuf = 1;
-my $doRoil = 1;
-my $reg;
-
-my $byLength = 0;
 
 # variables
+
+my $reg;
 
 my $lengthBail     = 0;
 my $gotAnyBad      = 0;
@@ -65,12 +68,15 @@ my $count          = 0;
 while ( $count <= $#ARGV ) {
   my $arg = lc( $ARGV[$count] );
   $arg =~ s/^-//;
-  $doShuf    = 0 if ( $arg eq "roi" );
-  $doRoil    = 0 if ( $arg eq "sa" );
-  $verbose   = 1 if ( $arg eq "v" );
-  $verbose   = 0 if ( $arg eq "b" );
-  $tryDetail = 1 if ( $arg eq "td" );
-  $byLength  = 1 if ( $arg eq "bl" );
+  usage() if ( $arg eq "?" || $arg eq "-?" );
+  if ( $arg eq "roi" ) { $doRoil = 0; $doShuf = 1; }
+  if ( $arg eq "sa" )  { $doRoil = 1; $doShuf = 0; }
+  $verbose      = 1 if ( $arg eq "v" );
+  $verbose      = 0 if ( $arg eq "b" );
+  $anagramCheck = 1 if ( $arg eq "a" || $arg eq "ay" );
+  $anagramCheck = 0 if ( $arg eq "an" );
+  $tryDetail    = 1 if ( $arg eq "td" );
+  $byLength     = 1 if ( $arg eq "bl" );
   if ( $arg eq "m" ) {
     $maxLetters = $arg;
     $maxLetters =~ s/.*m//;
@@ -100,7 +106,8 @@ if ($doShuf) {
   for $reg (@shufflingArray) {
     hashVer( "shuffling", 0, 1, "table of $reg nudges", 5, "nudges" );
 
-    # hashVer("shuffling", 3, 6, "table of $reg anagrams", 0, "");
+    hashVer( "shuffling", 3, 6, "table of $reg anagrams", 0, "" )
+      if $anagramCheck;
   }
   print "No hash value errors for Shuffling Around.\n" if !$gotAnyBad;
 }
@@ -109,7 +116,8 @@ if ($doRoil) {
   for $reg (@roilingArray) {
     hashVer( "roiling", 0, 1, "table of $reg nudges", 5, "nudges" );
 
-    # hashVer("roiling", 3, 6, "table of $reg anagrams", 0, "");
+    hashVer( "roiling", 3, 6, "table of $reg anagrams", 0, "" )
+      if $anagramCheck;
   }
   print "No hash value errors for A Roiling Original.\n" if !$gotAnyBad;
 }
@@ -312,4 +320,18 @@ sub combHashes {
     }
   }
   close(A);
+}
+
+sub usage {
+  print <<EOT;
+USAGE
+=====================================
+-? gives this
+roi/sa = only roiling/only shuffling
+an/(ay/a) = turn off/on anagram checking (more stable than nudge checking). Default is on.
+td = try detailed check for bad hashes
+bl = try the td check via length instead of by hash value, highest value letter to lowest
+Any word will print out its hash value.
+EOT
+  exit();
 }
