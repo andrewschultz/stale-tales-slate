@@ -124,13 +124,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "patcher"	456181591	--	patcher	--	"The patcher doesn't need to be changed. It does the changing if you point it."
 "field"	274156779	--	f-o-b	--	"[not-at-barley]."
 "barley"	409909726	--	f-o-b	--	"[not-at-barley][barley-check]."
-"mangiest"	688747880	--	mangiest steaming	--	"You can't do anything with the mangiest steaming other than enter it for a side adventure."
+"mangiest"	539953120	--	mangiest steaming	--	"You can't do anything with the mangiest steaming other than enter it for a side adventure."
 "husb"	257080977	--	hubs bush	--	"[hub-stur]."
 "bhu"	160807011	--	hubs bush	--	"[hub-stur]."
 "lectures"	718245236	--	lecturer	--	"[lec-un]." [start cruelest lectures]
 "lecture"	621971270	--	lecturer	--	"[lec-un]."
-"seating"	425651877	cruelest lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
-"mangiets"	688747880	cruelest lectures	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
+"seating"	475877967	cruelest lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
+"mangiets"	539953120	cruelest lectures	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
 "example"	569923068	--	lecturer	--	"[lec-un]."
 "ian"	116088172	--	idg	--	"[ian-un]."
 "guardian"	362334391	--	idg	--	"[ian-un]."
@@ -566,7 +566,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "dourest"	613001369	dourest detours	--	--	"[locname]." [DOUREST DETOURS]
-"detour"	613001369	dourest detours	--	--	"[locname]."
+"detour"	516727403	dourest detours	--	--	"[locname]."
 "ant"	174205344	dourest detours	--	--	"That's close. Something brutal and direct."
 "tenfold"	475534036	tenfold	--	--	"[locname]." [DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."

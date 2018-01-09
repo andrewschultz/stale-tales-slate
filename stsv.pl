@@ -39,6 +39,8 @@ $ary{"x"} = 112768081;
 $ary{"y"} = 122359252;
 $ary{"z"} = 122969618;
 
+my %quickHashRef;
+
 my @revHashOrd     = sort { $ary{$b} <=> $ary{$a} } keys %ary;
 my $foundSomething = 0;
 my $tryDetail      = 0;
@@ -55,6 +57,7 @@ my $byLength = 0;
 
 # variables
 
+my $lengthBail     = 0;
 my $gotAnyBad      = 0;
 my $showEveryCount = 0;
 my $count          = 0;
@@ -73,8 +76,16 @@ while ( $count <= $#ARGV ) {
     $maxLetters =~ s/.*m//;
     die("Max letters must be a number!") if ( $maxLetters !~ /^[0-9]+/ );
   }
+  if ( length($arg) > 3 ) {
+    $lengthBail = 1;
+    print "$arg -> " . myHash($arg) . "\n";
+  }
   $count++;
 }
+
+exit() if $lengthBail;
+
+seedHashesInSource() if $tryDetail;
 
 my @roilingArray = (
   "means manse", "stores", "routes", "troves", "presto", "oyster",
@@ -91,7 +102,7 @@ if ($doShuf) {
 
     # hashVer("shuffling", 3, 6, "table of $reg anagrams", 0, "");
   }
-  print "No errors for Shuffling Around.\n" if !$gotAnyBad;
+  print "No hash value errors for Shuffling Around.\n" if !$gotAnyBad;
 }
 if ($doRoil) {
   $gotAnyBad = 0;
@@ -100,7 +111,7 @@ if ($doRoil) {
 
     # hashVer("roiling", 3, 6, "table of $reg anagrams", 0, "");
   }
-  print "No errors for A Roiling Original.\n" if !$gotAnyBad;
+  print "No hash value errors for A Roiling Original.\n" if !$gotAnyBad;
 }
 
 sub hashVer {
@@ -147,6 +158,15 @@ sub hashVer {
         }
         else {
           $foundSomething = "";
+          if ( defined( $quickHashRef{$hashVal} )
+            && ( $quickHashRef{$hashVal} =~ /,/ ) )
+          {
+            print
+"$hashVal ($_[0] $.) may be mapped to $quickHashRef{$hashVal}, no detailed searching.\n";
+            next;
+          }
+          print
+"No occurrence of $hashVal in source or nudges, starting detailed searching for $hashVal/$idx[$_[1]]...\n";
           my $b4 = time();
           $byLength
             ? detailSearch( "", $hashVal )
@@ -246,4 +266,50 @@ sub byLengthNum {
     byLengthNum( "$_[0]$_", $_[1] - $ary{$_} ) if $_[1] > $ary{$_};
   }
   return "";
+}
+
+sub seedHashesInSource {
+  combHashes("roiling");
+  combHashes("shuffling");
+}
+
+sub combHashes {
+  my $source = "c:/games/inform/$_[0].inform/Source/story.ni";
+  my $nudge =
+"c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x";
+
+  my $hashAvailable = 0;
+  my @theAry        = ();
+  my $line;
+
+  open( A, $source ) || die("No $source");
+  while ( $line = <A> ) {
+    if ( $line !~ /[a-z]/i ) { $hashAvailable = 0; next; }
+    if ( $line =~ /^table of .*anagrams/ ) { $hashAvailable = 1; <A>; next; }
+    if ($hashAvailable) {
+      chomp($line);
+      @theAry = split( /\t/, $line );
+      $quickHashRef{ $theAry[3] } =
+        defined( $quickHashRef{ $theAry[3] } )
+        ? $quickHashRef{ $theAry[3] } . ", $_[0]-source-$.-$theAry[5]"
+        : "$_[0]-source-$.-$theAry[5]";
+      next;
+    }
+  }
+  close(A);
+  open( A, $nudge ) || die("No $nudge");
+  while ( $line = <A> ) {
+    if ( $line !~ /[a-z]/i ) { $hashAvailable = 0; next; }
+    if ( $line =~ /^table of .*nudges/ ) { $hashAvailable = 1; <A>; next; }
+    if ($hashAvailable) {
+      chomp($line);
+      @theAry = split( /\t/, $line );
+      $quickHashRef{ $theAry[1] } =
+        defined( $quickHashRef{ $theAry[1] } )
+        ? $quickHashRef{ $theAry[1] } . ", $_[0]-nudge-$.-$theAry[0]"
+        : "$_[0]-nudge-$.-$theAry[0]";
+      next;
+    }
+  }
+  close(A);
 }
