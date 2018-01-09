@@ -252,6 +252,8 @@ understand "redive" as a mistake ("Close, but you need to figure out where to re
 
 chapter Drain Nadir
 
+understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in Drain Nadir and Eddie's Song is in Drain Nadir.
+
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
 understand "aspired" as a mistake ("Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!") when player is in Drain Nadir.
@@ -264,9 +266,11 @@ understand "aled" as a mistake ("Getting drunk will not solve your problems[if l
 
 understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when player is in Boredom Bedroom and lager is in Boredom Bedroom
 
-understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
+understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when ME ARTS is in location of player.
 
 chapter browse bowers
+
+understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
 
 understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They don't crave...") when player is in Browse Bowers
 
@@ -282,15 +286,9 @@ chapter upscale capsule
 
 understand "fren" as a mistake ("That's not the right way to make friends. You have to, like, impress actual people.") when player is in upscale capsule.
 
-understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when ME ARTS is in location of player.
-
 understand "slat" as a mistake ("You're not in the window making business.") when salt is in location of player.
 
 understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is in location of player.
-
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in Upscale Capsule and playbill is in Upscale Capsule.
-
-understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in Upscale Capsule and playbill is in Upscale Capsule.
 
 understand "resign" as a mistake ("Wrong place for that. If you must, QUIT instead.") when player is not in Upscale Capsule.
 

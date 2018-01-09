@@ -116,7 +116,7 @@ last-loc of Means Manse is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 22. min-score of Troves is 15. [Pa Egg Pea, Sister Tressi, lager, lobster/ME ARTS, bee, astute statue, DIVORCES]
+Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 24. min-score of Troves is 17. [Pa Egg Pea / bee / lager, lobster/ME ARTS, , Trevis Vister/praise / DIVORCES, Sister Tressi/Blamer Balmer]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
@@ -2780,7 +2780,6 @@ cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is writ
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
-playbill	"[one of]S. Negri and N. Regis are the band. And there's a promotions company to read about, too[or]Isnerg promotions[cycling]."
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
 sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
@@ -3689,7 +3688,7 @@ table of end-flips
 thisflip	thatflip	warned-yet	my-prog	pointwarn
 yob den	yob den	false	routes-left rule	"The raptest patters are still slightly a nuisance, if you want to fix them."
 USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
-troend1	troend2	false	troves-left rule	"You tidied your upscale capsule up pretty well, but you could do a bit more."
+trance nectar	trance nectar	false	troves-left rule	"You tidied your upscale capsule up pretty well, but you could do a bit more."
 d2	d2	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
 curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that flowerpot you got from Renato."
 Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
@@ -3739,7 +3738,6 @@ this is the presto-left rule:
 
 this is the troves-left rule:
 	if Pa Egg Pea is reflexive, the rule succeeds;
-	if lobster is reflexive or ME ARTS is reflexive, the rule succeeds;
 	if divorces is not in lalaland, the rule succeeds;
 	the rule fails;
 
@@ -4037,7 +4035,6 @@ ME ARTS	"That's not quite the way to focus on the ME ARTS[if ivy vanity is refle
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
 salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
 Eddie's Song	"You try to groove to Eddie's song, but that's not quite it."
-playbill	"You try to imagine what the singer's songs are like, but that's not quite it."
 lamb	"The lamb looks confused. Maybe you could be more forceful. Verbally, not physically." [START presto]
 hump	"The hump suddenly looks a bit smaller. But not enough."
 volt maze	"The volt maze crackles with increased energy, almost ready to break down. Oy vey! I hope this one's not too meshuggenah."
@@ -5014,7 +5011,7 @@ when play begins (this is the hint and other randomization rule):
 	if a random chance of 1 in 2 succeeds:
 		now lobster-first is true;
 	if a random chance of 1 in 2 succeeds:
-		now song-first is true;
+		now sister-first is true;
 	if a random chance of 1 in 2 succeeds: [presto random clues]
 		now goshy is true;
 	sort byebyes in random order; [phat path ways to say goodbye]
@@ -5431,7 +5428,7 @@ check scaning location of the player (this is the location scan rule):
 			try scaning noise instead;
 		if salt is not visible:
 			try scaning song instead;
-		if ME ARTS is reflexed or lobster is in lalaland:
+		if ME ARTS is in lalaland or lobster is in lalaland:
 			try scaning salt instead;
 	if location of player is hacks' shack and compiled code is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
@@ -6072,7 +6069,7 @@ book troves-hinting
 
 ever-previewed is a truth state that varies.
 
-song-first is a truth state that varies.
+sister-first is a truth state that varies.
 
 carry out troves-hinting:
 	if player is in Loather Rathole:
@@ -6099,14 +6096,16 @@ carry out troves-hinting:
 		try objhinting Pernod instead;
 	if location of player is Upscale Capsule:
 		if noise is in Upscale Capsule, try objhinting vanity instead;
-		if ME ARTS is reflexive and lobster is in Upscale Capsule:
+		if ME ARTS is in Boredom Bedroom and lobster is in Upscale Capsule:
 			if lobster-first is true, try objhinting lobster instead;
 			try objhinting ME ARTS instead;
 		if lobster is in Upscale Capsule, try objhinting lobster instead;
 		if ME ARTS is in upscale capsule, try objhinting ME ARTS instead;
 		if salt is in Upscale Capsule, try objhinting salt instead;
-		if song-first is true, try objhinting song instead;
-		try objhinting playbill instead;
+		if tressi is in capsule and balmer is in capsule:
+			if sister-first is true, try objhinting sister tressi instead;
+			try objhinting blamer balmer instead;
+		try objhinting trance nectar instead;
 	if spoilit is true:
 		say "--hmmph. Do nothing. This is a BUG, but keep the truffle[no line break]";
 		now spoilit is false instead;
@@ -7702,7 +7701,6 @@ before listening (this is the you can hear stuff some places rule):
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if player is in Upscale Capsule, say "[if noise is in Upscale Capsule]You can't help but hear the knocking. Which prevents you working on your big new REGION[else if salt is in lalaland][one of]You listen closely to 'I'd Cede.' But you see red at the memory of Eddie C.[']s followup, a vapid rehash, I Ceded[or]Oh man, that part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy[cycling][else]. White noise, it is on. Whee[end if]." instead;
-	if playbill is in location of player, say "No escaping the song." instead;
 	if mrlp is presto, say "[if cur-score of presto is 0]A shot. Sort of[else]You don't hear anything congruent to what you've needed to say in this area, which is a good thing[end if]." instead; [presto]
 	if Rand is visible and Rand is washed up:
 		say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
@@ -8918,8 +8916,9 @@ what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yoursel
 cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]."
 cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
 sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! And yet...there's still something more to do here. You still need to bottom out in your own way."
-diapers	diapers	false	459079590	Boredom Bedroom	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
-song	troend1	false	361668827	Strip of Profits	"decide"	"decide"	"[troend]"
+Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected." [??]
+diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
+Eddie's Song	Eddie's Song	false	361668827	Boredom Bedroom	"decide"	"decide"	"[troend]"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
@@ -8927,11 +8926,11 @@ praise	praise	false	438050501	--	"aspire"	"aspire"	"You remember how when you we
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
-salt	playbill	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
+salt	salt	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and a lobster meal will be less a percent of YOUR income than your underlings['] food is of theirs!"
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
-trance nectar	trance nectar	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
+trance nectar	troend1	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
 table of presto anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -9528,15 +9527,15 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 			set the pronoun it to pernod;
 		continue the action;
 	else if noun is lobster or noun is ME ARTS:
-		if ME ARTS is reflexed and lobster is in lalaland:
+		if ME ARTS is in lalaland and lobster is in lalaland:
 			say "You feel your arch-greed recharged.";
 			min-up;
 		continue the action;
-	else if noun is troend1 or noun is troend2:
+	else if noun is troend1:
 		let temp be 0;
-		if lobster is prefigured, increment temp;
+		if Sister Tressi is prefigured, increment temp; [?? resist then ignore]
 		if ME ARTS is prefigured, increment temp;
-		if divorces is prefigured, increment temp;
+		if Blamer Balmer is prefigured, increment temp;
 		if temp > 0, say "(NOTE: before moving on, you much with some stuff to get a few extra points.)[paragraph break]";
 		increase min-score of troves by temp;
 		increase cur-score of troves by temp;
@@ -11706,11 +11705,12 @@ bent ewe	routes	"You can go BETWEEN the hurt hog and bent ewe."
 yob den	routes	"You need to go BEYOND the yob den."
 Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."
 stop post	troves	"You can't focus enough to SPOT, yet."
-salt	troves	"You can LAST [if ME ARTS is reflexed or lobster is in lalaland]now[else]once[end if] you have confidence in your skills."
+salt	troves	"You can LAST [if ME ARTS is in lalaland or lobster is in lalaland]now[else]once[end if] you have confidence in your skills."
 lobster	troves	"You can BOLSTER yourself to eat the lobster."
 ME ARTS	troves	"You can MASTER the relaxation technique seen with the ME ARTS."
-song	troves	"You can DECIDE once you've paid your dues."
-playbill	troves	"You can RESIGN once you've paid your dues."
+song	troves	"You can DECIDE to move on from the Drain Nadir."
+Sister Tressi	Troves	"You can RESIST Sister Tressi."
+Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
 DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
 onyx censer	presto	"The censer can become a SCREEN once you've found a place to put it."
 plebe	presto	"You can shout BLEEP at the plebe [if player wears star]now[else]once[end if] you look more authoritative."
@@ -13889,16 +13889,6 @@ book Drain Nadir
 
 Drain Nadir is a room in Troves. "You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][else]. They all point to a rock bottom you haven't hit yet, but it may be necessary now[end if][if sister tressi is in drain nadir]. A likeness of Sister Tressi also stares down at you, guilt-tripping you into feeling you didn't do nearly as much as you could or should have[end if]."
 
-chapter sister tressi
-
-the likeness of sister tressi is vanishing LLPish scenery in Drain Nadir. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling."
-
-a-text of sister tressi is "RYRYRR". b-text of sister tressi is "RY?Y?R". parse-text of sister tressi is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
-
-instead of doing something with sister tressi:
-	if action is procedural, continue the action;
-	say "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how." instead;
-
 chapter adeiprs
 
 [?? small clue later with statue]
@@ -13918,6 +13908,38 @@ a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of 
 book boredom bedroom
 
 Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad."
+
+chapter how to pre-deal
+
+section lobster
+
+an extra fancy lobster meal is in Boredom Bedroom. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is in lalaland]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
+
+a-text of lobster is "RYRRRYR". b-text of lobster is "RGRPPGP". parse-text of lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
+
+after fliptoing lobster:
+	if ME ARTS is in Upscale Capsule, now ME ARTS is LLPish;
+	continue the action;
+
+instead of eating lobster meal:
+	say "You don't quite feel you deserve to eat it, yet.";
+
+instead of taking lobster meal:
+	say "A big executive like you shouldn't worry about procedural details like taking something before eating it."
+
+section ME ARTS
+
+The ME ARTS is vanishing scenery in Boredom Bedroom. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if ME ARTS is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
+
+a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
+
+after fliptoing ME ARTS:
+	if lobster is in Upscale Capsule, now lobster is LLPish;
+	continue the action;
+
+instead of doing something to ME ARTS:
+	if action is procedural, continue the action;
+	say "It doesn't need to be physically futzed with[if ME ARTS is in Boredom Bedroom]. In fact, you've already gotten use out of it[end if].";
 
 chapter ltb
 
@@ -14061,7 +14083,7 @@ check objhinting rivets:
 	if rivets are reflexed and praise is reflexed:
 		all-say "You learned all you could from the statue." instead;
 
-the praise is privately-named scenery in Econ Cone. praise is undesc. printed name of praise is "PRAISE".
+the praise is privately-named vanishing scenery in Econ Cone. praise is undesc. printed name of praise is "PRAISE".
 
 understand "iarp" as praise when debug-state is true.
 
@@ -14082,7 +14104,8 @@ check scaning statue for the first time: [let statue be the first thing you scan
 check scaning statue:
 	try scaning rivets instead;
 
-a-text of rivets is "RRRYRY". b-text of rivets is "[if praise is reflexed]RRRYRY[else]?RR?R?[end if]". parse-text of rivets is "[if praise is reflexed]x[sp]x[sp]x[sp]i[sp]x[sp]e[else]?[sp]x[sp]x[sp]?[sp]x[sp]?[end if]".
+[?? unlock praise/rivets difference]
+a-text of rivets is "RRRYRY". b-text of rivets is "RRRYRY". parse-text of rivets is "x[sp]x[sp]x[sp]i[sp]x[sp]e".
 
 after fliptoing praise:
 	if rivets are reflexive, now rivets are llpish;
@@ -14170,6 +14193,30 @@ check fliptoing when player is in Upscale Capsule and noise is in Upscale Capsul
 		preef noun;
 		do nothing instead;
 
+chapter sister tressi
+
+Sister Tressi is proper-named vanishing scenery in Upscale Capsule. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling."
+
+a-text of sister tressi is "RYRYRR". b-text of sister tressi is "RY?Y?R". parse-text of sister tressi is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
+
+instead of doing something with sister tressi:
+	if action is procedural, continue the action;
+	say "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how." instead;
+
+after fliptoing sister tressi:
+	now Blamer Balmer is LLPish;
+	continue the action;
+
+chapter marble blamer
+
+Blamer Balmer is proper-named vanishing scenery in Upscale Capsule.
+
+a-text of marble blamer is "RYRRRY". b-text of blamer balmer is "R?RRRY". parse-text of blamer balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
+
+after fliptoing Blamer Balmer:
+	now sister tressi is LLPish;
+	continue the action;
+
 chapter Trance Nectar
 
 the Trance Nectar is a vanishing thing. "You notice some trance nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive.". description is "It's guaranteed to keep you focused on what you need to do, if not thrilled about it."
@@ -14236,15 +14283,15 @@ instead of scaning vanity:
 	if noise is in Upscale Capsule:
 		say "You note the noise and that you can read the vanity[if vanity is examined] again[end if].";
 		try scaning noise instead;
-	if lobster is in Upscale Capsule and ME ARTS is reflexive:
+	if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
 		say "Your settler picks up a signal when it moves to the lobster.";
 		try scaning lobster instead;
 	if salt is in Upscale Capsule:
 		say "Your settler picks up a signal when it moves to the salt.";
 		try scaning salt instead;
-	if playbill is visible:
-		say "Your settler picks up a signal when it moves to the playbill.";
-		try scaning playbill instead;
+	if trance nectar is in Upscale Capsule:
+		say "Your settler picks up a signal when it moves to the trance nectar.";
+		try scaning trance nectar instead;
 	say "You weren't able to find any. But there must be something to do!"
 
 chapter the noise (IGNORE)
@@ -14278,38 +14325,6 @@ instead of doing something to DIVORCES:
 	if action is procedural, continue the action;
 	say "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise." instead;
 
-chapter how to last (1 of 2)
-
-section lobster
-
-an extra fancy lobster meal is in Upscale Capsule. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is reflexed]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
-
-a-text of lobster is "RYRRRYR". b-text of lobster is "RGRPPGP". parse-text of lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
-
-after fliptoing lobster:
-	if ME ARTS is in Upscale Capsule, now ME ARTS is LLPish;
-	continue the action;
-
-instead of eating lobster meal:
-	say "You don't quite feel you deserve to eat it, yet.";
-
-instead of taking lobster meal:
-	say "A big executive like you shouldn't worry about procedural details like taking something before eating it."
-
-section ME ARTS
-
-The ME ARTS is vanishing scenery in Upscale Capsule. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if ME ARTS is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
-
-a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
-
-after fliptoing ME ARTS:
-	if lobster is in Upscale Capsule, now lobster is LLPish;
-	continue the action;
-
-instead of doing something to ME ARTS:
-	if action is procedural, continue the action;
-	say "It doesn't need to be physically futzed with[if ME ARTS is reflexive]. In fact, you've already gotten use out of it[end if].";
-
 chapter St Al Salt
 
 instead of doing something to the salt:
@@ -14321,26 +14336,13 @@ instead of doing something to the salt:
 		say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
 	say "Your mind stalls at what to do with the salt, or how to ignore it."
 
-the St Al Salt is scenery in Upscale Capsule. printed name of salt is "St. Al Salt".
+the St Al Salt is vanishing scenery in Upscale Capsule. printed name of salt is "St. Al Salt".
 
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
 description of salt is "St. Al Salt is, from what you are reading, engineered to maximize your productivity from (motivational stress * remaining years,) much better than other brands. It helps you preserve yourself, sort of. It is emblazoned with a picture of St. Al, recently enshrined as Yorpwald's patron saint of Not Faffing Around."
 
 a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]a[sp]x[sp]t". salt is parse-spoilable.
-
-chapter final action 1 of 2
-
-check fliptoing playbill:
-	if lobster is in Upscale Capsule and ME ARTS is in Upscale Capsule:
-		say "Man. That seems right. But you haven't improved yourself enough to last, yet.";
-		preef salt;
-		do nothing instead;
-
-after fliptoing playbill:
-	say "You're besieged by art, in fact! What's...what's that sound? It's that song! By Eddie C.!";
-	now song is in Upscale Capsule;
-	continue the action;
 
 section Eddie's Song
 
@@ -14351,34 +14353,9 @@ a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-te
 instead of examining song:
 	try listening instead;
 
-section playbill
-
-the playbill is scenery. "It's for Siren G. Grines, Singer. That's in red, as is smaller writing about the band and promoters and so forth. It looks counter-cultural, but you are intrigued."
-
-a-text of playbill is "RYRYRR". b-text of playbill is "RYRYRR". parse-text of playbill is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
-
-check scaning playbill for the first time:
-	say "You see only six lights, which means it's probably the text on the playbill.";
-
-instead of doing something with playbill:
-	if action is procedural, continue the action;
-	say "You can just examine or read the playbill, but that's about it."
-
-instead of doing something with eddie's song:
-	if action is procedural, continue the action;
-	say "You can just listen to Eddie's song for evocative details and stuff."
-
 section troend1 and troend2 dummy variables to flip
 
 troend1 is privately-named useless scenery. troend1 is undesc. printed name of troend1 is "I'd Cede (Eddie C.)"
-
-troend2 is privately-named useless scenery. troend2 is undesc. printed name of troend2 is "Singer flyer"
-
-decide-win is a truth state that varies.
-
-after fliptoing troend1:
-	now decide-win is true;
-	continue the action;
 
 volume presto
 
@@ -26316,9 +26293,9 @@ DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, b
 vanity	"[one of]The vanity is not just for prestige. It labels your region in red.[plus][or]You must learn to IGNORE silly distractions of people below/beneath you[minus][cycling]."	--	"IGNORE"
 noise	"You need to not pay attention to the noise. See the vanity for details."
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
-lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is reflexive]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
-ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is reflexive]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
-playbill	"[one of]Hm, the playbill mentions no song. Just the singer.[plus][or]More people hint what to do if you READ the playbill. Lots in red.[plus][or]You want to give up and move on after reading.[plus][or]You've got no time to negotiate a severance package. You're a busy adventurer! You can just RESIGN.[minus][cycling]"	--	"RESIGN"	[end TROVES hinting]
+lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is in Boredom Bedroom]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
+ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is in Boredom Bedroom]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
+trance nectar	"[one of]You don't want to drink it. You want to get out of the whole situation.[plus][or]How to apologize to yourself?[plus][or]RECANT.[minus][cycling]"	--	"RECANT" [end TROVES hinting]
 curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
 zany meter	--	volt maze
@@ -27330,7 +27307,6 @@ rule for showing alternate routes:
 	if troves is solved:
 		say "[eq2][b]TROVES[r][eq2][line break]";
 		say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
-		say "[2da]you could've [if decide-win is true]DECIDE[else]RESIGNe[end if]d in the Upscale Capsule, too.";
 	if presto is solved:
 		if phooeyed is true:
 			say "[eqls]PRESTO[line break][2da]you could've said POOH instead of PHOOEY, which would've meant one less point.";
@@ -27457,13 +27433,14 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if what-a-bee is reflexive, say "[2drm of boarded roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
 		if bee's head is reflexive, say "[2drm of boarded roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
-		if sister tressi is not in lalaland, say "[2drm of drain nadir]you could've tried to RESIST Sister Tressi.";
 		if lager is not in lalaland, say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
+		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS.";
+		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";
 		if rivets are reflexive, say "[2drm of econ cone]you could've tried to STRIVE by the statue of Trevis Vister.";
-		if praise is reflexive, say "[2drm of econ cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
-		if ME ARTS is reflexive, say "[2drm of upscale capsule]you could've tried to MASTER the ME ARTS.";
-		if lobster is in Upscale Capsule, say "[2drm of upscale capsule]you could've tried to BOLSTER yourself to deserve lobster.";
+		if praise is in econ cone, say "[2drm of econ cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
 		if DIVORCES is not in lalaland, say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
+		if sister tressi is not in lalaland, say "[2drm of upscale capsule]you could've tried to RESIST Sister Tressi.";
+		if Blamer Balmer is not in lalaland, say "[2drm of upscale capsule]you could've tried to RAMBLE to ignore Blamer Balmer.";
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";

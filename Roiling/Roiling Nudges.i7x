@@ -132,7 +132,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "seating"	475877967	cruelest lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
 "mangiets"	539953120	cruelest lectures	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
 "example"	569923068	--	lecturer	--	"[lec-un]."
-"ian"	116088172	--	idg	--	"[ian-un]."
+"inn"	116088172	--	idg	--	"[ian-un]."
 "guardian"	362334391	--	idg	--	"[ian-un]."
 "pamphlets"	647481120	cruelest	--	--	"[pamph-ana]."
 "pamphlet"	551207154	cruelest	--	--	"[pamph-ana]." [end-stores]
@@ -316,7 +316,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "divorces"	575948795	--	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 "song"	272133753	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "eddie"	342663242	--	song	--	"It's the song name--[i]I'd Cede[r]."
-"playbill"	430866297	--	playbill	--	"You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "troev"	497757327	--	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	--	--	degen-true rule	"[not-the-reg]." [end-v]
