@@ -179,8 +179,11 @@ sub hashVer {
           $byLength
             ? detailSearch( "", $hashVal )
             : byLengthNum( "", $hashVal );
-          $errMsg .= "detailed search gives "
-            . ( $foundSomething ? $foundSomething : "nothing I could find" );
+          $errMsg .=
+            "detailed search gives "
+            . ( $foundSomething
+            ? anagram_try($foundSomething)
+            : "nothing I could find" );
           $errMsg .= "(took " . ( time() - $b4 ) . " seconds)";
         }
         print "$errMsg\n";
@@ -320,6 +323,26 @@ sub combHashes {
     }
   }
   close(A);
+}
+
+sub anagram_try {
+  my $line;
+  my $x            = alfo( $_[0] );
+  my $match_string = "";
+  open( A, "c:/writing/dict/brit-1word.txt" );
+  while ( $line = <A> ) {
+    chomp($line);
+    if ( alfo($line) eq $x ) {
+      $match_string .= "~" . lc($line);
+    }
+  }
+  return $matchString
+    ? "$_[0]$match_string"
+    : "$_[0] (no one-word anagrams found)";
+}
+
+sub alfo {
+  return join( '', sort( split( '', lc( $_[0] ) ) ) );
 }
 
 sub usage {
