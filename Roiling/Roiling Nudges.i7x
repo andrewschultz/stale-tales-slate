@@ -132,7 +132,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "seating"	475877967	cruelest lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
 "mangiets"	539953120	cruelest lectures	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
 "example"	569923068	--	lecturer	--	"[lec-un]."
-"inn"	116088172	--	idg	--	"[ian-un]."
+"ian"	116088172	--	idg	--	"[ian-un]."
 "guardian"	362334391	--	idg	--	"[ian-un]."
 "pamphlets"	647481120	cruelest	--	--	"[pamph-ana]."
 "pamphlet"	551207154	cruelest	--	--	"[pamph-ana]." [end-stores]

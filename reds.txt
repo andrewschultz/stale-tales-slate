@@ -62,6 +62,8 @@ discover,rodsvice,revdisco,veridocs,scorediv
 last,R?R?=stal=salt
 decide,iceded,cdedei,ecedid
 resign,sireng,grines,singer,snegri,nregis,isnerg
+ramble,R?RRRY=blamer=balmer
+resist,RY?Y?R=sister=tressi
 recant,R??YRR=trance=nectar
 ################presto
 #grey gyre

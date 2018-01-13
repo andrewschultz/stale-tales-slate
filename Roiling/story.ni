@@ -13514,7 +13514,7 @@ book Cripple Clipper
 
 Cripple Clipper is a room in Routes. "Oh, no! You see a free reef in the distance, but you just realized you have no clue how to operate any sort of boat. About all you can see here are thickness sketchins[']."
 
-the bad oar is a thing. "It looks weird, but hey, it got you aboard the Cripple Clipper.";
+the bad oar is a thing. description is "It looks weird, but hey, it got you aboard the Cripple Clipper.". "The bad oar that helped you aboard the Cripple Clipper lies here, but you probably need to figure how to work things in general here."
 
 after looking in cripple clipper:
 	set the pronoun it to free reef;
@@ -14211,7 +14211,7 @@ chapter marble blamer
 
 Blamer Balmer is proper-named vanishing scenery in Upscale Capsule.
 
-a-text of marble blamer is "RYRRRY". b-text of blamer balmer is "R?RRRY". parse-text of blamer balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?RRRY". parse-text of blamer balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
 after fliptoing Blamer Balmer:
 	now sister tressi is LLPish;
@@ -19527,6 +19527,9 @@ after looking in loftier trefoil:
 
 w-p is privately-named plural-named scenery in loftier trefoil. printed name of w-p is "warriors".
 
+instead of objhinting w-p:
+	if number of warriors in trefoil is 1, try objhinting rodney instead;
+
 instead of doing something with w-p, say "Deal with the warriors individually."
 
 after printing the locale description for Loftier trefoil when Loftier trefoil is unvisited:
@@ -20938,7 +20941,11 @@ Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is
 
 the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it[else if flowerpot is in lalaland]happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
-the itster is scenery in Mesprise Premises. description is "It's red, and MAN what a high score the Tetris Sitter has."
+the itster is auxiliary scenery in Mesprise Premises. description is "It's red, and MAN what a high score the Tetris Sitter has."
+
+instead of doing something with the itster:
+	if action is procedural, continue the action;
+	say "The itster is the Tetris Sitter's, but maybe you can make her realize there's a lot more to life."
 
 after fliptoing tetris sitter:
 	now itster is in lalaland;
@@ -26173,6 +26180,7 @@ letters settler	"[one of]The settler seems to give mostly reds and yellows. If y
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
 tcb	"[one of]The teach-cheat button toggles whether or not you know characters are in the right position.[plus][or]More specifically, red/yellow=wrong, purple/green=right.[minus][cycling]"
 equals sign	"[one of]The equals sign is useful if you don't want things to be too easy.[plus][or]The equals sign will give squealings if you scan something and the information might make the puzzle trivial.[plus][or]You can override the equals sign with SY (scan with correct letters) or SN.[line break][sy-sn][minus][cycling]"
+ISBN Bins	"[one of]The ISBN Bins are pretty hefty, but they're easy to enter.[plus][or]Maybe you could add a bit of security before leaving. Not that you need to. But if you want all the points...[plus][or]It's an unusual word, but then, there are only twenty-four of them.[plus][or]You can make a SNIB.[minus][cycling]"
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
 super purse	"[one of]The super purse can't be changed, but it's there to circumvent some common adventuring tropes.[plus][or]The purse is a bit of a catch-all, so your huge inventory seems reasonable. It hides what you don't need nicely, and it shows what you do.[minus][cycling]"
 evac-cave	"The evac-cave is your way out[if Elmo is visible] once you get rid of Elmo[end if]."
@@ -26319,7 +26327,6 @@ Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][o
 Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
 Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
 wzup	"[wash-up]"	--	"WHASSUP"
-vile veil	"The vile veil is just a cheapo to explain why you can only go back north in Dirge Ridge."
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
 harpings phrasing	"[one of]The sign gives you three ways to tell Rand and Leo they've done their job[if rebuked is true], and they've been persistently loyal, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
@@ -26330,9 +26337,7 @@ ether	"[if Rand is not eager or Leo is not eager]You'll need friends to get thro
 lawl wall	"[one of]The wall can't be changed on its own.[plus][or]But the keys or hogs can be...dealt with. Try hinting either of them.[minus][cycling]"	--	"[if goshy is true]GOSH[else]SYKE[end if]"
 hogs	"[one of]The hogs find it funny you can't get the keys.[plus][or]If you expressed your disappointment, the hogs might get overconfident.[plus][or]GOSH.[minus][cycling]"	--	"GOSH"
 keys	"[one of]You really want the keys, and there's no way to pretend you don't.[plus][or]Maybe you can pretend, sort of, and annoy the hogs.[plus][or]SYKE.[minus][cycling]"	--	"SYKE"
-mount um-not	"Mount Um-Not is just scenery."
 hawt thaw	"[one of]You can do something with the hawt thaw, but it's not critical to the game.[plus][or]You may wonder how or why the heck it exits.[plus][or]Saying WHAT makes it disappear.[minus][cycling]"
-deil's slide	"Deil's Slide is just scenery."
 serial number	"[one of]The numbers can mean something else.[plus][or]Convert them to where they are in the alphabet.[plus][or]This is an alternate solution to grinding it out with the Settler.[plus][or]BINGO.[minus][cycling]"
 futon	"[if slept is true]You won't need to sleep on the futon again.[else][one of]The futon has patterns of tiresome--figuratively and literally--peels on it.[plus][or]The futon will be useful to sleep on when you need to.[minus][cycling][end if]"	--	"SLEEP on the futon"
 speel	"[one of]You're too tired to read the speel.[plus][or]You can't make any logic leeps in your current condition.[plus][or]Best to SLEEP.[minus][cycling]"	--	"SLEEP"
@@ -26423,14 +26428,12 @@ rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The dig
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not in lalaland][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 h-h	"The Horned Hedron is where you need to go [if Horned Hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
 a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
-handsome sand home	"It's just scenery."
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
 o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
-round bay boundary	"It's just there to provide a boundary in the Rascal Craals."
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
@@ -26455,6 +26458,7 @@ denim	"[one of]The denim can't quite be cut through by something like a dagger.[
 pester'n serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
 Tetris Sitter	"[if Tetris Sitter is reflexive][one of]The Tetris Sitter seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has flowerpot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]The succor crocus behind the unripe ur-pine may help her feel better about herself.[plus][or]Give it to her[if-cro].[minus][cycling]"
+itster	--	Tetris Sitter
 ur-pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 sporties' ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
 muscly luc sym	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
@@ -26551,6 +26555,7 @@ atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be 
 le mer	--	sea cube
 sea cube	"[bran-barn-already][one of]The sea cube in the atmo-moat/loop pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
 eels	"[bran-barn-already][one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
+allot atoll	"The allot atoll [if eels are reflexed]was just there to get you your reward[else]in is not helpful on its own, but you'll get there if you help the eels[end if]. You don't need to do anything to it."
 imp1	"[bug-report]"
 imp2	"[bug-report]"
 imp3	"[bug-report]"
@@ -26562,13 +26567,11 @@ satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of i
 badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be clothed?[plus][or]Or GARBED?[minus][cycling]"	--	"you can make the badger GARBED"
 leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound together by some invisible handcuffs.[plus][or]Like the leopard's in jail. Well, it sort of is.[plus][or]But the leopard's been well behaved. Can you get them out early?[plus][or]Yup. If they're PAROLED.[minus][cycling]"	--	"you can make the leopard PAROLED"
 ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"	--	"you can make the ocelots COOLEST"
-wire weir	"It's just there to provide a boundary in the Lamer Realm."
 raptor	"[one of]You need to be quick here. The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring, doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make the raptor a PARROT"
 nails	"[one of]The nails are arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
 pines	"[one of]The pines are shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
 corona	"[one of]The corona is black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
 thrones	"[one of]Sit on the thrones and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
-CRITTERS RESTRICT	"It's just there to block you from going any other way except back north."
 Elmer	--	Merle
 Merle	"[if parrot is in alcoves]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
 forces fresco	"It's just there to give ambience."
@@ -26635,7 +26638,6 @@ pugnacious plant	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]
 inapt paint	"[one of]DESERVER-RESERVED.[plus][or]The settler makes the vowels in the paint pretty clear.[plus][or]How do you make the paint the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
 augural arugula	"The augural arugula will help you GURU something."
 miser ruble	"[one of]It's purplish.[plus][or]And to think that a change could happen on such-and-such street.[plus][or]MULBERRIES.[minus][cycling]"
-streperous superstore	"It's just there as a device to block further exploration."
 nameless salesmen	"They used to be a puzzle in towers, and I didn't have the heart to get rid of them entirely, but fortunately they fit in the Clangier Clearing. They're not terribly useful."
 singed design	"The singed design gives you a clue what the [if player has coin]coin[else if player has coins]coins[else if player has icon]icon[else if player has icons]icons[else if player has s-c]sonic coins[end if] can become." [begin very endgame item hints]
 coin	"[one of]You ultimately need another coin, but perhaps it can be converted to something of intrinsic worth.[plus][or]Make the coin an ICON. Once you get another coin, you will make ICONS automatically.[minus][cycling]"
@@ -26656,7 +26658,6 @@ lost slot	"[if player has s-i]You need to put the sonic icons in the slot to ope
 halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has so-great storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Valence Enclave safely. The viewer and searcher can help, as can the message if you go north and fail."
 Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
-gropin' roping	"It's just there to establish you can't walk any which way."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"	[end others hinting]
 perp-priv	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]" [?? what if all 3]

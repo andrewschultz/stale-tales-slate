@@ -179,11 +179,12 @@ sub hashVer {
           $byLength
             ? detailSearch( "", $hashVal )
             : byLengthNum( "", $hashVal );
-          $errMsg .=
-            "detailed search gives "
-            . ( $foundSomething
+          $errMsg .= "detailed search gives "
+            . (
+            $foundSomething
             ? anagram_try($foundSomething)
-            : "nothing I could find" );
+            : "nothing I could find"
+            );
           $errMsg .= "(took " . ( time() - $b4 ) . " seconds)";
         }
         print "$errMsg\n";
@@ -336,7 +337,7 @@ sub anagram_try {
       $match_string .= "~" . lc($line);
     }
   }
-  return $matchString
+  return $match_string
     ? "$_[0]$match_string"
     : "$_[0] (no one-word anagrams found)";
 }
