@@ -6086,7 +6086,9 @@ carry out troves-hinting:
 		if bee's head is reflexive, try objhinting bee's head instead;
 		if what-a-bee is reflexive, try objhinting what-a-bee instead;
 		try objhinting cellar door instead;
-	if player is in Drain Nadir, try objhinting diapers instead;
+	if player is in Drain Nadir:
+		if diapers are in drain nadir, try objhinting diapers instead;
+		try objhinting eddie's song instead;
 	if player is in Boredom Bedroom, try objhinting ltb instead;
 	if player is in Browse Bowers, try objhinting brochure instead;
 	if location of player is Econ Cone:
@@ -26277,7 +26279,7 @@ heat	"[one of]Emotional investment is necessary to win [i]a rat race or a foot r
 fretful truffle	"The fretful truffle, if you eat it, will tell you what to [if cur-score of troves is 0]type[else]think[end if] next."
 verbose	"[one of]Even when someone or something is terse with you, their terseness can give you something to focus on and manipulate[plus][or]OBSERVE other people or things[minus][cycling]."	--	"OBSERVE"
 post	"[one of]You must persist when you are stonewalled. The second time is easier than the first and likely requires less creativity[plus][or]You may SPOT something interesting on a second look[minus][cycling]."	--	"SPOT"
-bee's head	"[one of]The bee is hovering so near. But small bees shouldn't be able to fly. Giant bees--well, there is the giant's paradox.[plus][or]The path of concrete reasoning should not be closed to the common man.[plus][or] often, once you believe you can, you really can REASON![minus][cycling]"	--	"REASON"
+bee's head	"[one of]The bee is hovering so near. But small bees shouldn't be able to fly. Giant bees--well, there is the giant's paradox.[plus][or]The path of concrete reasoning should not be closed to the common man or woman.[plus][or] often, once you believe you can, you really can REASON![minus][cycling]"	--	"REASON"
 what-a-bee	"[one of]Even intellectual elitists know, deep down inside, that there is an emotional component to things.[plus][or]They hope to be able to BELIEVE without letting the common man do so as well. Not that they need to, to achieve their goals.[minus][cycling]"	--	"BELIEVE"
 cellar door	"[one of]To open the cellar, you need not REMEMBER anything and everything. Instead, just say 'Oh I know' after someone offers knowledge. It works, because, you know--well, you BETTER know...[plus][or]It is better to be able to RECALL[minus][cycling]."	--	"RECALL"
 spider	--	sad pier
