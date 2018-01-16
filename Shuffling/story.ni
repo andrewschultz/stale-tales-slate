@@ -1225,6 +1225,7 @@ notes stone	"[if nose is off-stage or shades are off-stage or shotgun is off-sta
 shades	"The shades [snb]."
 nose	"The nose [snb]."
 beard	"The beard [snb]."
+skin sink	"The skin sink is just there to hold a few items you need."
 grinder	"[if livers are off-stage]You need to put meats in the grinder[else]You're done with the grinder, and it's done, too[end if]."
 red ring	--	grinder
 blades	--	grinder
@@ -1250,7 +1251,7 @@ ufcex	--	dial
 cfuge	--	dial
 Mean Old Mondale Doleman	"You don't need to do anything directly to Mondale Doleman to get through the sortie."
 lid	"The (a) lid is just there to keep the dial from turning."
-grate	"[one of]There's no gateman to help with the grate. [plus][or]You're feeling very hungry. You wish you could go somewhere to eat, or even make something to eat.  [plus][or]The tagged gadget gives a reading without you examining anything. [plus][or]This room becomes a KITCHEN. [minus][cycling]"
+great grate	"[one of]There's no gateman to help with the grate. But it is made of HECK TIN. [plus][or]You're feeling very hungry. You wish you could go somewhere to eat, or even make something to eat. [plus][or]The tagged gadget gives a reading without you examining anything. [plus][or]This room becomes a KITCHEN. [minus][cycling]"
 cell graffiti	"Its redness will help with how to leave the nick."
 branding	--	cell graffiti
 skate	"The skate can become steak."
@@ -1295,7 +1296,6 @@ oils	"[if soil is in lalaland][one of]The OILS can be a couple things, but you m
 lois	"Lois is the provider of oils."
 crashing archings	"Lois caused that, to help you not look backwards."
 roadblock	"[one of]The roadblock seems misplaced, almost inviting you to enter. [plus][or]It's also cut 5/9 of the way down. [plus][or]What's an entryway? A DOOR. [plus][or]That leaves the word BLACK. [plus][or]It's a BLACK DOOR! [minus][cycling]"
-rime mire	"The rime mire is just there to block you from leaving the moor."
 bright red graffiti	"The graffiti helps you figure what the roadblock is."
 hoots button	"[one of]The hoots button isn't up to much. [plus][or]You don't hoot with a missile... [plus][or]...you SHOOT. [minus][cycling]"
 trees button	"[one of]The trees button isn't much help launching a missile. [plus][or]You don't want that missile going just anywhere. [plus][or]STEER BUTTON. [minus][cycling]"
@@ -1316,6 +1316,7 @@ smilies	"[one of]The smilies seem like they don't belong on the page. [plus][or]
 panel	"[if panel is not part of silo]How to get the silo working? PUT PANEL ON SILO.[else]The panel is in place.[end if]"
 wires	"The wires aren't important. The panel is."
 drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if]. [plus][or]Anything would be more beautiful than drainage, especially a flower. [plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA. [minus][cycling]" [START METROS]
+a-reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
 soggy love letter	"The love letter intro clues what the drainage could be."
 can of beer	"The beer can's name clues what the drainage could be."
 arena dig flier	"The flier clues what the drainage should be."
@@ -1331,13 +1332,14 @@ leaves	"The leaves['] clinginess clues what the clover should become."
 Velcro	"The Velcro, with its hooks, is useful for sticking to something."
 string	"The string is probably what the clover's stem was. It keeps the Velcro mittens hooked together."
 hooks	--	Velcro
+lease easel	"The lease easel just [if motto is in bile libe]held[else]holds[end if] the (a) motto."
 motto	"[one of]The, I mean, a motto probably belongs in the trash in the long term. But it's helpful to you. [plus][or]Who's it by? Too-Apt Pa Otto. How does the song go?[or]Potato, ...[or]TOMATO. [minus][cycling]"
 neon pig	"[one of]That neon pig needs to go. For aesthetic and technical reasons. [plus][or]You can scan it, and that gives you some information. [plus][or]You'd rather have nothing there than the pig, too. [plus][or]It can become an OPENING. [minus][cycling]"
 fuzzy looking wall	"You can climb up the wall with [if player has Velcro]your Velcro[else]something sticky or clingy[end if]."
 gardenia	"[if player is in Fo Real Florae]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
+tilting titling	"The tilting titling is just there for ambience."
 building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
 sensor	"The sensor probably needs something electronic to read."
-red camp	"It's just scenery telling you something is north of the underside."
 lost corn	"[one of]You haven't done anything with the lost corn yet. [plus][or]The kernels look like buttons. [plus][or]The 'lost' adjective is important. [plus][or]The lost corn can become CONTROLS. [minus][cycling]"
 discolored buttons	--	kernels
 yellow kernels	"The different colored kernels may clue what the lost corn should be."
@@ -1365,7 +1367,6 @@ sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits 
 controls	"The controls need to fit into a recess[if neon pig is in lalaland], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
 red glowing cursive script	"Provides a clue what the neon pig should become."
-Pa's PSA	"Random silly PSAs I thought up."
 nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question. [plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing. [plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is... [plus][or]DARKNESS. [plus][or] ASK NERDS ABOUT DARKNESS. [minus][cycling]"
 utterly unreadable book	"The book gives clues what to ask the nerds about."
 tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
@@ -1394,6 +1395,7 @@ tool shed	"[one of]You need a way up the slope. It's too smooth and steep. [plus
 toeholds	"With the toeholds around, you only need to [if poles are visible]do something with the poles[else]go up the slope, though [toho][end if]."
 outcroppings	"These clue what the toolshed can become."
 u-lock	"Just there to keep you out of the toolshed. Which you can change."
+odd low woodland	"Just there as a hat tip to what Rived Drive was."
 protest	"[one of]Three people are still a protest. How can you cut them down? [plus][or]They have REAL jobs. They make something, they say! [plus][or]Apparently they use clay and say 'It's kiln me!' [plus][or]The people in the PROTEST are really POTTERS. [minus][cycling]"
 riot	"[one of]It's a riot! Way more than three people! [plus][or]How would you cut it down to three? [plus][or]Make them a TRIO. [minus][cycling]"
 links	"[one of]The potters need something to do with their hands. [plus][or]The chain links have been dropped. Perhaps you could use them for less violent purposes. [plus][or]They can become something fragile, for a bonus point you can guess.. [plus][or]They can become KILNS. [minus][cycling]"
@@ -1403,7 +1405,6 @@ kilns	"[if potters are off-stage]They need people to operate them--perhaps the o
 Burdell	"[one of]Red Bull Burdell does like yelling GET OUT. [plus][or]And changing stuff won't help you here. [plus][or]So maybe you need to change what he says? [plus][or]The gadget [if player has gadget]would be[else]was[end if] marginal help with six reds. [plus][or]He has but one weakness, blah blah blah... [plus][or]TUG TOE. [minus][cycling]"
 toe	--	Red Bull Burdell
 crass scars	"Helps make Red Bull Burdell more intimidating. I hope."
-ransom manors	"They are there for scenery."
 cutlery	--	crass scars
 thirst	--	crass scars
 [toh end]
@@ -6247,11 +6248,9 @@ after looking in kitchen for the first time:
 	now warts are part of the player;
 	now startmod5 is the remainder after dividing (turn count + 4) by 5;
 
-The great grate is bounding scenery in The Nick.
+The great grate is scenery in The Nick. "Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read."
 
 the branding is part of the great grate. description of branding is "The grate seems to be made by [first custom style]HECK TIN[r]. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.". understand "brand" as branding.
-
-description of great grate is "Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read."
 
 check opening great grate: say "You utterly fail to move it. If it could speak, it might sarcastically say [one of]Boring? Brig? No![or]Give up! And mean it, inmate![or]Denied, Indeed![or]Weak Try, Raw Tyke![at random]" instead.
 
@@ -7520,7 +7519,7 @@ does the player mean taping the spout: it is very likely.
 
 chapter mud
 
-the mum dud mud is a backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen. description is "Well, it's mud, and not very exciting mud at that."
+the mum dud mud is a bounding backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen. description is "Well, it's mud, and not very exciting mud at that."
 
 instead of doing something with mum dud mud:
 	if action is procedural, continue the action;
