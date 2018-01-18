@@ -604,6 +604,10 @@ You can RESIST.
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
 DESPAIR.
+?What is this song trying to say to me?
+You need to move on from your despair.
+Eddie C, CDEDE ... I
+DECIDE.
 >>BOREDOM BEDROOM
 ?I may or may not want to drink the lager!
 Turns out you don't.
@@ -612,9 +616,17 @@ This is a last lousy point.
 The settler's cheat mode breaks it open since it scans "REGAL LAGER" as red. That makes the first letter clear. Then four possibilities are left.
 You can cut them down further reading the red text about Ergal Agler.
 Or you can GLARE at it right away.
+?Why can't I eat the Bortles Lobster yet?
+You need to feel you can, you deserve it.
+The settler in cheat mode throws a bunch of questions, but actually, that means a lot of things you can clean up.
+BOLSTER.
+?Why don't I understand the motivational picture of the stream?
+You aren't on top of things yet. The stream should refocus you...
+...if you MASTER things.
 ?How do I lead?
 Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
 You need to learn to DEAL.
+Though, first, if you haven't dealt with the lobster or ME ARTS, you won't have the guts or endurance.
 >>BROWSE BOWERS
 ?How do I reside somewhere now?
 You are ready to want a bigger place.
@@ -625,7 +637,7 @@ Or to DESIRE to.
 They are just scenery, to give the Browse Bowers a feeling of isolation.
 >>ECON-CONE
 ?Who is the statue? What should I do with him/it?
-The statue is one of two things you need to move on, sort of like the lobster and ME ARTS.
+The statue is one of two things you need to move on, sort of like the Bortles Lobster and ME ARTS.
 Trevis Vister. Hmm. And there are rivets.
 The statue is there to make people want to be like him.
 STRIVE.
@@ -641,25 +653,13 @@ PONDER.
 ?The guy I deposed is bugging me!
 What can you do to concentrate on your REGION? Your tan ivy vanity title provides some hints. As does the banging on the door.
 IGNORE him.
-?Why can't I eat the lobster yet?
-You need to feel you can, you deserve it.
-The settler busts this wide open in cheat mode.
-BOLSTER.
-?Why don't I understand the motivational picture of the stream?
-You aren't on top of things yet. The stream should refocus you...
-...if you MASTER things.
 ?I'm not worth my salt!
 You will be, with time.
 If you haven't dealt with the lobster or the stream, you need to.
 Then, you need to LAST.
-?I'm jealous of the singer! Well, there are two!
-Siren G. Grines makes you want to give it all up.
-You need to have dealt with the salt.
-Then you can RESIGN. But there is another solution.
-?Is the song being played important?
-Eddie C. sings "I'd Cede" or, worse, "I Ceded."
-The CDEDE... "I..." that reddens your eyes is another clue.
-You can DECIDE.
+?What do I do with the Trance Nectar?
+It's time to turn your back on all this.
+RECANT.
 ?DIVORCES magazine. Is it useful?
 It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
 You need to realize something...

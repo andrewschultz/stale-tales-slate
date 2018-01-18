@@ -3,11 +3,73 @@ out=roiling-logic-invisiclues.htm
 ->c:/games/inform/roiling Materials/Release
 >General
 ?Which puzzles are discussed here?
+Only puzzles where the settler throws a question mark in cheat mode.
 ?What does a question mark in the settler reading mean?
-<pre>ASPIRE PRAISE\nXXXXXX</pre>
+It means that one of the letters in the description is right, but not all of them.
+Sometimes this can really help you more than an actual reading, though occasionally it can muddle things.
+?What are general strategies for dealing with question marks?
+If there is only one, you know whether it is a vowel or a consonant, since you should know the number of vowels and consonants in the target word. You will be a vowel or consonant short.
+If there is more than one, you may wish to check if there is a choice between only vowels or only consonants in any one slot. If so, then you may be able to determine what the other question-mark slots must be.
+Or if, for instance, the target word has two vowels, and the settler gives no vowels and two question marks, both question marks must be a vowel.
+These won't always get you to the right answer, but they'll often get you closer than even a standard cheat readout.
 >STORE P
 >STORE U
 >STORE V
+?What does _Pa Egg Pea_'s reading mean?
+First, <b>Pa Egg Pea</b> gives ??R?. But it's about and by its author, <b>Peg A. Page</b>. That suggests the book is wrapped up in those four letters. The book is designed with "egg" split mid-word to give a 4x4 of author and book name. So the ? means one letter is right.
+Here is how things look:\n<pre>PAEG\nGPEA\nPEGA\nPAGE</pre>
+The third slot is red and can't be G, so it's P.
+The first letter is P or G, meaning G.
+That leaves GEPA and GAPE. GAPE.
+?What about the Sob Ever Verbose?
+The <b>sob ever verbose</b> gives YRR?RR?. Since it has three vowels, the question marks must both be vowels.
+And in each slot, the only possible vowel is E. That means the other Y must be the final vowel, O.
+With O--E--E, we have some tricky stuff with the consonants. But if we listen, we can hear some red stuff that is all wrong. That gives us OBSERVE.
+?What about the stop post?
+The <b>stop post</b> gives ?R??.
+That makes the second slot S or P, since it can't be T or O.
+But it does the same for the first: one of S or P must be right.
+The third is O or S, and the fourth is P or T, but since the first and second can't be consonants, the third must be.
+(SP)(SP)O(PT) is left. That means T must be in slot 4.
+SPOT is right, and PSOT is not.
+?How do I figure out Sister Tressi?
+Sister Tressi gives a couple question marks, but with all the vowels accounted for, we know the remaining slots must be consonants.
+In fact, the second being a yellow/vowel and not I means it's an E, and thus the other vowel is an I.
+Also, R is the only possible consonant in slot 1. RE-I--.
+Here we see that slot 3 is S or 3, and slot 5 is S or E. So they're both S, and slot 6 is T.
+RESIST.
+?How do I decipher the ME ARTS?
+The ME ARTS has a big long name. MREAST STREAM TAMERS.
+The two question marks seem like a problem but aren't really. One must be a consonant, and one must be a vowel.
+But note the first one has only consonants as guesses, and one must be right, so the second is a vowel.
+The only vowel that could match up in slot 2 is A. That makes slot 5 E.
+-A--E- is left, but the last consonant can't be M/S/T, so it is R. The second (slot 3) can't be M, and slot 4 can't be R. This isn't a big help, but with fewer than six possibilities left, you can guess around and get MASTER.
+?What about the BORTLES Lobster?
+It gives ?GR??G?, which looks horrible...
+...until you notice there are only two vowels, total. That gives -O---E-, and the rest are consonants.
+In fact, each slot is one of two consonants.
+(BL)O(LST)(TS)(LT)E(RS).
+B must be in slot 1, R in slot 7. That leaves three possibilities based on what slot 3 is.
+BOLSTER turns out to be the right one.
+?How do I figure Blamer Balmer?
+Blamer Balmer has just one question mark. So he's not too tough to figure out.
+R?RRRY means that the second slot is a vowel, one of A and L, so A. That means slot 6 is E.
+The red Mr. Beal and LeBram clues should clinch that the verb is RAMBLE.
+?What do I do with _Lead_?
+For <b>LEAD</b>, by the two authors, ???R looks painful indeed. But the red means a consonant which can't be D. So it's L. Fortunately, there are just three choices.
+<pre>?A?L -> EADL\nA??L -> AEDL</pre>
+So, ??AL = DEAL. You could, of course, use non-teach mode to knock this off. It'd put the consonants at the end and the vowels in the middle.
+?What about the brochure in the Browse Bowers ("Sir Dee/Reside")?
+A reading of the brochure gives R???RG.
+We can get the first letter, then--consonant not R or S, so, D.
+The second must be a vowel (I or E,) and the third must be a consonant, R or S. Therefore number four is a vowel.
+Since the fourth slot is I or D, it is I, making the others E.
+DE-I-E has two possibilities, so you can guess DESIRE.
+?Finally, what about the Trance Nectar?
+Well, the R??YRR leaves you with a couple possibities for the 2nd/3rd slot. One vowel, one consonant.
+Here a minimal bit of guesswork and grinding it out works.
+-RA--- would mean CRAE(NT/TN) as there's a vowel in the fourth slot, and the first can't be N/T or R. So that doesn't work.
+-EC--- would mean RECA(NT/TN) or RECANT.
 >STORE W
 >STORE Y
 >STORE T
