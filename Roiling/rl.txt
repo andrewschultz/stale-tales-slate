@@ -1,0 +1,14 @@
+out=roiling-logic-invisiclues.htm
+!A Roiling Original HTML Logic Clues
+->c:/games/inform/roiling Materials/Release
+>General
+?Which puzzles are discussed here?
+?What does a question mark in the settler reading mean?
+<pre>ASPIRE PRAISE\nXXXXXX</pre>
+>STORE P
+>STORE U
+>STORE V
+>STORE W
+>STORE Y
+>STORE T
+>STORE H
