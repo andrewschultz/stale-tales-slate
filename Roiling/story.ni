@@ -2778,6 +2778,7 @@ pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red." [routes]
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
+Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
@@ -5403,7 +5404,7 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Econ Cone:
 		if pernod is visible:
 			try scaning pernod instead;
-		if rivets are reflexive and praise is reflexive:
+		if rivets are reflexive and praise is in econ cone:
 			if rivets-first is true:
 				say "The rivets have a weird magnetic pull to them. As if there's brain waves in there pulling you towards it so it can tell you what to do.";
 				try scaning rivets instead;
@@ -5498,6 +5499,7 @@ stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a fo
 sister tressi	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
 rivets	false	false	false	true	"[rivet-help]."
+praise	true	false	false	false	"Hmm. That's weird. Maybe it's the words in the praise that are giving the weird results. Maybe listening to them will clear stuff up."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
 song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
 alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [presto]
@@ -5541,13 +5543,13 @@ check scaning a prefigured thing:
 		say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
 
 to say rivet-help:
-	if rivets are reflexed and praise is reflexed:
+	if rivets are reflexed and praise is in lalaland:
 		say "Well, there's probably not much else hidden in the rivets";
 		continue the action;
 	if rivets are reflexed:
 		say "You maybe could focus on what the rivets say";
 		continue the action;
-	if praise is reflexed:
+	if praise is in lalaland:
 		say "Hmm, the message could've been painted on, but Trevis Vister commissioned rivets";
 		continue the action;
 	say "[if cheat-on is true]The greens and yellows in the last two characters blink in unison[else]A little messy, but that may just mean there are two ways to look at this problem[end if]";
@@ -6089,20 +6091,19 @@ carry out troves-hinting:
 	if player is in Drain Nadir:
 		if diapers are in drain nadir, try objhinting diapers instead;
 		try objhinting eddie's song instead;
-	if player is in Boredom Bedroom, try objhinting ltb instead;
+	if player is in Boredom Bedroom:
+		if lobster is in boredom bedroom and me arts are in boredom bedroom:
+			if lobster-first is true, try objhinting lobster instead;
+			try objhinting me arts instead;
+		try objhinting ltb instead;
 	if player is in Browse Bowers, try objhinting brochure instead;
 	if location of player is Econ Cone:
-		if rivets are reflexive and praise is reflexive:
+		if rivets are in econ cone and praise is in econ cone:
 			if rivets-first is true, try objhinting rivets instead;
 			try objhinting praise instead;
 		try objhinting Pernod instead;
 	if location of player is Upscale Capsule:
 		if noise is in Upscale Capsule, try objhinting vanity instead;
-		if ME ARTS is in Boredom Bedroom and lobster is in Upscale Capsule:
-			if lobster-first is true, try objhinting lobster instead;
-			try objhinting ME ARTS instead;
-		if lobster is in Upscale Capsule, try objhinting lobster instead;
-		if ME ARTS is in upscale capsule, try objhinting ME ARTS instead;
 		if salt is in Upscale Capsule, try objhinting salt instead;
 		if tressi is in capsule and balmer is in capsule:
 			if sister-first is true, try objhinting sister tressi instead;
@@ -7690,7 +7691,7 @@ to decide whether can-hear-posh:
 	if player is in econ cone and praise is in lalaland, yes;
 	no;
 
-before listening (this is the you can hear stuff some places rule):
+check listening (this is the you can hear stuff some places rule):
 	if player is in dusty study: [means manse]
 		if dusty study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is in lalaland][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
@@ -7702,6 +7703,7 @@ before listening (this is the you can hear stuff some places rule):
 		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
+	if player is in econ cone and praise is in econ cone, say "'Spare, I ape SIR! I reaps, I reaps! Ire? Sap! Praise! Praise!'" instead;
 	if player is in Upscale Capsule, say "[if noise is in Upscale Capsule]You can't help but hear the knocking. Which prevents you working on your big new REGION[else if salt is in lalaland][one of]You listen closely to 'I'd Cede.' But you see red at the memory of Eddie C.[']s followup, a vapid rehash, I Ceded[or]Oh man, that part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy[cycling][else]. White noise, it is on. Whee[end if]." instead;
 	if mrlp is presto, say "[if cur-score of presto is 0]A shot. Sort of[else]You don't hear anything congruent to what you've needed to say in this area, which is a good thing[end if]." instead; [presto]
 	if Rand is visible and Rand is washed up:
@@ -8925,10 +8927,10 @@ lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol,
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 praise	praise	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
-rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
+rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise is in lalaland]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
-salt	salt	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom."
+salt	trance nectar	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and a lobster meal will be less a percent of YOUR income than your underlings['] food is of theirs!"
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
@@ -9523,7 +9525,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		move player to Phat Path;
 		continue the action;
 	else if noun is praise or noun is rivets:
-		if praise is reflexed and rivets are reflexed:
+		if praise is in lalaland and rivets are reflexed:
 			say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
 			min-up;
 			set the pronoun it to pernod;
@@ -11304,7 +11306,7 @@ definition: a thing (called lp) is llpish-plus:
 		if p-2 is in lalaland:
 			decide yes;
 	if lp is praise and rivets are reflexed, yes;
-	if lp is rivets and praise is reflexed, yes;
+	if lp is rivets and praise is in lalaland, yes;
 	if lp is merle or lp is elmer, yes;
 	decide no;
 
@@ -14021,7 +14023,7 @@ instead of taking brochure:
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]While save aves branch out each way, the statue nearby looks so much more important! [if rivets is reflexive and praise is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or praise is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
+Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]While save aves branch out each way, the statue nearby looks so much more important! [if rivets is reflexive and praise is in econ cone]Maybe it will help you motivate yourself even more[else if rivets is reflexive or praise is in econ cone]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
 
 understand "econ-cone" as Econ Cone.
 
@@ -14053,7 +14055,7 @@ after fliptoing godlings' lodgings:
 	continue the action;
 
 check fliptoing godlings' lodgings:
-	if praise is reflexive and rivets are reflexive: [stri is false and asp is false:]
+	if praise is in econ cone and rivets are reflexive: [stri is false and asp is false:]
 		say "You sit and ponder for a bit. But it is just general complaining. The whole mish-mosh about people approximately as unfortunate as you. No wish for [i]praise rivets[r] you enough for you to ponder positively." instead;
 
 check scaning godlings' lodgings:
@@ -14078,27 +14080,28 @@ the rivets are part of the statue. description is "[one of]After looking for a f
 rivets-first is a truth state that varies.
 
 check objhinting rivets:
-	if rivets-first is false and praise is reflexive:
+	if rivets-first is false and praise is in econ cone:
 		try objhinting praise instead;
-	if rivets are reflexed and praise is reflexive:
+	if rivets are reflexed and praise is in econ cone:
 		try objhinting praise instead;
-	if rivets are reflexed and praise is reflexed:
+	if rivets are reflexed and praise is in lalaland:
 		all-say "You learned all you could from the statue." instead;
 
-the praise is privately-named vanishing scenery in Econ Cone. praise is undesc. printed name of praise is "PRAISE".
+the praise is vanishing scenery in Econ Cone. praise is undesc. printed name of praise is "PRAISE".
 
-understand "iarp" as praise when debug-state is true.
+instead of examining praise, try listening instead;
 
-a-text of praise is "YRRYRY". b-text of praise is "YRRGRG". parse-text of praise is "a[sp]x[sp]x[sp]i[sp]x[sp]e". praise is cheat-spoilable.
+a-text of praise is "YRRYRY". b-text of praise is "?RR?R?". parse-text of praise is "a[sp]x[sp]x[sp]i[sp]x[sp]e". praise is cheat-spoilable.
 
 before scaning rivets (this is the switch to praise rule):
-	if rivets are reflexed and praise is reflexive:
+	if rivets are reflexed and praise is in econ cone:
 		try scaning praise instead;
 
 instead of doing something with rivets:
 	if action is procedural, continue the action;
 	if current action is taking:
 		say "Petty theft is not big thinking! You'd do better to take a message from the rivets.[paragraph break]Plus, you don't have the right tool." instead;
+	say "[if rivets are reflexed]You figured what to do with the rivets[else]You need to figure what to do with the rivets--or what to have them inspire you to do[end if]."
 
 check scaning statue for the first time: [let statue be the first thing you scan]
 	say "You're pretty sure Trevis Vister did his best to make his statue couldn't be melted down by some silly mind-game, but maybe the settler will turn up something...hmm, nothing, except for the rivets.";
@@ -14114,7 +14117,7 @@ after fliptoing praise:
 	continue the action;
 
 after fliptoing rivets:
-	if praise is reflexive, now praise is llpish;
+	if praise is in econ cone, now praise is llpish;
 	continue the action;
 
 chapter pernod
@@ -14138,7 +14141,7 @@ after fliptoing when location of player is Econ Cone (this is the Pernod appears
 	continue the action;
 
 after fliptoing pernod:
-	if rivets are reflexive or praise is reflexive:
+	if rivets are reflexive or praise is in econ cone:
 		poss-d;
 	consider the region-knock rule;
 	continue the action;
@@ -14211,7 +14214,7 @@ after fliptoing sister tressi:
 
 chapter marble blamer
 
-Blamer Balmer is proper-named vanishing scenery in Upscale Capsule.
+Blamer Balmer is proper-named vanishing scenery in Upscale Capsule. description is "A stern looking fellow who is big on personal responsibility. You can READ who created this likeness."
 
 a-text of Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?RRRY". parse-text of blamer balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
@@ -25770,9 +25773,9 @@ definition: a thing (called hintcand) is hintrelevant:
 			if salted deltas is visited or Actionless Coastlines is visited or Strati Strait is visited:
 				decide yes;
 		decide no;
-	d "[hintcand] before.";
+	[d "[hintcand] before.";]
 	let R1 be map region of location of hintcand;
-	d "[hintcand] after.";
+	[d "[hintcand] after.";]
 	let R2 be mrlp;
 	if R1 is R2:
 		[d "[hintcand] [location of hintcand] vs [R2].";]
@@ -25781,7 +25784,6 @@ definition: a thing (called hintcand) is hintrelevant:
 		[d "[hintcand] is relevant.";]
 		decide yes;
 	decide no;
-	decide yes;
 
 objhinting is an action applying to one visible thing.
 
@@ -26126,7 +26128,7 @@ to say this-animal:
 	say "You've got a useful ally. They'll be ready just as they are when the time comes"
 
 to say by-rivets:
-	say "You've been inspired enough by the statue[if praise is reflexed and rivets are reflexed], more than enough, in fact[else], though you could still get a bit more inspiration[end if]"
+	say "You've been inspired enough by the statue[if praise is in lalaland and rivets are reflexed], more than enough, in fact[else], though you could still get a bit more inspiration[end if]"
 
 to say by-bee:
 	say "You can get past the bee now[if what-a-bee is reflexive and bee's head is reflexive], though you can deal with it one more way[else], having dealt with it both ways[end if]"
@@ -26293,7 +26295,7 @@ ltb	"[one of]Feelings of despair are okay. Working through them can help you lea
 brochure	"[one of]It is no sin to want a better place to RESIDE.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
 dour tan rotunda	"It's what the Browse Bowers used to be called."
 praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
-rivets	"[one of]Those rivets stand out.[plus][or][if praise is reflexed]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
+rivets	"[one of]Those rivets stand out.[plus][or][if praise is in lalaland]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
 statue	--	rivets
 secure door	"Useful for keeping people out[if noise is in Upscale Capsule], though the vanity may provide more hints what (not) to do[end if]."
 plasm lamps	"Useful for working late at the Upscale Capsule but not for solving silly word puzzles."
