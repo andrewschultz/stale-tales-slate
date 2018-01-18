@@ -625,16 +625,16 @@ Or to DESIRE to.
 They are just scenery, to give the Browse Bowers a feeling of isolation.
 >>ECON-CONE
 ?Who is the statue? What should I do with him/it?
-Just as with the cellar, there are two things. The more visible is the statue's name.
+The statue is one of two things you need to move on, sort of like the lobster and ME ARTS.
 Trevis Vister. Hmm. And there are rivets.
 The statue is there to make people want to be like him.
 STRIVE.
-?What else should he inspire me to do?
-This is an extra point.
+?What about the praise floating around?
+This is the other of the two things.
 Re-scan the rivets spelling praise.
 ASPIRE!
-?I need to enter the godlings' lodgings, but my sales pitch isn't refined enough!
-The bottle of Pernod is a bit of a hint.
+?What is the bottle of Pernod for?
+It's not for drinking. It should make you want to be richer.
 Notice whom it's from in red.
 PONDER.
 >>UPSCALE CAPSULE
