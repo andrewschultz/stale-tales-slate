@@ -47,32 +47,27 @@ with open("logic.htm") as file:
 
 t2 = [x for x in need_logic.keys() if x not in got_logic.keys()]
 
-count = 0
+need_in_logic = 0
 
 if len(t2):
     for y in sorted(t2, key=lambda x: need_logic[x]):
-        count = count + 1
+        need_in_logic = need_in_logic + 1
         if show_count:
-            print(count, y, "is in the source but needs to be commented in the logic file.")
+            print(need_in_logic, y, "is in the source but needs to be commented in the logic file.")
         if show_code:
             print("<!-- logic for", y, "-->")
 
-if not show_count and count > 0:
-    print(count, "logic file comments needed.")
-elif count == 0:
-    print("TEST SUCCEEDED: logic file comments from source")
-
 t3 = [x for x in got_logic.keys() if x not in need_logic.keys()]
 
-count = 0
+need_in_source = 0
 
 if len(t3):
     for y in t3:
-        count = count + 1
-        print(count, y, "is commented in the logic file but is not in the source.")
+        need_in_source = need_in_source + 1
+        print(need_in_source, y, "is commented in the logic file but is not in the source.")
 
-if not show_count and count > 0:
-    print(count, "logic file comments needed.")
-elif count == 0:
-    print("TEST SUCCEEDED: logic file comments from logic.htm")
+if need_in_logic + need_in_source > 0:
+    print("TEST FAILED:", need_in_logic, "logic file comments needed,", need_in_source, "source file definitions needed.")
+else:
+    print("TEST SUCCEEDED: logic file comments match source definitions exactly.")
 
