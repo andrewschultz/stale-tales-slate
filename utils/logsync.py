@@ -16,7 +16,13 @@ logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 scanned = ""
 
 # this is for oddly or privately named items
-abbrevs = { "a-s": "achers' arches", "ltb": "lead" }
+abbrevs = {
+  "a-s": "achers' arches",
+  "ltb": "lead",
+  "bogus-plains": "plains",
+  "b-b": "bleary barley",
+  "s-c": "sonic coins"
+}
 
 count = 0
 

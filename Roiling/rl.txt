@@ -27,7 +27,49 @@ Slot 3 is a vowel that is not O, so it's E, and slot 6 is a vowel, and O is the 
 But now slot 4 can't be P or T, and slot 2 covers R, so slot 4 is S.
 (TP)RES(TP)O = PRESTO.
 >STORE P
+# logic for sport ports
+?What do you say to the sport ports?
+The Sport Ports seem to give a huge mess, but actually, they work out okay if you poke at the details. ?R?R?. But looking at the undefined slots, only one could be a vowel: slot 3, since slots 1 and 5 leave a choice between two consonants. Therefore, we have --O--.
+But from here, we have a lot of possibilities canceling out, due to the question marks.
+(SP)(SRT)O(SP)(ST) is what is left. Now only slot 2 can be R, and once we know that, only slot 5 can be T. -RO-T.
+Now PROST is more likely than SROPT, but also, if you noticed STROP gave red text, you'd have things figured out there.
+# logic for alert
+?What should I say to the ALERT/ALTER part of the sign?
+You have RY???. The three question marks look troublesome, but since there are only two possibilities each, this gives...
+RY (ET)(ER)(RT). That leaves L and A as the first two letters, so...
+LA (ET)(ER)(RT). That leaves LAERT or LATER.
+LATER.
+# logic for hawt thaw
+?Is there a word to yell at the hawt thaw?
+The hawt thaw is trolling you a bit if you use cheat mode. Three question marks! But the one red letter you see is a big enough clue to get things rolling.
+So, R???. The first character can't be H or T, but it's a consonant, so it's W.
+Then, since one of the characters in each slot for hawt/thaw must be right, we have...
+W(ah)(wa)(tw), and since W is already used, that gives W(ah)AT, or WHAT.
+If you had used non-cheat, it would have shown where the A was, which would be an immediate hint but would not have spoiled everything.
+Also, I found it hard not to use "what" to start this question sequence, for obvious reasons.
+#logic for usb
+?Why does the USB give question marks?
+That's because there are two solutions.
+But since it's a three letter word, I didn't feel too guilty allowing for this.
+The vowel in the middle leaves two possibilities.
+You can leave via SUB or BUS.
 >STORE U
+#logic for rude 'n nuder
+?How do I decipher what to do with Rude 'N Nuder?
+The YRPG? gives you a lot of clues. The question mark is a consonant, so it's N or R. The green is E, making the first letter U.
+So, U--E(NR) has D in slot 3, and thus U(NR)DE(NR). URDEN is not a word, but UNDER is.
+#logic for morf form
+?What's with the morf form giving question marks?
+The ?RY? notation shows where the vowel is: O is in the third slot. That's a start.
+Similarly, slots 1 and 4 are F or M, leaving slot 2 as R.
+FROM is more likely than MROF. So there you go.
+#logic for thickness sketchins
+?What is with the thickness sketchins?
+Logan's poem on the Cripple Clipper may be confusing, too,but let's break it down.
+<pre>WHATTAR\nTAWRATH\nTHATRAW\nARTTHAW\n?RRR?RR</pre>
+<br>Now it's frustrating to have two questions marks, but they must both be vowels. The only vowel is A, so ... A---A--.
+But now we note there must be two T's, and T cannot be in slots 3, 4 or 6, pushing it to 2 and 7. AT--A-T.
+There are three choices left here, based on if slot 6 is H, R or W, and it turns out ATHWART works.
 >STORE V
 # logic for pa egg pea
 ?What does _Pa Egg Pea_'s reading mean?
@@ -71,6 +113,13 @@ In fact, each slot is one of two consonants.
 (BL)O(LST)(TS)(LT)E(RS).
 B must be in slot 1, R in slot 7. That leaves three possibilities based on what slot 3 is.
 BOLSTER turns out to be the right one.
+# logic for praise
+?What's with the praise and its three question marks?
+It is the content of the praise that is throwing the questions.
+<pre>SPAREI\nAPESIR\nPRAISE\nIREAPS\nIRESAP</pre>
+Also, you may note that three consonant slots are defined, meaning the question marks are all vowels. So let's nail down the consonants first in ?RR?R?.
+Slot 2 cannot be P or R, so it's S. We can't get any information for slot 3, since only vowels appear there in the praise. Slot 5 cannot be S or P, so it's R. That means 3 must be P: ?SP?R?.
+Now the remaining slots must be vowels, leaving (ai)SP(ai)R(ie), since one of the vowels in each slot must be right. But then slot 6 is the only one that can be E, leavin ISPARE or ASPIRE. ASPIRE.
 # logic for blamer balmer
 ?How do I figure Blamer Balmer?
 Blamer Balmer has just one question mark. So he's not too tough to figure out.
@@ -101,5 +150,105 @@ Here a minimal bit of guesswork and grinding it out works.
 -EC--- would mean RECA(NT/TN) or RECANT.
 >STORE W
 >STORE Y
+# logic for gins sign
+?How do I do something with/to the gins sign?
+A reading of ?G?R means that you have -I-(consonant) but you can figure the consonant.
+It can't be S or N so it's G.
+Now G can't be in slot 1 or 3, so it has to be the other letters--N for gins, S for sign. SING.
+# logic for perma-amper
+?How do I neutralize the perma-amper?
+The Perma-Amper shows you R?RYR in cheat mode. So there must be a vowel at location 2: a choice between E or M.
+M's not a vowel, so slot 2 is E, but that leaves A (the other vowel) for slot 4.
+That leaves (rm)E(m)A(mp) if we eliminate the consonants in Perma-Amper, or REMAP. Note this isn't too hard without figuring what the ?'s are for, but if you get it anyway, you may be able to look back and see why the question mark is there.
+# logic for casper
+?How do I neutralize Casper Spacer or Capers Recaps?
+Casper and the Capers both give clues consistent with each other, but Capers Recaps's result will help you a lot more. Together, they give a solution by force.
+Casper Spacer gives ?RRYRY, meaning the first letter is a consonant, C or S. He doesn't match up well with the vowels you need. That's not very good.
+# logic for capers
+?How do I do use the Casper and Capers clues together?
+CAPERS RECAPS gives RRR??Y. That means either E or A is in slot 4, and the C and R in slot 1 are wrong. Along with the information about Casper, this tells us the word we need starts with S. Also, one of R/P is right in slot 5.
+Note that slot 3 is a consonant but not P, C or (slot 1) S. So it is R.
+S(CP)R(ae)(rp)(ae) then becomes SCR(ae)P(ae). SCRAPE.
+# logic for span pans
+?What's with the span pans' double clue?
+You have ?R?R, which can nail down slot 4: a consonant that's not N or S. P.
+Since P is taken, slot 1 can't be P, so it's S. S--P.
+Now there must be a vowel, but it's not slot 2, so it's slot 3. S-AP. SNAP.
+# logic for achers' arches
+?How do I navigate the achers' arches?
+This seems confusing if you take the arches literally. RY?RRR needs a vowel in the third slot, but it should be H or C according to the question on the settler--except that they are also CHASER arches.
+That gives you the vowel you need, and it drops the other vowel in place. (CHRS)EA(CR)(CHS)(CH) is left.
+If R is in slot 1, we get REACSH. Not quite. So R is in slot 3. (CHS)EAR(CHS)(CH). If C is in slot 1, CEARSH. If H is, HEARSC. So S is. SEAR(CH/HC).
+SEARCH.
+# logic for gleaner
+?What do I need to do to the general gleaner?
+The gleaner gives YRR??RY to start. That means slot 4 is a or e, and slot 5 is n or r. That at least letsus know if a consonant or vowel is in each question slot.
+Here we're going to cheat a bit and assume A is in slot 4, because that forces 1 and 7 to E. E(nrg)(lrg)A(nr)(nrlg)E and here you may have to rely on some red text to cut things down. Al Green helps a bit. E(nrg)(lr)A(nr)(nrlg)E. You may need to brute force here: If R is in slot 3, you get EGRANLE, so it's L. From there, poking around should give ENLARGE.
+# logic for plains
+?What do I do in the plains?
+The LAPSIN PLAINS give RRRY??. There is thus one vowel and one consonant to cover.
+However, the only possible vowel is the I, which is in slot 5. This also determines slot 4. ---AI-, or ---AI(NS).
+(NS)(NSP)(NSL)AI(NS) is what is left if you go through what LAPSIN and PLAINS eliminate. So then slot 2 is P, and 3 is L.
+NPLAIS is not a word, but SPLAIN is, though slightly slangy. That's why it's an LLP.
+# logic for papery yapper
+?How do I use cheat mode on the papery yapper?
+?RY?Y? gives clues for the yapper. That puts the Y in slot 1 or 6: we can't tell. But we do know where the vowels are. And since slot five can't be E, it's A. That makes slot three A.
+But now slot 4 is a question mark, so it's E or P. E is taken, so it's P.
+(py)(pr)EPA(ry) is left. That's enough to use brute force.
+YPEPAR or PREPAY are the only two choices. PREPAY.
 >STORE T
+# logic for bleary barley
+?How do I get rid of the bleary barley?
+The settler gives P??YRB -- the B you may not have seen before, but it has to be brown based on the upper window. Brown = blue + orange, and orange is Y.
+B----Y and letter 2 is L or A, while letter 3 is E or R. You can use non-cheat mode to figure things out, or if you guess letter 2 is A, 3 has to be R to keep the number of vowels/consonants straight, leaving BARELY. On the other hand, guessing BLE--Y leaves only A and R as vowel and consonant, which is a word you already have.
+B--ELY is BRAELY (nah) or --BARELY.
+# logic for cinders
+?The cinders are weird. What to do with them?
+They're meant to be a tricky LLP. There are two things you can do with them, hence the question marks.
+You may need a bit of word-logic here, but the R?RR??R leaves two vowels. If there is not a vowel in the second position, then we have clumping. So the question mark is a vowel, but it could force an I or an E, depending on what you can do.
+Here you may also notice that one of the two verbs must have E in the fifth slot, because of the question mark, putting I in the second.
+-I--E-- and with Sr Indec and Nrdices as clues, you can get close. The last lousy point is trickier, but once you know DISCERN, you know that all the question marks are because DISCERN is right. DISCERN will give you a few hints, but what about the other?
+This requires a bit more trial and error. However, we know that slot 5 can't be E and slot 6 can't be R, or there wouldn't be question marks. That cuts things down. Also, we can assume that slot 2 is a vowel, but it can't be I, or the question mark would be definite. So it is E. The result is probably the trickiest puzzle of the game. You may have to do some guessing. But it IS a last lousy point.
+# logic for atmo-moat
+?How do I destroy the atmo-moat?
+This one may be guessable, but let's look at it anyway.
+With ??YR for atmo/moat, we know A can't be in slot 3, but since slot 2 is T or O, that leaves just slot 1 for A. Then slot 2 must be a consonant, or T.
+AT(vowel)(consonant) means ATOM.
+# logic for tearily-irately
+?What is up with the macks discussing reality?
+There are two solutions here. From the general theme, you can probably guess things end in LY. But from there, it's less clear. In fact, even the non-cheat settings gives question marks.
+The ??GR?RO for reality suggests --A--LY, and the non-cheat suggests we don't know what the first two letters are. However, the cheat vs. non-cheat suggests that E or I in the fifth slot can be an answer, and general logic says R or T must be in the fourth slot. That gets us pretty close.
+(IT/TI)ARELY, (IR/RI)ATELY, (ET/TE)ARILY, (ER/RE)ATILY.
+From these eight we see TEARILY or IRATELY could both work.
+# logic for formally
+The settler indicates two question mark entries should be consonants.
+<pre>AFOLLYMR\nFLYMORAL\n?YR?YRRO</pre>\nIndicates the first letter shouly be F, and the second yellow with O in slot 5 tells us where the vowels should be.
+FO--A--Y is remaining. That's twelve possibilities--well, a bit less if we assume it ends in LY. One of L and M is in slot 4, and if we assume L, we get FO(RM)LA(RM)LY, and neither of those work. But the other way we get FO(RL)MA(RL)LY, or FORMALLY.
+# logic for steamily
+<pre>MAYISLET\nMISTYALE\nSLIMYTEA</pre>
+The question marks at 1 and 7 can be intuited a bit. M(consonant) clumps. And slot 7 must be a vowel for the letters to add up right. So... S(MT)(AE)(AE)(MT)(EI)LY is left over. That puts I in slot 6, and with 4 guesses, you can use trial and error.
+SMEATILY sounds like it could be a word, and SMAETILY and STAEMILY look weird, but STEAMILY works great.
 >STORE H
+# logic for coins
+?Why are the coins giving me such confusing clues?
+The (plain) coins near the end are, unavoidably, confusing. That's because they can, like the USB, get a description and become a thing which has no letters in common.
+In fact, the coins need to become two very different things. Hence all the question marks.
+In this case, you may want to have scanned the coin beforehand, or take up the game's offer to scan a coin. Cheat mode should make it obvious what it should be: YRYP means (io)C(io)N or icon since i can't be in slot 3.
+However, if you combine cheat and non-cheat mode, then you notice the fifth slot is the only fixed one. It is a consonant. That gives you the idea that the last letter must be S in one case and C in another, and what's more, the words share no other consonant/vowel space in common.
+# logic for sonic coins
+?OK, I changed the coins, and the settler's still weird on cheat mode. Now what?
+The sonic coins need to be converted to something else. YRY?? leaves two consonants.
+So one of I or N is the right consonant in slot 4: N. One of C or S is the right consonant in slot 5.
+And also, the vowel in slot 3 can't be I, so it is O. That leaves I as the vowel in slot 1.
+I(CS)ON(CS) remains, where ICONS wins over ISONC.
+# logic for melon
+?Why does something like the melon give question marks?
+The melon seems like it should not be that hard, but it pops up question marks even on non-cheat mode. What is going on is that, well, you need to talk to Len, and there are two ways to do it.
+The RYR??/????? suggests that a M, E and L work in some cases but not in others. You can say LEN, MO or MO, LEN to get the melon.
+While this is tricky, there are a lot of other ways to get points, so I hope it's not too disappointing that the settler conks out, especially since it is five letters--and one solution simply switches two. And actually asking Len, or noticing he is part of "Melon," makes it a bit easier to ask for what you need.
+# logic for inapt paint
+?What should the inapt paint become?
+With more than five letters, it's what it says.
+The inapt paint says DESERVER RESERVED. It has a lot of question marks, but all three vowels are green in cheat mode, and one consonant even works out, giving you
+-E-ER-E-
+(dr)E(sv)ER(sv)E(dr) is rather easy to sift through, since there are only four possibilities. REVERSED.
