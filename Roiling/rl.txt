@@ -5,6 +5,9 @@ out=roiling-logic-invisiclues.htm
 >General
 ?Which puzzles are discussed here?
 Only puzzles where the settler throws a question mark in cheat mode.
+There's a brief recap of how to deal with the settler if it doesn't throw a question mark, but since the question mark may be confusing, I tried to break down how it actually helps you long-term once you know how to deal with it.
+?What are some general issues and terms?
+Well, for starters, "clog" means too many consonants
 ?What does a question mark in the settler reading mean?
 It means that one of the letters in the description is right, but not all of them.
 Sometimes this can really help you more than an actual reading, though occasionally it can muddle things.
@@ -155,12 +158,60 @@ Here a minimal bit of guesswork and grinding it out works.
 The Dreads Adders give RY?RYR. The question mark must be a consonant, and since the choice is D or E, it's D.
 That's the only clue you can get from the question mark, but everything else must give a wrong answer, so that helps.
 There are only six possibilities left, but the ED SARD red clue forces the D to the 4th spot, and since S can't be in 6, it's in 1. SEDDAR or SADDER is SADDER.
+# logic for bluster butlers
+?How can I interpret the bluster butlers' clue?
+R?RRR?? looks like garbage, but then there's only one consonant in the three question marks. If it were in slot 2, that would mean serious clogging.
+So if one of L or U must be slot 2, we can assume U. Then slot 6 is E/R and 7 is R/S. But we need the E somewhere, so we get -U---E(R/S). That's as far as logic can get you. (LRST)U(BLRS)(BRT)(BLRS)E(RS) leaves a lot, though.
+You can listen to the butlers, examine them or run past them to get other clues (TRUBLE'S, LES BURT, URL BEST), and since they could afford to be quieter, you may find SUBTLER anyway.
 # logic for snider diners
 ?What about the snider diners?
 The snider diners are the next to pop up questions, though you may not need to use question marks' flexibility to deal with them.
 There are question marks at locations 2, 3 and 5. What does this mean? It means 2 and 3 are I or N. 5 must be E or R. Since 2-3 are I-N, that means R??R?R needs a vowel, which must be E, because I-N must be in 2 and 3.
 You can switch to non-cheat mode to discover if it is I-N or N-I, or you can keep plugging away elsewhere. For instance, slot 1 can't be S or D--or N. So it is R. R(IN)(IN)(SD)E(SD).
 Slot 6 can't be R or S, so it has to be D, leaving S in slot 4. R(in)(in)SED, and RNISED is out, so, RINSED.
+# logic for Muscly Luc Sym
+?How do Muscly Luc Sym's question marks shake out?
+Muscly Luc Sym only appears if you are male, but his question mark should be pretty clear. There is no O or B, so therefore, the Y must be at the end. --U--Y, then, since there is only one vowel.
+The remaining reds strike out possibilities pretty easily. (CS)(CLMS)U(LM)(CMS)Y.
+But let's look for nonsense words. S in the first slot gives SMULCY/SLUMCY, so it's C. C(LMS)U(LM)(MS)Y.
+If we work on slot 2, CMULSY and CSULMY aren't words, so it's CLUMSY.
+# logic for dandier arid den
+?How do I decipher the dandier arid den?
+The dandier arid den appears to give two annoying question marks to start in cheat mode. In normal mode, the endorsers should wrap things up, but cheat mode's two question marks make things fall out even more nicely.
+The ??YYRGR gives three known vowels and two consonants, so we need two consonants. A or D in slot 1 is D, and A or R in slot 2 is R. Also, slot 6 is E because of the green.
+DR---E- seems much more manageable. Since slot 3 is a vowel and can't be I, it's A, and slot 4 is the other vowel, I.
+DRAI-E- now has red in slot 5, so it can't be D from the arid den. It's N. DRAINED.
+# logic for natives
+Here, with just one word for natives, there are two solutions.
+The ?GYRYRR gives some clues right away. The first letter may or may not be N, but we can cheat and guess it must be, for one of the solutions. The second must be A.
+NA(IE)(VS)(IE)(VST)(VT). But the V in the last two slots doesn't turn up anything close to a word. So...
+NA(IE)(VS)(IE)(ST)T becomes NA(IE)V(IE)ST, or NAIVEST.
+It's trickier to find the other solution, but talking to them gives a bunch of red text. That's a bit beyond deciphering the settler, but you get (NV)AI(NVS)E(NVS)T if you go through all the possibilities.
+# logic for angriest ingrates
+?How do I resolve the question marks for the angriest ingrates?
+Well, the ?PPRRY?R gives you two consonants right off the bat. And the first question mark must be a vowel, leaving the second as a vowel, too--or E.
+So (AI)NG(ST)(RST)(AI)ER--the 8th slot can't be S or T--and this leaves four guesses.
+There are a lot of clues if you listen, but brute force may be more effective, here. ANGSTIER.
+# logic for alarming grailman
+?How do I navigate the alarming grailman?
+With RYRRYR?R we can determine the remaining question mark is a vowel. Since the possible letters are N and A, it is A. That makes things -(AI)--(AI)-A-.
+At this point, you may need to look for red letter clues. Liam Garn, his name, knocks out the vowels. -A--I-A-. Unfortunately, these were tricky to find
+# logic for sweatier wait-seer
+?What can I learn about the sweatier wait-seer?
+The two question marks don't tell as much as we'd hoped: ?YYRY?RR gives SW in slot 1, IE in slot 6. But then, A must be in slot 3, since I and E are out. (SW)(IE)A(SWR)(IE)(IE)(SWRT)(SWT).
+From here you may just need to grind out letters that can't work (W in slots 7/8 clogs, and W in 4 gives SEAWEERT with one E replaced by an I.) Then I in slot 2 gives WIA(SR)EE(SRT)(ST) which seems like nonsense.
+WEA(SR)(EI/IE)(SRT)(ST) could give Weariest...or you could just listen to what the wait-seer has to say, with red text that helps cut down the possibilities.
+# logic for resident trendies
+?How do I navigate the resident trendies?
+The R?RRY?R? presents a problem if we look at strict logic: slot 6 is a vowel, E or I, but then there are consonant-vowel differences.
+We have (NDS)(ER)(DNRT)(DRTS)(IE)(IE)(DRTS)(ST). But note if slot 2 is a vowel, we have a lot of clogging, so we can call that E.
+(NDS)E(DNRT)(DRTS)(IE/EI)(DRTS)(ST). Now this is where you may need to look at a lot of the clues. This has plenty, if you listen to what they have to say.
+It can cut things down for you to where you have NERDIEST.
+# logic for fluster self rut
+?What do the question marks mean for the fluster self rut?
+R?RRR?R leaves only vowels in the question mark spots. The first is L or E, the second E or U. That makes -E---U-.
+The fluster/self-rut cuts down a lot of possibilities, but now we can cut out even more with examining and so forth. TRU-SELF and FURLETS help a lot.
+This, like many in store W, may have you reflect on the meaning of the final word. In this case, what is calm at the end? And with TRUSELF and FURLETS, you're left with REFTSUL and RESTFUL, e.g. RESTFUL.
 # logic for docile old ice
 ?How does the docile old ice work?
 The R?YRYR scan means letter 2 is O or L. Count the consonants and vowels, and it needs to be O.
@@ -173,6 +224,28 @@ This is one where having the non-cheat version shows a lot more. But we'll go st
 First we note that Y is in slot 6. Since there is no O anywhere, and slot 4 (Y in Player) shows red, and no other question mark contains a possible Y, the Y must be in slot 6.
 If we go through the question marks, we get (PR)(EL)(PA)(PL)(RPL)Y. But then slots 2 and 3 are the only ones with E and A. That makes things easier. (PR)EA(RL)(PLR)Y.
 So if we try R in slot 1, we get REALPY, which is not a word. PEA(RL)(RL)Y gives PEARLY.
+# logic for sporties' ripostes
+?How do I deflect the sporties' ripostes?
+First, note there are two vowels at positions 5 and 6, and one question mark in RR?RYYRR. So that question mark must be a vowel, O.
+Slot 6 can't be I, so that gives us the vowels: --O-IE--.
+Now, if you listen a lot, eliminating all the possibilities will lead to how to dispel the ripostes.
+Or you can use brute force on the S's. Slots 2, 4 and 7 contain the two S's.
+Now look at slot #4. If it is P, then -SOPIES- with (RT) doesn't work. If it is T, -SOTIES- again doesn't work. So let's try R in 7. -SOSIER- also has P/T left, which means no sensible words. This, S must be in the 7th place and R is in the 2nd. -ROSIES- is PROSIEST.
+# logic for asset-hit atheists
+?How do I get past the atheists?
+The asset-hit atheists are tricky. RY?R?YR?: You can see the fifth entry must be a vowel, because the third and eighth are choices between consonants.
+That's a decent start, but the rest is tricky. Still, it gives you this: (HST)(AE)(SH)(HST)I(AE)(HS)(ST).
+If you talk to them, "Set, it has" giving redness means the final entry must be T. With the settler and some educated guesses, not much is left.
+# logic for lois the hostile
+?What can the settler tell me about Lois the Hostile?
+Lois the Hostile also has a question mark to start. ?GRYYRR means the first letter is a consonant, so, H or L. Then O is letter 2. (HL)O(HLT)(OIE)(OE)(ST)(HLST).
+The vowels fall here. (HL)O(HLT)IE(ST)(HLST) and now if T is in slot 3, we get (HOL/LOH)IETS, which is nothing. So (HL)O(HTL)IES(HTL). Similarly L in the first slot gives two nonsense words. So we get HOLIEST.
+# logic for hostile-is-he lot
+?What can the settler tell me about Hostile-Is-He Lot?
+The Hostile-Is-He Lot has ??RYYR?. Now this looks like a mess, until you realize that there must be two consonants and one vowel in the questions. Each of slot 1, 2 and 7 could be a consonant or vowel.
+So what if 1 and 2 are consonants? Then we'd have HS----E, which is a mess. So 7 is a consonant, or T.
+If 1 is the vowel, we have IS----T, which becomes IS(LT)OE(HST)T, or ISLOEHT. So 2 must be the vowel. HO----T.
+That becomes HO(LT)(OI)(OE)(HST)T, or HOLIEST.
 # logic for dinger
 ?How do I ding up Reading: a Dinger?
 The RR?YR?R scan means that the two question marks must be vowels. A and E, to be precise. That leaves I in the remaining vowel slot, so we're off to a good start.
@@ -184,6 +257,23 @@ Yes, though you don't need to.
 The reading is ?GRYR?R. But since slot 1 must be a consonant, we can count consonants and vowels to realize that slot 6 must be a vowel. E or R means E. Also, we can pick of slot 2, since it's green.
 With -E---E- and a vowel in slot 4, we get -E-I-E-. Now from the settler's scan, 1 is W or R, and 3 and 5 can't be D. That means 7 is D. -E-I-ED.
 There are three possibilities left, but RERIWED and WERIRED aren't words. REWIRED.
+# logic for pester'n serpent
+How do I interpret the pester'n serpent scans?
+The ?RYRG?? leaves a lot of question marks, but since the only vowel is E, you can knock that off quickly. And you also know all the ?'s are consonants.
+So, --E-E-- is a start, even before navigating the question marks.
+Then (PS)(PSTRN)E(RSN)E(RN)(NT) is left. That's really not too bad, despite slot 2 looking like it has a lot of possibilities. If you pick off the other ones, it goes quickly.
+For instance, N in the final slot gives PTESERN. That's not a word, so we can put T there. (PS)(PSRN)E(RSN)E(RN)T.
+Now we can pick off slot 4 a bit if we want. S gives PSE(RN)(RN)T, not a word, N gives PNESERT, and R gives PRESENT. PRESENT.
+# logic for tetris sitter
+?How can I decipher the Tetris Sitter?
+With ?RYRRY, the first letter is a consonant, which is S or T.
+But what of the others? The fourth slot is a consonant, too, but it cannot be R or T. That means it is S. But since the first letter is T or S, it must be T. T-(IE)S-(IE).
+Since TT clogs things up, you get TR-ST-. TRISTE is a word, but TRESTI isn't.
+# logic for curst palace
+?What can I do with the curst palace?
+There's not much with the settler's question mark. Castle Apcur/Curst Palace has a question at the end.
+Counting vowels and consonants--and noting slot 5 must be a consonant though it's a question mark--tells you a consonant is at the end, so you have an R there. That's a decent start.
+You'll need a few more clues from the surrounding scenery to fix stuff, if you want to do more scanning..
 >STORE Y
 # logic for gins sign
 ?How do I do something with/to the gins sign?

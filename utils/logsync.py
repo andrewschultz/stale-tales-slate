@@ -37,15 +37,15 @@ def check_logic_file(needs, gots, outs, format_string, file_desc):
         for y in sorted(t2, key=needs.get):
             need_in_logic = need_in_logic + 1
             if show_count:
-                print(need_in_logic, y, "is in the source line", need_logic[y], "but needs to be commented in the logic file.")
+                print(need_in_logic, y, "is in the source line", need_logic[y], "but needs to be commented in", file_desc)
             if show_code:
                 print(format_string.format(y))
     t3 = sorted([x for x in gots.keys() if x not in needs.keys()], key=gots.get)
     need_in_source = 0
     if len(t3):
-        for y in sorted(t3, key=needs.get):
+        for y in sorted(t3, key=gots.get):
             need_in_source = need_in_source + 1
-            print(need_in_source, y, "is commented in the logic file line", t3[y] ,"but is not in the source.")
+            print(need_in_source, y, "is commented in the logic file line", needs[y] ,"but is not in the source.")
     if need_in_logic + need_in_source > 0:
         print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
     else:
@@ -56,14 +56,21 @@ count = 0
 show_count = False
 show_code = True
 
+force_next = False
+
 with open("story.ni") as file:
     for line in file:
         count = count + 1
-        if 'a-text' in line and 'b-text' in line:
+        if 'logsync.py force next' in line:
+            force_next = True
+            continue
+        if force_next or ('a-text' in line and 'b-text' in line):
             if 'parse-text' not in line and not line.startswith("\t"):
                 print("NEED PARSE-TEXT:", line.strip())
+                if force_next: print("Burned a force_next at line", count)
+                force_next = False
                 continue
-            if re.search("b-text.*\?.*parse-text", line):
+            if re.search("b-text.*\?.*parse-text", line) or force_next:
                 if re.search("is a mack-idea", line):
                     scanned = re.sub(" is a mack-idea.*", "", line.strip().lower())
                     scanned = re.sub("t-", "", scanned)
@@ -71,6 +78,7 @@ with open("story.ni") as file:
                     scanned = re.sub(" is \".*", "", line.strip().lower())
                     scanned = re.sub("a-text of ", "", scanned)
                 need_logic[abbrevs[scanned] if scanned in abbrevs.keys() else scanned] = count
+                force_next = False
 
 count = 0
 with open("logic.htm") as file:
@@ -99,11 +107,12 @@ with open(logic_invis) as file:
             got_logic_invis[scanned] = count
         last_comment = ll.startswith("#")
 
-arg_count = 0
+arg_count = 1
 
 while arg_count < len(sys.argv):
-    arg_count = arg_count + 1
     x = sys.argv[arg_count].lower()
+    if x[0] == '-':
+        x = x[1:]
     if x == 'cod':
         show_code = True
     elif x == 'ncod':
@@ -117,6 +126,7 @@ while arg_count < len(sys.argv):
     else:
         print("Unknown flag", x)
         usage()
+    arg_count = arg_count + 1
 
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues")
