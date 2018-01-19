@@ -6,6 +6,7 @@
 
 from collections import defaultdict
 
+import sys
 import re
 
 need_logic = defaultdict(int)
@@ -23,6 +24,32 @@ abbrevs = {
   "b-b": "bleary barley",
   "s-c": "sonic coins"
 }
+
+def usage():
+    print("-cod/-ncod turns on/off showing code, default = on.")
+    print("-cou/-ncou turns on/off showing counts of errors, default = off.")
+    exit()
+
+def check_logic_file(needs, gots, outs, format_string, file_desc):
+    t2 = [x for x in needs.keys() if x not in gots.keys()]
+    need_in_logic = 0
+    if len(t2):
+        for y in sorted(t2, key=needs.get):
+            need_in_logic = need_in_logic + 1
+            if show_count:
+                print(need_in_logic, y, "is in the source line", need_logic[y], "but needs to be commented in the logic file.")
+            if show_code:
+                print(format_string.format(y))
+    t3 = sorted([x for x in gots.keys() if x not in needs.keys()], key=gots.get)
+    need_in_source = 0
+    if len(t3):
+        for y in sorted(t3, key=needs.get):
+            need_in_source = need_in_source + 1
+            print(need_in_source, y, "is commented in the logic file line", t3[y] ,"but is not in the source.")
+    if need_in_logic + need_in_source > 0:
+        print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
+    else:
+        print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
 
 count = 0
 
@@ -54,9 +81,11 @@ with open("logic.htm") as file:
             scanned = re.sub("( )?-->.*", "", scanned)
             got_logic[scanned] = count
 
+
 count = 0
 last_comment = False
 hunt_for_comments = False
+
 with open(logic_invis) as file:
     for line in file:
         if 'STORE P' in line:
@@ -70,30 +99,24 @@ with open(logic_invis) as file:
             got_logic_invis[scanned] = count
         last_comment = ll.startswith("#")
 
-def check_logic_file(needs, gots, outs, format_string, file_desc):
-    t2 = [x for x in needs.keys() if x not in gots.keys()]
-    need_in_logic = 0
-    if len(t2):
-        for y in sorted(t2, key=lambda x: need_logic[x]):
-            need_in_logic = need_in_logic + 1
-            if show_count:
-                print(need_in_logic, y, "is in the source but needs to be commented in the logic file.")
-            if show_code:
-                print(format_string.format(y))
-    t3 = [x for x in gots.keys() if x not in needs.keys()]
-    need_in_source = 0
-    if len(t3):
-        for y in t3:
-            need_in_source = need_in_source + 1
-            print(need_in_source, y, "is commented in the logic file but is not in the source.")
-    if need_in_logic + need_in_source > 0:
-        print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
+arg_count = 0
+
+while arg_count < len(sys.argv):
+    arg_count = arg_count + 1
+    x = sys.argv[arg_count].lower()
+    if x == 'cod':
+        show_code = True
+    elif x == 'ncod':
+        show_code = False
+    elif x == 'cou':
+        show_count = True
+    elif x == 'ncou':
+        show_count = False
+    elif x == '?' or x == '-?':
+        usage()
     else:
-        print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
+        print("Unknown flag", x)
+        usage()
 
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues")
-
-
-
-
