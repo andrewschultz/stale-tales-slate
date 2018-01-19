@@ -1,6 +1,7 @@
 out=roiling-logic-invisiclues.htm
 !A Roiling Original HTML Logic Clues
 ->c:/games/inform/roiling Materials/Release
+# remember to check this with logsync.py
 >General
 ?Which puzzles are discussed here?
 Only puzzles where the settler throws a question mark in cheat mode.
@@ -149,6 +150,40 @@ Here a minimal bit of guesswork and grinding it out works.
 -RA--- would mean CRAE(NT/TN) as there's a vowel in the fourth slot, and the first can't be N/T or R. So that doesn't work.
 -EC--- would mean RECA(NT/TN) or RECANT.
 >STORE W
+# logic for dreads adders
+?What to do with the ambiguous Dreads Adders readings?
+The Dreads Adders give RY?RYR. The question mark must be a consonant, and since the choice is D or E, it's D.
+That's the only clue you can get from the question mark, but everything else must give a wrong answer, so that helps.
+There are only six possibilities left, but the ED SARD red clue forces the D to the 4th spot, and since S can't be in 6, it's in 1. SEDDAR or SADDER is SADDER.
+# logic for snider diners
+?What about the snider diners?
+The snider diners are the next to pop up questions, though you may not need to use question marks' flexibility to deal with them.
+There are question marks at locations 2, 3 and 5. What does this mean? It means 2 and 3 are I or N. 5 must be E or R. Since 2-3 are I-N, that means R??R?R needs a vowel, which must be E, because I-N must be in 2 and 3.
+You can switch to non-cheat mode to discover if it is I-N or N-I, or you can keep plugging away elsewhere. For instance, slot 1 can't be S or D--or N. So it is R. R(IN)(IN)(SD)E(SD).
+Slot 6 can't be R or S, so it has to be D, leaving S in slot 4. R(in)(in)SED, and RNISED is out, so, RINSED.
+# logic for docile old ice
+?How does the docile old ice work?
+The R?YRYR scan means letter 2 is O or L. Count the consonants and vowels, and it needs to be O.
+Everything else is a wrong letter. That leaves (CL)O(IE)(CDL)(IE)(CDL), which you may be able to brute force.
+Or you can examine twice, and you're reminded of LiedCo. That forces 1 to C and 3 to I, so COI(DL)E(DL). But 4 can't be D, so, COILED.
+# logic for raves saver
+?How do I tweak the Raves Saver, with its six letter clue?
+It's not quite a raves saver. It's a REPLAY PLAYER according to the scanner.
+This is one where having the non-cheat version shows a lot more. But we'll go strictly with cheat mode for as long as possible.
+First we note that Y is in slot 6. Since there is no O anywhere, and slot 4 (Y in Player) shows red, and no other question mark contains a possible Y, the Y must be in slot 6.
+If we go through the question marks, we get (PR)(EL)(PA)(PL)(RPL)Y. But then slots 2 and 3 are the only ones with E and A. That makes things easier. (PR)EA(RL)(PLR)Y.
+So if we try R in slot 1, we get REALPY, which is not a word. PEA(RL)(RL)Y gives PEARLY.
+# logic for dinger
+?How do I ding up Reading: a Dinger?
+The RR?YR?R scan means that the two question marks must be vowels. A and E, to be precise. That leaves I in the remaining vowel slot, so we're off to a good start.
+The authors' names (Di Regan and Ned Riga) also cut things down a bit--in particular, they force the first and last letters, but let's go on without them.
+With --AI-E-, we have (GN)(GRND)AI(RND)E(ND). N at the start clogs things, so we can go with G without much risk. Similarly, not many words start with GN or GD, so GRAI(ND)E(ND) gives GRAINED.
+# logic for weirder red wire
+?Can I do anything with the weirder red wire?
+Yes, though you don't need to.
+The reading is ?GRYR?R. But since slot 1 must be a consonant, we can count consonants and vowels to realize that slot 6 must be a vowel. E or R means E. Also, we can pick of slot 2, since it's green.
+With -E---E- and a vowel in slot 4, we get -E-I-E-. Now from the settler's scan, 1 is W or R, and 3 and 5 can't be D. That means 7 is D. -E-I-ED.
+There are three possibilities left, but RERIWED and WERIRED aren't words. REWIRED.
 >STORE Y
 # logic for gins sign
 ?How do I do something with/to the gins sign?
@@ -192,7 +227,7 @@ However, the only possible vowel is the I, which is in slot 5. This also determi
 NPLAIS is not a word, but SPLAIN is, though slightly slangy. That's why it's an LLP.
 # logic for papery yapper
 ?How do I use cheat mode on the papery yapper?
-?RY?Y? gives clues for the yapper. That puts the Y in slot 1 or 6: we can't tell. But we do know where the vowels are. And since slot five can't be E, it's A. That makes slot three A.
+The clues for the yapper are ?RY?Y?. That puts the Y in slot 1 or 6: we can't tell. But we do know where the vowels are. And since slot five can't be E, it's A. That makes slot three A.
 But now slot 4 is a question mark, so it's E or P. E is taken, so it's P.
 (py)(pr)EPA(ry) is left. That's enough to use brute force.
 YPEPAR or PREPAY are the only two choices. PREPAY.
