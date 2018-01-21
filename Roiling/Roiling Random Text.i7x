@@ -2182,7 +2182,6 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Boorts-Stroob Boostr-Robots"	false
 "Boost-Gang Toboggans"	false
 "Borelli's Brollies"	false
-"Bortles's Lobsters"	false
 "Bostic Bits Co"	false
 "Boswell Bellows"	false
 "Boutilier's Boiler Suit"	false

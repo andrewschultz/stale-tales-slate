@@ -2141,7 +2141,7 @@ sweatier wait-seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in rand
 duck	"It quacks."
 ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
 pester'n serpent	"[serp-say]."
-alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!'"
+alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!' You see red at the name."
 bonker	"You try to chat but feel like a, er, knob."
 Lois the Hostile	"She complains[hostile-red]!"
 Hostile-Is-He Lot	"They complain[hostile-red]!"
@@ -2798,7 +2798,7 @@ Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, TH
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
-cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."
+cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[or]You see red you can't understand Nrdices--which could be helpful here[in random order]."
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
@@ -4008,7 +4008,6 @@ seed pit	"The seed pit seems to bubble slightly."
 Nuder	"The pages of Rude [']N Nuder flutter a bit."
 un-road	"The un-road seems to lead somewhere, but you couldn't quite make it out like that."
 darkness	"You feel it's ALMOST the right time for the darkness to lift."
-narrow cracks	"The cracks almost seem to lead somewhere."
 mist	"Hmm, you almost see a way through the mist."
 hurt hog	"The hog grunts."
 bent ewe	"The bent ewe stretches a bit."
@@ -4345,7 +4344,6 @@ giant's elbow	"[if old giant is in lalaland][giant-over][else]You don't need to 
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
-narrow cracks	"The underground is already lit. Un-unlit."
 un-road	"You know where the un-road is, but how to navigate it?"
 da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost in da mist. Oh, and that you get lost enough."
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
@@ -6039,8 +6037,6 @@ carry out routes-hinting:
 	if location of player is Harms Marsh:
 		if darkness is visible:
 			try objhinting darkness instead;
-		if narrow cracks are visible:
-			try objhinting narrow cracks instead;
 		try objhinting un-road instead;
 	if location of player is ripe pier:
 		try objhinting da mist instead;
@@ -8898,8 +8894,8 @@ seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits
 Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
 MORF FORM	the-b	false	250266429	--	"from"	"from"	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
-darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. Compass directions are still out."
-narrow cracks	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
+darkness	darkness	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. The sheol-holes in particular. You can't find a road, but maybe an un-road. You're not sure which way to go, though. Compass directions are still out."
+sheol holes	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	along-bogus	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' You protest--you need someone to show you the way. 'You will learn from my sorrow,' says No-Gal Logan. You don't want to be an ol['] nag, so you sit and wait."
 thickness sketchins	thickness sketchins	false	329930229	Sonancy Canyons	"athwart"	"athwart"	"Not just any direction will do. You need something nautical. And there it is. Athewart--helps you navigate around tough bits. You look around. Oh, hey, there's the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction. The bad oar helps you on your way but snaps as you land. You think you yourself, scan yon... so canny... and you wind up somewhere different."
@@ -8932,7 +8928,7 @@ pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it'
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
 salt	trance nectar	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
-lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and a lobster meal will be less a percent of YOUR income than your underlings['] food is of theirs!"
+lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
 trance nectar	troend1	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
@@ -9041,7 +9037,7 @@ an admirer	an admirer	false	430738621	--	"married"	"married" or "mardier"	"[resp
 natives	natives	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
 sporties' ripostes	sporties' ripostes	false	709599244	--	"prosiest"	"prosiest"	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is true]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
-an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak."
+an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak. Then he decides not to risk holding his ground any more."
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
@@ -11702,7 +11698,7 @@ table of pres
 preflip	thereg	pretodo
 bench	routes	"Find a way to be fearless so you can lean AGAINST the bench." [routes]
 elbow	routes	"You can go BELOW the giant's elbow once he swings it around."
-narrow cracks	routes	"You can look AROUND to find the un-road."
+sheol holes	routes	"You can look AROUND to find the un-road."
 un-road	routes	"You can go ALONG the un-road...once you find it."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
 bent ewe	routes	"You can go BETWEEN the hurt hog and bent ewe."
@@ -12833,8 +12829,7 @@ understand "scripture picture/picturer" as picturers.
 understand "picture/picturer" as picturers.
 
 after examining when mrlp is routes (this is the switch picturers rule) :
-	if noun is not picturers:
-		now switch-pic-next is true;
+	if noun is not picturers and picturers are examined, now switch-pic-next is true;
 	continue the action;
 
 after examining picturers:
@@ -13424,29 +13419,18 @@ understand "hole" and "sheol hole" as sheol holes when player is in harms marsh.
 
 chapter darkness
 
-the darkness is scenery in Harms Marsh. "It is better to create light and move forward than cast about in the darkness."
+the darkness is vanishing scenery in Harms Marsh. "It is better to create light and move forward than cast about in the darkness."
 
 a-text of darkness is "YRRYR". b-text of darkness is "GPRGR". parse-text of darkness is "u[sp]n[sp]x[sp]i[sp]x". darkness is cheat-spoilable.
 
 to say to-o:
 	say "Brother Horbert talked about how if you had faith, and patience to see them right, they might lead you to an un-road or to No-Gal Logan if you knew how to study them."
 
-chapter narrow cracks
+section all noon gag
 
-the narrow cracks are plural-named scenery. "[to-o]"
-
-check taking narrow cracks:
-	say "Take a hint from them, where they may lead you." instead;
-
-a-text of narrow cracks is "YRYYRR". b-text of narrow cracks is "YRYYRP". parse-text of cracks is "-[sp]x[sp]-[sp]-[sp]x[sp]d".
-
-section cracks you followed
-
-the cracks you followed are useless scenery. "They led you here on the road--no, near the un-road to near No-Gal Logan."
-
-instead of doing something with the cracks you followed:
+instead of doing something with all noon gag:
 	if action is procedural, continue the action;
-	say "There's not too much to do with them, now they've led you here."
+	say "The all noon gag will just carry darkness with you. But maybe you can do something with it."
 
 chapter un-road
 
@@ -13775,12 +13759,12 @@ check fliptoing stop post:
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
+book Boarded Roadbed
+
 every turn when player is in Boarded Roadbed:
 	if what-a-bee is not reflexive or bee's head is not reflexive:
 		if current action is not listening:
 			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if what-a-bee is reflexive or bee's head is reflexive]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
-
-book Boarded Roadbed
 
 Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions."
 
@@ -13917,18 +13901,18 @@ chapter how to pre-deal
 
 section lobster
 
-an extra fancy lobster meal is in Boredom Bedroom. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is in lalaland]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
+the BORTLES Lobster is in Boredom Bedroom. description is "Oh, man, there's no lobster like BORTLES lobster. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is in lalaland]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "There's some BORTLES Lobster here, the best lobster in all of Yorpwald! But you're not sure if you're fully up to eating it, yet."
 
-a-text of lobster is "RYRRRYR". b-text of lobster is "RGRPPGP". parse-text of lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
+a-text of Bortles Lobster is "RYRRRYR". b-text of Bortles Lobster is "?G???G?". parse-text of Bortles Lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
 
 after fliptoing lobster:
 	if ME ARTS is in Upscale Capsule, now ME ARTS is LLPish;
 	continue the action;
 
-instead of eating lobster meal:
+instead of eating Bortles Lobster:
 	say "You don't quite feel you deserve to eat it, yet.";
 
-instead of taking lobster meal:
+instead of taking Bortles Lobster:
 	say "A big executive like you shouldn't worry about procedural details like taking something before eating it."
 
 section ME ARTS
@@ -19872,7 +19856,7 @@ understand "tape recorder" and "tape/recorder" as raves saver.
 check opening raves saver:
 	say "It's cheap and rickety enough, the tapes are stuck in like paste. It has no open button or mechanism." instead;
 
-a-text of saver is "RYYRRO". b-text of saver is "???RR?". parse-text of saver is "?[sp]?[sp]?[sp]l[sp]a[sp]?".
+a-text of raves saver is "RYYRRO". b-text of raves saver is "???RR?". parse-text of raves saver is "?[sp]?[sp]?[sp]l[sp]a[sp]?".
 
 description of raves saver is "[if saver is reflexive]It has an inscription REPLAY PLAYER, which is a violation of copyright law--those have video--but nobody's going to sue or care. But[else]It's slightly more polished now you made it pearly, and[end if] it also has a REPEAT button and a RETAPE button[one of].[paragraph break]It doesn't even have a socket for Hears-Share earphones.[stopping]"
 
@@ -20946,6 +20930,8 @@ Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is
 
 the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it[else if flowerpot is in lalaland]happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
+a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
+
 the itster is auxiliary scenery in Mesprise Premises. description is "It's red, and MAN what a high score the Tetris Sitter has."
 
 instead of doing something with the itster:
@@ -21147,6 +21133,7 @@ instead of doing something with the curst palace when player is not in mislit li
 	if action is procedural, continue the action;
 	say "The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it.";
 
+[logsync.py force next]
 a-text of curst palace is "[cpset of false]". b-text of curst palace is "[cpset of true]". parse-text of curst palace is "[cpp]".
 
 to say cpp:
@@ -21365,7 +21352,7 @@ section dandier arid den
 
 The dandier arid den is a blue neuter guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
 
-a-text of arid den is "RRYYRYR". b-text of arid den is "??YYRGR". parse-text of arid den is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
+a-text of dandier arid den is "RRYYRYR". b-text of dandier arid den is "??YYRGR". parse-text of dandier arid den is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
 
 description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
 
@@ -21399,7 +21386,7 @@ understand "wait/ seer" as wait-seer.
 
 description of sweatier wait-seer is "He is sweatier than anyone else you have run across here. But as-is, he has more than enough energy to beat you up. He mutters 'I...we...stare,' turning red, as you look at him."
 
-a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text of wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
+a-text of sweatier wait-seer is "RYYRYYRR". b-text of sweatier wait-seer is "?YYRY?RR". parse-text of sweatier wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
 
 section reed's ale
 
@@ -21434,7 +21421,7 @@ the Asset-Hit Atheists are plural-named purple guardians. "Atheists to the [psgd
 
 understand "atheist" as atheists.
 
-a-text of atheists is "RYRRYYRR". b-text of atheists is "RY?R?YR?". parse-text of atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
+a-text of asset-hit atheists is "RYRRYYRR". b-text of asset-hit atheists is "RY?R?YR?". parse-text of asset-hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 
 chapter danger garden
 
@@ -21500,7 +21487,7 @@ wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
-grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"This is the first grailman you've ever met, but he seems more than adequate enough to block your way."
+grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Align! Arm!' he booms, making you see red. You're not going that way with him there."	"This is the first grailman you've ever met, but he seems more than adequate enough to block your way."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in mislit limits, but I need this hack for it to replace the bonker]
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
@@ -22853,7 +22840,7 @@ t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text of t-seedily is "RY
 
 t-cattily is a mack-idea. pod-num is 1. pod-ord is 3. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
 
-t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "??YRYRO". b-text is "??GR?RO". parse-text is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
+t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "??YRYRO". b-text is "??GR?RB". parse-text is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
 
 [pod 2 is non-repeating 7-letters]
 t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
@@ -22867,7 +22854,7 @@ t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text is "RRYRRRO". b-tex
 [pod 3 is 8-letters repeating]
 t-blearily is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRYPB". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
 
-t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "?YR?YRRO". parse-text is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "?YR?YRRO". parse-text is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
 
 t-coitally is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRO". b-text is "RGYRYRRB". parse-text is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
 
@@ -22884,7 +22871,7 @@ t-suddenly is a mack-idea. pod-num is 3. pod-ord is 8. a-text is "RYRRYRRO". b-t
 [pod 4 is 8-letters non-repeating]
 t-modestly is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RYRYRRRO". b-text is "RYRYRRRO". parse-text is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
 
-t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RRYYRYRO". b-text is "RRYYRY?O". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RRYYRYRO". b-text is "?RYYRY?O". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
 
 t-stupidly is a mack-idea. pod-num is 4. pod-ord is 3. a-text is "RRYRYRRO". b-text is "RRYRYRRO". parse-text is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
@@ -26265,7 +26252,7 @@ drama armada	"They're just there to watch, or help you once you figure where to 
 the-b	"[one of]The Bean has given you a place to go or look--or, rather, a not-quite-direction.[plus][or]The ground feels a little shakier since the bean landed, but not enough to go straight down.[plus][or]PUSHing the Bean seems useless.[plus][or]You can go BENEATH the bean.[minus][cycling]"	--	"BENEATH"
 sheol holes	"They're just there as an agent to make you find the right way out. Oh, Sheol is the Old Testament name for Hell, if you were wondering. TMYK!"
 darkness	"[one of]'Unlit...' is a clue. What would the magic preposition be to make light?[plus][or]How to say this area was unlit, but now it is?[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
-narrow cracks	"[one of]You need to search for No-Gal Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
+sheol holes	"[one of]You need to search for No-Gal Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
 un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
 mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"It's just scenery."

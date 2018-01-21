@@ -210,7 +210,7 @@ chapter harms marsh
 
 understand "helos" as a mistake ("Helicopters can't make it underground.") when player is in Harms Marsh.
 
-understand "around" as a mistake ("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is in location of player and player is in Harms Marsh.
+understand "around" as a mistake ("You can't see anything around, yet. It's too unlit, here.[preefsay of sheol holes]") when darkness is in location of player and player is in Harms Marsh.
 
 understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
 

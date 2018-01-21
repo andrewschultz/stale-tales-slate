@@ -147,6 +147,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "cripture"	652133930	same mesa	--	--	"[picturer-change]."
 "picture"	566810127	same mesa	--	--	"[picturer-change]."
 "pictures"	663084093	same mesa	--	--	"[picturer-change]."
+"circle"	349947767	cleric circle	--	--	"[locname]." [CLERIC CIRCLE]
 "lairage"	348911935	same mesa	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if regalia is reflexed], and you don't need to[else], but maybe noting what's on it will help you get in[end if]."
 "satin"	315472156	same mesa	--	--	"The church's name is not as important as its mission."
 "worst"	466995137	--	worst ad	--	"If you change the ad from the worst, maybe you won't make it better. Maybe you'll make something else even worse. So, focus on the whole."
@@ -216,9 +217,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "along"	231861444	--	--	am-along rule	"You think of No-Gal Logan, wondering how to find a way to him."
 "darknses"	550735437	--	darkness	--	"[dark-been]."
 "dakr"	161473888	--	darkness	--	"[dark-been]."
-"cracks"	274729935	--	narrow cracks	--	"[no-logan]."
-"narrow"	424030282	--	narrow cracks	--	"[no-logan]."
-"narrowcracks"	698760217	--	narrow cracks	--	"[no-logan]."
 "marsh"	285143039	harms marsh	--	--	"[locname]." [HARMS MARSH]
 "harm"	188869073	harms marsh	--	--	"[locname]."
 "underpass"	684374025	harms marsh	--	--	"[locname-part]."
@@ -530,6 +528,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "polyp"	413457586	lapsin' plains	--	--	"[polyp-no]."
 "polyps"	509731552	lapsin' plains	--	--	"[polyp-no]."
 "inthere"	595228692	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
+"pna"	152561285	--	span pans	--	"There are two pans."
 "isk"	194199990	--	skis	--	"But you need to remove both skis."
 "open"	352532153	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "doorknob"	469670214	--	knob	--	"It's just a knob. Which thankfully cuts down the possibilities."
@@ -1391,9 +1390,6 @@ this is the am-along rule:
 
 to say dark-been:
 	say "The darkness has always been there and always will be. You need to find a way to say it was dark"
-
-to say no-logan:
-	say "The cracks themselves give no clues as to No-Gal Logan's whereabouts";
 
 to say btn-by:
 	say "You need to find the right button on or by the controls"
