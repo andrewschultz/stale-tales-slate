@@ -9,6 +9,7 @@
 #
 # can read in file name or word-arguments
 #
+# todo: let people go past the == command line arg
 
 use List::Util qw(reduce);
 use File::Compare;
@@ -242,7 +243,8 @@ else {
       $lineToOpen = $. if !$lineToOpen;
       print( $array[0] =~ /=/
         ? "WARNING line $. needs a comma before the question clue.\n"
-        : "WARNING line $. has only one argument.\n" );
+        : "WARNING line $. has only one argument.\n"
+      );
     }
 
     for my $q ( 1 .. $#array ) {
@@ -289,8 +291,8 @@ else {
   close(A);
   print( $errs == 0
     ? "EVERYTHING WORKED! YAY!"
-    : "$errs errors, $succ successes.\n" )
-    if !$auditString;
+    : "$errs errors, $succ successes.\n"
+  ) if !$auditString;
   print "$auditString turned up nothing.\n" if ( $auditString && !$gotAnyAna );
 }
 

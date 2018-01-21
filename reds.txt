@@ -161,6 +161,7 @@ grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
 drained,edindar,rindade
 drained,??YYRGR=dandier=aridden
 marginal,RYRRYR?R=alarming=grailman
+marginal,alignarm
 #treading gradient
 pearly,???RR?=replay=player
 released,dreleesa,eredeals,lardeese,edsleare
