@@ -74,6 +74,13 @@ So, U--E(NR) has D in slot 3, and thus U(NR)DE(NR). URDEN is not a word, but UND
 The ?RY? notation shows where the vowel is: O is in the third slot. That's a start.
 Similarly, slots 1 and 4 are F or M, leaving slot 2 as R.
 FROM is more likely than MROF. So there you go.
+>>HARMS MARSH
+#logic for all noon gag
+?What do we do with the all noon gag reading?
+The ??Y?? looks intimidating, but the question marks give lots of clues:\n<pre>ALLNO\nONGAG\n??Y??</pre>
+That leaves possibilities of (AO)(LN)(AO)(AN)(OG).
+But only 1 and 3 can be A and O, so that makes 4 and 5 N and G, respectively.
+Then 2 must be L. ONALG or ALONG are the only two left. ALONG is the only word of these two.
 >>CRIPPLE CLIPPER
 #logic for thickness sketchins
 ?What is with the thickness sketchins?

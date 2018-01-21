@@ -13428,6 +13428,10 @@ to say to-o:
 
 section all noon gag
 
+the all noon gag is a vanishing thing in Harms Marsh. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful."
+
+a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text of all noon gag is "?[sp]?[sp]-[sp]?[sp]?".
+
 instead of doing something with all noon gag:
 	if action is procedural, continue the action;
 	say "The all noon gag will just carry darkness with you. But maybe you can do something with it."
