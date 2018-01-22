@@ -2173,6 +2173,7 @@ Tyson	"[war-duh]"
 Wade	"[war-duh]"
 Sir Rodney	"This standoff won't be resolved with diplomacy."
 Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if flowerpot is reflexed]St. Teri looks at your flowerpot, sadly[else if player has crocus]St. Teri looks at your flowerpot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
+keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
@@ -3568,6 +3569,8 @@ check taking scenery:
 	say "You don't need to take any of the scenery here. Or, well, anywhere. Unless you change it to something else first." instead;
 
 chapter d
+
+in-beta is a truth state that varies.
 
 debug-state is a truth state that varies. debug-state is false.
 
@@ -7695,7 +7698,7 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
-		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!' [in random order]You see red a bit at getting no direct help, yourself." instead;
+		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!' [in random order][line break]dYou see red a bit at getting no direct help, yourself." instead;
 		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
@@ -8917,8 +8920,7 @@ cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]
 cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
 sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! And yet...there's still something more to do here. You still need to bottom out in your own way."
 Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected." [??]
-diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
-Eddie's Song	Eddie's Song	false	361668827	Boredom Bedroom	"decide"	"decide"	"[troend]"
+diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
@@ -8930,7 +8932,7 @@ salt	trance nectar	false	255385641	--	"last"	"last"	"You start lastin['] like St
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
-trance nectar	troend1	false	406340841	--	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
+trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
 table of presto anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -9080,7 +9082,7 @@ Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	"Terrance suddenly re
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
 Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
-Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can."
+Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
 yurts	brownies	true	512172846	--	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."
@@ -11584,6 +11586,9 @@ to say verb-list:
 	verbsplain "go to";
 	verbsplain "rove over";
 	verbsplain "retry";
+	if in-beta is true:
+		say "BETA COMMANDS BELOW.";
+		say "[2da]MISSED shows what you missed in all regions. MISSES shows this region's. MISSALT shows alternate routes."
 
 to say opts-list:
 	verbsplain "access";
@@ -11703,35 +11708,35 @@ un-road	routes	"You can go ALONG the un-road...once you find it."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
 bent ewe	routes	"You can go BETWEEN the hurt hog and bent ewe."
 yob den	routes	"You need to go BEYOND the yob den."
-Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."
-stop post	troves	"You can't focus enough to SPOT, yet."
+[Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."]
+stop post	troves	"You can't focus enough to SPOT, yet." [troves]
+ltb	troves	"You aren't quite able to DEAL, yet."
 salt	troves	"You can LAST [if ME ARTS is in lalaland or lobster is in lalaland]now[else]once[end if] you have confidence in your skills."
-lobster	troves	"You can BOLSTER yourself to eat the lobster."
-ME ARTS	troves	"You can MASTER the relaxation technique seen with the ME ARTS."
 song	troves	"You can DECIDE to move on from the Drain Nadir."
 Sister Tressi	Troves	"You can RESIST Sister Tressi."
 Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
 DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
-onyx censer	presto	"The censer can become a SCREEN once you've found a place to put it."
+onyx censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
 plebe	presto	"You can shout BLEEP at the plebe [if player wears star]now[else]once[end if] you look more authoritative."
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
-trolls	oyster	"You can't quite STROLL past the trolls, yet."
+trolls	oyster	"You can't quite STROLL past the trolls, yet." [oyster]
 haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
 a-s	oyster	"SEARCH the arches."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
 d2	oyster	"You should be able to REDIAL the dialer with the proper preparation."
 lance	oyster	"CLEAN the lance once you have something to wash it with."
-duck	towers	"The lone duck could make SOMETHING unlocked[if Obscurest Subsector is visited]. Maybe the prison ropins[end if]."
+duck	towers	"The lone duck could make SOMETHING unlocked[if Obscurest Subsector is visited]. Maybe the prison ropins[end if]." [towers]
 ropins	towers	"It would be nice if something made the prison ropins UNLOCKED[if duck is prefigured], like, maybe the duck[end if]."
 rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if]."
-b-b	otters	"You can make the barley be BARELY there once you get past the otters."
+b-b	otters	"You can make the barley be BARELY there once you get past the otters." [otters]
 eels	otters	"You can tell the eels ELSE [unless player has medals]once you have[else]now you've got[end if] a token of your goodness."
 sea cube	otters	"You can tell the eels in the sea cube BECAUSE once you know why."
 ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [if player has medals]now you've figured[else]once you figure[end if] where the bad guys are."
 p-2	otters	"You can say HOWEVER to deal with Mr. Lee and Rev. Howe."
 atmo-moat	otters	"You can collapse the atmo-moat to an ATOM once you have the power."
 medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
-pre-mang	others	"You can look AMONG once you have currency to haggle in the clearing."
+pre-mang	others	"You can look AMONG once you have currency to haggle in the clearing." [others]
+[?? recheck the preef tables]
 
 to say other-areas:
 	repeat through table of region-spoilers:
@@ -13432,7 +13437,7 @@ the all noon gag is a vanishing thing in Harms Marsh. "An all noon gag rests her
 
 a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text of all noon gag is "?[sp]?[sp]-[sp]?[sp]?".
 
-instead of doing something with all noon gag:
+instead of doing something with noon gag:
 	if action is procedural, continue the action;
 	say "The all noon gag will just carry darkness with you. But maybe you can do something with it."
 
@@ -13602,7 +13607,7 @@ check examining Pa Egg Pea for the first time:
 
 book Loather Rathole
 
-Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru.". last-loc of troves is Loather Rathole.
+Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. Lor['], [i]HEAT[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru.". last-loc of troves is Loather Rathole.
 
 the hurt thru is bounding scenery in Loather Rathole. "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue]."
 
@@ -13671,7 +13676,7 @@ a-text of heat is "RYRY". b-text of heat is "RGRG". parse-text of heat is "[sp]x
 
 book Bustle Sublet
 
-Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is visible]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
+Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is in bustle sublet]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]." [?? todo rewrite]
 
 check going nowhere in Bustle Sublet: say "The reastier arteries lead nowhere good. Stay here and figure what to do." instead;
 
@@ -13879,13 +13884,18 @@ check fliptoing cellar door:
 
 book Drain Nadir
 
-Drain Nadir is a room in Troves. "You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][else]. They all point to a rock bottom you haven't hit yet, but it may be necessary now[end if][if sister tressi is in drain nadir]. A likeness of Sister Tressi also stares down at you, guilt-tripping you into feeling you didn't do nearly as much as you could or should have[end if]."
+Drain Nadir is a room in Troves. "[if diapers are in drain nadir]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out[else]You've cleared the Drain Nadir of negative influences, and now Eddie C's song is playing.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if]."
+
+after fliptoing eddie's song:
+	now sad pier is in lalaland;
+	now spider is in lalaland;
+	continue the action;
 
 chapter adeiprs
 
 [?? small clue later with statue]
 
-the picture of a sad pier is auxiliary scenery in Drain Nadir. "It is a warding drawing of what not to wallow in: solitude so dilute in an old suite. According to [i]Pa, Egg, Pea[r], if it were not marked as such, it should be illegal."
+the picture of a sad pier is auxiliary scenery in Drain Nadir. "It is a warding drawing of what not to wallow in: solitude so dilute in an old suite. According to [i]Pa, Egg, Pea[r], if it were not marked as such, it should be illegal, due to possible encouragement of pervasive negative thinking."
 
 a-text of sad pier is "RYRRYYR". b-text of sad pier is "RYRPYYP". parse-text of sad pier is "x[sp]-[sp]x[sp]p[sp]-[sp]-[sp]r".
 
@@ -13906,6 +13916,8 @@ chapter how to pre-deal
 section lobster
 
 the BORTLES Lobster is in Boredom Bedroom. description is "Oh, man, there's no lobster like BORTLES lobster. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is in lalaland]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "There's some BORTLES Lobster here, the best lobster in all of Yorpwald! But you're not sure if you're fully up to eating it, yet."
+
+the BORTLES lobster is vanishing.
 
 a-text of Bortles Lobster is "RYRRRYR". b-text of Bortles Lobster is "?G???G?". parse-text of Bortles Lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
 
@@ -13936,6 +13948,11 @@ instead of doing something to ME ARTS:
 chapter ltb
 
 ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of ltb is "LEAD". [ ltb = lead the book]
+
+check fliptoing ltb:
+	if lobster is in boredom bedroom and me arts are in boredom bedroom:
+		preef ltb;
+		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS." instead;
 
 a-text of ltb is "RYYR". b-text of ltb is "???R". parse-text of ltb is "x[sp]e[sp]a[sp]x". ltb is parse-spoilable.
 
@@ -19502,7 +19519,9 @@ the yacker keycar is a LLPish vanishing thing. description of keycar is "The yac
 
 understand "key" and "key car" and "car" as keycar.
 
-[?? talk to the keycar]
+Include (-
+	has transparent animate
+-) when defining atmo-moat.
 
 check taking keycar:
 	say "The keycar zooms around, bantering about how it's a bit too fast for you." instead;
@@ -21694,6 +21713,7 @@ check going (this is the guardian reposition before rule):
 	if mrlp is Towers:
 		if noun is not a direction:
 			say "You need to specify a direction, not a place." instead;
+		if mislit limits is visited, continue the action; [probably not necessary but due to a silly hack with the stinger, I just want to make sure of things]
 		repeat with QQ running through guardians:
 			if QQ is in location of player:
 				choose row with guy of QQ in table of guard-org;
@@ -27712,6 +27732,7 @@ section instructions
 [* this is a simple list of instructions cluing a5 hintvis and ts]
 
 when play begins:
+	now in-beta is true;
 	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.[line break]--[b]warwar[r] wipes out the warriors in Store W.";
 
 book cheatage

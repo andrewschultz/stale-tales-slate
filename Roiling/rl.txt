@@ -8,8 +8,21 @@ raw=roiling-logic-invisiclues-raw.htm
 ?Which puzzles are discussed here?
 Only puzzles where the settler throws a question mark in cheat mode.
 There's a brief recap of how to deal with the settler if it doesn't throw a question mark, but since the question mark may be confusing, I tried to break down how it actually helps you long-term once you know how to deal with it.
+?Can I get a recap of the settler in general in non-cheat mode?
+Yes. If you scan certain items and then see what they should be, you'll notice a pattern. There's some spoilers below, but if you track settler vs. the right word, you should see a pattern.
+Yellow slots wind up as AEIOU: for instance, STABLE is RRYRRY.
+Red is the rest...except Y, which is orange.
+?Can I get a recap of the settler in general in cheat mode?
+Yes. Colors can be red, yellow, purple, green, orange or brown.
+In non-cheat mode, red is a consonant, and yellow is a vowel.
+Purple and green are red and yellow, with blue.
+If you look at the latches, they have green and purple except at the ends. SATCHEL is almost latches, with letters switched at the end.
+So purple and green mean that a letter is in the right place.
+Orange is a combination of red and yellow, or Y.
+Brown (orange plus blue, roughly) is a Y in the right place.
 ?What are some general issues and terms?
-Well, for starters, "clog" means too many consonants
+Well, for starters, "clog" means too many consonants. "Bleed" means too many vowels in a row.
+There'll also be some terminology and shorthand: EN(DT) means End or Ent, and I may use several parentheses in a row.
 ?What does a question mark in the settler reading mean?
 It means that one of the letters in the description is right, but not all of them.
 Sometimes this can really help you more than an actual reading, though occasionally it can muddle things.
@@ -17,7 +30,8 @@ Sometimes this can really help you more than an actual reading, though occasiona
 If there is only one, you know whether it is a vowel or a consonant, since you should know the number of vowels and consonants in the target word. You will be a vowel or consonant short.
 If there is more than one, you may wish to check if there is a choice between only vowels or only consonants in any one slot. If so, then you may be able to determine what the other question-mark slots must be.
 Or if, for instance, the target word has two vowels, and the settler gives no vowels and two question marks, both question marks must be a vowel.
-These won't always get you to the right answer, but they'll often get you closer than even a standard cheat readout.
+Combining these observations may allow you to knock off several question marks right away. For instance, a R?RR with just one vowel means the second slot must be the only vowel in whatever two words clash.
+These won't always get you to the right answer, but they'll often get you closer than even a standard cheat readout with just colors. But they may seem confusing at first.
 >MEANS MANSE
 >>CARVEN CAVERN
 # logic for plates
@@ -407,14 +421,14 @@ The sonic coins need to be converted to something else. YRY?? leaves two consona
 So one of I or N is the right consonant in slot 4: N. One of C or S is the right consonant in slot 5.
 And also, the vowel in slot 3 can't be I, so it is O. That leaves I as the vowel in slot 1.
 I(CS)ON(CS) remains, where ICONS wins over ISONC.
-# logic for melon
 >>CLANGIER CLEARING
+# logic for melon
 ?Why does something like the melon give question marks?
 The melon seems like it should not be that hard, but it pops up question marks even on non-cheat mode. What is going on is that, well, you need to talk to Len, and there are two ways to do it.
 The RYR??/????? suggests that a M, E and L work in some cases but not in others. You can say LEN, MO or MO, LEN to get the melon.
 While this is tricky, there are a lot of other ways to get points, so I hope it's not too disappointing that the settler conks out, especially since it is five letters--and one solution simply switches two. And actually asking Len, or noticing he is part of "Melon," makes it a bit easier to ask for what you need.
-# logic for inapt paint
 >>SCAPE SPACE
+# logic for inapt paint
 ?What should the inapt paint become?
 With more than five letters, it's what it says.
 The inapt paint says DESERVER RESERVED. It has a lot of question marks, but all three vowels are green in cheat mode, and one consonant even works out, giving you
