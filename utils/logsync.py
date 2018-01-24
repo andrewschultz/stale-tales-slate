@@ -6,6 +6,7 @@
 
 from collections import defaultdict
 
+import i7
 import sys
 import re
 
@@ -58,7 +59,7 @@ show_code = True
 
 force_next = False
 
-with open("story.ni") as file:
+with open(i7.src("roiling")) as file:
     for line in file:
         count = count + 1
         if 'logsync.py force next' in line:
@@ -81,7 +82,7 @@ with open("story.ni") as file:
                 force_next = False
 
 count = 0
-with open("logic.htm") as file:
+with open(i7.sdir("roiling") + "/logic.htm") as file:
     for line in file:
         count = count + 1
         if '<!--' in line and '-->' in line and 'logic for' in line:

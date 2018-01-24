@@ -1331,11 +1331,13 @@ carry out gotoing:
 			unless the rule succeeded:
 				do nothing instead;
 		if Leo is in location of player and Leo is eager:
-			say "(Leo and Rand following.)";
-			move Leo to noun;
-			move Rand to noun; [?? you have a problem if you goto when you've almost solved things]
+			if noun is not a mazeroom:
+				say "(Leo and Rand following.)";
+				move Leo to noun;
+				move Rand to noun;
 	if player is in fighter freight: [OYSTER, generic message not enough]
 		say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
+	if noun is end den and gleaner is reflexed, say "No need to go back there." instead;
 	d "From [progval of location of player] to [progval of noun].";
 	if progval of noun < progval of location of player:
 		if location of player is rawest waters:
@@ -17305,7 +17307,7 @@ understand "run [direction]" as going.
 
 book Disease Seaside
 
-Disease Seaside is a room in Oyster. "A super cult sculpture of Shoer Osher sits on this side of a river. One you can just begird or bridge. Boats block the whole river, and there's a raft docked here. A canoe too!"
+Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of beinh on this side of the river. Boats block the whole river, and there's a raft docked here. A canoe too!"
 
 after looking in Disease Seaside:
 	set the pronoun them to boats;
@@ -17479,9 +17481,11 @@ carry out leaping:
 
 book Anger Range
 
-Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping]."
+Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is in lalaland].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if]."
 
-printed name of Anger Range is "[if haunter is in lalaland]Disease Seaside[else]Anger Range[end if]"
+understand "hero/heros shore" and 'hero/heros/shore" as Anger Range when haunter is in lalaland.
+
+printed name of Anger Range is "[if haunter is in lalaland]Hero's Shore[else]Anger Range[end if]"
 
 after looking in anger range:
 	if trout is in anger range, set the pronoun it to trout;
@@ -17735,6 +17739,7 @@ every turn (this is the track haunter rule):
 				now walleyes are in lalaland;
 				now haunter is in lalaland;
 				now thin hint is in lalaland;
+				move shoer osher to anger range;
 				move player to Horned Hedron;
 				reg-inc;
 				the rule succeeds;
