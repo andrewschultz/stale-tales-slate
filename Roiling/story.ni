@@ -2658,16 +2658,16 @@ topic	right-region	him-say
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
 
-to decide which number is ag-moves: [hacky but simple and easy to prove. Inapt/swarm = force you 2W. SWSE or WSSE are only possible 4-movers. 2 + 2 * how many squares west you must go to go all the way south.] [??re-sort things]
-	if ego drains are in lalaland:
-		decide on 2;
-	if Mel Fish is not in lalaland:
-		decide on 6;
-	if grailman is in lalaland or reed's ale is in lalaland:
-		decide on 4;
-	decide on 6;
+to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
+	if grailman is in lalaland, decide on 2; [if the guardian(s) north of danger garden/strati strait are both gone, it is a straight jump. And of course lois/lot are in lalaland, since ag-moves is calculated when the kid is present] [also note that the arid den is in lalaland if this is not true]
+	if Mel Fish is not in lalaland, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
+	if wait-seer is not in lalaland:
+		if lars eede is not in lalaland and elsa erde is not in lalaland, decide on 6; [this zigzag blocks a clear path east]
+	decide on 4; [the only way 8 would be possible is S W N W S S E E, but that ignores you have cleared the atheists]
 
-to say ag-fol: [h]
+[?? see about booleans for larse/elsa in lalaland or lois/lot in lalaland]
+
+to say ag-fol:
 	if ag-moves is 2:
 		say "It's a quick walk back to the subsector with [relig-mf] and ego-drains gone.";
 	else if ag-moves is 4:
@@ -8913,7 +8913,7 @@ table of troves anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
 Pa Egg Pea	Pa Egg Pea	false	244059588	--	"gape"	"gape"	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."
 cold	heat	false	270386244	--	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."
-heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical to move on."
+heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief!  You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
 bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if what-a-bee is reflexed]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
@@ -17483,7 +17483,7 @@ book Anger Range
 
 Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is in lalaland].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if]."
 
-understand "hero/heros shore" and 'hero/heros/shore" as Anger Range when haunter is in lalaland.
+understand "hero/heros shore" and "hero/heros/shore" as Anger Range when haunter is in lalaland.
 
 printed name of Anger Range is "[if haunter is in lalaland]Hero's Shore[else]Anger Range[end if]"
 

@@ -239,7 +239,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storeu"	591972280	--	--	degen-true rule	"[not-the-reg]."
 "rouet"	495698314	--	--	degen-true rule	"[not-the-reg]." [end-r]
 
-table of troves nudges [?? used lot/pallid li'l pad / rustin ruin st in ruts]
+table of troves nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rathole"	483876463	rathole	--	--	"[locname]." [start loather rathole]
 "spoiloplis"	701798374	--	--	degen-true rule	"[no-spoil]."
