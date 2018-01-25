@@ -358,8 +358,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dirge"	311751549	dirge ridge	--	--	"[locname]." [start dirge ridge]
 "liev"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
-"ole"	255972525	--	--	Leo-mad rule	"There are only six possibilities. Leo's not too bright, and he can figure it out." [?? run test to see about flips before/after ole]
-"darn"	177448218	--	--	Rand-mad rule	"Use the settler. This is a, err, regional word." [?? run test to see about flips before/after darn]
 "austerer"	732937433	austerer	--	--	"[locname]." [start austerer treasure]
 "marines"	489567203	marines seminar remains	--	--	"[locname]." [start marines seminar remains]
 "marine"	393293237	marines seminar remains	--	--	"[locname]."
@@ -1551,16 +1549,6 @@ this is the gun-broken rule:
 
 this is the path-pass rule:
 	if player is in phat path or player is in saps' pass, the rule succeeds;
-	the rule fails;
-
-this is the Leo-mad rule:
-	if player is in dirge ridge:
-		if Leo is fightin, the rule succeeds;
-	the rule fails;
-
-this is the Rand-mad rule:
-	if player is in dirge ridge:
-		if Rand is fightin, the rule succeeds;
 	the rule fails;
 
 this is the washup rule:

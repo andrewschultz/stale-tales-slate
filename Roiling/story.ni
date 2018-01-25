@@ -6930,7 +6930,7 @@ carry out iving:
 
 chapter going
 
-check going nowhere (this is the towers-mis-go rule): [?? inside in Mislit Limits]
+check going nowhere (this is the towers-mis-go rule):
 	if mrlp is towers:
 		if noun is inside or noun is outside:
 			say "You can't go in, here." instead;
@@ -15041,6 +15041,10 @@ check scaning Leo when Rand is in Ridge and Rand is fightin:
 	say "It's Rand you need to deal with, now." instead;
 
 Leo is a fightin bruisin reflexive person. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset. For all their macho talk, he and Rand might just need someone to talk to[end if]."
+
+after fliptoing leo:
+	move rand to dirge ridge;
+	continue the action;
 
 to say r-l of (p - a person):
 	say "[if p is Leo]Rand[else if p is Rand]Leo[else]BUG[end if]"
