@@ -8920,8 +8920,8 @@ bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that s
 what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee's head is reflexed]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
 cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]."
 cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
-sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! And yet...there's still something more to do here. You still need to bottom out in your own way."
-Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected." [??]
+sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
+Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at Blamer Balmer, and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
@@ -9014,7 +9014,7 @@ haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you e
 lever	lever	false	501914680	--	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
-pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and click! There you go. The pins retract, and the dialer begins to hum again."[??]
+pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
 dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation, and the dialer quits humming. It doesn't look broken, but you guess you'll need to do something about those pins.";
 
@@ -9535,7 +9535,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 			say "You feel your arch-greed recharged.";
 			min-up;
 		continue the action;
-	else if noun is troend1:
+	else if noun is troend1: [?? zap all troend1]
 		let temp be 0;
 		if Sister Tressi is prefigured, increment temp; [?? resist then ignore]
 		if ME ARTS is prefigured, increment temp;
@@ -14205,6 +14205,12 @@ check fliptoing when player is in Upscale Capsule and noise is in Upscale Capsul
 		preef noun;
 		do nothing instead;
 
+to report-glarers:
+	if balmer is in lalaland and tressi is in lalaland:
+		say "Well! You feel very relaxed now, with both Blamer Balmer and Sister Tressi gone. You feel more in touch with yourself, less obliged to do what society requires...";
+	else:
+		say "You look over to [if balmer is in lalaland]Sister Tressi[else]Blamer Balmer[end if]. Maybe there's a way to get rid of [if balmer is in lalaland]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weight quite so heavily, now."
+
 chapter sister tressi
 
 Sister Tressi is proper-named vanishing scenery in Upscale Capsule. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling."
@@ -14217,6 +14223,7 @@ instead of doing something with sister tressi:
 
 after fliptoing sister tressi:
 	now Blamer Balmer is LLPish;
+	report-glarers;
 	continue the action;
 
 chapter marble blamer
@@ -14227,6 +14234,7 @@ a-text of Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?RRRY". parse-
 
 after fliptoing Blamer Balmer:
 	now sister tressi is LLPish;
+	report-glarers;
 	continue the action;
 
 chapter Trance Nectar
@@ -18210,7 +18218,10 @@ after printing the locale description for Den Loft when Den Loft is unvisited:
 		poss-d;
 		now yapper is in lalaland;
 
-the dialer is reflexive scenery in Den Loft.
+the dialer is reflexive scenery in Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. [if pins are reflexive and pins are in den loft]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
+
+to say shift-dialer:
+	if dialer is reflexed, say " again"
 
 Include (-
 	has transparent talkable
@@ -18224,8 +18235,6 @@ Include (-
 
 check taking intercom:
 	say "You'd probably get a nasty shock and set off an alarm." instead;
-
-description of dialer is "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. It looks like you could shift it. You also see some red writing, in small print."
 
 the jumble is part of the dialer. description is "[if dialer is reflexive]DIALER[else]DERAIL[end if] seems to indicate its current task."
 
