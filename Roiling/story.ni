@@ -8923,6 +8923,7 @@ cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]
 sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
 Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at Blamer Balmer, and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
+Eddie's Song	Eddie's Song	false	361668827	Boredom Bedroom	"decide"	"decide"	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
@@ -9535,12 +9536,12 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 			say "You feel your arch-greed recharged.";
 			min-up;
 		continue the action;
-	else if noun is troend1: [?? zap all troend1]
+	else if noun is trance nectar:
 		let temp be 0;
-		if Sister Tressi is prefigured, increment temp; [?? resist then ignore]
-		if ME ARTS is prefigured, increment temp;
+		if Sister Tressi is prefigured, increment temp;
 		if Blamer Balmer is prefigured, increment temp;
-		if temp > 0, say "(NOTE: before moving on, you much with some stuff to get a few extra points.)[paragraph break]";
+		if DIVORCES is prefigured, increment temp;
+		if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points.)[paragraph break]";
 		increase min-score of troves by temp;
 		increase cur-score of troves by temp;
 	else if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
@@ -13909,6 +13910,15 @@ a spider is scenery in Drain Nadir. "You're don't know whether to crush it or ev
 
 a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of a spider is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]r".
 
+section Eddie's Song
+
+Eddie's song is reflexive scenery. "Eddie C. warbles on."
+
+a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
+
+instead of examining song:
+	try listening instead;
+
 book boredom bedroom
 
 Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad."
@@ -14363,19 +14373,6 @@ understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 description of salt is "St. Al Salt is, from what you are reading, engineered to maximize your productivity from (motivational stress * remaining years,) much better than other brands. It helps you preserve yourself, sort of. It is emblazoned with a picture of St. Al, recently enshrined as Yorpwald's patron saint of Not Faffing Around."
 
 a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]a[sp]x[sp]t". salt is parse-spoilable.
-
-section Eddie's Song
-
-Eddie's song is reflexive scenery. "Eddie C. warbles on."
-
-a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
-
-instead of examining song:
-	try listening instead;
-
-section troend1 and troend2 dummy variables to flip
-
-troend1 is privately-named useless scenery. troend1 is undesc. printed name of troend1 is "I'd Cede (Eddie C.)"
 
 volume presto
 
