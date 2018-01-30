@@ -9541,7 +9541,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		if Sister Tressi is prefigured, increment temp;
 		if Blamer Balmer is prefigured, increment temp;
 		if DIVORCES is prefigured, increment temp;
-		if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points.)[paragraph break]";
+		if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, because your desire for more isn't totally drained.)[paragraph break]";
 		increase min-score of troves by temp;
 		increase cur-score of troves by temp;
 	else if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
