@@ -30,6 +30,7 @@ TDR = table of donereject, which gives specialized responses for if you try to f
 TQT = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 TCO = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT = dome tables, text from Demo Dome section
+PRE = table of pres, or information of stuff you figured but don't get points for yet
 
 VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text, though it's now in the new file.
 
@@ -248,6 +249,11 @@ chapter guardians
 a guardian is a kind of person. a guardian is usually vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
 a guardian has a person called other-g. The other-g of a guardian is usually dreads adders.
+
+to decide whether gn-gone of (g - a guardian):
+	if g is in lalaland, yes;
+	if other-g of g is not dreads adders and other-g of g is in lalaland, yes;
+	no.
 
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
@@ -563,13 +569,13 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		choose-male;
 
 to general-gender-towers:
-	if hostile-is-he lot is not in lalaland and lois the hostile is not in lalaland:
+	unless gen-gone of lois the hostile:
 		now hostile-is-he lot is off-stage;
 		now lois the hostile is off-stage;
-	if lars eede is not in lalaland and elsa erde is not in lalaland:
+	unless gen-gone of lars eede:
 		now lars eede is off-stage;
 		now elsa erde is off-stage;
-	if luc sym is not in lalaland and ms lucy is not in lalaland:
+	unless gen-gone of luc sym:
 		now luc sym is off-stage;
 		now ms lucy is off-stage;
 	if mrlp is towers, reposition-guardians;
@@ -2662,10 +2668,8 @@ to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF 
 	if grailman is in lalaland, decide on 2; [if the guardian(s) north of danger garden/strati strait are both gone, it is a straight jump. And of course lois/lot are in lalaland, since ag-moves is calculated when the kid is present] [also note that the arid den is in lalaland if this is not true]
 	if Mel Fish is not in lalaland, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
 	if wait-seer is not in lalaland:
-		if lars eede is not in lalaland and elsa erde is not in lalaland, decide on 6; [this zigzag blocks a clear path east]
+		unless gen-gone of lars eede, decide on 6; [this zigzag blocks a clear path east]
 	decide on 4; [the only way 8 would be possible is S W N W S S E E, but that ignores you have cleared the atheists]
-
-[?? see about booleans for larse/elsa in lalaland or lois/lot in lalaland]
 
 to say ag-fol:
 	if ag-moves is 2:
@@ -5510,6 +5514,7 @@ hawt thaw	true	false	false	false	"Wow! Three ambiguous readings. But you wonder 
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
+a-s	true	true		false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
@@ -6981,6 +6986,8 @@ Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens 
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
 Marines Seminar Remains	"The sport ports would provide a challenge you're ill-equipped for. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
+Saps' Pass	"There's no way around the hogs. You need to get rid of them."
+Path Path	"It's best to say on the Phat Path."
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets don't matter. You need to cross to the north for more action."
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
@@ -11702,7 +11709,8 @@ to say what-can-flip:
 		else:
 			say "[line break]You remember you need to think [pft] at some time.";
 
-table of pres
+[?? recheck everything in table of pres]
+table of pres [xxpre]
 preflip	thereg	pretodo
 bench	routes	"Find a way to be fearless so you can lean AGAINST the bench." [routes]
 elbow	routes	"You can go BELOW the giant's elbow once he swings it around."
@@ -11739,7 +11747,6 @@ p-2	otters	"You can say HOWEVER to deal with Mr. Lee and Rev. Howe."
 atmo-moat	otters	"You can collapse the atmo-moat to an ATOM once you have the power."
 medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
 pre-mang	others	"You can look AMONG once you have currency to haggle in the clearing." [others]
-[?? recheck the preef tables]
 
 to say other-areas:
 	repeat through table of region-spoilers:
@@ -15347,7 +15354,19 @@ Saps' Pass is a room in Presto. "This path cuts between two lethally beautiful a
 check going south in saps' pass:
 	say "The hogs snicker as you walk away.";
 
-Mount Um-Not is bounding scenery in Saps' Pass. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't." [climb it ??]
+check going north in saps' pass: say "Not with the wall and the hogs in the way." instead;
+
+Mount Um-Not is bounding scenery in Saps' Pass. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't."
+
+instead of doing something with mount um-not:
+	if action is procedural, continue the action;
+	if current action is climbing or current action is entering, try going west instead;
+	say "Mount Um-Not is just there for scenery. Intimidating scenery, but scenery."
+
+instead of doing something with mount um-not:
+	if action is procedural, continue the action;
+	if current action is climbing or current action is entering, try going west instead;
+	say "Deil's Slide is just there for scenery. Intimidating scenery, but scenery."
 
 check taking um-not:
 	say "Stronger adventurers than you couldn't take Mount Um-Not." instead;
@@ -18817,7 +18836,6 @@ understand "achers/arches" and "achers arches" as a-s.
 
 understand "a-s" as a-s when debug-state is true. [for showme a-s]
 
-[note that they can be CHASER arches too, hence the question mark. Need to check that cheat-scanning mentions CHASER too. ??]
 a-text of a-s is "RYYRRR". b-text of a-s is "RY?RRR". parse-text of a-s is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
 does the player mean searching the a-s: it is very likely.
@@ -23645,7 +23663,7 @@ to elvira-flee-taunt:
 	say "You leave her sin shrine [if current action is not going east]with extra quickness [end if]before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
 	now Elvira-delay is 0;
 
-the warpish warship is amusing scenery in Reclusion Inclosure. warship is undesc. [?? check all the sceneries]
+the warpish warship is amusing scenery in Reclusion Inclosure. warship is undesc.
 
 instead of doing something with warship:
 	say "You'll never do anything with the warship on your own. But defeating Elvira will probably disable it."
@@ -26699,7 +26717,7 @@ passport	"The passport will get you through the gates in the Gates Stage, but yo
 Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"	[end others hinting]
-perp-priv	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]" [?? what if all 3]
+perp-priv	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]"
 Great Grate	"The Great Grate is immovable." [start demo dome hinting, though there's really not much]
 chic loner chronicle	"[dome-blab]"
 shiest thesis	"[dome-blab]"
@@ -27426,7 +27444,7 @@ to say d-then:
 		say "DERAIL then ";
 	if lev-pull is false:
 		say "pull the lever then ";
-[?? need to spill pills vs span pans]
+[?? need to spill pills vs span pans and pins as well]
 to say how-pills-used:
 	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
@@ -29435,38 +29453,36 @@ understand the command "tall" as something new.
 understand "tall" as talling.
 
 carry out talling:
-	say "Now you can[if take-it is true]'t[end if] take all the things.";
-	now take-it is whether or not take-it is false;
+	say "Now you can[if take-test is true]'t[end if] take all the things.";
+	now take-test is whether or not take-test is false;
 	the rule succeeds;
 
-take-it is a truth state that varies.
+take-test is a truth state that varies.
 
 check taking:
-	if take-it is true:
-		if noun is scenery:
-			say "[noun]: Can't take scenery." instead;
-		if noun is fixed in place:
-			say "[noun]: Fixed in place." instead;
-		if noun is a person:
-			say "[noun]: Person." instead;
+	if take-test is true:
+		if noun is scenery, say "DEBUG: [noun]: Can't take scenery.";
+		if noun is fixed in place, say "DEBUG: [noun]: Fixed in place.";
+		if noun is a person, say "DEBUG: [noun]: Person.";
 
 The can't take what's fixed in place rule is not listed in the check taking rulebook.
 The can't take scenery rule is not listed in the check taking rulebook.
 
+[?? need to try to take scenery everywhere]
 [The exclude scenery from take all rule is not listed in the for deciding whether all includes rulebook.
 The exclude fixed in place things from take all rule is not listed in the for deciding whether all includes rulebook.
 The exclude people from take all rule is not listed in the for deciding whether all includes rulebook.
 
 Rule for deciding whether all includes scenery:
-	if take-it is true, it does; [?? the rule fails]
+	if take-test is true, it does;
 	it does not;
 
 Rule for deciding whether all includes people while taking:
-	if take-it is true, it does;
+	if take-test is true, it does;
 	it does not;
 
 Rule for deciding whether all includes fixed in place things while taking:
-	if take-it is true, yes;
+	if take-test is true, yes;
 	it does not;]
 
 chapter rfxing
@@ -29499,7 +29515,7 @@ carry out repling:
 		now all blue guardians are off-stage;
 		now atheists are off-stage;
 		now the-hostile is off-stage;
-		say "All red and blue guardians reinitialized.";
+		say "All red and blue guardians reinitialized. Side guardians (necessary or not) are still there.";
 		reposition-guardians;
 		the rule succeeds;
 	say "Doesn't apply here.";
