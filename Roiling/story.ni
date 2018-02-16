@@ -568,6 +568,11 @@ when play begins (this is the screenread gender swears and precursor rule) :
 	else: [force certain values]
 		choose-male;
 
+to decide whether gen-gone of (g - a guardian):
+	if g is in lalaland, yes;
+	if other-g of g is in lalaland, yes;
+	no;
+
 to general-gender-towers:
 	unless gen-gone of lois the hostile:
 		now hostile-is-he lot is off-stage;
@@ -613,7 +618,7 @@ to choose-male:
 	now Red Rat is in scape space;
 	now Dr Tera is off-stage;
 	now greedy-person is Red Rat;
-
+tatata
 to decide whether (cho - a number) is irrelevant:
 	if cho is 70 or cho is 102, decide no;
 	if cho is 77 or cho is 109, decide no;
@@ -6755,7 +6760,7 @@ Rule for printing a parser error when the latest parser error is the noun did no
 	if the player's command matches the regular expression "^(gt|go to)":
 		say "That's not a room or thing I recognize.";
 	else:
-		say "Nothing like that is in the immediate vicinity or region."
+		say "Nothing (significant) like that is in the immediate vicinity or region."
 
 Rule for printing a parser error when the latest parser error is the can't see any such thing error:
 	if location of player is study and study is dark:
@@ -6890,7 +6895,7 @@ instead of taking inventory:
 		say "[line break]You are also wearing [a list of worn things].";
 	if mrlp is presto and bored yak is not in lalaland:
 		if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can't carry, but you can push it around[if number of things on skid > 0]. It holds [the list of things on skid][end if]." instead;
-		if map region of location of skid is presto, say "You remember leaving the skid in [location of skid]." instead;
+		if skid is not off-stage and skid is not in lalaland, say "You remember leaving the skid in [location of skid]." instead;
 	if mrlp is otters and power-back is false, say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
 	if player has compass, say "[line break]You also have a compass to tell direction."; [start OTHERS special stuff]
 	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to GURU things you could make fruits from.";
@@ -7052,13 +7057,9 @@ Include (-
 ;
 -) after "Rulebooks.i6t".]
 
-does the player mean doing something with location of the player: it is unlikely.
-
 instead of doing something with the location of the player:
-	if current action is examining or current action is gotoing, continue the action;
+	if current action is xrooming or current action is gotoing, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command.";
-
-[?? take all takes the location of the player too]
 
 xrooming is an action applying to one visible thing.
 
@@ -29468,7 +29469,6 @@ check taking:
 The can't take what's fixed in place rule is not listed in the check taking rulebook.
 The can't take scenery rule is not listed in the check taking rulebook.
 
-[?? need to try to take scenery everywhere]
 [The exclude scenery from take all rule is not listed in the for deciding whether all includes rulebook.
 The exclude fixed in place things from take all rule is not listed in the for deciding whether all includes rulebook.
 The exclude people from take all rule is not listed in the for deciding whether all includes rulebook.
