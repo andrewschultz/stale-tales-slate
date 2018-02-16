@@ -618,7 +618,7 @@ to choose-male:
 	now Red Rat is in scape space;
 	now Dr Tera is off-stage;
 	now greedy-person is Red Rat;
-tatata
+
 to decide whether (cho - a number) is irrelevant:
 	if cho is 70 or cho is 102, decide no;
 	if cho is 77 or cho is 109, decide no;
@@ -723,6 +723,22 @@ to say s-w:
 
 to say t-w:
 	say "****";
+
+section multiple item operations
+
+the first time takeall notify rule is listed before the horbert-bye rule in the instead rules.
+the don't allow dropping all rule is listed before the first time takeall notify rule in the instead rules.
+
+instead of taking when number of entries in multiple object list > 1 (this is the first time takeall notify rule):
+	if getall-warn is false:
+		say "Multiple item-pull!";
+		now getall-warn is true;
+	continue the action;
+
+instead of dropping when number of entries in multiple object list > 1 (this is the don't allow dropping all rule):
+	let Q be the noun;
+	say "There's only one place where you need to drop an item, and [if prod is in lalaland]you found it[else]you'll probably know it, and you'll want to drop it specifically[end if]. So there's no reason to drop multiple items.";
+	alter the multiple object list to { Q };
 
 chapter testing stuff I can't quite NFR
 
@@ -6641,11 +6657,6 @@ after reading a command:
 	if the player's command matches the regular expression "\bsmell\b" and word number 1 in the player's command is not "smell":
 		say "You can just type SMELL.";
 		reject the player's command;
-	if getall-warn is false:
-		if the player's command matches the regular expression "\ball$":
-			if the player's command matches the regular expression "^(get|take)":
-				say "Multiple item-pull!";
-				now getall-warn is true;
 
 section special cases
 
@@ -13138,7 +13149,7 @@ after printing the locale description for Cleric Circle when Cleric Circle is un
 	say "Brother Horbert steps on something that flips up into the air and into your hands! He points at you. 'It...you...I was told...the spoon must be for you!'[paragraph break]He explains it is a snoop spoon, one that helps the right person--the one it chooses--to examine it for direction when needed. Apparently you have to tilt it right so all the rays or whatever get focused at the focal point, but you can figure that out as you go.";
 	now player has snoop spoon;
 
-instead of exiting in Cleric Circle:
+instead of exiting in Cleric Circle (this is the horbert-bye rule):
 	if toils is unexamined or pews are unexamined:
 		say "You look back at the [if toils is examined]pews[else if pews are examined]list-o-toils[else]pews and list-o-toils[end if]. Perhaps closer inspection might give you [if toils is examined]the 'why'[else if pews are examined]the 'what'[else]the 'what' and 'why'[end if] for dealing with the directionless Same Mesa.[paragraph break][randbla]";
 	now player is in Same Mesa instead;
