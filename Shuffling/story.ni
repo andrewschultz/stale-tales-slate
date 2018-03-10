@@ -321,7 +321,7 @@ bolt	"You think back to a combination lock you had with, well, forty cubed possi
 bulge	"The bulge swells and makes a squeal, like it's trying to make music."
 toga	"The toga blows in an unseen breeze, exposing what's written on it a bit more."
 nametag	"The nametag peels infinitesimally."
-static	"You [if attics are in lalaland]don't think you can change it to anything but the attics[else]think a bit, and the static seems like a bad extension to the doll house[end if]."
+static	"You [if attics are moot]don't think you can change it to anything but the attics[else]think a bit, and the static seems like a bad extension to the doll house[end if]."
 attics	"Hm, you can't think of anything to do with the attics but change them back."
 Store B	"You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet."
 Store F	"That seemed right but didn't seem quite natural."
@@ -345,7 +345,7 @@ Spam	"Nothing happens, but you think you can make out odd shapes in the Spam for
 hoses	"Something leaks out of the hoses. Hm. What else can be rubber, now."
 vowels	"The vowels continue to howl in defiance. OU...AIE...like a wild animal."
 wolves	"You can't change them back. But maybe you can get rid of them."
-cask	"[if sack is in lalaland]You doubt the sack/cask has a triple purpose[else]Nothing happens. Maybe you are trying to do too much to change the cask[end if]." [sortie]
+cask	"[if sack is moot]You doubt the sack/cask has a triple purpose[else]Nothing happens. Maybe you are trying to do too much to change the cask[end if]." [sortie]
 sack	"You doubt the sack/cask has a triple purpose."
 warts	"The warts itch slightly."
 poem	"[if poem is not folded]You need to fold the poem into a plane before you can try that[else]The plane can probably become something else, but not that[end if]."
@@ -400,7 +400,7 @@ to say m-r-almost:
 to say red-to:
 	now red asp is in Enclosure;
 	set the pronoun it to red asp;
-	now spread is in lalaland;
+	now spread is moot;
 
 to say spec-help of (itm - a thing):
 	if itm is begonias:
@@ -1015,7 +1015,7 @@ does the player mean objhinting a hintrelevant object: it is likely.
 [does the player mean objhinting a visible object:
 	it is likely.]
 
-does the player mean objhinting an object in lalaland: it is unlikely.
+does the player mean objhinting an object moot: it is unlikely.
 
 definition: a thing (called hthing) is deregioned:
 	if location of hthing is nothing, decide no;
@@ -1027,7 +1027,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if mrlp is sortie:
 		if hintcand is Mean Old Mondale Doleman, decide yes;
 	if hintcand is off-stage, decide no;
-	if hintcand is in lalaland, decide no;
+	if hintcand is moot, decide no;
 	if hintcand is in bullpen, decide yes;
 	if hintcand is location of player, decide no;
 	if hintcand is beats: [start of backdrops which will throw errors otherwise]
@@ -1088,7 +1088,7 @@ carry out objhinting:
 	now cur-item is noun;
 	if noun is location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
 	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
-	if noun is in lalaland, all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
+	if noun is moot, all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
 	if noun is not a backdrop and noun is not scenery:
 		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
 	if noun is bounding, all-say "[that-those-is-are of noun] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
@@ -1123,7 +1123,7 @@ name list	"The list hints what Shuffling Around is all about."
 above-sign	"The sign seems to be mis-printed, which is a clue what Shuffling Around is all about."
 odd side passage	"You can ENTER the odd side passage, or go IN."
 odor	"[one of]What can the odor turn into? Your random thoughts are not so random. [plus][or]The clues and distractions collapse to anagrams. [plus][or]If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram? [plus][or]A door. [minus][cycling]"
-musical chord	"The chord clues what to do [if bulge is in lalaland]with the bugle[else]with the bulge[end if]."
+musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."
 bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the door [plus][or]The musical chord is a clue [plus][or]You want to change the bulge into a BUGLE [minus][cycling]."
 bolt	"[one of]You don't have any key, but that bolt is stopping the door from opening.[plus][or]You want to change the bolt into a BLOT. [minus][cycling]"
 blot	"The blot is a clue what the bulge could become. It's not useful by itself."
@@ -1236,7 +1236,7 @@ banshee	"[one of]You don't need to get rid of the banshee to solve the forest, b
 spread	"[one of]The SPREAD can become something. Well, by magic. If you fiddle with it, it becomes something else. [plus][or]You can't quite cut the spread as-is, but maybe you could transform it into something less intimidating? [plus][or]You can figure out what the word is from there. [plus][or]The SPREAD becomes DRAPES. [minus][cycling]"
 red asp	"[one of]The red asp is too dangerous to fight, but remember, it started as a SPREAD, also red. [plus][or]Attacking the asp gives another clue, since you turn all red. [plus][or] The asp doesn't leave you feeling very homey. [plus][or]The red asp can become DRAPES. [minus][cycling]"
 drapes	"[if player does not have sliver]You need something that can cut the drapes[else]CUT the drapes with the sliver[end if]."
-sliver	"[if drapes are not in lalaland]The sliver can be used to cut something.[else][one of]The sliver is still useful. [plus][or]It can become SILVER. [minus][cycling]"
+sliver	"[if drapes are not moot]The sliver can be used to cut something.[else][one of]The sliver is still useful. [plus][or]It can become SILVER. [minus][cycling]"
 spam	"[one of]The Spam isn't particularly edible. [plus][or]It's more useful as MAPS. [minus][cycling]"
 silver	"[if silver is part of shotgun]It's ready to fire when needed[else if shotgun is off-stage]It'd be nice to have something to put the silver in[else]Put the silver in the shotgun[end if]."
 shotgun	"[if player has silver and silver is not in shotgun]Put the silver in the shotgun.[else if silver is off-stage]You need to create a bullet for the shotgun.[else if wolves are visible]SHOOT the wolves.[else]You need to find a target, one vulnerable to silver, maybe.[end if]"
@@ -1278,7 +1278,7 @@ trel-priv	"[if scraped wall is visible]It's the haywall below you need to worry 
 hallway	"You changed the haywall to make the hallway. You can just go east."
 hay	"[if hay is part of scraped wall]You've used the hay properly[else]You need to stuff the hay somewhere--there's only one hole besides the sack[end if]."
 poem	"[if smilies are part of the poem]It's the smilies you need to worry about[else if poem is folded]You changed the poem successfully[else]The poem has no value without the smilies, but the paper it is on can be FOLDed[end if]."
-cask	"[if sack is in lalaland]You can change the cask back to a sack, depending on what you need to schlep around.[else][one of]The cask can become something else. [plus][or]Something else that contains things. [plus][or]It can become a SACK. [minus][cycling][end if]"
+cask	"[if sack is moot]You can change the cask back to a sack, depending on what you need to schlep around.[else][one of]The cask can become something else. [plus][or]Something else that contains things. [plus][or]It can become a SACK. [minus][cycling][end if]"
 sack	"The sack can contain bulky things, or it can be changed back to a CASK."
 hole	"Nothing special, just--it can't be enlarged to fit bulky stuff in."
 grist	"[one of]The grist is close to actual food. [plus][or]Namely, some GRITS. [minus][cycling]"
@@ -1292,7 +1292,7 @@ anapest	"[one of]The poem you hear is an ANAPEST. [plus][or]It's so snotty and e
 expo flier	"The flier helps you figure what to change the anapest into."
 sc	"The serve verse on the cedar walls gives a rough idea what to do."
 serve verse	--	sc
-oils	"[if soil is in lalaland][one of]The OILS can be a couple things, but you may want to make a foundation first. [plus][or]The moor's ground won't support anything... [plus][or]...until it becomes more stable SOIL. [minus][cycling][else][one of]The SOIL can now support a structure. [plus][or]A structure that could hold farm stuff, or maybe feed. [plus][or]That'd be a SILO. [minus][cycling]"
+oils	"[if soil is moot][one of]The OILS can be a couple things, but you may want to make a foundation first. [plus][or]The moor's ground won't support anything... [plus][or]...until it becomes more stable SOIL. [minus][cycling][else][one of]The SOIL can now support a structure. [plus][or]A structure that could hold farm stuff, or maybe feed. [plus][or]That'd be a SILO. [minus][cycling]"
 lois	"Lois is the provider of oils."
 crashing archings	"Lois caused that, to help you not look backwards."
 roadblock	"[one of]The roadblock seems misplaced, almost inviting you to enter. [plus][or]It's also cut 5/9 of the way down. [plus][or]What's an entryway? A DOOR. [plus][or]That leaves the word BLACK. [plus][or]It's a BLACK DOOR! [minus][cycling]"
@@ -1302,7 +1302,7 @@ trees button	"[one of]The trees button isn't much help launching a missile. [plu
 steer button	"You should just need to push the STEER button now."
 shoot button	"[if missile-steered is true]You should just need to PUSH the SHOOT button now[else]You may want guidance before PUSHing the SHOOT button[end if]."
 scraped wall	"[if straw is off-stage]You don't have anything to stuff in the wall. Maybe you can find something. It may be right under your nose. [else if player has the straw or straw is in sack]Hm, the straw is too bulky to fit in the wall. Something like it, perhaps. [else if player has the hay or hay is in sack][one of]The hay might fit in well with the wall. [plus][or]PUT HAY IN WALL. [minus][cycling][else][one of]You stuffed the hay in the wall. What does the gadget offer? [plus][or]The hay wall can become a HALLWAY! [minus][cycling][end if]"
-missile	"[if silo is off-stage]You have nowhere to put the missile, yet[else if black door is not in lalaland]You need a way to open up the silo[else]You should be able to put the missile in the silo now[end if]."
+missile	"[if silo is off-stage]You have nowhere to put the missile, yet[else if black door is not moot]You need a way to open up the silo[else]You should be able to put the missile in the silo now[end if]."
 spout	"[if caskfillings is 2]You've gotten all the oil you need[else if caskfillings is 1]You may be able to get more oils[else]you can POUR OILS into the cask from the spout[end if]."
 soil	"[if silo is off-stage]The soil is a good foundation for a structure[else]You've built a structure on the  soil[end if]."
 Woeful Pat	"Pat's poetry is useless, but its beat isn't."
@@ -1364,7 +1364,7 @@ soundproofed walls	"Not useful for you but for the nerds, so they can think."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
 torn cue	"It indicates the brocade [if brocade is in Fo Real Florae]is[else]was[end if] free."
 sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
-controls	"The controls need to fit into a recess[if neon pig is in lalaland], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
+controls	"The controls need to fit into a recess[if neon pig is moot], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
 red glowing cursive script	"Provides a clue what the neon pig should become."
 nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question. [plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing. [plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is... [plus][or]DARKNESS. [plus][or] ASK NERDS ABOUT DARKNESS. [minus][cycling]"
@@ -1411,7 +1411,7 @@ thirst	--	crass scars
 
 to say toho: say "[if grips are visible and ropes are visible]you did a bit more[else]you can also meddle with the sprig and spore[end if]".
 
-to say put-can: say "[one of]Examining the livers indicates they need to be processed. [plus][or]You need to put both livers in the canister. [plus][or][unless River Ville liver is in lalaland]PUT River Ville IN CANISTER. [end if][unless viler liver is in lalaland]PUT VILER LIVER IN CANISTER. [end if][minus][cycling]"
+to say put-can: say "[one of]Examining the livers indicates they need to be processed. [plus][or]You need to put both livers in the canister. [plus][or][unless River Ville liver is moot]PUT River Ville IN CANISTER. [end if][unless viler liver is moot]PUT VILER LIVER IN CANISTER. [end if][minus][cycling]"
 
 to say i-fle: say "[if player is not in Flesh Shelf] in Flesh Shelf[end if]".
 
@@ -1662,17 +1662,17 @@ carry out sortie-hinting:
 	if player is in sacred cedars:
 		if caskfillings is 2, all-say "You have gotten all the oils you need here. Maybe you can pour them in the moor, again, with a different result." instead;
 		if oils are in cask, all-say "You can't pour the oils anywhere in this enclosed area. Try going back to the moor." instead;
-		if caskfillings is 0, all-say "[if sack is not in lalaland]Once you change the sack to a cask, y[else if player does not have cask]Once you get the cask, y[else]Y[end if]ou can FILL CASK here, to start." instead;
+		if caskfillings is 0, all-say "[if sack is not moot]Once you change the sack to a cask, y[else if player does not have cask]Once you get the cask, y[else]Y[end if]ou can FILL CASK here, to start." instead;
 		if caskfillings is 1, all-say "You can fill the cask with more oils once more." instead;
 	if player is in moor:
 		if anapest is visible, try objhinting anapest instead;
 		if peasant is visible, try objhinting peasant instead;
-		if smilies are not in lalaland:
+		if smilies are not moot:
 			if poem is unexamined, all-say "You should read the poem the peasant gave you. It's not terrible, but it contains some things that don't belong in a poem." instead;
 			try objhinting smilies instead;
 		if soil is not visible or silo is not visible:
 			if cedars is unvisited, all-say "You need to visit the room you opened east of the trellis first." instead;
-			if cask is in lalaland, all-say "You need to change the sack into a cask to carry the oils from Sacred Cedars." instead;
+			if cask is moot, all-say "You need to change the sack into a cask to carry the oils from Sacred Cedars." instead;
 			if oils are not in cask, all-say "You need to fill the cask[if soil is in moor]. Yes, again[end if]." instead;
 			try objhinting oils;
 		if roadblock is visible, try objhinting roadblock instead;
@@ -1845,8 +1845,8 @@ check throwing tomato at:
 	if second noun is neon pig, say "That might feel good, but it wouldn't do anything." instead;
 	if second noun is ulcer or second noun is Night Thing:
 		say "A direct hit! The tomato goes into the cruel ulcer with a pulp's splup, a gish, a sigh. The Night Thing smiles at first at the ketchupiness of the tomato. Then the inner rottenness and backwards logic from the (oops, a) motto kicks in. The beast wonders what sort of villain would DO that to ketchup. It looks at you in fear, sure you have more where that came from, and retreats into an unseen hole, scratching and clawing, suddenly a Thing of no Fight.[paragraph break]The mattress the Night Thing was on is slightly but noticeably bumpy. It's also ripped open, and it's concealing something rather badly.";
-		now tomato is in lalaland;
-		now night thing is in lalaland;
+		now tomato is moot;
+		now night thing is moot;
 		reg-inc;
 		the rule succeeds;
 
@@ -2127,7 +2127,7 @@ carry out spareing:
 		now parse-output is false;
 
 this is the gadget-okay rule:
-	if show hows tag is in lalaland:
+	if show hows tag is moot:
 		say "You pulled off the tag, so this isn't a relevant action.";
 		the rule fails;
 	if notices section is unvisited:
@@ -2536,7 +2536,7 @@ carry out retrying:
 	if trips strip is unvisited, say "You haven't been to the Trips Strip yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying the busiest subsite." instead;
 	if mrlp is resort:
 		if red bull burdell is in hotspot, say "No wimping out now. You can do it!" instead;
-		if red bull burdell is in lalaland, say "You've disposed of Red Bull Burdell[if number of solved regions < 4], so if you want to explore another region, you'll need to restart the game[end if]." instead;
+		if red bull burdell is moot, say "You've disposed of Red Bull Burdell[if number of solved regions < 4], so if you want to explore another region, you'll need to restart the game[end if]." instead;
 		say "You don't really need to[if number of solved regions is 4]. In fact, you have nowhere else to go[else], though there's one more region to solve[end if]. Are you sure?";
 		if the player direct-consents:
 			do nothing;
@@ -2544,11 +2544,11 @@ carry out retrying:
 			say "Okay, back to the endgame." instead;
 	repeat with JJ running through carried things:
 		unless JJ is warpable:
-			now JJ is in lalaland;
+			now JJ is moot;
 			add JJ to item-list of mrlp;
 	repeat with JJ running through worn things:
 		unless JJ is warpable:
-			now JJ is in lalaland;
+			now JJ is moot;
 			add JJ to worn-list of mrlp;
 	now retried is true;
 	now last-loc of mrlp is location of player;
@@ -2628,7 +2628,7 @@ carry out fliptoing (this is the main flipping rule) :
 					reg-inc;
 				move player to to-room entry;
 			else:
-				if the-to entry is not in lalaland and the-to entry is not in bullpen:
+				if the-to entry is not moot and the-to entry is not in bullpen:
 					reg-inc;
 					if the-to entry is attics:
 						min-up;
@@ -2645,7 +2645,7 @@ carry out fliptoing (this is the main flipping rule) :
 						if the-from entry is reversible:
 							move the-from entry to bullpen;
 						else:
-							move the-from entry to lalaland;
+							moot the-from entry;
 			if the-to entry is plural-named, set the pronoun them to the-to entry;
 			set the pronoun it to the-to entry;
 			if the-to entry is a person:
@@ -2653,7 +2653,7 @@ carry out fliptoing (this is the main flipping rule) :
 				set the pronoun her to the-to entry;
 	if player does not have the noun and noun is not visible:
 		if noun is shoes:
-			move noun to lalaland;
+			moot noun;
 		else if noun is not teleporter:
 			move noun to location of player; [may need special case for slippery sword]
 	if noun is shoot button or noun is steer button:
@@ -2668,7 +2668,7 @@ carry out fliptoing (this is the main flipping rule) :
 	the rule succeeds;
 
 after fliptoing rentals:
-	now rentals are in lalaland;
+	now rentals are moot;
 	continue the action;
 
 after fliptoing (this is the set pronouns rule) :
@@ -2679,7 +2679,7 @@ after fliptoing (this is the set pronouns rule) :
 		set the pronoun him to noun;
 		set the pronoun her to noun;
 		continue the action;
-	if noun is rentals, now noun is in lalaland;
+	if noun is rentals, now noun is moot;
 	if noun is visible:
 		if noun is plural-named:
 			set the pronoun them to noun;
@@ -2701,14 +2701,14 @@ after fliptoing (this is the when to increase min points after flip rule): [stat
 	if noun is rentals: [METROS]
 		min-up;
 	if noun is cork or noun is wings: [begin RESORT min]
-		if rock is in lalaland and swing is in lalaland:
+		if rock is moot and swing is moot:
 			min-up;
 	if noun is china:
 		min-up;
 	if noun is toeholds:
-		if sprig is in lalaland:
+		if sprig is moot:
 			min-up;
-		if spore is in lalaland:
+		if spore is moot:
 			min-up;
 	if noun is grips or noun is ropes:
 		if toeholds are not off-stage:
@@ -2764,8 +2764,8 @@ after fliptoing soil:
 
 after fliptoing silo:
 	now oils are in cedars;
-	now cask is in lalaland;
-	now sack is in lalaland;
+	now cask is moot;
+	now sack is moot;
 	continue the action;
 
 check fliptoing soil:
@@ -2799,17 +2799,17 @@ chapter more special cases
 
 after fliptoing resin:
 	if resin is visible:
-		now resin is in lalaland;
+		now resin is moot;
 		now stickyhanded is true;
 	continue the action;
 
 after fliptoing sorbet:
-	now sorbet is in lalaland;
+	now sorbet is moot;
 	min-up;
 	continue the action;
 
 check fliptoing silver:
-	if drapes are not in lalaland:
+	if drapes are not moot:
 		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
 		preef silver;
 		do nothing instead;
@@ -2817,7 +2817,7 @@ check fliptoing silver:
 to say liv-preef: preef silver.
 
 after fliptoing peasant:
-	now pat is in lalaland;
+	now pat is moot;
 	continue the action;
 
 after fliptoing chisel:
@@ -2962,7 +2962,7 @@ chapter say commands from anagrams
 to say exp-fli:
 	if player has expo flier:
 		say "snatches back the expo flier and ";
-		now expo flier is in lalaland;
+		now expo flier is moot;
 
 to say beast-beats: say "[if beast is visible]beats[else]beats".
 
@@ -2998,7 +2998,7 @@ to say holds-1:
 to say process-sandwich:
 	if sandwich is visible:
 		say "[if player has sandwich]You juggle the bread and spam, but neither part falls[else]You decide to pick up the sandwich so the other part doesn't fall[end if] to the floor. ";
-		now sandwich is in lalaland;
+		now sandwich is moot;
 		if the player's command matches the text "beard":
 			now player has spam;
 		if the player's command matches the text "maps":
@@ -3021,12 +3021,12 @@ to say trap-check:
 		say ", collapsing the trap door";
 	else:
 		say ", collapsing a trap door you hadn't noticed otherwise";
-	now td is in lalaland;
+	now td is moot;
 
 to say what-about-gate: say ". [if player has gadget]Not much left to do for you here[else]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
 
 to say which-roar:
-	now noise bag is in lalaland;
+	now noise bag is moot;
 	say "[if beats are visible]loud beats[else]beast's roaring[end if]"
 
 book start and notepad
@@ -3094,7 +3094,7 @@ to say opts-list:
 	verbsplain "spaces"
 
 to decide whether gadget-active:
-	if show hows tag is in lalaland, decide no;
+	if show hows tag is moot, decide no;
 	if notices section is unvisited, decide no;
 	if player does not have gadget, decide no;
 	decide yes;
@@ -3175,7 +3175,7 @@ table of preflip clues [this must have a regular item first due to a small bug i
 preflip	pretodo
 nametag	"nametag -> gateman" [intro]
 cabinet	"cabinet -> nice bat" [stores]
-silver	"[if livers are not in lalaland]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
+silver	"[if livers are not moot]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
 drapes	"spread -> [if red asp is in Enclosure]RED ASP -> [end if]drapes"
 sack	"cask -> sack" [sortie]
 r2	"room -> moor"
@@ -3301,7 +3301,7 @@ last-was-cert is a truth state that varies.
 scan-to-header is a truth state that varies.
 
 to say last-scan-thing:
-	if last-scan is nothing or last-scan is in lalaland, continue the action;
+	if last-scan is nothing or last-scan is moot, continue the action;
 	now scan-to-header is true;
 	say " || ";
 	say "[last-scan]:[if last-was-cert is true][rgtext of last-scan][else][rgbtext of last-scan][end if]";
@@ -3665,10 +3665,10 @@ after fliptoing gateman:
 	set the pronoun him to gateman;
 	if mega ant is in notices section:
 		say "The gateman looks over to the mega ant and does some weird hand-fu. The ant scampers off. 'There. Should be able to walk in now. I mean, after you ask me for all the help you want.'";
-		now mega ant is in lalaland;
+		now mega ant is moot;
 	if the player has the bugle:
-		say "The gateman [if ant is in lalaland]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
-		now bugle is in lalaland;
+		say "The gateman [if ant is moot]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
+		now bugle is moot;
 	continue the action;
 
 the odor is scenery. the odor is undesc. it is in Rested Desert. rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
@@ -3716,12 +3716,12 @@ instead of taking the blot: say "It's pretty much bled into the door."
 
 after fliptoing blot:
 	now blot is part of desert-door;
-	if bulge is in lalaland:
+	if bulge is moot:
 		min-up;
 	continue the action;
 
 after fliptoing bugle:
-	if bolt is in lalaland:
+	if bolt is moot:
 		min-up;
 	continue the action;
 
@@ -3758,7 +3758,7 @@ check entering desert-door:
 	if blot is off-stage, say "The door seems stuck by an invisible force[if bolt is visible]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
 	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of desert-door]Without the bolt, the door swings open easily. [end if]";
 	say "You can't see what's behind, but fortunately it's just a small tumble[if player has bugle], though the bugle gets caught on an outgrowth on the way down[end if]...[wfak]";
-	if player has bugle, now bugle is in lalaland;
+	if player has bugle, now bugle is moot;
 	if blot is off-stage and bugle is off-stage, poss-d;
 	now player is in Thickest Thickets instead;
 
@@ -3797,7 +3797,7 @@ check wearing the toga: say "If the barnyard smell weren't unpleasant enough, yo
 
 understand "thickets/thickest" and "thickest thickets" as darnels when player is in thickets.
 
-the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is in lalaland]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
+the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is moot]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
 
 the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 5. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]".
 
@@ -3963,7 +3963,7 @@ instead of closing the acne-bit cabinet: say "You don't need to hide anything in
 
 section prep paper
 
-a prep paper is a warpable thing. description of a prep paper is "USURPER PURSUER STENO-NOTES (TEN, SO). LASTING NAG-LIST OF CRAFTIEST TRIFECTAS.[paragraph break][unless forest is solved][forest-prep][else][second custom style]                        FOREST DONE[r][end if][line break][unless sortie is solved][sortie-prep][else][second custom style]                        SORTIE DONE[r][end if][line break][unless metros is solved][metros-prep][else][second custom style]                METROS DONE[r][end if][line break]                    [if burdell is in lalaland][second custom style]JUST, WELL, -BE- NOW![r][else]R. FIND RED BULL BURDELL'S WEAKNESS[end if]"
+a prep paper is a warpable thing. description of a prep paper is "USURPER PURSUER STENO-NOTES (TEN, SO). LASTING NAG-LIST OF CRAFTIEST TRIFECTAS.[paragraph break][unless forest is solved][forest-prep][else][second custom style]                        FOREST DONE[r][end if][line break][unless sortie is solved][sortie-prep][else][second custom style]                        SORTIE DONE[r][end if][line break][unless metros is solved][metros-prep][else][second custom style]                METROS DONE[r][end if][line break]                    [if burdell is moot][second custom style]JUST, WELL, -BE- NOW![r][else]R. FIND RED BULL BURDELL'S WEAKNESS[end if]"
 
 to say sortie-prep: say "I-A. [if taco is off-stage]Warm Food[else][second custom style]GOT TACO[r][end if] I-B. [if coat is off-stage]Warm Clothing[else][second custom style]GOT COAT[r][end if] I-C. [if missile is off-stage]Weapon of Kindness[else][second custom style]GOT MISSILE, NOW TO LAUNCH IT[r][end if]".
 
@@ -4058,7 +4058,7 @@ tag-warn is a truth state that varies.
 
 check xmxing:
 	if xray-vision is false:
-		if saltine is in lalaland:
+		if saltine is moot:
 			say "You lost your x-ray vision, so you can only just examine, instead.";
 		try examining the noun instead;
 	if noun is a direction, say "[if player is in sf or player is in rf]You can't see which way to go--maybe use your other senses[else]Just try going [noun] instead[end if]." instead;
@@ -4069,7 +4069,7 @@ carry out xmxing:
 			d "** DING DING ** RELOADING XRAY VISION!";
 		now xray-vision is true;
 	if xray-vision is false:
-		if saltine is in lalaland, say "You lost your x-ray vision." instead;
+		if saltine is moot, say "You lost your x-ray vision." instead;
 		try examining the noun instead;
 	if noun is r2:
 		if moor is visited:
@@ -4099,7 +4099,7 @@ carry out xmxing:
 			say "You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is visible]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
 		say "Well, you probably just need to get through with things. You take a bite of the saltine, then you think 'How do I get through that gate, man?' Hmm...GATEMAN. That'd fit." instead;
 	if noun is gateway:
-		if nametag is in lalaland, say "You don't need to unlock any further mysteries of the gateway." instead;
+		if nametag is moot, say "You don't need to unlock any further mysteries of the gateway." instead;
 		try xmxing nametag instead;
 	if noun is thruhinted:
 		say "You already hinted through for that. Are you sure you want to use the x-ray vision from your saltine?";
@@ -4158,7 +4158,7 @@ carry out xmxing:
 		say "The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.";
 		ditch-saltine instead;
 	if noun is warts, say "You can't see them, but you remember the palindrome 'No, too stupid a fad. I put soot on ...'" instead;
-	if noun is cask and sack is in lalaland, say "You already changed the cask to a sack[if straw is in lalaland], and you don't see any reason to do so again[else], and if you need to do so again, you won't forget[end if]." instead;
+	if noun is cask and sack is moot, say "You already changed the cask to a sack[if straw is moot], and you don't see any reason to do so again[else], and if you need to do so again, you won't forget[end if]." instead;
 	if noun is sack, say "After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though." instead;
 	if noun is pat, say "You try to, but it's awkward making eye contact. Maybe you could stare at the air, to flow with the poetry's anapest beat." instead;
 	if noun is poem:
@@ -4180,7 +4180,7 @@ carry out xmxing:
 		say "[v-b][if soil is in moor]you see a silo[else]you see soil, then a silo[end if].";
 		ditch-saltine instead;
 	if noun is begonias or noun is heaths: [start metros]
-		if gardenia is not in lalaland, say "The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise." instead;
+		if gardenia is not moot, say "The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise." instead;
 	if noun is motto:
 		say "You thought you saw a tomato whiz by 'a motto,' there.";
 		ditch-saltine instead;
@@ -4205,7 +4205,7 @@ carry out xmxing:
 		say "You see the trio stopping their protest to get to work as potters.";
 		ditch-saltine instead;
 	if noun is links:
-		say "[v-b]you see [unless china is in lalaland]some china and also [end if]kilns, to bake clay in, or something.";
+		say "[v-b]you see [unless china is moot]some china and also [end if]kilns, to bake clay in, or something.";
 		ditch-saltine instead;
 	if noun is red bull burdell or noun is toe:
 		say "You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells 'GET OUT.' Maybe you could pull it...no, not pull...well, there are only six possibilities...";
@@ -4243,7 +4243,7 @@ to say v-b: say "Your vision blurs a bit, and instead ".
 
 instead of eating the saltine:
 	if gateman is visible:
-		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
+		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is moot or attics are moot]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
 		the rule succeeds;
 	if faeries are visible:
@@ -4254,7 +4254,7 @@ instead of eating the saltine:
 		pad-rec "xx";
 	else:
 		say "Gulp. It tastes decent enough.";
-	now saltine is in lalaland;
+	now saltine is moot;
 	now xray-vision is true;
 	now undo-code is 2;
 	prevent undo instead;
@@ -4263,7 +4263,7 @@ section tinfoil info-lit
 
 the tinfoil info-lit is an amusing thing in cabinet. understand "tin/info/lit/paper" as tinfoil info-lit. the tinfoil info-lit is warpable.
 
-description of tinfoil info-lit is "[one of]It's tinfoil only in writing content--it's actually just paper. It's excessively all-caps and underlined, but I'll spare you that.[or]You read it again.[stopping]--If you can change stuff, why can't the people who made the gadget? How do they know you can? Or why couldn't they find someone off the street? Perhaps they're the real enemy and you're the pawn.[line break]--If they really wanted you to clean things up, why can't you take both the cabinet items?[line break]--That NEW DOOR is not really ONE WORD. Same as the guy who can lift it! They are two short words, easier than one big scary seven-letter word.[line break]--Anyone smart enough to untangle this world won't get any fulfillment from doing so. So there, stupider disputer![paragraph break]--Sane Sean, Farce Facer, Saltier Realist[paragraph break][if store f is in lalaland or store i is in lalaland or store m is in lalaland]This seems like total nonsense, now you've found other portals and such[else if player is in strip]This guy must be wrong. You've gotten to the Trips Strip, and you just need a way out[else]It'd all be distressingly persuasive gotcha-logic if you hadn't been able to flip that toga. But this is a fantasy world, [logic-cracks][end if]."
+description of tinfoil info-lit is "[one of]It's tinfoil only in writing content--it's actually just paper. It's excessively all-caps and underlined, but I'll spare you that.[or]You read it again.[stopping]--If you can change stuff, why can't the people who made the gadget? How do they know you can? Or why couldn't they find someone off the street? Perhaps they're the real enemy and you're the pawn.[line break]--If they really wanted you to clean things up, why can't you take both the cabinet items?[line break]--That NEW DOOR is not really ONE WORD. Same as the guy who can lift it! They are two short words, easier than one big scary seven-letter word.[line break]--Anyone smart enough to untangle this world won't get any fulfillment from doing so. So there, stupider disputer![paragraph break]--Sane Sean, Farce Facer, Saltier Realist[paragraph break][if store f is moot or store i is moot or store m is moot]This seems like total nonsense, now you've found other portals and such[else if player is in strip]This guy must be wrong. You've gotten to the Trips Strip, and you just need a way out[else]It'd all be distressingly persuasive gotcha-logic if you hadn't been able to flip that toga. But this is a fantasy world, [logic-cracks][end if]."
 
 to say logic-cracks: say "[if getaway is visible or gateman is visible]and you've already shown cracks in his logic[else]so there's a chance he's wrong[end if]"
 
@@ -4333,7 +4333,7 @@ to decide whether can-scan-air:
 	if player is in the nick, yes;
 	if player is in Astral Altars, yes;
 	if player is in roomroom, yes;
-	if player is in moor and anapest is in lalaland, yes;
+	if player is in moor and anapest is moot, yes;
 	if player is in Means Manse, yes;
 	no.
 
@@ -4610,18 +4610,18 @@ carry out recuseing:
 	if number of solved regions < 3, say "You can't recuse yet. You still need to work through one more store." instead;
 	if forest is unsolved:
 		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store F[else]the forest you didn't get through[end if]. As if in a blur, you see werewolves in ice being shot, and you hear distant applause.";
-		now store f is in lalaland;
-		now scented descent is in lalaland;
+		now store f is moot;
+		now scented descent is moot;
 		now forest is bypassed instead;
 	if sortie is unsolved:
 		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
-		now store i is in lalaland;
-		now posted depots are in lalaland;
+		now store i is moot;
+		now posted depots are moot;
 		now sortie is bypassed instead;
 	if metros is unsolved:
 		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
-		now store m is in lalaland;
-		now trade tread is in lalaland;
+		now store m is moot;
+		now trade tread is moot;
 		now metros is bypassed instead;
 	say "You don't seem to have any regions to recuse yourself from. From which to recuse yourself. And you don't get to skip [if store r is visible]store R[else]the resort[end if]." instead;
 	the rule succeeds;
@@ -4667,14 +4667,14 @@ carry out gleaning:
 		if Enclosure is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
 		if livers are off-stage, all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
 		if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
-		if drapes are not in lalaland, all-say "You see yourself slashing at the drapes, which billow out." instead;
+		if drapes are not moot, all-say "You see yourself slashing at the drapes, which billow out." instead;
 		if shotgun is off-stage, all-say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
 		if spread is visible, all-say "You see the spread fluttering as if outside an open window." instead;
 		if red asp is visible, all-say "You see the a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
 		if drapes are off-stage, all-say "You see yourself changing the [if red asp is in enclosure]red asp[else]spread[end if] [if player is not in enclosure]in the Enclosure [end if]into something easier to cut with the sliver." instead;
-		if silver is not in lalaland, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
+		if silver is not moot, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
 		if frost forts is unvisited:
-			if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is in lalaland]maps[else]Spam[end if] and then walking with a purpose." instead;
+			if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
 		if location of player is frost forts:
 			if vowels are in frost forts, all-say "You see the vowels grow slavering teeth." instead;
 			all-say "You are about to look in the phial, but it's survival time, here." instead;
@@ -4701,7 +4701,7 @@ carry out gleaning:
 		if Anti-Cool Location is unvisited:
 			d "dry cake: [location of dry cake].";
 			d "keycard: [location of keycard].";
-			all-say "You see yourself putting the [if brocade is in lalaland]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the sensor in the Underside. Nothing works until you put them together." instead;
+			all-say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the sensor in the Underside. Nothing works until you put them together." instead;
 		if player does not have tulip:
 			if player has noise bag or player has begonias, all-say "You see yourself grabbing the tulip as the nerds close their ears!" instead;
 			all-say "You see yourself opening the termite emitter so it swarms over the nerds[if emitter is not ungnatted]. You wonder who would be dirty enough to give you a quick refill[end if]." instead;
@@ -4721,7 +4721,7 @@ carry out gleaning:
 			all-say "You see yourself struggling with the tool shed, or with things around, to find a way to climb the slope." instead;
 		if player is in hotspot:
 			if red bull burdell is visible, all-say "You somehow manage to defeat Red Bull Burdell while still on the ground." instead;
-			if red bull burdell is in lalaland, all-say "You see yourself walking east." instead;
+			if red bull burdell is moot, all-say "You see yourself walking east." instead;
 			all-say "You see the [if riot is in hotspot]riot[else]trio[end if], happier now, discussing art and wearing dirty smocks." instead;
 		if player is in Means Manse, all-say "You see yourself just being. No, abiding. No, it's hard to describe what you're doing, since it's so passive." instead;
 	all-say "[bug-report] This part needs a story.";
@@ -4762,12 +4762,12 @@ after examining a sto when sto-all is false:
 
 definition: a sto (called stst) is lookdesc:
 	if stst is store b, decide no;
-	if stst is in lalaland, decide no;
+	if stst is moot, decide no;
 	if stst is flippable, decide yes;
 	decide no;
 
 to say exc-which:
-	if store f is in lalaland and store i is in lalaland and store m is in lalaland and store r is in lalaland, continue the action;
+	if store f is moot and store i is moot and store m is moot and store r is moot, continue the action;
 	let nvs be the number of lookdesc stos in trips strip;
 	if nvs is 1:
 		say ", except [random sto that is lookdesc]";
@@ -4903,7 +4903,7 @@ instead of unlocking:
 	else if noun is metallic door:
 		say "It has no visible keyholes. The only possible interface seems to be the sensor.";
 	else if noun is desert-door:
-		say "[if bugle-played is true]You already did when you played the bugle.[else if bolt is in lalaland]You already got rid of the bolt.[else]No keyholes. Maybe you can break it down some other way?[end if]";
+		say "[if bugle-played is true]You already did when you played the bugle.[else if bolt is moot]You already got rid of the bolt.[else]No keyholes. Maybe you can break it down some other way?[end if]";
 	else:
 		say "You don't need to.";
 
@@ -5554,7 +5554,7 @@ section canister / red ring
 
 the scantier canister is a fixed in place container in Flesh Shelf.
 
-description of canister is "It's small, nowhere near the size of a cistern. It's got a red ring you can put stuff in, and you can see a grinder of sabled blades inside. The grinder reads [i]team meat, tame [']em at...[r] and appears to have no switch or anything. MASH SHAM HAMS is written on it[if number of glopmeats in lalaland is 1]. It's about half full[end if]."
+description of canister is "It's small, nowhere near the size of a cistern. It's got a red ring you can put stuff in, and you can see a grinder of sabled blades inside. The grinder reads [i]team meat, tame [']em at...[r] and appears to have no switch or anything. MASH SHAM HAMS is written on it[if number of glopmeats moot is 1]. It's about half full[end if]."
 
 to say can-desc:
 	if livers are not off-stage:
@@ -5617,13 +5617,13 @@ check inserting into the scantier canister:
 		if player does not have chisel and player does not have noun, say "There's no way to peel the meat off, yet." instead;
 		if player has chisel and player does not have glopmeat:
 			say "(peeling the [noun] off the wall first)[line break]";
-		if number of glopmeats in lalaland is 1:
+		if number of glopmeats moot is 1:
 			say "Bam! The canister chokes, sputters, and then wheezes--you see a mist arise from it and vanish. It wheezes, chokes, and coughs out--well, liver-slop spillover, but we'll call the homogenized mess LIVERS.";
 			set the pronoun it to livers;
 			set the pronoun them to livers;
 			reg-inc;
-			now River Ville liver is in lalaland;
-			now viler liver is in lalaland;
+			now River Ville liver is moot;
+			now viler liver is moot;
 			now canister is broken;
 			now canister is realized;
 			now player has the livers;
@@ -5636,7 +5636,7 @@ check inserting into the scantier canister:
 						now cur-liv is viler liver;
 					else:
 						now cur-liv is River Ville liver;
-			now noun is in lalaland instead;
+			now noun is moot instead;
 	if noun is bread, say "You don't need to futz with the bread that way." instead;
 	if noun is the player, say "So, this game hasn't put you through the grinder enough? A Roiling Original, the sequel, will be even bigger-time." instead;
 	say "The canister's for processing food, and that doesn't count." instead;
@@ -5654,7 +5654,7 @@ instead of pulling sandwich: try opening sandwich.
 instead of opening sandwich:
 	say "You [if player does not have the sandwich]take the sandwich and [end if]peel the bread from the Spam.";
 	now player has bread;
-	now sandwich is in lalaland;
+	now sandwich is moot;
 	set the pronoun it to the Spam;
 	now player has the Spam;
 
@@ -5699,7 +5699,7 @@ check taking Spam:
 		now player has bread;
 	now player has Spam;
 	say "It's sort of gross, but hey, it's not moldy.";
-	now sandwich is in lalaland instead;
+	now sandwich is moot instead;
 
 [check taking Spam:
 	now bread is not part of sandwich;
@@ -5911,7 +5911,7 @@ the has-been is useless scenery. the has-been is undesc. understand "has been" a
 
 after fliptoing has-been:
 	min-up;
-	now has-been is in lalaland;
+	now has-been is moot;
 	continue the action;
 
 instead of doing something with has-been:
@@ -6143,7 +6143,7 @@ check dialsetting it to:
 		now numset of dial is 16;
 		say "The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it![paragraph break][if dial is unexamined]You glance at the dial, see EXITS N E and wonder if it was always there[else]The flipping bits in the dial lock in to say EXITS N E[end if]. And you see, yes, exits are north and east now. My hat, that was mathy.[paragraph break]You find yourself in a round den, unadorned.";
 		reg-inc;
-		now dial is in lalaland;
+		now dial is moot;
 		now lid is in Trap Part;
 		now centrifuge-stopped is true;
 		the rule succeeds;
@@ -6418,7 +6418,7 @@ to tort-add (x - a thing):
 instead of eating taco: say "It looks so good, you'd wind up eating it all quickly. That might give you a gas saga, or a hardier... anyway, this game has no fully implemented bathrooms. Or any at all."
 
 to say now-taco:
-	now tortilla is in lalaland;
+	now tortilla is moot;
 	now taco is in Kitchen;
 	reg-inc;
 
@@ -6648,7 +6648,7 @@ after fliptoing when player is in kitchen (this is the clue taco rule) :
 		if fridge-open is false:
 			say "You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
 			now fridge-open is true;
-		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is in lalaland or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
+		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
 	continue the action;
 
 chapter ROOM
@@ -6923,7 +6923,7 @@ after printing the locale description for moor when moor is unvisited:
 
 check fliptoing teleporter (this is the block moor if not dressed right rule):
 	if player is in roomroom:
-		if shoes are not in lalaland:
+		if shoes are not moot:
 			say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
 			preef r2 instead;
 		if player carries coat and player is not wearing coat:
@@ -6955,7 +6955,7 @@ to say moor-jump:
 
 chapter Stiller Trellis / Crashing Archings
 
-Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is in lalaland]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is in lalaland or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie.
+Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is moot]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is moot or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie.
 
 understand "haywall" and "hay wall" as scraped wall when scraped wall is hayfilled.
 
@@ -7230,8 +7230,8 @@ before giving straw to peasant (this is the straw-peasant rule):
 	say "'Oh, thank you! Mean Old Mondale-Doleman stuck me with this hay when I needed much stronger material to re-patch my house. He pretended not to know the difference. But he did once!'[paragraph break]'Here's a little something I wrote. [i]He[r] said even an economist wouldn't put emoticons in a poem.'[paragraph break]He hands you a paper and heads off. You're sick of poetry, but with the hay weighing you down, you'll never catch the peasant.";
 	now player has the poem;
 	reg-inc;
-	now peasant is in lalaland;
-	now straw is in lalaland;
+	now peasant is moot;
+	now straw is moot;
 	now hay is in sack instead;
 
 a poem is a thing. lgth of poem is 5. gpos of poem is 1. rpos of poem is 2. rgtext of poem is "[gcn][rc][rc][rc][rc]". cert-text of poem is "P[d1][d1][d1][d1]". rect-text of poem is "P[d1][d1][d1][ast]L".
@@ -7298,7 +7298,7 @@ check pushing shoot button:
 to say guards-say-hi:
 	if grist is in obligatory and cake pan is in obligatory:
 		say ". They smile and apologize awkwardly, and you say no problem.";
-	else if grist is in lalaland and cake pan is in lalaland:
+	else if grist is moot and cake pan is moot:
 		say ". They thank you for leaving them so much food even after they--well. They were too lazy when they woke up";
 	else:
 		say ". They thank you for leaving enough food to tide them over but not too much. They needed room for the feast";
@@ -7372,11 +7372,11 @@ check putting it on (this is the silo-put rule):
 		if noun is black door:
 			ignore the can't put what's not held rule;
 			say "The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.";
-			now dashed boundary is in lalaland;
+			now dashed boundary is moot;
 			now black door is part of the silo instead;
 		if noun is panel:
 			now panel is part of the silo;
-			now dotted rectangle is in lalaland;
+			now dotted rectangle is moot;
 			say "The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. 'Panel fits. Final step,' you muse.";
 			now the hoots button is part of the panel;
 			now the trees button is part of the panel instead;
@@ -7388,7 +7388,7 @@ check putting it on (this is the silo-put rule):
 	if noun is the missile, say "You roll the missile around, but you can't find anywhere to put it." instead;
 
 before doing something with the missile when the missile is visible:
-	if missile is in lalaland, say "It's where it needs to be. No need to worry about it." instead;
+	if missile is moot, say "It's where it needs to be. No need to worry about it." instead;
 
 check inserting missile into silo:
 	if black door is part of silo:
@@ -7460,7 +7460,7 @@ to block-cedars:
 		say "You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. 'WIN,' she whines.";
 		now printed name of Trellis is "Crashing Archings";
 		now crashing archings are in Trellis;
-		now trel-priv is in lalaland;
+		now trel-priv is moot;
 
 lois is scenery in sacred cedars. "Lois is beyond trivial standard I7 descriptions, so if you see this, it is a [bug-report] Report to the author with a transcript."
 
@@ -7549,9 +7549,9 @@ instead of taking drainage: say "It smells too powerful to even consider taking 
 
 check fliptoing gardenia:
 	if drainage is visible:
-		now arena dig flier is in lalaland;
-		now can of beer is in lalaland;
-		now soggy love letter is in lalaland;
+		now arena dig flier is moot;
+		now can of beer is moot;
+		now soggy love letter is moot;
 
 description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again. A beer can and a [if flier is visible]flier[else]soggy note[end if] float in it.". rgtext of drainage is "[rcn][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 6. cert-text of drainage is "-[d1][d1][d1][d1][d1][d1][d1]". rect-text of drainage is "G[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -7799,7 +7799,7 @@ the discolored buttons are part of the corn. description of discolored buttons i
 instead of taking mattress: try pushing mattress instead.
 
 before doing something with the mattress:
-	if emitter is off-stage and night thing is in lalaland:
+	if emitter is off-stage and night thing is moot:
 		if current action is taking or current action is pushing or current action is pulling:
 			say "As you move the mattress, but it seems that the bump moves with it. So you decide to search the mattress instead.";
 			try examining mattress instead;
@@ -7928,7 +7928,7 @@ check opening noise bag:
 	if words are in bag:
 		if location of player is Anti-Cool Location:
 			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later.";
-			now keycard is in lalaland;
+			now keycard is moot;
 			now player has the lit-up tulip;
 			reg-inc;
 			choose row 2 in the table of tulip-acq;
@@ -8116,7 +8116,7 @@ check putting keycard on barcode: try putting barcode on keycard instead.
 
 check putting barcode on keycard:
 	say "You peel the barcode, slap it on the keycard, and it is a perfect fit! Also, you stuff the adhesive backing in your pocket, where you forget about it until you can find a proper garbage can. You haven't seen any in this city yet[if player is in Bile Libe], and you don't want to add to the garbage piles here[end if].";
-	now adhesive backing is in lalaland;
+	now adhesive backing is moot;
 	now barcode is part of the keycard instead;
 
 check tying barcode to: try putting barcode on second noun instead.
@@ -8147,7 +8147,7 @@ check going to Fo Real Florae for the first time: say "'Main goal, magnolia... w
 after choosing notable locale objects when player is in Fo Real Florae: set the locale priority of the faeries to 2.
 
 rule for printing a locale paragraph about faeries:
-	say "Faeries buzz around here, [if fairy-worthy is false]guarding some heaths and begonias[else if heaths are in lalaland]guarding the begonias you declined[else if begonias are in lalaland]guarding the heaths you declined[else]waiting for you to choose between the heaths and begonias[end if].";
+	say "Faeries buzz around here, [if fairy-worthy is false]guarding some heaths and begonias[else if heaths are moot]guarding the begonias you declined[else if begonias are moot]guarding the heaths you declined[else]waiting for you to choose between the heaths and begonias[end if].";
 	now faeries are mentioned;
 	now heaths are mentioned;
 	now begonias are mentioned;
@@ -8191,7 +8191,7 @@ instead of doing something with the wands:
 
 to say he-be:
 	if heaths are in Fo Real Florae or begonias are in Fo Real Florae:
-		if heaths are in lalaland or begonias are in lalaland:
+		if heaths are moot or begonias are moot:
 			say "You have performed your magic admirably on our gift. Go and slay the beast![no line break]";
 		else:
 			say "'Your magic will work on what you have. But you must use your ingenuity.'[no line break]";
@@ -8255,7 +8255,7 @@ instead of showing to faeries: try giving noun to faeries.
 
 check giving gardenia to faeries:
 	say "They're visibly impressed. 'Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one[if brocade is in Fo Real Florae]. And take the brocade, too[end if]. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need.'";
-	now the gardenia is in lalaland;
+	now the gardenia is moot;
 	now fairy-worthy is true instead;
 
 to say take-flower: say "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel".
@@ -8273,7 +8273,7 @@ check taking:
 		say "You peel the meat from the bread and take both.";
 		now player has bread;
 		now player has Spam;
-		now sandwich is in lalaland;
+		now sandwich is moot;
 	if noun is in fridge, say "If it's in the fridge, it's probably someone's property. Even if it's someone you don't know or like[if noun is grits or noun is pancake], and even though you made it edible[end if]." instead;
 	if location of player is Fo Real Florae:
 		if noun is brocade:
@@ -8282,7 +8282,7 @@ check taking:
 			else:
 				say "'It is the least we can do for you! Thank you for helping us!'";
 			say "[line break]The FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if] torn cue by the brocade vanishes as you take it. Nice magic touch, that.";
-			now torn cue is in lalaland;
+			now torn cue is moot;
 			now player has brocade instead;
 		if noun is begonias:
 			if player has heaths or player has sheath, say "[greedy-greedy]" instead;
@@ -8452,7 +8452,7 @@ check switching on the termite emitter:
 		say "The angst gnats rise, fitful, like fruit-flies or as furies flit. The nerds go from woots to ows, but it isn't [']til they start complaining to each other or worrying about the poor repressed deadbeats they didn't do enough for that you snatch the lit-up tulip as they scalp-clasp and flail about.[paragraph break]Angered, enraged nerdage! En garde! (Gee, darn, no grenade.) 'Why didn't you ASK about the DARKNESS?' one moans as he swipes for the tulip--but only knocks the keycard out of your hand.[paragraph break]They continue moaning, but now it is about economic equality. You hear one point out that all this sensitivity to social stuff will make them more sensitive for the ladies. Then another one argues that it's a Heisenberg Uncertainty Principle sort of thing that if people know you might be angling for that emo stuff, it won't work.[paragraph break]You're almost sucked in, until you realize you have a city to save, and you chuck your keycard at them in frustration over how dumb smart people can be before running out.";
 		now nerds-unwelcome is true;
 		now player has the lit-up tulip;
-		now keycard is in lalaland;
+		now keycard is moot;
 		choose row 3 in the table of tulip-acq;
 		now chosen entry is true;
 		reg-inc;
@@ -8468,7 +8468,7 @@ check switching on the termite emitter:
 	if location of player is Obtains Boastin Bastion:
 		if bastion-evac is true, say "It's already crawling with termites." instead;
 		now bastion-evac is true;
-		now talkers are in lalaland;
+		now talkers are moot;
 		reg-inc;
 		say "You activate. They vacate it. 'Raiders, dear sir!' It's like a petard--those who prated, depart and ratchet down the chatter. The emitter shuts with a click after the last termite escapes." instead;
 	if location is Elm Train Terminal, say "The city's public transport has taken enough of a beating. It doesn't need that." instead;
@@ -8495,14 +8495,14 @@ description of smartest mattress is "The Smartest Mattress doesn't have a one-pa
 to say get-the-bump:
 	say ". The bump in the mattress is obvious enough that you have to take another look. You find a small machine labeled, apparently, a termite emitter, and you take it";
 	set the pronoun it to termite emitter;
-	now bump is in lalaland;
+	now bump is moot;
 	now player has the emitter;
 
 the bump is part of the mattress. description of the bump is "Why not examine the whole mattress instead?"
 
 instead of doing something with bump:
 	say "On getting close to the bump you realize it's due something wedged inside the mattress. You search around, find a small machine that is apparently a termite emitter, and take it.";
-	now bump is in lalaland;
+	now bump is moot;
 	now player has the emitter;
 
 instead of examining the bump: try examining the mattress.
@@ -8558,7 +8558,7 @@ check pulling metallic door: say "It's an automatic door." instead.
 
 this is the bother-nerds rule:
 	if nerds-unwelcome is true:
-		say "You aren't welcome back east[if keycard is in lalaland], and besides, no keycard[end if].";
+		say "You aren't welcome back east[if keycard is moot], and besides, no keycard[end if].";
 		the rule fails;
 	if player has lit-up tulip:
 		say "You don't want to put up with the nerds now you've gotten their tulip. They may not want to put up with you, either. Probably mention how they're sure they could figure what you need to do, etc.";
@@ -8736,7 +8736,7 @@ check going down in Elm Train Terminal: try going east instead.
 
 check going east in Elm Train Terminal:
 	now down-tried is true;
-	if power-shut is false, say "There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are in lalaland]. Even those rubber shoes won't insulate you[end if]." instead;
+	if power-shut is false, say "There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are moot]. Even those rubber shoes won't insulate you[end if]." instead;
 	if player does not have tulip, say "You go east but reach a thin ledge. It needs to be lightened before you go further. You have no item to help with that." instead;
 	if player does not have sheath and player does not have noise bag, say "You hear an even worse roaring than usual. Nothing you're carrying seems up to defeating it. You double back." instead;
 	if player has noise bag and noise bag does not contain words, say "You hear an even worse noise as you walk across the tracks. You run back across where you can reflect how it would be nice if you had something in that noise bag to combat...whatever it is there." instead;
@@ -8945,7 +8945,7 @@ does the player mean doing something with the leis: it is likely.
 
 the leis are scenery in isle. "Looking at them, you half forget you came through Store R to beat Red Bull Burdell."
 
-to say lei-lala: now leis are in lalaland.
+to say lei-lala: now leis are moot.
 
 check taking the leis: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead.
 
@@ -9012,7 +9012,7 @@ check going in Isle (this is the Isle escape rule):
 	if player has wings and noun is up, try going east instead;
 	if player does not have cork and player does not have wings, say "It's too far to swim, and you've got no way to go over the lake or whatever it is." instead;
 	if noun is not east, say "Maybe something's that way, but you see land far off to the east." instead;
-	if rock is not in lalaland or swing is not in lalaland:
+	if rock is not moot or swing is not moot:
 		poss-d;
 	say "Yes. It's time to move on from the [isle]. You need to find Red Bull Burdell.[paragraph break]";
 	if player has wings and wings are not worn:
@@ -9022,8 +9022,8 @@ check going in Isle (this is the Isle escape rule):
 		say "The wings last just long enough for you to get to the landmass you see before shredding into the wind[if player has cork]. You also, unsurprisingly, drop the cork as you operate your wings[end if]. But it probably doesn't matter now--you're across to some sort of mainland.";
 	else:
 		say "With the cork under your chest, you dog-paddle to the land you saw from the [isle]. It's soggy and gross from your swim, and the seaweed or whatever has already started to eat at it. You scrabble past a few silent inlets...";
-	now cork is in lalaland;
-	now wings are in lalaland;
+	now cork is moot;
+	now wings are moot;
 	now player is in Rived Drive instead;
 
 section flying
@@ -9145,13 +9145,13 @@ check going east in Rived Drive:
 	if poles are visible, say "The poles are too vertical to climb[if toeholds are visible]. Even with the toeholds[else if ropes are visible and grips are visible]. Even with your tools[else if ropes are visible or grips are visible], and your one climbing tool wouldn't be quite enough anyway[end if]." instead;
 	if toeholds are visible:
 		say "You make it up the [p-s] with some effort and surprisingly little risk. The toeholds are more like footholds, really[if player has grips or player has ropes]. You didn't even need any climbing gadgets--and in fact you drop them in surprise when you see what awaits[end if].";
-		now grips are in lalaland;
-		now ropes are in lalaland;
+		now grips are moot;
+		now ropes are moot;
 		now player is in Potshot Hotspot instead;
 	if player has ropes and player has grips:
 		say "Tying the rope around your waist, throwing it [']til it catches on a rock above, and using the grips, you make it up the slope. What you see makes you drop them in surprise!";
-		now grips are in lalaland;
-		now ropes are in lalaland;
+		now grips are moot;
+		now ropes are moot;
 		now player is in potshot hotspot instead;
 	else if player has ropes:
 		say "You aren't skilled enough to make it up there with the ropes. You might need one more gadget that lets you hold your place on the slope." instead;
@@ -9226,7 +9226,7 @@ before going in potshot hotspot:
 	if red bull burdell is visible:
 		if noun is east, say "Not with Red Bull Burdell around, you aren't. That 'get out' is just villain talk." instead;
 		say "I don't think Red Bull Burdell wants you to take him literally. Villains just talk like that, you know?" instead;
-	if red bull burdell is in lalaland:
+	if red bull burdell is moot:
 		if noun is not east, say "You really can only go east to your Means Manse." instead;
 
 check going west in Potshot Hotspot: say "No going back now." instead.
@@ -9241,7 +9241,7 @@ check going nowhere in potshot hotspot: say "The only way you want to try to go 
 
 section roman manors
 
-ransom manors are bounding scenery in Potshot Hotspot. "They're off to the east. Your Means Manse must be there somewhere. You'll probably find it with a bit of exploration[if red bull burdell is not in lalaland]. But first, you need to deal with the distraction at hand[end if]."
+ransom manors are bounding scenery in Potshot Hotspot. "They're off to the east. Your Means Manse must be there somewhere. You'll probably find it with a bit of exploration[if red bull burdell is not moot]. But first, you need to deal with the distraction at hand[end if]."
 
 instead of entering ransom manors: try going east instead.
 
@@ -9310,13 +9310,13 @@ to hello-bull:
 	now Red Bull Burdell is in Potshot Hotspot;
 	set the pronoun him to Red Bull Burdell;
 	set the pronoun it to cruelty cutlery;
-	now potters are in lalaland;
-	now kilns are in lalaland;
+	now potters are moot;
+	now kilns are moot;
 	now cutlery is in hotspot;
 
 after fliptoing china:
 	now links are in hotspot;
-	now china is in lalaland;
+	now china is moot;
 	continue the action;
 
 some china is a useless thing. description is "The china is nice and artsy and fragile but probably not useful to you."
@@ -9409,7 +9409,7 @@ carry out tuging:
 				now player has gadget;
 			else:
 				say "[line break]There can't be much more to do but go east and just sit around.";
-			now red bull burdell is in lalaland instead;
+			now red bull burdell is moot instead;
 		else:
 			say "You need six letters. You're close." instead;
 	try pulling the noun instead;
@@ -9484,13 +9484,13 @@ LLL is an unsolvable region. Lalaland is in LLL. [LLL is only a region for backd
 
 chapter lalaland
 
-[this region/room is for items that have been consumed, but we don't want to recycle them. It's easier to check if they're off-stage or in Lalaland than to define a boolean. Well, for me, anyway.]
+[this region/room is for items that have been consumed, but we don't want to recycle them. It's easier to check if they're off-stage or moot than to define a boolean. Well, for me, anyway.]
 
 Lalaland is a privately-named room. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
 
 understand "ll/lalaland" as lalaland when debug-state is true.
 
-instead of doing something in lalaland: say "You probably need to undo things." instead.
+instead of doing something moot: say "You probably need to undo things." instead.
 
 chapter bullpen
 
@@ -9572,7 +9572,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 					say "[dubdip entry][line break]";
 				else:
 					if the-to entry is sliver:
-						say "The sliver seems to bend, but it snaps back[if drapes are not in lalaland]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
+						say "The sliver seems to bend, but it snaps back[if drapes are not moot]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
 					else if the-to entry is soil and silo is not visible:
 						say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
 					else if the-to entry is potters:
@@ -10284,7 +10284,7 @@ deadbeat	beats	"'They're nice and all for being an excuse not to work but they'r
 deadbeat	nerds	"The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots."
 deadbeat	faeries	"The deadbeat doesn't believe in magic, now. But he did as a kid."
 deadbeat	red bull burdell	"'He is oppressive, man, but he is just a symptom of disparity and malaise.'"
-deadbeat	talkers	"[if talkers are in lalaland]'You showed them, dude!'[else]The deadbeat starts up some nonsense pseudo-sociological mumblings.[end if]"
+deadbeat	talkers	"[if talkers are moot]'You showed them, dude!'[else]The deadbeat starts up some nonsense pseudo-sociological mumblings.[end if]"
 deadbeat	lost corn	"[if bastion-evac is false]'Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?'[else if lost corn is visible]'Oh, yeah, it's yours, man, I guess. It's real corn, not that genetically modified stuff from,' he sees red for a sentence, '[first custom style]SLORNTCO[r] or that nasty dried stuff from [first custom style]ST ROLCNO[r].'[else]'Whoah. You must've like did something with that corn. Biosustainibility, man.'"
 deadbeat	termite emitter	"[if player does not have emitter]'What? Do you know something?' he looks furtively around, more convinced than ever you're with The Man, man.[else if bastion-evac is false]'Whoah. No fingerprints, no proof it's mine.' He clearly doesn't trust you, yet.[else][try-flies][no line break][end if]"
 faeries	drainage	"'Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?'"
@@ -10295,7 +10295,7 @@ faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help
 faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The faires wonder aloud what sort of magic could conjure a noise bag.[end if]"
 faeries	merchandise	"[faery-flower]"
 faeries	beats	"'It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around.'"
-faeries	brocade	"[if player has brocade]'Do with it what you need.'[else if brocade is in lalaland]'You have disposed of it! We hope it was useful.'[else]'It is free. But useless to us.'[end if]"
+faeries	brocade	"[if player has brocade]'Do with it what you need.'[else if brocade is moot]'You have disposed of it! We hope it was useful.'[else]'It is free. But useless to us.'[end if]"
 faeries	clover	"'That is just a weed! We have no use for it. But maybe it is useful to you.'"
 faeries	tomato	"'A putrid vegetable! [if player has tomato]We should kick you out right now[else]It must taste terrible[end if]!'"
 faeries	tulip	"'Some flower that is!'"
@@ -10421,7 +10421,7 @@ peasant	"hay"	"'I can't use it. But I could use some straw.'"
 woeful pat	"beat/rhythm/meter"	"[anapest-clue][run paragraph on]"
 woeful pat	"st paean" or "paean"	"'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go, just to make sure[give-flier][end if].'"
 deadbeat	"slorntco"	"'Organized capital is so repressive, dude.'"
-faeries	"gardenia"	"[if player has gardenia]'Yes! We like that! Give it!'[else if gardenia is in lalaland]'Yes! Thank you!'[else]'We need something for our garden-and-a-third!'[end if]"
+faeries	"gardenia"	"[if player has gardenia]'Yes! We like that! Give it!'[else if gardenia is moot]'Yes! Thank you!'[else]'We need something for our garden-and-a-third!'[end if]"
 faeries	"heaths/begonias/heath/begonia"	"[he-be]"
 nerds	"darkness"	"[nerd-dark]"
 nerds	"dorks"	"They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help."
@@ -10735,7 +10735,7 @@ carry out roomgoing:
 	if mrlp is resort:
 		if red bull burdell is in hotspot, say "He's saying GET OUT just to be obnoxious and intimidating." instead;
 		if player is in Means Manse, say "But you want to NOT go anywhere. NOT take any exits." instead;
-		if red bull burdell is in lalaland, say "But you beat Red Bull Burdell! Just go east!" instead;
+		if red bull burdell is moot, say "But you beat Red Bull Burdell! Just go east!" instead;
 		say "Gotta keep going forward." instead;
 	say "Zooomp...[line break]";
 	move player to myrm;
@@ -10784,7 +10784,7 @@ check inserting it into (this is the forest-insert rule):
 			say "The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.";
 			now shotgun is loaded;
 			set pronoun it to shotgun;
-			now silver is in lalaland instead;
+			now silver is moot instead;
 	if second noun is shotgun:
 		if shotgun is loaded, say "Already loaded." instead;
 		say "You'll need to put a bullet in the shotgun. That's not a bullet." instead;
@@ -10814,7 +10814,7 @@ before cutting:
 	if noun is spread, say "As you get close to the spread, it turns bright red and bursts into something else--a red asp! You jump away[red-to]." instead;
 	if noun is drapes:
 		say "The drapes vanish as they are cut, revealing a doorway.";
-		now drapes are in lalaland;
+		now drapes are moot;
 		now doorway is in Enclosure instead;
 	if noun is wolves, say "You're way outnumbered. And you have a better weapon." instead;
 	if noun is show hows tag or noun is knot:
@@ -10829,7 +10829,7 @@ to ask-to-cut:
 		now printed name of tagged gadget is "a gadget";
 		now tagged gadget is broken;
 		say "With a sad BOOOOP, the gadget shuts down. The tag flutters off. Hooray for adding to the challenge!";
-		now show hows tag is in lalaland;
+		now show hows tag is moot;
 		now undo-code is 3;
 	else:
 		say "Good choice.";
@@ -11284,9 +11284,9 @@ to solve-region (sre - a region):
 	consider the notify score changes rule;
 	say "[line break][sre] node: done! A bump-up, bam![wfak]";
 	now sre is solved;
-	if sre is forest, now scented descent is in lalaland;
-	if sre is sortie, now posted depots are in lalaland;
-	if sre is metros, now trade tread is in lalaland;
+	if sre is forest, now scented descent is moot;
+	if sre is sortie, now posted depots are moot;
+	if sre is metros, now trade tread is moot;
 	item-warp;
 	move player to trips strip;
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
@@ -11296,7 +11296,7 @@ to say espec-xtra:
 	if number of things in cabinet > 0:
 		say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tinfoil is in cabinet]. Well, except the tinfoil info-lit[end if]";
 	if info-lit is in cabinet:
-		now info-lit is in lalaland;
+		now info-lit is moot;
 	now player has all things in cabinet;
 
 to item-warp:
@@ -11307,11 +11307,11 @@ to item-warp:
 			if mrlp is intro:
 				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
 			else:
-				say "Out of nowhere swoops the [if cabinet is in lalaland]nice bat[else]cabinet[end if]. [run paragraph on][if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is in lalaland]You're still a little spooked, but grateful, as it swoops away[else]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, and you wonder if maybe you can do something for it[end if][espec-xtra].";
+				say "Out of nowhere swoops the [if cabinet is moot]nice bat[else]cabinet[end if]. [run paragraph on][if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is moot]You're still a little spooked, but grateful, as it swoops away[else]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, and you wonder if maybe you can do something for it[end if][espec-xtra].";
 				if cabinet is in notices section:
 					now cabinet is in trips strip;
-		now all carried not warpable things are in lalaland;
-		now all worn not warpable things are in lalaland;
+		now all carried not warpable things are moot;
+		now all worn not warpable things are moot;
 
 to reset-regions:
 	repeat through table of lastlocs:
@@ -11546,7 +11546,7 @@ carry out playing:
 	if player is in notices section, say "[if mega ant is in notices section]The mega ant is not moved[else]Nothing seems to happen to the gateway[end if][if bugle-played is true]. Maybe you need to do something different than play the bugle here[end if]." instead;
 	if player is not in Rested Desert, say "You should not have the bugle at this point, so this is a [bug-report]" instead;
 	if bugle-played is false:
-		say "The note from the bugle causes the door to swing back and forth, [if bolt is in lalaland]just as when you got rid of the bolt[else]even with the bolt in place. You can probably enter now[end if].";
+		say "The note from the bugle causes the door to swing back and forth, [if bolt is moot]just as when you got rid of the bolt[else]even with the bolt in place. You can probably enter now[end if].";
 		now bugle-played is true;
 	else:
 		say "Nothing further happens." instead;
@@ -11637,7 +11637,7 @@ carry out folding:
 	if noun is tinfoil:
 		if player is in strip:
 			say "You find a random trash can behind a random store and drop the info-lit in.";
-			now tinfoil is in lalaland instead;
+			now tinfoil is moot instead;
 		say "It probably deserves to be crumpled." instead;
 	if noun is shades, say "You try to execute a def move with the shades but fail." instead;
 	if noun is not poem, say "That might be fun, but it won't do much." instead;
@@ -11648,7 +11648,7 @@ carry out folding:
 	now noun is folded;
 	say "You fold the paper, and it looks sort of like a paper plane.";
 	now printed name of poem is "folded paper plane";
-	now creases are in lalaland;
+	now creases are moot;
 	the rule succeeds;
 
 understand "folded paper plane" as poem when poem is folded.
@@ -12017,7 +12017,7 @@ rule for listlisting:
 
 book tables
 
-check fliptoing china when china is in lalaland: say "You already shook that out of the links. You need to concentrate on the links, now." instead.
+check fliptoing china when china is moot: say "You already shook that out of the links. You need to concentrate on the links, now." instead.
 
 book undo tags
 
@@ -12370,7 +12370,7 @@ carry out tsing:
 		move player to Rested Desert, without printing a room description;
 	if notices section is unvisited:
 		move player to notices section, without printing a room description;
-	now nametag is in lalaland;
+	now nametag is moot;
 	solve-region intro;
 	now notices section is visited;
 	now player has the gadget;
@@ -12379,9 +12379,9 @@ carry out tsing:
 	now player has the phial;
 	now intro is solved;
 	if a random chance of 1 in 2 succeeds: [this is a silly randomization for what you could've solved at Rested Desert]
-		move bugle to lalaland;
+		moot bugle;
 	else:
-		move bolt to lalaland;
+		moot bolt;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
 	the rule succeeds;
 
@@ -12402,9 +12402,9 @@ carry out tsfing:
 	now sortie is solved;
 	now forest is solved;
 	now metros is solved;
-	now store f is in lalaland;
-	now store i is in lalaland;
-	now store m is in lalaland;
+	now store f is moot;
+	now store i is moot;
+	now store m is moot;
 	now player has the gadget;
 	now player has the prep paper;
 	the rule succeeds;
@@ -12530,9 +12530,9 @@ carry out sking:
 		now forest is solved;
 		now sortie is solved;
 		now metros is solved;
-		now store f is in lalaland;
-		now store i is in lalaland;
-		now store m is in lalaland;
+		now store f is moot;
+		now store i is moot;
+		now store m is moot;
 		the rule succeeds;
 	if sk > 3, say "Only 3 sections to change: forest, sortie, metros." instead;
 	if sk is 1:
@@ -12548,26 +12548,26 @@ carry out sking:
 		if my-reg is forest:
 			now store f is in trips strip;
 			if scented descent is in trips strip:
-				now scented descent is in lalaland;
+				now scented descent is moot;
 		if my-reg is sortie:
 			now store i is in trips strip;
 			if posted depots are in trips strip:
-				now posted depots are in lalaland;
+				now posted depots are moot;
 		if my-reg is metros:
 			now store m is in trips strip;
 			if trade tread is in trips strip:
-				now trade tread is in lalaland;
+				now trade tread is moot;
 	else:
 		now my-reg is solved;
 		if my-reg is forest:
-			now store f is in lalaland;
-			now scented descent is in lalaland;
+			now store f is moot;
+			now scented descent is moot;
 		if my-reg is sortie:
-			now store i is in lalaland;
-			now posted depots are in lalaland;
+			now store i is moot;
+			now posted depots are moot;
 		if my-reg is metros:
-			now store m is in lalaland;
-			now trade tread is in lalaland;
+			now store m is moot;
+			now trade tread is moot;
 	say "Now [my-reg] is [if A is true]not [end if]solved.";
 	the rule succeeds;
 
@@ -13105,7 +13105,7 @@ understand "boot [any thing]" as booting.
 
 carry out booting:
 	say "[noun] moved to lalaland.";
-	now noun is in lalaland;
+	now noun is moot;
 	the rule succeeds;
 
 chapter met
@@ -13165,7 +13165,7 @@ carry out scanalling:
 	let Z be indexed text;
 	now player has tagged gadget;
 	repeat with Q running through not inflexible things:
-		if Q is not off-stage and Q is not in lalaland and Q is not a backdrop:
+		if Q is not off-stage and Q is not moot and Q is not a backdrop:
 			let Y be the map region of the location of Q;
 			if Y is sortie or Y is forest or Y is resort or Y is intro or Y is stores or Y is metros:
 				say "[Q]: [rgtext of Q].";
@@ -13292,7 +13292,7 @@ carry out specsing:
 			unless the-from entry is spayshul:
 				increment qq;
 				if the-from entry is not a backdrop:
-					if the-from entry is not off-stage and the-from entry is not in lalaland:
+					if the-from entry is not off-stage and the-from entry is not moot:
 						now reg is map region of location of the-from entry;
 				say "[qq]. [the-from entry] -> [the-to entry] [reg] : [spec-help of the-from entry]";
 	if qq is 0:
