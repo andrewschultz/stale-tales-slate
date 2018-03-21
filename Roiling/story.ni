@@ -2117,7 +2117,7 @@ lecturer	"If he actually heard you, he'd yell a stunning rebuke to whatever he c
 urgent Gunter	"[bug-report]"
 Mole Elmo	"[bug-report]"
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
-Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
+Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[or]Sparest repasts[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
 drama armada	"They stare blankly at you, fearful yet confident you know what to do next. They won't be much help."
 old giant	"The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
@@ -4798,10 +4798,28 @@ carry out requesting the score:
 				say " [rgn] ([cur-score of rgn]/[max-score of rgn])[if temp < number of markable regions],[else].[end if]";
 	otherwise:
 		say "[line break]You haven't solved any regions yet.";
+	show-rank;
 	if mrlp is others:
 		eval-fruits;
 		check-guru;
 	the rule succeeds;
+
+to show-rank:
+	if mrlp is others or rove-over is true:
+		say "Procured Producer";
+		continue the action;
+	let Q be number of solved regions + number of bypassed regions + 1;
+	if Q > number of rows in table of ranks:
+		debug-say "[Q] rank, but only [number of rows in table of ranks] rows. Find some more.";
+		now Q is number of rows in table of ranks;
+	choose row Q in table of ranks;
+	say "This would give you a rank of [rank-name entry].";
+
+table of ranks
+rank-name
+"Farce Facer"
+"Decried Decider"
+"Results Tussler"
 
 to say lomax of (re - a region):
 	say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
