@@ -12,10 +12,13 @@ def on_off(a):
     return ". Default=" + ['off', 'on'][a]
 
 def usage():
+    print("-1/2 = see what happens with one or two letters removed")
     print("-o/no = only anagram, or add/lose a letter" + on_off(only_anagram))
     print("-p/np = plurals, or no plurals" + on_off(plural))
     print("-v/nv = verbose or not" + on_off(verbose))
+    print("-s = get STDIN, can be combined with command line")
     print("-? = this usage message")
+    print("You can put more thn one word on the command line or on STDIN. This is case insensitive, too.")
     exit()
 
 def alfy(a):
@@ -83,50 +86,51 @@ plural = True
 verbose = False
 minus_ones = False
 minus_twos = False
+get_stdin = False
 
 new_arg = []
 
-for x in sys.argv[1:]:
-    if x == 'o' or x == '-o':
+count = 1
+
+while count < len(sys.argv):
+    arg = sys.argv[count]
+    if arg[0] == '-':
+        arg = arg[1:]
+    if arg == 's':
+        get_stdin = True
+    elif arg == 'o':
         print("Checking only-anagram, no +/- 1 letter")
         only_anagram = True
-        continue
-    if x == 'p' or x == '-p':
+    elif arg == 'p':
         print("Checking plurals")
         plural = True
-        continue
-    if x is 'v' or x is '-v':
+    elif arg == 'v':
         print("Verbose checking")
         verbose = True
-        continue
-    if x == '12':
+    elif arg == '12':
         minus_ones = True
         minus_twos = True
-        continue
-    if x == '1':
+    elif arg == '1':
         minus_ones = True
-        continue
-    if x == '2':
+    elif arg == '2':
         minus_twos = True
-        continue
-    if x == 'no' or x == '-no':
+    elif arg == 'no':
         print("Not checking only-anagram, no +/- 1 letter")
         only_anagram = False
-        continue
-    if x == 'np' or x == '-np':
-        print("Checking plurals")
+    elif arg == 'np':
+        print("Not checking plurals")
         plural = False
-        continue
-    if x is 'nv' or x is '-nv':
+    elif arg == 'nv':
         print("Not verbose checking")
         verbose = False
-        continue
-    if x is '?' or x is '-?':
+    elif arg == '?':
         usage()
         exit()
-    new_arg.append(x)
+    else:
+        new_arg = new_arg + arg.split(",")
+    count = count + 1
 
-for x in new_arg:
+def anagram_check(x):
     if x == 'ing':
         do_ings()
         exit()
@@ -172,3 +176,27 @@ for x in new_arg:
         if 's' in x:
             x2 = re.sub("s", "", x, 1)
             see_anagram_or_close(x2, only_anagram)
+
+for x in new_arg:
+    anagram_check(x)
+
+if get_stdin:
+    input_line = "Enter line (blank quits, ?=find definitions):"
+    print(input_line)
+    for line in sys.stdin:
+        ll = line.strip().lower()
+        if ll.startswith('?'):
+            ll = ll[1:]
+            new_arg = re.split("[ ,]", ll.strip())
+            for x in new_arg:
+                os.system("start http://www.thefreedictionary.com/{:s}".format(x))
+        if not ll:
+            print("Exiting.")
+            exit()
+        if re.search("[^a-z, ]", ll, re.IGNORECASE):
+            print("WARNING: invalid characters skipped in", ll)
+            ll = re.sub("[^a-z, ]", "", ll, 0, re.IGNORECASE)
+        new_arg = re.split("[ ,]", ll.strip())
+        for x in new_arg:
+            anagram_check(x)
+        print(input_line)
