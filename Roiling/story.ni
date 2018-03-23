@@ -4805,21 +4805,34 @@ carry out requesting the score:
 	the rule succeeds;
 
 to show-rank:
-	if mrlp is others or rove-over is true:
-		say "Procured Producer";
+	say "This would give you a rank of ";
+	if mrlp is others or roved is true:
+		say "Procured Producer.";
 		continue the action;
-	let Q be number of solved regions + number of bypassed regions + 1;
+	let Q be number of rank-increasing regions + number of bypassed regions + 1;
 	if Q > number of rows in table of ranks:
-		debug-say "[Q] rank, but only [number of rows in table of ranks] rows. Find some more.";
+		d "[Q] rank, but only [number of rows in table of ranks] rows. Find some more.";
 		now Q is number of rows in table of ranks;
 	choose row Q in table of ranks;
-	say "This would give you a rank of [rank-name entry].";
+	say "[rank-name entry].";
+
+definition: a region (called reg) is rank-increasing:
+	if reg is spoiled, no;
+	if reg is bypassed, yes;
+	if reg is solved, yes;
+	no;
+
+[rejected: rode doer, Decried Decider]
 
 table of ranks
 rank-name
 "Farce Facer"
-"Decried Decider"
-"Results Tussler"
+"Riled Idler" [got to strip]
+"Results Tussler" [1]
+"Fierier Reifier" [2]
+"Rifeness Finesser" [3]
+"Lengthier Lightener" [4]
+"Truculenter Unclutterer" [5 solved]
 
 to say lomax of (re - a region):
 	say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
@@ -22496,7 +22509,7 @@ carry out playing:
 			first-status;
 			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
 			unless the player direct-consents:
-				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just UNDO at the next command.";
+				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just UNDO at the next command.[paragraph break]For now, you'll be a ... REPOSED DEPOSER.";
 				note-denial;
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
@@ -24373,7 +24386,7 @@ check going north in Gates Stage:
 		say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
-	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.";
+	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPIREVAL PREVAILER!";
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
 		min-and;
