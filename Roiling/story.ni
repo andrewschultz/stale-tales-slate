@@ -2817,6 +2817,7 @@ stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
 tumblers	"PITS is written in red on the bottom of some tumblers."
 scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
+span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
@@ -9048,7 +9049,7 @@ c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	"Based on where you go
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
 skis	skis	false	290473956	--	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."
 knob	knob	false	214612168	--	"bonk"	"bonk"	"BONK! You hit the knob just right. It falls from between the pans and rolls off...well, somewhere." [?? check for knob/skis if it's all gone]
-pans	pans	false	248835251	--	"snap"	"snap"	"You snap and, lo and behold, the pans detach and clank and fall over and melt into the ground."
+pans	pans	false	248835251	--	"snap"	"snap"	"You snap your fingers. Then, for good measure, you go off on a random tangent about something that doesn't really matter but has always bothered you. You're not sure which action worked, or if they both worked together, but the result's what counts: the pans detach and clank and fall over and melt into the ground."
 bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	"[if span pans are in Lapsin' Plains]You brag, to nobody and everyone in particular, how you SHOWED those pans[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
 trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
@@ -18600,7 +18601,7 @@ a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-te
 
 chapter bonking
 
-the span pans are plural-named vanishing scenery in Lapsin' Plains. "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!'[paragraph break]You're probably better off just focusing on the pans.[paragraph break][if skis are in plains and knob is in plains]Skis and a knob hold the pans together[else if skis are in plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
+the span pans are plural-named vanishing scenery in Lapsin' Plains. "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!' ... they seem less relevant than the red writing of who created them.[paragraph break][if skis are in plains and knob is in plains]Skis and a knob hold the pans together[else if skis are in plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
 
 to say pan-block:
 	if knob is in lapsin' plains and skis are in lapsin' plains:
