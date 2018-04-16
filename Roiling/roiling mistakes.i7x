@@ -455,6 +455,10 @@ understand "boast" as a mistake ("Batso.") when player is not in Disease Seaside
 
 understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Disease Seaside.
 
+chapter fighter freight
+
+undertstand "peal" as a mistake ("The pale plea already sort of is. You need a stronger action than that.") when player is in Fighter Freight.
+
 chapter anger range / hero's shore
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
@@ -528,6 +532,8 @@ understand "sweat [text]" as a mistake ("Don't sweat the extra words. Just sweat
 understand "stub" as a mistake ("You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.") when tubs are in location of player.
 
 understand "buts" as a mistake ("You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.") when tubs are in location of player.
+
+understand "tawse" as a mistake ("You don't need that sort of weapon.") when waste is in location of player.
 
 chapter horned hedron
 

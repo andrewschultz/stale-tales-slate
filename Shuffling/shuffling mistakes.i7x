@@ -81,6 +81,8 @@ understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not of
 
 understand "elastin" and "nailset" as a mistake ("That would make the saltine less edible.") when player has saltine.
 
+understand "stealin" as a mistake ("You're the good guy, here.") when player has saltine.
+
 book stores
 
 chapter trips strip
