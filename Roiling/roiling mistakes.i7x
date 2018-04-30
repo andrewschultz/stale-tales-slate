@@ -1,5 +1,7 @@
 Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 
+[mist.py checks to make sure the unit tests are synced with this]
+
 volume Roiling Mistakes
 
 book general
@@ -625,7 +627,7 @@ understand "granites" and "granite" as a mistake ("They're already stonewalling 
 
 chapter fringe finger
 
-understand "refing" as a mistake ("You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.")
+understand "refing" as a mistake ("You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.") when player is in fringe finger.
 
 chapter treading gradient
 

@@ -217,6 +217,10 @@ The ramp is useful now. Best keep it.
 >d
 Largely All-Grey Gallery
 
+#mistake test for sitar
+>sitar
+[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].
+
 >in
 You fumble nervously
 
@@ -236,6 +240,11 @@ all the secrets here
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
+#mistake test for trestle
+>trestle
+The settler is pretty powerful, but it can't build bridges.
+
+#mistake test for cheat on/off/teach on/off
 >cheat on
 Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
 >cheat off
@@ -252,7 +261,13 @@ The space capes are already abstract and bizarre enough. They work, and you prob
 >use settler
 The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors, or SCAN with the settler. You should also be able to EXAMINE something you want to use, and the game should hint a verb.
 
+#mistake test for bsin/bs in
+>bsin
+Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].
+>bs in
+Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].
 >in
+
 haven't really EXAMINED it
 >x settler
 
@@ -552,6 +567,21 @@ Ian's had a big life change, but that might be too big for him!
 >nia
 Ian's had a big life change, but that might be too big for him!
 
+#mistake test for ingates
+>ingates
+More like, you could use out-gates to leave, amirite?
+
+#mistake test for easting
+>easting
+Compass directions aren't relevant here. You need to upset everything, somehow.
+
+#mistake test for eatings/tangies
+>eatings
+You might be suspected of having the munchies if you tried that.
+>tangies
+You might be suspected of having the munchies if you tried that.
+
+
 >outsied
 The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
 >outside
@@ -604,8 +634,13 @@ Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 >towarsd
 
->preposition
-Yes, but WHICH prepositions?
+#mistake test for ramada
+>ramada
+This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in mesa]the MORF-FORM[else]THE BEAN[end if].
+
+#mistake test for apts
+>apts
+Pat's is a local small business, not nameless, faceless real estate.
 
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
@@ -655,6 +690,9 @@ Your score has just gone up by one point
 
 Idle Deli
 
+#mistake test for scarving
+>scarving
+Changing the restaurant to a clothes boutique isn't helpful.
 
 #mistake test for tap pat/tap
 >tap pat
@@ -702,6 +740,10 @@ Adobe Abode
 #mistake test for orcas
 >orcas
 But the whales would be beached.
+
+#mistake test for poopiest
+>poopiest
+This is the wrong area for adjectives. And [if player is not in adobe abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].
 
 >opposiet
 The soot smells a bit stronger than before for a moment.
@@ -832,6 +874,10 @@ Your score has just gone up by one point
 
 Harms Marsh
 
+#mistake test for helos
+>helos
+Helicopters can't make it underground.
+
 #mistake retest for along
 >along
 There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking.
@@ -889,6 +935,16 @@ You plot a zigzag past the sign, but you don't have full confidence in it, yet.
 Your score has just gone up by one point
 Cripple Clipper
 
+#mistake test for abroad/aboard
+>abroad
+Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
+>aboard
+Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
+
+#mistake test for feer
+>feer
+Fearing won't help, here.
+
 >behidn
 The ship controls seem to adjust themselves slightly, but not enough.
 >behind
@@ -909,6 +965,11 @@ No, on to Thor or the new beet.
 The new beet seems to spin slightly away from Thor for a second.
 >between
 Your score has just gone up by one point
+
+#mistake test for thru
+>thru
+Well, sort of, but not so colloquial.
+
 Strip of Profits
 
 >undo
@@ -1139,6 +1200,10 @@ You're wanting praise too much, now.
 
 >once
 Yes! You only need a chance! Once! To get inside! You're enthused enough, but you need to strategize.
+
+#mistake test for penrod
+>penrod
+Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!
 
 >pondre
 The bottle of Pernod seems to rattle and spin slightly.
@@ -1409,6 +1474,18 @@ That's not something
 
 >e
 Marines Seminar
+
+#mistake test for smearin
+>smearin
+That may've happened during the seminar, but you don't need that sort of violence here and now.
+
+#mistake test for pilots
+>pilots
+You don't need to fly anywhere.
+
+#mistake test for strop
+>strop
+That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.
 
 #mistake test for nobig/no big
 >nobig
@@ -1964,6 +2041,10 @@ The sign mainly just disallowed singing.
 
 ###############################second point
 
+#mistake test for nites
+>nites
+Misspellings don't work, here.
+
 #mistake test for insert
 >insert
 Almost, with the stein, there.
@@ -2163,7 +2244,19 @@ Your score has just gone up by one point
 That's not something
 
 >e
-Lean Lane
+Hardest Trashed Dearths
+
+#mistake test for hatred/hatreds
+>hatred
+There's enough of that going around.
+>hatreds
+There's enough of that going around.
+
+#mistake test for thread/threads
+>thread
+There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
+>threads
+There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
 #mistake test for neal
 >neal
@@ -2378,6 +2471,10 @@ You managed to get a digger from a prod, and that's good enough.
 >dig
 You need to dig to some purpose, though maybe somewhere else
 
+#mistake test for tawse
+>tawse
+You don't need that sort of weapon.
+
 #mistake test for sweat [text]
 >sweat zozimus
 Don't sweat the extra words. Just sweat.
@@ -2491,6 +2588,10 @@ You managed to bury the ruby. On to the next bit.
 >e
 >s
 >e
+
+#mistake test for unheart
+>unheart
+Silly internet slang isn't active enough, here.
 
 ##>unearth haunter
 
@@ -2782,6 +2883,10 @@ That's not something
 >n
 Baldest Blasted Saltbed
 
+#mistake test for fluters
+>fluters
+This game has no soundtrack, and if I made one, it wouldn't be very good.
+
 >coilde
 The old ice seems to glimmer a bit.
 >coiled
@@ -2852,6 +2957,12 @@ The ingrates seem to wonder if it's worth complaining to you for a moment. You g
 Your score has just gone up by one point
 >angstire
 That's not something
+
+>w
+#mistake test for refing
+>refing
+You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't see
+m to be much to do here.
 
 >n
 Shaven Havens
@@ -2980,6 +3091,10 @@ That's not something
 >e
 Danger Garden
 
+#mistake test for ranged
+>ranged
+The garden does not get any bigger.
+
 >brokne
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
 >broken
@@ -3021,6 +3136,22 @@ Lost Lots
 #mistake test for slot
 >slot
 If you made it, you might fall in the slot and never get out.
+
+#mistake test for prosties
+>prosties
+Not that sort of game. There's some suggestive stuff, but nothing like that.
+
+#mistake test for tripose/triposes
+>tripose
+No organic chemistry, please.
+>triposes
+No organic chemistry, please.
+
+#mistake test for reposit/reposits
+>reposit
+You can't just push the ripostes aside. There must be a way to change them.
+>reposits
+You can't just push the ripostes aside. There must be a way to change them.
 
 >rustlde
 You almost expect the strudel to hop up into your arms, but the moment passes.
@@ -3237,6 +3368,12 @@ Hmm...no rumbling from the curst palace. Big words have all sorts of possibiliti
 >w
 Lone Sod Solo Den
 
+#mistake test for titres/titers
+>titres
+No physical sciences are necessary here.
+>titers
+No physical sciences are necessary here.
+
 #mistake test for gyre
 >gyre
 Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.
@@ -3290,6 +3427,10 @@ The barley rustles in an imaginary wind--but hardly at all.
 Your score has just gone up by one point
 >bareyl
 You've dealt with the barley. You can move around a lot more, now.
+
+#mistake test for end u
+>end u
+No, end *U*!
 
 #mistake test for dialect
 >dialect
@@ -3804,6 +3945,10 @@ For whatever reason, you just decide to give up. Elvira cackles. "I knew you'd s
 You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.
 
 >undo
+
+#mistake test for cornelius
+>cornelius
+You don't know if someone named Cornelius would help or hurt you.
 
 #mistake test for sherpa
 >sherpa
