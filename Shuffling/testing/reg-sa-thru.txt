@@ -3,7 +3,6 @@
 ##
 ## nudgeleft.txt is the file to look for
 
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -89,7 +88,7 @@ You solved that puzzle already. Onward!
 >dray
 You don't have enough possessions to need a cart. You probably need somewhere to go, instead.
 
-#mistake test for yard-door
+#mistake test for desert-door
 >rood
 This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -102,7 +101,7 @@ Your score has just gone up by one point.
 The door is probably the way out. Best not change it into something else.
 
 #xc
-#mistake retest for yard-door
+#mistake retest for desert-door
 >rood
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -189,6 +188,20 @@ You haven't solved any regions yet. You have the rank of stunted student.
 #mistake test for bactine
 >bactine
 The cabinet bit you, but there was no lasting damage.
+
+#mistake test for beatnic
+>beatnic
+The cabinet deserves a better fate than THAT.
+
+#mistake test for elastin/nailset
+>elastin
+That would make the saltine less edible.
+>nailset
+That would make the saltine less edible.
+
+#mistake test for stealin
+>stealin
+You're the good guy, here.
 
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
@@ -339,6 +352,10 @@ There's nothing around you have to sate, thankfully.
 Self-ID Fields
 by one point
 
+#mistake test for scorse
+>scorse
+You can't trade with the dead.
+
 #mistake test for nile
 >nile
 Wrong river for the underworld.
@@ -360,6 +377,48 @@ Organic chemistry involves shuffling things around a lot, too, but ... the line 
 
 >e
 Sorted Trodes
+
+#mistake test for integral/integrals
+>integral
+I think this game is hard enough without bringing Calculus into it.
+>integrals
+I think this game is hard enough without bringing Calculus into it.
+
+#mistake test for reslating
+>reslating
+While you have all the time in the world, there's no sense deliberately putting things off.
+
+#mistake test for relating
+>relating
+This isn't really a game about emotional connections.
+
+#mistake test for alerting/alertings
+>alerting
+There's nobody to alert here.
+>alertings
+There's nobody to alert here.
+
+#mistake test for altering/alterings
+>altering
+No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
+>alterings
+No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
+
+#mistake test for teraglin/teraglins
+>teraglin
+But where would the fish go?
+>teraglins
+But where would the fish go?
+
+#mistake test for tanglier
+>tanglier
+Things are mixed up enough!
+
+#mistake test for tone/tones
+>tone
+You aren't sure you need a booming voice telling you what you can EXAMINE.
+>tones
+You aren't sure you need a booming voice telling you what you can EXAMINE.
 
 #mistake test for tones
 >tones
@@ -432,6 +491,28 @@ Shotgun: gnu? Tosh!
 >w
 >w
 Stored, er, Dots
+
+#mistake test for inks
+>inks
+The skin sink bleeds no color.
+
+#mistake test for helf/helfs
+>helf
+While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
+>helfs
+While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
+
+#mistake test for kin/kins
+>kin
+Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
+ers .
+>kins
+Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
+ers .
+
+#mistake test for debar
+>debar
+If there are any lawyers here, they've already been debarred.
 
 >open sandwich
 bread from the Spam
@@ -643,6 +724,14 @@ UNDO
 >x maps
 Frost Forts
 
+#mistake test for dumdum/dum/dum dum
+>dumdum
+The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].
+>dum
+The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].
+>dum dum
+The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].
+
 #xc
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
@@ -666,6 +755,17 @@ Your score has just gone up by one point.
 Trips Strip
 
 * _sortie
+
+#mistake test for tories
+##location = trips strip
+##condition(s) player is in trips strip.
+>tories
+I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.
+
+#mistake test for despot
+>despot
+[one of]Summoning Red Bull Burdell would be unwise. Best not try it again.[or]Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak
+]So [']dept.[stopping]
 
 #xc
 >sortie
@@ -869,6 +969,10 @@ You feel a slight psychic push-pull coming from all around. Keep at it.
 
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
+
+#mistake test for hoes
+>hoes
+One, there's more than one shoe. Two, this isn't that sort of game. Innuendo only, if you please!
 
 #mistake test for shoe
 >shoe
@@ -1196,6 +1300,11 @@ Unfortunately, it's not QUITE as easy as just pushing a reset button
 >reset button
 Unfortunately, it's not QUITE as easy as just pushing a reset button
 
+#mistake test for reest
+>reest
+You are noisily uncooperative for a minute. With what, I don't know. But you are.
+
+#mistake test for stere
 >stere
 Hmm, that doesn't work, but you bet you can bull your way through things.
 You feel a slight psychic push-pull coming from the trees button. Keep at it.
@@ -1379,6 +1488,10 @@ Your score has just gone up by one point.
 >baste
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
 
+#mistake test for grained
+>grained
+There's an extra A in here. And anyway, we're looking for a noun.
+
 >gardenai
 The drainage bubbles a bit.
 You feel a slight psychic push-pull coming from the drainage. Keep at it.
@@ -1502,7 +1615,15 @@ The controls stay as they are.
 Medical procedures aren't necessary here. The noise is too distracting anyway.
 
 >e
-Elf Row's Flowers
+Fo' Real Florae
+
+#mistake test for loafer
+>loafer
+You're un-magically being a loafer, with ideas like that.
+
+#mistake test for recount
+>recount
+The faeries aren't interested in what you've done so far, only what you can do.
 
 #mistake test for trounce/trounce counter
 >trounce
@@ -1958,6 +2079,11 @@ Light isn't the problem here. It's getting off the islet
 >score
 1 out of 14 total
 
+#mistake test for download
+>download
+[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doe
+sn't[end if][if leis are not in isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].
+
 #xc
 >cork
 Your score has just gone up by one point.
@@ -2080,6 +2206,20 @@ You don't know him that well. No riffing on his initials!
 >tug toe
 Your score has just gone up by one point.
 
+#mistake test for romans
+>romans
+It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.
+
+#mistake test for morans/moran
+>morans
+A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!
+>moran
+A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!
+
+>e
+
+Means Manse
+
 #xc
 #mistake test for sex it
 >sex it
@@ -2131,6 +2271,14 @@ You have the rank of solider soldier.
 You have the rank of a mature amateur.
 >metros
 Your score has just gone up by one point.
+
+#mistake test for rated
+>rated
+The trade tread isn't for commenting on, it's for passage to the metros.
+
+#mistake test for dater
+>dater
+This is not a romance game.
 
 >enter metros
 Underside

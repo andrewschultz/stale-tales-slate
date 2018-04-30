@@ -1,5 +1,7 @@
 Version 1/171011 of Shuffling Mistakes by Andrew Schultz begins here.
 
+[mist.py checks to make sure the unit tests are synced with this]
+
 volume Shuffling Mistakes
 
 definition: a thing (called t) is quickvis:
