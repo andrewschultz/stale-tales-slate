@@ -57,9 +57,9 @@ def pre_process(sts):
             if re.search("table of .* nudges", line):
                 current_table = sts + '-' + re.sub("nudges.*", "nudges", line.strip().lower())
                 # print("Current table now", current_table)
-                count = count + 1
+                count += 1
                 continue
-            count = count + 1
+            count += 1
             if re.search("\"\t[0-9]", line):
                 l = re.sub("\t.*", "", line.strip().lower())
                 l = re.sub("\"", "", l)
@@ -69,7 +69,7 @@ def pre_process(sts):
                 got_nudges[current_table][l] = False
                 if test_match_up[l]:
                     suggested_try = "???"
-                    dupes = dupes + 1
+                    dupes += 1
                     perms = [''.join(p) for p in permutations(l)]
                     for p in perms:
                         if p not in test_match_up.keys():
@@ -104,7 +104,7 @@ def poke_nudge_files(gm):
     short_file = re.sub(".*[\\\/]", "", nudge_files[gm])
     with open(nudge_files[gm]) as file:
         for line in file:
-            count = count + 1
+            count += 1
             ll = line.strip().lower()
             if line.startswith('>') and not nudge_comment:
                 alfl = alf(re.sub('>', '', ll))
@@ -120,14 +120,14 @@ def poke_nudge_files(gm):
                 ll = re.sub("#( )?nudge (for|of) ", "", ll)
                 if ll in got_nudges[gm].keys():
                     if got_nudges[gm][ll] > 0:
-                        count2 = count2 + 1
-                        count3 = count3 + 1
+                        count2 += 1
+                        count3 += 1
                         print("Duplicate nudge comment line", ll, 'line', count, 'duplicates', got_nudges[gm][ll])
                     got_nudges[gm][ll] = count
                 else:
                     print("Unmatched #NUDGE FOR in", short_file, "line", count, ':', ll)
-                    count2 = count2 + 1
-                    count3 = count3 + 1
+                    count2 += 1
+                    count3 += 1
             else:
                 nudge_comment = False
     short = re.sub(".*[\\\/]", "", nudge_files[q])
@@ -137,7 +137,7 @@ def poke_nudge_files(gm):
         if got_nudges[gm][j] == 0:
             for x in cmd_lines[alf(j)].split(' '):
                 nudge_add[x] = nudge_add[x] + ' ' + j
-            count2 = count2 + 1
+            count2 += 1
             count3 = count3 + len(cmd_lines[alf(j)].split(' '))
             if max_errs > 0 and count2 > max_errs:
                 continue
@@ -161,7 +161,7 @@ def poke_nudge_files(gm):
         count = 0
         with open(nudge_files[q]) as file:
             for line in file:
-                count = count + 1
+                count += 1
                 if nudge_add[str(count)]:
                     my_ary = nudge_add[str(count)].split(' ')
                     for x in my_ary:

@@ -139,9 +139,9 @@ understand "ouster" as a mistake ("You're the ouster here, trying to get by the 
 
 understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
 
-understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in mesa]the MORF-FORM[else]THE BEAN[end if].") when player is in same mesa and armada is in same mesa.
-
 chapter same mesa
+
+understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in mesa]the MORF-FORM[else]THE BEAN[end if].") when player is in same mesa and armada is in same mesa.
 
 understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is in location of player], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in same mesa.
 
@@ -459,7 +459,7 @@ understand "ocean" as a mistake ("As you seek to change the canoe, you hear a ru
 
 chapter fighter freight
 
-undertstand "peal" as a mistake ("The pale plea already sort of is. You need a stronger action than that.") when player is in Fighter Freight.
+understand "peal" as a mistake ("The pale plea already sort of is. You need a stronger action than that.") when player is in Fighter Freight.
 
 chapter anger range / hero's shore
 

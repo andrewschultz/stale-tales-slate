@@ -18,7 +18,7 @@ def mis2(p):
 			if re.search("^understand.*as a mistake", line):
 				fout.write(line)
 				fout.write("\n")
-				shifted = shifted + 1
+				shifted += 1
 			else:
 				fout2.write(line)
 	fout.close()

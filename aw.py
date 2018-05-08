@@ -42,14 +42,14 @@ def see_anagram_or_close(x, oa):
         z = ''.join(sorted(y[0:q] + y[q+1:len(y)]))
         if z in ag.keys():
             print(x, '-', y[q], '=', z + ' /' + ag[z])
-            minuses = minuses + 1
+            minuses += 1
         elif verbose:
             print(x, '-', y[q], 'gives nothing.')
     for q in ascii_lowercase:
         z = alfy(x + q);
         if z in ag.keys():
             print(x, '+', q, '=', z + ' /' + ag[z])
-            adds = adds + 1
+            adds += 1
         elif verbose:
             print(x, '+', q, 'gives nothing.')
     if adds + minuses > 0:
@@ -128,7 +128,7 @@ while count < len(sys.argv):
         exit()
     else:
         new_arg = new_arg + arg.split(",")
-    count = count + 1
+    count += 1
 
 def anagram_check(x):
     if x == 'ing':
@@ -148,7 +148,7 @@ def anagram_check(x):
                 if remove_hash[x[i]+x[j]] or remove_hash[x[j]+x[i]]:
                     if verbose: print("Skipping", x[i], x[j], "already done")
                     continue
-                twos_count = twos_count + 1
+                twos_count += 1
                 temp = x[:i] + x[i+1:j] + x[j+1:]
                 see_anagram_or_close(temp, only_anagram)
                 remove_hash[x[j]+x[i]] = True
