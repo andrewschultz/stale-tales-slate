@@ -1354,9 +1354,7 @@ carry out gotoing:
 				post-wall-arch;
 				do nothing instead;
 		if player is in shack:
-			consider the shack-south rule;
-			unless the rule succeeded:
-				do nothing instead;
+			abide by the shack-south rule;
 		if Leo is in location of player and Leo is eager:
 			if noun is not a mazeroom:
 				say "(Leo and Rand following.)";
@@ -8971,10 +8969,10 @@ bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that s
 what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee's head is reflexed]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
 cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]."
 cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
-sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
-Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at Blamer Balmer, and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 Eddie's Song	Eddie's Song	false	361668827	Boredom Bedroom	"decide"	"decide"	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
+ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
+lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
@@ -8983,8 +8981,8 @@ rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to str
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
 salt	trance nectar	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom."
-ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
-lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
+sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
+Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at Blamer Balmer, and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
 trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
@@ -9527,17 +9525,9 @@ after fliptoing prod:
 	now waste is in Shadier Airshed;
 	continue the action;
 
-after fliptoing diapers:
-	if sister tressi is in drain nadir, poss-d;
-	continue the action;
-
 after fliptoing ltb:
 	if lager is in Boredom Bedroom, poss-d;
-	continue the action;
-
-after fliptoing b-b:
-	now Ed Riley is in Bleary Barley;
-	now cinders are in Bleary Barley;
+	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
 	continue the action;
 
 after fliptoing ragged dagger:
@@ -13972,7 +13962,7 @@ instead of examining song:
 
 book boredom bedroom
 
-Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad."
+Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad[if me arts are in boredom bedroom]. And the ME ARTS hung up are inspiring, or should be[end if]."
 
 chapter how to pre-deal
 
@@ -13985,7 +13975,9 @@ the BORTLES lobster is vanishing.
 a-text of Bortles Lobster is "RYRRRYR". b-text of Bortles Lobster is "?G???G?". parse-text of Bortles Lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
 
 after fliptoing lobster:
-	if ME ARTS is in Upscale Capsule, now ME ARTS is LLPish;
+	if ME ARTS is in Boredom Bedroom:
+		now ME ARTS is LLPish;
+		say "You feel more up to grokking LEAD, now.";
 	continue the action;
 
 instead of eating Bortles Lobster:
@@ -14001,7 +13993,9 @@ The ME ARTS is vanishing scenery in Boredom Bedroom. "It's labeled MR. EAST STRE
 a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
 
 after fliptoing ME ARTS:
-	if lobster is in Upscale Capsule, now lobster is LLPish;
+	if lobster is in Boredom Bedroom:
+		now lobster is LLPish;
+		say "You feel more up to grokking LEAD, now.";
 	continue the action;
 
 instead of doing something to ME ARTS:
@@ -15904,11 +15898,6 @@ after fliptoing scratch paper:
 		now rom sticks are in lalaland;
 	continue the action;
 
-before gotoing in Hacks' Shack:
-	consider the shack-south rule;
-	if the rule failed:
-		do nothing instead;
-
 check going in Hacks' Shack (this is the maybe lock player in rule): [check going in shack]
 	if noun is outside:
 		try going south instead;
@@ -15916,9 +15905,7 @@ check going in Hacks' Shack (this is the maybe lock player in rule): [check goin
 		if keyboard is not off-stage and censer is not off-stage:
 			say "Nothing [noun], but you need to just sit and finish things here anyway." instead;
 	else:
-		consider the shack-south rule;
-		if the rule failed:
-			do nothing instead;
+		abide by the shack-south rule;
 
 after printing the locale description for hacks' shack (this is the auto-screen rule):
 	if player has onyx censer:
@@ -15964,7 +15951,7 @@ this is the shack-south rule:
 			say "That yak. Maybe you could release it from its yoke.";
 		else:
 			say "That drab yoke. What could it become?";
-	the rule succeeds;
+	make no decision;
 
 to say treas-west:
 	if austerer is not visited:
@@ -22381,6 +22368,11 @@ instead of taking b-b:
 chapter nude dune
 
 the nude dune is useless scenery. "It is impressive and blocks your way east."
+
+after fliptoing nude done:
+	move ed riley to bleary barley;
+	move cinders to bleary barley;
+	continue the action;
 
 instead of doing something with nude dune:
 	if action is procedural, continue the action;
@@ -29372,7 +29364,7 @@ carry out missalting:
 	the rule succeeds;
 
 to say miss-types:
-	say "MISSED = all regions['] misses.";
+	say "MISSED = all (solved) regions['] misses--not including the current region.";
 	say "MISSES = this region's misses.";
 	say "MISSALT = show alternate routes";
 

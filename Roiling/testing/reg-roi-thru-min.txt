@@ -11,7 +11,7 @@
 
 >posf
 >score
-Score in a scenario: 0 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 8. Maximum score available is 13.
+Score in a scenario: 0 out of 14 total points in the current region, Means Manse. Lowest score to solve is 8. Maximum score available is 14.
 
 >x chair
 You thought you preferred
@@ -19,8 +19,11 @@ You thought you preferred
 >think
 CREATIVITY
 
->x sad ads
+>get notepad
 Bangish bashing
+
+>x sad ads
+bangish bashing
 
 >open door
 
@@ -98,13 +101,15 @@ Your score has just gone up by one point
 >stapler
 Your score has just gone up by one point
 
->staple wall
+>staple curtain
+Your score has just gone up by one point
+
 >in
 Strip of Profits
 
 #xc
 >score
-Won now: Roman Manor (8/13).
+Won now: Means Manse (8/14).
 
 * _stores
 
@@ -136,7 +141,7 @@ Score in a scenario: 6 out of 11 total points in the current region, Stores. Low
 
 >posf
 >score
-Score in a scenario: 0 out of 18 total points in the current region, Routes. Lowest score to solve is 17. Maximum score available is 18.
+Score in a scenario: 0 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 21.
 You have scored 6 out of 11 total points for the (unsolved hub) Stores region.
 
 #xc
@@ -181,6 +186,7 @@ Your score has just gone up by one point
 
 #xc
 >in
+DEBUG INFO: Taking away a max point.
 #xc
 >out
 #xc
@@ -190,13 +196,12 @@ Your score has just gone up by one point
 #xc
 >beneath
 Your score has just gone up by one point
-DEBUG INFO: Taking away a max point.
 
-Sun-Spared Underpass
+Harms Marsh
 
 #xc
 >score
-Score in a scenario: 11 out of 18 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 17 points--you missed some extra stuff you can't go back for.
+Score in a scenario: 11 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 20.
 
 >until
 Your score has just gone up by one point
@@ -216,14 +221,24 @@ Your score has just gone up by one point
 Cripple Clipper
 
 #xc
->behind
+>athwart
 Your score has just gone up by one point
+
+#xc
+>between
+Your score has just gone up by one point
+
 #xc
 >through
 Your score has just gone up by one point
 
+#xc
+>beyond
+Your score has just gone up by one point
+
+
 >score
-Routes (17/18)
+Routes (19/21)
 
 * _troves
 
@@ -236,7 +251,7 @@ Your score has just gone up by one point
 #xc
 >care
 Your score has just gone up by one point
-Loudest Used Lot
+Bustle Sublet
 
 #xc
 >observe
@@ -251,29 +266,35 @@ Your score has just gone up by one point
 
 #xc
 >derive
-Pallid Li'L Pad
+Drain Nadir
 DEBUG INFO: Taking away a max point.
 
 >posf
 >score
-Score in a scenario: 6 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 20.
+Score in a scenario: 6 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
 
+#xc
 >despair
 Your score has just gone up by one point
 
+
 #xc
->l
-Boredom Bedroom
+>decide
+Your score has just gone up by one point
+
+#xc
+>bolster
+Your score has just gone up by one point
 
 #xc
 >deal
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
 
-Dour Tan Rotunda
+Browse Bowers
 
 >score
-Score in a scenario: 8 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 19.
+Score in a scenario: 10 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 
 #xc
 >desire
@@ -292,23 +313,27 @@ DEBUG INFO: Taking away a max point.
 
 #xc
 >score
-Score in a scenario: 11 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 18.
+Score in a scenario: 13 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
+#xc
 >ignore
 Your score has just gone up by one point
-#xc
->bolster
-Your score has just gone up by one point
+
 #xc
 >last
 Your score has just gone up by one point
+
 #xc
->resign
+>ramble
+Your score has just gone up by one point
+
+#xc
+>recant
 Your score has just gone up by one point
 Strip of Profits
 
 >score
-15/21
+Troves (17/24)
 
 * _presto
 
@@ -327,13 +352,14 @@ Taking away a max point.
 
 >posf
 >score
-Score in a scenario: 2 out of 33 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 32.
+Score in a scenario: 2 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 36.
+
 
 #xc
 >e
 #xc
 >s
-Burnt Brunt
+Char Arch
 
 #xc
 >rats
@@ -356,8 +382,12 @@ Your score has just gone up by one point
 
 >w
 #xc
->mazeltov
+>wont
 Your score has just gone up by one point
+Taking away a max point.
+
+>score
+Score in a scenario: 7 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 34.
 
 >s
 >s
@@ -380,7 +410,7 @@ Your score has just gone up by one point
 >there
 Your score has just gone up by one point
 >n
-Phat Path
+Saps' Pass
 
 ##bingo *2 = no line break
 #different message for making it to the phat path 1st time?
@@ -388,6 +418,7 @@ Phat Path
 #xc
 >syke
 Your score has just gone up by one point
+Phat Path
 
 #xc
 >later
@@ -459,6 +490,11 @@ Your score has just gone up by one point
 >sleep
 Your score has just gone up by one point
 >compile
+DEBUG INFO: Taking away a max point.
+
+>score
+Score in a scenario: 26 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 31.
+
 >pour cola in mug
 #xc
 >debug
@@ -470,7 +506,7 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-(28/33)
+Presto (28/37)
 
 * _oyster
 
@@ -480,7 +516,7 @@ Posh Hops Shop
 
 >posf
 >score
-Score in a scenario: 0 out of 39 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 0 out of 40 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >unset
 Your score has just gone up by one point
@@ -500,7 +536,7 @@ Your score has just gone up by one point
 >run
 Your score has just gone up by one point
 
-Hero's Shore
+Disease Seaside
 #xc
 >boast
 Your score has just gone up by one point
@@ -518,7 +554,7 @@ Your score has just gone up by one point
 
 >posf
 >score
-Score in a scenario: 9 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
+Score in a scenario: 9 out of 40 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 40.
 
 >e
 #xc
@@ -527,7 +563,7 @@ DEBUG INFO: Taking away a max point.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 10 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: 10 out of 40 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 39.
 
 #xc
 >eat
@@ -553,9 +589,12 @@ Your score has just gone up by one point
 #xc
 >bonk
 Your score has just gone up by one point
+#xc
+>snap
+Your score has just gone up by one point
 
 >in
-a hut
+Shadier Airshed
 
 #xc
 >bust
@@ -586,7 +625,7 @@ Your score has just gone up by one point
 Hedron
 
 >w
-Collapsed Old Places
+Rascal Craals
 
 #xc
 >bury
@@ -619,28 +658,33 @@ Your score has just gone up by one point
 >in
 
 >score
-Score in a scenario: 26 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: 27 out of 40 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 39.
 
 #xc
 >prepay
-Your score has just gone up by one point
+Your score has just gone up by one point.
 
 #xc
 >derail
-Your score has just gone up by one point
->pull lever
+Your score has just gone up by one point.
+
+>spin
+Your score has just gone up by one point.
+
 #xc
 >redial
-Your score has just gone up by one point
+Your score has just gone up by one point.
 
 >score
-Oyster (30/39)
+Oyster (31/40)
 
 * _towers
 
 >seed 1
 >towers
 >in
+
+>posf
 
 #xc
 >gone
@@ -657,18 +701,19 @@ Your score has just gone up by one point
 Topside Deposit
 
 >score
-Score in a scenario: 4 out of 48 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 44.
+Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 47.
 
 #xc
 >get tarts
 >put tarts in toaster
->xray keycar
+Just XRAY it.
 
->posf
+>xray adders
+
 >score
-Score in a scenario: 4 out of 48 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 43.
+Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
->creaky
+>sadder
 Your score has just gone up by one point
 
 #xc
@@ -689,7 +734,7 @@ Baldest Blasted Saltbed
 >pastier
 Your score has just gone up by one point
 
->punier
+>restful
 Your score has just gone up by one point
 
 >n
@@ -706,26 +751,34 @@ Shaven Havens
 >s
 >s
 >e
-Savager Ravages
+Treading Gradient
 
 #xc
 >sewed
+by one point
 
 >released
+by one point
 >e
-Ole Shrine Shoreline
+Strati Strait
+
 #xc
 >holiest
->grandiose
+by one point
+>marginal
+by one point
 >n
 Actionless Coastline
 
 #xc
 >hastiest
+by one point
 >s
 >s
 >broken
+by one point
 >resting
+by one point
 >e
 
 >wordy
@@ -736,9 +789,9 @@ Actionless Coastline
 >go to yow
 >unlocked
 
->go to kid
->gifted
->ask kid about yow
+>go to agnostic
+>grained
+>ask agnostic about yow
 Obscurest
 
 >s
@@ -749,25 +802,28 @@ Obscurest
 >go to copse
 >w
 >put dagger in machine
+by one point
 
->go to kid
->give gizmo to kid
+>go to agnostic
+>give gizmo to agnostic
 >robust
+by one point
 >stabler
 
 >score
-Score in a scenario: 24 out of 48 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 43.
+Score in a scenario: 24 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
 >enter boat
 
 >score
-Score in a scenario: 24 out of 48 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 29.
+Score in a scenario: 24 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 29.
 
 #xc
 >spectacular
+by one point
 
 >score
-24/47
+Towers (25/50)
 
 * _otters
 
@@ -795,7 +851,7 @@ DEBUG INFO: Taking away a max point.
 
 >posf
 >score
-Score in a scenario: 2 out of 29 total points in the current region, Otters. Lowest score to solve is 23. Maximum score available is 28.
+Score in a scenario: 2 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
 
 >bossily
 Your score has just gone up by one point.
@@ -833,7 +889,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >n
-Wickeder Wire Deck
+Lamer Realm
 
 #xcu
 >slow
@@ -997,6 +1053,20 @@ Your score has just gone up by one point.
 You Did Great
 
 * current_focus
+
+>gonear strip of profits
+>{include} _stores
+
+>enter towers
+Loftier Trefoil
+>{include} _only-towers
+
+>a5
+>otters
+>enter otters
+Bleary Barley
+>{include} _only-otters
+
 #>{include} _only-manor
 #>{include} _only-routes
 #>{include} _only-troves
@@ -1004,11 +1074,11 @@ You Did Great
 #>{include} _only-towers
 #>{include} _only-otters
 #>undo
->{include} _only-others
+#>{include} _only-others
 #>undo
 #>{include} _only-oyster
 
-* big-go
+* _big-go
 
 >{include} _manor
 >{include} _stores
@@ -1060,7 +1130,7 @@ Rustic Citrus
 
 >{include} _manor
 
-* only-stores
+* _only-stores
 
 >gonear strip
 >{include} _stores
