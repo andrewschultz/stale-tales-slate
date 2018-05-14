@@ -3184,7 +3184,6 @@ before quipping when player is in frontage (this is the Gretta checks rule):
 				if the player direct-consents:
 					say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
 					now hold-it-up is true;
-					continue the action;
 				say "OK.";
 				continue the action;
 
@@ -3269,7 +3268,7 @@ to enact (myq - a quip):
 	if myq is mowered:
 		d "[myq] already tried.[line break]";
 		continue the action;
-	[d "[myq] enabled.[line break]";]
+	d "[myq] enabled.[line break]";
 	enable the myq quip;
 
 hold-it-up is a truth state that varies.
@@ -3277,7 +3276,7 @@ hold-it-up is a truth state that varies.
 before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you back for hints rule):
 	if got-it-quip is not mowered and showset-quip is not mowered and still-no-gp-quip is not mowered:
 		say "Elmo checks you for a second. 'You sure you know how to use the settler?'";
-		if the player yes-consents:
+		if the player direct-consents:
 			say "You nod. 'No clues counsel.'";
 			continue the action;
 		say "You shake your head and go back to thinking why the settler might flicker yellow/green on the lamp and so forth.[no line break]";
@@ -3362,7 +3361,7 @@ after quipping when qbc_litany is the table of Gunter comments:
 		debug-fallthrough;
 
 after quipping when qbc_litany is the table of Elmo comments:
-	d "Went through [current quip].";
+	d "Went through [current quip], holdup = [hold-it-up].";
 	if hold-it-up is true:
 		choose row with response of bye-Elmo-quip in the table of Elmo comments;
 		now enabled entry is 1;
@@ -3794,27 +3793,19 @@ carry out zaping:
 		say "Store H isn't critical. Yet. Plus there are too many people around. You should maybe look elsewhere." instead;
 	if noun is Store K or noun is Store N:
 		say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. [noun] may not be where it's at, according to Elmo, so that's even more reason not to disintegrate it." instead;
-	if noun is a portal:
-		say "The patcher obliterates the [noun]. Wow!";
-		now go-region of noun is bypassed;
-		now noun is in lalaland;
-	if noun is Store T:
-		say "The energy you felt from the patcher seems to bounce off Store T and zap you back. You'll have to be a tough customer to enter Store T." instead;
-	if noun is otters-x:
-		say "The energy beam that emits from the patcher fizzles as it hits the otters. Whatever's behind the otters is likely no joke." instead;
-	if noun is Store U:
-		now routes is bypassed;
-	if noun is Store V:
-		now troves is bypassed;
-	if noun is Store W:
-		now towers is bypassed;
-	if noun is Store U:
-		now oyster is bypassed;
-	if noun is Store P:
-		now presto is bypassed;
+	if noun is Store T, say "The energy you felt from the patcher seems to bounce off Store T and zap you back. You'll have to be a tough customer to enter Store T." instead;
+	if noun is otters-x, say "The energy beam that emits from the patcher fizzles as it hits the otters. Whatever's behind the otters is likely no joke." instead;
+	if noun is a portal, now go-region of noun is bypassed;
+	if noun is Store U, now routes is bypassed;
+	if noun is Store V, now troves is bypassed;
+	if noun is Store W, now towers is bypassed;
+	if noun is Store U, now oyster is bypassed;
+	if noun is Store P, now presto is bypassed;
 	now noun is in lalaland;
-	say "You point the patcher at [noun], which disintegrates. Well, maybe you'll get someone to help you take care of things once you're finished here." instead;
+	say "[if noun is a portal]The patcher obliterates [the-por of noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Well, maybe you'll get someone to help you take care of things behind [the noun] once you're finished here.[end if]" instead;
 	the rule succeeds;
+
+to say the-por of (por - a thing): say "[if noun is e-s]the, er, spot[else][the noun][end if]"
 
 the chapter patcher is a warpable thing. description is "[if number of needed regions > 1]I bet if you switched it, something cool might happen[otherwise]It's probably useless to warp past the final area[end if].". "A chapter patcher lies here next to the megaton magneto-montage."
 
@@ -4753,7 +4744,7 @@ carry out requesting the score:
 		say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
 		if dome-score-not is false:
-			say "There's no score in the Demo Dome. You just need to look around.";
+			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee?";
 			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true:
@@ -5116,14 +5107,6 @@ chapter complex consents
 debug-auto-yes is a truth state that varies.
 
 yn-auto is a number that varies.
-
-to decide whether the player dir-consents:
-	if debug-state is true:
-		if yn-auto is 1, decide yes;
-		if yn-auto is -1, decide no;
-	if the player consents: [inside dir-consents]
-		decide yes;
-	decide no;
 
 chapter auing
 
@@ -9813,7 +9796,7 @@ description of MoneyCo is "Elvira notes Yorpwald's more profitable than ever! Wh
 
 The Shatter-Threats page is propaganda. it is part of the dope op-ed. understand "shatter/ threats/ page/" as shatter-threats page when player is in study.
 
-description of Shatter-Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a lamer realm, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
+description of Shatter-Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
 
 The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda.
 
@@ -22246,7 +22229,7 @@ carry out discerning:
 		if whistle is reflexive:
 			say "You discern you may need [if player is in Inclosure]to leave the inclosure [end if]to see how to make the whistle play DEEPLY.";
 		else if nounsolve < 3 or adjsolve < 3:
-			say "You discern you may not have enough allies after you blow the whistle and have them go quickly. You left some behind in [if nounsolve > 3]the Lamer Realm[else if adjsolve >= 3]the preserves[else]the preserves and Lamer Realm[end if].";
+			say "You discern you may not have enough allies after you blow the whistle and have them go quickly. You left some behind in [animals-left].";
 			now do-i-dis is false;
 		else:
 			say "You discern you need to play the whistle [if player is in Inclosure]here[else]in the inclosure[end if].";
@@ -22260,6 +22243,13 @@ carry out discerning:
 	poss-d;
 	now cinders are in lalaland;
 	the rule succeeds.]
+
+to say animals-left:
+	if adjsolve < 3:
+		say "the [if Lamer Realm is visited][Lamer Realm][else]room north of the [Tapering][end if]";
+		if nounsolve < 3, say " and ";
+	if nounsolve < 3:
+		say "the [Preserve]"
 
 book coevals' alcoves
 
@@ -22369,7 +22359,7 @@ chapter nude dune
 
 the nude dune is useless scenery. "It is impressive and blocks your way east."
 
-after fliptoing nude done:
+after fliptoing nude dune:
 	move ed riley to bleary barley;
 	move cinders to bleary barley;
 	continue the action;
@@ -22691,11 +22681,8 @@ to decide which number is optleft of (myp - a person):
 		increase mytemp by enabled entry;
 	decide on mytemp;
 
-after quipping when qbc_litany is the table of Gretta comments:
-	if hold-it-up is true:
-		now hold-it-up is false;
-		enact gre-go-quip;
-		continue the action;
+after quipping when qbc_litany is the table of Gretta comments (this is the process Gretta chat rule):
+	if hold-it-up is true, continue the action;
 	if current quip is gre-macks-quip:
 		enact gre-elv-quip;
 		enact gre-what-quip;
@@ -22722,6 +22709,32 @@ after quipping when qbc_litany is the table of Gretta comments:
 		do nothing;
 	else:
 		debug-fallthrough;
+
+chapter booting - not for release
+
+booting is an action applying to nothing.
+
+understand the command "boot" as something new.
+
+understand "boot" as booting.
+
+definition: a mack-idea (called mi) is smackable:
+	if mi is not in frontage, no;
+	if mi is not reflexive, no;
+	yes;
+
+carry out booting:
+	unless player is in frontage and macks are in frontage, say "Need the macks around." instead;
+	let count be 0;
+	let SI be number of smackable mack-ideas;
+	while macks are in frontage and count < 5:
+		let rmi be a random smackable mack-idea in frontage;
+		try fliptoing rmi;
+		increment count;
+	if count is 5:
+		say "OOPS. Something went wrong.";
+		say "[SI] before, [number of smackable mack-ideas] after.";
+	the rule succeeds;
 
 chapter smacking
 
@@ -23275,11 +23288,15 @@ book Lamer Realm
 
 Lamer Realm is north of Tapering Anger Pit. Lamer Realm is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
 
-the saturnic curtains are bounding scenery in Lamer Realm. "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place."
+printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[end if]"
+
+understand "blest/belts" and "blest belts" as Lamer Realm when adjsolve >= 3.
+
+the saturnic curtains are bounding scenery in Lamer Realm. "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place[if adjsolve >= 3] and my even provide a safeguard for the animals you rescued[end if]."
 
 instead of doing something with saturnic curtains:
 	if action is procedural, continue the action;
-	say "Saturnic means infected with lead poisoning, so you don't want to do too much with them.";
+	say "Saturnic means infected with lead poisoning, not just dark or ethereal, so you don't want to do too much with them.";
 
 chapter ocelots
 
@@ -23463,6 +23480,8 @@ book perverse preserve
 Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is a room in Otters. "[pre-desc]"
 
 printed name of perverse preserve is "[if nounsolve < 3]Perverse Preserve[else]Uprates Pasture[end if]"
+
+understand "uprates/pasture" and "uprates pasture" as perverse preserve when nounsolve >= 3.
 
 to say pre-desc:
 	if number of animals in perverse preserve is 1:
@@ -25715,7 +25734,7 @@ check hinting:
 			if hint-to-file is false and hint-to-display is false:
 				say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
 				ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
-				if the player dir-consents:
+				if the player direct-consents:
 					say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
 				otherwise:
 					say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
@@ -28083,6 +28102,29 @@ carry out dbing:
 	else:
 		say "Debug state is off now.";
 		now debug-state is false instead;
+
+book min/max tracking
+
+a region has a number called last-max. a region has a number called last-min. a region has a number called orig-min.
+
+when play begins:
+	repeat with RR running through regions:
+		now last-max of rr is max-score of rr;
+		now last-min of rr is min-score of rr;
+		now orig-min of rr is min-score of rr.
+
+every turn: consider the maxminchange check rule;
+
+after fliptoing (this is the maxminchange check rule):
+	if last-max of mrlp > poss-score of mrlp:
+		say "DEBUG NOTE: REGION MAX DECREASED BY [last-max of mrlp - poss-score of mrlp], [max-score of mrlp - poss-score of mrlp] OVERALL.";
+		now last-max of mrlp is poss-score of mrlp;
+	if last-min of mrlp < min-score of mrlp:
+		say "DEBUG NOTE: REGION MIN INCREASED BY [min-score of mrlp - last-min of mrlp], [min-score of mrlp - orig-min of mrlp] OVERALL.";
+		now last-min of mrlp is min-score of mrlp;
+	continue the action;
+
+the maxminchange check rule is listed last in the after rulebook.
 
 book basic tests
 
