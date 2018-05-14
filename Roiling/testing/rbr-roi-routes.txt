@@ -1,0 +1,134 @@
+files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudges.txt
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* routes-thru
+
+>posf
+>ts
+>routes
+>enter routes
+>score
+Score in a scenario: 0 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 21.
+
+==0
+>towards
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>score
+Score in a scenario: 1 out of 21 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+
+#xc
+>inside
+Your score has just gone up by one point
+
+#xc
+>x toils
+Precise recipes
+
+>out
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+#xc
+>despite
+Your score has just gone up by one point
+
+>out
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+#xc
+>opposite
+Your score has just gone up by one point
+
+>out
+
+#xc
+>against
+Your score has just gone up by one point
+>astride
+>below
+>under
+Your score has just gone up by one point
+
+##no-gal needs a line break ??
+
+#xc
+>in
+
+==1
+REGION MAX DECREASED BY 1, 1 OVERALL
+DEBUG INFO: Taking away a max point.
+
+#xc
+>out
+#xc
+>from
+Your score has just gone up by one point
+
+#xc
+>beneath
+Your score has just gone up by one point
+
+Harms Marsh
+
+#xc
+>score
+Score in a scenario: 11 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 20.
+
+>until
+Your score has just gone up by one point
+#xc
+>around
+Your score has just gone up by one point
+#xc
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+#xc
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+#xc
+>athwart
+Your score has just gone up by one point
+
+#xc
+>between
+Your score has just gone up by one point
+
+#xc
+>through
+Your score has just gone up by one point
+
+==1
+>without
+Score in a scenario: 19 out of 21 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 20 points--you missed some extra stuff you can't go back for.
+>undo
+
+==0
+>without
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 2 OVERALL.
+>score
+Score in a scenario: 20 out of 21 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 21.
+!you missed some extra stuff you can't go back for
+
+#xc
+>beyond
+Your score has just gone up by one point
+

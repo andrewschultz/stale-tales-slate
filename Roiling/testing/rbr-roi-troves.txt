@@ -1,0 +1,144 @@
+files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.txt,reg-roi2-troves-nudges.txt
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* trove-thru
+
+>posf
+
+>ts
+>troves
+>enter troves
+
+>l
+Loather Rathole
+
+>score
+Score in a scenario: 0 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
+
+==t0,3
+>gape
+Your score has just gone up by one point
+>score
+Score in a scenario: 1 out of 24 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 24.
+
+>hate
+Your score has just gone up by one point
+>care
+Your score has just gone up by one point
+Bustle Sublet
+
+>observe
+Your score has just gone up by one point
+>spot
+Your score has just gone up by one point
+
+==t0
+>believe
+Your score has just gone up by one point
+>reason
+Your score has just gone up by one point
+>score
+Score in a scenario: 7 out of 24 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 24.
+>undo
+>undo
+
+==t!2
+>believe
+Your score has just gone up by one point
+
+==t!1
+>reason
+Your score has just gone up by one point
+
+==t1
+>derive
+==!
+>recall
+
+==t1,2
+Score in a scenario: 6 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
+==!
+Score in a scenario: 8 out of 24 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 24.
+
+>despair
+Your score has just gone up by one point
+>decide
+Your score has just gone up by one point
+Boredom Bedroon
+
+==t0,3
+>glare
+Your score has just gone up by one point
+>score
+Score in a scenario: 11 out of 24 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 24.
+
+==t!2
+>bolster
+Your score has just gone up by one point
+
+==t!1
+>master
+Your score has just gone up by one point
+
+>deal
+Your score has just gone up by one point
+Browse Bowers
+
+==t1,2
+Score in a scenario: 10 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+==!
+Score in a scenario: 14 out of 24 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 24.
+
+>desire
+Your score has just gone up by one point
+Econ-Cone
+
+==t!2
+>aspire
+Your score has just gone up by one point
+
+==t!1
+>strive
+Your score has just gone up by one point
+
+>ponder
+Your score has just gone up by one point
+Upscale Capsule
+
+==t1,2
+Score in a scenario: 13 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+==!
+Score in a scenario: 18 out of 24 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 24.
+
+>ignore
+Your score has just gone up by one point
+
+==t!2
+>ramble
+Your score has just gone up by one point
+
+==t!1
+>resist
+Your score has just gone up by one point
+
+>last
+Your score has just gone up by one point
+
+>discover
+Your score has just gone up by one point
+Score in a scenario: 23 out of 24 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 24.
+
+>recant
+Your score has just gone up by one point
+
+==t1,2
+Troves (17/24)
+==!
+Troves (24/24)
+
