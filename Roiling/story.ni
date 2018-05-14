@@ -495,7 +495,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
 use MAX_NUM_STATIC_STRINGS of 90000.
 
-use MAX_PROP_TABLE_SIZE of 560000.
+use MAX_PROP_TABLE_SIZE of 570000.
 
 use MAX_STATIC_DATA of 750000.
 
@@ -511,7 +511,7 @@ use SYMBOLS_CHUNK_SIZE of 16000.
 
 use MAX_OBJECTS of 940.
 
-use MAX_PROP_TABLE_SIZE of 570000.
+use MAX_PROP_TABLE_SIZE of 580000.
 
 section debug on - not for release
 
@@ -7037,6 +7037,8 @@ Obscurest Subsector	"If you could go any way other than back west, the subsector
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
+Rote Moan Anteroom	"[no-coma]."
+Tapering Anger Pit	"[no-coma]."
 Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
@@ -7046,8 +7048,9 @@ Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anythi
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
 
-to say if-fence:
-	say "[if pipe panel fence is visible]the pipe panel fence too[else]even without the fence[end if]"
+to say no-coma: say "The coma camo may be detectable, but you can't change it"
+
+to say if-fence: say "[if pipe panel fence is visible]the pipe panel fence too[else]even without the fence[end if]"
 
 to say unless-max:
 	let my-tot be poss-score of oyster - cur-score of oyster;
@@ -7099,10 +7102,7 @@ check xrooming:
 	if noun is location of player:
 		say "X/EXAMINE (ROOM) is equivalent to LOOK in A Roiling Original.";
 		try examining location of player instead; [shouldn't happen but just in case]
-	if noun is visited:
-		say "You've been there, but you can't see that far[x-room-n].";
-	else:
-		say "You haven't gotten there yet, and you can't see that far[x-room-n].";
+	say "[if noun is visited]You've been there, but[else]You haven't gotten there yet, and[end if] you can't see that far[x-room-n].";
 
 to say x-room-n:
 	say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
@@ -9125,7 +9125,7 @@ Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"specta
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
 b-b	nude dune	false	409909726	--	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect a beryl."
-cinders	cinders	false	463338906	--	"rescind or "rescind cinders"	"rescind"	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
+cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 imp2	imp2	false	615937733	--	"brutely"	"brutely"	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
@@ -23287,6 +23287,14 @@ check going north in Anger Pit:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
 
+chapter coma camo
+
+the coma camo is a bounding backdrop. It is in Tapering Anger Pit and Rote Moan Anteroom. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent.".
+
+instead of doing something with coma camo:
+	if action is procedural, continue the action;
+	say "You won't be able to dispel the coma camo, and you won't need to."
+
 book Lamer Realm
 
 Lamer Realm is north of Tapering Anger Pit. Lamer Realm is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
@@ -25834,46 +25842,40 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is in lalaland, decide no;
 	if hintcand is useless, decide no;
 	if hintcand is the location, decide no;
-	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
+	if hintcand is old giant and mrlp is routes, decide yes; [he is known-about before he comes on stage officially]
+	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?] [this and below is for backdrops. I don't have a better way to do things.]
 		if player is in Largely All-Grey Gallery or player is in study:
 			decide yes;
 		decide no;
 	if hintcand is closest closets:
-		if mrlp is means manse and highest heights is visited:
-			decide yes;
-		decide no;
-	if hintcand is old giant and mrlp is routes: [he is known-about before he comes on stage officially]
-		decide yes;
-	if hintcand is red writing:
-		decide yes;
+		if mrlp is means manse and highest heights is visited, decide yes;
+	if hintcand is red writing, decide yes;
 	if hintcand is Thearchy Hatchery or hintcand is Maturation Natatorium:
 		if mrlp is towers:
-			if actionless coastlines is visited or Strati Strait is visited:
-				decide yes;
+			if actionless coastlines is visited or Strati Strait is visited, decide yes;
 		decide no;
 	if hintcand is n-t-air:
 		if mrlp is presto and zany meter is in grey gyre, decide yes;
 		decide no;
 	if hintcand is curst palace:
-		if mrlp is towers:
-			decide yes;
+		if mrlp is towers, decide yes;
 		decide no;
 	if hintcand is big-let:
-		if nowt town is visited:
-			decide yes;
+		if nowt town is visited, decide yes;
 		decide no;
 	if hintcand is cler-scen:
-		if mrlp is routes:
-			decide yes;
+		if mrlp is routes, decide yes;
 		decide no;
 	if hintcand is Edictal Citadel:
-		if mrlp is otters and frontage is visited:
-			decide yes;
+		if mrlp is otters and frontage is visited, decide yes;
+		decide no;
+	if hintcand is coma camo:
+		if mrlp is otters:
+			if anteroom is visited or tapering is visited, decide yes;
 		decide no;
 	if hintcand is leak lake or hintcand is shoals aslosh:
 		if mrlp is towers:
-			if salted deltas is visited or Actionless Coastlines is visited or Strati Strait is visited:
-				decide yes;
+			if salted deltas is visited or Actionless Coastlines is visited or Strati Strait is visited, decide yes;
 		decide no;
 	[d "[hintcand] before.";]
 	let R1 be map region of location of hintcand;

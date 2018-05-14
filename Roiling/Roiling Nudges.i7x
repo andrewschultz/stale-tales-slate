@@ -361,12 +361,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "austerer"	732937433	austerer	--	--	"[locname]." [start austerer treasure]
 "marines"	489567203	marines seminar remains	--	--	"[locname]." [start marines seminar remains]
 "marine"	393293237	marines seminar remains	--	--	"[locname]."
-"camo"	159621133	marines seminar remains	--	--	"[ca-co]."
-"force"	333002970	marines seminar remains	--	--	"[ca-co]."
-"forcefield"	607159749	marines seminar remains	--	--	"[ca-co]."
-"fiedl"	274156779	marines seminar remains	--	--	"[ca-co]."
-"forcefields"	703433715	marines seminar remains	--	--	"[ca-co]."
-"fields"	370430745	marines seminar remains	--	--	"[ca-co]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
@@ -846,6 +840,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "angry"	311378083	--	imp2	--	"[add-ly]."
 "angri"	234011677	--	imp2	--	"[add-ly]."
 "enraged"	465660138	--	imp3	--	"[add-ly]."
+"coma"	159621133	--	--	barley-n-s rule	"The coma camo remains as-is. It's sturdy, military-grade stuff"
 "anteroom"	600115563	Anteroom	--	--	"[locname]." [start anteroom]
 "rote"	390592507	Anteroom	--	callos-here rule	"[locname-part]."
 "moan"	209523056	Anteroom	--	callos-here rule	"[locname-part]."
@@ -1470,9 +1465,6 @@ this is the ether-gone rule:
 	if player is in gyre and ether is in lalaland, the rule succeeds;
 	the rule fails;
 
-to say ca-co:
-	say "The camo-coma remains as-is. It's sturdy, military-grade stuff"
-
 to say is-boing:
 	say "[if boing is reflexive]The number's got more numerals than letters[else]You got the boing mechanism working[end if]";
 
@@ -1911,9 +1903,12 @@ this is the imp-gone rule:
 	if player is in Tapering Anger Pit and imp is not in Tapering Anger Pit, the rule succeeds;
 	the rule fails;
 
+this is the barley-n-s rule:
+	if player is in anteroom or player is in tapering anger pit, the rule succeeds;
+	the rule fails;
+
 this is the callos-here rule:
-	if player is in anteroom:
-		if whiners are in anteroom, the rule succeeds;
+	if player is in anteroom and whiners are in anteroom, the rule succeeds;
 	the rule fails;
 
 this is the callos-gone rule:
