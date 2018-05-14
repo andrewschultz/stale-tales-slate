@@ -3091,7 +3091,7 @@ section gretta
 gre-go-warn is a truth state that varies.
 
 to say gre-other:
-	say "[if gre-what-quip is mowered]Remember[else]I didn't tell you[end if] her army can't leave the Edictal Citadel...yet. And she won't. [if gre-east-quip is mowered]You may need help from other than people[else]The animals I told you about--they could do something[end if]";
+	say "[if gre-what-quip is mowered]Remember[else]I didn't tell you[end if] her army can't leave the Edictal Citadel...yet. And she won't. [if gre-east-quip is not mowered]You may need help from other than people[else]The animals I told you about--they could do something[end if]";
 
 to say note-gretta:
 	unless gretta-quip is mowered:
@@ -9125,7 +9125,7 @@ Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"specta
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
 b-b	nude dune	false	409909726	--	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect a beryl."
-cinders	cinders	false	463338906	--	"rescind"	"rescind"	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
+cinders	cinders	false	463338906	--	"rescind or "rescind cinders"	"rescind"	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 imp2	imp2	false	615937733	--	"brutely"	"brutely"	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
@@ -22315,12 +22315,11 @@ book bleary barley
 to say if-ed:
 	say "[if ed riley is in bleary barley]You can go west past where Ed Riley was[else]Ed Riley is still blocking the way west[end if]"
 
-Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though the barley's too thick to the east, north and south are okay[end if]."
+Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
 
 printed name of Bleary Barley is "[if nude dune is in bleary barley]Burnt Brunt[else]Bleary Barley[end if]"
 
-check going east in Bleary Barley when b-b is reflexed:
-	say "The barley is a bit too thick that way[if ed riley is in Bleary Barley]--it almost looks more like marsh plants than barley[end if]." instead;
+check going east in Bleary Barley when b-b is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
 
 [glow red as you want to get rid of them]
 
@@ -22367,7 +22366,7 @@ after fliptoing nude dune:
 instead of doing something with nude dune:
 	if action is procedural, continue the action;
 	if current action is entering, say "That would END U. See what I did there?" instead;
-	if current action is climbing, say "There's nothing on the other side. You would probably just slide back down if you tried to climb it" instead;
+	if current action is climbing, say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too." instead;
 	say "The dune is just there, blocking your way east. And you don't need to go east."
 
 chapter Ed Riley
@@ -22672,7 +22671,7 @@ gre-north-quip	"'Maybe you will figure how to help the eels to the north and the
 gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
 gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Tapering Anger Pit is visited]You nod your head[else if Anteroom is unvisited and Tapering Anger Pit is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
 gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
-gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel.' She removes her medals and hands them to you. '[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
+gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel. They are worn out, but good deeds can restore them.'[paragraph break]They look very tarnished, but a gift is a gift. You take them.[paragraph break]'[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
 
 to decide which number is optleft of (myp - a person):
 	let mytemp be 0;
@@ -22764,6 +22763,10 @@ after printing the name of medals while taking inventory:
 medalings is a list of text variable. medalings is { "crusted over", "grimy", "dull", "shiny", "gleaming" }
 
 description of the medals is "They're roped together. [medal-summary]."
+
+after examining medals for the first time:
+	say "You remember Gretta said something about good deeds restoring the medals. Also, you remember a most improper story about medals clinking together when someone good hid from a vicious animal, but ... you'll take your chances.";
+	continue the action;
 
 to say medal-summary:
 	if medals-lucky-first is true:
@@ -27412,48 +27415,67 @@ showing alternate routes is an activity.
 to say remap-unset:
 	say "[if remapped is true]UNSET the tunes[else]REMAP the perma-amper[end if]";
 
+a region has a rule called altroutes.
+
+this is the manse-alt rule: say "[eq2][b]MEANS MANSE[r] has alternate routes, but nothing mutually exclusive.";
+
+this is the routes-alt rule: say "[eq2][b]ROUTES[r] has no alternate, um, routes.";
+
+this is the troves-alt rule:
+	say "[eq2][b]TROVES[r][eq2][line break]";
+	say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
+
+this is the presto-alt rule:
+	say "[eqls]PRESTO[line break][2da]you could've said [if phooeyed is true]POOH instead of PHOOEY[else]PHOOEY instead of POOH[end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
+	say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out for Nowt Town, but for fewer points[end if].";
+	say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
+	say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
+
+this is the oyster-alt rule:
+	say "[eqls]OYSTER[line break]";
+	if pill-warned is false:
+		say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
+	say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop patrons. You needed 3 of 5.";
+	if boats are in shore:
+		say "[2da]you could've tried to BOAST to get the boats['] attention, then LEAP.";
+	else:
+		say "[2da]you could've tried to [if raft is reflexive]FART on the raft, then [end if]SOAR to use the oars.";
+	say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
+	if end den is unvisited:
+		say "[2da]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there.";
+
+this is the towers-alt rule:
+	say "[eqls]TOWERS[line break]";
+	if bredo is in lalaland, say "[2da]Bredo could've also become [if bredo-bored is true]ROBED[else]BORED[instead].";
+	if reed's ale is in lalaland, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
+	if natives are in lalaland, say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
+	say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
+
+this is the otters-alt rule:
+	say "[eqls]OTTERS[line break]";
+	say "[2da]there were several other ways you could've made the macks act (you only needed three of seven): [how-macks].";
+	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've acted [if ram1 is reflexive]LOATHINGLY[else if ram2 is reflexive]STOICALLY[else]TERSELY[end if].";
+
+this is the others-alt rule:
+	say "[eqls]OTHERS[line break]";
+	say "[2da]you only needed two ways to work the passport. The other was to [if viewer is reflexive]REVIEW the viewer[else if searcher is reflexive]RESEARCH the searcher[else]PREP after you are called a perp[end if]."
+
+regions-in-order is a list of regions variable. regions-in-order is { routes, troves, presto, oyster, towers, otters, others }.
+
+altroutes of means manse is the manse-alt rule.
+altroutes of routes is the routes-alt rule.
+altroutes of troves is the troves-alt rule.
+altroutes of presto is the presto-alt rule.
+altroutes of oyster is the oyster-alt rule.
+altroutes of towers is the towers-alt rule.
+altroutes of otters is the otters-alt rule.
+altroutes of others is the others-alt rule.
+
 rule for showing alternate routes:
 	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The Means Manse and Routes have no mutually exclusive solutions. This list overlaps very little with the MISSED list which shows actual points missed.";
 	d "[list of solved regions].";
-	if routes is solved:
-		say "[eq2][b]ROUTES[r] has no alternate, um, routes.";
-	if troves is solved:
-		say "[eq2][b]TROVES[r][eq2][line break]";
-		say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
-	if presto is solved:
-		if phooeyed is true:
-			say "[eqls]PRESTO[line break][2da]you could've said POOH instead of PHOOEY, which would've meant one less point.";
-		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out for Nowt Town, but for fewer points[end if].";
-		say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
-		say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
-	if oyster is solved:
-		say "[eqls]OYSTER[line break]";
-		if pill-warned is false:
-			say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
-		say "[2da][remaining-actions of 2] would also have annoyed Posh Hops Shop patrons.";
-		if boats are in shore:
-			say "[2da]you could've tried to BOAST to get the boats['] attention, then LEAP.";
-		else:
-			say "[2da]you could've tried to [if raft is reflexive]FART on the raft, then [end if]SOAR to use the oars.";
-		say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
-		if end den is unvisited:
-			say "[2da]you actually missed the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there.";
-	if towers is solved:
-		say "[eqls]TOWERS[line break]";
-		if reed's ale is in lalaland:
-			say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
-		if natives are in lalaland:
-			say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
-		say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired the boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
-		if bredo is in lalaland:
-			say "[2da]Bredo could've become [if bredo-bored is true]ROBED[else]BORED[instead].";
-	if otters is solved:
-		say "[eqls]OTTERS[line break]";
-		say "[2da]there were a couple other ways you could've made the macks act: [how-macks].";
-		say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've acted [if ram1 is reflexive]LOATHINGLY[else if ram2 is reflexive]STOICALLY[else]TERSELY[end if].";
-	if others is solved:
-		say "[eqls]OTHERS[line break]";
-		say "[2da]you only needed two ways to work the passport. The other was to [if viewer is reflexive]REVIEW the viewer[else if searcher is reflexive]RESEARCH the searcher[else]PREP after you are called a perp[end if]."
+	repeat with myr running through regions-in-order:
+		if myr is solved, consider the altroutes of myr;
 
 to say presto-3 of (n - a number):
 	if n is not 1, say "pushing the skid to the shack with the yak on it";
@@ -27477,9 +27499,9 @@ showing what the player missed is an activity.
 
 to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
-	if tumblers are not in lalaland, add "SPIT" to poshact;
+	if tumblers are not reflexed, add "SPIT" to poshact;
 	if tines are not reflexed, add "INSET" to poshact;
-	if capers is not in lalaland, add "SCRAPE" to poshact;
+	if capers is not in reflexed, add "SCRAPE" to poshact;
 	if gins sign is not reflexed, add "SING" to poshact;
 	if tunes are not reflexed, add "UNSET/REMAP" to poshact;
 	sort poshact in random order;
@@ -29407,8 +29429,23 @@ carry out missalting:
 
 to say miss-types:
 	say "MISSED = all (solved) regions['] misses--not including the current region.";
-	say "MISSES = this region's misses.";
-	say "MISSALT = show alternate routes";
+	say "MISSES = this region's misses (may provide nonsense/spoilers).";
+	say "MISSALT = show alternate mutually exclusive routes for solved regions.";
+	say "THISALT = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
+
+chapter thisalting
+
+[ * THISALT shows the alternate paths so far ]
+
+thisalting is an action out of world.
+
+understand the command "thisalt" as something new.
+
+understand "thisalt" as thisalting.
+
+carry out thisalting:
+	consider the altroutes of mrlp;
+	the rule succeeds;
 
 chapter elving
 
