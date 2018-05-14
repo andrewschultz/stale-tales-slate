@@ -200,3 +200,5 @@ if get_stdin:
         for x in new_arg:
             anagram_check(x)
         print(input_line)
+else:
+    if len(new_arg) > 1: print("Remember -s is stdin. This makes runs go faster in the future.")
