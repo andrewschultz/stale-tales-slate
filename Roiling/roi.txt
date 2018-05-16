@@ -630,11 +630,11 @@ Though, first, if you haven't dealt with the lobster or ME ARTS, you won't have 
 >>BROWSE BOWERS
 ?How do I reside somewhere now?
 You are ready to want a bigger place.
-The brochures may help you here.
-Sir Dee tells you to Reside...
-Or to DESIRE to.
+Si Reed has Reside! Reside!
+It can become DESIRE.
 ?Are the shmoe homes and rotunda important?
 They are just scenery, to give the Browse Bowers a feeling of isolation.
+The rotunda is a reference to the Browse Bowers' old name.
 >>ECON-CONE
 ?Who is the statue? What should I do with him/it?
 The statue is one of two things you need to move on, sort of like the Bortles Lobster and ME ARTS.

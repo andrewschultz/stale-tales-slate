@@ -4045,7 +4045,7 @@ diapers	"Staring again at the diapers, you are depressed you couldn't even get b
 rivets	"Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want."
 Pernod	"The bottle of Pernod seems to rattle and spin slightly."
 large regal lager	"No...that is not quite the way to fight the temptation of the wicked brew."
-brochure	"Your longing increases...but not enough."
+Si Reed	"Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!"
 praise	"That's not quite the way to look forward to praise. But it may be a start."
 godlings' lodgings	"The godlings['] lodgings almost seem to laugh at you, for being close, yet far."
 noise	"The noise seems almost bearable."
@@ -5538,7 +5538,6 @@ ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-aut
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 sister tressi	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
-brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
 rivets	false	false	false	true	"[rivet-help]."
 praise	true	false	false	false	"Hmm. That's weird. Maybe it's the words in the praise that are giving the weird results. Maybe listening to them will clear stuff up."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
@@ -6136,7 +6135,7 @@ carry out troves-hinting:
 			if lobster-first is true, try objhinting lobster instead;
 			try objhinting me arts instead;
 		try objhinting ltb instead;
-	if player is in Browse Bowers, try objhinting brochure instead;
+	if player is in Browse Bowers, try objhinting Si Reed instead;
 	if location of player is Econ Cone:
 		if rivets are in econ cone and praise is in econ cone:
 			if rivets-first is true, try objhinting rivets instead;
@@ -7007,7 +7006,7 @@ Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. Besides, you might wind up in ruts: Rustin['] Ruin St."
 Drain Nadir	"You're so low, you can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow."
 Boredom Bedroom	"Directions won't work. Running into a wall would leave your bod more red: boom! Study your surroundings."
-Browse Bowers	"You are definitely going places, but the only place you'd get walking from here is the Save-Aves. Not ritzy enough! Maybe you should focus on that brochure."
+Browse Bowers	"You are definitely going places, but the only place you'd get walking from here is the Shmoe Homes. Terrible! Maybe you should focus on Si Reed's advice."
 Econ Cone	"That could lead to Save Aves. A well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there."
 Upscale Capsule	"You're at the very top. You don't really want to change that without really good motivation."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
@@ -8958,7 +8957,7 @@ ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's 
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
-brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
+Si Reed	Si Reed	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 praise	praise	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise is in lalaland]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
@@ -14034,10 +14033,9 @@ instead of taking lager:
 
 book Browse Bowers
 
-Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the shmoe homes you can look out on. The ones you're better than now, you hope.[paragraph break]There's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the shmoe homes you can look out on. The ones you're better than now, you hope.[paragraph break]An exhibit called RESIDE RESIDE advertises upscale housing.".
 
 after fliptoing ltb:
-	set the pronoun it to brochure;
 	set the pronoun them to browse bowers;
 	continue the action;
 
@@ -14047,7 +14045,7 @@ the shmoe homes are bounding scenery in Browse Bowers. "Ugh! You're sure they're
 
 instead of doing something with shmoe homes:
 	if action is procedural, continue the action;
-	say "You DON'T want to do anything with the shmoe homes except let out oh-mes at the thought of ever being associated with them. The brochure may suggest a way to move beyond them for good."
+	say "You DON'T want to do anything with the shmoe homes except let out oh-mes at the thought of ever being associated with them. Perhaps looking at things as Si Reed does will help you be more."
 
 chapter dour tan rotunda
 
@@ -14057,14 +14055,23 @@ instead of doing something with the dour tan rotunda:
 	if action is procedural, continue the action;
 	say "The rotunda has not kept up with progress. Do not worry about it.";
 
-chapter brochure
+chapter Si Reed
 
-a brochure is vanishing scenery in Browse Bowers. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads:[paragraph break]RESIDE! RESIDE! RESIDE! - Sir Dee."
+Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheery and dressed in bright red.". "[one of]'Hey! I'm Si Reed. I'll help with your mental attitude so you deserve better than the Shmoe Homes, here.'[or]Si Reed continues to pump his fist and Believe In You.[stopping]
 
-a-text of brochure is "RYRYRY". b-text of brochure is "R???RG". parse-text of brochure is "x[sp]e[sp]s[sp]i[sp]x[sp]e". brochure is cheat-spoilable.
+["[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads:[paragraph break]RESIDE! RESIDE! RESIDE! - Sir Dee."]
 
-instead of taking brochure:
-	say "No. What would the next person here read?"
+a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of Si Reed is "x[sp]-[sp]x[sp]-[sp]x[sp]-". Si Reed is cheat-spoilable.
+
+RESIDE RESIDE is scenery in Browse Bowers. it is cheat-spoilable. "RESIDE RESIDE advertises [randbla]."
+
+a-text of RESIDE RESIDE is "RYRYRY". b-text of Si Reed is "RGPGRG". parse-text of Si Reed is "-[sp]e[sp]s[sp]i[sp]-[sp]e".
+
+understand "exhibit" as RESIDE RESIDE when player is in Browse Bowers.
+
+instead of doing something with RESIDE RESIDE:
+	if action is procedural, continue the action;
+	say "RESIDE RESIDE is just there for advertising.";
 
 book Econ Cone
 
@@ -26335,7 +26342,7 @@ tokers	"[if nestor is off-stage]You can find the tokers['] friend in store N[els
 mangiest steaming	"[if lecturer is reflexive]You can enter the steaming for a mini-side-quest[else]You've been in the steaming. After how you upended things, it'd be unwise to go back[end if]."
 passage	"If you go there, you'll get a big hint."
 pamphlets	"They are completely useless for actual life lessons, but the settler on 'cheat' mode will knock a vowel out from I USED TO."
-idg	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't work here.[plus][or]Ian's brochure is a hint.[plus][or]TEDIOUS + I USED TO will give you a lot of clues. Studio E will give a clincher.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
+idg	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't work here.[plus][or]Ian's pamphlet is a hint.[plus][or]TEDIOUS + I USED TO will give you a lot of clues. Studio E will give a clincher.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
 lecturer	--	idg	[end stores hinting]
 poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[plus][or][if cur-score of routes > 0]You've already figured one word[else]It's a certain sort of word[end if].[plus][or]Directions are confusing here, and standard ones don't work, but there's another way to get around.[plus][or]PREPOSITIONS.[minus][cycling]"
 bench	"[one of]The bench-end indicates the bench is A GIANT'S. You probably can't touch it wrong.[plus][or]Touching the bench does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
@@ -26396,7 +26403,7 @@ Eddie's Song	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus]
 lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is in Boredom Bedroom]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
 ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is in Boredom Bedroom]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
 ltb	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
-brochure	"[one of]It is no sin to want a better place to RESIDE.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
+Si Reed	"[one of]Si Reed wnts to help you focus on certain mental stuff.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
 dour tan rotunda	"It's what the Browse Bowers used to be called."
 praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
 rivets	"[one of]Those rivets stand out.[plus][or][if praise is in lalaland]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"

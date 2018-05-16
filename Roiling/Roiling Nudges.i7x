@@ -282,7 +282,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rotunda"	460016620	browse bowers	--	--	"[rotun]."
 "dour"	285811276	browse bowers	--	--	"[rotun]."
 "tan"	174205344	browse bowers	--	--	"[rotun]."
-"brochure"	552618888	--	brochure	--	"It's more the blurb at the end than the brochure."
+"eder"	361965110	--	browse bowers	--	"It's Si Reed's full name."
 "shmoe"	399790104	browse bowers	--	--	"[shmoe-homes]."
 "home"	303516138	browse bowers	--	--	"[shmoe-homes]."
 "cone"	290071779	Econ Cone	--	--	"[cone-rec]." [start econ cone]
