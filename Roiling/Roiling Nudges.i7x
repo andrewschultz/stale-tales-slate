@@ -6,7 +6,7 @@ volume table of nudges
 
 [nuch.py makes sure that all the nudges have a test case assigned]
 
-[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Frontage, Pool (easier than barn), Barn, north/south rooms, Alcoves, Inclosure. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Alcoves, Inclosure. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
 
 book the tables themselves
 
@@ -779,11 +779,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "lied"	247641883	--	deli rye	--	"[del-ry]."
 "sandwich"	397613884	--	deli rye	--	"[del-ry]."
 "citadel"	371945304	--	Edictal Citadel	--	"The whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
-"frontage"	520802431	frontage	--	--	"[locname]." [start frontage]
-"gent"	332423337	--	--	frontage-before rule	"[locname-part]."
-"fora"	188379094	--	--	frontage-before rule	"[locname-part]."
-"frat"	217136535	--	--	frontage-after rule	"[locname-part]."
-"gone"	303665896	--	--	frontage-after rule	"[locname-part]."
+"downside"	520802431	Disowned Downside	--	--	"[locname]." [start Disowned Downside]
 "gents"	428697303	--	macks	--	"They aren't (spiritually) gents, and you can't change them but their arguments."
 "iq"	129398463	--	medals	--	"[both-medals]."
 "lucky"	353217661	--	medals	--	"[both-medals]."
@@ -830,18 +826,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "simply"	462981015	--	sly imp	--	"It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving."
 "sly"	272447057	--	sly imp	--	"[imp-sly]."
 "imp"	190533958	--	sly imp	--	"[imp-sly]."
-"whiner"	472247338	anteroom	--	--	"[whiney]."
-"whiners"	568521304	anteroom	--	--	"[whiney]."
+"whiner"	472247338	Clarthead Cathedral	--	--	"[whiney]."
+"whiners"	568521304	Clarthead Cathedral	--	--	"[whiney]."
 "brute"	439764642	--	imp1	--	"[add-ly]."
 "angry"	311378083	--	imp2	--	"[add-ly]."
 "angri"	234011677	--	imp2	--	"[add-ly]."
 "enraged"	465660138	--	imp3	--	"[add-ly]."
 "coma"	159621133	--	--	barley-n-s rule	"The coma camo remains as-is. It's sturdy, military-grade stuff"
-"anteroom"	600115563	Anteroom	--	--	"[locname]." [start anteroom]
-"rote"	390592507	Anteroom	--	callos-here rule	"[locname-part]."
-"moan"	209523056	Anteroom	--	callos-here rule	"[locname-part]."
-"near"	284225238	Anteroom	--	callos-gone rule	"[locname-part]."
-"moot"	315890325	Anteroom	--	callos-gone rule	"[locname-part]."
+"cathedral"	451746378	Clarthead Cathedral	--	--	"[locname]." [start Clarthead Cathedral]
 "loathing"	417246607	--	ram1	--	"[add-ly]."
 "stoic"	337734992	--	ram2	--	"Usually, you'd need to add two letters, but here you'd need to add four."
 "stoical"	393736649	--	ram2	--	"[add-ly]."
@@ -1824,14 +1816,6 @@ to say whiney:
 to say add-ly:
 	say "No, you need a couple more letters... [if power-back is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
 
-this is the frontage-after rule:
-	if player is in frontage and macks are in lalaland, the rule succeeds;
-	the rule fails;
-
-this is the frontage-before rule:
-	if player is in frontage and macks are in frontage, the rule succeeds;
-	the rule fails;
-
 to say both-medals:
 	say "No, it's a combination of what's on both medals"
 
@@ -1854,7 +1838,7 @@ to say eelmry:
 	if bran barn is unvisited and loop pool is unvisited and alcoves is unvisited:
 		say "You shouldn't know about Merle, Elmer et al yet";
 	else:
-		say "You think back to whom you've met so far once past the frontage"
+		say "You think back to whom you've met so far once past the Disowned Downside"
 
 to say e-m-prank:
 	say "If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down"
@@ -1891,25 +1875,8 @@ to say one-toy:
 to say elv-mach:
 	say "You have enough to think about without one more of Elvira's machines"
 
-this is the imp-here rule:
-	if player is in Shiner Shrine and imp is in Shiner Shrine, the rule succeeds;
-	the rule fails;
-
-this is the imp-gone rule:
-	if player is in Shiner Shrine and imp is not in Shiner Shrine, the rule succeeds;
-	the rule fails;
-
 this is the barley-n-s rule:
-	if player is in anteroom or player is in Shiner Shrine, the rule succeeds;
-	the rule fails;
-
-this is the callos-here rule:
-	if player is in anteroom and whiners are in anteroom, the rule succeeds;
-	the rule fails;
-
-this is the callos-gone rule:
-	if player is in anteroom:
-		if whiners are not in anteroom, the rule succeeds;
+	if player is in Clarthead Cathedral or player is in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
 this is the realm-saved rule:

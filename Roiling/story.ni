@@ -2499,8 +2499,8 @@ Elvira	Le Mer	"'Not dangerous.'"
 Elvira	Merle	"'He will get his reward. Even if he hadn't let you by.'"
 Elvira	Elmer	"'He will get his reward. Even if he hadn't let you by.'"
 Elvira	Ed Riley	"'I didn't expect much from him.'"
-Elvira	whiners	"[if whiners are in Anteroom]She's not going to HELP you with them[else]You explain you got past them, and she shrugs[end if]. Henchmen these days. That's why they're henchmen and not leaders."
-Elvira	sly imp	"[if imp is in Anteroom]She's not going to HELP you with the imp[else]You explain you got past it, and she shrugs[end if]. Henchmen these days. That's why they're henchmen and not leaders."
+Elvira	whiners	"[if whiners are in Clarthead Cathedral]She's not going to HELP you with them[else]You explain you got past them, and she shrugs[end if]. Henchmen these days. That's why they're henchmen and not leaders."
+Elvira	sly imp	"[if imp is in Shiner Shrine]She's not going to HELP you with the imp[else]You explain you got past it, and she shrugs[end if]. Henchmen these days. That's why they're henchmen and not leaders."
 sly imp	Elvira	"'Oh, you know her too? Of course you don't! If you did, you'd know you couldn't go beyond here.'"
 whiners	Elvira	"They bang on about how Elvira would be furious if they let someone see the animals to the south."
 Elmer	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'"
@@ -3169,7 +3169,7 @@ before QBC responding with (this is the warn you before bailing from a convo rul
 			if the number understood is cur-act - 1:
 				say "'So rude!' says Gunter, roused, soured.";
 
-before quipping when player is in frontage (this is the Gretta checks rule):
+before quipping when player is in Disowned Downside (this is the Gretta checks rule):
 	now hold-it-up is false;
 	let missed-one be false;
 	if current quip is gre-go-quip:
@@ -3521,7 +3521,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		now satchel is in lalaland;
 		now player has gird grid;
 		if do-i-chat is true: [this is a cheat bypass]
-			move player to Frontage;
+			move player to Disowned Downside;
 			now macks are in lalaland;
 			now qbc_litany is table of Gretta comments;
 		else:
@@ -4710,7 +4710,7 @@ otters	2	"Barley, [if player is in bleary barley]reedily[else]then another l-y. 
 others	1	"Hmm. It looks pretty clear what sort of stuff you're trying to make, here."
 
 to say imp-or-whiners:
-	if player is in anteroom:
+	if player is in Clarthead Cathedral:
 		say "whiners";
 	else:
 		say "sly imp";
@@ -5047,7 +5047,7 @@ definition: a room (called myrm) is ominous:
 	if myrm is bleary barley and b-b is reflexive:
 		decide no;
 	if myrm is in Otters:
-		if myrm is Shiner Shrine or myrm is Anteroom:
+		if myrm is Shiner Shrine or myrm is Clarthead Cathedral:
 			decide no;
 		decide yes;
 
@@ -5078,7 +5078,7 @@ when play begins (this is the hint and other randomization rule):
 	sort the table of guard-org in random order; [for first-time-view clues]
 	sort table of animal randomness in random order; [otters hinting]
 	sort shrine-imp-items in random order;
-	sort anteroom-items in random order;
+	sort cathedral-items in random order;
 	if a random chance of 1 in 2 succeeds: [others random clues]
 		now viewer-first is true;
 	sort rustic-easy-items in random order;
@@ -5302,7 +5302,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if p-2 is in bran barn:
 				now noun is p-2;
 				continue the action;
-		if player is in frontage and atmo-moat is in frontage and macks are not in frontage:
+		if player is in Disowned Downside and atmo-moat is in Disowned Downside and macks are not in Disowned Downside:
 			now noun is atmo-moat;
 			continue the action;
 		if player is in preserve and raptor is in preserve:
@@ -5318,7 +5318,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in Shiner Shrine and imp is in Shiner Shrine:
 			now noun is imp;
 			continue the action;
-		if player is in anteroom and whiners are in anteroom:
+		if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral:
 			now noun is whiners;
 			continue the action;
 	else if mrlp is others: [others]
@@ -6363,10 +6363,10 @@ to decide which thing is otters-cur-item:
 			decide on b-b;
 		if Ed Riley is in Bleary Barley:
 			decide on Ed Riley;
-	if player is in frontage:
-		if Macks are in frontage:
+	if player is in Disowned Downside:
+		if Macks are in Disowned Downside:
 			decide on Gretta;
-		if atmo-moat is in frontage and power-back is true:
+		if atmo-moat is in Disowned Downside and power-back is true:
 			decide on atmo-moat;
 	if player is in bran barn:
 		if Mr Lee wears ghoul hat:
@@ -6381,8 +6381,8 @@ to decide which thing is otters-cur-item:
 	if player is in Shiner Shrine:
 		if sly imp is in Shiner Shrine:
 			decide on sly imp;
-	if player is in anteroom:
-		if whiners are in anteroom:
+	if player is in Clarthead Cathedral:
+		if whiners are in Clarthead Cathedral:
 			decide on whiners;
 	if player is in Lamer Realm:
 		if owls are in Lamer Realm:
@@ -6441,24 +6441,24 @@ to decide which thing is animal-to-hint:
 
 shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, imp3}.
 
-anteroom-items is a list of things variable. anteroom-items is {ram1, ram2, ram3}.
+cathedral-items is a list of things variable. cathedral-items is {ram1, ram2, ram3}.
 
 carry out otters-hinting:
 	unless otters-cur-item is player:
 		try objhinting otters-cur-item instead;
 	if player is in Bleary Barley: [if there is no item, see what to do next based on where we can go]
 		all-say "You made a way west. You're done here." instead;
-	else if player is in frontage:
-		all-say "[if gretta is in frontage]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if alcoves is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if].";
+	else if player is in Disowned Downside:
+		all-say "[if gretta is in Disowned Downside]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if alcoves is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if].";
 	else if player is in loop pool or player is in bran barn:
 		all-say "You recovered your powers, so there's nothing more to do here.";
 	else if player is in Shiner Shrine:
 		all-say "The path north is cleared[tho-work].";
-	else if player is in Anteroom:
+	else if player is in Clarthead Cathedral:
 		all-say "The path south is cleared[tho-work].";
 	else if player is in Lamer Realm or player is in perverse preserve:
 		if power-back is false:
-			all-say "You need to get your powers back before you do anything. Look around [if frontage is visited]the frontage[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
+			all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
 		else:
 			if player is in perverse preserve:
 				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if].";
@@ -7036,7 +7036,7 @@ Obscurest Subsector	"If you could go any way other than back west, the subsector
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
-Rote Moan Anteroom	"[no-coma]."
+Clarthead Cathedral	"[no-coma]."
 Shiner Shrine	"[no-coma]."
 Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
@@ -7845,7 +7845,7 @@ before smelling (this is the you can smell some stuff some places rule):
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
 	if dandier arid den is in location of player, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if deli rye is visible or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
-	if player is in frontage, say "You can [if macks are visible]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
+	if player is in Disowned Downside, say "You can [if macks are visible]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in alcoves, say "A clove, likely from one alcove." instead;
 	if player is in loop pool, say "Salt Water. Wet, astral." instead;
 	if player is in Inclosure, say "Vast vats['] sulfinyl reek clearly eliminates all hope of silly fun." instead;
@@ -8001,7 +8001,7 @@ instead of swearing obscenely:
 		say "This is the place for it, but you can't bring yourself to be heard." instead;
 	if agnostic is in location of player:
 		say "Some example you are." instead;
-	if player is in frontage and macks are in frontage:
+	if player is in Disowned Downside and macks are in Disowned Downside:
 		say "The conversation is horrid enough." instead;
 	if player is in actionless coastlines or player is in Strati Strait:
 		if lois is in location of player or hostile-is-he lot is in location of player:
@@ -11838,7 +11838,7 @@ to pad-rec-p (q - text):
 to decide whether need-line-break:
 	if player is in study and gunter is in study:
 		decide no;
-	if player is in frontage and gretta is in frontage:
+	if player is in Disowned Downside and gretta is in Disowned Downside:
 		decide no;
 	if player is in Largely All-Grey Gallery and elmo is in Largely All-Grey Gallery:
 		decide no;
@@ -16541,9 +16541,9 @@ definition: a direction (called dir) is viable:
 		decide no;
 	if player is in Lapsin' Plains and dir is inside and span pans are in Lapsin' Plains:
 		decide no;
-	if player is in frontage and atmo-moat is in frontage and dir is west:
+	if player is in Disowned Downside and atmo-moat is in Disowned Downside and dir is west:
 		decide no;
-	if player is in alcoves and merle is in frontage and dir is west:
+	if player is in alcoves and merle is in Disowned Downside and dir is west:
 		decide no;
 	if player is in gates stage and player does not have passport and dir is north:
 		decide no;
@@ -22153,13 +22153,13 @@ does the player mean discerning the player: it is likely.
 
 to say rand-to-go:
 	let mysc be entry 1 of shrine-imp-items;
-	if player is in anteroom:
-		now mysc is entry 1 of anteroom-items;
+	if player is in Clarthead Cathedral:
+		now mysc is entry 1 of cathedral-items;
 	repeat through table of otters anagrams:
 		if mysc is the-from entry:
 			say "[right-word entry in upper case]";
 			continue the action;
-	say "BUG--[if player is in Anteroom]loathingly or tersely[else]angrily or brutely[end if]";
+	say "BUG--[if player is in Clarthead Cathedral]loathingly or tersely[else]angrily or brutely[end if]";
 
 rescind-cinders is a truth state that varies.
 
@@ -22193,13 +22193,13 @@ carry out discerning:
 [	if ed riley is visible:
 		say "You discern Ed Riley could speak more reedily.";
 	else if player is in bran barn:
-		if macks are in frontage:
+		if macks are in Disowned Downside:
 			say "You discern you don't really have Mr. Lee's trust. Maybe if you got rid of some obvious nastiness, like to the north, you could.";
 			now do-i-dis is false;
 		else:
 			say "You discern an argument [if ghoul hat is in bran barn]going although...however[else]finishing HOWEVER[end if].";
 	else if player is in loop pool and eels are visible:
-		if macks are in frontage:
+		if macks are in Disowned Downside:
 			say "You discern you haven't really proved yourself in these parts. Maybe if you got rid of some obvious nastiness, like to the south, you could.";
 			now do-i-dis is false;
 		else:
@@ -22260,7 +22260,7 @@ to say animals-left:
 
 book coevals' alcoves
 
-Coevals' Alcoves is a room in Otters. Alcoves is west of frontage. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare."
+Coevals' Alcoves is a room in Otters. Alcoves is west of Disowned Downside. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare."
 
 check going when player is in alcoves:
 	if noun is inside:
@@ -22428,7 +22428,7 @@ check fliptoing the whistle when whistle is reflexive:
 		get-dead;
 		follow the shutdown rules instead;
 	if number of visible people > 1:
-		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Frat-Gone Frontage[if merle is in lalaland] or the Alcoves[end if][if player is in alcoves], or find a way to get rid of everyone else[end if]." instead;
+		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is in lalaland] or the Alcoves[end if][if player is in alcoves], or find a way to get rid of everyone else[end if]." instead;
 
 definition: a person (called pe) is npcish:
 	if pe is the player, decide no;
@@ -22561,19 +22561,17 @@ carry out whistleing:
 		say "Music is not your talents. You'd need an instrument." instead;
 	try playing the whistle instead;
 
-book Frontage
+book Disowned Downside
 
-frontage is west of Bleary Barley. frontage is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
+Disowned Downside is west of Bleary Barley. Disowned Downside is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
 
-after looking in frontage:
-	if macks are in frontage:
+after looking in Disowned Downside:
+	if macks are in Disowned Downside:
 		set the pronoun them to macks;
 		set the pronoun her to gretta;
 	continue the action;
 
-printed name of frontage is "[if Gretta is in frontage]Gent-Fora Frontage[else]Frat-Gone Frontage[end if]"
-
-the atmo-moat is vanishing scenery in frontage. understand "atmo/moat" and "atmo moat" as atmo-moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red."
+the atmo-moat is vanishing scenery in Disowned Downside. understand "atmo/moat" and "atmo moat" as atmo-moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red."
 
 a-text of atmo-moat is "YRYR". b-text of atmo-moat is "??YR". parse-text of atmo-moat is "-[sp]x[sp]O[sp]M". atmo-moat is parse-spoilable.
 
@@ -22588,7 +22586,7 @@ instead of entering atmo-moat:
 	say "It's too gulfy. Things'd get fugly. You've no diver pod provided. Plus you might get poked by strident tridents."
 
 check fliptoing atmo-moat:
-	if macks are in frontage:
+	if macks are in Disowned Downside:
 		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
 		preef atmo-moat;
 		do nothing instead;
@@ -22597,7 +22595,7 @@ check fliptoing atmo-moat:
 		preef atmo-moat;
 		do nothing instead;
 
-after printing the locale description for frontage when frontage is unvisited:
+after printing the locale description for Disowned Downside when Disowned Downside is unvisited:
 	if do-i-chat is true:
 		now macks are in lalaland;
 		now all mack-ideas are in lalaland;
@@ -22605,14 +22603,14 @@ after printing the locale description for frontage when frontage is unvisited:
 		the rule succeeds;
 	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
 
-the Edictal Citadel is a backdrop in frontage. "It takes up a huge chunk of space to the west."
+the Edictal Citadel is a backdrop in Disowned Downside. "It takes up a huge chunk of space to the west."
 
 instead of doing something with the Edictal Citadel:
 	unless the action is procedural:
 		say "[if player is in alcoves or player is in Inclosure]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if]." instead;
 	continue the action;
 
-the sad elm is useless scenery in frontage. description is "It was probably sad before the macks came along, but it's not really important."
+the sad elm is useless scenery in Disowned Downside. description is "It was probably sad before the macks came along, but it's not really important."
 
 instead of climbing sad elm:
 	if Gretta is visible:
@@ -22620,7 +22618,7 @@ instead of climbing sad elm:
 	else:
 		say "Yorpwald's still up a tree. Don't join it."
 
-the macks are plural-named flippable reflexive people in frontage. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
+the macks are plural-named flippable reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
 understand "mack" as macks.
 
@@ -22637,7 +22635,7 @@ to say how-macked:
 	else if macked-out is 2:
 		say ", but they're wavering a bit. If you blow up their flow once more, you could probably get rid of them"
 
-Gretta Garett-Tatger is a female person in frontage. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore."
+Gretta Garett-Tatger is a female person in Disowned Downside. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore."
 
 before doing something when Gretta is visible and macks are not visible:
 	if current action is examining:
@@ -22676,7 +22674,7 @@ gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called
 gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
 gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
 gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
-gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Shiner Shrine is visited]You nod your head[else if Anteroom is unvisited and Shiner Shrine is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
+gre-east-quip	"'There are animal pens back east.' [if Clarthead Cathedral is visited and Shiner Shrine is visited]You nod your head[else if Clarthead Cathedral is unvisited and Shiner Shrine is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
 gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
 gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel. They are worn out, but good deeds can restore them.'[paragraph break]They look very tarnished, but a gift is a gift. You take them.[paragraph break]'[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
 
@@ -22725,16 +22723,16 @@ understand the command "boot" as something new.
 understand "boot" as booting.
 
 definition: a mack-idea (called mi) is smackable:
-	if mi is not in frontage, no;
+	if mi is not in Disowned Downside, no;
 	if mi is not reflexive, no;
 	yes;
 
 carry out booting:
-	unless player is in frontage and macks are in frontage, say "Need the macks around." instead;
+	unless player is in Disowned Downside and macks are in Disowned Downside, say "Need the macks around." instead;
 	let count be 0;
 	let SI be number of smackable mack-ideas;
-	while macks are in frontage and count < 5:
-		let rmi be a random smackable mack-idea in frontage;
+	while macks are in Disowned Downside and count < 5:
+		let rmi be a random smackable mack-idea in Disowned Downside;
 		try fliptoing rmi;
 		increment count;
 	if count is 5:
@@ -22826,7 +22824,7 @@ check fliptoing a mack-idea (this is the NO ESP rule):
 
 after fliptoing a mack-idea:
 	if uber-rand-cheat is true:
-		if number of mack-ideas in frontage is 0:
+		if number of mack-ideas in Disowned Downside is 0:
 			say "You're done!";
 			now macks are in lalaland;
 			try talking to Gretta;
@@ -22859,10 +22857,10 @@ after fliptoing a mack-idea:
 
 macked-out is a number that varies. macked-out is usually 0.
 
-check talking to Gretta when macks are in frontage:
+check talking to Gretta when macks are in Disowned Downside:
 	say "The macks are monopolizing the conversation. They outnumber you." instead;
 
-check going in frontage when Gretta is visible:
+check going in Disowned Downside when Gretta is visible:
 	if noun is north or noun is south or noun is east:
 		say "[cree-pee].";
 
@@ -22872,10 +22870,10 @@ to say cree-pee:
 check taking atmo-moat:
 	say "Way too big." instead;
 
-check going west in frontage:
-	if macks are in frontage:
+check going west in Disowned Downside:
+	if macks are in Disowned Downside:
 		say "One of the macks stops you from tripping the atmo-moat, and he tries to convince Gretta he's a great guy for saving you. The others yell at him for trying to play hero too obviously." instead;
-	if atmo-moat is in frontage:
+	if atmo-moat is in Disowned Downside:
 		say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
 	if Gretta is visible:
 		say "[cree-pee]." instead;
@@ -22896,7 +22894,7 @@ to place-a-mack (x1 - a number) and (x2 - a number):
 			if one-yet is true:
 				say "Oops [XX] is a duplicate.";
 			else:
-				now XX is in frontage;
+				now XX is in Disowned Downside;
 				now one-yet is true;
 	if one-yet is false:
 		say "Oops [x1] pod [x2] ord had no mack idea.";
@@ -22913,21 +22911,21 @@ when play begins (this is the mack-randomize rule):
 	now cur-pod-num is 0;
 
 definition: a mack-idea (called mm) is unprioritized:
-	if mack-prio of mm is 0 and mm is in frontage:
+	if mack-prio of mm is 0 and mm is in Disowned Downside:
 		decide yes;
 	decide no;
 
 to assign-fixed-mack-priority:
 	now cur-mack-blab is 0;
 	repeat with B running through mack-ideas:
-		if B is in frontage:
+		if B is in Disowned Downside:
 			now mack-prio of B is pod-num of B;
 
 to assign-random-mack-priority:
 	now cur-mack-blab is 0;
 	repeat with B running through mack-ideas:
 		now mack-prio of B is 0;
-	let C be number of mack-ideas in frontage; [should be 7, but yeah]
+	let C be number of mack-ideas in Disowned Downside; [should be 7, but yeah]
 	repeat with B running from 1 to C:
 		let thismack be a random unprioritized mack-idea;
 		now mack-prio of thismack is B;
@@ -23021,7 +23019,7 @@ to decide whether (n - a number) is unworkable:
 
 this is the find-mack-idea rule:
 	repeat with QQ running through mack-ideas:
-		if QQ is in frontage and mack-prio of QQ is cur-mack-blab:
+		if QQ is in Disowned Downside and mack-prio of QQ is cur-mack-blab:
 			now current-idea is QQ;
 			the rule succeeds;
 	the rule fails;
@@ -23030,7 +23028,7 @@ to decide which mack-idea is mack-hint:
 	let cur-prio be 10;
 	let got-mack be false;
 	let cur-mack be t-despairingly;
-	repeat with QQ running through ment reflexive mack-ideas in frontage:
+	repeat with QQ running through ment reflexive mack-ideas in Disowned Downside:
 		d "Considering [QQ] for hints.";
 		if mack-prio of QQ < cur-prio:
 			d "Potentially choosing [QQ].";
@@ -23041,8 +23039,8 @@ to decide which mack-idea is mack-hint:
 		say "(BUG in mack-idea code) ";
 	decide on cur-mack.
 
-every turn when player is in frontage and macks are in frontage (this is the macks hitting on rule):
-[	repeat with QQ running through reflexive mack-ideas in frontage:
+every turn when player is in Disowned Downside and macks are in Disowned Downside (this is the macks hitting on rule):
+[	repeat with QQ running through reflexive mack-ideas in Disowned Downside:
 		if debug-state is true:
 			say "DEBUG NOTES: [qq]: [mack-prio of qq].";]
 	let loop be false;
@@ -23072,7 +23070,7 @@ book side passages
 
 chapter Bran Barn
 
-Bran Barn is an innie room in Otters. Bran Barn is south of frontage. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
+Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
 
 Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if alcoves is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
 
@@ -23122,7 +23120,7 @@ check fliptoing p-2:
 
 chapter loop pool
 
-Loop Pool is a room in Otters. Loop Pool is north of frontage. "Here a wire weir bars you from [one of]a loop pool[or]the loop pool containing the allot atoll[stopping] and restricts you going every way except back south."
+Loop Pool is a room in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a loop pool[or]the loop pool containing the allot atoll[stopping] and restricts you going every way except back south."
 
 after looking in loop pool for the first time:
 	say "You hear whispering ... 'Le Mer guards the allot atoll from the not worth yet.' Well, it's good to know what to call the center of the loop pool.";
@@ -23212,7 +23210,7 @@ to de-inhib:
 	if atmo-moat is prefigured:
 		say "[line break]You feel strong enough to tackle the moat, now";
 		if try-fail-animal:
-			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-anteroom-south is false]loud roar[else]owls and loud roar[end if] that chased you away back east, too";
+			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-cathedral-south is false]loud roar[else]owls and loud roar[end if] that chased you away back east, too";
 		say ".";
 
 check fliptoing ghoul hat:
@@ -23278,11 +23276,11 @@ a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is 
 a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB". parse-text of imp3 is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y".
 
 try-fail-pit-north is a truth state that varies.
-try-fail-anteroom-south is a truth state that varies.
+try-fail-cathedral-south is a truth state that varies.
 
 to decide whether try-fail-animal:
 	if try-fail-pit-north is true, decide yes;
-	if try-fail-anteroom-south is true, decide yes;
+	if try-fail-cathedral-south is true, decide yes;
 	decide no;
 
 check going north in Shiner Shrine:
@@ -23294,7 +23292,7 @@ check going north in Shiner Shrine:
 
 chapter coma camo
 
-the coma camo is a bounding backdrop. It is in Shiner Shrine and Rote Moan Anteroom. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent.".
+the coma camo is a bounding backdrop. It is in Shiner Shrine and Clarthead Cathedral. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent.".
 
 instead of doing something with coma camo:
 	if action is procedural, continue the action;
@@ -23465,13 +23463,11 @@ after fliptoing an animal:
 				now my-animal entry is adjed instead;
 	say "[reject]" instead;]
 
-book Rote Moan Anteroom
+book Clarthead Cathedral
 
-Rote Moan Anteroom is south of Bleary Barley. Anteroom is a room in Otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west."
+Clarthead Cathedral is south of Bleary Barley. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west."
 
-understand "near/moot" and "near moot" as anteroom when whiners are in lalaland.
-
-the shrewin' whiners are plural-named flippable people in Anteroom. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
+the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text is "BUG".
 
@@ -23479,21 +23475,21 @@ section dummy scenery
 
 [3 dummy sceneries. Loathingly, stoically, tersely]
 
-ram1 is privately-named unscannable reflexive ssno scenery in Anteroom. ram1 is undesc. printed name of ram1 is "the whiners['] shrewin[']".
+ram1 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram1 is undesc. printed name of ram1 is "the whiners['] shrewin[']".
 
 a-text of ram1 is "RRYYRYRRO". b-text of ram1 is "RRYYRYRRB". parse-text of ram1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y".
 
-ram2 is privately-named unscannable reflexive ssno scenery in Anteroom. ram2 is undesc. printed name of ram2 is "the whiners['] shrewin[']".
+ram2 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram2 is undesc. printed name of ram2 is "the whiners['] shrewin[']".
 
 a-text of ram2 is "RYRRYRO". b-text of ram2 is "RGRRYPO". parse-text of ram2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". ram2 is cheat-spoilable.
 
-ram3 is privately-named unscannable reflexive ssno scenery in Anteroom. ram3 is undesc. printed name of ram3 is "the whiners['] shrewin[']".
+ram3 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram3 is undesc. printed name of ram3 is "the whiners['] shrewin[']".
 
 a-text of ram3 is "RYYRRYRRRO". b-text of ram3 is "RYYRRYRRRO". parse-text of ram3 is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
 
 book perverse preserve
 
-Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is a room in Otters. "[pre-desc]"
+Perverse Preserve is south of Clarthead Cathedral. Perverse Preserve is a room in Otters. "[pre-desc]"
 
 printed name of perverse preserve is "[if nounsolve < 3]Perverse Preserve[else]Uprates Pasture[end if]"
 
@@ -23586,14 +23582,14 @@ check scaning imp:
 
 check scaning whiners:
 	say "The settler seems to jump around a bit before stabilizing. It blinks about as they [if ram1 is reflexive]restyle[else]continue[end if] [if ram2 is reflexive]tallyhoing[else]their noisiness[end if] [if ram3 is reflexive]with callosity[end if]";
-	try scaning entry 1 of anteroom-items;
+	try scaning entry 1 of cathedral-items;
 	the rule succeeds;
 
-check going south in Anteroom:
+check going south in Clarthead Cathedral:
 	if whiners are visible:
 		say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
 	if power-back is false:
-		now try-fail-anteroom-south is true;
+		now try-fail-cathedral-south is true;
 		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
 
 to say shout-check:
@@ -23601,17 +23597,16 @@ to say shout-check:
 
 quietness is a number that varies.
 
-after fliptoing when player is in Anteroom (this is the de-tallyho rule) :
+after fliptoing when player is in Clarthead Cathedral (this is the de-tallyho rule) :
 	increment quietness;
 	if quietness is 2:
-		say "As they sulk away from the anteroom, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
-		now printed name of Anteroom is "Near-Moot Anteroom";
+		say "As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		now whiners are in lalaland;
 		now ram1 is in lalaland;
 		now ram2 is in lalaland;
 		now ram3 is in lalaland;
 	else:
-		remove noun from anteroom-items, if present;
+		remove noun from cathedral-items, if present;
 	continue the action;
 
 chapter raptor trap
@@ -25872,11 +25867,11 @@ definition: a thing (called hintcand) is hintrelevant:
 		if mrlp is routes, decide yes;
 		decide no;
 	if hintcand is Edictal Citadel:
-		if mrlp is otters and frontage is visited, decide yes;
+		if mrlp is otters and Disowned Downside is visited, decide yes;
 		decide no;
 	if hintcand is coma camo:
 		if mrlp is otters:
-			if anteroom is visited or Shiner Shrine is visited, decide yes;
+			if Clarthead Cathedral is visited or Shiner Shrine is visited, decide yes;
 		decide no;
 	if hintcand is leak lake or hintcand is shoals aslosh:
 		if mrlp is towers:
@@ -26044,7 +26039,7 @@ carry out objhinting (this is the pick object to hint rule) :
 				if noun is thruhinted or noun is prefigured:
 					if player is in Shiner Shrine and imp is in Shiner Shrine:
 						say "Hm, it'd still be fun to see the imp act";
-					else if player is in anteroom and whiners are in anteroom:
+					else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral:
 						say "It still might peg the whiners back a bit if they talked more";
 					else:
 						say "You pause, realizing you do not need to discern. Perhaps now is a good time to remember";
@@ -26052,7 +26047,7 @@ carry out objhinting (this is the pick object to hint rule) :
 				say "As you gaze into the cinders, they [if noun is medals and noun is not cinder-dissolve]glint slightly off the medals[else]blow away[end if], leaving you feeling ";
 				if player is in Shiner Shrine and imp is in Shiner Shrine:
 					say "the imp could act ";
-				else if player is in anteroom and whiners are in anteroom:
+				else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral:
 					say "the whiners could talk ";
 				say "[spoil-entry entry].";
 				if noun is cinder-dissolve:
@@ -26179,7 +26174,7 @@ to decide whether one-whine-down:
 to say medal-help:
 	say "The medals look less than perfect. ";
 	if nounsolve is 0 and adjsolve is 0:
-		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in preserve]see what you can do here[else if player is in Shiner Shrine or player is in anteroom]go north or south[else]explore north or south of the barley[end if]";
+		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in preserve]see what you can do here[else if player is in Shiner Shrine or player is in Clarthead Cathedral]go north or south[else]explore north or south of the barley[end if]";
 	else if nounsolve >= 3:
 		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in Lamer Realm] is optional now,)[else],[end if] but maybe you can go [if Lamer Realm is unvisited]north[else]to the Lamer Realm[end if] to do more";
 	else if adjsolve >= 3:
@@ -26822,7 +26817,7 @@ to say ag-yow-lect:
 	say "[if yow is in lalaland]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
 
 to say medals-do:
-	say "[if alcoves is unvisited]The medals are only fully useful west of the frontage[else if merle is not in lalaland]You can't really use the medals until Merle and Elmer are gone[else]The medals let you go QUICKLY before going west of the Alcoves, which will help you deal with Elvira's initial attack[end if]"
+	say "[if alcoves is unvisited]The medals are only fully useful west of the Disowned Downside[else if merle is not in lalaland]You can't really use the medals until Merle and Elmer are gone[else]The medals let you go QUICKLY before going west of the Alcoves, which will help you deal with Elvira's initial attack[end if]"
 
 to say need-refurb:
 	say "need refurbishing. Maybe in the ";
@@ -27262,7 +27257,7 @@ examp
 "Lars Eede/Elsa Erde has the Reed's Ale east of Treading Gradient."
 "Luc Sym or Ms. Lucy guards north of the Scope Copse."
 "The Hostile-is-He Lot or Lois the Hostile guards south of Actionless Coastline."
-"[bold type](otters)[r] KISSing, EXAMINEing the macks, talking/dispelling/attacking or leaving while they're in the Frontage."
+"[bold type](otters)[r] KISSing, EXAMINEing the macks, talking/dispelling/attacking or leaving while they're in the Disowned Downside."
 "KISSing Gretta or taking to her with the macks around."
 "Elvira calls you (Ach,) Mr. Charm or Ms. Arch-Charms."
 "KISSing Elvira or losing to her in battle."[]
@@ -27868,7 +27863,7 @@ understand "gret" as greting.
 
 carry out greting:
 	now macked-out is 2;
-	move player to frontage;
+	move player to Disowned Downside;
 	say "==CHEATING TO DEFEAT MACKS";
 	try fliptoing a random visible mack-idea;
 	the rule succeeds;
@@ -29141,10 +29136,10 @@ understand "plop" as ploping.
 carry out ploping:
 	let any-good be false;
 	if uber-rand-cheat is true:
-		say "You already dumped everyone in the Trefoil and Frontage.";
+		say "You already dumped everyone in the Trefoil and Disowned Downside.";
 		the rule succeeds;
-	if Loftier Trefoil is visited and frontage is visited:
-		say "You already went to the Trefoil and Frontage, so I'm going to make you restart, because reasons. It might break too much.";
+	if Loftier Trefoil is visited and Disowned Downside is visited:
+		say "You already went to the Trefoil and Disowned Downside, so I'm going to make you restart, because reasons. It might break too much.";
 		the rule succeeds;
 	if Loftier Trefoil is visited:
 		say "Skipping the Trefoil as you've been there.";
@@ -29153,10 +29148,10 @@ carry out ploping:
 		say "Dumping every warrior in the Trefoil.";
 		say "ts, towers, in, y for towers.";
 	if macked-out > 0:
-		say "Skipping the Frontage as you've already messed with the macks a bit.";
+		say "Skipping the Disowned Downside as you've already messed with the macks a bit.";
 	else:
-		now all mack-ideas are in frontage;
-		say "Dumping every mack idea in the Frontage.";
+		now all mack-ideas are in Disowned Downside;
+		say "Dumping every mack idea in the Disowned Downside.";
 		say "a5, in, barely, reedily, w for otters.";
 	now uber-rand-cheat is true;
 	the rule succeeds;
@@ -29166,9 +29161,9 @@ after fliptoing when uber-rand-cheat is true:
 	consider the uber-otters rule;
 	continue the action;
 
-every turn when player is in frontage and macks are in frontage and uber-rand-cheat is true (this is the uber-otters rule):
+every turn when player is in Disowned Downside and macks are in Disowned Downside and uber-rand-cheat is true (this is the uber-otters rule):
 	say "Adverbs available:";
-	repeat with QQ running through mack-ideas in frontage:
+	repeat with QQ running through mack-ideas in Disowned Downside:
 		choose row with the-from of QQ in table of otters anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
@@ -29225,14 +29220,14 @@ to place-idea (myp - a number) and (myi - a number):
 		now myi2 is max-pod;
 	repeat with QQ running through mack-ideas:
 		if pod-num of QQ is myp and pod-ord of QQ is myi2:
-			if QQ is in frontage:
+			if QQ is in Disowned Downside:
 				say "Oops, placed [QQ] twice. [myp] [myi2].";
-			now QQ is in frontage;
-			say "[QQ] to frontage.";
+			now QQ is in Disowned Downside;
+			say "[QQ] to Disowned Downside.";
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2].";
 
-carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip frontage]
+carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowned Downside]
 	let temp be 0;
 	let G be Rodney;
 	let found-yet be false;
@@ -29244,8 +29239,8 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip frontag
 		say "Need a positive act index.";
 		the rule fails;
 	if seedflags <= 4:
-		if frontage is visited and macked-out > 0: [next, seed the macks in OTTERS]
-			say "Skipping Frontage seeding because you already started wiping the macks out.";
+		if Disowned Downside is visited and macked-out > 0: [next, seed the macks in OTTERS]
+			say "Skipping Disowned Downside seeding because you already started wiping the macks out.";
 		else:
 			now all mack-ideas are off-stage;
 			repeat with J running from 1 to max-pod-num:
