@@ -2819,14 +2819,16 @@ span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
-keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order] in a different shade of red than the car. Maybe the other side has more information."
+keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more[of]a refresher on[stopping information, if you read again."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
-cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[or]You see red you can't understand Nrdices--which could be helpful here[in random order]."
-p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
+cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[or]You see red you can't understand Nrdices--which could be helpful here[in random order]."	[otters]
+coma camo	"You concentrate and see: 'Formerly the [if player is in clarthead cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
+sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
+p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
@@ -22563,7 +22565,7 @@ carry out whistleing:
 
 book Disowned Downside
 
-Disowned Downside is west of Bleary Barley. Disowned Downside is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
+Disowned Downside is west of Bleary Barley. Disowned Downside is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here."
 
 after looking in Disowned Downside:
 	if macks are in Disowned Downside:
@@ -22713,6 +22715,16 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 		do nothing;
 	else:
 		debug-fallthrough;
+
+section sample maples
+
+the sample maples are scenery in Disowned Downside. "Well, they're, uh, trees. You could READ one that's been carved."
+
+understand "elm sap" as sample maples.
+
+instead of doing something with sample maples:
+	if the action is procedural, continue the action;
+	say "No need to mess with the maples. They aren't particularly lovely trees, but they're the best thing about the Disowned Downside."
 
 chapter booting - not for release
 
@@ -23292,7 +23304,7 @@ check going north in Shiner Shrine:
 
 chapter coma camo
 
-the coma camo is a bounding backdrop. It is in Shiner Shrine and Clarthead Cathedral. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent.".
+the coma camo is a bounding backdrop. It is in Shiner Shrine and Clarthead Cathedral. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent. And yet--you bet you could see a pattern of letters in it, if you look closely enough.".
 
 instead of doing something with coma camo:
 	if action is procedural, continue the action;

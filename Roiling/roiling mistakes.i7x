@@ -717,6 +717,12 @@ chapter coevals alcoves
 
 understand "drobe" as a mistake ("That's pretty much their whole drobe. You're not here to talk fashion, anyway.") when Merle is in location of player.
 
+chapter disowned downside
+
+understand "slap em" as a mistake ("[if macks are in disowned downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in downside.
+
+understand "slap me" as a mistake ("That's ind of a silly way to motivate yourself.") when player is in downside.
+
 chapter loop pool
 
 understand "lees" as a mistake ("The eels would be insulted to be referred to as dregs.") when eels are in location of player.

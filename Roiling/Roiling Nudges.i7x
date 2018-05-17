@@ -781,8 +781,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "citadel"	371945304	--	Edictal Citadel	--	"The whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
 "downside"	520802431	Disowned Downside	--	--	"[locname]." [start Disowned Downside]
 "gents"	428697303	--	macks	--	"They aren't (spiritually) gents, and you can't change them but their arguments."
-"iq"	129398463	--	medals	--	"[both-medals]."
-"lucky"	353217661	--	medals	--	"[both-medals]."
+"sample"	425622844	--	Disowned Downside	--	"[maples-no]."
+"maple"	329348878	--	Disowned Downside	--	"[maples-no]."
 "bossy"	407678666	--	t-bossily	--	"[adj-needs-li]."
 "bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]."
 "nasti"	315472156	--	t-nastily	--	"[adj-needs-ly]."
@@ -820,6 +820,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "drawling"	416789378	--	t-drawlingly	--	"[adj-needs-ly]."
 "emotional"	613598445	--	t-emotionally	--	"[adj-needs-ly]."
 "despairing"	605579646	--	t-despairingly	--	"[adj-needs-ly]."
+"iq"	129398463	--	medals	--	"[both-medals]."
+"lucky"	353217661	--	medals	--	"[both-medals]."
 "medal"	268912008	--	medals	--	"It's what the medals say that makes them special."
 "medals"	365185974	--	medals	--	"It's what the medals say that makes them special."
 "shiner"	460586531	Shiner Shrine	--	--	"[locname]." [start Shiner Shrine]
@@ -1793,6 +1795,8 @@ this is the cppc rule:
 	if player is in limits:
 		if cactus pearl is in limits or pearl cactus is in limits, the rule succeeds;
 	the rule fails.
+
+to say maples-no: sau "No need to change the maples. They are the least dreary part of the Downside."
 
 to say adj-needs-ly:
 	say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley"
