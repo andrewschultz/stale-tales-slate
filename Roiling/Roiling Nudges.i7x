@@ -826,11 +826,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "despairing"	605579646	--	t-despairingly	--	"[adj-needs-ly]."
 "medal"	268912008	--	medals	--	"It's what the medals say that makes them special."
 "medals"	365185974	--	medals	--	"It's what the medals say that makes them special."
-"tapering"	546393763	Tapering Anger Pit	--	--	"[locname]." [start tapering]
-"angre"	316824940	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
-"pti"	229568823	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
-"inert"	430140284	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
-"gap"	116253479	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
+"shiner"	460586531	Shiner Shrine	--	--	"[locname]." [start Shiner Shrine]
 "simply"	462981015	--	sly imp	--	"It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving."
 "sly"	272447057	--	sly imp	--	"[imp-sly]."
 "imp"	190533958	--	sly imp	--	"[imp-sly]."
@@ -1896,15 +1892,15 @@ to say elv-mach:
 	say "You have enough to think about without one more of Elvira's machines"
 
 this is the imp-here rule:
-	if player is in Tapering Anger Pit and imp is in Tapering Anger Pit, the rule succeeds;
+	if player is in Shiner Shrine and imp is in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
 this is the imp-gone rule:
-	if player is in Tapering Anger Pit and imp is not in Tapering Anger Pit, the rule succeeds;
+	if player is in Shiner Shrine and imp is not in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
 this is the barley-n-s rule:
-	if player is in anteroom or player is in tapering anger pit, the rule succeeds;
+	if player is in anteroom or player is in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
 this is the callos-here rule:

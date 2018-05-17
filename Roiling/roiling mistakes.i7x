@@ -729,7 +729,13 @@ chapter bran barn
 
 understand "whoever" as a mistake ("Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.") when player is in bran barn and p-2 is in bran barn.
 
-chapter tapering anger pit
+chapter Shiner Shrine
+
+understand "rhines" as a mistake ("You don't need a river impeding your progress.") when player is in Shiner Shrine.
+
+understand "simply" as a mistake ("It's already simply annoying, so that has no effect. Maybe you can alter how it does things another way.") when sly imp is in location of player
+
+chapter Lamer Realm/Blest Belts
 
 understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release it from its captivity[end if].") when player is in Lamer Realm.
 
@@ -737,23 +743,15 @@ understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflex
 
 understand "barged" as a mistake ("You don't want the badger to have barged into you. Clothed or not.") when player is in Lamer Realm.
 
-understand "gpa" as a mistake ("You don't need to worry about grades now.") when player is in tapering anger pit and imp is not in tapering anger pit.
-
 understand "green lady" as a mistake ("You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.") when imp3 is reflexive and sly imp is in location of player.
 
 understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is in location of player
 
 understand "lows" as a mistake ("Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.") when owls are in location of player.
 
-understand "pga" as a mistake ("No golfers appear.") when player is in tapering anger pit and imp is not in tapering anger pit.
-
 understand "preload" and "pre-load" and "pre load" as a mistake ("The leopard is plenty powerful as-is, [if leopard is reflexed]and it's already on your side[else]but you need to get it on your side[end if].") when player is in Lamer Realm.
 
-understand "pti" as a mistake ("You can't go fast enough to interrupt the imp, much less apologize for doing so.") when player is in tapering anger pit and imp is in tapering anger pit.
-
 understand "ratsy" as a mistake ("You don't want a rat on your side. Or someone who says rats too much.") when satyr is in location of player.
-
-understand "simply" as a mistake ("It's already simply annoying, so that has no effect. Maybe you can alter how it does things another way.") when sly imp is in location of player
 
 understand "stary" as a mistake ("What good would the satyr be, staring all the time?") when satyr is in location of player.
 

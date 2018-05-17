@@ -1366,20 +1366,23 @@ Pod 5 is nine letters, pod 6 is ten, and pod 7 is twelve.
 The pods give you slightly more letters to deal with on average, but I felt it was too confusing to have thirty-two adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
 ?What good are Gretta's medals?
 The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need thme.
->>>TAPERING ANGER PIT
+>>>SHINER SHRINE
 ?The sly imp simply blocks me!
 LY-words again.
 With LEGENDARY patience, BUTLERY and RANGILY.
-You only need two. Make him lose his cool.
+You only need two. Make it lose its cool.
 ANGRILY.
 BRUTELY. And, for the curious...
 ...ENRAGEDLY.
+?What is the coma camo for? And the message?
+The message is what this room--or the cathedral--was called in previous releases.
+The camo just stops you from going west or east.
 >>>ROTE-MOAN ANTEROOM
-?The men block me noisily!
+?The shrewin' whiners block me noisily!
 They restyle, tallyhoing with callosity.
 Tune their volume down.
-You need two of three. TERSELY and STOICALLY are the two shorter.
-LOATHINGLY
+You need two of three. TERSELY and STOICALLY cost the fewest keystrokes.
+LOATHINGLY is the other solution.
 >>GETTING MY POWERS BACK
 ?Where do I go?
 You only need to go north or south of Gent-Fora/Frat-Gone Frontage. The Loop Pool is a bit easier. But going both ways gets you all the points.

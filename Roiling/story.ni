@@ -5047,7 +5047,7 @@ definition: a room (called myrm) is ominous:
 	if myrm is bleary barley and b-b is reflexive:
 		decide no;
 	if myrm is in Otters:
-		if myrm is Tapering Anger Pit or myrm is Anteroom:
+		if myrm is Shiner Shrine or myrm is Anteroom:
 			decide no;
 		decide yes;
 
@@ -5077,7 +5077,7 @@ when play begins (this is the hint and other randomization rule):
 		now t-or-b is blaster;
 	sort the table of guard-org in random order; [for first-time-view clues]
 	sort table of animal randomness in random order; [otters hinting]
-	sort tapering-items in random order;
+	sort shrine-imp-items in random order;
 	sort anteroom-items in random order;
 	if a random chance of 1 in 2 succeeds: [others random clues]
 		now viewer-first is true;
@@ -5315,7 +5315,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			say "The settler seems to give a reading when pointed at the parrot.";
 			now noun is parrot;
 			continue the action;
-		if player is in tapering and imp is in tapering:
+		if player is in Shiner Shrine and imp is in Shiner Shrine:
 			now noun is imp;
 			continue the action;
 		if player is in anteroom and whiners are in anteroom:
@@ -6378,8 +6378,8 @@ to decide which thing is otters-cur-item:
 			decide on sea cube;
 		if eels are not reflexed:
 			decide on eels;
-	if player is in anger pit:
-		if sly imp is in anger pit:
+	if player is in Shiner Shrine:
+		if sly imp is in Shiner Shrine:
 			decide on sly imp;
 	if player is in anteroom:
 		if whiners are in anteroom:
@@ -6439,7 +6439,7 @@ to decide which thing is animal-to-hint:
 	d "bad fallthrough in animal-to-hint.";
 	decide on the player; [this should never happen]
 
-tapering-items is a list of things variable. tapering-items is {imp1, imp2, imp3}.
+shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, imp3}.
 
 anteroom-items is a list of things variable. anteroom-items is {ram1, ram2, ram3}.
 
@@ -6452,7 +6452,7 @@ carry out otters-hinting:
 		all-say "[if gretta is in frontage]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if alcoves is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if].";
 	else if player is in loop pool or player is in bran barn:
 		all-say "You recovered your powers, so there's nothing more to do here.";
-	else if player is in Anger Pit:
+	else if player is in Shiner Shrine:
 		all-say "The path north is cleared[tho-work].";
 	else if player is in Anteroom:
 		all-say "The path south is cleared[tho-work].";
@@ -7037,7 +7037,7 @@ Shaven Havens	"Any direction but back east might drive you too far from the pala
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Rote Moan Anteroom	"[no-coma]."
-Tapering Anger Pit	"[no-coma]."
+Shiner Shrine	"[no-coma]."
 Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
@@ -22152,7 +22152,7 @@ does the player mean discerning the cinders: it is very likely.
 does the player mean discerning the player: it is likely.
 
 to say rand-to-go:
-	let mysc be entry 1 of tapering-items;
+	let mysc be entry 1 of shrine-imp-items;
 	if player is in anteroom:
 		now mysc is entry 1 of anteroom-items;
 	repeat through table of otters anagrams:
@@ -22253,7 +22253,7 @@ carry out discerning:
 
 to say animals-left:
 	if adjsolve < 3:
-		say "the [if Lamer Realm is visited][Lamer Realm][else]room north of the [Tapering][end if]";
+		say "the [if Lamer Realm is visited][Lamer Realm][else]room north of the Shiner Shrine[end if]"; [?? it is possible not to have visited the shrine]
 		if nounsolve < 3, say " and ";
 	if nounsolve < 3:
 		say "the [Preserve]"
@@ -22676,7 +22676,7 @@ gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called
 gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
 gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
 gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
-gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Tapering Anger Pit is visited]You nod your head[else if Anteroom is unvisited and Tapering Anger Pit is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
+gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Shiner Shrine is visited]You nod your head[else if Anteroom is unvisited and Shiner Shrine is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
 gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
 gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel. They are worn out, but good deeds can restore them.'[paragraph break]They look very tarnished, but a gift is a gift. You take them.[paragraph break]'[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
 
@@ -23243,16 +23243,14 @@ after fliptoing eels:
 		min-up;
 	continue the action;
 
-book Tapering Anger Pit
+book Shiner Shrine
 
-Tapering Anger Pit is an innie room in Otters. Tapering Anger Pit is north of Bleary Barley. printed name of Tapering Anger Pit is "Tapering [if sly imp is in Anger Pit]Anger Pit[else]Inert Gap[end if]". "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west."
+Shiner Shrine is an innie room in Otters. Shiner Shrine is north of Bleary Barley. "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west."
 
-understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
+The sly imp is a flippable neuter person in Shiner Shrine. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
 
-The sly imp is a flippable neuter person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
-
-after looking in tapering anger pit:
-	if sly imp is in tapering anger pit, it-him-her sly imp;
+after looking in Shiner Shrine:
+	if sly imp is in Shiner Shrine, it-him-her sly imp;
 	continue the action;
 
 after doing something with imp:
@@ -23267,11 +23265,11 @@ a-text of sly imp is "BUG". b-text of sly imp is "BUG". parse-text is "BUG".
 
 [These are all dummy items. imp1 = brutely, imp2 = angrily, imp3 = enragedly]
 
-imp1 is privately-named unscannable reflexive ssno scenery in Anger Pit. printed name of imp1 is "the imp's actions". description of imp1 is "[bug-report].".
+imp1 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp1 is "the imp's actions". description of imp1 is "[bug-report].".
 
-imp2 is privately-named unscannable reflexive ssno scenery in Anger Pit. printed name of imp2 is "the imp's actions". description of imp2 is "[bug-report].".
+imp2 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp2 is "the imp's actions". description of imp2 is "[bug-report].".
 
-imp3 is privately-named unscannable reflexive ssno scenery in Anger Pit. printed name of imp3 is "the imp's actions". description of imp3 is "[bug-report].".
+imp3 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp3 is "the imp's actions". description of imp3 is "[bug-report].".
 
 a-text of imp1 is "YRRRYRO". b-text of imp1 is "YRRRGPB". parse-text of imp1 is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". imp1 is cheat-spoilable.
 
@@ -23287,7 +23285,7 @@ to decide whether try-fail-animal:
 	if try-fail-anteroom-south is true, decide yes;
 	decide no;
 
-check going north in Anger Pit:
+check going north in Shiner Shrine:
 	if imp is visible:
 		say "The imp gives a sidle-slide, then idles in front of you. It's [if silence-tally is 1]still a bit [end if]too smooth for you right now." instead;
 	if power-back is false:
@@ -23296,7 +23294,7 @@ check going north in Anger Pit:
 
 chapter coma camo
 
-the coma camo is a bounding backdrop. It is in Tapering Anger Pit and Rote Moan Anteroom. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent.".
+the coma camo is a bounding backdrop. It is in Shiner Shrine and Rote Moan Anteroom. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent.".
 
 instead of doing something with coma camo:
 	if action is procedural, continue the action;
@@ -23304,7 +23302,7 @@ instead of doing something with coma camo:
 
 book Lamer Realm
 
-Lamer Realm is north of Tapering Anger Pit. Lamer Realm is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
 
 printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[end if]"
 
@@ -23398,7 +23396,7 @@ every turn (this is the raptor kills you rule):
 
 silence-tally is a number that varies.
 
-after fliptoing when player is in Anger Pit (this is the break the imp down rule) :
+after fliptoing when player is in Shiner Shrine (this is the break the imp down rule) :
 	increment silence-tally;
 	if silence-tally is 2:
 		say "The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.";
@@ -23407,17 +23405,17 @@ after fliptoing when player is in Anger Pit (this is the break the imp down rule
 		now imp2 is in lalaland;
 		now imp3 is in lalaland;
 	else:
-		remove noun from tapering-items, if present;
+		remove noun from shrine-imp-items, if present;
 	continue the action;
 
 section debug - not for release
 
-understand "i1" as imp1 when debug-state is true and player is in tapering anger pit.
-understand "i2" as imp2 when debug-state is true and player is in tapering anger pit.
-understand "i3" as imp3 when debug-state is true and player is in tapering anger pit.
-understand "r1" as ram1 when debug-state is true and player is in tapering anger pit.
-understand "r2" as ram2 when debug-state is true and player is in tapering anger pit.
-understand "r3" as ram3 when debug-state is true and player is in tapering anger pit.
+understand "i1" as imp1 when debug-state is true and player is in Shiner Shrine.
+understand "i2" as imp2 when debug-state is true and player is in Shiner Shrine.
+understand "i3" as imp3 when debug-state is true and player is in Shiner Shrine.
+understand "r1" as ram1 when debug-state is true and player is in Shiner Shrine.
+understand "r2" as ram2 when debug-state is true and player is in Shiner Shrine.
+understand "r3" as ram3 when debug-state is true and player is in Shiner Shrine.
 
 chapter animaling
 
@@ -23583,7 +23581,7 @@ the snail is a neuter animal. description is "It's quite spiky and seems to move
 
 check scaning imp:
 	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if silence-tally is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is in lalaland]patience is legendary and butlery[else if imp3 is in lalaland]It has a butlery air as it moves rangily[else if imp2 is in lalaland]patience feels legendary as it moves rangily[end if].";
-	try scaning entry 1 of tapering-items;
+	try scaning entry 1 of shrine-imp-items;
 	the rule succeeds;
 
 check scaning whiners:
@@ -25878,7 +25876,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide no;
 	if hintcand is coma camo:
 		if mrlp is otters:
-			if anteroom is visited or tapering is visited, decide yes;
+			if anteroom is visited or Shiner Shrine is visited, decide yes;
 		decide no;
 	if hintcand is leak lake or hintcand is shoals aslosh:
 		if mrlp is towers:
@@ -26044,7 +26042,7 @@ carry out objhinting (this is the pick object to hint rule) :
 				say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [spoil-entry entry] right now." instead;
 			if player has cinders:
 				if noun is thruhinted or noun is prefigured:
-					if player is in tapering and imp is in tapering:
+					if player is in Shiner Shrine and imp is in Shiner Shrine:
 						say "Hm, it'd still be fun to see the imp act";
 					else if player is in anteroom and whiners are in anteroom:
 						say "It still might peg the whiners back a bit if they talked more";
@@ -26052,7 +26050,7 @@ carry out objhinting (this is the pick object to hint rule) :
 						say "You pause, realizing you do not need to discern. Perhaps now is a good time to remember";
 					say " [spoil-entry entry]." instead;
 				say "As you gaze into the cinders, they [if noun is medals and noun is not cinder-dissolve]glint slightly off the medals[else]blow away[end if], leaving you feeling ";
-				if player is in tapering and imp is in tapering:
+				if player is in Shiner Shrine and imp is in Shiner Shrine:
 					say "the imp could act ";
 				else if player is in anteroom and whiners are in anteroom:
 					say "the whiners could talk ";
@@ -26181,7 +26179,7 @@ to decide whether one-whine-down:
 to say medal-help:
 	say "The medals look less than perfect. ";
 	if nounsolve is 0 and adjsolve is 0:
-		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in preserve]see what you can do here[else if player is in tapering anger pit or player is in anteroom]go north or south[else]explore north or south of the barley[end if]";
+		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in preserve]see what you can do here[else if player is in Shiner Shrine or player is in anteroom]go north or south[else]explore north or south of the barley[end if]";
 	else if nounsolve >= 3:
 		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in Lamer Realm] is optional now,)[else],[end if] but maybe you can go [if Lamer Realm is unvisited]north[else]to the Lamer Realm[end if] to do more";
 	else if adjsolve >= 3:
