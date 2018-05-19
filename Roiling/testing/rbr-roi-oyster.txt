@@ -1,0 +1,284 @@
+files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudges.txt
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* oyster-thru
+
+>ts
+>oyster
+>enter oyster
+Posh Hops Shop
+>posf
+
+>score
+Score in a scenario: 0 out of 40 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+
+==t1
+>get pills
+>spill pills
+>thisalt
+WRONG
+>thisalt
+WRONG
+>thisalt
+WRONG
+>thisalt
+WRONG
+==!
+>remap
+Your score has just gone up by one point
+>unset
+!Your score has just gone up by one point
+>undo
+>undo
+>unset
+Your score has just gone up by one point
+>remap
+!Your score has just gone up by one point
+>score
+Score in a scenario: 1 out of 39 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 40.
+>sing
+>score
+Score in a scenario: 2 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 40.
+>scrape
+>score
+Score in a scenario: 3 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 40.
+>thisalt
+WRONG
+>inset
+Perhaps you should've played it cool and fled, instead.
+>undo
+>spit
+Perhaps you should've played it cool and fled, instead.
+>undo
+
+>stroll
+Olde Lode
+
+>calm
+Your score has just gone up by one point
+>run
+Your score has just gone up by one point
+Disease Seaside
+>enter raft
+>fart
+Your score has just gone up by one point
+>soar
+Your score has just gone up by one point
+Anger Range
+>thisalt
+WRONG
+>undo
+>undo
+>undo
+>undo
+
+>boast
+Your score has just gone up by one point
+Fighter Freight
+>leap
+Your score has just gone up by one point
+Anger Range
+
+>spike
+Your score has just gone up by one point
+>thisalt
+WRONG
+>undo
+>undo
+>scrap
+Your score has just gone up by one point
+>thisalt
+WRONG
+
+>e
+Dearths
+
+>score
+Score in a scenario: 9 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
+
+==!1
+>scan
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+
+>score
+Score in a scenario: 10 out of 39 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 39.
+
+>seek
+Your score has just gone up by one point
+Lean Lane
+
+>eat
+Your score has just gone up by one point
+
+==!1
+>tend
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+
+>score
+Score in a scenario: 13 out of 39 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 39.
+
+>tutor
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 39 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 39.
+
+==!1
+>swipe
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 39 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 39.
+
+>w
+>n
+Lapsin' Plains
+
+==!1
+>splain
+REGION MIN INCREASED BY 1, 1 OVERALL.
+
+>score
+Score in a scenario: 16 out of 39 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 39.
+
+>trace
+Your score has just gone up by one point
+>react
+Your score has just gone up by one point
+>kiss
+Your score has just gone up by one point
+>bonk
+Your score has just gone up by one point
+>snap
+Your score has just gone up by one point
+
+>in
+
+>bust
+Your score has just gone up by one point
+>drop
+Your score has just gone up by one point
+
+==!1
+>sweat
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+
+>score
+Score in a scenario: 23 out of 39 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 39.
+
+==!1
+>shape
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+
+==!1
+>clean
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+
+>score
+Score in a scenario: 25 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
+
+>out
+
+>s
+
+>dig
+You need to dig to some purpose, like uncovering the haunter--and not just dig.
+
+>w
+Arches
+
+>warp
+Your score has just gone up by one point
+>search
+Your score has just gone up by one point
+>enlarge
+Your score has just gone up by one point
+
+>n
+Hedron
+
+>w
+Collapsed Old Places
+
+>bury
+Your score has just gone up by one point
+
+>e
+>s
+>e
+
+##>unearth haunter
+
+>unearth
+by one point
+>assuage
+by one point
+
+>ask haunter about ruby
+
+>w
+>n
+>w
+
+>e
+
+>patrol
+Your score has just gone up by one point
+
+>in
+End Den
+>out
+
+>x gleaner
+
+>in
+==!1
+Dourest Detours
+>score
+Score in a scenario: 33 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
+#?? this is actually wrong! If you are in the sanctum you're forced to kill the ant and get the min-point
+>tan
+Your score has just gone up by one point
+
+Tenfold Teflon'd
+
+>score
+Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 39.
+
+>prepay yapper
+Your score has just gone up by one point
+>undo
+>prepay
+Your score has just gone up by one point
+
+>revel
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+
+>score
+Score in a scenario: 36 out of 39 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 39 points.
+
+>derail
+Your score has just gone up by one point
+>spin
+Your score has just gone up by one point
+>undo
+>spin pins
+Your score has just gone up by one point
+>redial
+Your score has just gone up by one point
+
+>score
+Oyster (40/40)
+

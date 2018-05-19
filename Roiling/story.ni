@@ -153,7 +153,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for tentative
 1 for rewired (bot-boat)
 1 for giving Tetris Sitter the flowerpot NON-ANAGRAM
-3 for dying crocus/serpent/triste]
+3 for unripe ur-pine/serpent/triste]
 
 Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 30. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
 

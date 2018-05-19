@@ -1,0 +1,259 @@
+files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudges.txt
+
+>ts
+>posf
+>seed 1
+>towers
+>enter towers
+
+>gone
+Your score has just gone up by one point
+>wined
+Your score has just gone up by one point
+>bleak
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 3 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 50.
+
+==t!1,2
+>tenser
+Your score has just gone up by one point
+>score
+Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 50.
+>snared
+Your score has just gone up by one point
+>score
+Score in a scenario: 5 out of 50 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 50.
+>cricked
+Your score has just gone up by one point
+>score
+Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 50.
+
+>yonder
+Your score has just gone up by one point
+
+Topside Deposit
+
+>score
+==t!1,2
+Score in a scenario: 7 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
+==!
+Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 47.
+
+>sadder
+Your score has just gone up by one point
+>get all
+
+>n
+Scope Copse
+
+==t0,3
+>rusty
+Your score has just gone up by one point
+>score
+Score in a scenario: 9 out of 50 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 50.
+==!
+>put tarts in toaster
+>eat tarts
+>xray butlers
+
+>subtler
+Your score has just gone up by one point
+
+==t!1,2
+>score
+Score in a scenario: 5 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
+
+==t1
+>clumsy
+Your score has just gone up by one point
+>n
+>restful
+Your score has just gone up by one point
+>pastier
+Your score has just gone up by one point
+>n
+>married
+>n
+>s
+>s
+>e
+>sewed
+>released
+>e
+>marginal
+Your score has just gone up by one point
+>holiest
+>n
+>hastiest
+>s
+>s
+>score
+
+==t2
+>rinsed
+Your score has just gone up by one point
+>e
+>drained
+Your score has just gone up by one point
+>n
+>himself
+Your score has just gone up by one point
+>n
+>sewed
+Your score has just gone up by one point
+>weariest
+Your score has just gone up by one point
+>n
+>hastiest
+Your score has just gone up by one point
+>e
+>holiest
+Your score has just gone up by one point
+>w
+>w
+>married
+Your score has just gone up by one point
+>n
+>s
+>e
+>s
+>s
+>e
+>score
+Score in a scenario: 8 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
+
+==!1,2
+>clumsy
+Your score has just gone up by one point
+>snider
+Your score has just gone up by one point
+>n
+>restful
+Your score has just gone up by one point
+>pastier
+Your score has just gone up by one point
+>n
+>angstier
+Your score has just gone up by one point
+>nerdiest
+Your score has just gone up by one point
+>married
+Your score has just gone up by one point
+>n
+>s
+>e
+>hastiest
+Your score has just gone up by one point
+>weariest
+Your score has just gone up by one point
+>s
+>released
+Your score has just gone up by one point
+>himself
+Your score has just gone up by one point
+>sewed
+Your score has just gone up by one point
+>e
+>marginal
+Your score has just gone up by one point
+>holiest
+Your score has just gone up by one point
+>n
+>s
+>s
+>drained
+Your score has just gone up by one point
+>vainest
+Your score has just gone up by one point
+>thisalt
+WRONG
+>undo
+>undo
+>naivest
+Your score has just gone up by one point
+>thisalt
+>score
+WRONG
+
+>gt garden
+>broken
+Your score has just gone up by one point
+>resting
+Your score has just gone up by one point
+>e
+>wordy
+>push retape
+>gt duck
+>push repeat
+>gt subsector
+>unlocked
+>gt copse
+>w
+>put dagger in repair
+>gt coastlines
+>grained
+Your score has just gone up by one point
+>ask agnostic about doctor yow
+>attentive
+Your score has just gone up by one point
+>rowdy
+Your score has just gone up by one point
+>gt coastlines
+>give gizmo to agnostic
+>robust
+>enter boat
+Rawest Waters
+>nearest
+Mislit Limits
+Your score has just gone up by one point
+>undo
+>undo
+>undo
+>stabler
+Your score has just gone up by one point
+>enter boat
+Rawest Waters
+>nearest
+Mislit Limits
+Your score has just gone up by one point
+>undo
+>undo
+>robust
+Your score has just gone up by one point
+>enter boat
+
+==!1,2
+>rewired
+Your score has just gone up by one point
+MINIWRONG
+
+>enter boat
+
+==!1,2
+>punier
+Your score has just gone up by one point
+# add minimum point here
+WRONG
+>present
+Your score has just gone up by one point
+# add minimum point here
+WRONG
+>score
+WRONG
+>in
+>triste
+Your score has just gone up by one point
+>give flowerpot to sitter
+Your score has just gone up by one point
+>out
+
+>spectacular
+Your score has just gone up by one point
+Strip of Profits
+
+>score
+Towers (50/50)
+
+#### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?

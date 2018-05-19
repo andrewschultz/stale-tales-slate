@@ -1,0 +1,320 @@
+files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudges.txt,reg-roi2-otters-altpath.txt
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* otters-thru
+
+>posf
+
+>seed 1
+>otters
+>in
+>barely
+Your score has just gone up by one point
+>l
+Burnt Brunt
+
+>score
+Score in a scenario: 2 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
+
+==1
+>discern ed riley
+REGION MAX DECREASED BY 1, 1 OVERALL.
+>score
+Score in a scenario: 1 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
+==!
+>rescind
+Your score has just gone up by one point
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>score
+Score in a scenario: 2 out of 30 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 30.
+
+>reedily
+Your score has just gone up by one point
+
+>w
+Disowned Downside
+
+>bossily
+Your score has just gone up by one point.
+>nastily
+Your score has just gone up by one point.
+>blearily
+Your score has just gone up by one point.
+
+>au -1
+>1
+>3
+
+==3
+>s
+>although
+>however
+>misses
+WRONG
+>n
+>n
+>because
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>misses
+WRONG
+>else
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>n
+>n
+>because
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>else
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>misses
+WRONG
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+
+>n
+Loop Pool
+
+>because
+>else
+>misses
+WRONG
+>score
+>s
+
+==!1
+>s
+>although
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>score
+Score in a scenario: 9 out of 30 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 30.
+>however
+REGION MIN INCREASED BY 1, 1 OVERALL.
+>score
+Score in a scenario: 10 out of 30 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 30.
+>n
+
+>atom
+Your score has just gone up by one point
+
+>e
+
+>n
+Shiner Shrine
+
+==3
+>brutely
+>angrily
+>thisalt
+WRONG
+>undo
+>undo
+>enragedly
+>thisalt
+WRONG
+>undo
+>undo
+>undo
+
+>enragedly
+Your score has just gone up by one point
+>angrily
+Your score has just gone up by one point
+>thisalt
+WRONG
+
+>n
+Lamer Realm
+
+>slow
+Your score has just gone up by one point
+
+>coolest
+Your score has just gone up by one point
+>paroled
+Your score has just gone up by one point
+>artsy
+Your score has just gone up by one point
+
+>l
+Blest Belts
+
+==!1
+>garbed
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+
+==3
+>undo
+>undo
+>undo
+>garbed
+>artsy
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+>undo
+>undo
+>undo
+>undo
+>garbed
+>artsy
+>paroled
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+>undo
+>undo
+>undo
+>undo
+>undo
+>garbed
+>artsy
+>paroled
+>coolest
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+
+>s
+>s
+>s
+
+==3
+>tersely
+>stoically
+They find another place where rioters roister.
+>thisalt
+WRONG
+>undo
+>undo
+>loathingly
+They find another place where rioters roister.
+>thisalt
+WRONG
+>undo
+>undo
+>undo
+
+>loathingly
+Your score has just gone up by one point
+>tersely
+Your score has just gone up by one point
+They find another place where rioters roister.
+>thisalt
+WRONG
+
+>s
+Perverse Preserve
+
+>parrot
+Your score has just gone up by one point
+
+>snail
+Your score has just gone up by one point
+>hornets
+Your score has just gone up by one point
+>raccoon
+Your score has just gone up by one point
+
+>l
+Uprates Pasture
+
+==!1
+>snipe
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+
+==3
+>undo
+>undo
+>undo
+>snipe
+>raccoon
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+>undo
+>undo
+>undo
+>undo
+>snipe
+>raccoon
+>hornets
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+>undo
+>undo
+>undo
+>undo
+>undo
+>snipe
+>raccoon
+>hornets
+>snail
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+
+>n
+>n
+>w
+>w
+Coevals' Alcoves
+
+==!1
+>honestly
+Your score has just gone up by one point
+>score
+Score in a scenario: 26 out of 30 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 30 points.
+
+>raptor
+Your score has just gone up by one point
+>deeply
+Your score has just gone up by one point
+>quickly
+Your score has just gone up by one point
+
+>w
+Reclusion Inclosure
+WTF FTW
+
+==1
+WRONG (decrease)
+
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+
+>au 1
+>play whistle
+Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
+
+Otters (30/30)
