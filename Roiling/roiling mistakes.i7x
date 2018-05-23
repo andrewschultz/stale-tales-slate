@@ -286,13 +286,9 @@ understand "penrod" as a mistake ("Juvenile children's literature? At a time lik
 
 chapter upscale capsule
 
-understand "fren" as a mistake ("That's not the right way to make friends. You have to, like, impress actual people.") when player is in upscale capsule.
+understand "fren" as a mistake ("No dog walks along dragging Sebastian in their mouth.") when player is in upscale capsule.
 
 understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is in location of player.
-
-understand "reigns" as a mistake ("You try to convince yourself it totally reigns here, but the singer pushes you towards giving up your responsibility.") when song is in location of player.
-
-understand "resign" as a mistake ("Wrong place for that. If you must, QUIT instead.") when player is not in Upscale Capsule.
 
 understand "slat" as a mistake ("You're not in the window making business.") when salt is in location of player.
 
@@ -567,6 +563,8 @@ understand "cleats" as a mistake ("The castle is run-down and unromantic enough.
 
 understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
 
+understand "a place" as a mistake ("It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.") when mrlp is towers.
+
 chapter loftier trefoil
 
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is in location of player.
@@ -721,7 +719,7 @@ chapter disowned downside
 
 understand "slap em" as a mistake ("[if macks are in disowned downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in downside.
 
-understand "slap me" as a mistake ("That's ind of a silly way to motivate yourself.") when player is in downside.
+understand "slap me" as a mistake ("That's kind of a silly way to motivate yourself.") when player is in downside.
 
 chapter loop pool
 

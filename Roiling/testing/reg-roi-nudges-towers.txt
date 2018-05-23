@@ -65,6 +65,10 @@ up by one point
 >seed 2
 >gonear trefoil
 
+#mistake test for wander
+>wander
+A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead.
+
 >ashne
 Shane shakes his head, but a glare from Rodney sets him straight--for now.
 >ashen
@@ -89,9 +93,9 @@ Marcel shakes his head, but a glare from Rodney sets him straight--for now.
 >calmer
 up by one point
 
-#mistake test for wander
+#mistake retest for wander
 >wander
-A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random warrior in lalaland][end if].
+A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead, like you changed
 #mistake test for warden
 >warden
 Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.

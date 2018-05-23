@@ -22,7 +22,8 @@ You can HINT an individual thing or ask for a general HINT. There is also a walk
 
 #mistake test for use [text]
 >use zozimus
-The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors[if player has settler], or SCAN with the settler[end if][if player has whistle], or PLAY the whistle[end if]. You should also be able to EXAMINE something you want to use, and the game should hint a verb.
+The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors
+>purloin settler
 
 #mistake test for knock [text]
 >knock zozimus
@@ -140,11 +141,11 @@ Hm, you're pretty sure the beams guard something below. What's the best name for
 
 #mistake test for basement [text]/[text] basement [text]/[text] basement
 >basement zozimus
-You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].
+You can just change the ten beams by saying BASEMENT.
 >zozimus basement zozimus
-You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].
+You can just change the ten beams by saying BASEMENT.
 >zozimus basement
-You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].
+You can just change the ten beams by saying BASEMENT.
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
@@ -152,13 +153,17 @@ Your score has just gone up by two points
 >basemetn
 You probably just want to go DOWN to the basement.
 
+#mistake retest for basement [text]/[text] basement [text]/[text] basement
+>basement zozimus
+You can just go down to go to the basement .
+
 #mistake test for [text] stable [text]/stable [text]/[text] stable
 >zozimus stable zozimus
-You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].
+You can just change the tables by saying STABLE.
 >stable zozimus
-You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].
+You can just change the tables by saying STABLE.
 >zozimus stable
-You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].
+You can just change the tables by saying STABLE.
 
 #mistake test for nip
 >nip
@@ -177,6 +182,9 @@ The tables seem to shift a bit.
 DEBUG INFO: Adding a min point
 >stabel
 You probably just want to go IN to the stable.
+
+#mistake retest for [text] stable [text]/stable [text]/[text] stable
+You can just go IN to go to the stable.
 
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
@@ -202,6 +210,10 @@ You don't need to do any more with the stair.
 >stari
 The stair is good for getting around. It's worth keeping.
 
+#mistake retest for sitar
+>sitar
+Surely a stair is more handy right now.
+
 >in
 You shouldn't need to go back
 
@@ -219,7 +231,7 @@ Largely All-Grey Gallery
 
 #mistake test for sitar
 >sitar
-[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].
+You don't need music right now. A way to get around would be better.
 
 >in
 You fumble nervously
@@ -239,6 +251,10 @@ Your score has just gone up
 all the secrets here
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
+
+#mistake retest for use [text]
+>use zozimus
+The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors, or SCAN with the settler. You should also be able to EXAMINE something you want to use, and the game should hint a verb.
 
 #mistake test for trestle
 >trestle
@@ -263,9 +279,16 @@ The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or 
 
 #mistake test for bsin/bs in
 >bsin
-Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].
+Now, now! This game is strictly about logic! No stupid jokes or nothing! Right now, you're just dancing around a way to fix the ISBN bins.
 >bs in
-Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].
+Now, now! This game is strictly about logic! No stupid jokes or nothing! Right now, you're just dancing around a way to fix the ISBN bins.
+
+>snib
+
+#mistake retest for bsin/bs in
+>bsin
+Now, now! This game is strictly about logic! No stupid jokes or nothing! Okay, you can take a small break for fixing the bins.
+
 >in
 
 haven't really EXAMINED it
@@ -324,7 +347,7 @@ Carven Cavern
 
 #mistake test for craven
 >craven
-Ok, the carven cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.
+Ok, the carven cavern IS pretty craven as anagrams go, but you need to find a way through, no matter what its name is.
 
 #mistake test for trainer
 >trainer
@@ -333,10 +356,6 @@ You're on your own. Perhaps you'd be better off scanning the plaster and twiddli
 #mistake test for petals
 >petals
 That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.
-
-#mistake test for pastel
->pastel
-The plates are more metallic. Plus, you are a text adventurer, not an interior decorator.
 
 #mistake test for pleats
 >pleats
@@ -436,10 +455,8 @@ That's not what you need to do with store P--you even see red trying to figure H
 >pteros
 You don't need to face any predators.
 
-#mistake test for presot
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
-
 >presto
 Your score has just gone up by one point
 >presot
@@ -636,7 +653,11 @@ DEBUG INFO: Adding a min point
 
 #mistake test for ramada
 >ramada
-This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in mesa]the MORF-FORM[else]THE BEAN[end if].
+This wouldn't comfort the armada enough. You probably need to deal with the MORF-FORM.
+
+#mistake retest for ramada
+>ramada
+This wouldn't comfort the armada enough. You probably need to deal with THE BEAN.
 
 #mistake test for apts
 >apts
@@ -743,7 +764,7 @@ But the whales would be beached.
 
 #mistake test for poopiest
 >poopiest
-This is the wrong area for adjectives. And [if player is not in adobe abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].
+This is the wrong area for adjectives. And Oscar's abode is, well, dingy enough.
 
 >opposiet
 The soot smells a bit stronger than before for a moment.
@@ -751,6 +772,10 @@ The soot smells a bit stronger than before for a moment.
 Your score has just gone up by one point
 >opposiet
 Brother Horbert probably knows what to do with that.
+
+#mistake retest for poopiest
+>opposite
+This is the wrong area for adjectives. And the pipe soot is icky enough as-is.
 
 >out
 
@@ -835,14 +860,6 @@ Nobody or nothing else big enough to get astride of.
 >in
 >out
 
-#mistake test for gnash
->gnash
-You gnash your teeth a bit thinking about how threatening the form is. It is probably going to fall some time. Maybe you can get it over with.
-
-#mistake test for night
->night
-The thing can't block out THAT much of the sky. You've got the wrong word.
-
 >from
 Your score has just gone up by one point
 
@@ -908,18 +925,6 @@ The un-road seems to lead somewhere, but you couldn't quite make it out like tha
 Your score has just gone up by one point
 
 Ripe Pier
-
-#mistake test for hips
->hips
-Unfortunately, nothing can become hoorays. So that doesn't help.
-
-#mistake test for pish
->pish
-Pretending you don't want to get on the ship won't help you get on the ship.
-
-#mistake test for abroad
->abroad
-You can't go abroad til you get--well, you can figure it out.
 
 >amidts
 Hmm, you almost see a way through the mist.
@@ -1001,6 +1006,7 @@ Races scare you without the proper motivation from inside.
 
 >haet
 You think you feel less cold for a second. But you need to make it last.
+#not a mistake
 >hate
 Your score has just gone up by one point
 >haet
@@ -1014,7 +1020,7 @@ You needed a strong concrete emotion to get hot.
 >clod
 Hey! No beating yourself up. You'll do it wrong.
 
-#mistake test for a rec
+#not a mistake because it is in "after reading a command"
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
 
@@ -1028,9 +1034,11 @@ That farm-boy terminology won't help show you give a darn in the big city.
 >gs
 >acre
 That farm-girl terminology won't help show you give a darn in the big city.
+>gs
 
 >caer
 Meh. Maybe you're closer than you think to motivation. How to make that matter?
+#not a mistake
 >care
 Your score has just gone up by one point
 Boarded Roadbed
@@ -1177,10 +1185,6 @@ Your score has just gone up by one point
 
 Econ-Cone
 
-#mistake test for resign
->resign
-Wrong place for that. If you must, QUIT instead.
-
 >desier
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
@@ -1234,7 +1238,7 @@ That's not something you can say, do or see here.
 
 #mistake test for fren
 >fren
-That's not the right way to make friends. You have to, like, impress actual people.
+No dog walks along dragging Sebastian in their mouth.
 
 #make sure knocking occurs first thing
 
@@ -1282,18 +1286,6 @@ You've lasted long enough. There are new things to look at, now.
 >snog
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
 
-#mistake test for signer
->signer
-No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.
-
-#mistake test for reigns
->reigns
-You try to convince yourself it totally reigns here, but the singer pushes you towards giving up your responsibility.
-
->resing
-You try to imagine what the singer's songs are like, but that's not quite it.
->resign
-Your score has just gone up by one point
 Strip of Profits
 
 >undo
@@ -1402,7 +1394,7 @@ You're not being graded here. I mean, you are getting a score, but this isn't sc
 >spag
 You don't have time to read text-adventuring magazines right now. You're too busy living them.
 
-#mistake test for a gps
+#not a mistake because it is in "after reading a command"
 >a gps
 A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
 
@@ -1968,6 +1960,7 @@ haven't had any fun at all
 ##>unset tunes
 >unste
 The tunes grow slightly less annoying, for a moment.
+#not a mistake
 >unset
 Your score has just gone up by one point
 >remap
@@ -2136,7 +2129,7 @@ Easier said than done. Perhaps a river craft could help you across. Like the raf
 >frat
 A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on wordgames.
 
-#mistake test for a cone
+#not a mistake because it is in "after reading a command"
 >a cone
 That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.
 
@@ -2149,6 +2142,7 @@ UNDO
 
 >boats
 Perhaps if you were louder and more confident, the boats would hear you.
+#not a mistake
 >boast
 Your score has just gone up by one point
 Fighter Freight
@@ -2160,6 +2154,10 @@ Yes, the pale plea is calling and warning you to leave. But how?
 Destroying the boat would be a bad idea. You need to escape it.
 >boats
 Destroying the boat would be a bad idea. You need to escape it.
+
+#mistake test for peal
+>peal
+The pale plea already sort of is. You need a stronger action than that.
 
 >leap
 Your score has just gone up by one point
@@ -2176,12 +2174,14 @@ That's not something you
 >undo
 >undo
 
+#not a mistake
 >fart
 butterfly
 >undo
 >get on raft
 >fatr
 The raft rocks slightly.
+#not a mistake
 >fart
 Your score has just gone up by one point
 >fatr
@@ -2349,14 +2349,6 @@ Lapsin' Plains
 #mistake test for naps
 >naps
 You need action, here! Maybe nothing too exhausting, but some action nonetheless.
-
-#mistake test for prat
->prat
-Yes, whoever[if crate is reflexed or crate is in lalaland]was[else]'s[end if] lobbing crates isn't very nice, but name calling's no good.
-
-#mistake test for trap
->trap
-Yes, the tarp part is almost surely a trap, but identifying it as such doesn't help.
 
 #mistake test for palins
 >palins
@@ -3077,17 +3069,6 @@ The pulses seem less there and less negative for a moment.
 Your score has just gone up by one point
 >undo
 
-#mistake test for lauren
->lauren
-You briefly remember a random acquaintance. If your name actually is Lauren, you savor the awkward and neat feeling of the first other Lauren you meant. Life is like that.
->unrela
-The pulses seem less there and less negative for a moment.
->unreal
-Your score has just gone up by one point
-min point
->unrela
-That's not something
-
 >e
 Danger Garden
 
@@ -3374,10 +3355,6 @@ No physical sciences are necessary here.
 >titers
 No physical sciences are necessary here.
 
-#mistake test for gyre
->gyre
-Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.
-
 >grye
 Ed looks slightly less avaricious.
 >grey
@@ -3477,6 +3454,14 @@ The cinders are gone for good.
 >w
 Gent-Fora Frontage
 
+#mistake test for slap em
+>slap em
+Violence is not the answer! Be clever, here.
+
+#mistake test for slap me
+>slap me
+That's kind of a silly way to motivate yourself.
+
 >bossiyl
 You feel you're on the right track to expose the macks. But that's not quite it.
 >bossily
@@ -3506,6 +3491,10 @@ That's not something
 >1
 >1
 >1
+
+#mistake retest for slap em
+>slap em
+The maples are harmless.
 
 >n
 Loop Pool
@@ -3567,7 +3556,7 @@ That's not something you can say, do or see here.
 >e
 
 >n
-Tapering Anger Pit
+Shiner Shrine
 
 #mistake test for green lady
 >green lady
@@ -3580,6 +3569,10 @@ It's already simply annoying, so that has no effect. Maybe you can alter how it 
 #mistake test for implys
 >implys
 You will have to be subtle here, but you'll want to work on actions, instead.
+
+#mistake test for rhines
+>rhines
+You don't need a river impeding your progress.
 
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track.
@@ -3596,18 +3589,6 @@ The imp looks slightly annoyed for a second. You may be on the right track.
 Your score has just gone up by one point
 >angriyl
 The imp's already been compromised that way.
-
-#mistake test for pti
->pti
-You can't go fast enough to interrupt the imp, much less apologize for doing so.
-
-#mistake test for pga
->pga
-!No golfers appear.
-
-#mistake test for gpa
->gpa
-!You don't need to worry about grades now.
 
 >undo
 >undo
@@ -3776,7 +3757,9 @@ The parrot can be changed back into a raptor, but not into anything new.
 
 #mistake test for slain/as nil
 >slain
-[if nails are visible]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].
+You're trying to SAVE the animals, actually.
+>as nil
+You're trying to SAVE the animals, actually.
 
 >snali
 One of the nails seems to bend a bit.
@@ -3787,7 +3770,7 @@ Your score has just gone up by one point
 
 #mistake retest for slain/as nil
 >as nil
-[if nails are visible]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].
+The nails are already dead as a doornail.
 >snali
 No need to tweak the snail again. It's fine as is.
 
@@ -3954,6 +3937,11 @@ You don't know if someone named Cornelius would help or hurt you.
 >sherpa
 You don't need someone to help you climb. You need help fighting Elvira.
 >au 1
+
+#mistake retest for use [text]
+>use whistle
+The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors, or SCAN with the settler, or PLAY the whistle. You should also be able to EXAMINE something you want to use, and the game should hint a verb.
+
 >play whistle
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
