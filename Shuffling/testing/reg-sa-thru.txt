@@ -73,7 +73,11 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
 >in
-A Dry Yard
+Rested Desert
+
+#mistake test for deters
+>deters
+No! You're trying to make progress here.
 
 #xc
 #mistake retest for try
@@ -83,10 +87,6 @@ That's more sensible than the five alternatives, but it's not concrete enough.
 #mistake retest for no entry
 >no entry
 You solved that puzzle already. Onward!
-
-#mistake test for dray
->dray
-You don't have enough possessions to need a cart. You probably need somewhere to go, instead.
 
 #mistake test for desert-door
 >rood
@@ -420,10 +420,6 @@ You aren't sure you need a booming voice telling you what you can EXAMINE.
 >tones
 You aren't sure you need a booming voice telling you what you can EXAMINE.
 
-#mistake test for tones
->tones
-You aren't sure you need a booming voice telling you what you can EXAMINE.
-
 #mistake test for destro
 >destro
 It's going to get evil enough even without a high-ranking COBRA officer.
@@ -473,11 +469,11 @@ Your score has just gone up by one point.
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
 
-#mistake test for gunshot
+#mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun, but you don't have a bullet yet.
 
-#mistake test for gat
+#mistake retest for gat
 >gat
 Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the tag will break the tagged gadget.
 
@@ -631,11 +627,11 @@ LIVERS.
 Your score has just gone up by one point.
 
 #xc
-#mistake test for steam
+#mistake retest for steam
 >steam
 You've already done enough with the meats.
 
-#mistake test for grin
+#mistake retest for grin
 >grin
 You smirk at the grinder you trashed.
 
@@ -696,14 +692,14 @@ Your score has just gone up by one point.
 Hard to beat silver. It's what it should be.
 
 #xc
-#mistake test for gunshot
+#mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun, but you need to load it first.
 
 >put silver in shotgun
 
 #xc
-#mistake test for gunshot
+#mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun.
 
@@ -726,11 +722,14 @@ Frost Forts
 
 #mistake test for dumdum/dum/dum dum
 >dumdum
-The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].
+The mud is stuck that way. You don't need to change it.
+!Besides
 >dum
-The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].
+The mud is stuck that way. You don't need to change it.
+!Besides
 >dum dum
-The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].
+The mud is stuck that way. You don't need to change it.
+!Besides
 
 #xc
 >wolvse
@@ -757,15 +756,16 @@ Trips Strip
 * _sortie
 
 #mistake test for tories
-##location = trips strip
-##condition(s) player is in trips strip.
 >tories
 I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.
 
 #mistake test for despot
 >despot
-[one of]Summoning Red Bull Burdell would be unwise. Best not try it again.[or]Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak
-]So [']dept.[stopping]
+Summoning Red Bull Burdell would be unwise. Best not try it again.
+>despot
+Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ...
+So 'dept.
+>undo
 
 #xc
 >sortie
@@ -940,7 +940,7 @@ Best not to get too crazy with food preparation.
 >s
 A Round Den, Unadorned
 
-#mistake test for a lid
+#mistake retest for a lid
 >a lid
 You don't need to deal with the dial, now.
 
@@ -1040,7 +1040,7 @@ You feel a slight psychic push-pull coming from all around. Keep at it.
 >tap [text]
 'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH something instead.)
 
-#mistake test for mope
+#mistake retest for mope
 >mope
 Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.
 
@@ -1052,8 +1052,12 @@ Your score has just gone up by one point.
 >peasatn
 You're better off changing what the peasant has than what he is.
 
-#xc
+#mistake test for black rood/rood/blackrood
 >black rood
+Hm, no, keep religion out of it.
+>rood
+Hm, no, keep religion out of it.
+>blackrood
 Hm, no, keep religion out of it.
 
 >blackdoro
@@ -1064,13 +1068,9 @@ Your score has just gone up by one point.
 >blackdoro
 The black door just sits there.
 
-#mistake test for black rood/rood/blackrood
->black rood
-Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].
->rood
-Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].
+#mistake retest for black rood/rood/blackrood
 >blackrood
-Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].
+Hm, no, keep religion out of it--you have what you need.
 
 #mistake test for yah
 >yah
@@ -1086,7 +1086,7 @@ Instead of trading, use GIVE X to Y.
 Your score has just gone up by one point.
 
 #xc
-#mistake test for yah
+#mistake retest for yah
 >yah
 You're glad you've got the hay, but you're not excited, and you can't fake it.
 
@@ -1097,7 +1097,7 @@ lots of smilies
 >similes
 more forced than the smilies
 
-#mistake test for mope
+#mistake retest for mope
 >mope
 You try, but the smilies on the poem prevent you.
 
@@ -1110,11 +1110,11 @@ Your score has just gone up by one point.
 The missile emits an almost giggly sound but doesn't actually change.
 
 #xc
-#mistake test for mope
+#mistake retest for mope
 >mope
 You mope, but it doesn't change the poem. Or even give you an idea for one.
 
-#mistake test for similes
+#mistake retest for similes
 >similes
 You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.
 
@@ -1136,6 +1136,10 @@ The panel bleeps a "stop that" sort of warning.
 
 #xc
 >room
+
+#mistake retest for dumdum/dum/dum dum
+>dum
+The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
 
 #small detour for mistake conditional text
 >w
@@ -1172,11 +1176,11 @@ The sack stiffens, rises and becomes less blobby. It's the cask again, nice and 
 
 #mistake test for lois
 >lois
-Lois will not pour the oils in the cask for you, but she is not stopping you.
+Lois will not pour the oils in the cask for you, but she is not stopping you. Lois helps those who help themselves.
 
 >sack
 #xc
-#mistake test for lois
+#mistake retest for lois
 >lois
 You suddenly feel discontent at your container of choice.
 
@@ -1213,7 +1217,7 @@ Changing Lois is highly unlikely, and you should possess the oils before doing a
 >fill cask
 Gainly laying
 
-#mistake test for lois
+#mistake retest for lois
 >lois
 Lois is silent. You figure what to pour, where
 
@@ -1236,7 +1240,7 @@ Your score has just gone up by one point.
 The soil is right as-is, but maybe something can go on it.
 
 #xc
-#mistake test for lois
+#mistake retest for lois
 >lois
 Lois may not hear you out here, and she may only give marginal hints in the cedars.
 
@@ -1249,7 +1253,7 @@ Gainly laying
 SO NOW HALLS SHALL SWOON
 
 #xc
-#mistake test for lois
+#mistake retest for lois
 >lois
 You feel guilt at asking Lois for more
 
@@ -1262,7 +1266,7 @@ Crashing Archings
 >hallwya
 You already have a passage east. Don't close it.
 
-#mistake test for lois
+#mistake retest for lois
 >lois
 Lois may not hear you out here--she has left you to your own devices, but you must be close
 
@@ -1315,7 +1319,7 @@ Your score has just gone up by one point.
 No, the steer button HAS to be right.
 
 #xc
-#mistake test for terse
+#mistake retest for terse
 >terse
 Already good.
 
@@ -1332,7 +1336,7 @@ Your score has just gone up by one point.
 >shoto
 No, the shoot button HAS to be right.
 
-#mistake test for otohs
+#mistake retest for otohs
 >otohs
 You start fruitlessly double- and triple- thinking whether you should change back to the hoots button
 
@@ -1555,11 +1559,12 @@ The senors you want to see are behind the door.
 >w
 The Ol' Hotel
 
-#mistake test for lucre
+#mistake retest for lucre
+#technically, a different "lucre/cluer" but I'm too lazy to give 2 special names
 >lucre
 Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on.
 
-#mistake test for cluer
+#mistake retest for cluer
 >cluer
 Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing.
 
@@ -1665,7 +1670,7 @@ You don't need to deal with a knife-wielding psycho so near a hotel, which is cl
 >s
 Elm Train Terminal
 
-#mistake test for bates
+#mistake retest for bates
 >bates
 You don't need to deal with a knife-wielding psycho on top of all this.
 
@@ -1763,9 +1768,9 @@ Man, I've done enough work today
 
 #mistake test for nerd door w
 >odor
-That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.
+That door's reinforced. Whoever's behind there made sure it was protected against all sorts of crazy things.
 >rood
-That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.
+That door's reinforced. Whoever's behind there made sure it was protected against all sorts of crazy things.
 
 >e
 Your score has just gone up by one point.
@@ -1778,7 +1783,7 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 
 >ask nerds about darkness
 
->odor
+#mistake retest for nerd door w
 That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
 
 >s
@@ -1806,9 +1811,9 @@ Your score has just gone up by one point.
 >resni
 The dust is dust now.
 
-#mistake test for rinse
+#mistake retest for rinse
 >rinse
-Time for that after you sure-handedly slay the final enemy, here.
+Time for that after you get your hands dirty and slay the final enemy, here.
 
 #xc
 >betsa
@@ -2063,26 +2068,41 @@ Your score has just gone up by one point.
 
 Leis Isle
 
+#mistake test for download
+>download
+The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real.
+>download
+You wait for the woodland to download fully, but it doesn't.
+
 #mistake test for lies/lie
+>get leis
+>lies
+Too late. If you'd done this earlier, you'd have gotten a bonus point.
+>undo
+>undo
+
 >lies
 'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is
+Your score has just gone up by one point.
+>undo
 >lie
 'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made have dissolved. You see the isle for what it is
+Your score has just gone up by one point.
+>lies
+The melodrama is not as cathartic the second time through.
 
+#mistake retest for download
+>download
+You wait for the woodland to download fully, but it doesn't. But then, since the leis were fake, you shouldn't be surprised the woodland is, too.
 
 #xc
-#mistake test for lites
+#mistake retest for lites
 >lites
 Light isn't the problem here. It's getting off the islet
 
 #xc
 >score
 1 out of 14 total
-
-#mistake test for download
->download
-[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doe
-sn't[end if][if leis are not in isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].
 
 #xc
 >cork
@@ -2112,7 +2132,7 @@ Grumbling about prigs, or showing those prigs, won't help now. You should probab
 Your score has just gone up by one point.
 
 #xc
-#mistake test for prigs
+#mistake retest for prigs
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
 
@@ -2136,7 +2156,7 @@ Your score has just gone up by two points.
 >prose
 There's not much of that left in this game, and talking won't help you up the slope.
 
-#mistake test for pores
+#mistake retest for pores
 >pores
 No, you had it.
 
@@ -2149,7 +2169,7 @@ Potshot Hotspot
 
 #mistake test for spotter
 >spotter
-No, you see [']em, you just need a better way to disperse [']em.
+No, you see 'em, you just need a better way to disperse 'em.
 
 #mistake test for i rot
 >i rot
@@ -2234,13 +2254,14 @@ No, we know who's to blame. He's done with. Time to move on.
 
 #mistake test for amen/name
 >amen
-Use the plural, here.
+I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
 >name
-Use the plural, here.
+I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
 
-#mistake test for mensa/name
+#mistake test for mensa
 >mensa
-No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey wass not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.
+No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey wass not particularly relevant.
+Even if they wouldn't, well, the Means Manse is for you and you alone.
 >name
 No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey wass not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.
 

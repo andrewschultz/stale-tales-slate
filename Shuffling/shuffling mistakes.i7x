@@ -57,6 +57,8 @@ chapter rested desert
 [def=desert-door]
 understand "rood" as a mistake ("[if desert-door is in rested desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in rested desert.
 
+understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in rested desert.
+
 chapter thickest thickets
 
 understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is quickvis.
