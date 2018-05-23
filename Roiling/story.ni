@@ -7837,6 +7837,7 @@ before smelling (this is the you can smell some stuff some places rule):
 	if player is in shack and casserole is in shack, say "That casserole doesn't smell very good, but it's not toxic." instead;
 	if player is in Posh Hops Shop, say "You catch a whiff of some mokes['] smoke." instead; [oyster]
 	if player is in Disease Seaside, say "Say, spare sea spray." instead;
+	if player is in Fighter Freight, say "You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly." instead;
 	if player is in Achers' Arches and sardine is in achers' Arches, say "Sea rind." instead;
 	if aunt tuna is visible, say "Antiseptic spice taint." instead;
 	if player is in Rascal Craals, say "This situation only stinks in general, not literally." instead;
@@ -17489,7 +17490,7 @@ carry out sobating:
 
 book Fighter Freight
 
-Fighter Freight is a room in Oyster. "You're near the edge of a fighter freight. You're half-paralyzed with fear. With or without that pale plea echoing from below."
+Fighter Freight is a room in Oyster. "You're near the edge of a fighter freight. You're half-paralyzed with fear. With or without that pale plea echoing from below and... well... you think you smell something, too."
 
 after looking in fighter freight:
 	set the pronoun it to pale plea;
@@ -17499,7 +17500,7 @@ some scary crays are plural-named terse people in Fighter Freight. "Scary crays 
 
 understand "scary/ cray" as crays.
 
-the pale plea is scenery in Fighter Freight. "[one of]'A... [']elp!'[or]'Pal! Pal! Ee!'[or]'Apple...ale...'[in random order]". the pale plea is vanishing.
+the pale plea is vanishing scenery in Fighter Freight. "[one of]'A... [']elp!'[or]'Pal! Pal! Ee!'[in random order]".
 
 a-text of pale plea is "RYYR". b-text of pale plea is "RYYR". parse-text of pale is "x[sp]-[sp]-[sp]x". pale plea is cheat-spoilable.
 

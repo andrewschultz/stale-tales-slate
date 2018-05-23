@@ -7456,7 +7456,7 @@ to say what-to-ask-lois:
 	else if player does not have cask:
 		say "You suddenly feel discontent at your container of choice";
 	else if caskfillings is 0:
-		say "Lois will not pour the oils in the cask for you, but she is not stopping you";
+		say "Lois will not pour the oils in the cask for you, but she is not stopping you. Lois helps those who help themselves";
 	else if caskfillings is 1:
 		say "Lois is silent. You figure what to pour, where";
 	else:
