@@ -54,10 +54,10 @@ understand "try" as a mistake ("[if player is in subsite]You're sure the lecture
 
 chapter rested desert
 
+understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in rested desert.
+
 [def=desert-door]
 understand "rood" as a mistake ("[if desert-door is in rested desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in rested desert.
-
-understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in rested desert.
 
 chapter thickest thickets
 
@@ -314,10 +314,10 @@ understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry,
 
 chapter undesired underside
 
+understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a-reading is in underside.
+
 [def=nerd door w]
 understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
-
-understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a-reading is in underside.
 
 understand "senors" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in underside.
 
@@ -378,7 +378,7 @@ chapter bassy abyss
 
 understand "reins" as a mistake ("Horsing around like that won't hold back the [if beast is visible]beast[else]beats[end if]. You need to get a grip another way, but you're on the right track.") when player is in Bassy Abyss.
 
-understand "rinse" as a mistake ("[if siren is visible]No water source. You can do better than short-circuiting the siren with water, though[else]Time for that after you sure-handedly slay the final enemy, here[end if].") when player is in Bassy Abyss.
+understand "rinse" as a mistake ("[if siren is visible]No water source. You can do better than short-circuiting the siren with water, though[else]Time for that after you get your hands dirty and slay the final enemy, here[end if].") when player is in Bassy Abyss.
 
 understand "risen" as a mistake ("You don't need the [if siren is visible]siren's volume or [end if][if beast is visible]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
 
@@ -392,9 +392,9 @@ understand "slite" as a mistake ("That's bad spelling, and it won't shrink your 
 
 chapter Leis Isle
 
-understand "download" as a mistake ("[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if leis are not in isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].") when player is in isle.
+understand "download" as a mistake ("[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if l2 are not in isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].") when player is in isle.
 
-understand "lies" and "lie" as a mistake ("'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made [if leis are in lalaland]have dissolved[else]dissolve[end if]. You see the isle for what it is[lei-lala].") when player is in isle and leis are in isle.
+understand "lies" and "lie" as a mistake ("You reflect on how insidious it was to stick you here in a false paradise.") when player is in isle and l2 are moot.
 
 chapter rived drive
 

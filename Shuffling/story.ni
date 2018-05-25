@@ -865,18 +865,13 @@ rule for showing what the player missed:
 	if cabinet is in trips strip:
 		say "[2da of stores]the cabinet, once it followed you, could've become something really alive. A nice bat.";
 	now sect-missed is false;
-	if rock is in Isle:
-		say "[2da of resort]the rock on the [isle] was changeable to CORK.";
-	if swing is in isle:
-		say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
-	if spore is in Rived Drive:
-		say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
-	if sprig is in Rived Drive:
-		say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
-	if tool shed is in Rived Drive:
-		say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS.";
-	if china is off-stage:
-		say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
+	if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in leis isle]to expose the leis as an illusion[else]instead of taking the leis[end if].";
+	if rock is in Isle, say "[2da of resort]the rock on the [isle] was changeable to CORK.";
+	if swing is in isle, say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
+	if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
+	if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
+	if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS.";
+	if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
 	now sect-missed is false;
 	if forest is solved:
 		if has-been is off-stage:
@@ -1389,7 +1384,7 @@ beast	"You need to attack the beast with a weapon! You [if sword is off-stage]do
 emitter	"[if dry cake is in Obtains Boastin Bastion]The emitter is useful to lower property values. Specifically, the Bastion's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
 tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]
 stile	"[one of]The tiles provide a visual clue, but the stile is just to reinforce things.[plus][or]It's reddish tinged, so you know all the letters are wrong.[plus][or]The TILES/STILE become an ISLET. [minus][cycling]"
-leis	"They're not what you want to be after. You may or may not notice an anagram, here."
+l2	"They're not what you want to be after. You may or may not notice an anagram, here."
 swing	"[one of]The swing can get you up in the air, but maybe you can go even higher. [plus][or]The swing can become WINGS, too. [minus][cycling]"
 wings	"The wings will let you go up or east over the water."
 cork	"The cork will let you go east over the water."
@@ -2955,6 +2950,7 @@ words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claimi
 table of Resort anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
+l2	l2	"leis"	"leis"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
 sprig	grips	"grips/grip"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
@@ -8943,20 +8939,31 @@ instead of doing something with shiner shrine:
 
 chapter Isle
 
-Isle is a room in Resort. "[if leis are in isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if leis are not in isle], and now the leis here were exposed, you probably want to get going that way, too[end if]."
+Leis Isle is a room in Resort. "[if l2 are in isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if l2 are not in isle], and now the leis here were exposed, you probably want to get going that way, too[end if]."
 
-printed name of Isle is "[if Leis are in Isle]Leis[else]Lies[end if] Isle"
+printed name of Leis Isle is "[if l2 are in Isle]Leis[else]Lies[end if] Isle"
 
-understand "leis isle" as isle when leis are in isle.
-understand "lies isle" as isle when leis are not in isle.
+understand "lies isle" as isle when l2 are not in isle.
 
-does the player mean doing something with the leis: it is likely.
+section leis
 
-the leis are scenery in isle. "Looking at them, you half forget you came through Store R to beat Red Bull Burdell."
+the l2 are privately-named plural-named scenery in leis isle. "Looking at the leis, you half forget you came through Store R to beat Red Bull Burdell."
 
-to say lei-lala: moot leis;
+understand "leis" as l2 when l2 are in leis isle.
 
-check taking the leis: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead.
+found-lies is a truth state that varies.
+
+after fliptoing l2:
+	min-up;
+	moot l2;
+	now found-lies is true;
+	continue the action;
+
+does the player mean doing something with the l2: it is likely.
+
+to say lei-lala: moot l2;
+
+check taking the l2: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead.
 
 section an odd low woodland
 
@@ -8964,7 +8971,7 @@ check going nowhere in isle:
 	say "[if woodland-revealed is true]No, you already saw the woodland was faked[else]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if].";
 
 to say lei-down:
-	say "[if leis are not in isle], but then, the leis were fake, too"
+	say "[if l2 are not in isle], but then, the leis were fake, too"
 
 woodland-revealed is a truth state that varies.
 
