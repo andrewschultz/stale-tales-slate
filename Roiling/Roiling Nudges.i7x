@@ -302,7 +302,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "upscale"	485659083	Upscale Capsule	--	--	"[locname]." [start upscale capsule]
 "office"	319186909	Upscale Capsule	--	--	"[locname]."
 "fief"	225828747	Upscale Capsule	--	--	"[locname-part]."
-"ignore"	433982545	--	--	ignore-ignored rule	"Now that you've ignored the distraction, you want to forget it."
 "divorce"	479674829	--	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 "vanity"	448722262	--	tan ivy vanity	--	"[if noise is in lalaland]You really don't need to rearrange the vanity[else if vanity is unexamined]You don't need to deal with it as much as the person outside--but maybe examining will give you a clue[else]You may want to deal with the person outside, instead of this, but examining it may've helped a bit[end if]."
@@ -1416,10 +1415,6 @@ to say cone-rec:
 
 to say scrapery:
 	say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
-
-this is the ignore-ignored rule:
-	if player is in Upscale Capsule and noise is in lalaland, the rule succeeds;
-	the rule fails;
 
 this is the divorces-gone rule:
 	if player is in Upscale Capsule and divorces is in lalaland, the rule succeeds;

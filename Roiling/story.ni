@@ -2804,6 +2804,7 @@ pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red." [routes]
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
+red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[in random order]Ed Evers[stopping]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
@@ -8964,7 +8965,7 @@ Si Reed	Si Reed	false	503231922	econ cone	"desire"	"desire"	"You remember how wh
 praise	praise	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise is in lalaland]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
-noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
+red vees	red vees	false	693210005	--	"deserve"	"deserve"	"You believe you can, and you can! Once you do, your office fills up with meaningful and productive stuff. The salt, though the smallest, may be the most important. The rest is just trappings."
 salt	trance nectar	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom."
 sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
 Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at Blamer Balmer, and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
@@ -14348,9 +14349,6 @@ instead of opening vanity:
 
 instead of scaning vanity:
 	say "You scan around the vanity for clues.";
-	if noise is in Upscale Capsule:
-		say "You note the noise and that you can read the vanity[if vanity is examined] again[end if].";
-		try scaning noise instead;
 	if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
 		say "Your settler picks up a signal when it moves to the lobster.";
 		try scaning lobster instead;
@@ -14362,18 +14360,30 @@ instead of scaning vanity:
 		try scaning trance nectar instead;
 	say "You weren't able to find any. But there must be something to do!"
 
-chapter the noise (IGNORE)
+chapter red vees
 
-every turn while player is in Upscale Capsule (this is the region-knock rule):
-	if noise is in Upscale Capsule:
-		say "[one of]'Er...go in?' cries a voice not worth your attention[or]You hear the voice cry '[one of]Erin! Go[or]Go, Erin[cycling]!' which makes you see red. YOU'RE in charge here[or]Your 'visitor' seems to be plotting... you hear 'One: rig...' but you tune the rest out, seeing red[or]'No! I...erg!' your adversary rages[in random order].[paragraph break]If only you could tune that out!";
+[song or noise + capsule = wrong]
 
-the noise is vanishing scenery in Upscale Capsule. "It's noise from the person you locked out."
+[vee/vees/red vee in nudges ??]
+["'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."]
 
-a-text of noise is "YRRYRY". b-text of noise is "YRRYRY". parse-text of noise is "-[sp]x[sp]x[sp]-[sp]x[sp]-".
+The red vees are vanishing plural-named scenery in Upscale Capsule. description is "They look like they could be hooked together, but you csn't do so by standard means."
 
-after fliptoing noise:
-	now tan ivy vanity is clue-used;
+insted of doing something with red vees:
+	if action is procedural, continue the action;
+	say "Hmm. You need to know what to do with the vees, or around them, to fill up your office.";
+
+[?? er go in = old ignore erin/go go/erin One Rig / Rig One Region]
+[??get rid of big important desk and noise as scenery]
+
+after fliptoing red vees:
+	now tan ivy vanity is in upscale capsule;
+	now nerf fern is in upscale capsule;
+	now plasm lamps are in upscale capsule;
+	now DIVORCES magazine is in upscale capsule;
+	now St Al Salt is in upscale capsule;
+	the big important desk is in upscale capsule;
+	now desk sked is in upscale capsule;
 	continue the action;
 
 instead of doing something with the noise:
@@ -26423,7 +26433,7 @@ Pernod	"[one of]Expensive alcohol is for high class reflection, and stuff. Or it
 card	"The card gives a clue, along with the Pernod, of how to get into the godlings' lodgings."
 label	"If you peel the label (by taking it,) you will get another clue what to do to get in the godlings' lodgings."
 DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
-vanity	"[one of]The vanity is not just for prestige. It labels your region in red.[plus][or]You must learn to IGNORE silly distractions of people below/beneath you[minus][cycling]."	--	"IGNORE"
+red vees	"[one of]You have to believe it's worth it for you to do something with the red vees. That you're good enough.[plus][or]You must learn to DESERVE to use them[minus][cycling]."	--	"DESERVE"
 noise	"You need to not pay attention to the noise. See the vanity for details."
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
 sister tressi	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
@@ -28177,7 +28187,7 @@ chapter randtext
 
 [* this tests all possibilities of random text, by region. Generic possibilities are included in rand-i.]
 
-test twi with "lamp/x shelf/db/open door/1/4/4/4/4/4/lamp/x trash/g/g/g/g/g/g/g/g/d/staple/stapler/put staple in stapler/ts/troves/in/x pa/gonear upscale capsule/ignore/bolster/last/resign/otwin/deeply/quickly/w/e/w/e/w/e/w/7/play whistle"
+test twi with "lamp/x shelf/db/open door/1/4/4/4/4/4/lamp/x trash/g/g/g/g/g/g/g/g/d/staple/stapler/put staple in stapler/ts/troves/in/x pa/gonear upscale capsule/deserve/bolster/last/resign/otwin/deeply/quickly/w/e/w/e/w/e/w/7/play whistle"
 
 test rand-i with "cap 3/x bookshelf/g/g/g/g/g/g/attack it/g/g/g/lamp/open door/1/1/1/1/1/1/1/1/2/lamp/x art/g/g/g/g/g/g/g/g/hint/n/y/g/g/g/n/g/g/g/shit/g/g/g/x ads/g/g/g/listen/g/g/g/basement/d/satchel/x settler/in/flier/2/2/1/1/1/1/1/1/8/8/8/10/10/staple/stapler/staple wall/z/z/z/z/////in"
 
@@ -28189,7 +28199,7 @@ test rand-r with "past/ask pat about food/g/g/despite/out/across/opposite/out/in
 
 [this one actually wins, so I don't retry.]
 
-test rand-v with "z/z/z/z/x ethics/g/g/g/hate/care/l/l/l/l/observe/spot/reason/believe/recall/glare/gape/x lead/deal/x brochure/g/g/g/desire/aspire/strive/ponder/ignore/x desk/g/g/g/x sked/g/g/g/bolster/master/last/x divorces/g/g/g/discover/last/decide/y"
+test rand-v with "z/z/z/z/x ethics/g/g/g/hate/care/l/l/l/l/observe/spot/reason/believe/recall/glare/gape/x lead/deal/x brochure/g/g/g/desire/aspire/strive/ponder/deserve/x desk/g/g/g/x sked/g/g/g/bolster/master/last/x divorces/g/g/g/discover/last/decide/y"
 
 test rand-y with "ask casper about xyz/g/g/g/g/g/g/g/sing/inset/remap/stroll/calm/run/boast/leap/z/z/z/z/z/z/z/z/spike/e/scan cans/seek/ask tuna about tuna/g/g/g/g/g/g/g/tutor/eat/w/w/warp/search/n/x theses/g/g/g/retry"
 
@@ -28285,19 +28295,19 @@ chapter troves
 
 [* this includes tests for troves, troves with mistakes, troves min-points and troves max-points as well as alt ways through]
 
-test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/reason/believe/recall/glare/despair/x lead/deal/z/x brochure/desire/aspire/strive/ponder/ignore/last/master/bolster/x desk/x divorces/discover/last/resign/coff"
+test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/reason/believe/recall/glare/despair/x lead/deal/z/x brochure/desire/aspire/strive/ponder/deserve/last/master/bolster/x desk/x divorces/discover/last/resign/coff"
 
-test troves-err with "troves/enter troves/pega/gape/peag/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/reclal/recall/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/ignore/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/resing/resign/coff"
+test troves-err with "troves/enter troves/pega/gape/peag/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/reclal/recall/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/resing/resign/coff"
 
-test troves-alt with "troves/enter troves/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/deriev/derive/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/ignore/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/decied/decide/coff"
+test troves-alt with "troves/enter troves/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/deriev/derive/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/decied/decide/coff"
 
-test troves-oops with "sevort/troves/sevort/enter troves/teah/haet/teah/etah/hate/etah/reac/caer/reac/erac/care/erac/veresbo/obserev/veresbo/evresbo/observe/evresbo/otps/spto/otps/tops/spot/tops/onsaer/reasno/onsaer/nosaer/reason/nosaer/veeileb/belieev/veeileb/eveileb/believe/eveileb/lalcer/reclal/lalcer/llacer/recall/llacer/realg/glaer/realg/eralg/glare/eralg/irapsed/despari/irapsed/riapsed/despair/riapsed/aled/dela/aled/laed/deal/laed/reised/desier/reised/erised/desire/erised/reipsa/aspier/reipsa/eripsa/aspire/eripsa/veirts/striev/veirts/evirts/strive/evirts/erdnop/pondre/erdnop/rednop/ponder/rednop/reongi/ignoer/reongi/erongi/ignore/erongi/stal/lats/stal/tsal/last/tsal/ertsam/mastre/ertsam/retsam/master/retsam/ertslob/bolstre/ertslob/retslob/bolster/retslob/ervocsid/discovre/ervocsid/revocsid/discover/revocsid/stal/lats/stal/tsal/last/tsal/gniser/resing/gniser/ngiser/resign/ngiser/coff 1"
+test troves-oops with "sevort/troves/sevort/enter troves/teah/haet/teah/etah/hate/etah/reac/caer/reac/erac/care/erac/veresbo/obserev/veresbo/evresbo/observe/evresbo/otps/spto/otps/tops/spot/tops/onsaer/reasno/onsaer/nosaer/reason/nosaer/veeileb/belieev/veeileb/eveileb/believe/eveileb/lalcer/reclal/lalcer/llacer/recall/llacer/realg/glaer/realg/eralg/glare/eralg/irapsed/despari/irapsed/riapsed/despair/riapsed/aled/dela/aled/laed/deal/laed/reised/desier/reised/erised/desire/erised/reipsa/aspier/reipsa/eripsa/aspire/eripsa/veirts/striev/veirts/evirts/strive/evirts/erdnop/pondre/erdnop/rednop/ponder/rednop/reongi/ignoer/reongi/erongi/deserve/erongi/stal/lats/stal/tsal/last/tsal/ertsam/mastre/ertsam/retsam/master/retsam/ertslob/bolstre/ertslob/retslob/bolster/retslob/ervocsid/discovre/ervocsid/revocsid/discover/revocsid/stal/lats/stal/tsal/last/tsal/gniser/resing/gniser/ngiser/resign/ngiser/coff 1"
 
-test troves-0 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/reason/believe/recall/despair/deal/desire/aspire/strive/ponder/ignore/glare/last/master/bolster/last"
+test troves-0 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/reason/believe/recall/despair/deal/desire/aspire/strive/ponder/deserve/glare/last/master/bolster/last"
 
-test troves-1 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/believe/recall/despair/deal/desire/strive/ponder/ignore/master/last/resign"
+test troves-1 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/believe/recall/despair/deal/desire/strive/ponder/deserve/master/last/resign"
 
-test troves-2 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/reason/derive/despair/deal/desire/aspire/ponder/ignore/bolster/last/decide"
+test troves-2 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/reason/derive/despair/deal/desire/aspire/ponder/deserve/bolster/last/decide"
 
 chapter routes
 

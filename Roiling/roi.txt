@@ -1,6 +1,7 @@
 out=roiling-invisiclues.htm
 !A Roiling Original HTML Clues
 ->c:/games/inform/roiling Materials/Release
+==endheader
 >General
 ?Does the male/female option have any practical difference?
 Well, one. It changes two guardians behind Store W. It also changes the names/genders of some people you'll meet or hear of.
@@ -14,6 +15,8 @@ The south exit from the Coastline, in Store W, features either Lois the Hostile 
 The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
 Also, if any animals are referred to as male, let me know, as that's a potential bug. I tried to leave them gender-neutral.
+?Hey! Why do location names change? Does this mean anything?
+There's no deeper meaning, though it means you're probably mostly done with the area.
 >MEANS MANSE
 >>DUSTY STUDY
 ?What do I do here?
@@ -90,6 +93,8 @@ The pram can become a RAMP.
 Enter them to go back to the study. You'll see them everywhere in your manor once you know where to look.
 Or if in you're the study, you go to the heights.
 >>LARGELY ALL-GREY GALLERY
+?Hey! Why isn't this a basement?
+Well, "basement" was just a puzzle. I wanted to make all my location titles anagram-y. This was floating around, and I didn't know where to put it.
 ?Stria?!
 Above you...an odd word, but another way to walk around.
 STAIR.
@@ -98,7 +103,7 @@ Well, you can ignore them and still win. They don't add anything.
 Except a last lousy point for an odd word.
 They're unlocked, but you can change that.
 Make a SNIB.
-?Anything remaining to do in the basement?
+?Anything remaining to do in the largely all-grey gallery?
 Figure how the letters settler works, though you don't have to, as you'll get a tutorial.
 Then go IN.
 ?Help! There's a guy with a gun!
@@ -316,7 +321,7 @@ Say WHASSUP to get in their good graces.
 ?Are they going to follow me everywhere?
 Well, until you get close to the end.
 And not into the volt maze. You have to go there yourself.
->>NOWT TOWN/VOLT MAZE
+>>NOWT TOWN (VOLT MAZE)
 ?Why can't I enter the maze yet?
 You need to get a few points and figure out what's going on.
 ?Do I need to go through the volt maze? How many times?
@@ -358,6 +363,7 @@ TOUGH...
 ?Is the hawt thaw significant?
 Not strictly. It's only necessary to get maximum points.
 It's really weird, though. It barely makes any sense at all!
+It's a last lousy point, based on a puzzle that really didn't work in the first version.
 If you take a good hard look at it, you may want to say WHAT.
 >>HACKS' SHACK
 ?There's a lot to do here! What's my ultimate goal?
@@ -386,7 +392,7 @@ It can become a SKID...
 You'll need to move the skid around, unsurprisingly. Use the PUSH command.
 However, once you've gotten rid of the yak, you'll want to flip the skid back to the disk for good.
 ?The slab?
-Not important by itself, but you can put computer components on it as you find it.
+Not important by itself, but you can put computer components on it as you find them.
 The screen and the keyboard, in particular.
 ?The fount?
 It's dry but restful.
@@ -404,7 +410,7 @@ There is too much for you to eat. Maybe a friend or friends can.
 You can't do anything yet.
 You may notice the polemic by Mel Copi.
 It will teach you how to COMPILE, later.
-?The textbook?
+?The schematic catechism?
 It's not useful til you need to program, then you'll use it automatically.
 So, yeah, it's mostly for amusement.
 ?The horrible book? (Note: there are five possible titles)
@@ -650,9 +656,11 @@ It's not for drinking. It should make you want to be richer.
 Notice whom it's from in red.
 PONDER.
 >>UPSCALE CAPSULE
-?The guy I deposed is bugging me!
-What can you do to concentrate on your REGION? Your tan ivy vanity title provides some hints. As does the banging on the door.
-IGNORE him.
+?What should I do with the red vees?
+Don't overthink it or get too abstract.
+Believe you can and should.
+The names of the creators are Ed Evers and Erv Dees, in red.
+DESERVE it.
 ?I'm not worth my salt!
 You will be, with time.
 If you haven't dealt with the lobster or the stream, you need to.

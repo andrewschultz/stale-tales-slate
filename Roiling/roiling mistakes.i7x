@@ -141,9 +141,6 @@ understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW ver
 
 chapter same mesa
 
-[def=under-generic]
-understand "under" as a mistake ("Wrong preposition.") when player is in mesa and the-b is in mesa.
-
 understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in same mesa.
 
 understand "apts" as a mistake ("Pat's is a local small business, not nameless, faceless real estate.") when player is in Same Mesa or player is in Idle Deli.
@@ -181,6 +178,9 @@ understand "taps" as a mistake ("You have no bugle. Well, not in this game.") wh
 understand "tardies" as a mistake ("You can't tell the giant off for being late.") when old giant is in location of player.
 
 understand "under" as a mistake ("[if grouchy old giant is in location of player]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in mesa and Rude 'N Nuder is not in location of player.
+
+[def=under-generic]
+understand "under" as a mistake ("Wrong preposition.") when player is in mesa and the-b is in mesa.
 
 chapter cleric circle
 
