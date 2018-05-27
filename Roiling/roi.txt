@@ -643,7 +643,7 @@ They are just scenery, to give the Browse Bowers a feeling of isolation.
 The rotunda is a reference to the Browse Bowers' old name.
 >>ECON-CONE
 ?Who is the statue? What should I do with him/it?
-The statue is one of two things you need to move on, sort of like the Bortles Lobster and ME ARTS.
+The statue is one of two things you need to figure out to move on to the next area, sort of like the Bortles Lobster and ME ARTS--or RECALL/DERIVE back in the sublet, though in that case, they were mutually exclusive.
 Trevis Vister. Hmm. And there are rivets.
 The statue is there to make people want to be like him.
 STRIVE.
@@ -683,8 +683,8 @@ He describes them with anagramming adjectives.
 Once they're gone, you can send him YONDER.
 Or you can make him DRONEY and his followers will get bored.
 >>>RODNEY'S GOONS
-?How do I get rid of the goons? And why are so many listed? I only see six.
-Six of twenty-five are randomly chosen. Well, randomly chosen, one from each subgroup, so that randomness doesn't make things too hard or too easy. There are no clues below, just the groups I picked warriors from.
+?How do I get rid of the goons? And why are so many listed? I only see six, plus Rodney.
+One henchman is chosen from each group. Five groups have four, and one group has five. They are weighted by length.
 Geno, Shane, Tyson, Wade.
 Edwin, Eldon, Floyd, Royce.
 Blake, Bredo, Daryl, Dewey.
@@ -775,7 +775,8 @@ Nothing, until near the end.
 You can put them in the toaster, and it will give you the ability to XRAY something for a hint.
 ?What's the toaster for?
 It's a rosetta toaster.
-Put bready products, like the tarts, in the toaster, and you can see through stuff to what it should be.
+Put bready snacky products, like the tarts, in the toaster, and you can see through stuff to what it should be.
+There are five, total: behind the yurts in the copse and in the Fringe Finger (west edge) and Lost Lots (south edge). ?? two appear in Fringe Finger
 Including the final puzzle.
 Budget as you need to.
 ?Is there any functional difference between the pastries I find? And how many are there?
@@ -874,6 +875,11 @@ Make it PUNIER.
 It sure is vigilant.
 How to lower its energy?
 Make it RESTING.
+?Hey! What's this keycar doing?
+It appears the first time you clear an area of all the guardians.
+It's pretty easy to dispose of as an LLP.
+It's active and has no mechanical damage...
+...until you make it CREAKY.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
 While you have to go through the Scope Copse, and you have to pick off the guardians there, there's nothing critical. Though having the map is helpful.
@@ -934,7 +940,7 @@ The gizmo is handy later.
 It has a nametag.
 Have you seen anyone by that name?
 Dr. Yow is locked up in the subsector.
-You can't move Dr. Yow to the Shaven Havens, but you can move his voice.
+You can't move Dr. Yow to the Shaven Havens, but you can move Dr. Yow's voice.
 The duck might trust that.
 >>FRINGE FINGER
 ?What can I do about the strudel?
@@ -1163,6 +1169,7 @@ ASSUAGE him.
 Well, nobody's angry any more. So there's no point.
 Also, Hero's Shore is the old name of the Disease Seaside.
 So I moved it over.
+I did a lot of this, even after the first release. Most of the time, I wonder why I didn't do things this way in the first place.
 >>HARDEST TRASHED DEARTHS
 ?What do I do with the cans?
 You don't have to do anything.
@@ -1204,6 +1211,7 @@ Yes and no. You can't FIX it. That's only three letters...
 No, but you don't need to.
 >>LAPSIN' PLAINS
 ?How do I unlock the snap pans?
+Three parts to this one, but they're all relatively short.
 The skis and knob are in the way.
 KISS the skis.
 The knob is also stuck.
