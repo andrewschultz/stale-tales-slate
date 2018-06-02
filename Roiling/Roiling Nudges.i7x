@@ -298,13 +298,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "statue"	537593736	--	astute statue	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if]."
 "bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if]."
 "label"	256040510	--	label	--	"It's not the label but what's on it."
-"noise"	412333006	--	noise	--	"Hmm, no, focusing so directly on the noise to block it out is counterproductive."
 "upscale"	485659083	Upscale Capsule	--	--	"[locname]." [start upscale capsule]
 "office"	319186909	Upscale Capsule	--	--	"[locname]."
 "fief"	225828747	Upscale Capsule	--	--	"[locname-part]."
 "divorce"	479674829	--	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
-"vanity"	448722262	--	tan ivy vanity	--	"[if noise is in lalaland]You really don't need to rearrange the vanity[else if vanity is unexamined]You don't need to deal with it as much as the person outside--but maybe examining will give you a clue[else]You may want to deal with the person outside, instead of this, but examining it may've helped a bit[end if]."
+"vanity"	448722262	--	tan ivy vanity	--	"You really don't need to rearrange the vanity."
 "lamps"	297816735	--	plasm lamps	--	"You need that light for late-night work sessions."
 "lamp"	201542769	--	plasm lamps	--	"You already did something with a lamp, and you don't need to do anything with the plasm lamps."
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
@@ -1791,7 +1790,7 @@ this is the cppc rule:
 		if cactus pearl is in limits or pearl cactus is in limits, the rule succeeds;
 	the rule fails.
 
-to say maples-no: sau "No need to change the maples. They are the least dreary part of the Downside."
+to say maples-no: say "No need to change the maples. They are the least dreary part of the Downside."
 
 to say adj-needs-ly:
 	say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley"

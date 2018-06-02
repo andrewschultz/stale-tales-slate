@@ -66,7 +66,6 @@ Include (-
 	  'poss//':   print "track possible points";
 	  'pad//':   print "look up in your pad";
 	  'c//', 'cert//', 'cer//':   print "certify";
-	  'xx//':   print "examine closely";
 	  'z//':   print "wait";
 	  default: rfalse;
 	}

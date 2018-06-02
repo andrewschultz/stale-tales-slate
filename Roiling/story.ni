@@ -2804,7 +2804,7 @@ pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red." [routes]
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
-red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[in random order]Ed Evers[stopping]."
+red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
@@ -2820,7 +2820,7 @@ span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
-keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more[of]a refresher on[stopping information, if you read again."
+keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more[of]a refresher on[stopping] information, if you read again."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
@@ -4051,7 +4051,7 @@ large regal lager	"No...that is not quite the way to fight the temptation of the
 Si Reed	"Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!"
 praise	"That's not quite the way to look forward to praise. But it may be a start."
 godlings' lodgings	"The godlings['] lodgings almost seem to laugh at you, for being close, yet far."
-noise	"The noise seems almost bearable."
+red vees	"The red vees seem like they should link together somehow, but you don't have things right."
 tan ivy vanity	"You try to not pay attention to the babble behind the door, but you're trying too hard, and you fail. Still, you're on the right track."
 lobster	"That's not quite the way to deserve that lobster[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
 ME ARTS	"That's not quite the way to focus on the ME ARTS[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
@@ -4650,10 +4650,8 @@ ansobjing is an action applying to one thing.
 does the player mean ansobjing the side door when Gunter is off-stage: it is very likely.
 
 check ansobjing:
-	if noun is a person:
-		say "Try to ASK a person about something instead." instead;
-	if noun is side door or noun is span pans or noun is secure door:
-		try opening noun instead;
+	if noun is a person, say "Try to ASK a person about something instead." instead;
+	if noun is side door or noun is span pans, try opening noun instead;
 	say "That's not something animate." instead;
 
 chapter status bar and scoring
@@ -5217,12 +5215,9 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if stop post is reflexive:
 				now noun is stop post;
 				continue the action;
-		if player is in Upscale Capsule:
-			if noise is in Upscale Capsule:
-				now noun is noise;
-				continue the action;
-			if song is in Upscale Capsule:
-				now noun is song;
+		if player is in Drain Nadir:
+			if Eddie's Song is in Drain Nadir:
+				now noun is Eddie's Song;
 				continue the action;
 	else if mrlp is presto:
 		if player is in dirge ridge and leo is washed up:
@@ -5467,14 +5462,6 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Drain Nadir:
 		if diapers are reflexive:
 			say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the diapers, the picture of the sad pier, a spider..." instead;
-	if location of player is Upscale Capsule:
-		if noise is in Upscale Capsule:
-			say "The settler seems to pulse with the noise's volume.";
-			try scaning noise instead;
-		if salt is not visible:
-			try scaning song instead;
-		if ME ARTS is in lalaland or lobster is in lalaland:
-			try scaning salt instead;
 	if location of player is hacks' shack and compiled code is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
 		try scaning compiled code instead;
@@ -6145,7 +6132,7 @@ carry out troves-hinting:
 			try objhinting praise instead;
 		try objhinting Pernod instead;
 	if location of player is Upscale Capsule:
-		if noise is in Upscale Capsule, try objhinting vanity instead;
+		if red vees are in Upscale Capsule, try objhinting red vees instead;
 		if salt is in Upscale Capsule, try objhinting salt instead;
 		if tressi is in capsule and balmer is in capsule:
 			if sister-first is true, try objhinting sister tressi instead;
@@ -7736,10 +7723,11 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in Boarded Roadbed:
 		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!' [in random order][line break]dYou see red a bit at getting no direct help, yourself." instead;
 		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
-	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
-	if can-hear-posh, say "[if talk-quiet is false]You shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
+	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
+	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
+	if player is in Drain Nadir and Eddie's Song is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in econ cone and praise is in econ cone, say "'Spare, I ape SIR! I reaps, I reaps! Ire? Sap! Praise! Praise!'" instead;
-	if player is in Upscale Capsule, say "[if noise is in Upscale Capsule]You can't help but hear the knocking. Which prevents you working on your big new REGION[else if salt is in lalaland][one of]You listen closely to 'I'd Cede.' But you see red at the memory of Eddie C.[']s followup, a vapid rehash, I Ceded[or]Oh man, that part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy[cycling][else]. White noise, it is on. Whee[end if]." instead;
+	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
 	if mrlp is presto, say "[if cur-score of presto is 0]A shot. Sort of[else]You don't hear anything congruent to what you've needed to say in this area, which is a good thing[end if]." instead; [presto]
 	if Rand is visible and Rand is washed up:
 		say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
@@ -8934,7 +8922,7 @@ seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits
 Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
 MORF FORM	the-b	false	250266429	--	"from"	"from"	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
-darkness	darkness	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. The sheol-holes in particular. You can't find a road, but maybe an un-road. You're not sure which way to go, though. Compass directions are still out."
+darkness	darkness	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan, and because you're below ground, you fear no sunlit insult. The marsh doesn't exactly start glowing, but you can notice things better. The sheol holes in particular. You can't find a road, but maybe an un-road. You're not sure which way to go, though. Compass directions are still out."
 sheol holes	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	along-bogus	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' You protest--you need someone to show you the way. 'You will learn from my sorrow,' says No-Gal Logan. You don't want to be an ol['] nag, so you sit and wait."
@@ -9864,50 +9852,68 @@ after fliptoing stair (this is the check sitar min-up and exits rule) :
 	move stair backdrop to all stairy rooms;
 	continue the action;
 
-chapter denial
+chapter rig one (ignore region)
 
-denialing is an action applying to nothing.
+rigoneing is an action applying to nothing.
 
 understand the command "leadin denial" and "lead in denial" as something new.
 
-understand "leadin denial" and "lead in denial" as denialing.
+understand the command "ignore region" as something new.
 
-denial is a truth state that varies.
+understand "ignore region" as rigoneing.
 
-carry out denialing:
-	if denial is true, say "You already did." instead;
-	if player is not in dusty study, say "You need to do this at the start." instead;
+one-rigged is a truth state that varies.
+
+carry out rigoneing:
+	if one-rigged is true, say "You already did." instead;
+	if mrlp is not means manse, say "You can only IGNORE REGION in the Dusty Study." instead;
+	if player is not in dusty study, say "You need to do this in the Dusty Study." instead;
 	if Gunter is not off-stage, say "You need to reset the game to before when Gunter knocks at the door." instead;
 	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
 	say "Warping space and time, you move back to the Strip of Profits...";
 	get-cool-stuff;
-	now denial is true;
+	now one-rigged is true;
 	move player to strip of profits;
+	now means manse is bypassed;
 	the rule succeeds;
+
+chapter lead in denial
 
 denialnaileding is an action applying to nothing.
 
 understand the command "leadin denial nailed" and "lead in denial nailed" as something new.
 
 understand "leadin denial nailed" and "lead in denial nailed" as denialnaileding.
+understand "leadin denial" and "lead in denial" as denialnaileding.
+understand "leadin nailed" and "lead in nailed" as denialnaileding.
 
 portal-entered-yet is a truth state that varies.
 
+denial is a truth state that varies.
+
 carry out denialnaileding:
+	let patchies be 0;
+	if mrlp is means manse, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if gunter is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead;
+	if denial is true, say "You already used this warp." instead;
 	if player is in strip of profits:
 		if denial is true and store t is in lalaland, say "You already did." instead;
-		if denial is true:
-			say "BOOM! Store T shatters.";
-			now Store T is in lalaland;
-			now otters-x is in Strip of Profits;
-		if portal-entered-yet is true, say "You already entered a portal, so you'll need to reset the game to clear out everything  before Otters." instead;
-	if player is not in dusty study, say "You need to do this at the start--well, you can LEAD IN DENIAL before, but it's easier to do at the start." instead;
+		if denial is false:
+			if store t is in strip of profits:
+				increment patchies;
+				say "BOOM! Store T shatters.";
+				now Store T is in lalaland;
+				now otters-x is in Strip of Profits;
+		[if portal-entered-yet is true, say "You already entered a portal, so you'll need to reset the game to clear out everything before Otters. You can use IGNORE REGION to get past it." instead;] [?? get rid of portal-entered-yet truth state]
 	repeat with ZT running through needed regions:
-		if ZT is not otters, now ZT is bypassed;
+		if ZT is not otters and ZT is not solved, now ZT is bypassed;
 	repeat with ZT running through patchable things:
 		now ZT is in lalaland;
-	get-cool-stuff;
-	move player to strip of profits;
+		increment patchies;
+	if patchies is 0:
+		say "Nothing happened. Something should have, but it didn't.";
+	else:
+		say "[if store T was in Strip of Profits]Store T shatters. [end if]After a good deal of rumbling, the only portal left is the pair of otters created from Store T.";
+	now denial is true;
 
 chapter roveovering
 
@@ -14061,7 +14067,7 @@ instead of doing something with the dour tan rotunda:
 
 chapter Si Reed
 
-Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheery and dressed in bright red.". "[one of]'Hey! I'm Si Reed. I'll help with your mental attitude so you deserve better than the Shmoe Homes, here.'[or]Si Reed continues to pump his fist and Believe In You.[stopping]
+Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheery and dressed in bright red.". "[one of]'Hey! I'm Si Reed. I'll help with your mental attitude so you deserve better than the Shmoe Homes, here.'[or]Si Reed continues to pump his fist and Believe In You.[stopping]"
 
 ["[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads:[paragraph break]RESIDE! RESIDE! RESIDE! - Sir Dee."]
 
@@ -14069,7 +14075,7 @@ a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of Si R
 
 RESIDE RESIDE is scenery in Browse Bowers. it is cheat-spoilable. "RESIDE RESIDE advertises [randbla]."
 
-a-text of RESIDE RESIDE is "RYRYRY". b-text of Si Reed is "RGPGRG". parse-text of Si Reed is "-[sp]e[sp]s[sp]i[sp]-[sp]e".
+a-text of RESIDE RESIDE is "RYRYRY". b-text of RESIDE RESIDE is "RGPGRG". parse-text of RESIDE RESIDE is "-[sp]e[sp]s[sp]i[sp]-[sp]e".
 
 understand "exhibit" as RESIDE RESIDE when player is in Browse Bowers.
 
@@ -14105,10 +14111,6 @@ understand "skyline" as godlings' lodgings
 the godlings' lodgings are plural-named scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%."
 
 understand "godling/lodging" and "godlings/godling lodging/lodgings" as godlings' lodgings.
-
-after fliptoing godlings' lodgings:
-	consider the region-knock rule;
-	continue the action;
 
 check fliptoing godlings' lodgings:
 	if praise is in econ cone and rivets are reflexive: [stri is false and asp is false:]
@@ -14197,9 +14199,7 @@ after fliptoing when location of player is Econ Cone (this is the Pernod appears
 	continue the action;
 
 after fliptoing pernod:
-	if rivets are reflexive or praise is in econ cone:
-		poss-d;
-	consider the region-knock rule;
+	if rivets are reflexive or praise is in econ cone, poss-d;
 	continue the action;
 
 description of bottle of pernod is "It says [if label is in lalaland]N-E-Prod below where the label was[else]PERNOD on the label, which looks a bit loose[end if]. There's also a card you could read."
@@ -14236,23 +14236,21 @@ to say trev:
 
 book Upscale Capsule
 
-Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, this FiefCo Office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still, and the playbill is on the desk, too[else]. A shaker of salt sits on the vanity, too[end if]."
+Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in upscale capsule].[paragraph break]A shaker of salt sits on the vanity, too[end if]."
 
-after looking in Upscale Capsule:
-	if noise is in Upscale Capsule, set the pronoun it to noise;
-	continue the action;
+to say which-capsule-pics:
+	if blamer balmer is in upscale capsule and sister tressi is in upscale capsule:
+		say ". Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy";
+	else if sister tressi is in upscale capsule:
+		say ". Sister Tressi regards you severely";
+	else if blamer balmer is in upscale capsule:
+		say ". Blamer Balmer regards you severely";
+	else if blamer balmer is in lalaland:
+		say ". You are no longer hounded by the pictures of [bb-st]"
+
+to say bb-st: say "[one of]Blamer Balmer and Sister Tressi[or]Sister Tressi and Blamer Balmer[at random]"
 
 section order the flips
-
-check fliptoing when player is in Upscale Capsule and noise is in Upscale Capsule (this is the order Upscale Capsule flips rule): [note that this trumps check fliptoing song]
-	if noun is song:
-		say "First things first: you need to outlast that noise.";
-		preef salt;
-		do nothing instead;
-	if noun is not noise:
-		say "Thud, thud, thud. You might be able to do that properly later, but not now, with the noise distracting you from your new job listed on your vanity.";
-		preef noun;
-		do nothing instead;
 
 to report-glarers:
 	if balmer is in lalaland and tressi is in lalaland:
@@ -14262,7 +14260,7 @@ to report-glarers:
 
 chapter sister tressi
 
-Sister Tressi is proper-named vanishing scenery in Upscale Capsule. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling."
+Sister Tressi is proper-named vanishing scenery. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling."
 
 a-text of sister tressi is "RYRYRR". b-text of sister tressi is "RY?Y?R". parse-text of sister tressi is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
 
@@ -14277,7 +14275,7 @@ after fliptoing sister tressi:
 
 chapter marble blamer
 
-Blamer Balmer is proper-named vanishing scenery in Upscale Capsule. description is "A stern looking fellow who is big on personal responsibility. You can READ who created this likeness."
+Blamer Balmer is proper-named vanishing scenery. description is "A stern looking fellow who is big on personal responsibility. You can READ who created this likeness."
 
 a-text of Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?RRRY". parse-text of blamer balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
@@ -14319,19 +14317,9 @@ to say guy:
 instead of taking lamps:
 	say "That'd be expensive and toxic."
 
-section secure door
-
-the secure door is scenery in Upscale Capsule. "It isn't even to be thought about."
-
-instead of doing something with the secure door:
-	if current action is opening:
-		say "[if noise is in Upscale Capsule]And let that person in? No[else]You have too much to do. No sneaking out[end if]!" instead;
-	if action is procedural, continue the action;
-	say "You don't even want to think about that door with all you have to do."
-
 chapter desk, checklist and vanity
 
-the big important desk is scenery in Upscale Capsule. "Made of nice to notice eco-tin, it has a Desk-Sked (more popular and efficient than the [randbla]) on it that you could read all day."
+the big important desk is scenery. "Made of nice to notice eco-tin, it has a Desk-Sked (more popular and efficient than the [randbla]) on it that you could read all day."
 
 the Desk Sked is scenery in Upscale Capsule. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked
 
@@ -14342,7 +14330,7 @@ description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [ran
 check going east in Upscale Capsule:
 	say "You couldn't just run out on your company and your responsibilities like that! You would engage to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]." instead;
 
-the tan ivy vanity is auxiliary scenery in Upscale Capsule. "[one of]It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. [or][stopping][if noise is in Upscale Capsule]There's lots of red text:[paragraph break][fixed letter spacing]  GOREN I. REGNIO[line break]Ergnio-Onregi Region[r][paragraph break]So that's who you took over from. You sense you need to...marginalize Goren's memory somehow.[else]It's now engraved CEO FOR US? OF COURSE![end if]"
+the tan ivy vanity is auxiliary scenery. "It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. However, it's engraved CEO FOR US? OF COURSE!"
 
 instead of opening vanity:
 	say "It's not a case sort of vanity. It's just a useless sort of vanity.";
@@ -14369,7 +14357,7 @@ chapter red vees
 
 The red vees are vanishing plural-named scenery in Upscale Capsule. description is "They look like they could be hooked together, but you csn't do so by standard means."
 
-insted of doing something with red vees:
+instead of doing something with red vees:
 	if action is procedural, continue the action;
 	say "Hmm. You need to know what to do with the vees, or around them, to fill up your office.";
 
@@ -14382,14 +14370,9 @@ after fliptoing red vees:
 	now plasm lamps are in upscale capsule;
 	now DIVORCES magazine is in upscale capsule;
 	now St Al Salt is in upscale capsule;
-	the big important desk is in upscale capsule;
+	now the big important desk is in upscale capsule;
 	now desk sked is in upscale capsule;
 	continue the action;
-
-instead of doing something with the noise:
-	if action is procedural, continue the action;
-	if current action is objasking about or current action is asking about:
-		say "You don't want to step down from a strong negotiating point."
 
 chapter DIVORCES magazine
 
@@ -14414,7 +14397,7 @@ instead of doing something to the salt:
 		say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
 	say "Your mind stalls at what to do with the salt, or how to ignore it."
 
-the St Al Salt is vanishing scenery in Upscale Capsule. printed name of salt is "St. Al Salt".
+the St Al Salt is vanishing scenery. printed name of salt is "St. Al Salt".
 
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
@@ -22525,7 +22508,7 @@ carry out playing:
 	the rule succeeds;
 
 to note-denial:
-	ital-say "also, LEAD IN/LEADIN DENIAL sends you to the Strip of Profits, and LEAD IN/LEADIN DENIAL NAILED sends you there with Otters available.";
+	ital-say "also, IGNORE REGION sends you to the Strip of Profits, and LEAD IN/LEADIN (DENIAL or NAILED or both) sends you there with Otters available.";
 
 to say lee-or-eels:
 	say "[wfak]";
@@ -26424,7 +26407,6 @@ dour tan rotunda	"It's what the Browse Bowers used to be called."
 praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
 rivets	"[one of]Those rivets stand out.[plus][or][if praise is in lalaland]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
 statue	--	rivets
-secure door	"Useful for keeping people out[if noise is in Upscale Capsule], though the vanity may provide more hints what (not) to do[end if]."
 plasm lamps	"Useful for working late at the Upscale Capsule but not for solving silly word puzzles."
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 big important desk	"Just part of the scenery."
@@ -26434,7 +26416,6 @@ card	"The card gives a clue, along with the Pernod, of how to get into the godli
 label	"If you peel the label (by taking it,) you will get another clue what to do to get in the godlings' lodgings."
 DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
 red vees	"[one of]You have to believe it's worth it for you to do something with the red vees. That you're good enough.[plus][or]You must learn to DESERVE to use them[minus][cycling]."	--	"DESERVE"
-noise	"You need to not pay attention to the noise. See the vanity for details."
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
 sister tressi	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
 blamer balmer	"[one of]Blamer Balmer helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
