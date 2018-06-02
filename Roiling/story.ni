@@ -127,33 +127,34 @@ Presto is a region. regtab of Presto is table of presto nudges. regana of Presto
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
-4 for regular warriors
-1 for unripe ur-pine
-1 for subtler
-1 for admirer
-1 for bonker, 1 for stinger
-7 for basic stuff to get through the map
-1 for weeds
-2 for Dr Yow
-1 for lone duck
-1 for gifted/fidget
-2 for a bot boat
-1 for the palace] [1 NON-ANAGRAM for rapier repair]
+4=4 for regular warriors
+1=5 for dreads adders
+7=12 for the minimum number of other guardians you need to dispel to get through the map
+1=13 for subtler (see rapier repair)
+1=14 for admirer (see the duck)
+2=16 for bonker & stinger (get to subsector)
+1=17 for weeds
+2=19 for Dr Yow's two voices
+1=20 for lone duck
+1=21 for gifted/fidget
+1=22 for using the ragged dagger on the rapier repair
+2=24 for a bot boat
+1=25 for the palace]
 [BONUS:
-3 for the extra warriors
-1 for not using x-ray vision to clear every guardian NON-ANAGRAM
-1 for strudel
-1 for fluster self rut
-1 for the yurts
-5 for the H/I beyond needing to clear the coastlines
-2 for the ingrates/natives
-1 for keycar wherever it appears
-3 for the denim, sporties' ripostes and old ice
-1 for the replay player
-1 for tentative
-1 for rewired (bot-boat)
-1 for giving Tetris Sitter the flowerpot NON-ANAGRAM
-3 for unripe ur-pine/serpent/triste]
+3=3 for the extra warriors
+1=4 for the yurts
+5=9 for the H/I beyond needing to clear the coastlines
+1=10 for keycar wherever it appears
+3=13 for the denim, sporties' ripostes and old ice
+1=14 for making the replay player shiny
+2=16 for the ingrates/natives
+1=17 for strudel (fringe finger)
+1=18 for organised ego drains (lost lots)
+1=19 for tentative (agnostic meets dr yow)
+1=20 for rewired (bot-boat)
+1=21 for giving Tetris Sitter the flowerpot NON-ANAGRAM
+3=24 for unripe ur-pine/serpent/triste in Mislit Limits
+1=25 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 30. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
 
@@ -19116,8 +19117,7 @@ check inserting into the rosetta toaster:
 	now xrayvision is true;
 	say "[if xray-warn is false]Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it[else]The x-ray vision comes back. Once again, you can XRAY what you want to[end if].";
 	now xray-warn is true;
-	if noun is strudel and strudel is reflexive:
-		poss-d;
+	if noun is strudel and strudel is reflexive, poss-d;
 	pad-rec "xray";
 	now noun is in lalaland instead;
 
@@ -19176,7 +19176,7 @@ to say big-hint of (rayx - a thing) :
 xray-warn is a truth state that varies.
 
 check giving hintpastry to Tetris Sitter:
-	say "He's used to loftier meals than that." instead;
+	say "The Tetris Sitter is used to loftier meals than that." instead;
 
 check giving hintpastry to a guardian:
 	if second noun is diners:
@@ -19202,8 +19202,7 @@ check xraying:
 	else if xraytrump is true:
 		d "using x-ray trump.";
 	if mrlp is not towers:
-		if Topside is unvisited:
-			say "[reject]" instead;
+		if Topside is unvisited, say "[reject]" instead;
 		say "That was for the towers. It doesn't work anywhere else because, well, different areas are different." instead;
 	if noun is prefigured:
 		choose row with the-from of noun in table of towers anagrams;
@@ -21040,6 +21039,7 @@ check giving to Tetris Sitter:
 	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
 	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
+	consider the maxminchange check rule;
 	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	now flowerpot is in lalaland instead;
 
@@ -21657,6 +21657,7 @@ a room can be accessible, sideview, mightaswell or inaccessible. a room is usual
 
 after fliptoing a guardian (this is the track guardian progress rule):
 	shuffle-guardians noun;
+	continue the action;
 
 to shuffle-guardians (goner - a guardian):
 	let G be up;
@@ -27611,6 +27612,9 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	else if myreg is Towers:
+		if number of pinko warriors > 0:
+			repeat with pk running through pinko warriors:
+				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 		let xxx be unripe ur-pine;
 		if number of guardians not in lalaland > 0:
 			repeat with gua running through guardians not in lalaland:
@@ -27625,25 +27629,22 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				now rm2 is the room guadir of gua from rm2;
 				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
 			if number of guardians not in lalaland > 1, say "(that's all for the guardians)[line break]";
-		if yurts are in scope copse, say "[2dmiss of myreg]the yurts could've become RUSTY.";
-		if strudel is reflexive, say "[2dmiss of myreg]the strudel could've become RUSTLED.";
-		if ego drains are not in lalaland, say "[2dmiss of myreg]the organised ego drains could've become GRANDIOSE.";
-		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in the Lost Lots could've become PROSIEST.";
-		if ingrates are not in lalaland, say "[2dmiss of myreg]the ingrates could've been turned ANGSTIER.";
-		if natives are not in lalaland, say "[2dmiss of myreg]the natives could've been turned VAINEST or NAIVEST.";
+		if yurts are in scope copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
+		if keycar is not in lalaland, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
+		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in Unblest Sunbelt could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
 		if denim is not in lalaland, say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
-		if saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
+		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
+		if ingrates are not in lalaland, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
+		if natives are not in lalaland, say "[2dmiss of myreg]the natives in Danger Garden could've been turned VAINEST or NAIVEST.";
+		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger could've become RUSTLED.";
+		if ego drains are not in lalaland, say "[2dmiss of myreg]the organised ego drains in Lost Lots could've become GRANDIOSE.";
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
-		if keycar is not in lalaland, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
-		if flowerpot is reflexive, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
+		if unripe ur-pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
 		if flowerpot is not in lalaland, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west[else if mesprise is unvisited]gone west for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
-		if number of pinko warriors > 0:
-			repeat with pk running through pinko warriors:
-				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 	else if myreg is otters:
 		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not in lalaland]DISCERN or even [end if]RESCIND the cinders.";
 		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
@@ -28145,10 +28146,10 @@ every turn: consider the maxminchange check rule;
 
 after fliptoing (this is the maxminchange check rule):
 	if last-max of mrlp > poss-score of mrlp:
-		say "DEBUG NOTE: REGION MAX DECREASED BY [last-max of mrlp - poss-score of mrlp], [max-score of mrlp - poss-score of mrlp] OVERALL.";
+		if debug-state is true, say "DEBUG NOTE: REGION MAX DECREASED BY [last-max of mrlp - poss-score of mrlp], [max-score of mrlp - poss-score of mrlp] OVERALL.";
 		now last-max of mrlp is poss-score of mrlp;
 	if last-min of mrlp < min-score of mrlp:
-		say "DEBUG NOTE: REGION MIN INCREASED BY [min-score of mrlp - last-min of mrlp], [min-score of mrlp - orig-min of mrlp] OVERALL.";
+		if debug-state is true, say "DEBUG NOTE: REGION MIN INCREASED BY [min-score of mrlp - last-min of mrlp], [min-score of mrlp - orig-min of mrlp] OVERALL.";
 		now last-min of mrlp is min-score of mrlp;
 	continue the action;
 

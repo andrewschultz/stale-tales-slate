@@ -1,5 +1,14 @@
 files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudges.txt
 
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* towers-thru
+
 >ts
 >posf
 >seed 1
@@ -24,11 +33,11 @@ Score in a scenario: 4 out of 50 total points in the current region, Towers. Low
 >snared
 Your score has just gone up by one point
 >score
-Score in a scenario: 5 out of 50 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 50.
+Score in a scenario: 5 out of 50 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 50.
 >cricked
 Your score has just gone up by one point
 >score
-Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 50.
+Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
 
 >yonder
 Your score has just gone up by one point
@@ -61,7 +70,7 @@ Score in a scenario: 9 out of 50 total points in the current region, Towers. Low
 >subtler
 Your score has just gone up by one point
 
-==t!1,2
+==t1,2
 >score
 Score in a scenario: 5 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
@@ -127,9 +136,15 @@ Score in a scenario: 8 out of 50 total points in the current region, Towers. Low
 ==!1,2
 >clumsy
 Your score has just gone up by one point
->snider
+>rinsed
 Your score has just gone up by one point
+>creaky
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
 >n
+>coiled
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
 >restful
 Your score has just gone up by one point
 >pastier
@@ -137,6 +152,11 @@ Your score has just gone up by one point
 >n
 >angstier
 Your score has just gone up by one point
+>w
+>rustled
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 9 OVERALL.
+>e
 >nerdiest
 Your score has just gone up by one point
 >married
@@ -149,12 +169,21 @@ Your score has just gone up by one point
 >weariest
 Your score has just gone up by one point
 >s
+>resealed
+Your score has just gone up by one point
+>thisalt
+--you could've also RELEASED Lars Eede to give him a new outlook on life.
+>undo
+>undo
 >released
 Your score has just gone up by one point
 >himself
 Your score has just gone up by one point
 >sewed
 Your score has just gone up by one point
+>mined
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 13 OVERALL.
 >e
 >marginal
 Your score has just gone up by one point
@@ -168,14 +197,26 @@ Your score has just gone up by one point
 >vainest
 Your score has just gone up by one point
 >thisalt
-WRONG
+--you could've also RESEALED Lars Eede to give him a new outlook on life.
+--you could've also made the natives NAIVEST to uproot them.
 >undo
 >undo
 >naivest
 Your score has just gone up by one point
 >thisalt
+--you could've also RESEALED Lars Eede to give him a new outlook on life.
+--you could've also made the natives VAINEST to uproot them.
 >score
-WRONG
+Score in a scenario: 30 out of 50 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 50.
+>w
+>grandiose
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
+>e
+>s
+>prosiest
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 17 OVERALL.
 
 >gt garden
 >broken
@@ -197,20 +238,32 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >ask agnostic about doctor yow
 
-===!1,2
+==t!1,2
+>pearly
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 18 OVERALL.
 >attentive
 Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 19 OVERALL.
 
 >rowdy
 Your score has just gone up by one point
 >gt coastlines
 >give gizmo to agnostic
+
+==t1,2
+>robust
+>stabler
+==!
 >robust
 >enter boat
 Rawest Waters
 >nearest
 Mislit Limits
 Your score has just gone up by one point
+>thisalt
+--you'd have passed Rawest Waters if you'd have made the blaster STABLER.
+>undo
 >undo
 >undo
 >undo
@@ -221,36 +274,43 @@ Rawest Waters
 >nearest
 Mislit Limits
 Your score has just gone up by one point
+>thisalt
+--you'd have passed Rawest Waters if you'd have made the turbos ROBUST.
+>undo
 >undo
 >undo
 >robust
 Your score has just gone up by one point
->enter boat
 
 ==!1,2
 >rewired
 Your score has just gone up by one point
-MINIWRONG
+DEBUG NOTE: REGION MIN INCREASED BY 1, 20 OVERALL.
 
 >enter boat
 
 ==!1,2
+>thisalt
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST.
 >punier
 Your score has just gone up by one point
 # add minimum point here
-WRONG
+DEBUG NOTE: REGION MIN INCREASED BY 1, 21 OVERALL.
 >present
 Your score has just gone up by one point
 # add minimum point here
-WRONG
+DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
 >score
-WRONG
 >in
 >triste
 Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 23 OVERALL.
 >give flowerpot to sitter
 Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 24 OVERALL.
 >out
+
+>misses
 
 >spectacular
 Your score has just gone up by one point

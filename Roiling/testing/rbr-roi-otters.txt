@@ -22,7 +22,7 @@ Burnt Brunt
 >score
 Score in a scenario: 2 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
 
-==1
+==t1
 >discern ed riley
 REGION MAX DECREASED BY 1, 1 OVERALL.
 >score
@@ -51,7 +51,7 @@ Your score has just gone up by one point.
 >1
 >3
 
-==3
+==t3
 >s
 >although
 >however
@@ -86,7 +86,6 @@ WRONG
 >undo
 >undo
 >undo
-
 
 >n
 Loop Pool
@@ -118,7 +117,7 @@ Your score has just gone up by one point
 >n
 Shiner Shrine
 
-==3
+==t3
 >brutely
 >angrily
 >thisalt
@@ -162,7 +161,7 @@ DEBUG INFO: Adding a min point for this flip.
 >score
 Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
 
-==3
+==t3
 >undo
 >undo
 >undo
@@ -198,7 +197,7 @@ Score in a scenario: 18 out of 30 total points in the current region, Otters. Lo
 >s
 >s
 
-==3
+==t3
 >tersely
 >stoically
 They find another place where rioters roister.
@@ -245,7 +244,7 @@ DEBUG INFO: Adding a min point for this flip.
 >score
 Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
 
-==3
+==t3
 >undo
 >undo
 >undo
@@ -300,7 +299,7 @@ Your score has just gone up by one point
 Reclusion Inclosure
 WTF FTW
 
-==1
+==t1
 WRONG (decrease)
 
 >1
