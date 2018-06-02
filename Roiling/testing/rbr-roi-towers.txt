@@ -196,8 +196,11 @@ Your score has just gone up by one point
 >grained
 Your score has just gone up by one point
 >ask agnostic about doctor yow
+
+===!1,2
 >attentive
 Your score has just gone up by one point
+
 >rowdy
 Your score has just gone up by one point
 >gt coastlines

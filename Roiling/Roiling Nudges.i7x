@@ -778,7 +778,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "lied"	247641883	--	deli rye	--	"[del-ry]."
 "sandwich"	397613884	--	deli rye	--	"[del-ry]."
 "citadel"	371945304	--	Edictal Citadel	--	"The whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
-"downside"	520802431	Disowned Downside	--	--	"[locname]." [start Disowned Downside]
+"downside"	562325957	Disowned Downside	--	--	"[locname]." [start Disowned Downside]
 "gents"	428697303	--	macks	--	"They aren't (spiritually) gents, and you can't change them but their arguments."
 "sample"	425622844	--	Disowned Downside	--	"[maples-no]."
 "maple"	329348878	--	Disowned Downside	--	"[maples-no]."

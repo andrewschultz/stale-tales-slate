@@ -260,6 +260,7 @@ understand "tillers" as a mistake ("You aren't going to sea in this game.") when
 
 chapter MOOR
 
+[def=blackdoor]
 understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].") when roadblock is visible or black door is visible.
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor

@@ -1052,7 +1052,7 @@ Your score has just gone up by one point.
 >peasatn
 You're better off changing what the peasant has than what he is.
 
-#mistake test for black rood/rood/blackrood
+#mistake test for blackdoor
 >black rood
 Hm, no, keep religion out of it.
 >rood
@@ -1068,7 +1068,7 @@ Your score has just gone up by one point.
 >blackdoro
 The black door just sits there.
 
-#mistake retest for black rood/rood/blackrood
+#mistake retest for blackdoor
 >blackrood
 Hm, no, keep religion out of it--you have what you need.
 
