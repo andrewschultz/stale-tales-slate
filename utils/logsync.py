@@ -3,6 +3,9 @@
 # checks logic.py is synced with the source code
 #
 # we need a comment for every b-text with a question mark
+#
+# and of course no comment if b-text has no question mark
+#
 
 from collections import defaultdict
 
@@ -32,6 +35,7 @@ def usage():
     exit()
 
 def check_logic_file(needs, gots, outs, format_string, file_desc):
+    # for x in needs.keys(): print (x, needs[x], gots[x])
     t2 = [x for x in needs.keys() if x not in gots.keys()]
     need_in_logic = 0
     if len(t2):
@@ -46,7 +50,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc):
     if len(t3):
         for y in sorted(t3, key=gots.get):
             need_in_source = need_in_source + 1
-            print(need_in_source, y, "is commented in the logic file line", needs[y] ,"but is not in the source.")
+            print(need_in_source, y, "is commented in the logic file line", gots[y] ,"but is not in the source.")
     if need_in_logic + need_in_source > 0:
         print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
     else:

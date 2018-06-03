@@ -5,6 +5,7 @@ volume table of nudges
 [remember to sort with nud.pl after changes or, perhaps, before release. NUD.PL organizes the "to say" and "rule" in the same order they appear in the table.]
 
 [nuch.py makes sure that all the nudges have a test case assigned]
+[?? todo: make sure that nothing seeps into non-nudge stuff
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Alcoves, Inclosure. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
 
@@ -795,7 +796,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "catty"	349772691	--	t-cattily	--	"[adj-needs-li]."
 "teari"	363420594	--	t-tearily-irately	--	"[adj-needs-ly]."
 "teary"	440787000	--	t-tearily-irately	--	"[adj-needs-li]."
-"bleary"	409909726	--	t-blearily	--	"[adj-needs-li]."
+"bleayr"	409909726	--	t-blearily	--	"[adj-needs-li]."
 "bleari"	332543320	--	t-blearily	--	"[adj-needs-ly]."
 "ribald"	225766300	--	t-ribaldly	--	"[adj-needs-ly]."
 "formal"	306268086	--	t-formally	--	"[adj-needs-ly]."
@@ -1022,7 +1023,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storage"	521653993	--	so-great	--	"You might break what is in the storage."
 "great"	351027450	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
 "passport"	620454066	--	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
-"review"	601028460	--	passport	--	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 "popstar"	524180100	--	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
 "gates"	361977613	gates stage	--	--	"[no-gate]." [GATES STAGE START]
 "gate"	265703647	gates stage	--	--	"[no-gate]."
@@ -1944,7 +1944,7 @@ to say slot-no:
 		say "After all that work getting it to appear, you don't want to make the lost slot vanish"
 
 to say border-arbor:
-	say "Bad idea to ruin such life-giving scenery[if swell wells is unvisited], but maybe you can gain a sense of direction[end if]"
+	say "Bad idea to ruin such life-giving scenery[if compass is off-stage], but maybe you can gain a sense of direction[else if swell wells are unvisited]--try going north[else]--the only way is north[end if]"
 
 to say no-gate:
 	say "The gate needs to be unlocked some other way"

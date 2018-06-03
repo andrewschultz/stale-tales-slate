@@ -12005,7 +12005,7 @@ check taking a sto:
 
 book Strip of Profits
 
-Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if hubs bush is in strip]. The hubs bush that sprang up when you tried to escape still blocks your way out.."
+Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if hubs bush is in strip]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]."
 
 understand "trips/profit" as strip of profits when debug-state is true.
 

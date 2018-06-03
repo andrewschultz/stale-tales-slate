@@ -147,14 +147,6 @@ BOLSTER turns out to be the right one.
 For <b>LEAD</b>, by the two authors, ???R looks painful indeed. But the red means a consonant which can't be D. So it's L. Fortunately, there are just three choices.
 <pre>?A?L -> EADL\nA??L -> AEDL</pre>
 So, ??AL = DEAL. You could, of course, use non-teach mode to knock this off. It'd put the consonants at the end and the vowels in the middle.
->>BROWSE BOWERS
-# logic for brochure
-?What about the brochure in the Browse Bowers ("Sir Dee/Reside")?
-A reading of the brochure gives R???RG.
-We can get the first letter, then--consonant not R or S, so, D.
-The second must be a vowel (I or E,) and the third must be a consonant, R or S. Therefore number four is a vowel.
-Since the fourth slot is I or D, it is I, making the others E.
-DE-I-E has two possibilities, so you can guess DESIRE.
 >>ECON CONE
 # logic for praise
 ?What's with the praise and its three question marks?
