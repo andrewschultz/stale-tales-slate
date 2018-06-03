@@ -11,21 +11,38 @@ from collections import defaultdict
 
 from itertools import permutations
 
+import os
 import re
 import sys
+
+pattern = ''
 
 write_to_file = False
 flag_double_comments = False
 
 err_string = ""
 
-if len(sys.argv) > 1:
-    if sys.argv[1] == 'w':
+count = 1
+
+def usage():
+    print("-w = write to file")
+    print("-d = flag double comments")
+    print("p= = suggest file pattern")
+
+while count < len(sys.argv):
+    arg = sys.argv[count].lower()
+    if arg[0] == '-': arg = arg[1:]
+    if arg == 'w':
         write_to_file = True
         print('Writing files with errors')
-    if sys.argv[1] == 'd':
+    elif sys.argv[1] == 'd':
         flag_double_comments = True
         print('Flagging double comments')
+    elif arg[:2] == 'p=': pattern = arg[2:]
+    else:
+        print("Unrecognized command", arg)
+        usage()
+    count += 1
 
 nudge_files = {}
 
@@ -96,12 +113,17 @@ def poke_nudge_files(gm):
     tn = re.sub(".*table of", "table of", gm)
     count = 0
     count2 = 0
-    count3 = 0
+    to_add = 0
     nudge_comment = False
     nudge_add = defaultdict(str)
     cmd_lines = defaultdict(str)
+    cur_file = nudge_files[gm]
+    excess_nudges = 0
     print("Poking", tn)
-    short_file = re.sub(".*[\\\/]", "", nudge_files[gm])
+    short_file = re.sub(".*[\\\/]", "", cur_file)
+    if not os.path.exists(cur_file):
+        print("WARNING", cur_file, "does not exist.")
+        return
     with open(nudge_files[gm]) as file:
         for line in file:
             count += 1
@@ -121,13 +143,13 @@ def poke_nudge_files(gm):
                 if ll in got_nudges[gm].keys():
                     if got_nudges[gm][ll] > 0:
                         count2 += 1
-                        count3 += 1
+                        to_add += 1
                         print("Duplicate nudge comment line", ll, 'line', count, 'duplicates', got_nudges[gm][ll])
                     got_nudges[gm][ll] = count
                 else:
                     print("Unmatched #NUDGE FOR in", short_file, "line", count, ':', ll)
+                    excess_nudges += 1
                     count2 += 1
-                    count3 += 1
             else:
                 nudge_comment = False
     short = re.sub(".*[\\\/]", "", nudge_files[q])
@@ -138,14 +160,14 @@ def poke_nudge_files(gm):
             for x in cmd_lines[alf(j)].split(' '):
                 nudge_add[x] = nudge_add[x] + ' ' + j
             count2 += 1
-            count3 = count3 + len(cmd_lines[alf(j)].split(' '))
+            to_add = to_add + len(cmd_lines[alf(j)].split(' '))
             if max_errs > 0 and count2 > max_errs:
                 continue
             c2 = ' '.join([str(int(a) - 1) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'Nudge file line ' + str(cmd_tries[gm][j])
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, c2))
     global err_string
     if count2 > 0:
-        err_string = "%s\n%s/%s had %d total errors, %d comments." % (err_string, tn, short_file, count2, count3)
+        err_string = "{:s}\n{:s}/{:s} had {:d} total errors, {:d} to add, {:d} excess nudges.".format(err_string, tn, short_file, count2, to_add, excess_nudges)
     for y in nudge_add.keys():
         nudge_add[y] = re.sub("^ ", "", nudge_add[y])
     if count2 == 0:
@@ -178,6 +200,7 @@ for gm in d:
 max_errs = 50
 
 for q in nudge_files.keys():
+    if pattern and pattern not in q: continue
     poke_nudge_files(q)
 
 if err_string != "":
