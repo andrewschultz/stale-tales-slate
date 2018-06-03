@@ -72,7 +72,7 @@ Your score has just gone up by one point
 
 ==t1,2
 >score
-Score in a scenario: 5 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
+Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
 ==t1
 >clumsy
@@ -84,21 +84,27 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >n
 >married
+Your score has just gone up by one point
 >n
 >s
 >s
 >e
 >sewed
+Your score has just gone up by one point
 >released
+Your score has just gone up by one point
 >e
 >marginal
 Your score has just gone up by one point
 >holiest
+Your score has just gone up by one point
 >n
 >hastiest
+Your score has just gone up by one point
 >s
 >s
 >score
+Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
 ==t2
 >rinsed
@@ -106,9 +112,10 @@ Your score has just gone up by one point
 >e
 >drained
 Your score has just gone up by one point
->n
 >himself
 Your score has just gone up by one point
+>e
+>w
 >n
 >sewed
 Your score has just gone up by one point
@@ -116,6 +123,8 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >n
 >hastiest
+Your score has just gone up by one point
+>nerdiest
 Your score has just gone up by one point
 >e
 >holiest
@@ -131,9 +140,9 @@ Your score has just gone up by one point
 >s
 >e
 >score
-Score in a scenario: 8 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
+Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
-==!1,2
+==t!1,2
 >clumsy
 Your score has just gone up by one point
 >rinsed
@@ -225,6 +234,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >e
 >wordy
+Your score has just gone up by one point
 >push retape
 >gt duck
 >push repeat

@@ -12,6 +12,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >posf
 
 >seed 1
+>ts
+>a5
 >otters
 >in
 >barely
@@ -20,7 +22,7 @@ Your score has just gone up by one point
 Burnt Brunt
 
 >score
-Score in a scenario: 2 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
+Score in a scenario: 1 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
 
 ==t1
 >discern ed riley
@@ -56,15 +58,15 @@ Your score has just gone up by one point.
 >although
 >however
 >misses
-WRONG
+--you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
 >n
 >n
 >because
-REGION MIN INCREASED BY 1, 1 OVERALL.
+REGION MIN INCREASED BY 1, 2 OVERALL.
 >misses
-WRONG
+--you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
 >else
-REGION MIN INCREASED BY 1, 1 OVERALL.
+REGION MIN INCREASED BY 1, 3 OVERALL.
 >undo
 >undo
 >undo
@@ -75,11 +77,11 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 >n
 >n
 >because
-REGION MIN INCREASED BY 1, 1 OVERALL.
+REGION MIN INCREASED BY 1, 2 OVERALL.
 >else
-REGION MIN INCREASED BY 1, 1 OVERALL.
+REGION MIN INCREASED BY 1, 3 OVERALL.
 >misses
-WRONG
+--you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
 >undo
 >undo
 >undo
@@ -93,20 +95,20 @@ Loop Pool
 >because
 >else
 >misses
-WRONG
+--you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
 >score
 >s
 
 ==!1
 >s
 >although
-REGION MIN INCREASED BY 1, 1 OVERALL.
+REGION MIN INCREASED BY 1, 2 OVERALL.
 >score
-Score in a scenario: 9 out of 30 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 30.
+Score in a scenario: 9 out of 30 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 30.
 >however
-REGION MIN INCREASED BY 1, 1 OVERALL.
+REGION MIN INCREASED BY 1, 3 OVERALL.
 >score
-Score in a scenario: 10 out of 30 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 30.
+Score in a scenario: 10 out of 30 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 30.
 >n
 
 >atom
@@ -121,12 +123,12 @@ Shiner Shrine
 >brutely
 >angrily
 >thisalt
-WRONG
+--you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
 >undo
 >undo
 >enragedly
 >thisalt
-WRONG
+--you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
 >undo
 >undo
 >undo
@@ -136,7 +138,7 @@ Your score has just gone up by one point
 >angrily
 Your score has just gone up by one point
 >thisalt
-WRONG
+--you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
 
 >n
 Lamer Realm
@@ -157,7 +159,7 @@ Blest Belts
 ==!1
 >garbed
 Your score has just gone up by one point
-DEBUG INFO: Adding a min point for this flip.
+DEBUG NOTE: REGION MIN INCREASED BY 1, 4 OVERALL.
 >score
 Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
 
@@ -202,13 +204,13 @@ Score in a scenario: 18 out of 30 total points in the current region, Otters. Lo
 >stoically
 They find another place where rioters roister.
 >thisalt
-WRONG
+--you could've made the imp act BRUTELY, and the whiners could've acted STOICALLY.
 >undo
 >undo
 >loathingly
 They find another place where rioters roister.
 >thisalt
-WRONG
+--you could've made the imp act BRUTELY, and the whiners could've acted STOICALLY.
 >undo
 >undo
 >undo
@@ -219,7 +221,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 They find another place where rioters roister.
 >thisalt
-WRONG
+--you could've made the imp act BRUTELY, and the whiners could've acted STOICALLY.
 
 >s
 Perverse Preserve
@@ -240,7 +242,7 @@ Uprates Pasture
 ==!1
 >snipe
 Your score has just gone up by one point
-DEBUG INFO: Adding a min point for this flip.
+DEBUG NOTE: REGION MIN INCREASED BY 1, 5 OVERALL.
 >score
 Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
 
@@ -285,6 +287,7 @@ Coevals' Alcoves
 ==!1
 >honestly
 Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
 >score
 Score in a scenario: 26 out of 30 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 30 points.
 
@@ -313,7 +316,15 @@ WRONG (decrease)
 >1
 
 >au 1
+
+>misses
+
 >play whistle
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
+>score
+
+==!1
 Otters (30/30)
+==!
+Otters (24/30)
