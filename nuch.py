@@ -11,6 +11,8 @@ from collections import defaultdict
 
 from itertools import permutations
 
+nudge_text = defaultdict(str)
+
 import os
 import re
 import sys
@@ -23,9 +25,17 @@ flag_double_comments = False
 err_string = ""
 
 count = 1
+max_errs = 50
+
+def poss_tweak(a):
+    if 'locname' in a:
+        a = re.sub("\[locname\]", "You don't need to riff on any location names to win the game, unless there's not that much else to see", a)
+        a = re.sub("\[locname-part\]", "You should never need to riff on part of a location name", a)
+    return a
 
 def usage():
-    print("-w = write to file")
+    print("-m# = max errors per region")
+    print("-w = write to file (reg/rbr => prereg/prerbr at start)")
     print("-d = flag double comments")
     print("p= = suggest file pattern")
 
@@ -35,7 +45,9 @@ while count < len(sys.argv):
     if arg == 'w':
         write_to_file = True
         print('Writing files with errors')
-    elif sys.argv[1] == 'd':
+    elif arg[0] == 'm' and arg[1:].isdigit():
+        max_errs = int(arg[1:])
+    elif arg == 'd':
         flag_double_comments = True
         print('Flagging double comments')
     elif arg[:2] == 'p=': pattern = arg[2:]
@@ -78,12 +90,13 @@ def pre_process(sts):
                 continue
             count += 1
             if re.search("\"\t[0-9]", line):
-                l = re.sub("\t.*", "", line.strip().lower())
-                l = re.sub("\"", "", l)
+                tlist = line.split('\t')
+                l = re.sub("\"", "", tlist[0])
                 if ' ' in l:
                     print("WARNING line", count, "has space in the word-key.")
                 cmd_tries[current_table][l] = count
                 got_nudges[current_table][l] = False
+                nudge_text[l] = re.sub("\"", "", tlist[5])
                 if test_match_up[l]:
                     suggested_try = "???"
                     dupes += 1
@@ -91,7 +104,6 @@ def pre_process(sts):
                     for p in perms:
                         if p not in test_match_up.keys():
                             suggested_try = p
-                            print("Suggested try", p)
                             break
                         else:
                             continue
@@ -114,11 +126,13 @@ def poke_nudge_files(gm):
     count = 0
     count2 = 0
     to_add = 0
+    renudges = 0
     nudge_comment = False
     nudge_add = defaultdict(str)
     cmd_lines = defaultdict(str)
     cur_file = nudge_files[gm]
     excess_nudges = 0
+    dupe_nudges = 0
     print("Poking", tn)
     short_file = re.sub(".*[\\\/]", "", cur_file)
     if not os.path.exists(cur_file):
@@ -135,6 +149,12 @@ def poke_nudge_files(gm):
             if re.search('##( )?nudge (for|of) ', ll):
                 if flag_double_comments:
                     print("Line", count, "has a double comment.")
+            elif re.search("#( )?renudge (for|of)", ll):
+                ll = re.sub("#( )?renudge (for|of) *", "", ll)
+                if ll not in got_nudges[gm].keys():
+                    print("Bad renudge", ll, "line", count, "need nudge first")
+                    renudges += 1
+                    count2 += 1
             elif re.search('#( )?nudge (for|of) ', ll):
                 if nudge_comment:
                     print("Uh oh duplicate nudge comments at line", count)
@@ -143,7 +163,7 @@ def poke_nudge_files(gm):
                 if ll in got_nudges[gm].keys():
                     if got_nudges[gm][ll] > 0:
                         count2 += 1
-                        to_add += 1
+                        dupe_nudges += 1
                         print("Duplicate nudge comment line", ll, 'line', count, 'duplicates', got_nudges[gm][ll])
                     got_nudges[gm][ll] = count
                 else:
@@ -161,23 +181,32 @@ def poke_nudge_files(gm):
                 nudge_add[x] = nudge_add[x] + ' ' + j
             count2 += 1
             to_add = to_add + len(cmd_lines[alf(j)].split(' '))
-            if max_errs > 0 and count2 > max_errs:
-                continue
-            c2 = ' '.join([str(int(a) - 1) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'Nudge file line ' + str(cmd_tries[gm][j])
+            if max_errs > 0:
+                if count2 > max_errs:
+                    if count2 == max_errs + 1: print("Spillover. Use -m to increase max errs from", max_errs)
+                    continue
+            c2 = 'Branch file line(s) ' + ' '.join([str(int(a)) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'Nudge file line ' + str(cmd_tries[gm][j])
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, c2))
     global err_string
     if count2 > 0:
-        err_string = "{:s}\n{:s}/{:s} had {:d} total errors, {:d} to add, {:d} excess nudges.".format(err_string, tn, short_file, count2, to_add, excess_nudges)
+        err_string = "{:s}\n{:s}/{:s} had {:d} total errors: {:d} to add, {:d} excess nudges, {:d} duplicate nudges, {:d} bad renudges.".format(err_string, tn, short_file, count2, to_add, excess_nudges, dupe_nudges, renudges)
     for y in nudge_add.keys():
         nudge_add[y] = re.sub("^ ", "", nudge_add[y])
     if count2 == 0:
         print("Yay, no errors for", gm)
         return
-    out_nudge = re.sub("reg-", "prereg-", nudge_files[q], 0, re.IGNORECASE)
+    out_nudge = re.sub(r'(reg|rbr)-', r"pre\1-", nudge_files[q], 0, re.IGNORECASE)
+    nudge_needed = re.sub(r'(reg|rbr)-', r"need-\1-", nudge_files[q], 0, re.IGNORECASE)
     if out_nudge == nudge_files[q]:
         print("Uh oh, ", out_nudge, '=', nudge_files[q])
         return
     if write_to_file and count2 > 0: # just in case this goes outside count2==0 above
+        print("Writing nudges to", nudge_needed)
+        fout = open(nudge_needed, "w")
+        for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), cmd_tries[gm][x], x)):
+            if got_nudges[gm][j] == 0:
+                fout.write("#nudge for {:s}\n>{:s}\n{:s}\n\n".format(j, j[:-2] + j[-1] + j[-2], poss_tweak(nudge_text[j])))
+        fout.close()
         print("Writing to", out_nudge)
         fout = open(out_nudge, "w")
         count = 0
@@ -196,8 +225,6 @@ d = [ 'shuffling', 'roiling' ]
 
 for gm in d:
     pre_process(gm)
-
-max_errs = 50
 
 for q in nudge_files.keys():
     if pattern and pattern not in q: continue
