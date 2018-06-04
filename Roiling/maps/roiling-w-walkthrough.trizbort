@@ -75,7 +75,7 @@
 			<dock index="0" id="4" port="e" />
 			<dock index="1" id="25" port="w" />
 		</line>
-		<room id="27" name="Kid makes a bot-boat" subtitle="" x="128" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<room id="27" name="Agnostic makes a bot-boat" subtitle="" x="128" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
 		<line id="28" name="" description="" flow="oneWay">
 			<dock index="0" id="20" port="ne" />
 			<dock index="1" id="27" port="sw" />
@@ -116,7 +116,7 @@
 			<dock index="0" id="1" port="s" />
 			<dock index="1" id="43" port="n" />
 		</line>
-		<room id="45" name="Present/ Dying/Greedy (Ed Yerg)" subtitle="" x="288" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="45" name="Present/ Triste/ Unripe" subtitle="" x="288" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-52" customDown="0">Give the flowerpot|for non-anagram point</objects>
 		</room>
 		<line id="46" name="" description="" style="dashed">
@@ -186,6 +186,7 @@
 			<connectionStalkLength>32</connectionStalkLength>
 			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
 			<defaultRoomName>Mesprise Premises</defaultRoomName>
+			<defaultRoomShape>0</defaultRoomShape>
 		</rooms>
 		<ui>
 			<handleSize>12</handleSize>

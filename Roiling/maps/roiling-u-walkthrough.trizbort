@@ -28,18 +28,18 @@
 			<dock index="0" id="1" port="sw" />
 			<dock index="1" id="8" port="ne" />
 		</line>
-		<room id="10" name="The Bean appears" subtitle="" x="-32" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<room id="10" name="The Bean appears" subtitle="" x="-192" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
 		<line id="11" name="" description="" flow="oneWay">
 			<dock index="0" id="4" port="sw" />
 			<dock index="1" id="10" port="ne" />
 		</line>
 		<line id="12" name="" description="" flow="oneWay">
-			<dock index="0" id="8" port="se" />
-			<dock index="1" id="10" port="nw" />
+			<dock index="0" id="8" port="s" />
+			<dock index="1" id="10" port="n" />
 		</line>
 		<line id="13" name="" description="" flow="oneWay">
-			<dock index="0" id="6" port="s" />
-			<dock index="1" id="10" port="n" />
+			<dock index="0" id="6" port="sw" />
+			<dock index="1" id="10" port="nne" />
 		</line>
 		<room id="14" name="WORST AD LLP" subtitle="" x="-192" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects>Before going|underground</objects>
@@ -48,10 +48,15 @@
 			<dock index="0" id="14" port="e" />
 			<dock index="1" id="1" port="w" />
 		</line>
-		<room id="17" name="Marsh/ Pier/Clipper/ Canyons/win" subtitle="" x="128" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<room id="17" name="Marsh/ Pier/Clipper/ Canyons/win" subtitle="" x="-32" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
 		<line id="18" name="" description="" flow="oneWay">
 			<dock index="0" id="10" port="e" />
 			<dock index="1" id="17" port="w" />
+		</line>
+		<room id="15" name="Raptest Patters LLP in canyons" subtitle="" x="128" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<line id="19" name="" description="" style="dashed">
+			<dock index="0" id="17" port="e" />
+			<dock index="1" id="15" port="w" />
 		</line>
 	</map>
 	<settings>
@@ -90,9 +95,10 @@
 		<rooms>
 			<darknessStripeSize>24</darknessStripeSize>
 			<objectListOffset>4</objectListOffset>
-			<connectionStalkLength>32</connectionStalkLength>
+			<connectionStalkLength>4</connectionStalkLength>
 			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
 			<defaultRoomName>Mesprise Premises</defaultRoomName>
+			<defaultRoomShape>0</defaultRoomShape>
 		</rooms>
 		<ui>
 			<handleSize>12</handleSize>
