@@ -5,6 +5,11 @@
 #this tests no walkthrough, just nudges in the table of general nudges
 #
 
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* go weird places
+
 #nudge for terry
 >ryter
 !You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.

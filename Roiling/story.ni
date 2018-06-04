@@ -117,7 +117,7 @@ last-loc of Means Manse is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 24. min-score of Troves is 17. [Pa Egg Pea / bee / lager, lobster/ME ARTS, , Trevis Vister/praise / DIVORCES, Sister Tressi/Blamer Balmer]
+Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 24. min-score of Troves is 17. [Pa Egg Pea / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
@@ -21043,13 +21043,11 @@ check giving to Tetris Sitter:
 	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	now flowerpot is in lalaland instead;
 
-check going outside in Mesprise Premises:
-	try going east instead;
+check going outside in Mesprise Premises: try going east instead;
 
-the welt-proof flowerpot is a reflexive and LLPish container. description of flowerpot is "You don't know what good welt-proofing will do, but it seems pretty sturdy[if-crocus]."
+the welt-proof flowerpot is a container. description of flowerpot is "You don't know what good welt-proofing will do, but it seems pretty sturdy[if-crocus]."
 
-check examining welt-proof flowerpot:
-	ignore the examine containers rule;
+check examining welt-proof flowerpot: ignore the examine containers rule;
 
 to say if-crocus:
 	if crocus is in flowerpot:
