@@ -89,7 +89,7 @@ def pre_process(sts):
                 count += 1
                 continue
             count += 1
-            if re.search("\"\t[0-9]", line):
+            if re.search("\"\t[0-9]", line) and not line.startswith('['):
                 tlist = line.split('\t')
                 l = re.sub("\"", "", tlist[0])
                 if ' ' in l:
@@ -128,6 +128,7 @@ def poke_nudge_files(gm):
     to_add = 0
     renudges = 0
     nudge_comment = False
+    force_ignore = False
     nudge_add = defaultdict(str)
     cmd_lines = defaultdict(str)
     cur_file = nudge_files[gm]
@@ -140,6 +141,12 @@ def poke_nudge_files(gm):
         return
     with open(nudge_files[gm]) as file:
         for line in file:
+            if line.startswith('#forceignore'):
+                force_ignore = True
+                continue
+            if force_ignore:
+                force_ignore = False
+                continue
             count += 1
             ll = line.strip().lower()
             if line.startswith('>') and not nudge_comment:
@@ -150,7 +157,9 @@ def poke_nudge_files(gm):
                 if flag_double_comments:
                     print("Line", count, "has a double comment.")
             elif re.search("#( )?renudge (for|of)", ll):
-                ll = re.sub("#( )?renudge (for|of) *", "", ll)
+                ll = re.sub(".*#( )?renudge (for|of) *", "", ll)
+                if "\\" in ll:
+                    ll = re.sub(r"\\{2,}.*", "", ll)
                 if ll not in got_nudges[gm].keys():
                     print("Bad renudge", ll, "line", count, "need nudge first")
                     renudges += 1
@@ -203,9 +212,11 @@ def poke_nudge_files(gm):
     if write_to_file and count2 > 0: # just in case this goes outside count2==0 above
         print("Writing nudges to", nudge_needed)
         fout = open(nudge_needed, "w")
-        for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), cmd_tries[gm][x], x)):
+        # for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), cmd_tries[gm][x], x)):
+        for j in sorted(got_nudges[gm].keys(), key=lambda x: (cmd_tries[gm][x], x)):
             if got_nudges[gm][j] == 0:
-                fout.write("#nudge for {:s}\n>{:s}\n{:s}\n\n".format(j, j[:-2] + j[-1] + j[-2], poss_tweak(nudge_text[j])))
+                # fout.write("###{:s} {:d} {:d}\n".format(cmd_lines[alf(j)], int_wo_space(cmd_lines[alf(j)]), cmd_tries[gm][j], j))
+                fout.write("#nudge for {:s}\n>{:s}\n{:s}\n".format(j, j[:-2] + j[-1] + j[-2], poss_tweak(nudge_text[j])))
         fout.close()
         print("Writing to", out_nudge)
         fout = open(out_nudge, "w")
