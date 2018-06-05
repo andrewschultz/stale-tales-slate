@@ -10,9 +10,43 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >enter spot
 Grey Gyre
 
+==t2
+#nudge for volt
+>votl
+That can't be it. It's a volt MAZE.
+#nudge for maze
+>maez
+That can't be it. It's a VOLT maze.
+#nudge for storep
+>storpe
+[not-the-reg].
+#nudge for crust
+>cruts
+You should eat your food, not play with it. Yes, even if it's only MARGINALLY food.
+#nudge for grye
+>grey
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start grey gyre]
+#nudge for entry
+>entyr
+It's the maze you need to change, not the zany meter.
+#nudge for mazeentry
+>mazeentyr
+It's the maze you need to change, not the zany meter.
+#nudge for zany
+>zayn
+It's the maze you need to change, not the zany meter.
+#nudge for meter
+>metre
+It's the maze you need to change, not the zany meter.
+
 >umph
 Your score has just gone up by one point
 Austerer Treasure
+
+==t2
+#nudge for austerer
+>austerre
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start austerer treasure]
 
 ==t0,2
 >phooey
@@ -29,24 +63,141 @@ REGION MAX DECREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 2 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 36.
 
+==t2
+#nudge for onyx
+>onxy
+You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be.
+#nudge for onyxcenser
+>onyxcensre
+You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter.
+
 >e
 >s
 Char Arch
+
+==t2
+#nudge for char
+>chra
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start char arch]
+#nudge for mad
+>mda
+[no-scen].
+#nudge for maddam
+>maddma
+[no-scen].
+#nudge for amaddam
+>amaddma
+[no-scen].
+#nudge for amad
+>amda
+[no-scen].
+#nudge for themad
+>themda
+[no-scen].
+#nudge for gasp
+>gaps
+You try, but fail, to make something out of nothing.
+#nudge for gpa
+>gap
+You try, but fail, to make something out of nothing.
+#nudge for spumed
+>spumde
+[spumed-no].
+#nudge for tar
+>tra
+[spumed-no].
+#nudge for dumpster
+>dumpstre
+Not even you can make that icky stuff in the dumpster worthwhile, but maybe there's something useful inside.
+#nudge for adumpster
+>adumpstre
+Not even you can make that icky stuff in the dumpster worthwhile, but maybe there's something useful inside.
+>x dumpster
+>dumpstre
+Not even you can make that icky stuff in the dumpster worthwhile, but maybe you could reach for the dart.
+>adumpstre
+Not even you can make that icky stuff in the dumpster worthwhile, but maybe you could reach for the dart.
+#nudge for decorative
+>decoratiev
+You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude.
+
+==t2
+#nudge for stump
+>stupm
+The stump doesn't move, but the star seems to rattle a bit.
+#nudge for drat
+>drta
+Some 4-letter word or other will get the dart.
 
 >rats
 Your score has just gone up by one point
 >drat
 Your score has just gone up by one point
 
+==t2
+#renudge for drat
+>drta
+Don't need to do anything else.
+#renudge for stump
+>stupm
+The stump just sits there, stumpy
+#renudge for decorative
+>decoratiev
+The star's snazzy enough as-is.
+#renudge for adumpster
+>adumpstre
+Not even you can make that icky stuff in the dumpster worthwhile, and besides, you got the dart anyway.
+>dumpstre
+Not even you can make that icky stuff in the dumpster worthwhile, and besides, you got the dart anyway.
+
 >n
 >bleep
 Your score has just gone up by one point
 
 >e
-Marines Seminar
+Marines Seminar Remains
+
+==t2
+#nudge for marines
+>marinse
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start marines seminar remains]
+#nudge for marine
+>marien
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for popgun
+>popgnu
+Hmm. It's not the popgun itself that's cracked but the boing mechanism inside.
+#nudge for spoilt
+>spoitl
+Hmm. It's not the popgun itself that's cracked but the boing mechanism inside.
+#nudge for serial
+>serila
+The number's got more numerals than letters.
+#nudge for number
+>numbre
+The number's got more numerals than letters.
+
+==t2
+#nudge for bingo
+>binog
+Not quite. You're close to an a-ha moment, though.??
 
 >bingo
 Your score has just gone up by one point
+
+==t2
+#renudge for popgun
+>popgnu
+The popgun is just fine.
+#renudge for spoilt
+>spoitl
+The popgun is just fine.
+#renudge for serial
+>serila
+You got the boing mechanism working.
+#renudge for number
+>numbre
+You got the boing mechanism working.
 
 ==t!1
 >prost
@@ -74,6 +225,71 @@ REGION MAX DECREASED BY 1
 >undo
 >undo
 >undo
+
+==t2
+>n
+Nowt Town
+#nudge for mazeroom
+>mazeromo
+This is just the entry. You may want to tackle the whole maze.
+>w
+#renudge for mazeroom
+>mazeromo
+You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
+#nudge for bigl
+>bilg
+The big L may be some sort of clue, but you can't do anything with it.
+#nudge for floor
+>floro
+You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle.
+>w
+#nudge for bigm
+>bimg
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>w
+#nudge for bign
+>bing
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+#nudge for bigo
+>biog
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+#nudge for bigp
+>bipg
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>e
+#nudge for bigq
+>biqg
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>e
+#nudge for bigr
+>birg
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>e
+#nudge for bigs
+>bisg
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+#nudge for bigt
+>bitg
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>w
+#nudge for bigu
+>biug
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+#nudge for unwary
+>unwayr
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for bigv
+>bivg
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+#nudge for dreidl
+>dreild
+You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
+
 ===0,2
 >mazeltov
 Your score has just gone up by three points
@@ -89,23 +305,85 @@ Score in a scenario: 12 out of 37 total points in the current region, Presto. Lo
 >s
 Dirge Ridge
 
+==t2
+#nudge for dirge
+>direg
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start dirge ridge]
+#nudge for liev
+>live
+The vile veil is impassive. It--kind of protects you, actually.
+
 >ole
 Your score has just gone up by one point
+
+==t2
+#nudge for leonard
+>leonadr
+You don't need to face double the strength.
+
 >darn
 Your score has just gone up by one point
+
+==t2
+#renudge for leonard
+>leonadr
+You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
+
+==t2
+#nudge for whasup
+>whaspu
+Maybe something like that'd work with just one washup. But there are two.
+
 >whassup
 Your score has just gone up by one point
+
+==t2
+#renudge for leonard
+>leonadr
+You don't need to combine them physically, but their physical strengths combined could be a help.
 
 >n
 >n
 >load gun with dart
 >there
 Your score has just gone up by one point
+
+==t4
+#nudge for mazeltov
+>mazeltvo
+The volt maze is gone. Re-forming it would not be fun.
+#nudge for ether
+>ethre
+The ether is gone. You can just go [if phat path is visited]back [end if]north.
+
 >n
 Saps' Pass
 
-##bingo *2 = no line break
-#different message for making it to the phat path 1st time?
+##bingo *2 = no line break ??
+#different message for making it to the phat path 1st time? ??
+
+==t2
+#nudge for lawl
+>lalw
+It's too expansive for you to use any mental energy on.
+#nudge for ssap
+>sspa
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [saps' pass]
+#nudge for mount
+>moutn
+Mount Um, Not silently disposes of your attempts to manipulate it.
+#nudge for deil
+>deli
+[d-sli].
+#nudge for deils
+>deisl
+[d-sli].
+#nudge for hog
+>hgo
+You need to deal with all the hogs.
+#nudge for key
+>kye
+You aren't sure which key would work, so you need a plan to get them all.
 
 ==t2
 >gosh
@@ -117,10 +395,35 @@ Phat Path
 Your score has just gone up by one point
 Phat Path
 
+==t2
+#nudge for phat
+>phta
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start phat path]
+#nudge for saps
+>sasp
+You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here.
+#nudge for clump
+>clupm
+No, it's not just any clump, but hawt thaw.
+
 ==t!1
 >what
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1
+
+==t2
+#renudge for leonard
+>leonadr
+You've probably faced the greatest physical threat you need. You need to take leave of them, now.
+#nudge for harpings
+>harpinsg
+Concentrate on the words of the harpings phrasing.
+#nudge for harping
+>harpign
+Concentrate on the words of the harpings phrasing.
+#nudge for entyr
+>entyr
+No way you'll be able to meddle with the Entry from outside
 
 >later
 But we ain't bored yet, boss!
@@ -131,6 +434,7 @@ Hut! Go!
 Dat was a good dust-up
 
 ==t2
+>undo
 >undo
 >so long
 Your score has just gone up by one point
@@ -158,14 +462,168 @@ Dat was a good dust-up
 >later
 Your score has just gone up by one point
 Dat was a good dust-up
+#nudge for shack
+>shakc
+You'll need to enter the shack to take care of things here.
+
+==t2
+#renudge for entry
+>entyr
+The Entry doesn't need disabling, since you're the only person that can enter.
 
 >n
 Hacks' Shack
+
+==t2
+>s
+#renudge for shack
+>shakc
+You'll need to re-enter the shack to take care of things here.
+>n
+#nudge for boredyak
+>boredyka
+The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]
+#nudge for dongle
+>dongel
+It's built to be sturdy. You don't want to mess with it.
+#nudge for scratch
+>scrathc
+[scrapap].
+#nudge for paper
+>papre
+[scrapap].
+#nudge for pile
+>piel
+It's not just any pile--it's a pile of coal.
+#nudge for stikc
+>stick
+It's just gum.
+#nudge for stickofgum
+>stickofgmu
+It's just gum.
+#nudge for catechism
+>catechims
+[no-txtbk].
+#nudge for textbook
+>textboko
+[no-txtbk].
+#nudge for bkoo
+>bkoo
+[no-txtbk].
+#nudge for hard
+>hadr
+[no-dsk].
+#nudge for drive
+>driev
+[no-dsk].
+#nudge for harddrive
+>harddriev
+[no-dsk].
+#nudge for shakc
+>shack
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start hacks shack]
+#nudge for hack
+>hakc
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for algorithm
+>algoritmh
+[no-txtbk].
+#nudge for algorithms
+>algorithsm
+[no-txtbk].
+#nudge for labs
+>lasb
+The labs slab remains sturdy. Technology 1, Wordplay Magic 0.
+#nudge for alb
+>abl
+The labs slab remains sturdy. Technology 2, Wordplay Magic 0.
+#nudge for dead
+>deda
+There must be a more eco-friendly way to reincarnate the flea.
+#nudge for clock
+>clokc
+You can't make much out of a clock, but clock sap, maybe.
+#nudge for puddle
+>puddel
+You can't make much out of a clock, but clock sap, maybe.
+#nudge for rebuff
+>rebuff
+The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise.
+#nudge for magnetic
+>magnetci
+The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise.
+#nudge for computer
+>computre
+You need to fix the program in the computer[if number of things on labs slab < 4], well, once you get it running[end if].
+#nudge for button
+>buttno
+[shackbut].
+#nudge for buttons
+>buttosn
+[shackbut].
+#nudge for escarole
+>escaroel
+All the escaroles.
+#nudge for caffeine
+>caffeien
+[caffeine-no].
+#nudge for fine
+>fien
+[caffeine-no].
+#nudge for cafe
+>caef
+[caffeine-no].
+#nudge for soda
+>soad
+[cola-is-cola].
+#nudge for pop
+>ppo
+[cola-is-cola].
+#nudge for trim
+>trmi
+[trimsox].
+#nudge for sock
+>sokc
+[trimsox].
+#nudge for socks
+>socsk
+[trimsox].
+#nudge for trimsock
+>trimsokc
+[romstix].
+#nudge for sticks
+>sticsk
+[romstix].
+#nudge for rom
+>rmo
+[romstix].
+#nudge for stick
+>stikc
+[romstix].
+#nudge for spa
+>sap
+C'est [i]pas[r] sap. C'est du CLOCK SAP.
 
 >capslock
 Your score has just gone up by one point
 >skid
 Your score has just gone up by one point
+
+==t2
+#nudge for caps
+>casp
+[caps-no].
+#nudge for lock
+>lokc
+[caps-no].
+#nudge for rope
+>roep
+You don't need to do anything with the skid's rope.
+#nudge for fountain
+>fountani
+It's too small to be a fountain--really, just a fount.
+
+
 >cola
 Your score has just gone up by one point
 >mug
@@ -193,6 +651,23 @@ Lowest score to solve is 33. Maximum score available is 37.
 >put leaf on skid
 
 ==t2
+#nudge for yak
+>yka
+The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help.
+#nudge for yoke
+>yoek
+It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak.
+#nudge for drab
+>drba
+It's not just drab. It's a drab yoke. On the bored yak.
+#nudge for scratchings
+>scratchinsg
+You may wish to decipher the scratchings, instead.
+#nudge for scratching
+>scratchign
+You may wish to decipher the scratchings, instead.
+
+==t2
 >give book to yak
 by one point
 >undo
@@ -210,40 +685,107 @@ Your score has just gone up by one point
 >keyboard
 Your score has just gone up by one point
 
+==t2
+#nudge for tbakey
+>tbakye
+Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
+
 >put keyboard on slab
 You can now do computery things unimpeded!
 
 >put lock on keyboard
 fits in perfectly
 
+==t2
+#nudge for nottobe
+>nottoeb
+Even more nothing happens than you expected. The blue button really is too broken. But the orange is not.
+#nudge for reboot
+>reboto
+You need to give that computer another (figurative) kick.
+
 >disk
 >put disk in drive
 >reboot
 Your score has just gone up by one point
+
+==t2
+#nudge for sleep
+>slepe
+Your mind is a tired jumble right now, yes.
+
 >sleep
 Your score has just gone up by one point
+
+==t2
+#renudge for nottobe
+>nottoeb
+Even more nothing happens than you expected. The blue button really is too broken. You got the orange button to work, anyway.
+#renudge for reboot
+>reboto
+You don't need to give that computer another (figurative) kick.
 
 >compile
 ==t1
 REGION MAX DECREASED BY 2
 
 ==t2
+#renudge for sleep
+>slepe
+Your mind is no longer a tired jumble.
+#nudge for compiled
+>compilde
+The code won't BUDGE.
+#nudge for code
+>coed
+The code won't BUDGE.
+
+==t!1
 >rom sticks
+REGION MIN INCREASED BY 1
+>undo
+>romsticks
 REGION MIN INCREASED BY 1
 >tab
 REGION MIN INCREASED BY 1
 
 ==t2
+#nudge for trimsocks
+>trimsocsk
+The ROM sticks can probably make your computer go faster. Why fiddle further?
+#renudge for tbakey
+>tbakye
+You already did enough with the TAB key.
+
+==t!2
 >score
 Score in a scenario: 26 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 31.
+
+==t2
+#nudge for debug
+>debgu
+You need to budge the letters about.
+
 
 >pour cola in mug
 >debug
 Your score has just gone up by one point
+
+==t2
+>usb
+!Diver time
+Your score has just gone up by one point
+Strip of Profits
+>misses
+WRONG
+>undo
+
 >sub
 Diver time
 Your score has just gone up by one point
 Strip of Profits
+>misses
+WRONG
 
 >score
 ==t2
