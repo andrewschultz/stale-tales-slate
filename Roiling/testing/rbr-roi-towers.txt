@@ -11,9 +11,36 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >ts
 >posf
->seed 1
 >towers
+
+>seed 1
 >enter towers
+
+==t4
+#nudge for trefoil
+>trefoli
+[towersloc].
+#nudge for warrior
+>warriro
+[war-one].
+#nudge for warriors
+>warriosr
+[war-one].
+#nudge for storew
+>storwe
+[not-the-reg].
+#nudge for torew
+>torwe
+[not-the-reg].
+#nudge for badlands
+>badlansd
+[bland-sad].
+#nudge for asd
+>ads
+[bland-sad].
+#nudge for bland
+>bladn
+[bland-sad].
 
 >gone
 Your score has just gone up by one point
@@ -44,6 +71,86 @@ Your score has just gone up by one point
 
 Topside Deposit
 
+==t4
+#nudge for deposit
+>deposti
+[towersloc].
+#nudge for fire
+>fier
+[ftf].
+#nudge for torn
+>tonr
+[ftf].
+#nudge for frontier
+>frontire
+[ftf].
+#nudge for flowerpot
+>flowerpto
+[flow-fine].
+#nudge for flower
+>flowre
+[flow-fine].
+#nudge for pot
+>pto
+[flow-fine].
+#nudge for proof
+>profo
+[flow-fine].
+#nudge for welt
+>wetl
+[flow-fine].
+#nudge for adder
+>addre
+You need to take care of all the adders.
+#nudge for renato
+>renaot
+You don't have time to think about, or change, Renato. You got his present to his friend.
+#renudge for renato
+>renaot
+You don't have time to think about, or change, Renato. You've found and made his friend a bit happier, but maybe you can do even more.
+#renudge for renato
+>renaot
+You don't have time to think about, or change, Renato. His friend is still unreceptive, though.
+#renudge for renato
+>renaot
+You don't have time to think about, or change, Renato. You haven't yet found his friend he wants the gift sent to, anyway.
+#nudge for curst
+>curts
+It's not just that it's curst, it's a PALACE, too.
+#nudge for palace
+>palaec
+It's not just that it's a palace, it's CURST, too.
+#nudge for castle
+>castel
+Not just any castle. Castle Apcur.
+#nudge for apcur
+>apcru
+Not, like, swamp Apcur or hut Apcur. Castle Apcur.
+#nudge for start
+>statr
+[eat-pastry].
+#nudge for tart
+>tatr
+[not-singular-hp].
+#nudge for pastry
+>pastyr
+You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed.
+#nudge for lake
+>laek
+You can't see Leak Lake from here, and you couldn't do anything with it, anyway.
+#renudge for lake
+>laek
+You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
+#renudge for lake
+>laek
+You're beyond the lake now.
+#renudge for lake
+>laek
+Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.
+#nudge for toaster
+>toastre
+It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
+
 >score
 ==t!1,2
 Score in a scenario: 7 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
@@ -57,7 +164,24 @@ Your score has just gone up by one point
 >n
 Scope Copse
 
-==t0,3
+==t4
+#nudge for copse
+>copes
+[cop-sco].
+#nudge for spec
+>spce
+[cop-sco].
+#nudge for butler
+>butlre
+You need to deal with all the butlers. Not just one.
+#nudge for diner
+>dinre
+[plutry of diners]There's more than one diner blocking you.
+#nudge for yurt
+>yutr
+There's more than one yurt there.
+
+==t!1,2
 >rusty
 Your score has just gone up by one point
 >score
@@ -66,6 +190,20 @@ Score in a scenario: 9 out of 50 total points in the current region, Towers. Low
 >put tarts in toaster
 >eat tarts
 >xray butlers
+
+==t4
+#nudge for brownie
+>brownei
+[not-singular-hp].
+#nudge for brownies
+>brownise
+[eat-pastry].
+#nudge for owers
+>owesr
+[eat-pastry].
+#nudge for bin
+>bni
+[eat-pastry].
 
 >subtler
 Your score has just gone up by one point
@@ -150,7 +288,47 @@ Your score has just gone up by one point
 >creaky
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
+
+==t4
+>e
+#nudge for unblest
+>unblets
+[towersloc].
+#nudge for casn
+>cans
+[nerd-a].
+#nudge for nerd
+>nedr
+[nerd-a].
+#nudge for aid
+>adi
+[nerd-a].
+#nudge for wears
+>weasr
+You suppress a swear as the sales pitch wears on you.
+#nudge for bottles
+>bottlse
+They're not just bottles! They're bottles of NERD-AID!
+>w
+
+==t!1,2
 >n
+
+==t4
+#nudge for baldest
+>baldets
+[towersloc].
+#nudge for old
+>odl
+No, all the old ice.
+#nudge for ice
+>iec
+No, all the old ice.
+#nudge for pirate
+>piraet
+Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s.
+
+==t!1,2
 >coiled
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
@@ -159,9 +337,52 @@ Your score has just gone up by one point
 >pastier
 Your score has just gone up by one point
 >n
+
+==t4
+#nudge for cinema
+>cineam
+[towersloc].
+#nudge for theater
+>theatre
+You don't need to go looking for screens to stare at right now. You have a world to save.
+#nudge for wait
+>wati
+[wait-see].
+#nudge for seer
+>sere
+[wait-see].
+#nudge for rampant
+>rampatn
+No, just an admirer, really.
+>gs
+#nudge for womantrap
+>womantrpa
+No, just an admirer, really.
+>gs
+#nudge for ingrate
+>ingraet
+There's more than one ingrate blocking you.
+
+==t!1,2
 >angstier
 Your score has just gone up by one point
 >w
+
+==t4
+#nudge for finger
+>fingre
+[towersloc].
+#nudge for strudel
+>strudle
+[eat-pastry].
+#nudge for sled
+>slde
+Work on the whole sled rut.
+#nudge for rut
+>rtu
+Work on the whole sled rut.
+
+==t!1,2
 >rustled
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 9 OVERALL.
@@ -171,8 +392,49 @@ Your score has just gone up by one point
 >married
 Your score has just gone up by one point
 >n
+
+==t4
+#nudge for shaven
+>shavne
+[towersloc].
+#nudge for haven
+>havne
+[towersloc].
+#nudge for lone
+>loen
+It's not just any lone animal. It's a lone DUCK.
+#nudge for duck
+>dukc
+It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a LONE duck[end if].
+#nudge for idtag
+>idtga
+ID tag: dig at it? Gad.
+#nudge for unlocked
+>unlockde
+The lone duck looks around for something to do but can't find anything. Well, not here. And not like that.
+#nudge for ravages
+>ravagse
+[rav-chao].
+#nudge for ravage
+>ravaeg
+[rav-chao].
+
+==t!1,2
 >s
 >e
+
+==t4
+#nudge for shoals
+>shoasl
+[shoaly].
+#nudge for shoal
+>shola
+[shoaly].
+#nudge for atheist
+>atheits
+Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly.
+
+==t!1,2
 >hastiest
 Your score has just gone up by one point
 >weariest
@@ -188,12 +450,105 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >himself
 Your score has just gone up by one point
+
+==t4
+#nudge for lars
+>lasr
+[reed-name].
+#nudge for eede
+>eeed
+[reed-name].
+>gs
+#nudge for elsa
+>elas
+[reed-name].
+#nudge for erde
+>ered
+[reed-name].
+>gs
+#nudge for reeds
+>reesd
+[reed-ale].
+#nudge for reed
+>rede
+[reed-ale].
+#nudge for ale
+>ael
+[reed-ale].
+#nudge for reedale
+>reedael
+[reed-ale].
+#nudge for sere
+>seer
+[reed-ale].
+#nudge for deal
+>dela
+[reed-ale].
+
+==t4
+#nudge for gradient
+>gradietn
+[rav-rej].
+#nudge for weed
+>wede
+Gumming up one weed wouldn't get the others.
+
+==t!1,2
 >sewed
 Your score has just gone up by one point
+
+==t4
+#nudge for save
+>saev
+[no-fril].
+#nudge for saver
+>savre
+[no-fril].
+#nudge for recorder
+>recordre
+[no-fril].
+#nudge for tape
+>taep
+[no-fril].
+#nudge for buttosn
+>buttons
+The raves saver's minimal capabilities are enough...just...
+#nudge for buttno
+>button
+The raves saver's minimal capabilities are enough...just...
+#nudge for retape
+>retaep
+The raves saver has limited functionality, alas.
+#nudge for dagger
+>daggre
+You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
+
+==t4
+#nudge for denim
+>denmi
+You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently.
+
+==t!1,2
 >mined
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 13 OVERALL.
 >e
+
+==t4
+#nudge for scalier
+>scalire
+[eat-pastry].
+#nudge for eclair
+>eclari
+[not-singular-hp].
+#nudge for liam
+>lima
+[grail-name].
+#nudge for garn
+>ganr
+[grail-name].
+
+==t!1,2
 >marginal
 Your score has just gone up by one point
 >holiest
@@ -203,6 +558,13 @@ Your score has just gone up by one point
 >s
 >drained
 Your score has just gone up by one point
+
+==t4
+#nudge for native
+>natiev
+[plutry of natives]You'll need to deal with more than one native to make your way south.
+
+==t!1,2
 >vainest
 Your score has just gone up by one point
 >thisalt
@@ -218,23 +580,117 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 50 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 50.
 >w
+
+==t4
+#nudge for ego
+>eog
+[ego-dr].
+#nudge for drains
+>draisn
+[ego-dr]. Plus, if they were boring old drains, you could just step around them.
+#nudge for egodrain
+>egodrani
+[ego-dr].
+#nudge for drain
+>drani
+[ego-dr]. Plus, if it was a boring old drain, you could just step around.
+#nudge for organized
+>organizde
+Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
+
+==t!1,2
 >grandiose
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
 >e
 >s
+
+==t4
+#nudge for riposte
+>riposet
+You may find it easier to deal with all the ripostes at once.
+
+==t!1,2
 >prosiest
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 17 OVERALL.
+
+==t4
+#nudge for lost
+>lots
+[towersloc].
+#nudge for lot
+>lto
+[towersloc].
+#nudge for gasfield
+>gasfiedl
+[gasgad].
+#nudge for gadfly
+>gadfyl
+[gasgad].
+#nudge for gadflie
+>gadflei
+[gasgad].
 
 >gt garden
 >broken
 Your score has just gone up by one point
 >resting
 Your score has just gone up by one point
+
+==t4
+#nudge for geese
+>geees
+The geese are fine as they are. They're just there for scenery, and stuff.
+#nudge for gander
+>gandre
+[towersloc].
+#nudge for obscurest
+>obscurets
+[towersloc].
+#nudge for locked
+>lockde
+Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if].
+#nudge for gol
+>glo
+[if fissure is visible]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if].
+#nudge for gaol
+>galo
+The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer.
+#nudge for loggaol
+>loggalo
+Nah, you're pretty sure you're overthinking things now. You [if duck is returned]opened[else]may want to open[end if] the prison.
+#nudge for jail
+>jali
+It's not just any jail--but prison ropins.
+#nudge for ropin
+>ropni
+[no-ropin].
+#nudge for ropins
+>ropisn
+[no-ropin].
+#nudge for yow
+>ywo
+[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up.
+#nudge for doctor
+>doctro
+That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
+
 >e
+
+==t4
+#nudge for wordy
+>woryd
+Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell
+
 >wordy
 Your score has just gone up by one point
+
+==t4
+#renudge for wordy
+>woryd
+Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
+
 >push retape
 >gt duck
 >push repeat
@@ -242,8 +698,105 @@ Your score has just gone up by one point
 >unlocked
 >gt copse
 >w
+
+==t4
+#nudge for roeut
+>roetu
+[towersloc].
+#nudge for sway
+>swya
+You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful
+#nudge for camp
+>capm
+[gosh-camp]!
+#nudge for site
+>siet
+[gosh-camp]!
+#nudge for campiest
+>campiets
+[gosh-camp]!
+#nudge for repair
+>repari
+[rapier-mach].
+#nudge for machine
+>machien
+[rapier-mach].
+#nudge for shiny
+>shiyn
+[rapier-mach].
+#nudge for gizmo
+>gizom
+[giz-tex].
+#nudge for zomg
+>zogm
+[giz-tex].
+
 >put dagger in repair
 >gt coastlines
+
+==t4
+#nudge for actionless
+>actionless
+[towersloc].
+#nudge for coastline
+>coastlien
+[towersloc].
+#nudge for maturation
+>maturatino
+The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway
+#nudge for thearchy
+>thearcyh
+The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway
+#nudge for coasting
+>coastign
+Scot Agin looks at you curiously. You probably don't need to change his name or intelligence.
+#nudge for scot
+>scto
+Scot looks at you curiously. You probably don't need to change his name or intelligence.
+#nudge for agin
+>agni
+Scot looks at you curiously. You probably don't need to change his name or intelligence.
+>gs
+>renudge for coasting
+Staci Ong looks at you curiously. You probably don't need to change her name or intelligence.
+#nudge for staci
+>staic
+Staci looks at you curiously. You probably don't need to change her name or intelligence.
+#nudge for ong
+>ogn
+Staci looks at you curiously. You probably don't need to change her name or intelligence.
+>gs
+
+==t4
+#nudge for solve
+>solev
+[eat-pastry].
+#nudge for loaves
+>loavse
+[eat-pastry].
+#nudge for loaf
+>lofa
+[not-singular-hp].
+>s
+#nudge for strati
+>strait
+[towersloc].
+#nudge for could
+>coudl
+[could-cloud].
+#nudge for coulds
+>coulsd
+[could-cloud].
+>n
+>w
+#nudge for salted
+>saltde
+[towersloc].
+#nudge for delta
+>delat
+[towersloc].
+>e
+
 >grained
 Your score has just gone up by one point
 >ask agnostic about doctor yow
@@ -256,10 +809,81 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 18 OVERALL.
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 19 OVERALL.
 
+==t4
+#nudge for tentative
+>tentatiev
+Scot is fully attentive. Don't ruin a good thing!
+
 >rowdy
 Your score has just gone up by one point
+
+==t4
+#renudge for wordy
+>woryd
+Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions
+
 >gt coastlines
 >give gizmo to agnostic
+
+==t4
+>gonear rawest waters
+#nudge for waster
+>wastre
+Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better.
+>undo
+#nudge for spray
+>sprya
+The spray will still drown you if you don't figure a way to move somewhere.
+>undo
+#nudge for water
+>watre
+The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?
+>undo
+#nudge for northern
+>northenr
+The northern shore does not waver. Maybe try the eastern shore.
+>undo
+#nudge for shore
+>shoer
+You need to focus on one specific shore.
+>undo
+#nudge for shores
+>shorse
+You need to focus on one shore.
+>undo
+#nudge for north
+>norht
+Hmm. Concentrate on a shore--northern or eastern--not a direction.
+>undo
+#nudge for east
+>eats
+Hmm. Concentrate on a shore--northern or eastern--not a direction.
+>undo
+#nudge for southwest
+>southwets
+[diag-dir-rej].
+>undo
+>undo
+
+==t4
+#nudge for bot
+>bto
+[fix-boat-parts].
+#nudge for baot
+>bato
+[fix-boat-parts].
+#nudge for boatbot
+>boatbto
+[fix-boat-parts].
+#nudge for wire
+>wier
+The wires are okay. They're just organized WEIRDER.
+#nudge for wires
+>wirse
+The wires are okay. They're just organized WEIRDER.
+#nudge for turbo
+>turob
+You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos.
 
 ==t1,2
 >robust
@@ -292,12 +916,34 @@ Your score has just gone up by one point
 >robust
 Your score has just gone up by one point
 
+==t4
+#renudge for turbo
+>turob
+You already dealt with both turbos.
+
 ==!1,2
 >rewired
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 20 OVERALL.
 
 >enter boat
+
+==t4
+#nudge for mislit
+>mislti
+[towersloc].
+#nudge for clays
+>clasy
+[clay-pal].
+#nudge for caly
+>cayl
+[clay-pal].
+#nudge for pester
+>pestre
+The serpent doesn't just pester, it's pester'n.
+#nudge for erip
+>erpi
+It's officially an ur-pine, not a pine.
 
 ==!1,2
 >thisalt
@@ -311,7 +957,27 @@ Your score has just gone up by one point
 # add minimum point here
 DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
 >score
+
+==t4
+#nudge for occurs
+>occusr
+The succor crocus just is, and it doesn't need a new way to be. Perhaps it would make a nice gift.
+#nudge for present
+>presetn
+The serpent is taken care of.
+
+==!1,2
 >in
+
+==t4
+#nudge for mesprise
+>mespries
+[towersloc].
+#nudge for emprise
+>empries
+[towersloc].
+
+==!1,2
 >triste
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 23 OVERALL.
@@ -321,6 +987,62 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 24 OVERALL.
 >out
 
 >misses
+
+==t4
+#nudge for accurst
+>accurts
+[focus-castle].
+#nudge for leap
+>lepa
+[focus-castle].
+#nudge for clear
+>clera
+[focus-castle].
+#nudge for catsup
+>catspu
+[focus-castle].
+#nudge for pest
+>pets
+[focus-castle].
+#nudge for accrual
+>accrula
+[focus-castle].
+#nudge for cactus
+>cactsu
+[focus-castle].
+#nudge for pealr
+>pearl
+[focus-castle].
+#nudge for capsule
+>capsuel
+[focus-castle].
+#nudge for cart
+>catr
+[focus-castle].
+#nudge for accu
+>acuc
+[focus-castle].
+#nudge for plaster
+>plastre
+[focus-castle].
+#nudge for last
+>lats
+[focus-castle].
+#nudge for race
+>raec
+[focus-castle].
+#nudge for cup
+>cpu
+[focus-castle].
+#nudge for talc
+>tacl
+[focus-castle].
+#nudge for aps
+>asp
+[focus-castle].
+#nudge for cure
+>cuer
+[focus-castle].
 
 >spectacular
 Your score has just gone up by one point
