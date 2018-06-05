@@ -16,13 +16,62 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >a5
 >otters
 >in
+
+==t2
+#nudge for citadel
+>citadle
+The whole Citadel? No, you couldn't do much with it at full strength. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
+#nudge for ottre
+>otter
+[not-the-reg].
+#nudge for storet
+>storte
+[not-the-reg].
+#nudge for bleary
+>bleayr
+?? needs a better reject
+#nudge for bare
+>baer
+[adj-needs-ly].
+
+#forceignore
 >barely
 Your score has just gone up by one point
 >l
 Burnt Brunt
 
+==t2
+#nudge for ly
+>yl
+Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if].
+
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
+
+==t2
+#nudge for burtn
+>butnr
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [altname bleary barley]
+#nudge for dune
+>duen
+You can't really shift the dune, but you don't need to.
+#nudge for cinder
+>cindre
+You'll need to change more than one cinder.
+#nudge for lyier
+>lyire
+Ed's full name, please!
+#nudge for reedi
+>reeid
+[adj-needs-ly].
+#nudge for reedy
+>reeyd
+[adj-needs-li].
+
+>increds
+WRONG
+>incresd
+WRONG
 
 ==t1
 >discern ed riley
@@ -36,11 +85,203 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 2 out of 30 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 30.
 
+==t2
+#nudge for cinders
+>cindesr
+The cinders are gone for good.
+#nudge for steward
+>stewadr
+Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
+#nudge for asteward
+>astewadr
+Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
+#nudge for rye
+>rey
+[del-ry].
+#nudge for lied
+>lide
+[del-ry].
+#nudge for sandwich
+>sandwihc
+[del-ry].
+
 >reedily
 Your score has just gone up by one point
 
+==t2
+>plop
+#nudge for bossy
+>bosys
+[adj-needs-li].
+>undo
+#nudge for bossi
+>bosis
+[adj-needs-ly].
+>undo
+#nudge for nasti
+>nasit
+[adj-needs-ly].
+>undo
+#nudge for nasty
+>nasyt
+[adj-needs-li].
+>undo
+#nudge for seedi
+>seeid
+[adj-needs-ly].
+>undo
+#nudge for seedy
+>seeyd
+[adj-needs-li].
+>undo
+#nudge for shadi
+>shaid
+[adj-needs-ly].
+>undo
+#nudge for shady
+>shayd
+[adj-needs-li].
+>undo
+#nudge for snide
+>snied
+[adj-needs-ly].
+>undo
+#nudge for stark
+>stakr
+[adj-needs-ly].
+>undo
+#nudge for tacit
+>tacti
+[adj-needs-ly].
+>undo
+#nudge for catty
+>catyt
+[adj-needs-li].
+>undo
+#nudge for teari
+>teair
+[adj-needs-ly].
+>undo
+#nudge for teary
+>teayr
+[adj-needs-li].
+>undo
+#nudge for bleayr
+>bleary
+[adj-needs-li].
+>undo
+#nudge for bleari
+>bleair
+[adj-needs-ly].
+>undo
+#nudge for ribald
+>ribadl
+[adj-needs-ly].
+>undo
+#nudge for formal
+>formla
+[adj-needs-ly].
+>undo
+#nudge for coital
+>coitla
+[adj-needs-ly].
+>undo
+#nudge for modest
+>modets
+[adj-needs-ly].
+>undo
+#nudge for shabbi
+>shabib
+[adj-needs-ly].
+>undo
+#nudge for shabby
+>shabyb
+[adj-needs-li].
+>undo
+#nudge for shoddi
+>shodid
+[adj-needs-ly].
+>undo
+#nudge for shoddy
+>shodyd
+[adj-needs-li].
+>undo
+#nudge for silent
+>siletn
+[adj-needs-ly].
+>undo
+#nudge for steami
+>steaim
+[adj-needs-ly].
+>undo
+#nudge for steamy
+>steaym
+[adj-needs-li].
+>undo
+#nudge for sudden
+>suddne
+[adj-needs-ly].
+>undo
+#nudge for stupdi
+>stupid
+[adj-needs-ly].
+>undo
+#nudge for martial
+>martila
+[adj-needs-ly].
+>undo
+#nudge for sincere
+>sinceer
+[adj-needs-ly].
+>undo
+#nudge for sobbing
+>sobbign
+[adj-needs-ly].
+>undo
+#nudge for tedious
+>tediosu
+[adj-needs-ly].
+>undo
+#nudge for wearing
+>wearign
+[adj-needs-ly].
+>undo
+#nudge for drawling
+>drawlign
+[adj-needs-ly].
+>undo
+#nudge for emotional
+>emotionla
+[adj-needs-ly].
+>undo
+#nudge for despairing
+>despairign
+[adj-needs-ly].
+>undo
+>undo
+
 >w
 Disowned Downside
+
+==t2
+#nudge for downside
+>downsied
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Disowned Downside]
+#nudge for sample
+>sampel
+[maples-no].
+#nudge for maple
+>mapel
+[maples-no].
+#nudge for mack
+>makc
+If you messed with one mack, the others would gang up on you. Work on the argument, instead.
+#nudge for macks
+>macsk
+Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if].
+#nudge for gretta
+>gretat
+Gretta's been manipulated enough[if macks are visible]. Deal with the macks['] arguments, instead[end if].
 
 >bossily
 Your score has just gone up by one point.
@@ -92,12 +333,61 @@ REGION MIN INCREASED BY 1, 3 OVERALL.
 >n
 Loop Pool
 
+==t2
+#nudge for pool
+>polo
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for allot
+>allto
+You don't need to change it, and the eels might not like it if you did.
+#nudge for wier
+>wire
+The wire weir doesn't need to be changed.
+#nudge for sea
+>sae
+[cube-whole].
+#nudge for cube
+>cueb
+[cube-whole].
+
 >because
 >else
 >misses
 --you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
 >score
 >s
+
+==t2
+#renudge for allot
+>allto
+You already made it there, and you don't need to go back.
+
+==t2
+#nudge for iq
+>qi
+No, it's a combination of what's on both medals.
+#nudge for lucky
+>lucyk
+No, it's a combination of what's on both medals.
+#nudge for medal
+>medla
+It's what the medals say that makes them special.
+#nudge for medals
+>medasl
+It's what the medals say that makes them special.
+
+==t2
+>s
+#nudge for barn
+>banr
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start bran barn]
+#nudge for rev
+>rve
+The whole picture.
+#nudge for howe
+>hoew
+The whole picture.
+>n
 
 ==!1
 >s
@@ -118,6 +408,42 @@ Your score has just gone up by one point
 
 >n
 Shiner Shrine
+
+==t2
+#nudge for shiner
+>shinre
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Shiner Shrine]
+#nudge for simply
+>simpyl
+It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving.
+#nudge for sly
+>syl
+[imp-sly].
+#nudge for imp
+>ipm
+[imp-sly].
+#nudge for averts
+>averst
+You need to focus on HOW the imp averts, vaster.
+#nudge for avert
+>avetr
+You need to focus on HOW the imp averts, vaster.
+#nudge for coma
+>coam
+The coma camo remains as-is. It's sturdy, military-grade stuff
+#nudge for brute
+>bruet
+[add-ly].
+#nudge for angry
+>angyr
+[add-ly].
+#nudge for angri
+>angir
+[add-ly].
+#nudge for enraged
+>enragde
+[add-ly].
+
 
 ==t3
 >brutely
@@ -143,8 +469,31 @@ Your score has just gone up by one point
 >n
 Lamer Realm
 
+#nudge for low
+>lwo
+You probably want the owls not to swoop low. And you'll want to take care of them all.
+
 >slow
 Your score has just gone up by one point
+
+#nudge for lamer
+>lamre
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start lamer realm]
+#nudge for ocelot
+>ocelto
+The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if].
+#nudge for saturnic
+>saturnci
+The curtains are too solid to change.
+#nudge for aturnic
+>aturnci
+Even one curtain is too solid to change.
+#nudge for shades
+>shadse
+You're not here to mess with fashion. Plus, the shades were last game.
+#nudge for clipons
+>cliposn
+The ocelots would still be awkward even if they lost the clip-ons.
 
 >coolest
 Your score has just gone up by one point
@@ -155,6 +504,19 @@ Your score has just gone up by one point
 
 >l
 Blest Belts
+
+#renudge for shades
+>shadse
+You're not here to mess with fashion. Plus, the shades were last game.
+#nudge for kool
+>kolo
+You're not here to mess with fashion.
+#nudge for blest
+>blets
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for belt
+>betl
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 ==!1
 >garbed
@@ -199,6 +561,34 @@ Score in a scenario: 18 out of 30 total points in the current region, Otters. Lo
 >s
 >s
 
+Clarthead Cathedral
+
+==t2
+#nudge for whiner
+>whinre
+[whiney].
+#nudge for whiners
+>whinesr
+[whiney].
+#nudge for cathedral
+>cathedrla
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Clarthead Cathedral]
+#nudge for loathing
+>loathign
+[add-ly].
+#nudge for stoic
+>stoci
+Usually, you'd need to add two letters, but here you'd need to add four.
+#nudge for stoical
+>stoicla
+[add-ly].
+#nudge for terse
+>teres
+[add-ly].
+#renudge for coma
+>coam
+The coma camo remains as-is. It's sturdy, military-grade stuff
+
 ==t3
 >tersely
 >stoically
@@ -229,12 +619,51 @@ Perverse Preserve
 >parrot
 Your score has just gone up by one point
 
+==t2
+#nudge for preserve
+>preserev
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start perverse preserve]
+#nudge for uprate
+>upraet
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for uprates
+>upratse
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for lit
+>lti
+It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
+#nudge for tail
+>tali
+It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
+#nudge for pine
+>pien
+So many pines, hard to pick one. Might as well take care of them all.
+#nudge for nail
+>nali
+So many nails, hard to pick one. Might as well take care of them all.
+#nudge for critters
+>crittesr
+[restrictr].
+#nudge for critter
+>crittre
+[restrictr].
+#nudge for raccoon
+>raccono
+The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important.
+#nudge for throne
+>throen
+There's more than one throne, but it doesn't matter, really, for what you need to do.
+
 >snail
 Your score has just gone up by one point
 >hornets
 Your score has just gone up by one point
 >raccoon
 Your score has just gone up by one point
+
+#renudge for raccoon
+>raccono
+No need to tweak the rac(c)oon again. It's fine as is.
 
 >l
 Uprates Pasture
@@ -284,6 +713,53 @@ Score in a scenario: 25 out of 30 total points in the current region, Otters. Lo
 >w
 Coevals' Alcoves
 
+==t2
+#nudge for monstery
+>monsteyr
+[w-change].
+#nudge for monastery
+>monasteyr
+[w-change].
+#nudge for eelmr
+>eelrm
+[eelmry].
+#nudge for sober
+>sobre
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
+#nudge for bored
+>borde
+[e-m-prank].
+#nudge for bore
+>boer
+[e-m-prank].
+#nudge for scowl
+>scolw
+[e-m-prank].
+#nudge for cowl
+>colw
+[e-m-prank].
+#nudge for alcoves
+>alcovse
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start coevals' alcoves]
+#nudge for alcove
+>alcoev
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for hydra
+>hydar
+You try, but that doesn't do anything with, or to, the hydra to the west.
+#nudge for laminas
+>laminsa
+[no-lam].
+#nudge for lamina
+>lamian
+[no-lam].
+#nudge for forces
+>forcse
+[fresc].
+#nudge for forec
+>force
+[fresc].
+
 ==!1
 >honestly
 Your score has just gone up by one point
@@ -293,6 +769,15 @@ Score in a scenario: 26 out of 30 total points in the current region, Otters. Th
 
 >raptor
 Your score has just gone up by one point
+
+==t2
+#renudge for hydra
+>hydar
+The hydra's toast. Elvira is not. Deal with her.
+#nudge for crone
+>croen
+You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act.
+
 >deeply
 Your score has just gone up by one point
 >quickly
@@ -318,6 +803,56 @@ WRONG (decrease)
 >au 1
 
 >misses
+
+==t2
+#nudge for inclosure
+>inclosuer
+You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help. [start reclusion inclosure]
+#nudge for tripod
+>tripdo
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+#nudge for becharm
+>bechamr
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+#nudge for nacht
+>nacth
+It's annoying and unswayable, like most chants.
+#nudge for stocked
+>stockde
+[no-stockade].
+#nudge for vats
+>vast
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+#nudge for vat
+>vta
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+#nudge for moisture
+>moistuer
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+#nudge for pyre
+>pyer
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+#nudge for stockade
+>stockaed
+[no-stockade].
+#nudge for warship
+>warshpi
+[elv-mach].
+#nudge for amulet
+>amulte
+[one-toy].
+#nudge for ultimate
+>ultimaet
+[one-toy].
+#nudge for shaper
+>shapre
+[one-toy].
+#nudge for purple
+>purpel
+[elv-mach].
+#nudge for oranger
+>orangre
+[elv-mach].
 
 >play whistle
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
