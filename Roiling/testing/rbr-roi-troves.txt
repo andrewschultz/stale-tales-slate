@@ -18,6 +18,53 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 >l
 Loather Rathole
 
+==t3
+#nudge for hurt
+>hutr
+No way you could change even one hurt thru on your own. You just need to get by.
+#nudge for hurts
+>hurst
+No way you could change even one hurt thru on your own. You just need to get by.
+#nudge for rathole
+>reahlot
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+#nudge for poverty
+>pevtryo
+There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details.
+#nudge for troev
+>tevro
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+#nudge for storev
+>tevros
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+#nudge for spoil
+>spilo
+You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
+#nudge for spoiloplis
+>spilospilo
+You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
+#nudge for potholes
+>potholes
+City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
+#nudge for pothole
+>pothole
+City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
+#nudge for pagepage
+>pegagepa
+It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
+#nudge for peg
+>gep
+You pause, then note the author's middle initial, which seems annoyingly important.
+#nudge for egg
+>geg
+It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
+#nudge for pea
+>epa
+It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
+#nudge for cold
+>cldo
+Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat.
+
 >score
 Score in a scenario: 0 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
 
@@ -31,22 +78,88 @@ Score in a scenario: 1 out of 24 total points in the current region, Troves. Low
 Your score has just gone up by one point
 >care
 Your score has just gone up by one point
+
 Bustle Sublet
+
+==t3
+#nudge for bustle
+>subelt
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+#nudge for truffle
+>tuffler
+You can't change the truffle. It can help you change things, though. Or how you see things.
+#nudge for boor
+>broo
+You can't change a whole suburb. Better to change yourself.
+#nudge for grub
+>gurb
+You can't change a whole suburb. Better to change yourself.
+#nudge for messhole
+>messhoel
+A messhole is a messhole. You need to concentrate on thinking your way out.
+#nudge for asidewalk
+>asidewalk
+You can't make the sidewalk crumble any more, and you probably don't want to
+#nudge for sidewalk
+>sidewakl
+You can't make the sidewalk crumble any more, and you probably don't want to
+#nudge for laid
+>lida
+You can't make the sidewalk crumble any more, and you probably don't want to
+#nudge for askew
+>weska
+You can't make the sidewalk crumble any more, and you probably don't want to
+
+==t3
+#nudge for sob
+>sbo
+No, you'll want to zone out the whole verbose distraction.
+#nudge for veer
+>vere
+No, you'll want to zone out the whole verbose distraction.
 
 >observe
 Your score has just gone up by one point
+
+==t3
+#nudge for stop
+>stpo
+You're not seeing the right way to see the stop post, here.
+#nudge for observe
+>obserev
+You're already observing by reflex now. No need to tweak things.
+
 >spot
 Your score has just gone up by one point
+
+Boarded Roadbed
+
+#nudge for roadbed
+>roadbde
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Boarded Roadbed]
+#nudge for live
+>liev
+The bee's description isn't important. It's how you see the bee that matters.
+#nudge for bee
+>bee
+But it's not just any bee. It's a WRONG
 
 ==t0
 >believe
 Your score has just gone up by one point
+=one=3	#renudge for bee\\>bee\\But it's not just any bee. It's a WRONG
 >reason
 Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 24 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 24.
 >undo
 >undo
+
+==t3
+#renudge for bee
+>bee
+But it's not just any bee. It's a WRONG
+
 
 ==t!2
 >believe
@@ -61,6 +174,25 @@ Your score has just gone up by one point
 ==!
 >recall
 
+Drain Nadir
+
+==t3
+#nudge for nadir
+>nadri
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start drain nadir]
+#nudge for pictuer
+>picture
+It's not just any old picture. It's of a sad pier.
+#nudge for spider
+>spidre
+The diapers, the sad pier--the spider only fits in as *a* spider.
+#nudge for sda
+>sad
+It's a sad pier.
+#nudge for pire
+>pier
+It's a sad pier.
+
 ==t1,2
 Score in a scenario: 6 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
 ==!
@@ -68,9 +200,28 @@ Score in a scenario: 8 out of 24 total points in the current region, Troves. Low
 
 >despair
 Your score has just gone up by one point
+
+==t3
+#nudge for song
+>sogn
+It's the song name--I'd Cede.
+#nudge for eddie
+>eddei
+It's the song name--I'd Cede.
+
 >decide
 Your score has just gone up by one point
 Boredom Bedroon
+
+==t3
+#nudge for bedroom
+>bedromo
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start boredom bedroom]
+
+=t3
+#nudge for glare
+>glaer
+You stare into space some more but get distracted.??
 
 ==t0,3
 >glare
@@ -90,6 +241,33 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Browse Bowers
 
+===t3
+#nudge for eder
+>edre
+It's Si Reed's full name.
+#nudge for shmoe
+>shmeo
+The people living in them don't want to change. You can't make them. You need to change something for YOU.
+#nudge for home
+>hoem
+The people living in them don't want to change. You can't make them. You need to change something for YOU.
+#nudge for bower
+>obwer
+You should never need to riff on part of a location name
+#nudge for bowers
+>obwers
+You should never need to riff on part of a location name
+#nudge for rotunda
+>ratundo
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+#nudge for dour
+>duro
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
+#nudge for tan
+>nta
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
+
+
 ==t1,2
 Score in a scenario: 10 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 ==!
@@ -99,6 +277,32 @@ Score in a scenario: 14 out of 24 total points in the current region, Troves. Lo
 Your score has just gone up by one point
 Econ-Cone
 
+==t3
+#nudge for cone
+>coen
+You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
+#nudge for ave
+>aev
+No sense changing them. You must change yourself.
+#nudge for aves
+>avse
+No sense changing them. You must change yourself.
+#nudge for recent
+>recetn
+You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
+#nudge for skyline
+>skylien
+You don't want to mess with the skyline. You want to get in the godlings['] lodgings!
+#nudge for godling
+>godlign
+If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow!
+#nudge for godlings
+>godlinsg
+If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow!
+#nudge for statue
+>stateu
+The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if].
+
 ==t!2
 >aspire
 Your score has just gone up by one point
@@ -107,17 +311,65 @@ Your score has just gone up by one point
 >strive
 Your score has just gone up by one point
 
+==t3
+#nudge for label
+>lable
+It's not the label but what's on it.
+#nudge for bottle
+>bottel
+It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if].
+
 >ponder
 Your score has just gone up by one point
 Upscale Capsule
+
+==t3
+#nudge for upscale
+>upscael
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start upscale capsule]
+#nudge for office
+>offiec
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 ==t1,2
 Score in a scenario: 13 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 ==!
 Score in a scenario: 18 out of 24 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 24.
 
->ignore
+>deserve
 Your score has just gone up by one point
+
+==t3
+#nudge for fief
+>fife
+You should never need to riff on part of a location name.
+#nudge for divorce
+>divorec
+If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
+#nudge for magazine
+>magazien
+It's not just any magazine. It's DIVORCES!
+#nudge for vanity
+>vaniyt
+You really don't need to rearrange the vanity.
+#nudge for lamps
+>lamsp
+You need that light for late-night work sessions.
+#nudge for lamp
+>lapm
+You already did something with a lamp, and you don't need to do anything with the plasm lamps.
+#nudge for shaker
+>shakre
+It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit.
+#nudge for fern
+>fenr
+The fern is mentally, if not physically, unmalleable.
+#nudge for sked
+>skde
+The checklist was built to be especially stable and singular of purpose. So, nothing happens.
+#nudge for likeness
+>likeness
+It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
 
 ==t!2
 >ramble
@@ -133,6 +385,11 @@ Your score has just gone up by one point
 >discover
 Your score has just gone up by one point
 Score in a scenario: 23 out of 24 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 24.
+
+==t3
+#nudge for divorces
+>divorcse
+No! Not another second thinking about that rubbish.
 
 >recant
 Your score has just gone up by one point
