@@ -286,6 +286,8 @@ understand "penrod" as a mistake ("Juvenile children's literature? At a time lik
 
 chapter upscale capsule
 
+understand "ambler" as a mistake ("You see red slightly as the marble Blamer Balmer fails to walk away.") when player is in upscale capsule and Marble Blamer Balmer is in upscale capsule.
+
 understand "fren" as a mistake ("No dog walks along dragging Sebastian in their mouth.") when player is in upscale capsule.
 
 understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is in location of player.
@@ -676,6 +678,8 @@ understand "slated" as a mistake ("You're not sure what the salted deltas could 
 chapter actionless coastlines
 
 understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in actionless coastlines and weirder red wire is in actionless coastlines.
+
+understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
 
 chapter rawest waters
 

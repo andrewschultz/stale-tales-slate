@@ -123,11 +123,13 @@ understand "fire [something] at [something]" as a mistake ("You can either FIRE 
 
 understand "shoot [something] with [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.") when player has shotgun.
 
-chapter random forests
+chapter random forests / softer forest / rest of forest
 
 understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is in location of player.
 
 understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is in location of player.
+
+undertand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is in location of player.
 
 chapter self-id fields
 

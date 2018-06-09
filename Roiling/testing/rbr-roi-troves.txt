@@ -371,6 +371,11 @@ The checklist was built to be especially stable and singular of purpose. So, not
 >likeness
 It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
 
+==t3
+#mistake test for ambler
+>ambler
+You see red slightly as the marble Blamer Balmer fails to walk away.
+
 ==t!2
 >ramble
 Your score has just gone up by one point

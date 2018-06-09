@@ -14261,7 +14261,7 @@ to report-glarers:
 
 chapter sister tressi
 
-Sister Tressi is proper-named vanishing scenery. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling."
+the Sister Tressi Siters are vanishing scenery. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as Blamer Balmer's."
 
 a-text of sister tressi is "RYRYRR". b-text of sister tressi is "RY?Y?R". parse-text of sister tressi is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
 
@@ -14274,11 +14274,11 @@ after fliptoing sister tressi:
 	report-glarers;
 	continue the action;
 
-chapter marble blamer
+chapter marble blamer balmer
 
-Blamer Balmer is proper-named vanishing scenery. description is "A stern looking fellow who is big on personal responsibility. You can READ who created this likeness."
+Marble Blamer Balmer is proper-named vanishing scenery. description is "A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. You can READ who created this marble."
 
-a-text of Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?RRRY". parse-text of blamer balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of Marble Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?R???". parse-text of Marble Blamer Balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
 after fliptoing Blamer Balmer:
 	now sister tressi is LLPish;

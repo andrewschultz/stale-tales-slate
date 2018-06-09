@@ -168,11 +168,22 @@ In fact, the second being a yellow/vowel and not I means it's an E, and thus the
 Also, R is the only possible consonant in slot 1. RE-I--.
 Here we see that slot 3 is S or 3, and slot 5 is S or E. So they're both S, and slot 6 is T.
 RESIST.
-# logic for blamer balmer
-?How do I figure Blamer Balmer?
-Blamer Balmer has just one question mark. So he's not too tough to figure out.
-R?RRRY means that the second slot is a vowel, one of A and L, so A. That means slot 6 is E.
-The red Mr. Beal and LeBram clues should clinch that the verb is RAMBLE.
+# logic for marble blamer balmer
+?How do I figure Blamer Balmer (in marble)?
+Blamer Balmer has a bunch of question marks. And in, say, the final slot, it's odd there's a question mark for just R. So the question marks indicate many conflicts, but it's not too bad. Remember, there are only two possible vowels.
+We know that the A can only occur in one place, because it's eliminated from slots 1 and 3, but the ?'s in 4 and 5 and 6 must be, respectively, one of BM, LE and ER, or the settler would just show red or yellow.
+Therefore, A is in slot 2. Now we can see the possibilities left: (RL)A(BM)(BM)(LE)(ER). That's four possibilities total.
+You can look for the red Mr. Beal and LeBram clues to nail things down.
+Or you can notice there are only four choices: RABMLE, RAMBLE, LABMER, and LAMBER.
+Ramble it is.
+# logic for sister tressi siters
+?How do I figure the Sister Tressi Siters?
+You can get a lot of information from the non-question marks.
+In particular, the two vowels (yellow).
+Slot 2 can't be i, and slot 4 can't be e.
+So we have -E-I--, but then slot 1 can't be S or T, so it's R. Now we just need to figure which slot T is in.
+That is slot 6, since S is not there (siters).
+So we didn't even really need to use the question marks, here, to get RESIST.
 # logic for trance nectar
 ?Finally, what about the Trance Nectar?
 Well, the R??YRR leaves you with a couple possibities for the 2nd/3rd slot. One vowel, one consonant.

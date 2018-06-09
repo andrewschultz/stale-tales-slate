@@ -797,6 +797,12 @@ Staci looks at you curiously. You probably don't need to change her name or inte
 [towersloc].
 >e
 
+==t4
+#mistake test for coatings
+>coatings
+No, Scot Agin doesn't need to change like THAT.
+
+
 >grained
 Your score has just gone up by one point
 >ask agnostic about doctor yow
