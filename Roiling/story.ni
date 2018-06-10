@@ -19862,20 +19862,21 @@ check taking old ice:
 
 book unblest sunbelt
 
-Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if]. Organised ego drains block your way south[if ego drains are reflexive]. You might not be able to step over them, but maybe you could neutralize them[else]Though they're neutralized, you know better than to step over then[end if][tow-dirs]."
+Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. A Shout-So Hut blocks your way south, but you can go any other way. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Unblest Sunbelt]. They're not blocking you, but they do leave you feeling slightly bummed[end if]."
 
 section organised ego drains
 
-the organised ego drains are plural-named LLPish reflexive scenery in Unblest Sunbelt. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
+the organised ego drains are plural-named LLPish vanishing scenery in Unblest Sunbelt. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
 
 a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
 instead of doing something with organised ego drains:
 	if action is procedural, continue the action;
-	say "The ego drains are there, just waiting to mess with your mind. You [if ego drains are reflexed]dealt with them as well as you could[else]may be able to deal with them partially, though[end if]."
+	say "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance."
 
-check going south in unblest sunbelt:
-	say "Not wise to mess with the ego drains, whether or not they're at full power." instead;
+check going south in unblest sunbelt: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those[or][stopping]." instead;
+
+to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]"
 
 book Anemic Cinema
 
