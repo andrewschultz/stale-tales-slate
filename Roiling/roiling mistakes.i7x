@@ -677,9 +677,9 @@ understand "slated" as a mistake ("You're not sure what the salted deltas could 
 
 chapter actionless coastlines
 
-understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in actionless coastlines and weirder red wire is in actionless coastlines.
-
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
+
+understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in actionless coastlines and weirder red wire is in actionless coastlines.
 
 chapter rawest waters
 

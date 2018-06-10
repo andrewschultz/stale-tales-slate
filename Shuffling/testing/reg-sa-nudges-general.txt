@@ -63,8 +63,8 @@ This game usually doesn't require you to mess with cardinal directions
 >eats
 This game usually doesn't require you to mess with cardinal directions
 
-#nudge for wets
->wets
+#nudge for ewts
+>ewts
 This game usually doesn't require you to mess with cardinal directions
 
 #nudge for xyyzz

@@ -315,13 +315,21 @@ maybe, soon, you will
 
 * _forest
 
->sr ne
 >fretso
 That seemed right but didn't seem quite natural.
 You feel a slight psychic push-pull coming from Store F. Keep at it.
 >forest
 Your score has just gone up by one point.
 >fretso
+
+>rs sw
+#mistake test for wets
+>wets
+Getting lost in a swamp would be even worse than getting lost in a forest.
+>undo
+>undo
+
+>sr ne
 
 #xc
 >enter forest
@@ -347,6 +355,10 @@ You need the opposite of a seat, here. But at the same time, you're also very cl
 #mistake test for sate
 >sate
 There's nothing around you have to sate, thankfully.
+
+#mistake test for tase
+>tase
+This game is nonviolent--well, except for a few puns.
 
 >e
 Self-ID Fields

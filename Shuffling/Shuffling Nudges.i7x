@@ -577,7 +577,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "norht"	368976205	--	--	degen-true rule	"[dir-rej]."
 "souht"	416124667	--	--	degen-true rule	"[dir-rej]."
 "eats"	329377911	--	--	degen-true rule	"[dir-rej]."
-"wets"	435124866	--	--	degen-true rule	"[dir-rej]."
+"ewst"	435124866	--	--	degen-true rule	"[dir-rej]."
 "xyyzz"	603425821	--	--	degen-true rule	"[xyzzys]"
 "plugh"	310267606	--	--	degen-true rule	"[xyzzys]"
 "plover"	529927107	--	--	degen-true rule	"[xyzzys]"

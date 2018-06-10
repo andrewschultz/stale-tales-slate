@@ -615,6 +615,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gizmo"	338989896	--	gizmo	--	"[giz-tex]."
 "zomg"	293997050	--	gizmo	--	"[giz-tex]."
 "baldest"	422639744	saltbed	--	--	"[towersloc]." [BALDEST BLASTED SALTBED 1 2]
+"twes"	435124866	Baldest Blasted Saltbed	--	--	"[wets-no]."
+"twe"	338850900	Baldest Blasted Saltbed	--	--	"[wets-no]."
 "pirate"	444886553	--	pirates	--	"[plutry of pirates]Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s."
 "old"	149195505	--	old ice	--	"No, all the old ice."
 "ice"	191804540	--	old ice	--	"No, all the old ice."
@@ -640,7 +642,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unlocked"	522953692	--	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
 "ravages"	453544036	shaven havens	--	--	"[rav-chao]."
 "ravage"	357270070	shaven havens	--	--	"[rav-chao]."
-"unblest"	573436152	sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
+"unblest"	573436152	Unblest Sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
+"hut"	245498124	Unblest Sunbelt	--	--	"[no-hut]."
+"south"	416124667	Unblest Sunbelt	--	--	"[no-hut]."
 "casn"	186374877	--	Nerd-Aid	--	"[nerd-a]."
 "nerd"	303066509	--	Nerd-Aid	--	"[nerd-a]."
 "aid"	68209753	--	Nerd-Aid	--	"[nerd-a]."
@@ -1128,7 +1132,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "norht"	368976205	--	--	degen-true rule	"[dir-rej]."
 "south"	416124667	--	--	degen-true rule	"[dir-rej]."
 "eats"	329377911	--	--	degen-true rule	"[dir-rej]."
-"west"	435124866	--	--	degen-true rule	"[dir-rej]."
+"ewts"	435124866	--	--	degen-true rule	"[dir-rej]."
 "pedanto"	478859078	--	--	degen-true rule	"You don't need to change the pedanto-notepad, except maybe by filling it up with ideas[if-no-pad]."
 "warning"	410853958	--	--	degen-true rule	"You can't change warnings. Warnings are there to protect you. Even offer hints if you read them."
 "gadget"	319332438	--	--	degen-true rule	"[so-last]."
@@ -1656,42 +1660,32 @@ this is the pas-vis rule:
 	if number of visible hintpastries > 0, the rule succeeds;
 	the rule fails;
 
-to say eat-pastry:
-	say "The pastry is for eating, not for changing[if toaster is not visible]. It might be more edible if you heated it up, though[end if]"
+to say eat-pastry: say "The pastry is for eating, not for changing[if toaster is not visible]. It might be more edible if you heated it up, though[end if]"
 
 this is the strood rule:
 	if player has strudel and strudel is reflexed, the rule succeeds;
 	the rule fails;
 
-to say not-singular-hp:
-	say "Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway";
+to say not-singular-hp: say "Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway";
 
-to say cop-sco:
-	say "The copse and the scope are both fine as-is[if yurts are visible], though maybe you can do something about the yurts[end if]"
+to say cop-sco: say "The copse and the scope are both fine as-is[if yurts are visible], though maybe you can do something about the yurts[end if]"
 
-to say gosh-camp:
-	say "Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything"
+to say gosh-camp: say "Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything"
 
-to say plutry of (pg - a guardian):
-	now pg is plurtry;
+to say plutry of (pg - a guardian): now pg is plurtry;
 
-to say wait-see:
-	say "The wait-seer shrugs patiently, unfazed you did not understand his full being. It is probably your inconvenience and not his";
+to say wait-see: say "The wait-seer shrugs patiently, unfazed you did not understand his full being. It is probably your inconvenience and not his";
 
 to say no-fril:
 	say "The saver is hopelessly no-frills. It'll never be anything better. But [if saver is reflexed]you made it look a bit nicer[else if saver is attempted]you might've been onto something looking at its brand name[else]maybe you could revisit its brand name to make it look nicer[end if]. Not that looks matter"
 
-to say reed-name:
-	say "No, [el-la-f]'s full name. With Reed's Ale"
+to say reed-name: say "No, [el-la-f]'s full name. With Reed's Ale"
 
-to say reed-ale:
-	say "Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale"
+to say reed-ale: say "Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale"
 
-to say ego-dr:
-	say "Until you see the ego-drains themselves as organised, you probably won't see how to get past them"
+to say ego-dr: say "Until you see the ego-drains themselves as organised, you probably won't see how to get past them"
 
-to say gasgad:
-	say "You can't change the gadflies. There are too many"
+to say gasgad: say "You can't change the gadflies. There are too many"
 
 this is the duck-cant rule:
 	if player is not in subsector and location of duck is location of player, the rule succeeds;
@@ -1700,29 +1694,24 @@ this is the duck-cant rule:
 to say no-ropin:
 	say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open[end if]";
 
-to say could-cloud:
-	say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form"
+to say could-cloud: say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form"
 
-to say ray-part:
-	say "You can't do much with either part of Ray's name. Plus he has that keycar"
+to say ray-part: say "You can't do much with either part of Ray's name. Plus he has that keycar"
 
-to say out-rou:
-	say "Changing the direction or the composition of the trail won't do anything"
+to say out-rou: say "Changing the direction or the composition of the trail won't do anything"
 
-to say shoaly:
-	say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
+to say shoaly: say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
 
-to say rav-chao:
-	say "The ravages are chaotic enough. Changing them is a fight you'd lose"
+to say rav-chao: say "The ravages are chaotic enough. Changing them is a fight you'd lose"
 
-to say nerd-a:
-	say "Concentrate on the Nerd-Aid. In the dandier arid den"
+to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it"
+
+to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
 to say gradient-rej:
 	say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are in lalaland and denim is in lalaland]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
 
-to say grail-name:
-	say "His full name, Liam Garn"
+to say grail-name: say "His full name, Liam Garn"
 
 this is the see-female-admirer rule:
 	if player is female and admirer is visible, the rule succeeds;
@@ -1736,8 +1725,7 @@ this is the agnostic-can-learn rule:
 	if player is in subsector and agnostic is in subsector and ag-atten is true, the rule succeeds;
 	the rule fails.
 
-to say smart-agnostic-no:
-	say "[agnostic-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";
+to say smart-agnostic-no: say "[agnostic-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";
 
 this is the agnostic-male rule:
 	if agnostic is visible and agnostic is male, the rule succeeds;
@@ -1747,8 +1735,9 @@ this is the agnostic-female rule:
 	if agnostic is visible and agnostic is female, the rule succeeds;
 	the rule fails;
 
-to say giz-tex:
-	say "It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better"
+to say giz-tex: say "It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better"
+
+to say wets-no: say "You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future"
 
 to say fix-boat-parts:
 	say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";

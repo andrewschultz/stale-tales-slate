@@ -129,7 +129,9 @@ understand "sate" as a mistake ("There's nothing around you have to sate, thankf
 
 understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is in location of player.
 
-undertand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is in location of player.
+understand "tase" as a mistake ("This game is nonviolent--well, except for a few puns.") when teas is in location of player.
+
+understand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is in location of player.
 
 chapter self-id fields
 

@@ -93,8 +93,8 @@ Your compass feels extra jumbled, but--well, you must be close.
 >whffi
 No, that's not the essence of the thing.
 
-#nudge for west
->wets
+#nudge for ewst
+>ewst
 Your compass feels extra jumbled, but--well, you must be close.
 
 >w

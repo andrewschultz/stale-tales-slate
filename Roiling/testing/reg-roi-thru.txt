@@ -1304,6 +1304,10 @@ Adding a min point
 >mastre
 The stream has nurtured you spiritually. The lobster nurtured you physically. Time to move on.
 
+#mistake test for ambler
+>ambler
+You see red slightly as the marble Blamer Balmer fails to walk away.
+
 >decied
 You try to groove to Eddie's song, but that's not quite it.
 >decide
@@ -3228,6 +3232,11 @@ You don't need to repurpose the repair machine. It's done enough for you.
 >e
 >n
 >n
+
+#mistake test for coatings
+>coatings
+No, Scot Agin doesn't need to change like THAT.
+
 >give gizmo to kid
 "Wow! That'd be neat if I had something to build."
 
