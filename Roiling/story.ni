@@ -4746,7 +4746,7 @@ carry out requesting the score:
 		say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
 		if dome-score-not is false:
-			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee?";
+			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee? Or Greaten-Grantee?";
 			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true:
@@ -13723,7 +13723,7 @@ after looking in bustle sublet:
 
 section reastier arteries
 
-the reastier arteries are bounding scenery in Bustle Sublet. "They lead other places even worse, more likely. You need to focus on what to do here."
+the reastier arteries are plural-named bounding scenery in Bustle Sublet. "They lead other places even worse, more likely. You need to focus on what to do here."
 
 instead of doing something with reastier arteries:
 	if action is procedural, continue the action;
@@ -14052,7 +14052,7 @@ after fliptoing ltb:
 
 chapter shmoe homes
 
-the shmoe homes are bounding scenery in Browse Bowers. "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!"
+the shmoe homes are plural-named bounding scenery in Browse Bowers. "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!"
 
 instead of doing something with shmoe homes:
 	if action is procedural, continue the action;
@@ -14090,7 +14090,7 @@ Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've
 
 understand "econ-cone" as Econ Cone.
 
-save aves are bounding scenery in Econ Cone. "They lead out every way to less affluent and powerful places."
+the save aves are plural-named bounding scenery in Econ Cone. "They lead out every way to less affluent and powerful places."
 
 instead of doing something with save aves:
 	if action is procedural, continue the action;
@@ -19841,7 +19841,15 @@ Baldest Blasted Saltbed is north of Scope Copse. "This is a dreary place that do
 Baldest Blasted Saltbed is in Towers.
 
 check going west in Baldest Blasted Saltbed:
-	say "[if old ice is reflexed]Even though you made it look cooler, t[else]T[end if]he old ice is in the way[if old ice is reflexive], but maybe you could prettify it a bit[end if]." instead;
+	say "The stew wets are way too dangerous. But any other way is okay." instead;
+
+section stew wets (west)
+
+the stew wets are scenery in Baldest Blasted Saltbed. "The stew wets are just another bit of treacherous terrain that help prevent your journey from being more expansive than it already has been."
+
+instead of doing something with stew wets:
+	if action is procuedural, continue the action;
+	say "[wets-no]."
 
 section docile old ice
 
@@ -23311,7 +23319,7 @@ printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[en
 
 understand "blest/belts" and "blest belts" as Lamer Realm when adjsolve >= 3.
 
-the saturnic curtains are bounding scenery in Lamer Realm. "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place[if adjsolve >= 3] and my even provide a safeguard for the animals you rescued[end if]."
+the saturnic curtains are plural-named bounding scenery in Lamer Realm. "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place[if adjsolve >= 3] and my even provide a safeguard for the animals you rescued[end if]."
 
 instead of doing something with saturnic curtains:
 	if action is procedural, continue the action;
@@ -25950,7 +25958,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
 	if spoilit is false:
 		d "[noun] hinting.";
-	if noun is bounding, say "That's there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
+	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is a room:
 		say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
 	if noun is a fruit and player has noun, say "[frootz]" instead;

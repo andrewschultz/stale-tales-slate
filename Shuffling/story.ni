@@ -9256,7 +9256,7 @@ check going nowhere in potshot hotspot: say "The only way you want to try to go 
 
 section roman manors
 
-ransom manors are bounding scenery in Potshot Hotspot. "They're off to the east. Your Means Manse must be there somewhere. You'll probably find it with a bit of exploration[if red bull burdell is not moot]. But first, you need to deal with the distraction at hand[end if]."
+ransom manors are plural-named bounding scenery in Potshot Hotspot. "They're off to the east. Your Means Manse must be there somewhere. You'll probably find it with a bit of exploration[if red bull burdell is not moot]. But first, you need to deal with the distraction at hand[end if]."
 
 instead of entering ransom manors: try going east instead.
 
