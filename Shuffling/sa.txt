@@ -1,6 +1,7 @@
 out=shuffling-invisiclues.htm
 !Shuffling Around HTML Clues
 ->c:/games/inform/shuffling Materials/Release
+==endheader
 >INTRODUCTION
 ?What is my power in this game?
 Does the name of this opening room strike you as curious?
@@ -84,7 +85,8 @@ It gives you another example puzzle.
 AT---S are what you change the static to.
 There are actually only four possibilities left. You can brute force this.
 You can flip the ATTICS back, too, to get comfortable with the gadget.
->TRIPS STRIP
+>STORES
+>>TRIPS STRIP
 ?Oh no! I broke my leg and now it's in a cast! Plus I'm lonely.
 You could use some companionship.
 If only there was a way to change the cast.
@@ -109,18 +111,23 @@ METROS.
 ?Store R?
 You can't do anything with it right away.
 It can become a RESORT once you've solved two stores--three if you SECUREd the gadget.
->The cabinet is back! Can I do anything with/to it?
+?The cabinet is back! Can I do anything with/to it?
 It's a sort of obscure last point.
 It could be an animal. A nice one.
 Specifically, a NICE BAT.
 >STORE F
->>Forest
+>>SOFTER FOREST
 ?How do I go anywhere?
 There'll be some scenery, or something you notice.
 You can use that to determine what direction to go. It's random in each play-through.
 Or you can just find your way by accident. This wasn't intended to be a tough puzzle.
 If you smell stew, go WEST. Teas, go EAST. If you hear a shout, go SOUTH. If you see a thorn, go NORTH.
 After the Softer Forest, there's one more room with a similar plan.
+>>REST OF FOREST
+?Is this different from the softer forest?
+Well, you won't get the same direction twice.
+But the same logic applies.
+There'll be something else random that tells you what direction to go.
 >>Self-ID Fields
 ?How do I get through Corses Crosse?
 You need a disguise.
@@ -153,7 +160,7 @@ The bread looks scuzzy.
 It becomes a BEARD.
 The spam has weird lines.
 Because it can be MAPS.
->>Cruel Ones' Enclosures
+>>CRUEL ONES' ENCLOSURE
 ?The liches are scary! What do I do?
 Look at them. They may clue a word.
 They become a CHISEL.
@@ -193,10 +200,12 @@ It must have an X, and two of (NSEW).
 SIXTEEN.
 ?The room name changed! Does this mean anything?
 Only that there's not much else to do here.
-?Help! I'm locked in the nick!
+>>THE NICK
+?Oh no! How do I get out?
+There's graffiti, etc., all around that points to an anagram with CEHIKNT.
 You hungry for a new location?
 KITCHEN.
->>After escaping The Nick
+>>AFTER ESCAPING THE NICK
 ?What do I do here in the Kitchen?
 You need to make something warm.
 The ingredients are on the counter.
@@ -253,7 +262,7 @@ Once you have hay, PUT HAY IN WALL
 Then, HALLWAY.
 ?Help! The location name changed!
 That's because you're done to the east.
->>Beyond the Room
+>>BEYOND THE ROOM
 ?How do I get rid of the poet?
 Everything is in ANAPEST.
 ST. PAEAN is his latest work.
@@ -338,7 +347,7 @@ If you give him the emitter, he fills it with angst gnats.
 ?What does the lost corn become?
 It's from SlorntCo, and it looks high-tech.
 CONTROLS.
->>Bile Libe
+>>BILE LIBE
 ?What do I do with a motto?
 It is a motto, not the motto, after all. It advertises itself as such.
 TOMATO.
@@ -357,7 +366,7 @@ It's useful to lower property values.
 ?What do I do with the Night Thing?
 The bottle of ketchup is a clue.
 THROW TOMATO AT THING.
->>Cordoned Red Condo
+>>OBTAINS BOASTIN BASTION
 ?Do I need the dry cake?
 Yes, but you need to get rid of people.
 ?Can I go anywhere else?

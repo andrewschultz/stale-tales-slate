@@ -336,19 +336,19 @@ understand "stent" as a mistake ("Medical procedures aren't necessary here. The 
 
 understand "tang" and "tangs" as a mistake ("How the angst gnats taste doesn't matter.") when emitter is angstgnatted.
 
-chapter Obtains Boastin Bastion
+chapter Obtains Boastin' Bastion
 
-understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.") when player is in Obtains Boastin Bastion and talkers are in Obtains Boastin Bastion.
+understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.") when player is in Obtains Boastin' Bastion and talkers are in Obtains Boastin' Bastion.
 
-chapter Fo Real Florae
+chapter Fo' Real Florae
 
 understand "gab" as a mistake ("That's not a powerful enough noise to fight the beats.") when player has noise bag.
 
-understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that.") when player is in Fo Real Florae.
+understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that.") when player is in Fo' Real Florae.
 
-understand "recount" as a mistake ("The faeries aren't interested in what you've done so far, only what you can do.") when player is in Fo Real Florae.
+understand "recount" as a mistake ("The faeries aren't interested in what you've done so far, only what you can do.") when player is in Fo' Real Florae.
 
-understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when player is in Fo Real Florae.
+understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when player is in Fo' Real Florae.
 
 chapter tramline terminal
 

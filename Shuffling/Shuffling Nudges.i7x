@@ -397,13 +397,13 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "mitten"	512001652	--	velcro	--	"[mits-are]."
 "mittens"	608275618	--	velcro	--	"[mits-are]."
 "library"	412420266	Roarings Garrison	--	--	"The library could use renovation, but that's out of the scope of your quest, now."
-"boastin"	408243638	Obtains Boastin Bastion	--	--	"[loc-rej]." [boastin-obtains bastion]
-"obtain"	311969672	Obtains Boastin Bastion	--	--	"[loc-rej]."
-"candelabra"	400868292	Obtains Boastin Bastion	--	--	"Interior decorating is not your strength."
-"carpets"	515173258	Obtains Boastin Bastion	--	--	"Interior decorating is not your strength."
-"carpet"	418899292	Obtains Boastin Bastion	--	--	"Interior decorating is not your strength."
-"talkers"	521448731	Obtains Boastin Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
-"talker"	425174765	Obtains Boastin Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
+"boastin"	408243638	Obtains Boastin' Bastion	--	--	"[loc-rej]." [boastin-obtains bastion]
+"obtain"	311969672	Obtains Boastin' Bastion	--	--	"[loc-rej]."
+"candelabra"	400868292	Obtains Boastin' Bastion	--	--	"Interior decorating is not your strength."
+"carpets"	515173258	Obtains Boastin' Bastion	--	--	"Interior decorating is not your strength."
+"carpet"	418899292	Obtains Boastin' Bastion	--	--	"Interior decorating is not your strength."
+"talkers"	521448731	Obtains Boastin' Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
+"talker"	425174765	Obtains Boastin' Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
 "caek"	201932690	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "rental"	441149095	--	antlers	--	"One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers."
@@ -425,15 +425,15 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "bump"	269065824	--	bump	--	"Just search the bump instead."
 "motto"	419000343	--	motto	--	"It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it."
 "potaot"	438578967	--	motto	--	"The author twisted words enough. Perhaps you could concentrate on the motto."
-"florae"	369999042	Fo Real Florae	--	--	"some text"
-"real"	269131569	Fo Real Florae	--	--	"some text"
-"fare"	241832626	Fo Real Florae	--	--	"some text"
-"fairies"	428092284	Fo Real Florae	--	--	"They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them."
-"flower"	475745997	Fo Real Florae	--	--	"[loc-rej]."
-"fairy"	281378615	Fo Real Florae	--	--	"The faeries would mangle you back worse."
-"faery"	364191878	Fo Real Florae	--	--	"The faeries would mangle you back worse."
-"trounce"	583611407	Fo Real Florae	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
-"faeries"	510905547	Fo Real Florae	--	--	"They could CERTAINLY out-magic you back, even if anagramming could have an effect on them."
+"florae"	369999042	Fo' Real Florae	--	--	"some text"
+"real"	269131569	Fo' Real Florae	--	--	"some text"
+"fare"	241832626	Fo' Real Florae	--	--	"some text"
+"fairies"	428092284	Fo' Real Florae	--	--	"They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them."
+"flower"	475745997	Fo' Real Florae	--	--	"[loc-rej]."
+"fairy"	281378615	Fo' Real Florae	--	--	"The faeries would mangle you back worse."
+"faery"	364191878	Fo' Real Florae	--	--	"The faeries would mangle you back worse."
+"trounce"	583611407	Fo' Real Florae	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
+"faeries"	510905547	Fo' Real Florae	--	--	"They could CERTAINLY out-magic you back, even if anagramming could have an effect on them."
 "heath"	307668543	--	heaths	--	"[if player does not have heaths]Probably best not to do stuff to even one heath while the faeries have them[else]They are multiple heaths--so you should try to change just one[end if]."
 "stems"	487539212	--	heaths	--	"Deal with the whole flower, not just the stems."
 "begonia"	369265465	--	begonias	--	"[if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
@@ -880,7 +880,7 @@ to say aligns-no:
 	say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
 
 to say drivwy:
-	say "[if dry cake is in Obtains Boastin Bastion]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
+	say "[if dry cake is in Obtains Boastin' Bastion]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
 
 to say harp-annoy:
 	say "The harps are kind of annoying, but they've got nothing on the beats"
@@ -896,7 +896,7 @@ to say mits-are:
 	say "The mittens are as comfortable as they're going to be"
 
 this is the no-beats rule:
-	if player is in anti-cool location or player is in Obtains Boastin Bastion, the rule succeeds;
+	if player is in anti-cool location or player is in Obtains Boastin' Bastion, the rule succeeds;
 	the rule fails;
 
 this is the resin-lala rule:
