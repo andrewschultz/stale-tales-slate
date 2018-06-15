@@ -1,4 +1,4 @@
-files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudges.txt,reg-roi2-otters-altpath.txt
+files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt,reg-roi2-otters-altpath.txt
 
 ## *FILE
 

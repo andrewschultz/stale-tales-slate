@@ -4,7 +4,7 @@
 #
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
-files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudges.txt
+files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt
 
 ## *FILE
 
@@ -101,10 +101,18 @@ Nothing happens. Perhaps it's the whole item that's important.
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
+==t2
+#spechelp for moss cap
+>compssa
+The cap itches for a bit, then seems to try to spin you around.
+
 >compass
 Your score has just gone up by one point.
 
 ==t2
+#done rejects for compass
+>compssa
+If you changed the compass, it might wind up pointing in the wrong direction.
 #renudge for arbored
 >aborder
 Bad idea to ruin such life-giving scenery--the only way is north

@@ -366,7 +366,7 @@ It's useful to lower property values.
 ?What do I do with the Night Thing?
 The bottle of ketchup is a clue.
 THROW TOMATO AT THING.
->>OBTAINS BOASTIN BASTION
+>>OBTAINS BOASTIN' BASTION
 ?Do I need the dry cake?
 Yes, but you need to get rid of people.
 ?Can I go anywhere else?

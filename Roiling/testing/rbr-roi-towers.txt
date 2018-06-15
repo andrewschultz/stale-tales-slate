@@ -1,4 +1,4 @@
-files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudges.txt
+files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudmis.txt
 
 ## *FILE
 

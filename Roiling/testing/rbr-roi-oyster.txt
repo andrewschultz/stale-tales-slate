@@ -1,4 +1,4 @@
-files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudges.txt
+files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudmis.txt
 
 ## *FILE
 

@@ -5788,11 +5788,9 @@ understand "glop" and "glob" as livers.
 
 chapter Gnarliest Triangles
 
-Gnarliest Triangles is east of Self-ID Fields. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
+Gnarliest Triangles is east of Self-ID Fields. Gnarliest Triangles is in Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
 
 check going nowhere in gnarliest triangles: say "You don't need an alert sign to know running into the walls any direction but east would cause a real sting." instead;
-
-Gnarliest Triangles is in Forest.
 
 to decide whether still-need-in-triangles:
 	if ones are in bucket, yes;
@@ -7648,7 +7646,7 @@ understand "senser" as sensor.
 
 chapter Roarings Garrison
 
-Roarings Garrison is north of Underside. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin' Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin' Bastion].[paragraph break]A cordoned red condois north[else].[paragraph break]The Obtains Boastin['] Bastion you're not welcome back at is to the north[end if]. You hear painful music.". Roarings Garrison is in Metros.
+Roarings Garrison is north of Underside.  Roarings Garrison is in Metros. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin' Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin' Bastion].[paragraph break]A cordoned red condois north[else].[paragraph break]The Obtains Boastin['] Bastion you're not welcome back at is to the north[end if]. You hear painful music.".
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -8135,11 +8133,9 @@ check inserting barcode into keycard: try putting barcode on keycard instead.
 
 chapter Fo' Real Florae
 
-Fo' Real Florae is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp."
+Fo' Real Florae is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp.". Fo' Real Florae is in Metros.
 
 printed name of Fo' Real Florae is "Fo['] Real Florae Fare, Lo"
-
-Fo' Real Florae is in Metros.
 
 check going to Fo' Real Florae for the first time: say "'Main goal, magnolia... what low serf seeks for all floral?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'".
 
@@ -8695,9 +8691,7 @@ chapter Elm Train Terminal
 
 to say if-piggy: say "[if neon pig is visible]neon pig embedded in the wall seems even sillier[else if controls are in op]controls are working nicely in the opening you made[else]empty opening you made needs something to fit[end if][run paragraph on]"
 
-Elm Train Terminal is south of Undesired Underside. "You're in a disused train station with, err, min-alert customer service[one of], but at least the stop's labeled ELM, so you finally know what street you're on[or][stopping][if power-shut is false]. It's a bit dark, but not as bad as below, where noise seems to be echoing[else]. The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should strain for the darkness below, with more rats in than trains.[paragraph break]You could go back north, [if player is on fuzzy looking wall]though you may need to get off the wall[pigcon] first[else]and there's a fuzzy looking wall you can climb, and a scrolling display reads PA'S PSA[if-fade], but the [if-piggy][end if]. A rail is to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]."
-
-Elm Train is in Metros.
+Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station with, err, min-alert customer service[one of], but at least the stop's labeled ELM, so you finally know what street you're on[or][stopping][if power-shut is false]. It's a bit dark, but not as bad as below, where noise seems to be echoing[else]. The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should strain for the darkness below, with more rats in than trains.[paragraph break]You could go back north, [if player is on fuzzy looking wall]though you may need to get off the wall[pigcon] first[else]and there's a fuzzy looking wall you can climb, and a scrolling display reads PA'S PSA[if-fade], but the [if-piggy][end if]. A rail is to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]."
 
 to say if-fade: say "[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]"
 

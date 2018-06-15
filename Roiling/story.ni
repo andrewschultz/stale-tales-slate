@@ -26,7 +26,7 @@ TNW = messages for "you can't go that way"
 TRE = table of readables
 TSX  = differences between sexes
 TSH = table of spechelp, so you can see the specialized help for an item
-TDR = table of donereject, which gives specialized responses for if you try to flip something that doesn't need it any more
+TDR = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it any more
 TQT = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 TCO = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT = dome tables, text from Demo Dome section
@@ -4160,7 +4160,6 @@ Wade	"Wade's eyes get bigger for a second."
 Sir Rodney	"Rodney looks around, as if he is sick of this place."
 diners	"The diners glare at you, then look up at the sky, slightly worried."
 pirates	"The pirates blanch a bit but quickly regain their swagger."
-serpent	"The serpent shakes its head and tail a bit."
 Mel Fish	"Mel Fish mutters, 'No, that's not how to be me. Gotta be something simple and plain.'"
 fluster self rut	"You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will."
 strudel	"You almost expect the strudel to hop up[if player does not have strudel] into your arms[end if], but the moment passes."
@@ -4337,7 +4336,7 @@ doublewarn is a truth state that varies.
 to say them-that of (tt - a thing):
 	say "[if tt is a female person]her[else if tt is a neuter person]it[else if tt is a person]him[else]that[end if]";
 
-table of donereject [TDR - this can use a lot more entries]
+table of done rejects [TDR - this can use a lot more entries]
 specdone	spectalk
 lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
 painting	"The painting really goes better with the study than the giant pin."
@@ -4420,11 +4419,10 @@ wipes	"Now that you've got the wipes, you need to find how to use them construct
 crate	"Besides identifying it as a rect, you can't do much else with the crate."
 knob	"You should leave the knob to b'n OK."
 bogus-plains	"You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on."
-waste	"The tubs already got broken up."
+waste	"The heaps are still technically waste, but you cleaned them up enough."
 lance	"Your work turned up enough."
 rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
-waste	"The heaps are still technically waste, but you cleaned them up enough."
 a-s	"Further searching proves fruitless."
 a-p	"You discovered the portal. No need to look further."
 ruby	"You already did in the wrap."
@@ -4483,7 +4481,7 @@ to say just-c:
 	say "Just return the fruit to Curtis. No need for another change"
 
 to say good-enuf of (goody - a thing):
-	repeat through table of donereject:
+	repeat through table of done rejects:
 		if goody is specdone entry:
 			if there is no spectalk entry:
 				say "[generic-reject]";
@@ -4507,7 +4505,7 @@ to say good-enuf of (goody - a thing):
 	if goody is ram1 or goody is ram2 or goody is ram3:
 		say "The whiners were already slowed up that way.";
 		continue the action;
-	d "The table of donereject could use a lot more entries, like here for the [goody]. Search for TDR in the source.";
+	d "The table of done rejects could use a lot more entries, like here for the [goody]. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.[no line break]";
 
 firstwordhash is a number that varies.
@@ -8661,7 +8659,7 @@ check fliptoing (this is the check ending flip rule):
 section check and carry out rules
 
 to print-the-from (frm - a thing):
-	repeat through table of donereject:
+	repeat through table of done rejects:
 		if frm is specdone entry:
 			say "[spectalk entry][line break]";
 			continue the action;
@@ -29767,11 +29765,11 @@ to rej-analyze (x - a thing):
 	let y be the-to entry;
 	unless x is an xtrhelp listed in table of spechelp:
 		say "Whoops, [x] could also be in table of spechelp, to [y].";
-	unless x is a specdone listed in table of donereject:
+	unless x is a specdone listed in table of done rejects:
 		if x is reflexive:
-			say "Strong possibility: [x] could also be in table of donereject, to [y].";
+			say "Strong possibility: [x] could also be in table of done rejects, to [y].";
 		else if x is not vanishing:
-			say "Weak possibility: [x] could also be in table of donereject, to [y].";
+			say "Weak possibility: [x] could also be in table of done rejects, to [y].";
 
 chapter deprefing
 
