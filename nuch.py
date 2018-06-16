@@ -12,6 +12,7 @@ from collections import defaultdict
 from itertools import permutations
 
 nudge_text = defaultdict(str)
+nudge_proj = defaultdict(str)
 
 import os
 import re
@@ -19,13 +20,17 @@ import sys
 
 pattern = ''
 
-write_to_file = False
-flag_double_comments = False
-
 err_string = ""
+html_string = ""
 
 count = 1
+
+#cmd line options
+use_html = False
+launch_html = False
 max_errs = 50
+write_to_file = False
+flag_double_comments = False
 
 def poss_tweak(a):
     if 'locname' in a:
@@ -35,9 +40,10 @@ def poss_tweak(a):
 
 def usage():
     print("-m# = max errors per region")
-    print("-w = write to file (reg/rbr => prereg/prerbr at start)")
-    print("-d = flag double comments")
-    print("p= = suggest file pattern")
+    print("-w  = write to file (reg/rbr => prereg/prerbr at start)")
+    print("-d  = flag double comments")
+    print("p=  = suggest file pattern")
+    print("-h  = create HTML file and (with -l) launch it")
 
 while count < len(sys.argv):
     arg = sys.argv[count].lower()
@@ -51,6 +57,10 @@ while count < len(sys.argv):
         flag_double_comments = True
         print('Flagging double comments')
     elif arg[:2] == 'p=': pattern = arg[2:]
+    elif arg == 'h': use_html = True
+    elif arg == 'hl' or arg == 'lh':
+        use_html = True
+        launch_html = True
     else:
         print("Unrecognized command", arg)
         usage()
@@ -68,7 +78,8 @@ with open("c:/writing/scripts/nuch.txt") as file:
         if len(lary) < 3:
             print("Badly formed line", line, 'has', len(lary), 'tab columns, should have 3')
             exit()
-        nudge_files[lary[1] + '-' + lary[0]] = "c:/games/inform/%s.inform/source/%s" % (lary[1], lary[2])
+        nudge_files[lary[1] + '-' + lary[0]] = "c:/games/inform/{:s}.inform/source/{:s}".format(lary[1], lary[2])
+        nudge_proj[lary[2]] = lary[1]
 
 cmd_tries = defaultdict(dict)
 got_nudges = defaultdict(dict)
@@ -122,6 +133,8 @@ def int_wo_space(i):
     return int(re.sub(" .*", "", i))
 
 def poke_nudge_files(gm):
+    global err_string
+    global html_string
     tn = re.sub(".*table of", "table of", gm)
     count = 0
     count2 = 0
@@ -196,7 +209,7 @@ def poke_nudge_files(gm):
                     continue
             c2 = 'Branch file line(s) ' + ' '.join([str(int(a)) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'Nudge file line ' + str(cmd_tries[gm][j])
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, c2))
-    global err_string
+            html_string += "<tr><td>{:s}<td>{:s}<td>need #nudge for {:s}<td>{:s}</tr>".format(nudge_proj[short], short, j, c2)
     if count2 > 0:
         err_string = "{:s}\n{:s}/{:s} had {:d} total errors: {:d} to add, {:d} excess nudges, {:d} duplicate nudges, {:d} bad renudges.".format(err_string, tn, short_file, count2, to_add, excess_nudges, dupe_nudges, renudges)
     for y in nudge_add.keys():
@@ -244,3 +257,16 @@ for q in nudge_files.keys():
 if err_string != "":
     print("Error summary:", err_string)
 #dupnudge should be implemented (?)
+
+if use_html:
+    if html_string:
+        html_file = "c:\writing\scripts\sts-nudge-summary.htm"
+        f = open(html_file, "w")
+        f.write("<html>\n<title>Nudge stuff</title>\n<body>\n<table border=1>\n")
+        f.write(html_string)
+        f.write("</table>\n</body>\n</html>")
+        f.close()
+        if launch_html:
+            os.system(html_file)
+    else:
+        print("EVERYTHING PASSED! No need to launch HTML file.")
