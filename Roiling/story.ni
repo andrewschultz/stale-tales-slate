@@ -21675,7 +21675,13 @@ to shuffle-guardians (goner - a guardian):
 			now G is blockdir entry;
 		else:
 			now G is opposite of blockdir entry;
-		now  MR is the room G of location of player;
+		now MR is the room G of location of player;
+		if MR is salted deltas:
+			now strati strait is tower-accessible;
+			now strati strait is accessible;
+		if MR is strati strait:
+			now salted deltas is tower-accessible;
+			now salted deltas is accessible;
 	now goner is prodded;
 	if goner is dreads adders:
 		now topside is accessible;
@@ -21723,26 +21729,22 @@ to shuffle-guardians (goner - a guardian):
 			say "Well, this is the first place you cleared all the guardians from, which feels nice. [if spec-o-scope is unexamined]You don't know if you need any area completely cleared, but maybe you can check the scope[bak-copse] for more guidance[end if].";
 		else if number of guardians not in lalaland is 0:
 			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. To the other side of the lake.";
-		else if number of tower-accessible rooms is 11:
+		else if number of tower-accessible rooms is 12: [the grid + outer route + shaven havens + obscurest subsector] [?? this is not quite correct. If we clear the stinger/admirer/butlers last, we could have gotten everything. However, it is impossible to clear a red/blue guardian and get all rooms accessible in one swoop. That's because the grid squares each have more than one way to get there.]
 			if clear-warn is false:
 				say "You can move everywhere, now, but maybe you can clear a few more passages, if you want.";
 				now clear-warn is true;
-		else if number of tower-accessible rooms >= 9:
+		else if number of tower-accessible rooms >= 10:
 			say "You probably don't have much left to do, to get everywhere you need.";
 	continue the action;
 
 to decide which number is gua-to-clear:
 	let temp be 0;
-	if blasted saltbed is not accessible and sunbelt is not accessible, decide on 5;
-	if Treading Gradient is not accessible, increment temp;
-	if anemic cinema is not accessible:
-		increment temp;
-		if blasted saltbed is not accessible and salted deltas are not accessible and Strati Strait is accessible, increment temp;
-	if danger garden is not accessible:
-		increment temp;
-		if unblest sunbelt is not accessible and Strati Strait is not accessible and salted deltas are accessible, increment temp;
-	if salted deltas are not accessible and Strati Strait is not accessible, increment temp;
-	decide on temp.
+	if blasted saltbed is not accessible and sunbelt is not accessible, decide on 5; [1]
+	if Treading Gradient is not accessible, increment temp; [2]
+	if anemic cinema is not accessible, increment temp; [3]
+	if danger garden is not accessible, increment temp; [4]
+	if salted deltas are not accessible and Strati Strait is not accessible, increment temp; [5]
+	decide on temp. [ the proof of this is straightforward: we need a path (deleted guardian) to get to the each corner. For the NE, either strait/deltas is ok since we must clear the hostile and the atheists. We also need to get by the scope copse. Therefore we have 5 separate areas to link up: x+y=0, y=2, x=2, x=1 y=1, x+y=3. This is necessary/sufficient as anything in part 2-3-4 is 1 away from part 5. So if 5 is accessible, anything undone is 1 away from it. If 5 is not accessible, then it is 1 away from something done (except 1, in which case we just see the first area we go to from the 1's) and then the other not accessible areas are 1 away from 5, where we can go next. ]
 
 clear-warn is a truth state that varies.
 

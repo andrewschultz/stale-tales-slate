@@ -799,15 +799,17 @@ You must clear five guardians to reach and leave certain corners (NW-N, SE-E, an
 ?What's the quickest way?
 To get to the Coastlines and clear it, you must zap at least seven guardians. You can actually avoid visiting (saltbed and strait) or (sunbelt and deltas).
 The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. The H corresponds to clearing the west and east sides, as well as west and east in the Treading Gradient. The I corresponds to the north and south sides, as well as north and south in the Treading Gradient. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
-You must clear two guardians from the Coastlines, one from the Garden, and one from the Cinema. You must clear one from the Copse, and one from/to the Treading Gradient. All these exclude each other.
-The quick and dirty observation is that the one path from the Treading Gradient can connect to the Copse or Coastlines, but not both. Then there's no way to connect anything else.
-To grind through things, let's take the path you chose from the Copse. Assume it's to the north. It must hook up to the one you chose from the Cinema or Treading Gradient. If it hooks up to the Treading Gradient, the Cinema can hook south (missing the Coastlines) or east (missing the Copse.) Note we didn't even worry about the Garden, here.
-We can mirror this reasoning across a line northeast from the copse (proof by symmetry) to eliminate the path east of the Copse, too.
+This isn't the only way to do things, but it's the most intuitive, because it isn't that crooked, and the HI seems easiest. It took me a while to see the other shortest way through.
+You must clear the two guardians from the Coastlines, so we'll always assume they are gone. This makes the calculations easier.
+You need to clear (1) either Muscly or the diners in Scope Copse, to start. Also, you need to clear (2) a guardian to get to the Cinema, another (3) to get to the Gradient, another (4) to get to the Garden, and a final one (5) to get to either the Strait or the Deltas. Give yourself one point for each task you haven't got, and that's how many guardians, minimum, you need to dispel.
+The proof this is necessary and sufficient is not too bad, I think. First, if you just got a Copse guardian, then you can make the I or H for 4 left. You will get to 2, 3 or 4 next. Whichever you get to, it is a step away from 5, which is a step away from the other 2 of 2, 3 and 4. So each time you reach a new category/room, your point total goes down by 1. If you reach 5, then the remaining of 2, 3 and 4 are all 1 away. If you reach other than 5, then 5 is still 1 away, after which the remaining of 2, 3  and 4 will be one away. Discussion of guardian balance follows.
 The game is balanced so that both the h-shaped path and the i-shaped path through the main square in Towers are approximately equal. Or the words to anagram have roughly the same total complexity or number of possibilities.
 To be precise, there are 3/4 as many cheat-based possibilities in the I as the H, but there are 3/2 as many non-cheat-based possibilities. Given that we're working with numbers in the thousands, that's pretty close. Oh, and the total number of letters is equal whichever way you go, too.
-Yeah, I was bored and wrote a PERL program to figure it out. It was actually pretty fun.
+Yeah, I was bored and wrote a PERL program to figure it out. It was actually pretty fun. I did this before I realized there were alternate routes through. There are 5 not counting symmetry/rotation.
+NEESNNWW, NENWEESS, NNEESWES (this has 5 rotations/reflections. The others have 1.), NNSEES (the H/I), EEWNENWW.
 ?Can I walk around guardians I can't solve?
-For the most part, yes, eventually, except those guarding corners.
+Any one guardian? Probably, except the ones who guard dead-end rooms and the coastlines.
+You must defeat the atheists, the hostile, the bonker/stinger and the admirer. Oh, and the Dreads Adders to start.
 ?How can I figure guardians a bit more easily?
 Trying to walk past, attack or talk to them may give clues.
 Of course, you can x-ray them.
