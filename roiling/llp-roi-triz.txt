@@ -1,0 +1,30 @@
+# data file for rspoil.py
+#
+# capitalization is not really important
+#
+DEFAULT	#c0c0c0	BottomRight
+#routes
+Same Mesa
+Sonancy Canyons
+#troves
+Boarded Roadbed
+Boredom Bedroom	#c0c0c0	TopRight
+Econ-Cone
+Upscale Capsule	#c0c0c0	TopRight
+#presto
+Grey Gyre
+Austerer Treasure
+Marines Seminar Remains
+Saps' Pass (Phat Path)
+Hacks' Shack	#c0c0c0	TopRight
+#oyster
+Hardest Trashed Dearths
+Lean Lane
+Shadier Airshed	#c0c0c0	BottomRight
+TenfoldTeflon'd Den Loft
+#otters
+Bleary Barley (Burnt Brunt)
+Lamer Realm (Blest Belts)	#c0c0c0	BottomRight
+Perverse Preserve	#c0c0c0	BottomRight
+Coevals' Alcoves	#c0c0c0	BottomRight
+;
