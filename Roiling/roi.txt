@@ -11,7 +11,7 @@ So is Pat's.
 The tarred trader is Red Rat Art Erd or Dr. Tera Darter.
 The Coasting Agnostic is Scot Agin or Staci Ong.
 The person on A Droll Dollar is Lord Al Ollard or Dr. Lola Ollard.
-The south exit from the Coastline, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
+The south exit from the Coastlines, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
 The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
 Also, if any animals are referred to as male, let me know, as that's a potential bug. I tried to leave them gender-neutral.
@@ -133,6 +133,7 @@ Well, it looks like lined paper, with the holes and the lines.
 You can hook it back through the holes in the upper left.
 PUT STAPLE IN STAPLER.STAPLE CURTAIN.
 >The Settler
+##roomlevel=3
 >>Basic Use
 ?Can anyone in-game help me?
 Yes. If you leave the basement, you get a de facto tutorial.
@@ -169,7 +170,9 @@ If cheat mode is on, it warns you if the clue might make things too easy.
 In fact, for certain puzzles, it warns you even if cheat mode is off.
 That's a clue in itself, perhaps.
 My evaluations of what makes a puzzle too easy are a bit subjective. However, I wanted to mitigate total spoilers, or give the player a chance to pause and think on the easy ones, so I added this.
+##roomlevel=2
 >STORES
+>>STRIP OF PROFITS
 ?Which stores are useful?
 The megaton magneto-montage acts as a directory.
 K and N are optional. P, U, V, T, W and Y are useful.
@@ -210,7 +213,7 @@ TOWERS.
 The settler, with cheat mode on, solves the vowels. And the letter Y.
 It's something seawatery.
 OYSTER.
->>STORES K AND N
+>>>STORES K AND N
 ?Why are K and N smaller than the others?
 They're a totally optional subquest.
 ?What's store K?
@@ -224,7 +227,7 @@ NESTOR.
 ?What's the mangiest steaming? What's in it?
 The steaming is a byproduct of the tokers' activities.
 Inside the steaming is the start of a small unnecessary side quest. Enter it to find out.
->>>CRUELEST LECTURES
+>>CRUELEST LECTURES
 ?Can I take advantage of the teasing seating?
 No. But you don't need to.
 It is TEASING seating, after all.
@@ -238,8 +241,7 @@ Your settler gives a huge clue if you look in studio E.
 OUTSIDE.
 ?What's with the munchies now I'm back in the strip?
 They aren't an actual game item, but they will help you use the slider on the settler more often.
->>STORE B
-?What's in here?
+?What's in Store B?
 Some sort of food. It looks sort of misty--cold misty.
 SORBET.
 >STORE P
@@ -343,6 +345,11 @@ You can say MAZEL TOV at any time. With or without spaces.
 You get an extra point, if you're interested in that sort of thing.
 ?I took the hard way but still lost a point from the maximum. What gives?
 You scanned a fellow in the Unwary Runway for an additional clue.
+>>UNWARY RUNWAY
+?How do I get past the riddle dreidl?
+You don't. You need a magic word.
+?What are these guys doing?
+They're clues, if you scan them.
 >>SAPS' PASS
 ?How do I deal with the hogs?
 You can annoy them or get their keys.
@@ -454,8 +461,7 @@ There are only five possibilities. So you have a forty percent chance with a ran
 You have no particular reason to visit Boise State University, the Universal Bank of Switzerland or St. Bonaventure University. (Thanks, acronymfinder.com!)
 You can take a SUB or BUS out for slightly different alternate endings.
 >STORE U
->>ABOVEGROUND
->>>SAME MESA
+>>SAME MESA
 ?Is the worst ad good for anything?
 It's bad for society in every way. Err, I mean, it's a last lousy point.
 You can pick it off as long as the giant or the bean aren't present. If you get it first, you get a clue to the area. You may not need the clue, but it's there.
@@ -497,12 +503,12 @@ You need a good first word to tell the crowd what to do.
 THE BEAN holds something under it. Wait, we've done UNDER before.
 Something BELOW it. Wait, that's been done too.
 BENEATH.
->>>CLERIC CIRCLE
+>>CLERIC CIRCLE
 ?What is there to do here?
 See on the wall--there's a list of three things you need for a magic potion.
 You'll need to examine it, to see what to do.
 Come back once you have all three items.
->>>IDLE DELI
+>>IDLE DELI
 ?What should I say to Pat?
 Not much. Well, just one word. It's the seed pit that's important.
 ?What to do with the seed pit?
@@ -511,15 +517,14 @@ Pat discourages you from entering the seed pit. IT'S DEEP.
 What's a preposition that counters something that's been said?
 DESPITE.
 Now you have the mushrooms--another third of the reagents needed in the church.
->>>ADOBE ABODE
+>>ADOBE ABODE
 ?What should I say to Oscar?
 Not much. It's the pipe soot that's important.
 ?What about a trashy ashtray?
 It's holding pipe soot! But you can't just up and steal it.
 It's on the other side of Oscar.
 Position yourself OPPOSITE, and you can take it behind your back without him looking.
->>BELOWGROUND
->>>HARMS MARSH
+>>HARMS MARSH
 ?What do I do with the sheol-holes?
 Not fall into them.
 Directions don't help, so you need to be more circumspect.
@@ -533,18 +538,18 @@ Remember, you were told you need to NAG OL' NO-GAL LOGAN. There's an UN-ROAD you
 So, first, you need to look AROUND.
 You're on your way to finding him, now.
 Then, you need to go ALONG.
->>>RIPE PIER
+>>RIPE PIER
 ?What's with the mist?
 Well, it's also DA MIST, if you listen to Sad Tim. Some of his babbling leaves you red-eyed.
 One is thinking of DA MIST helps you feel more familiar, and you can go...
 AMIDST.
->>>CRIPPLE CLIPPER
+>>CRIPPLE CLIPPER
 ?How do I need to go?
 Logan's poem will give you some clues.
 It's a weird preposition, a nautical preposition.
 THAT WAR, etc.
 You need to go ATHWART.
->>>SONANCY CANYONS
+>>SONANCY CANYONS
 ?How do I get past those two animals?
 The order matters.
 The bent ewe comes first.
@@ -790,13 +795,13 @@ Make it PUNIER.
 ?How many do I need to clear?
 Eleven, minimum, including the serpent.
 There are eighteen total including the serpent.
-You must clear five guardians to reach and leave certain corners (NW-N, SE-E, and by the copse,) and you must clear both guardians by the coastline so the Coasting Agnostic comes out and has a bit of peace by the seashore.
+You must clear five guardians to reach and leave certain corners (NW-N, SE-E, and by the copse,) and you must clear both guardians by the coastlines so the Coasting Agnostic comes out and has a bit of peace by the seashore.
 ?What's the quickest way?
-To get to the Coastline and clear it, you must zap at least seven guardians. You can actually avoid visiting (saltbed and strait) or (sunbelt and deltas).
+To get to the Coastlines and clear it, you must zap at least seven guardians. You can actually avoid visiting (saltbed and strait) or (sunbelt and deltas).
 The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. The H corresponds to clearing the west and east sides, as well as west and east in the Treading Gradient. The I corresponds to the north and south sides, as well as north and south in the Treading Gradient. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
-You must clear two guardians from the Coastline, one from the Garden, and one from the Cinema. You must clear one from the Copse, and one from/to the Treading Gradient. All these exclude each other.
-The quick and dirty observation is that the one path from the Treading Gradient can connect to the Copse or Coastline, but not both. Then there's no way to connect anything else.
-To grind through things, let's take the path you chose from the Copse. Assume it's to the north. It must hook up to the one you chose from the Cinema or Treading Gradient. If it hooks up to the Treading Gradient, the Cinema can hook south (missing the Coastline) or east (missing the Copse.) Note we didn't even worry about the Garden, here.
+You must clear two guardians from the Coastlines, one from the Garden, and one from the Cinema. You must clear one from the Copse, and one from/to the Treading Gradient. All these exclude each other.
+The quick and dirty observation is that the one path from the Treading Gradient can connect to the Copse or Coastlines, but not both. Then there's no way to connect anything else.
+To grind through things, let's take the path you chose from the Copse. Assume it's to the north. It must hook up to the one you chose from the Cinema or Treading Gradient. If it hooks up to the Treading Gradient, the Cinema can hook south (missing the Coastlines) or east (missing the Copse.) Note we didn't even worry about the Garden, here.
 We can mirror this reasoning across a line northeast from the copse (proof by symmetry) to eliminate the path east of the Copse, too.
 The game is balanced so that both the h-shaped path and the i-shaped path through the main square in Towers are approximately equal. Or the words to anagram have roughly the same total complexity or number of possibilities.
 To be precise, there are 3/4 as many cheat-based possibilities in the I as the H, but there are 3/2 as many non-cheat-based possibilities. Given that we're working with numbers in the thousands, that's pretty close. Oh, and the total number of letters is equal whichever way you go, too.
@@ -807,11 +812,7 @@ For the most part, yes, eventually, except those guarding corners.
 Trying to walk past, attack or talk to them may give clues.
 Of course, you can x-ray them.
 The agnostic and Dr. Yow also give one clue.
->>>Specific guardians (alphabetical order)
-?Admirer
-(S)he'd have less of a crush on you...
-...if (s)he were MARRIED. If you're obscure and mean, you can make her/him...
-MARDIER.
+>>>Specific internal guardians (alphabetical order)
 ?Alarming Grailman
 You can't be a grailman unless you are a cut above.
 He can't imagine being worse than average.
@@ -823,10 +824,6 @@ Yes, make them HASTIEST.
 ?Bluster Butlers
 Making them more circumspect could help them move up in the world, and away from here.
 They can become SUBTLER.
-?Bonker
-It works perfectly.
-Til it's BROKEN.
-Oh, look, something else! We'll tackle that at the end.
 ?Dandier Arid Den
 It won't let you pass without buying its product, NERD-AID.
 It's endorsed by, among others, ED INDAR.
@@ -836,10 +833,6 @@ His name is Mel Fish, and that's in red.
 SMH Life, his catch phrase, also makes you see red.
 How can you let him be him?
 Well, by letting him be HIMSELF.
-?Ingrates
-Currently the ANGRIEST.
-If the madness became whining...
-...they could be ANGSTIER.
 ?The fluster-self rut
 It is agitated, and it agitates you.
 How can you calm things down?
@@ -847,11 +840,6 @@ Make everything more RESTFUL.
 ?Muscly (Luc Sym/Ms. Lucy)
 Strength doesn't matter without dexterity.
 So make him or her CLUMSY.
-?Natives
-These guys could be one thing, or the other.
-If you want to sucker them with pride, VAINEST.
-If you want to sucker them with stupidity, NAIVEST.
-Neither is better or worse than the other.
 ?Hostile-is-He Lot
 They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
 Make them feel differently.
@@ -868,18 +856,35 @@ The Reed's ale can also become RESEALED.
 ?Sweatier wait-seer
 He doesn't seem to get tired of blocking you.
 Make him WEARIEST.
-?Unripe i-Prune
-Whatever it is, it's terrifyingly big.
-Make it PUNIER.
-?The stinger replaced the bonker!
-It sure is vigilant.
-How to lower its energy?
-Make it RESTING.
 ?Hey! What's this keycar doing?
 It appears the first time you clear an area of all the guardians.
 It's pretty easy to dispose of as an LLP.
 It's active and has no mechanical damage...
 ...until you make it CREAKY.
+>>ANEMIC CINEMA
+?Do I need to deal with the mardier admirer?
+(S)he'd find you less a part of his/her life...
+...if (s)he were MARRIED.
+?Do I need to deal with the angriest ingrates?
+Only if you want a perfect score.
+If the madness became whining...
+...they could be ANGSTIER.
+>>DANGER GARDEN
+?Do I need to get rid of the bonker?
+Yes, it guards something important.
+It works perfectly.
+Til it's BROKEN.
+Oh, look, something else! They must be guarding something REALLY important.
+?Hey, something replaced the bonker!
+It sure is vigilant.
+How to lower its energy?
+Make it RESTING.
+?Do I need to get rid of the natives?
+Only for maximum points.
+These guys could be one thing, or the other.
+If you want to sucker them with pride, VAINEST.
+If you want to sucker them with stupidity, NAIVEST.
+Neither is better or worse than the other.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
 While you have to go through the Scope Copse, and you have to pick off the guardians there, there's nothing critical. Though having the map is helpful.
@@ -987,7 +992,7 @@ Return.
 The lone duck can't be unlocked, but it seems to know to go to the fissure.
 Alternatively, making the fissure FUSSIER causes the duck to go over.
 ?Is Dr. Yow good for anything else?
-Yes. Don't go on til you see someone new on the coastline.
+Yes. Don't go on til you see someone new on the Coastlines.
 The agnostic is interested in technical stuff.
 Playing the raves saver isn't enough.
 ?How should Dr. Yow lecture the agnostic?
@@ -997,7 +1002,7 @@ ROWDY.
 This is an LLP. It was part of the main puzzle before I felt it was a bit arbitrary. The word was too long, and it was too easy in cheat mode.
 TENTATIVE can become...
 ...ATTENTIVE.
->>ACTIONLESS COASTLINE
+>>ACTIONLESS COASTLINES
 ?What are the natatorium and hatchery for?
 They are convenient places for the atheists and hostile person/people to go once you've neutralized them.
 There's no way to enter.
@@ -1321,8 +1326,8 @@ It should be easy. There are only five possibilities.
 You need to attack it a certain way.
 There are only five possibilities for ANT.
 You need to TAN it.
-Once you do, you go to the loft-den.
->>TENFOLD TEFLON'D LOFT-DEN
+Once you do, you go to the den loft.
+>>TENFOLD TEFLON'D DEN LOFT
 ?Stupid papery yapper!
 He wants to be bribed, but use a different word, maybe?
 The settler can show you what to do. Though it seems to blink.
@@ -1346,8 +1351,7 @@ Well, you can DERAIL again...
 ...or you can find another way to call back.
 REDIAL.
 >STORE T
->>WHAT I CAN DO WHEN I'M POWERLESS?
->>>BLEARY BARLEY
+>>BLEARY BARLEY
 ?Help! I lost my powers! What do I do?
 You're severely weakened.
 What's the least powerful type of word in the English language?
@@ -1363,7 +1367,7 @@ Not if he speaks REEDILY.
 You can use them to DISCERN what word to use.
 Showing you don't need them gets another point.
 You can also RESCIND them.
->>>DISOWNED DOWNSIDE
+>>DISOWNED DOWNSIDE
 ?Why can't I go west?
 You need to help Gretta Garett-Tatger, whom Elmo told you about.
 ?How do I disperse the macks?
@@ -1382,7 +1386,9 @@ Pod 5 is nine letters, pod 6 is ten, and pod 7 is twelve.
 The pods give you slightly more letters to deal with on average, but I felt it was too confusing to have thirty-two adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
 ?What good are Gretta's medals?
 The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need thme.
->>>SHINER SHRINE
+?Where do I go?
+You only need to go one of north or south from the Disowned Downside. The Loop Pool is a bit easier. But going both ways gets you all the points.
+>>SHINER SHRINE
 ?The sly imp simply blocks me!
 LY-words again.
 With LEGENDARY patience, BUTLERY and RANGILY.
@@ -1393,16 +1399,13 @@ BRUTELY. And, for the curious...
 ?What is the coma camo for? And the message?
 The message is what this room--or the cathedral--was called in previous releases.
 The camo just stops you from going west or east.
->>>CLARTHEAD CATHEDRAL
+>>CLARTHEAD CATHEDRAL
 ?The shrewin' whiners block me noisily!
 They restyle, tallyhoing with callosity.
 Tune their volume down.
 You need two of three. TERSELY and STOICALLY cost the fewest keystrokes.
 LOATHINGLY is the other solution.
->>GETTING MY POWERS BACK
-?Where do I go?
-You only need to go one of north or south from the Disowned Downside. The Loop Pool is a bit easier. But going both ways gets you all the points.
->>>LOOP POOL
+>>LOOP POOL
 ?The sea cube...
 You can't waste words.
 But you can't use adverbs.
@@ -1411,7 +1414,7 @@ BECAUSE.
 ?The eels aren't convinced...
 Tell them 'Or...
 ...ELSE.'
->>>BRAN BARN
+>>BRAN BARN
 ?Mr. Lee says 'Hola Thug!' as he wears a ghoul hat.
 You have one word to grab his attention...
 ...ALTHOUGH.
@@ -1422,6 +1425,10 @@ HOWEVER...
 You need your powers back.
 They are too quick for you.
 Unless they are SLOW.
+?Why can't I dispel the owls?
+You need your powers back first.
+Visit the Disowned Downside, if you haven't.
+Then clear an area to the north or south.
 ?What of the other animals?
 The leopard can be PAROLED.
 The ocelots can be COOLEST.
@@ -1432,8 +1439,11 @@ Because you did enough to make it a nice place.
 >>PERVERSE PRESERVE
 ?Whoah! A raptor!
 Brute force won't work.
-You need your powers back.
 Make it a PARROT.
+?Why can't I dispel the raptor?
+You need your powers back first.
+Visit the Disowned Downside, if you haven't.
+Then clear an area to the north or south.
 ?Nails?
 Nothing's slain.
 Just an ex-SNAIL.

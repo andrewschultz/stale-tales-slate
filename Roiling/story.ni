@@ -10432,7 +10432,7 @@ rule for supplying a missing noun when entering:
 		now the noun is the evac-cave.
 
 [x current room]
-Largely All-Grey Gallery is a stairy innie room in Means Manse. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
+Largely All-Grey Gallery is an innie room in Means Manse. It is stairy. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
 diorama is in dusty study and Largely All-Grey Gallery. [this is written in here after defining the gallery as a room]
 
@@ -10984,7 +10984,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 
 book Farming Framing
 
-Farming Framing is a stairy innie room in Means Manse. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads [b]DOWN[r][end if][if tables are in lalaland]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].";
+Farming Framing is an innie room in Means Manse. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads [b]DOWN[r][end if][if tables are in lalaland]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].";
 
 the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
@@ -14696,7 +14696,7 @@ after fliptoing ether:
 
 book Char Arch
 
-Char Arch is a room in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
+Char Arch is south of Grey Gyre. It is in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
 
 leaf-clue is a truth state that varies.
 
@@ -14714,8 +14714,6 @@ check taking dam:
 instead of doing something to mad dam:
 	if action is procedural, continue the action;
 	try examining mad dam instead;
-
-Char Arch is south of Grey Gyre.
 
 some gasp gaps are bounding plural-named scenery in Char Arch. "You can't see much of the gaps, but you know you don't want to get close to them. Because you'd have to fall to get there."
 
@@ -15279,7 +15277,7 @@ a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]
 
 book Marines Seminar Remains
 
-Marines Seminar Remains is in presto. Marines Seminar Remains is east of Grey Gyre. "The only way out is back west. The sport ports in the other directions indicate this WAS a busy seminar, but you aren't and won't be equipped to handle them. Nothing [if popgun is in Marines Seminar Remains]besides a popgun[else]else[end if] is left."
+Marines Seminar Remains is east of Grey Gyre. Marines Seminar Remains is in Presto. "The only way out is back west. The sport ports in the other directions indicate this WAS a busy seminar, but you aren't and won't be equipped to handle them. Nothing [if popgun is in Marines Seminar Remains]besides a popgun[else]else[end if] is left."
 
 after printing the locale description for Marines Seminar Remains when Marines Seminar Remains is unvisited:
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to lobby for his amnesty once Elvira's out of the way.";
@@ -19834,9 +19832,7 @@ carry out repairing:
 
 book Baldest Blasted Saltbed
 
-Baldest Blasted Saltbed is north of Scope Copse. "This is a dreary place that doesn't seem worth guarding, [if number of visible guardians is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if][tow-dirs]."
-
-Baldest Blasted Saltbed is in Towers.
+Baldest Blasted Saltbed is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if number of visible guardians is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if][tow-dirs]."
 
 check going west in Baldest Blasted Saltbed:
 	say "The stew wets are way too dangerous. But any other way is okay." instead;
@@ -22565,7 +22561,7 @@ carry out whistleing:
 
 book Disowned Downside
 
-Disowned Downside is west of Bleary Barley. Disowned Downside is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here."
+Disowned Downside is west of Bleary Barley. It is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here."
 
 after looking in Disowned Downside:
 	if macks are in Disowned Downside:
