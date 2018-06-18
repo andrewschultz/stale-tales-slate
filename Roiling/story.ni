@@ -131,7 +131,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1=5 for dreads adders
 7=12 for the minimum number of other guardians you need to dispel to get through the map
 1=13 for subtler (see rapier repair)
-1=14 for admirer (see the duck)
+1=14 for mardier admirer (see the duck)
 2=16 for bonker & stinger (get to subsector)
 1=17 for weeds
 2=19 for Dr Yow's two voices
@@ -591,7 +591,7 @@ to choose-female:
 	now i trash his art is off-stage;
 	now er trash is part of the dope op-ed;
 	now Pat is female; [begin routes changes]
-	now the admirer is male; [begin towers changes]
+	now the mardier admirer is male; [begin towers changes]
 	general-gender-towers;
 	now agnostic is female;
 	now Dr Yow is female;
@@ -608,7 +608,7 @@ to choose-male:
 	now i trash his art is part of the dope op-ed;
 	now er trash is off-stage;
 	now Pat is male; [begin routes changes]
-	now the admirer is female; [begin towers changes]
+	now the mardier admirer is female; [begin towers changes]
 	general-gender-towers;
 	now agnostic is male;
 	now Dr Yow is male;
@@ -2025,7 +2025,7 @@ bonker	--
 stinger	--
 ingrates	--
 organised	--
-admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
+mardier admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 Atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
 Tetris Sitter	"[if flowerpot is in lalaland]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
@@ -2162,7 +2162,7 @@ organised ego drains	"The ego drains just aren't to be argued with. When you try
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
-admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
+mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
 Mel Fish	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im![or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait-seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
@@ -2435,8 +2435,8 @@ pirates	Elvira	"The pirates explain colorfully how Elvira's rule has been good f
 sweatier	Elvira	"The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end."
 sweatier	curst palace	"The wait-seer points to the palace and shrugs, as if to say, why?"
 ingrates	Elvira	"'She's been terrible for Yorpwald! But anyone else would be even worse. That's life!'"
-admirer	Elvira	"'I'm not sure if she's even better than you, or you're even better than her!'"
-admirer	curst palace	"'It's not good enough for you-ou-ou!'"
+mardier admirer	Elvira	"'You both have your faults and your good sides. You might have more faults than her.'"
+mardier admirer	curst palace	"'Well I bet you could make it there, you're clever enough, but what would you do once you got there?'"
 grailman	Elvira	"'Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure.'"
 grailman	curst palace	"'You can get there without getting by me, I bet!'"
 Mel Fish	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
@@ -4172,7 +4172,7 @@ ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite
 muscly luc sym	"Luc Sym stumbles for a moment."
 muscly	"Ms. Lucy stumbles for a moment."
 organised	"The drains sizzle slightly but go back to menacing quiet."
-admirer	"Your admirer looks askance, then returns to their puppy-love expression."
+mardier admirer	"The mardier admirer looks askance, then returns to evaluating you some more."
 natives	"The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
 alarming	"The grailman seems almost average for a moment."
@@ -6237,8 +6237,8 @@ carry out towers-hinting:
 		try objhinting h-w instead;
 	if location of player is rawest waters:
 		try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
-	if player is in anemic cinema and admirer is in anemic cinema:
-		try objhinting admirer instead;
+	if player is in anemic cinema and mardier admirer is in anemic cinema:
+		try objhinting mardier admirer instead;
 	if player is in Danger Garden and bonker is in Danger Garden:
 		try objhinting bonker instead;
 	if player is in Treading Gradient and weeds is in Treading Gradient:
@@ -6260,7 +6260,7 @@ carry out towers-hinting:
 	if obscurest subsector is unvisited:
 		all-say "[if bonker is in lalaland]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the scope copse.[end if]" instead;
 	if Treading Gradient is unvisited:
-		all-say "[if admirer is in lalaland]You need someone, or something, north of where the admirer was.[else]You need to work your way to the north bit you [seesaw] in the scope copse.[end if]" instead;
+		all-say "[if mardier admirer is in lalaland]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit you [seesaw] in the scope copse.[end if]" instead;
 	unless Dr Yow has been wordy:
 		all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof:
@@ -7514,43 +7514,26 @@ understand the command "kiss" as something new.
 Understand "kiss [thing]" as kissing. [needed to kiss skis]
 
 before kissing:
-	if player carries the noun:
-		say "Moisten no items." instead;
-	if noun is admirer:
-		say "You are not a lousy enough kisser to discourage [him-her]. Perhaps there's another way to sour [if player is male]her[else]him[end if] on you." instead;
-	if noun is bonker:
-		say "Not even with a good dental plan." instead;
-	if noun is duck:
-		say "It's cute and all, but it also doesn't trust you." instead;
-	if noun is Dr Yow:
-		say "[he-she-c] is not the touchy feely kind." instead;
-	if noun is agnostic:
-		say "Okay, we're close to creepy territory here.";
+	if player carries the noun, say "Moisten no items." instead;
+	if noun is the player, say "You feel as good-looking as ever after kissing yourself." instead;
+	if noun is skis, try fliptoing skis instead; [start OYSTER]
+	if noun is haunter, say "The ghost can't respond to affection." instead;
+	If noun is aunt tuna, say "That would be cruel to poor Tortu. She would blackmail him into kissing her long after you left." instead;
+	if noun is trolls, say "There's loving your enemy, then..." instead;
+	if noun is clam, say "It could use a bit of friendship, but not like that." instead;
+	if noun is mardier admirer, say "You are not a lousy enough kisser to discourage [him-her]. Perhaps there's another way to sour [if player is male]her[else]him[end if] on you." instead; [start TOWERS]
+	if noun is bonker, say "Not even with a good dental plan." instead;
+	if noun is duck, say "It's cute and all, but it also doesn't trust you." instead;
+	if noun is Dr Yow, say "[he-she-c] is not the touchy feely kind." instead;
+	if noun is agnostic, say "Okay, we're close to creepy territory here.";
+	if noun is not a person, say "That can't really respond to your affection." instead;
+	if noun is guardian, say "Creeping out whatever's blocking your way won't work." instead;
+	if noun is macks, say "[if player is male]That'd be subtle trolling, but you might not stay conscious long enough to enjoy it[else]You don't want to get their attention that way[end if]." instead; [start OTTERS]
+	if noun is Gretta, say "You imagine her all 'Tricky try. Ick.'" instead;
+	if noun is an animal, say "Yay you for loving animals. Or claiming to." instead;
 	if noun is Elvira:
 		say "'[if player is female]Superwoman? Wane, rum sop![else]Me? Spurn a superman?[end if]' She flatters you for admitting you were wrong about her, not recognizing she was socially out of your league. As she talks ('I lure! I rule!') suddenly you realize what your quest was about. Your test run showed SHATTER-THREATS was not enough...you are talked into being [if player is female]Chuck-Ms.-Schmuck[else]Mr. Arty Martyr[end if] for a newer better Yorpwald. The last thing you hear is Elvira saying: 'A big help? Pah! Bilge!'";
 		get-dead instead;
-	if noun is not skis and noun is not a person:
-		say "That can't really respond to your affection." instead;
-	if noun is macks:
-		say "[if player is male]That'd be subtle trolling, but you might not stay conscious long enough to enjoy it[else]You don't want to get their attention that way[end if]." instead;
-	if noun is Gretta:
-		say "You imagine her all 'Tricky try. Ick.'" instead;
-	if noun is haunter:
-		say "The ghost can't respond to affection." instead;
-	If noun is aunt tuna:
-		say "That would be cruel to poor Tortu. She would blackmail him into kissing her long after you left." instead;
-	if noun is trolls:
-		say "Bad idea." instead;
-	if noun is clam:
-		say "It could use a bit of friendship, but not like that." instead;
-	if noun is the player:
-		say "You feel as good-looking as ever after kissing yourself." instead;
-	if noun is an animal:
-		say "Yay you for loving animals. Or claiming to." instead;
-	if noun is guardian:
-		say "Creeping out whatever's blocking your way won't work." instead;
-	if noun is skis:
-		try fliptoing skis instead;
 	say "[if noun is a person]This is not a romance game[otherwise]There's only one possible inanimate object you could kiss, if you think about it[ski-la][end if]." instead;
 
 book common irregular verbs
@@ -7750,7 +7733,7 @@ check listening (this is the you can hear stuff some places rule):
 			say "Dr. Yow moans [he-she] could hack less shackles." instead;
 	if ingrates are visible, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[in random order]." instead;
 	if player is in outer route, say "The rapier repair machine [if dagger is in lalaland]chugs[else]fizzles[end if]along." instead;
-	if admirer is visible, say "It's a bit embarrassing, really. Just generic praise that never feels right." instead;
+	if mardier admirer is visible, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
 	if atheists are visible, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is visible]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
 	if wait-seer is visible, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in rawest waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
@@ -9060,7 +9043,7 @@ ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	"The ur-pine shrinks a
 arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
-an admirer	an admirer	false	430738621	--	"married"	"married" or "mardier"	"[response-based]. You're slapped sidearm for having misread them, but you're spared spouse opuses."
+mardier admirer	mardier admirer	false	430738621	--	"married"	"married"	"Your admirer blinks, then looks down a ring on their finger, which may or may not have been there before (the ring, you silly.) They start talking of the old ball and chain, and while it's not clear whether the old ball and chain will help them be a better person, which is how it works in theory, or they are just someone to complain to, well ... the mardier admirer is done with you. Why were they wasting time? Such a leer--a sure lech! Your ex-admirer walks away, spouting spouse opuses."
 natives	natives	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
 sporties' ripostes	sporties' ripostes	false	709599244	--	"prosiest"	"prosiest"	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is true]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
@@ -9315,12 +9298,6 @@ to say rodpals:
 check preferring sometimes abbreviated room descriptions (this is the Marlon versus built in commands rule) :
 	if Marlon is visible:
 		try fliptoing Marlon instead;
-
-to say response-based:
-	if the player's command includes "married":
-		say "Your admirer flashes a ring on their finger, which may or may not have been there before (the ring, you silly,) to prove they're married and don't need you and wonder what WERE they thinking. Such a leer--a sure lech";
-	else:
-		say "Your admirer gets more irritable quickly. Is this how you treat your fans? You really [i]are[r] more interested in the duck behind them than, well, them";
 
 spikes is a truth state that varies.
 
@@ -14261,7 +14238,7 @@ chapter sister tressi
 
 the Sister Tressi Siters are vanishing scenery. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as Blamer Balmer's."
 
-a-text of sister tressi is "RYRYRR". b-text of sister tressi is "RY?Y?R". parse-text of sister tressi is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
+a-text of sister tressi siters is "RYRYRR". b-text of sister tressi siters is "RY?Y?R". parse-text of sister tressi siters is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
 
 instead of doing something with sister tressi:
 	if action is procedural, continue the action;
@@ -19727,7 +19704,7 @@ before examining spec-o-scope for the first time:
 check examining spec-o-scope:
 	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the scope to a visual one?[close bracket][r][line break]";
 	if the player direct-consents:
-		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless admirer is in lalaland]un[end if]available, another just west is [unless ingrates are in lalaland]un[end if]available, a particularly important location east of the east shore seems [unless bonker is in lalaland]un[end if]available, and just south of it, an area looks [unless natives are in lalaland]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
+		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is in lalaland]un[end if]available, another just west is [unless ingrates are in lalaland]un[end if]available, a particularly important location east of the east shore seems [unless bonker is in lalaland]un[end if]available, and just south of it, an area looks [unless natives are in lalaland]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 
 description of spec-o-scope is "You look into the scope and see:[paragraph break][fixed letter spacing]
 [line break]  !      *
@@ -19741,7 +19718,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
 
 to decide whether (g - a guardian) gendermatches:
-	if g is admirer, yes;
+	if g is mardier admirer, yes;
 	if g is female and player is male, decide no;
 	if g is male and player is female and other-g of g is not dreads adders, decide no;
 	decide yes;
@@ -21401,16 +21378,16 @@ description of angriest ingrates is "They're spouting some of the angriest ranti
 
 a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRRY?R". parse-text of ingrates is "-[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
 
-section admirer
+section mardier admirer
 
-An admirer is a female purple guardian. "An admirer to the [psgdir of admirer] would rather you stay here and listen to their flattery than go anywhere new."
+An mardier admirer is a female purple guardian. "A mardier admirer to the [psgdir of mardier admirer] would rather you stay here and listen to their general double-edged blather than go past them."
 
-a-text of admirer is "RYRRYYR". b-text of admirer is "RYRRYGR". parse-text of admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
+a-text of mardier admirer is "RYRRYYR". b-text of mardier admirer is "???R?GR". parse-text of mardier admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
 
-description of admirer is "[if admirer is male]He[else]She[end if] seems to be gazing at you raptly, as if out of puppy love. While [admsex] is too scared to approach you, you doubt you can get by without some really awkward conversation. It's like [admsex] needs that special someone you can't be while you're trekking the Badlands."
+description of mardier admirer is "[if mardier admirer is male]He[else]She[end if] seems to be gazing at you with a bizarre mix of reverence and scorn. While [admsex] is too scared to approach you, that doesn't stop a constant stream of dialogue. It's like [admsex] is lonely for that special someone to help share and develop their feelings but doesn't know how to express it."
 
 to say admsex:
-	say "[if admirer is male]he[else]she[end if]"
+	say "[if mardier admirer is male]he[else]she[end if]"
 
 chapter unblest sunbelt
 
@@ -21553,7 +21530,7 @@ snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed 
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
-an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
+mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool it!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
 Mel Fish	Unblest Sunbelt	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
@@ -21625,7 +21602,7 @@ Elsa Erde	"[reedale].'"
 lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT."
 hostile-is-he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
-admirer	"Your admirer claps far too fervently at your accomplishment."
+mardier admirer	"The mardier admirer oohs and ahhs but then considers there were so many options possible, really."
 trendies	"The resident trendies whisper that they're too cool to be disappeared like that."
 wait-seer	"The wait-seer coolly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
@@ -21815,7 +21792,7 @@ to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
 		if guy entry is not in lalaland:
-			if guy entry is not admirer and player is male and guy entry is female, next;
+			if guy entry is not mardier admirer and player is male and guy entry is female, next;
 			if player is female and guy entry is mas, next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
@@ -26598,7 +26575,7 @@ Reed's Ale	"[one of]Poor [el-la-f]! Having to dress like that. They either want 
 Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
-admirer	"[one of]She needs someone to be attached to.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
+mardier admirer	"[one of]The mardier admirer needs someone to emote to, hopefully more constructively than with you. To be ... engaged with.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
 natives	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the natives.[plus][or]The natives can become VAINEST, or NAIVEST.[minus][cycling]"
 yurts	"[one of]They look out of place, made of weird metals.[plus][or]You can corrupt them by making them...[plus][or]RUSTY.[minus][cycling]"
 arid den	"[one of]The dandier arid den sells a lot of Nerd-Aid. It appears to be at full power.[plus][or]How could you lessen its power?[plus][or]Try smelling, examining the merchandise for endorsements, etc.[plus][or]DRAINED.[minus][cycling]"
@@ -27257,7 +27234,7 @@ examp
 "[bold type](oyster)[r] The win-text for the OYSTER region."
 "Shoer Osher changes gender too."
 "Attacking the pikes/carps."
-"[bold type](towers)[r] The admirer reacts differently to TALKing/KISSing, etc."
+"[bold type](towers)[r] The mardier admirer reacts differently to TALKing/KISSing, etc."
 "The rapier repair reminds you of Boy/Girl Scouts."
 "The ego drains drain you a bit more if you're female."
 "The Coasting Agnostic has a different name, with a (sic) on making the bot-boat."

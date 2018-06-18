@@ -624,8 +624,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "theater"	586626174	anemic cinema	--	--	"You don't need to go looking for screens to stare at right now. You have a world to save."
 "wait"	258225455	--	wait-seer	--	"[wait-see]."
 "seer"	437209987	--	wait-seer	--	"[wait-see]."
-"rampant"	407258077	--	admirer	--	"No, just an admirer, really."
-"womantrap"	589545427	--	--	see-female-admirer rule	"No, just an admirer, really."
+"rampant"	407258077	--	mardier admirer	--	"No, just a mardier admirer, really."
+"womantrap"	589545427	--	--	see-female-admirer rule	"No, just a mardier admirer, really."
 "ingrate"	464927804	--	ingrates	--	"[plutry of ingrates]There's more than one ingrate blocking you."
 "finger"	386144864	Fringe Finger	--	--	"[towersloc]." [FRINGE FINGER 0 3]
 "strudel"	592462631	--	--	strood rule	"[eat-pastry]."
@@ -1714,7 +1714,7 @@ to say gradient-rej:
 to say grail-name: say "His full name, Liam Garn"
 
 this is the see-female-admirer rule:
-	if player is female and admirer is visible, the rule succeeds;
+	if player is female and mardier admirer is visible, the rule succeeds;
 	the rule fails;
 
 this is the bonker-gone rule:
