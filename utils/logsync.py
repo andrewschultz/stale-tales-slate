@@ -35,6 +35,7 @@ def usage():
     exit()
 
 def check_logic_file(needs, gots, outs, format_string, file_desc):
+    print("=" * 40, "Checking", outs)
     # for x in needs.keys(): print (x, needs[x], gots[x])
     t2 = [x for x in needs.keys() if x not in gots.keys()]
     need_in_logic = 0
@@ -87,12 +88,11 @@ with open(i7.src("roiling")) as file:
 
 count = 0
 with open(i7.sdir("roiling") + "/logic.htm") as file:
-    for line in file:
-        count = count + 1
+    for (line_count, line) in enumerate(file, 1):
         if '<!--' in line and '-->' in line and 'logic for' in line:
             scanned = re.sub(".*logic for ", "", line.strip().lower())
             scanned = re.sub("( )?-->.*", "", scanned)
-            got_logic[scanned] = count
+            got_logic[scanned] = line_count
 
 
 count = 0

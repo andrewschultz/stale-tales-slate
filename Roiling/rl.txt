@@ -161,7 +161,7 @@ Now the remaining slots must be vowels, leaving (ai)SP(ai)R(ie), since one of th
 The St. Al Salt can probably be figured without clues, but let's go through it anyway.
 ST AL and SALT has R?R?. This gives no yellow or green, so the A must appear in a slot with a question mark, or the second. -A--.
 Slot 4 is LT, slot 1 is LT and slot 3 is ST. That leaves TASL or LAST, which means LAST.
-# logic for Sister Tressi
+# logic for Sister Tressi Siters
 ?How do I figure out Sister Tressi?
 Sister Tressi gives a couple question marks, but with all the vowels accounted for, we know the remaining slots must be consonants.
 In fact, the second being a yellow/vowel and not I means it's an E, and thus the other vowel is an I.
@@ -245,6 +245,13 @@ The R?RRY?R? presents a problem if we look at strict logic: slot 6 is a vowel, E
 We have (NDS)(ER)(DNRT)(DRTS)(IE)(IE)(DRTS)(ST). But note if slot 2 is a vowel, we have a lot of clogging, so we can call that E.
 (NDS)E(DNRT)(DRTS)(IE/EI)(DRTS)(ST). Now this is where you may need to look at a lot of the clues. This has plenty, if you listen to what they have to say.
 It can cut things down for you to where you have NERDIEST.
+#logic for mardier admirer
+?How do I get rid of the mardier admirer?
+There are a lot of question marks!
+The green is a big help, but you should also note there need to be 3 vowels total. So ???R?GR has a consonant in slot 3 (R or M), and that narrows things down.
+In fact, only one of the first two can be a vowel or they'd both be A, and there's only one A left. But at least one must be, or we'd only have a maximum of two vowels in the final word. One of the first two must be A, so slot 5 is I.
+With -----IE-, it's a bit easier, especially since we can figure where the R must be. Slots 1 and 2 form (MA) and (AD) and slot 7 can't be R. Therefore, slots 3 and 4 are R. --RRIE-.
+That leaves ADRRIEM or MARRIED. MARRIED.
 >>TREADING GRADIENT
 # logic for raves saver
 ?How do I tweak the Raves Saver, with its six letter clue?
