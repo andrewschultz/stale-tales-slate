@@ -21380,7 +21380,7 @@ a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRR
 
 section mardier admirer
 
-An mardier admirer is a female purple guardian. "A mardier admirer to the [psgdir of mardier admirer] would rather you stay here and listen to their general double-edged blather than go past them."
+An mardier admirer is a female purple guardian. "A mardier admirer to the [psgdir of mardier admirer] would rather you stay here and listen to their 'honest' evaluations than go past them."
 
 a-text of mardier admirer is "RYRRYYR". b-text of mardier admirer is "???R?GR". parse-text of mardier admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
 
