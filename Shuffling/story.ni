@@ -837,7 +837,41 @@ to say 2da of (rg - a region):
 
 to say 2dn: say "[unless sr-acc is true]--[end if]".
 
+to show-missed (curr - a region):
+	if cur-score of curr is max-score of curr, continue the action;
+	if curr is intro:
+		if blot is off-stage, say "[2da of intro]you could've changed the bolt into a BLOT.";
+		if bugle is off-stage, say "[2da of intro]you could've changed the bulge into a BUGLE.";
+		if darn-slan is false, say "[2da of intro]you could've tried to SLANDER the darnels.";
+		if attics are off-stage, say "[2da of intro]the static in Notices Section was changeable to ATTICS.";
+	if curr is stores:
+		if store b is in trips strip, say "[2da of stores]store B had some food for you. SORBET.";
+		if store f is in trips strip, say "[2da of stores]store F in the trips strip led to a forest.";
+		if store i is in trips strip, say "[2da of stores]store I in the trips strip led to a sortie. Which is both an exit and a missile launch.";
+		if store m is in trips strip, say "[2da of stores]store M in the trips strip led to the Metros.";
+		if cabinet is in trips strip, say "[2da of stores]the cabinet, once it followed you, could've become something really alive. A nice bat.";
+	if curr is forest and has-been is off-stage, say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
+	if curr is sortie:
+		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a PANCAKE.";
+		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become GRITS.";
+	if curr is metros:
+		if antlers are in Obtains Boastin' Bastion, say "[2da of metros]the antlers in the Obtains Boastin' Bastion could've become RENTALS.";
+		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
+		say "[2dn]the [if begonias are in Fo' Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
+		say "[2dn]the other ways to get the tulip are to [alt-sols].";
+	if curr is resort:
+		if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in leis isle]to expose the leis as an illusion[else]instead of taking the leis[end if].";
+		if rock is in Isle, say "[2da of resort]the rock on the [isle] was changeable to CORK.";
+		if swing is in isle, say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
+		if found-lies is false, say "[2da of resort]you could've called out the LIES beforehand.";
+		if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
+		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
+		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.";
+		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
+		say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them[or]you could also try [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
+
 rule for showing what the player missed:
+	now sect-missed is false;
 	let missed-points be 0;
 	repeat with zq running through solved regions:
 		increase missed-points by (max-score of zq - cur-score of zq);
@@ -845,47 +879,7 @@ rule for showing what the player missed:
 		say "You got all the points! Well done! You are definitely ready for the extra challenge of [i]A Roiling Original[r].";
 	else:
 		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed.";
-	if blot is off-stage, say "[2da of intro]you could've changed the bolt into a BLOT.";
-	if bugle is off-stage, say "[2da of intro]you could've changed the bulge into a BUGLE.";
-	if darn-slan is false:
-		say "[2da of intro]you could've tried to SLANDER the darnels.";
-	if attics are off-stage:
-		say "[2da of intro]the static in Notices Section was changeable to ATTICS.";
-	now sect-missed is false;
-	if store b is in trips strip:
-		say "[2da of stores]store B had some food for you. SORBET.";
-	if store f is in trips strip:
-		say "[2da of stores]store F in the trips strip led to a forest.";
-	if store i is in trips strip:
-		say "[2da of stores]store I in the trips strip led to a sortie. Which is both an exit and a missile launch.";
-	if store m is in trips strip:
-		say "[2da of stores]store M in the trips strip led to the Metros.";
-	if cabinet is in trips strip:
-		say "[2da of stores]the cabinet, once it followed you, could've become something really alive. A nice bat.";
-	now sect-missed is false;
-	if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in leis isle]to expose the leis as an illusion[else]instead of taking the leis[end if].";
-	if rock is in Isle, say "[2da of resort]the rock on the [isle] was changeable to CORK.";
-	if swing is in isle, say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
-	if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
-	if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
-	if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS.";
-	if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
-	now sect-missed is false;
-	if forest is solved:
-		if has-been is off-stage:
-			say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
-	if sortie is solved:
-		if pancake is off-stage:
-			say "[2da of sortie]the cake pan in the fridge could've become a PANCAKE.";
-		if grits are off-stage:
-			say "[2da of sortie]the grist in the fridge could've become GRITS.";
-	if metros is solved:
-		if antlers are in Obtains Boastin' Bastion:
-			say "[2da of metros]the antlers in the Obtains Boastin' Bastion could've become RENTALS.";
-		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
-		say "[2dn]the [if begonias are in Fo' Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
-		say "[2dn]the other ways to get the tulip are to [alt-sols].";
-	say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them[or]you could also try [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
+	repeat with zq running through solved regions: show-missed zq;
 
 to say toolwood: say "[if tool shed is in Rived Drive]. Though you got the tougher tool shed[end if]"
 
@@ -902,7 +896,7 @@ table of tulip-acq
 sol	chosen
 "ASK NERDS ABOUT DARKNESS"	false
 "OPEN NOISE BAG in the Anti-Cool Location after getting the begonias"	false
-"SHOW EMITTER TO DEADBEAT once he's friendly, then use it in the Anti-Cool Location"	false
+"SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Anti-Cool Location"	false
 
 book section-victory
 
@@ -2948,7 +2942,7 @@ words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claimi
 table of Resort anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
-l2	l2	"leis"	"leis"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"
+l2	l2	"lies"	"lies"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
 sprig	grips	"grips/grip"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
