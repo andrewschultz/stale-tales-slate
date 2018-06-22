@@ -493,6 +493,8 @@ understand "eta" as a mistake ("ETA's one move later now that you went fishing f
 
 understand "neal" as a mistake ("You aren't looking for anyone named Neal. Unless the trout is named Neal. (Spoiler: he's not.) Maybe you should figure how to find the eeks.") when player is in Lean Lane.
 
+understand "reangle" as a mistake ("You tilt the gleaner around to try to see it from a different point of view. [if general gleaner is reflexed]You see nothing new--enlarging it seemed to do enough[else]If there are any differences, they're too small for you to see[end if].") when player has general gleaner.
+
 understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when player is in lean lane.
 
 understand "wrap [text]" as a mistake ("The bubble wrap is already covering something.") when player has wrap.

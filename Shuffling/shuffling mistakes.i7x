@@ -342,6 +342,8 @@ understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the onl
 
 chapter Fo' Real Florae
 
+understand "eosin" as a mistake ("You need the bag, not a dying powder.") when player has noise bag.
+
 understand "gab" as a mistake ("That's not a powerful enough noise to fight the beats.") when player has noise bag.
 
 understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that.") when player is in Fo' Real Florae.

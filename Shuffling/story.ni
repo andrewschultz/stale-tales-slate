@@ -18,9 +18,8 @@ Shuffling Random Text.i7x includes all the random text. It is searchable by xx(f
 
 Shuffling Nudges.i7x includes all the nudges for good guesses. By good guesses I mean trying objects that can't be anagrammed, but they're descibed prominently enough.
 
-TMC=table of megachatter, where all the random text is forked.
 TON=table of nudges, where a good try is rejected, so the player knows they are on the wrong track. It's in Shuffling Nudges.i7x now.
-TOA=table of anagrams, or the big one.
+TOA=table of anagrams, or the big one. You can also search by store e.g. Store F = xxtfa
 TOH=table of hint objects
 TOSH=table of specialized help (for specific rejects, e.g. ELCISH for the liches)
 AIP=check if action is procedural
@@ -878,7 +877,7 @@ rule for showing what the player missed:
 	if missed-points is 0:
 		say "You got all the points! Well done! You are definitely ready for the extra challenge of [i]A Roiling Original[r].";
 	else:
-		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed.";
+		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed. There is no special ending if you get them all, so don't bother going through the game unless you really had fun. ";
 	repeat with zq running through solved regions: show-missed zq;
 
 to say toolwood: say "[if tool shed is in Rived Drive]. Though you got the tougher tool shed[end if]"
@@ -1906,7 +1905,7 @@ understand "throw [something preferably held] at [something]" as throwing it at.
 chapter exiting
 
 definition: a direction (called myd) is viable:
-	if myd is east and location of player is isle:
+	if myd is east and location of player is leis isle:
 		if player has wings or player has cork, decide yes;
 	if the room myd of location of player is nowhere, decide no;
 	decide yes;
@@ -2581,17 +2580,17 @@ a region has a number called cur-score. the cur-score of a region is usually zer
 
 a region has a table name called regtab. a region has a table name called regana.
 
-Intro is a region. max-score of Intro is 7. min-score of Intro is 4. regtab of Intro is table of intro nudges. regana of Intro is table of intro anagrams.
+Intro is a region. min-score of Intro is 4. max-score of Intro is 7. regtab of Intro is table of intro nudges. regana of Intro is table of intro anagrams. [both bulge/blot, darnels, static]
 
-Stores is an unsolvable region. max-score of Stores is 6. min-score of Stores is 4. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams.
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. [cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 16. regtab of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 16. regtab of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. [banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regtab of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams.
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regtab of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. [cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regtab of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regtab of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. [antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 14. regtab of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regtab of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. [leis isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 book fliptoing
 
@@ -2862,7 +2861,7 @@ check fliptoing beast:
 
 chapter the anagram table
 
-table of Intro anagrams [toa] [NOTE: PUT NON SCENERY FIRST]
+table of Intro anagrams [toa] [NOTE: PUT NON SCENERY FIRST] [xxta]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
 odor	desert-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
@@ -2872,7 +2871,7 @@ nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and
 static	attics	"attics" or "attic"	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Nat Egam golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
 attics	static	"static"	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true
 
-table of Stores anagrams
+table of Stores anagrams [xxtsa]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
 store f	scented descent	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
@@ -2881,7 +2880,7 @@ store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collec
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
 cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
 
-table of Forest anagrams
+table of Forest anagrams [xxtfa]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 ones	nose	"nose"	"ones"	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
 dashes	shades	"shades"	"dashes"	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
@@ -2896,7 +2895,7 @@ spread	drapes	"drapes"	"spread"	"The spread briefly turns into a red asp that ju
 Spam	maps	"maps"	"spam"	"[process-sandwich]With a sickening SCHLURP, the [spam] curdles and flattens to form several maps."	true	244002896
 vowels	wolves	"wolves"	"vowels"	"Well, you've done it now. The imposing vowels become werewolves--but they notice your shotgun and stand back. The first forward gets shot--or so they imagine."	false	567346084	"You don't need magic. You have a weapon."
 
-table of Sortie anagrams
+table of Sortie anagrams [xxtia]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 warts	straw	"straw"	"warts"	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
 skate	steak	"steak"	"skate"	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
@@ -2923,7 +2922,7 @@ oils	soil	"soil"	--	"You empty the cask. The oils seep into the moor and make a 
 hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	"The hoots button glows--you touch it (so hot,) and it changes to a shoot button as its letters shift."	false	385371437
 trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005
 
-table of Metros anagrams
+table of Metros anagrams [xxtma]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 drainage	gardenia	"gardenia"	"drainage" or "aged rain" or "arena dig" or "dear inga"	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
 clover	Velcro	"Velcro"	"clover"	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
@@ -2939,7 +2938,7 @@ siren	resin	"resin"	"siren"	"The siren makes some even more spastic noises befor
 beats	beast	"beast"	"beats"	"'Our beats! Saboteur!' you hear as a beast replaces the thumping with roaring, which stops when the thing needs to breathe. It's an improvement. For your chance to best a beast."	false	347796816
 words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claiming they didn't mean themselves, giving passive-aggressive threats. But it is too late--they fade, and a sword appears materially.[paragraph break]You sensibly put the sword--as slippery as the final words--into your sheath[in-sheath][else]The words explode from the noise bag, which is blown away by the [which-roar]. In their place is a shining sword that [give-sword][end if]."	false	384914208
 
-table of Resort anagrams
+table of Resort anagrams [xxtra]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
 l2	l2	"lies"	"lies"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"
@@ -8943,7 +8942,9 @@ after fliptoing l2:
 
 does the player mean doing something with the l2: it is likely.
 
-to say lei-lala: moot l2;
+to say lei-lala:
+	poss-d;
+	moot l2;
 
 check taking the l2: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead.
 
@@ -9010,14 +9011,14 @@ check going in Isle (this is the Isle escape rule):
 	if player has wings and noun is up, try going east instead;
 	if player does not have cork and player does not have wings, say "It's too far to swim, and you've got no way to go over the lake or whatever it is." instead;
 	if noun is not east, say "Maybe something's that way, but you see land far off to the east." instead;
-	unless rock is moot and swing is moot:
-		poss-d;
+	unless rock is moot and swing is moot, poss-d;
+	if l2 is in Leis Isle, poss-d;
 	say "Yes. It's time to move on from the [isle]. You need to find Red Bull Burdell.[paragraph break]";
 	if player has wings and wings are not worn:
 		say "You put on the wings--for spawning wingspan, of course. [run paragraph on]";
 		now player wears the wings;
 	if wings are worn:
-		say "The wings last just long enough for you to get to the landmass you see before shredding into the wind[if player has cork]. You also, unsurprisingly, drop the cork as you operate your wings[end if]. But it probably doesn't matter now--you're across to some sort of mainland.";
+		say "The wings last just long enough for you to get to the landmass you see before they shred in the wind[if player has cork]. You also, unsurprisingly, drop the cork as you operate your wings[end if]. But it probably doesn't matter now--you're across to some sort of mainland.";
 	else:
 		say "With the cork under your chest, you dog-paddle to the land you saw from the [isle]. It's soggy and gross from your swim, and the seaweed or whatever has already started to eat at it. You scrabble past a few silent inlets...";
 	moot cork;
