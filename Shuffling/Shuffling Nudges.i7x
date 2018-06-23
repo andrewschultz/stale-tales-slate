@@ -479,7 +479,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "resort"	572190276	--	--	degen-true rule	"[reg-rej]."
 "astral"	342897262	Astral Altars	--	--	"[loc-rej]." [start astral altars]
 "altar"	246623296	Astral Altars	--	--	"[loc-rej]."
-"shiner"	460586531	--	shiner shrine	--	"You don't need to change the shrine around the altars. Maybe what's on the altars, instead."
+"flare"	295646465	--	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
 "tile"	329722812	Astral Altars	--	--	"No, all the tiles."
 "leis"	322886760	Leis Isle	--	--	"[loc-rej]." [start leis isle]
 "lie"	226612794	Leis Isle	--	--	"[loc-rej]."

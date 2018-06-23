@@ -878,7 +878,8 @@ rule for showing what the player missed:
 		say "You got all the points! Well done! You are definitely ready for the extra challenge of [i]A Roiling Original[r].";
 	else:
 		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed. There is no special ending if you get them all, so don't bother going through the game unless you really had fun. ";
-	repeat with zq running through solved regions: show-missed zq;
+	repeat with zq running through solved regions:
+		show-missed zq;
 
 to say toolwood: say "[if tool shed is in Rived Drive]. Though you got the tougher tool shed[end if]"
 
@@ -7280,8 +7281,8 @@ missile-steered is a truth state that varies. missile-steered is usually false.
 
 check pushing shoot button:
 	if missile-steered is false, say "[one of]You hear a loud siren! Unfortunately, the missile doesn't seem to be pointing anywhere besides straight up. Guess where it'll land?[or]The missile doesn't have a specific target. You can't just go chucking it anywhere.[stopping]" instead;
-	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor. A loud voice echoes 'Mondale-Doleman! Lo, Amend!' And the missile becomes... a dolmen. You feel simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH! A do of FOOD!' he booms. 'Had now!'";
-	say "[wfak]And how! You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk (fine dish! Finished!) ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
+	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! Final danger? ... Landing fear![paragraph break]But a fine garland of light appears, instead. A loud voice echoes 'Mondale-Doleman! Lo, Amend!' You see Mondale-Doleman step out of ... a dolmen. Simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH! A do of FOOD!' he booms.";
+	say "[wfak]'Had now!' And how![paragraph break]You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk (fine dish! Finished!) ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
 	reg-inc;
 	solve-region sortie instead;
 
@@ -8890,13 +8891,13 @@ book resort
 
 chapter Astral Altars
 
-Astral Altars is a room in Resort. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if shiner shrine is in astral altars]. You've discovered a shiner shrine restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
+Astral Altars is a room in Resort. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
 check going nowhere in astral altars:
-	now shiner shrine is in astral altars;
-	say "[one of]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE SHINER SHRINE![or]No, the shiner shrine is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]" instead;
+	now feral flare is in astral altars;
+	say "[one of]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE![or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]" instead;
 
 tiles are plural-named flippable scenery in Astral Altars. "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
@@ -8910,13 +8911,13 @@ instead of doing something with scenery in Altars:
 	if action is procedural, continue the action;
 	say "You probably need to do something with, or to, the stile and tiles."
 
-section shiner shrine
+section feral flare
 
-The shiner shrine is bounding scenery. "It's all around the astral altars, but it's not where you want to be."
+The feral flare is bounding scenery. "It covers everywhere. Looks like you'll have to find what to do with the altars."
 
-instead of doing something with shiner shrine:
+instead of doing something with feral flare:
 	if action is procedural, continue the action;
-	say "The shiner shrine is just there, and it's not what or where you ultimately want to be. You'll want to try your luck with what's on the altars."
+	say "The feral flare is there and likely extremely dangerous to get near. You'll want to try your luck with what's on the altars."
 
 chapter Isle
 

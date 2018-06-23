@@ -181,8 +181,8 @@ for x in new_arg:
     anagram_check(x)
 
 if get_stdin:
-    input_line = "Enter line (blank quits, ?=find definitions):"
-    print(input_line)
+    input_line = "Enter line (blank quits, ?=find definitions):\n>>>>"
+    print(input_line, end='')
     for line in sys.stdin:
         ll = line.strip().lower()
         if ll.startswith('?'):
@@ -199,6 +199,6 @@ if get_stdin:
         new_arg = re.split("[ ,]", ll.strip())
         for x in new_arg:
             anagram_check(x)
-        print(input_line)
+        print(input_line, end='')
 else:
     if len(new_arg) > 1: print("Remember -s is stdin. This makes runs go faster in the future.")
