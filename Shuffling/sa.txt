@@ -329,7 +329,7 @@ GARDENIA.
 ?Can I go east? How?
 Yes. It's probably the big puzzle for this section.
 You need an ID. It's built from items from two other places.
-One thing is from the condo. The other is from Fo' Real Florae.
+One thing is from the Obtains Boastin Bastion. The other is from Fo' Real Florae.
 Spoilers of what to change things to are ahead.
 The KEYCARD and BARCODE.
 PUT BARCODE ON KEYCARD.
@@ -520,3 +520,28 @@ What can MEANS or MANSE become?
 Two things.
 You can start finding NAMES for everything.
 Or you can give AMENS.
+>General
+#roomlevel=4
+>>Last lousy points?
+?Where are the LLPs in the intro?
+You can do two things with the odor/door. You only need to do one to get by.
+BUGLE and BOLT both.
+The snarled darnels can't become anything, but you can be mad at them.
+They won't sue you if you ...
+SLANDER them.
+The static is also changeable.
+It can become ATTICS.
+?Where are the LLPs in the forest?
+Well, there's only one.
+In the Cruel One's Enclosure, you can deal with the banshee.
+Put it in the past tense.
+Make it a HAS-BEEN.
+?Where are the LLPs in the sortie?
+They are both in the grief'd fridge.
+The cake pan may be especially easy.
+It becomes a PANCAKE.
+The grist doesn't need many changes either.
+It becomes GRITS.
+?Where are the LLPs in the metros?
+There is just one.
+It's in the Bastion.
