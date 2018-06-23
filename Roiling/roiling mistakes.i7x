@@ -619,7 +619,9 @@ understand "fluters" as a mistake ("This game has no soundtrack, and if I made o
 
 chapter unblest sunbelt
 
-understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when Mel Fish is in location of player.
+understand "file" as a mistake ("You wish you could file Mel Fish away and put him in the past.") when Mel Fish is in location of player.
+
+understand "hms" as a mistake ("No ship comes to take Mel away. It's pretty landlocked here.") when Mel Fish is in location of player.
 
 chapter anemic cinema
 
@@ -829,7 +831,9 @@ understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis."
 
 chapter scape space
 
-understand "allo" as a mistake ("Lola says nothing back.") when player has dollar and player is female.
+mistake ("Lola says nothing back.") when player has dollar and player is female.
+
+understand "allo" as a understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when inapt paint is in location of player.
 
 understand "lots" as a mistake ("You only need the one slot.") when player has storage box and lost slot is part of storage box.
 

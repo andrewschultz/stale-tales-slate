@@ -645,6 +645,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unblest"	573436152	Unblest Sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
 "hut"	245498124	Unblest Sunbelt	--	--	"[no-hut]."
 "south"	416124667	Unblest Sunbelt	--	--	"[no-hut]."
+"smh"	197631418	--	Mel Fish	--	"[all-of-mel]."
+"life"	253127690	--	Mel Fish	--	"[all-of-mel]."
+"mel"	245695101	--	Mel Fish	--	"[all-of-mel]."
+"fshi"	205064007	--	Mel Fish	--	"[all-of-mel]."
 "casn"	186374877	--	Nerd-Aid	--	"[nerd-a]."
 "nerd"	303066509	--	Nerd-Aid	--	"[nerd-a]."
 "aid"	68209753	--	Nerd-Aid	--	"[nerd-a]."
@@ -1705,6 +1709,8 @@ to say shoaly: say "That might cause some bizarre erosion and risk dumping YOU i
 to say rav-chao: say "The ravages are chaotic enough. Changing them is a fight you'd lose"
 
 to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it"
+
+to say all-of-mel: say "No, you need to deal with all of Mel."
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 

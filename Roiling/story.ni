@@ -2163,7 +2163,7 @@ pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
-Mel Fish	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im![or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
+Mel Fish	"Mel Fish rants how they set him up to fail: [one of]'Shelf [']im[or]'Eh, Films[or](censored to maximize cluing) 'LES?! F HIM[in random order]! They done me wrong.' he cries as his eyes go red[one of]. He's obviously not finished ranting[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait-seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
 duck	"It quacks."
@@ -13940,7 +13940,7 @@ the BORTLES Lobster is in Boredom Bedroom. description is "Oh, man, there's no l
 
 the BORTLES lobster is vanishing.
 
-a-text of Bortles Lobster is "RYRRRYR". b-text of Bortles Lobster is "?G???G?". parse-text of Bortles Lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
+a-text of Bortles Lobster is "RYRRRYR". b-text of Bortles Lobster is "?GR??G?". parse-text of Bortles Lobster is "x[sp]o[sp]x[sp]x[sp]x[sp]e[sp]x". lobster is parse-spoilable.
 
 after fliptoing lobster:
 	if ME ARTS is in Boredom Bedroom:
@@ -14114,12 +14114,9 @@ the rivets are part of the statue. description is "[one of]After looking for a f
 rivets-first is a truth state that varies.
 
 check objhinting rivets:
-	if rivets-first is false and praise is in econ cone:
-		try objhinting praise instead;
-	if rivets are reflexed and praise is in econ cone:
-		try objhinting praise instead;
-	if rivets are reflexed and praise is in lalaland:
-		all-say "You learned all you could from the statue." instead;
+	if rivets-first is false and praise is in econ cone, try objhinting praise instead;
+	if rivets are reflexed and praise is in econ cone, try objhinting praise instead;
+	if rivets are reflexed and praise is in lalaland, all-say "You learned all you could from the statue." instead;
 
 the praise is vanishing scenery in Econ Cone. praise is undesc. printed name of praise is "PRAISE".
 
@@ -19809,17 +19806,17 @@ carry out repairing:
 
 book Baldest Blasted Saltbed
 
-Baldest Blasted Saltbed is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if number of visible guardians is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if][tow-dirs]."
+Baldest Blasted Saltbed is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if number of visible guardians is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if]. The stew wets behind the old ice are too dangerous[tow-dirs]"
 
 check going west in Baldest Blasted Saltbed:
 	say "The stew wets are way too dangerous. But any other way is okay." instead;
 
 section stew wets (west)
 
-the stew wets are scenery in Baldest Blasted Saltbed. "The stew wets are just another bit of treacherous terrain that help prevent your journey from being more expansive than it already has been."
+the stew wets are bounding scenery in Baldest Blasted Saltbed. "The stew wets are just another bit of treacherous terrain that help prevent your journey from being more expansive than it already has been."
 
 instead of doing something with stew wets:
-	if action is procuedural, continue the action;
+	if action is procedural, continue the action;
 	say "[wets-no]."
 
 section docile old ice
@@ -21391,13 +21388,13 @@ to say admsex:
 
 chapter unblest sunbelt
 
-Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.' You recognize him...wait, it's Mel Fish, the former reality show star ('SMH, Life'--the name still makes you see red) who always kept trying crazier and crazier ways to be an individual, before he burned out!"
+SMH Life Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.' You recognize him...wait, it's 'SMH Life' Mel Fish, the former reality show star (his names--real and stage--both make you see red) who always kept trying crazier and crazier ways to be more individual than you, before he burned out!"
 
 description of Mel Fish is "On his chest, Mel Fish has the word FLEMISH crossed out in red. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
 a-text of Mel Fish is "RYRRYRR". b-text of Mel Fish is "RYRRYRR". parse-text of Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
-understand "flemish/painted" and "flemish/painted man" as Mel Fish.
+printed name of Mel Fish is "'SMH, Life' Mel Fish".
 
 section dandier arid den
 
@@ -21538,7 +21535,7 @@ wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
-grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Align! Arm!' he booms, making you see red. You're not going that way with him there."	"This is the first grailman you've ever met, but he seems more than adequate enough to block your way."
+grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"This is the first grailman you've ever met, but he seems more than adequate enough to block your way."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in mislit limits, but I need this hack for it to replace the bonker]
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
