@@ -1,3 +1,5 @@
+#reds.pl rf
+#logsync.py should check to make sure that everything "questionable" (ha, ha) is checked off in reds.txt.
 sortie,riseto
 ################forest
 ################sortie
@@ -10,6 +12,7 @@ stable,tables,ablest,bleats,labset,belast
 flier,irelf,efril
 stair,trisa,israt,ratsi
 ramp,mrpa
+#qver of plates
 staple,epstal
 staple,RR?RRY=pastel=plates
 ################stores
@@ -18,6 +21,7 @@ towers,westor,restow
 tokers,restok,ktrose,stroke
 others,hoster,ershot,esroth
 nestor,storen,toners
+#qver of tropes poster
 presto,sopert
 presto,??YRRY=tropes=poster
 routes,sureto,setour
@@ -26,32 +30,44 @@ oyster,toyers
 #same mesa
 inside,diesin
 towards,radwost
+#qver of rude 'n nuder
 under,YRPG?=ruden=nuder
+#qver of morf form
 from,?RY?=morf=form
 beneath,thebean,hatbeen
 astride,itsared,edastir,staider
 #pat's
 despite,speedit,sitdeep
 #harms marsh
+#qver of all noon gag
+along,??Y??=allno=ongag
 along,nogal,logan
 #cripple clipper
+#qver of thickness sketchins
 athwart,?RRR?RR=whattar=tawrath=thatraw=artthaw
 ################troves
+#qver of pa egg pea
 gape,??R?=paeg=gpea=pega=page
 hate,thea,ateh,ehat
 care,rAcE
+#qver of stop post
 spot,?R??=stop=post
+#qver of sob ever verbose
 observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers
 recall,cEllar
 derive,idveer,viered,everid
-resist,RY?Y?R=sister=tressi
 ignore,ergnio,onregi,region,goerin
 reason,noears,sorena,anorse,oasner,asnero
 #drain nadir
 glare,regal,lager,ergal,agler
 #boredom bedroom
+#qver of lead
 deal,???R=lead=dale=elda=leda=adle
+#qver of bortles lobster
+bolster,?GR??G?=bortles=lobster
+#qver of me arts
+master,??rryr=mearts=mreast=stream=tamers
 #econ cone
 strive,trevis,vister
 ponder,derpon,epdorn,drpeno,nedorp
@@ -59,11 +75,15 @@ ponder,derpon,epdorn,drpeno,nedorp
 desire,R???RG=sirdee=reside
 #upscale capsule
 discover,rodsvice,revdisco,veridocs,scorediv
+#qver of salt
 last,R?R?=stal=salt
 decide,iceded,cdedei,ecedid
 resign,sireng,grines,singer,snegri,nregis,isnerg
-ramble,R?RRRY=blamer=balmer
+#qver of marble blamer balmer
+ramble,R?R???=marble=blamer=balmer
+#qver of sister tressi siters
 resist,RY?Y?R=sister=tressi
+#qver of trance nectar
 recant,R??YRR=trance=nectar
 ################presto
 #grey gyre
@@ -76,14 +96,17 @@ phooey,oyehop
 drat,tard
 rats,star
 #marines seminar remains
+#qver of sport ports
 prost,?R?R?=sport=ports
 #dirge ridge
 whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
 #phat path/saps pass
 keys,syke
+#qver of alert
 later,RY???=alert=alter=retre=atall
 later,alert
 tough,ought
+#qver of hawt thaw
 what,R???=hawt=thaw
 #hacks shack
 disk,skid,idks
@@ -91,11 +114,17 @@ skid,disk,idks
 compile,melcopi
 keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
+#qver of usb
+bus/sub,RY?=usb
 ################oyster
 #hops shop
+#qver of gins sign
 sing,?G?R=gins=sign
+#qver of perma-amper
 remap,R?RYR=perma=amper
+#qver of casper
 scrape,?RRYRY=casper=spacer
+#qver of capers
 scrape,RRR??Y=capers=recaps
 spill,lilps
 spit,tips,pits
@@ -108,16 +137,21 @@ unearth,haunter,etahnru,nearhut
 spike,pikes
 #lean lane
 swipe,ispew,wipes
+#qver of gleaner
 enlarge,YRR??RY=general=gleaner
 enlarge,algreen
 #achers arches
+#qver of achers' arches
 search,RY?RRR=chaser=achers=arches
 #lapsin plains
+#qver of plains
 splain,RRRY??=lapsin=plains
+#qver of span pans
 snap,?R?R=span=pans
 #dourest detours
 tan,ant
 #den loft
+#qver of papery yapper
 prepay,?RY?Y?=papery=yapper
 prepay,rapyep,yaperp
 #airshed
@@ -126,57 +160,80 @@ derail,ialder,laired
 redial,ialder,laired
 ###############towers
 #topside deposit
+#qver of dreads adders
 sadder,RY?RYR=dreads=adders
 sadder,dreads,drsade,edsard
 #scope copse
+rusty,R?R?O=tryus=yurts
+#qver of bluster butlers
 subtler,lesburt
 subtler,R?RRR??=bluster=butlers
+#qver of snider diners
 rinsed,R??R?R=snider=diners
 rinsed,isdern,drenis,nerdis
+#qver of muscly luc sym
 clumsy,RRYRR?=muscly=lucsym
-rusty,tryus
 #(random anywhere)
 creaky,kcayer,rayeck,keycar,yacker
 weariest,treesawi,treesiaw,sitweare,ewitears
 restful,truself,furlets
-docile,idleco,liedoc,olecid,cledio,ecolid
 #hintpastries
+#this looks very wrong
+#docile,idleco,liedoc,olecid,cledio,ecolid
 strudel,dreltus
 #obscurest subsector
 unlocked,dunkelco,loudneck,conklude,loneduck,elcundok
 #note "mardier" alternate solution doesn't quite work
+#qver of mardier admirer
+married,???R?GR=mardier=admirer
 married,iraderm,edmirra,redirma
-#long
+#outer route
 rustled,dreltus,sledrut
 #saltbed
+#qver of docile old ice
 coiled,R?YRYR=docile=oldice
+#this looks very wrong and is probably an artifact
+#docile,idleco,liedoc,olecid,cledio,ecolid
 pastier,airpest,reapsit,tipsare,spareit
 broken,rebonk
 #anemic cinema
+#qver of angriest ingrates
 angstier,?PPRRY?R=angriest=ingrates
 angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas,nitregas,sanergit,iregnats
 #unblest sunbelt
 himself,melfish,shelfim,smhlife,ehfilms,flemish
 grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
+#qver of dandier arid den
 drained,edindar,rindade
 drained,??YYRGR=dandier=aridden
+#qver of alarming grailman
 marginal,RYRRYR?R=alarming=grailman
-marginal,alignarm
+marginal,armalign
 #treading gradient
+#qver of raves saver
 pearly,???RR?=replay=player
 released,dreleesa,eredeals,lardeese,edsleare
 weariest,ewitears,treesawi,treesiaw,iwestare
+mined,?Y?YR=mende=dmini=denim
 #danger garden
 vainest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
 naivest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
+#qver of natives
+vainest/naivest,??YRYRR=natives=sitevan
 #lost lots
+#qver of sporties' ripostes
 prosiest,RR?RYYRR=sporties=ripostes
 #actionless coastlines
+#qver of asset-hit atheists
 hastiest,RY?R?YR?=assethit=atheists
+#qver of dinger
 grained,RR?YR?R=reading=adinger
+#qver of weirder red wire
 rewired,?GRYR?R=weirder=redwire
 holiest,thelois,sithole,liestho,sthelio,thesoil,theoils,thisole
+#qver of lois the hostile
 holiest,?GRYYRR=loisthe=hostile
+#qver of hostile-is-he lot
 holiest,??RYYR?=hostile=ishelot
 weirder,drewrie
 stabler,alberts
@@ -184,26 +241,41 @@ hastiest,setithas,thiseats
 #rawest waters
 nearest,ernesta,strenae,stearne
 #mislit limits
+#qver of pester'n serpent
 present,?RYRG??=pestern=serpent
 punier,inpure,iprune,inperu,unrIpe,urpIne
+#qver of curst palace
+#qver-ignore
 spectacular,cactuspearl,pearlcactus,capsulecart,acurstplace
 #mesprise premises
+#qver of tetris sitter
+triste,?RYRRY=tetris=sitter
 triste,restit
-#unsorted
+#### reorg a bit
+#qver of sweatier wait-seer
 weariest,?YYRY?RR=sweatier=waitseer
+#qver of fluster self rut
 restful,R?RRR?R=fluster=selfrut
+#qver of resident trendies
 nerdiest,R?RRY?R?=resident=trendies
 ################otters
 #bleary barley/burnt brunt
+#qver of bleary barley
 barely,P??YRB=bleary=barley
 reedily,lyredie,drilyee
+#qver of cinders
 discern,nrdices,icnerds,srindec
 rescind,nrdices,icnerds,srindec
 #frontage
+#qver of tearily-irately
+tearily/irately,??GR?RB=reality
+#qver of steamily
 steamily,?RYYRY?O=mayislet=mistyale=slimytea
+#qver of formally
 formally,?YR?YRRO=flymoral=allyfrom=myfloral
 wearingly,lawyering
 modestly,ed my lost,styledom,yet old ms,ty sod mel
+#qver of atmo-moat
 atom,??YR=atmo=moat
 #loop pool
 #bran barn
@@ -232,14 +304,19 @@ among,mango,goman
 #filed field
 watermelon,meantrowel,newtlamore,mrowenlate,moanerwelt
 #scape space
+#qver of inapt paint
 reversed,?GRGPRG?=reserved=deserver
 gonear,anogre,onearg,engaro
 rhubarb,burrbah
 #coins sequence
+#qver of sonic coins
 icons,YRY??=sonic=coins
+#qver of coins
 coins,nisco
 icons,nisco
 sonic,nisco
+#qver of melon
+lenmo/molen,?????=melon
 ;
 nerdiest treedsin % dinester ridesten sitender endtries steenrid sterndie edenstir drsteine eternids
 grained diregan % regdain nedriga indegar

@@ -39,6 +39,8 @@ my $permMod = 5000;
 my $myMax      = 1000;
 my $maxLetters = 20;
 
+my $bad_reverse_matches = 0;
+
 my $launchErrors = 0;
 my $lineToOpen   = 0;
 
@@ -60,6 +62,8 @@ my $onlyCheckReds  = 0;
 my $auditString    = "";
 my @extraArray     = ();
 my $includeLY      = 0;
+
+my $skipped_whatif = 0;
 
 my $setQYet = 0;
 
@@ -202,10 +206,9 @@ else {
     if ( $a =~ /^;/ )           { last; }
     if ($auditString) {
       next
-        if ( ( index( lc($a), "$auditString," ) == -1 )
-        && ( index( lc($a), ",$auditString" ) == -1 ) );
+        if ( $a !~ /\b$auditString\b/ );
       $gotAnyAna = 1;
-      if ( index( lc($a), lc($auditString) ) > 0 ) {
+      if ( $a !~ /^$auditString/ ) {
         print("$auditString found in $a at line $. but is not main anagram.\n");
         next;
       }
@@ -220,6 +223,10 @@ else {
       push( @wordArray, "" . ( "." x ( length( $wordArray[0] ) - 2 ) ) . "LY" )
         if $includeLY;
       push( @wordArray, "%" ) if $roilingYet && !$disableSettler;
+
+      for my $temp ( 0 .. $#wordArray ) {
+        if ( $wordArray[$temp] =~ /^[ROYGBV\?]+=/ ) { $setQYet = $temp; }
+      }
       goto PRINTRESULTS;
     }
 
@@ -236,8 +243,9 @@ else {
       }
       if ( !$foundPct ) { @array = ( @array, "%" ); }
     }
-    @letArray = split( //, $array[0] );
-    @perm     = split( //, $array[0] );
+    ( my $sol = $array[0] ) =~ s/\/.*//;
+    @letArray = split( //, $sol );
+    @perm     = split( //, $sol );
 
     if ( $#array < 1 ) {
       $lineToOpen = $. if !$lineToOpen;
@@ -247,11 +255,18 @@ else {
       );
     }
 
+    if ( $array[0] =~ /\// ) {
+      my $this_reverse_ok = reverse_match( $array[0], $array[1] );
+      $lineToOpen = $. if !$lineToOpen;
+      $errs += $this_reverse_ok;
+      next;
+    }
     for my $q ( 1 .. $#array ) {
 
       if ( questionClue( $array[$q] ) ) {
         if ( quesMatch( $array[0], $array[$q] ) == -1 ) {
-          print "$array[0]/$array[$q] bad Qmatch at line $..\n";
+          print
+            "$array[0]/$array[$q] matches question-clues badly at line $..\n";
           $errs++;
         }
         next;
@@ -300,13 +315,14 @@ else {
 #
 
 sub oneRed {
-
   my $permCount = 0;
   my $i, my $j, my $x, my $z;    # iterator variables
 
   my $succ = 0;
 
   my @lets = sort(@letArray);
+  ( my $sol = $array[0] ) =~ s/\/.*//;
+  my $ls = length($sol);
 
   my $checkForDup = 0;
 
@@ -315,9 +331,9 @@ sub oneRed {
   for $j ( 1 .. $#array ) {
     next if $j == $setQYet;
     next if $array[$j] eq "%";
-    next if length( $array[$j] ) eq length( $array[0] );
+    next if length( $array[$j] ) eq $ls;
     next
-      if ( length( $array[$j] ) eq length( $array[0] ) + 2 )
+      if ( length( $array[$j] ) eq $ls + 2 )
       && ( $array[$j] =~ /^1-/ );
     if ( $array[$j] =~ /=/ ) {
       my @eqAry = split( /=/, $array[$j] );
@@ -327,14 +343,15 @@ sub oneRed {
           "$eq (word $_) of argument $j/$array[$j] is the wrong length. It is "
             . length($eq)
             . " and should be "
-            . length( $array[0] ) )
-          if length($eq) != length( $array[0] );
+            . $ls )
+          if length($eq) != $ls;
       }
       next;
     }
-    die(
-"$array[$j] (word #$j) has wrong number of characters. Use .'s to fill out a word. Bailing."
-    );
+    die(  "$array[$j] (word #$j) has wrong number of characters: "
+        . length( $array[$j] ) . " vs "
+        . $ls
+        . ". Use .'s to fill out a word. Bailing." );
   }
   if ($onlyCheckReds) {
     print join( "/", @_ ) . " parsed okay\n" if $verbose;
@@ -351,9 +368,18 @@ sub oneRed {
   }
 
   return if $_[0] == 1 && $#array < 2;
+
+  if ( $array[0] =~ /\// ) {
+    print(
+"Skipping what-if searches since there is a ? which mucks things up. This can be done better but it's good enough for now.\n"
+    );
+    return if $skipped_whatif;
+    $skipped_whatif = 1;
+  }
   print "Removing arg # $_[0] of $array[$_[0]]: " if ( $_[0] );
 
-  @perm = split( //, "$array[0]" );
+  @letArray = split( //, $sol );
+  @perm     = split( //, "$sol" );
   for $j ( 1 .. $#array ) {
     next if $j eq $_[0];
     if ( $array[$j] eq "%" ) {
@@ -368,8 +394,8 @@ sub oneRed {
 
   assign_onematches();
 
-  if ( my $temp = isOops( $array[0], $_[0] ) ) {
-    die("Settler-Q test failed.") if ( $temp == -1 );
+  if ( my $temp = isOops( $sol, $_[0] ) ) {
+    die("Settler/questioning test failed.") if ( $temp == -1 );
     die "Test failed at word "
       . ( $temp & 0xff )
       . " character "
@@ -496,15 +522,15 @@ sub isOops # does this contradict the clues we are given e.g. ARGV[1] ... ARGV[A
     ) # remember to start at 1 because we want to disqualify the first entry as it's the one we want to solve
   {
     next if ( $count == $_[1] );
-    next if ( $array[$count] =~ /=/ );
 
     if ( $setQYet == $count ) {
-      return ( quesMatch( $_[0], $array[$setQYet] ) );
+      return ( quesMatch( $_[0], $array[$setQYet], $array[0] =~ /\// ) );
     }
 
     $gotone = 0;
 
     #print "$_[0]: THIS: $this PERM(L) $perm[$_[0]]\n";
+
     for $l ( 0 .. length( $array[0] ) - 1 ) {
       $this = substr( $array[$count], $l, 1 );
 
@@ -549,6 +575,9 @@ sub quesMatch {
   my $arg;
   my @sums;
 
+  my $beNice = 0;
+  if ( defined( $_[2] ) ) { $beNice = $_[2]; }
+
   push( @sums, 0 ) for ( 0 .. $#matchAry );
   for $arg ( 1 .. $#argsAry ) {
     my @tAry = split( //, $argsAry[$arg] );
@@ -585,7 +614,7 @@ sub quesMatch {
     }
   }
   for $pos ( 0 .. $#matchAry ) {
-    if ( $qAry[$pos] eq "?" ) {
+    if ( ( $qAry[$pos] eq "?" ) && ( !$beNice ) ) {
       return -1 if ( ( $sums[$pos] == 0 ) || ( $sums[$pos] == $#qAry ) );
     }
   }
@@ -713,6 +742,73 @@ sub assign_onematches {
     #if ($array[$j] =~ /[^0-9%]/) { die ("Bad input $j, $array[$j]"); }
   }
 
+}
+
+sub reverse_match {
+  my @possibles = split( /\//, $_[0] );
+  my @inputs    = split( "=",  $_[1] );
+  my $settler_stuff = $inputs[0];
+  shift(@inputs);
+
+  my @matched   = (0) x length( $possibles[0] );
+  my @unmatched = (0) x length( $possibles[0] );
+  my @set_read  = ('!') x length( $possibles[0] );
+
+  my @first_poss = split( //, $possibles[0] );
+
+  for my $q1 ( 0 .. $#first_poss ) {
+    $set_read[$q1] = misser( $first_poss[$q1] );
+  }
+
+  for my $q1 ( 0 .. $#possibles ) {
+    my @base_ary = split( //, $possibles[$q1] );
+    for my $q2 ( 1 .. $#possibles ) {
+      my @comp_ary = split( //, $possibles[$q2] );
+      for my $q3 ( 0 .. $#set_read ) {
+        $set_read[$q3] = '?'
+          if misser( $comp_ary[$q3] ) ne misser( $base_ary[$q3] );
+      }
+    }
+  }
+
+  for my $q1 ( 0 .. $#possibles ) {
+    my @base_ary = split( //, $possibles[$q1] );
+    for my $q2 ( 0 .. $#inputs ) {
+
+      #print ">>>>>>$q1/$q2/$possibles[$q1]/$inputs[$q2]\n";
+      my @comp_ary = split( //, $inputs[$q2] );
+      for ( 0 .. $#base_ary ) {
+        $matched[$_]   = 1 if ( $base_ary[$_] eq $comp_ary[$_] );
+        $unmatched[$_] = 1 if ( $base_ary[$_] ne $comp_ary[$_] );
+      }
+    }
+  }
+
+  # print "@matched///@unmatched\nPoss @possibles\nInputs @inputs\n";
+
+  for ( 0 .. $#matched ) {
+    if ( $matched[$_] && $unmatched[$_] ) {
+      $set_read[$_] = '?';
+    }
+    elsif ( $matched[$_] ) {
+      $set_read[$_] = 'G' if $set_read[$_] eq 'Y';
+      $set_read[$_] = 'P' if $set_read[$_] eq 'R';
+      $set_read[$_] = 'B' if $set_read[$_] eq 'O';
+    }
+  }
+
+  my $my_str = join( "", @set_read );
+  ( my $scan = $array[1] ) =~ s/=.*//;
+  return 0 if $my_str eq $scan;
+  print
+"Uh oh mismatch for reverse match of $_[0]/$_[1] at $.: $my_str vs $scan.\n";
+  return 1;
+}
+
+sub misser {
+  return 'Y' if lc( $_[0] ) =~ /[aeiou]/i;
+  return 'O' if lc( $_[0] ) eq 'y';
+  return 'R';
 }
 
 sub usage {
