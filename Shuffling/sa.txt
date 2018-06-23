@@ -523,6 +523,15 @@ Or you can give AMENS.
 >General
 #roomlevel=4
 >>Last lousy points?
+?Do I get anything special for getting the last lousy points?
+No, and if you want to see what happens, you can just search for the source (in quotes) in story.ni.
+?Where are they distributed?
+There's three at the start.
+There's one in the stores area.
+There's one in Store F.
+There're two in Store I.
+There's one in Store M.
+There're five in Store R, though one is potentially two points.
 ?Where are the LLPs in the intro?
 You can do two things with the odor/door. You only need to do one to get by.
 BUGLE and BOLT both.
@@ -531,6 +540,10 @@ They won't sue you if you ...
 SLANDER them.
 The static is also changeable.
 It can become ATTICS.
+?What do we do with the cabinet?
+You need something that you can pour onto it.
+This is a name brand that's become a common accepted word, much like the clover.
+BACTINE.
 ?Where are the LLPs in the forest?
 Well, there's only one.
 In the Cruel One's Enclosure, you can deal with the banshee.
@@ -545,3 +558,19 @@ It becomes GRITS.
 ?Where are the LLPs in the metros?
 There is just one.
 It's in the Bastion.
+The antlers don't have to stay there...
+...if you change them to RENTALS.
+?Where are the LLPs in the resort?
+There are a few.
+The first is in Leis Isle.
+Before examining anything, you should say LIES.
+Then getting both the CORK and WINGS will get you another.
+You get up to two points for changing all of the TOOLSHED, GRIPS and SLOPE.
+Finally, you can change the chain links to CHINA before turning them into kilns.
+?Can we get locked out of any LLPs?
+If you solve an area, yes.
+Moving on from the desert or thickets loses a maximum point in the intro.
+Moving on from the Cruel Ones' Enclosure loses the bonus point in Store F.
+The LLPs in the fridge are always available in Store I.
+If you clear the Bastion without dealing with the antlers, you lose a maximum point in Store M.
+Moving on from the isle or drive loses a point in store R. In addition, you lose a chance for an LLP in your current location if you take the leis or flip the kilns first.

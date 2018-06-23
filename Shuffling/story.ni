@@ -7679,6 +7679,10 @@ voice-count is a number that varies.
 
 the cordoned red condo is scenery in Roarings Garrison. "It's immaculate compared to the rest of the city[if bastion-evac is true], but you aren't welcome there any more[end if]."
 
+instead of entering cordoned red condo, try going north instead;
+
+to say n-of-garrison: say "[if obtains boastin bastion is visited]bastion[else]condo[end if]"
+
 the tents are useless scenery in Roarings Garrison. understand "commune" as tents.
 
 description of tents is "Decorated with a corny crayon-a-crony."
@@ -7729,7 +7733,7 @@ check going north in Roarings Garrison:
 
 check going nowhere in Roarings Garrison:
 	if noun is up or noun is down, continue the action;
-	say "There're condos north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south." instead;
+	say "There's [if bastion is visited]the Obtains Boastin['] Bastion[else]condos[end if] north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south." instead;
 
 the fuzzy clover is a thing in Roarings Garrison. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3. cert-text of clover is "-[d1][d1][d1][d1][d1]". rect-text of clover is "V[d1][d1][d1][d1][ast]O".
 
@@ -7809,7 +7813,7 @@ description of lost corn is "It's got a bunch of different kernels, and some loo
 
 check fliptoing keycard:
 	if bastion-evac is false and dry cake is visible:
-		say "[one of]The chatterers would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]Still gotta clear out the condo residents first[stopping].";
+		say "[one of]The chatterers would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
 		preef dry cake instead;
 
 check fliptoing controls:
@@ -8068,8 +8072,6 @@ after taking dry cake: say "You take care not to let the cake tear as you pick i
 
 understand "steal [something]" as taking.
 
-condo-barred is a truth state that varies. condo-barred is usually false.
-
 after taking the lost corn: say "'All yours, man,' says the deadbeat. 'It's some pretty good corn, too. Ask me if you like want details.'".
 
 check going south in Obtains Boastin' Bastion:
@@ -8078,7 +8080,6 @@ check going south in Obtains Boastin' Bastion:
 			say "A caveat before you vacate: some loot here may be a tool later. [run paragraph on]";
 			try taking the dry cake;
 		say "You migrate, ragtime music in your head. From the south, some camped folks decamp for har-hars and rah-rahs. 'Roaches scare! Ho!'[paragraph break]You're the camp's scamp now, so to speak. Why, the deadbeat has promoted you from The (Wo)Man to Dude. I bet you could even take that corn now!";
-		now condo-barred is true;
 
 report taking the dry cake:
 	say "Taking it is a piece of cake with everyone gone, you note dryly.";
@@ -11042,8 +11043,6 @@ part listening
 
 the block listening rule is not listed in any rulebook.
 
-condo-count is a number that varies.
-
 to say thissy: say "[one of]A passing conversation among the rushing and yelling for others to move aside: 'I bet they take the hotel fees out of our severance.'[paragraph break]'THIS.'[paragraph break]You've always hated when people say that, but it feels nearly profane today[or]Another 'THIS' makes you cringe, as if it were profanity[stopping]"
 
 check listening:
@@ -11904,7 +11903,7 @@ sortie	"Examining the parmesan cheese?"
 sortie	"Praying in Sacred Cedars?"
 sortie	"Throwing the paper plane?"
 sortie	"The following anagrams in the sortie where appropriate: stake, takes, teaks, pears, limes, thicken, lacy, mope or tap (by Pat), similes, sever, serve, POTUS[nfi]"
-metros	"Trying to explore the condo before you cleared it?"
+metros	"Trying to explore the bastion before clearing it?"
 metros	"Putting the barcode on the tomato?"
 metros	"Scanning the deadbeat?"
 metros	"Asking the beats anything?"

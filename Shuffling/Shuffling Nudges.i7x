@@ -842,8 +842,7 @@ to say no-hot:
 to say ded-chg:
 	say "He may mumble about change, but he's amazingly resistant to change, himself"
 
-to say condo-visit:
-	say "[if dry cake is in bastion]You should probably just go north to look at the condo instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
+to say condo-visit: say "[if dry cake is in bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
 
 to say kern-push:
 	say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
