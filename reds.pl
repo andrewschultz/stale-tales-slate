@@ -250,7 +250,6 @@ else {
     for my $q ( 1 .. $#array ) {
 
       if ( questionClue( $array[$q] ) ) {
-
         if ( quesMatch( $array[0], $array[$q] ) == -1 ) {
           print "$array[0]/$array[$q] bad Qmatch at line $..\n";
           $errs++;
@@ -320,6 +319,19 @@ sub oneRed {
     next
       if ( length( $array[$j] ) eq length( $array[0] ) + 2 )
       && ( $array[$j] =~ /^1-/ );
+    if ( $array[$j] =~ /=/ ) {
+      my @eqAry = split( /=/, $array[$j] );
+      for ( 0 .. $#eqAry ) {
+        my $eq = $eqAry[$_];
+        die(
+          "$eq (word $_) of argument $j/$array[$j] is the wrong length. It is "
+            . length($eq)
+            . " and should be "
+            . length( $array[0] ) )
+          if length($eq) != length( $array[0] );
+      }
+      next;
+    }
     die(
 "$array[$j] (word #$j) has wrong number of characters. Use .'s to fill out a word. Bailing."
     );
@@ -484,6 +496,7 @@ sub isOops # does this contradict the clues we are given e.g. ARGV[1] ... ARGV[A
     ) # remember to start at 1 because we want to disqualify the first entry as it's the one we want to solve
   {
     next if ( $count == $_[1] );
+    next if ( $array[$count] =~ /=/ );
 
     if ( $setQYet == $count ) {
       return ( quesMatch( $_[0], $array[$setQYet] ) );
@@ -580,7 +593,7 @@ sub quesMatch {
 }
 
 sub questionClue {
-  return 0 unless $_[0] =~ /^[roygbp\?]+=/i;
+  return 0 unless $_[0] =~ /^[roygbp\?=]+/i;
   my @ary = split( /=/, $_[0] );
   for ( 1 .. $#ary ) {
     die(
@@ -621,7 +634,7 @@ sub redSource {
       $outString .= "" . ( "=" x 40 ) . " END READABLES\n";
       next;
     }
-    if ( $a =~ /^table of readables/ ) {
+    if ( $line =~ /^table of readables/ ) {
       <A>;
       $inReadables = 1;
       next;

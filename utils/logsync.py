@@ -16,8 +16,10 @@ import re
 need_logic = defaultdict(int)
 got_logic = defaultdict(int)
 got_logic_invis = defaultdict(int)
+got_logic_reds = defaultdict(int)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
+logic_reds = "c:\\writing\\dict\\reds.txt"
 scanned = ""
 
 # this is for oddly or privately named items
@@ -34,7 +36,7 @@ def usage():
     print("-cou/-ncou turns on/off showing counts of errors, default = off.")
     exit()
 
-def check_logic_file(needs, gots, outs, format_string, file_desc):
+def check_logic_file(needs, gots, outs, format_string, file_desc, other_test = True):
     print("=" * 40, "Checking", outs)
     # for x in needs.keys(): print (x, needs[x], gots[x])
     t2 = [x for x in needs.keys() if x not in gots.keys()]
@@ -52,7 +54,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc):
         for y in sorted(t3, key=gots.get):
             need_in_source = need_in_source + 1
             print(need_in_source, y, "is commented in the logic file line", gots[y] ,"but is not in the source.")
-    if need_in_logic + need_in_source > 0:
+    if need_in_logic + need_in_source > 0 and other_test:
         print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
     else:
         print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
@@ -100,17 +102,34 @@ last_comment = False
 hunt_for_comments = False
 
 with open(logic_invis) as file:
-    for line in file:
+    for (line_count, line) in enumerate(file):
         if 'STORE P' in line:
             hunt_for_comments = True
-        count = count + 1
         ll = line.lower().strip()
         if hunt_for_comments and ll.startswith('?') and not last_comment:
-            print("Line", count, "may need line before it:", ll)
+            print("Line", line_count, "may need line before it:", ll)
         if ll.startswith("# logic for ") or ll.startswith("#logic for"):
             scanned = re.sub("^# ?logic for ", "", ll)
-            got_logic_invis[scanned] = count
+            got_logic_invis[scanned] = line_count
         last_comment = ll.startswith("#")
+
+with open(logic_reds) as file:
+    qm_needed = 0
+    need_question_mark = 0
+    last_qver = ""
+    for (line_count, line) in enumerate(file, 1):
+        ll = line.lower().strip()
+        if re.search("#qver (of|for) ", ll):
+            if need_question_mark:
+                print("Need question mark in settler results before line", line_count, "to cover last #qver ({:s})".format(last_qver), "at line", need_question_mark)
+                qm_needed += 1
+            scanned = re.sub("#qver (of|for) ", "", ll)
+            if 'qver for' in ll: print("WARNING line", line_count, "qver of = preferred for", ll)
+            last_qver = scanned
+            if scanned in got_logic_reds.keys(): print("WARNING line", line_count, "duplicates", scanned)
+            got_logic_reds[scanned] = line_count
+            need_question_mark = line_count
+        elif '?' in ll or 'qver ignore' in ll or 'qver-ignore' in ll: need_question_mark = 0
 
 arg_count = 1
 
@@ -135,3 +154,4 @@ while arg_count < len(sys.argv):
 
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues")
+check_logic_file(need_logic, got_logic_reds, "reds.txt", "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed > 0))
