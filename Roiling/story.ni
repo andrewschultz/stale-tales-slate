@@ -6492,7 +6492,7 @@ after reading a command:
 			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
 			now scan-nag is true;
 	if dash-nag is false and the player's command includes "-":
-		say "(NOTE: you never need to use a dash)";
+		say "(NOTE: you never need to use a dash, which can be replaced with a space)";
 		now dash-nag is true;
 	if XX matches the regular expression "^(say|think|shout|speak|yell) ":
 		if say-warn is false:
@@ -9051,7 +9051,7 @@ an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"margina
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
-dinger	dinger	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN.'"
+dinger	solve a loaves	false	382846875	--	"grained"	"grained"	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN. Oh, speaking of learning, here are some solve-a-loaves that didn't work for me. Apparently they are more for immediate help, not long-term projects and stuff. Plus they taste icky cold.'"
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair."
 trendies	trendies	false	675249448	--	"nerdiest"	"nerdiest"	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
@@ -14852,38 +14852,23 @@ check burning:
 	if burn-check is false:
 		ital-say "In this game, you should never have a burning implement, and you should never need one. So this verb is only good for cheap jokes.";
 		now burn-check is true instead;
-	if noun is an animal:
-		say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
-	if noun is a person:
-		say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
-	if noun is a fruit or noun is lobster or noun is tea tray:
-		say "Good thing this game isn't a cooking sim." instead;
-	if noun is chair: [introduction]
-		say "You think 'I char a rich chair' but have nothing to burn it with." instead;
-	if noun is sitar:
-		say "That's not the way to recover rock-star status." instead;
-	if noun is a sto:
-		say "[if noun is flippable]Even if it didn't look important, no[else]No senseless vandalism, please[end if]." instead;
-	if noun is rude 'n nuder: [routes]
-		say "I am anti-censorship, even of that sort of thing. Plus you have no source of flame." instead;
-	if noun is pipe soot:
-		say "It's been through enough of that." instead;
-	if noun is divorces: [troves]
-		say "A rubbish society rag deserves such a fate--in an incinerator or something. Maybe you can think DIVORCES into irrelevance, though." instead;
-	if noun is lager or noun is pernod:
-		say "It's not high enough proof. In fact, it's almost certainly watered-down." instead;
-	if noun is crate:
-		say "This is totally the wrong genre of game for that." instead;
-	if noun is coal: [presto]
-		say "You need to burn mental fuel, here." instead;
-	if noun is on labs slab:
-		say "You may figuratively want to, right now, but that's natural when you're programming something tough." instead;
-	if noun is raft: [oyster]
-		say "[if player is in raft]No way. Especially not while you're on it[else]That might be a way across. Somehow[end if]." instead;
-	if noun is log gaol: [towers]
-		say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead;
-	if noun is ropins:
-		say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
+	if noun is an animal, say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
+	if noun is a person, say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
+	if noun is a fruit or noun is lobster or noun is tea tray, say "Good thing this game isn't a cooking sim." instead;
+	if noun is chair, say "You think 'I char a rich chair' but have nothing to burn it with." instead; [introduction]
+	if noun is sitar, say "That's not the way to recover rock-star status." instead;
+	if noun is a sto, say "[if noun is flippable]Even if it didn't look important, no[else]No senseless vandalism, please[end if]." instead;
+	if noun is rude 'n nuder, say "I am anti-censorship, even of that sort of thing. Plus you have no source of flame." instead; [routes]
+	if noun is pipe soot, say "It's been through enough of that." instead;
+	if noun is divorces, say "A rubbish society rag deserves such a fate--in an incinerator or something. Maybe you can think DIVORCES into irrelevance, though." instead; [troves]
+	if noun is praise or noun is statue, say "[if noun is reflexive]Perhaps have it create a burning in you[else]It already created a burning in you[end if]." instead;
+	if noun is lager or noun is pernod, say "It's not high enough proof. In fact, it's almost certainly watered-down." instead;
+	if noun is coal, say "You need to burn mental fuel, here." instead; [presto]
+	if noun is on labs slab, say "You may figuratively want to, right now, but that's natural when you're programming something tough." instead;
+	if noun is raft, say "[if player is in raft]No way. Especially not while you're on it[else]That might be a way across. Somehow[end if]." instead; [oyster]
+	if noun is crate, say "This is totally the wrong genre of game for that." instead;
+	if noun is log gaol, say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead; [towers]
+	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
 	if noun is bot boat:
 		say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
 	if noun is flowerpot or noun is crocus:
@@ -20257,10 +20242,12 @@ after fliptoing atheists:
 
 chapter reading a dinger
 
-a thing called Reading a Dinger is vanishing scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves silliness like someone figuring out world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. This wouldn't happen in saner places."
+a thing called Reading a Dinger is flippable scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves utter nonsense like someone figuring out centuries-old world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. Saner places would reject it, I'm sure.".
+
+printed name of Reading a Dinger is "[i]READING: A Dinger[r]"
 
 check taking dinger:
-	say "You hear a rage din from the coasting agnostic. They might not like the book, but they like being robbed even less." instead;
+	say "You hear a rage din from the coasting agnostic. You both see red. They might not be particularly fond of the book, but since it's there and it's theirs, they don't want to give it up. Maybe you can make it more unattractive somehow." instead;
 
 a-text of dinger is "RRYYRYR". b-text of dinger is "RR?YR?R". parse-text of dinger is "x[sp]x[sp]?[sp]-[sp]x[sp]?[sp]x".
 
@@ -20624,6 +20611,12 @@ book Actionless Coastlines
 
 Actionless Coastlines is north of Strati Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor."
 
+section solve-a-loaves
+
+some solve a loaves are an edible plural-named hintpastry. "Some solve-a-loaves have been left here.". description is "Inscribed with 'lo, save,' they are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]."
+
+printed name of solve a loaves is "solve-a-loaves".
+
 section Maturation Natatorium
 
 the Maturation Natatorium is a backdrop. the Maturation Natatorium is in actionless coastlines and Salted Deltas. description is "It extends [if player is in actionless coastlines]west[else]east[end if]. There's no clear way in[if atheists are in lalaland], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT."
@@ -20681,8 +20674,6 @@ a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?
 chapter Fringe Finger
 
 Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This fringe finger leads to a dead end pretty much every which way. So there's not much to do except go back east."
-
-some solve-a-loaves are an edible plural-named hintpastry in Fringe Finger. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
 
 understand "loaves" and "loaf" as solve-a-loaves.
 
