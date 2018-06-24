@@ -5054,33 +5054,24 @@ definition: a room (called myrm) is ominous:
 last-wall is a thing that varies. last-wall is usually owl decal code wall.
 
 when play begins (this is the hint and other randomization rule):
-	if a random chance of 1 in 2 succeeds: [troves random clues]
-		now bee-head-first is true;
-	if a random chance of 1 in 2 succeeds:
-		now rivets-first is true;
-	if a random chance of 1 in 2 succeeds:
-		now lobster-first is true;
-	if a random chance of 1 in 2 succeeds:
-		now sister-first is true;
+	if a random chance of 1 in 2 succeeds, now bee-head-first is true; [troves random clues]
+	if a random chance of 1 in 2 succeeds, now rivets-first is true;
+	if a random chance of 1 in 2 succeeds, now lobster-first is true;
+	if a random chance of 1 in 2 succeeds, now sister-first is true;
+	if a random chance of 1 in 2 succeeds, now mbb is Mr Beal; [troves random puzzle]
 	if a random chance of 1 in 2 succeeds: [presto random clues]
 		now goshy is true;
 	sort byebyes in random order; [phat path ways to say goodbye]
 	now a random badbook is in hacks' shack;
 	sort shop-hint-items in random order; [posh hops shop items] [oyster random clues]
-	if a random chance of 1 in 2 succeeds:
-		now carps-pref is true;
-	else:
-		now carps-pref is false;
-	if a random chance of 1 in 2 succeeds: [towers random clues]
-		now t-or-b is turbos;
-	else:
-		now t-or-b is blaster;
+	if a random chance of 1 in 2 succeeds, now carps-pref is true;
+	now t-or-b is turbos;
+	if a random chance of 1 in 2 succeeds, now t-or-b is blaster; [towers random clues]
 	sort the table of guard-org in random order; [for first-time-view clues]
 	sort table of animal randomness in random order; [otters hinting]
 	sort shrine-imp-items in random order;
 	sort cathedral-items in random order;
-	if a random chance of 1 in 2 succeeds: [others random clues]
-		now viewer-first is true;
+	if a random chance of 1 in 2 succeeds, now viewer-first is true; [others random clues]
 	sort rustic-easy-items in random order;
 	sort wells-hintables in random order;
 	sort field-hintables in random order;
@@ -5093,8 +5084,7 @@ when play begins (this is the hint and other randomization rule):
 		increase orwt entry by wt;
 		increment wt;
 	sort the table of xibits in orwt order;
-	if a random chance of 1 in 2 succeeds: [demo dome random pokes]
-		now last-wall is owl decal code wall;
+	if a random chance of 1 in 2 succeeds, now last-wall is owl decal code wall; [demo dome random pokes]
 	else:
 		now last-wall is allow lots tools wall;
 
@@ -14234,20 +14224,36 @@ instead of doing something with sister tressi:
 	say "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how." instead;
 
 after fliptoing sister tressi:
-	now Blamer Balmer is LLPish;
+	now mbb is LLPish;
+	report-glarers;
+	continue the action;
+
+chapter marble blamer mr beal
+
+to say mbb-txt: say "A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, [other-mbb]. You can READ who created this marble"
+
+to say other-mbb: say "[if mbb is Balmer]Mr. Beal[else]Balmer[end if]"
+
+Marble Blamer Mr Beal is proper-named vanishing scenery. description is "[mbb-txt]."
+
+printed name of Mr Beal is "Marble Blamer Mr. Beal".
+
+a-text of Marble Blamer Mr Beal is "RYRRRY". b-text of Marble Blamer Mr Beal is "R?R???". parse-text of Marble Blamer Mr Beal is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
+
+after fliptoing mbb:
+	now sister tressi siters are LLPish;
 	report-glarers;
 	continue the action;
 
 chapter marble blamer balmer
 
-Marble Blamer Balmer is proper-named vanishing scenery. description is "A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. You can READ who created this marble."
+Marble Blamer Balmer is proper-named vanishing scenery. description is "[mbb-txt]."
 
-a-text of Marble Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?R???". parse-text of Marble Blamer Balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of Marble Blamer Balmer is "RYRRRY". b-text of Marble Blamer Balmer is "R?R???". parse-text of Marble Blamer Balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
-after fliptoing Blamer Balmer:
-	now sister tressi siters are LLPish;
-	report-glarers;
-	continue the action;
+mbb is a thing that varies. mbb is Marble Blamer Balmer.
+
+does the player mean doing something with mbb: it is very likely.
 
 chapter Trance Nectar
 
@@ -26364,6 +26370,7 @@ red vees	"[one of]You have to believe it's worth it for you to do something with
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
 sister tressi	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
 blamer balmer	"[one of]Blamer Balmer helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
+blamer mr beal	"[one of]Mr. Beal helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
 trance nectar	"[one of]You don't want to drink it. You want to get out of the whole situation.[plus][or]How to apologize to yourself?[plus][or]RECANT.[minus][cycling]"	--	"RECANT" [end TROVES hinting]
 curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
@@ -27375,6 +27382,7 @@ this is the routes-alt rule: say "[eq2][b]ROUTES[r] has no alternate, um, routes
 this is the troves-alt rule:
 	say "[eq2][b]TROVES[r][eq2][line break]";
 	say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
+	say "[2da]There were two marble blamers chosen at the start. You got [mbb], but there was also [other-mbb].";
 
 this is the presto-alt rule:
 	say "[eqls]PRESTO[line break][2da]you could've said [if phooeyed is true]POOH instead of PHOOEY[else]PHOOEY instead of POOH[end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";

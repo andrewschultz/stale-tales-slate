@@ -176,6 +176,10 @@ Therefore, A is in slot 2. Now we can see the possibilities left: (RL)A(BM)(BM)(
 You can look for the red Mr. Beal and LeBram clues to nail things down.
 Or you can notice there are only four choices: RABMLE, RAMBLE, LABMER, and LAMBER.
 Ramble it is.
+#logic for marble blamer mr beal
+?How do I figure Blamer Mr Beal?
+R?R??? looks unpromising, but if you write out the possibilities, you'll note a few things: RL/ARL/RLM/BME/AEL/ERL is what you have. If slot 2 is R or L, we get RLM/LRM..., which is not promising, especially since B must then go in slot 4. So A is in slot 2.
+RL/A/BRLM/B/EL/ERL is left. That puts M in slot 3. RL/amb/EL/ERL can be guessed, but note L in slot 1 means LAMBER, then you have RAMBEL/RAMBLE. RAMBLE.
 # logic for sister tressi siters
 ?How do I figure the Sister Tressi Siters?
 You can get a lot of information from the non-question marks.
