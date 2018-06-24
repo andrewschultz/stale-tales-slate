@@ -52,6 +52,10 @@ understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be T
 
 understand "try" as a mistake ("[if player is in subsite]You're sure the lecture to the east will be about trying versus doing. Ugh[else]That's more sensible than the five alternatives, but it's not concrete enough[end if].")
 
+understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.") when player is in Busiest Subsite.
+
+understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.") when player is in Busiest Subsite.
+
 chapter rested desert
 
 understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in rested desert.

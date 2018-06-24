@@ -72,6 +72,26 @@ Include (-
 ];
 -) after "Language.i6t".
 
+book i6 stub(s)
+
+to decide whether the player yes-consents:
+	(- YesOrNoExt(1) -).
+
+to decide whether the player no-consents:
+	(- YesOrNoExt(0) -).
+
+Include (-
+
+[ YesOrNoExt yn;
+	if ( (+ debug-state +) == 1)
+	{
+	    return yn;
+	}
+	return YesOrNo();
+];
+
+-)
+
 book separate modules
 
 include Shuffling Random Text by Andrew Schultz.
@@ -2092,6 +2112,10 @@ check kissing:
 	if noun is peasant, say "He has a wife. Sorry." instead;
 	say "Affection's so fine. Fact." instead;
 
+chapter thinking
+
+instead of thinking: say "Yes, I hope this game makes you do a little of this, but nothing painful[one of] (if you need hints, HINT will work better, or HINT (OBJECT)[or][stopping]."
+
 book stub verbs
 
 chapter parseing
@@ -3422,9 +3446,15 @@ book intro
 
 chapter Busiest Subsite
 
-Busiest Subsite is a room in Intro. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage the bustling, babbling masses seem to be ignoring."
+Busiest Subsite is a room in Intro. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage the bustling, babbling masses seem to be ignoring as they skirt the Oafs['] Sofa planted squarely in the center."
 
 last-loc of Intro is Busiest Subsite.
+
+section silly scenery
+
+the caterers' terraces are plural-named amusing scenery in subsite. "You can't see the caterers working on the terraces, and you probably don't want to disturb them."
+
+section grim hint
 
 grims is a truth state that varies.
 
@@ -3432,6 +3462,8 @@ every turn when player is in busiest subsite:
 	if turn count is 4 and grims is false:
 		say "'Non-grim morning!' you hear a voice call. It seems to be coming from that passage, and when you focus there, it repeats. You're guessing someone wants you to look there.";
 		now grims is true;
+
+section masses and passage and entry
 
 the bustling masses are useless scenery in Busiest Subsite. understand "people" as bustling masses.
 
@@ -3447,9 +3479,24 @@ description of masses is "Very diverse, yes, but equally drawn to whatever's to 
 
 the auditorium entry is useless scenery in busiest subsite. "You'd love any excuse not to join everyone else going there."
 
-the caterers' terraces are plural-named amusing scenery in subsite. "You can't see the caterers working on the terraces, and you probably don't want to disturb them."
+[??inn's gigs]
+the above-sign is privately-named scenery in Busiest Subsite. the printed name of above-sign is "the sign above the passage". understand "sign" as above-sign when player is in subsite.
+
+instead of taking above-sign: say "[grounds]".
+
+to say grounds: say "Appropriation of company property is potentially a fireable offense. Oh, wait. It's just useless, seriously."
+
+description of above-sign is "It says NONE TRY, and it's just above a side passage people are ignoring."
+
+section banner
 
 The banner is amusing scenery in Busiest Subsite. "'This way: BEING FIRED!'[one of] People walk by, discussing how the DEBRIEFING should make Mondays dynamos again.[or] You're run over by people saying 'This talk will be a FINE BRIDGE to a new job!'[or] Has nobody else noticed this sign? Or what it says?[stopping]"
+
+instead of following banner: try going east instead.
+
+instead of taking banner: say "[grounds]".
+
+section slim neat name list
 
 cycled-yet is a truth state that varies. cycled-yet is false.
 
@@ -3461,21 +3508,11 @@ after examining name list for the first time:
 
 check taking name list: say "That'd get you escorted out." instead.
 
-instead of following banner: try going east instead.
-
-the above-sign is privately-named scenery in Busiest Subsite. the printed name of above-sign is "the sign above the passage". understand "sign" as above-sign when player is in subsite.
-
-instead of taking above-sign: say "[grounds]".
-
-instead of taking banner: say "[grounds]".
-
-to say grounds: say "Appropriation of company property is potentially a fireable offense. Oh, wait. It's just useless, seriously."
-
-instead of taking brazier: say "That'd probably be illegal.".
-
-description of above-sign is "It says NONE TRY, and it's just above a side passage people are ignoring."
+section diretcional rejects
 
 instead of entering passage: try going inside instead.
+
+instead of taking brazier: say "That'd probably be illegal.".
 
 check going north in Busiest Subsite:
 	say "That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway[if name list is unexamined], but the name list catches your eye[else], though the name list seems to be mocking you to read it again[end if].";
@@ -3500,24 +3537,6 @@ check going outside in Busiest Subsite:
 		if the player yes-consents, try entering the passage instead;
 		say "Well, it's still there, if you want to enter it." instead;
 	say "There are many ways out. You may want to be more specific or have somewhere interesting or unusual in mind." instead;
-
-to decide whether the player yes-consents:
-	(- YesOrNoExt(1) -).
-
-to decide whether the player no-consents:
-	(- YesOrNoExt(0) -).
-
-Include (-
-
-[ YesOrNoExt yn;
-	if ( (+ debug-state +) == 1)
-	{
-	    return yn;
-	}
-	return YesOrNo();
-];
-
--)
 
 the overlate elevator is amusing scenery in Busiest Subsite.
 
@@ -3544,12 +3563,6 @@ check going inside in Busiest Subsite:
 	set the pronoun it to odor;
 	now player is in Rested Desert instead;
 
-instead of thinking: say "Yes, I hope this game makes you do a little of this, but nothing painful[one of] (if you need hints, HINT will work better, or HINT (OBJECT)[or][stopping]."
-
-check dropping magenta nametag:
-	if player is in subsite, say "Enough people have discarded their nametags carelessly. No littering please." instead;
-	if player is in Rested Desert, say "Littering in a nature-filled area like this is not a good idea." instead;
-
 dirs-missed is a number that varies. dirs-missed is 0.
 
 to been-check (subdir - a direction):
@@ -3570,7 +3583,21 @@ west	false	"[line break]The standard, usual directions don't seem to cut it. But
 
 check exiting in busiest subsite: try going outside instead.
 
+section oafs' sofa
+
+The OAFS' SOFA is scenery in Busiest Subsite. "It's labeled OAFS['] SOFA to remind you that you don't want to be wasting time off in dreamland right now."
+
+instead of entering oafs' sofa: say "The first people who did that were booted from the event in humiliating fashion. You'd like a way to leave, but not like that."
+
+instead of doing something with oafs' sofa:
+	if action is procedural, continue the action;
+	say "The Oafs' Sofa is there as something to avoid. The organizers tried to make a joke out of this, because jokes help people be motivated and productive and turn that frown upside-down, but unsurprisingly, they totally failed."
+
 section magenta nametag
+
+check dropping magenta nametag:
+	if player is in subsite, say "Enough people have discarded their nametags carelessly. No littering please." instead;
+	if player is in Rested Desert, say "Littering in a nature-filled area like this is not a good idea." instead;
 
 the magenta nametag is a thing. rgtext of magenta nametag is "[rcn][gc][rc][gc][rc]*[rc]". lgth of nametag is 7. gpos of nametag is 7. rpos of nametag is 1. cert-text of nametag is "-[ast]A[d1][ast]E[d1][ast]A[d1]". rect-text of nametag is "G[d1][d1][d1][d1][d1][ast]N".
 
@@ -3770,7 +3797,7 @@ chapter thickest thickets
 
 Thickest Thickets is a room in Intro. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
 
-check going nowhere in thickest thickets: say "[one of]You hit a snag, and the [if toga is visible]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if]." instead.
+check going nowhere in thickest thickets: say "[one of]You hit a snag, and the [if toga is visible]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]." instead.
 
 carry out fliptoing goat:
 	if player has toga:

@@ -21,6 +21,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "elevator"	681565093	subsite	--	--	"[word-games]."
 "terraces"	646837211	subsite	--	--	"[word-games]."
 "banner"	371551651	subsite	--	--	"[word-games]."
+"oafs"	199329257	busiest subsite	--	--	"[sofa-there]."
+"oaf"	103055291	busiest subsite	--	--	"[sofa-there]."
 "rested"	561349094	Rested Desert	--	--	"[loc-rej]." [start rested desert]
 "improbable"	570855914	Rested Desert	--	--	"You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler."
 "breeze"	610130653	--	odor	--	"[nope-odor]."
@@ -620,6 +622,8 @@ to say name-list:
 
 to say word-games:
 	say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
+
+to say sofa-there: say "The Oafs['] Sofa is there, and there's nothing you can do about it."
 
 to say nope-odor:
 	say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
