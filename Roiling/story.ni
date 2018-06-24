@@ -5454,13 +5454,12 @@ check scaning location of the player (this is the location scan rule):
 			try scaning verbose instead;
 		try scaning stop post instead;
 	if location of player is Boarded Roadbed:
-		if what-a-bee is reflexive and bee's head is reflexive:
+		if bee-score is 0:
 			say "That bee is all up in your face. So you sort of scan it by default.";
 			try scaning what-a-bee instead;
 		try scaning cellar door instead;
 	if location of player is Drain Nadir:
-		if diapers are reflexive:
-			say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the diapers, the picture of the sad pier, a spider..." instead;
+		if diapers are reflexive, say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the Ires Pad, the diapers, a spider..." instead;
 	if location of player is hacks' shack and compiled code is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
 		try scaning compiled code instead;
@@ -6109,9 +6108,8 @@ carry out troves-hinting:
 		if verbose are in Bustle Sublet, try objhinting verbose instead;
 		try objhinting post instead;
 	if player is in boarded roadbed:
-		if what-a-bee is reflexive and bee's head is reflexive:
-			if bee-head-first is true:
-				try objhinting bee's head instead;
+		if bee-score is 0:
+			if bee-head-first is true, try objhinting bee's head instead;
 			try objhinting what-a-bee instead;
 		if bee's head is reflexive, try objhinting bee's head instead;
 		if what-a-bee is reflexive, try objhinting what-a-bee instead;
@@ -6992,8 +6990,8 @@ Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambian
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not in lalaland]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
 Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
-Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. Besides, you might wind up in ruts: Rustin['] Ruin St."
-Drain Nadir	"You're so low, you can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow."
+Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
+Drain Nadir	"No. You're so low, you [if diapers are in nadir drain]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
@@ -7703,7 +7701,7 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
-		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][line break]You see red a bit at getting no direct help, yourself." instead;
+		unless bee-score is 0, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][line break]You see red a bit at getting no direct help, yourself[one of]. Maybe you can listen a few more times, to find an alternate way to find the cellar[or][stopping]." instead;
 		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
@@ -8715,8 +8713,7 @@ carry out fliptoing:
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
 				say "[the-to entry] to [the-from entry] denied! Push ff to change this![line break]" instead;
 			d "OK, [the-from entry] to [the-to entry].";
-			if the-from entry is reflexive:
-				now the-from entry is reflexed;
+			if the-from entry is reflexive, now the-from entry is reflexed;
 			now the-from entry is unfigured;
 			if location of player is preserve:
 				if the-to entry is not parrot and the-from entry is not parrot:
@@ -8917,8 +8914,8 @@ cold	heat	false	270386244	--	"hate"	"hate"	"You feel a rife fire in your heart. 
 heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief!  You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
-bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if what-a-bee is reflexed]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
-what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee's head is reflexed]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
+bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
+what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
 cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]."
 cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
 diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
@@ -13779,9 +13776,9 @@ a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop
 book Boarded Roadbed
 
 every turn when player is in Boarded Roadbed:
-	if what-a-bee is not reflexive or bee's head is not reflexive:
+	if bee-score > 0:
 		if current action is not listening:
-			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if what-a-bee is reflexive or bee's head is reflexive]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
+			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if bee-score is 1]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
 
 Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help."
 
@@ -13789,7 +13786,7 @@ chapter THE BEE and 2 solutions
 
 section bee proper (believe)
 
-the what-a-bee is a reflexive privately-named thing in Boarded Roadbed. printed name of what-a-bee is "[if bee's head is reflexive and what-a-bee is reflexive]evil bee[else if bee's head is reflexed and what-a-bee is reflexed]live bee[otherwise]vile bee[end if]"
+the what-a-bee is a reflexive privately-named thing in Boarded Roadbed. printed name of what-a-bee is "[vile-evil] bee"
 
 after looking in boarded roadbed:
 	set the pronoun it to what-a-bee;
@@ -13807,39 +13804,32 @@ Include (-
 	has transparent animate
 -) when defining what-a-bee.
 
-description of what-a-bee is "[if bee's head is reflexed and what-a-bee is reflexed]It looks utterly defeated, but at least it didn't die[otherwise if bee's head is reflexive and what-a-bee is reflexive]It seems to know you want to go down to the cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][otherwise]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee's head is reflexive or what-a-bee is reflexive]. It seems pretty [vile-evil][end if]."
+description of what-a-bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to the cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][otherwise]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score is 1]. It seems pretty [vile-evil][end if]."
 
-to say vile-evil:
-	if bee's head is reflexive and what-a-bee is reflexive:
-		say "evil";
-	else if bee's head is reflexed and what-a-bee is reflexed:
-		say "live";
-	else:
-		say "vile";
+to say vile-evil: say "[if bee-score is 0]evil[else if bee-score is 2]live bee[else]vile[end if]"
 
 [the below is really awful but I don't see a better way]
 
-understand "bee/evil" and "evil bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexive.
-understand "bee/vile" and "vile bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexed.
-understand "bee/vile" and "vile bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexive.
-understand "bee/live" and "live bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexed.
+understand "bee/evil" and "evil bee" as what-a-bee when bee-score is 0.
+understand "bee/vile" and "vile bee" as what-a-bee when bee-score is 1.
+understand "bee/live" and "live bee" as what-a-bee when bee-score is 2.
 
 check scaning what-a-bee:
-	if what-a-bee is reflexive and bee's head is reflexive:
+	if bee-score is 0:
 		if a random chance of 1 in 2 succeeds:
 			say "The bee pokes her head in so near and disrupts your settler's reading.";
 			try scaning bee's head instead;
 	if what-a-bee is reflexed and bee's head is reflexive:
 		say "Nothing shows up until you get to the bee's head.";
 		try scaning bee's head instead;
-	if bee's head is reflexed and what-a-bee is reflexed:
-		say "The bee rests, silent, and so does your settler." instead;
+	if bee-score is 2, say "The bee rests, silent, and so does your settler." instead;
 
-after fliptoing what-a-bee:
-	if bee's head is reflexed:
-		min-up;
-	else:
-		say "[bee-buzz-less].";
+after fliptoing when player is in boarded roadbed:
+	if noun is what-a-bee or noun is bee's head:
+		if bee-score is 2:
+			min-up;
+		else:
+			say "[bee-buzz-less].";
 	continue the action;
 
 to say bee-buzz-less:
@@ -13854,16 +13844,15 @@ a-text of bee's head is "RYYRYR". b-text of bee's head is "RYYRYR". parse-text o
 instead of taking bee's head:
 	say "You're not fast enough to behead the bee's head."
 
-after fliptoing bee's head:
-	if what-a-bee is reflexed:
-		min-up;
-	else:
-		say "[bee-buzz-less].";
-	continue the action;
+to determine which number is bee-score:
+	let temp be 0;
+	if bee's head is reflexed, increment temp;
+	if what-a-bee is reflexed, increment temp;
+	decide on temp;
 
 chapter cellar door (after bee dispatched)
 
-the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is[one of], though trying to examine again may give you a hint. Or not[or], but you see red knowing what a racket ERA LLC has in cellar construction."
+the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is, but maybe walking away for a bit -- or trying to -- will give you some sort of clue what is going on, here."
 
 a-text of cellar door is "RYRYRR". b-text of cellar door is "RGRYRR". parse-text of cellar door is "x[sp]e[sp]x[sp]a[sp]x[sp]x".
 
@@ -13876,26 +13865,23 @@ instead of doing something to cellar door:
 derived is a truth state that varies.
 
 after fliptoing cellar door:
-	if the player's command includes "derive":
-		now derived is true;
-	if bee's head is reflexive or what-a-bee is reflexive:
-		poss-d;
+	if the player's command includes "derive", now derived is true;
+	if bee-score < 2, poss-d;
 	continue the action;
 
 check fliptoing cellar door:
-	if what-a-bee is off-stage:
-		say "You haven't forgotten anything important, yet." instead;
-	if bee's head is reflexive and what-a-bee is reflexive:
+	if what-a-bee is off-stage, say "You haven't forgotten anything important, yet." instead;
+	if bee-score is 0:
 		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
 		preef cellar door;
 		the rule succeeds;
 
 book Drain Nadir
 
-Drain Nadir is a room in Troves. "While you could escape physically, there's nowhere better to go in your current mental state. [if diapers are in drain nadir]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out.[else]But you're getting better, you've half cleared the Drain Nadir of negative influences, and now Eddie C's song is playing. Perhaps listening could uplift you fully.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if]."
+Drain Nadir is a room in Troves. "While you could escape physically, there's nowhere better to go in your current mental state. [if diapers are in drain nadir]You notice trappings of spiritual and material poverty: an Ires Pad, to help you emote RIGHT, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out[else]But you're getting better, you've half cleared the Drain Nadir of negative influences, and now Eddie C's song is playing. Perhaps listening could uplift you fully.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if]."
 
 after fliptoing eddie's song:
-	now sad pier is in lalaland;
+	now Ires Pad is in lalaland;
 	now spider is in lalaland;
 	continue the action;
 
@@ -13903,9 +13889,12 @@ chapter adeiprs
 
 [?? small clue later with statue]
 
-the picture of a sad pier is auxiliary scenery in Drain Nadir. "It is a warding drawing of what not to wallow in: solitude so dilute in an old suite. According to [i]Pa, Egg, Pea[r], if it were not marked as such, it should be illegal, due to possible encouragement of pervasive negative thinking."
+check examining Ires Pad for the first time:
+	say "It's, well, really red. It's not clear whether it advocates focusing or losing your bad emotions, but either way, it changes views each time you look at it. Since its help might be too on-the-nose, you abstain from looking into the details of the current picture. But you can always look again, if you need that." instead;
 
-a-text of sad pier is "RYRRYYR". b-text of sad pier is "RYRPYYP". parse-text of sad pier is "x[sp]-[sp]x[sp]p[sp]-[sp]-[sp]r".
+the Ires Pad is auxiliary scenery in Drain Nadir. "It is the Hail-Maryest of motivational tools.  Currently it contains a picture [one of]labeled AS I DERP[or]labeled ERA DIPS[or]labeled RIPE, SAD[or]labeled SPA RIDE[or]labeled RAP SIDE[or]by Si Preda[or]by Pa Dries[in random order]. So much red, too!"
+
+a-text of Ires Pad is "RYRRYYR". b-text of Ires Pad is "RYRRYYR". parse-text of Ires Pad is "x[sp]-[sp]s[sp]x[sp]-[sp]-[sp]x".
 
 the box of diapers is vanishing scenery in Drain Nadir. "The diapers are a symbol of a new rebirth by starting from nothing, or something. At least, you hope they are."
 
@@ -26156,7 +26145,7 @@ table of dont-need-hints [tdnh]
 hint-entry	advice-entry
 Pa Egg Pea	"Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point." [start TROVES]
 stop post	"Now you've spotted the post, it is only good for another clue if you examine it."
-what-a-bee	"You can get past the bee now[if bee's head is reflexive], though you can deal with it one more way[else], having dealt with it both ways[end if]."
+what-a-bee	"You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]."
 bee's head	"[by-bee]."
 diapers	"[by-bee]."
 praise	"[by-rivets]."
@@ -26191,17 +26180,13 @@ medals	"The medals are in good enough shape. They will help you speed up when yo
 Elmer	"You can't take on Merle and Elmer by yourself--you need some allies."
 Merle	"You can't take on Merle and Elmer by yourself--you need some allies."	[end OTTERS]
 
-to say other-let:
-	say "Try either of the other letters. With variety, Leo and Rand will take the hint"
+to say other-let, say "Try either of the other letters. With variety, Leo and Rand will take the hint"
 
-to say this-animal:
-	say "You've got a useful ally. They'll be ready just as they are when the time comes"
+to say this-animal, say "You've got a useful ally. They'll be ready just as they are when the time comes"
 
-to say by-rivets:
-	say "You've been inspired enough by the statue[if praise is in lalaland and rivets are reflexed], more than enough, in fact[else], though you could still get a bit more inspiration[end if]"
+to say by-rivets, say "You've been inspired enough by the statue[if praise is in lalaland and rivets are reflexed], more than enough, in fact[else], though you could still get a bit more inspiration[end if]"
 
-to say by-bee:
-	say "You can get past the bee now[if what-a-bee is reflexive and bee's head is reflexive], though you can deal with it one more way[else], having dealt with it both ways[end if]"
+to say by-bee, say "You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]"
 
 to say op-ed-silly:
 	say "The op-ed, with all of its parts, is just there to build up Elvira's ludicrous 'case' against you";

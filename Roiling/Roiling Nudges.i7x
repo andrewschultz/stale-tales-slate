@@ -269,7 +269,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "stop"	355202520	--	stop post	--	"You're not seeing the right way to see the stop post, here."
 "roadbed"	350147390	Boarded Roadbed	--	--	"[locname]." [start Boarded Roadbed]
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
-"bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee's head is reflexive and what-a-bee is reflexive]n[end if] [what-a-bee][if bee's head is reflexed and what-a-bee is reflexed]! Though, really, you've already given it the business.[else]![end if]"
+"bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [what-a-bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
 "nadir"	222441064	Drain Nadir	--	--	"[locname]." [start drain nadir]
 "pictuer"	566810127	Drain Nadir	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
