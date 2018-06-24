@@ -251,8 +251,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "kitchne"	454037543	kitchen	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]." [start kitchen]
 "kitchen"	454037543	--	--	kitch-visit rule	"You can just walk to the kitchen, there's no need to revisit the nick, and there's no third location."
 "ditties"	541314892	kitchen	--	--	"Don't let the songs distract you from your mission."
-"fridge"	338266445	kitchen	--	--	"The fridge is just a fridge."
-"obligatory"	611511337	kitchen	--	--	"The fridge will always be what it is. Generally what is or was inside is more interesting, anyway."
+"fridge"	338266445	kitchen	--	--	"[fridge-abuse]."
+"grief"	317237356	kitchen	--	--	"[fridge-abuse]."
 "mud"	190210049	--	--	in-i-main rule	"The mud is just there. You can't change it."
 "middle"	332746125	--	tall trio	--	"[to-trio]."
 "left"	311244862	--	tall trio	--	"[to-trio]."
@@ -771,17 +771,15 @@ this is the kitch-visit rule:
 	if kitchen is visited, the rule succeeds;
 	the rule fails;
 
-to say to-trio:
-	say "The chefs are all lumped together--a tall trio"
+to say fridge-abuse, say "The fridge has taken enough abuse and can't be changed for the better[if cake pan is not moot or grist is not moot], but maybe you can fix something inside it[end if]"
 
-to say ck-p:
-	say "It's not a cake, and it's not quite a pan--it's a cake pan";
+to say to-trio, say "The chefs are all lumped together--a tall trio"
 
-to say perf-brand:
-	say "It's the full name brand that really catches your eye"
+to say ck-p, say "It's not a cake, and it's not quite a pan--it's a cake pan";
 
-to say label-no:
-	say "The tall trio is probably what you want to change, but the label may have information";
+to say perf-brand, say "It's the full name brand that really catches your eye"
+
+to say label-no, say "The tall trio is probably what you want to change, but the label may have information";
 
 this is the rm-or-moor rule:
 	if player is in room or player is in moor, the rule succeeds;

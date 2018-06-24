@@ -2026,11 +2026,10 @@ carry out kicking:
 	the rule succeeds;
 
 instead of attacking:
+	if noun is wolves and player has shotgun, try shooting wolves instead;
 	if noun is the player:
-		if player has shotgun:
-			try attacking the player;
-		else:
-			say "I hope it's not the puzzles that made you try this." instead;
+		if player has shotgun, try attacking the player instead;
+		say "I hope it's not the puzzles that made you try this." instead;
 	if noun is not visible, say "You don't have any weapon with that sort of range." instead;
 	if noun is gadget, say "Boy, if that's how you treat stuff that's there to HELP you..." instead; [general]
 	if noun is knot, say "You fail to tonk it." instead;
@@ -2041,10 +2040,9 @@ instead of attacking:
 	if noun is spread, try cutting noun instead;
 	if noun is a disguise-piece, say "You are not the fashion police, alas." instead;
 	if noun is bucket, say "You give the bucket a good kick, but fortunately this game is about anagrams and not figures of speech." instead;
-	if noun is wolves and player has shotgun, try shooting wolves instead;
 	if location of player is frost forts, try shooting the noun instead;
 	if noun is large packet, say "Peck at packet? Ack, pet! (Once your meal is ready, you'll do this.)[paragraph break]" instead; [sortie]
-	if noun is fridge, say "Fridge: grief'd." instead;
+	if noun is fridge, say "If this were a graphic game, a RED GIF would pop up to stop you. See what I did there?" instead;
 	if noun is scraped wall, say "Hm, pounding on it doesn't help[if hay is part of scraped wall]. You've filled it, though, and maybe you can change it more easily now[else]. The reading on the trellis seems to indicate you need to fill it first[end if]." instead;
 	if noun is tall trio, say "Even this threesome would leave you smote here." instead;
 	if noun is woeful pat, say "Violence against the English language should not beget physical violence." instead;
@@ -6355,7 +6353,7 @@ after printing the locale description for kitchen when kitchen is unvisited:
 
 does the player mean putting an ingredient on the tortilla: it is very likely.
 
-description of Kitchen is "This is a kitchen, though it's a bit bare, except for the obligatory fridge. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
+description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
 
 check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
 
@@ -6585,15 +6583,15 @@ check fliptoing HOTSAUCE:
 
 section fridge
 
-the obligatory fridge is scenery in the kitchen. understand "refrigerator" as fridge.
+the grief'd fridge is scenery in the kitchen. understand "refrigerator" as fridge.
 
-the obligatory fridge is an opaque openable container.
+the grief'd fridge is an opaque openable container.
 
 check examining fridge: ignore examine containers rule.
 
 rule for printing room description details of fridge: omit contents in listing.
 
-the manila animal is undesc. it is part of the obligatory fridge. understand "lamina" as manila animal.
+the manila animal is undesc. it is part of the grief'd fridge. understand "lamina" as manila animal.
 
 the manila animal is amusing.
 
@@ -6603,9 +6601,9 @@ instead of doing something with the manila animal:
 
 instead of examining the manila animal: say "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
 
-description of obligatory fridge is "A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
+description of grief'd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
 
-after examining obligatory fridge:
+after examining grief'd fridge:
 	pad-rec-q "warts";
 	continue the action;
 
@@ -6623,10 +6621,10 @@ instead of doing something with cake pan when fridge-open is false:
 	now fridge-open is true;
 	continue the action;
 
-check opening obligatory fridge:
+check opening grief'd fridge:
 	now fridge-open is true;
 	now fridge is transparent;
-	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in obligatory fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping]." instead;
+	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in grief'd fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping]." instead;
 
 some grist is in the fridge.
 
@@ -7315,7 +7313,7 @@ check pushing shoot button:
 	solve-region sortie instead;
 
 to say guards-say-hi:
-	if grist is in obligatory and cake pan is in obligatory:
+	if grist is in grief'd fridge and cake pan is in grief'd fridge:
 		say ". They smile and apologize awkwardly, and you say no problem.";
 	else if grist is moot and cake pan is moot:
 		say ". They thank you for leaving them so much food even after they--well. They were too lazy when they woke up";
@@ -13051,8 +13049,8 @@ to unsolve-sortie:
 	now tall trio is not flipped-yet;
 	now coat is off-stage;
 	now taco is not flipped-yet;
-	now grist is in obligatory;
-	now cake pan is in obligatory;
+	now grist is in grief'd fridge;
+	now cake pan is in grief'd fridge;
 	now grits are off-stage;
 	now pancake is off-stage;
 	now grist is not flipped-yet;
