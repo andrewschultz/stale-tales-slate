@@ -6991,7 +6991,7 @@ Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not in lalaland]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
 Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
-Drain Nadir	"No. You're so low, you [if diapers are in nadir drain]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
+Drain Nadir	"No. You're so low, you [if diapers are in nadir drain]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad piesy[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
@@ -13804,7 +13804,7 @@ Include (-
 	has transparent animate
 -) when defining what-a-bee.
 
-description of what-a-bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to the cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][otherwise]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score is 1]. It seems pretty [vile-evil][end if]."
+description of what-a-bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to the cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][otherwise]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score < 2]. It seems pretty [vile-evil][end if]."
 
 to say vile-evil: say "[if bee-score is 0]evil[else if bee-score is 2]live bee[else]vile[end if]"
 
@@ -14245,7 +14245,7 @@ Marble Blamer Balmer is proper-named vanishing scenery. description is "A stern 
 a-text of Marble Blamer Balmer is "RYRRRY". b-text of Blamer Balmer is "R?R???". parse-text of Marble Blamer Balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
 after fliptoing Blamer Balmer:
-	now sister tressi is LLPish;
+	now sister tressi siters are LLPish;
 	report-glarers;
 	continue the action;
 
@@ -26339,9 +26339,9 @@ post	"[one of]You must persist when you are stonewalled. The second time is easi
 bee's head	"[one of]The bee is hovering so near. But small bees shouldn't be able to fly. Giant bees--well, there is the giant's paradox.[plus][or]The path of concrete reasoning should not be closed to the common man or woman.[plus][or] often, once you believe you can, you really can REASON![minus][cycling]"	--	"REASON"
 what-a-bee	"[one of]Even intellectual elitists know, deep down inside, that there is an emotional component to things.[plus][or]They hope to be able to BELIEVE without letting the common man do so as well. Not that they need to, to achieve their goals.[minus][cycling]"	--	"BELIEVE"
 cellar door	"[one of]To open the cellar, you need not REMEMBER anything and everything. Instead, just say 'Oh I know' after someone offers knowledge. It works, because, you know--well, you BETTER know...[plus][or]It is better to be able to RECALL[minus][cycling]."	--	"RECALL"
-spider	--	sad pier
-sad pier	"[one of]The objects in the Drain Nadir should give you a clue what to do next, since they're all anagrams.[plus][or]Examining yourself, you need to hit total rock bottom.[plus][or]DESPAIR.[minus][cycling]"
-diapers	"[one of]One page after saying you don't want to make any big mistakes, there's a bit about how you may need to hit rock bottom before finding your way back up[plus][or]There's lots of mumbo-jumbo about observing sentimental objects until you get sick of them, but please be sure to forget them once they've served their purpose[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
+spider	--	ires pad
+ires pad	"[one of]Each picture/author name in the Ires Pad has a red-letter clue.[or]The objects in the Drain Nadir should give you a clue what to do next, since they're all anagrams.[plus][or]Examining yourself, you need to hit total rock bottom.[plus][or]DESPAIR.[minus][cycling]"
+diapers	"[one of]The diapers symbolize ... wait, no, they just mesh with the other items to present a seven-word anagram.[plus][or]Nevertheless, diapers are pretty depressing, too.[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
 lager	"[one of]The Large Regal Lager [if player is in boredom bedroom]here [end if]in Boredom Bedroom serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager.[minus][cycling]"	--	"GLARE"
 Eddie's Song	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
 lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is in Boredom Bedroom]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"

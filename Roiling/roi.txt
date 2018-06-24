@@ -607,11 +607,7 @@ But you can RECALL. There's another solution, too. You can listen.
 I'd veer...ever I'd--a way to figure where it was?
 DERIVE.
 >>DRAIN NADIR
-?Is Sister Tressi relevant?
-Only for an LLP.
-She looks down at you as if you say you're a failure.
-You can RESIST.
-?A spider, sad pier, diapers...
+?A spider, Ires Pad, diapers...
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
 DESPAIR.
@@ -672,7 +668,16 @@ If you haven't dealt with the lobster or the stream, you need to.
 Then, you need to LAST.
 ?What do I do with the Trance Nectar?
 It's time to turn your back on all this.
+But first, you must dispose of the Marble Blamer or the Sister Tressi Siters.
 RECANT.
+?Is the Marble Blamer relevant?
+Yes.
+It focuses you on grueling work that drains your soul.
+Unless you RAMBLE.
+?Are the Sister Tressi Siters relevant?
+Yes.
+She looks down at you as if you say you're a failure.
+You can RESIST.
 ?DIVORCES magazine. Is it useful?
 It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
 You need to realize something...

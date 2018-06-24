@@ -271,10 +271,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [what-a-bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
 "nadir"	222441064	Drain Nadir	--	--	"[locname]." [start drain nadir]
-"pictuer"	566810127	Drain Nadir	--	--	"It's not just any old picture. It's of a sad pier."
-"spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
-"sda"	119490873	Drain Nadir	--	--	"It's a sad PIER."
-"pire"	339588717	Drain Nadir	--	--	"It's a SAD pier."
+"spider"	456891772	--	diapers	--	"The diapers, the Ires Pad--the spider only fits in as *a* spider."
+"ires"	354396724	Drain Nadir	--	--	"It's an ires PAD."
+"pad"	104682866	Drain Nadir	--	--	"It's an IRES pad."
 "song"	272133753	--	Eddie's song	--	"It's the song name--[i]I'd Cede[r]."
 "eddie"	342663242	--	Eddie's song	--	"It's the song name--[i]I'd Cede[r]."
 "bedroom"	465358213	Boredom Bedroom	--	--	"[locname]." [start boredom bedroom]
