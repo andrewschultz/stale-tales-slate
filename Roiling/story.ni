@@ -6994,10 +6994,10 @@ Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable
 Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. Besides, you might wind up in ruts: Rustin['] Ruin St."
 Drain Nadir	"You're so low, you can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow."
-Boredom Bedroom	"Directions won't work. Running into a wall would leave your bod more red: boom! Study your surroundings."
-Browse Bowers	"You are definitely going places, but the only place you'd get walking from here is the Shmoe Homes. Terrible! Maybe you should focus on Si Reed's advice."
-Econ Cone	"That could lead to Save Aves. A well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there."
-Upscale Capsule	"You're at the very top. You don't really want to change that without really good motivation."
+Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
+Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
+Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
+Upscale Capsule		"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
@@ -7703,7 +7703,7 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
-		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!' [in random order][line break]dYou see red a bit at getting no direct help, yourself." instead;
+		unless what-a-bee is reflexive and bee's head is reflexive, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][line break]You see red a bit at getting no direct help, yourself." instead;
 		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
@@ -7908,18 +7908,14 @@ does the player mean examining a direction: it is very unlikely.
 does the player mean entering a direction: it is very unlikely.
 
 before examining (this is the mark as examined rule):
-	if noun is inside:
-		say "You need to specify the object you wish to look inside. You can also probably just X/EXAMINE it." instead;
-	if noun is a direction:
-		say "Looking in directions isn't supported in this game. Best to go where you want to look, or if a building is to the north, say X BUILDING instead." instead;
-	if noun is not a thing:
-		say "Try examining less abstract things instead." instead;
-	if the noun provides the property examined:
-		now noun is examined;
+	if noun is inside, say "You need to specify the object you wish to look inside. You can also probably just X/EXAMINE it." instead;
+	if noun is a direction, say "Looking in directions isn't supported in this game. Best to go where you want to look, or if a building is to the north, say X BUILDING instead." instead;
+	if noun is a room, try looking instead;
+	if noun is not a thing, say "Try examining less abstract things instead." instead;
+	if the noun provides the property examined, now noun is examined;
 
 after examining:
-	if noun is readable:
-		now last-read is noun;
+	if noun is readable, now last-read is noun;
 	continue the action;
 
 chapter tying it to
@@ -13688,7 +13684,7 @@ a-text of heat is "RYRY". b-text of heat is "RGRG". parse-text of heat is "[sp]x
 
 book Bustle Sublet
 
-Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is in bustle sublet]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]." [?? todo rewrite]
+Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs, not that you'd risk the reastier arteries to get there. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is in bustle sublet]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]." [?? todo rewrite]
 
 check going nowhere in Bustle Sublet: say "The reastier arteries lead nowhere good. Stay here and figure what to do." instead;
 
@@ -13787,7 +13783,7 @@ every turn when player is in Boarded Roadbed:
 		if current action is not listening:
 			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if what-a-bee is reflexive or bee's head is reflexive]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
 
-Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions."
+Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help."
 
 chapter THE BEE and 2 solutions
 
@@ -13867,7 +13863,7 @@ after fliptoing bee's head:
 
 chapter cellar door (after bee dispatched)
 
-the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is."
+the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is[one of], though trying to examine again may give you a hint. Or not[or], but you see red knowing what a racket ERA LLC has in cellar construction."
 
 a-text of cellar door is "RYRYRR". b-text of cellar door is "RGRYRR". parse-text of cellar door is "x[sp]e[sp]x[sp]a[sp]x[sp]x".
 
@@ -13896,7 +13892,7 @@ check fliptoing cellar door:
 
 book Drain Nadir
 
-Drain Nadir is a room in Troves. "[if diapers are in drain nadir]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out[else]You've cleared the Drain Nadir of negative influences, and now Eddie C's song is playing.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if]."
+Drain Nadir is a room in Troves. "While you could escape physically, there's nowhere better to go in your current mental state. [if diapers are in drain nadir]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out.[else]But you're getting better, you've half cleared the Drain Nadir of negative influences, and now Eddie C's song is playing. Perhaps listening could uplift you fully.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if]."
 
 after fliptoing eddie's song:
 	now sad pier is in lalaland;
@@ -13930,13 +13926,13 @@ instead of examining song:
 
 book boredom bedroom
 
-Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad[if me arts are in boredom bedroom]. And the ME ARTS hung up are inspiring, or should be[end if]."
+Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad[if me arts are in boredom bedroom]. And the ME ARTS hung up are inspiring, or should be[end if]. As with the Drain Nadir, you could leave physically, but you hope to soar mentally above your situation."
 
 chapter how to pre-deal
 
 section lobster
 
-the BORTLES Lobster is in Boredom Bedroom. description is "Oh, man, there's no lobster like BORTLES lobster. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is in lalaland]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "There's some BORTLES Lobster here, the best lobster in all of Yorpwald! But you're not sure if you're fully up to eating it, yet."
+the BORTLES Lobster is a vanishing thing in Boredom Bedroom. description is "Oh, man, there's no lobster like BORTLES lobster. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is in lalaland]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". initial appearance of BORTLES lobster is "Some BORTLES Lobster here, the best lobster in all of Yorpwald, sits here. It'd be a great meal, but you're not sure if you're fully up to eating it, yet."
 
 the BORTLES lobster is vanishing.
 
@@ -13972,12 +13968,13 @@ instead of doing something to ME ARTS:
 
 chapter ltb
 
-ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of ltb is "LEAD". [ ltb = lead the book]
+ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of ltb is "LEAD". [ ltb = lead the book]
 
 check fliptoing ltb:
 	if lobster is in boredom bedroom and me arts are in boredom bedroom:
+		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.";
 		preef ltb;
-		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS." instead;
+		the rule succeeds;
 
 a-text of ltb is "RYYR". b-text of ltb is "???R". parse-text of ltb is "x[sp]e[sp]a[sp]x". ltb is parse-spoilable.
 
@@ -14209,7 +14206,13 @@ to say trev:
 
 book Upscale Capsule
 
-Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in upscale capsule].[paragraph break]A shaker of salt sits on the vanity, too[end if]."
+Upscale Capsule is an innie room in Troves. "[capsule-desc]."
+
+to say capsule-desc:
+	if red vees are in Upscale Capsule:
+		say "This isn't very well populated yet. Just some red vees here";
+	else:
+		say "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in upscale capsule].[paragraph break]A shaker of salt sits on the vanity, too[end if]"
 
 to say which-capsule-pics:
 	if blamer balmer is in upscale capsule and sister tressi is in upscale capsule:
@@ -14299,9 +14302,6 @@ the Desk Sked is scenery in Upscale Capsule. printed name of Desk Sked is "Desk-
 does the player mean doing something with the big important desk: it is very likely.
 
 description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
-
-check going east in Upscale Capsule:
-	say "You couldn't just run out on your company and your responsibilities like that! You would engage to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]." instead;
 
 the tan ivy vanity is auxiliary scenery. "It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. However, it's engraved CEO FOR US? OF COURSE!"
 
@@ -14850,7 +14850,7 @@ burn-check is a truth state that varies.
 
 check burning:
 	if burn-check is false:
-		ital-say "In this game, you should never have a burning implement, and you should never need one. So this verb is only good for cheap jokes.";
+		ital-say "In this game, you should never have a burning implement, and you should never need one. So this verb is only good for cheap jokes. There are about twenty-five at last count.";
 		now burn-check is true instead;
 	if noun is an animal, say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
 	if noun is a person, say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
@@ -14869,24 +14869,15 @@ check burning:
 	if noun is crate, say "This is totally the wrong genre of game for that." instead;
 	if noun is log gaol, say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead; [towers]
 	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
-	if noun is bot boat:
-		say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
-	if noun is flowerpot or noun is crocus:
-		say "Renato would be so upset." instead;
-	if noun is yurts:
-		say "Perhaps another more natural way of decomposition would work better." instead;
-	if noun is curst palace:
-		say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
-	if noun is a hintpastry:
-		say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
-	if mrlp is towers and topside deposit is unvisited:
-		say "Don't be a brushfire furbisher." instead;
-	if noun is b-b: [otters]
-		say "You'd be right in the middle. So, bad idea." instead;
-	if noun is atmo-moat:
-		say "It's nowhere near greasy enough." instead;
-	if noun is storage:
-		say "It's meant to be nearly indestructible." instead;
+	if noun is bot boat, say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
+	if noun is flowerpot or noun is crocus, say "Renato would be so upset." instead;
+	if noun is yurts, say "Perhaps another more natural way of decomposition would work better." instead;
+	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
+	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
+	if mrlp is towers and topside deposit is unvisited, say "Don't be a brushfire furbisher." instead;
+	if noun is b-b, say "You'd be right in the middle. So, bad idea." instead; [otters]
+	if noun is atmo-moat, say "It's nowhere near greasy enough." instead;
+	if noun is storage, say "It's meant to be nearly indestructible." instead;
 	say "You're a ropy pyro. There's no igniter tiering nearby." instead;
 
 to say way-tow:
@@ -20675,7 +20666,7 @@ chapter Fringe Finger
 
 Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This fringe finger leads to a dead end pretty much every which way. So there's not much to do except go back east."
 
-understand "loaves" and "loaf" as solve-a-loaves.
+understand "loaves" and "loaf" as solve a loaves.
 
 section strudel
 
@@ -26535,7 +26526,7 @@ Rosetta Toaster	"[one of]You can use it to gain hints, but you need to clear the
 strudel	"[if strudel is not reflexed][one of]The strudel is, or was in a sled rut.[plus][or]Taking the strudel gets no points, but you can implicitly take, or steal, it. Even if you already have it.[plus][or]The strudel can be RUSTLED.[plus][or]You can put it in the toaster after just taking it, too.[minus][cycling][else]The strudel is food you can put in the toaster.[end if]"
 sled rut	--	strudel
 Éclairs	"The éclairs are food you can put in the toaster."
-solve-a-loaves	"The solve-a-loaves are food you can put in the toaster."
+solve a loaves	"The solve-a-loaves are food you can put in the toaster."
 start tarts	"The tarts are food you can put in the toaster."
 Brownies	"The brownies are food you can put in the toaster."
 spec-o-scope	"The scope copse gives a rough progress map."

@@ -631,9 +631,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "strudel"	592462631	--	--	strood rule	"[eat-pastry]."
 "sled"	298923003	--	sled rut	--	"Work on the whole sled rut."
 "rut"	293539628	--	sled rut	--	"Work on the whole sled rut."
-"solve"	459411311	--	solve-a-loaves	--	"[eat-pastry]."
-"loaves"	461599129	--	solve-a-loaves	--	"[eat-pastry]."
-"loaf"	156869130	--	solve-a-loaves	--	"[not-singular-hp]."
+"solve"	459411311	--	solve a loaves	--	"[eat-pastry]."
+"loaves"	461599129	--	solve a loaves	--	"[eat-pastry]."
+"loaf"	156869130	--	solve a loaves	--	"[not-singular-hp]."
 "shaven"	439622520	shaven havens	--	--	"[towersloc]." [SHAVEN HAVENS 1 4]
 "haven"	343348554	shaven havens	--	--	"[towersloc]."
 "lone"	324880033	--	lone duck	--	"It's not just any lone animal. It's a lone DUCK."

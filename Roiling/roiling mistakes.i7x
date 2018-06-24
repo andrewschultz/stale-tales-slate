@@ -268,7 +268,7 @@ understand "alger" as a mistake ("What would an Alger hero DO to such foul spiri
 
 understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Boredom Bedroom.
 
-understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when ME ARTS is in location of player.
+understand "maters" and "tamers" as a mistake ("Perhaps they know their trade, well, but you need to, too.") when ME ARTS is in location of player.
 
 chapter browse bowers
 
@@ -831,15 +831,15 @@ understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis."
 
 chapter scape space
 
-mistake ("Lola says nothing back.") when player has dollar and player is female.
-
-understand "allo" as a understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when inapt paint is in location of player.
+understand "allo" as a mistake ("Lola says nothing back.") when player has dollar and player is female.
 
 understand "lots" as a mistake ("You only need the one slot.") when player has storage box and lost slot is part of storage box.
 
 understand "scion" as a mistake ("Money, or something like it, should not be the guide of you.") when player has s-i or player has coins or player has s-c or player has icons.
 
 understand "sonic" as a mistake ("Maybe if you had more than one [if player has coin]coin[else]icon[end if].") when player has coin or player has icon.
+
+understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when inapt paint is in location of player.
 
 chapter gates stage
 
