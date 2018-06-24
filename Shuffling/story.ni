@@ -3751,7 +3751,7 @@ check opening desert-door:
 	say "There's nowhere else to go, though." instead;
 
 check entering desert-door:
-	if player has bugle and bugle-played is false, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
+	if player has bugle and bugle-played is false and blot is not in lalaland, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
 	if blot is off-stage, say "The door seems stuck by an invisible force[if bolt is visible]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
 	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of desert-door]Without the bolt, the door swings open easily. [end if]";
 	say "You can't see what's behind, but fortunately it's just a small tumble[if player has bugle], though the bugle gets caught on an outgrowth on the way down[end if]...[wfak]";
@@ -4736,7 +4736,7 @@ chapter Trips Strip
 
 [yeah, redundancy but...]
 
-Trips Strip is a room in Stores. last-loc of Stores is Trips Strip. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks your way out."
+Trips Strip is a room in Stores. last-loc of Stores is Trips Strip. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]."
 
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
 	if scented descent is in Trips strip, set the locale priority of scented descent to 6;
@@ -4785,7 +4785,7 @@ to say exc-which:
 
 section tepid icon depiction
 
-the tepid icon depiction is scenery in trips strip. "It's not high art, but you [if regions-to-clue is 1]look at the remaining one[else]pick one of the [regions-to-clue in words] at random[end if].[line break][icon-depict]."
+the tepid icon depiction is scenery in trips strip. "It's not high art, but you [if regions-to-clue is 1]look at the remaining one[else]pick [one of]another [ror][stopping]one of the [regions-to-clue in words] at random[end if].[line break][icon-depict]."
 
 to decide which number is regions-to-clue:
 	let temp be 0;
@@ -4800,7 +4800,7 @@ icon-rule	icon-text
 forest-unsolved rule	"Near Store F, you see yourself walking past innumerable trees, wearing a disguise through a sort of archway, and finally creating some sort of explosion somewhere very cold"
 sortie-unsolved rule	"Near Store I, you see yourself making food, entering a sacred area behind a secret passage, and creating some sort of fireworks that seem to land on a castle without harming it"
 metros-unsolved rule	"Near Store M, you see yourself picking up several hours and taking a light source into a very deep place underground. You seem to have a hand over one ear in each picture"
-resort-ready rule	"Near Store R, you see yourself hopping from one island to another, climbing a plateau, and dispersing an angry crowd before quaking in fear"
+resort-ready rule	"Near Store R, you see yourself hopping from one island to another, climbing a plateau, dispersing an angry crowd before quaking in fear, and finally, enjoying doing nothing"
 
 this is the forest-unsolved rule:
 	if forest is unsolved, the rule succeeds;
@@ -5281,7 +5281,7 @@ check entering the scented descent:
 
 section sortie portal
 
-the posted depots are a portal. "Posted depots stand where store I used to be. [if trap part is visited]You can ENTER again, to finish business.[else]They're a sortie...but to where?[end if]"
+the posted depots are a plural-named portal. "Posted depots stand where store I used to be. [if trap part is visited]You can ENTER again, to finish business.[else]They're a sortie...but to where?[end if]"
 
 understand "sortie" as depots when player is in strip and depots are in strip.
 
@@ -7282,7 +7282,7 @@ missile-steered is a truth state that varies. missile-steered is usually false.
 check pushing shoot button:
 	if missile-steered is false, say "[one of]You hear a loud siren! Unfortunately, the missile doesn't seem to be pointing anywhere besides straight up. Guess where it'll land?[or]The missile doesn't have a specific target. You can't just go chucking it anywhere.[stopping]" instead;
 	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! Final danger? ... Landing fear![paragraph break]But a fine garland of light appears, instead. A loud voice echoes 'Mondale-Doleman! Lo, Amend!' You see Mondale-Doleman step out of ... a dolmen. Simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH! A do of FOOD!' he booms.";
-	say "[wfak]'Had now!' And how![paragraph break]You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk (fine dish! Finished!) ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
+	say "[wfak]'Had now!' And how![paragraph break]You learn he is, of course, Noble Ol['] Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk (fine dish! Finished!) ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
 	reg-inc;
 	solve-region sortie instead;
 
@@ -7681,7 +7681,7 @@ the cordoned red condo is scenery in Roarings Garrison. "It's immaculate compare
 
 instead of entering cordoned red condo, try going north instead;
 
-to say n-of-garrison: say "[if obtains boastin bastion is visited]bastion[else]condo[end if]"
+to say n-of-garrison: say "[if obtains boastin' bastion is visited]bastion[else]condo[end if]"
 
 the tents are useless scenery in Roarings Garrison. understand "commune" as tents.
 
@@ -8860,6 +8860,8 @@ check examining beats:
 	if night thing is visible or player is in Bassy or location of player is Anti-Cool Location, say "You can't hear the beats right now, but then, there's [if nerds are visible]chatter[else]chatter[end if] to contend with." instead;
 
 The beast is a thing.
+
+does the player mean attacking the beast: it is likely.
 
 description of beast is "It's blob-shaped with one tooth and one eye and inside-out headphones that still transmit music."
 
@@ -10355,7 +10357,7 @@ beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't
 deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Anti-Cool Location is visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
 faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'You are our hero! Thank you so much[sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
 goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
-gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the gateway[if getaway is visible] once you change it. It's not too hard, for seven letters, but I can't tell you[end if]. You'll learn by doing.'[stopping]"
+gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has settler] once you have the letters settler[end if]. Oh, about the settler: you'll learn by doing.'[stopping]"
 gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
@@ -11279,13 +11281,22 @@ to say that-those of (p - a thing): say "[if p is plural-named]those[else]that[e
 
 section regional manip
 
+a region has a sto called reg-sto. a region has a portal called reg-ent.
+
+reg-sto of forest is store f. reg-ent of forest is scented descent.
+reg-sto of sortie is store i. reg-ent of forest is posted depots.
+reg-sto of metros is store m. reg-ent of metros is trade tread.
+reg-sto of others is store r. reg-ent of others is r-p.
+
 to solve-region (sre - a region):
 	consider the notify score changes rule;
 	say "[line break][sre] node: done! A bump-up, bam![wfak]";
 	now sre is solved;
-	if sre is forest, moot scented descent;
-	if sre is sortie, moot posted depots;
-	if sre is metros, moot trade tread;
+	if sre is not intro:
+		moot reg-ent of sre;
+		if reg-sto of sre is in trips strip:
+			say "This is (hopefully) a testing bug, but [reg-sto of sre] should not be in the Trips Strip. Sending it away.";
+			moot reg-sto of sre;
 	item-warp;
 	move player to trips strip;
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
