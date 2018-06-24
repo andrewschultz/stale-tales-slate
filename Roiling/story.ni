@@ -156,7 +156,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 3=24 for unripe ur-pine/serpent/triste in Mislit Limits
 1=25 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 30. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
+Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 31. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
 
 Others is an unsolved region. regtab of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
@@ -9123,6 +9123,7 @@ t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	"Thei
 t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	"The macks['] deep stares no longer look profound, but a bit creepy and needy. Their concentration is broken."
 t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks." [begin MACKS 12]
 Merle	Merle	false	683905568	--	"honestly"	"honestly"	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
+Elmer	Elmer	false	292289828	--	"aside"	"aside"	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit far west and hear the roar of a hardy hydra. You step back, and when Merle and Elmer laugh at you, you mention THEY could never be that intimidating. That shuts them up."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
 parrot	raptor	false	431763978	--	"raptor"	"raptor"	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west! Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
@@ -9473,8 +9474,8 @@ after fliptoing raptor:
 	now hydra is in lalaland;
 	now Merle is in lalaland;
 	now Elmer is in lalaland;
-	if Merle is reflexive:
-		poss-d;
+	if Merle is reflexive, poss-d;
+	if Elmer is reflexive, poss-d;
 	reg-inc;
 	continue the action;
 
@@ -20235,7 +20236,7 @@ printed name of Reading a Dinger is "[i]READING: A Dinger[r]"
 check taking dinger:
 	say "You hear a rage din from the coasting agnostic. You both see red. They might not be particularly fond of the book, but since it's there and it's theirs, they don't want to give it up. Maybe you can make it more unattractive somehow." instead;
 
-a-text of dinger is "RRYYRYR". b-text of dinger is "RR?YR?R". parse-text of dinger is "x[sp]x[sp]?[sp]-[sp]x[sp]?[sp]x".
+a-text of reading a dinger is "RRYYRYR". b-text of reading a dinger is "RR?YR?R". parse-text of reading a dinger is "x[sp]x[sp]?[sp]-[sp]x[sp]?[sp]x".
 
 book Strati Strait
 
@@ -22237,22 +22238,23 @@ check going east in alcoves:
 
 chapter elmer and merle
 
-Elmer is an auxiliary person in Alcoves. Elmer is henchy.
+an aide is a kind of person.
+
+Elmer is a reflexive LLPish person in Alcoves. Elmer is henchy.
 
 Merle is a reflexive LLPish person in Alcoves. Merle is henchy. The chum of Merle is Elmer.
 
 a-text of Merle is "RYRYRRRO". b-text of Merle is "RYRYRRRO". parse-text of merle is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
 
-a-text of Elmer is "RYRYRRRO". b-text of Elmer is "RYRYRRRO". parse-text of elmer is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
+a-text of Elmer is "YRYRY". b-text of Elmer is "?RYRY". parse-text of elmer is "?[sp]x[sp]-[sp]x[sp]-".
 
-to say e-m:
-	say "[one of]Merle[or]Elmer[in random order]";
+to say e-m, say "[one of]Merle[or]Elmer[in random order]";
 
 initial appearance of Elmer is "[bug-report]".
 initial appearance of Merle is "[bug-report]".
 
 rule for printing a locale paragraph about Elmer:
-	say "Elmer and Merle, two robed bored Coevals in scowl cowls, glance over at you contemptuously as they babble.";
+	say "Elmer and Merle, two robed bored Coevals in scowl cowls, glance over at you contemptuously as they babble[if elmer is reflexive]. They make it clear they're Elvira's ideas aides[end if].";
 	now Merle is mentioned;
 	now Elmer is mentioned;
 
@@ -27602,6 +27604,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
 		if p-2 is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said HOWEVER to gain Mr. Lee's trust.";
 		if Merle is reflexive, say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
+		if Elmer is reflexive, say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
 		if number of flippable things in perverse preserve > 0:
 			repeat with A running through flippable things in perverse preserve:
 				say "[2dmiss of myreg]you could've turned the [A] into [if A is plural-named]some[else]a[end if] [the-to corresponding to a the-from of A in the table of otters anagrams].";
