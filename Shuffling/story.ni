@@ -11284,7 +11284,7 @@ section regional manip
 a region has a sto called reg-sto. a region has a portal called reg-ent.
 
 reg-sto of forest is store f. reg-ent of forest is scented descent.
-reg-sto of sortie is store i. reg-ent of forest is posted depots.
+reg-sto of sortie is store i. reg-ent of sortie is posted depots.
 reg-sto of metros is store m. reg-ent of metros is trade tread.
 reg-sto of others is store r. reg-ent of others is r-p.
 
@@ -12372,15 +12372,22 @@ tsing is an action out of world.
 
 understand the command "ts" as something new.
 
-understand "ts" as tsing.
+understand "ts" as ts0ing.
+understand "ts [number]" as tsing.
+
+carry out ts0ing:
+	try tsing 0 instead;
 
 carry out tsing:
 	if trips strip is visited, say "Already beat intro. RETRY to get back." instead;
 	increase the cur-score of intro by 4;
 	if Rested Desert is unvisited:
 		move player to Rested Desert, without printing a room description;
-	if notices section is unvisited:
-		move player to notices section, without printing a room description;
+		if a random chance of 1 in 2 succeeds: [this is a silly randomization for what you could've solved at Rested Desert]
+			moot bugle;
+		else:
+			moot bolt;
+	if notices section is unvisited, move player to notices section, without printing a room description;
 	moot nametag;
 	solve-region intro;
 	now notices section is visited;
@@ -12389,11 +12396,20 @@ carry out tsing:
 	now player has the saltine;
 	now player has the phial;
 	now intro is solved;
-	if a random chance of 1 in 2 succeeds: [this is a silly randomization for what you could've solved at Rested Desert]
-		moot bugle;
-	else:
-		moot bolt;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
+	let curstuff be number understood;
+	if curstuff > 8:
+		now curstuff is the remainder after dividing curstuff by 8;
+		say "You need a number between 0 and 7, so I took [number understood] mod 8 to get [curstuff].";
+	if curstuff >= 4:
+		solve-region metro;
+		decrease curstuff by 4;
+	if curstuff >= 2:
+		solve-region sortie;
+		decrease curstuff by 2;
+	if curstuff >= 1:
+		solve-region forest;
+		decrease curstuff by 1;
 	the rule succeeds;
 
 chapter tsfing
@@ -12624,6 +12640,12 @@ volume testing commands - not for release
 part areas
 
 [* best to break things into areas in case 1 area breaks]
+
+chapter quick wins
+
+test qf with "gonear forts/purloin shotgun and silver/put silver in shotgun/vowels/shoot wolves".
+test qi with "gonear moor/abstract shoot button to moor/abstract steer button to moor/push steer button/push shoot button".
+test qm with "gonear abyss/purloin sword/beast/attack beast".
 
 chapter player tests
 
