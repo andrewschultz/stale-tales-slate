@@ -7,14 +7,14 @@
 		<history>This is for release 5 of the game. This test file was also used to test shuffling around (ha! Ha!) I7 export code in Trizbort.</history>
 	</info>
 	<map>
-		<room id="1" name="Busiest Subsite" subtitle="Start Intro" x="352" y="64" w="96" h="64" region="Intro" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
-		<room id="2" name="Rested Desert" subtitle="" x="352" y="-32" w="96" h="64" region="Intro" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="1" name="Busiest Subsite" subtitle="Start Ordeal Loader" x="352" y="64" w="96" h="64" region="Ordeal Loader" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<room id="2" name="Rested Desert" subtitle="" x="352" y="-32" w="96" h="64" region="Ordeal Loader" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="e" custom="yes" customRight="0" customDown="-6">Odor</objects>
 		</room>
-		<room id="3" name="Thickest Thickets" subtitle="" x="224" y="-32" w="96" h="64" region="Intro" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="3" name="Thickest Thickets" subtitle="" x="224" y="-32" w="96" h="64" region="Ordeal Loader" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-16" customDown="0">Toga|Darnels</objects>
 		</room>
-		<room id="4" name="Notices Section" subtitle="End Intro" x="96" y="-32" w="96" h="64" region="Intro" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="4" name="Notices Section" subtitle="End Ordeal Loader" x="96" y="-32" w="96" h="64" region="Ordeal Loader" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-40" customDown="0">Getaway Gateway|Broad Board</objects>
 		</room>
 		<room id="5" name="Trips Strip" subtitle="Store F, I, M, R" x="-32" y="-32" w="96" h="64" region="Stores" handDrawn="yes" allcornersequal="no" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
@@ -258,9 +258,9 @@
 		</colors>
 		<regions>
 			<Forest Name="Forest" TextColor="Black">Lime</Forest>
-			<Intro Name="Intro" TextColor="Black">Silver</Intro>
 			<Metros Name="Metros" TextColor="White">#0080C0</Metros>
 			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
+			<Ordeal____Loader Name="Ordeal Loader" TextColor="Black">Silver</Ordeal____Loader>
 			<Resort Name="Resort" TextColor="Black">Yellow</Resort>
 			<Sortie Name="Sortie" TextColor="Black">Red</Sortie>
 			<Stores Name="Stores" TextColor="Black">Gray</Stores>

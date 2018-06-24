@@ -46,15 +46,15 @@ chapter busiest subsite
 to say if-sign-x:
 	say "[if above-sign is not examined]. Maybe the sign means something different[end if]"
 
+understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.") when player is in Busiest Subsite.
+
+understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.") when player is in Busiest Subsite.
+
 understand "no entry" as a mistake ("[if player is in subsite]Hm, interesting. You wonder if anything is REALLY stopping you from entering.[else]You solved that puzzle already. Onward![end if]")
 
 understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be THAT dreary. But what if there is something else?") when the player is in Busiest Subsite.
 
 understand "try" as a mistake ("[if player is in subsite]You're sure the lecture to the east will be about trying versus doing. Ugh[else]That's more sensible than the five alternatives, but it's not concrete enough[end if].")
-
-understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.") when player is in Busiest Subsite.
-
-understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.") when player is in Busiest Subsite.
 
 chapter rested desert
 

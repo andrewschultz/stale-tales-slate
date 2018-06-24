@@ -10,7 +10,7 @@ volume nudges
 
 book nudge tables
 
-table of Intro nudges
+table of Ordeal Loader nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "busiest"	591981617	subsite	--	--	"[loc-rej]." [start busiest subsite]
 "noentry"	650766775	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
@@ -49,7 +49,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "oldman"	284365984	--	gateman	--	"He's too old to change. At least, in his present form."
 "dollhouse"	643830102	--	doll house	--	"Thinking that doesn't do much, but the [if static is visible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
 "attic"	272406285	--	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
-"intro"	376686752	--	--	degen-true rule	"[reg-rej]." [end-intro]
+"ordeal"	364513235	--	--	degen-true rule	"[reg-rej]." [end-ordeal-loader]
 
 table of Stores nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -564,7 +564,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "point"	372828908	--	--	know-point rule	"There's no secret cheat between NO TIP and OPT IN."
 "parse"	393057655	--	--	can-i-parse rule	"There's no inbetween for the PARSE and SPARE commands for the gadget."
 "angle"	285314976	--	phail phial	--	"There's nothing between ANGLE and GLEAN that you can do with the blue lube."
-"yorpwald"	548467110	--	--	past-intro rule	"[if player is in notices section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
+"yorpwald"	548467110	--	--	past-loader rule	"[if player is in notices section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
 "retry"	523922985	--	--	past-strip rule	"Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire."
 "notepad"	478859078	--	--	degen-true rule	"[what-for]."
 "dope"	304653734	--	--	degen-true rule	"[what-for]."
@@ -629,7 +629,7 @@ to say nope-odor:
 	say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
 
 to say com-chor:
-	say "It's a pretty complex chord[if cur-score of intro is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
+	say "It's a pretty complex chord[if cur-score of ordeal loader is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
 
 to say loc-rej:
 	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
@@ -956,7 +956,7 @@ this is the past-strip rule:
 		decide yes;
 	decide no;
 
-this is the past-intro rule:
+this is the past-loader rule:
 	if notices section is visited, the rule succeeds;
 	the rule fails;
 

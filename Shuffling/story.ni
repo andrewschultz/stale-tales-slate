@@ -525,7 +525,7 @@ chapter done rejects
 
 table of done rejects [tdr]
 donething	donemsg
-desert-door	"The door is probably the way out. Best not change it into something else." [intro]
+desert-door	"The door is probably the way out. Best not change it into something else." [Ordeal Loader]
 bugle	"The bugle emits a sad 'don't change me back' noise."
 gateman	"Don't scramble the gateman. He's here to help."
 nose	"Don't get that nose bent out of shape."
@@ -858,11 +858,11 @@ to say 2dn: say "[unless sr-acc is true]--[end if]".
 
 to show-missed (curr - a region):
 	if cur-score of curr is max-score of curr, continue the action;
-	if curr is intro:
-		if blot is off-stage, say "[2da of intro]you could've changed the bolt into a BLOT.";
-		if bugle is off-stage, say "[2da of intro]you could've changed the bulge into a BUGLE.";
-		if darn-slan is false, say "[2da of intro]you could've tried to SLANDER the darnels.";
-		if attics are off-stage, say "[2da of intro]the static in Notices Section was changeable to ATTICS.";
+	if curr is Ordeal Loader:
+		if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt into a BLOT.";
+		if bugle is off-stage, say "[2da of Ordeal Loader]you could've changed the bulge into a BUGLE.";
+		if darn-slan is false, say "[2da of Ordeal Loader]you could've tried to SLANDER the darnels.";
+		if attics are off-stage, say "[2da of Ordeal Loader]the static in Notices Section was changeable to ATTICS.";
 	if curr is stores:
 		if store b is in trips strip, say "[2da of stores]store B had some food for you. SORBET.";
 		if store f is in trips strip, say "[2da of stores]store F in the trips strip led to a forest.";
@@ -975,7 +975,7 @@ blot-first is a truth state that varies.
 
 carry out mainhelping:
 	if hintsoff is true, all-say "You elected to turn hints off for the remainder of the game. You'll need to restart to change that." instead;
-	if mrlp is intro, try intro-hinting instead;
+	if mrlp is Ordeal Loader, try ordeal-loader-hinting instead;
 	if mrlp is stores, try stores-hinting instead;
 	if mrlp is forest, try forest-hinting instead;
 	if mrlp is metros, try metros-hinting instead;
@@ -999,7 +999,7 @@ outline-print is a truth state that varies. outline-print is usually true.
 
 the file of shufhints is called "shufhints".
 
-intro-hinting is an action applying to nothing.
+ordeal-loader-hinting is an action applying to nothing.
 stores-hinting is an action applying to nothing.
 forest-hinting is an action applying to nothing.
 metros-hinting is an action applying to nothing.
@@ -1130,7 +1130,7 @@ to say snb:
 
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry
-yourself	"[if cur-score of intro is 0]Try hinting objects around you instead[else]You have the ability to anagram things[end if]."
+yourself	"[if cur-score of Ordeal Loader is 0]Try hinting objects around you instead[else]You have the ability to anagram things[end if]."
 redness	"Redness means all the letters in a word are wrong, compared to what something should become. E.g. GNAT <-> TANG."
 dope tan notepad	"You will write procedural things in your notepad as you get them."
 acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems animated, almost an animal. [plus][or]This is a LLP and maybe a slightly tricky one. [plus][or]It feels almost kind, mammalian, and the bits read CAN BITE which is in red. [plus][or]NICE BAT. [minus][cycling]"
@@ -1333,7 +1333,7 @@ panel	"[if panel is not part of silo]How to get the silo working? PUT PANEL ON S
 wires	"The wires aren't important. The panel is."
 drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if]. [plus][or]Anything would be more beautiful than drainage, especially a flower. [plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA. [minus][cycling]" [START METROS]
 a-reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
-soggy love letter	"The love letter intro clues what the drainage could be."
+soggy love letter	"The love letter introduction clues what the drainage could be."
 can of beer	"The beer can's name clues what the drainage could be."
 arena dig flier	"The flier clues what the drainage should be."
 metallic door	"[if nerds-unwelcome is true]You got through the door, but you're not welcome back. No loss[else if anti-cool is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
@@ -1433,9 +1433,9 @@ to say i-fle: say "[if player is not in Flesh Shelf] in Flesh Shelf[end if]".
 
 to say i-gt: say "[if player is in Gnarliest Triangles][else] in Gnarliest Triangles[end if]".
 
-section intro
+section Ordeal Loader
 
-carry out intro-hinting:
+carry out ordeal-loader-hinting:
 	if player is in busiest subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if above-sign is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
 	if player is in Rested Desert:
 		if odor is visible, try objhinting odor instead;
@@ -2035,7 +2035,7 @@ instead of attacking:
 	if noun is gadget, say "Boy, if that's how you treat stuff that's there to HELP you..." instead; [general]
 	if noun is knot, say "You fail to tonk it." instead;
 	if noun is phial, say "The lube would ooze out and be useless." instead;
-	if noun is mega ant, say "The ant spits, and you back off. You don't have a weapon, and you can't see any, even in the cabinet." instead; [intro]
+	if noun is mega ant, say "The ant spits, and you back off. You don't have a weapon, and you can't see any, even in the cabinet." instead; [Ordeal Loader]
 	if noun is gateman, say "But he's here to help you. And he's, uh, bigger than you, too." instead;
 	if noun is sandwich, try opening noun instead; [forest]
 	if noun is spread, try cutting noun instead;
@@ -2422,7 +2422,7 @@ carry out certifying:
 			say "(NOTE: when using CERTIFY, you can shorten it to CERT/CER/C in the future.)";
 			now certify-short is true;
 	try scaning noun;
-	intro-marcos;
+	mention-marcos-macros;
 	the rule succeeds;
 
 chapter rectifying
@@ -2458,7 +2458,7 @@ carry out rectifying:
 			say "(NOTE: when using RECTIFY, you can shorten it to RECT/REC/R in the future.)";
 			now rectify-short is true;
 	try scaning noun;
-	intro-marcos;
+	mention-marcos-macros;
 	the rule succeeds;
 
 chapter cring
@@ -2605,7 +2605,7 @@ a region has a number called cur-score. the cur-score of a region is usually zer
 
 a region has a table name called regtab. a region has a table name called regana.
 
-Intro is a region. min-score of Intro is 4. max-score of Intro is 7. regtab of Intro is table of intro nudges. regana of Intro is table of intro anagrams. [both bulge/blot, darnels, static]
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regtab of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. [both bulge/blot, darnels, static]
 
 Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. [cabinet]
 
@@ -2886,10 +2886,10 @@ check fliptoing beast:
 
 chapter the anagram table
 
-table of Intro anagrams [toa] [NOTE: PUT NON SCENERY FIRST] [xxta]
+table of Ordeal Loader anagrams [toa] [NOTE: PUT NON SCENERY FIRST] [xxta]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
-odor	desert-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
+odor	desert-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start Ordeal Loader anagrams]
 bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
 toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
 nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
@@ -3194,7 +3194,7 @@ to preef (flipper - a thing):
 
 table of preflip clues [this must have a regular item first due to a small bug in 6g]
 preflip	pretodo
-nametag	"nametag -> gateman" [intro]
+nametag	"nametag -> gateman" [Ordeal Loader]
 cabinet	"cabinet -> nice bat" [stores]
 silver	"[if livers are not moot]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
 drapes	"spread -> [if red asp is in Enclosure]RED ASP -> [end if]drapes"
@@ -3419,7 +3419,7 @@ check taking inventory:
 [	say "Regspecial [list of regspecial enclosed by player].";
 	say "Warpable [list of warpable things enclosed by player].";]
 	say "Item time! [run paragraph on]";
-	if mrlp is intro or mrlp is stores, continue the action;
+	if mrlp is Ordeal Loader or mrlp is stores, continue the action;
 	if the number of regspecial things enclosed by the player is 0:
 		say "You have nothing from this region in particular.";
 	else:
@@ -3442,13 +3442,13 @@ after taking inventory:
 		say "The aftertaste from the salient saltine remains. If you stare at things, they can become--different. Perhaps you could XX something that's stumping you.";
 	continue the action;
 
-book intro
+book Ordeal Loader
 
 chapter Busiest Subsite
 
-Busiest Subsite is a room in Intro. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage the bustling, babbling masses seem to be ignoring as they skirt the Oafs['] Sofa planted squarely in the center."
+Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage the bustling, babbling masses seem to be ignoring as they skirt the Oafs['] Sofa planted squarely in the center."
 
-last-loc of Intro is Busiest Subsite.
+last-loc of Ordeal Loader is Busiest Subsite.
 
 section silly scenery
 
@@ -3490,6 +3490,7 @@ description of above-sign is "It says NONE TRY, and it's just above a side passa
 
 section banner
 
+[??endorsable bandoleers]
 The banner is amusing scenery in Busiest Subsite. "'This way: BEING FIRED!'[one of] People walk by, discussing how the DEBRIEFING should make Mondays dynamos again.[or] You're run over by people saying 'This talk will be a FINE BRIDGE to a new job!'[or] Has nobody else noticed this sign? Or what it says?[stopping]"
 
 instead of following banner: try going east instead.
@@ -3650,7 +3651,7 @@ check wearing the magenta nametag:
 
 chapter Rested Desert
 
-Rested Desert is a room in intro.
+Rested Desert is a room in Ordeal Loader.
 
 instead of exiting in Rested Desert:
 	if thorn is visible:
@@ -3795,7 +3796,7 @@ check going inside in Rested Desert:
 
 chapter thickest thickets
 
-Thickest Thickets is a room in Intro. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
+Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
 
 check going nowhere in thickest thickets: say "[one of]You hit a snag, and the [if toga is visible]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]." instead.
 
@@ -3870,7 +3871,7 @@ carry out slandering:
 
 chapter Notices Section
 
-Notices Section is a room in Intro. "[one of]You're not sure what to do here, and there's no welcoming committee. But there's a broad board SMIT with TMIs[or]The broad board is SMIT with TMIs you [if broad board is unexamined]haven't read yet[else]figure will be useful[end if][stopping]."
+Notices Section is a room in Ordeal Loader. "[one of]You're not sure what to do here, and there's no welcoming committee. But there's a broad board SMIT with TMIs[or]The broad board is SMIT with TMIs you [if broad board is unexamined]haven't read yet[else]figure will be useful[end if][stopping]."
 
 understand "tmi/tmis" as broad board when player is in notices section.
 
@@ -4009,7 +4010,7 @@ check entering the getaway gateway:
 		pad-rec-q "retry";
 	say "[line break]The gate disappears behind you[if static is visible] as you hear Nat Egam grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
 	say "[wfak]...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
-	solve-region intro instead;
+	solve-region Ordeal Loader instead;
 
 section salient saltine
 
@@ -4117,7 +4118,7 @@ carry out xmxing:
 				ditch-saltine instead;
 			say "Before staring at anything, you wonder if you could just think yourself back to the ROOM." instead;
 		if player is in Means Manse, say "You just want to EXIST, really." instead;
-	if noun is nametag: [start intro]
+	if noun is nametag: [start Ordeal Loader]
 		if tag-warn is false:
 			now tag-warn is true;
 			say "You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is visible]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
@@ -4650,9 +4651,9 @@ carry out recuseing:
 	say "You don't seem to have any regions to recuse yourself from. From which to recuse yourself. And you don't get to skip [if store r is visible]store R[else]the resort[end if]." instead;
 	the rule succeeds;
 
-chapter intro-marcos
+chapter mention-marcos-macros
 
-to intro-marcos:
+to mention-marcos-macros:
 	if annoying-switches > 5 and marcos-trumped is false and location of player is not notices section:
 		say "A shady figure sidles up to you. 'Hey! Pal! The name's Marcos. Sellin['] macros. Ways to lump actions together. Streamline your thinking. Actually, not selling them at all, just hoping you remember me once you fix things here and are an acclaimed hero with clout.'[paragraph break]He takes the gadget away from you, fiddles with it, and gives it back. You are impressed with his dexterity, and yet, you feel it would not be too tough to imitate him.[paragraph break]'Just, if you think of one scan as R or C--you can make both of them with RC. Or CR. I won't judge.'[paragraph break]As you note this in your notepad, he pops out of view.";
 		pad-rec "macros";
@@ -9547,7 +9548,7 @@ to say warn-inc:
 
 part understanding mistakes
 
-section intro
+section Ordeal Loader
 
 to say blurby:
 	if location of player is notices section:
@@ -9932,7 +9933,7 @@ ever-scan is a truth state that varies.
 parse-output is a truth state that varies.
 
 carry out scaning:
-	if notices section is not visited and mrlp is not intro, say "[bug-report] You should not get to this code before the notices section. You probably jumped away from the intro." instead;
+	if notices section is not visited and mrlp is not Ordeal Loader, say "[bug-report] You should not get to this code before the notices section. You probably jumped away from the Ordeal Loader." instead;
 	if noun is storeall, say "Not all at once." instead;
 	if noun is disamb-store, say "Pick a specific store, instead." instead;
 	if player has gadget:
@@ -10748,9 +10749,9 @@ carry out roomgoing:
 		if map region of myrm is solved, say "You already solved that area." instead;
 		say "That'd be hyperwarping to another region. Sorry." instead;
 	if myrm is unvisited, say "You haven't gotten there yet." instead;
-	if myrm is subsite, say "Goodness, no." instead; [start intro]
+	if myrm is subsite, say "Goodness, no." instead; [start Ordeal Loader]
 	if myrm is Rested Desert, say "You can't see the door to get back." instead;
-	if myrm is Thickets, say "You can't see the passage back." instead; [end intro]
+	if myrm is Thickets, say "You can't see the passage back." instead; [end Ordeal Loader]
 	if myrm is sf or myrm is rf, say "You can't retrace your steps." instead; [start forest]
 	if player is in slough, say "You've done all you could in the enclosure and before. Onward." instead;
 	if player is in frost forts, say "It's time to deal with things, not run." instead; [end forest]
@@ -11149,9 +11150,9 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "Shuffling Around is the first of two wordplay games in [if cur-score of intro is 0]a series I don't want to spoil the name of until you get your first point[else]the Stale Tales Slate[end if]. It was inspired by playing Nord and Bert Couldn't Make Head or Tail of It and then wondering if there was any way to riff on it. Here's what I came up with. I suspect they thought of it, too, but it would've been impossible to stuff in two 140k disks.";
+	say "Shuffling Around is the first of two wordplay games in [if cur-score of Ordeal Loader is 0]a series I don't want to spoil the name of until you get your first point[else]the Stale Tales Slate[end if]. It was inspired by playing Nord and Bert Couldn't Make Head or Tail of It and then wondering if there was any way to riff on it. Here's what I came up with. I suspect they thought of it, too, but it would've been impossible to stuff in two 140k disks.";
 	say "[line break]Shuffling Around is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, which is just a vanity thing.";
-	say "[line break]POLITE doesn't mean easy, though, and it doesn't guarantee user-friendliness. I also hope there is little guess-the-verb[if cur-score of intro > 0]--well, not VERB, that's the sequel[end if]. Just find the right word to say, type it, and move on. My hope is that the tough ones are clued multiple ways, so you are not too frustrated[if notices section is unvisited]. There are hint items[end if].";
+	say "[line break]POLITE doesn't mean easy, though, and it doesn't guarantee user-friendliness. I also hope there is little guess-the-verb[if cur-score of Ordeal Loader > 0]--well, not VERB, that's the sequel[end if]. Just find the right word to say, type it, and move on. My hope is that the tough ones are clued multiple ways, so you are not too frustrated[if notices section is unvisited]. There are hint items[end if].";
 	say "[line break]You can see the testers who gave me transcripts with the CREDITS, which are rather long. They slugged through a lot! If you want to see technical contributions, type TECH. For general release information, type RELEASE.[paragraph break]Also, I still appreciate transcripts! So, if you like, type TRANSCRIPT, then send reports--especially ones with comments (* at the start of a line)--to [email].[paragraph break]If you enjoyed this, the sequel, A Roiling Original, is over twice the size. It has seven areas to explore from [unless trips strip is visited]the main world-hub[else]what the Trips Strip becomes[end if].";
 	the rule succeeds;
 
@@ -11168,9 +11169,9 @@ understand the command "credits" and "credit" as something new.
 understand "credits" and "credit" as creditsing.
 
 carry out creditsing:
-	if cur-score of Intro is 0:
+	if cur-score of Ordeal Loader is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
+	say "[if cur-score of Ordeal Loader > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if].";
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player yes-consents:
@@ -11202,7 +11203,7 @@ understand the command "tech" as something new.
 understand "tech" as teching.
 
 carry out teching:
-	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present [']til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into this game's sequel[if cur-score of intro > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present [']til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into this game's sequel[if cur-score of Ordeal Loader > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
 	say "And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
@@ -11215,7 +11216,7 @@ understand the command "sites" as something new.
 understand "sites" as sitesing.
 
 carry out sitesing:
-	if cur-score of intro is 0:
+	if cur-score of Ordeal Loader is 0:
 		say "Last chance spoiler warning. Sure you want to look?";
 		if the player yes-consents:
 			do nothing;
@@ -11319,7 +11320,7 @@ to solve-region (sre - a region):
 	consider the notify score changes rule;
 	say "[line break][sre] node: done! A bump-up, bam![wfak]";
 	now sre is solved;
-	if sre is not intro:
+	if sre is not Ordeal Loader:
 		moot reg-ent of sre;
 		if reg-sto of sre is in trips strip:
 			say "This is (hopefully) a testing bug, but [reg-sto of sre] should not be in the Trips Strip. Sending it away.";
@@ -11341,7 +11342,7 @@ to item-warp:
 	now last-loc of mrlp is location of the player;
 	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
 		if mrlp is solved:
-			if mrlp is intro:
+			if mrlp is Ordeal Loader:
 				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
 			else:
 				say "Out of nowhere swoops the [if cabinet is moot]nice bat[else]cabinet[end if]. [run paragraph on][if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is moot]You're still a little spooked, but grateful, as it swoops away[else]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, and you wonder if maybe you can do something for it[end if][espec-xtra].";
@@ -11371,7 +11372,7 @@ before going up:
 	if player is in Rived Drive, try going east instead;
 	if player is in Elm Train Terminal or player is in Obtains Boastin' Bastion or player is in underside or player is on fuzzy looking wall, continue the action;
 [	if up-nearby is true:
-		say "[if cur-score of Intro is 0]I, uh, lied. There's nowhere you can go up in the game. Or nearby. But that was a clue[else]Well, since you've scored a point, you might guess why 'I'd go nearby or up' is a hint[end if].";
+		say "[if cur-score of Ordeal Loader is 0]I, uh, lied. There's nowhere you can go up in the game. Or nearby. But that was a clue[else]Well, since you've scored a point, you might guess why 'I'd go nearby or up' is a hint[end if].";
 		now up-nearby is false instead;]
 	if player has wings and player is in Isle, try flying instead;
 	say "You have no boost boots for dances to ascend. And most of the time, if you need to go up, there'll be something clear to climb. Hopefully." instead;
@@ -11455,7 +11456,7 @@ understand the command "help/info/instructions" as something new.
 understand "help" and "info" and "instructions" as instructionsing.
 
 carry out instructionsing:
-	say "[if location of player is busiest subsite]There's not much to do here, but EXAMINEing different things may give you a clue what's going on[else if cur-score of intro is 0]You need to do something with the odor[else]What you did with the odor will clue the rest of the game[end if]. This is a part of all the puzzles in the game, but you'll have to do other things, too[one of].[paragraph break]Note: If you want actual hints, you may wish to try HINT or HINTS[or][stopping].";
+	say "[if location of player is busiest subsite]There's not much to do here, but EXAMINEing different things may give you a clue what's going on[else if cur-score of Ordeal Loader is 0]You need to do something with the odor[else]What you did with the odor will clue the rest of the game[end if]. This is a part of all the puzzles in the game, but you'll have to do other things, too[one of].[paragraph break]Note: If you want actual hints, you may wish to try HINT or HINTS[or][stopping].";
 	the rule succeeds;
 
 chapter knocking
@@ -11779,7 +11780,7 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	say "[one of]What a mess! Hard to do anything with that[if goat is off-stage]. You'll see why[end if].[or]This sort of game, I can only make lame meta-jokes with that[if cur-score of Intro > 0]...you should've figured that out[else], and if you knew why, that'd be sort of a spoiler[end if].[or]Testing all 29 possibilities...just to make sure...nope.[or]Testing the 119 possibilities...including duplicates...[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak]nope. You happy now?[or]If you're looking for jokes, that's the best I can do.[stopping]";
+	say "[one of]What a mess! Hard to do anything with that[if goat is off-stage]. You'll see why[end if].[or]This sort of game, I can only make lame meta-jokes with that[if cur-score of Ordeal Loader > 0]...you should've figured that out[else], and if you knew why, that'd be sort of a spoiler[end if].[or]Testing all 29 possibilities...just to make sure...nope.[or]Testing the 119 possibilities...including duplicates...[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak]nope. You happy now?[or]If you're looking for jokes, that's the best I can do.[stopping]";
 	the rule succeeds;
 
 chapter shooting
@@ -11930,7 +11931,7 @@ to say nfi: say "[one of]? [or]? (region suggestions are not fully inclusive--se
 table of big yucks
 reg	yux
 --	"XYZZY several times?"
---	"In the intro, trying SANDLER or LANDERS around the snarled darnels, or changing the toga to a gato[nfi]"
+--	"In the Ordeal Loader, trying SANDLER or LANDERS around the snarled darnels, or changing the toga to a gato[nfi]"
 --	"Reading the name list until the editorializing doesn't change?"
 --	"Examining store c? Several times?"
 --	"STROBE in the Trips Strip?"
@@ -12063,7 +12064,7 @@ undo-code is a number that varies. undo-code is usually 0.
 
 volume in-game map
 
-[intro region]
+[Ordeal Loader region]
 index map with notices section mapped east of trips strip.
 index map with thickets mapped east of notices section.
 index map with Rested Desert mapped east of thickets.
@@ -12349,7 +12350,7 @@ understand the command "dc" as something new.
 
 understand "dc" as dcing.
 
-carry out dcing: say "[b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[line break]ff freezes flips, so if you want to try, say, X BUTTON and X without undoing, you can.[line break][b]TS[r] skips the intro and gets you near the stores.[line break]hf shows full hints every move.[line break][b]CAP[r] caps the number of random texts printed at the number you type. It is useful for testing the text that appears for the last random text, but lots has been done by me.[line break][b]hd toggles printing full hints to a debug file called shufhints, or shufhints.glkdata. This is bolded annoyingly to stress that any hint transcript is helpful to me, if you can get it working, but don't force it. [r]Shufhints(.glkdata) is a text file that appears in c:\program files\inform 7 (or 2 directories up) on Windows and in your home directory on the Mac.[line break]hn turns hints off.[line break]stit toggles whether you always have x-ray vision."
+carry out dcing: say "[b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[line break]ff freezes flips, so if you want to try, say, X BUTTON and X without undoing, you can.[line break][b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break]hf shows full hints every move.[line break][b]CAP[r] caps the number of random texts printed at the number you type. It is useful for testing the text that appears for the last random text, but lots has been done by me.[line break][b]hd toggles printing full hints to a debug file called shufhints, or shufhints.glkdata. This is bolded annoyingly to stress that any hint transcript is helpful to me, if you can get it working, but don't force it. [r]Shufhints(.glkdata) is a text file that appears in c:\program files\inform 7 (or 2 directories up) on Windows and in your home directory on the Mac.[line break]hn turns hints off.[line break]stit toggles whether you always have x-ray vision."
 
 chapter hfing
 
@@ -12406,8 +12407,8 @@ carry out ts0ing:
 	try tsing 0 instead;
 
 carry out tsing:
-	if trips strip is visited, say "Already beat intro. RETRY to get back." instead;
-	increase the cur-score of intro by 4;
+	if trips strip is visited, say "Already beat Ordeal Loader. RETRY to get back." instead;
+	increase the cur-score of Ordeal Loader by 4;
 	if Rested Desert is unvisited:
 		move player to Rested Desert, without printing a room description;
 		if a random chance of 1 in 2 succeeds: [this is a silly randomization for what you could've solved at Rested Desert]
@@ -12416,13 +12417,13 @@ carry out tsing:
 			moot bolt;
 	if notices section is unvisited, move player to notices section, without printing a room description;
 	moot nametag;
-	solve-region intro;
+	solve-region Ordeal Loader;
 	now notices section is visited;
 	now player has the gadget;
 	now player has the prep paper;
 	now player has the saltine;
 	now player has the phial;
-	now intro is solved;
+	now Ordeal Loader is solved;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
 	let curstuff be number understood;
 	if curstuff > 8:
@@ -12474,9 +12475,9 @@ understand the command "j2" as something new.
 understand "j2" as j2ing.
 
 carry out j2ing:
-	if trips strip is visited, say "Already beat intro." instead;
-	increase the cur-score of intro by 4;
-	solve-region intro;
+	if trips strip is visited, say "Already beat Ordeal Loader." instead;
+	increase the cur-score of Ordeal Loader by 4;
+	solve-region Ordeal Loader;
 	now player has gadget;
 	now player has notepad;
 	now player has phail phial;
@@ -12495,7 +12496,7 @@ understand "getby [number]" as getbying.
 
 carry out getbying:
 	if number understood is 0:
-		toggle-solve intro;
+		toggle-solve Ordeal Loader;
 	if number understood is 1:
 		toggle-solve forest;
 	if number understood is 2:
@@ -12682,7 +12683,7 @@ section sortie-specific
 
 [* uses testing commands to test the most breakable puzzles, as well as playing dumb with guesses in the centrifuge]
 
-test setup with "test intro/gonear poet/abstract poet to lalaland/purloin sack/abstract straw to sack/abstract missile to moor/purloin cask/abstract black door to moor/abstract silo to moor/purloin panel/put panel in sack/put panel on sack/attach panel to sack/put missile on straw/put missile in straw/attach missile to straw/put missile in silo/put missile on silo/attach missile to silo/put door in silo/put door on silo/put missile in silo/put missile on silo/attach missile to silo/" in subsite
+test setup with "test ordeal-loader/gonear poet/abstract poet to lalaland/purloin sack/abstract straw to sack/abstract missile to moor/purloin cask/abstract black door to moor/abstract silo to moor/purloin panel/put panel in sack/put panel on sack/attach panel to sack/put missile on straw/put missile in straw/attach missile to straw/put missile in silo/put missile on silo/attach missile to silo/put door in silo/put door on silo/put missile in silo/put missile on silo/attach missile to silo/" in subsite
 
 test dial with "sortie/d/60/40/10/25/5/20/18/14/15/16" in trips strip
 
@@ -12710,20 +12711,20 @@ section big-picture
 
 [* all possible combinations. Shouldn't make difference what order we solve things in, but we also want to try solving 2 of 3 areas. The recuse- tests do this without tricks.]
 
-test win123 with "test intro/test forest/test sortie/test metros/nice bat/sorbet/test resort" in subsite.
-test win231 with "test intro/test sortie/test metros/test forest/nice bat/sorbet/test resort" in subsite.
-test win312 with "test intro/test metros/test forest/test sortie/nice bat/sorbet/test resort" in subsite.
+test win123 with "test ordeal-loader/test forest/test sortie/test metros/nice bat/sorbet/test resort" in subsite.
+test win231 with "test ordeal-loader/test sortie/test metros/test forest/nice bat/sorbet/test resort" in subsite.
+test win312 with "test ordeal-loader/test metros/test forest/test sortie/nice bat/sorbet/test resort" in subsite.
 
-test q12 with "test intro/secure/sk 1/sk 2/test resort" in subsite.
-test q13 with "test intro/secure/sk 1/sk 3/test resort" in subsite.
-test q21 with "test intro/secure/sk 2/sk 1/test resort" in subsite.
-test q23 with "test intro/secure/sk 2/sk 3/test resort" in subsite.
-test q31 with "test intro/secure/sk 3/sk 1/test resort" in subsite.
-test q32 with "test intro/secure/sk 3/sk 2/test resort" in subsite.
+test q12 with "test ordeal-loader/secure/sk 1/sk 2/test resort" in subsite.
+test q13 with "test ordeal-loader/secure/sk 1/sk 3/test resort" in subsite.
+test q21 with "test ordeal-loader/secure/sk 2/sk 1/test resort" in subsite.
+test q23 with "test ordeal-loader/secure/sk 2/sk 3/test resort" in subsite.
+test q31 with "test ordeal-loader/secure/sk 3/sk 1/test resort" in subsite.
+test q32 with "test ordeal-loader/secure/sk 3/sk 2/test resort" in subsite.
 
-test recuse-metros with "test intro/secure/test forest/test sortie/recuse/test resort" in subsite.
-test recuse-sortie with "test intro/secure/test forest/test metros/recuse/test resort" in subsite.
-test recuse-forest with "test intro/secure/test sortie/test metros/recuse/test resort" in subsite.
+test recuse-metros with "test ordeal-loader/secure/test forest/test sortie/recuse/test resort" in subsite.
+test recuse-sortie with "test ordeal-loader/secure/test forest/test metros/recuse/test resort" in subsite.
+test recuse-forest with "test ordeal-loader/secure/test sortie/test metros/recuse/test resort" in subsite.
 
 section talk-testing
 
@@ -12747,7 +12748,7 @@ section tester-scripts
 
 [*mostly paul lee's cool tries]
 
-test pl9m with "test intro/metros/d/beast/gardenia/x gardenia/n/Velcro/ask deadbeat about himself/ask deadbeat about cake/e/ask faeries about clover/give clover to faeries/ask faeries about heaths/ask faeries about begonias/ask faeries about gardenias/x brocade/x torn cue/barcode/x flowers/w/get lost corn/w/x garbage/smell/smell garbage/smell tomato/beats/sword/e/e/sheath/w/w/e/n/throw tomato/s/s/w/throw tomato/get emitter/e/n/n/switch emitter/get cake/keycard/s/get corn/" in subsite
+test pl9m with "test ordeal-loader/metros/d/beast/gardenia/x gardenia/n/Velcro/ask deadbeat about himself/ask deadbeat about cake/e/ask faeries about clover/give clover to faeries/ask faeries about heaths/ask faeries about begonias/ask faeries about gardenias/x brocade/x torn cue/barcode/x flowers/w/get lost corn/w/x garbage/smell/smell garbage/smell tomato/beats/sword/e/e/sheath/w/w/e/n/throw tomato/s/s/w/throw tomato/get emitter/e/n/n/switch emitter/get cake/keycard/s/get corn/" in subsite
 
 [u/u/jump/]
 
@@ -12782,7 +12783,7 @@ chapter win
 
 [* big test for the full win]
 
-test win with "test intro/test metros/test forest/test sortie/test resort" in subsite
+test win with "test ordeal-loader/test metros/test forest/test sortie/test resort" in subsite
 
 chapter gbg
 
@@ -12800,11 +12801,11 @@ test g3 with "drainage/gardenia/brocade/barcode/sheath/heaths/begonias/noise bag
 
 test g4 with "cork/rock/swing/wings/toolshed/toeholds/grips/sprig/ropes/spore/trio/riot/potters/protest/kilns/links/tug toe"
 
-chapter intro
+chapter Ordeal Loader
 
-[* maximum and minimum intro points]
+[* maximum and minimum Ordeal Loader points]
 
-test intro with "in/door/blot/bugle/in/goat/slander/in/gateman/ask gateman about cabinet/get all/attics/in/v ts" in subsite
+test ordeal-loader with "in/door/blot/bugle/in/goat/slander/in/gateman/ask gateman about cabinet/get all/attics/in/v ts" in subsite
 
 test nos with "in/door/blot/bugle/in/goat/slander/in"
 
@@ -12832,7 +12833,7 @@ chapter metros
 
 test toma with "gonear underside/n/w/tomato/e/s/w/throw tomato"
 
-test metbasic with "test intro/metros/g/g/gardenia/n/w/tomato/e/s/w/give tomato to thing/x mattress/e/n/n/switch emitter/get cake/keycard/s/velcro/controls" in subsite
+test metbasic with "test ordeal-loader/metros/g/g/gardenia/n/w/tomato/e/s/w/give tomato to thing/x mattress/e/n/n/switch emitter/get cake/keycard/s/velcro/controls" in subsite
 
 test met-all with "test metros-s-n1/ua 3/test metros-s-n2/ua 3/test metros-n-n1/ua 3/test metros-n-n2/ua 3/test metros-n-n3"
 
@@ -13098,11 +13099,11 @@ to unsolve-forest:
 	now forest is unsolved;
 	now cur-score of forest is 0;
 
-to unsolve-intro:
+to unsolve-ordeal-loader:
 	now odor is off-stage;
 	now bulge is part of desert-door;
 	now bugle is off-stage;
-	now cur-score of intro is 0;
+	now cur-score of ordeal loader is 0;
 
 chapter uaing
 
@@ -13227,7 +13228,7 @@ carry out scanalling:
 	repeat with Q running through not inflexible things:
 		if Q is not off-stage and Q is not moot and Q is not a backdrop:
 			let Y be the map region of the location of Q;
-			if Y is sortie or Y is forest or Y is resort or Y is intro or Y is stores or Y is metros:
+			if Y is sortie or Y is forest or Y is resort or Y is ordeal loader or Y is stores or Y is metros:
 				say "[Q]: [rgtext of Q].";
 				now Z is "[rgtext of Q]";
 				if Z matches the text "R":
@@ -13346,7 +13347,7 @@ understand "specs" as specsing.
 
 carry out specsing:
 	let qq be 0;
-	let reg be intro;
+	let reg be ordeal loader;
 	repeat with Q running through regions:
 		repeat through regana of Q:
 			unless the-from entry is spayshul:

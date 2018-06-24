@@ -2,7 +2,7 @@ out=shuffling-invisiclues.htm
 !Shuffling Around HTML Clues
 ->c:/games/inform/shuffling Materials/Release
 ==endheader
->INTRODUCTION
+>INTRODUCTION (ORDEAL LOADER)
 ?What is my power in this game?
 Does the name of this opening room strike you as curious?
 Spoiler below, though you can guess.
@@ -532,7 +532,7 @@ There's one in Store F.
 There're two in Store I.
 There's one in Store M.
 There're five in Store R, though one is potentially two points.
-?Where are the LLPs in the intro?
+?Where are the LLPs in the Ordeal Loader?
 You can do two things with the odor/door. You only need to do one to get by.
 BUGLE and BOLT both.
 The snarled darnels can't become anything, but you can be mad at them.
@@ -569,7 +569,7 @@ You get up to two points for changing all of the TOOLSHED, GRIPS and SLOPE.
 Finally, you can change the chain links to CHINA before turning them into kilns.
 ?Can we get locked out of any LLPs?
 If you solve an area, yes.
-Moving on from the desert or thickets loses a maximum point in the intro.
+Moving on from the desert or thickets loses a maximum point in the Ordeal Loader.
 Moving on from the Cruel Ones' Enclosure loses the bonus point in Store F.
 The LLPs in the fridge are always available in Store I.
 If you clear the Bastion without dealing with the antlers, you lose a maximum point in Store M.
