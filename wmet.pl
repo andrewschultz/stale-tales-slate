@@ -11,20 +11,23 @@ use POSIX;
 use strict;
 use warnings;
 
+use File::Compare;
 use Math::Prime::Util::GMP qw(gcd);
 use Algorithm::Combinatorics qw(combinations);
 use Array::Utils qw(array_diff);
 
 #####constants
-my $inFile  = "c:\\writing\\dict\\wmet.txt";
-my $outFile = "c:\\writing\\dict\\metrics.htm";
+my $inFile       = "c:\\writing\\dict\\wmet.txt";
+my $outFile      = "c:\\writing\\dict\\metrics-temp.htm";
+my $outFinalFile = "c:\\writing\\dict\\metrics.htm";
 
 #####options
-my $printSettler = 0;
-my $settlerToo   = 1;
-my $debug        = 0;
-my $launch       = 1;
-my $showMaxMin   = 0;
+my $printSettler  = 0;
+my $settlerToo    = 1;
+my $debug         = 0;
+my $launch        = 0;
+my $showMaxMin    = 0;
+my $checkRegScore = 0;
 
 #####vars
 my @fact;    # factorial array so don't have to keep recalculating
@@ -65,12 +68,14 @@ while ( $count <= $#ARGV ) {
       exit();
     };
     /^-?e$/ && do { `$inFile`; exit(); };
-    /^-?d$/      && do { $debug      = 1; $count++; next; };
-    /^-?nd$/     && do { $debug      = 0; $count++; next; };
-    /^-?l$/      && do { $launch     = 1; $count++; next; };
-    /^-?nl$/     && do { $launch     = 0; $count++; next; };
-    /^-?sm(m)?$/ && do { $showMaxMin = 1; $count++; next; };
-    /^-?nm(m)?$/ && do { $showMaxMin = 0; $count++; next; };
+    /^-?d$/         && do { $debug         = 1;  $count++; next; };
+    /^-?nd$/        && do { $debug         = 0;  $count++; next; };
+    /^-?cs$/        && do { $checkRegScore = 1;  $count++; next; };
+    /^-?(ncs|csn)$/ && do { $checkRegScore = 0;  $count++; next; };
+    /^-?l$/         && do { $launch        = 1;  $count++; next; };
+    /^-?nl$/        && do { $launch        = -1; $count++; next; };
+    /^-?sm(m)?$/    && do { $showMaxMin    = 1;  $count++; next; };
+    /^-?nm(m)?$/    && do { $showMaxMin    = 0;  $count++; next; };
     /^-?tow$/ && do { towers_analyze(); exit(); };
     print "Invalid flag $arg.\n\n";
     usage();
@@ -79,6 +84,9 @@ while ( $count <= $#ARGV ) {
 }
 
 open( A, $inFile ) || die("Can't open $inFile.");
+
+getScores() if $checkRegScore;
+
 open( B, ">$outFile" );
 
 print B
@@ -136,7 +144,27 @@ if ($showMaxMin) {
   print "$_: $mins{$_} to $maxes{$_}\n" for ( sort keys %maxes );
 }
 
-if ($launch) { `$outFile`; }
+my $changesThisTime = 0;
+
+if ( !compare( $outFile, $outFinalFile ) ) {
+  print "No changes since last update.\n";
+}
+else {
+  $changesThisTime = 1;
+  copy( $outFile, $outFinalFile );
+}
+if ( ( $launch == 1 ) || ( $launch == 0 && $changesThisTime == 1 ) ) {
+  `$outFinalFile`;
+}
+else {
+  print "Not launching. ";
+  print "Use -l to force a launch.\n" if $launch == 0;
+  print
+"Don't use -nl if you want to launch on any changes. Or use -l to force a launch.\n"
+    if $launch == -1;
+}
+
+unlink $outFile;
 
 ############################################
 #subroutines
@@ -390,6 +418,39 @@ sub difference {
     push( @retAry, $_ ) if ( $y_not_x_hash{$_} == 1 );
   }
   return @retAry;
+}
+
+sub getScores {
+  my @sts = ( "shuffling", "roiling" );
+  my $line;
+  my @regDef;
+  my $reg;
+  my $min;
+  my $max;
+  for my $pr (@sts) {
+    print "$pr\n";
+    open( X, "c:/games/inform/$pr.inform/source/story.ni" )
+      || die("No source file for $pr");
+    while ( $line = <X> ) {
+      if ( $line =~ /\. *min-score of / ) {
+        chomp($line);
+        @regDef = split( /\. */, $line );
+        for (@regDef) {
+          if ( $_ =~ /region$/i ) {
+            ( $reg = lc($_) ) =~ s/ is.*//;
+          }
+          elsif ( $_ =~ /max-score/i ) {
+            ( $max = lc($_) ) =~ s/.*is *//;
+          }
+          elsif ( $_ =~ /min-score/i ) {
+            ( $min = lc($_) ) =~ s/.*is *//;
+          }
+        }
+        print "$reg $min-$max\n";
+      }
+    }
+    close(X);
+  }
 }
 
 sub usage {
