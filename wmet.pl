@@ -11,6 +11,9 @@ use POSIX;
 use strict;
 use warnings;
 
+use lib "c:/writing/scripts";
+use i7;
+
 use File::Compare;
 use File::Copy;
 use Math::Prime::Util::GMP qw(gcd);
@@ -75,6 +78,8 @@ while ( $count <= $#ARGV ) {
       exit();
     };
     /^-?e$/ && do { `$inFile`; exit(); };
+    /^-?ec$/ && do { my $f = __FILE__; npx($f); exit(); };
+    /^-?ea$/ && do { `$adjustFile`; exit(); };
     /^-?d$/         && do { $debug         = 1;  $count++; next; };
     /^-?nd$/        && do { $debug         = 0;  $count++; next; };
     /^-?cs$/        && do { $checkRegScore = 1;  $count++; next; };
@@ -183,6 +188,7 @@ sub evaluate {
   my $t1a = $t1 / $inHere;
   my $t2a = $t2 / $inHere;
   my $t2b = $t2a**.5;
+  ( my $h2 = $header ) =~ s/[0-9]//g;
 
   if ( $t1 > 0 ) {
     my $tla = $thislog / $inHere;
@@ -193,31 +199,35 @@ sub evaluate {
       my $temp;
       my $max = ( $header =~ /max/i );
       my $min = ( $header =~ /min/i );
+      my $delta;
 
       ( my $headChop = lc($header) ) =~ s/ *\((min|max)\).*//i;
 
-      # print "$header....\n";
+      # print "$header/$h2 -> $headChop\n";
+
       if ($min) {
         $adjustSourceMin{$headChop} = 0
           if !defined( $adjustSourceMin{$headChop} );
-        $temp = $inHere + $adjustSourceMin{$headChop};
+        $temp  = $inHere + $adjustSourceMin{$headChop};
+        $delta = $sourceMin{$headChop} - $temp;
         print
-"Minimums wrong for $header/$headChop: source = $sourceMin{$headChop} wmet.txt = $inHere+$adjustSourceMin{$headChop}=$temp\n"
-          if ( $sourceMin{$headChop} != $temp );
+"Minimums wrong for $header/$headChop: source = $sourceMin{$headChop} wmet.txt = $inHere+$adjustSourceMin{$headChop}=$temp. Delta=$delta.\n"
+          if ($delta);
       }
       elsif ($max) {
         $adjustSourceMax{$headChop} = 0
           if !defined( $adjustSourceMax{$headChop} );
-        $temp = $inHere + $adjustSourceMax{$headChop};
+        $temp  = $inHere + $adjustSourceMax{$headChop};
+        $delta = $sourceMax{$headChop} - $temp;
         print
-"Maximums wrong for $header/$headChop: source = $sourceMax{$headChop} wmet.txt = $inHere+$adjustSourceMax{$headChop}=$temp\n"
-          if ( $sourceMax{$headChop} != $temp );
+"Maximums wrong for $header/$headChop: source = $sourceMax{$headChop} wmet.txt = $inHere+$adjustSourceMax{$headChop}=$temp. Delta=$delta.\n"
+          if ($delta);
       }
     }
 
     my $toB = sprintf(
 "<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
-      $header,
+      $h2,
       torgb( $inHere, 3, 47.01, "total puzzles in region" ),
       $inHere,
       torgb( $t1, 18, 321.1, "total letters in puzzles" ),
@@ -486,6 +496,13 @@ sub getScores {
         for (@regDef) {
           if ( $_ =~ /region$/i ) {
             ( $reg = lc($_) ) =~ s/ is.*//;
+            if ( defined( $sourceMax{$reg} ) ) {
+              my $count = 1;
+              while ( defined( $sourceMax{"$reg$count"} ) ) {
+                $count++;
+              }
+              $reg = "$reg$count";
+            }
           }
           elsif ( $_ =~ /max-score/i ) {
             ( $max = lc($_) ) =~ s/.*is *//;
@@ -496,6 +513,12 @@ sub getScores {
         }
         $sourceMax{$reg} = $max;
         $sourceMin{$reg} = $min;
+        if ( $reg eq "otters"
+          ) # this isn't great code, but there's only one case where we need adjusted stuff
+        {
+          $sourceMax{"$reg adjusted"} = $max;
+          $sourceMin{"$reg adjusted"} = $min;
+        }
         print "$reg $min-$max\n";
       }
     }

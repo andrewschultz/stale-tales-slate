@@ -7,7 +7,7 @@ forest/sortie/metros/resort
 Stores (max)
 forest/sortie/metros/resort/sorbet/nicebat
 Forest (min)
-east/west/shades/shotgun
+east/west/nose/shades/shotgun
 beard/chisel
 silver/sliver/spread
 maps/wolves
@@ -25,14 +25,16 @@ gardenia/tomato/rentals/keycard
 sheath/sword/barcode/controls/velcro/darkness/opening
 resin/beast
 Sortie (min)
-sixteen/kitchen/straw/sack/tortilla/lettuce/steak/parmesan/hotsauce
-coat/shoes/moor/peasant/hallway/soil
+sixteen/kitchen/straw/sack
+tortilla/lettuce/steak/parmesan/hotsauce
+coat/shoes/moor/peasant/hallway/soil/silo
 missile/blackdoor/panel/shoot/steer
 Sortie (max)
-sixteen/kitchen/straw/sack/tortilla/lettuce/steak/parmesan/hotsauce
-coat/shoes/moor/peasant/hallway/soil
-missile/blackdoor/panel/shoot/steer
+sixteen/kitchen/straw/sack
+tortilla/lettuce/steak/parmesan/hotsauce
 pancake/grits
+coat/shoes/moor/peasant/hallway/soil/silo
+missile/blackdoor/panel/shoot/steer
 Resort (min)
 islet
 cork
@@ -54,9 +56,9 @@ Means Manse (max)
 lamp/satchel
 basement/stable/chimney/ramp/painting/stair/snib
 flier/staple/stapler
-Stores (min)
+Stores1 (min)
 routes/troves/otters
-Stores (max)
+Stores1 (max)
 routes/troves/presto/oyster/towers/otters/others/sorbet/nestor/tokers/outside
 Troves (min)
 hate/care
@@ -84,9 +86,23 @@ wont/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/ca
 Presto (max)
 blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/prost/there/syke/what/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/rom sticks/casserole/reboot/tab/sleep/compile/debug/sub
 Oyster (min)
-spill/stroll/calm/run/fart/soar/scrap/seek/eat/tutor/kiss/trace/react/bonk/snap/bust/drop/warp/bury/unearth/assuage/search/enlarge/patrol/prepay/derail/spin/redial
+spill
+calm/run/fart/soar
+scrap/seek/eat/tutor
+trace/react/kiss/bonk/snap
+bust/drop
+warp/bury/unearth/assuage
+search/enlarge/patrol
+prepay/derail/spin/redial
 Oyster (max)
-sing/spit/inset/stroll/calm/run/boast/leap/scrap/scan/seek/eat/tutor/tend/swipe/kiss/trace/react/splain/bonk/snap/bust/drop/sweat/clean/shape/warp/bury/unearth/assuage/search/enlarge/patrol/tan/prepay/revel/derail/spin/redial
+sing/spit/inset/stroll
+calm/run/boast/leap
+scrap/scan/seek/eat/tutor/tend/swipe
+trace/react/kiss/bonk/snap/splain
+bust/drop/sweat/clean/shape
+warp/bury/unearth/assuage
+search/enlarge/patrol/tan
+prepay/revel/derail/spin/redial
 Towers (min)
 awed/coyer/weedy/yonder
 # North/H guardians
@@ -110,30 +126,43 @@ sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 rusty/naivest/angstier/mined/creaky/pearly/docile/rustled/grandiose/prosiest/attentive/rewired/
 # more LLPs
 punier/present/triste
-Otters (min) (adjusted)
+Otters adjusted (min)
 bare/reedi
 seedi/steami/tedious
 because/else/atom
-angri/brute/slow/coolest/artsy/garbed
-stoical/terse/parrot/snail/snipe/racoon
+angri/brute
+slow/coolest/artsy/garbed
+stoical/terse
+parrot/snail/snipe/racoon
 raptor/deep/quick
-Otters (max) (adjusted)
-#+1 rescind
+Otters adjusted (max)
 bare/rescind/reedi
 sobbing/emotional/despairing
-#+2 although/however
 because/else/atom/although/however
-#+1 n animals
-angri/brute/slow/paroled/coolest/artsy/garbed
-#+1 s animals
-loathing/stoical/parrot/snail/hornets/snipe/racoon
-#+2 elmer/merle
+angri/brute
+slow/paroled/coolest/artsy/garbed
+loathing/stoical
+parrot/snail/hornets/snipe/racoon
 honest/aside/raptor/deep/quick
 # non anagram point = play whistle
 Otters (min)
-barely/reedily/seedily/steamily/tediously/because/else/atom/angrily/brutely/slow/coolest/artsy/garbed/stoically/tersely/parrot/snail/snipe/racoon/honestly/raptor/deeply/quickly
+barely/reedily
+seedily/steamily/tediously
+because/else/atom
+angrily/brutely
+slow/coolest/artsy/garbed
+stoically/tersely
+parrot/snail/snipe/racoon
+raptor/deeply/quickly
 Otters (max)
-barely/rescind/reedily/sobbingly/emotionally/despairingly/because/else/atom/although/however/angrily/brutely/slow/paroled/coolest/artsy/garbed/loathingly/stoically/parrot/snail/hornets/snipe/racoon/honestly/aside/raptor/deeply/quickly
+barely/rescind/reedily
+sobbingly/emotionally/despairingly
+because/else/atom/although/however
+angrily/brutely
+slow/paroled/coolest/artsy/garbed
+loathingly/stoically
+parrot/snail/hornets/snipe/racoon
+honestly/aside/raptor/deeply/quickly
 Others (min)
 limes/grapes/pears/plums/compass
 apples/apricot/nabana/gonear

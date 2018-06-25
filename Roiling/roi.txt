@@ -1,6 +1,9 @@
-out=roiling-invisiclues.htm
+# rl.txt has the logic clues
+#
 !A Roiling Original HTML Clues
 ->c:/games/inform/roiling Materials/Release
+out=roiling-invisiclues.htm
+outraw=roiling-invisiclues-raw.htm
 ==endheader
 >General
 ?Does the male/female option have any practical difference?
