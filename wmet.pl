@@ -12,12 +12,14 @@ use strict;
 use warnings;
 
 use File::Compare;
+use File::Copy;
 use Math::Prime::Util::GMP qw(gcd);
 use Algorithm::Combinatorics qw(combinations);
 use Array::Utils qw(array_diff);
 
 #####constants
 my $inFile       = "c:\\writing\\dict\\wmet.txt";
+my $adjustFile   = "c:\\writing\\dict\\wmet-a.txt";
 my $outFile      = "c:\\writing\\dict\\metrics-temp.htm";
 my $outFinalFile = "c:\\writing\\dict\\metrics.htm";
 
@@ -44,6 +46,11 @@ my %thisTime;
 
 my %maxes;
 my %mins;
+
+my %adjustSourceMax;
+my %adjustSourceMin;
+my %sourceMax;
+my %sourceMin;
 
 my $count = 0;
 
@@ -85,7 +92,8 @@ while ( $count <= $#ARGV ) {
 
 open( A, $inFile ) || die("Can't open $inFile.");
 
-getScores() if $checkRegScore;
+checkAdjust() if $checkRegScore;
+getScores()   if $checkRegScore;
 
 open( B, ">$outFile" );
 
@@ -179,6 +187,34 @@ sub evaluate {
   if ( $t1 > 0 ) {
     my $tla = $thislog / $inHere;
     my $tlb = $thisset / $inHere;
+
+    if ($checkRegScore) {
+
+      my $temp;
+      my $max = ( $header =~ /max/i );
+      my $min = ( $header =~ /min/i );
+
+      ( my $headChop = lc($header) ) =~ s/ *\((min|max)\).*//i;
+
+      # print "$header....\n";
+      if ($min) {
+        $adjustSourceMin{$headChop} = 0
+          if !defined( $adjustSourceMin{$headChop} );
+        $temp = $inHere + $adjustSourceMin{$headChop};
+        print
+"Minimums wrong for $header/$headChop: source = $sourceMin{$headChop} wmet.txt = $inHere+$adjustSourceMin{$headChop}=$temp\n"
+          if ( $sourceMin{$headChop} != $temp );
+      }
+      elsif ($max) {
+        $adjustSourceMax{$headChop} = 0
+          if !defined( $adjustSourceMax{$headChop} );
+        $temp = $inHere + $adjustSourceMax{$headChop};
+        print
+"Maximums wrong for $header/$headChop: source = $sourceMax{$headChop} wmet.txt = $inHere+$adjustSourceMax{$headChop}=$temp\n"
+          if ( $sourceMax{$headChop} != $temp );
+      }
+    }
+
     my $toB = sprintf(
 "<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
       $header,
@@ -420,6 +456,18 @@ sub difference {
   return @retAry;
 }
 
+sub checkAdjust {
+  open( X, "$adjustFile" ) || die("No adjust file.");
+  while ( $a = <X> ) {
+    chomp($a);
+    next if $a =~ /^#/;
+    last if $a =~ /^;/;
+    my @ar = split( /,/, lc($a) );
+    $adjustSourceMin{ $ar[0] } = $ar[1];
+    $adjustSourceMax{ $ar[0] } = $ar[2];
+  }
+}
+
 sub getScores {
   my @sts = ( "shuffling", "roiling" );
   my $line;
@@ -446,6 +494,8 @@ sub getScores {
             ( $min = lc($_) ) =~ s/.*is *//;
           }
         }
+        $sourceMax{$reg} = $max;
+        $sourceMin{$reg} = $min;
         print "$reg $min-$max\n";
       }
     }

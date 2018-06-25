@@ -1,75 +1,93 @@
-Intro (min)
+Ordeal Loader (min)
 door/bolt/toga/nametag
-Intro (max)
+Ordeal Loader (max)
 door/bolt/bugle/toga/slander/nametag/attics
 Stores (min)
 forest/sortie/metros/resort
 Stores (max)
 forest/sortie/metros/resort/sorbet/nicebat
-Store F (min)
+Forest (min)
 east/west/shades/shotgun
 beard/chisel
 silver/sliver/spread
 maps/wolves
-Store F (max)
+Forest (max)
 north/south/nose/shades/shotgun
 beard/chisel
 silver/sliver/spread/hasbeen
 maps/wolves
-Store M (min)
+Metros (min)
 gardenia/tomato/keycard
 sheath/sword/barcode/controls/velcro/darkness/opening
 resin/beast
-Store M (max)
+Metros (max)
 gardenia/tomato/rentals/keycard
 sheath/sword/barcode/controls/velcro/darkness/opening
 resin/beast
-Store I (min)
+Sortie (min)
 sixteen/kitchen/straw/sack/tortilla/lettuce/steak/parmesan/hotsauce
 coat/shoes/moor/peasant/hallway/soil
 missile/blackdoor/panel/shoot/steer
-Store I (max)
+Sortie (max)
 sixteen/kitchen/straw/sack/tortilla/lettuce/steak/parmesan/hotsauce
 coat/shoes/moor/peasant/hallway/soil
 missile/blackdoor/panel/shoot/steer
 pancake/grits
-Store R (min)
-islet/cork/slope/ropes/grips/trio/potters/kilns/getout/exist
-Store R (max)
-islet/cork/wings/toeholds/slope/ropes/grips/trio/potters/kilns/chain/getout/exist
+Resort (min)
+islet
+cork
+slope/ropes/grips
+trio/potters/kilns/getout
+exist
+Resort (max)
+islet
+leis/cork/wings
+toeholds/slope/ropes/grips
+trio/potters/kilns/chain/getout
+exist
 ========
 Means Manse (min)
-lamp/satchel/stable/stair/flier/staple/stapler
+lamp/satchel
+stable/stair
+flier/staple/stapler
 Means Manse (max)
-lamp/satchel/basement/stable/chimney/ramp/painting/stair/snib/flier/staple/stapler
+lamp/satchel
+basement/stable/chimney/ramp/painting/stair/snib
+flier/staple/stapler
 Stores (min)
 routes/troves/otters
 Stores (max)
 routes/troves/presto/oyster/towers/otters/others/sorbet/nestor/tokers/outside
-Store V (min)
+Troves (min)
 hate/care
 observe/spot/reason/recall
-despair/deal/desire/aspire
-ponder/ignore/master/last/decide
-Store V (max)
+despair/decide
+master/deal
+desire
+aspire/ponder
+deserve/last/resist/recant
+Troves (max)
 hate/care/gape
-observe/spot/believe/reason/derive
-resist/despair/glare/deal/desire/aspire/strive
-ponder/ignore/master/bolster/discover/last/decide
-Store U (min)
+observe/spot/believe/reason/recall
+despair/decide
+glare/master/bolster/deal
+desire
+aspire/strive/ponder
+deserve/discover/last/resist/ramble/recant
+Routes (min)
 inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
-Store U (max)
+Routes (max)
 inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
 towards/without
-Store P (min)
+Presto (min)
 wont/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
-Store P (max)
+Presto (max)
 blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/prost/there/syke/what/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/rom sticks/casserole/reboot/tab/sleep/compile/debug/sub
-Store Y (min)
+Oyster (min)
 spill/stroll/calm/run/fart/soar/scrap/seek/eat/tutor/kiss/trace/react/bonk/snap/bust/drop/warp/bury/unearth/assuage/search/enlarge/patrol/prepay/derail/spin/redial
-Store Y (max)
+Oyster (max)
 sing/spit/inset/stroll/calm/run/boast/leap/scrap/scan/seek/eat/tutor/tend/swipe/kiss/trace/react/splain/bonk/snap/bust/drop/sweat/clean/shape/warp/bury/unearth/assuage/search/enlarge/patrol/tan/prepay/revel/derail/spin/redial
-Store W (min)
+Towers (min)
 awed/coyer/weedy/yonder
 # North/H guardians
 clumsy/nerdiest/pastier/resealed/restful
@@ -77,7 +95,7 @@ clumsy/nerdiest/pastier/resealed/restful
 punier/subtler/holiest/married/hastiest/broken/resting/sewed
 # other stuff to do (robust < nearest)
 wordy/rowdy/fussier/grained/stabler/robust/spectacular
-Store W (max)
+Towers (max)
 # 7 warriors
 ashen/coyer/weedy/tenser/achier/recreant/yonder
 # guardians you have to get (7)
@@ -92,22 +110,38 @@ sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 rusty/naivest/angstier/mined/creaky/pearly/docile/rustled/grandiose/prosiest/attentive/rewired/
 # more LLPs
 punier/present/triste
-Store T (min) (adjusted)
-bare/reedi/seedi/steami/tedious/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
-Store T (max) (adjusted)
-bare/rescind/reedi/sobbing/emotional/despairing/because/else/atom/although/however/angri/brute/slow/paroled/coolest/artsy/garbed/loathing/stoical/parrot/snail/hornets/snipe/racoon/honest/raptor/deep/quick
-Store T (min)
+Otters (min) (adjusted)
+bare/reedi
+seedi/steami/tedious
+because/else/atom
+angri/brute/slow/coolest/artsy/garbed
+stoical/terse/parrot/snail/snipe/racoon
+raptor/deep/quick
+Otters (max) (adjusted)
+#+1 rescind
+bare/rescind/reedi
+sobbing/emotional/despairing
+#+2 although/however
+because/else/atom/although/however
+#+1 n animals
+angri/brute/slow/paroled/coolest/artsy/garbed
+#+1 s animals
+loathing/stoical/parrot/snail/hornets/snipe/racoon
+#+2 elmer/merle
+honest/aside/raptor/deep/quick
+# non anagram point = play whistle
+Otters (min)
 barely/reedily/seedily/steamily/tediously/because/else/atom/angrily/brutely/slow/coolest/artsy/garbed/stoically/tersely/parrot/snail/snipe/racoon/honestly/raptor/deeply/quickly
-Store T (max)
-barely/rescind/reedily/sobbingly/emotionally/despairingly/because/else/atom/although/however/angrily/brutely/slow/paroled/coolest/artsy/garbed/loathingly/stoically/parrot/snail/hornets/snipe/racoon/honestly/raptor/deeply/quickly
-Store H (min)
+Otters (max)
+barely/rescind/reedily/sobbingly/emotionally/despairingly/because/else/atom/although/however/angrily/brutely/slow/paroled/coolest/artsy/garbed/loathingly/stoically/parrot/snail/hornets/snipe/racoon/honestly/aside/raptor/deeply/quickly
+Others (min)
 limes/grapes/pears/plums/compass
 apples/apricot/nabana/gonear
 cheap/cripes/solemn/molen
 rhubarb/tamarind/tangerines/nectarine
 raspberry/pineapple/reversed/mango
 sonic/icons/prep/review
-Store H (max)
+Others (max)
 limes/grapes/pears/plums/compass
 apples/apricot/nabana/gonear/mulberries/coconuts
 cheap/cripes/solemn/molen
