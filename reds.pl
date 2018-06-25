@@ -18,6 +18,8 @@ use Algorithm::Permute;
 
 use strict;
 use warnings;
+use lib 'c:/writing/scripts';
+use i7;
 
 my %dupHash;
 my %statFin;
@@ -131,7 +133,11 @@ while ( $cur <= $#av ) {
       $cur += 2;
       next;
     };
-    /^-?e$/  && do { `$reds`;         exit(); $cur++; next; };
+    /^-?e$/ && do {
+      open_right_line($arg2) if $arg2;
+      `$reds`;
+      exit();
+    };
     /^-?ef$/ && do { `np $redsource`; exit(); $cur++; next; };
     /^-?l$/ && do { $maxLetters = $arg2; $cur += 2; next; };
     /^-?m$/ && do { $myMax      = $arg2; $cur += 2; next; };
@@ -811,11 +817,24 @@ sub misser {
   return 'R';
 }
 
+sub open_right_line {
+  open( A, $reds ) || die("No file $reds");
+  my $line;
+  while ( $line = <A> ) {
+    if ( $line =~ /$_[0]/i ) {
+      my $lineNum = $.;
+      close(A);
+      npx( $reds, $lineNum );
+    }
+  }
+  die("Could not find a match for string $_[0].");
+}
+
 sub usage {
   print <<EOT;
 ==================USAGE FOR REDS.PL==================
 Examples:
--e = open reds.txt, -ef = open source file
+-e = open reds.txt, -ef = open source file. -e can take an argument to open at the right line number.
 reds.pl abcde %
 Should give 6*2 12 possibilities (% means we know where the vowels/consonants/y are and we have 3 consonants, 2 vowels))
 reds.pl abcd bcda

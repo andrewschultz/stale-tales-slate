@@ -50,6 +50,7 @@ athwart,?RRR?RR=whattar=tawrath=thatraw=artthaw
 gape,??R?=paeg=gpea=pega=page
 hate,thea,ateh,ehat
 care,rAcE
+#boarded roadbed
 #qver of stop post
 spot,?R??=stop=post
 #qver of sob ever verbose
@@ -57,11 +58,13 @@ observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers
 recall,cEllar
 derive,idveer,viered,everid
-ignore,ergnio,onregi,region,goerin
+#ignore,ergnio,onregi,region,goerin
 reason,noears,sorena,anorse,oasner,asnero
 #drain nadir
-glare,regal,lager,ergal,agler
+decide,iceded,cdedei,ecedid
 #boredom bedroom
+glare,regal,lager,ergal,agler
+despair,irespad,asiderp,eradips,ripesad,sparide,rapside,sipreda,padries
 #qver of lead
 deal,???R=lead=dale=elda=leda=adle
 #qver of bortles lobster
@@ -77,10 +80,11 @@ desire,R???RG=sirdee=reside
 discover,rodsvice,revdisco,veridocs,scorediv
 #qver of salt
 last,R?R?=stal=salt
-decide,iceded,cdedei,ecedid
 resign,sireng,grines,singer,snegri,nregis,isnerg
 #qver of marble blamer balmer
 ramble,R?R???=marble=blamer=balmer
+#qver of marble blamer mr beal
+ramble,R?R???=marble=blamer=mrbeal
 #qver of sister tressi siters
 resist,RY?Y?R=sister=tressi
 #qver of trance nectar
@@ -226,7 +230,7 @@ prosiest,RR?RYYRR=sporties=ripostes
 #actionless coastlines
 #qver of asset-hit atheists
 hastiest,RY?R?YR?=assethit=atheists
-#qver of dinger
+#qver of reading a dinger
 grained,RR?YR?R=reading=adinger
 #qver of weirder red wire
 rewired,?GRYR?R=weirder=redwire
@@ -264,6 +268,7 @@ nerdiest,R?RRY?R?=resident=trendies
 barely,P??YRB=bleary=barley
 reedily,lyredie,drilyee
 #qver of cinders
+#qver ignore because all 3 clues give no ?'s
 discern,nrdices,icnerds,srindec
 rescind,nrdices,icnerds,srindec
 #frontage
@@ -282,6 +287,8 @@ atom,??YR=atmo=moat
 although,ghoulhat,holathug,ughohalt
 however,eehrowv,veerhow,revhowe,whereov
 #coevals alcoves
+#qver of ideas aides
+aside,?RYRY=aides=ideas
 honestly,lhenyost,elsynoth,sthoylen,ethylsno,shytolen,......LY
 #perverse preserve
 hornets,shorten

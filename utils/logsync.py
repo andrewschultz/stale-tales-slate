@@ -17,21 +17,29 @@ need_logic = defaultdict(int)
 got_logic = defaultdict(int)
 got_logic_invis = defaultdict(int)
 got_logic_reds = defaultdict(int)
+open_line = defaultdict(int)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
 scanned = ""
 
-# this is for oddly or privately named items
+open_after = False
+open_first = True
+
+# this is for oddly, badly or privately named items
+# note HONESTLY currently has no ?'s in its b-text
 abbrevs = {
   "a-s": "achers' arches",
   "ltb": "lead",
   "bogus-plains": "plains",
   "b-b": "bleary barley",
-  "s-c": "sonic coins"
+  "s-c": "sonic coins",
+  "merle": "honestly",
+  "elmer": "ideas aides"
 }
 
 def usage():
+    print("-a/oa opens code after if there is a mistake to fix.")
     print("-cod/-ncod turns on/off showing code, default = on.")
     print("-cou/-ncou turns on/off showing counts of errors, default = off.")
     exit()
@@ -94,7 +102,10 @@ with open(i7.sdir("roiling") + "/logic.htm") as file:
         if '<!--' in line and '-->' in line and 'logic for' in line:
             scanned = re.sub(".*logic for ", "", line.strip().lower())
             scanned = re.sub("( )?-->.*", "", scanned)
-            got_logic[scanned] = line_count
+            if scanned in got_logic.keys():
+                print("Duplicate logic-for in logic.htm:", scanned, "line", line_count, "originally", got_logic[scanned])
+            else:
+                got_logic[scanned] = line_count
 
 
 count = 0
@@ -110,6 +121,10 @@ with open(logic_invis) as file:
             print("Line", line_count, "may need line before it:", ll)
         if ll.startswith("# logic for ") or ll.startswith("#logic for"):
             scanned = re.sub("^# ?logic for ", "", ll)
+            if scanned in got_logic_invis.keys():
+                print("Duplicate logic-for in rl.txt:", scanned, "line", line_count, "originally", got_logic_invis[scanned])
+            else:
+                got_logic_invis[scanned] = line_count
             got_logic_invis[scanned] = line_count
         last_comment = ll.startswith("#")
 
@@ -121,7 +136,8 @@ with open(logic_reds) as file:
         ll = line.lower().strip()
         if re.search("#qver (of|for) ", ll):
             if need_question_mark:
-                print("Need question mark in settler results before line", line_count, "to cover last #qver ({:s})".format(last_qver), "at line", need_question_mark)
+                print("REDS.TXT: Need question mark in settler results before line", line_count, "to cover last #qver ({:s})".format(last_qver), "at line", need_question_mark)
+                if logic_reds not in open_line.keys() or not open_first: open_line[logic_reds] = line_count
                 qm_needed += 1
             scanned = re.sub("#qver (of|for) ", "", ll)
             if 'qver for' in ll: print("WARNING line", line_count, "qver of = preferred for", ll)
@@ -137,16 +153,18 @@ while arg_count < len(sys.argv):
     x = sys.argv[arg_count].lower()
     if x[0] == '-':
         x = x[1:]
-    if x == 'cod':
-        show_code = True
-    elif x == 'ncod':
-        show_code = False
-    elif x == 'cou':
-        show_count = True
-    elif x == 'ncou':
-        show_count = False
-    elif x == '?' or x == '-?':
-        usage()
+    if x == 'cod': show_code = True
+    elif x == 'ncod': show_code = False
+    elif x == 'cou': show_count = True
+    elif x == 'ncou': show_count = False
+    elif x == '?' or x == '-?': usage()
+    elif x == 'a' or x == 'oa': open_after = True
+    elif x == 'af' or x == 'oaf':
+        open_after = True
+        open_first = True
+    elif x == 'al' or x == 'oal':
+        open_after = True
+        open_first = False
     else:
         print("Unknown flag", x)
         usage()
@@ -154,4 +172,9 @@ while arg_count < len(sys.argv):
 
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues")
-check_logic_file(need_logic, got_logic_reds, "reds.txt", "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed > 0))
+check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed > 0))
+
+if open_after:
+    for q in open_line.keys():
+        i7.npo(q, open_line[q])
+    if not len(open_line.keys()): print("Nothing to open. Everything worked.")
