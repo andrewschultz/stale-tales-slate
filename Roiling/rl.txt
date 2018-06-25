@@ -32,6 +32,8 @@ If there is more than one, you may wish to check if there is a choice between on
 Or if, for instance, the target word has two vowels, and the settler gives no vowels and two question marks, both question marks must be a vowel.
 Combining these observations may allow you to knock off several question marks right away. For instance, a R?RR with just one vowel means the second slot must be the only vowel in whatever two words clash.
 These won't always get you to the right answer, but they'll often get you closer than even a standard cheat readout with just colors. But they may seem confusing at first.
+?Are there any fake puzzles in here to throw me off?
+No. That'd be a jerk move. But there are some in the game invisiclues file proper.
 >MEANS MANSE
 >>CARVEN CAVERN
 # logic for plates
@@ -148,13 +150,13 @@ For <b>LEAD</b>, by the two authors, ???R looks painful indeed. But the red mean
 <pre>?A?L -> EADL\nA??L -> AEDL</pre>
 So, ??AL = DEAL. You could, of course, use non-teach mode to knock this off. It'd put the consonants at the end and the vowels in the middle.
 >>ECON CONE
-# logic for praise
-?What's with the praise and its three question marks?
-It is the content of the praise that is throwing the questions.
-<pre>SPAREI\nAPESIR\nPRAISE\nIREAPS\nIRESAP</pre>
-Also, you may note that three consonant slots are defined, meaning the question marks are all vowels. So let's nail down the consonants first in ?RR?R?.
-Slot 2 cannot be P or R, so it's S. We can't get any information for slot 3, since only vowels appear there in the praise. Slot 5 cannot be S or P, so it's R. That means 3 must be P: ?SP?R?.
-Now the remaining slots must be vowels, leaving (ai)SP(ai)R(ie), since one of the vowels in each slot must be right. But then slot 6 is the only one that can be E, leavin ISPARE or ASPIRE. ASPIRE.
+# logic for praise spirea
+?What's with the praise spirea and its two question marks?
+The two question marks must be vowels.
+Since 4 is I or R, it's I.
+Since 2 can't be R or P and is a consonant, it's S.
+That leaves four possibilities: (AE)S(PR)I(PR)(AE).
+ASPIRE is the one that works.
 >>UPSCALE CAPSULE
 # logic for salt
 ?What about the salt?
@@ -168,6 +170,7 @@ In fact, the second being a yellow/vowel and not I means it's an E, and thus the
 Also, R is the only possible consonant in slot 1. RE-I--.
 Here we see that slot 3 is S or 3, and slot 5 is S or E. So they're both S, and slot 6 is T.
 RESIST.
+Small note: we didn't even really need to use the question marks, here, to get RESIST.
 # logic for marble blamer balmer
 ?How do I figure Blamer Balmer (in marble)?
 Blamer Balmer has a bunch of question marks. And in, say, the final slot, it's odd there's a question mark for just R. So the question marks indicate many conflicts, but it's not too bad. Remember, there are only two possible vowels.
@@ -180,14 +183,6 @@ Ramble it is.
 ?How do I figure Blamer Mr Beal?
 R?R??? looks unpromising, but if you write out the possibilities, you'll note a few things: RL/ARL/RLM/BME/AEL/ERL is what you have. If slot 2 is R or L, we get RLM/LRM..., which is not promising, especially since B must then go in slot 4. So A is in slot 2.
 RL/A/BRLM/B/EL/ERL is left. That puts M in slot 3. RL/amb/EL/ERL can be guessed, but note L in slot 1 means LAMBER, then you have RAMBEL/RAMBLE. RAMBLE.
-# logic for sister tressi siters
-?How do I figure the Sister Tressi Siters?
-You can get a lot of information from the non-question marks.
-In particular, the two vowels (yellow).
-Slot 2 can't be i, and slot 4 can't be e.
-So we have -E-I--, but then slot 1 can't be S or T, so it's R. Now we just need to figure which slot T is in.
-That is slot 6, since S is not there (siters).
-So we didn't even really need to use the question marks, here, to get RESIST.
 # logic for trance nectar
 ?Finally, what about the Trance Nectar?
 Well, the R??YRR leaves you with a couple possibities for the 2nd/3rd slot. One vowel, one consonant.
@@ -305,7 +300,7 @@ The Hostile-Is-He Lot has ??RYYR?. Now this looks like a mess, until you realize
 So what if 1 and 2 are consonants? Then we'd have HS----E, which is a mess. So 7 is a consonant, or T.
 If 1 is the vowel, we have IS----T, which becomes IS(LT)OE(HST)T, or ISLOEHT. So 2 must be the vowel. HO----T.
 That becomes HO(LT)(OI)(OE)(HST)T, or HOLIEST.
-# logic for dinger
+# logic for reading a dinger
 ?How do I ding up Reading: a Dinger?
 The RR?YR?R scan means that the two question marks must be vowels. A and E, to be precise. That leaves I in the remaining vowel slot, so we're off to a good start.
 The authors' names (Di Regan and Ned Riga) also cut things down a bit--in particular, they force the first and last letters, but let's go on without them.
@@ -414,13 +409,21 @@ The ??GR?RO for reality suggests --A--LY, and the non-cheat suggests we don't kn
 (IT/TI)ARELY, (IR/RI)ATELY, (ET/TE)ARILY, (ER/RE)ATILY.
 From these eight we see TEARILY or IRATELY could both work.
 # logic for formally
+?What about the macks talking fly, moral?
 The settler indicates two question mark entries should be consonants.
 <pre>AFOLLYMR\nFLYMORAL\n?YR?YRRO</pre>\nIndicates the first letter shouly be F, and the second yellow with O in slot 5 tells us where the vowels should be.
 FO--A--Y is remaining. That's twelve possibilities--well, a bit less if we assume it ends in LY. One of L and M is in slot 4, and if we assume L, we get FO(RM)LA(RM)LY, and neither of those work. But the other way we get FO(RL)MA(RL)LY, or FORMALLY.
 # logic for steamily
+?What about the macks talking about Misty Ale?
 <pre>MAYISLET\nMISTYALE\nSLIMYTEA</pre>
 The question marks at 1 and 7 can be intuited a bit. M(consonant) clumps. And slot 7 must be a vowel for the letters to add up right. So... S(MT)(AE)(AE)(MT)(EI)LY is left over. That puts I in slot 6, and with 4 guesses, you can use trial and error.
 SMEATILY sounds like it could be a word, and SMAETILY and STAEMILY look weird, but STEAMILY works great.
+>>COEVALS' ALCOVE
+# logic for ideas aides
+?Can I deal with Elmer and Merle as ideas' aides?
+Yes. ?RYRY leaves us with (IA)/S/(AI)/(SD)/(AIE).
+That gives us (AI)S(AI)DE.
+ISADE doesn't work, so, ASIDE.
 >STORE H
 >>CURTIS'S COIN(S)
 # logic for coins
