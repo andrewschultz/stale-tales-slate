@@ -228,6 +228,10 @@ chapter sonancy canyons
 
 understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in canyons and hurt hog is in canyons.
 
+understand "spatter" as a mistake ("No violence!") when player is in canyons and patters are in canyons
+
+understand "tapster" as a mistake ("No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.") when player is in canyons and patters are in canyons.
+
 book troves
 
 chapter Loather Rathole

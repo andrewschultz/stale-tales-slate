@@ -380,15 +380,13 @@ This helps you move on a bit to the Boarded Roadbed, but oh no! An evil bee, so 
 or
 > BELIEVE
 
-Now you need to get in the cellar. You saw how the thief got there, but you can't remember.
+Doing both gets you an extra point.
 
-You can not-quite-remember the cellar, or listen to "I'd Veer":
+Now the cellar caller the bee was on is broken. It would get help you find the cellar pretty easily. So you need to think things out yourself.
 
 > RECALL
-or
-(ALT) > DERIVE
 
-So after either of these you're in the Drain Nadir.
+So now you're in the Drain Nadir.
 
 You've hit rock bottom, and you need to bring yourself up. If you want, you can take a flap at Sister Tressi, but you don't need to.
 

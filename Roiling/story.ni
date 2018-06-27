@@ -123,7 +123,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 37. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 37. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
@@ -137,7 +137,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 2=19 for Dr Yow's two voices
 1=20 for lone duck
 1=21 for gifted/fidget
-1=22 for using the ragged dagger on the rapier repair
+1=22 for using the ragged dagger on the rapier repair NON-ANAGRAM
 2=24 for a bot boat
 1=25 for the palace]
 [BONUS:
@@ -7688,9 +7688,7 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
 	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
-	if player is in Boarded Roadbed:
-		unless bee-score is 0, say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][line break]You see red a bit at getting no direct help, yourself[one of]. Maybe you can listen a few more times, to find an alternate way to find the cellar[or][stopping]." instead;
-		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
+	if player is in Boarded Roadbed and bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if player is in Drain Nadir and Eddie's Song is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
@@ -8904,8 +8902,7 @@ sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	"Cads. 
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief!  You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
 bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
 what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
-cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]."
-cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
+cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's that trap door? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
 diapers	Eddie's Song	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 Eddie's Song	Eddie's Song	false	361668827	Boredom Bedroom	"decide"	"decide"	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you sell it to someone who can similarly use it--if they are focused and with it and such."
@@ -9381,14 +9378,6 @@ to say bored-robed:
 	else:
 		say "clerically garbed, like he just became,";
 		now bredo-bored is false;
-
-to say rec-der:
-	say "You take time, and ";
-	if the player's command includes "recall":
-		say "not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's that trap door? You keep trying to recall--and you try so hard you forget to feel sorry for yourself";
-	else:
-		say "try to figure where the cellar must be based on what was behind the robber, where you were standing, and so forth. The calculations aren't as difficult as you feared, and pretty soon you figure where the cellar door must have been";
-	say ". You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be";
 
 to say logan-hi:
 	say "'No-Gal Logan. Serial Sailer. Here's our selves-vessel. Not quite the HMS SMH.'[paragraph break]'Hooray...or ahoy?' you say, confused.[paragraph break]But the sail ails where the stripe would be above ground. You sort of think you can see a reddish haze, or maybe it's your imagination. 'Now to hit WIN...where's that button? Hmph, won't let me cross. It's up to you. You seem like a trireme meriter. You'll find the hit win button Ben hid. Did it so well, made sure we didn't use it before we need to. You'll reach the beyond. One way now. Aye,' says No-Gal Logan. 'The end! Boy!'[paragraph break]You see him nod bye as he jumps over. 'Logan!' you cry. 'No lag!' he yells back. Then 'St. Olaf!' He floats, so flat, leaving you for the last of...he cries, 'Harbor!' and you cry 'Rah, Bro!' Then you write down what No-Gal said about the button.";
@@ -13851,10 +13840,7 @@ instead of doing something to cellar door:
 	if action is procedural, continue the action;
 	say "No, you need to do something to find the cellar. Since you can't quite remember...";
 
-derived is a truth state that varies.
-
 after fliptoing cellar door:
-	if the player's command includes "derive", now derived is true;
 	if bee-score < 2, poss-d;
 	continue the action;
 
@@ -27381,7 +27367,6 @@ this is the routes-alt rule: say "[eq2][b]ROUTES[r] has no alternate, um, routes
 
 this is the troves-alt rule:
 	say "[eq2][b]TROVES[r][eq2][line break]";
-	say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
 	say "[2da]There were two marble blamers chosen at the start. You got [mbb], but there was also [other-mbb].";
 
 this is the presto-alt rule:
