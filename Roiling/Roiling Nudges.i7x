@@ -354,8 +354,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "liev"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 "austerer"	732937433	austerer	--	--	"[locname]." [start austerer treasure]
-"marines"	489567203	marines seminar remains	--	--	"[locname]." [start marines seminar remains]
-"marine"	393293237	marines seminar remains	--	--	"[locname]."
+"marines"	489567203	Marines Seminar Remains	--	--	"[locname]." [start marines seminar remains]
+"marine"	393293237	Marines Seminar Remains	--	--	"[locname]."
+"port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]No, all the ports[else]You already observed all the ports. No need to try to single one out[end if]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
@@ -835,7 +836,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "angry"	311378083	--	imp2	--	"[add-ly]."
 "angri"	234011677	--	imp2	--	"[add-ly]."
 "enraged"	465660138	--	imp3	--	"[add-ly]."
-"coma"	159621133	--	--	barley-n-s rule	"The coma camo remains as-is. It's sturdy, military-grade stuff"
+"coma"	159621133	--	--	barley-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
 "cathedral"	451746378	Clarthead Cathedral	--	--	"[locname]." [start Clarthead Cathedral]
 "whiner"	472247338	Clarthead Cathedral	--	--	"[whiney]."
 "whiners"	568521304	Clarthead Cathedral	--	--	"[whiney]."
@@ -1262,29 +1263,21 @@ to say not-the-reg:
 
 section stores nudges
 
-this is the degen-true rule:
-	the rule succeeds.
+this is the degen-true rule: the rule succeeds.
 
-to say no-cand:
-	say "Nothing happens. You'd think that store would be a good candidate to change, but it isn't"
+to say no-cand: say "Nothing happens. You'd think that store would be a good candidate to change, but it isn't"
 
-to say so-last:
-	say "That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures";
+to say so-last: say "That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures";
 
-to say no-way:
-	say "Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway"
+to say no-way: say "Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway"
 
-to say shell-no:
-	say "The shells don't move. Perhaps they are just a clue"
+to say shell-no: say "The shells don't move. Perhaps they are just a clue"
 
-to say engs:
-	say "Nothing happens. You probably need to worry about the stores and/or what they become, instead"
+to say engs: say "Nothing happens. You probably need to worry about the stores and/or what they become, instead"
 
-to say towers-made:
-	say "What the towers are made of is not important. Just that they're big, and there's a quest behind them"
+to say towers-made: say "What the towers are made of is not important. Just that they're big, and there's a quest behind them"
 
-to say not-at-barley:
-	say "You're not near enough to the barley to affect it. You need to ENTER through the otters"
+to say not-at-barley: say "You're not near enough to the barley to affect it. You need to ENTER through the otters"
 
 to say barley-check:
 	if the player's command includes "barley":
@@ -1293,17 +1286,13 @@ to say barley-check:
 			preef b-b;
 			continue the action;
 
-to say hub-stur:
-	say "The hubs bush is too sturdy. You can't escape the Strip of Profits"
+to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Strip of Profits"
 
-to say lec-un:
-	say "The lecturer is unchangeable in his views, but maybe he is physically movable"
+to say lec-un: say "The lecturer is unchangeable in his views, but maybe he is physically movable"
 
-to say ian-un:
-	say "Ian is unchangeable, but maybe he is movable";
+to say ian-un: say "Ian is unchangeable, but maybe he is movable";
 
-to say pamph-ana:
-	say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
+to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
 
 section routes nudges
 

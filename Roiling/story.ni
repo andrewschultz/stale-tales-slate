@@ -490,7 +490,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 680.
+use MAX_VERBS of 690.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -506,7 +506,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 700.
+use MAX_VERBS of 710. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -5926,8 +5926,8 @@ carry out presto-hinting:
 		if yak is visible:
 			say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not visible]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
 		try objhinting drab yoke instead;
-	if hacks' shack is visited, if hump is not in lalaland:
-			try objhinting hump instead;
+	if hacks' shack is visited:
+		if hump is not in lalaland, try objhinting hump instead;
 		if onyx censer is not in lalaland, try objhinting onyx censer instead;
 		if yak is not in lalaland: [?! rearrange this]
 			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak[if yak is not in shack] you left back...wherever[end if]." instead;
@@ -6972,7 +6972,7 @@ Upscale Capsule		"You couldn't just run out on your company and your responsibil
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
-Marines Seminar Remains	"The sport ports would provide a challenge you're ill-equipped for. West is the only way out."
+Marines Seminar Remains	"While you're impressed with people who can navigate sport ports, you [if sport ports are reflexed]already saluted them. No need to do more[else]couldn't do much more than show respect for them, if you need a distraction from your main quest[end if]."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Saps' Pass	"There's no way around the hogs. You need to get rid of them."
 Path Path	"It's best to say on the Phat Path."
@@ -11856,16 +11856,11 @@ carry out pfing:
 volume stores
 
 after choosing notable locale objects when player is in strip of profits:
-	if store h is in strip of profits:
-		set the locale priority of store h to 0;
-	if hoster is in strip of profits:
-		set the locale priority of hoster to 0;
-	if otters-x are in strip of profits:
-		set the locale priority of otters-x to 10;
-	if tokers are in strip of profits:
-		set the locale priority of tokers to 1;
-	if tokers are in strip of profits and nestor is in strip of profits:
-		set the locale priority of nestor to 0;
+	if store h is in strip of profits, set the locale priority of store h to 0;
+	if hoster is in strip of profits, set the locale priority of hoster to 0;
+	if otters-x are in strip of profits, set the locale priority of otters-x to 10;
+	if tokers are in strip of profits, set the locale priority of tokers to 1;
+	if tokers are in strip of profits and nestor is in strip of profits, set the locale priority of nestor to 0;
 	continue the action;
 
 book definitions
@@ -11909,27 +11904,17 @@ cur-hint-sto is a sto that varies. cur-hint-sto is usually Store U.
 
 the plural of sto is stos.
 
-does the player mean entering a sto: it is likely.
-
 instead of entering a sto:
-	if noun is store b:
-		say "You [if store b is reflexive]need to say what you want a free sample of[else]already got your free sample[end if]." instead;
-	if noun is store c:
-		say "You'd have to show ID. Then they'd know who you were. Then Elvira would have you arrested. Plus, ew." instead;
-	if noun is store h:
-		say "[if roved is true]You need to figure how to convert Store H into something different[else]Store H looks so wild and confusing, you're disoriented when approaching it. Maybe take care of Elvira first[end if]." instead;
-	if noun is store k or noun is store n:
-		say "That looks distinctly too seedy. It actually does need to be demolished, somehow." instead;
-	if noun is store r:
-		say "You can't go back to your resort. Not until Elvira's dispatched." instead;
-	if noun is useless:
-		say "There's nothing you'd want in that store, even if you were shopping." instead;
-	if noun is flippable:
-		say "Probably not in its present state." instead;
+	if noun is store b, say "You [if store b is reflexive]need to say what you want a free sample of[else]already got your free sample[end if]." instead;
+	if noun is store c, say "You'd have to show ID. Then they'd know who you were. Then Elvira would have you arrested. Plus, ew." instead;
+	if noun is store h, say "[if roved is true]You need to figure how to convert Store H into something different[else]Store H looks so wild and confusing, you're disoriented when approaching it. Maybe take care of Elvira first[end if]." instead;
+	if noun is store k or noun is store n, say "That looks distinctly too seedy. It actually does need to be demolished, somehow." instead;
+	if noun is store r, say "You can't go back to your resort. Not until Elvira's dispatched." instead;
+	if noun is useless, say "There's nothing you'd want in that store, even if you were shopping." instead;
+	if noun is flippable, say "Probably not in its present state." instead;
 	say "You're not here to shop. You're here to save Yorpwald[if noun is nonreflexive]. Not shop in some random store[one of]. You changed a few other stores to get where you needed before--maybe do that again[or]. Like this one[stopping][else], and you remember how changing stores helped you get places before[end if]."
 
-check taking a sto:
-	say "You can't take that, [if noun is flippable]but you can maybe change it and enter it[else]and you can't do much else, either." instead;
+check taking a sto: say "You can't take that, [if noun is flippable]but you can maybe change it and enter it[else]and you can't do much else, either." instead;
 
 book Strip of Profits
 
@@ -11974,8 +11959,7 @@ to say tokies:
 
 check going inside in Strip of Profits (this is the which portal rule) : [we choose the "easiest" by default]
 	if number of maingame portals in strip is 1:
-		if hoster is in strip:
-			say "You figure the hoster can be put off [']til later.";
+		if hoster is in strip, say "You figure the hoster can be put off [']til later.";
 		try entering a random visible maingame portal instead;
 	if hoster is in strip and roved is true:
 		say "Yup. Only the hoster's left.";
@@ -11992,15 +11976,12 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 		if the player direct-consents:
 			try entering RP instead;
 		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
-	if mangiest steaming is in strip:
-		try entering mangiest steaming instead;
+	if mangiest steaming is in strip, try entering mangiest steaming instead;
 	say "There's nothing you can enter--the plain old stores don't count. You don't have time to shop." instead;
 
 last-loc of Stores is Strip of Profits.
 
-to say i-u:
-	if magneto montage is unexamined:
-		say ", which looks like a directory of some sort,"
+to say i-u: if magneto montage is unexamined, say ", which looks like a directory of some sort,"
 
 section hubs bush
 
@@ -12116,11 +12097,9 @@ the hoster is a not lumpable not maingame portal. "That stupid hoster is here wh
 
 understand "mouth" as hoster.
 
-does the player mean entering a sto:
-	it is very unlikely.
-
-does the player mean doing something with Store Z:
-	it is unlikely.
+does the player mean entering a sto: it is unlikely.
+does the player mean entering a portal: it is likely.
+does the player mean doing something with Store Z: it is unlikely.
 
 check entering hoster:
 	if rustic citrus is visited:
@@ -15190,13 +15169,13 @@ a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]
 
 book Marines Seminar Remains
 
-Marines Seminar Remains is east of Grey Gyre. Marines Seminar Remains is in Presto. "The only way out is back west. The sport ports in the other directions indicate this WAS a busy seminar, but you aren't and won't be equipped to handle them. Nothing [if popgun is in Marines Seminar Remains]besides a popgun[else]else[end if] is left."
+Marines Seminar Remains is east of Grey Gyre. Marines Seminar Remains is in Presto. "The only way out is back west. The sport ports in the other directions indicate this WAS a busy seminar, but you aren't and won't be equipped to get through them[if popgun is not in Marines Seminar Remains]. Nothing's left, now that you took the popgun[end if]."
 
 after printing the locale description for Marines Seminar Remains when Marines Seminar Remains is unvisited:
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to lobby for his amnesty once Elvira's out of the way.";
 	continue the action;
 
-The PG-on-up popgun is a container in Marines Seminar Remains.
+The PG-on-up popgun is a container in Marines Seminar Remains. "The only equipment left over from the seminar is a PG-on-up popgun."
 
 after printing the name of the popgun while taking inventory:
 	say " ([if dart is in popgun]loaded with the dart[else]unloaded[end if])";
@@ -15273,7 +15252,9 @@ check fliptoing boing mechanism (this is the take popgun to fix it rule) :
 
 chapter sport ports LLP
 
-the sport ports are plural-named reflexive LLPish scenery in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest, and [if sport ports are reflexed]yet, you feel there may be a right way to salute them and the challenge they provide[else]you already showed them some respect[end if]. You can READ the firm who made them."
+the sport ports are plural-named reflexive LLPish scenery in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest, and [if sport ports are reflexive]yet, you feel there may be a right way to salute them and the challenge they provide[else]you already showed them some respect[end if]. You can READ the firm who made them."
+
+understand "sport port" and "port" as sport ports when player is in Marines Seminar Remains.
 
 a-text of sport ports is "RRYRR". b-text of sport ports is "?R?R?". parse-text of sport ports is "?[sp]x[sp]?[sp]x[sp]?".
 
@@ -15631,7 +15612,7 @@ to decide whether cpuready:
 
 chapter locs pack
 
-the clack ops locs pack is a thing in hacks' shack. "A Clack Ops Locs Pack is here, empty." description is "It's empty. You don't see how sunglasses could make you type quieter, but you never know about technology. You might be able to read it to find out about related products or competitors."
+the clack ops locs pack is a thing in hacks' shack. "A Clack Ops Locs Pack is here, empty.". description is "It's empty. You don't see how sunglasses could make you type quieter, but you never know about technology. You might be able to read it to find out about related products or competitors."
 
 check taking locs pack: say "It seems to have no use for you in that form." instead;
 
@@ -15792,14 +15773,10 @@ check tying it to (this is the put on the slab rule) :
 
 after fliptoing scratch paper:
 	now compiled code is part of the computer screen;
-	if hawt thaw is in phat path:
-		poss-d;
-	if lamb is in Grey Gyre:
-		poss-d;
-	if sport ports are reflexive:
-		poss-d;
-	if player has rom sticks:
-		now rom sticks are in lalaland;
+	if hawt thaw is in phat path, poss-d;
+	if lamb is in Grey Gyre, poss-d;
+	if sport ports are reflexive, poss-d;
+	if player has rom sticks, now rom sticks are in lalaland;
 	continue the action;
 
 check going in Hacks' Shack (this is the maybe lock player in rule): [check going in shack]
