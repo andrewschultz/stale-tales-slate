@@ -413,7 +413,7 @@ From the Browse Bowers, you need somewhere to reside.
 
 > DESIRE
 
-In the Econ-Cone, you need to enter the godlings' lodgings. But it's for people who are the very best, because they wanted to be. People whom PRAISE RIVETS, as the statue of Trevis Vister says.
+In the Econ-Cone, you need to enter the godlings' lodgings. But it's for people who are the very best, because they wanted to be. Either side of the status, there's something. The rivets saying TREVIS VISTER and the Praise Spirea.
 
 > ASPIRE
 or
@@ -424,15 +424,22 @@ Hm, that Pernod dropped in the fray is tempting. But you can't enter the lodging
 
 > PONDER
 
-Wow! An office. Now you need to focus on your region! And not the guy you chucked out of here! So, before you do anything else,
+Wow! An office. But it's not properly stocked for being Numero Uno. Just the red vees.
 
-> IGNORE
+> DESERVE
 
 DIVORCES magazine is a bonus point.
 
 What to do now? To be worth your salt?
 
 > LAST
+
+Now to be productive, with either the Marble Blamer or Sister Tressi watching you.
+
+> RAMBLE
+or
+> RESIST
+(or both, for a bonus point!)
 
 You're tired. There's that Trance Nectar which can help you be more productive. It's totally different from the Large Regal Lager! But you still don't want to drink it. Maybe break free...
 
@@ -580,7 +587,7 @@ Now help the hurt hog.
 
 > THROUGH
 
-There's a chance for the LLP with the patters. Not changing patters but their content. Or you can just deal with the yob den.
+There's a chance for the LLP with the patters. Not changing them but their content. Or you can just deal with the yob den.
 
 > BEYOND
 
@@ -975,7 +982,7 @@ Read the schematic catechism a few times if you want--I sort of generated a lot 
 
 The trim socks are a last lousy point. This one is not meant to be easy, but if you know about computer hardware, maybe it is.
 
-The clock sap can and should be cleaned up.
+The Clack Ops Locs Pack is useless in its present form.
 
 > CAPS LOCK
 

@@ -2812,6 +2812,7 @@ card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned 
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
 sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
+clack ops locs pack	"The locs pack mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
@@ -4088,7 +4089,7 @@ drab yoke	"It'd take too long to type out all the possibilities, but that seems 
 t-key	"The TBA key rattles within the keyboard a bit."
 USB	"Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff."
 trim socks	"You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work."
-clock sap	"NO, REARRANGE AND TRY AGAIN, you think."
+clack ops locs pack	"NO, REARRANGE AND TRY AGAIN, you think."
 fount	"Hm, might be fun to try something like that again."
 gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
 piece of scratch paper	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
@@ -5471,18 +5472,11 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is bleary barley and b-b is reflexive: [start otters]
 		try scaning b-b instead;
 	if location of player is clangier: [start others]
-		if mango is off-stage:
-			say "As you listen to the crowds, you notice [full-monty of pre-mang] on your settler." instead;
+		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of pre-mang] on your settler." instead;
 	if location of player is swell wells:
 		if sorer bogey is visible:
 			try scaning sorer bogey instead;
 	say "You can't find anything specific to scan, and nothing shows up on your settler." instead;
-
-to say hit-win: [?! bad idea for spacing]
-	say "[if cheat-on is true]RGPRGR[else]RYRRYP[end if]"
-
-to say ben-hid:
-	say "[if cheat-on is true]PGRYRP[else]RYRYRR[end if]"
 
 chapter aftertexts
 
@@ -5922,10 +5916,8 @@ carry out presto-hinting:
 			all-say "No, you'd rather pour the cola in the mug. It's slightly less nasty than the crust.";
 			now spoilit is false instead;
 		try objhinting bottle of dirty looking cola instead;
-	if fount is visible:
-		try objhinting fount instead;
-	if clock sap is visible:
-		try objhinting clock sap instead;
+	if fount is visible, try objhinting fount instead;
+	if clack ops locs pack is visible, try objhinting clack ops locs pack instead;
 	if disk is visible and skid is off-stage:
 		try objhinting disk instead;
 	if yak is visible and spoilit is false:
@@ -5934,31 +5926,24 @@ carry out presto-hinting:
 		if yak is visible:
 			say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not visible]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
 		try objhinting drab yoke instead;
-	if hacks' shack is visited:
-		if hump is not in lalaland:
+	if hacks' shack is visited, if hump is not in lalaland:
 			try objhinting hump instead;
-		if onyx censer is not in lalaland:
-			try objhinting onyx censer instead;
+		if onyx censer is not in lalaland, try objhinting onyx censer instead;
 		if yak is not in lalaland: [?! rearrange this]
-			if spoilit is true:
-				all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak[if yak is not in shack] you left back...wherever[end if]." instead;
+			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak[if yak is not in shack] you left back...wherever[end if]." instead;
 			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
 	if player is in hacks' shack:
 		if disk is not in hard drive:
 			all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
 		if can-put-on-slab:
 			all-say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
-		if rebooted is false:
-			try objhinting blue button instead;
-		if clock sap is not in lalaland:
-			try objhinting clock sap instead;
+		if rebooted is false, try objhinting blue button instead;
+		if clack ops locs pack is not in lalaland, try objhinting clack ops locs pack instead;
 		if caps lock is not part of the keyboard:
-			if spoilit is true:
-				all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
+			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
 			try objhinting caps lock instead;
 		if futon is visible and slept is false:
-			if spoilit is true:
-				all-say "Yeech. You're full. You need to SLEEP." instead;
+			if spoilit is true, all-say "Yeech. You're full. You need to SLEEP." instead;
 			try objhinting futon instead;
 		if scratch paper is reflexive:
 			try objhinting scratch paper instead;
@@ -7686,7 +7671,7 @@ check listening (this is the you can hear stuff some places rule):
 		if dusty study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is in lalaland][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
-	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
+	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead; [routes]
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed and bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
@@ -8943,7 +8928,7 @@ log ons	log ons	false	400300169	--	"solong"	"so long" or "solong"	"[increm]"
 alert	alert	false	372241587	--	"later"	"later"	"[increm]"
 ought	ought	false	352450403	--	"tough"	"tough"	"[increm]"
 hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	"You realize you have done a lot of mental calculations with anagrams, but some of it feels rote, and while Elvira probably overdid it, there are times you relied just on calculation without asking deeper questions. Why is hawt-thaw as it is? Even Yorpwald's best scientists can't answer that question. So, you make a commitment to be more than just someone who finds anagrams, once this whole shebang is over, and you remind yourself that puzzles for their own sake only go so far.[paragraph break]The hawt thaw shrivels up and blows away, leaving you wiser--and more intellectually curious--for its brief presence in your life, even if it doesn't help you on your immediate quest.[paragraph break]You make plans, once Yorpwald is back to normal, to lobby for a Thaws-Swath to answer these questions. It will frequently be wash't, so it doesn't get shawt."
-clock sap	caps lock	true	399038507	--	"capslock"	"capslock" or "caps lock"	"You think WHOAH as the clock sap becomes a capslock button, which you pick up."
+clack ops locs pack	clack ops locs pack	true	399038507	--	"capslock"	"capslock" or "caps lock"	"You think WHOAH as the locs pack morps into a capslock button, which you pick up."
 disk	skid	false	215229079	--	"skid"	"skid"	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."
 skid	disk	true	215229079	--	"disk"	"disk"	"The skid changes back into a disk, which you take."
 flea	leaf	true	210322662	--	"leaf"	"leaf"	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
@@ -9248,9 +9233,6 @@ to say purse-gone:
 
 to say dust-b:
 	say "[one of]. You say, 'Dust, be busted' to clear up the mess in the air. You can go [b]IN[r] to the stable, now, to look around there[or][stopping]";
-
-to say hit-win-behind:
-	say "Ah! There's the Hit Win button. Within a compartment, behind a panel you missed earlier. After a few ol['] duhs, 'Should hold us. Uh, sold?' you say to--oops, you forgot No-Gal Logan left. Panic! 'Cap'n, I...' You feel like a saboteur with this boat ruse, yet the deeps speed by your cripple clipper. The ol['] ship has polish--it's a rigged red gig, but it stops between two reefs. You're only in position to win, but that's still a pretty good deal. One more magic thing?[no line break]";
 
 to say rodney-ditch:
 	let vw be number of visible warriors;
@@ -15513,7 +15495,7 @@ book Phat Path
 
 book Hacks' Shack
 
-Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[otherwise]You're in the shack where you probably need to write a program or something[end if]. A [unless caps lock is off-stage]no longer [end if]dripping clock hangs on the wall[if scratch paper is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if]."
+Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[otherwise]You're in the shack where you probably need to write a program or something[end if][if scratch paper is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if]."
 
 to say my-auth:
 	say "[author of random visible badbook]";
@@ -15646,6 +15628,14 @@ to decide whether cpuready:
 	if disk is not in hard drive, decide no;
 	if rebooted is false, decide no;
 	decide yes.
+
+chapter locs pack
+
+the clack ops locs pack is a thing in hacks' shack. "A Clack Ops Locs Pack is here, empty." description is "It's empty. You don't see how sunglasses could make you type quieter, but you never know about technology. You might be able to read it to find out about related products or competitors."
+
+check taking locs pack: say "It seems to have no use for you in that form." instead;
+
+a-text of locs pack is "RYRRRYRR". b-text of locs pack is "?YR?R???". parse-text of locs pack is "?[sp]-[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
 
 chapter trim socks
 
@@ -15951,13 +15941,6 @@ check an actor exiting (this is the custom not in anything rule):
 
 the custom not in anything rule is listed before the can't exit when not inside anything rule in the check exiting rulebook.
 
-The dripping clock is scenery in Hacks' Shack. "It's motionless[if caps lock is off-stage], except for a very slow drip from the bottom. (If you want, you can pretend it symbolizes time slowly dripping away.) A small thick opaque puddle registers how much has leaked from the clock[otherwise] and no longer leaking, and you can't see the puddle below where the clock sap used to be[end if]."
-
-instead of taking dripping clock:
-	say "Whatever it leaked might be, like, radioactive or something. No thanks.";
-
-does the player mean doing something with clock sap: it is unlikely. [disambig vs dripping clock]
-
 the labs slab is a supporter in Hacks' Shack. it is fixed in place. understand "table" as labs slab.
 
 port-warn is a truth state that varies.
@@ -16200,24 +16183,11 @@ carry out rebooting:
 
 chapter clock sap
 
-some clock sap is scenery in Hacks' Shack. description is "WHAT IS THIS, you think to yourself as you inspect the clock sap closer. You wonder how THE CLOCK ISN'T DRAINED since it's dripping at a pretty constant rate. CONFUSING!"
-
-check taking clock sap:
-	say "The sap is too sticky." instead;
-
-a-text of clock sap is "RYRRRYRR". b-text of clock sap is "PYRRRYRR". parse-text of clock sap is "c[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]x".
-
-understand "puddle" as clock sap.
+chapter disk
 
 a disk is a thing. description is "This disk is plain, chunky and 3 1/4' square. Small print indicates the disk contains not only a powerful compression algorithm that allows portability but also critical system repair programs that only run on startup."
 
 a-text of disk is "RRYR". b-text of disk is "RRYR". parse-text of disk is "x[sp]x[sp]i[sp]x". disk is cheat-spoilable.
-
-instead of eating the clock sap:
-	say "DUDE DON'T EVEN!!!"
-
-check taking the clock sap:
-	say "You start to grab it, but you imagine a loud voice. Something like WHAT DOES CLOCK SAP HAVE TO DO WITH A COMPUTER." instead;
 
 the caps lock button is a thing. understand "capslock" and "capslock button" as caps lock.
 
@@ -26406,7 +26376,7 @@ mug	"[one of]Like the never-ending gum it came from, the mug regenerates what's 
 skid	"[if yak is in lalaland][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 skidrope	"The skid's rope lets you PULL the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in hard drive]The disk is taken care of.[else]The disk can go in the hard drive, [once-now] you've got a full computer constructed."	--	"make a SKID"
-keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is visible]Put the caps lock in the keyboard.[else]See what you can do with the clock sap.[end if][minus][cycling]"
+keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is visible]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 t-key	"[if t-key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
 signature	--	scratch paper
@@ -26423,8 +26393,7 @@ yak	"[if shack is unvisited][yak-worry].[else if yak is not on skid][one of]The 
 catechism	"[if yak is in lalaland]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something,[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
 blue button	"[if rebooted is true]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
 orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The orange button is too bent to push.[plus][or]The orange button is not necessary.[minus][cycling]"
-clock sap	"[one of]The sap makes you think in LETTERS LIKE THESE.[plus][or]What makes people type in LETTERS LIKE THESE?[plus][or]CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
-dripping clock	--	clock sap
+clack ops locs pack	"[one of]The locs pack is allegedly for making things quieter.[plus][or]But why is so much of its text in LETTERS LIKE THESE?[plus][or]Because it can become CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
 hard drive	"[h-d][line break]"

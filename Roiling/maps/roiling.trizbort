@@ -86,7 +86,7 @@ version 3 March 2015</history>
 			<objects at="w" custom="yes" customRight="0" customDown="-12">Lawl|Wall</objects>
 		</room>
 		<room id="31" name="Hacks' Shack" subtitle="End Presto" x="-544" y="-128" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
-			<objects at="w" custom="yes" customRight="0" customDown="-24">Coal|Gum|Clock sap|Fount</objects>
+			<objects at="w" custom="yes" customRight="0" customDown="-24">Coal|Gum|Locs Pack|Fount</objects>
 		</room>
 		<room id="32" name="Posh Hops Shop" subtitle="Start Oyster" x="-160" y="-128" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="#40C0FF" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects at="wsw" />

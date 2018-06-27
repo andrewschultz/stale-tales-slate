@@ -226,11 +226,11 @@ understand "feer" as a mistake ("Fearing won't help, here.") when player is in c
 
 chapter sonancy canyons
 
-understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in canyons and hurt hog is in canyons.
-
 understand "spatter" as a mistake ("No violence!") when player is in canyons and patters are in canyons
 
 understand "tapster" as a mistake ("No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.") when player is in canyons and patters are in canyons.
+
+understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in canyons and hurt hog is in canyons.
 
 book troves
 
@@ -390,9 +390,11 @@ understand "brig" as a mistake ("There, there. This maze is much less hard to ge
 
 chapter saps' pass
 
-understand "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in saps' pass.
+understand "asp" and "asps" as a mistake ("Saps['] Pass is dangerous enough.") when player is in Saps' Pass.
 
-understand "spas" as a mistake ("If it were that easy to change Saps['] Pass, it wouldn't be much of a puzzle. You'd still need to get the keys from the hogs, anyway.") when player is in saps' pass.
+understand "psa" and "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in saps' pass.
+
+understand "spa" and "spas" as a mistake ("Maybe one day, Saps['] Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.") when player is in Saps' Pass.
 
 chapter phat path
 
@@ -405,8 +407,6 @@ understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, b
 chapter hacks' shack
 
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or player has fizzy cola or player has bottle of cola.
-
-understand "asp" as a mistake ("A deadly snake would just make the situation...stickier.") when clock sap is in location of player
 
 understand "bat" as a mistake ("You don't want to take a bat to the keyboard. Or have a bat swoop and take it. Trust me.") when keyboard is enclosed by location of player.
 
@@ -421,8 +421,6 @@ understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do mu
 understand "rived" as a mistake ("You don't need to do that sort of hacking.") when hard drive is in location of player.
 
 understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when player has dirty looking cola.
-
-understand "spa" as a mistake ("Operating machinery in water is dangerous. Or, if the spa was all sap, just plain gross.") when clock sap is in location of player
 
 book oyster
 

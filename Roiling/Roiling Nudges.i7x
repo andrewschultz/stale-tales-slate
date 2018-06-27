@@ -401,7 +401,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "maze"	317038698	--	--	volt-maze-visible rule	"That can't be it. It's a VOLT maze."
 "drat"	211650728	--	dart	--	"[if dart is in marines]Some 4-letter word or other will get the dart.[else]Don't need to do anything else.[end if]"
 "bingo"	239271538	--	--	gun-broken rule	"Not quite. You're close to an a-ha moment, though."
-"spa"	179927743	--	clock sap	--	"C'est [i]pas[r] sap. C'est du CLOCK SAP."
 "fountain"	494078978	--	fount	--	"It's too small to be a fountain--really, just a fount."
 "lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
 "ssap"	276201709	saps' pass	--	--	"[locname]." [saps' pass]
@@ -422,8 +421,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "labs"	170694528	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "alb"	74420562	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "dead"	172052105	--	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
-"clock"	219110764	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
-"puddle"	410249892	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
+"clack"	146946005	--	clack ops locs pack	--	"[full-pack]."
+"ops"	252092502	--	clack ops locs pack	--	"[full-pack]."
+"locs"	243445967	--	clack ops locs pack	--	"[full-pack]."
+"pack"	155592540	--	clack ops locs pack	--	"[full-pack]."
 "reboot"	483363989	shack	--	--	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
 "nottobe"	570057712	shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "debug"	304959612	--	--	time-to-debug rule	"You need to budge the letters about."
@@ -1549,9 +1550,10 @@ to say d-sli:
 	say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
 
 to say slab-score:
-	if slab-pts < 10: [prevent rollover]
-		increment slab-pts;
+	if slab-pts < 10, increment slab-pts; [prevent rollover]
 	say "[if slab-pts > 5]+++ (tired yet?)[run paragraph on][else][slab-pts][end if]";
+
+to say full-pack: say "You need to deal with the full [locs pack]"
 
 this is the time-to-compile rule:
 	if scratch paper is reflexive and rebooted is true, the rule succeeds;
