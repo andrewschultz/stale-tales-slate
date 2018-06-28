@@ -1018,6 +1018,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "kumquat"	516923398	--	kumquat	--	"[just-c]."
 "space"	326739437	scape space	--	--	"[locname]." [SCAPE SPACE START]
 "trader"	424780640	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
+"drawing"	362975539	Scape Space	--	--	"The drawing can't be changed. It's stuck to the wall as a warning."
 "banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it."
 "art"	190621639	--	Art Erd	--	"[1st-name]."
 "red"	234159001	--	Art Erd	--	"[1st-name]."

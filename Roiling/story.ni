@@ -24797,7 +24797,15 @@ The basket of blackberries is a fruit. description is "It's from Bickerers['] La
 
 book Scape Space
 
-Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair[if inapt paint is in scape space]. You notice inapt paint on one wall."
+Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if inapt paint is in scape space]. You notice inapt paint on another wall, too[end if]."
+
+chapter warding drawing
+
+warding drawing is bounding scenery in Scape Space. "This is a family game, so I can't fully explain the threats contained in the warding drawing for honest people who explore the Scape Space more deeply."
+
+instead of doing something with warding drawing:
+	if action is procedural, continue the action;
+	say "[greedy-person] might not be able to do anything if you messed with the drawing, but [he-she] could call on people who could. The drawing doesn't need to be altered."
 
 chapter paint/guava
 

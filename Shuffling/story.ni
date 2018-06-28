@@ -1054,7 +1054,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is mum dud mud:
 		if in-i-box, decide yes;
 		decide no;
-	if hintcand is warding drawing:
+	if hintcand is tech etch:
 		if player is in anti-cool or player is in underside, decide yes;
 		decide no;
 	if hintcand is forest-leaves:
@@ -2051,7 +2051,7 @@ instead of attacking:
 	if noun is talkers, say "Their inanity inspires violent fantasies, but no.'" instead; [metros]
 	if noun is neon pig, say "No poking a pig even if your name's Penny." instead;
 	if noun is nerds, say "[one of]'Def-con: co-fend!' they yell, seeing you tense up. [or][stopping]They're just annoying and superior, not evil." instead;
-	if noun is the metallic door, say "As you rush at the door, you notice one of the stick figures in the warding drawing attacking a door as big and solid as this one! To save your self-esteem, you turn away and forget what you saw." instead;
+	if noun is the metallic door, say "As you rush at the door, you notice one of the stick figures in the tech etch attacking a door as big and solid as this one! To save your self-esteem, you turn away and forget what you saw." instead;
 	if noun is mattress:
 		if bump is part of the mattress, say "You might to better to look at that bump before disturbing it." instead;
 		say "Hey, it's not the mattress's fault it only yielded a lousy termite emitter." instead;
@@ -7641,17 +7641,21 @@ The metallic door is a door. it is east of underside and west of Anti-Cool Locat
 check putting keycard on metallic door when player is in underside: try putting keycard on sensor instead.
 check putting keycard on metallic door when player is in anti-cool location: try going west instead.
 
-the initial appearance of the metallic door is "A large metallic door is to the [if player is in Anti-Cool Location]west. It's got no sensor on this side, so you can probably just walk back through it[else]east. It has an warding drawing repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
+the initial appearance of the metallic door is "A large metallic door is to the [if player is in Anti-Cool Location]west. It's got no sensor on this side, so you can probably just walk back through it[else]east. It has a tech etch repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
 
 to say prob-reads: say "[if Anti-Cool Location is unvisited]. Probably reads something-or-other to let you in[end if]"
 
-description of metallic door is "It's very solid[if metallic door is open] when it's closed[end if][if player is in underside], and a warding drawing gives it some semblance of character[end if]."
+description of metallic door is "It's very solid[if metallic door is open] when it's closed[end if][if player is in underside], and a tech etch gives it some semblance of character[end if]."
 
-the warding drawing is part of the metallic door. understand "sod" and "figure" and "stick figure" and "stick-figure" as warding drawing. the warding drawing is amusing.
+the tech etch is part of the metallic door. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
 
-instead of taking the warding drawing: say "Since it's part of the door, you take the warding drawing in the metaphorical sense and vow not to act like the poor schelps depicted on it.".
+instead of taking the tech etch: say "Since it's part of the door, you take the tech etch in the metaphorical sense and vow not to act like the poor schelps depicted on it.".
 
-description of warding drawing is "It's a red circle with a line through it, below the text 'Special Place is Special.' The poor struck-through sods in the center appear to be stick-figure parodies of stupid people. You note one [one of]stuffing a metal fork in a toaster[or]moving a rook pawn to start a chess game[or]thought-bubbling that 8+8=17[or]picking his nose[or]with his arm around Clippy[or]reading a tabloid magazine[or]hitting a computer that is not plugged in[or]about to walk over an open manhole[or]about to misplace a square manhole[or]watching a sporting event on TV[or]with a barbell crushing his neck[or]carrying a boombox[or]driving an SUV[or]getting an easy Sudoku all wrong[or]wearing a baseball hat backwards[or]wearing a sports jersey[or]drinking and smoking[or]feeding a shark[or]getting a tattoo[in random order]. Then you lose where it was in all the dizzying variety."
+description of tech etch is "It's a red circle with a line through it, below the text 'Special Place is Special.' The poor struck-through sods in the center appear to be stick-figure parodies of stupid people. You note one [one of]stuffing a metal fork in a toaster[or]moving a rook pawn to start a chess game[or]thought-bubbling that 8+8=17[or]picking his nose[or]with his arm around Clippy[or]reading a tabloid magazine[or]hitting a computer that is not plugged in[or]about to walk over an open manhole[or]about to misplace a square manhole[or]watching a sporting event on TV[or]with a barbell crushing his neck[or]carrying a boombox[or]driving an SUV[or]getting an easy Sudoku all wrong[or]wearing a baseball hat backwards[or]wearing a sports jersey[or]drinking and smoking[or]feeding a shark[or]getting a tattoo[in random order]. Then you lose where it was in all the dizzying variety."
+
+after examining tech etch for the first time:
+	say "The tech etch is, of course, drawn by one Chet Echt.";
+	continue the action;
 
 The sensor is scenery in undesired underside. description of the sensor is "It has a small optical beam."
 
