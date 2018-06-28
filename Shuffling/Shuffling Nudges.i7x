@@ -771,15 +771,15 @@ this is the kitch-visit rule:
 	if kitchen is visited, the rule succeeds;
 	the rule fails;
 
-to say fridge-abuse, say "The fridge has taken enough abuse and can't be changed for the better[if cake pan is not moot or grist is not moot], but maybe you can fix something inside it[end if]"
+to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if cake pan is not moot or grist is not moot], but maybe you can fix something inside it[end if]"
 
-to say to-trio, say "The chefs are all lumped together--a tall trio"
+to say to-trio: say "The chefs are all lumped together--a tall trio"
 
-to say ck-p, say "It's not a cake, and it's not quite a pan--it's a cake pan";
+to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
 
-to say perf-brand, say "It's the full name brand that really catches your eye"
+to say perf-brand: say "It's the full name brand that really catches your eye"
 
-to say label-no, say "The tall trio is probably what you want to change, but the label may have information";
+to say label-no: say "The tall trio is probably what you want to change, but the label may have information";
 
 this is the rm-or-moor rule:
 	if player is in room or player is in moor, the rule succeeds;
@@ -789,26 +789,19 @@ this is the got-shoes rule:
 	if shoes are in lalaland, the rule succeeds;
 	the rule fails;
 
-to say woe-all:
-	say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
+to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
 
-to say expo-or-anapest:
-	say "Thinking of the flier leads you back to the anapest";
+to say expo-or-anapest: say "Thinking of the flier leads you back to the anapest";
 
-to say hway-hint:
-	say "The scraped wall doesn't respond or come any closer to being a hallway"
+to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
 
-to say peas-poe:
-	say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
+to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
 
-to say pat-poe:
-	say "Pat won't react kindly to modifications of his poem"
+to say pat-poe: say "Pat won't react kindly to modifications of his poem"
 
-to say no-wire:
-	say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
+to say no-wire: say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
 
-to say but-but:
-	say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
+to say but-but: say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
 
 this is the panel-in-silo rule:
 	if player is in moor and panel is part of the silo, the rule succeeds;
@@ -841,60 +834,43 @@ this is the in-i-main rule:
 to say no-hot:
 	say "You can't change the hotel, [if night thing is not in Hotel]and you got rid of the night thing, anyway[else]but you could have [a-nother] look around[end if]";
 
-to say ded-chg:
-	say "He may mumble about change, but he's amazingly resistant to change, himself"
+to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 
 to say condo-visit: say "[if dry cake is in bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
 
-to say kern-push:
-	say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
+to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
 
-to say no-ketch:
-	say "It [if night thing is in lalaland]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
+to say no-ketch: say "It [if night thing is in lalaland]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
-to say ug-bug:
-	say "Ugh. Too messy. Mentally and physically"
+to say ug-bug: say "Ugh. Too messy. Mentally and physically"
 
 this is the angst rule:
 	if player has emitter and emitter is angstgnatted, the rule succeeds;
 	the rule fails;
 
-to say coterie-no:
-	say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough[else]. Maybe the nerds could help you another way, though[end if]"
+to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough[else]. Maybe the nerds could help you another way, though[end if]"
 
-to say nerd-nah:
-	say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
+to say nerd-nah: say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
 
-to say nnww:
-	say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
+to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
 
-to say fix-rail:
-	say "[if controls are in op]You fixed the rail[else]You need to fix the rails electronically[end if]";
+to say fix-rail: say "[if controls are in op]You fixed the rail[else]You need to fix the rails electronically[end if]";
 
-to say psa-vand:
-	say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
+to say psa-vand: say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
 
-to say faded-ad:
-	say "The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there"
+to say faded-ad: say "The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there"
 
-to say aligns-no:
-	say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
+to say aligns-no: say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
 
-to say drivwy:
-	say "[if dry cake is in Obtains Boastin' Bastion]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
+to say drivwy: say "[if dry cake is in Obtains Boastin' Bastion]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
 
-to say harp-annoy:
-	say "The harps are kind of annoying, but they've got nothing on the beats"
+to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
 
-to say beat-man:
-	say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
+to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
 
-to say dead-help:
-	if bastion-evac is true:
-		say ". Perhaps you can ask the deadbeat about the lost corn for more help";
+to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
 
-to say mits-are:
-	say "The mittens are as comfortable as they're going to be"
+to say mits-are: say "The mittens are as comfortable as they're going to be"
 
 this is the no-beats rule:
 	if player is in anti-cool location or player is in Obtains Boastin' Bastion, the rule succeeds;

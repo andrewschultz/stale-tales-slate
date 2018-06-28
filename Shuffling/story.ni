@@ -284,6 +284,8 @@ use MAX_VERBS of 450.
 
 use MAX_VERBSPACE of 4800.
 
+use MAX_SYMBOLS of 34000.
+
 section about the player
 
 does the player mean examining the player: it is unlikely.
@@ -507,7 +509,7 @@ to say reject:
 
 to say verb-cue: say "That's not something you can say, do or see here. For a list of common verbs, type VERBS"
 
-to say set-bug: say "BUG. You shouldn't have the settler yet. If this is wrong, contact me at [email] or report a bug at [ghsite]. Transcripts are a big help. Up arrows work too."
+to say set-bug: say "BUG. You shouldn't have the tagged gadget yet. If this is wrong, contact me at [email] or report a bug at [ghsite]. Transcripts are a big help. Up arrows work too."
 
 to say bug-report: say "BUG. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite]. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
 
@@ -4811,7 +4813,7 @@ to say exc-which:
 
 section tepid icon depiction
 
-the tepid icon depiction is scenery in trips strip. "It's not high art, but you [if regions-to-clue is 1]look at the remaining one[else]pick [one of]another [ror][stopping]one of the [regions-to-clue in words] at random[end if].[line break][icon-depict]."
+the tepid icon depiction is scenery in trips strip. "It's not high art, but you [if regions-to-clue is 1]look at the remaining [else]pick [one of]another [or][stopping]one of the [regions-to-clue in words] at random[end if].[line break][icon-depict]."
 
 to decide which number is regions-to-clue:
 	let temp be 0;
@@ -4879,6 +4881,7 @@ check going down in trips strip:
 check going inside in trips strip:
 	if number of portals in location of player is 1:
 		let Q be a random portal in location of player;
+		debug-say "Trying portal [Q].";
 		try entering Q instead;
 	if number of portals in location of player is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
 	say "That's ambiguous--you can currently enter [the list of portals in location of player] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
@@ -9095,7 +9098,7 @@ check going nowhere in Rived Drive: say "You'd probably get lost that way. Besid
 
 section blow bowl
 
-the blow bowl is bounding scenery in rived drive. "You can a (different) blow bowl whipping around in pretty much any direction except up the [slo-po]."
+the blow bowl is bounding scenery in rived drive. "You can see a (different) blow bowl whipping around in pretty much any direction except up the [slo-po]."
 
 instead of doing something with blow bowl:
 	if action is procedural, continue the action;
@@ -9792,8 +9795,7 @@ after reading a command:
 				say "[warp-result entry][paragraph break]";
 				say "You watch [if mystore entry is visible][mystore entry][else if myport entry is visible]the [myport entry][end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
 				now myreg entry is bypassed;
-				if mystore entry is visible:
-					reg-inc;
+				if mystore entry is visible, reg-inc;
 				consider the notify score changes rule;
 				reject the player's command;
 	if the player's command matches the regular expression "\bdoor\b":
@@ -10383,7 +10385,7 @@ beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't
 deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Anti-Cool Location is visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
 faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'You are our hero! Thank you so much[sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
 goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
-gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has settler] once you have the letters settler[end if]. Oh, about the settler: you'll learn by doing.'[stopping]"
+gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has tagged gadget] once you have the tagged gadget[end if]. Oh, about the gadget: you'll learn by doing.'[stopping]"
 gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
@@ -11312,7 +11314,7 @@ a region has a sto called reg-sto. a region has a portal called reg-ent.
 reg-sto of forest is store f. reg-ent of forest is scented descent.
 reg-sto of sortie is store i. reg-ent of sortie is posted depots.
 reg-sto of metros is store m. reg-ent of metros is trade tread.
-reg-sto of others is store r. reg-ent of others is r-p.
+reg-sto of resort is store r. reg-ent of resort is r-p.
 
 to solve-region (sre - a region):
 	consider the notify score changes rule;
@@ -12394,7 +12396,8 @@ chapter tsing
 
 [* TS starts you out with nice toys, at the strip with the gadget/paper]
 
-tsing is an action out of world.
+ts0ing is an action out of world.
+tsing is an action applying to one number.
 
 understand the command "ts" as something new.
 
@@ -12428,7 +12431,7 @@ carry out tsing:
 		now curstuff is the remainder after dividing curstuff by 8;
 		say "You need a number between 0 and 7, so I took [number understood] mod 8 to get [curstuff].";
 	if curstuff >= 4:
-		solve-region metro;
+		solve-region metros;
 		decrease curstuff by 4;
 	if curstuff >= 2:
 		solve-region sortie;

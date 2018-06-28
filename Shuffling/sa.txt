@@ -2,7 +2,7 @@ out=shuffling-invisiclues.htm
 !Shuffling Around HTML Clues
 ->c:/games/inform/shuffling Materials/Release
 ==endheader
->INTRODUCTION (ORDEAL LOADER)
+>INTRODUCTION
 ?What is my power in this game?
 Does the name of this opening room strike you as curious?
 Spoiler below, though you can guess.
@@ -329,7 +329,7 @@ GARDENIA.
 ?Can I go east? How?
 Yes. It's probably the big puzzle for this section.
 You need an ID. It's built from items from two other places.
-One thing is from the Obtains Boastin Bastion. The other is from Fo' Real Florae.
+One thing is from the condo. The other is from Fo' Real Florae.
 Spoilers of what to change things to are ahead.
 The KEYCARD and BARCODE.
 PUT BARCODE ON KEYCARD.
@@ -520,12 +520,9 @@ What can MEANS or MANSE become?
 Two things.
 You can start finding NAMES for everything.
 Or you can give AMENS.
->General
-#roomlevel=4
->>Last lousy points?
+>GENERAL QUESTIONS
 ?Do I get anything special for getting the last lousy points?
-No, and if you want to see what happens, you can just search for the source (in quotes) in story.ni.
-?Where are they distributed?
+No, and if you already won the game and just want to see what happens, you can just search for the source (in quotes) in story.ni.
 There's three at the start.
 There's one in the stores area.
 There's one in Store F.
@@ -546,7 +543,7 @@ This is a name brand that's become a common accepted word, much like the clover.
 BACTINE.
 ?Where are the LLPs in the forest?
 Well, there's only one.
-In the Cruel One's Enclosure, you can deal with the banshee.
+In the Cruel Ones' Enclosure, you can deal with the banshee.
 Put it in the past tense.
 Make it a HAS-BEEN.
 ?Where are the LLPs in the sortie?
@@ -568,7 +565,7 @@ Then getting both the CORK and WINGS will get you another.
 You get up to two points for changing all of the TOOLSHED, GRIPS and SLOPE.
 Finally, you can change the chain links to CHINA before turning them into kilns.
 ?Can we get locked out of any LLPs?
-If you solve an area, yes.
+If you solve an area, yes. But also, solving certain puzzles can lock you out of LLPs you didn't get yet.
 Moving on from the desert or thickets loses a maximum point in the Ordeal Loader.
 Moving on from the Cruel Ones' Enclosure loses the bonus point in Store F.
 The LLPs in the fridge are always available in Store I.
