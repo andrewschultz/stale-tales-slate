@@ -6539,13 +6539,9 @@ after reading a command:
 				[save-present-input;]
 				consider the hint flags checkoff rule;
 				consider the scam rule instead;
-	if Gunter is off-stage and peephole is unexamined:
-		if the player's command includes "gunter":
-			say "[if peephole is unexamined]Who?[else]Gunter's outside, but to interact meaningfully, you should open the door and let him in.[end if]" instead;
-	if e-s is visible:
-		if the player's command includes "presto":
-			unless the player's command includes "test":
-				say "Presto is the word you said to reveal the, er, spot." instead;
+	if Gunter is off-stage and the player's command includes "gunter", say "[if stuff-found >= 3]Who?[else]Gunter's outside, but to interact meaningfully, you should SWITCH the liaison.[end if]" instead;
+	if e-s is visible and the player's command includes "presto":
+			unless the player's command includes "test", say "Presto is the word you said to reveal the, er, spot." instead;
 	if the player's command includes "tickle" and Elmo is in Largely All-Grey Gallery:
 		say "Really. This is a juvenile computer game, not a juvenile toy." instead;
 	if player is in clearing and melon is in clearing:
@@ -7003,7 +6999,7 @@ Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be ab
 Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
-Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anything. You can only go back up."
+Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
 
@@ -9882,6 +9878,10 @@ to get-cool-stuff:
 	now player has letters settler;
 	now player has pedanto-notepad;
 
+chapter isolani liaison
+
+the isolani liaison is scenery in dusty study. "It's not much TO examine. Well, maybe its wires and circuits are, but all you see is a thing that lets you communicate with the outside world you're walled off from. From which you're walled off."
+
 chapter side door
 
 the semi-secret side door is scenery in Dusty Study.
@@ -9897,18 +9897,13 @@ check answering:
 
 does the player mean opening side door: it is very likely.
 
-description of semi-secret side door is "[one of]Oh, man, I can't really tell you. It's yours, and it's a secret, and I would've had to, like, violate your property rights to be able to describe it better than you could. Okay, i[or]I[stopping]t's an innocuous door that looks like boring aluminum siding from the outside. It has a peephole, too."
-
-the peephole is part of the side door. description is "Starin['] strain... [one of]People? Eh? [or][stopping][if Gunter is in lalaland]Shouty youths outside, chanting something[else if stuff-found < 3]Nobody[else][one of]You see Urgent Gunter behind. He's one of the biggest messengers in Yorpwald. You haven't seen him in a while. He must have something important for you[or]Urgent Gunter is waiting out there. You should probably invite him in[stopping][end if]."
-
-instead of searching peephole:
-	try examining peephole instead;
+description of semi-secret side door is "[one of]Oh, man, I can't really tell you. It's yours, and it's a secret, and I would've had to, like, violate your property rights to be able to describe it better than you could. Okay, i[or]I[stopping]t's an innocuous door that looks like boring aluminum siding from the outside."
 
 check opening side door:
 	if stuff-found < 3:
 		say "You don't feel like going out without a really good reason." instead;
 	if urgent Gunter is off-stage:
-		say "[if peephole is examined]Urgent Gunter charges in[else]It's Urgent Gunter[end if], full of sensible bileness. 'Pallid li'l pad! Stodgy sty, dog! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
+		say "It's Urgent Gunter, full of sensible bileness. 'Pallid li'l pad! Stodgy sty, dog! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
 		now urgent Gunter is in Dusty Study;
 		set the pronoun him to Urgent Gunter;
 		set the pronoun her to Elvira;
@@ -26143,7 +26138,7 @@ hint-entry	advice-entry	parallel-entry	spoil-entry
 red writing	"The red writing provides a clue of what the letters can't be."
 pedanto-notepad	"You can CONSULT the notepad about things. It contains no game-critical hints, but it can help you remember a lot of shortcuts and such, so you can think sharper."
 Urgent Gunter	"You can pump him for information if you want."
-peephole	"The peephole's for looking through."
+isolani liaison	"The isolani liaison isn't there for any puzzles but just to communicate with the outside world."
 notice	"For reading."
 question mark	"[bug-report]"
 colorful logo	"The logo provides hints as to the mechanics of the settler. You may want to try examining it with teach/cheat mode on or off."
