@@ -112,13 +112,18 @@ count = 0
 last_comment = False
 hunt_for_comments = False
 
+last_comment_line = 0
+last_question_line = 0
+
 with open(logic_invis) as file:
     for (line_count, line) in enumerate(file):
         if 'STORE P' in line:
             hunt_for_comments = True
         ll = line.lower().strip()
-        if hunt_for_comments and ll.startswith('?') and not last_comment:
-            print("Line", line_count, "may need line before it:", ll)
+        if ll.startswith('?'):
+            if hunt_for_comments and last_question_line > last_comment_line:
+                print("RL.TXT Line", line_count, "may be two questions in a row. Last question =", last_question_line, "Last comment = ", last_comment_line)
+            last_question_line = line_count
         if ll.startswith("# logic for ") or ll.startswith("#logic for"):
             scanned = re.sub("^# ?logic for ", "", ll)
             if scanned in got_logic_invis.keys():
@@ -126,6 +131,9 @@ with open(logic_invis) as file:
             else:
                 got_logic_invis[scanned] = line_count
             got_logic_invis[scanned] = line_count
+            if last_comment_line > last_question_line:
+                print("RL.TXT Two logic-for comments in a row without a question:", last_comment_line, line_count, ll)
+            last_comment_line = line_count
         last_comment = ll.startswith("#")
 
 with open(logic_reds) as file:

@@ -11,6 +11,11 @@ import sys
 
 debug = False
 
+def usage():
+    print("1/2 = sa or roiling only")
+    print("[asd]* = aftertexts, spechelp, donrejects.")
+    exit()
+
 def find_in_glob(spec_stuff, pattern, b):
     got_spec_yet = defaultdict(str)
     errs = 0
@@ -62,7 +67,23 @@ def spec_check(a, b):
     find_in_glob(needs_spec_test, "rbr-*", b)
     find_in_glob(needs_spec_test, "*-nudmis*", b)
 
-spec_check('sa', 'spechelp')
-spec_check('sa', 'done rejects')
-# spec_check('roi', 'spechelp')
-# spec_check('roi', 'done rejects')
+projs = ['sa', 'roi']
+tabs = [ 'aftertexts', 'spechelp', 'done rejects' ]
+
+count = 1
+
+while count < len(sys.argv):
+    arg = sys.argv[count]
+    if arg == '1' or arg == 'sa': projs = ['sa']
+    elif arg == '2' or arg == 'roi' or arg = 'ro' or arg == 'r': projs = ['roi']
+    elif re.search("^[asd]+", arg):
+        tabs = []
+        if 'a' in arg: tabs.append('aftertexts')
+        if 's' in arg: tabs.append('spechelp')
+        if 'd' in arg: tabs.append('done rejects')
+    else: usage()
+    count += 1
+
+for q in projs:
+    for t in tabs:
+        spec_check(q, t)
