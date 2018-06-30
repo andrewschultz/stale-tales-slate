@@ -4175,7 +4175,7 @@ muscly	"Ms. Lucy stumbles for a moment."
 organised	"The drains sizzle slightly but go back to menacing quiet."
 mardier admirer	"The mardier admirer looks askance, then returns to evaluating you some more."
 natives	"The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
-yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
+try us yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
 alarming	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
 Reed's Ale	"[el-la-f] listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
@@ -9050,7 +9050,7 @@ Tyson	Tyson	false	465003321	--	"stony"	"stony"	"Tyson's emotions grow from hatef
 Wade	Wade	false	258957789	--	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
 Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
 Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
-yurts	brownies	true	512172846	--	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
+try us yurts	brownies	true	512172846	--	"rusty"	"rusty"	"The yurts quickly tarnish and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."
 
@@ -14808,7 +14808,7 @@ check burning:
 	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
 	if noun is bot boat, say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
 	if noun is flowerpot or noun is crocus, say "Renato would be so upset." instead;
-	if noun is yurts, say "Perhaps another more natural way of decomposition would work better." instead;
+	if noun is try us yurts, say "Perhaps another more natural way of decomposition would work better." instead;
 	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
 	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
 	if mrlp is towers and topside deposit is unvisited, say "Don't be a brushfire furbisher." instead;
@@ -19040,7 +19040,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else: [only for non guardians/non warriors] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -19564,23 +19564,21 @@ Report taking the strudel:
 
 book Scope Copse
 
-Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A [one of]spec-o-scope (scope, for short)[or]scope[stopping] looks into the ground in the center of this wooded area[if yurts are visible], with some yurts looking out of place here[end if]. Paths lead in all directions, though things open up to the north and east."
+Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A [one of]spec-o-scope (scope, for short)[or]scope[stopping] looks into the ground in the center of this wooded area[if try us yurts are visible], with some yurts looking out of place here[end if]. Paths lead in all directions, though things open up to the north and east."
 
-the yurts are plural-named vanishing scenery in scope copse. "The yurts, of dull sturdy metal, don't look very lived-in. Maybe it's because there's no easy way in. They read TRY US in red letters." [yurts are not llpish but brownies--the objects you get from the yurts--are. That's how I wrote the code. I could do it better, but I didn't.]
+the Try Us Yurts are plural-named vanishing scenery in scope copse. "The Try Us Yurts, of dull sturdy metal, don't look very lived-in, because they're too small. They're mostly for storage, and they're not blocking you, but maybe they're hiding something useful." [yurts are not llpish but brownies--the objects you get from the yurts--are. That's how I wrote the code. I could do it better, but I didn't.]
 
-instead of entering yurts:
-	say "There's no easy way in. They'd be too cramped once you were inside, anyway."
+instead of entering try us yurts, say "There's no easy way in. They'd be too cramped once you were inside, anyway."
 
-understand "yurt" as yurts.
+understand "yurt" as try us yurts.
 
-check taking yurts:
-	say "They're too strongly built to even flake a piece off." instead;
+check taking Try Us Yurts: say "They're too strongly built to even flake a piece off." instead;
 
 some Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems."
 
 understand "brownie" as brownies.
 
-a-text of yurts is "RYRRO". b-text of yurts is "RGRPO". parse-text of yurts is "x[sp]u[sp]x[sp]t[sp]y". yurts are cheat-spoilable.
+a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]-[sp]x[sp]-[sp]y". try us yurts are cheat-spoilable.
 
 the spec-o-scope is scenery in Scope Copse. understand "map/scope/specoscope/spec" and "copse scope" as spec-o-scope.
 
