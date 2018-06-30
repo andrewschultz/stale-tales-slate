@@ -1,3 +1,6 @@
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just routes
+
 files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt
 
 ## *FILE

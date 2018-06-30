@@ -214,6 +214,12 @@ Muscly Luc Sym only appears if you are male, but his question mark should be pre
 The remaining reds strike out possibilities pretty easily. (CS)(CLMS)U(LM)(CMS)Y.
 But let's look for nonsense words. S in the first slot gives SMULCY/SLUMCY, so it's C. C(LMS)U(LM)(MS)Y.
 If we work on slot 2, CMULSY and CSULMY aren't words, so it's CLUMSY.
+# logic for Try Us Yurts
+?How do I decipher the Try-Us Yurts?
+This is one I actually made tougher than in a previous release, where it was a bit too easy in cheat mode. It's still not too bad.
+First things first: the O puts the Y in slot 5. The U must be in slot 2 or 4, but we can't tell which.
+(RS)(RU)(ST)(TU)Y is what we get. But there are only two possibilities to check.
+SRTUY is not a word, so RUSTY it is.
 >>BALDEST BLASTED SALTBED
 # logic for fluster self rut
 ?What do the question marks mean for the fluster self rut?

@@ -906,8 +906,8 @@ Of course, you must pass through one of the Strait/Deltas and Saltbed/Sunbelt. B
 ?What's the scope for?
 It shows you where you need to go.
 It also creates a map in the upper window that lasts until you cross the lake.
-?What are the yurts doing? How can I get rid of them?
-They're quite eco-friendly, or seem to be. They seem well build enough.
+?What are the try-us yurts doing? How can I get rid of them?
+They're quite eco-friendly, or seem to be. They seem well built enough.
 Unless, or until, they're RUSTY.
 >>BALDEST BLASTED SALTBED
 ?What's the docile old ice for?
