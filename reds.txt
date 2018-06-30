@@ -120,6 +120,8 @@ skid,disk,idks
 compile,melcopi
 keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
+#qver of locs pack
+capslock,?YR?R???=clackops=locspack
 #qver of usb
 bus/sub,RY?=usb
 ################oyster
@@ -170,6 +172,7 @@ redial,ialder,laired
 sadder,RY?RYR=dreads=adders
 sadder,dreads,drsade,edsard
 #scope copse
+#qver of try us yurts
 rusty,R?R?O=tryus=yurts
 #qver of bluster butlers
 subtler,lesburt
@@ -184,6 +187,8 @@ creaky,kcayer,rayeck,keycar,yacker
 weariest,treesawi,treesiaw,sitweare,ewitears
 restful,truself,furlets
 #hintpastries
+#qver of mended mini denim
+mined,?Y?YR=mende=dmini=denim
 #this looks very wrong
 #docile,idleco,liedoc,olecid,cledio,ecolid
 strudel,dreltus
@@ -321,6 +326,7 @@ rhubarb,burrbah
 #qver of sonic coins
 icons,YRY??=sonic=coins
 #qver of coins
+icons/sonic,?????=coins
 coins,nisco
 icons,nisco
 sonic,nisco

@@ -145,7 +145,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1=4 for the yurts
 5=9 for the H/I beyond needing to clear the coastlines
 1=10 for keycar wherever it appears
-3=13 for the denim, sporties' ripostes and old ice
+3=13 for the mended mini denim, sporties' ripostes and old ice
 1=14 for making the replay player shiny
 2=16 for the ingrates/natives
 1=17 for strudel (fringe finger)
@@ -4187,7 +4187,7 @@ hostile-is-he lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way.
 ropins	"The ropins remains secure, with no easy way to open it."
 agnostic	"[ag-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 atblock	"[ag-first] seems a little more focused, but [he-she] could maybe do even better."
-denim	"The denim bends and warps, but you hear no tearing noise."
+mended mini denim	"The mended mini denim bends and warps, but you hear no tearing noise."
 sporties' ripostes	"The ripostes seem less cutting for a moment."
 old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
@@ -7126,7 +7126,7 @@ yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough.
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything." [START towers]
 rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
-denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's thickly packed denim, for sure."
+mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
 sweatier wait-seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
 bluster butlers	"They're probably trained to hand out ur-belts."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
@@ -9015,7 +9015,7 @@ keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the k
 trendies	trendies	false	675249448	--	"nerdiest"	"nerdiest"	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
-denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
+mended mini denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[agnostic] snaps further to attention, even more eager than before!"
@@ -9484,7 +9484,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, because your desire for more isn't totally drained.)[paragraph break]";
 		increase min-score of troves by temp;
 		increase cur-score of troves by temp;
-	else if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
+	else if noun is LLPish or noun is claire's scalier: [bleah. mended mini Denim isn't reflexive. Neither is giant pin]
 		d "General LLPish min-up for [noun].";
 		min-up;
 	continue the action;
@@ -18398,8 +18398,8 @@ after printing the locale description for Lapsin' Plains when Lapsin' Plains is 
 	say "You hear splintering and notice a crate that fell near you. Someone or something doesn't like you here.";
 	now fragments are in Lapsin' Plains;
 
-instead of cutting denim:
-	try attacking denim;
+instead of cutting mended mini denim:
+	try attacking mended mini denim;
 
 the skis are a plural-named flippable thing in Lapsin' Plains. the skis are fixed in place. "Skis criss-cross over the pans, blocking you from entry."
 
@@ -19040,7 +19040,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else: [only for non guardians/non warriors] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -19766,25 +19766,22 @@ instead of doing something with theater:
 
 book Treading Gradient
 
-Treading Gradient is north of Unblest Sunbelt and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are visible and denim is visible][we-g] along with the denim patching what's probably a hole[else if weeds are visible][we-g][else if denim is visible]denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if number of visible guardians is 0], all unobstructed[else if number of visible guardians is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
+Treading Gradient is north of Unblest Sunbelt and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are visible and mended mini denim is visible][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are visible][we-g][else if mended mini denim is visible]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if number of visible guardians is 0], all unobstructed[else if number of visible guardians is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
 
 to say we-g:
 	say "weeds swaying, despite no wind,"
 
-every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient:
-	say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
+every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient: say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
 
-before going down in Treading Gradient:
-	say "[if denim is in Treading Gradient]The denim is too thick[else]You try to look into the dark where the denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
+before going down in Treading Gradient: say "[if mended mini denim is in Treading Gradient]The mended mini denim is too thick[else]You try to look into the dark where the mended mini denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
 
-the denim is LLPish vanishing scenery in Treading Gradient. the indefinite article of denim is "some".
+the mended mini denim is LLPish vanishing scenery in Treading Gradient. the indefinite article of mended mini denim is "some".
 
-check taking denim:
-	say "You can't get a good grip on the denim to pull it." instead;
+check taking mended mini denim:	say "You can't get a good grip on the mended mini denim to pull it." instead;
 
-a-text of denim is "RYRYR". b-text of denim is "RYPYR". parse-text of denim is "x[sp]-[sp]n[sp]-[sp]x". denim is cheat-spoilable.
+a-text of mended mini denim is "RYRYR". b-text of mended mini denim is "?Y?YR". parse-text of mended mini denim is "x[sp]I[sp]x[sp]E[sp]x". mended mini denim is cheat-spoilable.
 
-description of denim is "Too heavy for normal tools to cut."
+description of mended mini denim is "Too heavy for normal tools to cut."
 
 the weeds are vanishing scenery in Treading Gradient. "They look like some sort of mutant weeds from the future, maybe a crazy one with multi-layered cities. They blow in some undetectable wind: west, then east a while, then down and south. There may be something inside them, but you can't tell."
 
@@ -20687,7 +20684,7 @@ no-pastries is a truth state that varies.
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
 	d "Left [number of guardians not in lalaland] guardians: [list of guardians not in lalaland].";
-	if denim is in Scope Copse, d "Left denim.";
+	if mended mini denim is in Scope Copse, d "Left mended mini denim.";
 	if old ice is not in lalaland, d "Left old ice.";
 	if sporties' ripostes are not in lalaland, d "Left sporties['] ripostes.";
 	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
@@ -26456,7 +26453,7 @@ start tarts	"The tarts are food you can put in the toaster."
 Brownies	"The brownies are food you can put in the toaster."
 spec-o-scope	"The scope copse gives a rough progress map."
 old ice	"[if old ice is reflexed]You made the old ice coiled, already.[else][one of]The old ice is a Last Lousy Point. It's docile, which is fine, but how to make it more impressive?[plus][or]If it were more like a sculpture, maybe...[plus][or]COILED.[cycling][end if]"
-denim	"[one of]The denim can't quite be cut through by something like a dagger.[or]You won't find anything sharp enough to cut the denim.[or]You can, however, cheat to strip the denim away.[or]The denim can be MINED.[cycling]"
+mended mini denim	"[one of]The mended mini denim can't quite be cut through by something like a dagger.[or]You won't find anything sharp enough to cut the mended mini denim.[or]You can, however, cheat to strip the mended mini denim away.[or]The mended mini denim can be MINED.[cycling]"
 pester'n serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
 dreads adders	"[one of]You want to make the dreads adders less ferocious.[plus][or]Making them happy isn't your business, but you can still make them...[plus][or]SADDER.[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
@@ -27517,7 +27514,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if keycar is not in lalaland, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
 		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in Unblest Sunbelt could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
-		if denim is not in lalaland, say "[2dmiss of myreg]the denim in Treading Gradient could've been MINED.";
+		if mended mini denim is not in lalaland, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
 		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
 		if ingrates are not in lalaland, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
 		if natives are not in lalaland, say "[2dmiss of myreg]the natives in Danger Garden could've been turned VAINEST or NAIVEST.";

@@ -79,6 +79,12 @@ That's because there are two solutions.
 But since it's a three letter word, I didn't feel too guilty allowing for this.
 The vowel in the middle leaves two possibilities.
 You can leave via SUB or BUS.
+#logic for locs pack
+?What's with the Clack Ops Locs Pack?
+This is a relatively tricky one. But we know where the second vowel is. It must be in slot 6, since that is the only one that has a vowel as a candidate. Since slot 2 can't be A, we have -a---o--. That is a good start, and having two c's helps, too.
+The big question is, where are the c's? CL/A/PSLK/CS/CLS/O/CP/SK is what we have. This looks really sticky, but we can do some educated guessing. For starters, S cannot be in slot 8. If it were, we'd have CL/A/PLK/C/CL/O/CP/S. Then 1 or 5 would have to be C, and then 7 is P and 3 is K. (CL)/AKC/(CL)/OPS.
+CL/A/PSL/CS/CLS/O/CP/K is left. Now if P is in slot 7, we get CL/A/SL/CS/CLS/O/P/K. LASCCOPK, CAL(CS/SC)OPK aren't words, so try our luck with L in slov 5. C/A/PS/CS/L/O/CP/K is what is left. This is CASCLOPK or CAPSLOCK. CAPSLOCK.
+We can also use the red letter clues to make things a bit easier. PC Cloaks eliminates S in slot 8. POLACCKS puts L in slot 5 immediately. But it's still a bit tricky. Still, there are other clues that I hope makes up for it.
 >STORE U
 >>SAME MESA
 #logic for rude 'n nuder
@@ -270,6 +276,11 @@ So if we try R in slot 1, we get REALPY, which is not a word. PEA(RL)(RL)Y gives
 The two question marks don't tell as much as we'd hoped: ?YYRY?RR gives SW in slot 1, IE in slot 6. But then, A must be in slot 3, since I and E are out. (SW)(IE)A(SWR)(IE)(IE)(SWRT)(SWT).
 From here you may just need to grind out letters that can't work (W in slots 7/8 clogs, and W in 4 gives SEAWEERT with one E replaced by an I.) Then I in slot 2 gives WIA(SR)EE(SRT)(ST) which seems like nonsense.
 WEA(SR)(EI/IE)(SRT)(ST) could give Weariest...or you could just listen to what the wait-seer has to say, with red text that helps cut down the possibilities.
+# logic for mended mini denim
+?How do I deal with the mended mini denim?
+The two question marks in the Mended Mini Denim don't turn out to be very mysterious, with what you know from so far. Slot 1 must be D or M, and slot 3 must be N or I.
+But wait! Slots 2 and 4 are the vowels, meaning 1 and 3 must both be consonants. That makes slot 3 N. Slot 2 must be E, and slot 4 must be I. This, -INE-.
+Since slot 5 can't be M, we get MINED.
 >>DANGER GARDEN
 # logic for natives
 ?How do the natives work?
