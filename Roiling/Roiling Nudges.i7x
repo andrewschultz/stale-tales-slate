@@ -322,7 +322,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "meter"	508121192	--	zany meter	--	"[mz-chg]."
 "bigl"	149825292	nowt town	--	--	"The big L may be some sort of clue, but you can't do anything with it."
 "mazeltov"	655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
-"ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if phat path is visited]back [end if]north."
+"ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if saps' pass is visited]back [end if]north."
 "mazeroom"	615142808	--	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
 "bigm"	160086606	r10	--	--	"[just-letter]." [start nowt town]
 "bign"	164918961	r00	--	--	"[just-letter]."
@@ -410,7 +410,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "hog"	144234578	--	--	path-pass rule	"You need to deal with all the hogs."
 "key"	303098539	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
 "phat"	224046094	phat path	--	--	"[locname]." [start phat path]
-"saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
+"saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if shack is visited]back [end if]north, here."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "entyr"	507506690	phat path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
 "shack"	207682846	--	priv-shack	--	"You'll need to [if shack is visited]re-[end if]enter the shack to take care of things here."
@@ -658,7 +658,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gradient"	485956893	Treading Gradient	--	--	"[gradient-rej]." [TREADING GRADIENT 2 2]
 "scalier"	429403966	--	Éclairs	--	"[eat-pastry]."
 "eclair"	333130000	--	Éclairs	--	"[not-singular-hp]."
-"denim"	326810705	--	denim	--	"You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently."
+"denim"	326810705	--	denim	--	"You scrape at the mended mini denim bits to see if there is any magic in dem. Well, not the way you thought, apparently."
 "liam"	165069656	--	grailman	--	"[grail-name]."
 "garn"	189018831	--	grailman	--	"[grail-name]."
 "lars"	237599426	--	reed's ale	--	"[reed-name]."
@@ -1258,8 +1258,7 @@ this is the elmo-chat rule:
 to say w-twi:
 	say "The ads have probably gone through enough word-twisting"
 
-to say not-the-reg:
-	say "Trying to change the current region you're in would be risky, or useless, or maybe both";
+to say not-the-reg:	say "Trying to change the current region you're in all at once would be risky, or useless, or maybe both"
 
 section stores nudges
 
@@ -1450,11 +1449,9 @@ this is the ether-gone rule:
 to say is-boing:
 	say "[if boing is reflexive]The number's got more numerals than letters[else]You got the boing mechanism working[end if]";
 
-to say no-scen:
-	say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
+to say no-scen:	say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
 
-to say spumed-no:
-	say "The spumed tar does nothing[if star is in Char Arch or dart is in Char Arch]. Maybe focus on something else[end if]"
+to say spumed-no: say "The spumed tar does nothing[if star is in Char Arch or dart is in Char Arch]. Maybe focus on something else[end if]"
 
 to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze"
@@ -1469,24 +1466,19 @@ to say boing-clue:
 to say harphr:
 	say "Concentrate on the words of the harpings phrasing"
 
-to say shackbut:
-	say "There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though"
+to say shackbut: say "There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though"
 
-to say caffeine-no:
-	say "The name brand is not important. Besides, your body will break down the caffeine on its own, when needed"
+to say caffeine-no: say "The name brand is not important. Besides, your body will break down the caffeine on its own, when needed"
 
 this is the my-cola rule:
 	if fizzy cola is visible or dirty cola is visible, the rule succeeds;
 	the rule fails;
 
-to say cola-is-cola:
-	say "It's cola, not soda or pop. And you can just drink it"
+to say cola-is-cola: say "It's cola, not soda or pop. And you can just drink it"
 
-to say trimsox:
-	say "They're not just socks, or trim. They're trim socks"
+to say trimsox: say "They're not just socks, or trim. They're trim socks"
 
-to say romstix:
-	say "You'll know what to do with the sticks when you're ready to program";
+to say romstix: say "You'll know what to do with the sticks when you're ready to program";
 
 to say kboard-det:
 	if the player's command matches "keyboard" or the player's command matches "key board":
@@ -1535,8 +1527,7 @@ this is the enemy-lines rule:
 	if ether is in lalaland and player is in Grey Gyre and Leo is in Grey Gyre, the rule succeeds;
 	the rule fails;
 
-to say d-sli:
-	say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
+to say d-sli: say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
 
 to say slab-score:
 	if slab-pts < 10, increment slab-pts; [prevent rollover]
@@ -1552,19 +1543,15 @@ this is the time-to-debug rule:
 	if scratch paper is reflexed, the rule succeeds;
 	the rule fails.
 
-to say caps-no:
-	say "It'd sort of stink if a caps lock button broke in real life, so, no"
+to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
 
-to say scrapap:
-	say "It's what's on the scratch paper that [if scratch is reflexed]was[else]is[end if] important"
+to say scrapap: say "It's what's on the scratch paper that [if scratch is reflexed]was[else]is[end if] important"
 
-to say no-txtbk:
-	say "The catechism would be more likely to scramble YOU up. [if usb is visible]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
+to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if usb is visible]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
 
 section oyster nudges
 
-to say no-dsk:
-	say "That computer probably holds important information--you just need to extract it right, by trying other things";
+to say no-dsk: say "That computer probably holds important information--you just need to extract it right, by trying other things";
 
 to say patron:
 	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
@@ -1647,8 +1634,7 @@ section towers nudges
 to say bland-sad:
 	say "[if mislit limits is not visited and waters are not visited]The badlands can't be changed on their own. They must be trekked through[else]You're beyond the badlands now[end if]"
 
-to say war-one:
-	say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of warriors in lalaland > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
+to say war-one: say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of warriors in lalaland > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 
 this is the pas-vis rule:
 	if number of visible hintpastries > 0, the rule succeeds;
@@ -1666,12 +1652,12 @@ to say cop-sco: say "The copse and the scope are both fine as-is[if yurts are vi
 
 to say gosh-camp: say "Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything"
 
-to say plutry of (pg - a guardian): now pg is plurtry;
+to say plutry of (pg - a guardian): now pg is plurtry
 
-to say wait-see: say "The wait-seer shrugs patiently, unfazed you did not understand his full being. It is probably your inconvenience and not his";
+to say wait-see: say "The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix."
 
 to say no-fril:
-	say "The saver is hopelessly no-frills. It'll never be anything better. But [if saver is reflexed]you made it look a bit nicer[else if saver is attempted]you might've been onto something looking at its brand name[else]maybe you could revisit its brand name to make it look nicer[end if]. Not that looks matter"
+	say "The saver is hopelessly no-frills. It'll never be anything better. But [if saver is reflexed]you made it look a bit nicer[else if saver is attempted]you might've been onto something looking at its brand name[else]maybe you could revisit its brand name to make it look nicer[end if]. Not that looks ultimately matter"
 
 to say reed-name: say "No, [el-la-f]'s full name. With Reed's Ale"
 
@@ -1742,8 +1728,7 @@ this is the serpent-hiding rule:
 	if player is in limits and serpent is in lalaland, the rule succeeds;
 	the rule fails.
 
-to say ftf:
-	say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life"
+to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life"
 
 to say flow-fine:
 	say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"
@@ -1757,17 +1742,14 @@ to say towersloc:
 	if number of guardians in location of player > 0:
 		say ". You might also want to try to deal with [the list of guardians in location of player]";
 
-to say rapier-mach:
-	say "The machine is complicated enough. You [if gizmo is off-stage]probably just need to figure what to put in it[else]already got something from it[end if]"
+to say rapier-mach: say "The machine is complicated enough. You [if gizmo is off-stage]probably just need to figure what to put in it[else]already got something from it[end if]"
 
 to say diag-dir-rej:
 	say "This game doesn't require you to mess with diagonal directions[if player is in waters], so maybe you should consider the other shores[else], so I hope that's a relief[end if]";
 
-to say clay-pal:
-	say "Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead"
+to say clay-pal: say "Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead"
 
-to say focus-castle:
-	say "Nah, that's just garbage. It's the curst palace you need to focus on"
+to say focus-castle: say "Nah, that's just garbage. It's the curst palace you need to focus on"
 
 section otters nudges
 
@@ -1776,38 +1758,29 @@ this is the cppc rule:
 		if cactus pearl is in limits or pearl cactus is in limits, the rule succeeds;
 	the rule fails.
 
-to say maples-no: say "No need to change the maples. They are the least dreary part of the Downside."
+to say maples-no: say "No need to change the maples. They are the least dreary part of the Downside"
 
-to say adj-needs-ly:
-	say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley"
+to say adj-needs-ly: say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley"
 
 this is the cinders-gone rule:
 	if cinders are in lalaland, the rule succeeds;
 	the rule fails.
 
-to say adj-needs-li:
-	say "Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here"
+to say adj-needs-li: say "Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here"
 
-to say del-ry:
-	say "The sandwich isn't just deli, or rye, or a sandwich. It's deli rye"
+to say del-ry: say "The sandwich isn't just deli, or rye, or a sandwich. It's deli rye"
 
-to say imp-sly:
-	say "The imp's too sly to get tricked by a word THAT short"
+to say imp-sly: say "The imp's too sly to get tricked by a word THAT short"
 
-to say whiney:
-	say "You can't change who whiners are, but maybe you can make them whine [if ram3 is in lalaland or ram2 is in lalaland or ram1 is in lalaland]even [end if]less...whiningly"
+to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if ram3 is in lalaland or ram2 is in lalaland or ram1 is in lalaland]even [end if]less...whiningly"
 
-to say add-ly:
-	say "No, you need a couple more letters... [if power-back is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
+to say add-ly: say "No, you need a couple more letters... [if power-back is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
 
-to say both-medals:
-	say "No, it's a combination of what's on both medals"
+to say both-medals: say "No, it's a combination of what's on both medals"
 
-to say cube-whole:
-	say "The sea cube is unmoved. You may need to concentrate on the whole thing";
+to say cube-whole: say "The sea cube is unmoved. You may need to concentrate on the whole thing";
 
-to say w-change:
-	say "You can't change the alcoves. It's what's to the west that needs changing"
+to say w-change: say "You can't change the alcoves. It's what's to the west that needs changing"
 
 to say eelmry:
 	if player is in bran barn:
@@ -1824,8 +1797,7 @@ to say eelmry:
 	else:
 		say "You think back to whom you've met so far once past the Disowned Downside"
 
-to say e-m-prank:
-	say "If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down"
+to say e-m-prank: say "If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down"
 
 this is the eelmr rule:
 	if player is in alcoves and Elmer is in alcoves, the rule succeeds;
@@ -1833,31 +1805,24 @@ this is the eelmr rule:
 	if player is in loop pool, the rule succeeds;
 	the rule fails;
 
-to say no-lam:
-	say "You can't change them, and even if you could, Elvira would probably be alerted"
+to say no-lam: say "You can't change them, and even if you could, Elvira would probably be alerted"
 
-to say fresc:
-	say "Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second"
+to say fresc: say "Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second"
 
-to say restrictr:
-	say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that."
+to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that"
 
 this is the hydra-know rule:
 	if the player is in Inclosure, the rule succeeds;
 	if the player is in alcoves and hydra-known is true, the rule succeeds;
 	the rule fails.
 
-to say no-stockade:
-	say "You can't release any prisoners from the stockade THAT easily. You'd need an army"
+to say no-stockade: say "You can't release any prisoners from the stockade THAT easily. You'd need an army"
 
-to say inclosure-scen:
-	say "You can't just muck around with one part of Elvira's army. You need a way to find allies"
+to say inclosure-scen: say "You can't just muck around with one part of Elvira's army. You need a way to find allies"
 
-to say one-toy:
-	say "Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army"
+to say one-toy: say "Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army"
 
-to say elv-mach:
-	say "You have enough to think about without one more of Elvira's machines"
+to say elv-mach: say "You have enough to think about without one more of Elvira's machines"
 
 this is the barley-n-s rule:
 	if player is in Clarthead Cathedral or player is in Shiner Shrine, the rule succeeds;
