@@ -1,4 +1,5 @@
 files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt
+~	nu	t2
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
@@ -19,13 +20,13 @@ That can't be it. It's a volt MAZE.
 That can't be it. It's a VOLT maze.
 #nudge for storep
 >storpe
-[not-the-reg].
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for crust
 >cruts
 You should eat your food, not play with it. Yes, even if it's only MARGINALLY food.
 #nudge for grye
 >grey
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start grey gyre]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for entry
 >entyr
 It's the maze you need to change, not the zany meter.
@@ -39,6 +40,11 @@ It's the maze you need to change, not the zany meter.
 >metre
 It's the maze you need to change, not the zany meter.
 
+==t2
+#spechelp for hump
+>umhp
+The hump suddenly looks a bit smaller. But not enough.
+
 >umph
 Your score has just gone up by one point
 Austerer Treasure
@@ -46,7 +52,7 @@ Austerer Treasure
 ==t2
 #nudge for austerer
 >austerre
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start austerer treasure]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 ==t0,2
 >phooey
@@ -72,28 +78,34 @@ You consider the odd letters in such a short word, then  think 'X, Y, ... no.' M
 You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter.
 
 >e
+
+==t2
+#nudge for hump
+>umhp
+You search for the hump you overcame. You can't find it now. But it's not relevant.
+
 >s
 Char Arch
 
 ==t2
 #nudge for char
 >chra
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start char arch]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for mad
 >mda
-[no-scen].
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 #nudge for maddam
 >maddma
-[no-scen].
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 #nudge for amaddam
 >amaddma
-[no-scen].
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 #nudge for amad
 >amda
-[no-scen].
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 #nudge for themad
 >themda
-[no-scen].
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 #nudge for gasp
 >gaps
 You try, but fail, to make something out of nothing.
@@ -102,10 +114,10 @@ You try, but fail, to make something out of nothing.
 You try, but fail, to make something out of nothing.
 #nudge for spumed
 >spumde
-[spumed-no].
+The spumed tar does nothing. Maybe focus on something else.
 #nudge for tar
 >tra
-[spumed-no].
+The spumed tar does nothing. Maybe focus on something else.
 #nudge for dumpster
 >dumpstre
 Not even you can make that icky stuff in the dumpster worthwhile, but maybe there's something useful inside.
@@ -150,6 +162,11 @@ Not even you can make that icky stuff in the dumpster worthwhile, and besides, y
 >dumpstre
 Not even you can make that icky stuff in the dumpster worthwhile, and besides, you got the dart anyway.
 
+==t2
+#renudge for spumed
+The spumed tar does nothing
+!Maybe focus
+
 >n
 >bleep
 Your score has just gone up by one point
@@ -160,7 +177,7 @@ Marines Seminar Remains
 ==t2
 #nudge for marines
 >marinse
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start marines seminar remains]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for marine
 >marien
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -290,6 +307,11 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 >dreild
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
 
+==t2
+#spechelp for lamb
+>blma
+The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
+
 ===0,2
 >mazeltov
 Your score has just gone up by three points
@@ -301,6 +323,11 @@ REGION MIN INCREASED BY 1
 >score
 Score in a scenario: 12 out of 37 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 37.
 
+==t2
+>blma
+That's not something
+
+
 >s
 >s
 Dirge Ridge
@@ -308,7 +335,7 @@ Dirge Ridge
 ==t2
 #nudge for dirge
 >direg
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start dirge ridge]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for liev
 >live
 The vile veil is impassive. It--kind of protects you, actually.
@@ -348,13 +375,13 @@ You don't need to combine them physically, but their physical strengths combined
 >there
 Your score has just gone up by one point
 
-==t4
+==t2
 #nudge for mazeltov
 >mazeltvo
 The volt maze is gone. Re-forming it would not be fun.
 #nudge for ether
 >ethre
-The ether is gone. You can just go [if phat path is visited]back [end if]north.
+The ether is gone. You can just go north.
 
 >n
 Saps' Pass
@@ -363,21 +390,28 @@ Saps' Pass
 #different message for making it to the phat path 1st time? ??
 
 ==t2
+>s
+#renudge for ether
+The ether is gone. You can just go back north.
+>ethre
+>n
+
+==t2
 #nudge for lawl
 >lalw
 It's too expansive for you to use any mental energy on.
 #nudge for ssap
 >sspa
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [saps' pass]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for mount
 >moutn
 Mount Um, Not silently disposes of your attempts to manipulate it.
 #nudge for deil
 >deli
-[d-sli].
+Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 #nudge for deils
 >deisl
-[d-sli].
+Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 #nudge for hog
 >hgo
 You need to deal with all the hogs.
@@ -398,10 +432,10 @@ Phat Path
 ==t2
 #nudge for phat
 >phta
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start phat path]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for saps
 >sasp
-You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here.
+You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way north, here.
 #nudge for clump
 >clupm
 No, it's not just any clump, but hawt thaw.
@@ -476,22 +510,29 @@ Hacks' Shack
 
 ==t2
 >s
+#renudge for saps
+>sasp
+You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way back north, here.
 #renudge for shack
 >shakc
 You'll need to re-enter the shack to take care of things here.
 >n
 #nudge for boredyak
 >boredyka
-The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]
+The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing.
+>keyboard
+That seems like a decent idea for later, though
+WRONG
+>undo
 #nudge for dongle
 >dongel
 It's built to be sturdy. You don't want to mess with it.
 #nudge for scratch
 >scrathc
-[scrapap].
+It's what's on the scratch paper that is important.
 #nudge for paper
 >papre
-[scrapap].
+It's what's on the scratch paper that is important.
 #nudge for pile
 >piel
 It's not just any pile--it's a pile of coal.
@@ -503,34 +544,34 @@ It's just gum.
 It's just gum.
 #nudge for catechism
 >catechims
-[no-txtbk].
+The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 #nudge for textbook
 >textboko
-[no-txtbk].
+The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 #nudge for bkoo
 >bkoo
-[no-txtbk].
+The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 #nudge for hard
 >hadr
-[no-dsk].
+That computer probably holds important information--you just need to extract it right, by trying other things.
 #nudge for drive
 >driev
-[no-dsk].
+That computer probably holds important information--you just need to extract it right, by trying other things.
 #nudge for harddrive
 >harddriev
-[no-dsk].
+That computer probably holds important information--you just need to extract it right, by trying other things.
 #nudge for shakc
 >shack
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start hacks shack]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for hack
 >hakc
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for algorithm
 >algoritmh
-[no-txtbk].
+The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 #nudge for algorithms
 >algorithsm
-[no-txtbk].
+The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 #nudge for labs
 >lasb
 The labs slab remains sturdy. Technology 1, Wordplay Magic 0.
@@ -554,55 +595,52 @@ The rebuff-buffer is too technical for you, but even if it weren't, removing its
 The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise.
 #nudge for computer
 >computre
-You need to fix the program in the computer[if number of things on labs slab < 4], well, once you get it running[end if].
+You need to fix the program in the computer, well, once you get it running.
 #nudge for button
 >buttno
-[shackbut].
+There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
 #nudge for buttons
 >buttosn
-[shackbut].
+There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
 #nudge for escarole
 >escaroel
 All the escaroles.
 #nudge for caffeine
 >caffeien
-[caffeine-no].
+The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
 #nudge for fine
 >fien
-[caffeine-no].
+The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
 #nudge for cafe
 >caef
-[caffeine-no].
+The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
 #nudge for soda
 >soad
-[cola-is-cola].
+It's cola, not soda or pop. And you can just drink it.
 #nudge for pop
 >ppo
-[cola-is-cola].
+It's cola, not soda or pop. And you can just drink it.
 #nudge for trim
 >trmi
-[trimsox].
+They're not just socks, or trim. They're trim socks.
 #nudge for sock
 >sokc
-[trimsox].
+They're not just socks, or trim. They're trim socks.
 #nudge for socks
 >socsk
-[trimsox].
+They're not just socks, or trim. They're trim socks.
 #nudge for trimsock
 >trimsokc
-[romstix].
+You'll know what to do with the sticks when you're ready to program.
 #nudge for sticks
 >sticsk
-[romstix].
+You'll know what to do with the sticks when you're ready to program.
 #nudge for rom
 >rmo
-[romstix].
+You'll know what to do with the sticks when you're ready to program.
 #nudge for stick
 >stikc
-[romstix].
-#nudge for spa
->sap
-C'est [i]pas[r] sap. C'est du CLOCK SAP.
+You'll know what to do with the sticks when you're ready to program.
 
 >capslock
 Your score has just gone up by one point
@@ -612,10 +650,10 @@ Your score has just gone up by one point
 ==t2
 #nudge for caps
 >casp
-[caps-no].
+It'd sort of stink if a caps lock button broke in real life, so, no.
 #nudge for lock
 >lokc
-[caps-no].
+It'd sort of stink if a caps lock button broke in real life, so, no.
 #nudge for rope
 >roep
 You don't need to do anything with the skid's rope.
@@ -692,6 +730,11 @@ Nothing happens. It's probably just the TBA you need to work with, which certain
 
 >put keyboard on slab
 You can now do computery things unimpeded!
+
+==t2
+#renudge for computer
+>computre
+You need to fix the program in the computer, well, once you get it running.
 
 >put lock on keyboard
 fits in perfectly
@@ -770,6 +813,14 @@ You need to budge the letters about.
 >pour cola in mug
 >debug
 Your score has just gone up by one point
+
+==t2
+#renudge for algorithms
+>algorithsm
+The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.
+#renudge for scratch
+>scrathc
+It's what's on the scratch paper that was important.
 
 ==t2
 >usb

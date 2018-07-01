@@ -1,8 +1,9 @@
 files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt,reg-roi2-otters-altpath.txt
+~	nu	t2
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## alternate path
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -23,16 +24,16 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 The whole Citadel? No, you couldn't do much with it at full strength. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
 #nudge for ottre
 >otter
-[not-the-reg].
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for storet
 >storte
-[not-the-reg].
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for bleary
 >bleayr
 ?? needs a better reject
 #nudge for bare
 >baer
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 
 #forceignore
 >barely
@@ -43,7 +44,7 @@ Burnt Brunt
 ==t2
 #nudge for ly
 >yl
-Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if].
+Yup, that's the idea here in Otters.
 
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
@@ -51,7 +52,7 @@ Score in a scenario: 1 out of 30 total points in the current region, Otters. Low
 ==t2
 #nudge for burtn
 >butnr
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [altname bleary barley]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for dune
 >duen
 You can't really shift the dune, but you don't need to.
@@ -63,10 +64,10 @@ You'll need to change more than one cinder.
 Ed's full name, please!
 #nudge for reedi
 >reeid
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 #nudge for reedy
 >reeyd
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 
 >increds
 WRONG
@@ -97,13 +98,13 @@ Hm, you only managed to deal with adverbs so far, and steward doesn't have an L 
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
 #nudge for rye
 >rey
-[del-ry].
+[The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #nudge for lied
 >lide
-[del-ry].
+The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #nudge for sandwich
 >sandwihc
-[del-ry].
+The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 
 >reedily
 Your score has just gone up by one point
@@ -112,151 +113,151 @@ Your score has just gone up by one point
 >plop
 #nudge for bossy
 >bosys
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for bossi
 >bosis
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for nasti
 >nasit
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for nasty
 >nasyt
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for seedi
 >seeid
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for seedy
 >seeyd
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for shadi
 >shaid
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for shady
 >shayd
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for snide
 >snied
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for stark
 >stakr
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for tacit
 >tacti
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for catty
 >catyt
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for teari
 >teair
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for teary
 >teayr
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for bleayr
 >bleary
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for bleari
 >bleair
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for ribald
 >ribadl
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for formal
 >formla
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for coital
 >coitla
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for modest
 >modets
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for shabbi
 >shabib
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for shabby
 >shabyb
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for shoddi
 >shodid
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for shoddy
 >shodyd
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for silent
 >siletn
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for steami
 >steaim
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for steamy
 >steaym
-[adj-needs-li].
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for sudden
 >suddne
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for stupdi
 >stupid
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for martial
 >martila
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for sincere
 >sinceer
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for sobbing
 >sobbign
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for tedious
 >tediosu
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for wearing
 >wearign
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for drawling
 >drawlign
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for emotional
 >emotionla
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 #nudge for despairing
 >despairign
-[adj-needs-ly].
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
 >undo
 
@@ -266,31 +267,44 @@ Disowned Downside
 ==t2
 #nudge for downside
 >downsied
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Disowned Downside]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for sample
 >sampel
-[maples-no].
+No need to change the maples. They are the least dreary part of the Downside.
 #nudge for maple
 >mapel
-[maples-no].
+No need to change the maples. They are the least dreary part of the Downside.
 #nudge for mack
 >makc
 If you messed with one mack, the others would gang up on you. Work on the argument, instead.
 #nudge for macks
 >macsk
-Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if].
+Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying.
 #nudge for gretta
 >gretat
-Gretta's been manipulated enough[if macks are visible]. Deal with the macks['] arguments, instead[end if].
+Gretta's been manipulated enough. Deal with the macks' arguments, instead.
 
 >bossily
 Your score has just gone up by one point.
+
+==t2
+#renudge for macks
+>macsk
+Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying some more.
+
 >nastily
 Your score has just gone up by one point.
 >blearily
 Your score has just gone up by one point.
 
 >au -1
+
+==t2
+#renudge for gretta
+>gretat
+Gretta's been manipulated enough.
+!macks
+
 >1
 >3
 
@@ -299,13 +313,13 @@ Your score has just gone up by one point.
 >although
 >however
 >misses
---you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
+--you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels] trust.
 >n
 >n
 >because
 REGION MIN INCREASED BY 1, 2 OVERALL.
 >misses
---you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
+--you could've said ELSE to gain the eels] trust.
 >else
 REGION MIN INCREASED BY 1, 3 OVERALL.
 >undo
@@ -345,10 +359,10 @@ You don't need to change it, and the eels might not like it if you did.
 The wire weir doesn't need to be changed.
 #nudge for sea
 >sae
-[cube-whole].
+The sea cube is unmoved. You may need to concentrate on the whole thing.
 #nudge for cube
 >cueb
-[cube-whole].
+The sea cube is unmoved. You may need to concentrate on the whole thing.
 
 >because
 >else
@@ -356,6 +370,11 @@ The wire weir doesn't need to be changed.
 --you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
 >score
 >s
+
+==t2
+#nudge for ly
+>yl
+Yup, that's the idea here in Otters, even with your powers back.
 
 ==t2
 #renudge for allot
@@ -380,7 +399,7 @@ It's what the medals say that makes them special.
 >s
 #nudge for barn
 >banr
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start bran barn]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for rev
 >rve
 The whole picture.
@@ -412,16 +431,16 @@ Shiner Shrine
 ==t2
 #nudge for shiner
 >shinre
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Shiner Shrine]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for simply
 >simpyl
 It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving.
 #nudge for sly
 >syl
-[imp-sly].
+The imp's too sly to get tricked by a word THAT short.
 #nudge for imp
 >ipm
-[imp-sly].
+The imp's too sly to get tricked by a word THAT short.
 #nudge for averts
 >averst
 You need to focus on HOW the imp averts, vaster.
@@ -433,16 +452,16 @@ You need to focus on HOW the imp averts, vaster.
 The coma camo remains as-is. It's sturdy, military-grade stuff
 #nudge for brute
 >bruet
-[add-ly].
+No, you need a couple more letters... a couple to make a word weak enough to control.
 #nudge for angry
 >angyr
-[add-ly].
+No, you need a couple more letters... a couple to make a word weak enough to control.
 #nudge for angri
 >angir
-[add-ly].
+No, you need a couple more letters... a couple to make a word weak enough to control.
 #nudge for enraged
 >enragde
-[add-ly].
+No, you need a couple more letters... a couple to make a word weak enough to control.
 
 
 ==t3
@@ -478,10 +497,10 @@ Your score has just gone up by one point
 
 #nudge for lamer
 >lamre
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start lamer realm]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for ocelot
 >ocelto
-The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if].
+The ocelots are hanging too close together for you to pick off one to make it less cool.
 #nudge for saturnic
 >saturnci
 The curtains are too solid to change.
@@ -501,6 +520,11 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >artsy
 Your score has just gone up by one point
+
+==t2
+#renudge for ocelot
+>ocelto
+The ocelots are hanging too close together, but you already helped them, anyway.
 
 >l
 Blest Belts
@@ -566,25 +590,25 @@ Clarthead Cathedral
 ==t2
 #nudge for whiner
 >whinre
-[whiney].
+You can't change who whiners are, but maybe you can make them whine less...whiningly.
 #nudge for whiners
 >whinesr
-[whiney].
+You can't change who whiners are, but maybe you can make them whine less...whiningly.
 #nudge for cathedral
 >cathedrla
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Clarthead Cathedral]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for loathing
 >loathign
-[add-ly].
+No, you need a couple more letters... a couple to make a word weak enough to control.
 #nudge for stoic
 >stoci
 Usually, you'd need to add two letters, but here you'd need to add four.
 #nudge for stoical
 >stoicla
-[add-ly].
+No, you need a couple more letters... a couple to make a word weak enough to control.
 #nudge for terse
 >teres
-[add-ly].
+No, you need a couple more letters... a couple to make a word weak enough to control.
 #renudge for coma
 >coam
 The coma camo remains as-is. It's sturdy, military-grade stuff
@@ -622,7 +646,7 @@ Your score has just gone up by one point
 ==t2
 #nudge for preserve
 >preserev
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start perverse preserve]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for uprate
 >upraet
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -643,10 +667,10 @@ So many pines, hard to pick one. Might as well take care of them all.
 So many nails, hard to pick one. Might as well take care of them all.
 #nudge for critters
 >crittesr
-[restrictr].
+The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that.
 #nudge for critter
 >crittre
-[restrictr].
+The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that.
 #nudge for raccoon
 >raccono
 The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important.
@@ -713,34 +737,37 @@ Score in a scenario: 25 out of 30 total points in the current region, Otters. Lo
 >w
 Coevals' Alcoves
 
+>eelmry
+WRONG more possibilities
+
 ==t2
 #nudge for monstery
 >monsteyr
-[w-change].
+You can't change the alcoves. It's what's to the west that needs changing.
 #nudge for monastery
 >monasteyr
-[w-change].
+You can't change the alcoves. It's what's to the west that needs changing.
 #nudge for eelmr
 >eelrm
-[eelmry].
+You can't change Merle and Elmer, but maybe you could find a way to get rid of them.
 #nudge for sober
 >sobre
 If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
 #nudge for bored
 >borde
-[e-m-prank].
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
 #nudge for bore
 >boer
-[e-m-prank].
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
 #nudge for scowl
 >scolw
-[e-m-prank].
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
 #nudge for cowl
 >colw
-[e-m-prank].
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
 #nudge for alcoves
 >alcovse
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start coevals' alcoves]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for alcove
 >alcoev
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -749,16 +776,16 @@ You don't need to riff on any location names to win the game, unless there's not
 You try, but that doesn't do anything with, or to, the hydra to the west.
 #nudge for laminas
 >laminsa
-[no-lam].
+You can't change them, and even if you could, Elvira would probably be alerted.
 #nudge for lamina
 >lamian
-[no-lam].
+You can't change them, and even if you could, Elvira would probably be alerted.
 #nudge for forces
 >forcse
-[fresc].
+Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
 #nudge for forec
 >force
-[fresc].
+Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
 
 ==!1
 >honestly
@@ -807,7 +834,7 @@ WRONG (decrease)
 ==t2
 #nudge for inclosure
 >inclosuer
-You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help. [start reclusion inclosure]
+You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
 #nudge for tripod
 >tripdo
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
@@ -819,7 +846,7 @@ You can't just muck around with one part of Elvira's army. You need a way to fin
 It's annoying and unswayable, like most chants.
 #nudge for stocked
 >stockde
-[no-stockade].
+You can't release any prisoners from the stockade THAT easily. You'd need an army.
 #nudge for vats
 >vast
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
@@ -834,25 +861,25 @@ You can't just muck around with one part of Elvira's army. You need a way to fin
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 #nudge for stockade
 >stockaed
-[no-stockade].
+You can't release any prisoners from the stockade THAT easily. You'd need an army.
 #nudge for warship
 >warshpi
-[elv-mach].
+You have enough to think about without one more of Elvira's machines.
 #nudge for amulet
 >amulte
-[one-toy].
+Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 #nudge for ultimate
 >ultimaet
-[one-toy].
+Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 #nudge for shaper
 >shapre
-[one-toy].
+Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 #nudge for purple
 >purpel
-[elv-mach].
+You have enough to think about without one more of Elvira's machines.
 #nudge for oranger
 >orangre
-[elv-mach].
+You have enough to think about without one more of Elvira's machines.
 
 >play whistle
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.

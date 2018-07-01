@@ -147,11 +147,6 @@ You can just change the ten beams by saying BASEMENT.
 >zozimus basement
 You can just change the ten beams by saying BASEMENT.
 
->basement
-Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
-Your score has just gone up by two points
->basemetn
-You probably just want to go DOWN to the basement.
 
 #mistake retest for basement [text]/[text] basement [text]/[text] basement
 >basement zozimus
@@ -196,17 +191,11 @@ You probably just want to go UP the chimney.
 >in
 Farming Framing
 
->stari
-You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
 
 #mistake test for astir
 >astir
 You need to change that to something else, then it'll be astir.
 
->stair
-DEBUG INFO: Adding a min point
->astir
-You don't need to do any more with the stair.
 >stari
 The stair is good for getting around. It's worth keeping.
 
@@ -243,14 +232,6 @@ You don't need a safe home, right now. You need adventure. Oh, and you don't hav
 >use notepad
 The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors. You should also be able to EXAMINE something you want to use, and the game should hint a verb.
 !SCAN with
-
->satchle
-You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
->satchel
-Your score has just gone up
-all the secrets here
->satchle
-You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
 #mistake retest for use [text]
 >use zozimus
@@ -399,14 +380,6 @@ Won now: Roman Manor (13/13).
 >sportif
 You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.
 
->sorbte
-The smell from Store B becomes fruitier and more delicious.
->sorbet
-Your score has just gone up by one point
-DEBUG INFO: Adding a min point
->sorbte
-You're a hero and all, but only one sample per day. Just think of the field day Elvira'd have if she found out!
-
 #mistake test for ergots
 >ergots
 You're trying to rescue the people of Yorpwald, not give them fungus infections.
@@ -455,20 +428,6 @@ That's not what you need to do with store P--you even see red trying to figure H
 >pteros
 You don't need to face any predators.
 
->presot
-You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
->presto
-Your score has just gone up by one point
->presot
-You've got an entry. No need to seal it up.
-
->ottesr
-You hear various unrecognizable animal noises.
->otters
-Your score has just gone up by one point
->ottesr
-You've got an entry. No need to seal it up.
-
 >x otters
 
 #mistake test for barely
@@ -494,23 +453,9 @@ Your score has just gone up by one point
 >routse
 You've got an entry. No need to seal it up.
 
->trovse
-A single paper currency flutters off from Store V, lost forever.
->troves
-Your score has just gone up by one point
->trovse
-You've got an entry. No need to seal it up.
-
 #mistake test for restow
 >restow
 Store W glows red as you try this.
-
->towesr
-Store W seems to push up from the ground and go narrower for a second.
->towers
-Your score has just gone up by one point
->towesr
-You've got an entry. No need to seal it up.
 
 #mistake test for toyers
 >toyers
@@ -520,23 +465,9 @@ You see red at the possibility people might mess with your mind in whatever's be
 >troyes
 Store Y does not lead to France.
 
->oystre
-You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
->oyster
-Your score has just gone up by one point
->oystre
-You've got an entry. No need to seal it up.
-
->othesr
-Store H looks totally different for a second.
->others
-Your score has just gone up by one point
-
 >tosher
 The hoster does look a bit weird, but you need to enter it, not change it.
 
->enter hoster
-You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald.
 >othesr
 You've got an entry. No need to seal it up.
 
@@ -544,16 +475,6 @@ You've got an entry. No need to seal it up.
 >stroke
 You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.
 
->tokesr
-An odd sweet smell from Store K, for a second.
->tokers
-Your score has just gone up by one point
-DEBUG INFO: Adding a min point
->tokesr
-They are who they are. You should maybe try to get their friend back.
-
->nestro
-"Dude, you like must be close!" you hear from Store N.
 
 #mistake test for stoner
 >stoner
@@ -565,16 +486,9 @@ The door to Store N opens, and two bottles whizz in your direction but nowhere c
 >x bottles
 Sterno
 
->nestor
-Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 >stoner
 Being a stoner isn't treason. Use his real name.
->nestro
-You rescued him, and that's enough.
-
->tokesr
-They are who they are.
 
 >enter smoke
 
@@ -644,8 +558,6 @@ You're the ouster here, trying to get by the routes.
 >indies
 You don't need to worry about art, here.
 
->towarsd
-The ad seems slightly nearer, for a moment.
 >towards
 Your score has just gone up by one point
 DEBUG INFO: Adding a min point
@@ -766,13 +678,6 @@ But the whales would be beached.
 >poopiest
 This is the wrong area for adjectives. And Oscar's abode is, well, dingy enough.
 
->opposiet
-The soot smells a bit stronger than before for a moment.
->opposite
-Your score has just gone up by one point
->opposiet
-Brother Horbert probably knows what to do with that.
-
 #mistake retest for poopiest
 >opposite
 This is the wrong area for adjectives. And the pipe soot is icky enough as-is.
@@ -845,12 +750,6 @@ You don't need to avoid the giant's elbow any more.
 >beneath
 Nice try, but wrong preposition for the situation.
 
->undre
-The pages of Rude 'N Nuder flutter a bit.
->under
-Your score has just gone up by one point
->undre
-You don't need to do anything fancy with the runed book.
 
 ##no-gal needs a line break ??
 
@@ -884,8 +783,6 @@ Nice try, but wrong preposition for the situation.
 >under
 Wrong preposition.
 
->beneaht
-The bean rolls back and forth a bit.
 >beneath
 Your score has just gone up by one point
 
@@ -966,6 +863,7 @@ Your score has just gone up by one point
 >withni
 No, on to Thor or the new beet.
 
+#spechelp for bent ewe
 >betwene
 The new beet seems to spin slightly away from Thor for a second.
 >between
@@ -1078,14 +976,6 @@ The bee shakes its head, trying to make sense of the slightly disordered magic i
 Your score has just gone up by one point
 >reasno
 Too much fiddling with reason is unreasonable.
-
->reclla
-It's...hmm...you remember all the clues, but what order to place them in, now.
->recall
-Pallid
-Your score has just gone up by one point
->reclla
-That's not something you can say, do or see here.
 
 >undo
 >undo
@@ -1275,12 +1165,8 @@ You're not in the window making business.
 >lsat
 Oh dear. Is a standardized lawyers' aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.
 
->lats
-You don't quite draw inspiration from the shaker, but there can't be that many alts.
 >last
 Your score has just gone up by one point
->lats
-You've lasted long enough. There are new things to look at, now.
 
 #mistake test for snog
 >snog
@@ -1308,10 +1194,6 @@ The stream has nurtured you spiritually. The lobster nurtured you physically. Ti
 >ambler
 You see red slightly as the marble Blamer Balmer fails to walk away.
 
->decied
-You try to groove to Eddie's song, but that's not quite it.
->decide
-Your score has just gone up by one point
 Strip of Profits
 
 >score
@@ -1344,8 +1226,6 @@ Adding a min point
 >blma
 That's not something
 
->umhp
-The hump suddenly looks a bit smaller. But not enough.
 >umph
 Your score has just gone up by one point
 Austerer Treasure

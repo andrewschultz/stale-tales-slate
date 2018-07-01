@@ -1,4 +1,6 @@
 files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudmis.txt
+~	nudges	t4
+~	nu	t4
 
 ## *FILE
 
@@ -16,31 +18,31 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >seed 1
 >enter towers
 
-==t4
+@nu
 #nudge for trefoil
 >trefoli
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for warrior
 >warriro
-[war-one].
+One at a time. Each has his own weakness.
 #nudge for warriors
 >warriosr
-[war-one].
+One at a time. Each has his own weakness.
 #nudge for storew
 >storwe
-[not-the-reg].
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for torew
 >torwe
-[not-the-reg].
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for badlands
 >badlansd
-[bland-sad].
+The badlands can't be changed on their own. They must be trekked through.
 #nudge for asd
 >ads
-[bland-sad].
+The badlands can't be changed on their own. They must be trekked through.
 #nudge for bland
 >bladn
-[bland-sad].
+The badlands can't be changed on their own. They must be trekked through.
 
 >gone
 Your score has just gone up by one point
@@ -48,6 +50,11 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >bleak
 Your score has just gone up by one point
+
+@nu
+#renudge for warriors
+>warriosr
+You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
 
 >score
 Score in a scenario: 3 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 50.
@@ -66,39 +73,44 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
 
+@nu
+#renudge for warriors
+>warriosr
+There's only one warrior left, and his name is Rodney.
+
 >yonder
 Your score has just gone up by one point
 
 Topside Deposit
 
-==t4
+@nu
 #nudge for deposit
 >deposti
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for fire
 >fier
-[ftf].
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
 #nudge for torn
 >tonr
-[ftf].
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
 #nudge for frontier
 >frontire
-[ftf].
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
 #nudge for flowerpot
 >flowerpto
-[flow-fine].
+The flowerpot itself is just fine--you haven't found anything to put in it yet.
 #nudge for flower
 >flowre
-[flow-fine].
+The flowerpot itself is just fine--you haven't found anything to put in it yet.
 #nudge for pot
 >pto
-[flow-fine].
+The flowerpot itself is just fine--you haven't found anything to put in it yet.
 #nudge for proof
 >profo
-[flow-fine].
+The flowerpot itself is just fine--you haven't found anything to put in it yet.
 #nudge for welt
 >wetl
-[flow-fine].
+The flowerpot itself is just fine--you haven't found anything to put in it yet.
 #nudge for adder
 >addre
 You need to take care of all the adders.
@@ -128,10 +140,10 @@ Not just any castle. Castle Apcur.
 Not, like, swamp Apcur or hut Apcur. Castle Apcur.
 #nudge for start
 >statr
-[eat-pastry].
+The pastry is for eating, not for changing.
 #nudge for tart
 >tatr
-[not-singular-hp].
+Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 #nudge for pastry
 >pastyr
 You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed.
@@ -164,19 +176,19 @@ Your score has just gone up by one point
 >n
 Scope Copse
 
-==t4
+@nu
 #nudge for copse
 >copes
-[cop-sco].
+The copse and the scope are both fine as-is.
 #nudge for spec
 >spce
-[cop-sco].
+The copse and the scope are both fine as-is.
 #nudge for butler
 >butlre
 You need to deal with all the butlers. Not just one.
 #nudge for diner
 >dinre
-[plutry of diners]There's more than one diner blocking you.
+There's more than one diner blocking you.
 #nudge for yurt
 >yutr
 There's more than one yurt there.
@@ -191,19 +203,22 @@ Score in a scenario: 9 out of 50 total points in the current region, Towers. Low
 >eat tarts
 >xray butlers
 
-==t4
+@nu
+#renudge for yurts
+>yustr
+The copse and the scope are both fine as-is.
 #nudge for brownie
 >brownei
-[not-singular-hp].
+Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 #nudge for brownies
 >brownise
-[eat-pastry].
+The pastry is for eating, not for changing.
 #nudge for owers
 >owesr
-[eat-pastry].
+The pastry is for eating, not for changing.
 #nudge for bin
 >bni
-[eat-pastry].
+The pastry is for eating, not for changing.
 
 >subtler
 Your score has just gone up by one point
@@ -289,20 +304,20 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
 
-==t4
+@nu
 >e
 #nudge for unblest
 >unblets
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake. You might also want
 #nudge for casn
 >cans
-[nerd-a].
+Concentrate on the Nerd-Aid. In the dandier arid den.
 #nudge for nerd
 >nedr
-[nerd-a].
+Concentrate on the Nerd-Aid. In the dandier arid den.
 #nudge for aid
 >adi
-[nerd-a].
+Concentrate on the Nerd-Aid. In the dandier arid den.
 #nudge for wears
 >weasr
 You suppress a swear as the sales pitch wears on you.
@@ -314,10 +329,10 @@ They're not just bottles! They're bottles of NERD-AID!
 ==t!1,2
 >n
 
-==t4
+@nu
 #nudge for baldest
 >baldets
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for old
 >odl
 No, all the old ice.
@@ -338,19 +353,19 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >n
 
-==t4
+@nu
 #nudge for cinema
 >cineam
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for theater
 >theatre
 You don't need to go looking for screens to stare at right now. You have a world to save.
 #nudge for wait
 >wati
-[wait-see].
+The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
 #nudge for seer
 >sere
-[wait-see].
+The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
 #nudge for rampant
 >rampatn
 No, just an admirer, really.
@@ -368,13 +383,13 @@ There's more than one ingrate blocking you.
 Your score has just gone up by one point
 >w
 
-==t4
+@nu
 #nudge for finger
 >fingre
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for strudel
 >strudle
-[eat-pastry].
+The pastry is for eating, not for changing.
 #nudge for sled
 >slde
 Work on the whole sled rut.
@@ -393,19 +408,19 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >n
 
-==t4
+@nu
 #nudge for shaven
 >shavne
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for haven
 >havne
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for lone
 >loen
 It's not just any lone animal. It's a lone DUCK.
 #nudge for duck
 >dukc
-It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a LONE duck[end if].
+It's not just any duck. It's a LONE duck.
 #nudge for idtag
 >idtga
 ID tag: dig at it? Gad.
@@ -414,22 +429,22 @@ ID tag: dig at it? Gad.
 The lone duck looks around for something to do but can't find anything. Well, not here. And not like that.
 #nudge for ravages
 >ravagse
-[rav-chao].
+The ravages are chaotic enough. Changing them is a fight you'd lose.
 #nudge for ravage
 >ravaeg
-[rav-chao].
+The ravages are chaotic enough. Changing them is a fight you'd lose.
 
 ==t!1,2
 >s
 >e
 
-==t4
+@nu
 #nudge for shoals
 >shoasl
-[shoaly].
+That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 #nudge for shoal
 >shola
-[shoaly].
+That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 #nudge for atheist
 >atheits
 Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly.
@@ -451,44 +466,45 @@ Your score has just gone up by one point
 >himself
 Your score has just gone up by one point
 
-==t4
+@nu
 #nudge for lars
 >lasr
-[reed-name].
+No, Lars's full name. With Reed's Ale.
 #nudge for eede
 >eeed
-[reed-name].
+No, Lars's full name. With Reed's Ale.
 >gs
 #nudge for elsa
 >elas
-[reed-name].
+No, Lars's full name. With Reed's Ale.
 #nudge for erde
 >ered
-[reed-name].
+No, Lars's full name. With Reed's Ale.
 >gs
 #nudge for reeds
 >reesd
-[reed-ale].
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #nudge for reed
 >rede
-[reed-ale].
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #nudge for ale
 >ael
-[reed-ale].
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #nudge for reedale
 >reedael
-[reed-ale].
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #nudge for sere
 >seer
-[reed-ale].
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #nudge for deal
 >dela
-[reed-ale].
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
-==t4
+@nu
 #nudge for gradient
 >gradietn
-[rav-rej].
+This is a weird place, being at the crossroads, but better to get rid of the weeds.
+WRONG there are more
 #nudge for weed
 >wede
 Gumming up one weed wouldn't get the others.
@@ -497,19 +513,22 @@ Gumming up one weed wouldn't get the others.
 >sewed
 Your score has just gone up by one point
 
-==t4
+@nu
+#renudge for gradient
+>gradietn
+This is a weird place, being at the crossroads, but better to tackle a guardian.
 #nudge for save
 >saev
-[no-fril].
+The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
 #nudge for saver
 >savre
-[no-fril].
+The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
 #nudge for recorder
 >recordre
-[no-fril].
+The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
 #nudge for tape
 >taep
-[no-fril].
+The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
 #nudge for buttosn
 >buttons
 The raves saver's minimal capabilities are enough...just...
@@ -523,10 +542,10 @@ The raves saver has limited functionality, alas.
 >daggre
 You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
 
-==t4
+@nu
 #nudge for denim
 >denmi
-You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently.
+You scrape at the mended mini denim bits to see if there is any magic in dem. Well, not the way you thought, apparently.
 
 ==t!1,2
 >mined
@@ -534,19 +553,27 @@ Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 13 OVERALL.
 >e
 
-==t4
+@nu
 #nudge for scalier
 >scalire
-[eat-pastry].
+The pastry is for eating, not for changing.
 #nudge for eclair
 >eclari
-[not-singular-hp].
+Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 #nudge for liam
 >lima
-[grail-name].
+His full name, Liam Garn.
 #nudge for garn
 >ganr
-[grail-name].
+His full name, Liam Garn.
+
+@nu
+>gt gradient
+#renudge for gradient
+>gradinet
+This is a weird place, being at the crossroads, but better to mess around elsewhere
+>undo
+>undo
 
 ==t!1,2
 >marginal
@@ -559,10 +586,10 @@ Your score has just gone up by one point
 >drained
 Your score has just gone up by one point
 
-==t4
+@nu
 #nudge for native
 >natiev
-[plutry of natives]You'll need to deal with more than one native to make your way south.
+You'll need to deal with more than one native to make your way south.
 
 ==t!1,2
 >vainest
@@ -581,19 +608,19 @@ Your score has just gone up by one point
 Score in a scenario: 30 out of 50 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 50.
 >w
 
-==t4
+@nu
 #nudge for ego
 >eog
-[ego-dr].
+Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
 #nudge for drains
 >draisn
-[ego-dr]. Plus, if they were boring old drains, you could just step around them.
+Until you see the ego-drains themselves as organised, you probably won't see how to get past them. Plus, if they were boring old drains, you could just step around them.
 #nudge for egodrain
 >egodrani
-[ego-dr].
+Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
 #nudge for drain
 >drani
-[ego-dr]. Plus, if it was a boring old drain, you could just step around.
+Until you see the ego-drains themselves as organised, you probably won't see how to get past them. Plus, if it was a boring old drain, you could just step around.
 #nudge for organized
 >organizde
 Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
@@ -605,7 +632,7 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
 >e
 >s
 
-==t4
+@nu
 #nudge for riposte
 >riposet
 You may find it easier to deal with all the ripostes at once.
@@ -615,22 +642,22 @@ You may find it easier to deal with all the ripostes at once.
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 17 OVERALL.
 
-==t4
+@nu
 #nudge for lost
 >lots
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for lot
 >lto
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for gasfield
 >gasfiedl
-[gasgad].
+You can't change the gadflies. There are too many.
 #nudge for gadfly
 >gadfyl
-[gasgad].
+You can't change the gadflies. There are too many.
 #nudge for gadflie
 >gadflei
-[gasgad].
+You can't change the gadflies. There are too many.
 
 >gt garden
 >broken
@@ -638,47 +665,47 @@ Your score has just gone up by one point
 >resting
 Your score has just gone up by one point
 
-==t4
+@nu
 #nudge for geese
 >geees
 The geese are fine as they are. They're just there for scenery, and stuff.
 #nudge for gander
 >gandre
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for obscurest
 >obscurets
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for locked
 >lockde
-Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if].
+Nothing needs to be locked here, certainly not the gaol which already is.
 #nudge for gol
 >glo
-[if fissure is visible]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if].
+The gaol is too sturdy to defeated by a three-word combination. Or a four-word one.
 #nudge for gaol
 >galo
 The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer.
 #nudge for loggaol
 >loggalo
-Nah, you're pretty sure you're overthinking things now. You [if duck is returned]opened[else]may want to open[end if] the prison.
+Nah, you're pretty sure you're overthinking things now. You may want to open the prison.
 #nudge for jail
 >jali
 It's not just any jail--but prison ropins.
 #nudge for ropin
 >ropni
-[no-ropin].
+The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
 #nudge for ropins
 >ropisn
-[no-ropin].
+The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
 #nudge for yow
 >ywo
-[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up.
+He's a doctor! Have some respect when you try to scramble him up.
 #nudge for doctor
 >doctro
 That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
 
 >e
 
-==t4
+@nu
 #nudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell
@@ -686,7 +713,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--but he 
 >wordy
 Your score has just gone up by one point
 
-==t4
+@nu
 #renudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
@@ -696,51 +723,76 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 >push repeat
 >gt subsector
 >unlocked
+
+@nu
+#renudge for ropins
+>ropisn
+No need to mess with the ropins any more.
+#renudge for loggaol
+>loggalo
+Nah, you're pretty sure you're overthinking things now. You opened the prison.
+#renudge for gol
+>glo
+You opened the gaol, and there's not much else to do with it.
+#renudge for locked
+>lockde
+Nothing needs to be locked here, certainly not the gaol which you unlocked.
+#renudge for duck
+>dukc
+It's not just any duck. But it's served its purpose.
+
+
 >gt copse
 >w
 
-==t4
+@nu
 #nudge for roeut
 >roetu
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for sway
 >swya
 You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful
 #nudge for camp
 >capm
-[gosh-camp]!
+Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 #nudge for site
 >siet
-[gosh-camp]!
+Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 #nudge for campiest
 >campiets
-[gosh-camp]!
+Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 #nudge for repair
 >repari
-[rapier-mach].
+The machine is complicated enough. You probably just need to figure what to put in it.
 #nudge for machine
 >machien
-[rapier-mach].
+The machine is complicated enough. You probably just need to figure what to put in it.
 #nudge for shiny
 >shiyn
-[rapier-mach].
+The machine is complicated enough. You probably just need to figure what to put in it.
 #nudge for gizmo
 >gizom
-[giz-tex].
+It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
 #nudge for zomg
 >zogm
-[giz-tex].
+It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
 
 >put dagger in repair
+
+@nu
+#renudge for shiny
+>shiyn
+The machine is complicated enough. You already got something from it.
+
 >gt coastlines
 
-==t4
+@nu
 #nudge for actionless
 >actionless
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for coastline
 >coastlien
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for maturation
 >maturatino
 The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway
@@ -767,37 +819,37 @@ Staci looks at you curiously. You probably don't need to change her name or inte
 Staci looks at you curiously. You probably don't need to change her name or intelligence.
 >gs
 
-==t4
+@nu
 #nudge for solve
 >solev
-[eat-pastry].
+The pastry is for eating, not for changing.
 #nudge for loaves
 >loavse
-[eat-pastry].
+The pastry is for eating, not for changing.
 #nudge for loaf
 >lofa
-[not-singular-hp].
+Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 >s
 #nudge for strati
 >strait
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for could
 >coudl
-[could-cloud].
+You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form.
 #nudge for coulds
 >coulsd
-[could-cloud].
+You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form.
 >n
 >w
 #nudge for salted
 >saltde
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for delta
 >delat
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 >e
 
-==t4
+@nu
 #mistake test for coatings
 >coatings
 No, Scot Agin doesn't need to change like THAT.
@@ -807,6 +859,13 @@ No, Scot Agin doesn't need to change like THAT.
 Your score has just gone up by one point
 >ask agnostic about doctor yow
 
+@nu
+>peraly
+#renudge for save
+The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
+>saev
+The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
+
 ==t!1,2
 >pearly
 Your score has just gone up by one point
@@ -815,7 +874,10 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 18 OVERALL.
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 19 OVERALL.
 
-==t4
+@nu
+#renudge for save
+>saev
+The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
 #nudge for tentative
 >tentatiev
 Scot is fully attentive. Don't ruin a good thing!
@@ -823,7 +885,7 @@ Scot is fully attentive. Don't ruin a good thing!
 >rowdy
 Your score has just gone up by one point
 
-==t4
+@nu
 #renudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions
@@ -831,7 +893,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 >gt coastlines
 >give gizmo to agnostic
 
-==t4
+@nu
 >gonear rawest waters
 #nudge for waster
 >wastre
@@ -867,20 +929,21 @@ Hmm. Concentrate on a shore--northern or eastern--not a direction.
 >undo
 #nudge for southwest
 >southwets
-[diag-dir-rej].
+This game doesn't require you to mess with diagonal directions, so maybe you should consider the other shores.
 >undo
 >undo
 
-==t4
+@nu
 #nudge for bot
 >bto
-[fix-boat-parts].
+Hmm. It might be better to fix parts of the boat--the turbos and blaster.
 #nudge for baot
 >bato
-[fix-boat-parts].
+Hmm. It might be better to fix parts of the boat--the turbos and blaster.
 #nudge for boatbot
 >boatbto
-[fix-boat-parts].
+Hmm. It might be better to fix parts of the boat--the turbos and blaster.
+WRONG check out fixing other boat parts
 #nudge for wire
 >wier
 The wires are okay. They're just organized WEIRDER.
@@ -889,7 +952,7 @@ The wires are okay. They're just organized WEIRDER.
 The wires are okay. They're just organized WEIRDER.
 #nudge for turbo
 >turob
-You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos.
+You need to deal with both turbos.
 
 ==t1,2
 >robust
@@ -922,7 +985,7 @@ Your score has just gone up by one point
 >robust
 Your score has just gone up by one point
 
-==t4
+@nu
 #renudge for turbo
 >turob
 You already dealt with both turbos.
@@ -934,16 +997,18 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 20 OVERALL.
 
 >enter boat
 
-==t4
+@nu
+#renudge for bland
+You're beyond the badlands now.
 #nudge for mislit
 >mislti
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
 #nudge for clays
 >clasy
-[clay-pal].
+Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead.
 #nudge for caly
 >cayl
-[clay-pal].
+Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead.
 #nudge for pester
 >pestre
 The serpent doesn't just pester, it's pester'n.
@@ -964,7 +1029,7 @@ Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
 >score
 
-==t4
+@nu
 #nudge for occurs
 >occusr
 The succor crocus just is, and it doesn't need a new way to be. Perhaps it would make a nice gift.
@@ -975,13 +1040,13 @@ The serpent is taken care of.
 ==!1,2
 >in
 
-==t4
+@nu
 #nudge for mesprise
 >mespries
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
 #nudge for emprise
 >empries
-[towersloc].
+It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
 
 ==!1,2
 >triste
@@ -994,65 +1059,69 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 24 OVERALL.
 
 >misses
 
-==t4
+@nu
 #nudge for accurst
 >accurts
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for leap
 >lepa
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for clear
 >clera
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for catsup
 >catspu
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for pest
 >pets
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for accrual
 >accrula
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for cactus
 >cactsu
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for pealr
 >pearl
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for capsule
 >capsuel
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for cart
 >catr
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for accu
 >acuc
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for plaster
 >plastre
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for last
 >lats
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for race
 >raec
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for cup
 >cpu
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for talc
 >tacl
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for aps
 >asp
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for cure
 >cuer
-[focus-castle].
+Nah, that's just garbage. It's the curst palace you need to focus on.
 
 >spectacular
 Your score has just gone up by one point
 Strip of Profits
+
+#many different possibilities
+>flowerpot
+WRONG
 
 >score
 Towers (50/50)

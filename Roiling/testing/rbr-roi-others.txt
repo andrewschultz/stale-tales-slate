@@ -5,6 +5,7 @@
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
 files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt
+~	nu	t2
 
 ## *FILE
 

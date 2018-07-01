@@ -2,6 +2,7 @@
 #--this should be done for all RBR files and not just stores
 
 files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt
+~	nu	t2
 
 ## *FILE
 
