@@ -1,0 +1,164 @@
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just stores
+
+files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* stores-thru
+
+==t2
+#spechelp for store b
+>sorbte
+The smell from Store B becomes fruitier and more delicious.
+
+==t!1
+>sorbet
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+
+==t2
+#done rejects for store b
+>sorbte
+You're a hero and all, but only one sample per day. Just think of the field day Elvira'd have if she found out!
+
+==t2
+#spechelp for store n
+>nestro
+"Dude, you like must be close!" you hear from Store N.
+
+==t!1
+>nestor
+Your score has just gone up by one point
+
+==t2
+#donereject for store n
+>nestro
+You rescued him, and that's enough.
+
+==t2
+#spechelp for store k
+>tokesr
+An odd sweet smell from Store K, for a second.
+
+==t!1
+>tokers
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+
+==t2
+#donereject for store k
+>tokesr
+They are who they are. You should maybe try to get their friend back.
+
+==t!1
+>enter steaming
+#spechelp for lecturer
+
+==t2
+>outsied
+The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
+
+==t!1
+>outside
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+
+==t2
+#spechelp for store w
+>towesr
+Store W seems to push up from the ground and go narrower for a second.
+
+>towers
+Your score has just gone up by one point
+
+==t2
+#donereject for store w
+>towesr
+You've got an entry. No need to seal it up.
+
+==t2
+#spechelp for store u
+>routse
+Store U seems to light up with lines and curves for a second, but no, that's not quite right...
+
+>routes
+Your score has just gone up by one point
+
+==t2
+#done rejects for store u
+>routse
+You've got an entry. No need to seal it up.
+
+
+==t2
+#spechelp for store v
+>trovse
+A single paper currency flutters off from Store V, lost forever.
+
+>troves
+Your score has just gone up by one point
+
+==t2
+#done rejects for store v
+>trovse
+You've got an entry. No need to seal it up.
+
+
+==t2
+#spechelp for store y
+>oystre
+You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
+
+>oyster
+Your score has just gone up by one point
+
+==t2
+#donereject for store y
+>oystre
+You've got an entry. No need to seal it up.
+
+==t2
+#spechelp for store h
+>othesr
+Store H looks totally different for a second.
+
+>others
+Your score has just gone up by one point
+
+==t2
+#done rejects for store h
+>othesr
+You've got an entry. No need to seal it up.
+
+==t2
+#spechelp for store p
+>presot
+You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+
+>presto
+Your score has just gone up by one point
+
+==t2
+#done rejects for store p
+>presot
+You've got an entry. No need to seal it up.
+
+==t2
+#spechelp for store t
+>ottesr
+You hear various unrecognizable animal noises.
+
+>otters
+Your score has just gone up by one point
+
+==t2
+#done rejects for store t
+>ottesr
+You've got an entry. No need to seal it up.
+

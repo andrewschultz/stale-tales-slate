@@ -1,0 +1,222 @@
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just means manse
+
+files=reg-roi2-means-manse-max.txt,reg-roi2-means-manse-min.txt,reg-roi2-means-manse-nudmis.txt
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* means-manse-thru
+
+>think
+>x chair
+>x shelf
+
+>open door
+
+>1
+>5
+
+==t2
+#spechelp for t-b
+>basemetn
+The ten beams creak slightly. Maybe not all of them. But a few.
+
+>basement
+Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Your score has just gone up by two points
+
+==t2
+#done rejects for t-b
+>basemetn
+You probably just want to go DOWN to the basement.
+
+==t2
+#spechelp for palm
+>lapm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+
+>lamp
+Your score has just gone up by one point
+
+==t2
+#done rejects for palm
+>lapm
+If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+
+==t2
+#spechelp for tables
+>stabel
+The tables seem to shift a bit.
+
+==t!1
+>stable
+DEBUG INFO: Adding a min point
+
+==t2
+#done rejects for tables
+>stabel
+You probably just want to go IN to the stable.
+
+==t2
+#spechelp for niche
+>chimnye
+Hm, no, the niche--my niche--won't unfold that way.
+
+==t!1
+>chimney
+DEBUG INFO: Adding a min point
+
+==t2
+#done rejects for niche
+>chimnye
+You probably just want to go UP the chimney.
+
+==t2
+#spechelp for latches
+>satchle
+You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
+
+==t2
+#spechelp for giant pin
+>paintign
+The pin wobbles.
+
+==t!1
+>painting
+DEBUG INFO: Adding a min point
+
+==t2
+#done rejects for giant pin
+>paintign
+The painting really goes better with the study than the giant pin.
+
+
+>satchel
+Your score has just gone up
+==t2
+all the secrets here
+
+==t2
+#done rejects for latches
+>satchle
+You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
+
+==t!1
+>in
+
+==t2
+#spechelp for sitar
+>stari
+You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
+
+==t!1
+>stair
+DEBUG INFO: Adding a min point
+
+==t2
+#done rejects for sitar
+>stari
+You don't need to do any more with the stair.
+
+==t!1
+>out
+>u
+
+==t2
+#spechelp for pram
+>rapm
+The pram creaks back and forth slightly.
+
+==t!1
+>ramp
+DEBUG INFO: Adding a min point
+
+#done rejects for pram
+>rapm
+The ramp is useful now. Best keep it.
+
+>d
+Largely All-Grey Gallery
+
+==t2
+#spechelp for bins
+>snbi
+WRONG
+
+==t!1
+>snib
+DEBUG INFO: Adding a min point
+
+==t2
+#done rejects for bins
+>snbi
+WRONG
+
+>x settler
+>in
+
+==t2
+#spechelp for rifle
+>flire
+Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
+
+>flier
+by one point
+
+==t2
+>flire
+Better to pump Elmo for information.
+
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>3
+Carven Cavern
+
+==t2
+#spechelp for plates
+>stapel
+The plates shine slightly and rattle.
+
+>staple
+Your score has just gone up by one point
+
+==t2
+#done rejects for plates
+>stapel
+Those plates were a mess, and now they're a tidy staple. It's better that way.
+
+==t2
+#spechelp for plaster
+>staplre
+The plaster crackles and shines slightly.
+
+>stapler
+Your score has just gone up by one point
+
+==t2
+#done rejects for plaster
+>staplre
+The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
