@@ -10,44 +10,55 @@ import i7
 import sys
 
 debug = False
+ignore_nudmis = False
+err_max = 0
+
+region_wildcard = ""
 
 def usage():
     print("1/2 = sa or roiling only")
     print("[asd]* = aftertexts, spechelp, donrejects.")
+    print("r= = region wildcard")
+    print("e# = maximum errors")
     exit()
 
-def find_in_glob(spec_stuff, pattern, b):
+def no_of_for(x):
+    return re.sub(".* (for|of) ", "", x.strip())
+
+def find_in_glob(spec_stuff, pattern, b, region):
     got_spec_yet = defaultdict(str)
     errs = 0
     for x in glob.glob(pattern):
         with open(x) as file:
             print("Checking", x)
             for (line_count, line) in enumerate(file, 1):
-                if line.startswith('#' + b + ' of'):
-                    print('WARNING you need', b, 'for, not', b, 'of at', x, 'line', line_count)
+                if line.startswith('#' + b + ' of '):
+                    print('PEDANTIC WARNING you want', b, 'FOR, not', b, 'OF, to test', no_of_for(line), 'at', x, 'line', line_count)
                     continue
                 if line.startswith('#' + b + ' for '):
                     l = re.sub("#{:s} for ".format(b), "", line.strip().lower())
                     if l not in spec_stuff.keys():
-                        print(l, "is invalid", b, "in file", x, "at line", line_count, "for pattern", pattern)
-                        errs += 1
+                        if not region or region in x:
+                            if err_max == 0 or errs <= err_max: print(l, "is invalid", b, "in file", x, "at line", line_count, "for pattern", pattern)
+                            errs += 1
                     elif l in got_spec_yet.keys():
-                        print(l, "is duplicated", b, "in file", x, "at line", line_count, "for pattern", pattern, "duplicating", got_spec_yet[l])
-                        errs += 1
+                        if not region or region in x:
+                            if err_max == 0 or errs <= err_max: print(l, "is duplicated", b, "in file", x, "at line", line_count, "for pattern", pattern, "duplicating", got_spec_yet[l])
+                            errs += 1
                     else:
                         got_spec_yet[l] = "{:s} line {:d}".format(x, line_count)
                         # print(l, got_spec_yet[l])
     for q in list(set(spec_stuff.keys()) | set(got_spec_yet.keys())):
         if q not in got_spec_yet.keys():
             errs += 1
-            print(pattern, ':', q, "in table of", b, "but not in", pattern)
+            if err_max == 0 or errs <= err_max: print(pattern, ':', q, "in table of", b, "but not in", pattern)
         if q not in spec_stuff.keys():
             errs += 1
-            print(pattern, ':', q, "in", pattern, "but not in table of", b)
+            if err_max == 0 or errs <= err_max: print(pattern, ':', q, "in", pattern, "but not in table of", b)
     if errs: print(errs, "errors found for pattern", pattern)
     else: print("No errors found for pattern", pattern)
 
-def spec_check(a, b):
+def spec_check(a, b, region=""):
     needs_spec_test = defaultdict(int)
     in_spechelp = False
     table_to_find = 'table of ' + b
@@ -64,8 +75,10 @@ def spec_check(a, b):
             if ary[0] in needs_spec_test.keys(): sys.exit("STORY.NI duplication ({:s}): {:s} already defined at line {:d}, redefined at line {:d}.".format(b, ary[0], needs_spec_test[ary[0]], line_count))
             needs_spec_test[ary[0]] = line_count
             if debug: print(ary[0])
-    find_in_glob(needs_spec_test, "rbr-*", b)
-    find_in_glob(needs_spec_test, "*-nudmis*", b)
+    rbr_find = "rbr-*"
+    reg_find = "*-nudmis*"
+    find_in_glob(needs_spec_test, rbr_find, b, region)
+    if not ignore_nudmis: find_in_glob(needs_spec_test, reg_find, b, region)
 
 projs = ['sa', 'roi']
 tabs = [ 'aftertexts', 'spechelp', 'done rejects' ]
@@ -75,15 +88,18 @@ count = 1
 while count < len(sys.argv):
     arg = sys.argv[count]
     if arg == '1' or arg == 'sa': projs = ['sa']
-    elif arg == '2' or arg == 'roi' or arg = 'ro' or arg == 'r': projs = ['roi']
-    elif re.search("^[asd]+", arg):
+    elif arg == '2' or arg == 'roi' or arg == 'ro' or arg == 'r': projs = ['roi']
+    elif re.search("^[asdi]+", arg):
         tabs = []
         if 'a' in arg: tabs.append('aftertexts')
         if 's' in arg: tabs.append('spechelp')
         if 'd' in arg: tabs.append('done rejects')
+        if 'i' in arg: ignore_nudmis = True
+    elif arg.lower()[:2] == 'r=': region_wildcard = arg[2:]
+    elif arg.lower()[0] == 'e': err_max = int(arg[1:])
     else: usage()
     count += 1
 
 for q in projs:
     for t in tabs:
-        spec_check(q, t)
+        spec_check(q, t, region_wildcard)
