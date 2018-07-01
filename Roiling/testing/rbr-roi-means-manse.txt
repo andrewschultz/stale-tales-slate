@@ -2,6 +2,7 @@
 #--this should be done for all RBR files and not just means manse
 
 files=reg-roi2-means-manse-max.txt,reg-roi2-means-manse-min.txt,reg-roi2-means-manse-nudmis.txt
+~	nu	t2
 
 ## *FILE
 
@@ -50,7 +51,7 @@ You probably just want to go DOWN to the basement.
 >d
 #spechelp for stria
 >stari
-'Rats, I...' you think as you see red. That's not quite it.
+"Rats, I..." you think as you see red. That's not quite it.
 >undo
 >undo
 

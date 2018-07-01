@@ -1,4 +1,6 @@
 files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.txt,reg-roi2-troves-nudmis.txt
+~	nudges	t3
+~	nu	t3
 
 ## *FILE
 
@@ -18,7 +20,7 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 >l
 Loather Rathole
 
-==t3
+@nu
 #nudge for hurt
 >hutr
 No way you could change even one hurt thru on your own. You just need to get by.
@@ -68,20 +70,52 @@ Negative thinking! You don't need to focus on the cold but how to get rid of it.
 >score
 Score in a scenario: 0 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
 
+@nu
+#spechelp for pa egg pea
+>gaep
+You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
+
 ==t0,3
 >gape
 Your score has just gone up by one point
+Adding a min point
 >score
 Score in a scenario: 1 out of 24 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 24.
 
+@nu
+#done rejects for pa egg pea
+>gaep
+You probably did what you could. Or not-did.
+
+@nu
+#spechelp for cold
+>haet
+You think you feel less cold for a second. But you need to make it last.
+
 >hate
 Your score has just gone up by one point
+
+@nu
+#done rejects for cold
+>haet
+Don't need to overheat, or overhate.
+
+@nu
+#spechelp for heat
+>caer
+Meh. Maybe you're closer than you think to motivation. How to make that matter?
+
 >care
 Your score has just gone up by one point
 
+@nu
+#done rejects for heat
+>caer
+Caring and all its offshoots only go so far.
+
 Bustle Sublet
 
-==t3
+@nu
 #nudge for bustle
 >subelt
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -110,7 +144,7 @@ You can't make the sidewalk crumble any more, and you probably don't want to
 >weska
 You can't make the sidewalk crumble any more, and you probably don't want to
 
-==t3
+@nu
 #nudge for sob
 >sbo
 No, you'll want to zone out the whole verbose distraction.
@@ -118,11 +152,15 @@ No, you'll want to zone out the whole verbose distraction.
 >vere
 No, you'll want to zone out the whole verbose distraction.
 
+#spechelp for sob ever verbose
+>obserev
+WRONG
+
 >observe
 Your score has just gone up by one point
 
-==t3
-#nudge for stop
+@nu
+#spechelp for stop post
 >stpo
 You're not seeing the right way to see the stop post, here.
 #nudge for observe
@@ -134,10 +172,16 @@ Your score has just gone up by one point
 
 Boarded Roadbed
 
-==t2
+@nu
+#spechelp for what-a-bee
+>belieev
+The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
+#spechelp for bee's head
+>reasno
+The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you.
 #nudge for roadbed
 >roadbde
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Boarded Roadbed]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for live
 >liev
 The bee's description isn't important. It's how you see the bee that matters.
@@ -156,7 +200,7 @@ Score in a scenario: 7 out of 24 total points in the current region, Troves. Low
 >undo
 >undo
 
-==t3
+@nu
 #renudge for bee
 >bee
 But it's not just any bee. It's a WRONG
@@ -170,6 +214,18 @@ Your score has just gone up by one point
 >reason
 Your score has just gone up by one point
 
+`nu
+#done rejects for what-a-bee
+>belieev
+The bee's already taken enough of your in-my-heartitude.
+#done rejects for bee's head
+>reasno
+Too much fiddling with reason is unreasonable.
+#spechelp for cellar door
+>reclla
+It's...hmm...you remember all the clues, but what order to place them in, now.
+
+
 ==t1
 >derive
 ==!
@@ -177,10 +233,12 @@ Your score has just gone up by one point
 
 Drain Nadir
 
-==t3
+@nu
+>reclla
+That's not something you can say, do or see here.
 #nudge for nadir
 >nadri
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start drain nadir]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for pictuer
 >picture
 It's not just any old picture. It's of a sad pier.
@@ -199,10 +257,20 @@ Score in a scenario: 6 out of 24 total points in the current region, Troves. Low
 ==!
 Score in a scenario: 8 out of 24 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 24.
 
+@nu
+#spechelp for diapers
+>despari
+Staring again at the diapers, you are depressed you couldn't even get being depressed right.
+
 >despair
 Your score has just gone up by one point
 
-==t3
+@nu
+#done rejects for diapers
+>despari
+Don't twist yourself into knots to/from REAL despair.
+
+@nu
 #nudge for song
 >sogn
 It's the song name--I'd Cede.
@@ -210,19 +278,29 @@ It's the song name--I'd Cede.
 >eddei
 It's the song name--I'd Cede.
 
+@nu
+#spechelp for eddie's song
+>decied
+You try to groove to Eddie's song, but that's not quite it.
+
 >decide
 Your score has just gone up by one point
 Boredom Bedroon
 
-==t3
+@nu
 #nudge for bedroom
 >bedromo
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start boredom bedroom]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 =t3
 #nudge for glare
 >glaer
 You stare into space some more but get distracted.??
+
+@nu
+#spechelp for large regal lager
+>glaer
+No...that is not quite the way to fight the temptation of the wicked brew.
 
 ==t0,3
 >glare
@@ -230,19 +308,39 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 24 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 24.
 
+@nu
+#done rejects of large regal lager
+>glaer
+You stare into space some more but get distracted.
+
+@nu
+#spechelp for lobster
+>bolstre
+That's not quite the way to deserve that lobster.
+
 ==t!2
 >bolster
 Your score has just gone up by one point
+
+@nu
+#spechelp for me arts
+>mastre
+That's not quite the way to focus on the stream.
 
 ==t!1
 >master
 Your score has just gone up by one point
 
+@nu
+#spechelp for ltb
+>dela
+You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
+
 >deal
 Your score has just gone up by one point
 Browse Bowers
 
-==t3
+@nu
 #nudge for eder
 >edre
 It's Si Reed's full name.
@@ -274,11 +372,17 @@ Score in a scenario: 10 out of 24 total points in the current region, Troves. Lo
 ==!
 Score in a scenario: 14 out of 24 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 24.
 
+
+@nu
+#spechelp for si reed
+>desier
+Your longing increases...but not enough.
+
 >desire
 Your score has just gone up by one point
 Econ-Cone
 
-==t3
+@nu
 #nudge for cone
 >coen
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
@@ -304,9 +408,22 @@ If you brought down the godlings' lodgings like that somehow, mass panic would e
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
 
+@nu
+#spechelp for praise spirea
+>aspier
+That's not quite the way to look forward to praise. But it may be a start.
+
 ==t!2
 >aspire
 Your score has just gone up by one point
+
+@nu
+#renudge of praise spirea
+>aspier
+You're wanting praise too much, now.
+#spechelp for rivets
+>striev
+Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
 
 ==t!1
 >strive
@@ -315,22 +432,36 @@ Your score has just gone up by one point
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
-==t3
+@nu
+#done reject for rivets
+>striev
+You're striving too hard, now.
+
+@nu
 #nudge for label
 >lable
 It's not the label but what's on it.
 #nudge for bottle
 >bottel
-It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if].
+It's not just any bottle, but a bottle of Pernod.
+>x pernod
+#renudge for bottle
+>bottel
+It's not just any bottle, but a bottle of N-E-Prod.
+
+@nu
+#spechelp for pernod
+>pondre
+The bottle of Pernod seems to rattle and spin slightly.
 
 >ponder
 Your score has just gone up by one point
 Upscale Capsule
 
-==t3
+@nu
 #nudge for upscale
 >upscael
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start upscale capsule]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for office
 >offiec
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -340,10 +471,15 @@ Score in a scenario: 13 out of 24 total points in the current region, Troves. Lo
 ==!
 Score in a scenario: 18 out of 24 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 24.
 
+@nu
+#spechelp for red vees
+>deserev
+The red vees seem like they should link together somehow, but you don't have things right.
+
 >deserve
 Your score has just gone up by one point
 
-==t3
+@nu
 #nudge for fief
 >fife
 You should never need to riff on part of a location name.
@@ -375,7 +511,7 @@ The checklist was built to be especially stable and singular of purpose. So, not
 >likeness
 It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
 
-==t3
+@nu
 #mistake test for ambler
 >ambler
 You see red slightly as the marble Blamer Balmer fails to walk away.
@@ -388,15 +524,32 @@ Your score has just gone up by one point
 >resist
 Your score has just gone up by one point
 
+@nu
+
+@nu
+#spechelp for salt
+>lats
+You don't quite draw inspiration from the shaker, but there can't be that many alts.
+
 >last
 Your score has just gone up by one point
+
+@nu
+#done rejects for salt
+>lats
+You've lasted long enough. There are new things to look at, now.
+
+@nu
+#spechelp for divorces
+>divorcse
+DIVORCES suddenly seems more alluring and more rubbish at once.
 
 >discover
 Your score has just gone up by one point
 Score in a scenario: 23 out of 24 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 24.
 
-==t3
-#nudge for divorces
+@nu
+#done rejects for divorces
 >divorcse
 No! Not another second thinking about that rubbish.
 

@@ -563,7 +563,7 @@ Ripe Pier
 ==t2
 #nudge for pier
 >pire
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [start ripe pier]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for mist
 >mits
 Nothing happens. It's DA mist, after all.
