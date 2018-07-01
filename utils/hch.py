@@ -12,6 +12,7 @@ import sys
 debug = False
 ignore_nudmis = False
 err_max = 0
+quiet = 0
 
 region_wildcard = ""
 
@@ -20,6 +21,7 @@ def usage():
     print("[asd]* = aftertexts, spechelp, donrejects.")
     print("r= = region wildcard")
     print("e# = maximum errors")
+    print("q = quiet")
     exit()
 
 def no_of_for(x):
@@ -28,9 +30,10 @@ def no_of_for(x):
 def find_in_glob(spec_stuff, pattern, b, region):
     got_spec_yet = defaultdict(str)
     errs = 0
+    err_string = 'donereject' if pattern == 'done rejects' else ''
     for x in glob.glob(pattern):
         with open(x) as file:
-            print("Checking", x)
+            if not quiet: print("Checking", x)
             for (line_count, line) in enumerate(file, 1):
                 if line.startswith('#' + b + ' of '):
                     print('PEDANTIC WARNING you want', b, 'FOR, not', b, 'OF, to test', no_of_for(line), 'at', x, 'line', line_count)
@@ -48,13 +51,14 @@ def find_in_glob(spec_stuff, pattern, b, region):
                     else:
                         got_spec_yet[l] = "{:s} line {:d}".format(x, line_count)
                         # print(l, got_spec_yet[l])
-    for q in list(set(spec_stuff.keys()) | set(got_spec_yet.keys())):
+                elif err_string and err_string in line: print("Common typo flagged for", pattern, "at line", line_count, line.strip())
+    for q in sorted(list(set(spec_stuff.keys()) | set(got_spec_yet.keys())), key = lambda x: spec_stuff[x] if x in spec_stuff.keys() else -1):
         if q not in got_spec_yet.keys():
             errs += 1
-            if err_max == 0 or errs <= err_max: print(pattern, ':', q, "in table of", b, "but not in", pattern)
+            if err_max == 0 or errs <= err_max: print(pattern, ':', q, "in table of", b, "but not in", pattern, spec_stuff[q])
         if q not in spec_stuff.keys():
             errs += 1
-            if err_max == 0 or errs <= err_max: print(pattern, ':', q, "in", pattern, "but not in table of", b)
+            if err_max == 0 or errs <= err_max: print(pattern, ':', q, "in", pattern, "but not in table of", b, spec_stuff[q])
     if errs: print(errs, "errors found for pattern", pattern)
     else: print("No errors found for pattern", pattern)
 
@@ -89,6 +93,8 @@ while count < len(sys.argv):
     arg = sys.argv[count]
     if arg == '1' or arg == 'sa': projs = ['sa']
     elif arg == '2' or arg == 'roi' or arg == 'ro' or arg == 'r': projs = ['roi']
+    elif arg == 'q': quiet = True
+    elif arg == 'nq' or arg == 'qb': quiet = False
     elif re.search("^[asdi]+", arg):
         tabs = []
         if 'a' in arg: tabs.append('aftertexts')
