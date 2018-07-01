@@ -22,6 +22,19 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >5
 
 ==t2
+#spechelp for palm
+>lapm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+
+>lamp
+Your score has just gone up by one point
+
+==t2
+#done rejects for palm
+>lapm
+If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+
+==t2
 #spechelp for t-b
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
@@ -34,19 +47,19 @@ Your score has just gone up by two points
 #done rejects for t-b
 >basemetn
 You probably just want to go DOWN to the basement.
+>d
+#spechelp for stria
+>stari
+'Rats, I...' you think as you see red. That's not quite it.
+>undo
+>undo
 
-==t2
-#spechelp for palm
->lapm
-You think you feel the palm shake a bit, but nothing terribly magical happens.
-
->lamp
-Your score has just gone up by one point
-
-==t2
-#done rejects for palm
->lapm
-If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+==t!1,2
+>d
+>stair
+by one point
+>undo
+>undo
 
 ==t2
 #spechelp for tables
@@ -140,22 +153,52 @@ DEBUG INFO: Adding a min point
 >rapm
 The ramp is useful now. Best keep it.
 
+==t2
+#spechelp for pavement
+>event mpa
+>event map
+WRONG
+#spechelp for event map
+>pavemetn
+WRONG
+#spechelp for crabgrass
+>brass crga
+>brass crag
+WRONG
+#spechelp for brass crag
+>crabgrssa
+WRONG
+#spechelp for platform
+>farm plto
+>farm plot
+WRONG
+#spechelp for farm plot
+>platfomr
+WRONG
+#spechelp for pedestal
+>steel pda
+>steel pad
+WRONG
+#spechelp for steel pad
+>pedestla
+WRONG
+
 >d
 Largely All-Grey Gallery
 
 ==t2
-#spechelp for bins
+#spechelp for ISBN bins
 >snbi
-WRONG
+The ISBN bins creak slightly.
 
 ==t!1
 >snib
 DEBUG INFO: Adding a min point
 
 ==t2
-#done rejects for bins
+#done rejects for ISBN bins
 >snbi
-WRONG
+The ISBN bins are secure. Best not tinker.
 
 >x settler
 >in

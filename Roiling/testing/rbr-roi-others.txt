@@ -571,6 +571,7 @@ The design is sort of glommed onto the coins. So you should figure what to do, t
 >desigsn
 The design doesn't need changing. It's what the design's on.
 
+==t2
 #nudge for plant
 >pantl
 You may want to listen to what the plant has to say, or what it makes you say.

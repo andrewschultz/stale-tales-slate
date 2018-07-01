@@ -134,6 +134,7 @@ Your score has just gone up by one point
 
 Boarded Roadbed
 
+==t2
 #nudge for roadbed
 >roadbde
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Boarded Roadbed]
@@ -241,7 +242,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Browse Bowers
 
-===t3
+==t3
 #nudge for eder
 >edre
 It's Si Reed's full name.
@@ -292,16 +293,16 @@ No sense changing them. You must change yourself.
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
 #nudge for skyline
 >skylien
-You don't want to mess with the skyline. You want to get in the godlings['] lodgings!
+You don't want to mess with the skyline. You want to get in the godlings' lodgings!
 #nudge for godling
 >godlign
-If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow!
+If you brought down the godlings' lodgings like that somehow, mass panic would ensue. You need to enter somehow!
 #nudge for godlings
 >godlinsg
-If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow!
+If you brought down the godlings' lodgings like that somehow, mass panic would ensue. You need to enter somehow!
 #nudge for statue
 >stateu
-The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if].
+The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
 
 ==t!2
 >aspire
@@ -310,6 +311,9 @@ Your score has just gone up by one point
 ==t!1
 >strive
 Your score has just gone up by one point
+#renudge for statue
+>stateu
+The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
 ==t3
 #nudge for label

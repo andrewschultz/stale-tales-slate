@@ -1,5 +1,6 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just routes
+#--rbr.py v to verify nothing slipped
 
 files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt
 
@@ -95,12 +96,22 @@ Trying to change the current region you're in would be risky, or useless, or may
 >atsin
 The church's name is not as important as its mission.
 
-==t0
+==t2
+#spechelp for worst ad
+>towarsd
+The ad seems slightly nearer, for a moment.
+
+==t!1
 >towards
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 1 out of 21 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+
+==t2
+#spechelp for scripture picturers
+>insied
+You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 
 >inside
 Your score has just gone up by one point
@@ -194,6 +205,11 @@ The words themselves do nothing. You found the way in.
 >ins
 The words themselves do nothing. You found the way in.
 
+==t2
+#spechelp for adsorbing signboard
+>pats
+You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
+
 >past
 Your score has just gone up by one point
 
@@ -212,11 +228,9 @@ The whole seed pit.
 #nudge for putcries
 >picturse
 The pictures aren't here, and they're not what you need to deal with, anyway.
-
 #nudge for pta
 >tpa
 You don't need to do anything with Pat, but maybe you can get by him to that seed pit.
-
 #nudge for carvings
 >cravinsg
 It's not the carvings that need changing.
@@ -226,9 +240,22 @@ It's not the carvings that need changing.
 It's not the carvings that need changing.
 !You got
 
+==t2
+#spechelp for seed pit
+>despiet
+The seed pit seems to bubble slightly.
+
 >despite
 Your score has just gone up by one point
 
+#done rejects for seed pit
+>despiet
+That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+
+>despite
+Your score has just gone up by one point
+
+==t2
 #renudge for carvings
 >cravinsg
 It's not the carvings that need changing. You got the mushrooms from the seed pit, and that's what's important
@@ -254,12 +281,17 @@ Brother Horbert will do his magic on the reagents at the right time.
 ##nudge for reagent
 >reagetn
 Brother Horbert will do his magic on the reagents at the right time.
-
 #renudge for pta
 >tpa
 You don't need to do anything with Pat, especially now you got the mushrooms.
 
 >out
+
+==t2
+#spechelp for lairage regalia
+>acrsso
+You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
+
 >across
 Your score has just gone up by one point
 
@@ -285,15 +317,30 @@ Brother Horbert will work his magic with that.
 >ocras
 You don't need to do anything with Oscar, but maybe you can sneak the pipe soot away.
 
+==t2
+#spechelp for pipe soot
+>opposiet
+The soot smells a bit stronger than before for a moment.
+
 >opposite
 Your score has just gone up by one point
 
 ==t2
-#nudge for pipesoot
+#donereject for pipe soot
+#not a nudj for pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
 
 >out
+
+#done rejects for lairage regalia
+>acrsso
+WRONG
+#done rejects for adsorbing signboard
+>pats
+WRONG
+#done rejects for scripture picturers
+WRONG
 
 ==t2
 #dupnudge for orcas
@@ -310,6 +357,19 @@ The bench is too sturdy. You can't do anything with it, but you may be able to d
 Perhaps it's better to focus on the proper names instead. Simpler, too.
 
 
+==t2
+#spechelp for bench
+>againts
+You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should.
+
+>against
+Your score has just gone up by one point
+
+==t2
+#donerejects for bench
+>againts
+You leaned on the bench right. Time to get on it.
+
 >against
 Your score has just gone up by one point
 
@@ -318,7 +378,18 @@ Your score has just gone up by one point
 >tiraed
 There's more than one tirade
 
+==t2
+#spechelp for bench-end
+>astried
+Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
+
 >astride
+Your score has just gone up by one point
+
+==t2
+#donereject for bench-end
+>astried
+You got on the bench right. Time to start ducking.
 
 ==t2
 #dupnudge for stride
@@ -328,8 +399,18 @@ You've sort of dealt with the tirades, but there's still more than one, and you 
 >eblows
 Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?
 
+==t2
+#spechelp for giant's elbow
+>belwo
+You seem like you should be able to avoid the elbow, but you may need to mix things up a bit.
+
 >below
 Your score has just gone up by one point
+
+==t2
+#done rejects for giant's elbow
+>belwo
+You don't need to avoid the giant's elbow any more.
 
 ==t2
 #nudge for giatn
@@ -343,10 +424,18 @@ The giant is too old and set in its ways. You may just need to listen to him fro
 >groucyh
 The giant is too old and set in its ways. You may just need to listen to him from one more angle.
 
+==t2
+#spechelp for nuder
+>undre
+The pages of Rude 'N Nuder flutter a bit.
+
 >under
 Your score has just gone up by one point
 
 ==t2
+#done rejects for nuder
+>undre
+You don't need to do anything fancy with the runed book.
 #nudge for rude
 >urde
 That's not quite the book's whole title.
@@ -369,6 +458,12 @@ REGION MAX DECREASED BY 1, 1 OVERALL
 DEBUG INFO: Taking away a max point.
 
 >out
+
+==t2
+#spechelp for morf form
+>frmo
+WRONG
+
 >from
 Your score has just gone up by one point
 
@@ -382,6 +477,9 @@ They're too unruly and confused, and you probably need to get away from them, an
 #nudge for armad
 >rmaad
 They're too unruly and confused, and you probably need to get away from them, anyway.
+#spechelp for the-b
+>beneaht
+The bean rolls back and forth a bit.
 
 >beneath
 Your score has just gone up by one point
@@ -410,7 +508,6 @@ The darkness has always been there and always will be. You need to find a way to
 #nudge for dakr
 >dakr
 The darkness has always been there and always will be. You need to find a way to say it was dark
-
 #nudge for sheol
 >shelo
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
@@ -421,8 +518,18 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 >score
 Score in a scenario: 11 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 20.
 
+==t2
+#spechelp for darkness
+>untli
+You feel it's ALMOST the right time for the darkness to lift.
+
 >until
 Your score has just gone up by one point
+
+==t2
+#done rejects for darkness
+>untli
+The underground is already lit. Un-unlit.
 
 ==t2
 #nudge for pyrites
@@ -443,11 +550,17 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 >pyrite
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Gal Logan.
 
+==t2
+#spechelp for un-road
+>alogn
+The un-road seems to lead somewhere, but you couldn't quite make it out like that.
+
 >along
 Your score has just gone up by one point
 
 Ripe Pier
 
+==t2
 #nudge for pier
 >pire
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [start ripe pier]
@@ -455,11 +568,17 @@ You don't need to riff on any location names to win the game, unless there's not
 >mits
 Nothing happens. It's DA mist, after all.
 
+==t2
+#spechelp for da mist
+>amidts
+Hmm, you almost see a way through the mist.
+
 >amidst
 Your score has just gone up by one point
 
 Cripple Clipper
 
+==t2
 #nudge for clipper
 >clippre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -491,9 +610,20 @@ It's more the content of the patters that you could deal with, if you wanted.
 #nudge for patters
 >pattesr
 It's more the content of the patters that you could deal with, if you wanted.
+#spechelp for bent ewe
+>betwene
+The new beet seems to spin slightly away from Thor for a second.
+#spechelp for hurt hog
+>throuhg
+Thor seems to gesture you by for a second.
+
 
 >between
 Your score has just gone up by one point
+
+#done rejects for bent ewe
+>betwene
+WRONG
 
 >through
 Your score has just gone up by one point
@@ -510,6 +640,11 @@ REGION MIN INCREASED BY 1, 2 OVERALL.
 >score
 Score in a scenario: 20 out of 21 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 21.
 !you missed some extra stuff you can't go back for
+
+==t2
+#spechelp for yob den
+>beyodn
+WRONG
 
 >beyond
 Your score has just gone up by one point

@@ -4004,6 +4004,7 @@ pedestal	"[dior-hint]."
 steel pad	"[dior-hint]."
 sitar	"You hear a sad-sax noise from the sitar. Well, a sitar version. 'Rats, I...' you think, seeing red."
 stria	"'Rats, I...' you think as you see red. That's not quite it."
+ISBN bins	"The ISBN bins creak slightly."
 plates	"The plates shine slightly and rattle."
 plaster	"The plaster crackles and shines slightly."
 pram	"The pram creaks back and forth slightly."
@@ -4033,7 +4034,7 @@ seed pit	"The seed pit seems to bubble slightly."
 Nuder	"The pages of Rude [']N Nuder flutter a bit."
 un-road	"The un-road seems to lead somewhere, but you couldn't quite make it out like that."
 darkness	"You feel it's ALMOST the right time for the darkness to lift."
-mist	"Hmm, you almost see a way through the mist."
+da mist	"Hmm, you almost see a way through the mist."
 hurt hog	"The hog grunts."
 bent ewe	"The bent ewe stretches a bit."
 yob den	"Some different noises from the yob den."
@@ -4339,15 +4340,16 @@ to say them-that of (tt - a thing):
 
 table of done rejects [TDR - this can use a lot more entries]
 specdone	spectalk
-lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
+lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either." [START manse]
 painting	"The painting really goes better with the study than the giant pin."
 chimney	"You probably just want to go UP the chimney."
 stair	"The stair is good for getting around. It's worth keeping."
 ramp	"The ramp is useful now. Best keep it."
 satchel	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
+ISBN bins	"The ISBN bins are secure. Best not tinker."
 staple	"Those plates were a mess, and now they're a tidy staple. It's better that way."
 stapler	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
-store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!"	[stores]
+store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!"	[START stores]
 e-s	"[got-e]."
 otters-x	"[got-e]."
 routes-x	"[got-e]."
@@ -4358,7 +4360,7 @@ hoster	"[got-e]."
 tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
 nestor	"You rescued him, and that's enough."
 lecturer	"He's already been changed enough."
-picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[routes]
+picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
@@ -4371,7 +4373,7 @@ seed pit	"That'd be a double negative, to re-enter. Your argument would be so wo
 un-road	"You know where the un-road is, but how to navigate it?"
 da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost in da mist. Oh, and that you get lost enough."
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
-Pa Egg Pea	"You probably did what you could. Or not-did." [troves]
+Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
 heat	"Don't need to overheat, or overhate."
 fretful truffle	"Caring and all its offshoots only go so far."
 sob ever verbose	"You observe that further observation would be redundant."
@@ -4384,7 +4386,7 @@ praise	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
 ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
 Eddie's Song	"You've lasted long enough. There are new things to look at, now."
-star	"No need for additional arts."	[presto]
+star	"No need for additional arts."	[START presto]
 dart	"The dart's just fine as-is."
 onyx censer	"You may need to change the censer differently."
 boing mechanism	"You can't force another revelation, but you don't need to."
@@ -4410,7 +4412,7 @@ keyboard	"You don't need to resummon the bored yak. And programming exercises ca
 t-key	"No, the TAB key is what it should be."
 scratch paper	"After compiling, you often need to make small tweaks, but not like that."
 compiled code	"You had to consider all sorts of combinations while debugging, but things will be easier now."
-stumbler tumblers	"You can't and don't want to do anything else to the tumblers." [oyster]
+stumbler tumblers	"You can't and don't want to do anything else to the tumblers." [START oyster]
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
 gins sign	"The sign mainly just disallowed singing."
 tines	"You destroyed the stein, and that's enough."
@@ -4431,7 +4433,7 @@ haunter	"Don't oversell it! Just take the haunter to where it was probably (heh)
 thin hint	"The ruby's hidden well. No need to tinker."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
-brownies	-- [towers]
+brownies	-- [START towers]
 old ice	"Twist the ice too much, it might not look right."
 ragged dagger	--
 Claire's Scalier	--
@@ -4443,14 +4445,14 @@ turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
 Tetris Sitter	"St. Teri's back in the real world, now."
-b-b	"You've dealt with the barley. You can move around a lot more, now." [otters]
+b-b	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 eels	"The eels have done enough."
 Merle	"[i]Fine, be beefin[r], you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really."
 p-2	"You already justified yourself partially. Mr. Lee doesn't need more dialogue."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
 medals	"You already got a boost from the medals."
-compass	"If you changed the compass, it might wind up pointing in the wrong direction." [others]
+compass	"If you changed the compass, it might wind up pointing in the wrong direction." [START others]
 l-o-p	"You corrected the list enough."
 auction caution	"You hear a sap yap about the sign and figure it can't be changed any more."
 lemons	"You sour on changing the lemons further."
@@ -5497,14 +5499,14 @@ to say cheatfid:
 
 table of aftertexts [taf]
 xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
-pram	false	false	false	true	"[cheatfid]." [means manse]
+pram	false	false	false	true	"[cheatfid]." [START means manse]
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
 t-b	false	false	false	true	"[cheatfid]."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
-bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
+bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
-ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [troves]
+ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 sister tressi	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
@@ -5512,7 +5514,7 @@ rivets	false	false	false	true	"[rivet-help]."
 praise	true	false	false	false	"Hmm. That's weird. Maybe it's the words in the praise that are giving the weird results. Maybe listening to them will clear stuff up."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
 song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
-alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [presto]
+alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [START presto]
 hawt thaw	true	false	false	false	"Wow! Three ambiguous readings. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
@@ -5521,7 +5523,7 @@ a-s	true	true		false	false	"You note they're also CHASER arches, so maybe that a
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
-bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out." [towers]
+bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out." [START towers]
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
@@ -5535,15 +5537,15 @@ natives	true	true	false	false	"That's weird. They're just natives, but the blink
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
 serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
-cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [otters]
+cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [START otters]
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
-whiners	false	false	false	false	"The settler then garbles and changes. The men have ways of staying loud." [end otters]
-medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed."
-coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [others]
+whiners	false	false	false	false	"The settler then garbles and changes. The men have ways of staying loud."
+medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
+coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
 caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
@@ -26259,7 +26261,7 @@ sheol holes	"They're just there as an agent to make you find the right way out. 
 darkness	"[one of]'Unlit...' is a clue. What would the magic preposition be to make light?[plus][or]How to say this area was unlit, but now it is?[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
 sheol holes	"[one of]You need to search for No-Gal Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
 un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
-mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
+da mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"It's just scenery."
 thickness sketchins	"[one of]The poem seems to have AAHRTTW as the letters. It's tough to navigate, but you seem to need to go this way and that way.[plus][or]This word is a bit archaic, so you may want to use the spoon.[plus][or]ATHWART.[minus][cycling]"	--	"ATHWART"
 bad oar	"The thickness sketchins will tell you how to use the bad oar."
