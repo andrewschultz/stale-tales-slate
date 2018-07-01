@@ -1,0 +1,502 @@
+# rbr-sa-forest.txt
+#
+# this covers maximum points, minimum points and nudges.
+#
+# the nudmis file also covers two alternate ways through the forest.
+#
+files=reg-sa2-forest-max.txt,reg-sa2-forest-min.txt,reg-sa2-forest-nudmis.txt
+~	nudges	2
+~	nu	2
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* forest-thru
+
+>ts
+# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+>z
+
+==t2
+#spechelp for store f
+>fretso
+That seemed right but didn't seem quite natural.
+You feel a slight psychic push-pull coming from Store F. Keep at it.
+
+>forest
+Your score has just gone up by one point.
+
+==t2
+#done rejects for store f
+>fretso
+WRONG
+
+==t2
+>rs sw
+>in
+#mistake test for wets
+>wets
+Getting lost in a swamp would be even worse than getting lost in a forest.
+#spechelp for stew
+>twes
+WRONG
+>west
+#spechelp for shout
+>suoth
+WRONG
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>sr ne
+
+>enter forest
+
+==t2
+#spectest for thorn
+>ornth
+Your compass feels extra jumbled, but--well, you must be close.
+
+>n
+Your score has just gone up by one point.
+Rest of Forest
+
+>score
+1 out of 16 total
+
+==t2
+#spectest for teas
+>aest
+Your compass feels extra jumbled, but--well, you must be close.
+\\
+#mistake test for seat
+>seat
+You need the opposite of a seat, here. But at the same time, you're also very close.
+\\
+#mistake test for sate
+>sate
+There's nothing around you have to sate, thankfully.
+\\
+#mistake test for tase
+>tase
+This game is nonviolent--well, except for a few puns.
+
+>e
+Self-ID Fields
+by one point
+
+==t2
+#mistake test for scorse
+>scorse
+You can't trade with the dead.
+\\
+#mistake test for nile
+>nile
+Wrong river for the underworld.
+\\
+#mistake test for file
+>file
+It looks like you can just cut in line. No need to stand.
+\\
+#mistake test for lien
+>lien
+If they owe something, that's their business. It's too late to change that now.
+\\
+#mistake test for olefin
+>olefin
+Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.
+
+>score
+2 out of 16
+
+>e
+Sorted Trodes
+
+#mistake test for integral/integrals
+>integral
+I think this game is hard enough without bringing Calculus into it.
+>integrals
+I think this game is hard enough without bringing Calculus into it.
+
+#mistake test for reslating
+>reslating
+While you have all the time in the world, there's no sense deliberately putting things off.
+
+#mistake test for relating
+>relating
+This isn't really a game about emotional connections.
+
+#mistake test for alerting/alertings
+>alerting
+There's nobody to alert here.
+>alertings
+There's nobody to alert here.
+
+#mistake test for altering/alterings
+>altering
+No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
+>alterings
+No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
+
+#mistake test for teraglin/teraglins
+>teraglin
+But where would the fish go?
+>teraglins
+But where would the fish go?
+
+#mistake test for tanglier
+>tanglier
+Things are mixed up enough!
+
+#mistake test for tone/tones
+>tone
+You aren't sure you need a booming voice telling you what you can EXAMINE.
+>tones
+You aren't sure you need a booming voice telling you what you can EXAMINE.
+
+#mistake test for destro
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+
+#mistake test for doters
+>doters
+You don't need people oohing and ahing at your skill.
+
+#mistake test for eon/eons
+>eon
+No, you can't afford to wait that long.
+>eons
+No, you can't afford to wait that long.
+
+>noes
+The ones rattle a bit. Maybe you can sense out what they should be.
+You feel a slight psychic push-pull coming from the ones. Keep at it.
+>nose
+Your score has just gone up by one point.
+>noes
+Don't get that nose bent out of shape.
+
+#xc
+>shadse
+The dashes seemed to rattle a bit, but you feel slightly uncool.
+You feel a slight psychic push-pull coming from the dashes. Keep at it.
+>shades
+Your score has just gone up by one point.
+>shadse
+Anything you do to bend the shades might break them.
+
+#xc
+#mistake test for gat
+>gat
+Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
+
+#mistake test for gunshot
+>gunshot
+You need something more tangible than that. Something that could make a gunshot, perhaps
+
+#xc
+>shotgnu
+Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
+You feel a slight psychic push-pull coming from the noughts. Keep at it.
+>shotgun
+Your score has just gone up by one point.
+>shotgnu
+Anything you do might violate firearm safety rules, or something.
+
+#mistake retest for gunshot
+>gunshot
+You need to SHOOT the gun, but you don't have a bullet yet.
+
+#mistake retest for gat
+>gat
+Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the tag will break the tagged gadget.
+
+#mistake test for gnu
+>gnu
+Shotgun: gnu? Tosh!
+
+>score
+5 out of 16 total
+
+>w
+>w
+Stored, er, Dots
+
+#mistake test for inks
+>inks
+The skin sink bleeds no color.
+
+#mistake test for helf/helfs
+>helf
+While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
+>helfs
+While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
+
+#mistake test for kin/kins
+>kin
+Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
+ers .
+>kins
+Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
+ers .
+
+#mistake test for debar
+>debar
+If there are any lawyers here, they've already been debarred.
+
+>open sandwich
+bread from the Spam
+
+>eat spam
+spasm
+
+#mistake test for amps
+>amps
+You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
+
+>masp
+Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
+You feel a slight psychic push-pull coming from the Spam. Keep at it.
+>maps
+Your score has just gone up by one point.
+>masp
+The maps are probably right, you hope. No need to change them.
+
+#xc
+#mistake test for bared
+>bared
+It's kind of cold a lot of places here. Keep your clothes on.
+
+>beadr
+A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
+You feel a slight psychic push-pull coming from the bread. Keep at it.
+>beard
+Your score has just gone up by one point.
+>beadr
+For a beard, it's actually pretty cool.
+
+#xc
+>put shades on beard
+#xc
+>put nose on beard
+You've made a full disguise now!
+
+#xc
+>e
+>n
+Your score has just gone up by one point.
+Cruel Ones' Enclosure
+
+`nu
+#mistake test for lucre
+>lucre
+If there were any treasure here, it'd probably do something terrible to you once you took it.
+#mistake test for cluer
+>cluer
+This place is too stark to offer clues--well, maybe it'd offer WRONG clues.
+#mistake test for padres
+>padres
+Bringing holy men down here would probably kill them.
+#mistake test for rasped
+>rasped
+The spread makes a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.
+#mistake test for spader
+>spader
+James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.
+#mistake test for parsed
+>parsed
+You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
+
+==t!1
+#spechelp for banshee
+>hasbene
+The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
+>hasbeen
+Your score has just gone up by one point.
+
+#xc
+>score
+9 out of 16
+
+
+`nu
+#spechelp for chisel
+>chisle
+The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
+You feel a slight psychic push-pull coming from the liches. Keep at it.
+
+>chisel
+Your score has just gone up by one point.
+
+`nu
+#done reject of chisel
+>chisle
+It's a perfectly good tool. Trying to refine it might break it.
+
+#xc
+>s
+>w
+>peel cow
+Cr-r-r-r-k.
+
+>peel chicken
+Cr-r-r-r-k.
+
+#xc
+#mistake test for fire [something] at [something]
+>fire shotgun at grinder
+You can either FIRE the gun, or you can SHOOT the whatever you want.
+
+#mistake test for shoot [something] with [something]
+>shoot shotgun at grinder
+You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.
+
+
+#mistake test for grin
+>grin
+You smile confidently. You'll figure how to use the grinder.
+
+#mistake test for steam
+>steam
+Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
+
+>put cow in canister
+#xc
+>put chicken in canister
+LIVERS.
+Your score has just gone up by one point.
+
+#xc
+#mistake retest for steam
+>steam
+You've already done enough with the meats.
+
+#mistake retest for grin
+>grin
+You smirk at the grinder you trashed.
+
+>silver
+The livers are too dull to do anything like that with. Yet.
+
+>slivre
+The livers seem to prick you for a moment, as if to say you're not quite right.
+You feel a slight psychic push-pull coming from the livers. Keep at it.
+>sliver
+Your score has just gone up by one point.
+>slivre
+The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
+
+#xc
+>e
+>n
+
+>drepsa
+As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
+You feel a slight psychic push-pull coming from the spread. Keep at it.
+>undo
+>drapes
+Your score has just gone up by one point.
+>undo
+
+>n
+red asp!
+
+#xc
+#mistake test for spared
+>spared
+That is too passive, to ask to be spared.
+
+>drapse
+The red asp strikes at something you can't see, unaware it's you that's trying to change it.
+You feel a slight psychic push-pull coming from the red asp. Keep at it.
+>drapes
+Your score has just gone up by one point.
+>drapse
+They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
+
+#xc
+>n
+The drapes are too thick.
+
+>cut drapes
+revealing a doorway
+
+>n
+You don't know what's
+
+>silvre
+The sliver seems to bend, but it snaps back. Maybe you can do a bit more.
+>silver
+Your score has just gone up by one point.
+>silvre
+Hard to beat silver. It's what it should be.
+
+#xc
+#mistake retest for gunshot
+>gunshot
+You need to SHOOT the gun, but you need to load it first.
+
+>put silver in shotgun
+
+#xc
+#mistake retest for gunshot
+>gunshot
+You need to SHOOT the gun.
+
+>n
+Ghouls' Slough
+
+#xc
+#mistake test for god
+>god
+You want to tempt the supernatural in somewhere this hellish? Phew.
+
+#mistake test for gob
+>gob
+The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.
+UNDO
+>undo
+
+>x maps
+Frost Forts
+
+#mistake test for dumdum/dum/dum dum
+>dumdum
+The mud is stuck that way. You don't need to change it.
+!Besides
+>dum
+The mud is stuck that way. You don't need to change it.
+!Besides
+>dum dum
+The mud is stuck that way. You don't need to change it.
+!Besides
+
+#xc
+>wolvse
+The vowels continue to howl in defiance. OU...AIE...like a wild animal.
+You feel a slight psychic push-pull coming from the vowels. Keep at it.
+>wolves
+Your score has just gone up by one point.
+>wolvse
+You don't need magic. You have a weapon.
+
+#xc
+#mistake test for steel
+>steel
+You'd be crushed if the sleet turned to steel.
+
+#mistake test for unpile
+>unpile
+They'd be much less dangerous left in a pile. Maybe you have something that can do that!
+
+>shoot wolves
+Your score has just gone up by one point.
+Trips Strip
+
