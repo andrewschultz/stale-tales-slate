@@ -5,8 +5,8 @@
 # the nudmis file also covers two alternate ways through the forest.
 #
 files=reg-sa2-forest-max.txt,reg-sa2-forest-min.txt,reg-sa2-forest-nudmis.txt
-~	nudges	2
-~	nu	2
+~	nudges	t2
+~	nu	t2
 
 ## *FILE
 
@@ -43,11 +43,11 @@ WRONG
 Getting lost in a swamp would be even worse than getting lost in a forest.
 #spechelp for stew
 >twes
-WRONG
+The stew smells a bit burnt for a minute. No, that can't quite be it...
 >west
 #spechelp for shout
 >suoth
-WRONG
+The shout wavers for a bit. Maybe you're on to something...
 >undo
 >undo
 >undo
@@ -175,49 +175,62 @@ No, you can't afford to wait that long.
 >eons
 No, you can't afford to wait that long.
 
+`nu
+#spechelp for ones
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
 You feel a slight psychic push-pull coming from the ones. Keep at it.
+
 >nose
 Your score has just gone up by one point.
+
+`nu
+#done rejects for ones
 >noes
 Don't get that nose bent out of shape.
 
-#xc
+`nu
+#spechelp for dashes
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
 You feel a slight psychic push-pull coming from the dashes. Keep at it.
+
 >shades
 Your score has just gone up by one point.
+
+`nu
+#done rejects for dashes
 >shadse
 Anything you do to bend the shades might break them.
 
-#xc
+`nu
 #mistake test for gat
 >gat
 Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
-
 #mistake test for gunshot
 >gunshot
 You need something more tangible than that. Something that could make a gunshot, perhaps
 
-#xc
+`nu
+#spechelp for noughts
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 You feel a slight psychic push-pull coming from the noughts. Keep at it.
 >shotgun
 Your score has just gone up by one point.
+
+`nu
+#done rejects for shotgun
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
 
+`nu
 #mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun, but you don't have a bullet yet.
-
 #mistake retest for gat
 >gat
 Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the tag will break the tagged gadget.
-
 #mistake test for gnu
 >gnu
 Shotgun: gnu? Tosh!
@@ -229,16 +242,17 @@ Shotgun: gnu? Tosh!
 >w
 Stored, er, Dots
 
+`nu
 #mistake test for inks
 >inks
 The skin sink bleeds no color.
 
+`nu
 #mistake test for helf/helfs
 >helf
 While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
 >helfs
 While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
-
 #mistake test for kin/kins
 >kin
 Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
@@ -247,6 +261,7 @@ ers .
 Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
 ers .
 
+`nu
 #mistake test for debar
 >debar
 If there are any lawyers here, they've already been debarred.
@@ -257,23 +272,31 @@ bread from the Spam
 >eat spam
 spasm
 
+`nu
 #mistake test for amps
 >amps
 You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
 
+`nu
+#spechelp for spam
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
 You feel a slight psychic push-pull coming from the Spam. Keep at it.
+
 >maps
 Your score has just gone up by one point.
+
+`nu
+#done reject for spam
 >masp
 The maps are probably right, you hope. No need to change them.
 
-#xc
+`nu
 #mistake test for bared
 >bared
 It's kind of cold a lot of places here. Keep your clothes on.
-
+\\
+#spechelp for bread
 >beadr
 A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
 You feel a slight psychic push-pull coming from the bread. Keep at it.
@@ -282,9 +305,7 @@ Your score has just gone up by one point.
 >beadr
 For a beard, it's actually pretty cool.
 
-#xc
 >put shades on beard
-#xc
 >put nose on beard
 You've made a full disguise now!
 
@@ -327,7 +348,7 @@ Your score has just gone up by one point.
 
 
 `nu
-#spechelp for chisel
+#spechelp for liches
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
 You feel a slight psychic push-pull coming from the liches. Keep at it.
@@ -336,7 +357,7 @@ You feel a slight psychic push-pull coming from the liches. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done reject of chisel
+#done reject of liches
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
 
@@ -385,11 +406,16 @@ You smirk at the grinder you trashed.
 >silver
 The livers are too dull to do anything like that with. Yet.
 
+`nu
+#spechelp for livers
 >slivre
 The livers seem to prick you for a moment, as if to say you're not quite right.
 You feel a slight psychic push-pull coming from the livers. Keep at it.
+
 >sliver
 Your score has just gone up by one point.
+
+#done reject for sliver
 >slivre
 The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
@@ -397,10 +423,13 @@ The sliver seems to bend, but it snaps back. As if it's impatient to do or be mo
 >e
 >n
 
+`nu
+#spechelp for spread
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
 You feel a slight psychic push-pull coming from the spread. Keep at it.
 >undo
+
 >drapes
 Your score has just gone up by one point.
 >undo
@@ -413,15 +442,17 @@ red asp!
 >spared
 That is too passive, to ask to be spared.
 
+#spechelp for red asp
 >drapse
 The red asp strikes at something you can't see, unaware it's you that's trying to change it.
 You feel a slight psychic push-pull coming from the red asp. Keep at it.
 >drapes
 Your score has just gone up by one point.
+
+#done reject for drapes
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
 
-#xc
 >n
 The drapes are too thick.
 
@@ -431,10 +462,16 @@ revealing a doorway
 >n
 You don't know what's
 
+`nu
+#spechelp for sliver
 >silvre
 The sliver seems to bend, but it snaps back. Maybe you can do a bit more.
+
 >silver
 Your score has just gone up by one point.
+
+`nu
+#done reject for silver
 >silvre
 Hard to beat silver. It's what it should be.
 
@@ -478,16 +515,21 @@ The mud is stuck that way. You don't need to change it.
 The mud is stuck that way. You don't need to change it.
 !Besides
 
-#xc
+`nu
+#spechelp for vowels
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 You feel a slight psychic push-pull coming from the vowels. Keep at it.
+
 >wolves
 Your score has just gone up by one point.
+
+`nu
+#done rejects for wolves
 >wolvse
 You don't need magic. You have a weapon.
 
-#xc
+`nu
 #mistake test for steel
 >steel
 You'd be crushed if the sleet turned to steel.

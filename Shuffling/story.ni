@@ -346,6 +346,7 @@ chapter special help
 
 table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
+odor	"The odor doesn't seem too complex. You pause. You can figure what it should be."
 bolt	"You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here."
 bulge	"The bulge swells and makes a squeal, like it's trying to make music."
 toga	"The toga blows in an unseen breeze, exposing what's written on it a bit more."
@@ -358,7 +359,8 @@ Store I	"Store I shakes a bit. You see red wondering how you'll rise to the chal
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
 acne-bit cabinet	"The cabinet wobbles a bit."
-odor	"The odor doesn't seem too complex. You pause. You can figure what it should be." [forest]
+stew	"The stew smells a bit burnt for a minute. No, that can't quite be it..." [forest]
+shout	"The shout wavers for a bit. Maybe you're on to something..."
 ones	"The ones rattle a bit. Maybe you can sense out what they should be."
 dashes	"The dashes seemed to rattle a bit, but you feel slightly uncool."
 noughts	"Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you."
@@ -370,9 +372,8 @@ sliver	"The sliver shines a bit as you focus on it. It suddenly feels slightly m
 spread	"As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away[red-to]."
 red asp	"The red asp strikes at something you can't see, unaware it's you that's trying to change it."
 Spam	"Nothing happens, but you think you can make out odd shapes in the Spam for a moment."
-hoses	"Something leaks out of the hoses. Hm. What else can be rubber, now."
 vowels	"The vowels continue to howl in defiance. OU...AIE...like a wild animal."
-wolves	"You can't change them back. But maybe you can get rid of them."
+hoses	"Something leaks out of the hoses. Hm. What else can be rubber, now."
 cask	"[if sack is moot]You doubt the sack/cask has a triple purpose[else]Nothing happens. Maybe you are trying to do too much to change the cask[end if]." [sortie]
 sack	"You doubt the sack/cask has a triple purpose."
 warts	"The warts itch slightly."
@@ -527,10 +528,10 @@ chapter done rejects
 
 table of done rejects [tdr]
 donething	donemsg
-desert-door	"The door is probably the way out. Best not change it into something else." [Ordeal Loader]
+desert-door	"The door is probably the way out. Best not change it into something else." [start Ordeal Loader]
 bugle	"The bugle emits a sad 'don't change me back' noise."
 gateman	"Don't scramble the gateman. He's here to help."
-nose	"Don't get that nose bent out of shape."
+nose	"Don't get that nose bent out of shape." [start forest]
 shades	"Anything you do to bend the shades might break them."
 shotgun	"Anything you do might violate firearm safety rules, or something."
 beard	"For a beard, it's actually pretty cool."
@@ -538,7 +539,8 @@ maps	"The maps are probably right, you hope. No need to change them."
 chisel	"It's a perfectly good tool. Trying to refine it might break it."
 drapes	"They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically."
 silver	"Hard to beat silver. It's what it should be."
-HOTSAUCE	"[keep-food-simple]."
+wolves	"You can't change them back. But maybe you can get rid of them."
+HOTSAUCE	"[keep-food-simple]." [start sortie]
 parmesan	"[keep-food-simple]."
 steak	"[keep-food-simple]."
 lettuce	"[keep-food-simple]."
@@ -554,7 +556,7 @@ hallway	"You already have a passage east. Don't close it."
 silo	"That silo was pretty big. You probably have little more to do with the oils."
 steer button	"No, the steer button HAS to be right."
 shoot button	"No, the shoot button HAS to be right."
-gardenia	"The flowers are fine as-is." [metros]
+gardenia	"The flowers are fine as-is." [start metros]
 tomato	"It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out."
 Velcro	"The Velcro remains tangled."
 controls	"The controls stay as they are."
@@ -563,7 +565,7 @@ keycard	"The keycard remains stiff. Looks like it's as it should be."
 sheath	"The sheath remains still."
 sword	"Meddling with the sword right now, you're worried it might poke you."
 beast	"You've changed the beats to something tangible, physically beatable."
-cork	"Your head swims then sinks as you realize the cork can't become much else."	[resort]
+cork	"Your head swims then sinks as you realize the cork can't become much else." [start resort]
 wings	"The wings should be able to propel you enough."
 slope	"You wouldn't want to make the slope crumble away."
 ropes	"The ropes are useful for climbing, which you need to do to get east."

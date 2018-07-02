@@ -89,6 +89,8 @@ Maybe there is a way out of the nick. Not of nick, but the nick. It's probably t
 >ixsteen
 You don't need to re-stop the centrifuge.
 
+`nu
+#spechelp for t-n
 >kitchne
 The nick blurs a little but snaps back to normal.
 
@@ -428,6 +430,8 @@ But you're wearing the shoes. That might cause problems.
 >hesso
 But you're wearing the shoes. That might cause problems.
 
+`nu
+#spechelp for r2
 >romo
 You almost feel something picking you up for a second. You must have been close.
 
@@ -542,20 +546,22 @@ No, the full roadblock.
 >blokc
 No, the full roadblock.
 
-##nudge for room
+`nu
+#spechelp for m2
 >romo
-The moor sways a bit. You do some brief mental calculation. There's no third place between them.
+The moor sways a bit. You do some brief mental calculation. There's no third place between them
 
 ##nudge for room
 >room
+
+`nu
+>romo
+The room sways a bit. You do some brief mental calculation. There's no third place between them
 
 #dupnudge for kitchen
 >ketchin
 You can just walk to the kitchen, there's no need to revisit the nick, and there's no third location.
 
-##nudge for room
->romo
-The room sways a bit. You do some brief mental calculation. There's no third place between them.
 
 >n
 Stiller Trellis
@@ -671,7 +677,9 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 
 >w
 >s
-##nudge for room
+
+`nu
+
 >moor
 
 #nudge for folded

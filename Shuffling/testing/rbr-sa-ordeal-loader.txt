@@ -13,8 +13,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* ordeal-thru
-
 * ordeal_thru
 
 #nudge for intro
@@ -95,7 +93,18 @@ It's a pretty complex chord.
 >chodr
 It's a pretty complex chord.
 
+`nu
+#spechelp for bulge
+>bugel
+The bulge swells and makes a squeal, like it's trying to make music.
+You feel a slight psychic push-pull coming from the bulge. Keep at it.
 >bugle
+Your score has just gone up by one point.
+
+`nu
+#done rejects of bugle
+>bugel
+The bugle emits a sad "don't change me back" noise.
 
 #nudge for horn
 >honr
@@ -140,7 +149,19 @@ You already messed with the darnels.
 >shrbu
 The shrub and brush waver, then point towards the toga.
 
+`nu
+#spechelp for toga
+>gota
+The toga blows in an unseen breeze, exposing what's written on it a bit more.
+You feel a slight psychic push-pull coming from the toga. Keep at it.
+
 >goat
+Your score has just gone up by one point.
+
+`nu
+#done rejects of goat
+>gota
+The goat seems content enough as-is.
 
 #dupnudge for shrub
 >shrbu
@@ -153,7 +174,21 @@ Notices Section
 >noticse
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+`nu
+#spechelp for static
+>attisc
+You think a bit, and the static seems like a bad extension to the doll house.
+You feel a slight psychic push-pull coming from the static. Keep at it.
+
+==t!1
 >attics
+Your score has just gone up by one point.
+
+`nu
+#spechelp for attics
+>attisc
+Hm, you can't think of anything to do with the attics but change them back.
+
 
 #nudge for doll
 >dlol
@@ -183,7 +218,19 @@ The TMIs are there to help you.
 >newladn
 You will have to change the new land one item at a time.
 
+`nu
+#spechelp for nametag
+>gatemna
+The nametag peels infinitesimally.
+You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
+
 >gateman
+Your score has just gone up by one point.
+
+`nu
+#done rejects for gateman
+>gatemna
+Don't scramble the gateman. He's here to help.
 
 #nudge for warpy
 >waryp
