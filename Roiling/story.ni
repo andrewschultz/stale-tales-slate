@@ -5590,6 +5590,8 @@ trance nectar
 tropes poster
 try us yurts
 
+[?? test qmh toggling and scanning stuff]
+
 check scaning a prefigured thing:
 	if noun is not dialer:
 		say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
@@ -20417,7 +20419,10 @@ the fissure is part of the ropins. description is "It's rounded, more ovular tha
 
 a-text of fissure is "RYRRYYR". b-text of fissure is "PYPPYYR". parse-text of fissure is "f[sp]u[sp]s[sp]s[sp]i[sp]e[sp]r". fissure is parse-spoilable.
 
+fissure-flip is a truth state that varies.
+
 after fliptoing when player is in Obscurest Subsector (this is the yow is free rule) :
+	if noun is fissure, now fissure-flip is true;
 	if noun is fissure or noun is prison ropins:
 		now duck is unfigured;
 		now prison ropins is unfigured;
@@ -27376,6 +27381,9 @@ this is the towers-alt rule:
 	if reed's ale is in lalaland, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
 	if natives are in lalaland, say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
 	say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
+	say "[2da]Instead of [ff of true], you could've [ff of false]."
+
+to say ff of (j - a truth state): say "[if j is fissure-flip]using the lone duck to make the prison ropins['] UNLOCKED[else]making the fissure FUSSIER[end if]"
 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
