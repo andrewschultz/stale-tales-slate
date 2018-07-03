@@ -5392,6 +5392,9 @@ carry out scaning:
 	repeat through table of aftertexts:
 [	if noun is an xtradesc in table of aftertexts: ?! doesn't work]
 		if noun is xtradesc entry:
+			if there is no xtratext entry:
+				if cheat-on is true and give-generic-question-hint is true, ital-say "PAD QUESTION MARK should give generic question-mark hints, as a reminder. Toggle this nag with QMH."
+				the rule succeeds;
 			choose row with a xtradesc of noun in table of aftertexts;
 			if bothscan entry is true:
 				now noun is ncscanned;
@@ -5495,6 +5498,9 @@ others	"not nouns any more--a different part of speech in each location"
 to say cheatfid:
 	say "You fiddle with the cheat button and note that nothing happens to the R's and Y's"
 
+to say beal-or-balmer: say "Wow! Three names. You don't know if [other-mbb] would be easier but, well, it can't be helped"
+
+[??pad question mark / scan elmer / scan merle]
 table of aftertexts [taf]
 xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
 pram	false	false	false	true	"[cheatfid]." [START means manse]
@@ -5508,11 +5514,13 @@ thickness sketchins	true	false	false	false	"Those three sentences are certainly 
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
-sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
+eddie's song	false	true	false	false	"You'd guess it's, well, the song 'I Ceded' that's causing the settler readings. Because when Eddie C. takes a break from singing, the settler's readings stay up."
 rivets	false	false	false	true	"Hmm, the message could've been painted on, but Trevis Vister demanded rivets."
 praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
+marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
+marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
+sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
-eddie's song	false	true	false	false	"You'd guess it's, well, the song 'I Ceded' that's causing the settler readings. Because when Eddie C. takes a break from singing, the settler's readings stay up."
 alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [START presto]
 hawt thaw	true	false	false	false	"Wow! Three ambiguous readings. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
@@ -5523,6 +5531,7 @@ general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out." [START towers]
+snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
@@ -5539,6 +5548,7 @@ pester'n serpent	true	true	false	false	"That is a lot of blinks, but those blink
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [START otters]
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
+t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably more than one way to be active, so the settler can't pin it down."
@@ -5549,10 +5559,55 @@ pugnacious plant	false	false	false	false	"Wow, seven letters, odd. Maybe you nee
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
+all noon gag [below here you get a generic response]
+angriest ingrates
+asset-hit atheists
+b-b
+bortles lobster
+capers
+casper
+dreads adders
+elmer
+fluster self rut
+gins sign
+inapt paint
+locs pack
+mardier admirer
+me arts
+mended mini denim
+muscly luc sym
+papery yapper
+reading a dinger
+resident trendies
+rude 'n nuder
+s-c
+sob ever verbose
+sport ports
+sporties' ripostes
+t-formally
+tetris sitter
+trance nectar
+tropes poster
+try us yurts
 
 check scaning a prefigured thing:
 	if noun is not dialer:
 		say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
+
+chapter qmhing
+
+qmhing is an action out of world.
+
+understand the command "qmh" as something new.
+
+understand "qmh" as qmhing when player has settler.
+
+give-generic-question-hint is a truth state that varies.
+
+carry out qmhing:
+	now give-generic-question-hint is whether or not give-generic-question-hint is false;
+	say "Generic question hinting for settler cheat mode is now [on-off of give-generic-question-hint].";
+	the rule succeeds;
 
 book begin-region hints
 
@@ -7993,8 +8048,7 @@ understand the command "c/t/cheat/teach" as something new.
 understand "c" and "t" and "cheat" and "teach" as cting.
 
 carry out cting:
-	if settler is not visible:
-		say "[reject]" instead;
+	if settler is not visible, say "[reject]" instead;
 	try pushing tcb instead;
 
 chapter sbing
@@ -8010,14 +8064,12 @@ understand "sb [thing]" as sbing.
 sb-cur is a truth state that varies.
 
 carry out sbing:
-	if debug-state is false:
-		say "[reject]";
+	if debug-state is false, say "[reject]";
 	d "SBing: [noun].";
 	if noun is a person and noun is washed up: [leo/rand]
 		do nothing;
 	else if noun is reflexed:
-		if noun is not dialer and noun is not bench:
-			say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
+		if noun is not dialer and noun is not bench, say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
 	now sb-cur is true;
 	let z be cheat-on;
 	now cheat-on is false;
@@ -11130,17 +11182,13 @@ description of tcb is "It's a tech simple enough. Looks like you can push it to 
 
 cheat-on is a truth state that varies.
 
-instead of switching on the tcb:
-	try pushing the tcb instead;
+instead of switching on the tcb, try pushing the tcb instead;
 
-instead of switching off the tcb:
-	try pushing the tcb instead;
+instead of switching off the tcb, try pushing the tcb instead;
 
 check pushing the tcb:
 	say "You push the teach-cheat button, and it's now [if cheat-on is true]off. Hooray for more challenge[otherwise]on. Hooray for more information[end if][one of] when you SCAN in the future--though you can push the button to go back to normal mode[or][stopping][if cheat-on is false and seen-blues is false]. The logo seems to change colors as well[end if].";
-	if cheat-on is true:
-		now cheat-on is false instead;
-	now cheat-on is true instead;
+	now cheat-on is whether or not cheat-on is false;
 
 does the player mean doing something with the equals sign: it is unlikely.
 
@@ -22154,6 +22202,8 @@ Elmer is a reflexive LLPish aide in Alcoves.
 
 Merle is a reflexive LLPish aide in Alcoves. The chum of Merle is Elmer.
 
+[??difference between scanning elmer and merle]
+
 a-text of Merle is "RYRYRRRO". b-text of Merle is "RYRYRRRO". parse-text of merle is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
 
 a-text of Elmer is "YRYRY". b-text of Elmer is "?RYRY". parse-text of elmer is "?[sp]x[sp]-[sp]x[sp]-".
@@ -22849,7 +22899,7 @@ t-ribaldly is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RYRYRRRO". b-t
 
 t-shabbily is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RRYRRYRO". b-text is "RRYRRYRO". parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
 
-t-silently is a mack-idea. pod-num is 3. pod-ord is 6. a-text is "RYRYRRRO". b-text is "P??YRRRO". parse-text is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-silently is a mack-idea. pod-num is 3. pod-ord is 6. a-text is "RYRYRRRO". b-text is "P??YRR?O". parse-text is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
 
 t-shoddily is a mack-idea. pod-num is 3. pod-ord is 7. a-text is "RRYRRYRO". b-text is "RRYRRYRO". parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
 

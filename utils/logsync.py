@@ -76,10 +76,11 @@ def check_aftertexts():
                 continue
             if not in_table: continue
             if not line.strip(): break
-            ll = re.split("\t+", line.strip())
+            line = re.sub("[ \t]*\[[^\[]*\]$", "", line.strip())
+            ll = re.split("\t+", line)
             l0 = ll[0].lower()
             in_aftertexts[l0] = line_count
-            sug_text[l0] = ll[5]
+            if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in need_source_logic.keys():
                 if l0 not in okay.keys():
                     suggestions.append("{:s} may be superfluous aftertext at line {:d}".format(l0, line_count))
