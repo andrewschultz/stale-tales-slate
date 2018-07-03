@@ -5504,6 +5504,7 @@ t-b	false	false	false	true	"[cheatfid]."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
+thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
@@ -13435,7 +13436,7 @@ before going inside in Ripe Pier:
 
 book Cripple Clipper
 
-Cripple Clipper is a room in Routes. "Oh, no! You see a free reef in the distance, but you just realized you have no clue how to operate any sort of boat. About all you can see here are thickness sketchins[']."
+Cripple Clipper is a room in Routes. "Oh, no! You see a free reef in the distance, but you just realized you have no clue how to operate any sort of boat. About all you can see here are thickness sketchins['], presumably from Logan himself. A bit nonsensical, but maybe they'll give a clue where or how to adventure next."
 
 the bad oar is a thing. description is "It looks weird, but hey, it got you aboard the Cripple Clipper.". "The bad oar that helped you aboard the Cripple Clipper lies here, but you probably need to figure how to work things in general here."
 

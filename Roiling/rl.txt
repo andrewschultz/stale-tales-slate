@@ -435,6 +435,13 @@ FO--A--Y is remaining. That's twelve possibilities--well, a bit less if we assum
 <pre>MAYISLET\nMISTYALE\nSLIMYTEA</pre>
 The question marks at 1 and 7 can be intuited a bit. M(consonant) clumps. And slot 7 must be a vowel for the letters to add up right. So... S(MT)(AE)(AE)(MT)(EI)LY is left over. That puts I in slot 6, and with 4 guesses, you can use trial and error.
 SMEATILY sounds like it could be a word, and SMAETILY and STAEMILY look weird, but STEAMILY works great.
+# logic for silently
+?How do I deal with the snit-yell?
+The letter sequences that give the questions are snityell, sillynet and stylenit. These don't give a direct solution, but they eliminate a lot of possibilities.
+S(INT)(ILY)(EI)(LNT)(LT)(LEI)Y if we go strictly by the book.
+But we can guess L is in slot 7, because these are adverbs, and E is thus forced into slot 4.
+A bit of trial and error can help here. S(INT)(ILT)E(LNT)(LT)LY is left. Let's place L in slot 5, giving us SNIELTLY. That doesn't work. What about T? SNIETLLY.
+So N is in slot 5. S(IT)(ILT)EN(LT)LY is left. But T in slot 1 gives STIENLLY, so SI(LT)EN(LT)Y is SILENTLY.
 >>COEVALS' ALCOVE
 # logic for ideas aides
 ?Can I deal with Elmer and Merle as ideas' aides?
