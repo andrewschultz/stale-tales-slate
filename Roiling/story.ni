@@ -13,28 +13,28 @@ To search for your favorite goofy random tables, use ^blurb with a regular-expre
 The new Inform IDE may allow you to search this way, too. For A Roiling Original, I stuck with 6G60. I had enough changes to deal with.
 
 You can place a bracket before any of the other text chunks below to search. They're ordered in approximate priority I used and how often I searched for them.
-TOA = the tables of big point scoring changes, table of * anagrams
-TOH = table of hint logic
-TMC = mega-chatter, which logs all the tables I search lists for
-TAF = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
+TOA  = the tables of big point scoring changes, table of * anagrams
+TOH  = table of hint logic
+TMC  = mega-chatter, which logs all the tables I search lists for
+TAF  = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
 TOR/TRB = reflexive blather, asking people about themselves (this is often a default)
-TOD = default gen blather, about general nonsense e.g. a misunderstood request
-DSB = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
-TOB = read ALL the book titles!
+TOD  = default gen blather, about general nonsense e.g. a misunderstood request
+DSB  = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
+TOB  = read ALL the book titles!
 TOSB = subj-blather, about a specific subject
-TNW = messages for "you can't go that way"
-TRE = table of readables
+TNW  = messages for "you can't go that way"
+TRE  = table of readables
 TSX  = differences between sexes
-TSH = table of spechelp, so you can see the specialized help for an item
-TDR = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it any more
-TQT = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
-TCO = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
-DMT = dome tables, text from Demo Dome section
-PRE = table of pres, or information of stuff you figured but don't get points for yet
+TSH  = table of spechelp, so you can see the specialized help for an item
+TDR  = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it any more
+TQT  = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
+TCO  = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
+DMT  = dome tables, text from Demo Dome section
+PRE  = table of pres, or information of stuff you figured but don't get points for yet
 
-VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text, though it's now in the new file.
+VRT  = VOLUME RANDOM TEXT BLURB TABLES has the random text, though it's now in the new file.
 
-TRIX=what I think are nice tricks that may be somewhere near the back of the Inform IDE documentation
+TRIX = what I think are nice tricks that may be somewhere near the back of the Inform IDE documentation
 
 Volumes are divided by region for the most part.
 ]
@@ -2363,7 +2363,7 @@ hogs	Leo	"They size him up and give a thumbs-down. Then they give you a double t
 hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
 hogs	Elvira	"They snicker and nod."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger." [end presto]
-trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"	 [oyster]
+trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"	 [start oyster]
 trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
 trolls	h-h	"'Even more fun than here. So we hear.'"
 trolls	capers	"[if stein is in lalaland][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
@@ -4054,8 +4054,8 @@ large regal lager	"No...that is not quite the way to fight the temptation of the
 Si Reed	"Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!"
 praise spirea	"That's not quite the way to look forward to praise. But it may be a start."
 red vees	"The red vees seem like they should link together somehow, but you don't have things right."
-lobster	"That's not quite the way to deserve that lobster[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
-ME ARTS	"That's not quite the way to focus on the ME ARTS[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
+lobster	"That's not quite the way to deserve that lobster."
+ME ARTS	"That's not quite the way to focus on the ME ARTS."
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
 salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
 Eddie's Song	"You try to groove to Eddie's song, but that's not quite it."
@@ -4852,7 +4852,7 @@ to left-to-see:
 	if number of unnoted exhibits is 0:
 		repeat with QQ running through things in sparse spares:
 			if QQ is not player and QQ is not examined and QQ is not red writing:
-				say "You could still examine [the QQ] [if player is  in sparse spares]here[else]in Sparse Spares[end if].";
+				say "You could still examine [the QQ] [if player is in sparse spares]here[else]in Sparse Spares[end if].";
 				continue the action;
 	repeat through table of xibits:
 		if exhib entry is unnoted:
@@ -5507,17 +5507,17 @@ MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gi
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
-sister tressi	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
-rivets	false	false	false	true	"[rivet-help]."
-praise	true	false	false	false	"Hmm. That's weird. Maybe it's the words in the praise that are giving the weird results. Maybe listening to them will clear stuff up."
+sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
+rivets	false	false	false	true	"Hmm, the message could've been painted on, but Trevis Vister demanded rivets."
+praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
-song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
-alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [START presto]
+eddie's song	false	true	false	false	"You'd guess it's, well, the song 'I Ceded' that's causing the settler readings. Because when Eddie C. takes a break from singing, the settler's readings stay up."
+alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [START presto]
 hawt thaw	true	false	false	false	"Wow! Three ambiguous readings. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five[end if]."
-a-s	true	true		false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
+a-s	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
@@ -5528,24 +5528,24 @@ sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to 
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
 hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
-old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
+docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
-ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
+prison ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
 natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
-serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
+pester'n serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [START otters]
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
-sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
-whiners	false	false	false	false	"The settler then garbles and changes. The men have ways of staying loud."
+sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably more than one way to be active, so the settler can't pin it down."
+whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
-pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
-caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
+pugnacious plant	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
+auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 
@@ -5553,24 +5553,12 @@ check scaning a prefigured thing:
 	if noun is not dialer:
 		say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
 
-to say rivet-help:
-	if rivets are reflexed and praise spirea is reflexed:
-		say "Well, there's probably not much else hidden in the rivets";
-		continue the action;
-	if rivets are reflexed:
-		say "You maybe could focus on what the rivets say";
-		continue the action;
-	if praise spirea is reflexed:
-		say "Hmm, the message could've been painted on, but Trevis Vister commissioned rivets";
-		continue the action;
-	say "[if cheat-on is true]The greens and yellows in the last two characters blink in unison[else]A little messy, but that may just mean there are two ways to look at this problem[end if]";
-
 book begin-region hints
 
 section special parser errors
 
 rule for printing a parser error when the latest parser error is the didn't understand error and mrlp is not means manse and the number of words in the player's command > 1:
-	if cur-score of mrlp < 10 and  mrlp is not parsewrned:
+	if cur-score of mrlp < 10 and mrlp is not parsewrned:
 		choose row with thisreg of mrlp in table of parsewarns;
 		say "[specwarn entry][line break]";
 		now mrlp is parsewrned;
@@ -6541,9 +6529,8 @@ after reading a command:
 				consider the scam rule instead;
 	if Gunter is off-stage and the player's command includes "gunter", say "[if stuff-found >= 3]Who?[else]Gunter's outside, but to interact meaningfully, you should SWITCH the liaison.[end if]" instead;
 	if e-s is visible and the player's command includes "presto":
-			unless the player's command includes "test", say "Presto is the word you said to reveal the, er, spot." instead;
-	if the player's command includes "tickle" and Elmo is in Largely All-Grey Gallery:
-		say "Really. This is a juvenile computer game, not a juvenile toy." instead;
+		unless the player's command includes "test", say "Presto is the word you said to reveal the, er, spot." instead;
+	if the player's command includes "tickle" and Elmo is in Largely All-Grey Gallery, say "Really. This is a juvenile computer game, not a juvenile toy." instead;
 	if player is in clearing and melon is in clearing:
 		if the player's command matches the regular expression "\blen\b" and the player's command matches the regular expression "\bmo\b":
 			try fliptoing melon instead;
@@ -6964,7 +6951,7 @@ Drain Nadir	"No. You're so low, you [if diapers are in nadir drain]might just wa
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
-Upscale Capsule		"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]."
+Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
@@ -8880,7 +8867,7 @@ Pa Egg Pea	Pa Egg Pea	false	244059588	--	"gape"	"gape"	"You empty your mind to l
 cold	heat	false	270386244	--	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."
 heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
-stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief!  You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
+stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief! You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
 bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
 what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
 cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's that trap door? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
@@ -8998,7 +8985,7 @@ stinger	stinger	false	559013952	--	"resting"	"resting"	"The stinger whirs around
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
-ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	"The ur-pine shrinks and flails.  As it does, a succor crocus rolls out from under. You take the succor crocus and put it in the welt-proof flowerpot."
+ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	"The ur-pine shrinks and flails. As it does, a succor crocus rolls out from under. You take the succor crocus and put it in the welt-proof flowerpot."
 arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -10602,7 +10589,7 @@ after fliptoing stapler:
 
 chapter pastel plates
 
-the palest pastel plates are plural-named scenery in carven cavern. description of plates is "They're...a bit squarish. Odd. And they're  cracked and useless and appear to be squarish, but each has metallic trim around its edge and even some red writing[if plaster is in cavern]. The plates seem like they belong with the plaster[end if].".
+the palest pastel plates are plural-named scenery in carven cavern. description of plates is "They're...a bit squarish. Odd. And they're cracked and useless and appear to be squarish, but each has metallic trim around its edge and even some red writing[if plaster is in cavern]. The plates seem like they belong with the plaster[end if].".
 
 instead of taking plates:
 	if plaster is visible:
@@ -10813,7 +10800,7 @@ gretta-quip	"'She's a good investigative reporter, the best. She's dug further i
 trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
 shortcut-quip	"'Hm, maybe a covert vector after you solve two...[paragraph break]'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
 flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies [gtmn] gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
-scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if].  [mo-data]."
+scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if]. [mo-data]."
 gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
 elmomole-quip	"You flip the nametag to MOLE and back, tracking the scanner. Elmo to Mole is [if setspace is true]R Y R Y[else]RYRY[end if], Mole to Elmo is [if setspace is true]Y R R Y[else]YRRY[end if]. [mo-data]."
 got-red-yellow-quip	"'Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything.' You try and think of something where it might."
@@ -11579,7 +11566,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "question mark" or "question/mark"	false	"[if qmspoil is true]The question mark is often better than a red or yellow in Cheat mode, because it limits you to two possibilities[else]The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can HINT it if you're stuck[end if]."	"question mark"	true
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN lets you see initial region hints. NO TIP turns them off."	"opt in/no tip"	false
 "poss"	false	"POSS toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too."	"poss"	false
-"go to" or "go/gt/goto"	true	"You can GO TO/GOTO  or GT a location or thing if it's a bit far away but in the region."	"go to"	false
+"go to" or "go/gt/goto"	true	"You can GO TO/GOTO or GT a location or thing if it's a bit far away but in the region."	"go to"	false
 "clues"	false	"You can LISTEN, ASK people about random stuff, or EXAMINE them to figure how to change them."	"clues"	true
 "Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	false	"Apparently, appreciating her is what separates us from the animals. According to Gunter[if mrlp is otters]. But you need to know more and ask around about her[end if]."	"Elvira"	true
 "gretta"	false	"If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira."	"Gretta"	true
@@ -13406,7 +13393,7 @@ the along-bogus is a useless privately-named thing. description is "[bug-report]
 
 book Ripe Pier
 
-Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be.  No-Gal's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
+Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be. No-Gal's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
 
 after looking in ripe pier for the first time:
 	say "A man walks by, mumbling. 'Da mist! Da mist!' Ah, so it's not just mist. But his next babbling leaves you seeing red before he walks off. 'Sad Tim sat, dim... it's mad...' You see red at such nonsense.";
@@ -13823,7 +13810,7 @@ chapter adeiprs
 check examining Ires Pad for the first time:
 	say "It's, well, really red. It's not clear whether it advocates focusing or losing your bad emotions, but either way, it changes views each time you look at it. Since its help might be too on-the-nose, you abstain from looking into the details of the current picture. But you can always look again, if you need that." instead;
 
-the Ires Pad is auxiliary scenery in Drain Nadir. "It is the Hail-Maryest of motivational tools.  Currently it contains a picture [one of]labeled AS I DERP[or]labeled ERA DIPS[or]labeled RIPE, SAD[or]labeled SPA RIDE[or]labeled RAP SIDE[or]by Si Preda[or]by Pa Dries[in random order]. So much red, too!"
+the Ires Pad is auxiliary scenery in Drain Nadir. "It is the Hail-Maryest of motivational tools. Currently it contains a picture [one of]labeled AS I DERP[or]labeled ERA DIPS[or]labeled RIPE, SAD[or]labeled SPA RIDE[or]labeled RAP SIDE[or]by Si Preda[or]by Pa Dries[in random order]. So much red, too!"
 
 a-text of Ires Pad is "RYRRYYR". b-text of Ires Pad is "RYRRYYR". parse-text of Ires Pad is "x[sp]-[sp]s[sp]x[sp]-[sp]-[sp]x".
 
@@ -17860,7 +17847,7 @@ after examining general gleaner when player is in end den and gleaner is reflexe
 	check-detours;
 	continue the action;
 
-a-text of gleaner is "YRRYRRY". b-text of gleaner is "YRR??RY". parse-text of gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
+a-text of general gleaner is "YRRYRRY". b-text of general gleaner is "YRR??RY". parse-text of general gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
 
 find-base is a truth state that varies.
 
@@ -18994,7 +18981,7 @@ toasting is an action applying to one thing.
 
 understand the command "toast/heat/warm" as something new.
 
-understand "toast [something]" and "heat [something]"  and "warm [something]" as toasting.
+understand "toast [something]" and "heat [something]" and "warm [something]" as toasting.
 
 carry out toasting:
 	if noun is the player and toaster is visible:
@@ -19090,8 +19077,7 @@ check xraying:
 		else:
 			say "Without the strudel, you can't really see into the sled rut." instead;
 	if noun is Dr Yow:
-		if Dr Yow has been rowdy and Dr Yow has been wordy:
-			say "You've done what you can with Dr. Yow. [he-she-c] can still be rowdy or wordy." instead;
+		if Dr Yow has been rowdy and Dr Yow has been wordy, say "You've done what you can with Dr. Yow. [he-she-c] can still be rowdy or wordy." instead;
 		if Dr Yow has been wordy:
 			say "You realize Dr. Yow has a rowdy side, too.";
 		else if Dr Yow has been rowdy:
@@ -20225,7 +20211,7 @@ the ID tag is part of the lone duck.
 instead of taking the ID tag:
 	say "It's for identification. It's not worth removing."
 
-description of the ID tag is "'  Loud Neck (in red)[paragraph break]Dr. Yow's Duck'"
+description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'"
 
 the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
@@ -20403,13 +20389,14 @@ printed name of Dr Yow is "Dr. Yow"
 check taking Dr Yow:
 	say "[if Dr Yow is in ropins]You'll need to open the gaol first[else]Dr. Yow doesn't need that, after a spell in gaol[end if]." instead;
 
+to decide what number is yow-has-said:
+	let temp be 0;
+	if Dr Yow has been rowdy, increment temp;
+	if Dr Yow has been wordy, increment temp;
+	decide temp;
+
 to say what-can-doc-say:
-	let tosay be 0;
-	if Dr Yow has been rowdy:
-		increment tosay;
-	if Dr Yow has been wordy:
-		increment tosay;
-	say "[if tosay is 2]. He looks repressed, as if he has so many ways to say things, but he needs someone to bring it out of him[else if tosay is 1]. He looks slightly agitated, as if he's only said half of what he wants to say[end if]"
+	say "[if yow-has-said is 2]. [he-she-c] looks repressed, as if [he-she] has so many ways to say things but needs someone to bring it out of him[else if yow-has-said is 1]. [he-she-c] looks slightly agitated, as if [he-she]'s only said half of what [he-she] wants to say[end if]"
 
 a-text of Dr Yow is "RYRRO". b-text of Dr Yow is "RYRRO". parse-text of Dr Yow is "x[sp]o[sp]x[sp]x[sp]y". Dr Yow is cheat-spoilable.
 
@@ -22835,11 +22822,11 @@ For printing a locale paragraph about a mack-idea (called the item):
 [pod 1 is 7-letters repeating]
 t-bossily is a mack-idea. pod-num is 1. pod-ord is 1. a-text is "RYRRYRO". b-text is "RYRRYRO". parse-text is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
 
-t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
+t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text is "RYYRYRO". b-text is "RYGRGRO". parse-text is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
 
 t-cattily is a mack-idea. pod-num is 1. pod-ord is 3. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
 
-t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "??YRYRO". b-text is "??GR?RB". parse-text is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
+t-tearily-irately is a mack-idea. pod-num is 1. pod-ord is 4. a-text is "??YRYRO". b-text is "??GR?RB". parse-text is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
 
 [pod 2 is non-repeating 7-letters]
 t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
@@ -22859,9 +22846,9 @@ t-coitally is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRO". b-t
 
 t-ribaldly is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RYRYRRRO". b-text is "RYRYRRPB". parse-text is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
 
-t-shabbily is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
+t-shabbily is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RRYRRYRO". b-text is "RRYRRYRO". parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
 
-t-silently is a mack-idea. pod-num is 3. pod-ord is 6. a-text is "RYRYRRRO". b-text is "P**YRRRO". parse-text is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-silently is a mack-idea. pod-num is 3. pod-ord is 6. a-text is "RYRYRRRO". b-text is "P??YRRRO". parse-text is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
 
 t-shoddily is a mack-idea. pod-num is 3. pod-ord is 7. a-text is "RRYRRYRO". b-text is "RRYRRYRO". parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
 
@@ -24806,7 +24793,7 @@ instead of doing something with inapt paint:
 	if current action is taking, say "It's stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something." instead;
 	say "The paint is just there. There's got to be some way to get rid of it."
 
-a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?".  parse-text of inapt paint is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
+a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?". parse-text of inapt paint is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
 
 the guava is a fruit.
 
@@ -24828,7 +24815,7 @@ chapter rhubarb
 
 the pugnacious plant is a thing in Scape Space. "A pugnacious plant looms here, just waiting for you to do something with it."
 
-a-text of pugnacious is "RRYRYRR". b-text of pugnacious is "RRYRYRR". parse-text is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
+a-text of pugnacious plant is "RRYRYRR". b-text of pugnacious plant is "RRYRYRR". parse-text is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
 description of pugnacious plant is "It looks like, well, an evil version of a more straightforward tomato plant. You wonder if it is a vegetable that should be a fruit, a vegetable people prepare like a fruit, or vice versa."
 
@@ -25312,7 +25299,7 @@ to say part-one-thru:
 	choose row calendar-part in table of calparts;
 	say "[thiscal entry][line break]";
 	if calendar-part is number of rows in table of calparts:
-		say "[line  break]That's the end of the calendar.";
+		say "[line break]That's the end of the calendar.";
 		now careland calendar is exhausted;
 
 chapter Ned's Dens
@@ -25443,7 +25430,7 @@ thiscal [x calendar] [tdm1]
 "Part six: star pix[paragraph break]I had hoped to put graphics into the game, and it turned out trickier than I thought. Thankfully Glimmr for Glulx works pretty well, but I would up losing valuable time not using the fonts correctly, due to a dumb mistake. I also failed to stop a buffer overrun in some cases, but that's another story. This was something automation could not catch. I also experimented with some pictures and colored text (Yorpwald/wordplay) but didn't get cover art. I couldn't think of anything simple."
 "Part seven: vaster pen[paragraph break]The big problem, though, was what to do with Towers. Originally they were a mess of anagrams like STANCH and CHANTS you had to guess, and you got clues of what was where, and some choices were good and some were evil, and you hacked through the Thickest Thickets. One guy, Elmer, was good, and Merle was evil, and the Coevals['] Alcoves had an elevator where you could go to the various floors and try puzzles. I liked this when OYSTER was small, but Oyster started getting bigger, and Towers became too abstruse with its actions.[paragraph break]It did have hinting, though, and this hinting eventually got repurposed more powerfully and elementally to the settler, but until then, it was a mess. I figured adjectives would be the trickiest things to look at, but a look through my master document gave a lot. At least they weren't as bad as adverbs. I couldn't do anything with them, right? Adverbs were so--powerless."
 "Part eight: that gripe, gather pit, tiger path[paragraph break]And that's when it hit me--I could just GREP my anagram file for ly\b, or words that end in LY, and of course you could be powerless near your great foe. The bleary barley came first, then a way to regain your powers--conjunctions were another word that could be very powerful. Then I noticed a slew of animals which hadn't been anagrammed, mostly because I didn't see how to in SA without crowding the game. Things started to click. I even had an enemy to defeat, but she had no character or name. The necro-crone wasn't Elvira til after Spring Thing."
-"Part nine: inert nap, pain rent[paragraph break]I was able to get the game working with a walkthrough, and I submitted it okay. Greg Boettcher noted it worked, and he liked the idea, though he diplomatically noted that the walkthrough's cuing helped (translated, this meant I forgot to cue SEVERAL exits.)  I found a few easy bugs post-release and didn't see any reviews for a while. I was at least glad one liked the pedanto-notepad. But I was still frustrated. I was grateful to place second to a very entertaining game (Geoff Moore and I have since helped each other with other works,) and I knew I wanted a post-release fix, but I didn't know the scope. What probably kicked me in the butt was an email from someone named Toby Ott who thanked me for the game. He explained he was blind and liked games like this, but he'd found a few bugs. This moved me from 'I better fix my mistakes' to 'I can make this better for people who like this sort of thing.' I also saw a very good walkthrough with bug reports from David Welbourn. I was happy to note I'd fixed some of the bugs, but he provided cuing beyond the good stuff my testers found, including some help-code that hung the game. I think what they found helped him be able to find stuff without getting TOO frustrated. But again, it was nice people were PLAYING."
+"Part nine: inert nap, pain rent[paragraph break]I was able to get the game working with a walkthrough, and I submitted it okay. Greg Boettcher noted it worked, and he liked the idea, though he diplomatically noted that the walkthrough's cuing helped (translated, this meant I forgot to cue SEVERAL exits.) I found a few easy bugs post-release and didn't see any reviews for a while. I was at least glad one liked the pedanto-notepad. But I was still frustrated. I was grateful to place second to a very entertaining game (Geoff Moore and I have since helped each other with other works,) and I knew I wanted a post-release fix, but I didn't know the scope. What probably kicked me in the butt was an email from someone named Toby Ott who thanked me for the game. He explained he was blind and liked games like this, but he'd found a few bugs. This moved me from 'I better fix my mistakes' to 'I can make this better for people who like this sort of thing.' I also saw a very good walkthrough with bug reports from David Welbourn. I was happy to note I'd fixed some of the bugs, but he provided cuing beyond the good stuff my testers found, including some help-code that hung the game. I think what they found helped him be able to find stuff without getting TOO frustrated. But again, it was nice people were PLAYING."
 "Part ten: pet rant pattern[paragraph break]I thought I'd get the first release out before IFComp 2013, but there were always new bugs to find or puzzles to touch up. I'd fix an area, then move to the next, then be sure the area was paved over smoothly--only to find several 'I saw that, right?' issues. The thing was, there was so much I needed to do, I couldn't get down to the fun aesthetic stuff in good conscience. Eventually I decided on a drop-dead release date early in 2014, but unfortunately I couldn't get to some good transcripts. I left some huge bugs in--ones my testers found--but release 2 made a lot more sense."
 "Part eleven: nerve leapt. Vent. Repeal[paragraph break]One of the huge problems I had with testing was the inefficiency of adding one anagram. But with the major issues out of the way, I found ways to do stuff better. How to add names to anagram checking. This caused my bookshelf to add 1000 titles for release 3 and let me name all the authors. I found a way to centralize all the anagram tables so you could see them at the end. I thought I wouldn't use it much, but I wound up adding ten tables more. I used Notepad++ to load quickly and add anagrams when I didn't need to compile, and for my own vanity, I tracked the number of anagrams in the randomized tables and even checked if they conformed to Benford's Law and Zipf's Law. I wrote an anagram-checker. PERL even helped me to detect bad punctuation, capitals or quotes. All this helped me focus on technical stuff. There's so much I thought I'd only use once, but I reused it. All sorts of internal checks (like the tables of anagrams and David White's hashes--in some cases, I wasn't checking right) cleared up. The Table of Nudges grew by several hundreds as I wrote a program to check for the hash value and dump it in a text file for later use. I even managed to write a silly program to check the relative difficulties of the areas. Towers is, by far, the toughest. But I think the most important thing I did was to try and play through one or two areas seriously per week. I needed to let testers['] suggestions soak in. Some puzzles, I thought, weren't perfect, but I didn't have better. But I would up cleaning them up later."
 "Part twelve: twerp valet varlet wept[paragraph break]It turns out there's nothing here that was any good, but I liked this sentence."

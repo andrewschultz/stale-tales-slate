@@ -12,6 +12,7 @@ from collections import defaultdict
 import i7
 import sys
 import re
+import os
 
 need_logic = defaultdict(int)
 need_source_logic = defaultdict(int)
@@ -23,6 +24,7 @@ open_line = defaultdict(int)
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
 scanned = ""
+data_file = "logsync.txt"
 
 open_after = False
 open_first = True
@@ -49,12 +51,13 @@ def usage():
 
 def check_aftertexts():
     okay = defaultdict(bool)
-    with open("logsync.txt") as file:
+    with open(data_file) as file:
         for line in file:
             if line.startswith('#'): continue
             if line.startswith(';'): break
             ll = line.lower().strip().split(",")
             for x in ll: okay[x] = True
+    markedokay = 0
     mayneedsource = 0
     mayneedaftertext = 0
     reading_header = False
@@ -89,7 +92,11 @@ def check_aftertexts():
         if x not in in_aftertexts.keys():
             print("May need", x, "in aftertexts table.")
             mayneedaftertext += 1
-    if mayneedaftertext + mayneedsource: print("May need", mayneedaftertext, "aftertext and", mayneedsource, "source")
+    for x in okay.keys():
+        if x not in in_aftertexts.keys():
+            print(x, "marked as okay for table of aftertexts but doesn't appear there.")
+            markedokay += 1
+    if mayneedaftertext + mayneedsource + markedokay: print("May need", mayneedaftertext, "aftertext and", mayneedsource, "source and may've wrongly marked", markedokay)
 
 def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message = "", other_test = True):
     print("=" * 40, "Checking", outs)
@@ -139,12 +146,12 @@ with open(mysrc) as file:
             if re.search("b-text.*\?.*parse-text", line) or force_next:
                 if re.search("is a mack-idea", line):
                     scanned = re.sub(" is a mack-idea.*", "", line.strip().lower())
-                    scanned = re.sub("t-", "", scanned)
                 else:
                     scanned = re.sub(" is \".*", "", line.strip().lower())
                     scanned = re.sub("a-text of ", "", scanned)
-                need_logic[abbrevs[scanned] if scanned in abbrevs.keys() else scanned] = count
                 need_source_logic[scanned] = count
+                if scanned.startswith("t-") and 'ly' in scanned: scanned = scanned[2:]
+                need_logic[abbrevs[scanned] if scanned in abbrevs.keys() else scanned] = count
                 force_next = False
 
 count = 0
@@ -217,6 +224,9 @@ while arg_count < len(sys.argv):
     elif x == 'cou': show_count = True
     elif x == 'ncou': show_count = False
     elif x == '?' or x == '-?': usage()
+    elif x == 'ed' or x == 'de':
+        os.system(data_file)
+        exit()
     elif x == 'a' or x == 'oa': open_after = True
     elif x == 'af' or x == 'oaf':
         open_after = True
