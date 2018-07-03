@@ -145,7 +145,7 @@ unearth,haunter,etahnru,nearhut
 spike,pikes
 #lean lane
 swipe,ispew,wipes
-#qver of gleaner
+#qver of general gleaner
 enlarge,YRR??RY=general=gleaner
 enlarge,algreen
 #achers arches

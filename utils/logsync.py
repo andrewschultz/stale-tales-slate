@@ -14,6 +14,7 @@ import sys
 import re
 
 need_logic = defaultdict(int)
+need_source_logic = defaultdict(int)
 got_logic = defaultdict(int)
 got_logic_invis = defaultdict(int)
 got_logic_reds = defaultdict(int)
@@ -25,6 +26,8 @@ scanned = ""
 
 open_after = False
 open_first = True
+
+verbose = False
 
 # this is for oddly, badly or privately named items
 # note HONESTLY currently has no ?'s in its b-text
@@ -44,7 +47,51 @@ def usage():
     print("-cou/-ncou turns on/off showing counts of errors, default = off.")
     exit()
 
-def check_logic_file(needs, gots, outs, format_string, file_desc, other_test = True):
+def check_aftertexts():
+    okay = defaultdict(bool)
+    with open("logsync.txt") as file:
+        for line in file:
+            if line.startswith('#'): continue
+            if line.startswith(';'): break
+            ll = line.lower().strip().split(",")
+            for x in ll: okay[x] = True
+    mayneedsource = 0
+    mayneedaftertext = 0
+    reading_header = False
+    in_table = False
+    in_aftertexts = defaultdict(int)
+    sug_text = defaultdict(str)
+    suggestions = []
+    with open(mysrc) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if reading_header:
+                in_table = True
+                reading_header = False
+                continue
+            if line.startswith('table of aftertexts'):
+                reading_header = True
+                continue
+            if not in_table: continue
+            if not line.strip(): break
+            ll = re.split("\t+", line.strip())
+            l0 = ll[0].lower()
+            in_aftertexts[l0] = line_count
+            sug_text[l0] = ll[5]
+            if l0 not in need_source_logic.keys():
+                if l0 not in okay.keys():
+                    suggestions.append("{:s} may be superfluous aftertext at line {:d}".format(l0, line_count))
+                    mayneedsource += 1
+                #print(ll[5])
+            else:
+                if verbose: print("Got", ll[0], "in aftertexts.")
+    if len(suggestions): print("\n".join(sorted(suggestions)))
+    for x in sorted(need_source_logic.keys()):
+        if x not in in_aftertexts.keys():
+            print("May need", x, "in aftertexts table.")
+            mayneedaftertext += 1
+    if mayneedaftertext + mayneedsource: print("May need", mayneedaftertext, "aftertext and", mayneedsource, "source")
+
+def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message = "", other_test = True):
     print("=" * 40, "Checking", outs)
     # for x in needs.keys(): print (x, needs[x], gots[x])
     t2 = [x for x in needs.keys() if x not in gots.keys()]
@@ -64,6 +111,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, other_test = T
             print(need_in_source, y, "is commented in the logic file line", gots[y] ,"but is not in the source.")
     if need_in_logic + need_in_source > 0 and other_test:
         print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
+        if launch_message: print(launch_message)
     else:
         print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
 
@@ -74,7 +122,9 @@ show_code = True
 
 force_next = False
 
-with open(i7.src("roiling")) as file:
+mysrc = i7.src("roiling")
+
+with open(mysrc) as file:
     for line in file:
         count = count + 1
         if 'logsync.py force next' in line:
@@ -94,6 +144,7 @@ with open(i7.src("roiling")) as file:
                     scanned = re.sub(" is \".*", "", line.strip().lower())
                     scanned = re.sub("a-text of ", "", scanned)
                 need_logic[abbrevs[scanned] if scanned in abbrevs.keys() else scanned] = count
+                need_source_logic[scanned] = count
                 force_next = False
 
 count = 0
@@ -178,7 +229,9 @@ while arg_count < len(sys.argv):
         usage()
     arg_count = arg_count + 1
 
-check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML")
+check_aftertexts()
+
+check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "LH opens the logic file")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues")
 check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed > 0))
 

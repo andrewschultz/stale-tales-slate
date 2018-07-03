@@ -16,12 +16,18 @@ quiet = 0
 
 region_wildcard = ""
 
+def standard_usage():
+    print("hch.py 1 si e50 = print 50 maximum errors from shuffling (1) ignoring NUDMIS (nudge/miss) output file testing")
+    print("hch.py 2 a e50 = print 50 maximum errors from roiling (2) only the aftertexts (e.g. what they say after)")
+    exit()
+
 def usage():
     print("1/2 = sa or roiling only")
-    print("[asdi]* = aftertexts, spechelp, donrejects / i = ignore 'nudmis' files, only look at RBR generators.")
+    print("[asdi]* = aftertexts, spechelp, done rejects / i = ignore 'nudmis' files, only look at RBR generators.")
     print("r= = region wildcard")
     print("e# = maximum errors")
     print("q = quiet")
+    print("?? = standard usage")
     exit()
 
 def no_of_for(x):

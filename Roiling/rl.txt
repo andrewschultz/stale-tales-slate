@@ -388,7 +388,7 @@ That gives you the vowel you need, and it drops the other vowel in place. (CHRS)
 If R is in slot 1, we get REACSH. Not quite. So R is in slot 3. (CHS)EAR(CHS)(CH). If C is in slot 1, CEARSH. If H is, HEARSC. So S is. SEAR(CH/HC).
 SEARCH.
 >>END DEN (GLEANER)
-# logic for gleaner
+# logic for general gleaner
 ?What do I need to do to the general gleaner?
 The gleaner gives YRR??RY to start. That means slot 4 is a or e, and slot 5 is n or r. That at least letsus know if a consonant or vowel is in each question slot.
 Here we're going to cheat a bit and assume A is in slot 4, because that forces 1 and 7 to E. E(nrg)(lrg)A(nr)(nrlg)E and here you may have to rely on some red text to cut things down. Al Green helps a bit. E(nrg)(lr)A(nr)(nrlg)E. You may need to brute force here: If R is in slot 3, you get EGRANLE, so it's L. From there, poking around should give ENLARGE.
