@@ -5393,7 +5393,7 @@ carry out scaning:
 [	if noun is an xtradesc in table of aftertexts: ?! doesn't work]
 		if noun is xtradesc entry:
 			if there is no xtratext entry:
-				if cheat-on is true and give-generic-question-hint is true, ital-say "PAD QUESTION MARK should give generic question-mark hints, as a reminder. Toggle this nag with QMH."
+				if cheat-on is true and give-generic-question-hint is true, ital-say "PAD QUESTION MARK should give generic question-mark hints, as a reminder. Toggle this nag with QMH.";
 				the rule succeeds;
 			choose row with a xtradesc of noun in table of aftertexts;
 			if bothscan entry is true:
@@ -5510,7 +5510,7 @@ t-b	false	false	false	true	"[cheatfid]."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
-thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
+thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
@@ -5531,7 +5531,7 @@ general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out." [START towers]
-snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's
+snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's this? Such distracting noise!' They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work."
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
@@ -5559,7 +5559,7 @@ pugnacious plant	false	false	false	false	"Wow, seven letters, odd. Maybe you nee
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
-all noon gag [below here you get a generic response]
+noon gag [below here you get a generic response]
 angriest ingrates
 asset-hit atheists
 b-b
@@ -7138,7 +7138,7 @@ instead of attacking: [this takes responses for general types. The table below i
 sign-other is a truth state that varies.
 
 to say dont-hit of (fi - a person):
-	say "[if fi is fightin]Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)[else if fi is washed up]He'd still beat you up, even though he really doesn't want to fight. Wouldn't change that he and [other-guy of fi] are still [i]washups[r]. Maybe a talk with them would break their funk.[else]Slug lugs? As d-u-m as mud.[end if]"
+	say "[if fi is fightin]Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)[else if fi is washed up]He'd still beat you up, even though he really doesn't want to fight. Wouldn't change that he and [r-l of fi] are still [i]washups[r]. Maybe a talk with them would break their funk.[else]Slug lugs? As d-u-m as mud.[end if]"
 
 table of attack-specific
 target	nohit
@@ -15002,28 +15002,22 @@ Leo is a fightin bruisin reflexive person. Leo is in Dirge Ridge. description is
 
 after fliptoing leo:
 	move rand to dirge ridge;
+	set the pronoun them to rand;
 	continue the action;
 
-to say r-l of (p - a person):
-	say "[if p is Leo]Rand[else if p is Rand]Leo[else]BUG[end if]"
+to say r-l of (p - a person): say "[if p is Leo]Rand[else if p is Rand]Leo[else]BUG[end if]"
 
-check taking a fightin person:
-	say "You can 'take' them by trickery." instead;
+check taking a fightin person: say "You can 'take' [noun] by trickery." instead;
 
-to say l-r:
-	say "[if a random chance of 1 in 2 succeeds]Leo[else]Rand[end if]"
+to say l-r: say "[if a random chance of 1 in 2 succeeds]Leo[else]Rand[end if]"
 
-to say lrp:
-	say "[if a random chance of 1 in 2 succeeds]Leo and Rand[else]Rand and Leo[end if]"
+to say lrp:	say "[if a random chance of 1 in 2 succeeds]Leo and Rand[else]Rand and Leo[end if]"
 
 Rand is a fightin bruisin reflexive person. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset. For all their macho talk, he and Leo might just need someone to talk to[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
 
 a-text of Leo is "YRY". b-text of Leo is "YRY". parse-text of leo is "o[sp]l[sp]e". leo is any-spoilable.
 
 a-text of Rand is "RYRR". b-text of Rand is "RGRR". parse-text of Rand is "x[sp]a[sp]x[sp]x". rand is cheat-spoilable.
-
-to say other-guy of (rl - a person):
-	say "[if noun is Rand]Leo[else]Rand[end if]";
 
 initial appearance of Rand is "[bug-report]".
 initial appearance of Leo is "[bug-report]".
@@ -17436,9 +17430,9 @@ book Anger Range
 
 Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is in lalaland].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if]."
 
-understand "hero/heros shore" and "hero/heros/shore" as Anger Range when haunter is in lalaland.
+understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when haunter is in lalaland.
 
-printed name of Anger Range is "[if haunter is in lalaland]Hero's Shore[else]Anger Range[end if]"
+printed name of Anger Range is "[if haunter is not in lalaland]Anger Range[else if player is male]Hero's Shore[else]Shero Shore[end if]"
 
 after looking in anger range:
 	if trout is in anger range, set the pronoun it to trout;
@@ -20447,7 +20441,7 @@ to decide what number is yow-has-said:
 	let temp be 0;
 	if Dr Yow has been rowdy, increment temp;
 	if Dr Yow has been wordy, increment temp;
-	decide temp;
+	decide on temp;
 
 to say what-can-doc-say:
 	say "[if yow-has-said is 2]. [he-she-c] looks repressed, as if [he-she] has so many ways to say things but needs someone to bring it out of him[else if yow-has-said is 1]. [he-she-c] looks slightly agitated, as if [he-she]'s only said half of what [he-she] wants to say[end if]"
@@ -27176,6 +27170,7 @@ examp
 "When entering the Upscale Capsule."
 "[bold type](presto)[r] The plebe stops you or lets you by with different text."
 "[bold type](oyster)[r] The win-text for the OYSTER region."
+"Anger Range changes to Hero's or Shero Shore."
 "Shoer Osher changes gender too."
 "Attacking the pikes/carps."
 "[bold type](towers)[r] The mardier admirer reacts differently to TALKing/KISSing, etc."
