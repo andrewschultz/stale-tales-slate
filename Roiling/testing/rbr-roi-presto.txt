@@ -53,6 +53,11 @@ Austerer Treasure
 #nudge for austerer
 >austerre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#spechelp for ye hoop
+>phooye
+The hoop dips a bit as if to taunt you.
+>poho
+WRONG
 
 ==t0,2
 >phooey
@@ -137,9 +142,11 @@ You consider some over-long epithet to get the star, but no, it's gotta be somet
 #nudge for stump
 >stupm
 The stump doesn't move, but the star seems to rattle a bit.
-#nudge for drat
+#spechelp for dart
 >drta
 Some 4-letter word or other will get the dart.
+#spechelp for decorative star
+WRONG
 
 >rats
 Your score has just gone up by one point
@@ -168,8 +175,29 @@ The spumed tar does nothing
 !Maybe focus
 
 >n
+
+==t2
+#spechelp for plebe
+The plebe looks confused, as if you garbled what you said.
+
 >bleep
 Your score has just gone up by one point
+
+==t2
+#spechelp for volt maze
+>mazeltvo
+WRONG
+>n
+>w
+#spechelp for maze walls
+>mazeltvo
+The maze walls rumble a bit.
+>wotn
+WRONG
+>undo
+>undo
+>undo
+>undo
 
 >e
 Marines Seminar Remains
@@ -195,9 +223,9 @@ The number's got more numerals than letters.
 The number's got more numerals than letters.
 
 ==t2
-#nudge for bingo
+#spechelp for boing
 >binog
-Not quite. You're close to an a-ha moment, though.??
+You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
 
 >bingo
 Your score has just gone up by one point
@@ -215,6 +243,9 @@ You got the boing mechanism working.
 #renudge for number
 >numbre
 You got the boing mechanism working.
+#spechelp for sport ports
+>prots
+The sport ports seem even shinier for a second.
 
 ==t!1
 >prost
@@ -339,6 +370,9 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for liev
 >live
 The vile veil is impassive. It--kind of protects you, actually.
+#spechelp for leo
+>oel
+There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
 
 >ole
 Your score has just gone up by one point
@@ -347,6 +381,9 @@ Your score has just gone up by one point
 #nudge for leonard
 >leonadr
 You don't need to face double the strength.
+#spechelp for rand
+>danr
+There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 
 >darn
 Your score has just gone up by one point
@@ -360,6 +397,9 @@ You need to concentrate on them being washups. Combining them would mean they co
 #nudge for whasup
 >whaspu
 Maybe something like that'd work with just one washup. But there are two.
+#spechelp for wzup
+>whasspu
+You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 
 >whassup
 Your score has just gone up by one point
@@ -371,7 +411,23 @@ You don't need to combine them physically, but their physical strengths combined
 
 >n
 >n
+
+==t2
+#here we try 'there' before we have the ability
+>there
+WRONG
+>there
+No, you definitely need to say THERE. You just need to have backup and maybe weapons
+>undo
+>undo
+
 >load gun with dart
+
+==t2
+#spechelp for ether
+>theer
+The ether pulsates, but you still can't see through it.
+
 >there
 Your score has just gone up by one point
 
@@ -397,6 +453,13 @@ The ether is gone. You can just go back north.
 >n
 
 ==t2
+#spechelp for hogs
+>gohs
+The hogs snicker a bit, but they seem a little nervous, too.
+#spechelp for keys
+>syek
+The hogs snicker a bit, but they seem a little nervous, too.
+
 #nudge for lawl
 >lalw
 It's too expansive for you to use any mental energy on.
@@ -440,6 +503,11 @@ You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a s
 >clupm
 No, it's not just any clump, but hawt thaw.
 
+==t2
+#spechelp for hawt thaw
+>what
+The hawt thaw crackles slightly.
+
 ==t!1
 >what
 Your score has just gone up by one point
@@ -458,6 +526,15 @@ Concentrate on the words of the harpings phrasing.
 #nudge for entyr
 >entyr
 No way you'll be able to meddle with the Entry from outside
+#spechelp for alert letters
+>latre
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
+#spechelp for log ons letters
+>sologn
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
+#spechelp for ought letters
+>touhg
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 
 >later
 But we ain't bored yet, boss!
@@ -641,6 +718,12 @@ You'll know what to do with the sticks when you're ready to program.
 #nudge for stick
 >stikc
 You'll know what to do with the sticks when you're ready to program.
+#spechelp for disk
+>skdi
+The disk seems to want to expand, but not quite into that. You must be close.
+#spechelp for clack ops locs pack
+>capslokc
+NO, REARRANGE AND TRY AGAIN, you think.
 
 >capslock
 Your score has just gone up by one point
@@ -648,6 +731,13 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 ==t2
+#spechelp for skid
+>diks
+Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did.
+>disk
+>skdi
+Bleah. Did all this high-tech work make you forget the disk was a skid? Yes. Yes, it did.
+>skid
 #nudge for caps
 >casp
 It'd sort of stink if a caps lock button broke in real life, so, no.
@@ -660,7 +750,18 @@ You don't need to do anything with the skid's rope.
 #nudge for fountain
 >fountani
 It's too small to be a fountain--really, just a fount.
-
+#spechelp for pile of coal
+>cloa
+Microscopic bubbles seem to form on the coal and burst in the air.
+#spechelp for flea
+>lefa
+The flea makes a crinkly noise but still seems quite dead.
+#spechelp for fount
+>futno
+Hm, might be FUN TO try another guess. Or useful. Or both.
+#spechelp for gum
+>gmu
+Ugg... umm... you stare at the gum. Not many ways it COULD be stretched.
 
 >cola
 Your score has just gone up by one point
@@ -670,6 +771,15 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >futon
 Your score has just gone up by one point
+
+==t2
+#spechelp for onyx censer
+>screne
+That feels right, but it's not enough yet. You don't need anything grumbly, here.
+#spechelp for escaroles
+>casseroel
+The escaroles seem slightly meatier.
+
 >screen
 Your score has just gone up by one point
 >put screen on slab
@@ -720,6 +830,11 @@ Hacks' Shack
 >push skid n
 Your score has just gone up by one point
 
+==t2
+#spechelp for drab yoke
+>keyboadr
+It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
+
 >keyboard
 Your score has just gone up by one point
 
@@ -767,12 +882,19 @@ Even more nothing happens than you expected. The blue button really is too broke
 #renudge for reboot
 >reboto
 You don't need to give that computer another (figurative) kick.
+#spechelp for piece of scratch paper
+>compiel
+Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
+
 
 >compile
 ==t1
 REGION MAX DECREASED BY 2
 
 ==t2
+#spechelp for t-key
+>abt
+The TBA key rattles within the keyboard a bit.
 #renudge for sleep
 >slepe
 Your mind is no longer a tired jumble.
@@ -782,6 +904,9 @@ The code won't BUDGE.
 #nudge for code
 >coed
 The code won't BUDGE.
+#spechelp for trim socks
+>romsticsk
+You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
 
 ==t!1
 >rom sticks
@@ -805,10 +930,10 @@ You already did enough with the TAB key.
 Score in a scenario: 26 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 31.
 
 ==t2
-#nudge for debug
+#spechelp for compiled code
 >debgu
-You need to budge the letters about.
-
+Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here.
+BUDGE
 
 >pour cola in mug
 >debug
@@ -823,7 +948,10 @@ The catechism would be more likely to scramble YOU up. It's way more complex tha
 It's what's on the scratch paper that was important.
 
 ==t2
->usb
+#spechelp for usb
+>ubs
+Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
+>bus
 !Diver time
 Your score has just gone up by one point
 Strip of Profits

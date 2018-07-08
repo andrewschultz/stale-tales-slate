@@ -3971,11 +3971,9 @@ to match-process (it1 - indexed text) and (it2 - indexed text):
 
 list-headache is a truth state that varies.
 
-to say dior-hint:
-	say "That's not quite it. You can probably look at the diorama to see what to do"
+to say dior-hint: say "That's not quite it. You can probably look at the diorama to see what to do"
 
-to say l-r-bye-hint:
-	say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
+to say l-r-bye-hint: say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
 
 to say di-cli:
 	say "[if yapper is in tenfold]The yapper might alert his cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]There's something more to do, but that's not quite it[end if]"
@@ -4076,7 +4074,7 @@ maze walls	"The maze walls rumble a bit."
 onyx censer	"That feels right, but it's not enough yet. You don't need anything grumbly, here."
 Hogs	"The hogs snicker a bit, but they seem a little nervous, too."
 Keys	"The hogs snicker a bit, but they seem a little nervous, too."
-thaw	"The hawt thaw crackles slightly."
+hawt thaw	"The hawt thaw crackles slightly."
 alert letters	"[l-r-bye-hint]."
 log ons letters	"[l-r-bye-hint]."
 ought letters	"[l-r-bye-hint]."
@@ -4089,7 +4087,7 @@ t-key	"The TBA key rattles within the keyboard a bit."
 USB	"Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff."
 trim socks	"You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work."
 clack ops locs pack	"NO, REARRANGE AND TRY AGAIN, you think."
-fount	"Hm, might be fun to try something like that again."
+fount	"Hm, might be FUN TO try another guess. Or useful. Or both."
 gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
 piece of scratch paper	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
@@ -8728,16 +8726,11 @@ carry out fliptoing:
 				if the-to entry is not parrot and the-from entry is not parrot:
 					increment nounsolve;
 			if the-from entry is pronoun-settable and the-from entry is not the-to entry:
-				if the-to entry is singular-named:
-					set pronoun it to the-to entry;
-				if the-to entry is plural-named:
-					set pronoun them to the-to entry;
-				if the-to entry provides the property male and the-to entry is male:
-					set the pronoun him to the-to entry;
-				if the-to entry provides the property female and the-to entry is female:
-					set the pronoun her to the-to entry;
-			if pill-use is true:
-				pill-list the-from entry;
+				if the-to entry is singular-named, set pronoun it to the-to entry;
+				if the-to entry is plural-named, set pronoun them to the-to entry;
+				if the-to entry provides the property male and the-to entry is male, set the pronoun him to the-to entry;
+				if the-to entry provides the property female and the-to entry is female, set the pronoun her to the-to entry;
+			if pill-use is true, pill-list the-from entry;
 			else if suppress-score is false:
 				say "[the-msg entry][line break]";
 			if mrlp is stores:
@@ -8770,8 +8763,7 @@ carry out fliptoing:
 			else if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
 				now the-from entry is in lalaland;
 			if taked entry is true or player has the-from entry:
-				if the-from entry is not ruby and the-from entry is not medals: [else medals go from worn to carried]
-					now player has the-to entry;
+				if the-from entry is not ruby and the-from entry is not medals, now player has the-to entry; [else medals go from worn to carried]
 			if there is a roomjump entry:
 				if roomjump entry is Strip of Profits:
 					solve-region the map region of the location of the player;
@@ -8790,19 +8782,15 @@ carry out fliptoing:
 			if the-to entry is lamp:
 				now bean-smell is true;
 				now dusty study is lit;
-				if latches are off-stage:
-					now player has latches;
+				if latches are off-stage, now player has latches;
 				consider the adjust light rule;
-			if the-to entry is not the-from entry and the-from entry is not reflexed:
-				move the-from entry to lalaland; [this is to drop a new item in place]
-			if the-to entry is visible: [assume that we are focused on the item we just flipped]
-				set the pronoun it to the-to entry;
-				if the-to entry is plural-named:
-					set the pronoun them to the-to entry;
+			if the-to entry is not the-from entry and the-from entry is not reflexed, move the-from entry to lalaland; [this is to drop a new item in place]
+			if the-to entry is visible:
+				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
+				if the-to entry is plural-named, set the pronoun them to the-to entry;
 			follow the show blues rule instead; [for debugging]
 	repeat through regana of mrlp:
-		if noun is the-from entry and location of noun is location of player:
-			say "You can't seem to change things back to how they were." instead;
+		if noun is the-from entry and location of noun is location of player, say "You can't seem to change things back to how they were." instead;
 	say "This case with [the player's command] in [location of player] shouldn't have happened. BUG." instead;
 	the rule succeeds;
 
@@ -14391,6 +14379,7 @@ every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey ru
 				move Leo to location of player;
 				move Rand to location of player;
 				move wzup to location of player;
+				if hogs are not in location of player, set the pronoun them to wzup
 
 chapter loading
 
@@ -15002,7 +14991,6 @@ Leo is a fightin bruisin reflexive person. Leo is in Dirge Ridge. description is
 
 after fliptoing leo:
 	move rand to dirge ridge;
-	set the pronoun them to rand;
 	continue the action;
 
 to say r-l of (p - a person): say "[if p is Leo]Rand[else if p is Rand]Leo[else]BUG[end if]"
@@ -15076,7 +15064,7 @@ instead of doing something with wzup:
 	if current action is scaning, continue the action;
 	if current action is objhinting, continue the action;
 	if current action is fliptoing, continue the action;
-	say "You don't need to refer to Rand and Leo at once. Referring to one is as good as referring to the other.";
+	say "You don't need to refer to both Rand and Leo at once. Referring to one is as good as referring to the other.";
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 

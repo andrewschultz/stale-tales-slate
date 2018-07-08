@@ -130,6 +130,7 @@ show_code = True
 
 force_next = False
 
+i7.go_proj("roiling")
 mysrc = i7.src("roiling")
 
 with open(mysrc) as file:
