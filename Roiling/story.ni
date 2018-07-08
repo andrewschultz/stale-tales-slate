@@ -3975,7 +3975,8 @@ to say dior-hint: say "That's not quite it. You can probably look at the diorama
 
 to say l-r-bye-hint: say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
 
-to say di-cli: say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]There's something more to do, but that's not quite it[end if]"
+to say di-cli:
+	say "[if yapper is in tenfold]The yapper might alert his cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]There's something more to do, but that's not quite it[end if]"
 
 docile-tried is a truth state that varies.
 
@@ -4092,42 +4093,41 @@ piece of scratch paper	"Man! That's the thing about compiling. Switch one or two
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
 compiled code	"Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here."
 Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe." [START oyster]
-gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
+gins sign	"Hm, the sign doesn't strictly disallow THAT."
 tumblers	"The tumblers wobble a bit as you try to do ... something ... to them."
 tines	"Hm, the stein belongs somewhere you can destroy it, but not QUITE like that."
+sign	"Nobody pays attention to your performance as you disobey the sign. Or try to."
 tunes	"The tunes grow slightly less annoying, for a moment."
 trolls	"The trolls laugh at you a bit, but nervously."
 clam	"The clam still seems enraged."
 urn	"The urn sits there, daring you to walk away."
 boats	"Perhaps if you were louder and more confident, the boats would hear you."
-raft	"The raft rocks slightly."
-oars	"You see bubbling under the oars."
 pale plea	"Yes, the pale plea is calling and warning you to leave. But how?"
 carps	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 pikes	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 trout	"[if player is in range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[end if]."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 wrap	"That's not quite the way to pop the wrap."
+o-t	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
+raft	"The raft rocks slightly."
+oars	"You see bubbling under the oars."
 eeks	"You guess the eeks must be there--no, there!"
 pre-haun	"You need an organized way to see what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
+haunter	"You're a bit tongue-tied, but that seems close."
+a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 knob	"The knob rattles slightly."
 skis	"The skis momentarily seem more polished."
-snap pans	"The pans wobble slightly."
 bogus-plains	"You feel like making a big speech about what you've done and what you plan to do, but not quite like that."
-waste	"The heaps are still technically waste, but you may want to deal with them more delicately."
-heaps	"The heaps still look ugly as ever."
 tubs	"Hm. The tubs rattle a bit, but you need to do something strong."
 prod	"You juggle the prod a bit, but it doesn't change into anything. Well, not like that."
-a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
 ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
-haunter	"You're a bit tongue-tied, but that seems close."
-o-t	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
+waste	"The heaps are still technically waste, but you may want to deal with them more delicately."
+heaps	"The heaps still look ugly as ever."
 gleaner	"The gleaner remains too small to read."
 dialer	"[di-cli]."
 lever	"You look at the lever, wishing it would be a little more fun to pull."
-pins	"You look at the pins. They're in the way, but they don't look particularly sturdy."
 d2	"[di-cli]."
 yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
 Andres	"Andres looks a bit more tied up at the moment." [START towers]
@@ -5058,8 +5058,7 @@ when play begins (this is the hint and other randomization rule):
 	if a random chance of 1 in 2 succeeds, now lobster-first is true;
 	if a random chance of 1 in 2 succeeds, now sister-first is true;
 	if a random chance of 1 in 2 succeeds, now mbb is Mr Beal; [troves random puzzle]
-	if a random chance of 1 in 2 succeeds: [presto random clues]
-		now goshy is true;
+	if a random chance of 1 in 2 succeeds, now goshy is true; [presto random clues]
 	sort byebyes in random order; [phat path ways to say goodbye]
 	now a random badbook is in hacks' shack;
 	sort shop-hint-items in random order; [posh hops shop items] [oyster random clues]
@@ -8730,7 +8729,8 @@ carry out fliptoing:
 				if the-to entry is plural-named, set pronoun them to the-to entry;
 				if the-to entry provides the property male and the-to entry is male, set the pronoun him to the-to entry;
 				if the-to entry provides the property female and the-to entry is female, set the pronoun her to the-to entry;
-			if pill-use is true, pill-list the-from entry;
+			if pill-use is true:
+				pill-list the-from entry;
 			else if suppress-score is false:
 				say "[the-msg entry][line break]";
 			if mrlp is stores:
@@ -14231,7 +14231,10 @@ check drinking trance nectar: say "No. That can't be it. You want a way to exit,
 
 a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x".
 
-[clap back black cap ??]
+check fliptoing trance nectar:
+	if mbb is in upscale capsule and sister tressi is in upscale capsule:
+		say "No. You've done enough. You ... you've come to loathe the trance nectar any more, but you can't quite break free of it. With [mbb] and Sister Tressi staring down at you,you can't quite bring yourself to. Buyt maybe if you dealt with even one of them...";
+		preef trance nectar;
 
 chapter silly Upscale Capsule scenery
 
@@ -14336,6 +14339,11 @@ instead of doing something to the salt:
 the St Al Salt is vanishing scenery. printed name of salt is "St. Al Salt".
 
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
+
+after fliptoing salt:
+	now mbb is in upscale capsule;
+	now sister tressi is in upscale capsule;
+	continue the action;
 
 description of salt is "St. Al Salt is, from what you are reading, engineered to maximize your productivity from (motivational stress * remaining years,) much better than other brands. It helps you preserve yourself, sort of. It is emblazoned with a picture of St. Al, recently enshrined as Yorpwald's patron saint of Not Faffing Around."
 
@@ -17020,7 +17028,7 @@ ant	"With the pills dropping around, the ant is distracted, and your wild hacks 
 ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
 scrawl	"The pills slip into the scrawl, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
 haunter	"The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding."
-yapper	"The yapper begins bellyaching about picking up the pills. 'Why is it always MY job? And now I have to go find a wastebasket...' You think you see the yapper popping a pill that got stuck in the jr. jar before departing. The den-loft is yours now!"
+yapper	"The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves."
 d2	 "You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
 dialer	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
 
@@ -29143,17 +29151,25 @@ to place-idea (myp - a number) and (myi - a number):
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2].";
 
-carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowned Downside]
+carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowned Downside. Most of the time we'll just need the non hundreds.]
 	let temp be 0;
 	let G be Rodney;
 	let found-yet be false;
 	let act-index be the remainder after dividing number understood by 100;
 	let seedflags be number understood / 100;
+	say "USAGE NOTES:[line break]1=Balmer 2=Mr Beal[line break], 10=the pod(1..8) for the macks, 1=the pod number(1..5) for the warriors.[paragraph break]Seed flags can be anything up to 4.";
 	if act-index > 8:
-		say "[b]WARNING: this is probably out of range.[r][line break]";
+		say "[b]WARNING: this is probably out of range, but we are rounding down.[r][line break]";
 	if act-index < 1:
 		say "Need a positive act index.";
 		the rule fails;
+	if upscale capsule is visited and sister tressi is not off-stage:
+		say "We can't randomly allocate the marble blamer.";
+	else:
+		if the remainder after dividing seedflags by 2 is 1:
+			now mbb is Marble Blamer Balmer;
+		else:
+			now mbb is Marble Blamer Mr Beal;
 	if seedflags <= 4:
 		if Disowned Downside is visited and macked-out > 0: [next, seed the macks in OTTERS]
 			say "Skipping Disowned Downside seeding because you already started wiping the macks out.";
@@ -29161,7 +29177,7 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 			now all mack-ideas are off-stage;
 			repeat with J running from 1 to max-pod-num:
 				place-idea J and act-index;
-			if seedflags is 0:
+			if the remainder after dividing seedflags by 2 is 0:
 				assign-random-mack-priority;
 			else:
 				assign-fixed-mack-priority;
@@ -29171,7 +29187,7 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 		else:
 			if act-index > 5:
 				say "Decreasing index to 5 for the Trefoil.";
-				now act-index is 4;
+				now act-index is 5;
 			now all warriors are off-stage;
 			repeat with J running from 1 to 7:
 				place-warrior J and act-index;
