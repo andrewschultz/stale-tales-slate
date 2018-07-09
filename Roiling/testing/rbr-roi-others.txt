@@ -23,6 +23,18 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >z
 
 ==t2
+#spechelp for lumps
+>lumsp
+The lumps seem almost ready to burst.
+\\
+#spechelp for harmonicas
+>harmonicsa
+The harmonicas whistle, as if something happened.
+\\
+#spechelp for pagers
+>pagesr
+The pagers light up slightly. Maybe give it another go.
+\\
 #nudge for arugula
 >arugual
 The arugula is just for eating, so you can change something else that's been stumping you.
@@ -67,6 +79,22 @@ Nothing happens. Maybe just examine it.
 >x stand
 
 ==t2
+#spechelp for eerie blurbs
+>eerie blursb
+The blurbs turn a few shades of purple before settling again.
+\\
+#spechelp for peanut cola
+>peanut coal
+The peanut cola smells slightly fruity for a minute.
+\\
+#spechelp for magenta rope
+>magenta roep
+The magenta rope and other items you uncovered briefly seem as one.
+\\
+#spechelp for videotape
+>videotaep
+You must be on the right track--but nothing happens. Yet.
+\\
 #nudge for stand
 >stadn
 Nothing happens. You found enough inside it, anyway.
@@ -76,6 +104,10 @@ Nothing happens. You found enough inside it, anyway.
 #nudge for lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
+\\
+#spechelp for mad train
+>mad trani
+The train emits some fake smoke and seems ready to blow up--but no.
 
 >maraschino
 Your score has just gone up by one point.
@@ -183,6 +215,14 @@ Nothing happens. Perhaps it's the whole item that's important.
 #nudge for eerie
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
+\\
+#spechelp for slime
+>sliem
+The slime shifts about slightly, but not enough--yet.
+\\
+#spechelp for spear
+>spera
+The spear stays as-is. But it can't be that hard to change.
 
 >score
 Score in a scenario: 5 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
@@ -224,6 +264,29 @@ There's enough credit on the token. Don't get greedy.
 Swell Wells
 
 ==t2
+#spechelp for silly shirt
+>silly shitr
+You don't quite have ESP, pal, but with the right logic skills you can seem like you do. The shirt remains unchanged.
+\\
+#spechelp for green stain
+>tangerinse
+Parts of the green stain turn orange-ish but is too small to be oranges.
+\\
+#spechelp for riot cap
+>riot cpa
+Nothing happens. Your magic skills feel like the pits for a second.
+\\
+#spechelp for stucco
+>stucoc
+The stucco looks almost hairy for a second.
+\\
+#spechelp for miser ruble
+>miser rubel
+The miser ruble turns a bit purpler.
+\\
+#spechelp for sorer bogey
+>gooseberyr
+The bogey's tone changes slightly for a second.
 #nudge for wells
 >swlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -291,6 +354,10 @@ Score in a scenario: 15 out of 42 total points in the current region, Others. Lo
 scru-it
 
 ==t2
+#spechelp for coin
+>coni
+The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
+\\
 #renudge for arbored
 >aborder
 Bad idea to ruin such life-giving scenery--the only way is north.
@@ -319,6 +386,40 @@ Score in a scenario: 18 out of 42 total points in the current region, Others. Lo
 Filed Field
 
 ==t2
+#spechelp for barber sickle
+>barber sickel
+The barber sickle darkens a bit. You must be on the right track.
+#spechelp for mean trowel
+>meantrowle
+You had the seed of an idea there, you thought.
+#spechelp for b-r
+>breadfruti
+You loaf a bit after thinking that, hoping for something to happen. It doesn't.
+\\
+#spechelp for pryer bars
+>pryer basr
+The pryer bars briefly turn very red.
+\\
+#spechelp for briar screen
+>briar screne
+The briar screen briefly turns darker.
+\\
+#spechelp for rapt figure
+>rapt figuer
+The rapt figure frowns as if it's eaten something sour.
+\\
+#spechelp for pipe panel fence
+>pineappel
+The pipe panel fence sways slightly.
+\\
+#spechelp for b-w
+>strawberrise
+You feel the barriers west pulling towards you.
+\\
+#spechelp for barren cries
+>barren crise
+The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
+\\
 #nudge for eog
 >eog
 There's no way to chop the foliage down, but you don't need to.
@@ -411,8 +512,27 @@ That doesn't really describe the Tekno-Token
 >icno
 Hmm. You could probably do something with just one coin, or you could do something with all of them.
 
+==t2
+>icons
+#spechelp for icons
+>icosn
+The icons rattle and hum promisingly.
+>undo
+>undo
+
+==t2
+#spechelp for coins
+>coisn
+The coins rattle and hum promisingly.
+
 >sonic
 Blam!
+
+==t2
+#spechelp for s-c
+>sonci
+The sonic coins hum almost questioningly.
+
 >score
 Score in a scenario: 22 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
 >icons
@@ -447,6 +567,25 @@ Score in a scenario: 28 out of 42 total points in the current region, Others. Lo
 Clangier Clearing
 
 ==t2
+#spechelp for lemons
+>lemosn
+Len frowns at the lemons.
+\\
+#spechelp for melon
+>melno
+Hm, there must be a better melon than that, but how to ask Len, now.
+\\
+#spechelp for pre-mang
+>amogn
+It would be nice to find a mango, yes. But you don't find anything that way.
+\\
+#spechelp for quince
+>quinec
+That certainly sounds foreign--but it doesn't seem to sway Len.
+\\
+#spechelp for nectarine
+>nectarien
+The nectarine seems a little less shiny and new. But not enough.
 #spechelp for auction caution
 >papaysa
 Everyone promises quick payment, but what are you promising to pay quickly FOR?
@@ -556,6 +695,22 @@ No, you already took care of stuff
 Scape Space
 
 ==t2
+#spechelp for pugnacious plant
+>pugnacious platn
+The plant seems to adopt a defensive position with its arms/branches.
+\\
+#spechelp for orange
+>oraneg
+The orange seems a bit closer for a bit.
+\\
+#spechelp for an-a
+>nabaan
+The A shines for a split-second.
+\\
+#spechelp for inapt paint
+>inapt paitn
+You seem to read the inapt paint backwards for a second.
+\\
 #nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -693,6 +848,19 @@ The Valence Enclave doesn't need modifications. Especially with people potential
 
 >n
 PERP
+
+==t2
+#spechelp for viewer
+>viewre
+That's not the way to learn from the viewer--it's probably not that complicated. You hope.
+\\
+#spechelp for searcher
+>searchre
+That's not the way to learn from the searcher--it's probably not that complicated. You hope.
+\\
+#spechelp for perp-priv
+>prpe
+It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
 
 ==t1
 >review
