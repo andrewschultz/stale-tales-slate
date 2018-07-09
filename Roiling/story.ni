@@ -3978,11 +3978,7 @@ to say l-r-bye-hint: say "It's kind of tough to say goodbye, firmly but kindly, 
 to say di-cli:
 	say "[if yapper is in tenfold]The yapper might alert his cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]There's something more to do, but that's not quite it[end if]"
 
-docile-tried is a truth state that varies.
-
-to say doc-try:
-	now docile-tried is true;
-	say "[one of][or], again[stopping]";
+to say ser-try: say "[one of][or], again[stopping]";
 
 table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
@@ -4168,17 +4164,17 @@ bonker	"'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!
 weeds	"The weeds almost seem to shrug."
 raves saver	"The 'replay player' letters brighten for a second."
 muscly luc sym	"Luc Sym stumbles for a moment."
-muscly	"Ms. Lucy stumbles for a moment."
-organised	"The drains sizzle slightly but go back to menacing quiet."
+muscly ms lucy	"Ms. Lucy stumbles for a moment."
+organised ego drains	"The drains sizzle slightly but go back to menacing quiet."
 mardier admirer	"The mardier admirer looks askance, then returns to evaluating you some more."
 natives	"The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 try us yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
-alarming	"The grailman seems almost average for a moment."
+alarming grailman	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
 Reed's Ale	"[el-la-f] listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
-wait-seer	"The wait-seer looks bored and distracted for a second."
+sweatier wait-seer	"The wait-seer looks bored and distracted for a second."
 bluster butlers	"The bluster butlers cough slightly and look around furtively."
-atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
+asset-hit atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
 lois the hostile	"Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress."
 hostile-is-he lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
 ropins	"The ropins remains secure, with no easy way to open it."
@@ -4186,14 +4182,13 @@ agnostic	"[ag-first] scrunches [his-her] eyes to try to keep even more attention
 atblock	"[ag-first] seems a little more focused, but [he-she] could maybe do even better."
 mended mini denim	"The mended mini denim bends and warps, but you hear no tearing noise."
 sporties' ripostes	"The ripostes seem less cutting for a moment."
-old ice	"The old ice seems to glimmer a bit."
+docile old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
-serpent	"The serpent calms down for a split-second[doc-try]."
+serpent	"The serpent calms down for a split-second[ser-try]."
 Tetris Sitter	"The Tetris Sitter breaks her glassy smile."
 ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
-flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
@@ -19995,8 +19990,7 @@ printed name of Coasting Agnostic is "[if player is male]Scot Agin[else]Staci On
 understand "staci/ong" and "staci ong" as Agnostic when player is female.
 understand "scot/agin" and "scot agin" as Agnostic when player is male.
 
-to say ag-first:
-	say "[if player is female]Staci[else]Scot[end if]"
+to say ag-first: say "[if player is female]Staci[else]Scot[end if]"
 
 check objhinting agnostic:
 	if player is in subsector and agnostic is in subsector, try objhinting atblock instead;

@@ -54,12 +54,12 @@ def jump_str(a, b):
     if a - b <= 1: return ''
     return "*JUMP*"
 
-def find_in_glob(spec_stuff, pattern, b, region):
+def find_in_glob(spec_stuff, pattern, b, region, extras = []):
     got_spec_yet = defaultdict(str)
     errs = 0
     err_string = 'donereject' if pattern == 'done rejects' else ''
     last_line = 0
-    for x in glob.glob(pattern):
+    for x in glob.glob(pattern) + extras:
         with open(x) as file:
             if not quiet: print("Checking", x)
             for (line_count, line) in enumerate(file, 1):
@@ -116,7 +116,7 @@ def spec_check(a, b, region=""):
             if debug: print(ary[0])
     rbr_find = "rbr-*"
     reg_find = "*-nudmis*"
-    find_in_glob(needs_spec_test, rbr_find, b, region)
+    find_in_glob(needs_spec_test, rbr_find, b, region, ["reg-roi-seed.txt"])
     if not ignore_nudmis: find_in_glob(needs_spec_test, reg_find, b, region)
 
 projs = ['sa', 'roi']
