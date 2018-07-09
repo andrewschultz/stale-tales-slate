@@ -2472,7 +2472,7 @@ Dr Yow	agnostic	"[if agnostic is in actionless coastlines]'It would be fun to tu
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
-Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but Ed's pep talk was a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
+Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but the Tetris Sitter's observations were a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
 Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is in lalaland]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
 Tetris Sitter	flowerpot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
 Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
@@ -4166,8 +4166,7 @@ ingrates	"The ingrates seem to wonder if it's worth complaining to you for a mom
 fissure	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is visible], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if]."
 bonker	"'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!'"
 weeds	"The weeds almost seem to shrug."
-saver	"The 'replay player' letters brighten for a second."
-ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
+raves saver	"The 'replay player' letters brighten for a second."
 muscly luc sym	"Luc Sym stumbles for a moment."
 muscly	"Ms. Lucy stumbles for a moment."
 organised	"The drains sizzle slightly but go back to menacing quiet."
@@ -4192,7 +4191,8 @@ turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
 serpent	"The serpent calms down for a split-second[doc-try]."
-Tetris Sitter	"Ed looks slightly less avaricious."
+Tetris Sitter	"The Tetris Sitter breaks her glassy smile."
+ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
@@ -4269,17 +4269,13 @@ viewer	"That's not the way to learn from the viewer--it's probably not that comp
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
 perp-priv	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
 
-to say l-frown:
-	say "[if player is in clearing]Len frowns[else]you frown[end if] at the ";
+to say l-frown: say "[if player is in clearing]Len frowns[else]you frown[end if] at the ";
 
-to say jet-nq:
-	say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";
+to say jet-nq: say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";
 
-to say imp-nag:
-	say "The imp looks slightly annoyed for a second. You may be on the right track";
+to say imp-nag: say "The imp looks slightly annoyed for a second. You may be on the right track";
 
-to say ram-nag:
-	say "The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track";
+to say ram-nag: say "The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track";
 
 ana-repeats is a number that varies.
 
@@ -6363,34 +6359,23 @@ to say current-mackiness:
 
 to decide which thing is otters-cur-item:
 	if player is in Bleary Barley:
-		if b-b is reflexive:
-			decide on b-b;
-		if Ed Riley is in Bleary Barley:
-			decide on Ed Riley;
+		if b-b is reflexive, decide on b-b;
+		if Ed Riley is in Bleary Barley, decide on Ed Riley;
 	if player is in Disowned Downside:
-		if Macks are in Disowned Downside:
-			decide on Gretta;
-		if atmo-moat is in Disowned Downside and power-back is true:
-			decide on atmo-moat;
+		if Macks are in Disowned Downside, decide on Gretta;
+		if atmo-moat is in Disowned Downside and power-back is true, decide on atmo-moat;
 	if player is in bran barn:
-		if Mr Lee wears ghoul hat:
-			decide on ghoul hat;
-		if p-2 is in bran barn:
-			decide on p-2;
+		if Mr Lee wears ghoul hat, decide on ghoul hat;
+		if p-2 is in bran barn, decide on p-2;
 	if player is in loop pool:
-		if sea cube is not in lalaland:
-			decide on sea cube;
-		if eels are not reflexed:
-			decide on eels;
+		if sea cube is not in lalaland, decide on sea cube;
+		if eels are not reflexed, decide on eels;
 	if player is in Shiner Shrine:
-		if sly imp is in Shiner Shrine:
-			decide on sly imp;
+		if sly imp is in Shiner Shrine, decide on sly imp;
 	if player is in Clarthead Cathedral:
-		if whiners are in Clarthead Cathedral:
-			decide on whiners;
+		if whiners are in Clarthead Cathedral, decide on whiners;
 	if player is in Lamer Realm:
-		if owls are in Lamer Realm:
-			decide on owls;
+		if owls are in Lamer Realm, decide on owls;
 		if number of visible reflexive animals > 1:
 			decide on animal-to-hint;
 	if player is in perverse preserve:
@@ -11650,7 +11635,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
-"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
+"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for...well, someone Renato was sad to miss."	"badlands"	true	towers
 "guru"	false	"You can GURU something [if arugula is in lalaland]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 
 to say xray-help:
@@ -20646,7 +20631,7 @@ after printing the locale description for Rawest Waters when Rawest Waters is un
 	now poss-score of Towers is 5 + cur-score of towers;
 	now min-score of Towers is 1 + cur-score of towers;
 	if player has strudel and strudel is not reflexed:
-		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also DINGY, GREEDY, PRESENT and give Ed the flowerpot. And the strudel can always be rustled.]
+		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also PUNIER, TRISTE, PRESENT and give the Triste Sitter the flowerpot. And the strudel can always be rustled.]
 
 the eastern shore is reflexive scenery in rawest waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
 
@@ -20925,7 +20910,7 @@ after fliptoing tetris sitter:
 
 check going east in Mesprise Premises (this is the force give flowerpot rule):
 	if player has flowerpot and flowerpot contains crocus and Tetris Sitter is reflexed:
-		say "Before you leave, you remember Ornate Atoner Renato's speech--the flowerpot seems like a nice gift for Ed, now that Ed is nicer. You give it to him.[paragraph break]'Come back if you need help with Castle Apcur!' he says, as he goes to set the crocus out somewhere nice.";
+		say "Before you leave, you remember Ornate Atoner Renato's speech--the flowerpot seems like a nice gift for the Tetris Sitter, now she's not stuck on her game. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
 		now flowerpot is in lalaland;
 	continue the action;
 
