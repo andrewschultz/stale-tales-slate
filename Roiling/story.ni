@@ -478,7 +478,7 @@ section compiler non-syntax section
 
 use MAX_DICT_ENTRIES of 3000.
 
-use MAX_OBJECTS of 930.
+use MAX_OBJECTS of 940.
 
 use MAX_SYMBOLS of 140000.
 
@@ -510,7 +510,7 @@ use MAX_VERBS of 710. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
-use MAX_OBJECTS of 940.
+use MAX_OBJECTS of 950.
 
 use MAX_PROP_TABLE_SIZE of 580000.
 
@@ -4097,7 +4097,7 @@ trolls	"The trolls laugh at you a bit, but nervously."
 clam	"The clam still seems enraged."
 urn	"The urn sits there, daring you to walk away."
 boats	"Perhaps if you were louder and more confident, the boats would hear you."
-raft	"The raft rocks slightly."
+frat raft	"The frat raft rocks slightly."
 oars	"You see bubbling under the oars."
 pale plea	"Yes, the pale plea is calling and warning you to leave. But how?"
 carps	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
@@ -4111,7 +4111,7 @@ c2	"The crate's from there! No, there! No, there! Well, you thought you had an i
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 knob	"The knob rattles slightly."
 skis	"The skis momentarily seem more polished."
-snap pans	"The pans wobble slightly."
+span pans	"The pans wobble slightly."
 bogus-plains	"You feel like making a big speech about what you've done and what you plan to do, but not quite like that."
 waste	"The heaps are still technically waste, but you may want to deal with them more delicately."
 heaps	"The heaps still look ugly as ever."
@@ -4221,7 +4221,7 @@ medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
 pipe panel fence	"The pipe panel fence sways slightly."
-b-w	"You feel the barriers west pulling towards you."
+barriers west	"You feel the barriers west pulling towards you."
 sorer bogey	"The bogey's tone changes slightly for a second."
 l-o-p	"Something glints off the list of prices."
 auction caution	"Everyone promises quick payment, but what are you promising to pay quickly FOR?"
@@ -4405,7 +4405,7 @@ stumbler tumblers	"You can't and don't want to do anything else to the tumblers.
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
 gins sign	"The sign mainly just disallowed singing."
 tines	"You destroyed the stein, and that's enough."
-raft	"The raft has fuel. It needs to use that fuel, now, with the oars."
+frat raft	"The frat raft has fuel. It needs to use that fuel, now, with the oars."
 trout	"Retutor? Torture. Rot. True!"
 wipes	"Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on."
 crate	"Besides identifying it as a rect, you can't do much else with the crate."
@@ -5810,7 +5810,7 @@ rustic-hard-items is a list of things variable. rustic-hard-items is { mad train
 
 wells-hintables is a list of things variable. wells-hintables is { riot cap, silly shirt, stucco, sorer bogey, green stain, miser ruble }.
 
-field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, buried raft, b-w, barber sickle, mean trowel, rapt figure, barren cries }.
+field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, buried raft, barriers west, barber sickle, mean trowel, rapt figure, barren cries }.
 
 clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, l-o-p, lemons, auction caution, nectarine }.
 
@@ -6168,9 +6168,9 @@ to decide which thing is oyster-item:
 		if clam is in lode, decide on clam;
 		if urn is in lode, decide on urn;
 	if player is in Disease Seaside, decide on boats;
-	if player is on raft:
-		if raft is reflexed, decide on oars;
-		decide on raft;
+	if player is on frat raft:
+		if frat raft is reflexed, decide on oars;
+		decide on frat raft;
 	if player is in freight, decide on plea;
 	if player is in range:
 		if pikes are in range, decide on carps;
@@ -6655,7 +6655,7 @@ section special cases
 this is the trailing-a rule:
 	if location of player is Disease Seaside:
 		if the player's command exactly matches the text "a cone":
-			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.";
+			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or boats are a better bet.";
 			the rule succeeds;
 	else if location of player is loather rathole:
 		if the player's command exactly matches the text "a rec":
@@ -7022,7 +7022,7 @@ Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
-filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
+filed field	"[if barriers west are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
@@ -7139,7 +7139,7 @@ hogs	"If you were as strong as Rand and Leo, maybe. But you're not. Maybe you ca
 trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down." [START oyster]
 urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
 boats	"Sabot? Batso!"
-raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
+frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
 carps	"That sounds so--brutal. And nonspecific."
 pikes	"That sounds so--brutal. And nonspecific."
 trout	"This game's kind of topsy turvy, but not like THAT."
@@ -7199,10 +7199,8 @@ to say which-sharp:
 chapter entering
 
 rule for supplying a missing noun when entering:
-	if location of player is Disease Seaside:
-		try entering raft;
-	if location of player is Strip of Profits and number of visible portals is 1:
-		now noun is a random visible portal;
+	if location of player is Disease Seaside, try entering frat raft;
+	if location of player is Strip of Profits and number of visible portals is 1, now noun is a random visible portal;
 	if location of player is Cruelest Lectures:
 		if e-revealed is true or the player's command matches the text "sit":
 			now noun is teasing seating;
@@ -7236,7 +7234,7 @@ chapter climbing
 The block climbing rule is not listed in the check climbing rulebook.
 
 check climbing (this is the climb to enter rule) :
-	if noun is raft or noun is dumpster or noun is chimney or noun is bench or noun is stair:
+	if noun is frat raft or noun is dumpster or noun is chimney or noun is bench or noun is stair:
 		try entering noun instead;
 
 check climbing (this is the generic silly climbing reject rule):
@@ -7727,7 +7725,7 @@ check listening (this is the you can hear stuff some places rule):
 	if wait-seer is visible, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in rawest waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in Achers' Arches, say "Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU." instead;
-	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The raft makes unpleasant, disturbing noises." instead;
+	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
 	if player is in lode and clam is in lode, say "You hear the clam snapping." instead;
 	if player is in freight, try examining the pale plea instead;
 	if player is in anger range and carps are in lalaland and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
@@ -8729,7 +8727,7 @@ carry out fliptoing:
 						increment cur-score of mrlp;
 					two-up; [this is kind of a bad hack--two-up checks the score for increases, hence no min-up in the unless above]
 			else if the-to entry is not in lalaland or the-to entry is satchel: [more than one point here]
-				if the-from entry is boats and raft is reflexed:
+				if the-from entry is boats and frat raft is reflexed:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
 				else if the-from entry is coins and the-to entry is s-i:
 					two-up;
@@ -8965,7 +8963,7 @@ clam	clam	false	139082395	--	"calm"	"calm"	"You try some odd combination of sing
 urn	urn	false	259337118	Disease Seaside	"run"	"run"	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."
 boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boats"	"You start yelling about how great you are and how you deserve a free ride. A beat-foil lifeboat (not shippish) passes you by, but eventually a fighter freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"
 pale plea	pale plea	false	265273725	Anger Range	"leap"	"leap" or "leap at plea" or "leap at pale plea"	"You're a bit scared to jump, but when it's a majestic leap--whee! You jump overboard, and nobody can really follow you, since the boat is moving away, and they don't want to be left behind. Even if they could swim better. Your super purse remains water-tight, so no possessions get soaked."
-oars	oars	false	258138164	Anger Range	"soar"	"soar"	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
+oars	oars	false	258138164	Anger Range	"soar"	"soar"	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the frat raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
 raft	raft	false	217136535	--	"fart"	"fart" or "fart on raft"	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"
 carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	"[spike-scrap]."
 carps	carps	false	403472058	--	"spike"	"spike" or "spike pikes"	"[spike-scrap]."
@@ -9131,7 +9129,7 @@ the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
 moss cap	compass	true	433635024	--	"compass"	"compass"	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which might actually be able to tell the direction!"
 lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	"The lumps grow circular and purplish, and suddenly plums are rolling all around."
 eerie blurbs	blueberries	true	891090201	--	"blueberries"	"blueberries/blueberry"	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes."
-b-w	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	"The barriers west collapse into a pile of strawberries."
+barriers west	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	"The barriers west collapse into a pile of strawberries."
 spear	pears	true	393057655	--	"pears"	"pears/pear"	"The spear splatters into more pears than you can hold!"
 slime	limes	true	386961913	--	"limes"	"lime/limes"	"The slime schlurps into a pile of limes too cumbersome for you to carry."
 pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	"Poof! The pagers turn into grapes. 'Wow, got rid of the noise AND got me more merchandise.'"
@@ -14819,7 +14817,7 @@ check burning:
 	if noun is lager or noun is pernod, say "It's not high enough proof. In fact, it's almost certainly watered-down." instead;
 	if noun is coal, say "You need to burn mental fuel, here." instead; [presto]
 	if noun is on labs slab, say "You may figuratively want to, right now, but that's natural when you're programming something tough." instead;
-	if noun is raft, say "[if player is in raft]No way. Especially not while you're on it[else]That might be a way across. Somehow[end if]." instead; [oyster]
+	if noun is frat raft, say "[if player is in frat raft]No way. Especially not while you're on it[else]That might be a way across. Somehow[end if]." instead; [oyster]
 	if noun is crate, say "This is totally the wrong genre of game for that." instead;
 	if noun is log gaol, say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead; [towers]
 	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
@@ -16995,7 +16993,7 @@ skis	"The pills fly to the skis with a bizarre smooching noise. The skis dissolv
 clam	"The pills form a large maze with no dead ends. The clam goes after the bouncing pills and eats some, zigzags crazily, and runs himself tired tracking new ones down. Then, suddenly, it looks as if it's seen a ghost. It shrivels to a point with a sad deflating noise, then vanishes with a pop!"
 urn	"The urn, being possessed of greed, seems to suck in the pills, which cause it to shake. You run in a random direction as it explodes. Hm, run, urn. You could've figured that, but, well, time to move on."
 boats	"A boat pulls over as you spill the pills. 'If ye need a ride, come aboard! We'll collect yer coins...'[paragraph break]Before you can protest, you're aboard. You hear yelling as several of the fish realize the 'coins' are pills. They don't like freeloaders..."
-oars	"The pills must've been energy pills, because they jump up and down and attach to the oars and create a reaction that blasts your raft into the air to the other side! With a bump, you tumble out and walk a bit..."
+oars	"The pills must've been energy pills, because they jump up and down and attach to the oars and create a reaction that blasts the frat raft into the air to the other side! With a bump, you tumble out and walk a bit..."
 plea	"Some of the crays are dumb enough to think that the pills might be coins. In the ensuing hubbub of arguments between smart fish and dumb fish, you jump over the edge and swim to shore."
 carps	"The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. 'You stupid! Those pills are valuable. Out of our way, mouth-breather.' The range anger wells up in you."
 tubs	"You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into waste. Which might be hiding more than just that prod you found inside."
@@ -17232,11 +17230,11 @@ understand "run [direction]" as going.
 
 book Disease Seaside
 
-Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of beinh on this side of the river. Boats block the whole river, and there's a raft docked here. A canoe too!"
+Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of beinh on this side of the river. Boats block the whole river, and there's a frat raft docked here. A canoe too!"
 
 after looking in Disease Seaside:
 	set the pronoun them to boats;
-	set the pronoun it to raft;
+	set the pronoun it to frat raft;
 	continue the action;
 
 the canoe is scenery in Disease Seaside. "The canoe is all red and has a fish carved into it. The fish seems to be trying to cut...a tree?!"
@@ -17247,7 +17245,7 @@ check taking canoe:
 the fish is part of the canoe. description of fish is "You can't tell what sort of fish it is. It may not be important. It seems to be cutting down a tree, but you can't tell."
 
 instead of entering canoe:
-	say "It's too narrow. How stupid of the designer. Plus it has no oars. Maybe the raft or boats can get you across.";
+	say "It's too narrow. How stupid of the designer. Plus it has no oars. Maybe the frat raft or boats can get you across.";
 
 instead of doing something with fish:
 	if action is procedural, continue the action;
@@ -17263,14 +17261,7 @@ to say uurrgg:
 
 The boats are vanishing plural-named scenery in Disease Seaside.
 
-check fliptoing boats when raft is reflexed:
-	say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
-
 a-text of boats is "RYYRR". b-text of boats is "PGGRR". parse-text of boats is "b[sp]o[sp]a[sp]x[sp]x". boats is cheat-spoilable.
-
-the raft is scenery.
-
-a-text of raft is "RYRR". b-text of raft is "RGRP". parse-text of raft is "x[sp]a[sp]x[sp]t". raft is parse-spoilable.
 
 instead of doing something with boats:
 	if action is procedural, continue the action;
@@ -17278,9 +17269,9 @@ instead of doing something with boats:
 		continue the action;
 	say "You're too far away from the boats to do anything to them. Or have them do something to you.";
 
-description of boats is "They're boats, not shippish, and too dense to swim through[if player is on raft]. Probably even to raft through[else][end if][if clam is in lalaland]. You can hear loud voices from the boats[end if]."
+description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is in lalaland]. You can hear loud voices from the boats[end if]."
 
-a river is scenery in Disease Seaside. "Boats pass on the river. A raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
+a river is scenery in Disease Seaside. "Boats pass on the river. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
 
 check taking river:
 	say "The river drips through your fingers." instead;
@@ -17293,30 +17284,31 @@ check going in Disease Seaside:
 		say "You can't cross the river on your own. One of the boats would hit you." instead;
 	say "You're not sure how to get back to the Posh Hops Shop, and you're not sure it's worth it. The boats seem hard to get by, and you're not amphibious enough to speed through the deeps." instead;
 
-the raft is an enterable reflexive supporter in Disease Seaside. the raft is fixed in place.
+section frat raft
 
-instead of taking raft:
-	say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically.";
+the frat raft is scenery in Disease Seaside. description is "It's a frat raft, by the looks of it. All sorts of Greek symbols and crude jokes are written on it. You probably have to do something pretty hokey to get it fueled up, or whatever.[paragraph break]It's made of oaks which soak and carry interlocking--and completely locked--oars."
 
-instead of pushing raft:
-	say "It would crash into a boat if you tried to cross the standard way." instead;
+a-text of frat raft is "RYRR". b-text of frat raft is "RGRP". parse-text of frat raft is "x[sp]a[sp]x[sp]t". frat raft is parse-spoilable.
 
-instead of pulling raft:
-	say "It would crash into a boat if you tried to cross the standard way." instead;
+the frat raft is an enterable reflexive supporter. the frat raft is fixed in place.
 
-check going when player is in raft:
-	say "The raft is a bit clunky. You can't even move the oars." instead;
+check fliptoing boats when frat raft is reflexed: say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
 
-description of raft is "It's made of oaks which soak and carry interlocking--and completely locked--oars."
+instead of taking raft: say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically.";
 
-the interlocking oars are part of the raft. description is "The oars are some red metal, more like containers than something that could get you through the water. They don't seem mobile[if raft is reflexed]--they seem a bit bulkier than before you, um, gave a gas refill[end if].".
+instead of pushing raft: say "It would crash into a boat if you tried to cross the standard way." instead;
+
+instead of pulling raft: say "It would crash into a boat if you tried to cross the standard way." instead;
+
+check going when player is in raft: say "The raft is a bit clunky. You can't even move the oars." instead;
+
+section oars
+
+the interlocking oars are part of the frat raft. the interlocking oars are reflexive. description is "The oars are some red metal, more like containers than something that could get you through the water. They don't seem mobile[if raft is reflexed]--they seem a bit bulkier than before you, um, gave a gas refill[end if].".
 
 pushing oars is futiling. pulling oars is futiling.
 
-instead of futiling:
-	say "[if player is not on raft]They're too far away--you'll need to get on the raft[else]They are not just interlocking but locked in[end if]."
-
-the interlocking oars are reflexive.
+instead of futiling: say "[if player is not on raft]The oars are too far away--you'll need to get on the raft[else]They are not just interlocking but locked in[end if]."
 
 a-text of oars is "RYYR". b-text of oars is "RYYR". parse-text of oars is "x[sp]-[sp]-[sp]x". oars is cheat-spoilable.
 
@@ -17335,7 +17327,7 @@ check fliptoing raft:
 		preef raft;
 		the rule succeeds;
 
-section matterless streamlets
+chapter matterless streamlets
 
 the matterless streamlets are plural-named bounding scenery in Disease Seaside. "The streamlets flow everywhere. They actually HAVE matter, but they don't, um, matter."
 
@@ -17354,10 +17346,8 @@ understand "sob at [something]" as sobating.
 does the player mean sobating the boats: it is very likely.
 
 carry out sobating:
-	if player is not in shore:
-		say "[reject]" instead;
-	if noun is not boats:
-		say "That's not a good thing to sob at. At which to sob. Actually, nothing is." instead;
+	if player is not in shore, say "[reject]" instead;
+	if noun is not boats, say "That's not a good thing to sob at. At which to sob. Actually, nothing is." instead;
 	say "Show some confidence! Boats are no places for whining." instead;
 	the rule succeeds;
 
@@ -24678,7 +24668,7 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and buried raft is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and barriers west is in lalaland and rapt figure is in lalaland and buried raft is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
 the ego fail foliage is bounding scenery in filed field. "The ego fail foliage will still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -24774,18 +24764,15 @@ a raspberry is a fruit.
 
 chapter strawberries
 
-b-w are plural-named proper-named privately-named scenery in Filed Field. "The barriers west seem to mark the end of the Filed Field."
+a thing called barriers west is plural-named scenery in Filed Field. "The barriers west seem to mark the end of the Filed Field."
 
 strawberries are a plural-named fruit.
 
-printed name of b-w is "the barriers west"
+check taking barriers west: say "Too heavy, and there's nothing west, anyway." instead;
 
-check taking b-w:
-	say "Too heavy, and there's nothing west, anyway." instead;
+understand "barriers w" as barriers west.
 
-understand "barriers west/w/" and "barriers west" as b-w.
-
-a-text of b-w is "RRRYRRYRRYYR". b-text of b-w is "RRPYRRYRRYYR". parse-text of b-w is "x[sp]x[sp]r[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
+a-text of barriers west is "RRRYRRYRRYYR". b-text of barriers west is "RRPYRRYRRYYR". parse-text of barriers west is "x[sp]x[sp]r[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 chapter barber sickle
 
@@ -26117,7 +26104,7 @@ alert letters	"[other-let]."
 ought letters	"[other-let]."
 scratch paper	"You got things compiling. No more worries there."
 t-key	"[if t-key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
-raft	"Now you're on the raft, you need to find a way to use the oars." [start OYSTER]
+frat raft	"Now you're on the frat raft, you need to find a way to use the oars." [start OYSTER]
 knob	"The knob's been dealt with."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
@@ -26403,8 +26390,8 @@ gins sign	"[if i-sung is true]You already managed to SING.[else][one of]The gins
 clam	"[one of]The clam is agitated. It probably doesn't want to attack you.[plus][or]You need to settle the clam down.[plus][or]I mean CALM it.[minus][cycling]"
 urn	"[one of]You can't walk away from the urn. You need to do something more decisive.[plus][or]You should RUN from the urn.[minus][cycling]"
 Shoer Osher	"You might've learned something from Shoer Osher's publicist before Elvira came by, but for the game's purposes, Shoer Osher is just there for decoration and amusement."
-river	"[one of]There are two ways across the river.[plus][or]You can get the boats' attention--one verb--or get on the raft, which requires two.[plus][or]Hint the boats or raft individually.[minus][cycling]"
-raft	"[one of]Just getting on the raft is no fun. You want it to, well. move.[plus][or]Those oars on the raft would be a drag to pull around.[plus][or]Hint the oars if you can't figure out what to do with them.[minus][cycling]"
+river	"[one of]There are two ways across the river.[plus][or]You can get the boats' attention--one verb--or get on the raft, which requires two.[plus][or]Hint the boats or frat raft individually.[minus][cycling]"
+frat raft	"[one of]Just getting on the frat raft is no fun. You want it to, well. move.[plus][or]Those oars on the frat raft would be a drag to pull around.[plus][or]Hint the oars if you can't figure out what to do with them.[minus][cycling]"
 boats	"[one of]The sailors aboard the boats seem to like a good chat about accomplishments.[plus][or]How could you get the boats['] attention with your own bragging or self-promotion?[plus][or]BOAST.[minus][cycling]"
 crays	--	plea
 plea	"[one of]You can't change the crays, but the plea offers a way out. The pale plea.[plus][or]You are feeling too jumpy to just plain jump, so you need to...[plus][or]...LEAP.[minus][cycling]"
@@ -26625,7 +26612,7 @@ mopeage rant	--	magenta rope
 rampage note	--	magenta rope
 megaton pear	--	magenta rope
 buried raft	"[one of]Philip Larkin would know what to do with the buried raft right away.[plus][or]You may or may not know what the fruit actually looks or tastes like, but it IS a fruit, in fact...[plus][or]It's breadfruit.[minus][cycling]" [begin filed field hints]
-b-w	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
+barriers west	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
 barber sickle	"[one of]The barber sickle is dripping and dark. Its texture is like the pryer bars.[plus][or]BLACKBERRIES.[minus][cycling]"
 mean trowel	"[one of]The mean trowel mentions three names if you READ it.[plus][or]There's no physical clue as to what the mean trowel is, so it's a bit tricky unless you just plow through all the fruits that might be.[plus][or]WATERMELON.[minus][cycling]"
 pipe panel fence	"[one of]These are meant to keep the cows out.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE.[minus][cycling]"
@@ -27341,7 +27328,7 @@ this is the oyster-alt rule:
 	if boats are in shore:
 		say "[2da]you could've tried to BOAST to get the boats['] attention, then LEAP.";
 	else:
-		say "[2da]you could've tried to [if raft is reflexive]FART on the raft, then [end if]SOAR to use the oars.";
+		say "[2da]you could've tried to [if frat raft is reflexive]FART on the frat raft, then [end if]SOAR to use the oars.";
 	say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
 	if end den is unvisited:
 		say "[2da]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there.";
@@ -27577,7 +27564,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if stucco is not in lalaland, say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
 		if rapt figure is not in lalaland, say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT."; [filed field]
 		if pipe panel fence is not in lalaland, say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
-		if b-w are not in lalaland, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
+		if barriers west are not in lalaland, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
 		if briar screen is not in lalaland, say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
 		if buried raft is not in lalaland, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
 		if pryer bars are not in lalaland, say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
