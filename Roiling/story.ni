@@ -4233,7 +4233,7 @@ pagers	"The pagers light up slightly. Maybe give it another go."
 riot cap	"Nothing happens. Your magic skills feel like the pits for a second."
 stucco	"The stucco looks almost hairy for a second."
 miser ruble	"The miser ruble turns a bit purpler."
-b-r	"You loaf a bit after thinking that, hoping for something to happen. It doesn't."
+buried raft	"You loaf a bit after thinking that, hoping for something to happen. It doesn't."
 mean trowel	"You had the seed of an idea there, you thought."
 nectarine	"The nectarine seems a little less shiny and new. But not enough."
 green stain	"Parts of the green stain turn orange-ish but is too small to be oranges."
@@ -5810,7 +5810,7 @@ rustic-hard-items is a list of things variable. rustic-hard-items is { mad train
 
 wells-hintables is a list of things variable. wells-hintables is { riot cap, silly shirt, stucco, sorer bogey, green stain, miser ruble }.
 
-field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, b-r, b-w, barber sickle, mean trowel, rapt figure, barren cries }.
+field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, buried raft, b-w, barber sickle, mean trowel, rapt figure, barren cries }.
 
 clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, l-o-p, lemons, auction caution, nectarine }.
 
@@ -9162,7 +9162,7 @@ nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	"The unripe nectar
 green stain	tangerines	true	757915387	--	"tangerines"	"tangerines/tangerine"	"The green stain coalesces and brightens...and becomes a few tangerines! It changed color, too. Every single one ain't green."
 inapt paint	guava	true	778533808	--	"reversed"	"reversed"	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
 pugnacious plant	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner, and the plant begins to ... vegetate. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Or, well, stuff that's prepared like a fruit."
-b-r	breadfruit	true	619813094	--	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."
+buried raft	breadfruit	true	619813094	--	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."
 briar screen	cranberries	true	761370255	--	"cranberries"	"cranberries"	"The prickly screen turns into (you hope) less prickly cranberries."
 an-a	small yellow banana	true	162797375	--	"nab an a"	"nab an a" or "nab"	"The A expands and curves in your hands, the middle-bar melting into the legs, and you have a banana."
 orange	orange	true	391177517	--	"go near"	"go near"	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!"
@@ -24678,7 +24678,7 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and buried raft is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
 the ego fail foliage is bounding scenery in filed field. "The ego fail foliage will still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -24688,12 +24688,11 @@ understand "foilage" and "foilage foliage" as ego fail foliage.
 
 chapter breadfruit (Ohai Philip Larkin!)
 
-the b-r is scenery in Filed Field. "It's jammed into the ground. You can't take it.". printed name of b-r is "buried raft". understand "buried/raft" and "buried raft" as b-r.
+the buried raft is scenery in Filed Field. "It's jammed into the ground. You can't take it.".
 
-a-text of b-r is "RRYYRRRYYR". b-text of b-r is "PRYYRRPYYP". parse-text of b-r is "b[sp]x[sp]-[sp]-[sp]x[sp]x[sp]r[sp]-[sp]-[sp]t".
+a-text of buried raft is "RRYYRRRYYR". b-text of buried raft is "PRYYRRPYYP". parse-text of buried raft is "b[sp]x[sp]-[sp]-[sp]x[sp]x[sp]r[sp]-[sp]-[sp]t".
 
-check taking b-r:
-	say "You imagine a toad called work squatting on you as you do this. Maybe you should try to change the buried raft, instead." instead;
+check taking buried raft: say "You imagine a toad called work squatting on you as you do this. Maybe you should try to change the buried raft, instead." instead;
 
 the breadfruit is a fruit. description is "It doesn't look doughy at all. Too bad Philip Larkin's ghost isn't around, or you could show him what one looks like. That'd be a cultural experience!"
 
@@ -26625,7 +26624,7 @@ magenta rope	"[one of]The megaton pear, mopeage rant, rampage note and magenta r
 mopeage rant	--	magenta rope
 rampage note	--	magenta rope
 megaton pear	--	magenta rope
-b-r	"[one of]Philip Larkin would know what to do with the buried raft right away.[plus][or]You may or may not know what the fruit actually looks or tastes like, but it IS a fruit, in fact...[plus][or]It's breadfruit.[minus][cycling]" [begin filed field hints]
+buried raft	"[one of]Philip Larkin would know what to do with the buried raft right away.[plus][or]You may or may not know what the fruit actually looks or tastes like, but it IS a fruit, in fact...[plus][or]It's breadfruit.[minus][cycling]" [begin filed field hints]
 b-w	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
 barber sickle	"[one of]The barber sickle is dripping and dark. Its texture is like the pryer bars.[plus][or]BLACKBERRIES.[minus][cycling]"
 mean trowel	"[one of]The mean trowel mentions three names if you READ it.[plus][or]There's no physical clue as to what the mean trowel is, so it's a bit tricky unless you just plow through all the fruits that might be.[plus][or]WATERMELON.[minus][cycling]"
@@ -27580,7 +27579,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if pipe panel fence is not in lalaland, say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
 		if b-w are not in lalaland, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
 		if briar screen is not in lalaland, say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
-		if b-r is not in lalaland, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
+		if buried raft is not in lalaland, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
 		if pryer bars are not in lalaland, say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
 		if barber sickle is not in lalaland, say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
 		if mean trowel is not in lalaland, say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";

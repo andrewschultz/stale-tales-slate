@@ -453,7 +453,7 @@ understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft 
 
 understand "boast" as a mistake ("Batso.") when player is not in Disease Seaside.
 
-understand "fart" as a mistake ("[if b-r is in location of player]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
+understand "fart" as a mistake ("[if buried raft is in location of player]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
 
 understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Disease Seaside.
 
