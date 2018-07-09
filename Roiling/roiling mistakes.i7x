@@ -290,7 +290,11 @@ understand "penrod" as a mistake ("Juvenile children's literature? At a time lik
 
 chapter upscale capsule
 
-understand "ambler" as a mistake ("You see red slightly as the marble Blamer Balmer fails to walk away.") when player is in upscale capsule and Marble Blamer Balmer is in upscale capsule.
+understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in upscale capsule and player is in upscale capsule.
+
+understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when mbb is in upscale capsule and player is in upscale capsule.
+
+understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when player is in upscale capsule and Marble Blamer Balmer is in upscale capsule.
 
 understand "fren" as a mistake ("No dog walks along dragging Sebastian in their mouth.") when player is in upscale capsule.
 
@@ -541,9 +545,9 @@ understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Ad
 
 chapter horned hedron
 
-understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when player is in hedron and o-t is in hedron.
+understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when player is in hedron and ol' trap is in hedron.
 
-understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when player is in hedron and o-t is in hedron.
+understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when player is in hedron and ol' trap is in hedron.
 
 chapter end den
 

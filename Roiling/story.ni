@@ -4093,43 +4093,44 @@ piece of scratch paper	"Man! That's the thing about compiling. Switch one or two
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
 compiled code	"Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here."
 Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe." [START oyster]
-gins sign	"Hm, the sign doesn't strictly disallow THAT."
+gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
 tumblers	"The tumblers wobble a bit as you try to do ... something ... to them."
 tines	"Hm, the stein belongs somewhere you can destroy it, but not QUITE like that."
-sign	"Nobody pays attention to your performance as you disobey the sign. Or try to."
 tunes	"The tunes grow slightly less annoying, for a moment."
 trolls	"The trolls laugh at you a bit, but nervously."
 clam	"The clam still seems enraged."
 urn	"The urn sits there, daring you to walk away."
 boats	"Perhaps if you were louder and more confident, the boats would hear you."
+raft	"The raft rocks slightly."
+oars	"You see bubbling under the oars."
 pale plea	"Yes, the pale plea is calling and warning you to leave. But how?"
 carps	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 pikes	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 trout	"[if player is in range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[end if]."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 wrap	"That's not quite the way to pop the wrap."
-o-t	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
-raft	"The raft rocks slightly."
-oars	"You see bubbling under the oars."
 eeks	"You guess the eeks must be there--no, there!"
 pre-haun	"You need an organized way to see what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
-haunter	"You're a bit tongue-tied, but that seems close."
-a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 knob	"The knob rattles slightly."
 skis	"The skis momentarily seem more polished."
+snap pans	"The pans wobble slightly."
 bogus-plains	"You feel like making a big speech about what you've done and what you plan to do, but not quite like that."
-tubs	"Hm. The tubs rattle a bit, but you need to do something strong."
-prod	"You juggle the prod a bit, but it doesn't change into anything. Well, not like that."
-ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
 waste	"The heaps are still technically waste, but you may want to deal with them more delicately."
 heaps	"The heaps still look ugly as ever."
+tubs	"Hm. The tubs rattle a bit, but you need to do something strong."
+prod	"You juggle the prod a bit, but it doesn't change into anything. Well, not like that."
+a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
+ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
+haunter	"You're a bit tongue-tied, but that seems close."
+ol' trap	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
 gleaner	"The gleaner remains too small to read."
 dialer	"[di-cli]."
 lever	"You look at the lever, wishing it would be a little more fun to pull."
+pins	"You look at the pins. They're in the way, but they don't look particularly sturdy."
 d2	"[di-cli]."
-yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
+papery yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
 Andres	"Andres looks a bit more tied up at the moment." [START towers]
 Andrew	"Andrew suddenly looks as if he's been told he did something wrong."
 Archie	"Archie looks a bit pained."
@@ -5242,8 +5243,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			else:
 				now noun is eeks;
 			continue the action;
-		if player is in Horned Hedron and walleyes are in lalaland and o-t is in Horned Hedron:
-			now noun is o-t;
+		if player is in Horned Hedron and walleyes are in lalaland and ol' trap is in Horned Hedron:
+			now noun is ol' trap;
 			continue the action;
 		if player is in Dourest Detours:
 			now noun is ant;
@@ -6209,7 +6210,7 @@ to decide which thing is oyster-item:
 		if a-s is reflexive, decide on a-s;
 	if player is in Horned Hedron:
 		if walleyes are in Horned Hedron, decide on walleyes;
-		if o-t is in Horned Hedron, decide on o-t;
+		if ol' trap is in Horned Hedron, decide on ol' trap;
 	if player has gleaner and gleaner is reflexive, decide on gleaner;
 	if player is in Rascal Craals:
 		if player has digger and player has ruby, decide on ruby;
@@ -8998,7 +8999,7 @@ trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	"[trout-tu
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
 a-s	a-s	false	367879580	--	"search"	"search"	"'Reach, acher,' you say, stretching a bit more to find something interesting."
-o-t	a-p	false	400254014	--	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."
+ol' trap	a-p	false	400254014	--	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 tubs	waste	false	322908696	--	"bust"	"bust"	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
@@ -14234,7 +14235,7 @@ a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-
 check fliptoing trance nectar:
 	if mbb is in upscale capsule and sister tressi is in upscale capsule:
 		say "No. You've done enough. You ... you've come to loathe the trance nectar any more, but you can't quite break free of it. With [mbb] and Sister Tressi staring down at you,you can't quite bring yourself to. Buyt maybe if you dealt with even one of them...";
-		preef trance nectar;
+		preef trance nectar instead;
 
 chapter silly Upscale Capsule scenery
 
@@ -16445,7 +16446,7 @@ definition: a direction (called dir) is viable:
 		decide no; [these are individual cases]
 	unless the room dir from location of player is nothing:
 		decide yes; [this is the main one. If a room's there, go]
-	if player is in Horned Hedron and dir is inside and walleyes are in lalaland and o-t is reflexed:
+	if player is in Horned Hedron and dir is inside and walleyes are in lalaland and ol' trap is reflexed:
 		decide yes; [these are fringe cases. Again, you can enter certain places etc. once traps are removed]
 	if player is in Largely All-Grey Gallery and dir is inside:
 		decide yes;
@@ -17023,7 +17024,7 @@ waste	"The pills perform a disturbing chemical reaction with the waste, dissolvi
 wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, your bubble wrap falls. He flees, and as you run after him, you step on the bubble wrap, causing it to tear and pop.[paragraph break]The wrap feels ruined, now, like you can't warp it, but you do notice a ruby inside. It seems valuable. So you take it."
 a-s	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
 gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
-o-t	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
+ol' trap	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
 ant	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
 ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
 scrawl	"The pills slip into the scrawl, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
@@ -17678,7 +17679,7 @@ every turn (this is the track haunter rule):
 				say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
 				the rule succeeds;
 			if location of player is Rascal Craals:
-				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
+				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol' trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
 				now walleyes are in lalaland;
 				now haunter is in lalaland;
 				now thin hint is in lalaland;
@@ -17789,7 +17790,7 @@ does the player mean bonking the knob: it is very likely.
 the can't search unless container or supporter rule is not listed in any rulebook.
 
 carry out searching:
-	if noun is o-t:
+	if noun is ol' trap:
 		say "That's the right idea. But not the right way to search. You need to walk all over the floor, here, to disable the ol['] trap." instead;
 	if noun is a-p:
 		say "The portal has nothing." instead;
@@ -18837,7 +18838,7 @@ check fliptoing thin hint:
 
 book Horned Hedron
 
-Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if o-t is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if o-t is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are in lalaland]Collapsed old places[else]Rascal craals[end if] lie west."
+Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if ol' trap is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are in lalaland]Collapsed old places[else]Rascal craals[end if] lie west."
 
 check going west when player is in Horned Hedron:
 	if haunter is in lalaland:
@@ -18864,19 +18865,19 @@ description of theses sheets is "[one of]They could be a heists thesis except th
 
 chapter ol trap and portal
 
-the o-t is privately-named flippable scenery in Horned Hedron. understand "ol/ol' trap" and "trap/oltrap" as o-t. printed name of o-t is "ol['] trap".
+the ol' trap is flippable scenery in Horned Hedron. understand "ol trap" and "ol/oltrap" as ol' trap.
 
-a-text of o-t is "RYRRYR". b-text of o-t is "RYRRGR". parse-text is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
+a-text of ol' trap is "RYRRYR". b-text of ol' trap is "RYRRGR". parse-text is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
 
-check taking o-t:
+check taking ol' trap:
 	say "That'd be a good way to spring it." instead;
 
-description of o-t is "Naturally, it is there to make it hard for you to enter. But there must be some way to disarm it. Somewhere hidden in this room."
+description of ol' trap is "Naturally, it is there to make it hard for you to enter. But there must be some way to disarm it. Somewhere hidden in this room."
 
 check fliptoing a-p:
 	if walleyes are not in lalaland:
 		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
-		preef o-t;
+		preef ol' trap;
 		do nothing instead;
 
 The weaselly walleyes are plural-named people in Horned Hedron. "[one of]Some weaselly walleyes whisper to each other and smirk at your every move[or]Those weaselly walleyes are still acting and looking all shifty[stopping]."
@@ -18895,10 +18896,10 @@ description of walleyes is "Oh, they are seedy, all right. But they seem more in
 check going inside in Horned Hedron:
 	if a-p is visible:
 		try entering a-p instead;
-	if o-t is visible:
-		try entering o-t instead;
+	if ol' trap is visible:
+		try entering ol' trap instead;
 
-check entering o-t:
+check entering ol' trap:
 	say "It's an obvious ol['] trap but likely an effective one." instead;
 
 a-p is privately-named auxiliary scenery. printed name of a-p is "the portal". description of a-p is "It looks safe. It doesn't crackle or anything. The only question is where it leads."
@@ -18941,20 +18942,20 @@ understand "patrol" as patroling.
 
 carry out patroling:
 	if player is in Horned Hedron:
-		if o-t is visible:
+		if ol' trap is visible:
 			try fliptoing a-p instead;
 		else:
 			say "You already patrolled." instead;
 	if Horned Hedron is visited:
-		if walleyes are in lalaland and o-t is in Horned Hedron and mrlp is oyster:
+		if walleyes are in lalaland and ol' trap is in Horned Hedron and mrlp is oyster:
 			say "You suddenly realize how to search out the ol['] trap in the Horned Hedron.";
 			move player to Horned Hedron, without printing a room description;
 			try fliptoing a-p instead;
 		if walleyes are in Horned Hedron and mrlp is oyster:
 			say "That's a good idea. Maybe you can search the Horned Hedron once if the walleyes are gone.";
-			preef o-t;
+			preef ol' trap;
 			do nothing instead;
-	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if o-t is in lalaland]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
+	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if ol' trap is in lalaland]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
 	the rule succeeds;
 
 book Rascal Craals
@@ -26463,7 +26464,7 @@ a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]Ther
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
-o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
+ol' trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
@@ -27448,7 +27449,7 @@ to say d-then:
 		say "pull the lever then ";
 [?? need to spill pills vs span pans and pins as well]
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol' trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 
