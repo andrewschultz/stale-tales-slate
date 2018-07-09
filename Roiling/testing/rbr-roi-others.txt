@@ -447,6 +447,15 @@ Score in a scenario: 28 out of 42 total points in the current region, Others. Lo
 Clangier Clearing
 
 ==t2
+#spechelp for auction caution
+>papaysa
+Everyone promises quick payment, but what are you promising to pay quickly FOR?
+#spechelp for peach
+>peahc
+The peach still looks too expensive.
+#spechelp for l-o-p
+>cripse
+Something glints off the list of prices.
 ###########below is melon/lemon nudge trickiness
 >abstract melon to ll
 #nudge for lemon

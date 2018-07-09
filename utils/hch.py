@@ -87,6 +87,7 @@ def find_in_glob(spec_stuff, pattern, b, region, extras = []):
             if err_max == 0 or errs <= err_max:
                 print(pattern, ':', q, "in table of", b, "but not in", pattern, spec_stuff[q], jump_str(spec_stuff[q], last_line))
                 if out_to_file: hout.write("#{:s} for {:s}\n>{:s}\n{:s}\n\n".format(b, q, lastrev(q), spec_detail[q]))
+            elif err_max and errs == err_max + 1: print("Too many errors. Increase with -e##.")
             last_line = spec_stuff[q]
         if q not in spec_stuff.keys():
             errs += 1

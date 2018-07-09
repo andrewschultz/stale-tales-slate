@@ -34,6 +34,9 @@ Trying to change the current region you're in all at once would be risky, or use
 #nudge for bare
 >baer
 Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+#spechelp for b-b
+>bareyl
+The barley rustles in an imaginary wind--but hardly at all.
 
 #forceignore
 >barely
@@ -69,10 +72,9 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >reeyd
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 
->increds
-WRONG
->incresd
-WRONG
+#spechelp for cinders
+>cindesr
+The cinders glow and even warm up for a bit.
 
 ==t1
 >discern ed riley
@@ -105,6 +107,11 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #nudge for sandwich
 >sandwihc
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
+
+==t2
+#spechelp for ed riley
+>reediyl
+Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
 
 >reedily
 Your score has just gone up by one point
@@ -363,6 +370,12 @@ The sea cube is unmoved. You may need to concentrate on the whole thing.
 #nudge for cube
 >cueb
 The sea cube is unmoved. You may need to concentrate on the whole thing.
+#spechelp for sea cube
+>sea cueb
+The sea cube shakes a bit.
+#spechelp for eels
+>eesl
+The eels swim a bit faster.
 
 >because
 >else
@@ -410,6 +423,16 @@ The whole picture.
 
 ==!1
 >s
+
+==t2
+#spechelp for ghoul hat
+>althouhg
+Mr. Lee shakes his head and adjusts the ghoul hat.
+#spechelp for p-2
+>howeveer
+Rev. Howe seems to snarl a bit more deeply for a moment.
+
+==!1
 >although
 REGION MIN INCREASED BY 1, 2 OVERALL.
 >score
@@ -419,6 +442,11 @@ REGION MIN INCREASED BY 1, 3 OVERALL.
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 30.
 >n
+
+==t2
+#spechelp for atmo-moat
+>mota
+Hm, that's not it, but it must be elemental. No, elementary.
 
 >atom
 Your score has just gone up by one point
@@ -462,7 +490,35 @@ No, you need a couple more letters... a couple to make a word weak enough to con
 #nudge for enraged
 >enragde
 No, you need a couple more letters... a couple to make a word weak enough to control.
-
+\\
+#spechelp for imp1
+>angriyl
+The imp looks slightly annoyed for a second. You may be on the right track.
+\\
+#spechelp for imp2
+>bruteyl
+The imp looks slightly annoyed for a second. You may be on the right track.
+\\
+#spechelp for imp3
+>enragedyl
+The imp looks slightly annoyed for a second. You may be on the right track.
+#spechelp for thrones
+>thronse
+The thrones seem to buzz a bit.
+\\
+#spechelp for nails
+>naisl
+One of the nails seems to bend a bit.
+>naisl
+Another one of the nails seems to bend a bit.
+\\
+#spechelp for pines
+>pinse
+The pines rustle as if an animal climbed through them.
+\\
+#spechelp for corona
+>coroan
+The corona scurries about for a bit before settling down again.
 
 ==t3
 >brutely
@@ -488,9 +544,13 @@ Your score has just gone up by one point
 >n
 Lamer Realm
 
+==t2
 #nudge for low
 >lwo
 You probably want the owls not to swoop low. And you'll want to take care of them all.
+#spechelp for owls
+>owsl
+Hmm. The owls still swarm and swirl too fast.
 
 >slow
 Your score has just gone up by one point
@@ -513,6 +573,21 @@ You're not here to mess with fashion. Plus, the shades were last game.
 #nudge for clipons
 >cliposn
 The ocelots would still be awkward even if they lost the clip-ons.
+#spechelp for ocelots
+>ocelost
+The ocelots squint at you through their clip-ons.
+\\
+#spechelp for leopard
+>leopadr
+The leopard almost seems to un-cuff its hands.
+\\
+#spechelp for badger
+>badgre
+The badger flexes imaginary suit lapels, then quickly goes back to brooding.
+\\
+#spechelp for satyr
+>satry
+The satyr puts a hand on its chin as if pondering music.
 
 >coolest
 Your score has just gone up by one point
@@ -612,6 +687,19 @@ No, you need a couple more letters... a couple to make a word weak enough to con
 #renudge for coma
 >coam
 The coma camo remains as-is. It's sturdy, military-grade stuff
+\\
+#spechelp for ram1
+>loathingyl
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+\\
+#spechelp for ram2
+>stoicalyl
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+\\
+#spechelp for ram3
+>terseyl
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+
 
 ==t3
 >tersely
@@ -640,10 +728,21 @@ They find another place where rioters roister.
 >s
 Perverse Preserve
 
+==t2
+#spechelp for raptor
+>raptro
+The raptor recoils slightly.
+
 >parrot
 Your score has just gone up by one point
 
 ==t2
+#spechelp for weltish whistle
+>weltish whistel
+Probably best to have the whistle before changing it.
+#spechelp for parrot
+>parrto
+The parrot seems to roll its eyes at you, as if to say, not here.
 #nudge for preserve
 >preserev
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -786,6 +885,12 @@ Some art is just out there to troll people. The forces fresco is such. Even if y
 #nudge for forec
 >force
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
+#spechelp for elmer
+>asied
+Merle and Elmer stumble off away from you for a bit.
+#spechelp for merle
+>honestyl
+Merle and Elmer look askance at each other for a bit.
 
 ==!1
 >honestly
@@ -793,6 +898,10 @@ Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
 >score
 Score in a scenario: 26 out of 30 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 30 points.
+
+==t2
+>parrto
+The parrot seems to roll its eyes at you, as if to say, you DO remember what I was.
 
 >raptor
 Your score has just gone up by one point
@@ -804,6 +913,13 @@ The hydra's toast. Elvira is not. Deal with her.
 #nudge for crone
 >croen
 You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act.
+#spechelp for medals
+>quickyl
+The medals waver noiselessly. Hm, that's not quite it.
+
+==t2
+>weltish whistel
+The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
 
 >deeply
 Your score has just gone up by one point

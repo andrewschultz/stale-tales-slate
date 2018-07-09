@@ -757,7 +757,7 @@ by one point
 >e
 
 ==t2
-#spechelp for o-t
+#spechelp for ol' trap
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol['] trap.
 >s
@@ -841,7 +841,7 @@ Changing the intercom to a ton-crime intercom would be the opposite of what you 
 >criem
 [i-com]. [end-y]
 \\
-#spechelp for yapper
+#spechelp for papery yapper
 >yappre
 'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'
 >derali
