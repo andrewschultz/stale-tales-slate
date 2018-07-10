@@ -122,6 +122,8 @@ keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
 #qver of locs pack
 capslock,?YR?R???=clackops=locspack
+#qver of drive e
+derive,?Y???G=drivee=edrive
 #qver of usb
 bus/sub,RY?=usb
 ################oyster

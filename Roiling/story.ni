@@ -2813,6 +2813,7 @@ volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz
 sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 clack ops locs pack	"The locs pack mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
+drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
@@ -16063,6 +16064,16 @@ check inserting it into (this is the disk in drive and wired computer rule):
 			say "You don't have enough pieces to the computer to make it work. Specifically, no input device." instead;
 		if computer screen is off-stage:
 			say "(Protip: you might want to get something like a screen to figure what's going on.)" instead;
+
+chapter drive e
+
+does the player mean doing something with hard drive: it is very likely.
+
+drive e is reflexive LLPish scenery in hacks' shack. "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if]."
+
+a-text of drive e is "RYRYRY". b-text of drive e is "R?R?R?". parse-text of drive e is "x[sp]-[sp]x[sp]-[sp]x[sp]-".
+
+instead of inserting into drive e, say "Drive e is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive a may be able to hold stuff[end if].";
 
 chapter badbooks
 
