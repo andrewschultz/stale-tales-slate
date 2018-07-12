@@ -105,18 +105,18 @@
 			<dock index="1" id="37" port="ne" />
 		</line>
 		<room id="41" name="Last chance for LLPs" subtitle="" x="288" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-44" customDown="0">Yurts/strudel/denim|Old ice/neural pulses|replay player|remaining guardians (7)</objects>
+			<objects custom="yes" customRight="-44" customDown="0">Yurts/denim|Old ice/sporties' ripostes|replay player|remaining guardians (5+2)|ego drains/strudel|</objects>
 		</room>
 		<line id="42" name="" description="" style="dashed">
 			<dock index="0" id="27" port="ne" />
 			<dock index="1" id="41" port="sw" />
 		</line>
-		<room id="43" name="remaining 3 warriors down" subtitle="" x="-352" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<room id="43" name="(3) remove remaining warriors" subtitle="" x="-352" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
 		<line id="44" name="" description="" style="dashed" midText="Only at start">
 			<dock index="0" id="1" port="s" />
 			<dock index="1" id="43" port="n" />
 		</line>
-		<room id="45" name="Present/ Triste/ Unripe" subtitle="" x="288" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+		<room id="45" name="(4) Present / Triste /Unripe" subtitle="" x="288" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-52" customDown="0">Give the flowerpot|for non-anagram point</objects>
 		</room>
 		<line id="46" name="" description="" style="dashed">

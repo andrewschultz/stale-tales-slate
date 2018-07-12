@@ -46,7 +46,9 @@
 			<dock index="0" id="38" port="n" />
 			<dock index="1" id="41" port="s" />
 		</line>
-		<room id="43" name="trim socks, TBA key, escaroles" subtitle="" x="192" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0" />
+		<room id="43" name="Shack cleanup (5)" subtitle="" x="192" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" ZOrder="0">
+			<objects at="e" custom="yes" customRight="0" customDown="-24">trim socks|TBA key|escaroles|drive a/e</objects>
+		</room>
 		<line id="44" name="" description="" style="dashed">
 			<dock index="0" id="38" port="ne" />
 			<dock index="1" id="43" port="sw" />
