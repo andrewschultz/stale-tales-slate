@@ -1,4 +1,7 @@
-#reds.pl rf
+#anagram red/settler verification file
+#
+#usage: reds.pl rf
+#
 #logsync.py should check to make sure that everything "questionable" (ha, ha) is checked off in reds.txt.
 sortie,riseto
 ################forest
@@ -79,6 +82,7 @@ ponder,derpon,epdorn,drpeno,nedorp
 #browse bowers
 desire,R???RG=sirdee=reside
 #upscale capsule
+deserve,edevers,ervdees
 discover,rodsvice,revdisco,veridocs,scorediv
 #qver of salt
 last,R?R?=stal=salt
