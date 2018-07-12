@@ -430,12 +430,22 @@ It also clues that you need to make a KEYBOARD.
 If you've got the yak on the skid...
 ...you can GIVE BOOK TO YAK, and the yak reacts with indigestion and runs away. Click ahead for all five book names.
 <i>Day Broke</i> by Rob Adkey, <i>eBay Dork</i> by Kary Bode, <i>Bred Okay</i> by Bad Korey, <i>Dear Koby</i> by Yoda Berk, and <i>Yo, Be Dark</i> by Dr. Bo Kaye.
-?How do I work the hard drive?
+?How do I work Drive A?
+Well, you can change it, but that's a last lousy point.
+You really need to just connect a bunch of things to it.
 You need the keyboard to work, first. Then it needs to go on the slab.
 You also need to have put the screen on the slab.
 Switch the skid back to the disk, too, and you're ready--but there's a stupid error.
 There's a TO BE OR button. You want to push it, but you're not sure what it's for.
 Once the disk is in, and the keyboard's attached, REBOOT or PUSH REBOOT.
+?How do I change Drive A to be more efficient?
+A DRIVE, DRIVE A, VARIED.
+It seems sluggish, almost unwilling.
+AVIDER.
+?How do I fix Drive E? Do I need to?
+It's a Last Lousy Point.
+You can reverse engineer things...
+...or just DERIVE.
 ?How do I get a keyboard?
 See the Char Arch section.
 ?Great. I have the drab yoke. What to do with it?
@@ -646,7 +656,7 @@ They are just scenery, to give the Browse Bowers a feeling of isolation.
 The rotunda is a reference to the Browse Bowers' old name.
 >>ECON-CONE
 ?Who is the statue? What should I do with him/it?
-The statue is one of two things you need to figure out to move on to the next area, sort of like the Bortles Lobster and ME ARTS--or RECALL/DERIVE back in the sublet, though in that case, they were mutually exclusive.
+The statue is one of two things you need to figure out to move on to the next area, sort of like the Bortles Lobster and ME ARTS back in Boredom Bedroom.
 Trevis Vister. Hmm. And there are rivets.
 The statue is there to make people want to be like him.
 STRIVE.

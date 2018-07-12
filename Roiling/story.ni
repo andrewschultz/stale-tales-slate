@@ -123,7 +123,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 37. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 38. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
@@ -2813,6 +2813,7 @@ volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz
 sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 clack ops locs pack	"The locs pack mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
+drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end if]."
 drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
@@ -4089,6 +4090,9 @@ gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
 piece of scratch paper	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
 compiled code	"Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here."
+drive a	"Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently."
+drive e	"Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it."
+usb	"There's not much you can DO with a USB."
 Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe." [START oyster]
 gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
 tumblers	"The tumblers wobble a bit as you try to do ... something ... to them."
@@ -5513,8 +5517,10 @@ marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
 sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
 alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [START presto]
-hawt thaw	true	false	false	false	"Wow! Three ambiguous readings. But you wonder if they won't help in their own way, or if you really need a huge hint."
+hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
+Drive E	true	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
+Drive A	true	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five[end if]."
 a-s	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
@@ -5970,7 +5976,7 @@ carry out presto-hinting:
 			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak[if yak is not in shack] you left back...wherever[end if]." instead;
 			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
 	if player is in hacks' shack:
-		if disk is not in hard drive:
+		if disk is not in drive a:
 			all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
 		if can-put-on-slab:
 			all-say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
@@ -7911,7 +7917,7 @@ chapter tying it to
 check tying it to (this is the keyboard and key rule) :
 	if noun is second noun:
 		say "Tautology? Got ya, lout!" instead;
-	if noun is hard drive:
+	if noun is drive a:
 		try tying second noun to noun instead;
 	if second noun is caps lock:
 		try tying second noun to noun instead;
@@ -8950,6 +8956,8 @@ trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
 trim socks	ROM sticks	true	540067126	--	"romstick"	"romstick" or "rom stick"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 compiled code	compiled code	false	304959612	--	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"
+drive a	drive a	false	388504485	--	"avider"	"avider"	"Drive A coughs and whirrs a bit before humming a bit louder. You see the status on the side change from VARIED to AVIDER. Yay! It should work faster now."
+drive e	drive e	false	514122776	--	"derive"	"derive"	"You inspect Drive E and, with some educated guesswork, figure why it is out of whack. A few common-sense steps later, it's fixed."
 USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	"[sub-bus]!"
 
 table of oyster anagrams
@@ -15145,8 +15153,7 @@ a-text of onyx censer is "RRRYYR". b-text of onyx censer is "RRRYGR". parse-text
 the switch computer pieces rule is listed before the can't switch on unless switchable rule in the check switching on rules.
 
 check switching on (this is the switch computer pieces rule) :
-	if noun is hard drive:
-		say "There [if hard drive is reflexed]was[else]is[end if] a button for that." instead;
+	if noun is drive a, say "There [if drive a is reflexed]was[else]is[end if] a button for that." instead;
 	if noun is computer screen or noun is keyboard or noun is dongle:
 		say "You don't need to switch any auxiliary equipment on or off." instead;
 
@@ -15610,7 +15617,7 @@ to decide whether cpuready:
 	if keyboard is not on slab, decide no;
 	if computer screen is not on slab, decide no;
 	if caps lock is not part of keyboard, decide no;
-	if disk is not in hard drive, decide no;
+	if disk is not in drive a, decide no;
 	if rebooted is false, decide no;
 	decide yes.
 
@@ -15726,11 +15733,11 @@ instead of doing something with the compiled code:
 	say "You can really only examine it--or--what do you do with code that won't budge or be dug?" instead;
 
 check restarting the game when player is in shack:
-	say "[if rebooted is false]You look over at the hard drive--and the blue and orange buttons--it doesn't quite need a restart. Hmm, what's the word, now. Or maybe you want to restart the game.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to.[end if]";
+	say "[if rebooted is false]You look over at Drive A--and the blue and orange buttons--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
 
 after printing the locale description for shack when shack is unvisited:
 	if computer screen is in austerer treasure:
-		say "That hard drive could use a screen. Like the one you uncovered in the treasure room. Which you run back and get.";
+		say "Drive A could use a screen. Like the one you uncovered in the treasure room. Which you run back and get.";
 		now player has computer screen;
 	else if onyx censer is in austerer treasure and censer is prefigured:
 		say "You remember that censer it would've been awkward to carry around. You decide to go back for it.";
@@ -15738,12 +15745,12 @@ after printing the locale description for shack when shack is unvisited:
 		now player has computer screen;
 		reg-inc;
 	else:
-		say "That hard drive on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--you can probably change the onyx censer now.[else if player has the screen]--yours would do.[else if player has onyx censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
+		say "Drive A on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--you can probably change the onyx censer now.[else if player has the screen]--yours would do.[else if player has onyx censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
 	continue the action;
 
 after fliptoing the computer screen (this is the turbo back to the shack rule):
 	if shack is visited and player is not in shack:
-		say "That screen would go great with the hard drive in the shack. So you go back there.";
+		say "That screen would go great with Drive A in the shack. So you go back there.";
 		go-back hacks' shack;
 		now player has screen;
 	continue the action;
@@ -15761,7 +15768,7 @@ check tying it to (this is the put on the slab rule) :
 		say "The drive and dongle are already tied together." instead;
 	if noun is drive or noun is dongle:
 		try tying second noun to noun instead;
-	if second noun is hard drive or second noun is dongle or second noun is labs slab:
+	if second noun is Drive A or second noun is dongle or second noun is labs slab:
 		try putting noun on labs slab instead;
 	if noun is keyboard and second noun is screen:
 		try tying second noun to noun instead;
@@ -15772,7 +15779,7 @@ check tying it to (this is the put on the slab rule) :
 			try putting screen on slab instead;
 		if screen is on slab:
 			try putting keyboard on slab instead;
-		say "They keyboard and screen don't tie to each other but to the hard drive." instead;
+		say "They keyboard and screen don't tie to each other but to Drive A." instead;
 	say "This game doesn't recognize the ATTACH/TIE verb for either of those objects. Perhaps it should, but you may be better off using PUT ABC ON/IN XYZ." instead;
 
 after fliptoing scratch paper:
@@ -15956,19 +15963,19 @@ instead of taking labs slab:
 
 description of labs slab is "It's far from a plain old table, but you can call it that if you want. It's quite ergonomic and sturdy and not just because none of the twenty-two other things you (yes, you) could zap it to make any sense."
 
-the hard drive is a container on the labs slab. understand "disk drive" and "eco-trump computer" and "computer" as hard drive.
+Drive A is proper-named reflexive LLPish container on the labs slab. understand "disk drive" and "eco-trump computer" and "computer" and "hard" and "hard drive" as Drive A.
 
-does the player mean doing something with hard drive: it is likely;
+a-text of drive a is "YRYRYR". b-text of drive a is "?R?R?R". parse-text of drive a is "?[sp]x[sp]?[sp]x[sp]?[sp]x".
 
-instead of opening drive:
-	say "You don't need to. You can just put the sort of stuff that goes in disk drives in the drive.";
+does the player mean doing something with Drive A: it is likely.
 
-the golden dongle is part of the hard drive. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it."
+instead of opening Drive A: say "You don't need to. You can just put the sort of stuff that goes in disk drives in the drive.";
 
-instead of doing something with dongle:
+the golden dongle is part of Drive A. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it."
+
+instead of doing something with golden dongle:
 	if action is procedural, continue the action;
-	if current action is taking:
-		say "You need the dongle to connect the hard drive to other computer parts." instead;
+	if current action is taking, say "You need the dongle to connect Drive A to other computer parts." instead;
 	say "You don't need to do anything fancy with the dongle."
 
 the USB is a vanishing thing. description is "It's an ordinary USB. Or it would be, around anyone but you.". "The USB that the golden dongle degenerated into lies here."
@@ -15999,13 +16006,11 @@ to say sub-bus:
 	now crust is in lalaland;
 	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Anti-Cool Location way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
 
-does the player mean doing something with the hard drive: it is unlikely.
+description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with. You can also READ it for its status."
 
-description of hard drive is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with."
+The small blue button is part of Drive A. understand "reboot/ button" as small blue button. it is flippable.
 
-The small blue button is part of the hard drive. understand "reboot/ button" as small blue button. it is flippable.
-
-The small orange button is part of the hard drive.
+The small orange button is part of Drive A.
 
 a-text of small blue button is "RYRYYR". b-text of small blue button is "RYPYGR". parse-text of blue button is "x[sp]-[sp]b[sp]-[sp]o[sp]x". blue button is cheat-spoilable.
 
@@ -16021,7 +16026,7 @@ check pushing small blue button:
 	if player has keyboard and keyboard is not on slab:
 		say "The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?";
 		preef small blue button instead;
-	if disk is not in hard drive:
+	if disk is not in Drive A:
 		say "It's risky to boot without a disk, like that [if disk is in shack]disk right there[else]skid used to be[end if], in the disk drive. Much less reboot.";
 		preef small blue button instead;
 	if computer screen is not on slab:
@@ -16047,33 +16052,36 @@ check pushing small orange button:
 	say "It's too bent to push. You can probably just restart the computer when you need to." instead;
 
 check taking (this is the can't remove computer parts from labs slab rule):
-	if noun is in hard drive:
-		say "The disk is where it should be." instead;
-	if noun is on labs slab:
-		say "[The noun] is where it needs to be." instead;
+	if noun is in Drive A, say "The disk is where it should be." instead;
+	if noun is on labs slab, say "[The noun] is where it needs to be." instead;
 
 check inserting it into (this is the disk in drive and wired computer rule):
 	if noun is disk:
 		ignore the can't insert what's not held rule;
-		if noun is in hard drive:
-			say "The disk's already in the hard drive." instead;
-	if second noun is hard drive:
-		if noun is not disk:
-			say "[if noun is rom sticks]You'll wait [']til you're ready to program[else]It's a disk drive. Only disks fit in there[end if]." instead;
-		if keyboard is off-stage:
-			say "You don't have enough pieces to the computer to make it work. Specifically, no input device." instead;
-		if computer screen is off-stage:
-			say "(Protip: you might want to get something like a screen to figure what's going on.)" instead;
+		if noun is in Drive A, say "The disk's already in Drive A." instead;
+	if second noun is Drive A:
+		if noun is not disk, say "[if noun is rom sticks]You'll wait [']til you're ready to program[else]It's a disk drive. Only disks fit in there[end if]." instead;
+		if keyboard is off-stage, say "You don't have enough pieces to the computer to make it work. Specifically, no input device." instead;
+		if computer screen is off-stage, say "(Protip: you might want to get something like a screen to figure what's going on.)" instead;
 
 chapter drive e
 
-does the player mean doing something with hard drive: it is very likely.
+after fliptoing when player is in shack:
+	if noun is drive e or noun is drive a:
+		if usb is not off-stage, say "Well, it didn't help speed up your programming, but hooray for generally satisfying your curiosity!"
+	continue the action;
 
-drive e is reflexive LLPish scenery in hacks' shack. "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if]."
+Drive E is proper-named reflexive LLPish scenery in hacks' shack. "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if]."
 
 a-text of drive e is "RYRYRY". b-text of drive e is "R?R?R?". parse-text of drive e is "x[sp]-[sp]x[sp]-[sp]x[sp]-".
 
 instead of inserting into drive e, say "Drive e is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive a may be able to hold stuff[end if].";
+
+to decide which number is drive-llp:
+	let temp be 0;
+	if drive a is reflexed, increase temp by 2;
+	if drive e is reflexed, increment temp;
+	decide on temp;
 
 chapter badbooks
 
@@ -16271,12 +16279,11 @@ check fliptoing scratch paper:
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
 		preef scratch paper instead;
-	if disk is not in hard drive:
-		say "A DISK, I'D ASK pops up. You realize that [if disk is in lalaland]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]." instead;
+	if disk is not in Drive A, say "A DISK, I'D ASK pops up. You realize that [if disk is in lalaland]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]." instead;
 	if rebooted is false:
-		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if hard drive is examined]nother[end if] look at the drive might help.";
+		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
 		preef scratch paper instead;
-	if disk is not in hard drive:
+	if disk is not in Drive A:
 		say "You probably want to save your work to disk.";
 		preef scratch paper instead;
 	if slept is false:
@@ -26356,12 +26363,12 @@ fount	"[one of]The fount is a fount of knowledge. Dry knowledge, but knowledge.[
 escaroles	"[one of]The escaroles aren't much of a meal on their own. They could be more meaty.[plus][or]The escaroles could be a dish instead of garnish. Any old dish, with all sorts of things slopped into it.[plus][or]Or a CASSEROLE.[minus][cycling]"	--	"Fix a CASSEROLE."
 casserole	"[if yak is in shack or yak is in lalaland]You can't use the casserole any more. You could've bribed Leo and Rand with it.[else][one of]You can't take the casserole--it's too hot. It's also kind of yucky for someone as sophisticated as you unless you need calories.[plus][or]Met anyone who can use calories who doesn't sweat niceties?[plus][or]Leo and Rand. If you poke them when you have a tough physical task, you can get them to push the skid north.[minus][cycling][end if]"
 trim socks	"[one of]The socks aren't critical to solving the game, but they do give a LLP--Last Lousy Point.[plus][or]The socks don't seem very technical, but they look like circuit chips or something.[plus][or]Maybe they'd make you go faster or something.[plus][or]Maybe they are, instead, ROM STICKS.[minus][cycling]"
-rom sticks	"[one of]You can put the sticks in the hard drive to make it go faster. The game does this automatically.[plus][or]The sticks don't actually save moves or anything, though.[minus][cycling]"
+rom sticks	"[one of]You can put the sticks in Drive A to make it go faster. The game does this automatically.[plus][or]The sticks don't actually save moves or anything, though.[minus][cycling]"
 gum	"[one of]Gum comes in more than six flavors at your local supermarket, but there are only five ways to change G-U-M.[plus][or]As for what it's good for, it's everlasting gum, and maybe what it changes into will help other things be everlasting.[plus][or]Oh, the solution?[plus][or]UMG, er, OMG, do you need to ask?[plus][or]You don't need to go to George Mason University.[plus][or]I just put extra clues in to give more clues than anagram possibilities, because I could.[plus][or]MUG. In which you pour liquid.[minus][cycling]"	--	"make a MUG"
 mug	"[one of]Like the never-ending gum it came from, the mug regenerates what's in there.[plus][or]What goes in a mug? Liquid, generally.[plus][or][if coal is not in lalaland]You can probably figure what to do with the coal to make a liquid.[end if]The cola is a liquid.[plus][or]POUR COLA IN MUG.[minus][cycling]"
 skid	"[if yak is in lalaland][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 skidrope	"The skid's rope lets you PULL the skid."
-disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in hard drive]The disk is taken care of.[else]The disk can go in the hard drive, [once-now] you've got a full computer constructed."	--	"make a SKID"
+disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is visible]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 t-key	"[if t-key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
@@ -26382,9 +26389,9 @@ orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The or
 clack ops locs pack	"[one of]The locs pack is allegedly for making things quieter.[plus][or]But why is so much of its text in LETTERS LIKE THESE?[plus][or]Because it can become CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
-hard drive	"[h-d][line break]"
+Drive A	"[h-d][line break]"
 priv-shack	"[if player is in shack]You need to build a computer here[else]It's just scenery when you're in the Phat Path. But you can enter by going north[end if]."
-golden dongle	"The golden dongle is just there to make it plausible to hook the hard drive to other hardware."
+golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
 computer screen	"[if shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
 trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying other patrons.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	[start OYSTER hinting]
 stumbler tumblers	"[one of]The stumbler tumblers say TIPS.[plus][or]How to turn off the machine is written on the machine. Except the right action is rubbed off.[plus][or]Tips for getting rid of songs that are the pits...[plus][or]SPIT on the machine.[minus][cycling]"
@@ -26744,9 +26751,8 @@ to say frootz:
 	say "[if dollar is not off-stage]You've gotten all you need, but you can still return this fruit to Curtis[else]Curtis will mostly be collecting fruits, so you can return this to him[end if].[line break]"
 
 check objhinting drive:
-	if disk is in hard drive:
-		if rebooted is true:
-			all-say "You have the disk drive working." instead;
+	if disk is in Drive A:
+		if rebooted is true, all-say "You have the disk drive working." instead;
 		try objhinting blue button instead;
 
 to say h-d:
@@ -26759,14 +26765,11 @@ to say sy-sn:
 	pad-rec-lump "sy";
 	pad-rec "sn";
 
-to say leaf-or-flea:
-	say "[if leaf is off-stage]You need to change the flea in the shack.[else]The leaf in the shack will work.[end if]"
+to say leaf-or-flea: say "[if leaf is off-stage]You need to change the flea in the shack.[else]The leaf in the shack will work.[end if]"
 
-to say kboard-blah:
-	say "[if keyboard is off-stage]You need to find a keyboard. An animal and its item may provide a clue[else]The keyboard you got from the yak's drab yoke will work[end if]"
+to say kboard-blah: say "[if keyboard is off-stage]You need to find a keyboard. An animal and its item may provide a clue[else]The keyboard you got from the yak's drab yoke will work[end if]"
 
-to say once-now:
-	say "[if keyboard is on slab and disk is in hard drive]now[else]once[end if]"
+to say once-now: say "[if keyboard is on slab and disk is in Drive]now[else]once[end if]"
 
 to say a-t-check:
 	say "[if Lean Lane is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
@@ -27489,6 +27492,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if rom sticks are off-stage, say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage, say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
+		if drive a is reflexive, say "[2drm of Hacks' Shack]you could've made Drive A AVIDER.";
+		if drive e is reflexive, say "[2drm of Hacks' Shack]you could've taken time to DERIVE how to improve Drive E.";
 	else if myreg is oyster:
 		if you-used-pills is true, say "[how-pills-used].";
 		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";

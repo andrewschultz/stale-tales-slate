@@ -414,7 +414,7 @@ understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in thi
 
 understand "bat" as a mistake ("You don't want to take a bat to the keyboard. Or have a bat swoop and take it. Trust me.") when keyboard is enclosed by location of player.
 
-understand "diver" as a mistake ("It's you that'll need to dive into some code.") when hard drive is in location of player.
+understand "diver" as a mistake ("It's you that'll need to dive into some code.") when Drive A is in location of player.
 
 understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is enclosed by location of player]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid is enclosed by location of player or disk is enclosed by location of player.
 
@@ -422,7 +422,7 @@ understand "kids" as a mistake ("Kids don't need to listen to the words you've u
 
 understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has dirty looking cola.
 
-understand "rived" as a mistake ("You don't need to do that sort of hacking.") when hard drive is in location of player.
+understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is in location of player.
 
 understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when player has dirty looking cola.
 
