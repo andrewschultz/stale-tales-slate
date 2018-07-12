@@ -128,6 +128,9 @@ You've got an entry. No need to seal it up.
 #spechelp for store h
 >othesr
 Store H looks totally different for a second.
+#readables for store h
+>read store h
+'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'
 
 >others
 Your score has just gone up by one point

@@ -344,6 +344,16 @@ Score in a scenario: 15 out of 50 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 >rinsed
 Your score has just gone up by one point
+
+#readables for keycar
+>read keycar
+/(KC AYER|RAY ECK)
+have more
+>read keycar
+/(KC AYER|RAY ECK)
+a refresher on
+
+==t!1,2
 >creaky
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
@@ -395,6 +405,11 @@ Changing just one pirate would not, you sense, do much. It might even ostracize 
 #spechelp for docile old ice
 >old iec
 The old ice seems to glimmer a bit.
+#readables for fluster self rut
+>read fluster self rut
+You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There might be more if you read again.
+>read fluster self rut
+You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There are also weird furlets around it.
 
 ==t!1,2
 >coiled
@@ -464,6 +479,9 @@ You almost expect the strudel to hop up into your arms, but the moment passes.
 >take strudel
 >strudle
 You almost expect the strudel to hop up, but the moment passes.
+#readables for strudel
+>read strudel
+DR. ELTUS recommends this strudel!
 
 ==t!1,2
 >rustled
@@ -864,6 +882,10 @@ Bizarre animal noises continue to emanate from the fissure. It is beyond your co
 #spechelp for ropins
 >unleckdo
 The ropins remains secure, with no easy way to open it.
+#readables for prison
+>read prison
+Part of the red writing on the prison says
+There're two other bits to read.
 
 >unlocked
 
@@ -1003,6 +1025,13 @@ Scot scrunches his eyes to try to keep even more attention, but it doesn't quite
 >agnostci
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 >gs
+#readables for dinger
+>read dinger
+You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red.
+#readables for thearchy hatchery
+>read thearchy hatchery
+THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
+WRONG: What about hostile?
 
 >grained
 Your score has just gone up by one point
@@ -1120,6 +1149,9 @@ Despite your lack of technical knowledge, you think you almost did...something t
 #spechelp for blaster
 >blastre
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
+#readables for blaster
+>read blaster
+ALBERT'S.
 
 @nu
 >gonear rawest

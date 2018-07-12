@@ -127,6 +127,9 @@ You don't need to do anything more to the satchel--and if it became latches or s
 #spechelp for sitar
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
+#readables for sitar
+>read sitar
+Oh, right. You bought it from Trisa Israt.
 
 ==t!1
 >stair
@@ -208,6 +211,9 @@ The ISBN bins are secure. Best not tinker.
 #spechelp for rifle
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
+#readables for rifle
+>read rifle
+It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle.
 
 >flier
 by one point
@@ -243,6 +249,9 @@ Carven Cavern
 #spechelp for plates
 >stapel
 The plates shine slightly and rattle.
+#readables for pastel plates
+>read pastel plates
+EPSTAL is written as an author's signature.
 
 >staple
 Your score has just gone up by one point

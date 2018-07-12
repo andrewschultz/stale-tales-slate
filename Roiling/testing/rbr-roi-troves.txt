@@ -335,6 +335,10 @@ Your score has just gone up by one point
 #spechelp for ltb
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
+#readables for ltb
+>read ltb
+You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! He needs to learn to, like...!' They always acted as if it was so simple.
+However, there must be some simple way to focus and move on.
 
 >deal
 Your score has just gone up by one point
@@ -453,6 +457,11 @@ It's not just any bottle, but a bottle of N-E-Prod.
 #spechelp for pernod
 >pondre
 The bottle of Pernod seems to rattle and spin slightly.
+#readables for card
+>read card
+/(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
+>read card
+/(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 
 >ponder
 Your score has just gone up by one point
@@ -475,6 +484,9 @@ Score in a scenario: 18 out of 24 total points in the current region, Troves. Lo
 #spechelp for red vees
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
+#readables for red vees
+>read red vees
+Etched into the vees are the names of this motivational device's inventors. One is
 
 >deserve
 Your score has just gone up by one point
@@ -515,6 +527,9 @@ It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
 #mistake test for ambler
 >ambler
 You see red slightly as the marble Blamer Balmer fails to walk away.
+#readables for blamer balmer
+>read blamer balmer
+The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 
 ==t!2
 >ramble
@@ -543,6 +558,10 @@ You've lasted long enough. There are new things to look at, now.
 #spechelp for divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
+#readables for divorces
+>read divorces
+All sorts of articles that make you see red. This one's about
+/(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
 
 >discover
 Your score has just gone up by one point

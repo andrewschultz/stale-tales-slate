@@ -19,6 +19,19 @@ Posh Hops Shop
 Score in a scenario: 0 out of 40 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 ==t2
+#readables for stein
+>read stein
+The stein reads TIENS in red, trying to be foreign and exotic, maybe.
+#readables for jukebox
+>read jukebox
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Do, undo.
+>read jukebox
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Reset, set.
+>read jukebox
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Do, undo, set, reset? Hm.
+#readables for tumblers
+>read tumblers
+PITS is written in red on the bottom of some tumblers.
 #spechelp for capers recaps
 >scraep
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
@@ -306,6 +319,9 @@ The carps and pikes laugh at--whatever you tried. But you know bullies are like 
 #spechelp for trout
 >trotu
 Deal with the attackers, not the trout. Well, for now.
+#readables for scrawl
+>read scrawl
+[reject].
 
 >spike
 Your score has just gone up by one point
@@ -317,6 +333,10 @@ WRONG
 Your score has just gone up by one point
 >thisalt
 WRONG
+
+==t2
+>read scrawl
+Etahn Ru. Near-Hut Haunter.
 
 >e
 Dearths
@@ -504,7 +524,7 @@ The knob rattles slightly.
 >sksi
 The skis momentarily seem more polished.
 \\
-#spechelp for snap pans
+#spechelp for span pans
 >pasn
 The pans wobble slightly.
 \\
@@ -544,6 +564,9 @@ Your score has just gone up by one point
 #nudge for bonk
 >bokn
 That isn't quite the right way to hit the knob.
+#readables for span pans
+>read span pans
+Red writing indicates the pans were made by Nan's Apps.
 
 >bonk
 Your score has just gone up by one point
@@ -664,6 +687,9 @@ Your score has just gone up by one point
 #spechelp for gleaner
 >gleanre
 The gleaner remains too small to read.
+#readables for gleaner
+>read gleaner
+The gleaner was made by Al Green, written in red.
 
 >enlarge
 Your score has just gone up by one point
@@ -872,6 +898,9 @@ Score in a scenario: 36 out of 39 total points in the current region, Oyster. Th
 #spechelp for dialer
 >dilrae
 The dialer seems to click slightly
+#readables for dialer
+>read dialer
+A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
 
 >derail
 Your score has just gone up by one point

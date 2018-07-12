@@ -147,6 +147,9 @@ The stump doesn't move, but the star seems to rattle a bit.
 Some 4-letter word or other will get the dart.
 #spechelp for decorative star
 WRONG
+#readables for drab yoke
+>read drab yoke
+It is, apparently, an OAK DERBY drab yoke, from the small red print.
 
 >rats
 Your score has just gone up by one point
@@ -179,6 +182,13 @@ The spumed tar does nothing
 ==t2
 #spechelp for plebe
 The plebe looks confused, as if you garbled what you said.
+#readables for volt maze
+>read volt maze
+The writing says EZ-Ol'-Av' (TM) Volt Maze.
+>read volt maze
+Olav Metz and Zemo Valt were the main architects.
+>read volt maze
+It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 
 >bleep
 Your score has just gone up by one point
@@ -246,6 +256,9 @@ You got the boing mechanism working.
 #spechelp for sport ports
 >prots
 The sport ports seem even shinier for a second.
+#readables for sport ports
+>read sport ports
+TOP'RS is the name of the firm who built the Sport Ports, carved in red.
 
 ==t!1
 >prost
@@ -724,6 +737,11 @@ The disk seems to want to expand, but not quite into that. You must be close.
 #spechelp for clack ops locs pack
 >capslokc
 NO, REARRANGE AND TRY AGAIN, you think.
+#readables for clack ops locs pack
+>read clack ops locs pack
+The locs pack mentions, in red, PC Cloaks are also a super cool productivity booster.
+>read clack ops locs pack
+The locs pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!
 
 >capslock
 Your score has just gone up by one point
@@ -907,8 +925,19 @@ The code won't BUDGE.
 #spechelp for trim socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
+#readables for drive a
+>read drive a
+It says DRIVE A/A DRIVE: VARIED
+#readables for drive e
+>read drive e
+It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
+It's alternately referred to as Drive E and E Drive. I'D VEER, someone has written in red.
 
 ==t!1
+>avider
+REGION MIN INCREASED BY 1
+>derive
+REGION MIN INCREASED BY 1
 >rom sticks
 REGION MIN INCREASED BY 1
 >undo
@@ -918,6 +947,8 @@ REGION MIN INCREASED BY 1
 REGION MIN INCREASED BY 1
 
 ==t2
+>read drive a
+It says DRIVE A/A DRIVE: AVIDER
 #nudge for trimsocks
 >trimsocsk
 The ROM sticks can probably make your computer go faster. Why fiddle further?

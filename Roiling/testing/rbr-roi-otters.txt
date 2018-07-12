@@ -71,10 +71,12 @@ Your powers are so weak that you need to add a few letters to the word you need.
 #nudge for reedy
 >reeyd
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
-
 #spechelp for cinders
 >cindesr
 The cinders glow and even warm up for a bit.
+#readables for cinders
+>read cinders
+/(Sr. Indec|NRD ICES|IC Nerds)
 
 ==t1
 >discern ed riley
@@ -282,6 +284,9 @@ No need to change the maples. They are the least dreary part of the Downside.
 >mapel
 No need to change the maples. They are the least dreary part of the Downside.
 #nudge for mack
+#readables for sample maples
+>read sample maples
+On one, you read: "Formerly the maiden median, then the gent-fora/frat-gone frontage."
 >makc
 If you messed with one mack, the others would gang up on you. Work on the argument, instead.
 #nudge for macks
@@ -429,8 +434,11 @@ The whole picture.
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
 #spechelp for p-2
->howeveer
+>howevre
 Rev. Howe seems to snarl a bit more deeply for a moment.
+#readables for p-2
+>read p-2
+/One barely legible bit reads (Eeh, Row V!|Veer How|Rev. Howe|Whereov)
 
 ==!1
 >although
@@ -533,6 +541,11 @@ The corona scurries about for a bit before settling down again.
 >undo
 >undo
 >undo
+
+==t2
+#readables for coma camo
+>read coma camo
+You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger Pit/Inert Gap."
 
 >enragedly
 Your score has just gone up by one point
@@ -717,6 +730,11 @@ They find another place where rioters roister.
 >undo
 >undo
 
+==t2
+#readables for coma camo
+>read coma camo
+You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom."
+
 >loathingly
 Your score has just gone up by one point
 >tersely
@@ -737,6 +755,9 @@ The raptor recoils slightly.
 Your score has just gone up by one point
 
 ==t2
+#readables for whistle
+>read whistle
+You strain your eyes to see that Ed Plye, apparently, made the whistle.
 #spechelp for weltish whistle
 >weltish whistel
 Probably best to have the whistle before changing it.
@@ -920,6 +941,8 @@ The medals waver noiselessly. Hm, that's not quite it.
 ==t2
 >weltish whistel
 The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
+>read whistle
+Ed Plye, apparently, made the whistle.
 
 >deeply
 Your score has just gone up by one point

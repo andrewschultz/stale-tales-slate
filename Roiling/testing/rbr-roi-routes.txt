@@ -244,6 +244,9 @@ It's not the carvings that need changing.
 #spechelp for seed pit
 >despiet
 The seed pit seems to bubble slightly.
+#readables for cravings carvings
+>read cravings carvings
+When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
 
 >despite
 Your score has just gone up by one point

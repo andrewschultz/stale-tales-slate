@@ -142,12 +142,12 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1=25 for the palace]
 [BONUS:
 3=3 for the extra warriors
-1=4 for the yurts
-5=9 for the H/I beyond needing to clear the coastlines
-1=10 for keycar wherever it appears
-3=13 for the mended mini denim, sporties' ripostes and old ice
-1=14 for making the replay player shiny
-2=16 for the ingrates/natives
+5=8 for the H/I beyond needing to clear the coastlines
+2=10 for the ingrates/natives to get to the edge
+1=11 for the yurts, 1=12 for the mended mini denim
+1=13 for sporties' ripostes, 1=14 for old ice
+1=15 for keycar wherever it appears
+1=16 for making the replay player shiny
 1=17 for strudel (fringe finger)
 1=18 for organised ego drains (lost lots)
 1=19 for tentative (agnostic meets dr yow)
@@ -2830,7 +2830,7 @@ Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, TH
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
-cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[or]You see red you can't understand Nrdices--which could be helpful here[in random order]."	[otters]
+cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in clarthead cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."
@@ -13335,7 +13335,7 @@ check going outside in Idle Deli:
 
 chapter seed pit and cravings carvings
 
-The cravings carvings is auxiliary scenery in Idle Deli. "All sorts of food doodles are here, and if you READ them, they might form a message, too."
+The cravings carvings are plural-named auxiliary scenery in Idle Deli. "All sorts of food doodles are here, and if you READ them, they might form a message, too."
 
 a-text of cravings carvings is "RYRRYRY". b-text of cravings carvings is "RGRRYRG". parse-text of cravings carvings is "x[sp]e[sp]x[sp]x[sp]i[sp]x[sp]e".
 

@@ -108,6 +108,9 @@ Well, you don't technically need plurals for this, but you're on the right track
 #spechelp for mad train
 >mad trani
 The train emits some fake smoke and seems ready to blow up--but no.
+#readables for mad train
+>read mad train
+DR. NIMATA.
 
 >maraschino
 Your score has just gone up by one point.
@@ -223,6 +226,12 @@ The slime shifts about slightly, but not enough--yet.
 #spechelp for spear
 >spera
 The spear stays as-is. But it can't be that hard to change.
+#readables for drinks stand
+>read drinks stand
+One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
+#readables for eerie blurbs
+>read eerie blurbs
+One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
 
 >score
 Score in a scenario: 5 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
@@ -332,6 +341,9 @@ Nothing happens. Perhaps it's the whole item that's important.
 #nudge for tangerine
 >tangerien
 The green stain could make just one fruit, but why not think bigger? It could become many.
+#readables for riot cap
+>read riot cap
+It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
 
 >apricot
 Your score has just gone up by one point.
@@ -486,6 +498,9 @@ The barriers' westness is important.
 #nudge for foliage
 >foliaeg
 Alas, the foliage also blocks your magical powers and not just your explorations, but there's plenty else to work at here.
+#readables for mean trowel
+>read mean trowel
+It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt.
 
 >cranberries
 Your score has just gone up by one point.
@@ -524,6 +539,9 @@ The icons rattle and hum promisingly.
 #spechelp for coins
 >coisn
 The coins rattle and hum promisingly.
+#readables for singed design
+>read singed design
+The singed design on the coins reads, when you look close, property of NISCO.
 
 >sonic
 Blam!
@@ -737,6 +755,9 @@ The design is sort of glommed onto the coins. So you should figure what to do, t
 The design doesn't need changing. It's what the design's on.
 
 ==t2
+#readables for orange
+>read orange
+It's stamped with the word ENGARO in red.
 #nudge for plant
 >pantl
 You may want to listen to what the plant has to say, or what it makes you say.
