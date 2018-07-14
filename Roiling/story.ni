@@ -4354,7 +4354,7 @@ hoster	"[got-e]."
 tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
 nestor	"You rescued him, and that's enough."
 lecturer	"He's already been changed enough."
-picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
+scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
@@ -4369,17 +4369,16 @@ da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost 
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
 Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
 heat	"Don't need to overheat, or overhate."
-fretful truffle	"Caring and all its offshoots only go so far."
 sob ever verbose	"You observe that further observation would be redundant."
 stop post	"You don't need to P.S. tweaking the post."
 bee's head	"Too much fiddling with reason is unreasonable."
 what-a-bee	"The bee's already taken enough of your in-my-heartitude."
 cellar door	"How inefficient! You already know where it is."
-box of diapers	"Don't twist yourself into knots to/from REAL despair."
+ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
 praise	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
-ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
-Eddie's Song	"You've lasted long enough. There are new things to look at, now."
+marble blamer mr. beal	"[mbb-no]."
+marble blamer balmer	"[mbb-no]."
 star	"No need for additional arts."	[START presto]
 dart	"The dart's just fine as-is."
 onyx censer	"You may need to change the censer differently."
@@ -4458,32 +4457,24 @@ perp-priv	"Don't want to over-prep[gs-north]."
 searcher	"You've done enough researching[gs-north]."
 viewer	"You've done enough reviewing[gs-north]."
 
-to say gs-north:
-	if gate-level is 2:
-		say ", but you can just go north"
+to say mbb-no: say "You already stopped thinking too much about [mbb]. If you try too hard to keep ignoring [mbb], you'll start thinking about [mbb], again"
 
-to say got-e:
-	say "You've got an entry. No need to seal it up"
+to say gs-north: if gate-level is 2, say ", but you can just go north"
 
-to say sk2dsk:
-	say "No, skid <=> disk is about it. There's no tricky third way."
+to say got-e: say "You've got an entry. No need to seal it up"
 
-to say giant-over:
-	say "The bench isn't important with the giant gone"
+to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way."
 
-to say no-rehash:
-	say "[if leo is in dirge ridge]They're already off getting to know each other better[else]That'd be an awkward rehash. You need another way to say good-bye[end if]"
+to say giant-over: say "The bench isn't important with the giant gone"
 
-to say just-c:
-	say "Just return the fruit to Curtis. No need for another change"
+to say no-rehash: say "[if leo is in dirge ridge]They're already off getting to know each other better[else]That'd be an awkward rehash. You need another way to say good-bye[end if]"
+
+to say just-c: say "Just return the fruit to Curtis. No need for another change"
 
 to say good-enuf of (goody - a thing):
 	repeat through table of done rejects:
 		if goody is specdone entry:
-			if there is no spectalk entry:
-				say "[generic-reject]";
-			else:
-				say "[spectalk entry]";
+			say "[if there is no spectalk entry][generic-reject][else][spectalk entry]";
 			continue the action;
 	if goody is a mack-idea:
 		say "You've already dealt with the macks that way.[no line break]";
@@ -5520,7 +5511,7 @@ alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
-Drive A	true	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
+Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five[end if]."
 a-s	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."

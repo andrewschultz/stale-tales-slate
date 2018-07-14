@@ -31,7 +31,7 @@ You think you feel the palm shake a bit, but nothing terribly magical happens.
 Your score has just gone up by one point
 
 ==t2
-#done rejects for palm
+#done rejects for lamp
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
 
@@ -45,7 +45,7 @@ Now you remember why there were ten beams. Of course, the ten beams lead down to
 Your score has just gone up by two points
 
 ==t2
-#done rejects for t-b
+#nudge for tenbeams
 >basemetn
 You probably just want to go DOWN to the basement.
 >d
@@ -72,7 +72,7 @@ The tables seem to shift a bit.
 DEBUG INFO: Adding a min point
 
 ==t2
-#done rejects for tables
+#nudge for stable
 >stabel
 You probably just want to go IN to the stable.
 
@@ -86,7 +86,7 @@ Hm, no, the niche--my niche--won't unfold that way.
 DEBUG INFO: Adding a min point
 
 ==t2
-#done rejects for niche
+#done rejects for chimney
 >chimnye
 You probably just want to go UP the chimney.
 
@@ -105,7 +105,7 @@ The pin wobbles.
 DEBUG INFO: Adding a min point
 
 ==t2
-#done rejects for giant pin
+#done rejects for painting
 >paintign
 The painting really goes better with the study than the giant pin.
 
@@ -116,7 +116,7 @@ Your score has just gone up
 all the secrets here
 
 ==t2
-#done rejects for latches
+#done rejects for satchel
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
@@ -136,7 +136,7 @@ Oh, right. You bought it from Trisa Israt.
 DEBUG INFO: Adding a min point
 
 ==t2
-#done rejects for sitar
+#done rejects for stair
 >stari
 You don't need to do any more with the stair.
 
@@ -153,7 +153,7 @@ The pram creaks back and forth slightly.
 >ramp
 DEBUG INFO: Adding a min point
 
-#done rejects for pram
+#done rejects for ramp
 >rapm
 The ramp is useful now. Best keep it.
 
@@ -257,7 +257,7 @@ EPSTAL is written as an author's signature.
 Your score has just gone up by one point
 
 ==t2
-#done rejects for plates
+#done rejects for staple
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
 
@@ -270,6 +270,6 @@ The plaster crackles and shines slightly.
 Your score has just gone up by one point
 
 ==t2
-#done rejects for plaster
+#done rejects for stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.

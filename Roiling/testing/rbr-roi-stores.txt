@@ -38,7 +38,7 @@ You're a hero and all, but only one sample per day. Just think of the field day 
 Your score has just gone up by one point
 
 ==t2
-#donereject for store n
+#done rejects for nestor
 >nestro
 You rescued him, and that's enough.
 
@@ -53,7 +53,7 @@ Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 
 ==t2
-#donereject for store k
+#done rejects for tokers
 >tokesr
 They are who they are. You should maybe try to get their friend back.
 
@@ -79,7 +79,7 @@ Store W seems to push up from the ground and go narrower for a second.
 Your score has just gone up by one point
 
 ==t2
-#donereject for store w
+#done rejects for towers-x
 >towesr
 You've got an entry. No need to seal it up.
 
@@ -92,7 +92,7 @@ Store U seems to light up with lines and curves for a second, but no, that's not
 Your score has just gone up by one point
 
 ==t2
-#done rejects for store u
+#done rejects for routes-x
 >routse
 You've got an entry. No need to seal it up.
 
@@ -106,7 +106,7 @@ A single paper currency flutters off from Store V, lost forever.
 Your score has just gone up by one point
 
 ==t2
-#done rejects for store v
+#done rejects for troves-x
 >trovse
 You've got an entry. No need to seal it up.
 
@@ -120,7 +120,7 @@ You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
 Your score has just gone up by one point
 
 ==t2
-#donereject for store y
+#done rejects for oyster-x
 >oystre
 You've got an entry. No need to seal it up.
 
@@ -130,13 +130,13 @@ You've got an entry. No need to seal it up.
 Store H looks totally different for a second.
 #readables for store h
 >read store h
-'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'
+"All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth"
 
 >others
 Your score has just gone up by one point
 
 ==t2
-#done rejects for store h
+#done rejects for hoster
 >othesr
 You've got an entry. No need to seal it up.
 
@@ -149,7 +149,7 @@ You hear old forgotten magic words which seem like they might almost apply if th
 Your score has just gone up by one point
 
 ==t2
-#done rejects for store p
+#done rejects for e-s
 >presot
 You've got an entry. No need to seal it up.
 
@@ -162,7 +162,7 @@ You hear various unrecognizable animal noises.
 Your score has just gone up by one point
 
 ==t2
-#done rejects for store t
+#done rejects for otters-x
 >ottesr
 You've got an entry. No need to seal it up.
 

@@ -96,7 +96,7 @@ You think you feel less cold for a second. But you need to make it last.
 Your score has just gone up by one point
 
 @nu
-#done rejects for cold
+#done rejects for heat
 >haet
 Don't need to overheat, or overhate.
 
@@ -108,12 +108,12 @@ Meh. Maybe you're closer than you think to motivation. How to make that matter?
 >care
 Your score has just gone up by one point
 
+Bustle Sublet
+
 @nu
-#done rejects for heat
+#nudge for care
 >caer
 Caring and all its offshoots only go so far.
-
-Bustle Sublet
 
 @nu
 #nudge for bustle
@@ -266,7 +266,7 @@ Staring again at the diapers, you are depressed you couldn't even get being depr
 Your score has just gone up by one point
 
 @nu
-#done rejects for diapers
+#nudge for diapers
 >despari
 Don't twist yourself into knots to/from REAL despair.
 
@@ -292,11 +292,6 @@ Boredom Bedroon
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-=t3
-#nudge for glare
->glaer
-You stare into space some more but get distracted.??
-
 @nu
 #spechelp for large regal lager
 >glaer
@@ -308,15 +303,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 24 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 24.
 
-@nu
-#done rejects of large regal lager
+==t3
+#nudge for glare
 >glaer
-You stare into space some more but get distracted.
-
-@nu
-#spechelp for lobster
->bolstre
-That's not quite the way to deserve that lobster.
+You stare into space some more but get distracted.??
 
 ==t!2
 >bolster
@@ -437,7 +427,7 @@ Your score has just gone up by one point
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
 @nu
-#done reject for rivets
+#done rejects for rivets
 >striev
 You're striving too hard, now.
 
@@ -550,7 +540,7 @@ You don't quite draw inspiration from the shaker, but there can't be that many a
 Your score has just gone up by one point
 
 @nu
-#done rejects for salt
+#nudge for salt
 >lats
 You've lasted long enough. There are new things to look at, now.
 
@@ -568,7 +558,7 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 24 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 24.
 
 @nu
-#done rejects for divorces
+#nudge for divorces
 >divorcse
 No! Not another second thinking about that rubbish.
 

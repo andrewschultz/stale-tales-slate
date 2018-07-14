@@ -257,6 +257,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "cold"	168201090	--	cold	--	"Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat."
 "bustle"	504528644	Bustle Sublet	--	--	"[locname]." [start bustle sublet]
 "messhole"	677684018	Bustle Sublet	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
+"care"	234323315	Bustle Sublet	--	--	"Caring and all its offshoots only go so far."
 "boor"	252447862	Bustle Sublet	--	--	"[boor-grub]."
 "grub"	241448217	Bustle Sublet	--	--	"[boor-grub]."
 "observe"	637146289	--	--	lot-observed rule	"You're already observing by reflex now. No need to tweak things."
@@ -275,6 +276,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ires"	354396724	Drain Nadir	--	--	"It's an ires PAD."
 "pad"	104682866	Drain Nadir	--	--	"It's an IRES pad."
 "song"	272133753	--	Eddie's song	--	"It's the song name--[i]I'd Cede[r]."
+"diapers"	459079590	--	Eddie's song	--	"Don't twist yourself into knots to/from REAL despair." [this relies on Eddie's Song replacing the diapers before you move on to the bedroom]
 "eddie"	342663242	--	Eddie's song	--	"It's the song name--[i]I'd Cede[r]."
 "bedroom"	465358213	Boredom Bedroom	--	--	"[locname]." [start boredom bedroom]
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
@@ -307,6 +309,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
 "fern"	308552316	Upscale Capsule	--	--	"The fern is mentally, if not physically, unmalleable."
 "sked"	298042342	Upscale Capsule	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
+"salt"	255385641	--	--	salt-gone rule	"You've lasted long enough. There are new things to look at, now."
 "likeness"	668807521	--	--	tressi-or-balmer rule	"It's whoever's in the likeness that matters--[if Sister Tressi is in lalaland]Blamer Balmer[else if Blamer Balmer is in lalaland]Sister Tressi[else]Sister Tressi and Blamer Balmer[end if], here."
 "divorces"	575948795	--	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
@@ -440,9 +443,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "catechism"	513739379	shack	--	--	"[no-txtbk]."
 "textbook"	666851463	shack	--	--	"[no-txtbk]."
 "bkoo"	220057237	shack	--	--	"[no-txtbk]."
-"hard"	145823009	shack	--	--	"[no-dsk]."
 "drive"	386316667	shack	--	--	"[no-dsk]."
-"harddrive"	532139676	shack	--	--	"[no-dsk]."
 "storep"	568332432	--	--	degen-true rule	"[not-the-reg]." [end-p]
 
 table of oyster nudges
@@ -1408,6 +1409,10 @@ to say cone-rec:
 to say scrapery:
 	say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
 
+this is the salt-gone rule:
+	if st al salt is in lalaland, the rule succeeds;
+	the rule fails;
+
 this is the tressi-or-balmer rule:
 	if player is in upscale capsule:
 		if sister tressi is in upscale capsule or blamer balmer is in upscale capsule, the rule succeeds;
@@ -1552,7 +1557,7 @@ to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if
 
 section oyster nudges
 
-to say no-dsk: say "That computer probably holds important information--you just need to extract it right, by trying other things";
+to say no-dsk: say "Since there's both Drive A and Drive E, that's ambiguous.";
 
 to say patron:
 	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"

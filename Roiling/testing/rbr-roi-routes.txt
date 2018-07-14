@@ -329,7 +329,7 @@ The soot smells a bit stronger than before for a moment.
 Your score has just gone up by one point
 
 ==t2
-#donereject for pipe soot
+#done rejects for pipe soot
 #not a nudj for pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
@@ -369,7 +369,7 @@ You hang around the bench, hoping for something to happen, but nothing happens. 
 Your score has just gone up by one point
 
 ==t2
-#donerejects for bench
+#done rejects for bench
 >againts
 You leaned on the bench right. Time to get on it.
 
@@ -390,7 +390,7 @@ Oof! You fail to jump on the bench end. Try mixing things up from what you just 
 Your score has just gone up by one point
 
 ==t2
-#donereject for bench-end
+#done rejects for bench-end
 >astried
 You got on the bench right. Time to start ducking.
 
@@ -436,7 +436,7 @@ The pages of Rude 'N Nuder flutter a bit.
 Your score has just gone up by one point
 
 ==t2
-#done rejects for nuder
+#done rejects for U NERD ENDUR REDUN
 >undre
 You don't need to do anything fancy with the runed book.
 #nudge for rude
@@ -530,7 +530,7 @@ You feel it's ALMOST the right time for the darkness to lift.
 Your score has just gone up by one point
 
 ==t2
-#done rejects for darkness
+#done rejects for un-road
 >untli
 The underground is already lit. Un-unlit.
 
