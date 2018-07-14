@@ -19,6 +19,9 @@ sync_detail = defaultdict(str)
 
 region_wildcard = ""
 
+show_wrongs = False
+wrong_count = 0
+
 out_to_file = False
 launch_outfile = False
 houtfile = "hch_out.txt"
@@ -31,6 +34,7 @@ def standard_usage():
 def usage():
     print("1/2 = sa or roiling only")
     print("[asdi]* = aftertexts, spechelp, done rejects / i = ignore 'nudmis' files, only look at RBR generators.")
+    print("w nw wn = switch on/off WRONG notifications")
     print("r= = region wildcard")
     print("e# = maximum errors")
     print("q = quiet")
@@ -60,18 +64,27 @@ def find_in_glob(sync_stuff, pattern, b, region, extras = []):
     errs = 0
     err_string = 'donereject' if pattern == 'done rejects' else ''
     last_line = 0
+    wrong_count = 0
     for x in glob.glob(pattern) + extras:
         with open(x) as file:
             if not quiet: print("Checking", x)
             for (line_count, line) in enumerate(file, 1):
-                if line.startswith('#done reject '):
+                ll = line.lower().strip()
+                if show_wrongs and line.startswith("WRONG"):
+                    wrong_count += 1
+                    print("WRONG #", wrong_count, "needs to be replaced at", x, "line", line_count)
+                    continue
+                if ll.startswith('#done reject '):
                     print('PEDANTIC WARNING you want done rejectS to test', no_of_for(line), 'at', x, 'line', line_count)
                     continue
-                if line.startswith('#' + b + ' of '):
+                if ll.startswith('#donereject'):
+                    print('PEDANTIC WARNING you want done rejectS (with a space) to test', no_of_for(line), 'at', x, 'line', line_count)
+                    continue
+                if ll.startswith('#' + b + ' of '):
                     print('PEDANTIC WARNING you want', b, 'FOR, not', b, 'OF, to test', no_of_for(line), 'at', x, 'line', line_count)
                     continue
-                if line.startswith('#' + b + ' for '):
-                    l = re.sub("#{:s} for ".format(b), "", line.strip().lower())
+                if ll.startswith('#' + b + ' for '):
+                    l = re.sub("#{:s} for ".format(b), "", ll)
                     if l not in sync_stuff.keys():
                         if not region or region in x:
                             if err_max == 0 or errs <= err_max: print(l, "is invalid", b, "in file", x, "at line", line_count, "for pattern", pattern)
@@ -144,6 +157,8 @@ while count < len(sys.argv):
     elif arg == '2' or arg == 'roi' or arg == 'ro' or arg == 'r': projs = ['roi']
     elif arg == 'q': quiet = True
     elif arg == 'o': out_to_file = True
+    elif arg == 'w': show_wrongs = True
+    elif arg == 'nw' or arg == 'wn': show_wrongs = False
     elif arg == 'lo' or arg == 'ol': out_to_file = launch_outfile = True
     elif arg == 'nq' or arg == 'qb': quiet = False
     elif re.search("^[asdir]+", arg):
