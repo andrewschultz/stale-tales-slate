@@ -85,6 +85,10 @@ WRONG
 
 >door
 
+#done rejects for desert-door
+>doro
+The door is probably the way out. Best not change it into something else.
+
 #nudge for musical
 >musicla
 It's a pretty complex chord.
@@ -102,7 +106,7 @@ You feel a slight psychic push-pull coming from the bulge. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done rejects of bugle
+#done rejects for bugle
 >bugel
 The bugle emits a sad "don't change me back" noise.
 
@@ -159,7 +163,7 @@ You feel a slight psychic push-pull coming from the toga. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done rejects of goat
+#done rejects for goat
 >gota
 The goat seems content enough as-is.
 

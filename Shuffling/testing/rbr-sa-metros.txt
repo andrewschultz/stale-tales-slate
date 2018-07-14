@@ -29,7 +29,7 @@ Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 >metros
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 `nu
-#done rejects of metros
+#done rejects for metros
 >metrso
 WRONG
 
@@ -142,7 +142,7 @@ You feel a slight psychic push-pull coming from the drainage. Keep at it.
 by one point
 
 `nu
-#done rejects for gardenai
+#done rejects for gardenia
 >gardenai
 The flowers are fine as-is.
 
@@ -217,7 +217,7 @@ You feel a slight psychic push-pull coming from the motto. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done rejects of tomato
+#done rejects for tomato
 >tomaot
 It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out.
 
@@ -469,7 +469,7 @@ You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done rejects of keycard
+#done rejects for keycard
 >keycadr
 The keycard remains stiff. Looks like it's as it should be.
 
@@ -584,7 +584,7 @@ You feel a slight psychic push-pull coming from the heaths. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done reject  for sheath
+#done rejects for sheath
 >sheaht
 The sheath remains still.
 
@@ -628,7 +628,7 @@ You feel a slight psychic push-pull coming from the brocade. Keep at it.
 >barcode
 Your score has just gone up by one point.
 
-#done rejects of barcode
+#done rejects for barcode
 >barcoed
 The barcode does not shift.
 
@@ -793,7 +793,7 @@ You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 by one point
 
 `nu
-#done rejects of op
+#done rejects for op
 >openign
 WRONG
 

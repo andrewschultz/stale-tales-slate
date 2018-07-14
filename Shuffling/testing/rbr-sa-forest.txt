@@ -185,7 +185,7 @@ You feel a slight psychic push-pull coming from the ones. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done rejects for ones
+#done rejects for nose
 >noes
 Don't get that nose bent out of shape.
 
@@ -199,7 +199,7 @@ You feel a slight psychic push-pull coming from the dashes. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done rejects for dashes
+#done rejects for shades
 >shadse
 Anything you do to bend the shades might break them.
 
@@ -287,7 +287,7 @@ You feel a slight psychic push-pull coming from the Spam. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done reject for spam
+#done rejects for maps
 >masp
 The maps are probably right, you hope. No need to change them.
 
@@ -302,6 +302,7 @@ A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
 You feel a slight psychic push-pull coming from the bread. Keep at it.
 >beard
 Your score has just gone up by one point.
+#done rejects for beard
 >beadr
 For a beard, it's actually pretty cool.
 
@@ -357,7 +358,7 @@ You feel a slight psychic push-pull coming from the liches. Keep at it.
 Your score has just gone up by one point.
 
 `nu
-#done reject of liches
+#done rejects for chisel
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
 
@@ -415,7 +416,7 @@ You feel a slight psychic push-pull coming from the livers. Keep at it.
 >sliver
 Your score has just gone up by one point.
 
-#done reject for sliver
+#done rejects for sliver
 >slivre
 The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
@@ -449,7 +450,7 @@ You feel a slight psychic push-pull coming from the red asp. Keep at it.
 >drapes
 Your score has just gone up by one point.
 
-#done reject for drapes
+#done rejects for drapes
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
 
@@ -471,7 +472,7 @@ The sliver seems to bend, but it snaps back. Maybe you can do a bit more.
 Your score has just gone up by one point.
 
 `nu
-#done reject for silver
+#done rejects for silver
 >silvre
 Hard to beat silver. It's what it should be.
 

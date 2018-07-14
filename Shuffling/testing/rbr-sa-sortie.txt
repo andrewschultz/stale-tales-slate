@@ -28,7 +28,7 @@ WRONG
 >sortie
 
 `nu
-#done reject for store i
+#done rejects for store i
 >sortei
 WRONG
 
@@ -148,8 +148,14 @@ The fridge is just a fridge.
 The grist looks a bit less bland.
 You feel a slight psychic push-pull coming from the grist. Keep at it.
 
+==t!1
 >grits
 Your score has just gone up by one point.
+
+`nu
+#done rejects for grits
+>grist
+Best not to get too crazy with food preparation.
 
 `nu
 #donerejects for grits
@@ -254,10 +260,9 @@ by one point
 by one point
 
 `nu
-#done rejects for hot sauce
+#done rejects for hotsauce
 >hotsauec
-WRONG
-
+Best not to get too crazy with food preparation.
 
 #nudge for cause
 >caues
@@ -730,7 +735,7 @@ WRONG
 >panel
 
 `nu
-#done reject for panel
+#done rejects for panel
 >panle
 WRONG
 
@@ -821,6 +826,12 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 ##nudge for room
 >moor
 >silo
+by one point
+
+`nu
+#done rejects for silo
+>siol
+That silo was pretty big. You probably have little more to do with the oils.
 
 >put panel in silo
 >put door in silo
@@ -879,9 +890,20 @@ WRONG
 
 >shoot
 
+`nu
 #nudge for button
 >buttno
 It's the buttons' purposes that needed changing.
+
+`nu
+#done rejects for steer button
+>steer buttno
+No, the steer button HAS to be right.
+
+`nu
+#done rejects for shoot button
+>shoot buttno
+No, the shoot button HAS to be right.
 
 >push steer
 >push shoot

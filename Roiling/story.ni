@@ -5519,7 +5519,7 @@ salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel mus
 alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [START presto]
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
-Drive E	true	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
+Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
 Drive A	true	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five[end if]."
@@ -23372,11 +23372,18 @@ after fliptoing an animal:
 
 book Clarthead Cathedral
 
-Clarthead Cathedral is south of Bleary Barley. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west."
+Clarthead Cathedral is south of Bleary Barley. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are in clarthead cathedral]The noise here is just unbearable[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west."
 
-the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
+the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text is "BUG".
+
+to determine which number is whiner-score:
+	let temp be 0;
+	if ram1 is reflexed, increment temp;
+	if ram2 is reflexed, increment temp;
+	if ram3 is reflexed, increment temp;
+	decide on temp;
 
 section dummy scenery
 

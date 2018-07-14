@@ -80,6 +80,8 @@ def check_aftertexts():
             ll = re.split("\t+", line)
             l0 = ll[0].lower()
             in_aftertexts[l0] = line_count
+            print(line_count)
+            if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of tabs at line {:d}: {:s}".format(line_count, line))
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in need_source_logic.keys():
                 if l0 not in okay.keys():

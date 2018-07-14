@@ -179,7 +179,7 @@ The poles start to bend at an angle--or maybe that's the light.
 >slope
 by one point
 
-#done rejects of slope
+#done rejects for slope
 >pelso
 You wouldn't want to make the slope crumble away.
 
@@ -189,7 +189,7 @@ You wouldn't want to make the slope crumble away.
 
 >toeholds
 
-#done rejects of toeholds
+#done rejects for toeholds
 >toeholsd
 
 `nu
@@ -299,9 +299,9 @@ WRONG
 by one point
 
 `nu
-#done rejects for potters
+#done rejects for protest
 >pottesr
-WRONG
+You can deal with three people. But you'll have to change their motivations.
 
 #nudge for potter
 >pottre

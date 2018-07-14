@@ -4,6 +4,7 @@
 #
 
 from collections import defaultdict
+import os
 import re
 import glob
 import i7
@@ -63,6 +64,9 @@ def find_in_glob(sync_stuff, pattern, b, region, extras = []):
         with open(x) as file:
             if not quiet: print("Checking", x)
             for (line_count, line) in enumerate(file, 1):
+                if line.startswith('#done reject '):
+                    print('PEDANTIC WARNING you want done rejectS to test', no_of_for(line), 'at', x, 'line', line_count)
+                    continue
                 if line.startswith('#' + b + ' of '):
                     print('PEDANTIC WARNING you want', b, 'FOR, not', b, 'OF, to test', no_of_for(line), 'at', x, 'line', line_count)
                     continue
@@ -125,7 +129,7 @@ def sync_check(a, b, region=""):
         return
     rbr_find = "rbr-*"
     reg_find = "*-nudmis*"
-    find_in_glob(needs_sync_test, rbr_find, b, region, ["reg-roi-seed.txt"])
+    find_in_glob(needs_sync_test, rbr_find, b, region, ["reg-roi-seed.txt"] if os.path.exists("reg-roi-seed.txt") else [])
     if not ignore_nudmis: find_in_glob(needs_sync_test, reg_find, b, region)
 
 projs = ['sa', 'roi']
