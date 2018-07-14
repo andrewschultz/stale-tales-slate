@@ -31,9 +31,9 @@ You feel a slight psychic push-pull coming from Store F. Keep at it.
 Your score has just gone up by one point.
 
 ==t2
-#done rejects for store f
+#done rejects for scented descent
 >fretso
-WRONG
+The scented descent to the forest doesn't need to be changed.
 
 ==t2
 >rs sw
@@ -416,8 +416,8 @@ You feel a slight psychic push-pull coming from the livers. Keep at it.
 >sliver
 Your score has just gone up by one point.
 
-#done rejects for sliver
->slivre
+`nu
+>silver
 The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
 #xc

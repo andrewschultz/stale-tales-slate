@@ -359,7 +359,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "metallic"	468805207	--	metallic door	--	"No way. That thing's sturdy. [if anti-cool is visited]Those nerds[else]The people in there[end if] know their stuff."
 "tonr"	331693906	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "cue"	251917501	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
-"etch"	287204011	--	--	tech etch	"The tech-etch is pretty securely, um, etched on."
+"etch"	287204011	--	tech etch	--	"The tech-etch is pretty securely, um, etched on."
 "canofbeer"	550323310	--	can of beer	--	"The beer is just garbage, not even organic like the drainage. But its name is interesting."
 "arena"	286413056	--	arena dig flier	--	"The invite's for an ARENA DIG."
 "dig"	98621637	--	arena dig flier	--	"The invite's for an ARENA DIG."

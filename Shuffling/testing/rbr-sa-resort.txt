@@ -28,9 +28,9 @@ WRONG
 >resort
 
 `nu
-#done rejects for resort
+#done rejects for r-p
 >resotr
-WRONG
+
 
 >enter resort
 Astral Altars
@@ -186,11 +186,14 @@ You wouldn't want to make the slope crumble away.
 
 #spechelp for tool shed
 >toeholsd
+You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
 
 >toeholds
+by two points
 
 #done rejects for toeholds
 >toeholsd
+The toeholds could be handy for getting up and out of here.
 
 `nu
 #spechelp for spore
@@ -272,7 +275,7 @@ The riot's still a crowd. A BIG crowd.
 >trio
 
 `nu
-#done rejects for trio
+#done rejects for protest
 >troi
 You can deal with three people. But you'll have to change their motivations.
 
@@ -297,11 +300,6 @@ WRONG
 
 >potters
 by one point
-
-`nu
-#done rejects for protest
->pottesr
-You can deal with three people. But you'll have to change their motivations.
 
 #nudge for potter
 >pottre

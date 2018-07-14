@@ -408,7 +408,7 @@ siren	"The siren continues to blind you--like it's throwing dust in your eyes."
 neon pig	"The neon pig blinks as if in last-ditch defiance."
 tiles	"The tiles rattle as if to shift but settle down." [resort start]
 swing	"The swing goes slightly airborne."
-tool shed	"You hear an unseen hinge neigh as if in defiance."
+tool shed	"You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here."
 rock	"Hmm, a rock, but only so much you can do with it."
 sprig	"The sprig seems to grow less fragile for a moment."
 poles	"The poles start to bend at an angle--or maybe that's the light."
@@ -530,7 +530,12 @@ table of done rejects [tdr]
 donething	donemsg
 desert-door	"The door is probably the way out. Best not change it into something else." [start Ordeal Loader]
 bugle	"The bugle emits a sad 'don't change me back' noise."
+goat	"The goat is happy as-is. No need to go tag a ..."
 gateman	"Don't scramble the gateman. He's here to help."
+scented descent	"The scented descent to the forest doesn't need to be changed. What's behind it, does." [start stores]
+posted depots	"The posted depots doen't need to be changed. What's behind them, does."
+trade tread	"The trade tread doesn't need to be changed. What's behind it, does."
+r-p	"You already made passage to the resort. It's good enough. Why change it?"
 nose	"Don't get that nose bent out of shape." [start forest]
 shades	"Anything you do to bend the shades might break them."
 shotgun	"Anything you do might violate firearm safety rules, or something."
@@ -549,11 +554,13 @@ grits	"[keep-food-simple]."
 pancake	"[keep-food-simple]."
 coat	"No need for fashion tweaks."
 straw	"The straw remains motionless."
+peasant	"The peasant doesn't need a fashion boost or anything. Just a trade."
 black door	"The black door just sits there."
 missile	"The missile emits an almost giggly sound but doesn't actually change."
 panel	"The panel bleeps a 'stop that' sort of warning."
 hallway	"You already have a passage east. Don't close it."
 silo	"That silo was pretty big. You probably have little more to do with the oils."
+soil	"The soil is right as-is, but maybe something can go on it."
 steer button	"No, the steer button HAS to be right."
 shoot button	"No, the shoot button HAS to be right."
 gardenia	"The flowers are fine as-is." [start metros]
@@ -562,11 +569,15 @@ Velcro	"The Velcro remains tangled."
 controls	"The controls stay as they are."
 barcode	"The barcode does not shift."
 keycard	"The keycard remains stiff. Looks like it's as it should be."
+op	"You don't need to close up the opening. [if controls are not in op]Maybe put something there[else]You don't need to close up the opening. The controls are in, and they fill it well enough[end if]."
 sheath	"The sheath remains still."
+noise bag	"The noise bag rumbles ominously. Best not change it into something worse."
 sword	"Meddling with the sword right now, you're worried it might poke you."
+resin	"You could use the resin's stickiness right now."
 beast	"You've changed the beats to something tangible, physically beatable."
 cork	"Your head swims then sinks as you realize the cork can't become much else." [start resort]
 wings	"The wings should be able to propel you enough."
+toeholds	"The toeholds could be handy for getting up and out of here."
 slope	"You wouldn't want to make the slope crumble away."
 ropes	"The ropes are useful for climbing, which you need to do to get east."
 grips	"You can't get ahold of anything that would be more useful than the grips."
@@ -4883,7 +4894,7 @@ check going down in trips strip:
 check going inside in trips strip:
 	if number of portals in location of player is 1:
 		let Q be a random portal in location of player;
-		debug-say "Trying portal [Q].";
+		d "Trying portal [Q].";
 		try entering Q instead;
 	if number of portals in location of player is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
 	say "That's ambiguous--you can currently enter [the list of portals in location of player] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
@@ -5291,7 +5302,7 @@ section forest portal
 
 does the player mean entering the scented descent: it is likely. [forest is first in alphabet and easiest]
 
-the scented descent is a proper-named privately-named thing. it is fixed in place. the printed name of scented descent is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". scented descent is a portal. scented descent is fixed in place.
+the scented descent is a portal. the printed name of scented descent is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". scented descent is a portal. scented descent is fixed in place.
 
 understand "forest" as scented descent.
 
@@ -7261,8 +7272,7 @@ a poem is a thing. lgth of poem is 5. gpos of poem is 1. rpos of poem is 2. rgte
 understand "poetry" as poem when poem is visible.
 
 after printing the name of the poem while taking inventory:
-	if smilies are part of the poem:
-		say " (improperly punctuated)";
+	if smilies are part of the poem, say " (improperly punctuated)";
 	continue the action;
 
 does the player mean folding the poem: it is likely.
@@ -8131,8 +8141,7 @@ check taking begonias:
 the keycard is a thing.
 
 after printing the name of the keycard while taking inventory:
-	if barcode is part of the keycard:
-		say " (with the barcode on it)";
+	if barcode is part of the keycard, say " (with the barcode on it)";
 	continue the action;
 
 understand "key/ card/" as keycard.

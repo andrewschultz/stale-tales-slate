@@ -29,7 +29,7 @@ Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 >metros
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 `nu
-#done rejects for metros
+#done rejects for trade tread
 >metrso
 WRONG
 
@@ -568,11 +568,11 @@ They are multiple heaths--so you should try to change just one.
 `nu
 #spechelp for begonias
 >noise bga
-WRONG
+The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
 >noise bag
 #done rejects for noise bag
 >noise bga
-WRONG
+The noise bag rumbles ominously. Best not change it into something worse.
 
 `nu
 #spechelp for heaths
@@ -795,7 +795,7 @@ by one point
 `nu
 #done rejects for op
 >openign
-WRONG
+You don't need to close up the opening. Maybe put something there.
 
 #nudge for recess
 >recses
@@ -809,10 +809,12 @@ You don't want to mess with the wirin that way
 
 >put controls in opening
 
+`nu
+>openign
+You don't need to close up the opening. The controls are in, and they fill it well enough.
 #dupnudge for irwin
 >iinrw
 You don't want to mess with the wirin any further
-
 #dupnudge for recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you did what you needed.

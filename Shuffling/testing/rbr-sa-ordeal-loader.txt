@@ -165,7 +165,7 @@ Your score has just gone up by one point.
 `nu
 #done rejects for goat
 >gota
-The goat seems content enough as-is.
+The goat is happy as-is. No need to go tag a ...
 
 #dupnudge for shrub
 >shrbu
