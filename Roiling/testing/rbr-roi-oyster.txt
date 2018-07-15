@@ -19,6 +19,33 @@ Posh Hops Shop
 Score in a scenario: 0 out of 40 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 ==t2
+>inset
+#done rejects for tines
+>tinse
+You destroyed the stein, and that's enough.
+>undo
+>undo
+>spit
+#done rejects for stumbler tumblers
+>spti
+You can't and don't want to do anything else to the tumblers.
+>undo
+>undo
+>scrape
+#done rejects for capers recaps
+>scapre
+capers recasp
+Casper has suffered enough indignities. You should annoy someone else.
+>undo
+>undo
+>sing
+#done rejects for gins sign
+>igsn
+The sign mainly just disallowed singing.
+>undo
+>undo
+
+==t2
 #readables for stein
 >read stein
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
@@ -250,11 +277,15 @@ Whoah, they're just oars. Think simpler. Much simpler.
 >enter raft
 >fart
 Your score has just gone up by one point
+#done rejects for frat raft
+>frat ratf
+The frat raft has fuel. It needs to use that fuel, now, with the oars.
 >soar
 Your score has just gone up by one point
 Anger Range
 >thisalt
 WRONG
+>undo
 >undo
 >undo
 >undo
@@ -427,6 +458,9 @@ Score in a scenario: 13 out of 39 total points in the current region, Oyster. Lo
 Your score has just gone up by one point
 
 ==t2
+#done rejects for trout
+>trotu
+Retutor? Torture. Rot. True!
 #spechelp for wrap
 >wrpa
 That's not quite the way to pop the wrap.
@@ -463,6 +497,9 @@ Score in a scenario: 15 out of 39 total points in the current region, Oyster. Lo
 Lapsin' Plains
 
 ==t2
+#done rejects for wipes
+>wipse
+Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
 #nudge for acters
 >actesr
 Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time...
@@ -750,6 +787,8 @@ No, that's not quite it. The ruby dulls as if covered by dirt.
 Your score has just gone up by one point
 
 ==t2
+#done rejects for thin hint
+The ruby's hidden well. No need to tinker.
 #nudge for hint
 >hitn
 The thin hint doesn't reveal anything else.

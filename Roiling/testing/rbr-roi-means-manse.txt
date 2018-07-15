@@ -75,8 +75,7 @@ DEBUG INFO: Adding a min point
 #nudge for stable
 >stabel
 You probably just want to go IN to the stable.
-
-==t2
+\\
 #spechelp for niche
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.

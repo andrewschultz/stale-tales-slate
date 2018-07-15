@@ -75,6 +75,9 @@ REGION MAX DECREASED BY 1, 1 OVERALL.
 Score in a scenario: 2 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 36.
 
 ==t2
+#done rejects for onyx censer
+>screne
+You don't want to change the censer back, but maybe you can change it to something more practical than treasure.
 #nudge for onyx
 >onxy
 You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be.
@@ -157,9 +160,11 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 ==t2
-#renudge for drat
+#done rejects for star
+star	"No need for additional arts."
+#done rejects for dart
 >drta
-Don't need to do anything else.
+dart	"The dart's just fine as-is."
 #renudge for stump
 >stupm
 The stump just sits there, stumpy
@@ -241,6 +246,9 @@ You try something that doesn't quite work, but now you're that much closer to an
 Your score has just gone up by one point
 
 ==t2
+#done rejects for boing mechanism
+>binog
+You can't force another revelation, but you don't need to.
 #renudge for popgun
 >popgnu
 The popgun is just fine.
@@ -264,6 +272,11 @@ TOP'RS is the name of the firm who built the Sport Ports, carved in red.
 >prost
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1
+
+==t2
+#done rejects for sport ports
+>prots
+You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism.
 
 ==t1
 >w
@@ -391,6 +404,9 @@ There aren't that many things to do with Leo. So few, you could probably brute-f
 Your score has just gone up by one point
 
 ==t2
+#done rejects for leo
+>loe
+Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 #nudge for leonard
 >leonadr
 You don't need to face double the strength.
@@ -402,6 +418,9 @@ There aren't that many things to do with Rand. So few, you could probably brute-
 Your score has just gone up by one point
 
 ==t2
+#done rejects for rand
+>radn
+Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 #renudge for leonard
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
@@ -418,6 +437,8 @@ You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 Your score has just gone up by one point
 
 ==t2
+#done rejects for wzup
+You don't need to greet Leo and Rand again.
 #renudge for leonard
 >leonadr
 You don't need to combine them physically, but their physical strengths combined could be a help.
@@ -558,14 +579,27 @@ Hut! Go!
 Dat was a good dust-up
 
 ==t2
+#done rejects for ought
+>ougth
+They're already off getting to know each other better
 >undo
+>undo
+#done rejects for alert
+>aletr
+That'd be an awkward rehash. You need another way to say good-bye
 >undo
 >so long
 Your score has just gone up by one point
 !Hut! Go!
 Dat was a good dust-up
+#done rejects for log ons
+>snoogl
+That'd be an awkward rehash. You need another way to say good-bye
+#################the above captured the done-rejects for all the harpings
 >undo
 >undo
+>undo
+#################now we go with 'so long' first
 >so long
 Your score has just gone up by one point
 >tough
@@ -589,8 +623,6 @@ Dat was a good dust-up
 #nudge for shack
 >shakc
 You'll need to enter the shack to take care of things here.
-
-==t2
 #renudge for entry
 >entyr
 The Entry doesn't need disabling, since you're the only person that can enter.
@@ -749,6 +781,9 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 ==t2
+#done rejects for caps lock
+>capslokc
+YOU HAVE WHAT YOU NEED.
 #spechelp for skid
 >diks
 Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did.
@@ -791,6 +826,18 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 ==t2
+#done rejects for dirty looking cola
+>ocal
+No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
+#done rejects for futon
+>futno
+The futon could be a little less lumpy, sure, but that's beyond your magic powers.
+#done rejects for mug
+>mgu
+You'd get cola all over you if you tried anything with the mug.
+#done rejects for leaf
+>lefa
+You can't bring the flea back to life--or do anything else to the leaf.
 #spechelp for onyx censer
 >screne
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
@@ -808,6 +855,14 @@ Only one more piece of hardware
 REGION MIN INCREASED BY 1
 >score
 Lowest score to solve is 33. Maximum score available is 37.
+
+==t2
+#done rejects for computer screen
+>screne
+The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
+#done rejects for casserole
+>casseroel
+The casserole is mixed up enough.
 
 >get book
 >push skid s
@@ -857,6 +912,9 @@ It'd take too long to type out all the possibilities, but that seems basically r
 Your score has just gone up by one point
 
 ==t2
+#done rejects for keyboard
+>keyboadr
+You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
 #nudge for tbakey
 >tbakye
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
@@ -910,6 +968,9 @@ Man! That's the thing about compiling. Switch one or two characters, and foom, i
 REGION MAX DECREASED BY 2
 
 ==t2
+#done rejects for scratch paper
+>compeil
+After compiling, you often need to make small tweaks, but not like that.
 #spechelp for t-key
 >abt
 The TBA key rattles within the keyboard a bit.
@@ -949,12 +1010,15 @@ REGION MIN INCREASED BY 1
 ==t2
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
-#nudge for trimsocks
+#done rejects for rom sticks
 >trimsocsk
 The ROM sticks can probably make your computer go faster. Why fiddle further?
 #renudge for tbakey
 >tbakye
 You already did enough with the TAB key.
+#done rejects for t-key
+>bta
+No, the TAB key is what it should be.
 
 ==t!2
 >score
@@ -971,6 +1035,9 @@ BUDGE
 Your score has just gone up by one point
 
 ==t2
+#done rejects for compiled code
+>debgu
+You had to consider all sorts of combinations while debugging, but things will be easier now.
 #renudge for algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.

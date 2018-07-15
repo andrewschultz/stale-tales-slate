@@ -267,8 +267,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sob"	189045448	--	sob ever verbose	--	"No, you'll want to zone out the whole verbose distraction."
 "veer"	448100841	--	sob ever verbose	--	"No, you'll want to zone out the whole verbose distraction."
 "laid"	122023592	Bustle Sublet	--	--	"[sidewalk-oops]."
-"stop"	355202520	--	stop post	--	"You're not seeing the right way to see the stop post, here."
 "roadbed"	350147390	Boarded Roadbed	--	--	"[locname]." [start Boarded Roadbed]
+"stop"	355202520	Boarded Roadbed	--	--	"The stop post is in the past. No need to p.s. tweaking it."
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [what-a-bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
 "nadir"	222441064	Drain Nadir	--	--	"[locname]." [start drain nadir]
@@ -311,6 +311,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sked"	298042342	Upscale Capsule	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
 "salt"	255385641	--	--	salt-gone rule	"You've lasted long enough. There are new things to look at, now."
 "likeness"	668807521	--	--	tressi-or-balmer rule	"It's whoever's in the likeness that matters--[if Sister Tressi is in lalaland]Blamer Balmer[else if Blamer Balmer is in lalaland]Sister Tressi[else]Sister Tressi and Blamer Balmer[end if], here."
+"marble"	351625627	--	--	marble-gone rule	"[mbb-no]."
+"siter"	457506742	--	Sister Tressi Siters	--	"All the siters."
+"siters"	553780708	--	Sister Tressi Siters	--	"The sister tressi siters are gone. Trying to re-defeat them would be protesting too much."
 "divorces"	575948795	--	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "troev"	497757327	--	--	degen-true rule	"[not-the-reg]."
@@ -1417,6 +1420,12 @@ this is the tressi-or-balmer rule:
 	if player is in upscale capsule:
 		if sister tressi is in upscale capsule or blamer balmer is in upscale capsule, the rule succeeds;
 	the rule fails;
+
+this is the marble-gone rule:
+	if player is in upscale capsule and mbb is in lalaland, the rule succeeds;
+	the rule fails;
+
+to say mbb-no: say "You already stopped thinking too much about [mbb]. If you try too hard to keep ignoring [mbb], you'll start thinking about [mbb], again"
 
 this is the divorces-gone rule:
 	if player is in Upscale Capsule and divorces is in lalaland, the rule succeeds;

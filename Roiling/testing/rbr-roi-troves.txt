@@ -173,6 +173,9 @@ Your score has just gone up by one point
 Boarded Roadbed
 
 @nu
+#nudge for stop
+>stpo
+The stop post is in the past. No need to p.s. tweaking it.
 #spechelp for what-a-bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
@@ -322,6 +325,9 @@ That's not quite the way to focus on the stream.
 Your score has just gone up by one point
 
 @nu
+#done rejects for me arts
+>mearst
+The ME ARTS have nurtured you spiritually. The lobster nurtured you physically. Time to move on.
 #spechelp for ltb
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
@@ -412,7 +418,7 @@ That's not quite the way to look forward to praise. But it may be a start.
 Your score has just gone up by one point
 
 @nu
-#renudge of praise spirea
+#done rejects for praise spirea
 >aspier
 You're wanting praise too much, now.
 #spechelp for rivets
