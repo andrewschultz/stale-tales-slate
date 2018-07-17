@@ -404,6 +404,8 @@ chapter phat path
 
 understand "alter" as a mistake ("Vandalism! For shame!") when harpings phrasing is in location of player.
 
+understand "artel" as a mistake ("You, Rand and Leo have already engaged in a collective effort.") when harpings phrasing is in location of player.
+
 understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
 
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is in lalaland and Leo is in Phat Path.

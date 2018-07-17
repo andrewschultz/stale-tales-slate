@@ -930,8 +930,8 @@ to say alt-sols:
 table of tulip-acq
 sol	chosen
 "ASK NERDS ABOUT DARKNESS"	false
-"OPEN NOISE BAG in the Anti-Cool Location after getting the begonias"	false
-"SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Anti-Cool Location"	false
+"OPEN NOISE BAG in the Esoteric Coteries after getting the begonias"	false
+"SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Esoteric Coteries"	false
 
 book section-victory
 
@@ -1540,7 +1540,7 @@ carry out objhinting begonias when fairy-worthy is false: try objhinting faeries
 
 carry out objhinting heaths when fairy-worthy is false: try objhinting faeries instead.
 
-carry out objhinting tulip when tulip is in anti-cool location: try objhinting nerds instead.
+carry out objhinting tulip when tulip is in Esoteric Coteries: try objhinting nerds instead.
 
 carry out metros-hinting:
 	if player is in Hotel:
@@ -1555,7 +1555,7 @@ carry out metros-hinting:
 		if Fo' Real Florae is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
 		if bile libe is not visited, all-say "You can go west from the camp to a library." instead;
 		if dry cake is in Obtains Boastin' Bastion, all-say "You should try going [if Obtains Boastin' Bastion is visited]back north to the Obtains Boastin['] Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
-		if Anti-Cool Location is not visited:
+		if Esoteric Coteries are not visited:
 			if keycard-put is true, say "Just go east." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			if player has brocade, try objhinting brocade instead;
@@ -1590,11 +1590,11 @@ carry out metros-hinting:
 		if player has noise bag, try objhinting noise bag instead;
 		if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae, all-say "Pick a reward from the faeries, then come back here." instead;
 		all-say "You don't have much to do here right now." instead;
-	if player is in Anti-Cool Location:
+	if player is in Esoteric Coteries:
 		if player has lit-up tulip, all-say "Nothing more to do here." instead;
 		try objhinting nerds instead;
 	if player is in Elm Train Terminal or player is on fuzzy looking wall:
-		if power-shut is true, all-say "You've done what you can here[if player does not have tulip]. You'll need a light source to go east across the rail[end if][if Anti-Cool Location is unvisited]. You haven't been behind the door east of the Underside, yet[end if]." instead;
+		if power-shut is true, all-say "You've done what you can here[if player does not have tulip]. You'll need a light source to go east across the rail[end if][if Esoteric Coteries are unvisited]. You haven't been behind the door east of the Underside, yet[end if]." instead;
 		if clover is in camp, all-say "You need something sticky to climb the wall. Go back to the camp." instead;
 		if player has clover, try objhinting clover instead;
 		if player is not wearing Velcro and player is not on fuzzy looking wall, all-say "You can WEAR the Velcro to climb the wall." instead;
@@ -4392,7 +4392,7 @@ check examining the tagged gadget (this is the see if gadget clues locations rul
 		read-gadget;
 		the rule succeeds;
 	if player is in anti-cool and nerds are in anti-cool, try scaning nerds instead;
-	if player is in Anti-Cool Location:
+	if player is in Esoteric Coteries:
 		if player has tulip, say "The gadget shows nothing now." instead;
 		say "You scan the area, wondering what you could ask nerds that'd get that tulip. You see [asknerds]." instead;
 
@@ -4736,7 +4736,7 @@ carry out gleaning:
 		if player has heaths, all-say "You see a weapon at your side, as if tied to a belt." instead;
 		if player has begonias, all-say "You are holding a bag with one hand and plugging an ear with another." instead;
 		if neon pig is in Elm Train Terminal and Elm Train Terminal is visited, all-say "You see the neon pig exploding, the empty space being filled with--an ear of corn?!" instead;
-		if Anti-Cool Location is unvisited:
+		if Esoteric Coteries are unvisited:
 			d "dry cake: [location of dry cake].";
 			d "keycard: [location of keycard].";
 			all-say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the sensor in the Underside. Nothing works until you put them together." instead;
@@ -6698,7 +6698,7 @@ to say tagit:
 
 check scaning location (this is the air scan rule):
 	if player does not have gadget, continue the action;
-	if player is in the nick or player is in Anti-Cool Location or player is in moor or player is in roomroom or player is in means manse:
+	if player is in the nick or player is in Esoteric Coteries or player is in moor or player is in roomroom or player is in means manse:
 		if player has gadget, try examining gadget instead;
 
 instead of going nowhere in roomroom: say "Dud, mum mud blocks your way [noun]. You can only go west back to the trap part or north[if Trellis is visited] to the trellis[end if].".
@@ -7648,14 +7648,14 @@ the cramped red camp is useless scenery in Undesired Underside. "It's pretty dir
 
 section metallic door
 
-The metallic door is a door. it is east of underside and west of Anti-Cool Location.
+The metallic door is a door. it is east of underside and west of Esoteric Coteries.
 
 check putting keycard on metallic door when player is in underside: try putting keycard on sensor instead.
-check putting keycard on metallic door when player is in anti-cool location: try going west instead.
+check putting keycard on metallic door when player is in Esoteric Coteries: try going west instead.
 
-the initial appearance of the metallic door is "A large metallic door is to the [if player is in Anti-Cool Location]west. It's got no sensor on this side, so you can probably just walk back through it[else]east. It has a tech etch repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
+the initial appearance of the metallic door is "A large metallic door is to the [if player is in Esoteric Coteries]west. It's got no sensor on this side, so you can probably just walk back through it[else]east. It has a tech etch repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
 
-to say prob-reads: say "[if Anti-Cool Location is unvisited]. Probably reads something-or-other to let you in[end if]"
+to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads something-or-other to let you in[end if]"
 
 description of metallic door is "It's very solid[if metallic door is open] when it's closed[end if][if player is in underside], and a tech etch gives it some semblance of character[end if]."
 
@@ -7673,13 +7673,7 @@ The sensor is scenery in undesired underside. description of the sensor is "It h
 
 check scaning sensor: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead.
 
-to say want-wanted:
-	if player has tulip:
-		say "got the tulip from";
-	else if Anti-Cool Location is visited:
-		say "guard the tulip";
-	else:
-		say "want to see"
+to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteric Coteries are visited]guard the tulip[else]want to see[end if]
 
 understand "senser" as sensor.
 
@@ -7966,7 +7960,7 @@ check opening noise bag:
 			now words are in noise bag;
 			say "You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it." instead;
 	if words are in bag:
-		if location of player is Anti-Cool Location:
+		if location of player is Esoteric Coteries:
 			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later.";
 			moot keycard;
 			now player has the lit-up tulip;
@@ -8481,7 +8475,7 @@ check switching on the termite emitter:
 		if deadbeat is visible, say "It'd be rude to throw the gift back in the deadbeat's face." instead;
 		if faeries are visible, say "The faeries are on your side. Try someone else, maybe." instead;
 		if player is in Abyss, say "Those angst gnats have no chance. You need something much more powerful." instead;
-		if location is not Anti-Cool Location, say "There's nobody here worth bumming out with the angst gnats." instead;
+		if location is not Esoteric Coteries, say "There's nobody here worth bumming out with the angst gnats." instead;
 		if player has lit-up tulip, say "You already have the tulip. That'd be mean." instead;
 		say "The angst gnats rise, fitful, like fruit-flies or as furies flit. The nerds go from woots to ows, but it isn't [']til they start complaining to each other or worrying about the poor repressed deadbeats they didn't do enough for that you snatch the lit-up tulip as they scalp-clasp and flail about.[paragraph break]Angered, enraged nerdage! En garde! (Gee, darn, no grenade.) 'Why didn't you ASK about the DARKNESS?' one moans as he swipes for the tulip--but only knocks the keycard out of your hand.[paragraph break]They continue moaning, but now it is about economic equality. You hear one point out that all this sensitivity to social stuff will make them more sensitive for the ladies. Then another one argues that it's a Heisenberg Uncertainty Principle sort of thing that if people know you might be angling for that emo stuff, it won't work.[paragraph break]You're almost sucked in, until you realize you have a city to save, and you chuck your keycard at them in frustration over how dumb smart people can be before running out.";
 		now nerds-unwelcome is true;
@@ -8498,7 +8492,7 @@ check switching on the termite emitter:
 	if location is Roarings Garrison, say "That'd be kind of cruel." instead;
 	if location is Bile Libe, say "The termites are the wrong sort of pest for the Bile Libe." instead;
 	if location is Fo' Real Florae, say "Trust me. You don't want to know what the faeries would do back to you." instead;
-	if location is Anti-Cool Location, say "You're being watched too closely." instead;
+	if location is Esoteric Coteries, say "You're being watched too closely." instead;
 	if location of player is Obtains Boastin' Bastion:
 		if bastion-evac is true, say "It's already crawling with termites." instead;
 		now bastion-evac is true;
@@ -8555,20 +8549,18 @@ rule for supplying a missing noun while throwing:
 	if night thing is visible:
 		now the noun is the tomato;
 
-chapter Anti-Cool Location
+chapter Esoteric Coteries
 
-Anti-Cool Location is a room in Metros.
+Esoteric Coteries are a room in Metros.
 
 after printing the locale description for Anti-Cool when Anti-Cool is unvisited:
 	reg-inc;
 	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.";
 	continue the action;
 
-description of Anti-Cool Location is "It's free of pure noise here, mostly due to the soundproofed walls. It'd make a nice mob combine, but it's more an anti-cool location. Esoteric coteries lie everywhere but back west."
+description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west."
 
-soundproofed walls are plural-named scenery in Anti-Cool Location. "They've got those perpendicular ridges in sets of three that kill sound. The nerds won't shut up, though."
-
-check going nowhere in Anti-Cool Location: say "The esoteric coteries are not for you. You have enough thinking to do, here, anyway." instead.
+check going nowhere in Esoteric Coteries: say "The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher." instead.
 
 the optical beam is part of the sensor. description of optical beam is "I wouldn't advise staring into it, but you could put something on it."
 
@@ -8624,8 +8616,7 @@ check going east in undesired underside:
 	if the rule failed, the rule succeeds;
 	if metallic door is open, continue the action;
 	if player has the keycard and barcode is part of the keycard:
-		if anti-cool location is unvisited:
-			say "Hm, maybe your keycard will do the trick.[paragraph break]";
+		if Esoteric Coteries are unvisited, say "Hm, maybe your keycard will do the trick.[paragraph break]";
 		try putting keycard on sensor;
 		continue the action;
 	else:
@@ -8633,7 +8624,7 @@ check going east in undesired underside:
 
 check opening the metallic door:
 	if noun is open, say "But it already is. For now." instead;
-	if location of player is Anti-Cool Location:
+	if location of player is Esoteric Coteries:
 		say "The door slides open as you step near it.";
 		now metallic door is open;
 		the rule succeeds;
@@ -8666,7 +8657,7 @@ every turn when metallic door was open:
 			else:
 				say "[i][bracket]NOTE: the game will just let you walk east now, so don't worry about swiping the card again.[close bracket][r][paragraph break]";
 
-some nerds are plural-named flippable people in Anti-Cool Location.
+some nerds are plural-named flippable people in Esoteric Coteries.
 
 check putting noise bag on nerds:
 	if words are in noise bag:
@@ -8683,13 +8674,13 @@ before giving something to nerds:
 		do nothing instead;
 	say "They aren't big on material things. They probably prefer to show how smart they are." instead;
 
-initial appearance of nerds is "Some nerds are here, nattering about technology and such."
+initial appearance of nerds is "Some nerds are here, nattering about technology and such. Yet you suspect you could ASK NERDS about something in your way."
 
-description of nerds is "They're sitting around nattering about nerd things. They don't look particularly nerdy, but most of their conversation seems to revolve around how smart other people aren't. They're babblier than most but don't seem bribable."
+description of nerds is "They're sitting around nattering about nerd things. They don't look particularly nerdy, but most of their conversation seems to revolve around how smart other people aren't. They're babblier than most but don't seem bribable. As you look at them, they pause, as if expecting you to ASK NERDS about something."
 
 rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1]R[d1][d1][d1]SS".
 
-the lit-up tulip is a thing in Anti-Cool Location.
+the lit-up tulip is a thing in Esoteric Coteries.
 
 instead of taking lit-up tulip:
 	if nerds are visible and player does not have tulip:
@@ -8716,15 +8707,15 @@ to say nerd-dark:
 	else:
 		say "'What?! We gave you the tulip! We can't solve all you dumb people's problems. We have our own!' They go on to bemoan how only dumb people seem to enter politics.[run paragraph on]";
 
-section esoteric coteries
+section Earliest Ateliers
 
-esoteric coteries are plural-named bounding scenery in anti-cool location. "You can only imagine what the coteries are like."
+Earliest Ateliers are plural-named bounding scenery in Esoteric Coteries. "The ateliers are full of research that makes stuff like...well, that lit-up tulip. But you don't need to worry about how things are made. You need to get that tulip."
 
-understand "esoteric coterie" and "coterie" as esoteric coteries.
+understand "esoteric atelier" and "atelier" as Earliest Ateliers.
 
-instead of doing something with esoteric coteries:
+instead of doing something with Earliest Ateliers:
 	if action is procedural, continue the action;
-	say "You can't do anything meaningful with the esoteric coteries. They're for the nerds."
+	say "You can't do anything meaningful with the Earliest Ateliers. They're for the nerds."
 
 chapter Elm Train Terminal
 
@@ -8901,7 +8892,7 @@ description of beats is "You're sure some idiot would call them funky, but you d
 instead of taking the beats: say "Hmph. Your ears are already sort of taking a beating, but that's not really the same thing."
 
 check examining beats:
-	if night thing is visible or player is in Bassy or location of player is Anti-Cool Location, say "You can't hear the beats right now, but then, there's [if nerds are visible]chatter[else]chatter[end if] to contend with." instead;
+	if night thing is visible or player is in Bassy or location of player is Esoteric Coteries, say "You can't hear the beats right now, but then, there's [if nerds are visible]chatter[else]chatter[end if] to contend with." instead;
 
 The beast is a thing.
 
@@ -10378,7 +10369,7 @@ to say ana-true: now anapest-clued is true.
 
 the utterly unreadable book is undesc.
 
-to say book-in-nerds: now utterly unreadable book is in Anti-Cool Location.
+to say book-in-nerds: now utterly unreadable book is in Esoteric Coteries.
 
 check examining the utterly unreadable book:
 	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
@@ -10397,7 +10388,7 @@ Red Bull Burdell	"'Ego? Tut!' you mumble, but it has nothing on action."
 banshee	"'I strip spirit!' it wails, then, 'Rather be breather!'"
 beast	"It cares not for conversation, only noise."
 beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act."
-deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Anti-Cool Location is visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
+deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Esoteric Coteries are visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
 faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'You are our hero! Thank you so much[sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
 goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
 gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has tagged gadget] once you have the tagged gadget[end if]. Oh, about the gadget: you'll learn by doing.'[stopping]"
@@ -10776,7 +10767,7 @@ carry out roomgoing:
 		block-cedars;
 	if myrm is cedars and caskfillings is 2, say "You can't go back there." instead; [end sortie]
 	if myrm is Obtains Boastin' Bastion and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
-	if myrm is anti-cool location and player has tulip, say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
+	if myrm is Esoteric Coteries and player has tulip, say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
 	if player is in abyss, say "No going back now. This is the final confrontation." instead; [end metros]
 	if mrlp is resort:
 		if red bull burdell is in hotspot, say "He's saying GET OUT just to be obnoxious and intimidating." instead;
@@ -11031,7 +11022,7 @@ instead of waiting:
 	if player is in frost forts, say "[one of]Ish. Very shivery.[or]Looks like you have a Mexican standoff, if Mexico were in Greenland.[or]The wolves get antsy. I mean, they don't turn into ants. You are getting colder.[or]Your blood runs cold as the wolves inch closer. These aren't totally causally related.[or]If you don't do something cold-blooded, you'll be too cold-blooded to do anything.[or][die-die-die][stopping]" instead;
 	if player is in Means Manse, say "Well, you sort of almost have it, but you want to (not) do something with the exits." instead;
 	if player is in Rested Desert and goat is not visible, say "There's something important to do here. But what?" instead;
-	if player is in anti-cool location, say "The anti-cool location becomes a lo-action location for a bit." instead;
+	if player is in Esoteric Coteries, say "The Esoteric Coteries becomes a lo-action location for a bit." instead;
 	say "[one of]Time passes... [no line break][or][stopping][one of]A mist seeps...[or]I see stamps...[or]Me, sit? Passe![or]Sit, see maps...[at random]";
 
 book senses
@@ -11094,7 +11085,7 @@ check listening:
 	if player is in potshot hotspot:
 		if riot is in hotspot or protest is in hotspot, say "The [if riot is visible]riot[else]protest[end if] sounds like it can go on for a while, but thankfully, it's not getting violent." instead;
 	if red bull burdell is in potshot hotspot, say "Tenso-tones (notes?) add drama to it all." instead;
-	if location of player is Anti-Cool Location, say "The nerds are nattering about something or other[one of]. Their RPG GRP[or]. 'Vie, Red, Derive!' they chant at someone marking up scratch paper[or]. Complaining of their briefs['] fibers[or]. How to be a nerd mo['] modern[or]. Their time in the Undergrad Nerd Guard[or]. How they like to bug Sundberg[or]. How they're an IQ/clue clique[or]. How the newcomer might be a decent pretend nerd pet[or]. Stupid people who don't vote, or who vote stupid when they do[or]. Some dolt who got TOLD[or]. How text adventures are for losers stuck in the eighties[or]. How nothing's stopping dumb people from getting on the internet and building the same soundproof bunker they have[or][stopping]." instead;
+	if location of player is Esoteric Coteries, say "The nerds are nattering about something or other[one of]. Their RPG GRP[or]. 'Vie, Red, Derive!' they chant at someone marking up scratch paper[or]. Complaining of their briefs['] fibers[or]. How to be a nerd mo['] modern[or]. Their time in the Undergrad Nerd Guard[or]. How they like to bug Sundberg[or]. How they're an IQ/clue clique[or]. How the newcomer might be a decent pretend nerd pet[or]. Stupid people who don't vote, or who vote stupid when they do[or]. Some dolt who got TOLD[or]. How text adventures are for losers stuck in the eighties[or]. How nothing's stopping dumb people from getting on the internet and building the same soundproof bunker they have[or][stopping]." instead;
 	if location of player is Abyss:
 		if beats are visible, say "The beats are worse than ever[if siren is visible], accompanied by that siren[end if]. The Hears-Share sound system dishes out supersonic percussion--a croupiness, if you will." instead;
 		say "The beats are gone, replaced with a beast's roaring[if siren is visible], which clashes nastily with the siren[end if]." instead;
@@ -11499,7 +11490,7 @@ carry out knocking:
 	if noun is cabinet, say "That's potentially an act of violence." instead;
 	if noun is black door, say "[if black door is part of silo]Nobody answers, unsurprisingly[else]How polite! And ineffective[end if]." instead;
 	if noun is desert-door, say "[if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You brush against the bulge as you knock[end if]. You get no response." instead;
-	if noun is metallic door, say "[if player has tulip]You don't need to go back[else if Anti-Cool Location is visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
+	if noun is metallic door, say "[if player has tulip]You don't need to go back[else if Esoteric Coteries are visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
 	if noun is Corses Crosse, say "A good way to scrape your knuckles, seeing how quickly it turns." instead;
 	say "Knock, knock. Who's there? Conkk, conkk." instead;
 
@@ -13025,8 +13016,8 @@ to unsolve-metros:
 	now motto is in Bile Libe;
 	now motto is not flipped-yet;
 	now tomato is off-stage;
-	now tulip is in Anti-Cool Location;	[special place]
-	now Anti-Cool Location is unvisited;
+	now tulip is in Esoteric Coteries;	[special place]
+	now Esoteric Coteries are unvisited;
 	now night thing is in Hotel;	[ol' hotel]
 	now termite emitter is off-stage;
 	now termite emitter is ungnatted;
