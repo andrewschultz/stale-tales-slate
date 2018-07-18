@@ -700,13 +700,35 @@ Score in a scenario: 35 out of 42 total points in the current region, Others. Lo
 Your score has just gone up by one point.
 >score
 Score in a scenario: 36 out of 42 total points in the current region, Others. Lowest score to solve is 38. Maximum score available is 42.
-===2
+
+==t2
 #dupnudge for lits
 >lits
 You already messed with the list
 #dupnudge for price
 >priec
 No, you already took care of stuff
+#done rejects for l-o-p
+>cripse
+You corrected the list enough.
+#done rejects for auction caution
+>papaysa
+You hear a sap yap about the sign and figure it can't be changed any more.
+#done rejects for lemons
+>lemosn
+You sour on changing the lemons further.
+#done rejects for melon
+>melno
+The melon is fine as-is. It's better than the one that was on display, for sure.
+#done rejects for peach
+>peahc
+You got enough of a discount. Really.
+#done rejects for mango
+>manog
+Snag mo['] mangos? No mas, G.
+#done rejects for papayas
+>papaysa
+You've already established yourself as a prompt payer.
 
 >w
 >d
@@ -883,6 +905,13 @@ That's not the way to learn from the searcher--it's probably not that complicate
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
 
+==t2
+>perp
+#done rejects for perp-priv
+>pepr
+Don't want to over-prep.
+
+
 ==t1
 >review
 >prep
@@ -905,6 +934,14 @@ Your score has just gone up by one point.
 Score in a scenario: 42 out of 42 total points in the current region, Others. You can go NORTH to Admit-Us Stadium.
 >thisalt
 WRONG
+
+==t2
+#done rejects for searcher
+>searchre
+You've done enough researching.
+#done rejects for viewer
+>viewre
+You've done enough reviewing.
 
 >n
 

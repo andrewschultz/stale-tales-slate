@@ -574,6 +574,9 @@ You feel like making a big speech about what you've done and what you plan to do
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
 ==t2
+#done rejects for bogus-plains
+>splani
+You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on.
 #renudge for plain
 >plani
 You had your say.
@@ -583,10 +586,19 @@ Score in a scenario: 16 out of 39 total points in the current region, Oyster. Lo
 
 >trace
 Your score has just gone up by one point
+
+==t2
+#change, this is WRONG
+>craet
+WRONG
+
 >react
 Your score has just gone up by one point
 
 ==t2
+#done rejects for crate
+>craet
+Besides identifying it as a rect, you can't do much else with the crate.
 #renudge for fragments
 >fragmenst
 Not worth messing with the fragments any more.
@@ -607,6 +619,13 @@ Red writing indicates the pans were made by Nan's Apps.
 
 >bonk
 Your score has just gone up by one point
+
+==t2
+#done rejects for knob
+>knbo
+You should leave the knob to b'n OK.
+#note the pans must be taken care of last
+
 >snap
 Your score has just gone up by one point
 
@@ -648,8 +667,13 @@ Your score has just gone up by one point
 >prdo
 You juggle the prod a bit, but it doesn't change into anything. Well, not like that.
 
->drop
+>drop prod
 Your score has just gone up by one point
+
+==t2
+#done rejects for rigged digger
+>drpo
+You managed to get a digger from a prod, and that's good enough.
 
 ==t2
 #spechelp for waste
@@ -665,6 +689,9 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 Score in a scenario: 23 out of 39 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 39.
 
 ==t2
+#done rejects for waste
+>waset
+The heaps are still technically waste, but you cleaned them up enough.
 #spechelp for heaps
 >heasp
 The heaps still look ugly as ever.
@@ -678,6 +705,14 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 >clean
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
+
+==t2
+#done rejects for heaps
+>heasp
+You figure the heaps are at a point where you can't change them for the better.
+#done rejects for lance
+>lanec
+It's clean enough. You can't, like, make it sharper or anything.
 
 >score
 Score in a scenario: 25 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
@@ -721,6 +756,12 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 ==t2
+#done rejects for ruby
+>ruyb
+You already did in the wrap.
+#done rejects for a-s
+>srecha
+Further searching proves fruitless.
 #spechelp for gleaner
 >gleanre
 The gleaner remains too small to read.
@@ -732,7 +773,11 @@ The gleaner was made by Al Green, written in red.
 Your score has just gone up by one point
 
 ==t2
+#done rejects for gleaner
+>gleanre
+It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if].
 >reacsh
+WRONG
 You did enough with the arches
 
 >n
@@ -813,6 +858,11 @@ Anything can howl, but this is a haunter--and, in fact, it's not just a haunter 
 >assuage
 by one point
 
+==t2
+#done rejects for haunter
+>hauntre
+Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
+
 >ask haunter about ruby
 
 >w
@@ -842,6 +892,9 @@ You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something ent
 Your score has just gone up by one point
 
 ==t2
+#done rejects for a-p
+>patrlo
+You discovered the portal. No need to look further.
 >in
 End Den
 #nudge for end
@@ -934,6 +987,9 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 Score in a scenario: 36 out of 39 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 39 points.
 
 ==t2
+#done rejects for lever
+>levre
+You riff on your previous celebrations, but it doesn't feel as cool.
 #spechelp for dialer
 >dilrae
 The dialer seems to click slightly

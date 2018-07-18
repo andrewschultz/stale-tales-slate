@@ -45,6 +45,9 @@ Your score has just gone up by one point
 Burnt Brunt
 
 ==t2
+#done rejects for b-b
+>blarey
+You've dealt with the barley. You can move around a lot more, now.
 #nudge for ly
 >yl
 Yup, that's the idea here in Otters.
@@ -384,6 +387,12 @@ The eels swim a bit faster.
 
 >because
 >else
+
+==t2
+#done rejects for eels
+>eesl
+The eels have done enough.
+
 >misses
 --you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
 >score
@@ -443,6 +452,13 @@ Rev. Howe seems to snarl a bit more deeply for a moment.
 ==!1
 >although
 REGION MIN INCREASED BY 1, 2 OVERALL.
+
+==t2
+#done rejects for p-2
+>althouhg
+You already justified yourself partially. Mr. Lee doesn't need more dialogue.
+
+==!1
 >score
 Score in a scenario: 9 out of 30 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 30.
 >however
@@ -921,8 +937,19 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
 Score in a scenario: 26 out of 30 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 30 points.
 
 ==t2
+#done rejects for parrot
+>parrto
+The parrot can be changed back into a raptor, but not into anything new.
 >parrto
 The parrot seems to roll its eyes at you, as if to say, you DO remember what I was.
+WRONG, one of these is. Which is it? And why?
+#done rejects for merle
+>honetsly
+Fine, be beefin, you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really.
+WRONG
+>aseid
+Fine, be beefin, you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really.
+WRONG
 
 >raptor
 Your score has just gone up by one point
@@ -939,7 +966,9 @@ You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act.
 The medals waver noiselessly. Hm, that's not quite it.
 
 ==t2
->weltish whistel
+>whistel
+The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
+>deepyl
 The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
 >read whistle
 Ed Plye, apparently, made the whistle.
@@ -948,6 +977,14 @@ Ed Plye, apparently, made the whistle.
 Your score has just gone up by one point
 >quickly
 Your score has just gone up by one point
+
+==t2
+#done rejects for whistle
+>eeplyd
+The whistle's already in tune.
+#done rejects for medals
+>ickqlyu
+You already got a boost from the medals.
 
 >w
 Reclusion Inclosure

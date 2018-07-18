@@ -123,7 +123,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 38. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 39. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
@@ -4283,6 +4283,9 @@ ana-repeats is a number that varies.
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
 to say spec-help of (itm - a thing):
+	if itm is skid and skid is in lalaland:
+		say "[sk2dsk].";
+		continue the action;
 	if rq is active:
 		say "With that conversation, you can't concentrate on much...";
 		continue the action;
@@ -4418,17 +4421,13 @@ haunter	"Don't oversell it! Just take the haunter to where it was probably (heh)
 thin hint	"The ruby's hidden well. No need to tinker."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
-brownies	-- [START towers]
-old ice	"Twist the ice too much, it might not look right."
-ragged dagger	--
-Claire's Scalier	--
+old ice	"Twist the ice too much, it might not look right." [START towers]
 raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You'd have to drop the strudel on the ground and get it germy to try that again. Eww."
 prison ropins	"It already is. Dr. Yow is free."
-agnostic	"Fiddling with [ag-first] too much that way might undo the good you did [him-her]."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
-flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
+unripe ur-pine	"You already found a succor crocus. There's not much else there, it seems."
 Tetris Sitter	"St. Teri's back in the real world, now."
 b-b	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 eels	"The eels have done enough."
@@ -4449,11 +4448,13 @@ perp-priv	"Don't want to over-prep[gs-north]."
 searcher	"You've done enough researching[gs-north]."
 viewer	"You've done enough reviewing[gs-north]."
 
+to say play-food: say "Don't play with your food. [if toaster is visible]Maybe put it in the toaster instead[else]There must be something that can prepare it[end if]"
+
 to say gs-north: if gate-level is 2, say ", but you can just go north"
 
 to say got-e: say "You've got an entry. No need to seal it up"
 
-to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way."
+to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
 
 to say giant-over: say "The bench isn't important with the giant gone"
 
@@ -8697,6 +8698,7 @@ carry out fliptoing:
 				if the-to entry is plural-named, set pronoun them to the-to entry;
 				if the-to entry provides the property male and the-to entry is male, set the pronoun him to the-to entry;
 				if the-to entry provides the property female and the-to entry is female, set the pronoun her to the-to entry;
+			now last-hash is 0;
 			if pill-use is true:
 				pill-list the-from entry;
 			else if suppress-score is false:
@@ -8906,7 +8908,7 @@ hump	hump	false	287929218	austerer treasure	"umph"	"umph"	"You ham up 'Hup, ma!'
 star	star	true	286895605	--	"rats"	"rats"	"You're frustrated you can't reach that star in the stump, and you bang your fists on the stump and say RATS! Then you wiggle a finger in absent-mindedly, and while you're not thinking of it, or of getting your fingers stuck in a cut in the stump, pop, the star comes out! It's the sort you can affix to your clothes and look important with, so you do."
 dart	dart	true	211650728	--	"drat"	"drat"	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."
 plebe	plebe	false	409310921	--	"bleep"	"bleep"	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[otherwise]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"
-boing	boing	false	239271538	--	"bingo"	"bingo"	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. But now, to load it."
+boing	boing	false	239271538	--	"bingo"	"bingo"	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. [gun-load-if]."
 sport ports	sport ports	false	440526323	--	"prost"	"prost"	"You mentally toast the abilities of people able to navigate the sport ports. It feels good, this act of sportsmanship."
 Leo	Leo	false	255972525	--	"ole"	"ole"	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."
 Rand	Rand	false	177448218	--	"darn"	"darn"	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."
@@ -8917,7 +8919,7 @@ n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	"[wont-maze]."
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
-hogs	hogs	false	240508544	--	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
+hogs	hogs	false	240508544	--	"gosh"	"gosh"	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
 log ons	log ons	false	400300169	--	"solong"	"so long" or "solong"	"[increm]"
 alert	alert	false	372241587	--	"later"	"later"	"[increm]"
 ought	ought	false	352450403	--	"tough"	"tough"	"[increm]"
@@ -9166,6 +9168,15 @@ searcher	searcher	false	581009492	--	"research"	"research"	"You conduct thorough
 perp-priv	perp-priv	false	376061830	--	"prep"	"prep"	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
 
 chapter auxiliary text and rules
+
+to say h-n-k: now hogs-not-keys is true;
+
+to say gun-load-if:
+	if gun-load-tried is false:
+		say "But now, to load it";
+	else:
+		say "You realize you can load the dart into the popgun now, so you do";
+		now dart is in the popgun;
 
 to say wont-maze:
 	if cur-score of presto is 1:
@@ -14351,7 +14362,7 @@ every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey ru
 		if location of player is adjacent to location of Leo:
 			if Leo is not dismissed:
 				if location of player is saps' pass and location of hogs is saps' pass:
-					say "Leo and Rand follow, but they're not quite as big as the hogs. You may have to be sneaky, here.";
+					say "Leo and Rand didn't flee, but they're not quite as big as the hogs. You may have to be sneaky, here.";
 				else:
 					say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
 				move Leo to location of player;
@@ -15067,7 +15078,7 @@ check asking about "whassup":
 
 book Austerer Treasure
 
-Austerer Treasure is an innie room in presto. Austerer Treasure is west of Grey Gyre. "[if ye hoop is visible]This room's pretty barren. I mean, a lot of treasure rooms generally get looted of unicorns['] coin urns and all before text adventurers without weapons make it there, but man. All that remains is an ancient-looking hoop about nine feet up labeled YE HOOP.[paragraph break]Looking at how it's out of reach sort of makes you want to give up, or maybe just pretend to give up and maybe something'll turn up[else]You've completely looted this place[end if]."
+Austerer Treasure is an innie room in presto. Austerer Treasure is west of Grey Gyre. "[if ye hoop is visible]This room's pretty barren. I mean, a lot of treasure rooms generally get looted of unicorns['] coin urns and all before text adventurers without weapons make it there, but man. All that remains is an ancient-looking hoop about nine feet up labeled YE HOOP.[paragraph break]Looking at how it's out of reach sort of makes you want to give up, or maybe just pretend to give up and maybe something'll turn up[else]You've completely looted this place[end if]. The only way to leave is back east."
 
 after looking in austerer treasure:
 	if ye hoop is in austerer treasure, set the pronoun it to ye hoop;
@@ -15290,7 +15301,7 @@ check entering Deil's Slide:
 
 book Phat Path
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a harpings phrasing warning you from a shack to the north[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
 the priv-shack is privately-named proper-named scenery in Phat Path. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
 
@@ -15344,6 +15355,8 @@ some keys are part of the lawl wall. the keys are vanishing and plural-named. de
 a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". keys is any-spoilable.
 
 the hogs are vanishing plural-named people in Saps' Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look much more pompous, though--maybe distracting them just right can get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
+
+hogs-not-keys is a truth state that varies.
 
 after printing the locale description for Saps' Pass when Saps' Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
@@ -15604,7 +15617,7 @@ to decide whether cpuready:
 
 chapter locs pack
 
-the clack ops locs pack is a thing in hacks' shack. "A Clack Ops Locs Pack is here, empty.". description is "It's empty. You don't see how sunglasses could make you type quieter, but you never know about technology. You might be able to read it to find out about related products or competitors."
+the clack ops locs pack is a flippable thing in hacks' shack. "A Clack Ops Locs Pack is here, empty.". description is "It's empty. You don't see how sunglasses could make you type quieter, but you never know about technology. You might be able to read it to find out about related products or competitors."
 
 check taking locs pack: say "It seems to have no use for you in that form." instead;
 
@@ -16049,7 +16062,7 @@ chapter drive e
 
 after fliptoing when player is in shack:
 	if noun is drive e or noun is drive a:
-		if usb is not off-stage, say "Well, it didn't help speed up your programming, but hooray for generally satisfying your curiosity!"
+		if usb is not off-stage, say "Well, it didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
 	continue the action;
 
 Drive E is proper-named reflexive LLPish scenery in hacks' shack. "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if]."
@@ -20596,8 +20609,7 @@ understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and 
 a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
 
 check scaning strudel:
-	if strudel is reflexed:
-		say "You already rustled it." instead;
+	if strudel is reflexed, say "You already rustled it." instead;
 	say "You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.";
 
 The sled rut is auxiliary scenery in Outer Route. "It's flecked with red, oddly[if strudel is in Outer Route], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
@@ -23359,7 +23371,7 @@ the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. d
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text is "BUG".
 
-to determine which number is whiner-score:
+to decide which number is whiner-score:
 	let temp be 0;
 	if ram1 is reflexed, increment temp;
 	if ram2 is reflexed, increment temp;
@@ -27318,7 +27330,8 @@ this is the troves-alt rule:
 
 this is the presto-alt rule:
 	say "[eqls]PRESTO[line break][2da]you could've said [if phooeyed is true]POOH instead of PHOOEY[else]PHOOEY instead of POOH[end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
-	say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out for Nowt Town, but for fewer points[end if].";
+	say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out Nowt Town, but for fewer points[end if].";
+	say "[2da][if h-n-k is true]SYKE[else]GOSH[end if] was another way around the hogs.";
 	say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
 	say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
 

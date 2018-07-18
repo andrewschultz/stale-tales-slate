@@ -422,6 +422,13 @@ Your score has just gone up by one point
 The pirates blanch a bit but quickly regain their swagger.
 >pastier
 Your score has just gone up by one point
+
+@nu
+#done rejects for old ice
+>oldiec
+Twist the ice too much, it might not look right.
+
+==t!1,2
 >n
 
 @nu
@@ -492,6 +499,9 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 9 OVERALL.
 Your score has just gone up by one point
 
 @nu
+#done rejects for strudel
+>strudle
+You'd have to drop the strudel on the ground and get it germy to try that again. Eww.
 #spechelp for mardier admirer
 >marride
 The mardier admirer looks askance, then returns to evaluating you some more.
@@ -890,6 +900,9 @@ There're two other bits to read.
 >unlocked
 
 @nu
+#done rejects for prison ropins
+>unlockde
+It already is. Dr. Yow is free.
 #renudge for ropins
 >ropisn
 No need to mess with the ropins any more.
@@ -1065,6 +1078,9 @@ Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 19 OVERALL.
 
 @nu
+#done rejects for raves saver
+>pearyl
+The raves saver is as glitzed-up as it'll get.
 #renudge for save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
@@ -1154,6 +1170,18 @@ Despite your lack of technical knowledge, you think you almost did...something t
 ALBERT'S.
 
 @nu
+>robust
+#done rejects for turbos
+>turbso
+The turbos are working. Best not tinker.
+>undo
+>undo
+>stabler
+#done rejects for blaster
+>blastre
+The blaster is working. Best not tinker.
+>undo
+>undo
 >gonear rawest
 #spechelp for eastern shore
 >eastenr
@@ -1247,6 +1275,9 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
 >score
 
 @nu
+#done rejects for unripe ur-pine
+>penuir
+You already found a succor crocus. There's not much else there, it seems.
 #nudge for occurs
 >occusr
 The succor crocus just is, and it doesn't need a new way to be. Perhaps it would make a nice gift.
@@ -1272,6 +1303,13 @@ The Tetris Sitter breaks her glassy smile for a moment.
 >triste
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 23 OVERALL.
+
+@nu
+#done rejects for tetris sitter
+>settir
+St. Teri's back in the real world, now.
+
+==!1,2
 >give flowerpot to sitter
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 24 OVERALL.
