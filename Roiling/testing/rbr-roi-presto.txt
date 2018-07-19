@@ -68,6 +68,7 @@ Score in a scenario: 3 out of 37 total points in the current region, Presto. Low
 
 ==t1
 >pooh
+#notmax
 Your score has just gone up by one point
 Taking away a max point.
 REGION MAX DECREASED BY 1, 1 OVERALL.
@@ -188,6 +189,7 @@ The spumed tar does nothing
 
 ==t2
 #spechelp for plebe
+>blepe
 The plebe looks confused, as if you garbled what you said.
 #readables for volt maze
 >read volt maze
@@ -201,9 +203,6 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 Your score has just gone up by one point
 
 ==t2
-#spechelp for volt maze
->mazeltvo
-WRONG
 >n
 >w
 #spechelp for maze walls
@@ -269,6 +268,9 @@ The sport ports seem even shinier for a second.
 #readables for sport ports
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
+#spechelp for n-t-air
+>wotn
+You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 
 ==t!1
 >prost
@@ -293,6 +295,7 @@ Score in a scenario: 7 out of 37 total points in the current region, Presto. Low
 >gonear runway
 >scan lev
 >mazeltov
+#notmax
 Your score has just gone up by two points
 REGION MIN INCREASED BY 1
 REGION MAX DECREASED BY 1
@@ -370,6 +373,9 @@ You won't be able to do anything to the dreidl to see it, but it'll be so horrif
 #spechelp for lamb
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
+#spechelp for volt maze
+>mazeltvo
+The volt maze crackles with increased energy, almost ready to break down. Oy vey! I hope this one's not too meshuggenah.
 
 ===0,2
 >mazeltov
@@ -489,13 +495,6 @@ The ether is gone. You can just go back north.
 >n
 
 ==t2
-#spechelp for hogs
->gohs
-The hogs snicker a bit, but they seem a little nervous, too.
-#spechelp for keys
->syek
-The hogs snicker a bit, but they seem a little nervous, too.
-
 #nudge for lawl
 >lalw
 It's too expansive for you to use any mental energy on.
@@ -517,10 +516,18 @@ You need to deal with all the hogs.
 #nudge for key
 >kye
 You aren't sure which key would work, so you need a plan to get them all.
+\\
+#spechelp for hogs
+>gohs
+The hogs snicker a bit, but they seem a little nervous, too.
+#spechelp for keys
+>syek
+The hogs snicker a bit, but they seem a little nervous, too.
 
 ==t2
 >gosh
 Your score has just gone up by one point
+#altpath
 Phat Path
 >undo
 
@@ -541,7 +548,7 @@ No, it's not just any clump, but hawt thaw.
 
 ==t2
 #spechelp for hawt thaw
->what
+>whta
 The hawt thaw crackles slightly.
 
 ==t!1
@@ -573,8 +580,8 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 
 >later
-But we ain't bored yet, boss!
 Your score has just gone up by one point
+But we ain't bored yet, boss!
 >tough
 Your score has just gone up by one point
 Hut! Go!
@@ -592,6 +599,7 @@ That'd be an awkward rehash. You need another way to say good-bye
 >undo
 >so long
 Your score has just gone up by one point
+#altpath
 !Hut! Go!
 Dat was a good dust-up
 #done rejects for log ons
@@ -603,23 +611,29 @@ That'd be an awkward rehash. You need another way to say good-bye
 >undo
 #################now we go with 'so long' first
 >so long
+#notmax
 Your score has just gone up by one point
 >tough
+#notmax
 Your score has just gone up by one point
 Dat was a good dust-up
 >undo
 >later
+#notmax
 Your score has just gone up by one point
 Dat was a good dust-up
 >undo
 >undo
 >tough
+#notmax
 Your score has just gone up by one point
 >so long
+#notmax
 Your score has just gone up by one point
 Dat was a good dust-up
 >undo
 >later
+#notmax
 Your score has just gone up by one point
 Dat was a good dust-up
 #nudge for shack
@@ -854,6 +868,7 @@ Only one more piece of hardware
 
 ==t!1
 >casserole
+by one point
 REGION MIN INCREASED BY 1
 >score
 Lowest score to solve is 33. Maximum score available is 37.
@@ -892,17 +907,21 @@ You may wish to decipher the scratchings, instead.
 
 ==t2
 >give book to yak
+#notmax
 by one point
 >undo
 
 ==t2
 >push skid s
+#notana
+Your score has just gone up by one point
 Hacks' Shack
 >undo
 
 >push skid n
 >push skid n
 >push skid n
+#notmax
 Your score has just gone up by one point
 
 ==t2
@@ -973,9 +992,6 @@ REGION MAX DECREASED BY 2
 #done rejects for scratch paper
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
-#spechelp for t-key
->abt
-The TBA key rattles within the keyboard a bit.
 #renudge for sleep
 >slepe
 Your mind is no longer a tired jumble.
@@ -994,7 +1010,11 @@ It says DRIVE A/A DRIVE: VARIED
 #readables for drive e
 >read drive e
 It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
+>read drive e
 It's alternately referred to as Drive E and E Drive. I'D VEER, someone has written in red.
+#spechelp for t-key
+>abt
+The TBA key rattles within the keyboard a bit.
 
 @nu
 #spechelp for drive a
@@ -1006,15 +1026,19 @@ Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things
 
 ==t!1
 >avider
+by one point
 REGION MIN INCREASED BY 1
 >derive
+by one point
 REGION MIN INCREASED BY 1
 >rom sticks
 REGION MIN INCREASED BY 1
 >undo
 >romsticks
+by one point
 REGION MIN INCREASED BY 1
 >tab
+by one point
 REGION MIN INCREASED BY 1
 
 ==t2
@@ -1060,16 +1084,17 @@ It's what's on the scratch paper that was important.
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 >bus
-!Diver time
 Your score has just gone up by one point
+#altpath
+!Diver time
 Strip of Profits
 >misses
 WRONG
 >undo
 
 >sub
-Diver time
 Your score has just gone up by one point
+Diver time
 Strip of Profits
 >misses
 WRONG

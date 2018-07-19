@@ -174,6 +174,7 @@ Score in a scenario: 1 out of 39 total points in the current region, Oyster. Low
 >score
 Score in a scenario: 2 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 40.
 >scrape
+by one point
 >score
 Score in a scenario: 3 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 40.
 >thisalt
@@ -274,14 +275,17 @@ No one boat seems better than the others. Maybe you should widen your focus to a
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
 
+==t2
 >enter raft
 >fart
 Your score has just gone up by one point
+#altpath
 #done rejects for frat raft
 >frat ratf
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
 >soar
 Your score has just gone up by one point
+#altpath
 Anger Range
 >thisalt
 WRONG
