@@ -256,7 +256,8 @@ Your score has just gone up by one point
 That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
 
 >despite
-Your score has just gone up by one point
+!Your score has just gone up by one point
+WRONG
 
 ==t2
 #renudge for carvings
@@ -374,7 +375,7 @@ Your score has just gone up by one point
 You leaned on the bench right. Time to get on it.
 
 >against
-Your score has just gone up by one point
+!Your score has just gone up by one point
 
 ==t2
 #nudge for tirade
@@ -538,6 +539,9 @@ The underground is already lit. Un-unlit.
 #nudge for pyrites
 >pyrites
 not something you
+#spechelp for un-road
+>aroudn
+You thought you saw an un-road for a second, but ... not quite.
 
 >around
 Your score has just gone up by one point
@@ -554,7 +558,7 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Gal Logan.
 
 ==t2
-#spechelp for un-road
+#spechelp for along-bogus
 >alogn
 The un-road seems to lead somewhere, but you couldn't quite make it out like that.
 
@@ -594,6 +598,9 @@ No need to alter them. Worth looking at, though.
 #nudge for sketchins
 >sketchisn
 No need to alter them. Worth looking at, though.
+#spechelp for thickness sketchins
+>athwatr
+The cripple clipper rocks and makes negligible forward progress. Still, it's a start.
 
 >athwart
 Your score has just gone up by one point
@@ -632,9 +639,14 @@ WRONG
 Your score has just gone up by one point
 
 ==t1
->without
+>beyond
 Score in a scenario: 19 out of 21 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 20 points--you missed some extra stuff you can't go back for.
 >undo
+
+==t2
+#spechelp for raptest patters
+>withotu
+The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
 
 ==t0
 >without

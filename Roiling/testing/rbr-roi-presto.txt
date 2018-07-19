@@ -149,10 +149,12 @@ The stump doesn't move, but the star seems to rattle a bit.
 >drta
 Some 4-letter word or other will get the dart.
 #spechelp for decorative star
-WRONG
+>stra
+The star seems to wiggle a bit, but not enough to pull it out.
 #readables for drab yoke
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
+
 
 >rats
 Your score has just gone up by one point
@@ -161,10 +163,10 @@ Your score has just gone up by one point
 
 ==t2
 #done rejects for star
-star	"No need for additional arts."
+No need for additional arts.
 #done rejects for dart
 >drta
-dart	"The dart's just fine as-is."
+The dart's just fine as-is.
 #renudge for stump
 >stupm
 The stump just sits there, stumpy
