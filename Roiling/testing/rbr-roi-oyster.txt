@@ -213,7 +213,7 @@ Your score has just gone up by one point
 Disease Seaside
 
 ==t2
-#spechelp for raft
+#spechelp for frat raft
 >ratf
 The raft rocks slightly.
 \\

@@ -4055,6 +4055,10 @@ ME ARTS	"That's not quite the way to focus on the ME ARTS."
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
 salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
 Eddie's Song	"You try to groove to Eddie's song, but that's not quite it."
+sister tressi siters	"Sister Tressi seems a bit more upset than usual."
+marble blamer balmer	"[mbb] seems slightly taken aback."
+marble blamer mr beal	"[mbb] seems slightly taken aback."
+trance nectar	"Your willpower is not quite strong enough to give it all up yet. But you must be on the right track."
 lamb	"The lamb looks confused. Maybe you could be more forceful. Verbally, not physically." [START presto]
 hump	"The hump suddenly looks a bit smaller. But not enough."
 volt maze	"The volt maze crackles with increased energy, almost ready to break down. Oy vey! I hope this one's not too meshuggenah."
@@ -4092,7 +4096,6 @@ skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Ye
 compiled code	"Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here."
 drive a	"Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently."
 drive e	"Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it."
-usb	"There's not much you can DO with a USB."
 Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe." [START oyster]
 gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
 tumblers	"The tumblers wobble a bit as you try to do ... something ... to them."

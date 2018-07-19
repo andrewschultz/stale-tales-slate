@@ -194,9 +194,11 @@ But it's not just any bee. It's a WRONG
 
 ==t0
 >believe
+#notmax
 Your score has just gone up by one point
 =one=3	#renudge for bee\\>bee\\But it's not just any bee. It's a WRONG
 >reason
+#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 24 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 24.
@@ -228,11 +230,8 @@ Too much fiddling with reason is unreasonable.
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
 
-
-==t1
->derive
-==!
 >recall
+by one point
 
 Drain Nadir
 
@@ -310,6 +309,12 @@ Score in a scenario: 11 out of 24 total points in the current region, Troves. Lo
 #nudge for glare
 >glaer
 You stare into space some more but get distracted.??
+
+`nu
+#spechelp for lobster
+>bolstre
+That's not quite the way to deserve that lobster.
+
 
 ==t!2
 >bolster
@@ -527,6 +532,17 @@ You see red slightly as the marble Blamer Balmer fails to walk away.
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 
+`nu
+#spechelp for marble blamer mr beal
+>rambel
+seems slightly taken aback
+#spechelp for marble blamer balmer
+>rambel
+seems slightly taken aback
+#spechelp for sister tressi siters
+>resits
+Sister Tressi seems a bit more upset than usual.
+
 ==t!2
 >ramble
 Your score has just gone up by one point
@@ -567,6 +583,9 @@ Score in a scenario: 23 out of 24 total points in the current region, Troves. Lo
 #nudge for divorces
 >divorcse
 No! Not another second thinking about that rubbish.
+#spechelp for trance nectar
+>recatn
+Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
 
 >recant
 Your score has just gone up by one point

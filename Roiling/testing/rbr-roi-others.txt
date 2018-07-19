@@ -404,7 +404,7 @@ The barber sickle darkens a bit. You must be on the right track.
 #spechelp for mean trowel
 >meantrowle
 You had the seed of an idea there, you thought.
-#spechelp for b-r
+#spechelp for buried raft
 >breadfruti
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 \\
@@ -424,7 +424,7 @@ The rapt figure frowns as if it's eaten something sour.
 >pineappel
 The pipe panel fence sways slightly.
 \\
-#spechelp for b-w
+#spechelp for barriers west
 >strawberrise
 You feel the barriers west pulling towards you.
 \\

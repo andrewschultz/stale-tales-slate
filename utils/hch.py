@@ -170,7 +170,11 @@ while count < len(sys.argv):
         if 'i' in arg: ignore_nudmis = True
     elif arg.lower()[:2] == 'r=': region_wildcard = arg[2:]
     elif arg.lower()[0] == 'e': err_max = int(arg[1:])
-    else: usage()
+    elif arg == '??': standard_usage()
+    elif arg == '?': usage()
+    else:
+        print("Bad command", arg)
+        usage()
     count += 1
 
 if out_to_file: hout = open(houtfile, "w")

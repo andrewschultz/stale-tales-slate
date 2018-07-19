@@ -994,6 +994,14 @@ It says DRIVE A/A DRIVE: VARIED
 It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
 It's alternately referred to as Drive E and E Drive. I'D VEER, someone has written in red.
 
+@nu
+#spechelp for drive a
+>drivea
+Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
+#spechelp for drive e
+>drivee
+Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
+
 ==t!1
 >avider
 REGION MIN INCREASED BY 1
