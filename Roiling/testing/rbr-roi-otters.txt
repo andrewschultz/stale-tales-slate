@@ -299,6 +299,17 @@ Hm, you probably can't change the macks. They're dead set in their ways. Perhaps
 >gretat
 Gretta's been manipulated enough. Deal with the macks' arguments, instead.
 
+`nu
+#spechelp for t-bossily
+>bossiyl
+You feel you're on the right track to expose the macks. But that's not quite it.
+#spechelp for t-nastily
+>nastiyl
+You feel you're on the right track to expose the macks. But that's not quite it.
+#spechelp for t-blearily
+>bleariyl
+You feel you're on the right track to expose the macks. But that's not quite it.
+
 >bossily
 Your score has just gone up by one point.
 
@@ -386,7 +397,9 @@ The sea cube shakes a bit.
 The eels swim a bit faster.
 
 >because
+by one point
 >else
+by one point
 
 ==t2
 #done rejects for eels
@@ -446,11 +459,12 @@ Mr. Lee shakes his head and adjusts the ghoul hat.
 >howevre
 Rev. Howe seems to snarl a bit more deeply for a moment.
 #readables for p-2
->read p-2
+>read howe
 /One barely legible bit reads (Eeh, Row V!|Veer How|Rev. Howe|Whereov)
 
 ==!1
 >although
+by one point
 REGION MIN INCREASED BY 1, 2 OVERALL.
 
 ==t2
@@ -462,6 +476,7 @@ You already justified yourself partially. Mr. Lee doesn't need more dialogue.
 >score
 Score in a scenario: 9 out of 30 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 30.
 >however
+by one point
 REGION MIN INCREASED BY 1, 3 OVERALL.
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 30.
@@ -526,26 +541,22 @@ The imp looks slightly annoyed for a second. You may be on the right track.
 #spechelp for imp3
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track.
-#spechelp for thrones
->thronse
-The thrones seem to buzz a bit.
-\\
-#spechelp for nails
->naisl
-One of the nails seems to bend a bit.
->naisl
-Another one of the nails seems to bend a bit.
-\\
-#spechelp for pines
->pinse
-The pines rustle as if an animal climbed through them.
-\\
-#spechelp for corona
->coroan
-The corona scurries about for a bit before settling down again.
+
+==t2
+#spechelp for imp1
+>enragedyl
+The imp looks slightly annoyed for a second. You may be on the right track
+#spechelp for imp2
+>angriyl
+The imp looks slightly annoyed for a second. You may be on the right track
+#spechelp for imp3
+>bruteyl
+The imp looks slightly annoyed for a second. You may be on the right track
 
 ==t3
 >brutely
+by one point
+#altpath
 >angrily
 >thisalt
 --you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
@@ -813,12 +824,29 @@ The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn
 #nudge for throne
 >throen
 There's more than one throne, but it doesn't matter, really, for what you need to do.
+#spechelp for thrones
+>thronse
+The thrones seem to buzz a bit.
+\\
+#spechelp for nails
+>naisl
+One of the nails seems to bend a bit.
+>naisl
+Another one of the nails seems to bend a bit.
+\\
+#spechelp for pines
+>pinse
+The pines rustle as if an animal climbed through them.
+\\
+#spechelp for corona
+>coroan
+The corona scurries about for a bit before settling down again.
 
 >snail
 Your score has just gone up by one point
 >hornets
 Your score has just gone up by one point
->raccoon
+>racoon
 Your score has just gone up by one point
 
 #renudge for raccoon
@@ -930,11 +958,20 @@ Merle and Elmer stumble off away from you for a bit.
 Merle and Elmer look askance at each other for a bit.
 
 ==!1
+#spechelp for elmer
+>honestyl
+Merle and Elmer stumble off away from you for a bit.
+#spechelp for merle
+>asied
+Merle and Elmer look askance at each other for a bit.
 >honestly
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
 >score
 Score in a scenario: 26 out of 30 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 30 points.
+>aside
+Your score has just gone up by one point
+DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
 
 ==t2
 #done rejects for parrot
@@ -968,6 +1005,7 @@ The medals waver noiselessly. Hm, that's not quite it.
 ==t2
 >whistel
 The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
+#spechelp of weltish whistle
 >deepyl
 The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
 >read whistle
@@ -1058,11 +1096,13 @@ You have enough to think about without one more of Elvira's machines.
 You have enough to think about without one more of Elvira's machines.
 
 >play whistle
+#notana
+by one point
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
 >score
 
-==!1
-Otters (30/30)
+==1
+Otters (24/31)
 ==!
-Otters (24/30)
+Otters (31/31)
