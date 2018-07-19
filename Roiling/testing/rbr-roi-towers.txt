@@ -1,3 +1,4 @@
+# spechelp should be right before ==t!1,2
 files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudmis.txt
 ~	nudges	t4
 ~	nu	t4
@@ -43,6 +44,29 @@ The badlands can't be changed on their own. They must be trekked through.
 #nudge for bland
 >bladn
 The badlands can't be changed on their own. They must be trekked through.
+
+`nu
+#spechelp for geno
+>geon
+Geno looks around, as if he's about to bolt.
+#spechelp for edwin
+>edwni
+Edwin hiccups.
+#spechelp for blake
+>blaek
+Blake looks a bit sadder.
+#spechelp for ernest
+>ernets
+Ernest seizes up.
+#spechelp for andres
+>andrse
+Andres looks a bit more tied up at the moment.
+#spechelp for cedrick
+>cedrikc
+Cedrick cringes slightly.
+#spechelp for sir rodney
+>rodnye
+Rodney looks around, as if he is sick of this place.
 
 >gone
 Your score has just gone up by one point
@@ -172,6 +196,10 @@ Score in a scenario: 7 out of 50 total points in the current region, Towers. Low
 ==!
 Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 47.
 
+#spechelp for dreads adders
+>saddre
+The adders look downcast for a minute before resuming a threatening pose.
+
 >sadder
 Your score has just gone up by one point
 >get all
@@ -198,7 +226,7 @@ There's more than one yurt there.
 
 @nu
 #spechelp for try us yurts
->try us yurst
+>yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
 
 ==t!1,2
@@ -238,52 +266,92 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
-@nu
-#spechelp for muscly luc sym
->muscly luc smy
-Luc Sym stumbles for a moment.
->gs
-#spechelp for muscly ms lucy
->muscly ms luyc
-Ms. Lucy stumbles for a moment.
->gs
-
 ==t1
 >clumsy
+#notmax
 Your score has just gone up by one point
 >n
-
-@nu
-#spechelp for fluster self rut
->selfrtu
-You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
 
 ==t1
 >restful
+#notmax
 Your score has just gone up by one point
 >pastier
+#notmax
 Your score has just gone up by one point
 >n
 >married
+#notmax
 Your score has just gone up by one point
 >n
 >s
 >s
 >e
 >sewed
+#notmax
 Your score has just gone up by one point
 >released
+#notmax
 Your score has just gone up by one point
 >e
 >marginal
+#notmax
 Your score has just gone up by one point
 >holiest
+#notmax
 Your score has just gone up by one point
 >n
 >hastiest
+#notmax
 Your score has just gone up by one point
 >s
 >s
+>score
+Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
+
+==t2
+>rinsed
+#notmax
+Your score has just gone up by one point
+>e
+>drained
+#notmax
+Your score has just gone up by one point
+>himself
+#notmax
+Your score has just gone up by one point
+>e
+>w
+>n
+\\
+>sewed
+#notmax
+Your score has just gone up by one point
+>weariest
+#notmax
+Your score has just gone up by one point
+>n
+>hastiest
+#notmax
+Your score has just gone up by one point
+>nerdiest
+#notmax
+Your score has just gone up by one point
+>e
+>holiest
+#notmax
+Your score has just gone up by one point
+>w
+>w
+>married
+#notmax
+Your score has just gone up by one point
+>n
+>s
+>e
+>s
+>s
+>e
 >score
 Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
@@ -291,53 +359,14 @@ Score in a scenario: 15 out of 50 total points in the current region, Towers. Lo
 #spechelp for diners
 >dinesr
 The diners glare at you, then look up at the sky, slightly worried.
-
->rinsed
-Your score has just gone up by one point
->e
->drained
-Your score has just gone up by one point
-#spechelp for mel fish
->mel fihs
-Mel Fish mutters, 'No, that's not how to be me. Gotta be something simple and plain.'
->himself
-Your score has just gone up by one point
->e
->w
->n
-
-@nu
-#spechelp for weeds
->weesd
-The weeds almost seem to shrug.
-#spechelp for sweatier wait-seer
->waitsere
-The wait-seer looks bored and distracted for a second.
-
->sewed
-Your score has just gone up by one point
->weariest
-Your score has just gone up by one point
->n
->hastiest
-Your score has just gone up by one point
->nerdiest
-Your score has just gone up by one point
->e
->holiest
-Your score has just gone up by one point
->w
->w
->married
-Your score has just gone up by one point
->n
->s
->e
->s
->s
->e
->score
-Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
+#spechelp for muscly luc sym
+>clumys
+Luc Sym stumbles for a moment.
+>gs
+#spechelp for muscly ms lucy
+>clumys
+Ms. Lucy stumbles for a moment.
+>gs
 
 ==t!1,2
 >clumsy
@@ -352,6 +381,11 @@ have more
 >read keycar
 /(KC AYER|RAY ECK)
 a refresher on
+
+@nu
+#spechelp for keycar
+>creayk
+The keycar sputters momentarily.
 
 ==t!1,2
 >creaky
@@ -410,6 +444,11 @@ The old ice seems to glimmer a bit.
 You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There might be more if you read again.
 >read fluster self rut
 You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There are also weird furlets around it.
+
+@nu
+#spechelp for fluster self rut
+>selfrtu
+You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
 
 ==t!1,2
 >coiled
@@ -489,6 +528,9 @@ You almost expect the strudel to hop up, but the moment passes.
 #readables for strudel
 >read strudel
 DR. ELTUS recommends this strudel!
+#spechelp for resident trendies
+>nerdiets
+The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
 
 ==t!1,2
 >rustled
@@ -557,6 +599,9 @@ Changing only one atheist would only help you so long. The rest would restore th
 #spechelp for asset-hit atheists
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
+#spechelp for sweatier wait-seer
+>waitsere
+The wait-seer looks bored and distracted for a second.
 
 ==t!1,2
 >hastiest
@@ -572,6 +617,9 @@ Lars listens to what you're saying for a minute, but--no, you didn't quite get i
 >reedsael
 Elsa listens to what you're saying for a minute, but--no, you didn't quite get it right. She goes back to reciting her tired sales pitch.
 >gs
+#spechelp for mel fish
+>mel fihs
+Mel Fish mutters, 'No, that's not how to be me. Gotta be something simple and plain.'
 
 ==t!1,2
 >resealed
@@ -627,6 +675,9 @@ WRONG there are more
 #nudge for weed
 >wede
 Gumming up one weed wouldn't get the others.
+#spechelp for weeds
+>weesd
+The weeds almost seem to shrug.
 
 ==t!1,2
 >sewed
@@ -712,8 +763,10 @@ The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment pa
 
 ==t!1,2
 >marginal
+#notmax
 Your score has just gone up by one point
 >holiest
+#notmax
 Your score has just gone up by one point
 >n
 >s
@@ -721,7 +774,7 @@ Your score has just gone up by one point
 
 @nu
 #spechelp for dandier arid den
->dandier arid dne
+>dandrie
 The arid den seems less imposing and impressive.
 
 ==t!1,2
@@ -819,7 +872,10 @@ You can't change the gadflies. There are too many.
 @nu
 #spechelp for bonker
 >bonkre
-'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!'
+"TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
+#spechelp for stinger
+>restign
+The stinger fizzles a bit.
 
 >broken
 Your score has just gone up by one point
@@ -956,6 +1012,8 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
 
 >put dagger in repair
+#notana
+by one point
 
 @nu
 #renudge for shiny
@@ -1045,10 +1103,15 @@ You notice it was co-authored. Di Regan and Ned Riga. The names elevated, emboss
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 WRONG: What about hostile?
+#spechelp for dinger
+>grainde
+Scot Agin blinks and ruffles Reading: a Dinger and yawns before flipping a page, slightly less interested than before.
 
 >grained
 Your score has just gone up by one point
 >ask agnostic about doctor yow
+#notana
+Your score has just gone up by one point
 
 @nu
 #spechelp for raves saver
@@ -1062,10 +1125,10 @@ The saver is hopelessly no-frills. It'll never be anything better. But you made 
 
 @nu
 #spechelp for atblock
->atblokc
+>attentiev
 Scot seems a little more focused, but he could maybe do even better.
 >gs
->atblokc
+>attentiev
 Staci seems a little more focused, but she could maybe do even better.
 >gs
 
@@ -1089,6 +1152,7 @@ The saver is hopelessly no-frills. It'll never be anything better. But you made 
 Scot is fully attentive. Don't ruin a good thing!
 
 >rowdy
+#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
 @nu
@@ -1159,13 +1223,6 @@ The wires are okay. They're just organized WEIRDER.
 #nudge for turbo
 >turob
 You need to deal with both turbos.
-#spechelp for turbos
->turbso
-Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
-#spechelp for blaster
->blastre
-Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
-#readables for blaster
 >read blaster
 ALBERT'S.
 
@@ -1189,6 +1246,15 @@ Maybe it's you, but the eastern shore seemed slightly closer.
 >undo
 >undo
 
+@nu
+#spechelp for turbos
+>turbso
+Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
+#spechelp for blaster
+>blastre
+Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
+#readables for blaster
+
 ==t1,2
 >robust
 >stabler
@@ -1197,8 +1263,9 @@ Maybe it's you, but the eastern shore seemed slightly closer.
 >enter boat
 Rawest Waters
 >nearest
-Mislit Limits
 Your score has just gone up by one point
+#altpath
+Mislit Limits
 >thisalt
 --you'd have passed Rawest Waters if you'd have made the blaster STABLER.
 >undo
@@ -1210,8 +1277,9 @@ Your score has just gone up by one point
 >enter boat
 Rawest Waters
 >nearest
-Mislit Limits
+#notmax
 Your score has just gone up by one point
+Mislit Limits
 >thisalt
 --you'd have passed Rawest Waters if you'd have made the turbos ROBUST.
 >undo
@@ -1224,6 +1292,9 @@ Your score has just gone up by one point
 #renudge for turbo
 >turob
 You already dealt with both turbos.
+#spechelp for weirder red wire
+>rewirde
+You think you see how to untangle some of the mes inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
 
 ==!1,2
 >rewired
@@ -1311,6 +1382,7 @@ St. Teri's back in the real world, now.
 
 ==!1,2
 >give flowerpot to sitter
+#notana
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 24 OVERALL.
 >out
@@ -1376,7 +1448,8 @@ Nah, that's just garbage. It's the curst palace you need to focus on.
 Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
 
 >spectacular
-Your score has just gone up by one point
+Your score has just gone up by two points
+#note for bop.py we may need a pts+1 for the bonus point for no x-rays
 Strip of Profits
 
 #many different possibilities
