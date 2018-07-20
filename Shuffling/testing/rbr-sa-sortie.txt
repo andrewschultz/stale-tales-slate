@@ -46,9 +46,6 @@ You're dizzy enough looking around without trying to focus on anything. The dial
 #nudge for frenetic
 >frenetic
 You won't need to do anything to the whole room unless you are trapped in a room.
-#nudge for sextien
->esxtien
-The spinning seems to slow a bit.
 #nudge for exitsnw
 >xeitsnw
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
@@ -64,11 +61,15 @@ You can't do much to the exits when you don't even know which way they are.
 #nudge for dial
 >dila
 Messing up the dial would leave you trapped here.
+#nudge for sextien
+>esxtien
+The spinning seems to slow a bit.
 
+`nu
 
->sixtene
-WRONG
 >sixteen
+#notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
+by one point
 
 >n
 The Nick
@@ -95,6 +96,7 @@ You don't need to re-stop the centrifuge.
 The nick blurs a little but snaps back to normal.
 
 >kitchen
+by one point
 Kitchen
 
 #####detour to check on UFR
@@ -145,6 +147,7 @@ The fridge is just a fridge.
 `nu
 >grtis
 #spechelp for grist
+>girts
 The grist looks a bit less bland.
 You feel a slight psychic push-pull coming from the grist. Keep at it.
 
@@ -257,6 +260,7 @@ by one point
 `nu
 >undo
 >hot sauce
+#notmax
 by one point
 
 `nu
@@ -295,16 +299,13 @@ Your score has just gone up by one point.
 >parmesna
 Best not to get too crazy with food preparation.
 
-
->parmesan
-by one point
-
 `nu
 #spechelp for skate
 >steka
 You thought you smelled meat there, for a minute. Hm.
 
 >steak
+by one point
 
 `nu
 #done rejects for steak
@@ -335,6 +336,7 @@ The whole t-shirt.
 The whole t-shirt.
 
 >lettuce
+by one point
 
 `nu
 #done rejects for lettuce
@@ -346,7 +348,10 @@ Best not to get too crazy with food preparation.
 >put parmesan on tortilla
 >put hot sauce on tortilla
 >undo
+
 >put hotsauce on tortilla
+#notana
+by one point
 
 `nu
 #spechelp for taco
@@ -375,6 +380,7 @@ The cask is changeable, but not like that. WERE-EWER just clues it can be change
 Nothing happens. Maybe you are trying to do too much to change the cask.
 
 >sack
+by one point
 
 `nu
 #spechelp for sack
@@ -399,6 +405,8 @@ Why zap just one wart? Go for all of them!
 WRONG
 
 >straw
+by one point
+
 >put straw in sack
 
 `nu
@@ -437,6 +445,10 @@ But you're wearing the shoes. That might cause problems.
 You almost feel something picking you up for a second. You must have been close.
 
 >moor
+by one point
+
+>mroo
+WRONG
 
 #nudge for mire
 >meir
@@ -511,6 +523,7 @@ Shooting things up is not the answer.
 WRONG
 
 >peasant
+by one point
 
 `nu
 #done rejects for peasant
@@ -518,6 +531,8 @@ WRONG
 The peasant doesn't need a fashion boost or anything. Just a trade.
 
 >give straw to peasant
+#notana
+by one point
 
 #nudge for pome
 >pome
@@ -588,6 +603,8 @@ The scraped wall doesn't respond or come any closer to being a hallway.
 The scraped wall doesn't respond or come any closer to being a hallway.
 
 >put hay in wall
+#notana
+by one point
 
 `nu
 #spechelp for scraped wall
@@ -729,6 +746,7 @@ It's a plane, now, for sure.
 WRONG
 
 >panel
+by one point
 
 `nu
 #done rejects for panel
@@ -809,7 +827,6 @@ Neither arching shakes. They're probably too sturdy, and you're probably not mea
 >crashign
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
-
 #nudge for rubble
 >rubbel
 The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need.
@@ -821,6 +838,7 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 >s
 ##nudge for room
 >moor
+
 >silo
 by one point
 
@@ -865,11 +883,11 @@ Hm, no, that'd be too abstruse. It's what the button says, probably.
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 
 #nudge for shootbutton
->shootbuttno
+>shotobutton
 No, you're overthinking it. Just the text.
 
 #nudge for treesbutton
->treesbuttno
+>tresebutton
 No, you're overthinking it. Just the text.
 
 `nu
@@ -878,6 +896,7 @@ No, you're overthinking it. Just the text.
 WRONG
 
 >steer
+by one point
 
 `nu
 #spechelp for hoots button
@@ -885,6 +904,7 @@ WRONG
 WRONG
 
 >shoot
+by one point
 
 `nu
 #nudge for button
@@ -893,13 +913,23 @@ It's the buttons' purposes that needed changing.
 
 `nu
 #done rejects for steer button
->steer buttno
+>stree
 No, the steer button HAS to be right.
 
 `nu
 #done rejects for shoot button
->shoot buttno
+>shtoo
 No, the shoot button HAS to be right.
 
 >push steer
 >push shoot
+#notana
+by one point
+
+>score
+
+==t1
+25/27
+
+==t!1
+27/27

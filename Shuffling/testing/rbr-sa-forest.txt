@@ -28,6 +28,7 @@ That seemed right but didn't seem quite natural.
 You feel a slight psychic push-pull coming from Store F. Keep at it.
 
 >forest
+#notmax
 Your score has just gone up by one point.
 
 ==t2
@@ -65,6 +66,7 @@ The shout wavers for a bit. Maybe you're on to something...
 Your compass feels extra jumbled, but--well, you must be close.
 
 >n
+#notana
 Your score has just gone up by one point.
 Rest of Forest
 
@@ -89,8 +91,9 @@ There's nothing around you have to sate, thankfully.
 This game is nonviolent--well, except for a few puns.
 
 >e
-Self-ID Fields
+#notana
 by one point
+Self-ID Fields
 
 ==t2
 #mistake test for scorse
@@ -313,6 +316,7 @@ You've made a full disguise now!
 #xc
 >e
 >n
+#notana
 Your score has just gone up by one point.
 Cruel Ones' Enclosure
 
@@ -389,11 +393,12 @@ You smile confidently. You'll figure how to use the grinder.
 >steam
 Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
 
->put cow in canister
+>put river ville in canister
 #xc
->put chicken in canister
-LIVERS.
+>put viler liver in canister
+#notana
 Your score has just gone up by one point.
+LIVERS.
 
 #xc
 #mistake retest for steam
@@ -432,6 +437,7 @@ You feel a slight psychic push-pull coming from the spread. Keep at it.
 >undo
 
 >drapes
+#notmax
 Your score has just gone up by one point.
 >undo
 
@@ -540,6 +546,13 @@ You'd be crushed if the sleet turned to steel.
 They'd be much less dangerous left in a pile. Maybe you have something that can do that!
 
 >shoot wolves
+#notana
 Your score has just gone up by one point.
 Trips Strip
 
+>score
+
+==t1
+16/17
+==t!1
+17/17

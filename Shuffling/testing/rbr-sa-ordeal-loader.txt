@@ -84,6 +84,7 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 WRONG
 
 >door
+by one point
 
 #done rejects for desert-door
 >doro
@@ -120,6 +121,8 @@ No, the bugle is a bugle, not just a horn. It's been changed enough.
 WRONG
 
 >blot
+by one point
+
 >open door
 Thickest Thickets
 
@@ -140,6 +143,8 @@ If it were just one darnel, there'd be no point in getting mad. But there are a 
 You might be able to clear the darnels, but they're not as thick as, well, the thicket.
 
 >slander
+#notana
+by one point
 
 #dupnudge for darnel
 >darnle

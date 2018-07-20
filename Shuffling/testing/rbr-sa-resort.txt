@@ -26,6 +26,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 WRONG
 
 >resort
+#notmax
+by one point
 
 `nu
 #done rejects for r-p
@@ -61,6 +63,8 @@ You need to deal with all the tiles.
 WRONG
 
 >islet
+by one point
+
 Leis Isle
 
 #nudge for leis
@@ -96,6 +100,13 @@ You notice writing on the rock and swing similar to what you just said. Or tried
 >crko
 Hmm, a rock, but only so much you can do with it.
 
+==t!1
+#spechelp for l2
+>lise
+You have something on the tip of your tongue ... something about the Leis Isle doesn't seem right...
+>lies
+by one point
+
 >cork
 by one point
 
@@ -114,6 +125,7 @@ You have a way off this island to the east, though you can make the other for fu
 The swing goes slightly airborne.
 
 >wings
+by one point
 
 `nu
 #done rejects for wings
@@ -201,6 +213,7 @@ The toeholds could be handy for getting up and out of here.
 WRONG
 
 >ropes
+by one point
 
 `nu
 #done rejects for ropes
@@ -272,7 +285,9 @@ No, the clay is a clue to what the protest really wants to do.
 #spechelp for riot
 >troi
 The riot's still a crowd. A BIG crowd.
+
 >trio
+by one point
 
 `nu
 #done rejects for protest
@@ -320,6 +335,8 @@ You're overthinking it. Or you hope you are. It's both a chain, and links.
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now.
 
 >china
+#notana
+by one point
 
 `nu
 #spechelp for chain links
@@ -327,10 +344,7 @@ The links rattle slightly. Perhaps they are chaining others' creativity as well 
 WRONG
 
 >kilns
-
-#nudge for tugtoe
->getotu
-Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
+by one point
 
 >get out
 
@@ -370,7 +384,14 @@ Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery
 >tshirt
 You slur out a few consonants--maybe you should work with something closer, lower down.
 
+==t2
+#nudge for tugtoe
+>getotu
+Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
+
 >tug toe
+#notana
+by one point
 
 #nudge for manor
 >romna
@@ -402,5 +423,18 @@ You don't even want to TRY any more anagrams. You just want to BE...and not even
 #nudge for toaster
 >toastre
 You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+
+>exist
+#notana
+by one point
+
+==t2
+>undo
+>amens
+by one point
+#altpath
+>names
+by one point
+#altpath
 
 ################################################

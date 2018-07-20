@@ -408,7 +408,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "talker"	425174765	Obtains Boastin' Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
 "caek"	201932690	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	--	dry cake	--	"It isn't just any cake. It's dry cake."
-"rental"	441149095	--	antlers	--	"One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers."
+"rental"	441149095	Obtains Boastin' Bastion	--	--	"[if antlers are in bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
 "thelo"	396364842	Hotel	--	--	"[loc-rej]." [the ol hotel]
 "bottel"	480611466	Hotel	--	--	"[no-ketch]."
 "ketchup"	526708955	Hotel	--	--	"[no-ketch]."

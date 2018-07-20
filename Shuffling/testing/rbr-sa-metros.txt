@@ -261,6 +261,8 @@ You think of how to make the ketchup slightly classier. It doesn't bend, but may
 Nothing to change the mattress to, even if you could move the night thing off.
 
 >throw tomato at thing
+#notana
+by one point
 
 #nudge for bump
 >bupm
@@ -391,17 +393,21 @@ You won't need to do anything to the whole room unless you are trapped in a room
 You won't need to do anything to the whole room unless you are trapped in a room.
 
 `nu
-#spechelp for antlers
+#nudge for rental
 >rentla
+One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
+#spechelp for antlers
+>rentlas
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 
 ==t!1
->rental
+>rentals
 Your score has just gone up by one point.
 
 `nu
+#renudge for rental
 >rentla
-That's not something
+No point bringing those tacky antlers back, or thinking about them any more
 
 #nudge for candelabra
 >candelabar
@@ -431,6 +437,9 @@ It isn't just any cake. It's dry cake.
 It isn't just any cake. It's dry cake.
 
 >switch emitter
+#notana
+by one point
+
 >get dry cake
 >s
 
@@ -559,20 +568,26 @@ You don't need to do anything to the counter, and it's probably protected by a s
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
 
 >give gardenia to faeries
->take heaths
-
-#dupnudge for heath
->heaht
-They are multiple heaths--so you should try to change just one.
 
 `nu
 #spechelp for begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
 >noise bag
+by one point
+#altpath
 #done rejects for noise bag
 >noise bga
 The noise bag rumbles ominously. Best not change it into something worse.
+>undo
+>undo
+>undo
+
+>take heaths
+
+#dupnudge for heath
+>heaht
+They are multiple heaths--so you should try to change just one.
 
 `nu
 #spechelp for heaths
@@ -647,6 +662,8 @@ The beats shift up for a second.
 
 >put card on sensor
 >e
+#notana
+by one point
 
 Anti-Cool Location
 
@@ -715,6 +732,9 @@ The nerds look at you, then remark they can't decipher THAT. But maybe if you re
 "You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
 
 >ask nerds about darkness
+#notana
+by one point
+#again, this is not an anagram of an actual thing, so it is NOTANA
 
 #dupnudge for metallic
 >metallci
@@ -808,6 +828,8 @@ You've already made nothing out of something, and instead of reversing that, you
 You don't want to mess with the wirin that way
 
 >put controls in opening
+#notana
+by one point
 
 `nu
 >openign
@@ -867,5 +889,8 @@ You've changed the beats to something tangible, physically beatable.
 The hilt serves a purpose, and besides, there's not much to change it to.
 
 >attack beast
+#notana
+by one point
+
 Trips Strip
 

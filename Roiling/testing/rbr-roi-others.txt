@@ -514,6 +514,7 @@ The coins rattle and hum promisingly.
 The singed design on the coins reads, when you look close, property of NISCO.
 
 >sonic
+by one point
 Blam!
 
 ==t2
@@ -877,9 +878,6 @@ The Valence Enclave doesn't need modifications. Especially with people potential
 PERP
 
 ==t2
-#spechelp for viewer
->viewre
-That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 \\
 #spechelp for searcher
 >searchre
@@ -928,6 +926,9 @@ You've done enough researching.
 You've done enough reviewing.
 
 >n
+#notana
+by one point
+#bonus point for not usuing arugula
 
 You Did Great
 
