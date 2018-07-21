@@ -16793,11 +16793,9 @@ does the player mean remaping the perma-amper: it is very likely.
 
 carry out remaping:
 	if noun is perma-amper:
-		if tunes are in lalaland:
-			say "The tunes have already been altered. Remapping won't do any good. Or bad." instead;
+		if tunes are in lalaland, say "The tunes have already been altered. Remapping won't do any good. Or bad." instead;
 		try fliptoing tunes instead;
-	say "Remapping could break something. So maybe try something else.";
-	the rule succeeds;
+	say "Remapping could break something. So maybe try something else." instead;
 
 remapped is a truth state that varies.
 

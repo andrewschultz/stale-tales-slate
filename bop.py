@@ -75,7 +75,11 @@ def points_in(x):
 
 def cmd_to_alfchunk(y):
     ret_string = ''.join(sorted(re.sub("[^a-z]", "", y)))
-    return ret_string
+    lr = len(ret_string)
+    if lr % 1 or lr < 2: return ret_string
+    for x in range (0, len(ret_string), 2):
+        if ret_string[x] != ret_string[x+1]: return ret_string
+    return ret_string[::2]
 
 def testproj(proj):
     get_region_maxes(proj)
@@ -113,10 +117,13 @@ def testproj(proj):
                     alt_points_this_region += cur_points
                     cur_points = 0
                 else: pts_this_region += cur_points
+                is_anagram = True
                 if cur_points and show_score:
                     lntemp = ln - 1
-                    if '#notana' in content[lntemp]: lntemp -= 1
-                    print(lntemp, cur_points, pts_this_region, content[lntemp])
+                    if '#notana' in content[lntemp]:
+                        is_anagram = "'" in content[lntemp]
+                        lntemp -= 1
+                    print("{:5d} {:d} {:2d} {:s} {:s}".format(lntemp, cur_points, pts_this_region, content[lntemp], '' if is_anagram else '(not anagram)'))
                 if '#notana' in content[ln-1].lower(): continue
                 if not content[ln-1].startswith('>'):
                     print("Maybe need command before BY ONE POINT at lines", ln, ln-1)

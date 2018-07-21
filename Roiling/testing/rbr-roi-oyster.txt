@@ -159,6 +159,7 @@ WRONG
 WRONG
 ==!
 >remap
+#notana 'nudge for remap'
 Your score has just gone up by one point
 >unset
 !Your score has just gone up by one point
@@ -187,6 +188,7 @@ Perhaps you should've played it cool and fled, instead.
 >undo
 
 >stroll
+by one point
 Olde Lode
 
 ==t2
@@ -305,18 +307,18 @@ Fighter Freight
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [FIGHTER FREIGHT]
 #nudge for bota
 >boat
-[dest-esc].
+Destroying the boat would be a bad idea. You need to escape it.
 #nudge for boats
 >boast
-[dest-esc].
+Destroying the boat would be a bad idea. You need to escape it.
 #nudge for crays
 >crasy
-[no-cray].
+No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 #nudge for cray
 >crya
-[no-cray].
+No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 #spechelp for pale plea
->pale plae
+>lepa
 Yes, the pale plea is calling and warning you to leave. But how?
 
 >leap
@@ -365,7 +367,7 @@ WRONG
 >undo
 >undo
 >scrap
-Your score has just gone up by one point
+Your score has just gone up by one
 >thisalt
 WRONG
 
@@ -407,6 +409,7 @@ Score in a scenario: 9 out of 39 total points in the current region, Oyster. Low
 
 ==!1
 >scan
+#notana 'nudge for cans'
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
@@ -443,10 +446,12 @@ Quit playing with your food, already.
 [just-tea].
 
 >eat
+#notana 'nudge for eat'
 Your score has just gone up by one point
 
 ==!1
 >tend
+#notana 'nudge for dent'
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
@@ -575,6 +580,7 @@ You feel like making a big speech about what you've done and what you plan to do
 
 ==!1
 >splain
+by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
 ==t2
@@ -705,8 +711,20 @@ The heaps still look ugly as ever.
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
+==t2
+#nudge for lance
+>clena
+The lance is still itself--you can't figure how to apply the wipes.
+>abstract wipes to lean lane
+>clena
+The lance is still itself--but how to make it neater, now.
+>clean
+WRONG
+>purloin wipes
+
 ==!1
 >clean
+#notana 'nudge for lance'
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
@@ -716,6 +734,7 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 You figure the heaps are at a point where you can't change them for the better.
 #done rejects for lance
 >lanec
+The lance is still itself--and you probably did enough cleaning it."
 It's clean enough. You can't, like, make it sharper or anything.
 
 >score
@@ -833,6 +852,9 @@ It's what it needs to be, you imagine.
 No, that's not quite it. The ruby dulls as if covered by dirt.
 
 >bury
+Your score has just gone up by one
+>undo
+>bury ruby
 Your score has just gone up by one point
 
 ==t2
@@ -853,7 +875,7 @@ by one point
 
 ==t2
 #spechelp for haunter
->hauntre
+>assuaeg
 You're a bit tongue-tied, but that seems close.
 #nudge for howler
 >howlre
@@ -868,6 +890,8 @@ by one point
 Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
 
 >ask haunter about ruby
+#notana
+by one point
 
 >w
 >n
@@ -927,6 +951,7 @@ You don't need to riff on any location names to win the game, unless there's not
 That's close. Something brutal and direct.
 
 >tan
+#notana 'nudge for ant'
 Your score has just gone up by one point
 
 Tenfold Teflon'd Den Loft
@@ -972,10 +997,10 @@ The yapper might alert its cronies if you try anything. Even something not quite
 >score
 Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 39.
 
->prepay yapper
-Your score has just gone up by one point
->undo
 >prepay
+Your score has just gone up by one
+>undo
+>prepay yapper
 Your score has just gone up by one point
 
 ==t2
@@ -1010,14 +1035,14 @@ Your score has just gone up by one point
 You look at the pins. They're in the way, but they don't look particularly sturdy.
 
 >spin
-Your score has just gone up by one point
+Your score has just gone up by one
 >undo
 >spin pins
 Your score has just gone up by one point
 
 ==t2
 #spechelp for d2
->2d
+>redila
 There's something more to do, but that's not quite it.
 
 >redial
