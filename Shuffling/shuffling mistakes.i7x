@@ -326,7 +326,7 @@ chapter undesired underside
 understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a-reading is in underside.
 
 [def=nerd door w]
-understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
+understand "odor" and "rood" as a mistake ("That door's reinforced. [if Esoteric Coteries is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
 
 understand "senors" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in underside.
 
@@ -380,10 +380,10 @@ understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") whe
 
 understand "tar" as a mistake ("That'd be neat, make the wall sticky so you could climb and deal with that [if neon pig is visible]stupid pig[else]opening you made[end if]...but you might get stuck to it, too. Need something clingy but less gooey.") when player is in Elm Train Terminal.
 
-chapter anti-cool location
+chapter Esoteric Coteries
 
 [def=nerd door e]
-understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Anti-Cool Location.
+understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Esoteric Coteries.
 
 chapter bassy abyss
 

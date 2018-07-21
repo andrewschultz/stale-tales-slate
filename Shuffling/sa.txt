@@ -400,7 +400,7 @@ A lot like a sort of ID...
 They can become a SHEATH.
 ?What do I do to the begonias?
 They become a NOISE BAG.
->>Anti-Cool Location
+>>Esoteric Coteries
 ?Is the lit-up tulip important?
 Yes. But you need to show the nerds you're smart enough.
 ?How do I deal with the nerds?
@@ -414,7 +414,7 @@ They kick you out, but you're done here now.
 >>Elm Train Terminal
 ?Can I go east? How?
 You need a light source and to make the way less dangerous.
-The light source is in the Anti-Cool Location, east of the Underside.
+The light source is in the Esoteric Coteries, east of the Underside.
 You also need to shut down the faulty electricity to the east.
 ?What's this neon pig?
 So tacky, better to have nothing there at all.

@@ -27,6 +27,7 @@ launch_outfile = False
 houtfile = "hch_out.txt"
 
 def standard_usage():
+    print("[asdi]* = aftertexts, spechelp, done rejects / i = ignore 'nudmis' files, only look at RBR generators.")
     print("hch.py 1 si e50 = print 50 maximum errors from shuffling (1) ignoring NUDMIS (nudge/miss) output file testing")
     print("hch.py 2 a e50 o = print 50 maximum errors from roiling (2) only the aftertexts (e.g. what they say after) and sends to output")
     exit()

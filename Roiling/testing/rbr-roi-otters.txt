@@ -529,20 +529,6 @@ No, you need a couple more letters... a couple to make a word weak enough to con
 #nudge for enraged
 >enragde
 No, you need a couple more letters... a couple to make a word weak enough to control.
-\\
-#spechelp for imp1
->angriyl
-The imp looks slightly annoyed for a second. You may be on the right track.
-\\
-#spechelp for imp2
->bruteyl
-The imp looks slightly annoyed for a second. You may be on the right track.
-\\
-#spechelp for imp3
->enragedyl
-The imp looks slightly annoyed for a second. You may be on the right track.
-
-==t2
 #spechelp for imp1
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track
@@ -786,7 +772,7 @@ Your score has just gone up by one point
 >read whistle
 You strain your eyes to see that Ed Plye, apparently, made the whistle.
 #spechelp for weltish whistle
->weltish whistel
+>weltish
 Probably best to have the whistle before changing it.
 #spechelp for parrot
 >parrto
@@ -951,14 +937,6 @@ Some art is just out there to troll people. The forces fresco is such. Even if y
 >force
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
 #spechelp for elmer
->asied
-Merle and Elmer stumble off away from you for a bit.
-#spechelp for merle
->honestyl
-Merle and Elmer look askance at each other for a bit.
-
-==!1
-#spechelp for elmer
 >honestyl
 Merle and Elmer stumble off away from you for a bit.
 #spechelp for merle
@@ -1005,7 +983,6 @@ The medals waver noiselessly. Hm, that's not quite it.
 ==t2
 >whistel
 The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
-#spechelp of weltish whistle
 >deepyl
 The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
 >read whistle

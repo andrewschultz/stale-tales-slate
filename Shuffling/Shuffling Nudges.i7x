@@ -354,9 +354,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "optical"	378928642	underside	--	--	"Changing the beam is way out of your league."
 "beam"	212487985	underside	--	--	"Changing the beam is way out of your league."
 "building"	389860542	underside	--	--	"[no-hot]."
-"special"	425546122	underside	--	--	"[if anti-cool is visited]You don't need to perform any tricks, now you've gotten to the Anti-Cool Location[else]That's not the way to get to the special place. You need special ID[end if]."
+"special"	425546122	underside	--	--	"[if Esoteric Coteries is visited]You don't need to perform any tricks, now you've gotten to the Esoteric Coteries[else]That's not the way to get to the special place. You need special ID[end if]."
 "theol"	396364842	underside	--	--	"[no-hot]."
-"metallic"	468805207	--	metallic door	--	"No way. That thing's sturdy. [if anti-cool is visited]Those nerds[else]The people in there[end if] know their stuff."
+"metallic"	468805207	--	metallic door	--	"No way. That thing's sturdy. [if Esoteric Coteries is visited]Those nerds[else]The people in there[end if] know their stuff."
 "tonr"	331693906	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "cue"	251917501	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "etch"	287204011	--	tech etch	--	"The tech-etch is pretty securely, um, etched on."
@@ -441,17 +441,17 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "begonia"	369265465	--	begonias	--	"[if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
 "noise"	412333006	--	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
 "bag"	53206425	--	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
-"anticool"	440722768	anti-cool	--	--	"[loc-rej]."
-"esoteric"	678671013	anti-cool	--	--	"[coterie-no]."
-"coterie"	582397047	anti-cool	--	--	"[coterie-no]."
-"nerd"	303066509	anti-cool	--	--	"[nerd-nah]."
-"nerds"	399340475	anti-cool	--	--	"[nerd-nah]."
-"dorks"	329912613	anti-cool	--	--	"[nnww]."
-"geeks"	437419064	anti-cool	--	--	"[nnww]."
-"dork"	233638647	anti-cool	--	--	"[nnww]."
-"geek"	341145098	anti-cool	--	--	"[nnww]."
-"asknerds"	550735437	anti-cool	--	--	"The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit..."
-"asknerd"	454461471	anti-cool	--	--	"'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
+"anticool"	440722768	Esoteric Coteries	--	--	"[loc-rej]."
+"esoteric"	678671013	Esoteric Coteries	--	--	"[coterie-no]."
+"coterie"	582397047	Esoteric Coteries	--	--	"[coterie-no]."
+"nerd"	303066509	Esoteric Coteries	--	--	"[nerd-nah]."
+"nerds"	399340475	Esoteric Coteries	--	--	"[nerd-nah]."
+"dorks"	329912613	Esoteric Coteries	--	--	"[nnww]."
+"geeks"	437419064	Esoteric Coteries	--	--	"[nnww]."
+"dork"	233638647	Esoteric Coteries	--	--	"[nnww]."
+"geek"	341145098	Esoteric Coteries	--	--	"[nnww]."
+"asknerds"	550735437	Esoteric Coteries	--	--	"The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit..."
+"asknerd"	454461471	Esoteric Coteries	--	--	"'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
 "tulip"	388488469	--	tulip	--	"[if player has tulip]It's handy as is. It gives light. You can't ask for much more[else]The nerds would gang up on you and take it back, if anything worked, which it won't[end if]."
 "tramline"	550217094	terminal	--	--	"[loc-rej]." [start tramline terminal]
 "lairs"	282592272	terminal	--	--	"[fix-rail]."
@@ -873,7 +873,7 @@ to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbe
 to say mits-are: say "The mittens are as comfortable as they're going to be"
 
 this is the no-beats rule:
-	if player is in anti-cool location or player is in Obtains Boastin' Bastion, the rule succeeds;
+	if player is in Esoteric Coteries or player is in Obtains Boastin' Bastion, the rule succeeds;
 	the rule fails;
 
 this is the resin-lala rule:

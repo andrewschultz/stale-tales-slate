@@ -1068,7 +1068,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		if in-i-box, decide yes;
 		decide no;
 	if hintcand is tech etch:
-		if player is in anti-cool or player is in underside, decide yes;
+		if player is in Esoteric Coteries or player is in underside, decide yes;
 		decide no;
 	if hintcand is forest-leaves:
 		if player is in rf or player is in sf, decide yes;
@@ -1351,7 +1351,7 @@ a-reading	"A reading anagrams the drainage, so it gives you a few more clues whe
 soggy love letter	"The love letter introduction clues what the drainage could be."
 can of beer	"The beer can's name clues what the drainage could be."
 arena dig flier	"The flier clues what the drainage should be."
-metallic door	"[if nerds-unwelcome is true]You got through the door, but you're not welcome back. No loss[else if anti-cool is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
+metallic door	"[if nerds-unwelcome is true]You got through the door, but you're not welcome back. No loss[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
 night thing	"You can't kill the night thing on your own. Maybe something equally awful would take care of it?"
 smartest mattress	"[if night thing is in Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
 cruel ulcer	"That cruel ulcer looks like a weak link. If you could throw something in there..."
@@ -1391,7 +1391,6 @@ begonias	"[one of]Two words on the gadget. Something that holds something. [plus
 noise bag	"[if player is in Bile Libe and words are in Bile Libe]OPEN the noise bag to get the words.[else if words are in Bile Libe]The noise bag, if opened, can contain sounds.[else if player is in abyss and beast is in abyss]You can OPEN the noise bag to defeat the beast.[else if player is in abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
 words	"[if player is in abyss]This is the place to change the words[else if begonias are in Fo' Real Florae and heaths are in Fo' Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo' Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
 sword	"[if beast is visible and siren is not visible]Attack the beast[else if beast is visible]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
-soundproofed walls	"Not useful for you but for the nerds, so they can think."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
 torn cue	"It indicates the brocade [if brocade is in Fo' Real Florae]is[else]was[end if] free."
 sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
@@ -1603,7 +1602,7 @@ carry out metros-hinting:
 			if bastion-evac is false, all-say "You need to [if camp is unvisited]see someone up north[else]please the deadbeat[end if] to get an item to replace the neon pig in the opening." instead;
 			try objhinting lost corn instead;
 		if controls are not in op, try objhinting op instead;
-		all-say "You're done here. You can just go east [if tulip is in anti-cool]once you've got light[else if words are in Bile Libe]once you have a weapon[else]for the final confrontation[end if]." instead;
+		all-say "You're done here. You can just go east [if tulip is in Esoteric Coteries]once you've got light[else if words are in Bile Libe]once you have a weapon[else]for the final confrontation[end if]." instead;
 	if location of player is Bassy Abyss:
 		if stickyhanded is false, try objhinting siren instead;
 		if player has sword or player has sheath:
@@ -3396,7 +3395,7 @@ to set-other-default: now cask is not flipped-yet.
 when play begins (this is the initialise anagrams pad and beats rule) :
 	now all rooms in metros are noisy;
 	now Obtains Boastin' Bastion is not noisy;
-	now anti-cool is not noisy;
+	now Esoteric Coteries is not noisy;
 	move beats backdrop to all noisy rooms;
 	repeat through table of pad-stuff:
 		if there is no verify entry:
@@ -4007,7 +4006,7 @@ to say sortie-prep: say "I-A. [if taco is off-stage]Warm Food[else][second custo
 
 to say forest-prep: say "F-A. [if beard is not wearable]Disguise[else][second custom style]GOT DISGUISE[r][end if] F-B. [if shotgun is off-stage]Get and load weapon[else if silver is off-stage]Load weapon[else][second custom style]GOT LOADED WEAPON[r][end if] F-C. [if player is not in frost forts]Find way, d[else]D[end if]efeat an all-ice alliance".
 
-to say metros-prep: say "M-A. [if gardenia is off-stage]Find a flower[else][second custom style]GOT FLOWER[r][end if] M-B. [if tulip is in anti-cool]Find a light source[else][second custom style]GOT LIT-UP TULIP[r][end if] M-C. [if controls are not in op]Find a way underground[else][second custom style]REPAIRED RAILS[r][end if]"
+to say metros-prep: say "M-A. [if gardenia is off-stage]Find a flower[else][second custom style]GOT FLOWER[r][end if] M-B. [if tulip is in Esoteric Coteries]Find a light source[else][second custom style]GOT LIT-UP TULIP[r][end if] M-C. [if controls are not in op]Find a way underground[else][second custom style]REPAIRED RAILS[r][end if]"
 
 check entering the getaway gateway:
 	if gateman is off-stage:
@@ -4338,7 +4337,7 @@ rule for supplying a missing noun (this is the scan the location if you can rule
 		if player is in hotspot and red bull is in hotspot:
 			now noun is red bull;
 			continue the action;
-		if player is in anti-cool and player does not have tulip:
+		if player is in Esoteric Coteries and player does not have tulip:
 			now noun is tulip;
 			continue the action;
 		if player is in moor and anapest is in moor:
@@ -4391,7 +4390,7 @@ check examining the tagged gadget (this is the see if gadget clues locations rul
 	if can-scan-air:
 		read-gadget;
 		the rule succeeds;
-	if player is in anti-cool and nerds are in anti-cool, try scaning nerds instead;
+	if player is in Esoteric Coteries and nerds are in Esoteric Coteries, try scaning nerds instead;
 	if player is in Esoteric Coteries:
 		if player has tulip, say "The gadget shows nothing now." instead;
 		say "You scan the area, wondering what you could ask nerds that'd get that tulip. You see [asknerds]." instead;
@@ -8553,7 +8552,7 @@ chapter Esoteric Coteries
 
 Esoteric Coteries are a room in Metros.
 
-after printing the locale description for Anti-Cool when Anti-Cool is unvisited:
+after printing the locale description for Esoteric Coteries when Esoteric Coteries is unvisited:
 	reg-inc;
 	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.";
 	continue the action;
