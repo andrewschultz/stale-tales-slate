@@ -1255,7 +1255,7 @@ What is the location's name?
 PLAINS.
 You can do something with that. It's a bit slangy, but...
 ...you can SPLAIN your goals and dreams and wishes.
->>SHADIER AIRSHED
+>>SHUTTLE HUTLETS
 ?What do I do with the tubs?
 Maybe there is something inside.
 You need to break them open.
@@ -1338,7 +1338,7 @@ ENLARGE it.
 >>DOUREST DETOURS
 ?I skipped over this! Is it a fake room or clue?
 No, it's a small side quest.
-You need something from the Shadier Airshed.
+You need something from the Shuttle Hutlets.
 The lance. If you have it, the game will alert you.
 ?What do I do with the ant?
 It should be easy. There are only five possibilities.

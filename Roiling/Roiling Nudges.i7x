@@ -532,7 +532,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "shut"	341772090	plains	--	--	"[hutzy]."
 "hut"	245498124	plains	--	--	"[hutzy]."
 "bonk"	214612168	--	knob	--	"That isn't quite the right way to hit the knob."
-"airshed"	414895930	Shadier Airshed	--	--	"[locname]." [SHADIER AIRSHED]
+"hutlet"	530228090	Shuttle Hutlets	--	--	"[locname]." [SHUTTLE HUTLETS]
+"hutlets"	626502056	Shuttle Hutlets	--	--	"[locname]."
 "heap"	248742185	--	heaps	--	"[if heaps are reflexed]You don't need or want to futz with one heap to make things super-extra-perfect.[else]Change ALL the heaps![end if]"
 "ubt"	226634730	--	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	--	tubs	--	"That didn't make anything go boom."
@@ -1617,7 +1618,7 @@ to say polyp-no: say "You're a bit worried anything you did to unstabilize the p
 
 to say crate-frag: say "[if crate is reflexed]Not worth messing with the fragments any more[else]They're fragments of a crate--this may or may not help[end if]"
 
-to say hutzy: say "[if Shadier Airshed is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the pans[end if]"
+to say hutzy: say "[if Shuttle Hutlets is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the pans[end if]"
 
 to say i-com:
 	say "The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead"

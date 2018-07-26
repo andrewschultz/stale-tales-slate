@@ -3818,7 +3818,6 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Tingly's Styling"	false
 "Tired? Zoom! Tom Dozier Motorized!"	true
 "TiredCo's Cot Rides"	false
-"Titfer Fitter"	false
 "To Fix it: FOX!"	true
 "To Score: Cooter's StoreCo!"	true
 "Tobie's So-Be-It Boites"	false []

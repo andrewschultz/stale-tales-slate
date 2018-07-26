@@ -527,9 +527,9 @@ understand "thus" as a mistake ("Your inactive word does nothing to the huts[if 
 
 understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
 
-chapter shadier airshed
+chapter Shuttle Hutlets
 
-understand "auth" as a mistake ("Sorry! I'm too busy to cameo in my own game at the moment.") when player is in Shadier Airshed.
+understand "auth" as a mistake ("Sorry! I'm too busy to cameo in my own game at the moment.") when player is in Shuttle Hutlets.
 
 understand "bury [text]" as a mistake ("Nothing worth burying.") when player has digger and ruby is off-stage.
 
@@ -543,7 +543,7 @@ understand "sweat [text]" as a mistake ("Don't sweat the extra words. Just sweat
 
 understand "tawse" as a mistake ("You don't need that sort of weapon.") when waste is in location of player.
 
-understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.") when player is in Shadier Airshed.
+understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.") when player is in Shuttle Hutlets.
 
 chapter horned hedron
 

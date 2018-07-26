@@ -6186,13 +6186,13 @@ to decide which thing is oyster-item:
 		if knob is reflexive, decide on knob;
 		if pans are reflexive, decide on pans;
 	if player is in Hardest Trashed Dearths, decide on eeks;
-	if player is in Shadier Airshed:
-		if tubs are in Shadier Airshed, decide on tubs;
+	if player is in Shuttle Hutlets:
+		if tubs are in Shuttle Hutlets, decide on tubs;
 		if prod is visible, decide on prod;
 		if aunt-tuna-cross is false or wipes are not in Lean Lane: [hint the side quest ONLY IF you can still get the wipes]
-			if waste is in Shadier Airshed, decide on waste;
-			if lance is not cleaned and lance is in Shadier Airshed, decide on lance;
-			if heaps are reflexive and heaps are in Shadier Airshed, decide on heaps;
+			if waste is in Shuttle Hutlets, decide on waste;
+			if lance is not cleaned and lance is in Shuttle Hutlets, decide on lance;
+			if heaps are reflexive and heaps are in Shuttle Hutlets, decide on heaps;
 	if player is in Lean Lane:
 		if tea tray is visible, decide on tea tray;
 		if trout is reflexive, decide on trout;
@@ -6612,7 +6612,7 @@ after reading a command:
 					reject the player's command;
 				say "You already took care of [go-region of portdest entry].";
 				reject the player's command;
-	if the player is in Shadier Airshed and digger is off-stage:
+	if the player is in Shuttle Hutlets and digger is off-stage:
 		if the player's command includes "shovel":
 			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
 			reject the player's command;
@@ -7254,7 +7254,7 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is mount: [start presto]
 		say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead;
 	if noun is crate: [start OYSTER]
-		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shadier Airshed is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
+		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shuttle Hutlets is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
 	if noun is huts: [end OYSTER]
 		say "They're too tall. No good handholds. The span pans guide the only way in." instead;
 	if noun is gaol: [towers]
@@ -9440,12 +9440,12 @@ after fliptoing a-p:
 	continue the action;
 
 after fliptoing lance:
-	now heaps are in Shadier Airshed;
+	now heaps are in Shuttle Hutlets;
 	now waste is in lalaland;
 	continue the action;
 
 after fliptoing prod:
-	now waste is in Shadier Airshed;
+	now waste is in Shuttle Hutlets;
 	continue the action;
 
 after fliptoing ltb:
@@ -12392,6 +12392,10 @@ instead of doing something with the megaton magneto montage:
 	say "The magneto-montage's not good for much besides looking at. But it's a useful guide.";
 
 description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
+
+after examining montage for the first time:
+	say "It was created by Tom Egan. Of course. Can't say he was not game.";
+	continue the action;
 
 to say engrav-note:
 	say "[if engravings are examined]Those engravings are at the bottom, too[else]You note engravings craftily hidden below all this[end if]"
@@ -17105,7 +17109,7 @@ carry out spilling:
 		say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead;
 	if oi is the player:
 		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
-	if player is in Shadier Airshed:
+	if player is in Shuttle Hutlets:
 		if oi is waste or oi is heaps or oi is lance:
 			say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
 			if the player direct-consents:
@@ -17397,8 +17401,7 @@ check scaning when player is in freight:
 		say "You already scanned around here. You saw RYYR, probably from the pale plea." instead;
 	say "The crays are till slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.";
 	now scray-scan is true;
-	if noun is not plea:
-		try scaning plea instead;
+	if noun is not plea, try scaning plea instead;
 
 instead of doing something with pale plea:
 	if action is procedural, continue the action;
@@ -17413,8 +17416,7 @@ understand the command "leap" as something new.
 understand "leap" as leaping.
 
 carry out leaping:
-	if location of player is not fighter freight:
-		try jumping instead;
+	if location of player is not fighter freight, try jumping instead;
 	try fliptoing pale plea instead;
 
 book Anger Range
@@ -17616,7 +17618,7 @@ carry out unearthing:
 		preef pre-haun;
 		the rule succeeds;
 	if player does not have rigged digger:
-		say "You need something to dig here[if Shadier Airshed is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
+		say "You need something to dig here[if Shuttle Hutlets is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
 		preef pre-haun;
 		the rule succeeds;
 	if noun is haunter:
@@ -17774,7 +17776,7 @@ check going inside when player is in Lapsin' Plains:
 		say "The knob seems stuck--and attached to the pans." instead;
 	if span pans are in Lapsin' Plains:
 		say "The span pans still block your way, but it should be a breeze to get by them. No that's not quite it. A cinch? No..." instead;
-	if Shadier Airshed is unvisited:
+	if Shuttle Hutlets is unvisited:
 		say "You've made it past the pans but have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
 		say "You go back into a hut shaped like Utah."
@@ -18584,9 +18586,9 @@ to say mr-miss:
 to say heepy:
 	say "[if waste is visible]waste lying around, though you probably don't need to expend the physical effort to clean it unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
 
-Shadier Airshed is inside of Lapsin' Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are visible or waste is visible]. You see [heepy][end if]. You can only go back outside."
+Shuttle Hutlets is inside of Lapsin' Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are visible or waste is visible]. You see [heepy][end if]. You can only go back outside."
 
-understand "hut" as Shadier Airshed.
+understand "hut" as Shuttle Hutlets.
 
 to say uaah:
 	say "[one of]uh, at[or]at, uh,[in random order] a hut".
@@ -18605,7 +18607,7 @@ check dropping prod:
 		say "That's not the right way to abuse the prod to open it." instead;
 	try fliptoing rigged digger instead; [eg flipping the prod to the digger]
 
-the tubs are a plural-named thing in Shadier Airshed. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
+the tubs are a plural-named thing in Shuttle Hutlets. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
 
 check taking tubs:
 	say "Way too bulky. But actually not as heavy as you thought." instead;
@@ -18704,7 +18706,7 @@ carry out busting:
 
 after fliptoing waste (this is the tubs give prod and waste rule):
 	now player has prod;
-	now heaps are in Shadier Airshed;
+	now heaps are in Shuttle Hutlets;
 	set the pronoun them to heaps;
 	set the pronoun it to prod;
 	continue the action;
@@ -18827,8 +18829,8 @@ carry out burying:
 check fliptoing thin hint:
 	if player does not have rigged digger:
 		if player has prod:
-			say "Your prod from the Shadier Airshed should be able to bury stuff if you tinker right. Jar it the right way." instead;
-		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shadier Airshed is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
+			say "Your prod from the Shuttle Hutlets should be able to bury stuff if you tinker right. Jar it the right way." instead;
+		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shuttle Hutlets is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 
 book Horned Hedron
 
@@ -26051,7 +26053,7 @@ check objhinting old giant:
 	say "[bug-report]" instead;
 
 to say in-hovels:
-	say "[if player has lance]--wait, you already solved the wipes[else if player is in Shadier Airshed and lance is off-stage] that might be buried under here[else if player is in Shadier Airshed] like that lance, with the right verb[else] in a dingier area than this[end if]";
+	say "[if player has lance]--wait, you already solved the wipes[else if player is in Shuttle Hutlets and lance is off-stage] that might be buried under here[else if player is in Shuttle Hutlets] like that lance, with the right verb[else] in a dingier area than this[end if]";
 
 to say up-to-l3:
 	unless droll dollar is off-stage:
@@ -26720,7 +26722,7 @@ spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
 
 to say name-the-lance:
-	say "[if lance is off-stage]You haven't found it yet, but you probably will when you see it[else]The lance in the Shadier Airshed[end if]"
+	say "[if lance is off-stage]You haven't found it yet, but you probably will when you see it[else]The lance in the Shuttle Hutlets[end if]"
 
 to say lance-hints:
 	if player does not have lance:
@@ -27511,7 +27513,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";
 		if cans are not in lalaland, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
 		if dent is not in lalaland, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
-		if heaps are reflexive and heaps are in Shadier Airshed, say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
+		if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
 		if wipes are on raw red drawer:
 			say "[2dmiss of myreg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
 		else if waste is not in lalaland:
@@ -27730,7 +27732,7 @@ index map with Hardest Trashed Dearths mapped east of Lean Lane.
 index map with tenfold mapped north of horned hedron.
 index map with Dourest Detours mapped east of tenfold.
 index map with end den mapped east of Dourest Detours.
-index map with Shadier Airshed mapped east of end den.
+index map with Shuttle Hutlets mapped east of end den.
 
 [start otters]
 
