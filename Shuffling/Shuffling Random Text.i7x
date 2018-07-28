@@ -4413,8 +4413,7 @@ this is the talk-in-bastion rule:
 	the rule fails;
 
 this is the in-mensa rule:
-	if player is in anti-cool location:
-		if current action is not objasking about and current action is not objasking generically, the rule succeeds;
+	if player is in Esoteric Coteries and current action is not objasking about and current action is not objasking generically, the rule succeeds;
 	the rule fails;
 
 section resort rules

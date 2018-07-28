@@ -10958,7 +10958,7 @@ check going inside in dusty study:
 
 section girding ridging
 
-the girding ridging is bounding scenery in Farming Framing. description is "It blocks your way out, but on the other hand, it blocks a mob's way in, which is more important right now."
+the girding ridging is bounding scenery in Farming Framing. "It blocks your way out, but on the other hand, it blocks a mob's way in, which is more important right now."
 
 instead of doing something with girding ridging:
 	if action is procedural, continue the action;
@@ -14960,13 +14960,14 @@ book Dirge Ridge
 
 Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "It's sort of sad here, leaving you thinking and saying 'Erg ... I'd ...'. A vile veil covers any way except back north."
 
-the vile veil is bounding scenery in Dirge Ridge. it is undesc.
+the vile veil is bounding scenery in Dirge Ridge. description is "It's so horrible to even look at, and you realize whatever it is protecting you from must be even worse."
 
 after looking in dirge ridge:
 	set the pronoun it to vile veil;
 	continue the action;
 
 instead of doing something with vile veil:
+	if action is procedural, continue the action;
 	say "The veil's oppressive to even think about, but it also protects you from falling off. You don't need to do anything with it."
 
 check going north in Dirge Ridge:
@@ -18578,7 +18579,7 @@ check opening the span pans:
 	if knob is reflexive:
 		say "It's jammed and there's no key. Or keyhole under the knob[one of]. And no, there's no mat to look under anywhere for a key. Just FYI[or][stopping]." instead;
 
-book Uh at a Hut
+book Shuttle Hutlets
 
 to say mr-miss:
 	say "[if player is male]Mr.[run paragraph on][else]Miss[end if]";
@@ -18588,7 +18589,7 @@ to say heepy:
 
 Shuttle Hutlets is inside of Lapsin' Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are visible or waste is visible]. You see [heepy][end if]. You can only go back outside."
 
-understand "hut" as Shuttle Hutlets.
+understand "hut" and "huts" and "hutlet" as Shuttle Hutlets.
 
 to say uaah:
 	say "[one of]uh, at[or]at, uh,[in random order] a hut".
@@ -18671,6 +18672,14 @@ a-text of lance is "RRYYR". b-text of lance is "RRYYR". parse-text of lance is "
 
 instead of taking lance:
 	say "It's too icky."
+
+chapter shadier airshed
+
+the shadier airshed is bounding scenery in Shuttle Hutlets. "The shadier airshed surrounds about half of the shuttle hutlets. It doesn't look like there's any way in, and even if there were, you don't know what you'd do there.".
+
+instead of doing something with shadier airshed:
+	if action is procedural, continue the action;
+	say "You can't, and don't need to, do anything with the shadier airshed."
 
 chapter shapeing
 
@@ -19529,7 +19538,7 @@ for printing a locale paragraph about a thing (called nongua) in topside deposit
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
-the fire torn frontier is bounding scenery in Topside Deposit. description is "It's pretty rough. You don't know what's beyond it, but it can't be anything useful."
+the fire torn frontier is bounding scenery in Topside Deposit. "It's pretty rough. You don't know what's beyond it, but it can't be anything useful."
 
 instead of doing something with fire torn frontier:
 	if action is procedural, continue the action;
@@ -20663,16 +20672,13 @@ a-text of eastern shore is "RYYRYRR". b-text of eastern shore is "RYYRGRR". pars
 every turn when player is in rawest waters:
 	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
 
-the raspy spray is bounding scenery in rawest waters. the spray is undesc.
+the raspy spray is bounding scenery in rawest waters. description is "Well, you don't have much time to look at it in detail. You'd just like to get to one of the shores."
 
-does the player mean drinking the spray:
-	it is very likely.
+does the player mean drinking the spray: it is very likely.
 
-instead of doing something with spray:
-	if current action is drinking:
-		say "You'd hate the taste of the sips." instead;
-	if current action is xraying:
-		continue the action;
+instead of doing something with raspy spray:
+	if current action is drinking, say "You'd hate the taste of the sips." instead;
+	if current action is procedural, continue the action;
 	say "You need to worry about getting out of the spray."
 
 chapter a bot boat

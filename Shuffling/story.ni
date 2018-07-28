@@ -7672,7 +7672,7 @@ The sensor is scenery in undesired underside. description of the sensor is "It h
 
 check scaning sensor: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead.
 
-to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteric Coteries are visited]guard the tulip[else]want to see[end if]
+to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteric Coteries are visited]guard the tulip[else]want to see[end if]"
 
 understand "senser" as sensor.
 
@@ -8333,9 +8333,7 @@ the torn cue is scenery in Fo' Real Florae.
 
 description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
 
-the cornute counter is bounding scenery in Fo' Real Florae.
-
-description of cornute counter is "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. A torn cue is written into the counter, next to a brocade[else]."
+the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. A torn cue is written into the counter, next to a brocade[else]."
 
 the barcode is a thing. understand "code" and "bar" as barcode when barcode is visible.
 
