@@ -10530,10 +10530,7 @@ to show-bluable:
 	if ever-switched is false:
 		say "[line break]Wow! That's handy! The switch shows you which items identifiably change definability!";
 		now ever-switched is true;
-	if ever-blur was false and ever-blur is true:
-		say "[line break]You'd guess the blurry stuff clues something more important.";
-	if ever-blur was false and ever-blur is true:
-		say "[line break]Perhaps the blurry stuff is fully optional.";
+	if ever-blur was false and ever-blur is true, say "[line break]You'd guess the blurry stuff clues something less critical.";
 	d "[list of bluable things].";
 
 ever-blur is a truth state that varies.
@@ -10568,15 +10565,14 @@ to say bluable-list:
 
 definition: a thing (called lp) is llpish-plus:
 	if lp is llpish, yes;
-	if lp is ghoul hat or lp is p-2:
-		if eels are reflexed:
-			decide yes;
-	if lp is eels or lp is sea cube:
-		if p-2 is in lalaland:
-			decide yes;
+	if lp is lobster and me arts are in lalaland, decide yes; [troves]
+	if lp is me arts and lobster us in lalaland, decide yes;
 	if lp is praise and rivets are reflexed, yes;
 	if lp is rivets and praise spirea is reflexed, yes;
-	if lp is merle or lp is elmer, yes;
+	if lp is ghoul hat or lp is p-2: [otters]
+		if eels are reflexed, decide yes;
+	if lp is eels or lp is sea cube:
+		if p-2 is in lalaland, decide yes;
 	decide no;
 
 definition: a thing (called mbbl) is blurry:
@@ -13187,7 +13183,7 @@ instead of taking Bortles Lobster:
 
 section ME ARTS
 
-The ME ARTS is vanishing scenery in Boredom Bedroom. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if ME ARTS is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
+The ME ARTS are plural-named vanishing scenery in Boredom Bedroom. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if ME ARTS is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
 
 a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
 
