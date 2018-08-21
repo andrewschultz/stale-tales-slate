@@ -60,6 +60,8 @@ include Roiling Nudges by Andrew Schultz.
 
 include Roiling Mistakes by Andrew Schultz.
 
+include Roiling Tables by Andrew Schultz.
+
 include Reactable Quips by Michael Martin.
 
 include Quip-based Conversation by Michael Martin. [his extensions must be listed in this order]
@@ -4128,7 +4130,7 @@ last-hash is a number that varies.
 
 section answer
 
-[this is a small hack to allow ANSWER SIDE DOOR]
+[this is a small hack to allow ANSWER LIAISON]
 
 understand the command "answer [text]" as something new.
 
@@ -4141,11 +4143,11 @@ understand "answer [something]" as ansobjing.
 
 ansobjing is an action applying to one thing.
 
-does the player mean ansobjing the side door when Gunter is off-stage: it is very likely.
+does the player mean ansobjing the isolani liaison when Gunter is off-stage: it is very likely.
 
 check ansobjing:
 	if noun is a person, say "Try to ASK a person about something instead." instead;
-	if noun is side door or noun is span pans, try opening noun instead;
+	if noun is isolani liaison or noun is span pans, try opening noun instead;
 	say "That's not something animate." instead;
 
 chapter status bar and scoring
@@ -5183,12 +5185,9 @@ carry out means-hinting:
 			now latches-warn is true;
 		try objhinting latches instead;
 	if location of player is study:
-		if Gunter is in study:
-			say "Talk to Gunter. He provides back story." instead;
-		if Gunter is off-stage:
-			try objhinting semi-secret side door instead;
-		if player does not have lamp:
-			try objhinting palm instead;
+		if Gunter is in study, say "Talk to Gunter. He provides back story." instead;
+		if Gunter is off-stage, try objhinting isolani liaison instead;
+		if player does not have lamp, try objhinting palm instead;
 		if settler-hint-yet is false:
 			if tables are in study and niche is in study and t-b are in study:
 				all-say "You have three ways out of the study. You may wish to HINT SETTLER or HINT DIORAMA to figure what to do with them.";
@@ -5205,20 +5204,14 @@ carry out means-hinting:
 		all-say "[bug-report]";
 		the rule succeeds;
 	if location of player is Farming Framing:
-		if sitar is visible:
-			try objhinting the sitar instead;
-		if stair is visible:
-			try objhinting the stair instead;
+		if sitar is visible, try objhinting the sitar instead;
+		if stair is visible, try objhinting the stair instead;
 		all-say "[bug-report]" instead;
 	if player is in cavern:
-		if plates are in cavern:
-			try objhinting plates instead;
-		if plaster is in cavern:
-			try objhinting plaster instead;
-		if act-ruin curtain is visible:
-			try objhinting act-ruin curtain instead;
-		if player has latches:
-			try objhinting latches instead;
+		if plates are in cavern, try objhinting plates instead;
+		if plaster is in cavern, try objhinting plaster instead;
+		if act-ruin curtain is visible, try objhinting act-ruin curtain instead;
+		if player has latches, try objhinting latches instead;
 	if player has settler and settler is not examined, say "You should probably examine the settler." instead;
 	all-say "Nothing left to do here. You should be able to get going to the next part."
 
@@ -8334,7 +8327,7 @@ to say tables-beams:
 		say "[if tables are in study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if]";
 		say ", and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
 
-Dusty Study is an innie room in Means Manse. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+Dusty Study is an innie room in Means Manse. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
 
 after printing the locale description for Dusty Study when Dusty Study is unvisited:
 	ital-say "you may wish to type ABOUT or VERBS to see information about the game and what words work best.";
@@ -8699,10 +8692,6 @@ chapter isolani liaison
 
 the isolani liaison is scenery in dusty study. "It's not much TO examine. Well, maybe its wires and circuits are, but all you see is a thing that lets you communicate with the outside world you're walled off from. From which you're walled off."
 
-chapter side door
-
-the semi-secret side door is scenery in Dusty Study.
-
 answer-warn is a truth state that varies.
 
 check answering:
@@ -8712,11 +8701,7 @@ check answering:
 	else:
 		try asking noun to try taking inventory instead;
 
-does the player mean opening side door: it is very likely.
-
-description of semi-secret side door is "[one of]Oh, man, I can't really tell you. It's yours, and it's a secret, and I would've had to, like, violate your property rights to be able to describe it better than you could. Okay, i[or]I[stopping]t's an innocuous door that looks like boring aluminum siding from the outside."
-
-check opening side door:
+check opening isolani liaison:
 	if stuff-found < 3:
 		say "You don't feel like going out without a really good reason." instead;
 	if urgent Gunter is off-stage:
@@ -8897,12 +8882,11 @@ every turn when location of player is dusty study and stuff-found >= 3 (this is 
 		increment okay-thats-it;
 		if okay-thats-it is 6:
 			say "You're sick of the knocking, so you just answer the door, already.";
-			try opening side door instead;
-		say "[one of]Whoah! Bangish bashing at the door[it-door]![or]The bangish bashing continues.[stopping]";
+			try opening isolani liaison instead;
+		say "[one of]Whoah! Bangish bashing at the isolani liaison[it-liaison]![or]The bangish bashing continues.[stopping]";
 		now knockage is true;
 
-to say it-door:
-	set the pronoun it to the side door;
+to say it-liaison: set the pronoun it to the isolani liaison;
 
 section gunter dialogue
 
@@ -10068,7 +10052,7 @@ to say bluable-list:
 definition: a thing (called lp) is llpish-plus:
 	if lp is llpish, yes;
 	if lp is lobster and me arts are in lalaland, decide yes; [troves]
-	if lp is me arts and lobster us in lalaland, decide yes;
+	if lp is me arts and lobster is in lalaland, decide yes;
 	if lp is praise and rivets are reflexed, yes;
 	if lp is rivets and praise spirea is reflexed, yes;
 	if lp is ghoul hat or lp is p-2: [otters]
@@ -12174,6 +12158,12 @@ the Sheol Holes are plural-named scenery in Harms Marsh. "You can't nail down wh
 
 understand "hole" and "sheol hole" as sheol holes when player is in harms marsh.
 
+section stripey pyrites
+
+the stripey pyrites are useless scenery. "The pyrites look pretty, but you're not here for a treasure hunt. You're here to find No-Gal Logan."
+
+check taking stripey pyrites: say "Take a hint from them, where they may lead you." instead;
+
 chapter darkness
 
 the darkness is vanishing scenery in Harms Marsh. "It is better to create light and move forward than cast about in the darkness."
@@ -14035,9 +14025,12 @@ Instead of doing something with the serial number:
 
 description of serial number is "B09140715."
 
+gun-load-tried is a truth state that varies.
+
 check inserting it into (this is the dart-popgun rule):
 	if second noun is popgun and boing is reflexive:
 		if noun is dart:
+			now gun-load-tried is true;
 			say "It seems like it should fit, but it doesn't. You can't quite compress the boing mechanism right, but if you had a moment of insight, you could." instead;
 		else:
 			say "That's not the right shape to fit in the gun to fire. Anyway, the boing mechanism looks broken." instead;
@@ -19191,7 +19184,7 @@ check unlocking:
 			say "The prison doesn't seem like something you can unlock--well, not with a key. 'Luck...done,' you mumble as you try. 'Done, luck.' You see red. There's nothing that resembles a keyhole. That weird fissure, maybe..." instead;
 	if noun is drab yoke:
 		say "It doesn't seem to have a key or anything. But whatever's inside it might." instead;
-	if noun is side door:
+	if noun is isolani liaison:
 		say "[if Gunter is off-stage]Just open it instead[else]With what's outside? Bad idea[end if]." instead;
 	if noun is span pans:
 		say "There's no keyhole in the span pans." instead;
@@ -19467,7 +19460,7 @@ does the player mean drinking the spray: it is very likely.
 
 instead of doing something with raspy spray:
 	if current action is drinking, say "You'd hate the taste of the sips." instead;
-	if current action is procedural, continue the action;
+	if action is procedural, continue the action;
 	say "You need to worry about getting out of the spray."
 
 chapter a bot boat
@@ -25339,7 +25332,7 @@ this is the troves-alt rule:
 this is the presto-alt rule:
 	say "[eqls]PRESTO[line break][2da]you could've said [if phooeyed is true]POOH instead of PHOOEY[else]PHOOEY instead of POOH[end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
 	say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out Nowt Town, but for fewer points[end if].";
-	say "[2da][if h-n-k is true]SYKE[else]GOSH[end if] was another way around the hogs.";
+	say "[2da][if hogs-not-keys is true]SYKE[else]GOSH[end if] was another way around the hogs.";
 	say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
 	say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
 
@@ -25861,7 +25854,7 @@ carry out chating:
 	repeat with ram running through ramabits:
 		now ram is ncscanned;
 		now ram is cscanned;
-	try opening side door;
+	try opening isolani liaison;
 	now player has whistle;
 	now adjsolve is 4;
 	now nounsolve is 4;

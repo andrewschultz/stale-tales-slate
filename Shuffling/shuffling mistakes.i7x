@@ -334,6 +334,8 @@ understand "snores" as a mistake ("Any noise would be better than the beats, but
 
 chapter Roarings Garrison
 
+understand "isonome" as a mistake ("The noisome moonies pretend to be all about nature, but as for actually understanding science? Pfft.") when player is in Roarings Garrison.
+
 understand "smitten" as a mistake ("No matter how hard you try to convince yourself they[are-were] useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.") when player has Velcro.
 
 understand "stent" as a mistake ("Medical procedures aren't necessary here. The noise is too distracting anyway.") when player is in Roarings Garrison.

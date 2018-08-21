@@ -221,7 +221,7 @@ keycar	keycar	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the k
 trendies	trendies	false	675249448	--	"nerdiest"	"nerdiest"	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
-mended mini denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
+mended mini denim	Ã‰clairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of Ã©clairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the Ã©clairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[agnostic] snaps further to attention, even more eager than before!"
@@ -578,11 +578,6 @@ to say bored-robed:
 
 to say logan-hi:
 	say "'No-Gal Logan. Serial Sailer. Here's our selves-vessel. Not quite the HMS SMH.'[paragraph break]'Hooray...or ahoy?' you say, confused.[paragraph break]But the sail ails where the stripe would be above ground. You sort of think you can see a reddish haze, or maybe it's your imagination. 'Now to hit WIN...where's that button? Hmph, won't let me cross. It's up to you. You seem like a trireme meriter. You'll find the hit win button Ben hid. Did it so well, made sure we didn't use it before we need to. You'll reach the beyond. One way now. Aye,' says No-Gal Logan. 'The end! Boy!'[paragraph break]You see him nod bye as he jumps over. 'Logan!' you cry. 'No lag!' he yells back. Then 'St. Olaf!' He floats, so flat, leaving you for the last of...he cries, 'Harbor!' and you cry 'Rah, Bro!' Then you write down what No-Gal said about the button.";
-
-the stripey pyrites are useless scenery. "The pyrites look pretty, but you're not here for a treasure hunt. You're here to find No-Gal Logan."
-
-check taking stripey pyrites:
-	say "Take a hint from them, where they may lead you." instead;
 
 after fliptoing un-road:
 	now stripey pyrites are in Harms Marsh;
@@ -1435,7 +1430,7 @@ pen	"Not much you can do with a pen other than write."
 palm	"[one of]Well, you need a light source, but a palm [b]absorbs[r] light.[plus][or]It wouldn't be bright to stumble into the palm...[plus][or]...but changing the palm would be.[plus][or]If you wait around, you get some hints of what to do with the palm. Note the purposefully bad spelling.[or]One four-letter shuffling of PALM is indicated. Hopefully.[or]You can change the palm to a LAMP by just saying so.[minus][cycling]"
 lamp	"The lamp will last as long as you need it to."
 yourself	"[one of]You have the same power you had in Shuffling Around.[plus][or][if Gunter is off-stage]Try opening the door and having a chat. You'll see some, err, patterns.[else]Gunter's chat contained a good many things.[end if][plus][or]You had the ability to flip objects into anagrams of each other. This game shows a different side to that power.[minus][cycling]"
-semi-secret side door	"[if Gunter is off-stage]You can and should OPEN the door.[else]There's nobody outside the door you wants to see. You'll want another exit.[end if]"
+isolani liaison	"[if Gunter is off-stage]You can and should OPEN the door.[else]There's nobody outside the door you wants to see. You'll want another exit.[end if]"
 t-b	"[one of]The ten beams guard something downstairs. What?[plus][or]The number of beams is important.[plus][or]What's a common downstairs place in any house?[plus][or]The beams guard a BASEMENT.[minus][cycling]"
 tables	"[one of]The tables seem out of place in such a posh mansion.[plus][or]What's more posh than tables?[plus][or]The tables can be a STABLE.[minus][cycling]"
 chimney	"You can CLIMB the chimney or go up it."
