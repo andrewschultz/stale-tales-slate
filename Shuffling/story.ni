@@ -296,27 +296,35 @@ section compiler adjust constant section
 
 [This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in]
 
-use MAX_STATIC_DATA of 300000.
+use MAX_STATIC_DATA of 280000.
 
-use MAX_NUM_STATIC_STRINGS of 21000.
+use MAX_NUM_STATIC_STRINGS of 20000.
 
-use MAX_ACTIONS of 290.
+use MAX_ACTIONS of 250.
 
-use MAX_VERBS of 410.
+use MAX_VERBS of 420. [-40 from debug]
 
 use MAX_VERBSPACE of 4600.
 
 use MAX_SYMBOLS of 33000.
 
-use MAX_PROP_TABLE_SIZE of 240000.
+use MAX_PROP_TABLE_SIZE of 220000.
 
 section compiler adjust constant section - not for release
 
-use MAX_VERBS of 450.
+use MAX_ACTIONS of 290.
+
+use MAX_VERBS of 460.
 
 use MAX_VERBSPACE of 4800.
 
 use MAX_SYMBOLS of 34000.
+
+use MAX_PROP_TABLE_SIZE of 240000.
+
+use MAX_STATIC_DATA of 300000.
+
+use MAX_NUM_STATIC_STRINGS of 21000.
 
 section about the player
 
@@ -5708,7 +5716,9 @@ to say gad: say "Your gadget's not near anything, but it's registering ".
 
 chapter Kitchen
 
-Kitchen is north of Trap Part. Kitchen is in Sortie.
+Kitchen is north of Trap Part. Kitchen is in Sortie. description is "This is a kitchen, though it's a bit bare. A grief'd fridge sits to the side. [if number of moot pregredients is 0]A to-scale red inn looks like where you prepare food[else]The centerpiece is a red inn, or a model of one, which has lots of non-food elements[end if]. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
+
+check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
 
 after choosing notable locale objects when player is in kitchen:
 	if straw is in kitchen and straw is not enclosed by player:
@@ -5716,14 +5726,14 @@ after choosing notable locale objects when player is in kitchen:
 
 an ingredient is a kind of thing. a pregredient is a kind of thing.
 
-for printing a locale paragraph about an pregredient (called xyzyx) when player is in kitchen:
+for printing a locale paragraph about a pregredient (called xyzyx) when player is in kitchen:
 	if xyzyx is not mentioned:
-		say "There's [if number of visible pregredients is 1]one more thing[else if number of visible ingredients > 0]some other stuff[else][one of]a bunch of[or]still[stopping] stuff[end if] that doesn't quite belong in a kitchen, here: [a list of pregredients in kitchen].[paragraph break]";
+		say "On top of the Red Inn, there's [if number of visible pregredients is 1]one more thing[else if number of visible ingredients > 0]some other stuff[else][one of]a bunch of[or]still[stopping] stuff[end if] that doesn't quite belong in a kitchen, here: [a list of pregredients in kitchen].[paragraph break]";
 		now all ingredients are mentioned;
 
 for printing a locale paragraph about an ingredient (called xyzyx) when player is in kitchen:
 	if xyzyx is not mentioned:
-		say "[if number of visible pregredients is 0]You've gotten rid of the kitschy stuff, and there's some food left:[else]So far, you've rustled up[end if] [a list of ingredients in kitchen].[paragraph break]";
+		say "[if number of visible pregredients > 0]Also, t[else]T[end if]he Red Inn holds some actual food you rustled: [a list of ingredients in kitchen].[paragraph break]";
 		now all ingredients are mentioned;
 
 check taking an ingredient: [?? put steak on saltine before/after on tortilla]
@@ -5737,10 +5747,6 @@ after printing the locale description for kitchen when kitchen is unvisited:
 	continue the action;
 
 does the player mean putting an ingredient on the tortilla: it is very likely.
-
-description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
-
-check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
 
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -5965,6 +5971,14 @@ instead of eating HOTSAUCE: say "If you really want to do this, you are obviousl
 
 check fliptoing HOTSAUCE:
 	if the player's command does not include "hot" and the player's command does not include "hotsauce", say "Close, but you need to say the full name of the sauce." instead;
+
+section red inn
+
+the red inn is amusing scenery in the kitchen. "It says RENDIN['] DINNER on it."
+
+instead of doing something with red inn:
+	if the action is procedural, continue the action;
+	say "The red inn doesn't need to be manipulated. Just what's on it."
 
 section fridge
 

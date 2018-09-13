@@ -501,6 +501,7 @@ lid	"The (a) lid is just there to keep the dial from turning."
 great grate	"[one of]There's no gateman to help with the grate. But it is made of HECK TIN. [plus][or]You're feeling very hungry. You wish you could go somewhere to eat, or even make something to eat. [plus][or]The tagged gadget gives a reading without you examining anything. [plus][or]This room becomes a KITCHEN. [minus][cycling]"
 cell graffiti	"Its redness will help with how to leave the nick."
 branding	--	cell graffiti
+red inn	"The red inn itself is useless, but the items on it can be manipulated."
 skate	"The skate can become steak."
 cult tee	"The cult tee can become lettuce."
 cathouse	"The CATHOUSE perfume can become hot sauce."

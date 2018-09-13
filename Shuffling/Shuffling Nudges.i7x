@@ -250,6 +250,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "nick"	185839117	the nick	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
 "kitchne"	454037543	kitchen	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]." [start kitchen]
 "kitchen"	454037543	--	--	kitch-visit rule	"You can just walk to the kitchen, there's no need to revisit the nick, and there's no third location."
+"rendin"	416966863	kitchen	--	--	"You don't need to change the red inn. It [if taco is off-stage]will support[else]supported[end if] your cooking efforts."
 "ditties"	541314892	kitchen	--	--	"Don't let the songs distract you from your mission."
 "fridge"	338266445	kitchen	--	--	"[fridge-abuse]."
 "grief"	317237356	kitchen	--	--	"[fridge-abuse]."
