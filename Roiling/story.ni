@@ -437,7 +437,7 @@ Procedural rule: ignore the print final score rule.
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
 
-description of player is "As every[if player is female]wo[end if]mannish as ever[if player wears star], and wearing a spiffy star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if]."
+description of player is "As every[if player is female]wo[end if]mannish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if]."
 
 does the player mean examining the player when mrlp is troves: it is very likely.
 
@@ -3926,10 +3926,7 @@ to recover-items:
 	repeat with JJJ running through item-list of mrlp:
 		if JJJ is not scenery and JJJ is not a backdrop:
 			now player has JJJ;
-			if JJJ is star:
-				now player wears star;
-			if JJJ is medals:
-				now player wears medals;
+			if JJJ is tsar star or JJJ is medals, now player wears JJJ;
 
 chapter say "[reject]" and lalaland
 
@@ -5366,7 +5363,7 @@ carry out presto-hinting:
 	if hump is visible:
 		try objhinting hump instead;
 	if plebe is visible:
-		if spoilit is true and player does not wear star:
+		if spoilit is true and player does not wear tsar star:
 			all-say "The plebe grimaces as you try to eat the crust. He doesn't seem to respect your authority enough to keep a straight face yet.";
 			now spoilit is false instead;
 		try objhinting plebe instead;
@@ -5375,8 +5372,8 @@ carry out presto-hinting:
 			try objhinting ye hoop instead;
 		if spoilit is false:
 			all-say "You are done here in Austerer Treasure." instead;
-	if star is visible and star is in Char Arch:
-		try objhinting star instead;
+	if tsar star is visible and tsar star is in Char Arch:
+		try objhinting tsar star instead;
 	if dart is visible and dart is in dumpster:
 		try objhinting dart instead;
 	if location of player is Dirge Ridge:
@@ -7080,7 +7077,7 @@ check giving something to:
 			say "That's not technical enough for the agnostic." instead;
 		continue the action;
 	if noun is flowerpot:
-		if second noun is agnostic, say "He's more physical sciences than biological." instead;
+		if second noun is agnostic, say "[he-she-c]'s more physical sciences than biological." instead;
 		if second noun is Dr Yow, say "[one of]Dr. Yow puts the flowerpot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
 		if second noun is a guardian, 	say "You remember Ornate Atoner Renato's friend was across the water. So it can't be anyone guarding things over here." instead;
 	if second noun is Curtis: [others]
@@ -10471,7 +10468,7 @@ Sister Tressi	Troves	"You can RESIST Sister Tressi."
 Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
 DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
 onyx censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
-plebe	presto	"You can shout BLEEP at the plebe [if player wears star]now[else]once[end if] you look more authoritative."
+plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative."
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
 trolls	oyster	"You can't quite STROLL past the trolls, yet." [oyster]
 haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
@@ -13248,7 +13245,7 @@ understand "pour [something] in/into/on [something]" as pouring it into.
 chapter interjections
 
 to decide whether (int - a thing) is interjective: [this is for hinting in presto: do you think something, or envision something?]
-	if int is lamb or int is hump or int is star, decide yes;
+	if int is lamb or int is hump or int is tsar star, decide yes;
 	if int is dart or int is plebe or int is boing, decide yes;
 	if int is leo or int is rand or int is hoop, decide yes;
 	if int is volt maze or int is maze walls or int is ether, decide yes;
@@ -13308,7 +13305,7 @@ check inserting something into mechanism:
 
 check going east in Grey Gyre:
 	if plebe is visible:
-		say "'Atten-HUT!' The taunt, then--taut, the plebe blocks your way east. '[if player is female]Stop, Ma'am! Ammo past!'[else]You, sir! Is your...'[end if][line break]You'll need to show your authority [if star is worn]and not just with that star. Probably the right word[else]with probably some sort of medal[end if][if Leo is visible].[paragraph break]'You too, booby and yobbo!'[else].[end if]" instead;
+		say "'Atten-HUT!' The taunt, then--taut, the plebe blocks your way east. '[if player is female]Stop, Ma'am! Ammo past!'[else]You, sir! Is your...'[end if][line break]You'll need to show your authority [if tsar star is worn]and not just with that tsar star. Probably the right word[else]with probably some sort of medal[end if][if Leo is visible].[paragraph break]'You too, booby and yobbo!'[else].[end if]" instead;
 
 ether-try is a truth state that varies.
 
@@ -13384,7 +13381,7 @@ The hump is fixed in place.
 
 chapter bleeping
 
-the plebe is a vanishing person in Grey Gyre. description is "He's got the shaved head, boring monochrome clothes--nothing on him marks him as too special to be yelled at.". "A plebe is standing at attention here to the east, waiting for a command from someone in charge. Or just bossy[if plebe is prefigured and player wears star][one of]. Now that you're wearing that star, maybe you can use that semi-cuss you used earlier[or][stopping][end if]."
+the plebe is a vanishing person in Grey Gyre. description is "He's got the shaved head, boring monochrome clothes--nothing on him marks him as too special to be yelled at.". "A plebe is standing at attention here to the east, waiting for a command from someone in charge. Or just bossy[if plebe is prefigured and player wears tsar star][one of]. Now that you're wearing that tsar star, maybe you can use that semi-cuss you used earlier[or][stopping][end if]."
 
 check taking plebe:
 	say "That plebe won't be pushed aside." instead;
@@ -13394,7 +13391,7 @@ a-text of plebe is "RRYYR". b-text of plebe is "RPGYR". parse-text of plebe is "
 bleep-clue is a truth state that varies. bleep-clue is false.
 
 check fliptoing plebe:
-	if player is not wearing star:
+	if player is not wearing tsar star:
 		say "You try and cuss, but the plebe is not intimidated by your civilian clothes[if Rand is in gyre] or even your companions[end if]. Perhaps you need something proclaiming your authority.";
 		preef plebe;
 		the rule succeeds;
@@ -13707,32 +13704,32 @@ carry out plainthrowing:
 		now throw-warn is true instead;
 	try dropping noun instead;
 
-section star
+section tsar star
 
-a decorative star is a reflexive wearable thing in Char Arch. "A decorative star--the sort you pin to your clothes--is lodged in a red stump here. Sort of like how Excalibur was stuck in a stone. Or not."
+a tsar star is a reflexive wearable thing in Char Arch. "A tsar star--the sort you pin to your clothes to show authority--is lodged in a red stump here. Sort of like how Excalibur was stuck in a stone. Or not."
 
 check scaning stump:
-	if star is reflexive:
-		say "Nothing, until you aim at the star.";
-		try scaning star instead;
+	if tsar star is reflexive:
+		say "Nothing, until you aim at the tsar star.";
+		try scaning tsar star instead;
 
-the red stump is scenery in Char Arch. "It's [if star is in stump]cracked where the star was[else]got a star wedged in it."
+the red stump is scenery in Char Arch. "It's [if tsar star is in stump]cracked where the tsar star was[else]got a tsar star wedged in it."
 
-a-text of decorative star is "RYRR". b-text of decorative star is "RYRR". parse-text of star is "x[sp]a[sp]x[sp]x". star is cheat-spoilable.
+a-text of tsar star is "RYRR". b-text of tsar star is "RYRR". parse-text of tsar star is "x[sp]a[sp]x[sp]x". tsar star is cheat-spoilable.
 
-description of decorative star is "It's not some paper gold star from Mrs. Crabtree's third grade class. It's actual dull metal. Shows you are a tsar of some sort of arts."
+description of tsar star is "It's not some paper gold star from Mrs. Crabtree's third grade class. It's actual dull metal. Shows you are a tsar of some sort of arts."
 
-instead of doing something to decorative star when star is in Char Arch:
+instead of doing something to tsar star when tsar star is in Char Arch:
 	if current action is taking:
-		say "It's wedged in just enough to frustrate you. You mutter 'bad star' under your breath, but that's almost a bit too harsh even for this area. You figure you'll probably see how to get it once you give up, but you can't give up just to take it." instead;
+		say "The tsar star is wedged in just enough to frustrate you. You mutter 'bad star' under your breath, but that's almost a bit too harsh even for this area. You figure you'll probably see how to get it once you give up, but you can't give up just to take it." instead;
 	if action is procedural, continue the action;
-	say "Straightforward taking won't work, and neither will other manipulation. You wonder what sort of magic might get it out.";
+	say "Straightforward taking won't work, and neither will other manipulation. You wonder what sort of magic might get the tsar star out.";
 
-after fliptoing star:
-	now player wears decorative star;
+after fliptoing tsar star:
+	now player wears tsar star;
 	continue the action;
 
-instead of taking off decorative star:
+instead of taking off tsar star:
 	say "[if plebe is in lalaland]But it looks so jaunty and reminds you of how you got rid of that plebe[else]You shouldn't remove it. You might need to impress someone with it[end if]."
 
 book Dirge Ridge
@@ -14160,8 +14157,8 @@ hogs-not-keys is a truth state that varies.
 
 after printing the locale description for Saps' Pass when Saps' Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
-	say "A 'PSS!' Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your star and crumples before going to guard the keys, the big jerk. What to do?";
-	now decorative star is in lalaland;
+	say "A 'PSS!' Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your tsar star and crumples before going to guard the keys, the big jerk. What to do?";
+	now tsar star is in lalaland;
 	now popgun is in lalaland;
 
 a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]o[sp]x[sp]x". hogs are cheat-spoilable.
@@ -24743,7 +24740,7 @@ giant's elbow	"You ducked the giant's elbow successfully. Now about that book...
 seed pit	"You got what you needed from the seed pit."
 hurt hog	"[fill-in-here]" [end ROUTES]
 dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if marines seminar remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]." [start PRESTO]
-star	"[if marines seminar remains is visited]The star has done its duty[else]Wearing the star may help you get the authority to get by someone else who knows about decorations[end if]."
+tsar star	"[if marines seminar remains is visited]The tsar star has done its duty[else]Wearing the tsar star may help you get the authority to get by someone else who knows about decorations[end if]."
 boing	"The boing mechanism works fine now."
 maze walls	"The walls hold no great secrets beyond a clue to volt maze's essence itself."
 log ons letters	"[other-let]."

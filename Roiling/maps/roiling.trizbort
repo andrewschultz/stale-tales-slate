@@ -70,7 +70,7 @@ version 3 March 2015</history>
 			<objects custom="yes" customRight="-36" customDown="0">Plebe   Lamb Ether|</objects>
 		</room>
 		<room id="25" name="Char Arch" subtitle="" x="-416" y="160" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="w" custom="yes" customRight="0" customDown="-18">Yak|Star|Dumpster</objects>
+			<objects at="w" custom="yes" customRight="0" customDown="-18">Yak|Tsar Star|Dumpster</objects>
 		</room>
 		<room id="26" name="Dirge Ridge" subtitle="" x="-416" y="256" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-24" customDown="0">Leo, Rand</objects>

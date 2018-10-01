@@ -349,10 +349,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gasp"	212527445	Char Arch	--	--	"You try, but fail, to make something out of nothing."
 "gpa"	116253479	Char Arch	--	--	"You try, but fail, to make something out of nothing."
 "adumpster"	686377722	Char Arch	--	--	"Not even you can make that icky stuff in the dumpster worthwhile[if dart is not in dumpster], and besides, you got the dart anyway[else if dumpster is unexamined], but maybe there's something useful inside[else], but maybe you could reach for the dart[end if]."
-"dumpster"	684189904	Char Arch	--	--	"The dumpster and red stump are both pretty sturdy[if dart is in dumpster and star is in Char Arch], but maybe you could pull out what's in them[else if dart is in dumpster], but you might be able to get what's in the dumpster[else if star is in Char Arch], but maybe you could pull the star from the stump[else], but you got something from both of them, anyway[end if]."
+"dumpster"	684189904	Char Arch	--	--	"The dumpster and red stump are both pretty sturdy[if dart is in dumpster and tsar star is in Char Arch], but maybe you could pull out what's in them[else if dart is in dumpster], but you might be able to get what's in the dumpster[else if tsar star is in Char Arch], but maybe you could pull the tsar star from the stump[else], but you got something from both of them, anyway[end if]."
 "spumed"	495756083	Char Arch	--	--	"[spumed-no]."
 "tar"	190621639	Char Arch	--	--	"[spumed-no]."
-"decorative"	712778774	--	decorative star	--	"[if player wears star]The star's snazzy enough as-is[else]You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude[end if]."
 "dirge"	311751549	dirge ridge	--	--	"[locname]." [start dirge ridge]
 "liev"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
@@ -362,7 +361,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]No, all the ports[else]You already observed all the ports. No need to try to single one out[end if]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
-"stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
+"stump"	450030903	--	stump	--	"[if tsar star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the tsar star seems to rattle a bit[end if]."
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
@@ -1464,7 +1463,7 @@ to say is-boing:
 
 to say no-scen:	say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
 
-to say spumed-no: say "The spumed tar does nothing[if star is in Char Arch or dart is in Char Arch]. Maybe focus on something else[end if]"
+to say spumed-no: say "The spumed tar does nothing[if tsar star is in Char Arch or dart is in Char Arch]. Maybe focus on something else[end if]"
 
 to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze"

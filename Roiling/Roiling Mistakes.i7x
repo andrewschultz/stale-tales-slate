@@ -318,6 +318,8 @@ understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. The
 
 chapter Char Arch
 
+understand "arts" as a mistake ("Being an arts tsar won't help. You need a word that shows anger.") when tsar star is in Char Arch.
+
 understand "cafe" as a mistake ("You don't need caffeine or food here.") when player is in Char Arch.
 
 understand "gpa" and "gpas" as a mistake ("You're not being graded here. I mean, you are getting a score, but this isn't school or anything.") when player is in Char Arch.
@@ -330,17 +332,15 @@ understand "mad" as a mistake ("How can you feel mad, looking at such a beautifu
 
 understand "okey" as a mistake ("You try to make things okey (sic) but you aren't enough of a bard to.") when yoke is in location of player.
 
-understand "rats" as a mistake ("[if star is in lalaland]You miss that star of yours[else]") when star is not in location of player.
+understand "rats" as a mistake ("[if tsar star is in lalaland]Boy! You miss that tsar star[else]Boy! It'd be neat to have something that made you more authoritative[end if].") when tsar star is not in location of player and tsar star is not worn and mrlp is presto.
 
 understand "spag" as a mistake ("You don't have time to read text-adventuring magazines right now. You're too busy living them.") when player is in Char Arch.
 
-understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when star is in Char Arch.
+understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when tsar star is in Char Arch.
 
 understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[or]You are just trolling now. No further clues for you[stopping].") when player is in Char Arch and dart is in dumpster.
 
-understand "tars" as a mistake ("That'd make the star stickier--or reduce it to awful glop.") when star is in Char Arch.
-
-understand "tsar" and "arts" as a mistake ("Being an arts tsar won't help. You need a word that shows anger.") when star is in Char Arch.
+understand "tars" as a mistake ("That'd make the tsar star stickier--or reduce it to awful glop.") when tsar star is in Char Arch.
 
 chapter dirge ridge
 
