@@ -543,7 +543,6 @@ screenread is a truth state that varies.
 
 when play begins (this is the screenread gender swears and precursor rule) :
 	if debug-state is false:
-		intro-restore-skip;
 		say "A Roiling Original has some features that can be adjusted for screen readers. Are you using a screen reader?";
 		if the player direct-consents:
 			say "Accessibility is turned on. It is something I had trouble meaningfully planning and testing, so please let me know at [email] if you feel it could be improved. Thank you!";
@@ -562,7 +561,6 @@ when play begins (this is the screenread gender swears and precursor rule) :
 			choose-female;
 		else:
 			choose-male;
-		if read-intro is false, continue the action;
 		say "And one final thing: A Roiling Original is a sequel to Shuffling Around. It's strongly recommended you play Shuffling Around first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
 		if the player direct-consents:
 			say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Means Manse as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
@@ -4211,29 +4209,9 @@ to say imp-or-whiners:
 	else:
 		say "sly imp";
 
-read-intro is a truth state that varies.
-
-to intro-restore-skip:
-	now read-intro is true;
-	if debug-state is false:
-		let got-good-key be false;
-		while got-good-key is false:
-			let Q be the chosen letter;
-			if Q is 70 or Q is 73 or Q is 102 or Q is 105:
-				now read-intro is true;
-				now got-good-key is true;
-			else if Q is 82 or Q is 114:
-				say "Restoring...";
-				try restoring the game;
-			else if Q is 83 or Q is 115:
-				now read-intro is false;
-				now got-good-key is true;
-			if got-good-key is false, say "[line break][if q is 82 or q is 114]Restore failed. Let's try again[else]I didn't recognize that[end if]. Would you like to see the full introduction (F or I), restore a previous game (R), or skip the introduction (S)?";
-
 when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of solved regions][close bracket][end if]";
-	if read-intro is false, continue the action;
 	ital-say "this game is a sequel to Shuffling Around. It has the same mechanics. But the back story is not important.";
 	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way, for some egghead to grind things out! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagramming acronyms (pro and con) and whether accents count, and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
 
