@@ -316,7 +316,7 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 460.
 
-use MAX_VERBSPACE of 4800.
+use MAX_VERBSPACE of 4900.
 
 use MAX_SYMBOLS of 34000.
 
@@ -2836,7 +2836,7 @@ book Ordeal Loader
 
 chapter Busiest Subsite
 
-Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage the bustling, babbling masses seem to be ignoring as they skirt the Oafs['] Sofa planted squarely in the center."
+Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage everyone else who skirted the Oafs['] Sofa planted squarely in the center."
 
 last-loc of Ordeal Loader is Busiest Subsite.
 
@@ -2853,19 +2853,11 @@ every turn when player is in busiest subsite:
 		say "'Non-grim morning!' you hear a voice call. It seems to be coming from that passage, and when you focus there, it repeats. You're guessing someone wants you to look there.";
 		now grims is true;
 
-section masses and passage and entry
-
-the bustling masses are useless scenery in Busiest Subsite. understand "people" as bustling masses.
-
-Include (-
-	has transparent animate
--) when defining bustling masses.
+section passage and entry
 
 the odd side passage is scenery in Busiest Subsite. "It's just under the NONE TRY sign. You could probably ENTER it, or go INSIDE. It's not really any direction you can tell, and you could have sworn it was near a different exit before you turned your back on it just a bit ago. It curves quickly so you can't see much of it."
 
 instead of entering or following the side passage: try going inside.
-
-description of masses is "Very diverse, yes, but equally drawn to whatever's to the east. You don't share their eagerness."
 
 the auditorium entry is useless scenery in busiest subsite. "You'd love any excuse not to join everyone else going there."
 
@@ -4270,9 +4262,9 @@ check going down in trips strip:
 
 check going inside in trips strip:
 	if number of portals in location of player is 1:
-		let Q be a random portal in location of player;
-		d "Trying portal [Q].";
-		try entering Q instead;
+		let RP be a random portal in location of player;
+		d "Trying portal [RP].";
+		try entering RP instead;
 	if number of portals in location of player is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
 	say "That's ambiguous--you can currently enter [the list of portals in location of player] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
 
@@ -5716,9 +5708,7 @@ to say gad: say "Your gadget's not near anything, but it's registering ".
 
 chapter Kitchen
 
-Kitchen is north of Trap Part. Kitchen is in Sortie. description is "This is a kitchen, though it's a bit bare. A grief'd fridge sits to the side. [if number of moot pregredients is 0]A to-scale red inn looks like where you prepare food[else]The centerpiece is a red inn, or a model of one, which has lots of non-food elements[end if]. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
-
-check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
+Kitchen is north of Trap Part. Kitchen is in Sortie.
 
 after choosing notable locale objects when player is in kitchen:
 	if straw is in kitchen and straw is not enclosed by player:
@@ -5726,15 +5716,30 @@ after choosing notable locale objects when player is in kitchen:
 
 an ingredient is a kind of thing. a pregredient is a kind of thing.
 
-for printing a locale paragraph about a pregredient (called xyzyx) when player is in kitchen:
-	if xyzyx is not mentioned:
-		say "On top of the Red Inn, there's [if number of visible pregredients is 1]one more thing[else if number of visible ingredients > 0]some other stuff[else][one of]a bunch of[or]still[stopping] stuff[end if] that doesn't quite belong in a kitchen, here: [a list of pregredients in kitchen].[paragraph break]";
-		now all ingredients are mentioned;
+definition: an ingredient (called ing) is separate-visible:
+	if ing is part of the tortilla, no;
+	if ing is visible, yes;
+	no;
 
-for printing a locale paragraph about an ingredient (called xyzyx) when player is in kitchen:
-	if xyzyx is not mentioned:
-		say "[if number of visible pregredients > 0]Also, t[else]T[end if]he Red Inn holds some actual food you rustled: [a list of ingredients in kitchen].[paragraph break]";
-		now all ingredients are mentioned;
+definition: a thing (called thi) is tacoish:
+	if thi is a pregredient or thi is an ingredient, yes;
+	no;
+
+for printing a locale paragraph about a tacoish thing (called xyzyx) when player is in kitchen:
+	now the player is mentioned;
+	now red inn is mentioned;
+	now dud mum mud is mentioned;
+	now grief'd fridge is mentioned;
+	now doleman is mentioned;
+	if xyzyx is a pregredient or xyzyx is an ingredient:
+		if xyzyx is not mentioned and xyzyx is not part of the tortilla:
+			say "The Red Inn contains things that [if number of visible pregredients > 0 and number of separate-visible ingredients > 0]do and don't [else if number of visible pregredients > 0]don't [end if]belong in a kitchen: ";
+			if number of visible pregredients > 0, say "[a list of visible pregredients]";
+			if number of visible pregredients > 0 and number of visible ingredients > 0, say ". It also contains, more suitably, ";
+			if number of visible ingredients > 0, say "[the list of separate-visible ingredients]";
+			say ".[paragraph break]";
+			now all pregredients are mentioned;
+			now all ingredients are mentioned;
 
 check taking an ingredient: [?? put steak on saltine before/after on tortilla]
 	if noun is part of the tortilla, say "No need to undo your efforts." instead;
@@ -5747,6 +5752,10 @@ after printing the locale description for kitchen when kitchen is unvisited:
 	continue the action;
 
 does the player mean putting an ingredient on the tortilla: it is very likely.
+
+description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
+
+check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
 
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -5810,7 +5819,7 @@ the printed name of the tortilla is "[tort-desc]".
 
 to tort-add (x - a thing):
 	if x is part of the tortilla:
-		say "You've already put [x] in the tortilla.";
+		say "You've already put [the x] in the tortilla.";
 		the rule succeeds;
 	now x is part of the tortilla;
 	increment ingredients-in-tort;
@@ -5849,7 +5858,7 @@ check putting something on an ingredient (this is the funnel kitchen activity to
 		say "(I'm switching the [noun] and [second noun])";
 		try putting second noun on noun instead;
 	if second noun is part of the tortilla, try putting noun on tortilla instead;
-	if second noun is not tortilla, say "Neither of those is the best ingredient to make a base for a dish--maybe something more bready." instead;
+	if second noun is not tortilla, say "Neither of those is the best ingredient to make a base for a dish--maybe something more bready. But they could be combined eventually." instead;
 
 check eating an ingredient:
 	if ingredient is part of the tortilla, try eating tortilla instead;
@@ -5974,11 +5983,7 @@ check fliptoing HOTSAUCE:
 
 section red inn
 
-the red inn is amusing scenery in the kitchen. "It says RENDIN['] DINNER on it."
-
-instead of doing something with red inn:
-	if the action is procedural, continue the action;
-	say "The red inn doesn't need to be manipulated. Just what's on it."
+the red inn is scenery in kitchen. "It's for rendin['] dinner[if taco is not off-stage], or it was, until you made that taco[end if]."
 
 section fridge
 
@@ -8700,7 +8705,7 @@ the potters are plural-named scenery. understand "trio/protest/three" as potters
 
 Include (-
 	has transparent animate
--) when defining bustling masses.
+-) when defining potters.
 
 before asking potters about: say "They don't want talk. They want action. Maybe even bribery." instead.
 
@@ -9776,7 +9781,6 @@ gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat ba
 gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
-masses	"You can't think of any small talk. Not that you're trying hard to."
 nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit. As you do, you are hit with a book[book-in-nerds]![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
 night thing	"'NYURGH! HUNGRY!' Easier to argue a grue away."
 peasant	"'I don't know much about that, that's sure. But I know from hay, being an abler baler.'"
@@ -9867,7 +9871,6 @@ understand "talk to [someone]" as talktoing.
 check talktoing:
 	if noun is riot or noun is protest, try asking noun about "mumblety-peg" instead;
 	if noun is the player, try asking player about "mumbletypeg" instead;
-	if noun is masses, say "They seem preoccupied with themselves." instead;
 	if noun is not a person, say "This place doesn't have that sort of magic. Best talk to people, or at least human-type things." instead;
 	if noun is nerds:
 		say "You engage in small talk, and they start showing off weird knowledge, as if they're prodding you to ASK about something. Hm, what to ASK NERDS about.";
@@ -10931,9 +10934,6 @@ understand the command "follow [something]" as something new.
 understand "follow [something]" as following.
 
 carry out following:
-	if noun is masses:
-		say "You are swept up with the people entering the lecture.";
-		try going east instead;
 	if noun is above-sign or noun is passage:
 		say "You duck inside the passage.";
 		try going inside instead;
@@ -12051,6 +12051,10 @@ carry out caping:
 volume testing commands - not for release
 
 [be sure to do stuff when you're not in the right room. This is CRITICAL to testing.]
+
+part quick checks
+
+test newkit with "ts/sortie/in/16/n/kitchen/l/lettuce/l/parmesan/l/straw/hotsauce/l/steak/l/tortilla/l/put steak on tortilla/l/put lettuce on tortilla/l/put parmesan on tortilla/l/put hotsauce on tortilla/l"
 
 part areas
 
