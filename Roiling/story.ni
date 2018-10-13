@@ -9948,17 +9948,17 @@ check scaning (this is the scan settler and act-ruin curtain parts rule):
 	if noun is act-ruin curtain or noun is part of act-ruin curtain:
 		say "The act-ruin curtain registers nothing. Perhaps you need to find a way to unlock the small holes in the act-ruin curtain[if staple is off-stage]. You don't have anything that makes holes, yet[else]. Hmm, you have something that could make a small hole[end if]." instead;
 
-the stubborn switch is part of the settler. description is "It doesn't seem to budge easily--maybe that's because it gives some unusually good hints."
+the whichs shwich is part of the settler. description is "It doesn't seem to budge easily--maybe that's because it gives some unusually good hints."
 
 instead of switching on the settler:
-	try switching on the stubborn switch instead.
+	try switching on the whichs shwich instead.
 
 instead of switching off the settler:
-	try switching on the stubborn switch instead.
+	try switching on the whichs shwich instead.
 
 the tcb is a privately-named thing. the tcb is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as tcb when tcb is visible. printed name of tcb is "teach/cheat button"
 
-description of tcb is "It's a tech simple enough. Looks like you can push it to toggle it as much as you want."
+description of tcb is "It's labeled A TECH. It's currently set to [if cheat-on]CHEAT[else]TEACH[end if]."
 
 cheat-on is a truth state that varies.
 
@@ -9997,16 +9997,16 @@ set-sw is a truth state that varies.
 
 ever-switched is a truth state that varies.
 
-instead of pushing or pulling or attacking the stubborn switch:
-	try switching on the stubborn switch;
+instead of pushing or pulling or attacking the whichs shwich:
+	try switching on the whichs shwich;
 
-does the player mean switching on the stubborn switch: it is very likely.
+does the player mean switching on the whichs shwich: it is very likely.
 
-instead of switching on the stubborn switch:
+instead of switching on the whichs shwich:
 	show-bluable instead;
 
 to show-bluable:
-	if stubborn switch is not visible:
+	if whichs shwich is not visible:
 		say "[reject]";
 		continue the action;
 	let QQ be number of bluable things;
