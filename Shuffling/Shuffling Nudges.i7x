@@ -624,7 +624,7 @@ to say name-list:
 to say word-games:
 	say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
 
-to say sofa-there: say "The Oafs['] Sofa is there, and there's nothing you can do about it."
+to say sofa-there: say "The Oafs['] Sofa is there, and there's nothing you can do about it"
 
 to say nope-odor:
 	say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"

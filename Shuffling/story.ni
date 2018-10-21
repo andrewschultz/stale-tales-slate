@@ -2842,7 +2842,7 @@ last-loc of Ordeal Loader is Busiest Subsite.
 
 section silly scenery
 
-the caterers' terraces are plural-named amusing scenery in subsite. "You can't see the caterers working on the terraces, and you probably don't want to disturb them."
+the caterers' terraces are plural-named amusing scenery in busiest subsite. "You can't see the caterers working on the terraces, and you probably don't want to disturb them."
 
 section grim hint
 
@@ -2933,7 +2933,7 @@ check going west in Busiest Subsite:
 	say "The Caterers['] Terraces are west. They're rendin['] dinner. You see someone sweating over a bizarre brazier, hear how this next lecture will 'Prep us for supper,' and promptly lose your will to do anything for a minute.";
 	been-check west instead;
 
-the bizarre brazier is amusing scenery in subsite. "It's a brazier. [bug-report]"
+the bizarre brazier is amusing scenery in busiest subsite. "It's a brazier. [bug-report]"
 
 instead of doing something with the brazier when brazier is visible: say "Next meal's too far off, and you've got no business on the terraces.".
 
@@ -4270,7 +4270,7 @@ check going inside in trips strip:
 
 cool-index is a number that varies.
 
-the wooden sign is scenery in the Trips Strip. description of wooden sign is "'A store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'"
+the wooden sign is scenery in Trips Strip. description of wooden sign is "'A store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'"
 
 instead of taking the wooden sign: say "It's too heavy. And besides, what would you do with it?"
 
@@ -5351,9 +5351,9 @@ chapter Ghouls' Slough
 
 Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear. You're not sure where the marsh starts and the lake ends[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL[or][stopping].". nowhere is south of Ghouls' Slough.
 
-the dog is amusing scenery in slough. dog is an undesc. instead of doing something with the dog when dog is visible: say "Where was it? Where is it? Eegh. You don't REALLY want to think about it."
+the dog is amusing scenery in ghouls' slough. dog is an undesc. instead of doing something with the dog when dog is visible: say "Where was it? Where is it? Eegh. You don't REALLY want to think about it."
 
-the bog is amusing scenery in slough. bog is an undesc.
+the bog is amusing scenery in ghouls' slough. bog is an undesc.
 
 to say end-it: end the story.
 
@@ -5987,7 +5987,7 @@ the red inn is scenery in kitchen. "It's for rendin['] dinner[if taco is not off
 
 section fridge
 
-the grief'd fridge is scenery in the kitchen. understand "refrigerator" as fridge.
+the grief'd fridge is scenery in kitchen. understand "refrigerator" as fridge.
 
 the grief'd fridge is an opaque openable container.
 
@@ -6380,7 +6380,7 @@ Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is moot
 
 understand "haywall" and "hay wall" as scraped wall when scraped wall is hayfilled.
 
-trel-priv is privately-named scenery in Trellis. printed name of trel-priv is "the trellis". understand "trellis" as trel-priv.
+trel-priv is privately-named scenery in Stiller Trellis. printed name of trel-priv is "the trellis". understand "trellis" as trel-priv.
 
 understand "decoration" as trel-priv.
 
@@ -6392,7 +6392,7 @@ to say the-trellis:
 	else:
 		say "The trellis to the east is the only decoration you've seen in this area[if scraped wall is not hayfilled], and the wall below it seems scraped and beaten up a bit[end if]"
 
-the scraped wall is scenery in Trellis. the scraped wall can be hayfilled. the scraped wall is not hayfilled.
+the scraped wall is scenery in Stiller Trellis. the scraped wall can be hayfilled. the scraped wall is not hayfilled.
 
 the rgtext of scraped wall is "[gc][gc][rc][rc][rc][rc][rc]". the lgth of scraped wall is 7. gpos of scraped wall is 1. rpos of scraped wall is 3. cert-text of scraped wall is "H[ast]A[d1][d1][d1][d1][d1]". rect-text of scraped wall is "H[d1][d1][d1][d1][d1][ast]Y".
 
@@ -6961,7 +6961,7 @@ check going inside in Undesired Underside: say "That's ambiguous with the hotel 
 
 check going outside in undesired underside: say "You already are in the not-so-great outdoors." instead.
 
-the building is scenery in underside. understand "hotel" as building. description of building is "[if drainage is in underside]It says L'HOTE HELOT[else][first custom style]AND I RAGE[r] is written in red.[end if]"
+the building is scenery in undesired underside. understand "hotel" as building. description of building is "[if drainage is in underside]It says L'HOTE HELOT[else][first custom style]AND I RAGE[r] is written in red.[end if]"
 
 the drainage is in Undesired Underside. It is fixed in place. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. You see [letter-or-flier] in it. Cleaning it up would help take this city back."
 
@@ -8383,7 +8383,7 @@ to say lei-down:
 
 woodland-revealed is a truth state that varies.
 
-an odd low woodland is scenery in Isle. "[if woodland-revealed is false]You stare at it for a while, and eventually the word DOWNLOAD... starts blinking. Hmm. It doesn't seem real at all[woodrev][else]It still seems computer-generated, wrong[end if]."
+an odd low woodland is scenery in Leis Isle. "[if woodland-revealed is false]You stare at it for a while, and eventually the word DOWNLOAD... starts blinking. Hmm. It doesn't seem real at all[woodrev][else]It still seems computer-generated, wrong[end if]."
 
 to say woodrev:
 	now woodland-revealed is true;
@@ -8394,7 +8394,7 @@ instead of doing something with odd low woodland:
 
 section nonbounding scenery
 
-the sand is useless scenery in Isle.
+the sand is useless scenery in Leis Isle.
 
 description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if]."
 
@@ -8402,7 +8402,7 @@ instead of doing something with the sand:
 	if action is procedural, continue the action;
 	say "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here."
 
-the tree is useless scenery in Isle.
+the tree is useless scenery in Leis Isle.
 
 instead of climbing tree: say "That'll only get you off the sand on the island, not the island."
 
@@ -11812,17 +11812,21 @@ carry out tsing:
 	now player has the phial;
 	now Ordeal Loader is solved;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
+	say "Note that TS can be used with a number, or TSF can solve everything. 4=metros 2=sortie 1=forest.";
 	let curstuff be number understood;
 	if curstuff > 8:
 		now curstuff is the remainder after dividing curstuff by 8;
 		say "You need a number between 0 and 7, so I took [number understood] mod 8 to get [curstuff].";
 	if curstuff >= 4:
+		say "<METROS SOLVED>[line break]";
 		solve-region metros;
 		decrease curstuff by 4;
 	if curstuff >= 2:
+		say "<SORTIE SOLVED>[line break]";
 		solve-region sortie;
 		decrease curstuff by 2;
 	if curstuff >= 1:
+		say "<FOREST SOLVED>[line break]";
 		solve-region forest;
 		decrease curstuff by 1;
 	the rule succeeds;
@@ -11838,8 +11842,11 @@ understand the command "tsf" as something new.
 understand "tsf" as tsfing.
 
 carry out tsfing:
-	if player is not in trips strip:
+	if trips strip is unvisited:
 		move player to trips strip;
+		now ordeal loader is solved;
+	else:
+		say "I'm not letting you run TSF if you're already in the Trips Strip. Restart to allow this.";
 	say "OK. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
 	now sortie is solved;
 	now forest is solved;
