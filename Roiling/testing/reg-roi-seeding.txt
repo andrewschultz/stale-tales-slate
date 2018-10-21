@@ -208,6 +208,9 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >nearby
 Your score has just gone up by one point
+#spechelp for terrance
+>terranec
+Terrance looks around as if he wants to run off.
 >recreant
 Your score has just gone up by one point
 >yonder

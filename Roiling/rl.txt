@@ -85,6 +85,14 @@ This is a relatively tricky one. But we know where the second vowel is. It must 
 The big question is, where are the c's? CL/A/PSLK/CS/CLS/O/CP/SK is what we have. This looks really sticky, but we can do some educated guessing. For starters, S cannot be in slot 8. If it were, we'd have CL/A/PLK/C/CL/O/CP/S. Then 1 or 5 would have to be C, and then 7 is P and 3 is K. (CL)/AKC/(CL)/OPS.
 CL/A/PSL/CS/CLS/O/CP/K is left. Now if P is in slot 7, we get CL/A/SL/CS/CLS/O/P/K. LASCCOPK, CAL(CS/SC)OPK aren't words, so try our luck with L in slov 5. C/A/PS/CS/L/O/CP/K is what is left. This is CASCLOPK or CAPSLOCK. CAPSLOCK.
 We can also use the red letter clues to make things a bit easier. PC Cloaks eliminates S in slot 8. POLACCKS puts L in slot 5 immediately. But it's still a bit tricky. Still, there are other clues that I hope makes up for it.
+#logic for drive E
+?Why does Drive E throw out all these question marks?
+It's not only Drive E but also E Drive. The puzzle might be too easy with question marks, so I threw this curve ball in.
+But actually, it's still not too bad, as the question marks fall out quickly. The green at the end is a nice help.
+?Y???G gives (ed)(ei)(ri)(vi)(ve)E based on DRIVE E and E DRIVE.
+Now D and R both only have one place to appear: slots 1 and 3, respectively. That gives us D(ei)R(vi)(ve)E.
+Now you can either read Drive E to see "I'd Veer" in red, or you can try each possibility.
+DIRVEE doesn't quite work, so DERIVE it is.
 >STORE U
 >>SAME MESA
 #logic for rude 'n nuder

@@ -9183,7 +9183,7 @@ diorama is in dusty study and Largely All-Grey Gallery. [this is written in here
 
 section isbn bins and snib
 
-the ISBN bins are plural-named LLPish reflexive scenery in All-Grey Gallery. "[if bins are reflexed]The bins are now locked and a bit securer with the snib[else]The ISBN bins are very red and very unlocked. One of them says NIBS (in another shade of red), an embarrassing reference to how fawned over you once gave all sorts of embarrassing sobriquets you didn't want[end if]."
+the ISBN bins are plural-named LLPish reflexive scenery in Largely All-Grey Gallery. "[if bins are reflexed]The bins are now locked and a bit securer with the snib[else]The ISBN bins are very red and very unlocked. One of them says NIBS (in another shade of red), an embarrassing reference to how fawned over you once gave all sorts of embarrassing sobriquets you didn't want[end if]."
 
 instead of doing something with ISBN bins:
 	if action is procedural, continue the action;
@@ -9347,7 +9347,7 @@ check going inside in cavern:
 
 chapter plaster psalter
 
-a plaster psalter is scenery in cavern. "It looks sturdy enough, but out of place[if plates are visible]. Some plates lie on top of it[end if]. Maybe you can make it into something more useful."
+a plaster psalter is scenery in carven cavern. "It looks sturdy enough, but out of place[if plates are visible]. Some plates lie on top of it[end if]. Maybe you can make it into something more useful."
 
 check taking plaster:
 	say "It's stuck to the floor. What would you do with it, anyway?" instead;
@@ -9956,9 +9956,9 @@ instead of switching on the settler:
 instead of switching off the settler:
 	try switching on the whichs shwich instead.
 
-the tcb is a privately-named thing. the tcb is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as tcb when tcb is visible. printed name of tcb is "teach/cheat button"
+a tech etcha' is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as a tech etcha' when player has settler.
 
-description of tcb is "It's labeled A TECH. It's currently set to [if cheat-on]CHEAT[else]TEACH[end if]."
+description of tcb is "It says A TECH ETCHA['] in the middle, with [if cheat-on]a glowing [end if]CHEAT below and [unless cheat-on]a glowing [end if]TEACH below. You could PUSH it to change that, or just type CHEAT or TEACH."
 
 cheat-on is a truth state that varies.
 
@@ -10344,16 +10344,19 @@ instead of taking the pen:
 qmspoil is a truth state that varies.
 
 to say verb-list:
-	say "[2da]N, S, E and W are the basic directions.";
-	say "[2da]TALK to an NPC gives general information, while ASK X ABOUT gives detailed information.";
-	say "[2da]OPTIONS or OPTS or POST OPTS gives you a list of game options that can simplify play or add detail.";
-	say "[2da]PAD to see a list of topics. Then PAD VERBS, for example.";
-	say "[2da]VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.";
+	say "[2da][b]N[r], [b]S[r], [b]E[r] and [b]W[r] are the basic directions, though [b]UP[r] and [b]DOWN are used occasionally, and [b]IN[r] or [b]OUT[r] may work.
+	say "[b]X[r] or [r]EXAMINE may provide clues about something, and if it has writing on it, [b]READ[r] will show the writing, which is often a hint.";
+	say "[2da][b]TALK[r] to an NPC gives general information, while [b]ASK X ABOUT Y[r] gives detailed information.";
+	say "[2da][b]OPTIONS[r] or [b]OPTS[r] or [b]POST OPTS[r] gives you a list of game options that can simplify play or add detail.";
+	say "[2da][b]PAD[r] to see a list of topics. Then [b]PAD VERBS[r], for example.";
+	say "[2da][b]HINT[r] or [b]HELP[r] on an object shows progressive clues for what to do with it.";
+	say "[2da][b]VERBS[r] shows this again, and informational meta-commands include [b]ABOUT[r], [b]CREDITS[r], [b]TECH[r], [b]SITES[r], and [b]RELEASE[r]. These give no hints, but you may find them interesting.";
 	if player has settler:
-		say "[2da]SCAN various things to see if they can be changed and how.";
-		say "[2da]Settler shortcuts: la=recall what you scanned last, sl=turns slider on, sy=scan with cheat on, sn=scan with cheat off, ss=shake settler to see what needs to change.";
+		say "[2da][b]SCAN[r] various things to see if they can be changed and how.";
+		say "[2da][b]TEACH[r] or [b]CHEAT[r] can change how much the settler helps. CHEAT tells a bit more than TEACH. [b]C[r] and [b]T[r] are abbreviations.";
+		say "[2da]Settler shortcuts: [b]LA[r]=recall what you scanned last, [b]SL[r]=turns slider on, [b]SY[r]=scan once with cheat on, [b]SN[r]=scan once with cheat off, SS=shake settler (or switch the Whichs Shwich) to see what can be changed.";
 	if player has whistle:
-		say "[2da]PLAY the whistle.";
+		say "[2da][b]PLAY[r] the whistle.";
 	verbsplain "xray";
 	verbsplain "go to";
 	verbsplain "rove over";
@@ -10375,24 +10378,24 @@ to verbsplain (t - text):
 		say "[2da][blurb entry][line break]";
 
 [top]
-table of pad-stuff
+table of pad-stuff [??what does thinking do elsewhere]
 topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "verbs/verb"	true	"[verb-list]"	"verbs"	false	--	false
 "options" or "opts" or "post opts"	true	"[opts-list]"	"options"	false	--	false
-"parse/spare"	false	"PARSE processes the settler's data for you, but SPARE hides it."	"parse"	false	--	false
-"access"	true	"Typing ACCESS toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."	"access"	false	--	false
+"parse/spare"	false	"[b]PARSE[r] processes the settler's data for you, but SPARE hides it."	"parse"	false	--	false
+"access"	true	"Typing [b]ACCESS[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."	"access"	false	--	false
 "free turns" or "free/turns"	true	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like SCORE, will not cost you time if you are in a tight situation."	"free turns"	false
-"saying"	false	"Instead of SAYing or THINKing, you can just type the word."	"saying"	false
-"talking"	false	"TALKING is the equivalent of asking someone about themselves."	"talking"	false
-"sleep/sleeping"	false	"SLEEP is only advisable in a protected area."	"sleep"	false
-"long commands" or "long/command/commands"	false	"Commands over 4 words long aren't necessary. You can say TAKE ALL or GET ALL, eliminate THE, or use half an open compound word without repercussions."	"long commands"
-"random/ dialogue/dialog/"	false	"HUSH turns random dialogue off. UHHS turns it on. It is [on-off of talk-quiet]."	"random dialogue"	false
+"saying"	false	"Instead of [b]SAY[r]ing or [b]THINK[r]ing, you can just type the word."	"saying"	false
+"talking"	false	"[b]TALK[r]ing is the equivalent of asking someone about themselves."	"talking"	false
+"sleep/sleeping"	false	"[b]SLEEP[r] is only advisable in a protected area."	"sleep"	false
+"long commands" or "long/command/commands"	false	"Commands over 4 words long aren't necessary. You can say [b]TAKE[r] or [b]GET ALL[r], eliminate THE, or use half an open compound word without repercussions."	"long commands"
+"random/ dialogue/dialog/"	false	"[b]HUSH[r] turns random dialogue off. [b]UHHS[r] turns it on. It is [on-off of talk-quiet]."	"random dialogue"	false
 "diorama"	false	"[dior-scan]"	"diorama"	true
-"question mark" or "question/mark"	false	"[if qmspoil is true]The question mark is often better than a red or yellow in Cheat mode, because it limits you to two possibilities[else]The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can HINT it if you're stuck[end if]."	"question mark"	true
-"opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN lets you see initial region hints. NO TIP turns them off."	"opt in/no tip"	false
+"question mark" or "question/mark"	false	"[if qmspoil is true]The question mark is often better than a red or yellow in Cheat mode, because it limits you to two possibilities[else]The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can [b]HINT[r] it if you're stuck[end if]."	"question mark"	true
+"opt in" or "opt/notip/optin/tip" or "no tip"	false	"[b]OPT IN[r] lets you see initial region hints. [b]NO TIP[r] turns them off."	"opt in/no tip"	false
 "poss"	false	"POSS toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too."	"poss"	false
-"go to" or "go/gt/goto"	true	"You can GO TO/GOTO or GT a location or thing if it's a bit far away but in the region."	"go to"	false
-"clues"	false	"You can LISTEN, ASK people about random stuff, or EXAMINE them to figure how to change them."	"clues"	true
+"go to" or "go/gt/goto"	true	"You can [b]GT/GO TO/GOTO[r] a location or thing if it's a bit far away but in the region."	"go to"	false
+"clues"	false	"You can [b]LISTEN[r], [b]ASK[r] people about random stuff, or X/EXAMINE them to figure how to change them."	"clues"	true
 "Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	false	"Apparently, appreciating her is what separates us from the animals. According to Gunter[if mrlp is otters]. But you need to know more and ask around about her[end if]."	"Elvira"	true
 "gretta"	false	"If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira."	"Gretta"	true
 "Elmo"	false	"There are areas behind stores P, U, V, W, Y and, most cryptically, T."	"Elmo"	true
@@ -10430,7 +10433,6 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "progress"	false	"You note the following: means manse = stuff[other-areas]."	"progress"	false
 "curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
 "xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
-"hit/ win/ button/" or "ben/ hid"	false	"Ben hid a HIT WIN button somewhere. Where?"	"hit win button"	false	routes
 "scenery"	false	"St. Teri told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
@@ -10440,13 +10442,13 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 
 to say xray-help:
 	if xrayvision is true:
-		say "You can XRAY something you can't describe to see what it can or should be, with that pastry you ate. You can wait as long as you want/need";
+		say "You can [b]XRAY[r] something you can't describe to see what it can or should be, with that pastry you ate. You can wait as long as you want/need";
 	else if all hintpastries are in lalaland:
-		say "You've used all the possible XRAYs";
+		say "You've used all the possible [b]XRAY[r]s";
 	else if toaster is in lalaland:
-		say "You can't put any more pastries in the toaster to XRAY them";
+		say "You can't put any more pastries in the toaster to [b]XRAY[r] them";
 	else:
-		say "You can put a[if number of hintpastries in lalaland > 1]nother[end if] pastry in the toaster to get XRAY vision to be able to describe what something can or should be"
+		say "You can put a[if number of hintpastries in lalaland > 1]nother[end if] pastry in the toaster to get [b]XRAY[r] vision to be able to describe what something can or should be"
 
 pf-warn is a truth state that varies.
 
@@ -12252,10 +12254,6 @@ instead of doing something to mist:
 	if action is procedural, continue the action;
 	if current action is taking, say "Mistake. Ha ha ha." instead;
 	try examining noun instead;
-
-after fliptoing mist:
-	pad-rec-q "hit win button";
-	continue the action;
 
 chapter no-gal's boat
 

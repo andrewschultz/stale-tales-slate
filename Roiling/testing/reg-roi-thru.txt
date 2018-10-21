@@ -970,22 +970,9 @@ You don't need to P.S. tweaking the post.
 Darn it, that should work
 >undo
 
->reasno
-The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you.
->reason
-Your score has just gone up by one point
->reasno
-Too much fiddling with reason is unreasonable.
 
 >undo
 >undo
->belieev
-The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
->believe
-Your score has just gone up by one point
-Adding a min point
->belieev
-The bee's already taken enough of your in-my-heartitude.
 
 >listen
 helping someone else
@@ -1017,12 +1004,6 @@ You would like to be, but you can't just want others to. Change comes from withi
 #mistake test for aspired
 >aspired
 Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!
->despari
-Staring again at the diapers, you are depressed you couldn't even get being depressed right.
->despair
-Your score has just gone up by one point
->despari
-Don't twist yourself into knots to/from REAL despair.
 
 #mistake test for aled
 >aled
@@ -1109,13 +1090,9 @@ That's not something you can say, do or see here. For a general list of verbs, t
 
 >undo
 >undo
->striev
-Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
 >strive
 Your score has just gone up by one point
 Adding a min point
->striev
-You're striving too hard, now.
 
 >pondre
 The bottle of Pernod seems to rattle and spin slightly.
@@ -1139,12 +1116,13 @@ Your score has just gone up by one point
 >ignoer
 Now that you've ignored the distraction, you want to forget it.
 
+@nu
+#spechelp of lobster
 >bolstre
 That's not quite the way to deserve that lobster.
 >bolster
 Your score has just gone up by one point
->bolstre
-That's not something you can say, do or see here.
+
 
 >discovre
 DIVORCES suddenly seems more alluring and more rubbish at once.

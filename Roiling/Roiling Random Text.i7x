@@ -3414,7 +3414,6 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Rebuildy Bud Riley"	false
 "Recursions Co-Insurers"	false
 "Red Bay Bad Rye"	false []
-"Red Inn Dinner Rendin[']"	false
 "Red Machine's Merchandise"	false
 "Red Oafs['] Fedoras"	false
 "Redleaf Federal"	false
