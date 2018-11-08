@@ -4260,7 +4260,7 @@ carry out requesting the score:
 		say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
 		if dome-score-not is false:
-			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee? Or Greaten-Grantee?";
+			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee? Or Greaten-Grantee? Or Derivin' Diviner?";
 			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true:
@@ -4312,7 +4312,7 @@ carry out requesting the score:
 
 to show-rank:
 	say "This would give you a rank of ";
-	if mrlp is others or roved is true:
+	if mrlp is others or roved is true or otters is solved:
 		say "Procured Producer.";
 		continue the action;
 	let Q be number of rank-increasing regions + number of bypassed regions + 1;
@@ -8541,7 +8541,7 @@ description of MoneyCo is "Elvira notes Yorpwald's more profitable than ever! Wh
 
 The Shatter-Threats page is propaganda. it is part of the dope op-ed. understand "shatter/ threats/ page/" as shatter-threats page when player is in study.
 
-description of Shatter-Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
+description of Shatter-Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers, Sombrest Mobsters and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
 
 The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda.
 
@@ -14254,6 +14254,7 @@ to say increm:
 		now alert letters are reflexed;
 		now log ons letters are reflexed;
 		now ought letters are reflexed;
+		now starch charts are in Saps' Pass;
 
 chapter hawt thaw
 
@@ -14294,7 +14295,11 @@ carry out chewing:
 		say "The gum looks like it tastes like clay." instead;
 	try eating noun instead;
 
-book Phat Path
+chapter Starch Charts
+
+the Starch Charts are flippable LLPish plural-named scenery.
+
+a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of coal is "x[sp]x[sp]a[sp]x[sp]?[sp]?". coal is cheat-spoilable.
 
 book Hacks' Shack
 

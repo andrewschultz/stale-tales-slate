@@ -118,6 +118,8 @@ later,alert
 tough,ought
 #qver of hawt thaw
 what,R???=hawt=thaw
+#qver of starch charts
+trasch,RRGR??=starch=charts
 #hacks shack
 disk,skid,idks
 skid,disk,idks
