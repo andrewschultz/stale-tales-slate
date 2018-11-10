@@ -375,6 +375,9 @@ Not strictly. It's only necessary to get maximum points.
 It's really weird, though. It barely makes any sense at all!
 It's a last lousy point, based on a puzzle that really didn't work in the first version.
 If you take a good hard look at it, you may want to say WHAT.
+?Are the starch charts significant?
+Not strictly. They're only necessary to get maximum points. They also signal a switch from interjections to something new for the final bit.
+They can be labeled TRASCH. **FIX
 >>HACKS' SHACK
 ?There's a lot to do here! What's my ultimate goal?
 Write a computer program.

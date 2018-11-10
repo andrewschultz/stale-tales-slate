@@ -127,7 +127,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 39. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 40. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
