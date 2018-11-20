@@ -417,7 +417,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if shack is visited]back [end if]north, here."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "entyr"	507506690	phat path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
-"shack"	207682846	--	priv-shack	--	"You'll need to [if shack is visited]re-[end if]enter the shack to take care of things here."
+"lodge"	309601316	--	ogled lodge	--	"You'll need to [if shack is visited]re-enter the shack[else]enter the lodge[end if] to take care of things here."
 "shakc"	207682846	shack	--	--	"[locname]." [start hacks shack]
 "hack"	111408880	shack	--	--	"[locname]."
 "algorithm"	497738055	shack	--	--	"[no-txtbk]."

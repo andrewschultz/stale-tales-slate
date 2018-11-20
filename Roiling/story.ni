@@ -14118,16 +14118,14 @@ check entering Deil's Slide:
 
 book Phat Path
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a harpings phrasing warning you from a shack to the north[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a harpings phrasing guarding [one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
-the priv-shack is privately-named proper-named scenery in Phat Path. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
+the ogled lodge is privately-named proper-named scenery in Phat Path. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of ogled lodge is "the shack"
 
-understand "shack" as priv-shack when player is in phat path.
-
-check entering priv-shack:
+check entering ogled lodge:
 	try going north instead;
 
-instead of doing something with priv-shack:
+instead of doing something with ogled lodge:
 	if current action is entering:
 		try going north instead;
 	if current action is attacking:
@@ -14305,10 +14303,10 @@ book Hacks' Shack
 
 Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[otherwise]You're in the shack where you probably need to write a program or something[end if][if scratch paper is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in hacks' shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if]."
 
-shack-flips is a number that varies. shack-flips is 0.
+lodge-flips is a number that varies. lodge-flips is 0.
 
 after fliptoing when player is in hacks' shack:
-	increment shack-flips;
+	increment lodge-flips;
 	continue the action;
 
 to say my-auth:

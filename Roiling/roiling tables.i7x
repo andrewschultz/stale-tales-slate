@@ -124,7 +124,7 @@ log ons	log ons	false	400300169	--	"solong"	"so long" or "solong"	"[increm]"
 alert	alert	false	372241587	--	"later"	"later"	"[increm]"
 ought	ought	false	352450403	--	"tough"	"tough"	"[increm]"
 hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	"You realize you have done a lot of mental calculations with anagrams, but some of it feels rote, and while Elvira probably overdid it, there are times you relied just on calculation without asking deeper questions. Why is hawt-thaw as it is? Even Yorpwald's best scientists can't answer that question. So, you make a commitment to be more than just someone who finds anagrams, once this whole shebang is over, and you remind yourself that puzzles for their own sake only go so far.[paragraph break]The hawt thaw shrivels up and blows away, leaving you wiser--and more intellectually curious--for its brief presence in your life, even if it doesn't help you on your immediate quest.[paragraph break]You make plans, once Yorpwald is back to normal, to lobby for a Thaws-Swath to answer these questions. It will frequently be wash't, so it doesn't get shawt."
-starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	"You realize the charts themselves are a bunch of nonsense. Calling them trash sort of works as a noun or an interjection, but seeing and having them there [if any-hack-shack is true]clues[else]reinforces[end if] to you that you'll be using mostly nouns--and maybe a verb, since you can trash things--inside the hacks['] shack." [?? what if do later]
+starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	"You realize the charts themselves are a bunch of nonsense. Calling them trash sort of works as a noun or an interjection, but seeing and having them there [if shack-flips > 0]clues[else]reinforces[end if] to you that you'll be using mostly nouns--and maybe a verb, since you can trash things--inside the hacks['] shack." [?? what if do later]
 clack ops locs pack	clack ops locs pack	true	399038507	--	"capslock"	"capslock" or "caps lock"	"You think WHOAH as the locs pack morps into a capslock button, which you pick up."
 disk	skid	false	215229079	--	"skid"	"skid"	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."
 skid	disk	true	215229079	--	"disk"	"disk"	"The skid changes back into a disk, which you take."
@@ -1643,7 +1643,7 @@ clack ops locs pack	"[one of]The locs pack is allegedly for making things quiete
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
 Drive A	"[h-d][line break]"
-priv-shack	"[if player is in shack]You need to build a computer here[else]It's just scenery when you're in the Phat Path. But you can enter by going north[end if]."
+ogled lodge	"[if player is in shack]You need to build a computer here[else]The Ogled Lodge just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
 golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
 computer screen	"[if shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
 trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying other patrons.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	[start OYSTER hinting]
@@ -1960,6 +1960,9 @@ larded ladder	"[dome-blab]"
 talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
+
+to say if-rand-gone:
+	say "[if rand is in dirge ridge]now[else]once[end if] Leo and Rand are gone"
 
 to say name-the-lance:
 	say "[if lance is off-stage]You haven't found it yet, but you probably will when you see it[else]The lance in the Shuttle Hutlets[end if]"
