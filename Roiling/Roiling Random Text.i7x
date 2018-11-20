@@ -7508,7 +7508,6 @@ blurb
 "Black Ops Slob Pack"
 "Booker's So Broke"
 "Boy, Mr. Byrom"
-"Brain-Bairn Brian"
 "Bub Chun's Bus Bunch"
 "Cake Boss Beck Sosa"
 "Can't Hate Etta Chan"

@@ -14297,13 +14297,19 @@ carry out chewing:
 
 chapter Starch Charts
 
-the Starch Charts are flippable LLPish plural-named scenery.
+the Starch Charts are flippable LLPish plural-named scenery. "The starch charts seem a bit beyond you, yet they seem to be indicating something. You're not sure what, and you're not sure you need to 'solve' the charts to know. But they're covered with all the interjections you've used so far--well, up to a certain point. Where the interjections become, well, actual concrete nouns or even verbs you could spit out in disgust to similar effect. Some are misspelled for effect, but you still recognize them."
 
-a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of coal is "x[sp]x[sp]a[sp]x[sp]?[sp]?". coal is cheat-spoilable.
+a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of coal is "x[sp]x[sp]a[sp]x[sp]?[sp]?".
 
 book Hacks' Shack
 
-Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[otherwise]You're in the shack where you probably need to write a program or something[end if][if scratch paper is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if]."
+Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[otherwise]You're in the shack where you probably need to write a program or something[end if][if scratch paper is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in hacks' shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if]."
+
+shack-flips is a number that varies. shack-flips is 0.
+
+after fliptoing when player is in hacks' shack:
+	increment shack-flips;
+	continue the action;
 
 to say my-auth:
 	say "[author of random visible badbook]";
@@ -14603,6 +14609,7 @@ after fliptoing scratch paper:
 	if hawt thaw is in phat path, poss-d;
 	if lamb is in Grey Gyre, poss-d;
 	if sport ports are reflexive, poss-d;
+	if starch charts are in phat path, poss-d;
 	if player has rom sticks, now rom sticks are in lalaland;
 	continue the action;
 

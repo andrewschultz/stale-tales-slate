@@ -367,6 +367,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
 "harpings"	449033901	--	harpings phrasing	--	"[harphr]."
 "harping"	352759935	--	harpings phrasing	--	"[harphr]."
+"chart"	246909523	--	starch charts	--	"No, the chartS."
 "rebuff"	389684416	shack	--	--	"The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise."
 "magnetic"	462684739	shack	--	--	"The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise."
 "computer"	660245011	shack	--	--	"You need to fix the program in the computer[if number of things on labs slab < 4], well, once you get it running[end if]."
