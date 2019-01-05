@@ -747,11 +747,11 @@ understand "slee" as a mistake ("The eels aren't what needs to be reduced to rub
 
 chapter bran barn
 
-understand "whoever" as a mistake ("Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.") when player is in bran barn and p-2 is in bran barn.
+understand "whoever" as a mistake ("You wonder whoever could be saying the vow here. You suspect you are very close and very far at once.") when vow here is in location of player.
 
 chapter Shiner Shrine
 
-understand "rhines" as a mistake ("You don't need a river impeding your progress.") when player is in Shiner Shrine.
+understand "rhines" as a mistake ("You don't need a river or two impeding your progress.") when player is in Shiner Shrine.
 
 understand "simply" as a mistake ("It's already simply annoying, so that has no effect. Maybe you can alter how it does things another way.") when sly imp is in location of player
 

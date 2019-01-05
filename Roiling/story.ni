@@ -1710,7 +1710,7 @@ persuasion rule for asking macks to try doing something:
 	persuasion fails;
 
 persuasion rule for asking Mr Lee to try doing something:
-	say "[if p-2 is in lalaland]Mr. Lee can't do any more for you[else]Mr. Lee doesn't trust you enough to do anything for you[end if].";
+	say "[if gore ogre is in lalaland]Mr. Lee can't do any more for you[else]Mr. Lee doesn't trust you enough to do anything for you[end if].";
 	persuasion fails;
 
 persuasion rule for asking whiners to try doing something:
@@ -2212,7 +2212,7 @@ Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
 atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
-Mr Lee	"[if p-2 is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--bad start. Rev. Howe glares at you[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed[tho-eels].[end if]"
+Mr Lee	"[if gore ogre is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--bad start. Rev. Howe glares at you[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed[tho-eels].[end if]"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
 macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
 eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
@@ -2486,7 +2486,7 @@ Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is,
 macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
 Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
-Mr Lee	Elvira	"'She must be defeated[if p-2 is in lalaland]. You must be the one to lead us[else if ghoul hat is in lalaland]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
+Mr Lee	Elvira	"'She must be defeated[if gore ogre is in lalaland]. You must be the one to lead us[else if ghoul hat is in lalaland]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
 ocelots	Elvira	"They shudder[at-elvira]."
 satyr	Elvira	"He shudders[at-elvira]."
 leopard	Elvira	"It shudders[at-elvira]."
@@ -2839,7 +2839,6 @@ blaster	"ALBERT'S."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in clarthead cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
-p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
@@ -3138,7 +3137,7 @@ to say check-started-yet:
 	set pronoun them to medals;
 	let prefigs be 0;
 	let southfigs be 0;
-	if p-2 is prefigured:
+	if gore ogre is prefigured:
 		increment prefigs;
 		increment southfigs;
 	if ghoul hat is prefigured:
@@ -3155,7 +3154,7 @@ to say check-started-yet:
 	else if prefigs is 2:
 		say ". You made [if southfigs is 1]some progress to the north and south[else if southfigs is 2]progress to the south[else]progress to the north[end if]";
 	else if prefigs is 1:
-		say ". Maybe you can go back to the [if p-2 is prefigured or ghoul hat is prefigured]barn[else]pool[end if] and do some work now";
+		say ". Maybe you can go back to the [if gore ogre is prefigured or ghoul hat is prefigured]barn[else]pool[end if] and do some work now";
 
 before QBC responding with (this is the warn you before bailing from a convo rule):
 	let cur-act be a number; [this is kind of cutesy code. Basically, it checks to see if Player Choice is equal to the # of available choices. If so, it warns you.]
@@ -3736,7 +3735,7 @@ curst palace	curst palace	false	towers-left rule	"This will knock down the palac
 Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
 
 to say to-clean-otters: [hells bells this is ugly]
-	if p-2 is reflexive or eels are reflexive:
+	if gore ogre is reflexive or eels are reflexive:
 		say "[if eels are reflexive]the Bran Barn[else]the Loop Pool[end if]";
 		if cinders are not in lalaland or elmer is reflexive:
 			say ", as well as ";
@@ -3757,7 +3756,7 @@ this is the routes-left rule:
 	the rule fails;
 
 this is the otters-left rule:
-	if p-2 is reflexive or eels are reflexive, the rule succeeds;
+	if gore ogre is reflexive or eels are reflexive, the rule succeeds;
 	if elmer is reflexive, the rule succeeds;
 	if cinders are not in lalaland, the rule succeeds;
 	the rule fails.
@@ -4799,8 +4798,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if ghoul hat is not in lalaland:
 				now noun is ghoul hat;
 				continue the action;
-			if p-2 is in bran barn:
-				now noun is p-2;
+			if gore ogre is in bran barn:
+				now noun is gore ogre;
 				continue the action;
 		if player is in Disowned Downside and atmo-moat is in Disowned Downside and macks are not in Disowned Downside:
 			now noun is atmo-moat;
@@ -5879,7 +5878,7 @@ to decide which thing is otters-cur-item:
 		if atmo-moat is in Disowned Downside and power-back is true, decide on atmo-moat;
 	if player is in bran barn:
 		if Mr Lee wears ghoul hat, decide on ghoul hat;
-		if p-2 is in bran barn, decide on p-2;
+		if gore ogre is in bran barn, decide on gore ogre;
 	if player is in loop pool:
 		if sea cube is not in lalaland, decide on sea cube;
 		if eels are not reflexed, decide on eels;
@@ -10074,10 +10073,10 @@ definition: a thing (called lp) is llpish-plus:
 	if lp is me arts and lobster is in lalaland, decide yes;
 	if lp is praise and rivets are reflexed, yes;
 	if lp is rivets and praise spirea is reflexed, yes;
-	if lp is ghoul hat or lp is p-2: [otters]
+	if lp is ghoul hat or lp is gore ogre: [otters]
 		if eels are reflexed, decide yes;
 	if lp is eels or lp is sea cube:
-		if p-2 is in lalaland, decide yes;
+		if gore ogre is in lalaland, decide yes;
 	decide no;
 
 definition: a thing (called mbbl) is blurry:
@@ -10507,7 +10506,7 @@ b-b	otters	"You can make the barley be BARELY there once you get past the otters
 eels	otters	"You can tell the eels ELSE [unless player has medals]once you have[else]now you've got[end if] a token of your goodness."
 sea cube	otters	"You can tell the eels in the sea cube BECAUSE once you know why."
 ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [if player has medals]now you've figured[else]once you figure[end if] where the bad guys are."
-p-2	otters	"You can say HOWEVER to deal with Mr. Lee and Rev. Howe."
+gore ogre	otters	"You can say ERGO to deal with the Gore Ogre."
 atmo-moat	otters	"You can collapse the atmo-moat to an ATOM once you have the power."
 medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
 pre-mang	others	"You can look AMONG once you have currency to haggle in the clearing." [others]
@@ -21234,7 +21233,7 @@ to note-denial:
 
 to say lee-or-eels:
 	say "[wfak]";
-	if p-2 is in lalaland:
+	if gore ogre is in lalaland:
 		if eels are in lalaland:
 			say "You're surprised to see Mr. Lee and the eels together, 'LEE'S EELS,' alongside--yes, Gretta with animals of her own.";
 		else:
@@ -21798,13 +21797,9 @@ book side passages
 
 chapter Bran Barn
 
-Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
+Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
 
 Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if alcoves is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
-
-Mr Lee wears the ghoul hat. printed name of Mr Lee is "Mr. Lee".
-
-the ghoul hat is vanishing. description is "red and bloody and gruesome, it seems affixed to Mr. Lee. Maybe you can help it come loose, and Mr. Lee would appreciate that."
 
 lee-yet is a truth state that varies.
 
@@ -21814,13 +21809,19 @@ for printing a locale paragraph about Mr Lee:
 		now lee-yet is true;
 	else:
 		say "Mr. Lee hangs around here, ";
-		if p-2 is in lalaland:
+		if Gore Ogre is in lalaland:
 			say "doing farmy chores.";
 		else if ghoul hat is in lalaland:
 			say "glancing nervously at the painting of Rev. Howe.";
 		else:
 			say "[one of]musing 'Here to GLOAT, HUH?'[or]looking red-eyed and growling 'Hola, thug!'[or]giving a hot laugh.[or]crying, red-eyed, 'Ugh! O, halt!'[cycling]";
 	now Mr Lee is mentioned.
+
+section ghoul hat
+
+Mr Lee wears the ghoul hat. printed name of Mr Lee is "Mr. Lee".
+
+the ghoul hat is vanishing. description is "red and bloody and gruesome, it seems affixed to Mr. Lee. Maybe you can help it come loose, and Mr. Lee would appreciate that."
 
 a-text of ghoul hat is "YRRRYYRR". b-text of ghoul hat is "YRRRYYRR". parse-text of ghoul hat is "-[sp]x[sp]x[sp]x[sp]-[sp]-[sp]x[sp]x".
 
@@ -21829,22 +21830,16 @@ check scaning Mr Lee:
 		say "Nothing happens until the settler points to the ghoul hat.";
 		try scaning ghoul hat instead;
 
-the p-2 is privately-named vanishing scenery in bran barn. "The painting has four bits of red writing on it."
+section Gore Ogre
 
-printed name of p-2 is "painting of Rev. Howe".
+the Gore Ogre is a vanishing person. "Fortunately, the gore ogre doesn't seem immediately violent, but it is still intimidating Mr. Lee."
 
-understand "painting" and "rev howe" and "rev/howe" as p-2 when player is in bran barn.
+[?? a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of p-2 is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x". ]
 
-a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of p-2 is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
-
-check fliptoing Mr Lee:
-	if alcoves is not visited:
-		say "[nuh-uh]" instead;
-
-check fliptoing p-2:
+check fliptoing gore ogre:
 	if Mr Lee wears ghoul hat:
 		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if alcoves is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if].";
-		preef p-2 instead;
+		preef gore ogre instead;
 
 chapter loop pool
 
@@ -21951,7 +21946,7 @@ after fliptoing ghoul hat:
 		min-up;
 	continue the action;
 
-after fliptoing p-2:
+after fliptoing gore ogre:
 	de-inhib;
 	if eels are reflexed:
 		min-up;
@@ -21965,7 +21960,7 @@ after fliptoing sea cube:
 
 after fliptoing eels:
 	de-inhib;
-	if p-2 is in lalaland:
+	if gore ogre is in lalaland:
 		min-up;
 	continue the action;
 
@@ -23144,7 +23139,7 @@ check going north in Gates Stage:
 		say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
-	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPIREVAL PREVAILER!";
+	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fly-Heart Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPIREVAL PREVAILER!";
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
 		min-and;
@@ -25578,7 +25573,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is otters:
 		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not in lalaland]DISCERN or even [end if]RESCIND the cinders.";
 		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
-		if p-2 is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said HOWEVER to gain Mr. Lee's trust.";
+		if gore ogre is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to gain Mr. Lee's trust.";
 		if Merle is reflexive, say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
 		if Elmer is reflexive, say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
 		if number of flippable things in perverse preserve > 0:

@@ -855,8 +855,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sea"	226267893	--	sea cube	--	"[cube-whole]."
 "cube"	270336406	--	sea cube	--	"[cube-whole]."
 "barn"	174838034	bran barn	--	--	"[locname]." [start bran barn]
-"rev"	320294732	--	p-2	--	"The [i]whole[r] picture."
-"howe"	347375758	--	p-2	--	"The [i]whole[r] picture."
+"vow"	289452170	--	vow here	--	"The [i]whole[r] vow here."
+"here"	378218320	--	vow here	--	"The [i]whole[r] vow here."
 "averts"	521866534	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
 "avert"	425592568	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
 "monstery"	742208386	alcoves	--	--	"[w-change]."
@@ -1797,10 +1797,10 @@ to say w-change: say "You can't change the alcoves. It's what's to the west that
 
 to say eelmry:
 	if player is in bran barn:
-		say "[if p-2 is in lalaland]You managed to help Mr. Lee enough[else if eels are reflexed]It would be better to show Mr. Lee, but you don't need to, since you talked with Le Mer[else]You just need to show Mr. Lee, not change him[end if]";
+		say "[if gore ogre is in lalaland]You managed to help Mr. Lee enough[else if eels are reflexed]It would be better to show Mr. Lee, but you don't need to, since you talked with Le Mer[else]You just need to show Mr. Lee, not change him[end if]";
 		continue the action;
 	if player is in loop pool:
-		say "[if eels are reflexed]You managed to help Le Mer enough[else if p-2 is reflexed]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
+		say "[if eels are reflexed]You managed to help Le Mer enough[else if gore ogre is in lalaland]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
 		continue the action;
 	if player is in alcoves and Merle is in alcoves:
 		say "You can't change Merle and Elmer, but maybe you could find a way to get rid of them";
