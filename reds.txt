@@ -302,6 +302,7 @@ atom,??YR=atmo=moat
 #loop pool
 #bran barn
 although,ghoulhat,holathug,ughohalt
+ergo,gore,ogre
 however,eehrowv,veerhow,revhowe,whereov
 #coevals alcoves
 #qver of ideas aides
