@@ -160,7 +160,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 3=24 for unripe ur-pine/serpent/triste in Mislit Limits
 1=25 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 31. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
+Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
 
 Others is an unsolved region. regtab of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
@@ -2212,7 +2212,7 @@ Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
 atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
-Mr Lee	"[if gore ogre is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--bad start. Rev. Howe glares at you[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed[tho-eels].[end if]"
+Mr Lee	"[if gore ogre is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
 macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
 eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
@@ -7272,6 +7272,7 @@ check listening (this is the you can hear stuff some places rule):
 		try objasking natives about natives instead;
 	if Ed Riley is visible, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
 	if macks are visible, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
+	if vow here is in location of player: say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in bran barn, say "You hear morose mooers you can't see." instead;
 	if whiners are visible, say "The volume and speed they're at, the actual words don't matter. You need to bite the men's style somehow." instead;
 	if sly imp is visible, say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
@@ -21812,7 +21813,7 @@ for printing a locale paragraph about Mr Lee:
 		if Gore Ogre is in lalaland:
 			say "doing farmy chores.";
 		else if ghoul hat is in lalaland:
-			say "glancing nervously at the painting of Rev. Howe.";
+			say "glancing nervously at the Gore Ogre.";
 		else:
 			say "[one of]musing 'Here to GLOAT, HUH?'[or]looking red-eyed and growling 'Hola, thug!'[or]giving a hot laugh.[or]crying, red-eyed, 'Ugh! O, halt!'[cycling]";
 	now Mr Lee is mentioned.
@@ -21832,14 +21833,15 @@ check scaning Mr Lee:
 
 section Gore Ogre
 
-the Gore Ogre is a vanishing person. "Fortunately, the gore ogre doesn't seem immediately violent, but it is still intimidating Mr. Lee."
+the Gore Ogre is a vanishing person. "Fortunately, the Gore Ogre doesn't seem immediately violent, but it is still intimidating Mr. Lee.". the Gore Ogre is cheat-spoilable.
 
-[?? a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of p-2 is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x". ]
+a-text of Gore Ogre is "YRRY". b-text of Gore Ogre is "YRRY". parse-text of Gore Ogre is "-[sp]x[sp]x[sp]-".
 
-check fliptoing gore ogre:
-	if Mr Lee wears ghoul hat:
-		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if alcoves is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if].";
-		preef gore ogre instead;
+section vow here
+
+the vow here is vanishing LLPish scenery. "You could probably LISTEN to hear the vow better. It doesn't make you see red if you don't hear the details."
+
+a-text of vow here is "RYRYRYR". b-text of vow here is "RGPYRYR". parse-text of vow here is "x[sp]O[sp]W[sp]-[sp]x[sp]-[sp]x".
 
 chapter loop pool
 
@@ -21888,22 +21890,6 @@ the eels are a plural-named reflexive person in the sea cube. description of eel
 
 a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "e[sp]x[sp]x[sp]e". eels are cheat-spoilable.
 
-check fliptoing eels:
-	if player does not have medals:
-		say "[nuh-uh]";
-		preef eels instead;
-	if sea cube is visible:
-		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.";
-		preef eels instead;
-
-to say nuh-uh:
-	say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if location of player is bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.[line break]";
-
-check fliptoing sea cube:
-	if player does not have medals:
-		say "[nuh-uh]";
-		preef sea cube instead;
-
 section allot atoll
 
 the allot atoll is scenery in Loop Pool. "[if eels are reflexed]You've been there. You don't need to go back[else]It doesn't look like a place everyone's allowed to go. Maybe you can be worthy of getting there[end if].[paragraph break]It's nothing to LOL at.".
@@ -21923,45 +21909,68 @@ instead of doing something with wire weir:
 	if current action is touching, say "That might get you zapped a bit." instead;
 	say "The wire weir is there to keep you from going anywhere but back south. No need to mess with it."
 
-section otters flipto and min points
+chapter otters flipto and min points
 
-[we need to check herer ifwe are completing both pool and barn points.]
+[we need to check herer if we are completing both pool and barn points.]
+
+section get your powers back
 
 to de-inhib:
 	now power-back is true;
-	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!'";
+	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!' But they are overtaken ... by a vow here.";
+	move vow here to location of player;
 	if atmo-moat is prefigured:
 		say "[line break]You feel strong enough to tackle the moat, now";
 		if try-fail-animal:
 			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-cathedral-south is false]loud roar[else]owls and loud roar[end if] that chased you away back east, too";
 		say ".";
 
-check fliptoing ghoul hat:
+section check fliptoing
+
+the medal check rules are an object-based rulebook.
+
+a medal check rule for (x - a thing):
 	if player does not have medals:
-		say "[nuh-uh]";
-		preef ghoul hat instead;
+		preef x;
+		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if location of player is bran barn]Mr. Lee[else]Le Mer[end if] is unmoved." instead;
+
+check fliptoing sea cube:
+	abide by the medal check rules for sea cube;
+
+check fliptoing gore ogre:
+	abide by the medal check rules for gore ogre;
+	if Mr Lee wears ghoul hat:
+		preef gore ogre;
+		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if alcoves is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if]." instead;
+
+check fliptoing eels:
+	abide by the medal check rules for eels;
+	if sea cube is visible:
+		preef eels;
+		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word." instead;
+
+check fliptoing ghoul hat:
+	abide by the medal check rules for ghoul hat;
+
+section after fliptoing
 
 after fliptoing ghoul hat:
-	if sea cube is in lalaland:
-		min-up;
+	if sea cube is in lalaland, min-up;
 	continue the action;
 
 after fliptoing gore ogre:
 	de-inhib;
-	if eels are reflexed:
-		min-up;
+	if eels are reflexed, min-up;
 	continue the action;
 
 after fliptoing sea cube:
 	now eels are in loop pool;
-	if ghoul hat is in lalaland:
-		min-up;
+	if ghoul hat is in lalaland, min-up;
 	continue the action;
 
 after fliptoing eels:
 	de-inhib;
-	if gore ogre is in lalaland:
-		min-up;
+	if gore ogre is in lalaland, min-up;
 	continue the action;
 
 book Shiner Shrine
