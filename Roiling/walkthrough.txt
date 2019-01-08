@@ -1556,6 +1556,8 @@ The sea cube and the eels--but you only have weak words. Fortunately, the medals
 
 > ELSE
 
+The vow here is a last lousy point.
+
 > S
 
 Now you can get rid of the moat.
@@ -1965,7 +1967,7 @@ The game has point totals for each region, but how do they compare in size? I de
 
 I think that this overview of complexity isn't fully accurate since complexity likely varies more as (letters ^ 2) or something. So a sum is not so useful. But this gives a bit extra to look at. If you're very interested, a heat map should be attached with this release. WMET.HTM is the file name, for "write metrics."
 
-MeansManse has a minimum of 40 and a maximum of 71. Find only one way out of the study and ignore the giant pin for the minimum score.
+Means Manse has a minimum of 40 and a maximum of 71. Find only one way out of the study and ignore the giant pin for the minimum score.
 
 Stores has a minimum of 36 and a maximum of 67. It is 18 if you use the patcher. You have six stores to open. The Lectures quest gives 19, Store H gives 6, and Store B gives 6.
 
@@ -1973,13 +1975,13 @@ Store V has a minimum of 95 and a maximum of 138. The seven Last Lousy Points ac
 
 Store U has a minimum of 115 and a maximum of 129. The last lousy points give you seven letters each. It's debatable here whether U is harder than V. U clearly has fewer choices for words, but V may be a bit tougher to clear completely, since the optional points can get skipped.
 
-Store P has a minimum of 132 and a maximum of 179. You can save a letter with the right good-bye to Leo and Rand. The lamb, TBA, and ROM sticks go, too, along with drives A and E. You can save 15 letters with the crust (volt maze, washups.) How you deal with Ye Hoop also means 4 or 6 letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack.
+Store P has a minimum of 132 and a maximum of 185. You can save a letter with the right good-bye to Leo and Rand. The lamb, TBA, starch charts and ROM sticks go, too, along with drives A and E. You can save 15 letters with the crust (volt maze, washups.) How you deal with Ye Hoop also means 4 or 6 letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack.
 
 Store Y has a minimum of 130 and a maximum of 187. Many solutions are short words. The five-command side quest is a big one. You can spill the pills right away to "lose" 8 more letters.  You can add a few letters with the right bar actions, crossing the river the two-step way, and several LLPs.
 
 Store W has a minimum of 157-161 and a maximum of 316-318, subjected to some randomness. Both the "H" and "I" paths through the guardians are 36 letters. You can save keystrokes, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two since one group of enemies has 4 or 5 letters, and another has 7 or 8. That makes for the estimates in the totals. The warriors are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip a lot, like three of the warriors, the strudel, the denim and other LLPs and, of course, five central guardians and two outlying ones. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
-Store T has a minimum of 145 and a maximum of 205. The bran barn forces you to use several more letters, and you can LLP Elmer and Merle twice, pick off the final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. There's randomness with the adverbs given but not their length. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 123 to 181.
+Store T has a minimum of 145 and a maximum of 209. The bran barn forces you to use one more letter, and you can LLP Elmer and Merle twice, pick off the vow here and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. There's randomness with the adverbs given but not their length. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 123 to 178.
 
 Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough, I think, that it shouldn't be too tough.
 

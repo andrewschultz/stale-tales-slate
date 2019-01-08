@@ -48,6 +48,7 @@ Store T:
 --the Imp is now of indeterminate gender.
 --the raw bulk bulwark is now the Edictal Citadel.
 --the Wickeder Wire Deck is repurposed as bounding scenery, and the animal rooms now change names when you've save enough of them.
+--Rev. Howe is replaced by the Gore Ogre, but there is a spinoff LLP in the vow here.
 
 Store U:
 --the scenery in the Same Mesa is now more thematically named.
