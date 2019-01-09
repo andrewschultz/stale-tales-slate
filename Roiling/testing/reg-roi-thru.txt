@@ -17,7 +17,9 @@ Well, if you want points for that, you'll need to go back to the study.
 #!above is a cheap cheat test to pick off an obscure mistake
 
 #mistake test for walkthrough or walkthru
->walkthrough or walkthru
+>walkthrough
+You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+>walkthru
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
 
 #mistake test for use [text]

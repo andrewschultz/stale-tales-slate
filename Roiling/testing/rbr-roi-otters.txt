@@ -53,7 +53,7 @@ You've dealt with the barley. You can move around a lot more, now.
 Yup, that's the idea here in Otters.
 
 >score
-Score in a scenario: 1 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
+Score in a scenario: 1 out of 32 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
 
 ==t2
 #nudge for burtn
@@ -85,13 +85,13 @@ The cinders glow and even warm up for a bit.
 >discern ed riley
 REGION MAX DECREASED BY 1, 1 OVERALL.
 >score
-Score in a scenario: 1 out of 30 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
+Score in a scenario: 1 out of 32 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
 ==!
 >rescind
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
-Score in a scenario: 2 out of 30 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 30.
+Score in a scenario: 2 out of 32 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 32.
 
 ==t2
 #nudge for cinders
@@ -337,15 +337,18 @@ Gretta's been manipulated enough.
 ==t3
 >s
 >although
+>ergo
+>misses
+--you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
+--you could've said HOWEVER
 >however
->misses
---you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels] trust.
+!--you could've said HOWEVER
 >n
 >n
 >because
 REGION MIN INCREASED BY 1, 2 OVERALL.
 >misses
---you could've said ELSE to gain the eels] trust.
+--you could've said ELSE to gain the eels' trust.
 >else
 REGION MIN INCREASED BY 1, 3 OVERALL.
 >undo
@@ -362,7 +365,7 @@ REGION MIN INCREASED BY 1, 2 OVERALL.
 >else
 REGION MIN INCREASED BY 1, 3 OVERALL.
 >misses
---you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
+--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
 >undo
 >undo
 >undo
@@ -407,7 +410,7 @@ by one point
 The eels have done enough.
 
 >misses
---you could've said ALTHOUGH to dissolve the ghoul hat, then said HOWEVER to gain Mr. Lee's trust.
+--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
 >score
 >s
 
@@ -456,8 +459,11 @@ The whole picture.
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
 #spechelp for p-2
->howevre
-Rev. Howe seems to snarl a bit more deeply for a moment.
+>erog
+??WRONG
+>listen
+??WRONG
+
 #readables for p-2
 >read howe
 /One barely legible bit reads (Eeh, Row V!|Veer How|Rev. Howe|Whereov)
@@ -474,12 +480,24 @@ You already justified yourself partially. Mr. Lee doesn't need more dialogue.
 
 ==!1
 >score
-Score in a scenario: 9 out of 30 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 30.
->however
+Score in a scenario: 9 out of 32 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 32.
+>ergo
 by one point
 REGION MIN INCREASED BY 1, 3 OVERALL.
 >score
-Score in a scenario: 10 out of 30 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 30.
+Score in a scenario: 10 out of 32 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 32.
+
+==t2
+#spechelp for vow here
+>howevre
+??WRONG
+
+==!1
+>however
+by one point
+REGION MIN INCREASED BY 1, 4 OVERALL.
+>score
+Score in a scenario: 11 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 >n
 
 ==t2
@@ -648,7 +666,7 @@ You don't need to riff on any location names to win the game, unless there's not
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 4 OVERALL.
 >score
-Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: 18 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 
 ==t3
 >undo
@@ -658,7 +676,7 @@ Score in a scenario: 18 out of 30 total points in the current region, Otters. Lo
 >artsy
 DEBUG INFO: Adding a min point for this flip.
 >score
-Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: 18 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 >undo
 >undo
 >undo
@@ -668,7 +686,7 @@ Score in a scenario: 18 out of 30 total points in the current region, Otters. Lo
 >paroled
 DEBUG INFO: Adding a min point for this flip.
 >score
-Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: 18 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 >undo
 >undo
 >undo
@@ -680,7 +698,7 @@ Score in a scenario: 18 out of 30 total points in the current region, Otters. Lo
 >coolest
 DEBUG INFO: Adding a min point for this flip.
 >score
-Score in a scenario: 18 out of 30 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: 18 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 
 >s
 >s
@@ -847,7 +865,7 @@ Uprates Pasture
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 5 OVERALL.
 >score
-Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 25 out of 32 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 32.
 
 ==t3
 >undo
@@ -857,7 +875,7 @@ Score in a scenario: 25 out of 30 total points in the current region, Otters. Lo
 >raccoon
 DEBUG INFO: Adding a min point for this flip.
 >score
-Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 25 out of 32 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 32.
 >undo
 >undo
 >undo
@@ -867,7 +885,7 @@ Score in a scenario: 25 out of 30 total points in the current region, Otters. Lo
 >hornets
 DEBUG INFO: Adding a min point for this flip.
 >score
-Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 25 out of 32 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 32.
 >undo
 >undo
 >undo
@@ -879,7 +897,7 @@ Score in a scenario: 25 out of 30 total points in the current region, Otters. Lo
 >snail
 DEBUG INFO: Adding a min point for this flip.
 >score
-Score in a scenario: 25 out of 30 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 25 out of 32 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 32.
 
 >n
 >n
@@ -946,7 +964,7 @@ Merle and Elmer look askance at each other for a bit.
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
 >score
-Score in a scenario: 26 out of 30 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 30 points.
+Score in a scenario: 26 out of 32 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 30 points.
 >aside
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
