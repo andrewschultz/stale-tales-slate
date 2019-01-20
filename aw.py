@@ -13,7 +13,7 @@ def on_off(a):
 
 def usage():
     print("-1/2 = see what happens with one or two letters removed")
-    print("-o/no = only anagram, or add/lose a letter" + on_off(only_anagram))
+    print("-o/no = only anagram, or (no) add/lose a letter" + on_off(only_anagram))
     print("-p/np = plurals, or no plurals" + on_off(plural))
     print("-v/nv = verbose or not" + on_off(verbose))
     print("-s = get STDIN, can be combined with command line")

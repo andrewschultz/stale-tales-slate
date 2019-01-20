@@ -2129,6 +2129,7 @@ old giant	"The giant is sort of controlling the conversation, and he's bigger th
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
 what-a-bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
+Si Reed	"Si Reed taps his head. You need to THINK right, here! But you sort of already knew that."
 lamb	"It's a baaaaad conversationalist." [begin presto]
 l-m	"[left-here].'"
 m-l	"[left-here].'"
@@ -2213,6 +2214,7 @@ cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
 atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
 Mr Lee	"[if gore ogre is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
+Gore Ogre	"'EORG EORG EORG!!!'"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
 macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
 eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
@@ -7272,7 +7274,7 @@ check listening (this is the you can hear stuff some places rule):
 		try objasking natives about natives instead;
 	if Ed Riley is visible, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
 	if macks are visible, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
-	if vow here is in location of player: say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
+	if vow here is in location of player, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in bran barn, say "You hear morose mooers you can't see." instead;
 	if whiners are visible, say "The volume and speed they're at, the actual words don't matter. You need to bite the men's style somehow." instead;
 	if sly imp is visible, say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
@@ -9958,7 +9960,7 @@ instead of switching off the settler:
 
 a tech etcha' is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as a tech etcha' when player has settler.
 
-description of tcb is "It says A TECH ETCHA['] in the middle, with [if cheat-on]a glowing [end if]CHEAT below and [unless cheat-on]a glowing [end if]TEACH below. You could PUSH it to change that, or just type CHEAT or TEACH."
+description of tcb is "It says A TECH ETCHA['] in the middle, with [if cheat-on is true]a glowing [end if]CHEAT below and [unless cheat-on is true]a glowing [end if]TEACH below. You could PUSH it to change that, or just type CHEAT or TEACH."
 
 cheat-on is a truth state that varies.
 
@@ -10344,7 +10346,7 @@ instead of taking the pen:
 qmspoil is a truth state that varies.
 
 to say verb-list:
-	say "[2da][b]N[r], [b]S[r], [b]E[r] and [b]W[r] are the basic directions, though [b]UP[r] and [b]DOWN are used occasionally, and [b]IN[r] or [b]OUT[r] may work.
+	say "[2da][b]N[r], [b]S[r], [b]E[r] and [b]W[r] are the basic directions, though [b]UP[r] and [b]DOWN are used occasionally, and [b]IN[r] or [b]OUT[r] may work.";
 	say "[b]X[r] or [r]EXAMINE may provide clues about something, and if it has writing on it, [b]READ[r] will show the writing, which is often a hint.";
 	say "[2da][b]TALK[r] to an NPC gives general information, while [b]ASK X ABOUT Y[r] gives detailed information.";
 	say "[2da][b]OPTIONS[r] or [b]OPTS[r] or [b]POST OPTS[r] gives you a list of game options that can simplify play or add detail.";
@@ -14297,7 +14299,7 @@ chapter Starch Charts
 
 the Starch Charts are flippable LLPish plural-named scenery. "The starch charts seem a bit beyond you, yet they seem to be indicating something. You're not sure what, and you're not sure you need to 'solve' the charts to know. But they're covered with all the interjections you've used so far--well, up to a certain point. Where the interjections become, well, actual concrete nouns or even verbs you could spit out in disgust to similar effect. Some are misspelled for effect, but you still recognize them."
 
-a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of coal is "x[sp]x[sp]a[sp]x[sp]?[sp]?".
+a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of starch charts is "x[sp]x[sp]a[sp]x[sp]?[sp]?".
 
 book Hacks' Shack
 
@@ -21929,7 +21931,7 @@ section check fliptoing
 
 the medal check rules are an object-based rulebook.
 
-a medal check rule for (x - a thing):
+a medal check rule for a thing (called x):
 	if player does not have medals:
 		preef x;
 		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if location of player is bran barn]Mr. Lee[else]Le Mer[end if] is unmoved." instead;
@@ -25582,7 +25584,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is otters:
 		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not in lalaland]DISCERN or even [end if]RESCIND the cinders.";
 		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
-		if gore ogre is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to gain Mr. Lee's trust.";
+		if gore ogre is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
 		if Merle is reflexive, say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
 		if Elmer is reflexive, say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
 		if number of flippable things in perverse preserve > 0:

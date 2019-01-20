@@ -124,7 +124,7 @@ log ons	log ons	false	400300169	--	"solong"	"so long" or "solong"	"[increm]"
 alert	alert	false	372241587	--	"later"	"later"	"[increm]"
 ought	ought	false	352450403	--	"tough"	"tough"	"[increm]"
 hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	"You realize you have done a lot of mental calculations with anagrams, but some of it feels rote, and while Elvira probably overdid it, there are times you relied just on calculation without asking deeper questions. Why is hawt-thaw as it is? Even Yorpwald's best scientists can't answer that question. So, you make a commitment to be more than just someone who finds anagrams, once this whole shebang is over, and you remind yourself that puzzles for their own sake only go so far.[paragraph break]The hawt thaw shrivels up and blows away, leaving you wiser--and more intellectually curious--for its brief presence in your life, even if it doesn't help you on your immediate quest.[paragraph break]You make plans, once Yorpwald is back to normal, to lobby for a Thaws-Swath to answer these questions. It will frequently be wash't, so it doesn't get shawt."
-starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	"You realize the charts themselves are a bunch of nonsense. Calling them trash sort of works as a noun or an interjection, but seeing and having them there [if shack-flips > 0]clues[else]reinforces[end if] to you that you'll be using mostly nouns--and maybe a verb, since you can trash things--inside the hacks['] shack." [?? what if do later]
+starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	"You realize the charts themselves are a bunch of nonsense. Calling them trash sort of works as a noun or an interjection, but seeing and having them there [if shack-flip-yet is true]clues[else]reinforces[end if] to you that you'll be using mostly nouns--and maybe a verb, since you can trash things--inside the hacks['] shack."
 clack ops locs pack	clack ops locs pack	true	399038507	--	"capslock"	"capslock" or "caps lock"	"You think WHOAH as the locs pack morps into a capslock button, which you pick up."
 disk	skid	false	215229079	--	"skid"	"skid"	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."
 skid	disk	true	215229079	--	"disk"	"disk"	"The skid changes back into a disk, which you take."
@@ -715,6 +715,12 @@ after fliptoing skid:
 		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
 		preef disk;
 	now skid is in location of player;
+	continue the action;
+
+shack-flip-yet is a truth state that varies.
+
+after fliptoing when player is in hacks' shack:
+	now shack-flip-yet is true;
 	continue the action;
 
 after fliptoing otters-x:
@@ -1408,7 +1414,7 @@ isolani liaison	"The isolani liaison isn't there for any puzzles but just to com
 notice	"For reading."
 question mark	"[one of]A question mark in cheat mode for the settler is not as hopeless as you think.[plus][or]For starters, you may find something more direct than a question mark if you switch to non-cheat mode. That way you'll know if the confusing letter is a vowel or consonant.[plus][or]However, the question mark can also indicate that one of two letters in a description works. There's a simple example ahead.[plus][or]So if, for instance, APES['] APSE gives RYY?, you know the last letter must be E or S.[plus][or]But RYY? tells us more: APES and APSE have two consonants, and so must the product. So letter 4 is a consonant, or S. So the question mark wasn't really a question mark. That doesn't always work, but it can help. In this case, we also find slot 3 is A, making 2 E and 1 P. PEAS.[plus][or]More abstractly, if ABCDE EBACD needs to be EDABC, we would have ?R?RR. But the two remaining slots would have to be vowels.[plus][or]Similarly, if we have two question marks and one is a choice between only consonants or only vowels, you can figure what the other is by counting consonants and vowels.[plus][or]Thus, question marks may not give immediate clues, but they may provide a bit more than just standard colors. Restart to see this again.[cycling]"
 colorful logo	"The logo provides hints as to the mechanics of the settler. You may want to try examining it with teach/cheat mode on or off."
-switch	"The switch shows you what needs to be changed if you SWITCH SETTLER."
+whichs shwich	"The shwich shows you what needs to be changed if you SWITCH SETTLER."
 decal	"[one of]The Y's on the decal are orange. This seems like a clue.[plus][or]Orange is red and yellow.[plus][or]Y is the only letter of the alphabet that is...[plus][or]...a consonant and a vowel![minus][cycling]"
 backside	--	laced decal
 slider	"The slider will allow you more detailed hints about how close a guess is. But it has limited uses."
