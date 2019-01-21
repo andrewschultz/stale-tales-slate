@@ -1989,6 +1989,7 @@ Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in 
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 armada	"They'll have nothing sensible to say in unison."
 statue	"Oh, if it were the real version, you'd regret that."
+Si Reed	--	[reflex TROVES]
 plebe	 "You figure you should grill him about how worthless he thinks he is, but you lack the right word or words." [reflex PRESTO]
 Rand	"He gives a whole new dimension to small talk. But not for long, thankfully."
 Leo	"He gives a whole new dimension to small talk. But not for long, thankfully."
@@ -2022,6 +2023,8 @@ sweatier wait-seer	--
 arid den	--
 bluster butlers	--
 unripe ur-pine	--
+resident trendies	--
+fluster self rut	--
 pirates	--
 keycar	--
 grailman	--
@@ -2042,6 +2045,7 @@ Gretta	"She's got enough people asking about her right now."
 Elmer	"'Slightly more interesting than my friend.'"
 Merle	"'Slightly more interesting than my friend.'"
 Mr Lee	--
+gore ogre	--
 le mer	--
 eels	--
 snail	--
@@ -2124,13 +2128,15 @@ Mole Elmo	"[bug-report]"
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[or]Sparest repasts[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
-drama armada	"They stare blankly at you, fearful yet confident you know what to do next. They won't be much help."
+drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it. Mob mentality and all."
 old giant	"The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
 what-a-bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
 Si Reed	"Si Reed taps his head. You need to THINK right, here! But you sort of already knew that."
+Si Reed	"Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. You'd like to know what Si Reed knows!" [begin troves]
 lamb	"It's a baaaaad conversationalist." [begin presto]
+plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
 l-m	"[left-here].'"
 m-l	"[left-here].'"
 Tom Alvez	"[left-here].'"
@@ -2157,30 +2163,7 @@ ant	"The ant twitches silently but menacingly."
 dialer	"Your voice would be recognized as not evil enough, even if you got through."
 intercom	"Your voice would be recognized as not evil enough, even if you got through."
 spec-o-scope	"Try looking in it instead."
-agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]" [begin TOWERS]
-Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it."
-plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move."
-muscly luc sym	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
-muscly ms lucy	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
-bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
-snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
-organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in Danger Garden]north[else]south[end if][if Danger Garden is visited and Strati Strait is visited], especially since you walked around before[end if]."
-pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
-lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
-Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
-mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
-Mel Fish	"Mel Fish rants how they set him up to fail: [one of]'Shelf [']im[or]'Eh, Films[or](censored to maximize cluing) 'LES?! F HIM[in random order]! They done me wrong.' he cries as his eyes go red[one of]. He's obviously not finished ranting[or][stopping]."
-natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
-sweatier wait-seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
-duck	"It quacks."
-ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
-pester'n serpent	"[serp-say]."
-alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!' You see red at the name."
-bonker	"You try to chat but feel like a, er, knob."
-Lois the Hostile	"She complains[hostile-red]!"
-Hostile-Is-He Lot	"They complain[hostile-red]!"
-Atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
+dreads adders	"They can't speak. They seem happy enough just blocking you." [begin TOWERS]
 Andres	"[war-duh]"
 Andrew	"[war-duh]"
 Archie	"[war-duh]"
@@ -2207,6 +2190,31 @@ Terrance	"[war-duh]"
 Tyson	"[war-duh]"
 Wade	"[war-duh]"
 Sir Rodney	"This standoff won't be resolved with diplomacy."
+muscly luc sym	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
+muscly ms lucy	"She kind of stumbles with dialogue. Maybe you can make her stumble physically."
+bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
+snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
+fluster self rut	"You feel agitated just talking to the rut, whether or not it decides to talk back. You press yourself hard to think what to ask, but no. That can't quite work."
+organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in Danger Garden]north[else]south[end if][if Danger Garden is visited and Strati Strait is visited], especially since you walked around before[end if]."
+pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
+lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
+Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
+mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
+Mel Fish	"Mel Fish rants how they set him up to fail: [one of]'Shelf [']im[or]'Eh, Films[or](censored to maximize cluing) 'LES?! F HIM[in random order]! They done me wrong.' he cries as his eyes go red[one of]. He's obviously not finished ranting[or][stopping]."
+natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
+sweatier wait-seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
+duck	"It quacks."
+Resident Trendies	"They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by."
+ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
+pester'n serpent	"[serp-say]."
+alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!' You see red at the name."
+bonker	"You try to chat but feel like a, er, knob."
+stinger	"As you start to talk, you almost see a grin set in the stinger, which makes you see red."
+Lois the Hostile	"She complains[hostile-red]!"
+Hostile-Is-He Lot	"They complain[hostile-red]!"
+Atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
+agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
+Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
 Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if flowerpot is reflexed]St. Teri looks at your flowerpot, sadly[else if player has crocus]St. Teri looks at your flowerpot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
@@ -2338,11 +2346,12 @@ oscar	Brother Horbert	"'[bh-mw].'"
 oscar	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
 oscar	oscar	"Oscar grumbles. 'I'm ME, you know?'"
 pat	pat	"'Still holding on to the Idle Deli here.'"
-pat	seed pit	"'[if mushrooms are off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'" [end routes]
+pat	seed pit	"'[if mushrooms are off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'"
 pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
 pat	old giant	"'Probably not good for business.'"
 pat	Brother Horbert	"'Brother Horbert means well, but he's too unfocused to DO anything by himself.'"
-pat	Elvira	"'Business is bad enough. I don't need trouble with her.'"
+pat	Elvira	"'Business is bad enough. I don't need trouble with her.'" [end routes]
+Si Reed	Elvira	"Si Reed nods pointedly." [begin troves] [end troves]
 plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]." [start PRESTO]
 plebe	Leo	"You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force."
 plebe	Rand	"You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force."
@@ -2437,7 +2446,7 @@ yapper	Elvira	"'She's called on the dialer a few times.'"
 yapper	h-h	"'That's where we are.'"
 butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'" [start TOWERS]
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
-muscly sym luc	Elvira	"Sym Luc blinks and shrugs and grunts."
+muscly luc sym	Elvira	"Luc Sym blinks and shrugs and grunts."
 muscly ms lucy	Elvira	"Ms. Lucy blinks and shrugs and grunts."
 pirates	Elvira	"The pirates explain colorfully how Elvira's rule has been good for piracy. Not the software or music sort that deserves jail time, but the stuff that takes real guts."
 sweatier	Elvira	"The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end."
@@ -2458,6 +2467,7 @@ hostile-is-he lot	Elvira	"'Any one of us could do even better than her...Yorpwal
 organised	Elvira	"Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before."
 natives	Elvira	"The natives mention she says everyone deserves their own place, unless they suck, which the natives don't."
 natives	curst palace	"'Why go there when you could live in the Badlands?'"
+fluster self rut	Elvira	"You hear nothing and imagine Elvira laughing at you."
 bonker	Elvira	"'She has increased bonker production by 1000%!'"
 bonker	curst palace	"'It must be guarded by a thousand like me!'"
 agnostic	Dr Yow	"[if agnostic is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if agnostic is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [ag-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if agnostic is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
@@ -2489,6 +2499,7 @@ macks	Elvira	"'She would be too good for us. She deserves to have time by hersel
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
 Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
 Mr Lee	Elvira	"'She must be defeated[if gore ogre is in lalaland]. You must be the one to lead us[else if ghoul hat is in lalaland]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
+Gore Ogre	Elvira	"The Gore Ogre EORG's a bit louder."
 ocelots	Elvira	"They shudder[at-elvira]."
 satyr	Elvira	"He shudders[at-elvira]."
 leopard	Elvira	"It shudders[at-elvira]."
@@ -4553,7 +4564,7 @@ when play begins (this is the basic initialization rule):
 						say "[PE] has nothing special or specific to say.";
 				if PE is not a him-asked listed in the table of reflexive-blather:
 					if litany of PE is Table of No Conversation:
-						say "[PE] has nothing to say about themselves.";
+						say "[PE] has nothing to say about themselves. Perhaps put a blank entry in Table of Reflexive Blather.";
 		if convo-holes is false:
 			say "No conversational holes.";
 	now die-trigger is a random number from 3 to 5; [DIE TO US in Lectures]
@@ -4567,6 +4578,9 @@ definition: a room (called myrm) is ominous:
 		if myrm is Shiner Shrine or myrm is Clarthead Cathedral:
 			decide no;
 		decide yes;
+
+definition: a person (called per) is guardianish:
+	if per is a guardian, yes;
 
 last-wall is a thing that varies. last-wall is usually allow lots tools wall.
 
@@ -7537,7 +7551,7 @@ part settler stubs
 
 chapter cting
 
-[* c=t=cheat=teach=push tcb/cheat button]
+[* c=t=cheat=teach=push tech etcha'/cheat button]
 
 cting is an action applying to nothing.
 
@@ -7547,7 +7561,7 @@ understand "c" and "t" and "cheat" and "teach" as cting.
 
 carry out cting:
 	if settler is not visible, say "[reject]" instead;
-	try pushing tcb instead;
+	try pushing tech etcha' instead;
 
 chapter sbing
 
@@ -9960,15 +9974,15 @@ instead of switching off the settler:
 
 a tech etcha' is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as a tech etcha' when player has settler.
 
-description of tcb is "It says A TECH ETCHA['] in the middle, with [if cheat-on is true]a glowing [end if]CHEAT below and [unless cheat-on is true]a glowing [end if]TEACH below. You could PUSH it to change that, or just type CHEAT or TEACH."
+description of tech etcha' is "It says A TECH ETCHA['] in the middle, with [if cheat-on is true]a glowing [end if]CHEAT below and [unless cheat-on is true]a glowing [end if]TEACH below. You could PUSH it to change that, or just type CHEAT or TEACH."
 
 cheat-on is a truth state that varies.
 
-instead of switching on the tcb, try pushing the tcb instead;
+instead of switching on the tech etcha', try pushing the tech etcha' instead;
 
-instead of switching off the tcb, try pushing the tcb instead;
+instead of switching off the tech etcha', try pushing the tech etcha' instead;
 
-check pushing the tcb:
+check pushing the tech etcha':
 	say "You push the teach-cheat button, and it's now [if cheat-on is true]off. Hooray for more challenge[otherwise]on. Hooray for more information[end if][one of] when you SCAN in the future--though you can push the button to go back to normal mode[or][stopping][if cheat-on is false and seen-blues is false]. The logo seems to change colors as well[end if].";
 	now cheat-on is whether or not cheat-on is false;
 
@@ -18299,7 +18313,7 @@ after looking in loftier trefoil:
 	set the pronoun them to w-p;
 	continue the action;
 
-w-p is privately-named plural-named scenery in loftier trefoil. printed name of w-p is "warriors".
+w-p is privately-named plural-named scenery in loftier trefoil. printed name of w-p is "warriors". description is "[bug-report]".
 
 instead of objhinting w-p:
 	if number of warriors in trefoil is 1, try objhinting rodney instead;
@@ -21835,7 +21849,7 @@ check scaning Mr Lee:
 
 section Gore Ogre
 
-the Gore Ogre is a vanishing person. "Fortunately, the Gore Ogre doesn't seem immediately violent, but it is still intimidating Mr. Lee.". the Gore Ogre is cheat-spoilable.
+the Gore Ogre is a vanishing person. description is "Fortunately, the Gore Ogre doesn't seem immediately violent, but it is still intimidating Mr. Lee.". the Gore Ogre is cheat-spoilable.
 
 a-text of Gore Ogre is "YRRY". b-text of Gore Ogre is "YRRY". parse-text of Gore Ogre is "-[sp]x[sp]x[sp]-".
 
