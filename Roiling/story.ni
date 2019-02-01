@@ -127,7 +127,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 40. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts, +1 points for GOODNESS]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
@@ -2385,7 +2385,7 @@ trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
 trolls	h-h	"'Even more fun than here. So we hear.'"
 trolls	capers	"[if stein is in lalaland][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
 trolls	stein	"[if stein is in lalaland][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
-trolls	tunes	"[if song is in reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
+trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
 trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
 trolls	stumbler tumblers	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
 trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
@@ -7229,11 +7229,13 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in Drain Nadir and Eddie's Song is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in econ cone and praise spirea is reflexive, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
-	if mrlp is presto, say "[if cur-score of presto is 0]A shot. Sort of[else]You don't hear anything congruent to what you've needed to say in this area, which is a good thing[end if]." instead; [presto]
-	if Rand is visible and Rand is washed up:
+	if Rand is visible and Rand is washed up: [presto] [this needs to come first, since there is a lot to listen to in Dirge Ridge]
 		say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
 		try asking a random washed up person about "rannygazoo" instead;
-	if player is in shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
+	if player is in Dirge Ridge and odes song is in dirge ridge, say "The sods-gone odes song makes Dirge Ridge an unwelcoming place, but not totally inhospitable. You'd like to deal with it, but you don't need to. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DEN SOS GO, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red ingremember DEN SOS GO also wrote the appalling nonsense SEGS DO ON[stopping]." instead;
+	if player is in Dirge Ridge, say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite dealing with Rand and Leo[end if]." instead;
+	if player is in hacks' shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
+	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
 	if player is in Loftier Trefoil: [towers]
 		if number of visible warriors is 1, say "Rodney's intimidating enough, he can keep this place quiet." instead;
 		if number of visible warriors is 0, say "Regular tavern bustle and storytelling once again, but nobody you need to talk to." instead;
@@ -13584,10 +13586,8 @@ to yak-and-yoke:
 	now yak is in lalaland;
 
 check going south in Char Arch:
-	if Leo is visible:
-		say "'I don't wanna go back dere, boss. I wants adventureses. Fightses.' says [l-r]." instead;
-	if Leo is dismissed:
-		post-wall-arch instead;
+	if Leo is visible, say "'I don't wanna go back dere, boss. I wants adventureses. Fightses.' says [l-r]." instead;
+	if Leo is dismissed, post-wall-arch instead;
 
 to post-wall-arch:
 	if casserole is in lalaland:
@@ -13770,7 +13770,7 @@ instead of taking off tsar star:
 
 book Dirge Ridge
 
-Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "It's sort of sad here, leaving you thinking and saying 'Erg ... I'd ...'. A vile veil covers any way except back north."
+Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "[if odes song is in lalaland]With the odes song gone, you're ... well, just mad about stuff. [else]A odes song floating around leaves you thinking 'Erg... I'd ...' [end if]A vile veil covers any way except back north.". printed name of Dirge Ridge is "[if odes song is in lalaland]Ires['] Rise[else]Dirge Ridge[end if]".
 
 the vile veil is bounding scenery in Dirge Ridge. description is "It's so horrible to even look at, and you realize whatever it is protecting you from must be even worse."
 
@@ -13905,6 +13905,10 @@ check fliptoing wzup:
 check asking about "whassup":
 	if noun is Leo or noun is Rand:
 		try fliptoing wzup instead;
+
+chapter sods gone odes song
+
+the sods gone odes song is LLPish vanishing scenery in Dirge Ridge.
 
 book Austerer Treasure
 
@@ -14136,7 +14140,7 @@ book Phat Path
 
 Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a harpings phrasing guarding [one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
-the ogled lodge is privately-named proper-named scenery in Phat Path. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of ogled lodge is "the shack"
+the ogled lodge is proper-named scenery in Phat Path. "[if shack is visited]The ogled lodge/hacks['] shack looks just as you left it[else]The ogled lodge looks cozy and inviting[end if].".
 
 check entering ogled lodge:
 	try going north instead;
@@ -14269,6 +14273,7 @@ to say increm:
 		now log ons letters are reflexed;
 		now ought letters are reflexed;
 		now starch charts are in Saps' Pass;
+		if odes song is in Dirge Ridge, min-up;
 
 chapter hawt thaw
 
@@ -25535,6 +25540,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
 		if maze-points is 2, say "[2drm of Grey Gyre]you missed a point for scanning a guy in Nowt Town.";
+		if odes song is in dirge ridge, say "[2drm of Dirge Ridge]you could've said GOODNESS to the Odes Song.";
 		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
 		if sport ports are reflexive, say "[2drm of Austerer Treasure]you could've said PROST (a German word to toast someone) to the Sport Ports.";
 		if hawt thaw is in phat path, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
