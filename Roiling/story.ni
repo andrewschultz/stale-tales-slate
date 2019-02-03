@@ -14146,10 +14146,10 @@ check entering Deil's Slide:
 
 book Phat Path
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a harpings phrasing guarding [one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[end if][if starch charts are in phat path][desc-starch][end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for [if harpings phrasing is in phat path]a harpings phrasing guarding[end if] [one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[end if][if starch charts are in phat path][desc-starch][end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
 to say desc-starch:
-	say "[if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
+	say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
 
 the ogled lodge is proper-named scenery in Phat Path. "[if shack is visited]The ogled lodge/hacks['] shack looks just as you left it[else]The ogled lodge looks cozy and inviting[end if].".
 
