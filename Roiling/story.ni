@@ -127,7 +127,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts, +1 points for GOODNESS]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
 [Necessary points:
@@ -8174,6 +8174,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			if noun is the-to entry and the-from entry is reflexed:
 				print-the-from the-from entry;
 				the rule succeeds;
+		if debug-state is true, say "DEBUG WARNING: if you hoped to flip this for a point, maybe it needs to be reflexive or vanishing.";
 		try examining noun instead;
 	if noun is t-b or noun is tables or noun is palm or noun is giant pin or noun is niche:
 		if Gunter is not in lalaland:
@@ -9691,6 +9692,8 @@ after printing the name of gird grid when gird grid is examined:
 	say " (X 1 through X 6 to read quickly)";
 
 understand "x [number]" as gridxing when player has gird grid.
+
+does the player mean gridxing when player is in strip of profits and player has gird grid: it is very likely.
 
 gridxing is an action applying to one number.
 
@@ -13454,7 +13457,7 @@ after fliptoing ether:
 
 book Char Arch
 
-Char Arch is south of Grey Gyre. It is in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
+Char Arch is south of Grey Gyre. It is in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. [if dart is not  in dumpster]A dumpster you looted stands uselessly here[else if dumpster is examined]Maybe you could get the dart out of a dumpster standing her[else]A dumpster sits here. It might be worth looking at, or in[end if]."
 
 leaf-clue is a truth state that varies.
 
@@ -13859,7 +13862,7 @@ for writing a paragraph about a bruisin person:
 	if Leo is eager:
 		say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is visible] into that computer area they probably don't need to be[end if]." instead;
 	if Rand is washed up and Leo is washed up:
-		say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talk and listen would help, or the right word might help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
+		say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talking and listening would cue you to help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
 
 every turn when player is in dirge ridge:
 	if Leo is fightin:
@@ -14064,6 +14067,12 @@ description of serial number is "B09140715."
 
 gun-load-tried is a truth state that varies.
 
+check inserting it into (this is the don't insert if already inserted rule):
+	if noun is in second noun, say "But [the noun] is already in [the second noun], where it needs to be." instead;
+	if noun is dart and noun is in popgun, say "The dart is loaded nicely in the popgun." instead;
+
+the don't insert if already inserted rule is listed before the can't insert what's not held rule in the check inserting it into rulebook.
+
 check inserting it into (this is the dart-popgun rule):
 	if second noun is popgun and boing is reflexive:
 		if noun is dart:
@@ -14071,8 +14080,7 @@ check inserting it into (this is the dart-popgun rule):
 			say "It seems like it should fit, but it doesn't. You can't quite compress the boing mechanism right, but if you had a moment of insight, you could." instead;
 		else:
 			say "That's not the right shape to fit in the gun to fire. Anyway, the boing mechanism looks broken." instead;
-	if noun is dart and second noun is not popgun:
-		say "How could that launch the dart?" instead;
+	if noun is dart and second noun is not popgun, say "How could that launch the dart?" instead;
 	if noun is not dart and second noun is popgun:
 		say "That's not the right shaped ammo for the popgun." instead;
 	if noun is dart and second noun is popgun:
@@ -14138,7 +14146,10 @@ check entering Deil's Slide:
 
 book Phat Path
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a harpings phrasing guarding [one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a harpings phrasing guarding [one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[end if][if starch charts are in phat path][desc-starch][end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+
+to say desc-starch:
+	say "[if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
 
 the ogled lodge is proper-named scenery in Phat Path. "[if shack is visited]The ogled lodge/hacks['] shack looks just as you left it[else]The ogled lodge looks cozy and inviting[end if].".
 
@@ -14167,7 +14178,7 @@ check going east in Phat Path:
 Check going inside in Phat Path:
 	Try going north instead;
 
-the harpings phrasing is scenery in Phat Path. description of harpings phrasing is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!"
+the harpings phrasing is scenery in Phat Path. description of harpings phrasing is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!'"
 
 check taking harpings phrasing:
 	say "Removing the warning won't make the warning any less valid." instead;
@@ -14272,7 +14283,7 @@ to say increm:
 		now alert letters are reflexed;
 		now log ons letters are reflexed;
 		now ought letters are reflexed;
-		now starch charts are in Saps' Pass;
+		now starch charts are in Phat Path;
 		if odes song is in Dirge Ridge, min-up;
 
 chapter hawt thaw
@@ -14645,9 +14656,10 @@ after printing the locale description for hacks' shack (this is the auto-screen 
 	if player has onyx censer:
 		if censer is prefigured:
 			now hacks' shack is visited;
+			say "Hmm, now would be a good time to change the censer to a screen. Get it off your hands.";
 			try fliptoing screen;
 			if player has screen:
-				say "You decide to put the screen you just made on the labs slab so you don't have to lug it around any more.";
+				say "You fit the screen you just made handily on the labs slab.";
 				now screen is on labs slab;
 	check-trivial-presto-llp;
 	continue the action;
@@ -20812,7 +20824,7 @@ to preef (thi - a thing): [text listed in table of pres]
 	if player is in study:
 		check-get-pad;
 	if thi is not prefigured:
-		say "[i][bracket]You add the information to your pedanto-notepad under FLIPS.[close bracket][r]";
+		say "[i][bracket]You add the information to your pedanto-notepad under FLIPS.[close bracket][r][line break]";
 	now thi is prefigured;
 	if player is not in study and player does not have pedanto-notepad:
 		say "You should have your notepad, but you don't. This is a BUG, reportable at [email], and I'm giving you the notepad.";
@@ -25539,11 +25551,12 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
-		if maze-points is 2, say "[2drm of Grey Gyre]you missed a point for scanning a guy in Nowt Town.";
+		if maze-points is 2, say "[2drm of Grey Gyre]you missed a point by scanning a guy in Nowt Town.";
 		if odes song is in dirge ridge, say "[2drm of Dirge Ridge]you could've said GOODNESS to the Odes Song.";
 		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
-		if sport ports are reflexive, say "[2drm of Austerer Treasure]you could've said PROST (a German word to toast someone) to the Sport Ports.";
-		if hawt thaw is in phat path, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
+		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said PROST (a German word to toast someone) to the Sport Ports.";
+		if hawt thaw is not in lalaland, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
+		if starch charts are not reflexed, say "[2drm of Phat Path]you could've made the starch charts TRASCH.";
 		if rom sticks are off-stage, say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage, say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
@@ -25878,6 +25891,8 @@ understand the command "ts" as something new.
 understand "ts" as tsing.
 
 carry out tsing:
+	if player is in strip of profits, say "You already are here!" instead;
+	if strip of profits is visited, say "You should RETRY instead to go back." instead;
 	move player to Strip of Profits;
 	get-cool-stuff;
 	if player has lamp, now lamp is in lalaland;
