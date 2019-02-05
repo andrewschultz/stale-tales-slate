@@ -110,6 +110,8 @@ rats,star
 prost,?R?R?=sport=ports
 #dirge ridge
 whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
+#qver of goodness
+goodness,R?YRRYRR=sodsgone=odessong
 #phat path/saps pass
 keys,syke
 #qver of alert
@@ -123,7 +125,7 @@ trasch,RRGR??=starch=charts
 #hacks shack
 disk,skid,idks
 skid,disk,idks
-compile,melcopi
+compile,melcopi,imlecop,mcpoeil,licemop
 keyboard,darkeboy,robadkey,oakderby,brokeday
 reboot,boreto
 #qver of locs pack
