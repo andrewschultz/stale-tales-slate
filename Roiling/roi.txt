@@ -281,7 +281,7 @@ Onyx is out, as is onyx censer.
 The green semi-text on black may be a clue.
 It becomes a SCREEN.
 >>CHAR ARCH
-?What's in the dumpster?
+?What's in the cretins' cistern?
 A dart. It's frustrating to get. You'll probably get it as soon as you give up.
 Or say DRAT.
 ?How do I get the star?

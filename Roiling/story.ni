@@ -5411,7 +5411,7 @@ carry out presto-hinting:
 			all-say "You are done here in Austerer Treasure." instead;
 	if tsar star is visible and tsar star is in Char Arch:
 		try objhinting tsar star instead;
-	if dart is visible and dart is in dumpster:
+	if dart is visible and dart is in cistern:
 		try objhinting dart instead;
 	if location of player is Dirge Ridge:
 		if Leo is in dirge ridge and Leo is fightin:
@@ -5449,7 +5449,7 @@ carry out presto-hinting:
 				if player does not have popgun:
 					all-say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the Marines Seminar Remains.[cycling]" instead;
 				if Rand is not eager or Leo is not eager:
-					all-say "[one of]If you've gone through the ether alone, you'll see you've been outnumbered.[or]You'll need allies to even up the numbers in the ether to the north.[or]Anyone here you seen who likes a fight?[or]Fetch the fellows by the dumpster, first.[cycling]" instead;
+					all-say "[one of]If you've gone through the ether alone, you'll see you've been outnumbered.[or]You'll need allies to even up the numbers in the ether to the north.[or]Anyone here you seen who likes a fight?[or]Fetch the fellows south of the cistern, first.[cycling]" instead;
 			else:
 				if dart is not in popgun or boing is reflexive or Leo is not in gyre:
 					all-say "The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through." instead;
@@ -6766,7 +6766,7 @@ chapter climbing
 The block climbing rule is not listed in the check climbing rulebook.
 
 check climbing (this is the climb to enter rule) :
-	if noun is frat raft or noun is dumpster or noun is chimney or noun is bench or noun is stair:
+	if noun is frat raft or noun is cistern or noun is chimney or noun is bench or noun is stair:
 		try entering noun instead;
 
 check climbing (this is the generic silly climbing reject rule):
@@ -13261,19 +13261,13 @@ carry out shooting:
 	if noun is maze walls:
 		say "Too sturdy. There must be a better way for them to tumble down." instead;
 	if noun is Rand or noun is Leo:
-		if noun is fightin:
-			say "That'd just make him madder." instead;
-		if noun is Leo and Rand is fightin:
-			say "That wouldn't help you beat Rand, and if it did, it'd make Leo madder." instead;
-		say "After saying Whassup to him? That's be cold. Plus, [if noun is Rand]Leo[else]Rand[end if] would avenge his friend." instead;
-	if noun is m-l or noun is l-m or noun is Tom Alvez:
-		say "They aren't preventing you from trying to complete the maze." instead;
-	if noun is dumpster:
-		say "Pointless vandalism." instead;
-	if noun is ether:
-		say "You can't see through it. Plus, the popgun is not a gun of un-fog." instead;
-	if noun is nowt town:
-		say "Brute force is a better way to get maze hints." instead;
+		if noun is fightin, say "That'd just make him madder." instead;
+		if noun is Leo and Rand is fightin, say "That wouldn't help you beat Rand, and if it did, it'd make Leo madder." instead;
+		say "After saying Whassup to them both? That's be cold. Plus, [if noun is Rand]Leo[else]Rand[end if] would avenge his friend." instead;
+	if noun is m-l or noun is l-m or noun is Tom Alvez, say "They aren't preventing you from trying to complete the maze." instead;
+	if noun is cistern, say "Pointless vandalism." instead;
+	if noun is ether, say "You can't see through it. Plus, the popgun is not a gun of un-fog." instead;
+	if noun is nowt town, say "Brute force is a better way to get maze hints." instead;
 	say "Less shooting, more soothing. You'll be prepared when there is a fight." instead;
 	the rule succeeds;
 
@@ -13457,7 +13451,7 @@ after fliptoing ether:
 
 book Char Arch
 
-Char Arch is south of Grey Gyre. It is in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. [if dart is not  in dumpster]A dumpster you looted stands uselessly here[else if dumpster is examined]Maybe you could get the dart out of a dumpster standing her[else]A dumpster sits here. It might be worth looking at, or in[end if]."
+Char Arch is south of Grey Gyre. It is in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. [if dart is not in cistern]The cretins['] cistern you looted stands uselessly here[else if cistern is examined]Maybe you could get the dart out of the cretins['] cistern standing here[else]A cretins['] cistern sits here. It might be worth looking at, or in[end if]."
 
 leaf-clue is a truth state that varies.
 
@@ -13614,20 +13608,17 @@ to post-wall-arch:
 		continue the action;
 	say "'Nyurgh! Hungry!' you recall Leo and Rand saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
 
-section dumpster
+section cretins' cistern
 
-the dumpster is scenery in Char Arch. the dumpster is an opaque container.
+the cretins' cistern is scenery in Char Arch. the cretins' cistern is an opaque container.
 
-check taking dumpster:
-	say "Way too heavy." instead;
+check taking cretins' cistern: say "Way too heavy." instead;
 
-check examining dumpster:
-	ignore the examine containers rule;
+check examining cretins' cistern: ignore the examine containers rule;
 
-dumpster-look is a truth state that varies.
+cistern-look is a truth state that varies.
 
-check searching dumpster:
-	try examining dumpster instead;
+check searching cretins' cistern: try examining cretins' cistern instead;
 
 the block burning rule is not listed in any rulebook.
 
@@ -13669,33 +13660,12 @@ to say way-tow:
 	if Mislit Limits is unvisited:
 		say "way ";
 
-instead of burning the dumpster:
-	say "That would be a dumpster fire of an idea. Plus the Char Arch is burnt enough already."
+instead of burning the cretins' cistern: say "The cistern may deserve it, but Char Arch is burnt enough already."
 
-instead of entering dumpster:
-	say "It's potentially too toxic to enter, what with the permadust and spumed tar and other dreamt-ups inside."
+instead of entering cretins' cistern:
+	say "You'd feel dumb trying to get out again."
 
-description of dumpster is "Property of Sinbad's Sad Bins, it reeks of bad sins--permadust and spumed tar and other dreamt-ups[if dart is in dumpster], but you take a peek anyway--to see [one of]a dart in[or]that dart still[stopping] there[end if]."
-
-a thing can be irrelevant. a thing is usually not irrelevant.
-
-some permadust is irrelevant scenery in Char Arch. "It's settled nicely in the dumpster, blending with the spumed tar."
-
-some spumed tar is irrelevant scenery in Char Arch. "It's settled nicely in the dumpster, blending with the permadust."
-
-instead of doing something with an irrelevant thing:
-	if action is procedural, continue the action;
-	repeat through table of irrelevance:
-		if noun is irr entry:
-			say "[irrtext entry]";
-
-to say not-much:
-	say "There's not much to do with that. It belongs in the dumpster.";
-
-table of irrelevance
-irr	irrtext
-spumed tar	"[not-much]"
-permadust	"[not-much]"
+description of cretins' cistern is "Property of Sinbad's Sad Bins, it reeks of bad sins. Written on it is RIP permadust/spumed tar/dumpster/dreamt-ups Release 3. [if dart is in cretins' cistern]You take a peek in--to see [one of]a dart in[or]that dart still[stopping] there[else]It's empty, now you took the dart[end if]."
 
 section dart
 
@@ -13709,14 +13679,20 @@ check throwing it at (this is the don't throw dart rule) :
 	say "You don't have many good rangy weapons in this game. Attacking instead (though that's useless too)...";
 	try attacking the second noun instead;
 
-the dart is a reflexive thing. description is "[if dart is in popgun]Locked and loaded[else if dart is not in dumpster]It's long and narrow, made more for stunning than killing, for propulsion than throwing[else]The dart is in the dumpster, just out of reach[end if]."
+the dart is a reflexive thing. description is "[if dart is in popgun]Locked and loaded[else if dart is not in cistern]It's long and narrow, made more for stunning than killing, for propulsion than throwing[else]The dart is in the cretins['] cistern, just out of reach[end if]."
 
-the dumpster contains the dart.
+the cretins' cistern contains the dart.
+
+instead of scanning cretins' cistern:
+	if dart is in cistern:
+		say "Hmm...there's a reading when you scan over the dart.";
+		try scaning dart instead;
+	say "With the dart gone, the cretins['] cistern shows up nothing."
 
 a-text of dart is "RRYR". b-text of dart is "PRYP". parse-text of dart is "d[sp]r[sp]a[sp]t". dart is parse-spoilable.
 
-check taking the dart when dart is in dumpster:
-	say "You grunt and stretch, but you can't quite reach the dart. You [if cur-score of presto is 0]may not have found how to get things done here[else]probably didn't grunt the right thing[end if]. Maybe you'll unexpectedly get it if you get disgusted the right way." instead;
+check taking the dart when dart is in cretins' cistern:
+	say "You grunt and stretch, but you can't quite reach the dart. The cretins['] cistern seems to bend unexpectedly when you get close. You [if cur-score of presto is 0]may not have found how to get things done here[else]probably didn't grunt the right thing[end if]. Maybe you just need to get disgusted you can't get it the right way." instead;
 
 section throwing
 
@@ -14327,7 +14303,7 @@ carry out chewing:
 
 chapter Starch Charts
 
-the Starch Charts are flippable LLPish plural-named scenery. "The starch charts seem a bit beyond you, yet they seem to be indicating something. You're not sure what, and you're not sure you need to 'solve' the charts to know. But they're covered with all the interjections you've used so far--well, up to a certain point. Where the interjections become, well, actual concrete nouns or even verbs you could spit out in disgust to similar effect. Some are misspelled for effect, but you still recognize them."
+the Starch Charts are vanishing LLPish plural-named scenery. "The starch charts seem a bit beyond you, yet they seem to be indicating something. You're not sure what, and you're not sure you need to 'solve' the charts to know. But they're covered with all the interjections you've used so far--well, up to a certain point. Where the interjections become, well, actual concrete nouns or even verbs you could spit out in disgust to similar effect. Some are misspelled for effect, but you still recognize them."
 
 a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of starch charts is "x[sp]x[sp]a[sp]x[sp]?[sp]?".
 
@@ -15229,7 +15205,7 @@ a-text of scratch paper is "RYRRYRY". b-text of scratch paper is "RGRRYRY". pars
 
 the signature is part of the scratch paper.
 
-description of signature is "It's in red and takes a bit of time to decipher. [one of]MEL COPI is this guy's name. There's a bit more[or]The author rails against the McPoeil method[or]The author compares a manual to a lice mop[cycling]."
+description of signature is "It's in red and takes a bit of time to decipher. [one of]MEL COPI is this guy's name. There's a bit more[or]The author rails against the McPoeil method[or]The author compares a manual to a lice mop[or]The author bangs on about how I'M LE COP[cycling]."
 
 understand "polemic" as scratch paper.
 
