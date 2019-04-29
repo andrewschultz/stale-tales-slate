@@ -20001,15 +20001,15 @@ instead of doing something with leak lake:
 
 book shoals aslosh (backdrop)
 
-the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Strati Strait, leak lake. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
+the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Strati Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
 
-instead of doing something with leak lake:
+instead of doing something with shoals aslosh:
 	if the action is procedural, continue the action;
 	if the current action is drinking, say "Yo, sick! So icky!" instead;
 	if the current action is entering:
 		if player is in actionless coastlines and bot boat is in actionless coastlines, try entering bot boat instead;
 		say "Go out, eh? Too huge!" instead;
-	say "The shoals aslosh are just there. Not much to do with it. You [if player is in mislit limits]found[else]need[end if] a way to cross Leak Lake.";
+	say "The shoals aslosh are just there. Not much to do with them. You [if player is in mislit limits]found[else]need[end if] a way to cross Leak Lake.";
 
 book Towers specific verbs
 
@@ -20085,7 +20085,7 @@ the fluster self rut is a red guardian. description is "Just looking at it makes
 
 instead of doing something with the fluster self rut:
 	if the action is procedural, continue the action;
-	say "You can't do much with the fluster self rut. Well, nothing exciting."
+	say "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way."
 
 a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
 
@@ -20996,7 +20996,7 @@ the forces fresco is scenery in Coevals' Alcoves. description of forces fresco i
 
 instead of doing something with the forces fresco:
 	if current action is examining, continue the action;
-		say "The fresco is just there to taunt and annoy people not aligned with Elvira."
+	say "The fresco is just there to taunt and annoy people not aligned with Elvira."
 
 the laminas are useless scenery in Coevals' Alcoves. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". understand "animals/lamina/animal" as laminas.
 
@@ -23123,7 +23123,7 @@ section gropin' roping
 
 the gropin' roping is bounding scenery in Gates Stage. "The gropin['] roping guards you from going west or east."
 
-instead of doing something with the halt lath:
+instead of doing something with the gropin' roping:
 	if action is procedural, continue the action;
 	say "You don't want to tangle with the gropin['] roping, because it will probably tangle with you, back.";
 

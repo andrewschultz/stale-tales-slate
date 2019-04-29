@@ -8765,7 +8765,7 @@ understand "rbb" as Red Bull Burdell.
 
 the thirst t-shirt is undesc.
 
-instead of doing something with thirst t-shirt: say "The Thirst t-shirt is a decent piece of rage gear but worth bothering with. You're down on the ground, anyway.".
+instead of doing something with thirst t-shirt: say "The Thirst t-shirt is a decent piece of rage gear but not worth bothering with. You're down on the ground, anyway.".
 
 rule for printing a locale paragraph about Red Bull Burdell: now Red Bull Burdell is mentioned.
 
