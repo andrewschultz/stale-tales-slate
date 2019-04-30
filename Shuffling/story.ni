@@ -374,11 +374,11 @@ instead of dropping tomato: say "Much as you'd like to drop it, it [if player is
 section mootness
 
 definition: a thing (called th) is moot:
-	if th is in lalaland, yes;
+	if th is in Emerita Emirate, yes;
 	no;
 
 to moot (th - a thing):
-	move th to lalaland;
+	move th to Emerita Emirate;
 
 chapter help stuff
 
@@ -909,11 +909,11 @@ does the player mean objhinting a hintrelevant object: it is likely.
 [does the player mean objhinting a visible object:
 	it is likely.]
 
-does the player mean objhinting an object in lalaland: it is unlikely. [ic]
+does the player mean objhinting a moot object: it is unlikely. [ic]
 
 definition: a thing (called hthing) is deregioned:
 	if location of hthing is nothing, decide no;
-	if location of hthing is lalaland, decide no;
+	if hthing is moot, decide no;
 	if mrlp is not map region of location of hthing, decide yes;
 	decide no.
 
@@ -922,7 +922,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		if hintcand is Mean Old Mondale Doleman, decide yes;
 	if hintcand is off-stage, decide no;
 	if hintcand is moot, decide no;
-	if hintcand is in bullpen, decide yes;
+	if hintcand is in Long Hid Holding, decide yes;
 	if hintcand is location of player, decide no;
 	if hintcand is beats: [start of backdrops which will throw errors otherwise]
 		if mrlp is metros, decide yes;
@@ -2202,7 +2202,7 @@ carry out fliptoing (this is the main flipping rule) :
 					reg-inc;
 				move player to to-room entry;
 			else:
-				if the-to entry is not moot and the-to entry is not in bullpen:
+				if the-to entry is not moot and the-to entry is not in Long Hid Holding:
 					reg-inc;
 					if the-to entry is attics:
 						min-up;
@@ -2214,10 +2214,10 @@ carry out fliptoing (this is the main flipping rule) :
 					move the-from entry to sacred cedars;
 				if vanish entry is true:
 					if the-from entry is a backdrop:
-						move the-from entry to lll;
+						move the-from entry to Meta Team;
 					else:
 						if the-from entry is reversible:
-							move the-from entry to bullpen;
+							move the-from entry to Long Hid Holding;
 						else:
 							moot the-from entry;
 			if the-to entry is plural-named, set the pronoun them to the-to entry;
@@ -2790,8 +2790,8 @@ when play begins (this is the initialise anagrams pad and beats rule) :
 				now force-take entry is false;
 	place-random-garbage;
 	shuffle-chat-lists;
-	now red bull is in bullpen;
-	now redness is in bullpen;
+	now red bull is in Long Hid Holding;
+	now redness is in Long Hid Holding;
 
 check taking scenery:
 	say "Taking scenery is either illegal or physically impossible or both.";
@@ -3161,7 +3161,7 @@ check opening desert-door:
 	say "There's nowhere else to go, though." instead;
 
 check entering desert-door:
-	if player has bugle and bugle-played is false and blot is not in lalaland, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
+	if player has bugle and bugle-played is false and blot is not moot, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
 	if blot is off-stage, say "The door seems stuck by an invisible force[if bolt is visible]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
 	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of desert-door]Without the bolt, the door swings open easily. [end if]";
 	say "You can't see what's behind, but fortunately it's just a small tumble[if player has bugle], though the bugle gets caught on an outgrowth on the way down[end if]...[wfak]";
@@ -6306,7 +6306,7 @@ does the player mean pouring the oils when player is in cedars: it is very likel
 does the player mean filling the cask: it is very likely.
 
 carry out pouring:
-	if player has sack and cask is in bullpen, say "Fluids would leak through the sack. The cask you had would be better." instead;
+	if player has sack and cask is in Long Hid Holding, say "Fluids would leak through the sack. The cask you had would be better." instead;
 	if player does not have cask, say "Nothing to pour anything into." instead;
 	if noun is cask:
 		if oils are not in cask, say "Nothing in the cask to pour." instead;
@@ -8902,29 +8902,29 @@ carry out existing:
 	else:
 		say "You continue to exist. Perhaps this ability will come in handy some day." instead;
 
-book lll
+book Meta Team
 
-LLL is an unsolvable region. Lalaland is in LLL. [LLL is only a region for backdrops.]
+Meta Team is an unsolvable region. Emerita Emirate is in Meta Team. [Meta Team is only a region for backdrops.]
 
-chapter lalaland
+chapter Emerita Emirate
 
 [this region/room is for items that have been consumed, but we don't want to recycle them. It's easier to check if they're off-stage or moot than to define a boolean. Well, for me, anyway.]
 
-Lalaland is a privately-named room. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
+Emerita Emirate is a privately-named room. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
 
-understand "ll/lalaland" as lalaland when debug-state is true.
+understand "ll/Emerita Emirate" as Emerita Emirate when debug-state is true.
 
-instead of doing something in lalaland: say "You probably need to undo things." instead. [ic]
+instead of doing something in Emerita Emirate: say "You probably need to undo things." instead. [ic]
 
-chapter bullpen
+chapter Long Hid Holding
 
 [used for the cask and sack to indicate they're not done-with yet]
 
-Bullpen is a privately-named room in LLL. "This is the bullpen. You should not see it."
+Long Hid Holding is a privately-named room in Meta Team. "This is the long hid holding, where items not yet totally done are hid. You should not see it."
 
-understand "bullpen" as bullpen when debug-state is true.
+understand "long hid" and "holding" as Long Hid Holding when debug-state is true.
 
-teleporter is privately-named scenery in Bullpen. description is "this is just to signify that flipping an item makes a jump.". it is abstract.
+teleporter is privately-named scenery in Long Hid Holding. description is "this is just to signify that flipping an item makes a jump.". it is abstract.
 
 book error checking
 
@@ -9172,7 +9172,7 @@ after reading a command:
 					say "Your utterance falls on deaf ears. You've already passed through [mystore entry] and beyond.";
 					reject the player's command;
 				d "[number of unsolved regions] currently left.";
-				if number of unsolved regions is 6 and button-locked is false and player has gadget and cheat-lock-warn is false: [this has to be 6: 3 unsolved stores, roster, LLL (blank area) and STORES itself.]
+				if number of unsolved regions is 6 and button-locked is false and player has gadget and cheat-lock-warn is false: [this has to be 6: 3 unsolved stores, roster, Meta Team (blank area) and STORES itself.]
 					now cheat-lock-warn is true;
 					say "The SECURE/RECUSE button starts blinking. You may need to make sure the gadget's setting is as you want it. Currently, it [if gadget-secured is false]has SECURE/RECUSE off, so you'll need to pick off the remaining store[else if gadget is cert]is set to CERTIFY with SECURE/RECUSE on, and you can skip the final store[else]is set to RECTIFY with SECURE/RECUSE on, and you can skip the final store[end if]. Is this okay?";
 					if the player yes-consents:
@@ -11480,8 +11480,8 @@ index map with terminal mapped north of slough.
 index map with abyss mapped west of elm train terminal.
 
 [non-game rooms]
-index map with lalaland mapped east of The Nick.
-index map with bullpen mapped east of lalaland.
+index map with Emerita Emirate mapped east of The Nick.
+index map with Long Hid Holding mapped east of Emerita Emirate.
 
 volume beta testing - not for release
 
@@ -12081,7 +12081,7 @@ section sortie-specific
 
 [* uses testing commands to test the most breakable puzzles, as well as playing dumb with guesses in the centrifuge]
 
-test setup with "test ordeal-loader/gonear poet/abstract poet to lalaland/purloin sack/abstract straw to sack/abstract missile to moor/purloin cask/abstract black door to moor/abstract silo to moor/purloin panel/put panel in sack/put panel on sack/attach panel to sack/put missile on straw/put missile in straw/attach missile to straw/put missile in silo/put missile on silo/attach missile to silo/put door in silo/put door on silo/put missile in silo/put missile on silo/attach missile to silo/" in subsite
+test setup with "test ordeal-loader/gonear poet/abstract poet to emerita emirate/purloin sack/abstract straw to sack/abstract missile to moor/purloin cask/abstract black door to moor/abstract silo to moor/purloin panel/put panel in sack/put panel on sack/attach panel to sack/put missile on straw/put missile in straw/attach missile to straw/put missile in silo/put missile on silo/attach missile to silo/put door in silo/put door on silo/put missile in silo/put missile on silo/attach missile to silo/" in subsite
 
 test dial with "sortie/d/60/40/10/25/5/20/18/14/15/16" in trips strip
 
@@ -12138,7 +12138,7 @@ section rm-testing
 
 [*this just tests bashing about in a room]
 
-test alldirs with "nodir ne/nodir se/nodir sw/nodir nw/rmneglect lalaland/allrooms"
+test alldirs with "nodir ne/nodir se/nodir sw/nodir nw/rmneglect emerita emirate/allrooms"
 
 test abouts with "about/credits/tech/verbs/history/in/goat/about/credits/tech/verbs/history"
 
@@ -12173,7 +12173,7 @@ test hb with "hd/z/l/hf/x me/l/hd/x myself/l/hf/xyzzy/l"
 
 chapter odd verbs
 
-[* this tests that retrying preserves items in the bullpen, for the simpelst case, in the Metros ]
+[* this tests that retrying preserves items in the Long Hid Holding, for the simpelst case, in the Metros ]
 
 test ts with "ts/metros/in/gardenia/retryi//in/i"
 
@@ -12552,18 +12552,20 @@ carry out babbleing: [Any way to pull out the topic?]
 		try asking him-who entry about topic entry;
 	the rule succeeds;
 
-chapter booting
+chapter mooting
 
-[ * BOOT kicks any item to lalaland. You could just ABSTRACT, but yay saving keystrokes ]
+[ * MOOT moots any item. You could just ABSTRACT, but yay saving keystrokes ]
 
 booting is an action applying to one visible thing.
 
+understand the command "moot [any thing]" as something new.
 understand the command "boot [any thing]" as something new.
 
+understand "moot [any thing]" as booting.
 understand "boot [any thing]" as booting.
 
 carry out booting:
-	say "[noun] moved to lalaland.";
+	say "[noun] mooted/moved to Emerita Emirate.";
 	moot noun;
 	the rule succeeds;
 

@@ -134,7 +134,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "storex"	599634554	--	store x	--	"[no-way]."
 "storey"	609225725	--	store y	--	"[no-mb]."
 "storez"	609836091	--	store z	--	"[no-way]."
-"marquee"	596710416	trips strip	--	--	"You don't need to change the marquee[unless sorbet is in lalaland], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
+"marquee"	596710416	trips strip	--	--	"You don't need to change the marquee[unless sorbet is moot], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
 "depot"	407763752	--	posted depots	--	"You can't do anything to the depots besides ENTER them."
 "depots"	504037718	--	posted depots	--	"You can't do anything to the depots besides ENTER them."
 "scented"	563938384	--	scented descent 	--	"No way. It's your way down to the forest."
@@ -206,7 +206,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "bleads"	319529726	Flesh Shelf	--	--	"The blades, buried in the grinder, remain lifeless."
 "meat"	297179098	--	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	--	see-meats rule	"[spec-meat]."
-"liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is in lalaland or viler liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
+"liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
 "ville"	387591453	--	river ville liver	--	"[rivliv]."
 "river"	450611381	--	river ville liver	--	"[rivliv]."
 "cruel"	391055143	Enclosure	--	--	"[loc-rej]." [START OF CRUEL ONES ENCLOSURE]
@@ -263,7 +263,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "rightchef"	513917557	--	tall trio	--	"[to-trio]."
 "cult"	281035249	--	cult tee	--	"The whole t-shirt."
 "tee"	358722236	--	cult tee	--	"The whole t-shirt."
-"were"	448870794	--	cask	--	"[if sack is in bullpen]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is in bullpen]d[else]s[end if] it can be changed."
+"were"	448870794	--	cask	--	"[if sack is in Long Hid Holding]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is in Long Hid Holding]d[else]s[end if] it can be changed."
 "pan"	152561285	--	cake pan	--	"[ck-p]."
 "cake"	201932690	--	cake pan	--	"[ck-p]."
 "cause"	350379285	--	HOTSAUCE	--	"No need to do more with the hot sauce."
@@ -700,7 +700,7 @@ to say no-un:
 	say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
 
 to say in-sort of (q - a thing):
-	say "[if q is in lalaland]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
+	say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
 
 to say tack-heap:
 	say "No need to try to turn the stack into a heap. Ho ho ho"
@@ -787,7 +787,7 @@ this is the rm-or-moor rule:
 	the rule fails;
 
 this is the got-shoes rule:
-	if shoes are in lalaland, the rule succeeds;
+	if shoes are moot, the rule succeeds;
 	the rule fails;
 
 to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
@@ -841,7 +841,7 @@ to say condo-visit: say "[if dry cake is in bastion]You should probably just go 
 
 to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
 
-to say no-ketch: say "It [if night thing is in lalaland]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
+to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
 to say ug-bug: say "Ugh. Too messy. Mentally and physically"
 
@@ -878,7 +878,7 @@ this is the no-beats rule:
 	the rule fails;
 
 this is the resin-lala rule:
-	if resin is in lalaland, the rule succeeds;
+	if resin is moot, the rule succeeds;
 	the rule fails.
 
 section resort nudges
@@ -899,7 +899,7 @@ this is the hotspot-no-kilns rule:
 	the rule fails;
 
 this is the riot-gone rule:
-	if player is in hotspot and riot is in lalaland, the rule succeeds;
+	if player is in hotspot and riot is moot, the rule succeeds;
 	the rule fails;
 
 to say ennui:
@@ -962,7 +962,7 @@ this is the know-point rule:
 	the rule fails.
 
 this is the can-i-parse rule:
-	if hows tag is in lalaland, the rule fails;
+	if hows tag is moot, the rule fails;
 	if player has gadget:
 		the rule succeeds;
 	the rule fails.

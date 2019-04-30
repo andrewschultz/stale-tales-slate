@@ -197,15 +197,15 @@ understand "cluer" as a mistake ("[if player is in Enclosure]This place is too s
 
 understand "lucre" as a mistake ("[if player is in Enclosure]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is visible or player is in Enclosure.
 
-understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Enclosure and red asp is not in lalaland.
+understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Enclosure and red asp is not moot.
 
-understand "parsed" as a mistake ("You can just read the [if drapes are visible]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Enclosure and red asp is not in lalaland.
+understand "parsed" as a mistake ("You can just read the [if drapes are visible]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Enclosure and red asp is not moot.
 
-understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Enclosure and red asp is not in lalaland.
+understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Enclosure and red asp is not moot.
 
-understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Enclosure and red asp is not in lalaland.
+understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Enclosure and red asp is not moot.
 
-understand "spared" as a mistake ("That is too passive, to ask to be spared.") when red asp is not in lalaland.
+understand "spared" as a mistake ("That is too passive, to ask to be spared.") when red asp is not moot.
 
 chapter ghouls' slough
 
@@ -246,7 +246,7 @@ understand "keats" as a mistake ("This is wordplay, not poetry. But the skate do
 
 understand "limes" as a mistake ("I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.") when spear is visible.
 
-understand "littoral" as a mistake ("How frustrating! A shoreline doesn't appear. You're still stuck in here, but [if r2 is prefigured or moor is visited]you know[else]maybe[end if] there's another way out.") when player is in kitchen and tortilla is not in lalaland.
+understand "littoral" as a mistake ("How frustrating! A shoreline doesn't appear. You're still stuck in here, but [if r2 is prefigured or moor is visited]you know[else]maybe[end if] there's another way out.") when player is in kitchen and tortilla is not moot.
 
 understand "pears" as a mistake ("I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.") when spear is visible.
 
@@ -425,7 +425,7 @@ understand "verdi" as a mistake ("You don't need a musical score for this advent
 
 chapter potshot hotspot
 
-understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not in lalaland], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are in hotspot.
+understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not moot], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are in hotspot.
 
 understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in hotspot and red bull burdell is in hotspot.
 
@@ -441,9 +441,9 @@ understand "roister" as a mistake ("That's what's causing the riot, and it's up 
 
 understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.") when player is in hotspot and ransom manors are in hotspot.
 
-understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is in lalaland]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in hotspot
+understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in hotspot
 
-understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in hotspot and potters are not in lalaland.
+understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in hotspot and potters are not moot.
 
 chapter means manse
 
