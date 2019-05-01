@@ -377,6 +377,10 @@ definition: a thing (called th) is moot:
 	if th is in Emerita Emirate, yes;
 	no;
 
+definition: a thing (called th) is abrod: [ "abroad," geddit? ]
+	if th is in Adorb Bardo, yes;
+	no;
+
 to moot (th - a thing):
 	move th to Emerita Emirate;
 
@@ -922,7 +926,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		if hintcand is Mean Old Mondale Doleman, decide yes;
 	if hintcand is off-stage, decide no;
 	if hintcand is moot, decide no;
-	if hintcand is in Long Hid Holding, decide yes;
+	if hintcand is abrod, decide yes;
 	if hintcand is location of player, decide no;
 	if hintcand is beats: [start of backdrops which will throw errors otherwise]
 		if mrlp is metros, decide yes;
@@ -2202,7 +2206,7 @@ carry out fliptoing (this is the main flipping rule) :
 					reg-inc;
 				move player to to-room entry;
 			else:
-				if the-to entry is not moot and the-to entry is not in Long Hid Holding:
+				if the-to entry is not moot and the-to entry is not is abrod:
 					reg-inc;
 					if the-to entry is attics:
 						min-up;
@@ -2217,7 +2221,7 @@ carry out fliptoing (this is the main flipping rule) :
 						move the-from entry to Meta Team;
 					else:
 						if the-from entry is reversible:
-							move the-from entry to Long Hid Holding;
+							move the-from entry to Adorb Bardo;
 						else:
 							moot the-from entry;
 			if the-to entry is plural-named, set the pronoun them to the-to entry;
@@ -2790,8 +2794,8 @@ when play begins (this is the initialise anagrams pad and beats rule) :
 				now force-take entry is false;
 	place-random-garbage;
 	shuffle-chat-lists;
-	now red bull is in Long Hid Holding;
-	now redness is in Long Hid Holding;
+	now red bull is abrod;
+	now redness is abrod;
 
 check taking scenery:
 	say "Taking scenery is either illegal or physically impossible or both.";
@@ -6306,7 +6310,7 @@ does the player mean pouring the oils when player is in cedars: it is very likel
 does the player mean filling the cask: it is very likely.
 
 carry out pouring:
-	if player has sack and cask is in Long Hid Holding, say "Fluids would leak through the sack. The cask you had would be better." instead;
+	if player has sack and cask is abrod, say "Fluids would leak through the sack. The cask you had would be better." instead;
 	if player does not have cask, say "Nothing to pour anything into." instead;
 	if noun is cask:
 		if oils are not in cask, say "Nothing in the cask to pour." instead;
@@ -8916,15 +8920,15 @@ understand "ll/Emerita Emirate" as Emerita Emirate when debug-state is true.
 
 instead of doing something in Emerita Emirate: say "You probably need to undo things." instead. [ic]
 
-chapter Long Hid Holding
+chapter Adorb Bardo
 
 [used for the cask and sack to indicate they're not done-with yet]
 
-Long Hid Holding is a privately-named room in Meta Team. "This is the long hid holding, where items not yet totally done are hid. You should not see it."
+Adorb Bardo is a privately-named room in Meta Team. "This is the Adorb Bardo, a cute tidy little place where items not yet totally done, like the cask or sack, are hid.[paragraph break]Since you're not an item, you really shouldn't be here."
 
-understand "long hid" and "holding" as Long Hid Holding when debug-state is true.
+understand "adorb/bardo" and "adorb bardo" as Adorb Bardo when debug-state is true.
 
-teleporter is privately-named scenery in Long Hid Holding. description is "this is just to signify that flipping an item makes a jump.". it is abstract.
+teleporter is privately-named scenery in Adorb Bardo. description is "this is just to signify that flipping an item makes a jump.". it is abstract.
 
 book error checking
 
@@ -11481,7 +11485,7 @@ index map with abyss mapped west of elm train terminal.
 
 [non-game rooms]
 index map with Emerita Emirate mapped east of The Nick.
-index map with Long Hid Holding mapped east of Emerita Emirate.
+index map with Adorb Bardo mapped east of Emerita Emirate.
 
 volume beta testing - not for release
 
@@ -12173,7 +12177,7 @@ test hb with "hd/z/l/hf/x me/l/hd/x myself/l/hf/xyzzy/l"
 
 chapter odd verbs
 
-[* this tests that retrying preserves items in the Long Hid Holding, for the simpelst case, in the Metros ]
+[* this tests that retrying preserves items in the Adorb Bardo, for the simpelst case, in the Metros ]
 
 test ts with "ts/metros/in/gardenia/retryi//in/i"
 

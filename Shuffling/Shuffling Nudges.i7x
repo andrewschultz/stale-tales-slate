@@ -263,7 +263,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "rightchef"	513917557	--	tall trio	--	"[to-trio]."
 "cult"	281035249	--	cult tee	--	"The whole t-shirt."
 "tee"	358722236	--	cult tee	--	"The whole t-shirt."
-"were"	448870794	--	cask	--	"[if sack is in Long Hid Holding]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is in Long Hid Holding]d[else]s[end if] it can be changed."
+"were"	448870794	--	cask	--	"[if sack is abrod]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is abrod]d[else]s[end if] it can be changed."
 "pan"	152561285	--	cake pan	--	"[ck-p]."
 "cake"	201932690	--	cake pan	--	"[ck-p]."
 "cause"	350379285	--	HOTSAUCE	--	"No need to do more with the hot sauce."
