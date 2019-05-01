@@ -1,5 +1,10 @@
+#
+# aw.py: command line and stdin generator
+#
+
 import re
 import sys
+import os
 
 from string import ascii_lowercase
 
@@ -18,7 +23,8 @@ def usage():
     print("-v/nv = verbose or not" + on_off(verbose))
     print("-s = get STDIN, can be combined with command line")
     print("-? = this usage message")
-    print("You can put more thn one word on the command line or on STDIN. This is case insensitive, too.")
+    print("You can put more than one word on the command line or on STDIN. This is case insensitive, too.")
+    print("?(word) on stdin launches the word in Thefreedictionary. /(word) launches it in thesaurus.com.")
     exit()
 
 def alfy(a):
@@ -190,6 +196,11 @@ if get_stdin:
             new_arg = re.split("[ ,]", ll.strip())
             for x in new_arg:
                 os.system("start http://www.thefreedictionary.com/{:s}".format(x))
+        if ll.startswith('/'):
+            ll = ll[1:]
+            new_arg = re.split("[ ,]", ll.strip())
+            for x in new_arg:
+                os.system("start http://www.thesaurus.com/browse/{:s}".format(x))
         if not ll:
             print("Exiting.")
             exit()
