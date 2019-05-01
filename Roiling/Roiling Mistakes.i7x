@@ -58,7 +58,7 @@ understand "basement" as a mistake ("Well, if you want points for that, you'll n
 
 understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
 
-understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is in lalaland]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is in location of player.
+understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is in location of player.
 
 understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
@@ -246,7 +246,7 @@ understand "hate" as a mistake ("You don't want to get burnt up with hate[if hea
 
 understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is in location of player.
 
-understand "real hot" as a mistake ("You need[if cold is in lalaland]ed[end if] a strong concrete emotion to get hot.") when player is in rathole.
+understand "real hot" as a mistake ("You need[if cold is moot]ed[end if] a strong concrete emotion to get hot.") when player is in rathole.
 
 chapter Boarded Roadbed
 
@@ -254,7 +254,7 @@ understand "obverse" as a mistake ("You can't just make things obverse by wantin
 
 chapter Bustle Sublet
 
-understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Bustle Sublet and sob ever verbose is in lalaland
+understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Bustle Sublet and sob ever verbose is moot.
 
 chapter Drain Nadir
 
@@ -332,7 +332,7 @@ understand "mad" as a mistake ("How can you feel mad, looking at such a beautifu
 
 understand "okey" as a mistake ("You try to make things okey (sic) but you aren't enough of a bard to.") when yoke is in location of player.
 
-understand "rats" as a mistake ("[if tsar star is in lalaland]Boy! You miss that tsar star[else]Boy! It'd be neat to have something that made you more authoritative[end if].") when tsar star is not in location of player and tsar star is not worn and mrlp is presto.
+understand "rats" as a mistake ("[if tsar star is moot]Boy! You miss that tsar star[else]Boy! It'd be neat to have something that made you more authoritative[end if].") when tsar star is not in location of player and tsar star is not worn and mrlp is presto.
 
 understand "spag" as a mistake ("You don't have time to read text-adventuring magazines right now. You're too busy living them.") when player is in Char Arch.
 
@@ -408,7 +408,7 @@ understand "artel" as a mistake ("You, Rand and Leo have already engaged in a co
 
 understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
 
-understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is in lalaland and Leo is in Phat Path.
+understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is moot and Leo is in Phat Path.
 
 chapter hacks' shack
 
@@ -471,9 +471,9 @@ chapter anger range / hero's shore
 
 understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in anger range and carps are in anger range.
 
-understand "horse" as a mistake ("A horse won't help you explore the Hedron.") when player is in Anger Range and haunter is in lalaland.
+understand "horse" as a mistake ("A horse won't help you explore the Hedron.") when player is in Anger Range and haunter is moot.
 
-understand "hoser" as a mistake ("It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.") when player is in Anger Range and haunter is in lalaland.
+understand "hoser" as a mistake ("It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.") when player is in Anger Range and haunter is moot.
 
 understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in anger range and player is in anger range.
 
@@ -591,7 +591,7 @@ understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might 
 
 understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is in location of player.
 
-understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random warrior in lalaland][end if].") when Andrew is in location of player.
+understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random moot warrior][end if].") when Andrew is in location of player.
 
 understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.") when Andrew is in location of player.
 
@@ -741,7 +741,7 @@ chapter loop pool
 
 understand "lees" as a mistake ("The eels would be insulted to be referred to as dregs.") when eels are in location of player.
 
-understand "polo" as a mistake ("No time for games! [if eels are in lalaland]Even with the eels rescued/on your side[else if power-back is false]You don't have your powers back, anyway. It's what's IN the water you want to change[else]Even with your powers back[end if].") when player is in Loop Pool
+understand "polo" as a mistake ("No time for games! [if eels are moot]Even with the eels rescued/on your side[else if power-back is false]You don't have your powers back, anyway. It's what's IN the water you want to change[else]Even with your powers back[end if].") when player is in Loop Pool
 
 understand "slee" as a mistake ("The eels aren't what needs to be reduced to rubble, here.") when eels are in location of player.
 

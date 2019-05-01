@@ -73,7 +73,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "hostage"	473612489	--	rifle	--	"It's not you that needs changing but the rifle."
 "gun"	206613017	--	rifle	--	"It's not a gun but a rifle. And a gnu would be a gnu-sance anyway."
 "flier"	338451493	--	--	elmo-chat rule	"Better to pump Elmo for information."
-"elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle in lalaland] that needed changing[end if]."
+"elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle is moot] that needed changing[end if]."
 "cavern"	410395643	carven cavern	--	--	"[locname]." [start carven cavern]
 "terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
 "manse"	359250554	--	--	degen-true rule	"[not-the-reg]." [end-manse]
@@ -293,7 +293,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "godling"	328295263	Econ Cone	--	--	"[scrapery]!"
 "godlings"	424569229	Econ Cone	--	--	"[scrapery]!"
 "statue"	537593736	--	astute statue	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if]."
-"bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if]."
+"bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is moot]Pernod[else]N-E-Prod[end if]."
 "label"	256040510	--	label	--	"It's not the label but what's on it."
 "upscale"	485659083	Upscale Capsule	--	--	"[locname]." [start upscale capsule]
 "office"	319186909	Upscale Capsule	--	--	"[locname]."
@@ -307,7 +307,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "fern"	308552316	Upscale Capsule	--	--	"The fern is mentally, if not physically, unmalleable."
 "sked"	298042342	Upscale Capsule	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
 "salt"	255385641	--	--	salt-gone rule	"You've lasted long enough. There are new things to look at, now."
-"likeness"	668807521	--	--	tressi-or-balmer rule	"It's whoever's in the likeness that matters--[if Sister Tressi is in lalaland]Blamer Balmer[else if Blamer Balmer is in lalaland]Sister Tressi[else]Sister Tressi and Blamer Balmer[end if], here."
+"likeness"	668807521	--	--	tressi-or-balmer rule	"It's whoever's in the likeness that matters--[if Sister Tressi is moot]Blamer Balmer[else if Blamer Balmer is moot]Sister Tressi[else]Sister Tressi and Blamer Balmer[end if], here."
 "marble"	351625627	--	--	marble-gone rule	"[mbb-no]."
 "siter"	457506742	--	Sister Tressi Siters	--	"All the siters."
 "siters"	553780708	--	Sister Tressi Siters	--	"The sister tressi siters are gone. Trying to re-defeat them would be protesting too much."
@@ -354,7 +354,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tar"	190621639	Char Arch	--	--	"[spumed-no]."
 "dirge"	311751549	dirge ridge	--	--	"[locname]." [start dirge ridge]
 "liev"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
-"leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
+"leonard"	433420743	--	Rand	--	"[if lawl wall is moot]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 "austerer"	732937433	austerer	--	--	"[locname]." [start austerer treasure]
 "marines"	489567203	Marines Seminar Remains	--	--	"[locname]." [start marines seminar remains]
 "marine"	393293237	Marines Seminar Remains	--	--	"[locname]."
@@ -507,7 +507,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reward"	429605395	--	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
 "bubble"	341982470	--	bubble wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	--	bubble wrap	--	"It's just wrap, really."
-"dent"	320852724	--	aunt tuna	--	"[if dent is in lalaland]You already fixed the dent. It's gone[else]That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it[end if]."
+"dent"	320852724	--	aunt tuna	--	"[if dent is moot]You already fixed the dent. It's gone[else]That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it[end if]."
 "tuna"	279311151	--	tuna	--	"She is a bit fussy, but she is more than okay as she is."
 "eat"	233103945	--	tea tray	--	"Quit playing with your food, already."
 "tray"	312980891	--	tea tray	--	"[just-tea]."
@@ -593,7 +593,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "proof"	342009812	--	flowerpot	--	"[flow-fine]."
 "welt"	392664739	--	flowerpot	--	"[flow-fine]."
 "adder"	257375908	--	dreads adders	--	"You need to take care of all the adders."
-"renato"	461687833	--	--	got-pot rule	"You don't have time to think about, or change, Renato. [if flowerpot is in lalaland]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if mesprise premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
+"renato"	461687833	--	--	got-pot rule	"You don't have time to think about, or change, Renato. [if flowerpot is moot]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if mesprise premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
 "toaster"	592164309	--	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	--	start tarts	--	"[eat-pastry]."
@@ -1199,7 +1199,7 @@ to say locname-part:
 	say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
 
 this is the Gunter-left rule:
-	if player is in study and Gunter is in lalaland, the rule succeeds;
+	if player is in study and Gunter is moot, the rule succeeds;
 	the rule fails.
 
 this is the is-study-dark rule:
@@ -1395,7 +1395,7 @@ to say ei2pg:
 	say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
 
 this is the glaring-futile rule:
-	if player is in Boredom Bedroom and lager is in lalaland, the rule succeeds;
+	if player is in Boredom Bedroom and lager is moot, the rule succeeds;
 	the rule fails;
 
 to say rotun:
@@ -1411,7 +1411,7 @@ to say scrapery:
 	say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
 
 this is the salt-gone rule:
-	if st al salt is in lalaland, the rule succeeds;
+	if st al salt is moot, the rule succeeds;
 	the rule fails;
 
 this is the tressi-or-balmer rule:
@@ -1420,13 +1420,13 @@ this is the tressi-or-balmer rule:
 	the rule fails;
 
 this is the marble-gone rule:
-	if player is in upscale capsule and mbb is in lalaland, the rule succeeds;
+	if player is in upscale capsule and mbb is moot, the rule succeeds;
 	the rule fails;
 
 to say mbb-no: say "You already stopped thinking too much about [mbb]. If you try too hard to keep ignoring [mbb], you'll start thinking about [mbb], again"
 
 this is the divorces-gone rule:
-	if player is in Upscale Capsule and divorces is in lalaland, the rule succeeds;
+	if player is in Upscale Capsule and divorces is moot, the rule succeeds;
 	the rule fails;
 
 to say ruts-pull:
@@ -1436,7 +1436,7 @@ to say sidewalk-oops:
 	say "You can't make the sidewalk crumble any more, and you probably don't want to"
 
 this is the lot-observed rule:
-	if player is in Bustle Sublet and sob ever verbose is in lalaland, the rule succeeds;
+	if player is in Bustle Sublet and sob ever verbose is moot, the rule succeeds;
 	the rule fails;
 
 to say boor-grub:
@@ -1452,11 +1452,11 @@ to say mz-chg:
 	say "It's the maze you need to change, not the zany meter"
 
 this is the maze-gone rule:
-	if player is in gyre and maze is in lalaland, the rule succeeds;
+	if player is in gyre and maze is moot, the rule succeeds;
 	the rule fails;
 
 this is the ether-gone rule:
-	if player is in gyre and ether is in lalaland, the rule succeeds;
+	if player is in gyre and ether is moot, the rule succeeds;
 	the rule fails;
 
 to say is-boing:
@@ -1539,7 +1539,7 @@ this is the washup rule:
 	the rule succeeds;
 
 this is the enemy-lines rule:
-	if ether is in lalaland and player is in Grey Gyre and Leo is in Grey Gyre, the rule succeeds;
+	if ether is moot and player is in Grey Gyre and Leo is in Grey Gyre, the rule succeeds;
 	the rule fails;
 
 to say d-sli: say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
@@ -1629,7 +1629,7 @@ to say to-dig:
 	say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
 
 this is the now-shore rule:
-	if player is in anger range and haunter is in lalaland, the rule succeeds;
+	if player is in anger range and haunter is moot, the rule succeeds;
 	the rule fails;
 
 this is the is-hauntable rule:
@@ -1649,7 +1649,7 @@ section towers nudges
 to say bland-sad:
 	say "[if mislit limits is not visited and waters are not visited]The badlands can't be changed on their own. They must be trekked through[else]You're beyond the badlands now[end if]"
 
-to say war-one: say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of warriors in lalaland > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
+to say war-one: say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of moot warriors > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 
 this is the pas-vis rule:
 	if number of visible hintpastries > 0, the rule succeeds;
@@ -1706,7 +1706,7 @@ to say all-of-mel: say "No, you need to deal with all of Mel."
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
 to say gradient-rej:
-	say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are in lalaland and denim is in lalaland]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
+	say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
 
 to say grail-name: say "His full name, Liam Garn"
 
@@ -1715,7 +1715,7 @@ this is the see-female-admirer rule:
 	the rule fails;
 
 this is the bonker-gone rule:
-	if player is in Danger Garden and bonker is in lalaland, the rule succeeds;
+	if player is in Danger Garden and bonker is moot, the rule succeeds;
 	the rule fails;
 
 this is the agnostic-can-learn rule:
@@ -1740,7 +1740,7 @@ to say fix-boat-parts:
 	say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
 
 this is the serpent-hiding rule:
-	if player is in limits and serpent is in lalaland, the rule succeeds;
+	if player is in limits and serpent is moot, the rule succeeds;
 	the rule fails.
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life"
@@ -1778,7 +1778,7 @@ to say maples-no: say "No need to change the maples. They are the least dreary p
 to say adj-needs-ly: say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley"
 
 this is the cinders-gone rule:
-	if cinders are in lalaland, the rule succeeds;
+	if cinders are moot, the rule succeeds;
 	the rule fails.
 
 to say adj-needs-li: say "Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here"
@@ -1787,7 +1787,7 @@ to say del-ry: say "The sandwich isn't just deli, or rye, or a sandwich. It's de
 
 to say imp-sly: say "The imp's too sly to get tricked by a word THAT short"
 
-to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if ram3 is in lalaland or ram2 is in lalaland or ram1 is in lalaland]even [end if]less...whiningly"
+to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if ram3 is moot or ram2 is moot or ram1 is moot]even [end if]less...whiningly"
 
 to say add-ly: say "No, you need a couple more letters... [if power-back is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
 
@@ -1799,10 +1799,10 @@ to say w-change: say "You can't change the alcoves. It's what's to the west that
 
 to say eelmry:
 	if player is in bran barn:
-		say "[if gore ogre is in lalaland]You managed to help Mr. Lee enough[else if eels are reflexed]It would be better to show Mr. Lee, but you don't need to, since you talked with Le Mer[else]You just need to show Mr. Lee, not change him[end if]";
+		say "[if gore ogre is moot]You managed to help Mr. Lee enough[else if eels are reflexed]It would be better to show Mr. Lee, but you don't need to, since you talked with Le Mer[else]You just need to show Mr. Lee, not change him[end if]";
 		continue the action;
 	if player is in loop pool:
-		say "[if eels are reflexed]You managed to help Le Mer enough[else if gore ogre is in lalaland]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
+		say "[if eels are reflexed]You managed to help Le Mer enough[else if gore ogre is moot]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
 		continue the action;
 	if player is in alcoves and Merle is in alcoves:
 		say "You can't change Merle and Elmer, but maybe you could find a way to get rid of them";
@@ -1994,7 +1994,7 @@ to say cussy:
 	say "You're not fooling ME. Shame on you"
 
 this is the can-i-parse rule:
-	if elmo is in lalaland, the rule succeeds;
+	if elmo is moot, the rule succeeds;
 
 this is the degen-false rule:
 	the rule fails.

@@ -407,7 +407,7 @@ to say get-crust:
 
 to say new-thing:
 	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
-	now satchel is in lalaland;
+	moot satchel;
 
 after fliptoing satchel (this is the give you tons of stuff if Gunter was by rule) :
 	if player does not have treatise:
@@ -468,7 +468,7 @@ to say read-canflip:
 to say stein-drop:
 	if player has stein:
 		say "[paragraph break]Oh, as you leave, you drop and break the stein. Tiens";
-	now stein is in lalaland;
+	moot stein;
 
 to say rodpals:
 	if number of visible warriors > 2:
@@ -497,7 +497,7 @@ check fliptoing old giant:
 to say xtra-help:
 	if lager is in Boredom Bedroom and divorces is in Upscale Capsule:
 		continue the action;
-	if lager is in lalaland and divorces is in lalaland:
+	if lager is moot and divorces is moot:
 		say ". Your songs aren't just soulful, though. They're built on your experience with alcohol and media abuse and glorifying consumerism, from the lager and DIVORCES. They do society good";
 		continue the action;
 	if lager is in Boredom Bedroom:
@@ -629,12 +629,12 @@ after fliptoing when mrlp is others (this is the slot and singed design appear r
 	continue the action;
 
 after fliptoing a-p:
-	now digger is in lalaland;
+	moot digger;
 	continue the action;
 
 after fliptoing lance:
 	now heaps are in Shuttle Hutlets;
-	now waste is in lalaland;
+	moot waste;
 	continue the action;
 
 after fliptoing prod:
@@ -652,10 +652,10 @@ after fliptoing ragged dagger:
 
 after fliptoing raptor:
 	now player has whistle;
-	now raptor is in lalaland;
-	now hydra is in lalaland;
-	now Merle is in lalaland;
-	now Elmer is in lalaland;
+	moot raptor;
+	moot hydra;
+	moot Merle;
+	moot Elmer;
 	if Merle is reflexive, poss-d;
 	if Elmer is reflexive, poss-d;
 	reg-inc;
@@ -689,7 +689,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 			set the pronoun it to pernod;
 		continue the action;
 	else if noun is lobster or noun is ME ARTS:
-		if ME ARTS is in lalaland and lobster is in lalaland:
+		if ME ARTS is moot and lobster is moot:
 			say "You feel your arch-greed recharged.";
 			min-up;
 		continue the action;
@@ -1006,7 +1006,7 @@ hawt thaw	"The hawt thaw crackles slightly."
 alert letters	"[l-r-bye-hint]."
 log ons letters	"[l-r-bye-hint]."
 ought letters	"[l-r-bye-hint]."
-disk	"[if skid is in lalaland]Bleah. Did all this high-tech work make you forget the disk was a skid? Yes. Yes, it did[else]The disk seems to want to expand, but not quite into that. You must be close[end if]."
+disk	"[if skid is moot]Bleah. Did all this high-tech work make you forget the disk was a skid? Yes. Yes, it did[else]The disk seems to want to expand, but not quite into that. You must be close[end if]."
 escaroles	"The escaroles seem slightly meatier."
 pile of coal	"Microscopic bubbles seem to form on the coal and burst in the air."
 flea	"The flea makes a crinkly noise but still seems quite dead."
@@ -1227,7 +1227,7 @@ ana-repeats is a number that varies.
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
 to say spec-help of (itm - a thing):
-	if itm is skid and skid is in lalaland:
+	if itm is skid and skid is moot:
 		say "[sk2dsk].";
 		continue the action;
 	if rq is active:
@@ -1302,10 +1302,10 @@ nestor	"You rescued him, and that's enough."
 scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
-old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
-bench	"[if old giant is in lalaland][giant-over][else]You leaned on the bench right. Time to get on it[end if]."
-bench-end	"[if old giant is in lalaland][giant-over][else if nuder is in mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the bench right. Time to start ducking[end if]."
-giant's elbow	"[if old giant is in lalaland][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
+old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is moot]You had your conversation for the day[else][bug-report][end if]."
+bench	"[if old giant is moot][giant-over][else]You leaned on the bench right. Time to get on it[end if]."
+bench-end	"[if old giant is moot][giant-over][else if nuder is in mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the bench right. Time to start ducking[end if]."
+giant's elbow	"[if old giant is moot][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
@@ -1315,7 +1315,7 @@ Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
 heat	"Don't need to overheat, or overhate."
 bee's head	"Too much fiddling with reason is unreasonable."
 what-a-bee	"The bee's already taken enough of your in-my-heartitude."
-ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
+ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is moot]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
 praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
 tsar star	"No need for additional arts."	[START presto]
@@ -1510,14 +1510,14 @@ cler-scen	--	scripture picturers
 Brother Horbert	"He'll mix the reagents once you get them."
 summary	"It's there for background: why you're doing what you're doing. Oh, about Mum Ray, I can't tell you. It's too sad/confidential/unbelievable."
 snoop spoon	"Examine the snoop spoon for a hint when you need it."
-list o toils	"The list-o-toils tells what you need[if mushrooms are in lalaland]ed[end if] to get. There is one item in each aboveground Routes location besides the Cleric Circle."
+list o toils	"The list-o-toils tells what you need[if mushrooms are moot]ed[end if] to get. There is one item in each aboveground Routes location besides the Cleric Circle."
 rs	"They're there to re-enforce your lack of direction."
 worst ad	"[one of]How would you approach the worst ad?[plus][or]RADWOST is what the ad sells, whatever that is. That plus the settler gets you the vowels. A big clue for this Last Lousy Point.[plus][or][if cur-score of routes is 0]I'll check if you want to find what sort of words work here before going on[else]There are only so many prepositions in the English language[end if].[plus][or]TOWARDS.[minus][cycling]"	--	"TOWARDS"
 adsorbing signboard	"[one of]You can't walk into Pat's as normal. It moves, and you never seem to get to the door.[plus][or]You just need to flip two letters to enter Pat's.[plus][or]PAST works.[minus][cycling]"	--	"PAST"
 grubby restaurant	--	adsorbing signboard
 lairage regalia	"[one of]You can't walk into Oscar's as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to Oscar's?[plus][or]Not down to enter Oscar's--perpendicular.[plus][or]ACROSS.[minus][cycling]"	--	"ACROSS"
 dingy dwelling	--	lairage regalia
-grouchy old giant	"[if old giant is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if old giant is in lalaland]You're done with him[else]BUG. You should be directed to the bench or bench part you need to figure, now[end if]."
+grouchy old giant	"[if old giant is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if old giant is moot]You're done with him[else]BUG. You should be directed to the bench or bench part you need to figure, now[end if]."
 bench-end	"[one of]The giant seems to want you to listen to his tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
 tirades	--	bench-end
 giant's elbow	"[if elbow is reflexive][one of]Having trouble ducking the giant's elbow there, eh?[plus][or]The giant swings his elbow sort of high...[plus][or]...so you should be BELOW it.[minus][cycling][else]You dealt with the giant's elbow.[end if]"	--	"BELOW"
@@ -1593,16 +1593,13 @@ Tom Alvez	"You can scan Tom for hints. He's not much for conversation."	--	"MAZE
 lamb	"[one of]The lamb is petrified with fear, but maybe the right fear would get it going again.[plus][or]What sort of noise can you make to get it going?[plus][or]BLAM.[minus][cycling]"	--	"BLAM"
 onyx censer	"[one of]The censer's black and green and really retro.[plus][or]The censer may remind you of what people used to play text adventures on a long time ago.[plus][or]It can become a SCREEN.[minus][cycling]"	--	"make a SCREEN"
 dart	"[one of]The dart is stuck in the dumpster, and taking it doesn't work.[plus][or]Frustrating, eh?[plus][or]What's a good word of frustration?[plus][or]Four letters.[plus][or]DRAT.[minus][cycling]"	--	"DRAT"
-dumpster	"[if dart is not in dumpster]You got the dart you needed from the dumpster. Hooray![else][one of]You can't reach into the dumpster without a little extra something.[plus][or]The right word might help you get the dart.[plus][or]What to say to get the dart?[plus][or]DRAT.[minus][cycling]"
-spumed tar	"The spumed tar is just there to complement the dumpster."
 tsar star	"[one of]The tsar star is stuck in the stump, and taking it doesn't work.[plus][or]Frustrating, eh?[plus][or]What's a good word of frustration?[plus][or]Four letters.[plus][or]RATS.[minus][cycling]"	--	"RATS"
 red stump	--	tsar star
-permadust
 hump	"[one of]Hm, you can't get over the hump.[plus][or]What's a good word before you give a bunch of effort?[plus][or]UMPH.[minus][cycling]"	--	"UMPH"
 plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has tsar star or player wears tsar star]You've got something that will impress him[otherwise]You need to find something to impress the plebe--you may want to go visit the Char Arch to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has tsar star or player wears tsar star]now[otherwise]once[end if] you have the tsar star.[minus][cycling]"	--	"BLEEP"
 Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost, but you can do a bit better.[plus]What can YE HOOP anagram to?[minus][cycling]"	--	"POOH"
-Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
-Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
+Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
+Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
 wzup	"[wash-up]"	--	"WHASSUP"
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
@@ -1621,29 +1618,29 @@ futon	"[if slept is true]You won't need to sleep on the futon again.[else][one o
 speel	"[one of]You're too tired to read the speel.[plus][or]You can't make any logic leeps in your current condition.[plus][or]Best to SLEEP.[minus][cycling]"	--	"SLEEP"
 fount	"[one of]The fount is a fount of knowledge. Dry knowledge, but knowledge.[plus][or]The fount's also very restful.[plus][or]You can probably find a way to fold the fount into...[plus][or]...a FUTON.[minus][cycling]"	--	"make a FUTON"
 escaroles	"[one of]The escaroles aren't much of a meal on their own. They could be more meaty.[plus][or]The escaroles could be a dish instead of garnish. Any old dish, with all sorts of things slopped into it.[plus][or]Or a CASSEROLE.[minus][cycling]"	--	"Fix a CASSEROLE."
-casserole	"[if yak is in shack or yak is in lalaland]You can't use the casserole any more. You could've bribed Leo and Rand with it.[else][one of]You can't take the casserole--it's too hot. It's also kind of yucky for someone as sophisticated as you unless you need calories.[plus][or]Met anyone who can use calories who doesn't sweat niceties?[plus][or]Leo and Rand. If you poke them when you have a tough physical task, you can get them to push the skid north.[minus][cycling][end if]"
+casserole	"[if yak is in shack or yak is moot]You can't use the casserole any more. You could've bribed Leo and Rand with it.[else][one of]You can't take the casserole--it's too hot. It's also kind of yucky for someone as sophisticated as you unless you need calories.[plus][or]Met anyone who can use calories who doesn't sweat niceties?[plus][or]Leo and Rand. If you poke them when you have a tough physical task, you can get them to push the skid north.[minus][cycling][end if]"
 trim socks	"[one of]The socks aren't critical to solving the game, but they do give a LLP--Last Lousy Point.[plus][or]The socks don't seem very technical, but they look like circuit chips or something.[plus][or]Maybe they'd make you go faster or something.[plus][or]Maybe they are, instead, ROM STICKS.[minus][cycling]"
 rom sticks	"[one of]You can put the sticks in Drive A to make it go faster. The game does this automatically.[plus][or]The sticks don't actually save moves or anything, though.[minus][cycling]"
 gum	"[one of]Gum comes in more than six flavors at your local supermarket, but there are only five ways to change G-U-M.[plus][or]As for what it's good for, it's everlasting gum, and maybe what it changes into will help other things be everlasting.[plus][or]Oh, the solution?[plus][or]UMG, er, OMG, do you need to ask?[plus][or]You don't need to go to George Mason University.[plus][or]I just put extra clues in to give more clues than anagram possibilities, because I could.[plus][or]MUG. In which you pour liquid.[minus][cycling]"	--	"make a MUG"
-mug	"[one of]Like the never-ending gum it came from, the mug regenerates what's in there.[plus][or]What goes in a mug? Liquid, generally.[plus][or][if coal is not in lalaland]You can probably figure what to do with the coal to make a liquid.[end if]The cola is a liquid.[plus][or]POUR COLA IN MUG.[minus][cycling]"
-skid	"[if yak is in lalaland][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
+mug	"[one of]Like the never-ending gum it came from, the mug regenerates what's in there.[plus][or]What goes in a mug? Liquid, generally.[plus][or][if coal is not moot]You can probably figure what to do with the coal to make a liquid.[end if]The cola is a liquid.[plus][or]POUR COLA IN MUG.[minus][cycling]"
+skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 skidrope	"The skid's rope lets you PULL the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is visible]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 t-key	"[if t-key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
 signature	--	scratch paper
-dirty looking cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is in lalaland]the mug[else]what the gum can become[end if].[minus][cycling]"
+dirty looking cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is moot]the mug[else]what the gum can become[end if].[minus][cycling]"
 fizzy cola	"Cola is great for drinking (without knowing it) during a long programming session."
 scratch paper	"[if signature is reflexed]Useless now.[else][one of]The signature and the scratch paper are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the scratch paper"
 scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and this one's resisting in some odd animal fashion. So you need to deal with the yak.[minus][cycling]"
-drab yoke	"[if yak is not in lalaland]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
+drab yoke	"[if yak is not moot]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
 compiled code	"[one of]The compiled code works but has problems.[plus][or]You need to make the code BUDGE.[plus][or]The code still has bugs to fish out.[plus][or]Therefore, you need to DEBUG.[minus][cycling]"	--	"to DEBUG the compiled code"
 slab	"You [if cpuready]already[else]can[end if] put things on the slab to build a computer."
 USB	"[one of]The USB is pretty universal. It can become either of two things.[plus][or]The USB can become transport out of here.[plus][or]SUB or BUS.[minus][cycling]"	--	"make a BUS or USB"
 caps lock	"[if caps lock is part of the keyboard]The caps lock is where it should be.[else][one of]What does a caps lock work with?[plus][or]A keyboard.[plus][or][kboard-blah].[plus][or]Put the caps lock in the keyboard.[minus][cycling]"
 yak	"[if shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on its drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. Or the bad book that anagrams the keyboard.[plus][or]SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
-catechism	"[if yak is in lalaland]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something,[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
+catechism	"[if yak is moot]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something,[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
 blue button	"[if rebooted is true]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
 orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The orange button is too bent to push.[plus][or]The orange button is not necessary.[minus][cycling]"
 clack ops locs pack	"[one of]The locs pack is allegedly for making things quieter.[plus][or]But why is so much of its text in LETTERS LIKE THESE?[plus][or]Because it can become CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
@@ -1662,7 +1659,7 @@ tunes	"[one of]It's kind of complicated to change the tunes or get rid of them.[
 jar of pills	"[one of]What can you do with PILLS?[plus][or]You can pop the pills, but the lid is stuck.[plus][or]The pills can make life convenient for your adversaries, if they were on the ground.[plus][or]You would have to SPILL them.[plus][or]You can do so at various places.[minus][cycling]"
 tines	--	stein
 stein	"[one of]The stein is free.[plus][or]How does the stein hook up with the tines?[plus][or]INSERT the stein and you're five-sixths there.[plus][or]INSET the stein.[minus][cycling]"
-casper	"[if recaps is in lalaland]You've disturbed Casper enough.[else][casp-cap][end if]"
+casper	"[if recaps is moot]You've disturbed Casper enough.[else][casp-cap][end if]"
 capers recaps	"[casp-cap]"
 gins sign	"[if i-sung is true]You already managed to SING.[else][one of]The gins sign is a last lousy point, but it's one that introduces what to do in the area.[plus][or]The drinks are named after depressing puns on popular music.[plus][or]This is a last lousy point, but because it is a hint, I'll tell you what it is next.[plus][or]You can SING.[minus][cycling][end if]"
 clam	"[one of]The clam is agitated. It probably doesn't want to attack you.[plus][or]You need to settle the clam down.[plus][or]I mean CALM it.[minus][cycling]"
@@ -1688,7 +1685,7 @@ waste	"[one of]The waste puzzle is optional.[plus][or][one of]The waste is hard 
 lance	"[lance-hints]"
 heaps	"[one of]The heaps are malleable, but they might be a pain to search.[plus][or]If you SHAPE the heaps, you get a Keep Yorpwald Beautiful Last Lousy Point.[minus][cycling]"
 eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[plus][or]They are EEKS. That leaves twelve choices.[plus][or]Two, if you use the settler.[plus][or]SEEK.[minus][cycling]"
-aunt tuna	"Aunt Tuna is useful for talking to. She has good information[if tea tray is not in lalaland]. Her food is also edible[end if]."
+aunt tuna	"Aunt Tuna is useful for talking to. She has good information[if tea tray is not moot]. Her food is also edible[end if]."
 dent	"[one of]The dent can be dealt with if you know how to futz with it, but it's a last lousy point.[plus][or]No, not futz, another four-letter word.[plus][or]You need to TEND the dent.[minus][cycling]"	--
 wipes	"[if player has wipes][one of]The wipes, unsurprisngly, help make something less dirty.[plus][or]What is something that is very dirty?[plus][or][name-the-lance].[minus][cycling][else][one of]You can't just plain take the wipes. You are not fast enough.[plus][or]What's a quicker action than TAKE, to get the wipes?[plus][or]SWIPE the wipes.[minus][cycling][end if]"
 tea tray	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can EAT the tea.[minus][cycling]"
@@ -1702,7 +1699,7 @@ shut huts	--	span pans
 tubs	"[one of]The tubs seem tough to crack.[plus][or]You could blast the tubs, or crush them, ...[plus][or]...or BUST them.[cycling]"
 prod	"[one of]The prod seems like it should be more than it is, but you can't figure how to operate it.[plus][or]Operating the prod is probably simple and dumb, but something you do by accident.[plus][or]To operate the prod, you need a simple standard action this game doesn't usually let you do.[plus][or]DROP the prod.[minus][cycling]"
 rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The digger can get what's in the plain.[plus][or]How would you summon the HAUNTER?[plus][or]You can UNEARTH it.[cycling]"
-sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not in lalaland][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
+sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not moot][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 h-h	"The Horned Hedron is where you need to go [if Horned Hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
 a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
@@ -1712,7 +1709,7 @@ ol' trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][o
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
-paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
+paler pearl	"[if tea tray is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
 ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or]TAN the ant.[minus][cycling]"
 yapper	"[one of]The settler on cheat mode gives confusing readings here because PAPERY and YAPPER clash.[plus][or]So if you use the settler, you may note that five of the letters are right. But maybe you want to solve this the old-fashioned way.[plus][or]He seems to be asking for a bribe and not asking for one at the same time. He needs to be compensated before he lets you do anything.[plus][or]If you give the yapper an item, he indicates he could be bribed...if it were valuable. He likes the pearl.[plus][or]You can just PREPAY the yapper.[minus][cycling]"
@@ -1829,9 +1826,9 @@ deli rye	"Ed Riley won't share, but the rye can share a hint with you if you sca
 yield sign	"The yield sign symbolizes Ed Riley isn't THAT in control of things. Oh, and it can share a hint with you if you scan it."
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
 whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
-Mr Lee	"[loop-pool-already][if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if gore ogre is in bran barn]Try to get rid of the Gore Ogre.[else]You've helped Mr. Lee all you can."
+Mr Lee	"[loop-pool-already][if ghoul hat is not moot]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if gore ogre is in bran barn]Try to get rid of the Gore Ogre.[else]You've helped Mr. Lee all you can."
 ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
-Gore Ogre	"[loop-pool-already][if ghoul hat is not in lalaland]Deal with the ghoul hat first.[else][one of]The gore ogre doesn't seem violent, but maybe there's a conjuncion that works on it.[plus][or]Maybe something that can outsmart the Gore Ogre and claim you're right.[plus][or]ERGO.[minus][cycling]"	--	"you can say ERGO"
+Gore Ogre	"[loop-pool-already][if ghoul hat is not moot]Deal with the ghoul hat first.[else][one of]The gore ogre doesn't seem violent, but maybe there's a conjuncion that works on it.[plus][or]Maybe something that can outsmart the Gore Ogre and claim you're right.[plus][or]ERGO.[minus][cycling]"	--	"you can say ERGO"
 Vow Here	"[one of]You don't need to deal with the vow here, but since it appears in an area where you've used conjunctions, you need one more,[plus][or]Listening to the vow here may help a bit.[or][plus]You can say HOWEVER.[minus][cycling]"	--	"you can say HOWEVER"
 atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make an ATOM"
 le mer	--	sea cube
@@ -1924,7 +1921,7 @@ nameless salesmen	"They used to be a puzzle in towers, and I didn't have the hea
 singed design	"The singed design gives you a clue what the [if player has coin]coin[else if player has coins]coins[else if player has icon]icon[else if player has icons]icons[else if player has s-c]sonic coins[end if] can become." [begin very endgame item hints]
 coin	"[one of]You ultimately need another coin, but perhaps it can be converted to something of intrinsic worth.[plus][or]Make the coin an ICON. Once you get another coin, you will make ICONS automatically.[minus][cycling]"
 coins	"[one of]There are two things to do with the coins.[plus][or]The coins can become another thing, or they can change in quality.[plus][or]The thing coins can become is ICONS.[plus][or]The coins can also become SONIC.[minus][cycling]"
-icon	"You've done what you can with the icon. You need to [if number of fruits in lalaland < 8]get more fruits[else]return to Curtis[end if] to get another coin and make ICONS."
+icon	"You've done what you can with the icon. You need to [if number of moot fruits < 8]get more fruits[else]return to Curtis[end if] to get another coin and make ICONS."
 icons	"[one of]The icons are too inert.[plus][or]The icons can become SONIC.[minus][cycling]"
 gs	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has storage box]You have the storage box[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box [greedy-s] is guarding[end if]."
 s-c	"[one of]The sonic coins aren't quite what you need. Nobody wants singing money.[plus][or]The coins can become ICONS.[minus][cycling]"
@@ -1936,7 +1933,7 @@ droll dollar	"[one of]The droll dollar is probably not spendable in a reputable 
 Lord Al	"[ollard-hint]"
 Dr Lola	"[ollard-hint]"
 tekno-token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
-lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are in lalaland]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
+lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are moot]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
 halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has so-great storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Valence Enclave safely. The viewer and searcher can help, as can the message if you go north and fail."
 Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
@@ -1982,10 +1979,10 @@ to say lance-hints:
 		say "[one of]The detour past the Horned Hedron entry opens up if you have the lance.[plus][or]Once you get there, you have an animal to defeat, which should not be hard.[minus][cycling]"
 
 to say ag-yow-lect:
-	say "[if yow is in lalaland]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
+	say "[if yow is moot]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
 
 to say medals-do:
-	say "[if alcoves is unvisited]The medals are only fully useful west of the Disowned Downside[else if merle is not in lalaland]You can't really use the medals until Merle and Elmer are gone[else]The medals let you go QUICKLY before going west of the Alcoves, which will help you deal with Elvira's initial attack[end if]"
+	say "[if alcoves is unvisited]The medals are only fully useful west of the Disowned Downside[else if merle is not moot]You can't really use the medals until Merle and Elmer are gone[else]The medals let you go QUICKLY before going west of the Alcoves, which will help you deal with Elvira's initial attack[end if]"
 
 to say need-refurb:
 	say "need refurbishing. Maybe in the ";
@@ -2023,7 +2020,7 @@ to say h-d:
 	if keyboard is on slab and screen is on slab:
 		say "You need to put the disk in the drive.";
 		continue the action;
-	say "[one of]You can put the disk in the drive, when you're done. You can also attach things to the drive or put things on the slab. Computery things.[plus][or][if yak is not in lalaland]You need to get something to operate the computer with first, though.[else if keyboard is visible and keyboard is not on slab]You can put the keyboard on the labs slab.[else if computer screen is visible and computer screen is not on slab]You can put the computer screen on the labs slab.[else]You need to put find and put components on the labs slab to get the disk working.[end if][plus][or]You can push a button once you're done.[minus][cycling]"
+	say "[one of]You can put the disk in the drive, when you're done. You can also attach things to the drive or put things on the slab. Computery things.[plus][or][if yak is not moot]You need to get something to operate the computer with first, though.[else if keyboard is visible and keyboard is not on slab]You can put the keyboard on the labs slab.[else if computer screen is visible and computer screen is not on slab]You can put the computer screen on the labs slab.[else]You need to put find and put components on the labs slab to get the disk working.[end if][plus][or]You can push a button once you're done.[minus][cycling]"
 
 to say sy-sn:
 	pad-rec-lump "sy";

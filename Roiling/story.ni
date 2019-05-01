@@ -200,6 +200,16 @@ a thing can be rayed. a thing is usually not rayed.
 
 a thing can be examined or unexamined. a thing is usually unexamined.
 
+to moot (th - a thing): move th to lalaland;
+
+to moot (lt - a list of things):
+	repeat with Q running through lt:
+		move Q to lalaland;
+
+definition: a thing (called th) is moot:
+	if th is in lalaland, yes;
+	no;
+
 chapter rooms
 
 a room can be stairy. a room is usually not stairy.
@@ -256,8 +266,8 @@ a guardian is a kind of person. a guardian is usually vanishing. a guardian can 
 a guardian has a person called other-g. The other-g of a guardian is usually dreads adders.
 
 to decide whether gn-gone of (g - a guardian):
-	if g is in lalaland, yes;
-	if other-g of g is not dreads adders and other-g of g is in lalaland, yes;
+	if g is moot, yes;
+	if other-g of g is not dreads adders and other-g of g is moot, yes;
 	no.
 
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
@@ -277,7 +287,7 @@ check objasking a guardian about a guardian (this is the guardian general chat r
 	if noun is second noun, continue the action;
 	if second noun is in location of player:
 		say "Nothing. Guess the guardians aren't going to rat on each other." instead;
-	if second noun is in lalaland, say "Threats or reminiscing won't get you anywhere." instead;
+	if second noun is moot, say "Threats or reminiscing won't get you anywhere." instead;
 	say "Your grilling runs up against plausible deniability. Who? What? Where?" instead;
 
 the specification of guardian is "A person that blocks your way through the towers area until you describe him correctly."
@@ -295,7 +305,7 @@ to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
 
 every turn when strip of profits is visited (this is the region-hint on no score rule):
-	if mrlp is means manse and Gunter is in lalaland:
+	if mrlp is means manse and Gunter is moot:
 		increment turns-spent of mrlp;
 	else if mrlp is unspoiled:
 		increment turns-spent of mrlp;
@@ -576,8 +586,8 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		choose-male;
 
 to decide whether gen-gone of (g - a guardian):
-	if g is in lalaland, yes;
-	if other-g of g is in lalaland, yes;
+	if g is moot, yes;
+	if other-g of g is moot, yes;
 	no;
 
 to general-gender-towers:
@@ -744,7 +754,7 @@ instead of taking when number of entries in multiple object list > 1 (this is th
 
 instead of dropping when number of entries in multiple object list > 1 (this is the don't allow dropping all rule):
 	let Q be the noun;
-	say "There's only one place where you need to drop an item, and [if prod is in lalaland]you found it[else]you'll probably know it, and you'll want to drop it specifically[end if]. So there's no reason to drop multiple items.";
+	say "There's only one place where you need to drop an item, and [if prod is moot]you found it[else]you'll probably know it, and you'll want to drop it specifically[end if]. So there's no reason to drop multiple items.";
 	alter the multiple object list to { Q };
 
 chapter testing stuff I can't quite NFR
@@ -793,7 +803,7 @@ every turn when scams is true (this is the scam rule):
 		if player has arugula:
 			say "Force feeding you arugula.";
 			now can-guru is true;
-			now arugula is in lalaland;
+			moot arugula;
 		else if can-guru is false:
 			now can-guru is true;
 			say "Giving you GURU ability.";
@@ -1274,8 +1284,8 @@ to item-warp:
 				say "This game just removed an item it should not have: ([list of carried not warpable things]) ([list of worn not warpable things]). [bug-report]";
 			otherwise:
 				say "[one of]An acuter curate relieves you of the items you won't need any more. He points at himself. 'Rod Hare, Hoarder.' He [if player is female]mumbles pensively, 'Her road...[run paragraph on][else]points at you. 'Rad, hero.[run paragraph on][end if]' He points away. 'I scour curios.'[or]The hoarder takes your surplus stuff again.[stopping]";
-		now all carried not warpable things are in lalaland;
-		now all worn not warpable things are in lalaland;
+		moot list of all carried not warpable things;
+		moot list of all worn not warpable things;
 
 chapter going to
 
@@ -1350,7 +1360,7 @@ carry out gotoing:
 	if progval of noun > progval of location of player:
 		say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
 	if noun is a mazeroom or noun is Unwary Runway:
-		if volt maze is in lalaland:
+		if volt maze is moot:
 			say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
 	if mrlp is presto: [PRESTO]
@@ -1412,7 +1422,7 @@ carry out gotothinging:
 	d "Trying person/thing [newrm].";
 	if noun is a guardian:
 		ital-say "this could be a bit vague, since each guardian can be seen from two rooms.";
-	if noun is in lalaland:
+	if noun is moot:
 		if noun is skid or noun is disk:
 			say "You can flip back to [the noun]." instead;
 		say "That [if noun is a person]person [end if]has served the necessary purpose." instead;
@@ -1710,7 +1720,7 @@ persuasion rule for asking macks to try doing something:
 	persuasion fails;
 
 persuasion rule for asking Mr Lee to try doing something:
-	say "[if gore ogre is in lalaland]Mr. Lee can't do any more for you[else]Mr. Lee doesn't trust you enough to do anything for you[end if].";
+	say "[if gore ogre is moot]Mr. Lee can't do any more for you[else]Mr. Lee doesn't trust you enough to do anything for you[end if].";
 	persuasion fails;
 
 persuasion rule for asking whiners to try doing something:
@@ -2037,7 +2047,7 @@ organised	--
 mardier admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 Atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
-Tetris Sitter	"[if flowerpot is in lalaland]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
+Tetris Sitter	"[if flowerpot is moot]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
 Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]."
 whiners	--
 macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
@@ -2072,7 +2082,7 @@ to say pat-on-pit:
 
 check asking Curtis about:
 	if second noun is a fruit:
-		say "'[if second noun is in lalaland]Yes, thanks for that, again[else]That'd work well, yeah[end if].'" instead;
+		say "'[if second noun is moot]Yes, thanks for that, again[else]That'd work well, yeah[end if].'" instead;
 
 to say mon-men:
 	say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if Merle is reflexive][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]get all, ETHYLS, NO and make a drinking gesture and wag their fingers[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[end if]."
@@ -2213,7 +2223,7 @@ stinger	"As you start to talk, you almost see a grin set in the stinger, which m
 Lois the Hostile	"She complains[hostile-red]!"
 Hostile-Is-He Lot	"They complain[hostile-red]!"
 Atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
-agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
+agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
 Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if flowerpot is reflexed]St. Teri looks at your flowerpot, sadly[else if player has crocus]St. Teri looks at your flowerpot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
@@ -2221,7 +2231,7 @@ Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
 atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
-Mr Lee	"[if gore ogre is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
+Mr Lee	"[if gore ogre is moot]'You have gained my trust and your powers. Go on!'[else if ghoul hat is moot]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
 Gore Ogre	"'EORG EORG EORG!!!'"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
 macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
@@ -2328,13 +2338,13 @@ tokers	nestor	"[if nestor is visible]They thank you for finding him[else]They we
 tokers	mangiest steaming	"[if cruelest lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. You'd probably have SOME sort of experience going through those fumes[end if]."
 lecturer	Elvira	"You probably know he's in favor of her."
 lecturer	lecturer	"Oh, his good-for-society rant has enough of his own experiences sprinkled in."
-Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
+Brother Horbert	spoon	"'[if spoon is moot]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
 Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
-Brother Horbert	old giant	"'Well-meaning, but his wrath is misplaced. I can hear him from here. You [if giant is in lalaland]did well to listen to him[else]may learn from listening to him, but there is nothing to fear[end if].'"
+Brother Horbert	old giant	"'Well-meaning, but his wrath is misplaced. I can hear him from here. You [if giant is moot]did well to listen to him[else]may learn from listening to him, but there is nothing to fear[end if].'"
 Brother Horbert	Elvira	"'Perhaps she was good once. But her influence on religion is...disturbing.'"
 old giant	bench	"There's not much dispute over the ownership. And the giant isn't trying to shoo you away. Maybe you should listen to the giant in general."
 old giant	Elvira	"The old giant becomes momentarily more vocal and upset."
@@ -2357,7 +2367,7 @@ plebe	Leo	"You tell the plebe Leo might push him aside, but no dice. Maybe a bru
 plebe	Rand	"You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force."
 Rand	yak	"[pal-yak]" [chum=Leo]
 Rand	plebe	"[no-plebe]"
-Leo	hogs	"[if Saps' Pass is unvisited]You haven't seen any hogs yet.[else if lawl wall is in lalaland]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
+Leo	hogs	"[if Saps' Pass is unvisited]You haven't seen any hogs yet.[else if lawl wall is moot]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
 Rand	Leo	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Rand is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
 Leo	Rand	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Leo is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
 Leo	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
@@ -2383,8 +2393,8 @@ hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronge
 trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"	 [start oyster]
 trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
 trolls	h-h	"'Even more fun than here. So we hear.'"
-trolls	capers	"[if stein is in lalaland][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
-trolls	stein	"[if stein is in lalaland][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
+trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
+trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
 trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
 trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
 trolls	stumbler tumblers	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
@@ -2411,7 +2421,7 @@ trout	pikes	"[if player is in range]You can ask about them later. They're pretty
 trout	aunt tuna	"[if carps are visible]The carps are already asking mean questions.[else]'She sure is grateful you rescued me.'[end if]"
 trout	Casper	"'I don't like his books. Too violent. But Aunt Tuna thinks I read the dirty bits, anyway.'"
 aunt tuna	casper	"'Those books of his! I cannot approve.'"
-aunt tuna	tea	"'[if tea is in lalaland]Goodness! I cannot share the recipe[else]Try it! You'll like it[end if].'"
+aunt tuna	tea	"'[if tea is moot]Goodness! I cannot share the recipe[else]Try it! You'll like it[end if].'"
 aunt tuna	pikes	"[bbbullies]."
 aunt tuna	carps	"[bbbullies]."
 aunt tuna	pre-haun	"'It is searching for a stolen treasure. They say it will wreak terrible havoc on the possessor.'"
@@ -2491,14 +2501,14 @@ Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against askin
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
 Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but the Tetris Sitter's observations were a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
-Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is in lalaland]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
+Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is moot]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
 Tetris Sitter	flowerpot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
 Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
 macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
 Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
-Mr Lee	Elvira	"'She must be defeated[if gore ogre is in lalaland]. You must be the one to lead us[else if ghoul hat is in lalaland]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
+Mr Lee	Elvira	"'She must be defeated[if gore ogre is moot]. You must be the one to lead us[else if ghoul hat is moot]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
 Gore Ogre	Elvira	"The Gore Ogre EORG's a bit louder."
 ocelots	Elvira	"They shudder[at-elvira]."
 satyr	Elvira	"He shudders[at-elvira]."
@@ -2573,7 +2583,7 @@ check objasking agnostic about (this is the agnostic can spoil rule):
 		say "'Wow! It woulda been too much to have anyone more snooping around.'" instead;
 	if second noun is hostile-is-he lot and agnostic is female:
 		say "'Wow! It woulda been too much to have anyone more snooping around." instead;
-	if second noun is in lalaland:
+	if second noun is moot:
 		if second noun is not atheists and second noun is not the-hostile and second noun is not lois:
 			say "That's out of the way." instead;
 		else:
@@ -2591,7 +2601,7 @@ check objasking agnostic about (this is the agnostic can spoil rule):
 	else:
 		if ag-guar is not noun:
 			say "[ag-first] mumbles [he-she]'s bored with word games." instead;
-		if ag-guar is in lalaland:
+		if ag-guar is moot:
 			say "You thank [ag-first] for helping you out." instead;
 
 doc-cheat is a truth state that varies. doc-cheat is false.
@@ -2600,7 +2610,7 @@ doc-guar is a person that varies. [doc-guar is usually nothing.]
 check objasking Dr Yow about:
 	if Dr Yow is in ropins:
 		say "[he-she-c] doesn't need the added pressure, but maybe [he-she] can give a bit of help once [he-she]'s out." instead;
-	if second noun is in lalaland:
+	if second noun is moot:
 		if second noun is not bonker:
 			say "You don't need to worry about that, now." instead;
 	else if second noun is a guardian or second noun is curst palace:
@@ -2615,7 +2625,7 @@ check objasking Dr Yow about:
 		else:
 			if doc-guar is not noun:
 				say "Dr. Yow rubs [his-her] temples. [he-she-c]'s probably up to more technical stuff, now." instead;
-			if doc-guar is in lalaland:
+			if doc-guar is moot:
 				say "You thank Dr. Yow for helping you out." instead;
 			choose row with the-from of second noun in the table of towers anagrams;
 			say "No, you remember, it was [right-word entry in upper case].";
@@ -2626,7 +2636,7 @@ check objasking len craig about a fruit:
 			say "'A nice fruit, and it's fresh, but I'm selling today.'";
 	else if second noun is visible:
 		say "You are about to haggle, but Len looks at you just SO. You need to go about things the right way.";
-	else if second noun is in lalaland:
+	else if second noun is moot:
 		say "You don't need to get Curtis any more of that.";
 	else if second noun is kumquat or second noun is papayas:
 		say "Len looks at you askance, not sure how you know about those fruits.";
@@ -2659,7 +2669,7 @@ to say maze-later:
 
 check objasking a warrior about a warrior:
 	if noun is rodney:
-		if second noun is in lalaland:
+		if second noun is moot:
 			say "No gloating, now" instead;
 		if second noun is off-stage:
 			say "I don't think you want Rodney to call up reinforcements." instead;
@@ -2672,12 +2682,12 @@ check objasking a warrior about curst palace:
 	say "He only knows he's supposed to defend it from you. He probably wasn't given any secrets to divulge." instead;
 
 to say pick-keep:
-	if number of warriors in lalaland > 0:
+	if number of moot warriors > 0:
 		say "keep picking";
 	else:
 		say "pick";
 	say " off Rodney's gang ";
-	say "[if number of warriors in lalaland < 3]one by one[else] though you probably don't need to[end if]";
+	say "[if number of moot warriors < 3]one by one[else] though you probably don't need to[end if]";
 
 to say around-gone:
 	say "[if Dr Yow is visible]around[else]gone"
@@ -2693,7 +2703,7 @@ idg	"vitamins/nativism" or "nativism vitamins"	"'Nice an crunchy. Taste good too
 table of object-blather [this gives people default things to say about stuff, if they are not terse.]
 person-subj	right-region	him-say
 Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way.'"
-settler	--	"You don't think anyone can help you [if Elmo is in lalaland]more than Elmo did [end if]with that."
+settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
 pedanto-notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get there[end if]!'"
 haunter	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
@@ -2704,9 +2714,9 @@ topic	right-region	him-say
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
-	if grailman is in lalaland, decide on 2; [if the guardian(s) north of danger garden/strati strait are both gone, it is a straight jump. And of course lois/lot are in lalaland, since ag-moves is calculated when the kid is present] [also note that the arid den is in lalaland if this is not true]
-	if Mel Fish is not in lalaland, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
-	if wait-seer is not in lalaland:
+	if grailman is moot, decide on 2; [if the guardian(s) north of danger garden/strati strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the arid den is moot if this is not true]
+	if Mel Fish is not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
+	if wait-seer is not moot:
 		unless gen-gone of lars eede, decide on 6; [this zigzag blocks a clear path east]
 	decide on 4; [the only way 8 would be possible is S W N W S S E E, but that ignores you have cleared the atheists]
 
@@ -2845,7 +2855,7 @@ dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but 
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more[of]a refresher on[stopping] information, if you read again."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
-Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
+Thearchy Hatchery	"[if the-hostile is moot]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
@@ -3375,12 +3385,12 @@ after quipping when qbc_litany is the table of Gunter comments:
 	else if current quip is leave-quip:
 		lawnmower the table of Gunter comments;
 		terminate the conversation;
-		move Gunter to lalaland;
+		moot Gunter;
 		now dusty study is dark;
 		if do-i-chat is true:
 			move Elmo to Largely All-Grey Gallery;
 			move player to Largely All-Grey Gallery;
-			now rifle is in lalaland;
+			moot rifle;
 			now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Gunter's dialogue]
 	else:
 		debug-fallthrough;
@@ -3423,21 +3433,21 @@ after quipping when qbc_litany is the table of Elmo comments:
 		enact gulp-quip;
 		enact elmomole-quip;
 		enact got-red-yellow-quip;
-		if t-b is escanned and t-b is in lalaland:
+		if t-b is escanned and t-b is moot:
 			now basement-quip is Elmo-av;
-		if tables are escanned and tables are in lalaland:
+		if tables are escanned and tables are moot:
 			now stable-quip is Elmo-av;
-		if pram is escanned and pram is in lalaland:
+		if pram is escanned and pram is moot:
 			now ramp-quip is Elmo-av;
-		if giant pin is escanned and giant pin is in lalaland:
+		if giant pin is escanned and giant pin is moot:
 			now painting-quip is Elmo-av;
 		if sitar is escanned or stria is escanned:
-			if sitar is in lalaland or stria is in lalaland:
+			if sitar is moot or stria is moot:
 				now stair-quip is Elmo-av;
 		choose row with short of "diorama" in table of pad-stuff;
 		if known entry is true:
 			enact dio-quip;
-		if niche is escanned and niche is in lalaland:
+		if niche is escanned and niche is moot:
 			enact chimney-quip;
 			now chimney-quip is Elmo-av;
 		else:
@@ -3542,12 +3552,12 @@ after quipping when qbc_litany is the table of Elmo comments:
 		terminate the conversation;
 		if player does not have gird grid and do-i-chat is false:
 			say "Hm. Maybe Elmo had some information for you that a conversation couldn't bring out. Well, it's all really just anagramming from here on out--you think/hope.";
-		now Elmo is in lalaland;
-		now satchel is in lalaland;
+		moot Elmo;
+		moot satchel;
 		now player has gird grid;
 		if do-i-chat is true: [this is a cheat bypass]
 			move player to Disowned Downside;
-			now macks are in lalaland;
+			moot macks;
 			now qbc_litany is table of Gretta comments;
 		else:
 			now poss-score of Means Manse is cur-score of Means Manse + 3;
@@ -3661,9 +3671,9 @@ to solve-region (sre - a region):
 		continue the action;
 	repeat with po running through portals in Strip of Profits:
 		if go-region of po is sre:
-			move po to lalaland;
+			moot po;
 		check-the-store po;
-	if sre is oyster and pills are in lalaland:
+	if sre is oyster and pills are moot:
 		now you-used-pills is true;
 	item-warp;
 	let wiped-any-out be false;
@@ -3677,9 +3687,9 @@ to solve-region (sre - a region):
 	if lecturer is reflexed: [have to get rid of them before moving the player, but we want to print a note AFTER going. So, tap dance with code a bit.]
 		if mangiest steaming is in profits:
 			now tokers-home is true;
-			now nestor is in lalaland;
-			now tokers are in lalaland;
-			now mangiest steaming is in lalaland;
+			moot nestor;
+			moot tokers;
+			moot mangiest steaming;
 	if min-score of mrlp > poss-score of mrlp, say "NOTE: somehow the minimum score processed by the code exceeded the possible score. If you are able to, and you can cut/paste the game transcript, I'd appreciate seeing it at [email] so I can fix it. This won't affect the game, but all the same--it's a nuisance bug. Thanks!";
 	if player is not in Strip of Profits:
 		d "player not currently in Strip of Profits. Player moved from [location of player].";
@@ -3696,9 +3706,9 @@ to solve-region (sre - a region):
 to check-the-store (po - a portal):
 	repeat through table of stores anagrams:
 		if the-to entry is po:
-			if the-from entry is not in lalaland:
+			if the-from entry is not moot:
 				d "Moving [the-from entry] to lll.";
-				now the-from entry is in lalaland;
+				moot the-from entry;
 				break;
 
 eng-change is a truth state that varies.
@@ -3750,13 +3760,13 @@ Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-
 to say to-clean-otters: [hells bells this is ugly]
 	if gore ogre is reflexive or eels are reflexive:
 		say "[if eels are reflexive]the Bran Barn[else]the Loop Pool[end if]";
-		if cinders are not in lalaland or elmer is reflexive:
+		if cinders are not moot or elmer is reflexive:
 			say ", as well as ";
 		else:
 			continue the action;
 	if elmer is reflexive:
 		say "Elmer and Merle's annoying blather";
-		if cinders are not in lalaland:
+		if cinders are not moot:
 			say " and ";
 		else:
 			continue the action;
@@ -3771,16 +3781,16 @@ this is the routes-left rule:
 this is the otters-left rule:
 	if gore ogre is reflexive or eels are reflexive, the rule succeeds;
 	if elmer is reflexive, the rule succeeds;
-	if cinders are not in lalaland, the rule succeeds;
+	if cinders are not moot, the rule succeeds;
 	the rule fails.
 
 this is the towers-left rule:
-	if flowerpot is not in lalaland, the rule succeeds;
+	if flowerpot is not moot, the rule succeeds;
 	the rule fails;
 
 this is the oyster-left rule:
 	if lever is reflexive, the rule succeeds;
-	if aunt-tuna-cross is false and lance is not in lalaland, the rule succeeds;
+	if aunt-tuna-cross is false and lance is not moot, the rule succeeds;
 	if bogus-plains is reflexive, the rule succeeds;
 	the rule fails;
 
@@ -3792,7 +3802,7 @@ this is the presto-left rule:
 
 this is the troves-left rule:
 	if Pa Egg Pea is reflexive, the rule succeeds;
-	if divorces is not in lalaland, the rule succeeds;
+	if divorces is not moot, the rule succeeds;
 	the rule fails;
 
 chapter zaping (with patcher)
@@ -3826,7 +3836,7 @@ carry out zaping:
 	if noun is Store W, now towers is bypassed;
 	if noun is Store U, now oyster is bypassed;
 	if noun is Store P, now presto is bypassed;
-	now noun is in lalaland;
+	moot noun;
 	say "[if noun is a portal]The patcher obliterates [the-por of noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Well, maybe you'll get someone to help you take care of things behind [the noun] once you're finished here.[end if]" instead;
 	the rule succeeds;
 
@@ -3843,14 +3853,14 @@ check switching on the chapter patcher:
 	if number of needed regions is 0:
 		say "It's jammed. Probably because you solved most all you need to. Guess you'll have to figure [if Store T is in Strip of Profits]what's behind Store T[otherwise]how to deal with the otters and what's behind them[end if]." instead;
 	say "The patcher shatters in a shower of fourth-wall quantum physics as you switch it. [no line break]";
-	now patcher is in lalaland;
+	moot patcher;
 	repeat with ZT running through needed regions:
 		now ZT is bypassed;
 	say "[if number of things that are patchable is 1]You point your patcher at [random patchable thing] and it goes poof[else]You point your patcher at, in turn, [list of patchable things][end if]. Well, you should be able to see what's [if Store T is visible]really behind Store T[else]behind the otters[end if] now.";
 	repeat with ZT running through patchable things:
 		if ZT is a sto and ZT is in Strip of Profits:
 			poss-d;
-		now ZT is in lalaland;
+		moot ZT;
 	do nothing instead;
 
 definition: a thing (called xx) is patchable:
@@ -4183,7 +4193,7 @@ to reg-inc:
 			now last-solved-region is stores;
 	if suppress-score is false, consider the notify score changes rule;
 	let tru-sco be cur-score of mrlp;
-	if mrlp is otters and cinders are in lalaland:
+	if mrlp is otters and cinders are moot:
 		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this is a hack]
 	repeat through table of init-points:
 		if mrlp is myrg entry and tru-sco >= pttot entry:
@@ -4759,7 +4769,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is a-s;
 				continue the action;
 		if player is in anger range:
-			if pikes are in lalaland and haunter is off-stage:
+			if pikes are moot and haunter is off-stage:
 				now noun is pre-haun;
 				continue the action;
 			if pre-haun is in anger range:
@@ -4774,7 +4784,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			else:
 				now noun is eeks;
 			continue the action;
-		if player is in Horned Hedron and walleyes are in lalaland and ol' trap is in Horned Hedron:
+		if player is in Horned Hedron and walleyes are moot and ol' trap is in Horned Hedron:
 			now noun is ol' trap;
 			continue the action;
 		if player is in Dourest Detours:
@@ -4811,7 +4821,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is eels;
 				continue the action;
 		if player is in bran barn:
-			if ghoul hat is not in lalaland:
+			if ghoul hat is not moot:
 				now noun is ghoul hat;
 				continue the action;
 			if gore ogre is in bran barn:
@@ -5160,7 +5170,7 @@ to say pars-trub:
 table of parsewarns
 thisreg	specwarn
 means manse	"You need to change certain things to other things."
-stores	"[pars-trub]you need to change the stores, here, like you changed the [if tables are in lalaland]tables[else if niche is in lalaland]'my niche' writing[else]ten beams[end if], and you just need one word."
+stores	"[pars-trub]you need to change the stores, here, like you changed the [if tables are moot]tables[else if niche is moot]'my niche' writing[else]ten beams[end if], and you just need one word."
 presto	"[pars-trub]one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five."
 routes	"[pars-trub]one word should work here, with no preface necessary. While one word is eight letters long, the rest are around five or six."
 troves	"[pars-trub]one word will work here, and you won't need to specify details. A last lousy point is eight letters long, but most are five or six."
@@ -5326,7 +5336,7 @@ to decide which number is fruits-left:
 	let temp be 0;
 	repeat with myf running through fruits:
 		if location of player is frroom of myf:
-			unless player has myf or myf is in lalaland:
+			unless player has myf or myf is moot:
 				increment temp;
 	decide on temp;
 
@@ -5422,13 +5432,13 @@ carry out presto-hinting:
 			try objhinting wzup instead;
 		if spoilit is true:
 			now spoilit is false;
-		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in dirge ridge and ether is not in lalaland]. Maybe Leo and Rand's combined muscle could help you somewhere[end if]." instead;
+		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in dirge ridge and ether is not moot]. Maybe Leo and Rand's combined muscle could help you somewhere[end if]." instead;
 	if boing is reflexive and popgun is visible:
 		try objhinting boing mechanism instead;
 	if popgun is visible:
 		if dart is not visible:
 			all-say "You need to find ammo for your popgun." instead;
-		if dart is not in popgun and dart is not in lalaland:
+		if dart is not in popgun and dart is not moot:
 			if spoilit is true:
 				now spoilit is false;
 			try objhinting popgun instead;
@@ -5444,7 +5454,7 @@ carry out presto-hinting:
 	if player is in Grey Gyre:
 		if volt maze is in Grey Gyre:
 			try objhinting volt maze instead;
-		if ether is not in lalaland:
+		if ether is not moot:
 			if spoilit is false:
 				if player does not have popgun:
 					all-say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the Marines Seminar Remains.[cycling]" instead;
@@ -5495,9 +5505,9 @@ carry out presto-hinting:
 			say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not visible]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
 		try objhinting drab yoke instead;
 	if hacks' shack is visited:
-		if hump is not in lalaland, try objhinting hump instead;
-		if onyx censer is not in lalaland, try objhinting onyx censer instead;
-		if yak is not in lalaland: [?! rearrange this]
+		if hump is not moot, try objhinting hump instead;
+		if onyx censer is not moot, try objhinting onyx censer instead;
+		if yak is not moot: [?! rearrange this]
 			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak[if yak is not in shack] you left back...wherever[end if]." instead;
 			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
 	if player is in hacks' shack:
@@ -5506,7 +5516,7 @@ carry out presto-hinting:
 		if can-put-on-slab:
 			all-say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
 		if rebooted is false, try objhinting blue button instead;
-		if clack ops locs pack is not in lalaland, try objhinting clack ops locs pack instead;
+		if clack ops locs pack is not moot, try objhinting clack ops locs pack instead;
 		if caps lock is not part of the keyboard:
 			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
 			try objhinting caps lock instead;
@@ -5797,9 +5807,9 @@ carry out towers-hinting:
 	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient:
 		all-say "Collect the loot from the Treading Gradient." instead;
 	if obscurest subsector is unvisited:
-		all-say "[if bonker is in lalaland]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the scope copse.[end if]" instead;
+		all-say "[if bonker is moot]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the scope copse.[end if]" instead;
 	if Treading Gradient is unvisited:
-		all-say "[if mardier admirer is in lalaland]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit you [seesaw] in the scope copse.[end if]" instead;
+		all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit you [seesaw] in the scope copse.[end if]" instead;
 	unless Dr Yow has been wordy:
 		all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof:
@@ -5807,7 +5817,7 @@ carry out towers-hinting:
 	if duck is not returned:
 		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
-		all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is in lalaland and atheists are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
+		all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
 	if agnostic is lonely:
 		all-say "[one of]Hm, the agnostic [if player is not in actionless coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
 	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
@@ -5816,7 +5826,7 @@ carry out towers-hinting:
 		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
 	if dinger is in coastlines, try objhinting dinger instead;
 	if Outer Route is not visited:
-		all-say "You need to visit west of the Copse Scope[if butlers are not in lalaland]. The bluster butlers guard that area[end if]." instead;
+		all-say "You need to visit west of the Copse Scope[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
 	if player is in Outer Route:
 		if weeds are in Treading Gradient:
 			all-say "The item you want is behind the weeds in the Treading Gradient." instead;
@@ -5896,7 +5906,7 @@ to decide which thing is otters-cur-item:
 		if Mr Lee wears ghoul hat, decide on ghoul hat;
 		if gore ogre is in bran barn, decide on gore ogre;
 	if player is in loop pool:
-		if sea cube is not in lalaland, decide on sea cube;
+		if sea cube is not moot, decide on sea cube;
 		if eels are not reflexed, decide on eels;
 	if player is in Shiner Shrine:
 		if sly imp is in Shiner Shrine, decide on sly imp;
@@ -6081,7 +6091,7 @@ after reading a command:
 				replace the regular expression "^go " in XX with "";
 				change the text of the player's command to XX;
 	if player is in posh hops shop:
-		if the player's command includes "tunes" and tunes are in lalaland:
+		if the player's command includes "tunes" and tunes are moot:
 			say "The tunes are gone, now that you messed with the jukebox." instead;
 	if player is in olde lode and urn is in olde lode:
 		if word number 1 in player's command is "run":
@@ -6114,9 +6124,9 @@ after reading a command:
 				if rude 'n nuder is visible:
 					say "Truncating to one word.";
 					change the text of the player's command to "under";
-	if player is in Rascal Craals and ruby is in lalaland:
+	if player is in Rascal Craals and ruby is moot:
 		if the player's command includes "ruby":
-			say "Don't worry about the ruby any more[if haunter is in lalaland], or the haunter[else]. It's someone else's worry. Or someTHING's[end if].";
+			say "Don't worry about the ruby any more[if haunter is moot], or the haunter[else]. It's someone else's worry. Or someTHING's[end if].";
 			reject the player's command;
 	if the player is in strip of profits:
 		repeat through table of skipcmds:
@@ -6135,8 +6145,8 @@ after reading a command:
 					say "You declare cleared [go-region of portdest entry] and watch [if portdest entry is visible][portdest entry][else][storedest entry][end if] dissolve.";
 					if storedest entry is visible:
 						reg-inc;
-					now storedest entry is in lalaland;
-					now portdest entry is in lalaland;
+					moot storedest entry;
+					moot portdest entry;
 					now go-region of portdest entry is shortcircuited;
 					see-about-patcher;
 					reject the player's command;
@@ -6303,7 +6313,7 @@ Rule for printing a parser error when the latest parser error is the can't see a
 			say "Hmm. It's not useful in its present state. You think back to how you changed that toga into a goat just by saying 'goat.' Maybe you can do something like that, again." instead;
 		say "You can't see much of anything here, and if you stumble around, that [i]palm[r] might poke your eye out." instead;
 	if the player's command matches the regular expression "^go":
-		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are in lalaland]GO IN or IN or GO TO FRAMING[else if t-b are in lalaland]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
+		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are moot]GO IN or IN or GO TO FRAMING[else if t-b are moot]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
 	if the player has the rigged digger:
 		if the player's command includes "prod":
 			say "It's a digger, now." instead;
@@ -6428,9 +6438,9 @@ instead of taking inventory:
 		say "Your general tools are hidden. IV will turn them back on.";
 	if number of worn things > 0:
 		say "[line break]You are also wearing [a list of worn things].";
-	if mrlp is presto and bored yak is not in lalaland:
-		if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can't carry, but you can push it around[if number of things on skid > 0]. It holds [the list of things on skid][end if]." instead;
-		if skid is not off-stage and skid is not in lalaland, say "You remember leaving the skid in [location of skid]." instead;
+	if mrlp is presto and bored yak is not moot:
+		if location of player is location of skid and bored yak is not moot, say "[line break]There's also that skid you can't carry, but you can push it around[if number of things on skid > 0]. It holds [the list of things on skid][end if]." instead;
+		if skid is not off-stage and skid is not moot, say "You remember leaving the skid in [location of skid]." instead;
 	if mrlp is otters and power-back is false, say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
 	if player has compass, say "[line break]You also have a compass to tell direction."; [start OTHERS special stuff]
 	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to GURU things you could make fruits from.";
@@ -6454,7 +6464,7 @@ to eval-fruits:
 		say "You can't expect anything more from Curtis.";
 		continue the action;
 	let next-goal be (curtis-level + 2) * 4;
-	let fruits-got be number of fruits in lalaland + number of held fruits;
+	let fruits-got be number of moot fruits + number of held fruits;
 	if fruits-got >= next-goal:
 		say "You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
 	else:
@@ -6513,7 +6523,7 @@ Harms Marsh	"Far into a rift? No. You can't [if darkness is visible]see far enou
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Drowning ails or roils a sailor.[end if]"
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
-Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not in lalaland]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
+Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
 Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in nadir drain]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad piesy[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
@@ -6988,7 +6998,7 @@ lyre-dest is a truth state that varies.
 check singing:
 	if player is in hops shop:
 		try fliptoing gins sign instead;
-	if mrlp is oyster and gins sign is in lalaland:
+	if mrlp is oyster and gins sign is moot:
 		say "You remember your last sang-snag." instead;
 	if player is in peek keep:
 		say "No, this is a quieter place than the Posh Hops Shop." instead;
@@ -7106,7 +7116,7 @@ check giving something to:
 			say "'Tips are...' one says and shakes his head. You blush red at the meager gift you offered." instead;
 		say "No response. It looks like a gift won't be enough to get by. But you won't need one, based on what you've done so far." instead;
 	if second noun is agnostic:
-		if Dr Yow is not in lalaland:
+		if Dr Yow is not moot:
 			say "The agnostic seems like [he-she]'d rather have the gift of knowledge." instead;
 		if noun is settler:
 			say "The agnostic seems impressed, but [he-she]'s more mechanically than magically inclined." instead;
@@ -7128,7 +7138,7 @@ Understand "pull [something] [direction]" or "pull [something] to [direction]" a
 yak-sol is a number that varies.
 
 check pushing the skid to (this is the yak-oof rule):
-	if yak is in lalaland:
+	if yak is moot:
 		if player is in hacks' shack:
 			say "You pushed the skid around enough." instead;
 		say "The skid's served its purpose, and maybe it's time to remake it as a disk back in the shack. You go back. Jack.";
@@ -7138,8 +7148,8 @@ check pushing the skid to (this is the yak-oof rule):
 	if the room second noun of location of player is nowhere:
 		continue the action;
 	if yak is on skid and location of player is phat path and second noun is north:
-		say "The yoke doesn't quite fit through the door. It does, however, snap off and the yak looks freer, aliver, almost happy. It decides it's had enough of the leaf and, with a nod, walks off to a yak realm, perhaps in search of more malarkey. Maybe [if lamb is in lalaland]near the lamb you rescued[else]somewhere near the poor lamb's home[end if].";
-		now yak is in lalaland;
+		say "The yoke doesn't quite fit through the door. It does, however, snap off and the yak looks freer, aliver, almost happy. It decides it's had enough of the leaf and, with a nod, walks off to a yak realm, perhaps in search of more malarkey. Maybe [if lamb is moot]near the lamb you rescued[else]somewhere near the poor lamb's home[end if].";
+		moot yak;
 		now yak-sol is 1;
 		reg-inc;
 		pad-del "Leo and Rand";
@@ -7154,7 +7164,7 @@ check pushing the skid to (this is the yak-oof rule):
 			if hump is visible:
 				say "You need to get over the hump." instead;
 			else:
-				say "The way west [if hoop is in lalaland]got cleared out when you jumped for the hoop[else if austerer is unvisited]looks like a dead end, nothing where your sled would need to go[else]was pretty much clear. You can't imagine needing to bring anything there[end if]." instead;
+				say "The way west [if hoop is moot]got cleared out when you jumped for the hoop[else if austerer is unvisited]looks like a dead end, nothing where your sled would need to go[else]was pretty much clear. You can't imagine needing to bring anything there[end if]." instead;
 		if second noun is east:
 			if plebe is in gyre:
 				say "The plebe stands strong. You don't have the heart to run it over." instead;
@@ -7209,7 +7219,7 @@ to say a-r:
 	say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
 
 to say next-sonancy:
-	say "[if hurt hog is in lalaland]the final step[else if bent ewe is reflexed]the hurt hog[else]the hog and the bee[end if]"
+	say "[if hurt hog is moot]the final step[else if bent ewe is reflexed]the hurt hog[else]the hog and the bee[end if]"
 
 to decide whether can-hear-posh:
 	if player is in browse bowers, yes;
@@ -7219,9 +7229,9 @@ to decide whether can-hear-posh:
 check listening (this is the you can hear stuff some places rule):
 	if player is in dusty study: [means manse]
 		if dusty study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
-		say "[if Gunter is in lalaland][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
+		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
-	if player is in sonancy canyons, say "[if raptest patters are not in lalaland]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead; [routes]
+	if player is in sonancy canyons, say "[if raptest patters are not moot]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead; [routes]
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed and bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
@@ -7253,7 +7263,7 @@ check listening (this is the you can hear stuff some places rule):
 			if Dr Yow has been rowdy or Dr Yow has been wordy, say "Dr. Yow is silent once again." instead;
 			say "Dr. Yow moans [he-she] could hack less shackles." instead;
 	if ingrates are visible, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[in random order]." instead;
-	if player is in outer route, say "The rapier repair machine [if dagger is in lalaland]chugs[else]fizzles[end if]along." instead;
+	if player is in outer route, say "The rapier repair machine [if dagger is moot]chugs[else]fizzles[end if]along." instead;
 	if mardier admirer is visible, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
 	if atheists are visible, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is visible]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
 	if wait-seer is visible, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
@@ -7262,9 +7272,9 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
 	if player is in lode and clam is in lode, say "You hear the clam snapping." instead;
 	if player is in freight, try examining the pale plea instead;
-	if player is in anger range and carps are in lalaland and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
+	if player is in anger range and carps are moot and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
-	if old giant is in lalaland and player is in Same Mesa, say "Nice to have silence with the giant gone." instead;
+	if old giant is moot and player is in Same Mesa, say "Nice to have silence with the giant gone." instead;
 	if tokers are visible and nestor is visible, say "[if nestor is visible]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if nestor is visible, say "Nestor periodically mumbles about his lost buddies." instead;
 	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
@@ -7310,7 +7320,7 @@ chapter smelling
 
 before smelling (this is the you can smell some stuff some places rule):
 	if player is in study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [means manse]
-	if player is in study and Gunter is in lalaland, say "Bean soup. Subpoena is near." instead;
+	if player is in study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
 	if player is in strip: [stores]
 		if store y is in strip, say "Seawater scents from Store Y." instead;
@@ -7368,7 +7378,7 @@ before sleeping:
 				say "You feel smarter the moment you lie down on a lump you realize must be an armrest. So it's definitely more practical than some oaf's sofa. During this purest rest-up, you osmose the max-sleep examples, and even the smartest mattress would only have given smatters of what your subconscious soaks up from the comfort of the cot. The sleep peels away your fatigue and doesn't even leave an ague fit in return. 'Real day already?' you remark. 'Up, coder! Produce!' Rested, you desert the futon.";
 				reg-inc;
 				pad-del "sleep";
-				now speel is in lalaland;
+				moot speel;
 				now slept is true instead;
 				say "You'll sleep on the futon when you need to." instead;
 			say "You don't have anything to lie down on yet." instead;
@@ -7694,7 +7704,7 @@ understand "la" as scanlasting.
 carry out scanlasting:
 	if last-scanned-thing is yourself or last-scanned-thing is nothing:
 		say "You haven't successfully scanned anything yet." instead;
-	say "Previous scan: [the last-scanned-thing][if last-scanned-thing is in lalaland], which are now out of play,[end if] scanned [full-monty of last-scanned-thing]." instead;
+	say "Previous scan: [the last-scanned-thing][if last-scanned-thing is moot], which are now out of play,[end if] scanned [full-monty of last-scanned-thing]." instead;
 
 part accessibility
 
@@ -8071,7 +8081,7 @@ carry out retrying:
 	repeat with MI running through held things:
 		if MI is not warpable:
 			d "warping [MI].";
-			now MI is in lalaland;
+			moot MI;
 			add MI to item-list of mrlp;
 			now lreg of MI is mrlp;
 	now retried is true;
@@ -8177,7 +8187,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip this for a point, maybe it needs to be reflexive or vanishing.";
 		try examining noun instead;
 	if noun is t-b or noun is tables or noun is palm or noun is giant pin or noun is niche:
-		if Gunter is not in lalaland:
+		if Gunter is not moot:
 			say "Nothing urgent yet[if stuff-found >= 3] except that bangish bashing[end if]. So no need to pre-flip, flipper.";
 			check-get-pad;
 			now noun is prefigured;
@@ -8263,7 +8273,7 @@ carry out fliptoing:
 						increment the score;
 						increment cur-score of mrlp;
 					two-up; [this is kind of a bad hack--two-up checks the score for increases, hence no min-up in the unless above]
-			else if the-to entry is not in lalaland or the-to entry is satchel: [more than one point here]
+			else if the-to entry is not moot or the-to entry is satchel: [more than one point here]
 				if the-from entry is boats and frat raft is reflexed:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
 				else if the-from entry is coins and the-to entry is s-i:
@@ -8278,7 +8288,7 @@ carry out fliptoing:
 			if the-from entry is a backdrop:
 				remove the-from entry from play;
 			else if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
-				now the-from entry is in lalaland;
+				moot the-from entry;
 			if taked entry is true or player has the-from entry:
 				if the-from entry is not ruby and the-from entry is not medals, now player has the-to entry; [else medals go from worn to carried]
 			if there is a roomjump entry:
@@ -8301,7 +8311,7 @@ carry out fliptoing:
 				now dusty study is lit;
 				if latches are off-stage, now player has latches;
 				consider the adjust light rule;
-			if the-to entry is not the-from entry and the-from entry is not reflexed, move the-from entry to lalaland; [this is to drop a new item in place]
+			if the-to entry is not the-from entry and the-from entry is not reflexed, moot the-from entry; [this is to drop a new item in place]
 			if the-to entry is visible:
 				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
 				if the-to entry is plural-named, set the pronoun them to the-to entry;
@@ -8316,7 +8326,7 @@ The look around once light available rule is not listed in the for printing the 
 after fliptoing when player is in rustic citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
 		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]Hmm. Probably some of this garbage could be turned to more fruit, if you were the sort of person who wanted to do everything, but you'd rather help yourself right now.";
-		now all carried fruits are in lalaland;
+		moot list of all carried fruits;
 		now player has moss cap;
 		continue the action;
 	if cur-score of others > 3:
@@ -8346,7 +8356,7 @@ after fliptoing (this is the fruit cue rule):
 	let frr be frroom of noun;
 	repeat with myf running through fruits:
 		if frr is frroom of myf:
-			unless player has myf or myf is in lalaland:
+			unless player has myf or myf is moot:
 				d "[myf] still to do.";
 				continue the action;
 	if another-break is true, say "[line break]";
@@ -8365,7 +8375,7 @@ to say tables-beams:
 		say "[if tables are in study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if]";
 		say ", and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
 
-Dusty Study is an innie room in Means Manse. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+Dusty Study is an innie room in Means Manse. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
 
 after printing the locale description for Dusty Study when Dusty Study is unvisited:
 	ital-say "you may wish to type ABOUT or VERBS to see information about the game and what words work best.";
@@ -8376,22 +8386,22 @@ to say think-cue:
 
 to decide which number is study-outs:
 	let q be 0;
-	if tables are in lalaland:
+	if tables are moot:
 		increment q;
-	if t-b are in lalaland:
+	if t-b are moot:
 		increment q;
-	if niche is in lalaland:
+	if niche is moot:
 		increment q;
 	decide on q.
 
-after printing the locale description when player is in dusty study and gunter is in lalaland:
-	if tables are in lalaland or t-b is in lalaland or niche is in lalaland:
+after printing the locale description when player is in dusty study and gunter is moot:
+	if tables are moot or t-b is moot or niche is moot:
 		say "You take stock of your way[unless study-outs is 1]s[end if] out: ";
 		if tables are not visible:
 			say "You could probably go [b]in[r], to the stable, with the tables gone. ";
-		if t-b are in lalaland:
-			say "You [if tables are in lalaland]also [end if]cleared a path [b]down[r]. ";
-		if niche is in lalaland:
+		if t-b are moot:
+			say "You [if tables are moot]also [end if]cleared a path [b]down[r]. ";
+		if niche is moot:
 			say "There's [if study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
 		say "[line break]";
 	continue the action;
@@ -8458,7 +8468,7 @@ instead of doing something with chair:
 		else:
 			say "You climb on the chair to go up.";
 			try going up instead;
-	say "[if gunter is in lalaland]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if]."
+	say "[if gunter is moot]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if]."
 
 report taking pedanto-notepad:
 	say "Good choice taking the notepad. It'll help you tame lots that's meta, mate.";
@@ -8490,7 +8500,7 @@ the bookshelf is amusing scenery in dusty study. "[one of]It's sturdy enough to 
 understand "shelf" and "books" as bookshelf.
 
 instead of taking bookshelf:
-	say "[if Gunter is in lalaland]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if]."
+	say "[if Gunter is moot]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if]."
 
 check exiting in dusty study:
 	try going outside instead;
@@ -8514,7 +8524,7 @@ before going nowhere in dusty study:
 	if noun is down:
 		say "[if Gunter is off-stage]Yeah...you do have somewhere to hide., but no full excuse, yet[else]There's a room below. What's it called, again? Boy[end if]." instead;
 	if noun is outside:
-		say "You don't want to go outside, and you don't want to walk around where you might be seen[if Gunter is in lalaland], especially after that chat with Gunter[end if]." instead;
+		say "You don't want to go outside, and you don't want to walk around where you might be seen[if Gunter is moot], especially after that chat with Gunter[end if]." instead;
 	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if t-b are visible]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is visible]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
 
 Rule for printing the description of a dark room (this is the dusty study rule):
@@ -8591,24 +8601,24 @@ dope-idx is a number that varies.
 
 after fliptoing when player is in dusty study (this is the more min points in study rule) :
 	if noun is t-b:
-		if tables are in lalaland or niche is in lalaland:
+		if tables are moot or niche is moot:
 			d "Min point for tables or niche.";
 			min-up; [already have way out of study]
-			if sitar is in lalaland or pram is in lalaland:
-				d "Min point for [if sitar is in lalaland]sitar [end if][if pram is in lalaland]pram [end if].";
+			if sitar is moot or pram is moot:
+				d "Min point for [if sitar is moot]sitar [end if][if pram is moot]pram [end if].";
 				min-up; [already have way out of study]
 	else if noun is chimney:
-		if t-b is in lalaland or tables are in lalaland:
+		if t-b is moot or tables are moot:
 			min-up;
 	else if noun is tables:
-		if t-b is in lalaland or niche is in lalaland:
+		if t-b is moot or niche is moot:
 			min-up;
 	continue the action;
 
 after fliptoing ramp (this is the check ramp min-up rule) :
-	if tables are in lalaland and sitar is in lalaland:
+	if tables are moot and sitar is moot:
 		min-up;
-	else if t-b is in lalaland:
+	else if t-b is moot:
 		min-up; [check if passage is made via beams or stable->stair]
 	continue the action;
 
@@ -8616,12 +8626,12 @@ after fliptoing stair (this is the check sitar min-up and exits rule) :
 	now Largely All-Grey Gallery is mapped below Farming Framing;
 	if the room below study is nothing:
 		now Farming Framing is mapped above Largely All-Grey Gallery;
-	if t-b is in lalaland:
+	if t-b is moot:
 		min-up;
-	else if niche is in lalaland and pram is in lalaland:
+	else if niche is moot and pram is moot:
 		min-up; [check if passage is made via beams or chimney->pram]
-	now stria is in lalaland;
-	now sitar is in lalaland;
+	moot stria;
+	moot sitar;
 	move stair backdrop to all stairy rooms;
 	continue the action;
 
@@ -8669,18 +8679,18 @@ carry out denialnaileding:
 	if mrlp is means manse, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if gunter is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead;
 	if denial is true, say "You already used this warp." instead;
 	if player is in strip of profits:
-		if denial is true and store t is in lalaland, say "You already did." instead;
+		if denial is true and store t is moot, say "You already did." instead;
 		if denial is false:
 			if store t is in strip of profits:
 				increment patchies;
 				say "BOOM! Store T shatters.";
-				now Store T is in lalaland;
+				moot Store T;
 				now otters-x is in Strip of Profits;
 		[if portal-entered-yet is true, say "You already entered a portal, so you'll need to reset the game to clear out everything before Otters. You can use IGNORE REGION to get past it." instead;] [?? get rid of portal-entered-yet truth state]
 	repeat with ZT running through needed regions:
 		if ZT is not otters and ZT is not solved, now ZT is bypassed;
 	repeat with ZT running through patchable things:
-		now ZT is in lalaland;
+		moot ZT;
 		increment patchies;
 	if patchies is 0:
 		say "Nothing happened. Something should have, but it didn't.";
@@ -8713,10 +8723,10 @@ carry out roveovering:
 	repeat with ZT running through needed regions:
 		now ZT is bypassed;
 	repeat with ZT running through patchable things:
-		now ZT is in lalaland;
-	now Store K is in lalaland;
-	now Store N is in lalaland;
-	now magneto is in lalaland;
+		moot ZT;
+	moot Store K;
+	moot Store N;
+	moot magneto;
 	get-cool-stuff;
 	the rule succeeds;
 
@@ -8901,7 +8911,7 @@ tried-flip is a truth state that varies.
 
 to decide which number is stuff-found:
 	let mytemp be 0;
-	if gunter is in lalaland, decide on 3;
+	if gunter is moot, decide on 3;
 	if thinko is true, increase mytemp by 2;
 	if sad ads are examined, increment mytemp;
 	if player has pedanto-notepad, increment mytemp;
@@ -9281,7 +9291,7 @@ check going in Farming Framing:
 			if the player yes-consents:
 				now player is in dusty study instead;
 			else:
-				say "Ok, probably best to [if pram is not in lalaland]find a way out. Clean out that pram, maybe[else]see about that ramp[end if]." instead;
+				say "Ok, probably best to [if pram is not moot]find a way out. Clean out that pram, maybe[else]see about that ramp[end if]." instead;
 
 check going down in Farming Framing:
 	if stair is not visible:
@@ -9320,12 +9330,12 @@ check going inside in Largely All-Grey Gallery:
 			now settler-x-nag is true;
 			say "You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas." instead;
 	say "A brief mental lament as you leave gives way to fear of a sting-ops stop sign. But you miss...[paragraph break]'Hands up!'[paragraph break]You say 'grrr' and feel all yellow, then see red as you scream 'Eeeee!' Because it's not a joke. Some guy has a rifle! You drop your lamp, which shatters.[paragraph break]He's got a rifle. You choke, 'O heck.' You notice the name on his uniform is Elmo, which gives you some hope.";
-	now lamp is in lalaland;
+	moot lamp;
 	now Elmo is in Largely All-Grey Gallery instead;
 
 book carven cavern
 
-Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in cavern and plaster is in cavern]Palest pastel plates sit on a plaster psalter[else if plates are in cavern]Palest pastel plates lie here[else if plaster is in cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is in lalaland]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in cavern]A curtain may be covering up a passage[else]The psalter looks like it could be blocking something[end if]. You probably don't want to go back outside."
+Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in cavern and plaster is in cavern]Palest pastel plates sit on a plaster psalter[else if plates are in cavern]Palest pastel plates lie here[else if plaster is in cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in cavern]A curtain may be covering up a passage[else]The psalter looks like it could be blocking something[end if]. You probably don't want to go back outside."
 
 after looking in carven cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in carven cavern, set the pronoun them to palest pastel plates;
@@ -9338,14 +9348,14 @@ after fliptoing plaster psalter:
 	continue the action;
 
 check exiting in cavern:
-	if act-ruin curtain is in lalaland:
+	if act-ruin curtain is moot:
 		say "Exiting the cavern, entering the passage, the same thing.";
 		try going inside instead;
 	say "It's much safer to go in, not out, here." instead;
 
 check going nowhere in cavern (this is the cavern check rule):
-	say "The only way to make progress is inward, through that [if act-ruin curtain is in lalaland]ex-[end if]curtain.";
-	if act-ruin curtain is in lalaland:
+	say "The only way to make progress is inward, through that [if act-ruin curtain is moot]ex-[end if]curtain.";
+	if act-ruin curtain is moot:
 		say "[line break]Go through?";
 		if the player direct-consents:
 			try going inside instead;
@@ -9359,8 +9369,8 @@ check going inside in cavern:
 		now curtain-know is true;
 		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it" instead;
 	say "You walk through the former act-ruin curtain--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
-	now satchel is in lalaland;
-	now teariest treatise is in lalaland;
+	moot satchel;
+	moot teariest treatise;
 	solve-region Means Manse;
 	the rule succeeds;
 
@@ -9389,7 +9399,7 @@ check opening stapler:
 	if player has staple:
 		say "I'm going to assume you mean opening the stapler to put the staple in.";
 		try inserting staple into stapler instead;
-	if act-ruin curtain is in lalaland:
+	if act-ruin curtain is moot:
 		say "You've probably done enough with your stapler, here." instead;
 	say "You don't have anything to put in the stapler." instead;
 
@@ -9496,9 +9506,9 @@ carry out stapleing:
 	if staple is not visible:
 		say "You can't staple with that stapler until you have a staple." instead;
 	say "You staple the act-ruin curtain. The staple is the right strength to cut in all the layers, grab them at once, and peel them back. The act-ruin curtain snaps back, slamming like a door and melting into the wall--and taking the stapler with it. You can't repaper, but [if latches are visible]with those latches, you may[else]you won't[end if] need to prepare to go [b]in[r] to further adventure!";
-	now act-ruin curtain is in lalaland;
-	now staple is in lalaland;
-	now stapler is in lalaland;
+	moot act-ruin curtain;
+	moot staple;
+	moot stapler;
 	reg-inc;
 	the rule succeeds;
 
@@ -9586,7 +9596,7 @@ check scaning when rifle is visible:
 
 after fliptoing rifle:
 	pad-rec-q "rove over";
-	now high sign is in lalaland;
+	moot high sign;
 	try talking to Mole Elmo instead;
 	continue the action;
 
@@ -9750,7 +9760,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 
 book Farming Framing
 
-Farming Framing is an innie room in Means Manse. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads [b]DOWN[r][end if][if tables are in lalaland]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].";
+Farming Framing is an innie room in Means Manse. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].";
 
 the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
@@ -10091,14 +10101,14 @@ to say bluable-list:
 
 definition: a thing (called lp) is llpish-plus:
 	if lp is llpish, yes;
-	if lp is lobster and me arts are in lalaland, decide yes; [troves]
-	if lp is me arts and lobster is in lalaland, decide yes;
+	if lp is lobster and me arts are moot, decide yes; [troves]
+	if lp is me arts and lobster is moot, decide yes;
 	if lp is praise and rivets are reflexed, yes;
 	if lp is rivets and praise spirea is reflexed, yes;
 	if lp is ghoul hat or lp is gore ogre: [otters]
 		if eels are reflexed, decide yes;
 	if lp is eels or lp is sea cube:
-		if gore ogre is in lalaland, decide yes;
+		if gore ogre is moot, decide yes;
 	decide no;
 
 definition: a thing (called mbbl) is blurry:
@@ -10459,17 +10469,17 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
 "badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for...well, someone Renato was sad to miss."	"badlands"	true	towers
-"guru"	false	"You can GURU something [if arugula is in lalaland]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
+"guru"	false	"You can GURU something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 
 to say xray-help:
 	if xrayvision is true:
 		say "You can [b]XRAY[r] something you can't describe to see what it can or should be, with that pastry you ate. You can wait as long as you want/need";
-	else if all hintpastries are in lalaland:
+	else if all hintpastries are moot:
 		say "You've used all the possible [b]XRAY[r]s";
-	else if toaster is in lalaland:
+	else if toaster is moot:
 		say "You can't put any more pastries in the toaster to [b]XRAY[r] them";
 	else:
-		say "You can put a[if number of hintpastries in lalaland > 1]nother[end if] pastry in the toaster to get [b]XRAY[r] vision to be able to describe what something can or should be"
+		say "You can put a[if number of moot hintpastries > 1]nother[end if] pastry in the toaster to get [b]XRAY[r] vision to be able to describe what something can or should be"
 
 pf-warn is a truth state that varies.
 
@@ -10507,7 +10517,7 @@ yob den	routes	"You need to go BEYOND the yob den."
 [Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."]
 stop post	troves	"You can't focus enough to SPOT, yet." [troves]
 ltb	troves	"You aren't quite able to DEAL, yet."
-salt	troves	"You can LAST [if ME ARTS is in lalaland or lobster is in lalaland]now[else]once[end if] you have confidence in your skills."
+salt	troves	"You can LAST [if ME ARTS is moot or lobster is moot]now[else]once[end if] you have confidence in your skills."
 song	troves	"You can DECIDE to move on from the Drain Nadir."
 Sister Tressi	Troves	"You can RESIST Sister Tressi."
 Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
@@ -11323,7 +11333,7 @@ chapter outsideing
 outside-warned is a truth state that varies.
 
 after fliptoing lecturer (this is the disable the macks slightly too rule) :
-	now pamphlets are in lalaland;
+	moot pamphlets;
 	increase headaches by 10;
 	now lectures is shunned;
 	if t-tediously is in otters:
@@ -11415,7 +11425,7 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the cleric circle[else]A cleric circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if old giant is in lalaland]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the cleric circle[else]A cleric circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if old giant is moot]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
 
 after looking in same mesa:
 	if old giant is in same mesa:
@@ -11734,7 +11744,7 @@ chapter bench
 the bench is reflexive scenery in Same Mesa. "[if old giant is in Same Mesa]The giant's on it, and he covers enough of it, you could only half squeeze in between him and the armrests[else if old giant is off-stage]It'd be a chore to sit on--it looks like it's a giant's. Probably because the words A GIANT'S are painted where you would sit. Maybe he'll come back[otherwise]The giant probably won't be around here any more[end if]."
 
 check entering the bench:
-	say "[if old giant is in lalaland]You don't need to fool with the bench any more.[else if old giant is visible]You don't quite have room. And you're not going to get the giant to scootch over.[otherwise]From the size, the bench seems to be [i]a giant's[r]. If he came along, he could sit on you pretty easily.[end if]" instead;
+	say "[if old giant is moot]You don't need to fool with the bench any more.[else if old giant is visible]You don't quite have room. And you're not going to get the giant to scootch over.[otherwise]From the size, the bench seems to be [i]a giant's[r]. If he came along, he could sit on you pretty easily.[end if]" instead;
 
 after fliptoing bench:
 	now old giant has Rude 'N Nuder;
@@ -11761,7 +11771,7 @@ check scaning bench:
 		if rude is visible:
 			say "Nothing happens until the giant starts waving Rude [']N Nuder in your face.";
 			try scaning rude instead;
-	if old giant is in lalaland:
+	if old giant is moot:
 		say "There's no more magic in the bench. Nothing more to do." instead;
 
 section bench-end
@@ -11796,7 +11806,7 @@ check fliptoing Rude 'N Nuder:
 		say "You're already below, but if you were close enough to listen, that could work." instead;
 
 after fliptoing U NERD ENDUR REDUN:
-	now grouchy old giant is in lalaland;
+	moot grouchy old giant;
 	continue the action;
 
 does the player mean doing something with Rude 'N Nuder when Nuder is visible:
@@ -11890,13 +11900,13 @@ Cleric Circle is an innie room in Routes. "Things seem less confused here than o
 
 after looking in Cleric Circle:
 	if number of held quest-items is 3:
-		now all quest-items are in lalaland;
+		moot list of all quest-items;
 		say "'You have all the reagents! Wonderful!' The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Gal Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Gal Logan. That's an odd name. You write it down.";
 		pad-rec "No-Gal Logan";
-		now Brother Horbert is in lalaland;
+		moot Brother Horbert;
 		pad-del "reagents";
 		now MORF FORM is in Same Mesa;
-		if worst ad is not in lalaland:
+		if worst ad is not moot:
 			poss-d;
 	continue the action;
 
@@ -12305,7 +12315,7 @@ the thickness sketchins are plural-named vanishing scenery in cripple clipper. "
 understand "sketchin" and "thickness sketchin" as thickness sketchins.
 
 after fliptoing thickness sketchins:
-	now bad oar is in lalaland;
+	moot bad oar;
 	continue the action;
 
 a-text of thickness sketchins is "YRRRYRR". b-text of thickness sketchins is "?RRR?RR". parse-text of thickness sketchins is "a[sp]x[sp]x[sp]x[sp]a[sp]x[sp]x[sp]". [whattar tawrath thatraw artthaw <=> athwart]
@@ -12328,8 +12338,8 @@ chapter hurt hog
 the hurt hog is reflexive scenery in sonancy canyons. "The hog [if bent ewe is reflexed]seems more relaxed than before[else]is staring the poor bent ewe down. Maybe you can act as peacemaker[end if]."
 
 after fliptoing hurt hog:
-	now bent ewe is in lalaland;
-	now hurt hog is in lalaland;
+	moot bent ewe;
+	moot hurt hog;
 	now yob den is in canyons;
 	set the pronoun it to yob den;
 	set the pronoun them to yob den;
@@ -12398,7 +12408,7 @@ instead of doing something with hurt thru:
 	say "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
 
 to say care-hate-clue:
-	say ". [if cold is in lalaland]Race after the thief, somehow[else]find a way to generate hate[end if]"
+	say ". [if cold is moot]Race after the thief, somehow[else]find a way to generate hate[end if]"
 
 after looking in loather rathole:
 	set the pronoun it to cold;
@@ -12500,7 +12510,7 @@ bab-lis is a truth state that varies.
 the sob ever verbose is vanishing scenery in Bustle Sublet. "The sob ever verbose just rattles on and on. A sad, stupid, winding story about [one of]how Erv be SO[or]poor, poor Eve Bors[or]that Bev Oser[or]shifty Bo Evers[in random order], which makes you feel bad you don't feel bad enough about it. After a few minutes of this, you're seeing red."
 
 after doing something with sob ever verbose:
-	if sob ever verbose is not in lalaland:
+	if sob ever verbose is not moot:
 		set the pronoun it to sob ever verbose;
 	else:
 		set the pronoun it to stop post;
@@ -12653,8 +12663,8 @@ book Drain Nadir
 Drain Nadir is a room in Troves. "While you could escape physically, there's nowhere better to go in your current mental state. [if diapers are in drain nadir]You notice trappings of spiritual and material poverty: an Ires Pad, to help you emote RIGHT, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out[else]But you're getting better, you've half cleared the Drain Nadir of negative influences, and now Eddie C's song is playing. Perhaps listening could uplift you fully.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if]."
 
 after fliptoing eddie's song:
-	now Ires Pad is in lalaland;
-	now spider is in lalaland;
+	moot Ires Pad;
+	moot spider;
 	continue the action;
 
 chapter adeiprs
@@ -12693,7 +12703,7 @@ chapter how to pre-deal
 
 section lobster
 
-the BORTLES Lobster is a vanishing thing in Boredom Bedroom. description is "Oh, man, there's no lobster like BORTLES lobster. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is in lalaland]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". initial appearance of BORTLES lobster is "Some BORTLES Lobster here, the best lobster in all of Yorpwald, sits here. It'd be a great meal, but you're not sure if you're fully up to eating it, yet."
+the BORTLES Lobster is a vanishing thing in Boredom Bedroom. description is "Oh, man, there's no lobster like BORTLES lobster. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if ME ARTS is moot]--though you are feeling confident enough, having dealt with the ME ARTS[end if].". initial appearance of BORTLES lobster is "Some BORTLES Lobster here, the best lobster in all of Yorpwald, sits here. It'd be a great meal, but you're not sure if you're fully up to eating it, yet."
 
 the BORTLES lobster is vanishing.
 
@@ -12713,7 +12723,7 @@ instead of taking Bortles Lobster:
 
 section ME ARTS
 
-The ME ARTS are plural-named vanishing scenery in Boredom Bedroom. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if ME ARTS is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
+The ME ARTS are plural-named vanishing scenery in Boredom Bedroom. "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if ME ARTS is not reflexed and lobster is moot]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
 
 a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
 
@@ -12912,7 +12922,7 @@ after fliptoing rivets:
 
 chapter pernod
 
-the bottle of Pernod is a vanishing thing. "A broken bottle of [if label is in lalaland]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
+the bottle of Pernod is a vanishing thing. "A broken bottle of [if label is moot]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
 
 a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR". parse-text is "[if label is part of pernod]p[else]x[end if][sp]o[sp]x[sp]x[sp]e[sp]x".
 
@@ -12934,7 +12944,7 @@ after fliptoing pernod:
 	if rivets are reflexive or praise spirea is reflexive, poss-d;
 	continue the action;
 
-description of bottle of pernod is "It says [if label is in lalaland]N-E-Prod below where the label was[else]PERNOD on the label, which looks a bit loose[end if]. There's also a card you could read."
+description of bottle of pernod is "It says [if label is moot]N-E-Prod below where the label was[else]PERNOD on the label, which looks a bit loose[end if]. There's also a card you could read."
 
 understand "champagne" as Pernod.
 
@@ -12946,7 +12956,7 @@ the label is part of the bottle of pernod. description of label is "It says PERN
 
 check taking the label:
 	say "The label comes off to reveal a much less hoity-toity label: the generic N-E-PROD is the [i]REAL[r] manufacturer! It's in red letters, too.";
-	now label is in lalaland instead;
+	moot label instead;
 
 check examining the label:
 	say "It looks like you could TAKE it off! You wonder if this bottle is a fake. It says PERNOD, but there's also a card tied to the bottle." instead;
@@ -12983,7 +12993,7 @@ to say which-capsule-pics:
 		say ". Sister Tressi regards you severely";
 	else if blamer balmer is in upscale capsule:
 		say ". Blamer Balmer regards you severely";
-	else if blamer balmer is in lalaland:
+	else if blamer balmer is moot:
 		say ". You are no longer hounded by the pictures of [bb-st]"
 
 to say bb-st: say "[one of]Blamer Balmer and Sister Tressi[or]Sister Tressi and Blamer Balmer[at random]"
@@ -12991,10 +13001,10 @@ to say bb-st: say "[one of]Blamer Balmer and Sister Tressi[or]Sister Tressi and 
 section order the flips
 
 to report-glarers:
-	if balmer is in lalaland and tressi is in lalaland:
+	if balmer is moot and tressi is moot:
 		say "Well! You feel very relaxed now, with both Blamer Balmer and Sister Tressi gone. You feel more in touch with yourself, less obliged to do what society requires...";
 	else:
-		say "You look over to [if balmer is in lalaland]Sister Tressi[else]Blamer Balmer[end if]. Maybe there's a way to get rid of [if balmer is in lalaland]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weight quite so heavily, now."
+		say "You look over to [if balmer is moot]Sister Tressi[else]Blamer Balmer[end if]. Maybe there's a way to get rid of [if balmer is moot]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weight quite so heavily, now."
 
 chapter sister tressi
 
@@ -13444,7 +13454,7 @@ check fliptoing ether:
 
 after fliptoing ether:
 	now dart is in gyre;
-	now dart is in lalaland;
+	moot dart;
 	now saps' pass is mapped north of grey gyre;
 	now grey gyre is mapped south of saps' pass;
 	continue the action;
@@ -13571,37 +13581,37 @@ before giving a badbook to yak:
 	now yak-sol is 2;
 	now yoke is in location of player;
 	now player has drab yoke;
-	now yak is in lalaland;
-	now noun is in lalaland;
+	moot yak;
+	moot noun;
 	reg-inc;
 	do nothing instead;
 
 to yak-and-yoke:
 	say "[line break][if try-keyboard is true]Now, you can flip to the keyboard like you tried before, and w[else]W[end if]ith the yak off the skid, you remember the lossless compression that will let you change the skid back to a disk.";
 	now yoke is in shack;
-	now leaf is in lalaland;
-	now yak is in lalaland;
+	moot leaf;
+	moot yak;
 
 check going south in Char Arch:
 	if Leo is visible, say "'I don't wanna go back dere, boss. I wants adventureses. Fightses.' says [l-r]." instead;
 	if Leo is dismissed, post-wall-arch instead;
 
 to post-wall-arch:
-	if casserole is in lalaland:
+	if casserole is moot:
 		say "You don't have another workout for Rand and Leo.";
 		continue the action;
-	if yak is in lalaland:
-		say "[if casserole is in lalaland]You don't have another casserole. Or another chore[else]You maybe could've used Leo and Rand to push the yak around, but not now[end if].";
+	if yak is moot:
+		say "[if casserole is moot]You don't have another casserole. Or another chore[else]You maybe could've used Leo and Rand to push the yak around, but not now[end if].";
 		continue the action;
 	if yak is on skid:
 		if casserole is in shack:
 			say "You offer Leo and Rand the casserole in exchange for pushing the skid north. 'Fuel? Us? Useful!' It's a great workout for them, and though they're a bit careless pulling the skid into the shack, it breaks a safety catch on the drab yoke, which falls to the ground. The yak blinks, nods at all three of you, and runs off. The casserole replenishes vital carbohydrates or something for Leo and Rand. They ask to keep the dish, which is fine with you. The shack's messy enough.";
 			reg-inc;
-			now yak is in lalaland;
+			moot yak;
 			now yak-sol is 3;
 			now skid is in shack;
 			now drab yoke is in shack;
-			now casserole is in lalaland;
+			moot casserole;
 			move player to hacks' shack;
 			continue the action;
 		say "You'd like to ask for help, but you don't have enough muscle food for Leo and Rand after they pull the skid. Those escaroles simply aren't meaty enough.";
@@ -13683,7 +13693,7 @@ the dart is a reflexive thing. description is "[if dart is in popgun]Locked and 
 
 the cretins' cistern contains the dart.
 
-instead of scanning cretins' cistern:
+instead of scaning cretins' cistern:
 	if dart is in cistern:
 		say "Hmm...there's a reading when you scan over the dart.";
 		try scaning dart instead;
@@ -13745,11 +13755,11 @@ after fliptoing tsar star:
 	continue the action;
 
 instead of taking off tsar star:
-	say "[if plebe is in lalaland]But it looks so jaunty and reminds you of how you got rid of that plebe[else]You shouldn't remove it. You might need to impress someone with it[end if]."
+	say "[if plebe is moot]But it looks so jaunty and reminds you of how you got rid of that plebe[else]You shouldn't remove it. You might need to impress someone with it[end if]."
 
 book Dirge Ridge
 
-Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "[if odes song is in lalaland]With the odes song gone, you're ... well, just mad about stuff. [else]A odes song floating around leaves you thinking 'Erg... I'd ...' [end if]A vile veil covers any way except back north.". printed name of Dirge Ridge is "[if odes song is in lalaland]Ires['] Rise[else]Dirge Ridge[end if]".
+Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "[if odes song is moot]With the odes song gone, you're ... well, just mad about stuff. [else]A odes song floating around leaves you thinking 'Erg... I'd ...' [end if]A vile veil covers any way except back north.". printed name of Dirge Ridge is "[if odes song is moot]Ires['] Rise[else]Dirge Ridge[end if]".
 
 the vile veil is bounding scenery in Dirge Ridge. description is "It's so horrible to even look at, and you realize whatever it is protecting you from must be even worse."
 
@@ -14122,7 +14132,7 @@ check entering Deil's Slide:
 
 book Phat Path
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for [if harpings phrasing is in phat path]a harpings phrasing guarding[end if] [one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[end if][if starch charts are in phat path][desc-starch][end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's not much left with the wall gone, except for [if harpings phrasing is in phat path]a harpings phrasing guarding [end if][one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[if starch charts are in phat path][desc-starch][end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
 to say desc-starch:
 	say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
@@ -14183,8 +14193,8 @@ hogs-not-keys is a truth state that varies.
 after printing the locale description for Saps' Pass when Saps' Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
 	say "A 'PSS!' Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your tsar star and crumples before going to guard the keys, the big jerk. What to do?";
-	now tsar star is in lalaland;
-	now popgun is in lalaland;
+	moot tsar star;
+	moot popgun;
 
 a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]o[sp]x[sp]x". hogs are cheat-spoilable.
 
@@ -14392,7 +14402,7 @@ before inserting dirty looking cola into mug:
 	if fizzy cola is in mug:
 		say "This isn't a gross-out game. Plus, there's enough cola in the mug." instead;
 	say "You drain the cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue.";
-	now dirty looking cola is in lalaland;
+	moot dirty looking cola;
 	now fizzy cola is in mug instead;
 
 check inserting into mug:
@@ -14510,7 +14520,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 				say "You might not be safe from Elvira's SHATTER-THREATS legislation here. And you're not sure what to do with that, yet. But that feels right.";
 				preef noun;
 				do nothing instead;
-			if noun is disk and yak is in lalaland:
+			if noun is disk and yak is moot:
 				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
 				if the player yes-consents:
 					say "Great!";
@@ -14532,7 +14542,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 					say "OK, but you'll need to do so anyway to get out of here.";
 					preef screen;
 					do nothing instead;
-			if noun is keyboard and yak is in lalaland:
+			if noun is keyboard and yak is moot:
 				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
 				if the player yes-consents:
 					say "Great!";
@@ -14547,7 +14557,7 @@ the compiled code is a reflexive thing. description is "It's too much to conside
 
 after fliptoing compiled code:
 	now USB is in shack;
-	now golden dongle is in lalaland;
+	moot golden dongle;
 	continue the action;
 
 a-text of compiled code is "RYRYR". b-text of compiled code is "RYRYR". parse-text of compiled code is "x[sp]-[sp]x[sp]-[sp]x".
@@ -14569,7 +14579,7 @@ after printing the locale description for shack when shack is unvisited:
 		now player has computer screen;
 	else if onyx censer is in austerer treasure and censer is prefigured:
 		say "You remember that censer it would've been awkward to carry around. You decide to go back for it.";
-		now onyx censer is in lalaland;
+		moot onyx censer;
 		now player has computer screen;
 		reg-inc;
 	else:
@@ -14616,7 +14626,7 @@ after fliptoing scratch paper:
 	if lamb is in Grey Gyre, poss-d;
 	if sport ports are reflexive, poss-d;
 	if starch charts are in phat path, poss-d;
-	if player has rom sticks, now rom sticks are in lalaland;
+	if player has rom sticks, moot rom sticks;
 	continue the action;
 
 check going in Hacks' Shack (this is the maybe lock player in rule): [check going in shack]
@@ -14646,7 +14656,7 @@ to check-trivial-presto-llp:
 	if pt-discounted is true:
 		continue the action;
 	if player has censer or player has screen:
-		if yak is in lalaland and player is in hacks' shack:
+		if yak is moot and player is in hacks' shack:
 			if keyboard is in hacks' shack or keyboard is on slab:
 				if lamb is in gyre:
 					poss-d;
@@ -14669,7 +14679,7 @@ this is the shack-south rule:
 	if screen is off-stage:
 		say "You feel you're missing something. You probably should see about [treas-west].";
 	else if keyboard is off-stage:
-		if yak is not in lalaland:
+		if yak is not moot:
 			say "That yak. Maybe you could release it from its yoke.";
 		else:
 			say "That drab yoke. What could it become?";
@@ -14833,7 +14843,7 @@ to say sub-bus:
 	let issub be false;
 	if the player's command includes "sub":
 		now issub is true;
-	now crust is in lalaland;
+	moot crust;
 	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Esoteric Coteries way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
 
 description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with. You can also READ it for its status."
@@ -14872,7 +14882,7 @@ check pushing small blue button:
 	say "The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen.";
 	set the pronoun it to computer screen;
 	if player has rom sticks:
-		now rom sticks are in lalaland;
+		moot rom sticks;
 	reg-inc;
 	now rebooted is true instead;
 
@@ -14934,7 +14944,7 @@ does the player mean doing something with a badbook when player is in shack: it 
 
 does the player mean giving a badbook to the yak: it is likely.
 
-does the player mean reading catechism when yak is in lalaland: it is very likely.
+does the player mean reading catechism when yak is moot: it is very likely.
 
 a-text of a badbook is usually "RYORYYRR".
 
@@ -14980,7 +14990,7 @@ to say ev-worse:
 		say "[mybk] by [author of mybk][if number of unalluded badbooks is 0] (that's the last one)[end if]";
 
 check reading a badbook:
-	if yak is in lalaland:
+	if yak is moot:
 		say "You shouldn't. You really shouldn't. But you do. It...it's pretty indigestible. Nothing lasting, but enough to inspire an animal urge to bang your head against the floor." instead;
 	say "It would probably make you dumber just reading it for ironic laughs. That's the last thing you need right now." instead;
 
@@ -15072,7 +15082,7 @@ the disk is in Hacks' Shack. "[if disk is handled]You see a disk lying on the la
 the skid is a supporter. "The skid lying here [skid-do]."
 
 to say skid-do:
-	if yak is in lalaland:
+	if yak is moot:
 		say "has done its job. Well, as the skid. Perhaps it's more useful as what it was";
 		continue the action;
 	say "can probably be pushed around[if number of things on skid > 0]. It's currently carrying [the list of things on skid][end if]";
@@ -15109,7 +15119,7 @@ check fliptoing scratch paper:
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
 		preef scratch paper instead;
-	if disk is not in Drive A, say "A DISK, I'D ASK pops up. You realize that [if disk is in lalaland]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]." instead;
+	if disk is not in Drive A, say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]." instead;
 	if rebooted is false:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
 		preef scratch paper instead;
@@ -15178,13 +15188,13 @@ check fliptoing keyboard when yak is visible:
 	preef keyboard instead;
 
 after fliptoing keyboard:
-	now leaf is in lalaland;
+	moot leaf;
 	check-trivial-presto-llp;
 	continue the action;
 
 the piece of scratch paper is a reflexive thing in hacks' shack.
 
-every turn when scratch paper is reflexed and usb is not in shack and player is in shack and gum is in lalaland (this is the hint debug verb rule) :
+every turn when scratch paper is reflexed and usb is not in shack and player is in shack and gum is moot (this is the hint debug verb rule) :
 	say "You find yourself pacing around muttering at the computer. BUDGE, BE DUG, BUDGE.";
 
 check fliptoing scratch paper:
@@ -15219,7 +15229,7 @@ l-m is a privately-named person. understand "lev matzo" and "lev/matzo" as l-m w
 
 to decide whether lev-first:
 	if m-l is not off-stage, decide no;
-	if l-m is in Unwary Runway or l-m is in lalaland, decide yes;
+	if l-m is in Unwary Runway or l-m is moot, decide yes;
 	decide no;
 
 m-l is a privately-named person. understand "matzo lev" and "lev/matzo" as m-l when m-l is not off-stage. printed name of m-l is "Matzo Lev".
@@ -15273,11 +15283,11 @@ definition: a direction (called dir) is viable:
 		decide no; [these are individual cases]
 	unless the room dir from location of player is nothing:
 		decide yes; [this is the main one. If a room's there, go]
-	if player is in Horned Hedron and dir is inside and walleyes are in lalaland and ol' trap is reflexed:
+	if player is in Horned Hedron and dir is inside and walleyes are moot and ol' trap is reflexed:
 		decide yes; [these are fringe cases. Again, you can enter certain places etc. once traps are removed]
 	if player is in Largely All-Grey Gallery and dir is inside:
 		decide yes;
-	if player is in cavern and dir is inside and act-ruin curtain is in lalaland:
+	if player is in cavern and dir is inside and act-ruin curtain is moot:
 		decide yes;
 	decide no;
 
@@ -15297,7 +15307,7 @@ the description of mazeroom is "You're in a maze room with no distinguishing fea
 check going to nowt town when player was in Grey Gyre:
 	say "[one of]You hope the maze isn't too big. Then you hope there's a quick way around it--[if zany meter is examined]the zany meter seems to indicate there might be[else]maybe the zany meter has advice[end if][or]You re-enter, not knowing whether to feel bad you're [if Unwary Runway is visited]trying[else]not even patient enough[end if] to brute-force things and run through the maze or bad you want an easy way through[if voltzap is false and Unwary Runway is visited] or too scared to touch any walls[end if][if Unwary Runway is visited and zany meter is unexamined] or too hasty to even read that zany meter this time around[end if][stopping]."
 
-Nowt Town is north of Grey Gyre. Nowt Town is in Presto. "You can exit back south or hit the maze proper to the west. A big L is tiled into the floor here[if m-l is in lalaland]. Nothing really seems to have changed about the maze several times through, and you may flip if you have to go through the L-to-V maze again[end if]."
+Nowt Town is north of Grey Gyre. Nowt Town is in Presto. "You can exit back south or hit the maze proper to the west. A big L is tiled into the floor here[if m-l is moot]. Nothing really seems to have changed about the maze several times through, and you may flip if you have to go through the L-to-V maze again[end if]."
 
 the big l is scenery in nowt town. "It's a decent enough example of an L[if r00 is unvisited]. Maybe there are other letters in the maze[end if].". understand "letter" and "letter l" as big l when player is in nowt town.
 
@@ -15409,13 +15419,13 @@ check going north in Unwary Runway:
 		if l-m is cscanned:
 			say "[drei-you]see someone walk into view to replace Lev Matzo.";
 			now m-l is in Unwary Runway;
-			now l-m is in lalaland;
+			moot l-m;
 		else:
 			say "[drei-you]see Lev Matzo throwing his hands up as if he wished he could have done more.";
 	else if m-l is in Unwary Runway:
 		if m-l is cscanned:
 			say "[drei-you]see someone else walk into view to replace Matzo Lev.";
-			now m-l is in lalaland;
+			moot m-l;
 			now Tom Alvez is in Unwary Runway;
 		else:
 			say "[drei-you]see Matzo Lev throwing his hands up as if he wished he could have done more.";
@@ -15485,7 +15495,7 @@ instead of exiting when in Posh Hops Shop:
 the tines are plural-named reflexive scenery in Posh Hops Shop. "They look perfect for fitting a stein into, for refills."
 
 check taking tines:
-	say "[if stein is in lalaland]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
+	say "[if stein is moot]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
 
 a-text of tines is "YRRYR". b-text of tines is "YRRGR". parse-text of tines is "i[sp]x[sp]x[sp]e[sp]x". tines is cheat-spoilable.
 
@@ -15616,7 +15626,7 @@ does the player mean remaping the perma-amper: it is very likely.
 
 carry out remaping:
 	if noun is perma-amper:
-		if tunes are in lalaland, say "The tunes have already been altered. Remapping won't do any good. Or bad." instead;
+		if tunes are moot, say "The tunes have already been altered. Remapping won't do any good. Or bad." instead;
 		try fliptoing tunes instead;
 	say "Remapping could break something. So maybe try something else." instead;
 
@@ -15678,7 +15688,7 @@ understand "unset [something]" as unseting.
 does the player mean unseting tunes: it is very likely.
 
 carry out unseting:
-	if tunes are in lalaland:
+	if tunes are moot:
 		say "You already dealt with the tunes[if unset-not-remap is false] when you mucked up the perma-amper[end if]." instead;
 	if noun is tunes:
 		try fliptoing tunes instead;
@@ -15811,7 +15821,7 @@ does the player mean spilling pills: it is very likely;
 cheated-guy is an object that varies. cheated-guy is nothing.
 
 after spilling:
-	if pills are in lalaland and cheated-guy is nothing:
+	if pills are moot and cheated-guy is nothing:
 		d "BUG I mistracked a pill spill.[line break]";
 	else if scams is true:
 		if cheated-guy is nothing:
@@ -15902,14 +15912,14 @@ carry out spilling:
 				if wipes are in Lean Lane:
 					decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
 			now player has wrap;
-			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
+			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not moot] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
 			guy-cheat trout;
 			now aunt-tuna-cross is true;
 			move player to anger range;
 			pearl-check;
 			do nothing instead;
 		else:
-			say "That would be a rude parting gift. You've claimed your reward--the bubble wrap[if tea tray is not in lalaland]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
+			say "That would be a rude parting gift. You've claimed your reward--the bubble wrap[if tea tray is not moot]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
 	if player is in Posh Hops Shop: [special case for spilling pills. This overrides the current hint item and takes out the trolls]
 		say "The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.";
 		increase min-score of oyster by cur-score of oyster;
@@ -15918,7 +15928,7 @@ carry out spilling:
 		if cur-score of oyster < 3:
 			now poss-score of oyster is poss-score of oyster + cur-score of oyster - 3; [you can skip up to 3 points but will not lose a point using the pills later to tutor Tortu the trout if you use the pills now. So really the maximum to lose is 2.]
 		move player to olde lode instead;
-	if player is in anger range and carps are in lalaland::
+	if player is in anger range and carps are moot:
 		if digger is off-stage:
 			say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
 		if pre-haun is in anger range:
@@ -15943,7 +15953,7 @@ carry out spilling:
 			now cheated-guy is lance;
 			min-and instead;
 	if oi is pre-haun:
-		if ruby is not in lalaland:
+		if ruby is not moot:
 			say "As you turn the pill jar upside-down, the pills stay in--as if some supernatural force is pushing them up, because they aren't ready to come out yet.[paragraph break]Hmm. Maybe you have more to do before you find what's under, here." instead;
 		now cheated-guy is pre-haun;
 		say "The pills attach to your digger with a clang. They can't be removed normally, so you start to dig and dig.";
@@ -15991,7 +16001,7 @@ produce-redo-cup is a truth state that varies. produce-redo-cup is false.
 carry out produceredocuping:
 	if mrlp is not oyster:
 		say "[reject]";
-	if pills are in lalaland:
+	if pills are moot:
 		say "Through magic, you get your pills back.";
 		now player has pills;
 	if produce-redo-cup is true:
@@ -16115,7 +16125,7 @@ instead of doing something with boats:
 		continue the action;
 	say "You're too far away from the boats to do anything to them. Or have them do something to you.";
 
-description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is in lalaland]. You can hear loud voices from the boats[end if]."
+description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the boats[end if]."
 
 a river is scenery in Disease Seaside. "Boats pass on the river. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
 
@@ -16240,11 +16250,11 @@ carry out leaping:
 
 book Anger Range
 
-Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is in lalaland].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if]."
+Anger Range is a room in Oyster. "This place [if haunter is moot]no longer [end if]manages to n-rage you, [if haunter is moot]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is moot].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if]."
 
-understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when haunter is in lalaland.
+understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when haunter is moot.
 
-printed name of Anger Range is "[if haunter is not in lalaland]Anger Range[else if player is male]Hero's Shore[else]Shero Shore[end if]"
+printed name of Anger Range is "[if haunter is not moot]Anger Range[else if player is male]Hero's Shore[else]Shero Shore[end if]"
 
 after looking in anger range:
 	if trout is in anger range, set the pronoun it to trout;
@@ -16252,7 +16262,7 @@ after looking in anger range:
 	continue the action;
 
 to say hau-clue:
-	say "[if ruby is in lalaland and haunter is off-stage], even more than before you buried the ruby[end if]";
+	say "[if ruby is moot and haunter is off-stage], even more than before you buried the ruby[end if]";
 
 to say rub-wr:
 	say "[if player has ruby]ruby[else]wrap[end if]";
@@ -16394,7 +16404,7 @@ understand "haunter" as pre-haun when pre-haun is in anger range.
 does the player mean unearthing the pre-haun: it is very likely.
 
 check fliptoing pre-haun:
-	if player has digger and ruby is in lalaland:
+	if player has digger and ruby is moot:
 		continue the action;
 	d "[whether or not player has digger], [location of ruby].";
 	say "[h-not-yet].";
@@ -16402,7 +16412,7 @@ check fliptoing pre-haun:
 	the rule succeeds;
 
 to say h-not-yet:
-	say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is in lalaland]shouldn't dig the haunter back up. You've no reason to[else]don't know what you'd do if you'd unearth the haunter[end if]"
+	say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is moot]shouldn't dig the haunter back up. You've no reason to[else]don't know what you'd do if you'd unearth the haunter[end if]"
 
 after fliptoing pre-haun:
 	now haunter is in anger range;
@@ -16413,7 +16423,7 @@ before doing something with pre-haun:
 		continue the action;
 	say "[h-not-yet]." instead;
 
-before doing something with ruby when ruby is in lalaland:
+before doing something with ruby when ruby is moot:
 	if current action is unearthing or current action is objhinting:
 		continue the action;
 	if current action is objasking about or current action is objasking generically:
@@ -16429,7 +16439,7 @@ carry out unearthing:
 		if noun is ruby:
 			say "That is wasted work." instead;
 		if noun is thin hint:
-			say "That would be wasted work, unearthing the thin hint[if haunter is not in lalaland] and the ruby below it[end if]." instead;
+			say "That would be wasted work, unearthing the thin hint[if haunter is not moot] and the ruby below it[end if]." instead;
 	if player is not in anger range:
 		say "Nothing to unearth here. Maybe somewhere more wide-open." instead;
 	if noun is not pre-haun:
@@ -16449,7 +16459,7 @@ carry out unearthing:
 		say "[line break]As you begin to dig, you hear 'My...jewel...close...thieves...pay.'[paragraph break]It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or some people-forms. People-forms who deserve SOMETHING pinned on them.";
 		preef pre-haun;
 		do nothing instead;
-	if ruby is not in lalaland:
+	if ruby is not moot:
 		say "[line break]You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'[paragraph break]You haven't found or discovered a jewel, yet.";
 		preef pre-haun;
 		do nothing instead;
@@ -16460,7 +16470,7 @@ carry out unearthing:
 	set the pronoun it to haunter;
 	set the pronoun him to haunter;
 	set the pronoun her to haunter;
-	now scrawl is in lalaland;
+	moot scrawl;
 	the rule succeeds;
 
 the haunter is a reflexive neuter person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon."
@@ -16495,9 +16505,9 @@ every turn (this is the track haunter rule):
 				the rule succeeds;
 			if location of player is Rascal Craals:
 				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol' trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
-				now walleyes are in lalaland;
-				now haunter is in lalaland;
-				now thin hint is in lalaland;
+				moot walleyes;
+				moot haunter;
+				moot thin hint;
 				move shoer osher to anger range;
 				move player to Horned Hedron;
 				reg-inc;
@@ -16509,8 +16519,8 @@ every turn (this is the track haunter rule):
 
 after fliptoing carps:
 	now trout is in Lean Lane;
-	now carps are in lalaland;
-	now pikes are in lalaland;
+	moot carps;
+	moot pikes;
 	now scrawl is in anger range;
 	now pre-haun is in anger range;
 	continue the action;
@@ -16569,7 +16579,7 @@ does the player mean traceing the crate: it is very likely.
 carry out traceing:
 	if noun is not crate:
 		say "[reject]" instead;
-	if c2 is in lalaland:
+	if c2 is moot:
 		say "You already did that. If you retrace, you might get lost at a terrace." instead;
 	try fliptoing c2 instead;
 
@@ -16591,7 +16601,7 @@ check going inside when player is in Lapsin' Plains:
 		say "As you go for the door, you [one of]feel[or]remember[stopping] something hitting you in the [one of]back[or]head[or]leg[or]kidney[or]foot[or]patookus[or]appendix[in random order]. It's not particularly harmful, but it's distracting enough that you won't be able to [if knob is reflexive]smack the door around the right way[else]get through the door[end if] until you reckon about that conker." instead;
 	if skis are visible:
 		say "Those skis block the door pretty handily." instead;
-	if knob is not in lalaland:
+	if knob is not moot:
 		say "The knob seems stuck--and attached to the pans." instead;
 	if span pans are in Lapsin' Plains:
 		say "The span pans still block your way, but it should be a breeze to get by them. No that's not quite it. A cinch? No..." instead;
@@ -16639,7 +16649,7 @@ check scaning the cans (this is the bonus point rule) :
 	if the player's command includes "scan":
 		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths.";
 		min-and;
-		now cans are in lalaland instead;
+		moot cans instead;
 	say "You're over-thinking this one.";
 	the rule fails;
 
@@ -16777,7 +16787,7 @@ check fliptoing ruby:
 			the rule succeeds;
 
 after fliptoing ruby:
-	now sandier sardine is in lalaland;
+	moot sandier sardine;
 	continue the action;
 
 some bubble wrap is a flippable thing. indefinite article of bubble wrap is "some". understand "bubbles" as bubble wrap.
@@ -16799,7 +16809,7 @@ does the player mean warping the bubble wrap: it is very likely.
 carry out warping:
 	if noun is bubble wrap:
 		try fliptoing ruby instead;
-	if sardine is in lalaland:
+	if sardine is moot:
 		say "You already warped what you needed to";
 	else:
 		say "There's only one thing you can warp, and [if noun is plural-named]those aren't[else]that's not[end if] it";
@@ -16820,7 +16830,7 @@ instead of eating tea tray:
 		say "You feel slightly guilty eating before helping the trout, but Aunt Tuna nods, it's okay for you to eat first.";
 	say "Gosh, tea, and you don't feel hostage[if aunt tuna is visible] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is visible]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]";
 	pearl-check;
-	now tea tray is in lalaland;
+	moot tea tray;
 	reg-inc;
 
 to say tray-sez:
@@ -16908,8 +16918,8 @@ carry out taning:
 		try attacking noun instead;
 	say "Whack! Pow! 'Scum ant! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!";
 	min-and;
-	now ant is in lalaland;
-	now lance is in lalaland;
+	moot ant;
+	moot lance;
 	now Dourest Detours is shunned;
 	now player is in Tenfold Teflon'd Den Loft instead;
 
@@ -16936,7 +16946,7 @@ after looking in den loft:
 	continue the action;
 
 after fliptoing yapper (this is the A Briber is You rule):
-	now gleaner is in lalaland;
+	moot gleaner;
 	now lever is in tenfold teflon'd den loft;
 	continue the action;
 
@@ -16963,7 +16973,7 @@ after printing the locale description for Den Loft when Den Loft is unvisited:
 		say "The yapper, seeing your lance, flees! Shortly after, some static from the dialer causes the lance to shatter, but it did its job. Perhaps you didn't need to be so threatening, but hey, you're in.";
 		min-up;
 		poss-d;
-		now yapper is in lalaland;
+		moot yapper;
 
 the dialer is reflexive scenery in Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. [if pins are reflexive and pins are in den loft]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
 
@@ -17058,7 +17068,7 @@ does the player mean spining the pins: it is very likely.
 
 carry out spining:
 	if noun is pins, try fliptoing noun instead;
-	say "You need to spin letters around, but spinning things around isn't useful except maybe in one special case[if pins are in lalaland]. Which you found[end if]." instead;
+	say "You need to spin letters around, but spinning things around isn't useful except maybe in one special case[if pins are moot]. Which you found[end if]." instead;
 
 chapter redialing
 
@@ -17139,7 +17149,7 @@ carry out tending:
 		reg-inc;
 		min-up;
 		now dent-tend is true;
-		now dent is in lalaland;
+		moot dent;
 	the rule succeeds;
 
 chapter swipeing
@@ -17198,7 +17208,7 @@ carry out cleaning:
 	now lance is unfigured;
 	now player has lance;
 	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry.";
-	now wipes are in lalaland;
+	moot wipes;
 	min-and instead;
 
 book Lapsin' Plains
@@ -17262,7 +17272,7 @@ check fliptoing skis:
 		the rule succeeds;
 
 to say ski-la:
-	if skis are in lalaland:
+	if skis are moot:
 		say ", and you already nailed that";
 
 description of skis is "They're [one of]SISK brand (of course) and[or][stopping] criss-cross over the span pans. You won't make it through without getting rid of them."
@@ -17336,7 +17346,7 @@ a-text of knob is "RYRR". b-text of knob is "RYRR". parse-text of knob is "x[sp]
 does the player mean bonking the knob: it is very likely.
 
 check scaning span pans:
-	if knob is in lalaland and skis are in lalaland, continue the action;
+	if knob is moot and skis are moot, continue the action;
 	say "The settler gives weird readouts depending on if you go over [if knob is in Lapsin' Plains and skis are in Lapsin' Plains]the knob, skis or pans[else if knob is in lapsin' plains]the knob or pans[else]the skis or pans[end if], but when you focus on the skis, this is what you get:[paragraph break]";
 
 chapter snaping
@@ -17349,7 +17359,7 @@ understand "snap" as snaping.
 
 carry out snaping:
 	if player is in lapsin' plains:
-		if span pans are in lalaland:
+		if span pans are moot:
 			say "After a bit of thought, you decide against 'losing it.'" instead;
 		try fliptoing span pans instead;
 	say "This isn't the time or place to snap. With your fingers or with your brain.";
@@ -17445,10 +17455,10 @@ a-text of heaps is "RRYRY". b-text of heaps is "RRGPY". parse-text of heaps is "
 the rigged digger is a thing. description is "It is, unsurprisingly, a product of Shovel Hovels. It looks suited to its advertised purpose.". understand "shovel" as digger.
 
 to say dig-purpose:
-	if haunter is in lalaland and ruby is in lalaland:
+	if haunter is moot and ruby is moot:
 		say "You're finished with the digger";
 		continue the action;
-	if ruby is in lalaland:
+	if ruby is moot:
 		say "You managed to bury the ruby. On to the next bit.";
 		continue the action;
 	if player is in Rascal Craals and hint is in Rascal Craals:
@@ -17540,7 +17550,7 @@ after fliptoing waste (this is the tubs give prod and waste rule):
 
 book Achers' Arches
 
-Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is in lalaland] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is in lalaland], as well as north[hedron-if-v][end if]. A handsome sand home blocks the way south and west."
+Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. A handsome sand home blocks the way south and west."
 
 check going in Achers' Arches:
 	if noun is west or noun is south:
@@ -17639,7 +17649,7 @@ description of ruby is "[one of]See ruby, rub eyes. [or][stopping]You feel heat 
 carry out burying:
 	if noun is not ruby:
 		say "That's not something worth BURYing." instead;
-	if ruby is in lalaland:
+	if ruby is moot:
 		say "You half forgot where you dug the ruby. You're not sure if you want it back." instead;
 	if player does not have ruby:
 		say "Nothing you have is valuable enough to bury." instead;
@@ -17661,15 +17671,14 @@ check fliptoing thin hint:
 
 book Horned Hedron
 
-Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if ol' trap is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are in lalaland]Collapsed old places[else]Rascal craals[end if] lie west."
+Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if ol' trap is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal craals[end if] lie west."
 
 check going west when player is in Horned Hedron:
-	if haunter is in lalaland:
-		say "Collapsed old places are that way. No need to go back." instead;
+	if haunter is moot, say "Collapsed old places are that way. No need to go back." instead;
 
 thug-tell is a truth state that varies.
 
-check going south when player is in Horned Hedron and ruby is in lalaland:
+check going south when player is in Horned Hedron and ruby is moot:
 	if thug-tell is false:
 		say "You hear snickers as DIE THOU thugs are, presumably, digging up your ruby. If anyone finds them with it, the thugs will be the ones who have it.";
 		now thug-tell is true;
@@ -17698,7 +17707,7 @@ check taking ol' trap:
 description of ol' trap is "Naturally, it is there to make it hard for you to enter. But there must be some way to disarm it. Somewhere hidden in this room."
 
 check fliptoing a-p:
-	if walleyes are not in lalaland:
+	if walleyes are not moot:
 		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
 		preef ol' trap;
 		do nothing instead;
@@ -17732,7 +17741,7 @@ a-text of a-p is "RYRRYR". b-text of a-p is "RYPPYR". parse-text of a-p is "p[sp
 understand "portal" as a-p.
 
 check entering a-p:
-	if ruby is not in lalaland:
+	if ruby is not moot:
 		say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Horned Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
 	if walleyes are in Horned Hedron:
 		say "Not with those walleyes waiting and watching." instead;
@@ -17770,7 +17779,7 @@ carry out patroling:
 		else:
 			say "You already patrolled." instead;
 	if Horned Hedron is visited:
-		if walleyes are in lalaland and ol' trap is in Horned Hedron and mrlp is oyster:
+		if walleyes are moot and ol' trap is in Horned Hedron and mrlp is oyster:
 			say "You suddenly realize how to search out the ol['] trap in the Horned Hedron.";
 			move player to Horned Hedron, without printing a room description;
 			try fliptoing a-p instead;
@@ -17778,12 +17787,12 @@ carry out patroling:
 			say "That's a good idea. Maybe you can search the Horned Hedron once if the walleyes are gone.";
 			preef ol' trap;
 			do nothing instead;
-	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if ol' trap is in lalaland]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
+	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if ol' trap is moot]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
 	the rule succeeds;
 
 book Rascal Craals
 
-Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron workers live, are lined up nice and scalar[if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if]. A round bay boundary blocks all ways out except back east.". Rascal Craals is in Oyster. Rascal Craals is innie.
+Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron workers live, are lined up nice and scalar[if ruby is not moot]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if]. A round bay boundary blocks all ways out except back east.". Rascal Craals is in Oyster. Rascal Craals is innie.
 
 section round bay boundary
 
@@ -17798,7 +17807,7 @@ section thin hint
 the thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
 
 after fliptoing thin hint:
-	now ruby is in lalaland;
+	moot ruby;
 	continue the action;
 
 before doing something with thin hint:
@@ -17840,7 +17849,7 @@ check inserting into the rosetta toaster:
 	now xray-warn is true;
 	if noun is strudel and strudel is reflexive, poss-d;
 	pad-rec "xray";
-	now noun is in lalaland instead;
+	moot noun instead;
 
 toasting is an action applying to one thing.
 
@@ -18109,10 +18118,10 @@ to draw-towers-map:
 		now myy is tow-y-start + (tow-delta * my-y entry) - square-from-center;
 		draw a rectangle (current foreground-color) in current graphics window at myx by myy with size sqsz by sqsz;
 	repeat through table of guard-org:
-		if guy entry is stinger and bonker is not in lalaland, next; [the stinger is tricky because it's artificially placed a bit]
+		if guy entry is stinger and bonker is not moot, next; [the stinger is tricky because it's artificially placed a bit]
 		[if debug-state is true, say "Gendermatching [guy entry].";]
 		unless guy entry gendermatches, next;
-		if guy entry is in lalaland:
+		if guy entry is moot:
 			change current foreground-color to (R 42 G 210 B 42);
 		else:
 			change current foreground-color to (R 210 G 42 B 42);
@@ -18403,7 +18412,7 @@ Report taking the Rosetta toaster:
 
 after fliptoing strudel:
 	now player has strudel;
-	now sled rut is in lalaland;
+	moot sled rut;
 	continue the action;
 
 check fliptoing strudel:
@@ -18449,7 +18458,7 @@ before examining spec-o-scope for the first time:
 check examining spec-o-scope:
 	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the scope to a visual one?[close bracket][r][line break]";
 	if the player direct-consents:
-		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is in lalaland]un[end if]available, another just west is [unless ingrates are in lalaland]un[end if]available, a particularly important location east of the east shore seems [unless bonker is in lalaland]un[end if]available, and just south of it, an area looks [unless natives are in lalaland]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
+		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives are moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 
 description of spec-o-scope is "You look into the scope and see:[paragraph break][fixed letter spacing]
 [line break]  !      *
@@ -18475,7 +18484,7 @@ to say pc of (myr - a room) and (myd - a direction): [passage character]
 		if myr is loc entry and myd is blockdir entry, now maybe is true;
 		if myr is the room myd of loc entry and myd is opposite of blockdir entry, now maybe is true;
 		if maybe is true and guy entry gendermatches:
-			say "[if guy entry is not in lalaland]x[else if myd is west or myd is east]-[else]|[end if]";
+			say "[if guy entry is not moot]x[else if myd is west or myd is east]-[else]|[end if]";
 			continue the action;
 	say "?[run paragraph on]"
 
@@ -18503,10 +18512,10 @@ instead of doing something with campiest campsite:
 	if action is procedural, continue the action;
 	say "Well, gosh! There's not a whole lot to do with the camp but have fun being around it! Oh, and maybe figure what goes in the rapier repair." instead;
 
-A rapier repair machine is in Outer Route. "A shiny machine labeled RAPIER REPAIR [if dagger is in lalaland]fizzles[else]chugs[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if dagger is not in lalaland]It's nowhere near big enough to clean a lance, but you could probably PUT any blade smaller than a rapier in there[otherwise]You seem to have broken it creating the gizmo[end if]."
+A rapier repair machine is in Outer Route. "A shiny machine labeled RAPIER REPAIR [if dagger is moot]fizzles[else]chugs[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if dagger is not moot]It's nowhere near big enough to clean a lance, but you could probably PUT any blade smaller than a rapier in there[otherwise]You seem to have broken it creating the gizmo[end if]."
 
 instead of taking rapier repair:
-	say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if dagger is in lalaland]Plus you already used it[else]Better to carry something that'd fit into IT[end if]."
+	say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if dagger is moot]Plus you already used it[else]Better to carry something that'd fit into IT[end if]."
 
 the I ZOMG Gizmo is a thing. description is "[one of]Whew. I'm buffaloed on this one. Somebody who knows how to build things would probably understand how to activate, much less use, the [randbla] or [randbla]. Hey, if I understood, I would be writing stuff far less silly than this game[or]You find yourself baffled by the [giz-part][stopping]."
 
@@ -18524,17 +18533,13 @@ check opening gizmo:
 
 check inserting into rapier repair machine:
 	ignore the can't insert into what's not a container rule;
-	if noun is gizmo:
-		say "The gizmo is so cool, the machine broke itself producing one." instead;
-	if ragged dagger is in lalaland:
-		say "The machine has already given its all to create the gizmo." instead;
-	if noun is toaster:
-		say "In a different Wasteland, that would be very practical, indeed. Especially if you know the bit-flip infinite skill trick. But not here." instead;
-	if noun is not ragged dagger:
-		say "That's nothing like a rapier. It's not sharp, metal and pointed. You'll need to find something else." instead;
+	if noun is gizmo, say "The gizmo is so cool, the machine broke itself producing one. Also, the gizmo needs no repair." instead;
+	if ragged dagger is moot, say "The machine has already given its all to create the gizmo." instead;
+	if noun is toaster, say "In a different Wasteland, that would be very practical, indeed. Especially if you know the bit-flip infinite skill trick. But not here." instead;
+	if noun is not ragged dagger, say "That's nothing like a rapier. It's not sharp, metal and pointed. You'll need to find something else." instead;
 	say "The dagger is sucked into the machine, which gets raspier as it repairs. A couple minutes of proclaiming itself 'the sharpener that resharpens,' and a final wheezing choke later, you open it. Instead of a riper rapier, or a clever cleaver, it's a gizmo--bearing the label of the famed novelty company I ZOMG.";
 	now player has the I ZOMG Gizmo;
-	now ragged dagger is in lalaland;
+	moot ragged dagger;
 	set the pronoun it to I ZOMG Gizmo;
 	reg-inc instead;
 
@@ -18889,7 +18894,7 @@ to say if-tent:
 	if player is in actionless coastlines:
 		say ", looking far-off, as if for inspiration [he-she] hasn't found yet";
 	if player is in Obscurest Subsector:
-		say ", looking [if atblock is in lalaland]attentive[else]tentative[end if]"
+		say ", looking [if atblock is moot]attentive[else]tentative[end if]"
 
 check answering agnostic that:
 	if the player's command matches the regular expression "\b(doctor|dr|yow)\b":
@@ -18949,10 +18954,10 @@ to say heat-remain:
 	now all carried hintpastries are heated;
 
 check giving gizmo to agnostic:
-	if Dr Yow is in lalaland:
+	if Dr Yow is moot:
 		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in the garden[end if]--the toaster would've caused an electric shock in the water anyway. After frantic craftin['], the spare parts just allow [him-her] to craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
 		now agnostic has gizmo;
-		now toaster is in lalaland;
+		moot toaster;
 		now bot boat is in actionless coastlines;
 		now blaster is part of bot boat;
 		now turbos are part of bot boat instead;
@@ -18971,7 +18976,7 @@ section agnostic shows up
 
 to check-agnostic:
 	if agnostic is off-stage:
-		if atheists are in lalaland and the-hostile are in lalaland:
+		if atheists are moot and the-hostile are moot:
 			now agnostic is in actionless coastlines;
 			now dinger is in actionless coastlines;
 			if player is in actionless coastlines:
@@ -18980,7 +18985,7 @@ to check-agnostic:
 			else:
 				say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Strati Strait]north[else]east[end if].";
 		else:
-			say "You hear [if the-hostile are not in lalaland]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
+			say "You hear [if the-hostile are not moot]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
 to say what-ag-does:
 	if dinger is in actionless coastlines:
@@ -19022,7 +19027,7 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
 	decide on lois the hostile;
 
-Strati Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
+Strati Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
 
 the coulds clouds are useless scenery in Strati Strait. "The strati are definitely coulds-clouds, full of possibility. Just looking at them feels like you have artist traits.". understand "coulds-clouds" as coulds clouds.
 
@@ -19240,7 +19245,7 @@ after fliptoing when player is in Obscurest Subsector (this is the yow is free r
 		now duck is unfigured;
 		now prison ropins is unfigured;
 		now fissure is unfigured;
-		now fissure is in lalaland;
+		moot fissure;
 		now prison ropins is reflexed;
 		now Dr Yow is in Obscurest Subsector;
 		now duck is returned;
@@ -19336,11 +19341,11 @@ to ag-gets-it:
 	else:
 		say "[line break]The lecture goes extra quickly with [ag-first] attentive! So much common sense, but there's lots of deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
 	say "[line break]The lecture over, [ag-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][agnostic] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! I have this lots-o-tools stool...' but the agnostic's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
-	now Dr Yow is in lalaland;
-	now duck is in lalaland;
+	moot Dr Yow;
+	moot duck;
 	if atblock is in Obscurest Subsector:
 		now ag-atten is false;
-	now atblock is in lalaland;
+	moot atblock;
 	now agnostic is in Actionless Coastlines;
 
 section wordying
@@ -19382,11 +19387,11 @@ printed name of solve a loaves is "solve-a-loaves".
 
 section Maturation Natatorium
 
-the Maturation Natatorium is a backdrop. the Maturation Natatorium is in actionless coastlines and Salted Deltas. description is "It extends [if player is in actionless coastlines]west[else]east[end if]. There's no clear way in[if atheists are in lalaland], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT."
+the Maturation Natatorium is a backdrop. the Maturation Natatorium is in actionless coastlines and Salted Deltas. description is "It extends [if player is in actionless coastlines]west[else]east[end if]. There's no clear way in[if atheists are moot], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT."
 
 instead of doing something with Maturation Natatorium:
 	if current action is entering and player is in Salted Deltas:
-		say "[if atheists are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried the atheists might give you a working over, verbal or physical might have you strung up for sacrilege. So HOSTILE[end if]." instead;
+		say "[if atheists are moot]No need to disturb [relig-mf] now you're past[else]You're worried the atheists might give you a working over, verbal or physical might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 	if action is procedural, continue the action;
 	if current action is entering:
 		say "It doesn't look very fun, whether or not you'd be pestered by atheists." instead;
@@ -19399,7 +19404,7 @@ the Thearchy Hatchery is a backdrop. Thearchy Hatchery is in actionless coastlin
 instead of doing something with Thearchy Hatchery:
 	if current action is entering and player is in Strati Strait:
 		if player is in strati strait:
-			say "[if the-hostile are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
+			say "[if the-hostile are moot]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 		say "That would probably be sacrilegious. You'd get a good scolding, I'm sure." instead;
 	if action is procedural, continue the action;
 	say "There's nothing much to do with the Hatchery. It's just a gaudy structure.";
@@ -19413,7 +19418,7 @@ chapter Lost Lots
 Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if organised ego drains are in lost lots], and worse, sporties['] ripostes mock you[end if]."
 
 after looking in lost lots:
-	if strudel is carried by player or strudel is in lalaland, set the pronoun it to gasfield;
+	if strudel is carried by player or strudel is moot, set the pronoun it to gasfield;
 	continue the action;
 
 the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
@@ -19533,10 +19538,10 @@ no-pastries is a truth state that varies.
 
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
-	d "Left [number of guardians not in lalaland] guardians: [list of guardians not in lalaland].";
+	d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
 	if mended mini denim is in Scope Copse, d "Left mended mini denim.";
-	if old ice is not in lalaland, d "Left old ice.";
-	if sporties' ripostes are not in lalaland, d "Left sporties['] ripostes.";
+	if old ice is not moot, d "Left old ice.";
+	if sporties' ripostes are not moot, d "Left sporties['] ripostes.";
 	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
 	unless turbos are reflexed and blaster is reflexed:
@@ -19640,7 +19645,7 @@ after going to mislit limits:
 	if flip-final-clue is true:
 		say "You notice something [if clue-index > 0]else [end if]you wouldn't have seen without St. Teri's help.[run paragraph on]";
 		if clue-index > 0:
-			move entry clue-index in nextclue to lalaland;
+			moot entry clue-index in nextclue;
 		increment clue-index;
 		if clue-index > number of entries in nextclue:
 			now clue-index is 1;
@@ -19727,7 +19732,7 @@ chapter Mesprise/Emprise Premise(s)
 
 Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
-the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it[else if flowerpot is in lalaland]happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
+the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it[else if flowerpot is moot]happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
 a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
@@ -19738,13 +19743,13 @@ instead of doing something with the itster:
 	say "The itster is the Tetris Sitter's, but maybe you can make her realize there's a lot more to life."
 
 after fliptoing tetris sitter:
-	now itster is in lalaland;
+	moot itster;
 	continue the action;
 
 check going east in Mesprise Premises (this is the force give flowerpot rule):
 	if player has flowerpot and flowerpot contains crocus and Tetris Sitter is reflexed:
 		say "Before you leave, you remember Ornate Atoner Renato's speech--the flowerpot seems like a nice gift for the Tetris Sitter, now she's not stuck on her game. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
-		now flowerpot is in lalaland;
+		moot flowerpot;
 	continue the action;
 
 Ornate Atoner Renato is an undesc.
@@ -19762,13 +19767,13 @@ check giving to Tetris Sitter:
 		try giving flowerpot to Tetris Sitter instead;
 	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
 		if noun is not flowerpot, say "She mumbles '[']S trite,' [if noun is flowerpot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
-	unless noun is flowerpot, say "St. Teri thanks you, but [if flowerpot is in lalaland]the flowerpot was probably enough[else]that's not quite what she wants[end if]." instead;
+	unless noun is flowerpot, say "St. Teri thanks you, but [if flowerpot is moot]the flowerpot was probably enough[else]that's not quite what she wants[end if]." instead;
 	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
 	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
 	consider the maxminchange check rule;
 	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
-	now flowerpot is in lalaland instead;
+	moot flowerpot instead;
 
 check going outside in Mesprise Premises: try going east instead;
 
@@ -20295,8 +20300,8 @@ hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know bett
 chapter guardian taunt tables
 
 after fliptoing reed's ale:
-	now lars eede is in lalaland;
-	now elsa erde is in lalaland;
+	moot lars eede;
+	moot elsa erde;
 	consider the guardian taunt rule;
 	if player is male, shuffle-guardians lars eede;
 	if player is female, shuffle-guardians elsa erde;
@@ -20308,7 +20313,7 @@ after fliptoing a guardian (this is the guardian taunt rule) :
 			say "A keycar speeds into view with all the guardians gone! And not just any keycar. An annoying yacker keycar, a novelty toy whose sales helped make Elvira rich, before she sponsored a campaign to fine reckless keycar users--well, okay, there's no PROOF of kickbacks.[paragraph break]The keycar's probably not going to stop you going anywhere, but it'd be nice to get rid of.";
 			now keycar is in location of player;
 		continue the action;
-	if other-g of noun is not dreads adders, now other-g of noun is in lalaland;
+	if other-g of noun is not dreads adders, moot other-g of noun;
 	repeat through table of ggt:
 		if guaname entry is in location of player and guaname entry is not prevtaunt:
 			deliver-taunt guaname entry and noun;
@@ -20438,12 +20443,12 @@ to shuffle-guardians (goner - a guardian):
 		min-up;
 	if can-see-map:
 		draw-my-loc;
-	let RG be number of red guardians not in lalaland;
-	if Lars Eede is in lalaland or Elsa Erde is in lalaland, decrement RG; [Lars and Elsa both go]
-	if Ms Lucy is in lalaland or Luc Sym is in lalaland, decrement RG; [both musclies go]
-	let BG be number of blue guardians not in lalaland;
-	d "Reds left = [list of red guardians not in lalaland].";
-	d "Blues left = [list of blue guardians not in lalaland].";
+	let RG be number of not moot red guardians;
+	if Lars Eede is moot or Elsa Erde is moot, decrement RG; [Lars and Elsa both go]
+	if Ms Lucy is moot or Luc Sym is moot, decrement RG; [both musclies go]
+	let BG be number of not moot blue guardians;
+	d "Reds left = [list of not moot red guardians].";
+	d "Blues left = [list of not moot blue guardians].";
 	d "Reds now [RG], blues now [BG]. [goner] = [if goner is red]red[else if goner is blue]blue[else if goner is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
 	if number of visible guardians > 0:
 		now mr-hinty is a random visible guardian;
@@ -20451,7 +20456,7 @@ to shuffle-guardians (goner - a guardian):
 		if any-cleared is false:
 			now any-cleared is true;
 			say "Well, this is the first place you cleared all the guardians from, which feels nice. [if spec-o-scope is unexamined]You don't know if you need any area completely cleared, but maybe you can check the scope[bak-copse] for more guidance[end if].";
-		else if number of guardians not in lalaland is 0:
+		else if number of not moot guardians is 0:
 			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. To the other side of the lake.";
 		else if number of tower-accessible rooms is 12: [the grid + outer route + shaven havens + obscurest subsector] [?? this is not quite correct. If we clear the stinger/admirer/butlers last, we could have gotten everything. However, it is impossible to clear a red/blue guardian and get all rooms accessible in one swoop. That's because the grid squares each have more than one way to get there.]
 			if clear-warn is false:
@@ -20483,7 +20488,7 @@ to say bak-copse:
 		if MR is adjacent to HS and MR is a hotcorner and distance of MR > 1:
 			now distance of MR is 1;
 	d "[new-br-needed] is the new br needed. [br-needed] is the old.";
-	d "Blue = [number of blue guardians not in lalaland] Red = [number of red guardians not in lalaland], overall = [new-br-needed].";]
+	d "Blue = [number of not moot blue guardians] Red = [number of not moot red guardians], overall = [new-br-needed].";]
 
 mr-hinty is a guardian that varies.
 
@@ -20495,7 +20500,7 @@ check going (this is the guardian reposition before rule):
 		repeat with QQ running through guardians:
 			if QQ is in location of player:
 				choose row with guy of QQ in table of guard-org;
-				if QQ is not in lalaland:
+				if QQ is not moot:
 					now QQ is passtried;
 					if loc entry is location and blockdir entry is noun:
 						if blockdir entry is neuter, set the pronoun it to blockdir entry;
@@ -20538,7 +20543,7 @@ definition: a guardian (called gu) is mas:
 to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
-		if guy entry is not in lalaland:
+		if guy entry is not moot:
 			if guy entry is not mardier admirer and player is male and guy entry is female, next;
 			if player is female and guy entry is mas, next;
 			if location of player is loc entry:
@@ -20601,7 +20606,7 @@ after fliptoing a warrior (this is the trefoil exit rule):
 		now all visible warriors are pinko;
 		if vw > 0:
 			decrease poss-score of towers by vw;
-		now all visible warriors are in lalaland;
+		moot list of all warriors in Loftier Trefoil;
 		now player has flowerpot;
 		reposition-guardians;
 		continue the action;
@@ -20954,7 +20959,7 @@ carry out discerning:
 		else if Merle is in alcoves and Merle is reflexive:
 			say "There might be a way to make them less annoying, but you discern that annoying isn't as bad as evil, so you won't get wrapped up in their hang-ups.";
 			now do-i-dis is false;
-	else if parrot is in lalaland and medals are reflexive:
+	else if parrot is moot and medals are reflexive:
 		say "You discern you need to [if player is not in alcoves]go to the alcoves and [end if]see the medals can make you go QUICKLY.";
 	else if player has whistle:
 		if whistle is reflexive:
@@ -20972,7 +20977,7 @@ carry out discerning:
 	prevent undo;
 	now undo-code is 7;
 	poss-d;
-	now cinders are in lalaland;
+	moot cinders;
 	the rule succeeds.]
 
 to say animals-left:
@@ -21155,7 +21160,7 @@ check fliptoing the whistle when whistle is reflexive:
 		get-dead;
 		follow the shutdown rules instead;
 	if number of visible people > 1:
-		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is in lalaland] or the Alcoves[end if][if player is in alcoves], or find a way to get rid of everyone else[end if]." instead;
+		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Alcoves[end if][if player is in alcoves], or find a way to get rid of everyone else[end if]." instead;
 
 definition: a person (called pe) is npcish:
 	if pe is the player, decide no;
@@ -21243,8 +21248,8 @@ to note-denial:
 
 to say lee-or-eels:
 	say "[wfak]";
-	if gore ogre is in lalaland:
-		if eels are in lalaland:
+	if gore ogre is moot:
+		if eels are moot:
 			say "You're surprised to see Mr. Lee and the eels together, 'LEE'S EELS,' alongside--yes, Gretta with animals of her own.";
 		else:
 			say "Some eels tag long behind Mr. Lee. You [if loop pool is visited]don't recognize them[else]look away sheepishly--you didn't convince them[end if], and they glare briefly as if to say, you should've TOLD us about the fun.";
@@ -21254,24 +21259,24 @@ to say lee-or-eels:
 to clean-for-roving:
 	now roved is true;
 	if mangiest steaming is in strip:
-		move mangiest steaming to lalaland;
+		moot mangiest steaming;
 	if tokers are in strip:
-		move tokers to lalaland;
+		moot tokers;
 	if nestor is in strip:
-		move nestor to lalaland;
-	move otters-x to lalaland;
-	move whistle to lalaland;
-	move medals to lalaland;
-	move magneto to lalaland;
+		moot nestor;
+	moot otters-x;
+	moot whistle;
+	moot medals;
+	moot magneto;
 	move player to strip of profits;
 	if number of portals in strip of profits > 0:
 		say "Moving [list of portals in strip of profits] out of the Strip. They shouldn't be there.";
 		repeat with myport running through portals in strip of profits:
 			if myport is not hoster:
-				move myport to lalaland;
+				moot myport;
 
 to say hat-gone:
-	say "[if ghoul hat is in lalaland] despite zapping that ghoul hat[else], though his ghoul hat's gone[end if]";
+	say "[if ghoul hat is moot] despite zapping that ghoul hat[else], though his ghoul hat's gone[end if]";
 
 chapter whistleing
 
@@ -21324,7 +21329,7 @@ check fliptoing atmo-moat:
 
 after printing the locale description for Disowned Downside when Disowned Downside is unvisited:
 	if do-i-chat is true:
-		now macks are in lalaland;
+		moot macks;
 		now all mack-ideas are in lalaland;
 		try talking to gretta;
 		the rule succeeds;
@@ -21390,7 +21395,7 @@ prompt	response	enabled
 "I sort of lost my powers. Well, most of them. What can I do now?"	gre-what-quip	0
 "[if loop pool is visited]What can I do with the pool[else]What's[end if] to the north?"	gre-north-quip	0
 "[if bran barn is visited]What can I do in the barn[else]What's[end if] to the south?"	gre-south-quip	0
-"What can I do back east[if sly imp is in lalaland or whiners are in lalaland]? I got rid of some nuisances[but-stuck].[else]?[end if]"	gre-east-quip	0
+"What can I do back east[if sly imp is moot or whiners are moot]? I got rid of some nuisances[but-stuck].[else]?[end if]"	gre-east-quip	0
 "Rescuing animals? How?"	gre-animals-quip	0
 "[if optleft of Gretta is 1]Wow! You've been a big help[else if gre-go-warn is true]That's really all, now[else]Um, that's all, I guess[end if]. Thanks."	gre-go-quip	0
 
@@ -21431,9 +21436,9 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 	else if current quip is gre-go-quip:
 		terminate the conversation;
 		now the player wears medals;
-		now Gretta is in lalaland;
+		moot Gretta;
 		if do-i-chat is true:
-			now hydra is in lalaland;
+			moot hydra;
 			now whistle is reflexed;
 			move player to inclosure;
 	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
@@ -21563,7 +21568,7 @@ after fliptoing a mack-idea:
 	if uber-rand-cheat is true:
 		if number of mack-ideas in Disowned Downside is 0:
 			say "You're done!";
-			now macks are in lalaland;
+			moot macks;
 			try talking to Gretta;
 			continue the action;
 		else:
@@ -21582,8 +21587,8 @@ after fliptoing a mack-idea:
 	otherwise:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
-		now macks are in lalaland;
-		now all mack-ideas are in lalaland;
+		moot macks;
+		moot list of all mack-ideas;
 		try talking to Gretta;
 		continue the action;
 	consider the macks hitting on rule;
@@ -21819,9 +21824,9 @@ for printing a locale paragraph about Mr Lee:
 		now lee-yet is true;
 	else:
 		say "Mr. Lee hangs around here, ";
-		if Gore Ogre is in lalaland:
+		if Gore Ogre is moot:
 			say "doing farmy chores.";
-		else if ghoul hat is in lalaland:
+		else if ghoul hat is moot:
 			say "glancing nervously at the Gore Ogre.";
 		else:
 			say "[one of]musing 'Here to GLOAT, HUH?'[or]looking red-eyed and growling 'Hola, thug!'[or]giving a hot laugh.[or]crying, red-eyed, 'Ugh! O, halt!'[cycling]";
@@ -21964,7 +21969,7 @@ check fliptoing ghoul hat:
 section after fliptoing
 
 after fliptoing ghoul hat:
-	if sea cube is in lalaland, min-up;
+	if sea cube is moot, min-up;
 	continue the action;
 
 after fliptoing gore ogre:
@@ -21974,12 +21979,12 @@ after fliptoing gore ogre:
 
 after fliptoing sea cube:
 	now eels are in loop pool;
-	if ghoul hat is in lalaland, min-up;
+	if ghoul hat is moot, min-up;
 	continue the action;
 
 after fliptoing eels:
 	de-inhib;
-	if gore ogre is in lalaland, min-up;
+	if gore ogre is moot, min-up;
 	continue the action;
 
 book Shiner Shrine
@@ -22062,7 +22067,7 @@ understand "ocelot" as ocelots.
 the ocelots wear the SlopInc Clip-Ons. description of clip-ons is "Just terribly un-hip. They make the ocelots look like jive turkeys and not jive cats."
 
 after fliptoing ocelots:
-	now slopinc clip-ons are in lalaland;
+	moot slopinc clip-ons;
 	now ocelots wear look-kool shades;
 	continue the action;
 
@@ -22139,10 +22144,10 @@ after fliptoing when player is in Shiner Shrine (this is the break the imp down 
 	increment silence-tally;
 	if silence-tally is 2:
 		say "The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.";
-		now imp is in lalaland;
-		now imp1 is in lalaland;
-		now imp2 is in lalaland;
-		now imp3 is in lalaland;
+		moot imp;
+		moot imp1;
+		moot imp2;
+		moot imp3;
 	else:
 		remove noun from shrine-imp-items, if present;
 	continue the action;
@@ -22324,7 +22329,7 @@ a-text of nails is "RRYYR". b-text of nails is "RRYYR". parse-text of nails is "
 the snail is a neuter animal. description is "It's quite spiky and seems to move faster than your average snail.". "The spiky snail you summoned is slithering impatiently in a circle."
 
 check scaning imp:
-	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if silence-tally is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is in lalaland]patience is legendary and butlery[else if imp3 is in lalaland]It has a butlery air as it moves rangily[else if imp2 is in lalaland]patience feels legendary as it moves rangily[end if].";
+	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if silence-tally is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is moot]patience is legendary and butlery[else if imp3 is moot]It has a butlery air as it moves rangily[else if imp2 is moot]patience feels legendary as it moves rangily[end if].";
 	try scaning entry 1 of shrine-imp-items;
 	the rule succeeds;
 
@@ -22349,10 +22354,10 @@ after fliptoing when player is in Clarthead Cathedral (this is the de-tallyho ru
 	increment quietness;
 	if quietness is 2:
 		say "As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
-		now whiners are in lalaland;
-		now ram1 is in lalaland;
-		now ram2 is in lalaland;
-		now ram3 is in lalaland;
+		moot whiners;
+		moot ram1;
+		moot ram2;
+		moot ram3;
 	else:
 		remove noun from cathedral-items, if present;
 	continue the action;
@@ -22384,7 +22389,7 @@ every turn when parrot is visible (this is the parrot-chat rule):
 		say "The parrot hides out of sight of Elmer and Merle, eyeing them fearfully.";
 	else if location of player is Lamer Realm:
 		let vra be number of visible reflexive animals;
-		if owl is in lalaland and vra is 0:
+		if owl is moot and vra is 0:
 			say "'Awwk! Happy animals! They might do something for you some day, adventurer!'";
 			continue the action;
 		if vra > 0:
@@ -22414,7 +22419,7 @@ book Reclusion Inclosure
 hydra-known is a truth state that varies.
 
 check going west in Alcoves (this is the need quick rule):
-	if parrot is in lalaland and raptor is in lalaland:
+	if parrot is moot and raptor is moot:
 		if medals are not reflexed:
 			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. 'Last word: drat! Slow!'[paragraph break]The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used[if medals are prefigured], though you sort of figured how, earlier[end if].";
 			get-dead;
@@ -22577,7 +22582,7 @@ some augural arugula is an edible thing. description of arugula is "It's not eno
 
 check eating arugula:
 	say "Not very tasty, but your vision seems clearer. 'La! A guru!' you think to yourself. You can now GURU what you are curious about.";
-	now arugula is in lalaland;
+	moot arugula;
 	now can-guru is true;
 	the rule succeeds;
 
@@ -22599,7 +22604,7 @@ did-guru is a truth state that varies.
 
 carry out guruing:
 	if can-guru is false:
-		if arugula is in lalaland:
+		if arugula is moot:
 			say "You lost your guru powers." instead;
 		say "You'll near to eat the arugula, first." instead;
 	if noun is megaton pear or noun is mopeage rant or noun is rampage note:
@@ -22733,14 +22738,11 @@ a tamarind is a fruit. description is "It looks more like a potato than any frui
 chapter coin-give
 
 to decide which number is curtis-level:
-	if number of fruits in lalaland < 8:
-		decide on 0;
-	if number of fruits in lalaland < 12:
-		decide on 1;
-	if number of fruits in lalaland < 16:
-		decide on 2;
-	if number of fruits in lalaland < 20:
-		decide on 3;
+	let moot-fruit be number of moot fruits;
+	if moot-fruit < 8, decide on 0;
+	if moot-fruit < 12, decide on 1;
+	if moot-fruit < 16, decide on 2;
+	if moot-fruit < 20, decide on 3;
 	decide on 4.
 
 to coin-eval:
@@ -22749,14 +22751,14 @@ to coin-eval:
 	let temp be curtis-level;
 	if temp is 4:
 		say "Curtis says 'Boy, you have a lot of goodies now. Wouldn't want to lose them carrying all those fruits.' He helps keep your inventory lean and mean.";
-		now all carried fruits are in lalaland;
+		moot list of all carried fruits;
 	if number of carried fruits > 0 and temp < 4:
 		if number of carried fruits > 4:
 			say "Curtis goes to take your bounty but backs off on seeing how much there is. 'I, old as...' He snaps his fingers. 'A solid load is laid, so! Lo, aids! Oi, lads!' he booms, and a couple assistants carry away your haul[one of]. 'Do sail!' he exhorts you[or][stopping].";
 		else:
 			say "Curtis relieves you of the burden[if number of carried fruits > 1]s[end if] you found[one of]. He thanks you but is curt[or][stopping].";
 		repeat with fru running through carried fruits:
-			now fru is in lalaland;
+			moot fru;
 	if curtis-level > temp:
 		repeat through table of coingiving:
 			if levb4 entry is temp and levaf entry is curtis-level:
@@ -22769,13 +22771,13 @@ to coin-eval:
 					set the pronoun it to coin;
 				if get-coins entry is 1:
 					if player has icon:
-						now icon is in lalaland;
+						moot icon;
 						now player has icons;
 						now singed design is part of the icons;
 						say "[line break]You fiddle with the coin you got, and now it's an icon, too. So now you have icons!";
 						set the pronoun them to icons;
 					else if player has coin:
-						now coin is in lalaland;
+						moot coin;
 						now player has coins;
 						now singed design is part of the coins;
 						set the pronoun them to coins;
@@ -22866,7 +22868,7 @@ check going north in Rustic Citrus:
 
 chapter drinks stand
 
-the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are in lalaland], and plans for a megaton pear,[end if] under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
+the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
 
 check taking drinks stand:
 	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
@@ -22959,9 +22961,9 @@ the mopeage rant is auxiliary scenery. description of mopeage rant is "[bug-repo
 a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY". parse-text of mopeage rant is "x[sp]o[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]a[sp]x[sp]-".
 
 after fliptoing pomegranate: [the magenta rope is already flipped]
-	now megaton pear is in lalaland;
-	now rampage note is in lalaland;
-	now mopeage rant is in lalaland;
+	moot megaton pear;
+	moot rampage note;
+	moot mopeage rant;
 	continue the action;
 
 book Swell Wells
@@ -23066,7 +23068,7 @@ Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going w
 after looking in gates stage (this is the retract halt lath rule):
 	if halt lath is in gates stage and player has popstar's passport:
 		say "Your popstar's passport beeps quickly. The halt lath rises and retracts into the gates to the north.";
-		now halt lath is in lalaland;
+		moot halt lath;
 	continue the action;
 
 check going inside in gates stage:
@@ -23149,7 +23151,7 @@ check going north in Gates Stage:
 		say "'Need ID! Indeed!' the gates say mechanically." instead;
 	if number of carried fruits > 0:
 		say "(First returning the extra fruit[unless number of carried fruits is 1]s[end if])[paragraph break]";
-		now all carried fruits are in lalaland;
+		moot list of all carried fruits;
 	if gate-level < 2:
 		now perp-check is true;
 		now perp-priv is part of the passport;
@@ -23304,8 +23306,8 @@ check inserting into lost slot:
 	if noun is not s-i:
 		say "That doesn't fit." instead;
 	say "As you perform the toll-toss, you think you hear tots['] LOLs. The box opens up, dissolving to reveal a popstar's passport.";
-	now storage box is in lalaland;
-	now s-i is in lalaland;
+	moot storage box;
+	moot s-i;
 	now player has popstar's passport;
 	consider the retract halt lath rule;
 	the rule succeeds;
@@ -23371,7 +23373,7 @@ book Clangier Clearing
 
 check fliptoing when player is in clearing and player does not have tekno-token:
 	if noun is not carried by player:
-		let temp be number of fruits in lalaland + number of fruits carried by player;
+		let temp be number of moot fruits + number of fruits carried by player;
 		say "That would work, but you don't have anything resembling currency to haggle with. Maybe you [if temp < 8]can earn some currency elsewhere[else]can go see Curtis for remuneration. You've done a good bit[end if].";
 		preef noun;
 		do nothing instead;
@@ -23435,10 +23437,10 @@ a-text of l-o-p is "RRYRYR". b-text of l-o-p is "RPGRGP". parse-text of l-o-p is
 
 the kumquat is a fruit. description is "Weird and orange and oblong."
 
-check fliptoing kumquat when kumquat is in lalaland:
+check fliptoing kumquat when kumquat is moot:
 		say "Len Craig already gave you enough for your help. Don't push it." instead;
 
-check fliptoing papayas when papayas are in lalaland:
+check fliptoing papayas when papayas are moot:
 		say "You already got credit for prompt payment." instead;
 
 the auction caution is reflexive scenery in Clangier Clearing. "It's pretty clear: PAY ASAP covers over half of it. That probably applies to non-auctions, too.". understand "banner" as auction caution.
@@ -23527,7 +23529,7 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and barriers west is in lalaland and rapt figure is in lalaland and buried raft is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is visible]A buried raft lies here, too. [end if][if pipe panel fence is moot and briar screen is moot and barriers west is moot and rapt figure is moot and buried raft is moot]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
 the ego fail foliage is bounding scenery in filed field. "The ego fail foliage will still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -23569,8 +23571,8 @@ The briar screen is scenery in Filed Field. "It's stained dark off-red and smell
 a-text of briar screen is "RRYRRYRRYYR". b-text of briar screen is "RPYRRYRPYGR". parse-text of briar screen is "x[sp]r[sp]-[sp]x[sp]x[sp]-[sp]x[sp]r[sp]-[sp]e[sp]x".
 
 after fliptoing cranberries:
-	now briar screen is in lalaland;
-	now barren cries are in lalaland;
+	moot briar screen;
+	moot barren cries;
 	continue the action;
 
 Instead of taking the briar screen:
@@ -23713,7 +23715,7 @@ to say greedy-s:
 	say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]"
 
 to say trader-clue:
-	say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of fruits in lalaland < 12]Curtis's third gift, after [12 - number of fruits in lalaland in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
+	say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of moot fruits < 12]Curtis's third gift, after [12 - number of moot fruits in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
 
 to say gree-app:
 	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if][if guava is off-stage], and [he-she] is only partially hiding a sign[end if]"
@@ -23881,7 +23883,7 @@ carry out demoing:
 		say "You already are in demo dome mode." instead;
 	if Gunter is not off-stage:
 		say "[reject]";
-	if player is not in dusty study or gunter is in lalaland:
+	if player is not in dusty study or gunter is moot:
 		say "For reasons of continuity, you can't visit the Demo Dome until you've restarted the game." instead;
 	say "[if knockage is true]You ignore Gunter's emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You call up a nav-van and then pull out your discreet, secret ID to enter.";
 	now demo-dome is true;
@@ -24397,7 +24399,7 @@ before objhinting for the first time:
 
 [definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is off-stage, decide no;
-	if hintcand is in lalaland, decide no;
+	if hintcand is moot, decide no;
 	if hintcand is useless, decide no;
 	if hintcand is the location, decide no;
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
@@ -24419,7 +24421,7 @@ before objhinting for the first time:
 
 definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is off-stage, decide no;
-	if hintcand is in lalaland, decide no;
+	if hintcand is moot, decide no;
 	if hintcand is useless, decide no;
 	if hintcand is the location, decide no;
 	if hintcand is old giant and mrlp is routes, decide yes; [he is known-about before he comes on stage officially]
@@ -24504,13 +24506,12 @@ does the player mean objhinting a hintrelevant object:
 [does the player mean objhinting a visible object:
 	it is likely.]
 
-does the player mean objhinting an object in lalaland:
-	it is unlikely.
+does the player mean objhinting a moot object: it is unlikely.
 
 definition: a thing (called hthing) is deregioned:
 	if mrlp is routes and hthing is giant pin, decide yes;
 	if location of hthing is nothing, decide no;
-	if location of hthing is lalaland, decide no;
+	if hthing is moot, decide no;
 	if mrlp is not map region of location of hthing, decide yes;
 	decide no.
 
@@ -24529,7 +24530,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	if noun is a room:
 		say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
 	if noun is a fruit and player has noun, say "[frootz]" instead;
-	if noun is a badbook, say "[if yak is in lalaland][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
+	if noun is a badbook, say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
 	if noun is the player:
 		all-say "[if cur-score of Means Manse < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
 	if noun is a fruit and player has noun:
@@ -24549,7 +24550,7 @@ carry out objhinting (this is the pick object to hint rule) :
 		all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
 	if location of noun is nothing and noun is not a backdrop:
 		all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
-	if noun is in lalaland:
+	if noun is moot:
 		if noun is disk:
 			if map region of location of skid is presto:
 				all-say "(Hinting the skid instead, though you'll need to flip the disk back.)";
@@ -24596,13 +24597,13 @@ carry out objhinting (this is the pick object to hint rule) :
 				prevent undo;
 				if swears is 0:
 					say "The crust is all gone, now.";
-					now crust is in lalaland instead;
+					moot crust instead;
 				otherwise:
 					say "[line break]You have [swears] bite[if swears > 1]s[end if] left." instead;
 			if player has snoop spoon:
 				if noun is thruhinted or noun is prefigured:
 					say "Hmm, wait. Maybe you can just go [spoil-entry entry]." instead;
-				now snoop spoon is in lalaland;
+				moot snoop spoon;
 				prevent undo;
 				now undo-code is 6;
 				now noun is cheatitemed;
@@ -24610,7 +24611,7 @@ carry out objhinting (this is the pick object to hint rule) :
 			if player has fretful truffle:
 				if noun is thruhinted or noun is prefigured:
 					say "You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to [spoil-entry entry]." instead;
-				now fretful truffle is in lalaland;
+				moot fretful truffle;
 				prevent undo;
 				now undo-code is 4;
 				now noun is cheatitemed;
@@ -24638,10 +24639,10 @@ carry out objhinting (this is the pick object to hint rule) :
 					if noun is medals: [ugh. This is a lousy hack to say, if we just find out about te medals, don't do anything. ]
 						if nounsolve > 2 and adjsolve > 2:
 							poss-d;
-							now cinders are in lalaland;
+							moot cinders;
 					else:
 						poss-d;
-						now cinders are in lalaland;
+						moot cinders;
 				now noun is cheatitemed;
 				the rule succeeds;
 	if there is hint-entry of noun in the table of hintobjs:
@@ -24775,7 +24776,7 @@ bee's head	"[by-bee]."
 diapers	"[by-bee]."
 praise	"[by-rivets]."
 rivets	"[by-rivets]."
-ME ARTS	"The ME ARTS inspired you enough, [if lobster is in lalaland]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
+ME ARTS	"The ME ARTS inspired you enough, [if lobster is moot]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
 bench	"You got the giant to the bench. Now you need to deal with the giant."
 bench-end	"You positioned yourself well to duck the giant and put up with his elbow. Try something else."
@@ -24799,7 +24800,7 @@ gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figur
 lever	"The lever was designed not to give extra points for pulling it too much."	[end OYSTER]
 turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
 blaster	"You fixed the blaster. Now maybe try the turbos."
-Tetris Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is in lalaland]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
+Tetris Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is moot]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
 b-b	"You've cut it down enough. Leave some for next year's crop." [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Elmer	"You can't take on Merle and Elmer by yourself--you need some allies."
@@ -25054,7 +25055,7 @@ this is the presto-or-others rule:
 to say 2dg of (rg - a region):
 	if rg is not tickedoff:
 		say "[eqls][rg][line break]";
-		if rg is towers and number of guardians not in lalaland > 1:
+		if rg is towers and number of not moot guardians > 1:
 			say "[eqls][eqls]starting missed Towers guardians[line break]";
 		now rg is tickedoff;
 
@@ -25391,9 +25392,9 @@ this is the oyster-alt rule:
 
 this is the towers-alt rule:
 	say "[eqls]TOWERS[line break]";
-	if bredo is in lalaland, say "[2da]Bredo could've also become [if bredo-bored is true]ROBED[else]BORED[instead].";
-	if reed's ale is in lalaland, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
-	if natives are in lalaland, say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
+	if bredo is moot, say "[2da]Bredo could've also become [if bredo-bored is true]ROBED[else]BORED[instead].";
+	if reed's ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
+	if natives are moot, say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
 	say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
 	say "[2da]Instead of [ff of true], you could've [ff of false]."
 
@@ -25440,7 +25441,7 @@ to say how-macks:
 		else:
 			choose row with the-from of QQ in table of otters anagrams;
 			say "[right-word entry]";
-	if t-tearily-irately is in lalaland and t-tearily-irately is not passed-on:
+	if t-tearily-irately is moot and t-tearily-irately is not passed-on:
 		say "[if irately is true]TEARILY instead of IRATELY[else]IRATELY instead of TEARILY[end if]";
 
 showing what the player missed is an activity.
@@ -25496,7 +25497,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if giant pin is in dusty study, say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
 		if t-b is in dusty study, say "[2dmiss of myreg]you could've made the ten beams into a BASEMENT.";
 		if tables are in dusty study, say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
-		if sitar is not in lalaland, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing/[end if]stria in the gallery into a STAIR.";
+		if sitar is not moot, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing/[end if]stria in the gallery into a STAIR.";
 		if niche is in dusty study, say "[2dmiss of myreg]you could've changed 'my niche' into a CHIMNEY.";
 		if pram is in heights, say "[2dmiss of myreg]you could've changed the pram into a RAMP[if heights is unvisited], if you'd gone up from the study[end if].";
 		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a SNIB on the ISBN bins.";
@@ -25516,14 +25517,14 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if what-a-bee is reflexive, say "[2drm of boarded roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
 		if bee's head is reflexive, say "[2drm of boarded roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
-		if lager is not in lalaland, say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
+		if lager is not moot, say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
 		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS.";
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";
 		if rivets are reflexive, say "[2drm of econ cone]you could've tried to STRIVE by the statue of Trevis Vister.";
 		if praise spirea is reflexive, say "[2drm of econ cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
-		if DIVORCES is not in lalaland, say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
-		if sister tressi is not in lalaland, say "[2drm of upscale capsule]you could've tried to RESIST Sister Tressi.";
-		if Blamer Balmer is not in lalaland, say "[2drm of upscale capsule]you could've tried to RAMBLE to ignore Blamer Balmer.";
+		if DIVORCES is not moot, say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
+		if sister tressi is not moot, say "[2drm of upscale capsule]you could've tried to RESIST Sister Tressi.";
+		if Blamer Balmer is not moot, say "[2drm of upscale capsule]you could've tried to RAMBLE to ignore Blamer Balmer.";
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
@@ -25531,7 +25532,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if odes song is in dirge ridge, say "[2drm of Dirge Ridge]you could've said GOODNESS to the Odes Song.";
 		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
 		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said PROST (a German word to toast someone) to the Sport Ports.";
-		if hawt thaw is not in lalaland, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
+		if hawt thaw is not moot, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
 		if starch charts are not reflexed, say "[2drm of Phat Path]you could've made the starch charts TRASCH.";
 		if rom sticks are off-stage, say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
@@ -25541,18 +25542,18 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is oyster:
 		if you-used-pills is true, say "[how-pills-used].";
 		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";
-		if cans are not in lalaland, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
-		if dent is not in lalaland, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
+		if cans are not moot, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
+		if dent is not moot, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
 		if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
 		if wipes are on raw red drawer:
 			say "[2dmiss of myreg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
-		else if waste is not in lalaland:
+		else if waste is not moot:
 			say "[2dmiss of myreg]you could've tried to SWEAT to remove the waste.";
 		else if lance is not cleaned:
 			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
-		else if Dourest Detours is visited and ant is not in lalaland:
+		else if Dourest Detours is visited and ant is not moot:
 			say "[2dmiss of myreg]you could've tried to TAN the ant.";
-		else if ant is not in lalaland:
+		else if ant is not moot:
 			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
@@ -25561,8 +25562,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			repeat with pk running through pinko warriors:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 		let xxx be unripe ur-pine;
-		if number of guardians not in lalaland > 0:
-			repeat with gua running through guardians not in lalaland:
+		if number of not moot guardians > 0:
+			repeat with gua running through not moot guardians:
 				if player is male:
 					if gua is Elsa Erde or gua is Lois the Hostile, next;
 				if player is female:
@@ -25573,27 +25574,27 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
 				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
-			if number of guardians not in lalaland > 1, say "(that's all for the guardians)[line break]";
+			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 		if yurts are in scope copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
-		if keycar is not in lalaland, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
-		if sporties' ripostes are not in lalaland, say "[2dmiss of myreg]the sporties['] ripostes in Unblest Sunbelt could've become PROSIEST.";
+		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
+		if sporties' ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Unblest Sunbelt could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
-		if mended mini denim is not in lalaland, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
+		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
 		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
-		if ingrates are not in lalaland, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
-		if natives are not in lalaland, say "[2dmiss of myreg]the natives in Danger Garden could've been turned VAINEST or NAIVEST.";
+		if ingrates are not moot, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
+		if natives are not moot, say "[2dmiss of myreg]the natives in Danger Garden could've been turned VAINEST or NAIVEST.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger could've become RUSTLED.";
-		if ego drains are not in lalaland, say "[2dmiss of myreg]the organised ego drains in Lost Lots could've become GRANDIOSE.";
+		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Lost Lots could've become GRANDIOSE.";
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur-pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if flowerpot is not in lalaland, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west[else if mesprise is unvisited]gone west for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
+		if flowerpot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west[else if mesprise is unvisited]gone west for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:
-		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not in lalaland]DISCERN or even [end if]RESCIND the cinders.";
-		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
-		if gore ogre is not in lalaland, say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
+		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not moot]DISCERN or even [end if]RESCIND the cinders.";
+		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not moot]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
+		if gore ogre is not moot, say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
 		if Merle is reflexive, say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
 		if Elmer is reflexive, say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
 		if number of flippable things in perverse preserve > 0:
@@ -25603,45 +25604,45 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			repeat with A running through flippable things in Lamer Realm:
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
 	else if myreg is others:
-		if spear is not in lalaland, say "[2drm of Rustic Citrus]the spear could've become pears.";
-		if lumps are not in lalaland, say "[2drm of Rustic Citrus]the lumps could've become plums.";
-		if mad train is not in lalaland, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
-		if harmonicas are not in lalaland, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
-		if grapes are not in lalaland, say "[2drm of Rustic Citrus]the pagers could've become grapes.";
+		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become pears.";
+		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become plums.";
+		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
+		if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
+		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become grapes.";
 		if drinks stand is unexamined:
 			say "[2drm of Rustic Citrus]you could've examined the drinks stand to find more pre-fruits.";
 		else:
-			if eerie blurbs are not in lalaland, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
-			if slime is not in lalaland, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
-			if peanut cola is not in lalaland, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
-			if mopeage rant is not in lalaland, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
-			if videotape collection is not in lalaland, say "[2drm of Rustic Citrus]The videotape collection's movies could've become a PERSIMMON.";
-		if apples are not in lalaland, say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES."; [swell wells]
-		if green stain is not in lalaland, say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
-		if miser ruble is not in lalaland, say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
-		if riot cap is not in lalaland, say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";
-		if sorer bogey is not in lalaland, say "[2drm of Swell Wells]the sorer bogey could've become a GOOSEBERRY.";
-		if stucco is not in lalaland, say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
-		if rapt figure is not in lalaland, say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT."; [filed field]
-		if pipe panel fence is not in lalaland, say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
-		if barriers west are not in lalaland, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
-		if briar screen is not in lalaland, say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
-		if buried raft is not in lalaland, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
-		if pryer bars are not in lalaland, say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
-		if barber sickle is not in lalaland, say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
-		if mean trowel is not in lalaland, say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";
-		if lemons are not in lalaland, say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons."; [clangier clearing]
-		if melon is not in lalaland, say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
-		if papayas are not in lalaland, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
-		if mango is not in lalaland, say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
-		if peach is not in lalaland, say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
+			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
+			if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
+			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
+			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
+			if videotape collection is not moot, say "[2drm of Rustic Citrus]The videotape collection's movies could've become a PERSIMMON.";
+		if apples are not moot, say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES."; [swell wells]
+		if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
+		if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
+		if riot cap is not moot, say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";
+		if sorer bogey is not moot, say "[2drm of Swell Wells]the sorer bogey could've become a GOOSEBERRY.";
+		if stucco is not moot, say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
+		if rapt figure is not moot, say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT."; [filed field]
+		if pipe panel fence is not moot, say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
+		if barriers west are not moot, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
+		if briar screen is not moot, say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
+		if buried raft is not moot, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
+		if pryer bars are not moot, say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
+		if barber sickle is not moot, say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
+		if mean trowel is not moot, say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";
+		if lemons are not moot, say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons."; [clangier clearing]
+		if melon is not moot, say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
+		if papayas are not moot, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
+		if mango is not moot, say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
+		if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
 		if l-o-p is not reflexed, say "[2drm of Clangier Clearing]you could've said CRIPES at the prices.";
-		if quince is not in lalaland, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
-		if nectarine is not in lalaland, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
-		if orange is not in lalaland, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [scape space]
-		if banana is not in lalaland, say "[2drm of Scape Space]you could've tried to NAB AN A for a banana.";
-		if pugnacious plant is not in lalaland, say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
-		if inapt paint is not in lalaland, say "[2drm of Scape Space]you could've made the inapt paint ('DESERVER RESERVED') REVERSED.";
+		if quince is not moot, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
+		if nectarine is not moot, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
+		if orange is not moot, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [scape space]
+		if banana is not moot, say "[2drm of Scape Space]you could've tried to NAB AN A for a banana.";
+		if pugnacious plant is not moot, say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
+		if inapt paint is not moot, say "[2drm of Scape Space]you could've made the inapt paint ('DESERVER RESERVED') REVERSED.";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
 	else if myreg is demo dome:
 		say "No points in the Demo Dome, so nothing to find.";
@@ -25871,8 +25872,8 @@ carry out tsing:
 	if strip of profits is visited, say "You should RETRY instead to go back." instead;
 	move player to Strip of Profits;
 	get-cool-stuff;
-	if player has lamp, now lamp is in lalaland;
-	if player has teariest treatise, now teariest treatise is in lalaland;
+	if player has lamp, moot lamp;
+	if player has teariest treatise, moot teariest treatise;
 	now Means Manse is solved;
 	say "I gave you the purse, settler, and notepad.";
 	the rule succeeds;
@@ -25921,7 +25922,7 @@ carry out a5ing:
 	now Means Manse is solved;
 	repeat with MI running through held things:
 		if MI is not warpable:
-			now MI is in lalaland;
+			moot MI;
 			now lreg of MI is mrlp;
 	get-cool-stuff;
 	move player to Strip of Profits;
@@ -25934,11 +25935,11 @@ carry out a5ing:
 	if store w is in Strip of Profits, try fliptoing towers-x;
 	if store y is in Strip of Profits, try fliptoing oyster-x;
 	try fliptoing otters-x;
-	now e-s is in lalaland;
-	now routes-x is in lalaland;
-	now troves-x is in lalaland;
-	now towers-x is in lalaland;
-	now oyster-x is in lalaland;
+	moot e-s;
+	moot routes-x;
+	moot troves-x;
+	moot towers-x;
+	moot oyster-x;
 	now troves is solved;
 	now routes is solved;
 	now oyster is solved;
@@ -26629,7 +26630,7 @@ cuss-every-turn is a truth state that varies.
 
 every turn when cuss-every-turn is true and mrlp is presto (this is the cheat and swear rule) :
 	now swears is 2;
-	if curst crust is in lalaland:
+	if curst crust is moot:
 		now player has curst crust;
 	try eating curst crust;
 
@@ -26666,7 +26667,7 @@ carry out fixtowing:
 		say "Note: you've visited the Trefoil, so anything goofy that happens is not really fixable. It's best to use this before doing so, so you can access trickier parts of Towers.";
 	repeat with WA running through warriors:
 		if WA is not rodney:
-			now WA is in lalaland;
+			moot WA;
 	now geno is in Loftier Trefoil;
 	now wade is in Loftier Trefoil;
 	now goldy is in Loftier Trefoil;
@@ -26841,7 +26842,7 @@ carry out tuting:
 		do nothing;
 	else if number understood is 2:
 		repeat with zzzzz running through zzzz:
-			now zzzzz is in lalaland;
+			moot zzzzz;
 			now zzzzz is ncscanned;
 			now zzzzz is cscanned;
 	else:
@@ -26890,8 +26891,8 @@ carry out fruiing:
 	let fruhere be 0;
 	repeat with fru running through fruits:
 		let frr be frroom of fru;
-		say "[fru]: [if fru is off-stage]off-stage[else if fru is in lalaland]DONE[else]in OTHERS[end if]. From room = [frr].";
-		if fru is in lalaland:
+		say "[fru]: [if fru is off-stage]off-stage[else if fru is moot]DONE[else]in OTHERS[end if]. From room = [frr].";
+		if fru is moot:
 			increment frusolv;
 		else if fru is off-stage:
 			increment fruhid;
@@ -27034,11 +27035,11 @@ carry out otwining:
 	else:
 		now player has whistle;
 		now player wears medals;
-		now hydra is in lalaland;
-		now parrot is in lalaland;
-		now raptor is in lalaland;
-		now Merle is in lalaland;
-		now Elmer is in lalaland;
+		moot hydra;
+		moot parrot;
+		moot raptor;
+		moot Merle;
+		moot Elmer;
 		now adjsolve is 3;
 		now nounsolve is 3;
 		now player is in alcoves;
@@ -27211,7 +27212,7 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 			else:
 				assign-fixed-mack-priority;
 	if the remainder after dividing seedflags by 4 < 2:
-		if Loftier Trefoil is visited and number of warriors in lalaland > 0: [first, seed the start of TOWERS]
+		if Loftier Trefoil is visited and number of moot warriors > 0: [first, seed the start of TOWERS]
 			say "Skipping Trefoil seeding as you've already disposed of one warrior. Restart if you wish to re-seed.";
 		else:
 			if act-index > 5:
@@ -27312,7 +27313,7 @@ understand "gz" as gsing.
 
 carry out gzing:
 	repeat with myg running through guardians:
-		now myg is in lalaland;
+		moot myg;
 		increment cur-score of towers;
 	now min-score of towers is 31;
 	if strudel is reflexed:
@@ -27512,9 +27513,9 @@ carry out skiing:
 	if mrlp is not towers:
 		say "You need to be in Towers for this test command.";
 	else:
-		now all guardians are in lalaland;
+		moot list of all guardians;
 		now agnostic is in actionless coastlines;
-		now gizmo is in lalaland;
+		moot gizmo;
 		now bot boat is in actionless coastlines;
 		move player to actionless coastlines;
 		ital-say "moving south or west from here will make the game kind of goofy. Also, the score is wrong, because this is a test command. You pretty much want to get on the bot-boat once the Coasting Agnostic creates it." instead;
