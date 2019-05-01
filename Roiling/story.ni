@@ -200,14 +200,14 @@ a thing can be rayed. a thing is usually not rayed.
 
 a thing can be examined or unexamined. a thing is usually unexamined.
 
-to moot (th - a thing): move th to lalaland;
+to moot (th - a thing): move th to Meatier Emerita Emirate;
 
 to moot (lt - a list of things):
 	repeat with Q running through lt:
-		move Q to lalaland;
+		move Q to Meatier Emerita Emirate;
 
 definition: a thing (called th) is moot:
-	if th is in lalaland, yes;
+	if th is in Meatier Emerita Emirate, yes;
 	no;
 
 chapter rooms
@@ -1334,7 +1334,7 @@ carry out gotoing:
 			d "You probably used a debug trip to get here.";
 		else:
 			say "You haven't made it to that region, yet." instead;
-	if noureg is lll:
+	if noureg is Meta Team:
 		say "You should've gotten a different reject than this, but somehow you found a way through my code. This is a BUG I'd be interested to hear about, but fortunately, whatever you wanted to visit isn't relevant to solving the game." instead;
 	if noureg is not mrlp:
 		say "You can't jump across game regions." instead;
@@ -3707,7 +3707,7 @@ to check-the-store (po - a portal):
 	repeat through table of stores anagrams:
 		if the-to entry is po:
 			if the-from entry is not moot:
-				d "Moving [the-from entry] to lll.";
+				d "Moving [the-from entry] to Meta Team.";
 				moot the-from entry;
 				break;
 
@@ -3952,17 +3952,17 @@ to recover-items:
 			now player has JJJ;
 			if JJJ is tsar star or JJJ is medals, now player wears JJJ;
 
-chapter say "[reject]" and lalaland
+chapter say "[reject]" and Meatier Emerita Emirate
 
-lalaland is a privately-named room. "[bug-report]"
+Meatier Emerita Emirate is a privately-named room. "[bug-report]"
 
-understand "ll/lalaland" as lalaland when debug-state is true.
+understand "ll/me/ee/" as Meatier Emerita Emirate when debug-state is true.
 
-lll is an unsolved region.
+Meta Team is an unsolved region.
 
-lalaland is in lll.
+Meatier Emerita Emirate is in Meta Team.
 
-last-solved-region is a region that varies. last-solved-region is usually lll.
+last-solved-region is a region that varies. last-solved-region is usually Meta Team.
 
 headaches is a number that varies. headaches is 10.
 
@@ -15346,7 +15346,7 @@ understand "big/letter t" and "letter/t" as big-let when player is in r33.
 understand "big/letter u" and "letter/u" as big-let when player is in r23.
 understand "big/letter v" and "letter/v" as big-let when player is in Unwary Runway.
 
-nowt-town-p is a privately-named room. it is in lll. description of nowt-town-p is "[bug-report]." [this is a small internal-map hack]
+nowt-town-p is a privately-named room. it is in Meta Team. description of nowt-town-p is "[bug-report]." [this is a small internal-map hack]
 
 r10 is a privately-named mazeroom in Presto. r10 is west of nowt-town-p. "A big M is tiled into the floor here[exits-lead]."
 
@@ -21330,7 +21330,7 @@ check fliptoing atmo-moat:
 after printing the locale description for Disowned Downside when Disowned Downside is unvisited:
 	if do-i-chat is true:
 		moot macks;
-		now all mack-ideas are in lalaland;
+		now all mack-ideas are in Meatier Emerita Emirate;
 		try talking to gretta;
 		the rule succeeds;
 	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
@@ -25219,7 +25219,7 @@ rule for demo dome moding:
 	fully resume the story;
 	say "You stumble on a small museum chock full of meta-information about your quest.";
 	move the player to Peek Keep;
-	now all held things are in lalaland;
+	now all held things are in Meatier Emerita Emirate;
 	demo-dome-status;
 	the rule succeeds;
 
@@ -25261,7 +25261,7 @@ rule for nextreglisting:
 			now curlistnum is 1;
 		choose row curlistnum in table of megachatter;
 		if initnum is curlistnum:
-			say "There's only one list for [if cur-reg is lll]stuff in general[else][cur-reg].";
+			say "There's only one list for [if cur-reg is Meta Team]stuff in general[else][cur-reg].";
 			the rule succeeds;
 	try liliing curlistnum;
 
@@ -25276,7 +25276,7 @@ to sort-meg:
 
 table of regabr
 this-reg	this-top
-lll	"la"
+Meta Team	"mt"
 others	"lh"
 means manse	"lm"
 presto	"lp"
@@ -25287,7 +25287,7 @@ troves	"lv"
 towers	"lw"
 oyster	"ly"
 
-cur-reg is a region that varies. cur-reg is usually lll.
+cur-reg is a region that varies. cur-reg is usually Meta Team.
 
 rule for showing regional lists:
 	let myrow be 0;
@@ -25296,7 +25296,7 @@ rule for showing regional lists:
 		the rule succeeds;
 	repeat through table of regabr:
 		if word number 1 in the player's command is "[this-top entry]":
-			say "Here is a list of all the lists [if this-reg entry is lll]of universal text[else]for [this-reg entry][end if].";
+			say "Here is a list of all the lists [if this-reg entry is Meta Team]of universal text[else]for [this-reg entry][end if].";
 			now cur-reg is this-reg entry;
 			sort-meg;
 			repeat through table of megachatter:
@@ -25308,7 +25308,7 @@ rule for showing regional lists:
 					if there is a whichreg entry:
 						if whichreg entry is cur-reg:
 							say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
-				else if region is lll and whichreg entry is cur-reg:
+				else if region is Meta Team and whichreg entry is cur-reg:
 					say "[myrow]. Undos[line break]";
 			say "You can type LR to see the next list in your current region.";
 			the rule succeeds;
@@ -25491,7 +25491,7 @@ to say 2drm of (rr - a room):
 anything-missed is a truth state that varies.
 
 to show-miss (myreg - a region) and (needsolve - a truth state):
-	now miss-room is lalaland;
+	now miss-room is Meatier Emerita Emirate;
 	if needsolve is true and myreg is not solved, continue the action;
 	if myreg is means manse:
 		if giant pin is in dusty study, say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
@@ -25785,7 +25785,7 @@ index map with ned's dens mapped east of scape space.
 index map with intel inlet mapped north of evoc-cove.
 index map with sparse spares mapped south of peek keep.
 
-index map with lalaland mapped east of lost lots.
+index map with Meatier Emerita Emirate mapped east of lost lots.
 
 volume beta testing - not for release
 
