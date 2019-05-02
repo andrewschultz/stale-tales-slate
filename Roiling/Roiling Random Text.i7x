@@ -4,16 +4,16 @@ volume megachatter table
 
 table of megachatter [tmc] [these are general rules that must take precedence]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
-table of empty command rejects	false	0	20	you-said-nothing rule	lll	"Responses to an empty command"	--	""	"Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)"	--	false	0	0	1
-table of undo rejects	false	0	30	undo-rej rule	lll	"Undo rejects"	--	""	"'Do-over overdo.'"
-table of undo allows	false	0	30	undo-ok rule	lll	"Successful undo responses"	--	""	"'Do? Er, re-do.' (Last one. Stale? NO.)"
-table of noage	false	0	20	am-noing rule	lll	"Rejects for saying no"	--	""	"You're so down, yow. Sour. DONE."
-table of yessage	false	0	20	am-yessing rule	lll	"Rejects for saying yes"	--	""	"A rote ego too eager!"
-table of singing rejects	false	0	20	is-singing rule	lll	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
-table of wait responses	false	0	20	you-waited rule	lll	"Wait/Z messages"	--	""	"A gag? La, la. A lag gala.[no line break]"
-table of cussing rejects	false	0	20	you-cussed rule	lll	"How the game blocks profanity, mild or obscene"	--	""	"Screed on, [bracket]CENSORED[close bracket].[no line break]"
-table of nonviolence messages	false	0	20	you-attacked rule	lll	"How the game blocks ATTACK"	--	""	"Ill touch? Chill out till...ouch!"
-table of death messages	false	0	0	bzzt rule	lll	"Death notices"	--	""
+table of empty command rejects	false	0	20	you-said-nothing rule	Meta Team	"Responses to an empty command"	--	""	"Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)"	--	false	0	0	1
+table of undo rejects	false	0	30	undo-rej rule	Meta Team	"Undo rejects"	--	""	"'Do-over overdo.'"
+table of undo allows	false	0	30	undo-ok rule	Meta Team	"Successful undo responses"	--	""	"'Do? Er, re-do.' (Last one. Stale? NO.)"
+table of noage	false	0	20	am-noing rule	Meta Team	"Rejects for saying no"	--	""	"You're so down, yow. Sour. DONE."
+table of yessage	false	0	20	am-yessing rule	Meta Team	"Rejects for saying yes"	--	""	"A rote ego too eager!"
+table of singing rejects	false	0	20	is-singing rule	Meta Team	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
+table of wait responses	false	0	20	you-waited rule	Meta Team	"Wait/Z messages"	--	""	"A gag? La, la. A lag gala.[no line break]"
+table of cussing rejects	false	0	20	you-cussed rule	Meta Team	"How the game blocks profanity, mild or obscene"	--	""	"Screed on, [bracket]CENSORED[close bracket].[no line break]"
+table of nonviolence messages	false	0	20	you-attacked rule	Meta Team	"How the game blocks ATTACK"	--	""	"Ill touch? Chill out till...ouch!"
+table of death messages	false	0	0	bzzt rule	Meta Team	"Death notices"	--	""
 
 table of megachatter (continued) [this is organized by region then by alphabet, well, roughly]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
@@ -63,7 +63,7 @@ table of Elvira taunts	false	0	20	Elvira-taunt rule	otters	"Elvira's taunts"	--	
 table of animal friends	false	0	60	bzzt rule	otters	"Your animal friends"	--	""
 table of political slogans	false	0	20	sloganing rule	others	"Political slogans"	--	""
 table of selly yells	false	0	30	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
-table of help companies	false	0	30	bzzt rule	lll	"Hint guy t-shirt writing[if have-objhinted is false] (occurs first time you request hints)[end if]"	--	""
+table of help companies	false	0	30	bzzt rule	Meta Team	"Hint guy t-shirt writing[if have-objhinted is false] (occurs first time you request hints)[end if]"	--	""
 table of elmo emo	false	0	30	bzzt rule	Means Manse	"Elmo's romantic complaints[if girls-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
 table of sports chatter	false	0	30	bzzt rule	Means Manse	"Elmo's sports banter[if sports-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
 table of biopics	false	0	30	bzzt rule	Means Manse	"Biopics, good and bad[if media-quip-2 is not mowered] (off-topic Elmo chat)[end if]"	""	""
@@ -78,7 +78,7 @@ table of oldies singers	false	0	30	bzzt rule	Means Manse	"Initial oldies singers
 table of lousy hit songs	false	0	30	bzzt rule	Means Manse	"Bad songs[elv-art]"	--	""
 table of self-help bestsellers	false	0	30	bzzt rule	troves	"Self-help bestsellers[eisiping]"	--	""
 table of songs you could write	false	0	30	bzzt rule	troves	"Songs you write on solving Troves"	--	""
-table of sleep rejects	false	0	30	am-sleeping rule	lll	"Sleeping rejects"	--	"[pre-lb]"
+table of sleep rejects	false	0	30	am-sleeping rule	Meta Team	"Sleeping rejects"	--	"[pre-lb]"
 [tmc]
 
 volume megachatter rules and stubs
@@ -347,7 +347,7 @@ this is the pun-quip rule:
 	the rule fails.
 
 this is the mob-chanting rule:
-	if current action is listening and player is in study and gunter is in lll, the rule succeeds;
+	if current action is listening and player is in study and gunter is moot, the rule succeeds;
 	the rule fails;
 
 section STRIP random text rules

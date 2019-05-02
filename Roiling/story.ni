@@ -13702,7 +13702,7 @@ instead of scaning cretins' cistern:
 a-text of dart is "RRYR". b-text of dart is "PRYP". parse-text of dart is "d[sp]r[sp]a[sp]t". dart is parse-spoilable.
 
 check taking the dart when dart is in cretins' cistern:
-	say "You grunt and stretch, but you can't quite reach the dart. The cretins['] cistern seems to bend unexpectedly when you get close. You [if cur-score of presto is 0]may not have found how to get things done here[else]probably didn't grunt the right thing[end if]. Maybe you just need to get disgusted you can't get it the right way." instead;
+	say "You grunt and stretch, but you can't quite reach the dart. The cretins['] cistern seems to bend unexpectedly when you get close--crestin['], if you will. You [if cur-score of presto is 0]may not have found how to get things done here[else]probably didn't grunt the right thing[end if]. Maybe you just need to get disgusted you can't get the dart the easy way." instead;
 
 section throwing
 
@@ -24448,6 +24448,10 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is cler-scen:
 		if mrlp is routes, decide yes;
 		decide no;
+	if hintcand is closest closets:
+		if mrlp is not means manse, no;
+		if highest heights is visited, yes;
+		no;
 	if hintcand is Edictal Citadel:
 		if mrlp is otters and Disowned Downside is visited, decide yes;
 		decide no;
