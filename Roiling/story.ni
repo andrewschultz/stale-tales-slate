@@ -13731,14 +13731,7 @@ carry out plainthrowing:
 
 section tsar star
 
-a tsar star is a reflexive wearable thing in Char Arch. "A tsar star--the sort you pin to your clothes to show authority--is lodged in a red stump here. Sort of like how Excalibur was stuck in a stone. Or not."
-
-check scaning stump:
-	if tsar star is reflexive:
-		say "Nothing, until you aim at the tsar star.";
-		try scaning tsar star instead;
-
-the red stump is scenery in Char Arch. "It's [if tsar star is in stump]cracked where the tsar star was[else]got a tsar star wedged in it."
+a tsar star is a reflexive wearable thing in Char Arch. "A tsar star--the sort you pin to your clothes to show authority--is mired in some tars here. You might be able to take it, if you can bounce back correctly from your first few failures to."
 
 a-text of tsar star is "RYRR". b-text of tsar star is "RYRR". parse-text of tsar star is "x[sp]a[sp]x[sp]x". tsar star is cheat-spoilable.
 
@@ -13746,7 +13739,7 @@ description of tsar star is "It's not some paper gold star from Mrs. Crabtree's 
 
 instead of doing something to tsar star when tsar star is in Char Arch:
 	if current action is taking:
-		say "The tsar star is wedged in just enough to frustrate you. You mutter 'bad star' under your breath, but that's almost a bit too harsh even for this area. You figure you'll probably see how to get it once you give up, but you can't give up just to take it." instead;
+		say "The tsar star whooshes and rotates just enough to frustrate you. You mutter 'bad star' under your breath, but that's almost a bit too harsh even for this area. You figure you'll probably see how to get it once you give up, but you can't give up just to take it." instead;
 	if action is procedural, continue the action;
 	say "Straightforward taking won't work, and neither will other manipulation. You wonder what sort of magic might get the tsar star out.";
 
@@ -13754,8 +13747,18 @@ after fliptoing tsar star:
 	now player wears tsar star;
 	continue the action;
 
-instead of taking off tsar star:
+check taking off tsar star:
 	say "[if plebe is moot]But it looks so jaunty and reminds you of how you got rid of that plebe[else]You shouldn't remove it. You might need to impress someone with it[end if]."
+
+section tars
+
+the tars are cluey scenery in Char Arch. "Ucky and grimy. You may need to do or say something special to pull the tsar star out."
+
+a-text of tars is "RYRR". b-text of tars is "RGRP". parse-text of tsar star is "x[sp]a[sp]x[sp]s". tars are cheat-spoilable.
+
+check scaning tars:
+	say "Nothing, until you aim at the tsar star.";
+	try scaning tsar star instead;
 
 book Dirge Ridge
 

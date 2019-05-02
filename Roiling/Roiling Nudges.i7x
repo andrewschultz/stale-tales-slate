@@ -361,7 +361,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]No, all the ports[else]You already observed all the ports. No need to try to single one out[end if]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
-"stump"	450030903	--	stump	--	"[if tsar star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the tsar star seems to rattle a bit[end if]."
+"tar"	190621639	--	tars	--	"The tars remain heterogeneous. And very sticky. And the same size."
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
@@ -1465,8 +1465,6 @@ to say is-boing:
 to say no-scen:	say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins['] cistern";
 
 to say cistern-to-dart: say "[if dart is in cistern]You won't change the cistern, but maybe you can track down the dart[else]You got the dart from the cistern. No need to futz further[end if]"
-
-to say spumed-no: say "The spumed tar does nothing[if tsar star is in Char Arch or dart is in Char Arch]. Maybe focus on something else[end if]"
 
 to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze"

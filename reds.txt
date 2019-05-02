@@ -104,7 +104,8 @@ mazeltov,ezolavtm,vztlameo,zvtlameo,ltovmaze,olavmetz,zemovalt
 phooey,oyehop
 #char arch
 drat,tard
-rats,star
+rats,RYRR=tsar=star
+rats,RGRP=tars
 #marines seminar remains
 #qver of sport ports
 prost,?R?R?=sport=ports

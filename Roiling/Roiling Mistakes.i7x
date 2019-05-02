@@ -340,7 +340,7 @@ understand "srat" as a mistake ("The Self-Referential Aptitude Test is an intere
 
 understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[or]You are just trolling now. No further clues for you[stopping].") when player is in Char Arch and dart is in cretins' cistern.
 
-understand "tars" as a mistake ("That'd make the tsar star stickier--or reduce it to awful glop.") when tsar star is in Char Arch.
+understand "tars" as a mistake ("But you already took the tsar star FROM the tars. Plus, you'd get all sticky.") when player wears tsar star.
 
 chapter dirge ridge
 
