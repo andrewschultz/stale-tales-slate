@@ -13461,7 +13461,7 @@ after fliptoing ether:
 
 book Char Arch
 
-Char Arch is south of Grey Gyre. It is in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. [if dart is not in cistern]The cretins['] cistern you looted stands uselessly here[else if cistern is examined]Maybe you could get the dart out of the cretins['] cistern standing here[else]A cretins['] cistern sits here. It might be worth looking at, or in[end if]."
+Char Arch is south of Grey Gyre. It is in Presto. "You see gasp-gaps to the west and a mad dam east, though north-south is unimpeded. [if dart is not in cistern]The cretins['] cistern you looted stands uselessly here[else if cistern is examined]Maybe you could get the dart out of the cretins['] cistern standing here[else]A cretins['] cistern sits here. It might be worth looking at, or in[end if]."
 
 leaf-clue is a truth state that varies.
 
@@ -13754,7 +13754,7 @@ section tars
 
 the tars are cluey scenery in Char Arch. "Ucky and grimy. You may need to do or say something special to pull the tsar star out."
 
-a-text of tars is "RYRR". b-text of tars is "RGRP". parse-text of tsar star is "x[sp]a[sp]x[sp]s". tars are cheat-spoilable.
+a-text of tars is "RYRR". b-text of tars is "RGRP". parse-text of tars is "x[sp]a[sp]x[sp]s". tars are cheat-spoilable.
 
 check scaning tars:
 	say "Nothing, until you aim at the tsar star.";

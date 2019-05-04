@@ -350,8 +350,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gpa"	116253479	Char Arch	--	--	"You try, but fail, to make something out of nothing."
 "cretin"	449145869	Char Arch	--	--	"[cistern-to-dart]."
 "cistern"	545419835	Char Arch	--	--	"[cistern-to-dart]."
-"spumed"	495756083	Char Arch	--	--	"[spumed-no]."
-"tar"	190621639	Char Arch	--	--	"[spumed-no]."
+"tar"	190621639	--	tars	--	"The tars remain heterogeneous. And very sticky. And the same size."
 "dirge"	311751549	dirge ridge	--	--	"[locname]." [start dirge ridge]
 "liev"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "leonard"	433420743	--	Rand	--	"[if lawl wall is moot]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
@@ -361,7 +360,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]No, all the ports[else]You already observed all the ports. No need to try to single one out[end if]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
-"tar"	190621639	--	tars	--	"The tars remain heterogeneous. And very sticky. And the same size."
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
