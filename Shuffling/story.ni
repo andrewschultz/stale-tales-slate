@@ -122,6 +122,8 @@ Include (-
 
 -)
 
+To process (RL - a rule): (- ProcessRulebook({RL}, 0, true); -)
+
 book separate modules
 
 include Shuffling Random Text by Andrew Schultz.
@@ -284,6 +286,28 @@ a disguise-piece is a kind of thing. a disguise-piece has a number called elevat
 
 a flower is a kind of thing. understand "flower" and "flowers" as a flower.
 
+section boringthings
+
+a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually default-bore rule.
+
+a boringscen is a kind of boringthing.
+
+this is the default-bore rule: do nothing;
+
+this is the force-exam rule:
+	say "There's not much to do with [the noun] except examine it. So you do.";
+	try examining the noun instead.
+
+For printing a locale paragraph about a thing (called the item)
+	(this is the don't mention boringscen in room descriptions rule):
+	if the item is boringscen, set the locale priority of the item to 0;
+	continue the activity.
+
+instead of doing something with a boringthing:
+	process the bore-check of noun;
+	if action is procedural, continue the action;
+	say "[bore-text of noun]";
+
 chapter colors
 
 when play begins (this is the status window rule):
@@ -298,7 +322,7 @@ section compiler adjust constant section
 
 use MAX_STATIC_DATA of 280000.
 
-use MAX_NUM_STATIC_STRINGS of 20000.
+use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 250.
 
@@ -324,7 +348,7 @@ use MAX_PROP_TABLE_SIZE of 240000.
 
 use MAX_STATIC_DATA of 300000.
 
-use MAX_NUM_STATIC_STRINGS of 21000.
+use MAX_NUM_STATIC_STRINGS of 22000.
 
 section about the player
 
@@ -2206,7 +2230,7 @@ carry out fliptoing (this is the main flipping rule) :
 					reg-inc;
 				move player to to-room entry;
 			else:
-				if the-to entry is not moot and the-to entry is not is abrod:
+				if the-to entry is not moot and the-to entry is not abrod:
 					reg-inc;
 					if the-to entry is attics:
 						min-up;
@@ -2794,8 +2818,8 @@ when play begins (this is the initialise anagrams pad and beats rule) :
 				now force-take entry is false;
 	place-random-garbage;
 	shuffle-chat-lists;
-	now red bull is abrod;
-	now redness is abrod;
+	move Red Bull Burdell to Adorb Bardo; [these are concepts that you will ask about]
+	move redness to Adorb Bardo;
 
 check taking scenery:
 	say "Taking scenery is either illegal or physically impossible or both.";
@@ -5765,17 +5789,20 @@ the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc]
 
 understand "chefs/chef/statues/statue" as tall trio.
 
-description of tall trio is "Well, they are actually only six inches tall, the middle chef patting the other's shoulders. But they're skinny enough that you sort of assume they're tall. Well, I'm assuming. There's a loose label attached to the middle one, who is half-hugging both his pals."
+description of tall trio is "Well, they are actually only six inches tall, the middle chef patting the others['] shoulders. But they're skinny enough that you sort of assume they're tall, or they should be, if proportioned to scale. Well, I'm assuming. There's a loose label attached to the middle one, who is half-hugging both his pals."
 
-the middle chef is part of the tall trio. description of middle chef is "[mid-chef]."
+this is the part-trio-take rule:
+	if current action is taking, say "You don't need to take the tall trio or any part of it. Maybe there's a way to change things, though." instead;
 
-the left chef is part of the tall trio. left chef is undesc. instead of doing something with left chef: say "He's not nearly as interesting as the middle one."
+the middle chef is a boringthing. it is part of the tall trio. description of middle chef is "[mid-chef].". bore-check of middle chef is part-trio-take rule.
 
-the right chef is part of the tall trio. right chef is undesc. instead of doing something with right chef: say "He's not nearly as interesting as the middle one."
+the left chef is a boringthing. it is part of the tall trio. left chef is a boringthing. description of left chef is "He's not nearly as interesting as the middle one.". bore-check of left chef is part-trio-take rule.
 
-to say mid-chef: say "He's got a big smile and is semi-hugging his friend. The loose label sticks out awkwardly. Maybe it has some actual useful information on it".
+the right chef is a boringthing. it is part of the tall trio. bore-text of right chef is "He's nNot nearly as interesting as the middle one.". bore-check of right chef is part-trio-take rule.
 
-the loose label is part of the tall trio.
+to say mid-chef: say "The middle chef has a big smile and is semi-hugging his friends. The loose label sticks out awkwardly. Maybe it has some actual useful information on it".
+
+the loose label is a boringthing. it is part of the tall trio. bore-check of loose label is part-trio-take rule.
 
 instead of taking the loose label: say "You can read it okay without taking it."
 
@@ -11452,6 +11479,8 @@ book undo tags
 
 undo-code is a number that varies. undo-code is usually 0.
 
+volume boring thing rules
+
 volume in-game map
 
 [Ordeal Loader region]
@@ -13022,8 +13051,7 @@ after fliptoing when show-prep is true:
 	consider the prep-rehash rule;
 	continue the action;
 
-every turn when player has prep paper (this is the prep-rehash rule):
-	if show-prep is true:
-		say "====PREP PAPER SAYS[line break]";
-		try examining prep paper;
-		say "====END PREP PAPER[line break]";
+every turn when player has prep paper and show-prep is true (this is the prep-rehash rule):
+	say "====PREP PAPER SAYS[line break]";
+	try examining prep paper;
+	say "====END PREP PAPER[line break]";
