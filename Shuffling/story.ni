@@ -288,15 +288,16 @@ a flower is a kind of thing. understand "flower" and "flowers" as a flower.
 
 section boringthings
 
-a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually default-bore rule.
+a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually force-exam rule.
 
 a boringscen is a kind of boringthing.
 
 this is the default-bore rule: do nothing;
 
 this is the force-exam rule:
-	say "There's not much to do with [the noun] except examine it. So you do.";
-	try examining the noun instead.
+	if current action is not examining:
+		say "There's not much to do with [the noun] except examine [if noun is plural-named]them[else]it[end if]. So you do.";
+		try examining the noun instead.
 
 For printing a locale paragraph about a thing (called the item)
 	(this is the don't mention boringscen in room descriptions rule):
@@ -466,15 +467,15 @@ to say set-bug: say "BUG. You shouldn't have the tagged gadget yet. If this is w
 
 to say bug-report: say "BUG. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite]. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
 
-understand "nick" as nick when player is in nick.
-
 a room can be noisy. a room is usually not noisy.
 
-the pockets are part of the player. the pockets are plural-named and useless.
+section the player's pockets
+
+the pockets are a boringthing. They are part of the player. the pockets are plural-named and useless.
 
 description of pockets is "This shouldn't be here since any action gives a default message."
 
-instead of doing something with the pockets: say "[if location of player is busiest subsite]That would be unprofessional in future job interviews[else if location of player is Rested Desert]You fidget nervously with your pockets for a bit .There's not much else you can do with them[else][one of]Your pockets have no holes. But r[or]R[stopping]eal adventurers don't futz with their pockets. Or pocket-equivalents[end if]."
+bore-text of pockets is "[if location of player is busiest subsite]That would be unprofessional in future job interviews[else if location of player is Rested Desert]You fidget nervously with your pockets for a bit .There's not much else you can do with them[else][one of]Your pockets have no holes. But r[or]R[stopping]eal adventurers don't futz with their pockets. Or pocket-equivalents[end if]."
 
 chapter say shortcuts
 
@@ -2961,9 +2962,7 @@ check going west in Busiest Subsite:
 	say "The Caterers['] Terraces are west. They're rendin['] dinner. You see someone sweating over a bizarre brazier, hear how this next lecture will 'Prep us for supper,' and promptly lose your will to do anything for a minute.";
 	been-check west instead;
 
-the bizarre brazier is amusing scenery in busiest subsite. "It's a brazier. [bug-report]"
-
-instead of doing something with the brazier when brazier is visible: say "Next meal's too far off, and you've got no business on the terraces.".
+the bizarre brazier is amusing boringscen in busiest subsite. description is "Next meal's too far off, and you've got no business on the terraces. You don't need to tinker with the bizarre brazier.".
 
 check examining (this is the examine-dirs rule):
 	if noun is a direction, say "[if the room noun of location of player is nowhere]That doesn't seem to lead anywhere.[else]Just try going that way instead. Don't be scared! You can always undo![end if]" instead;
@@ -2996,13 +2995,11 @@ check exiting in busiest subsite: try going outside instead.
 
 section oafs' sofa
 
-The OAFS' SOFA is scenery in Busiest Subsite. "It's labeled OAFS['] SOFA to remind you that you don't want to be wasting time off in dreamland right now."
+The OAFS' SOFA is amusing boringscen in Busiest Subsite. description is "It's labeled OAFS['] SOFA to remind you that you don't want to be wasting time off in dreamland right now.". bore-check of OAFS' SOFA is bore-enter-reject rule. bore-text is "The Oafs['] Sofa is there as something to avoid. The organizers tried to make a joke out of this, because jokes help people be motivated and productive and turn that frown upside-down, but unsurprisingly, they totally failed."
 
-instead of entering oafs' sofa: say "The first people who did that were booted from the event in humiliating fashion. You'd like a way to leave, but not like that."
-
-instead of doing something with oafs' sofa:
-	if action is procedural, continue the action;
-	say "The Oafs' Sofa is there as something to avoid. The organizers tried to make a joke out of this, because jokes help people be motivated and productive and turn that frown upside-down, but unsurprisingly, they totally failed."
+this is the bore-enter-reject rule:
+	if current action is taking, say "Hauling a big sofa is the wrong sort of work to look for, here." instead;
+	if current action is entering, say "The first people who did that were booted from the event in humiliating fashion. You'd like a way to leave, but not like that." instead;
 
 section magenta nametag
 
@@ -5648,6 +5645,8 @@ chapter The Nick
 
 A room called The Nick is in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
 
+understand "nick" as nick when player is in nick.
+
 t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N". t-n is abstract.
 
 instead of doing something with t-n: if action is procedural, continue the action.
@@ -5798,7 +5797,7 @@ the middle chef is a boringthing. it is part of the tall trio. description of mi
 
 the left chef is a boringthing. it is part of the tall trio. left chef is a boringthing. description of left chef is "He's not nearly as interesting as the middle one.". bore-check of left chef is part-trio-take rule.
 
-the right chef is a boringthing. it is part of the tall trio. bore-text of right chef is "He's nNot nearly as interesting as the middle one.". bore-check of right chef is part-trio-take rule.
+the right chef is a boringthing. it is part of the tall trio. description of right chef is "He's not nearly as interesting as the middle one.". bore-check of right chef is part-trio-take rule.
 
 to say mid-chef: say "The middle chef has a big smile and is semi-hugging his friends. The loose label sticks out awkwardly. Maybe it has some actual useful information on it".
 
