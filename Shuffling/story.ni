@@ -266,8 +266,6 @@ a thing has a number called rpos. a thing has a number called gpos. a thing has 
 
 a thing can be padded. a thing is usually not padded.
 
-an undesc is a kind of thing. The description of an undesc is usually "BUG".
-
 a portal is a kind of thing. a portal is usually fixed in place.
 
 a portal can be fake-enterable. a portal is usually fake-enterable.
@@ -3112,13 +3110,22 @@ after fliptoing gateman:
 		moot bugle;
 	continue the action;
 
-the odor is scenery. the odor is undesc. it is in Rested Desert. rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
+the odor is boringscen. it is in Rested Desert. bore-text is "You smell an odor of adventure and new and different things.". bore-rule is bore-odor rule.
+
+this is the bore-odor rule:
+	if current action is smelling:
+		try examining the odor;
+		the rule succeeds;
+	if current action is taking:
+		say "You'll need to make the odor into something more tangible.";
+		the rule succeeds;
+	abide by the bore-exam rule;
+
+rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
 
 understand "smell" and "breeze" as odor.
 
 instead of taking odor: say "Impossible."
-
-instead of examining odor: try smelling instead.
 
 to say bul-blo:
 	if bulge is part of the desert-door and blot is part of the desert-door:
@@ -3202,10 +3209,6 @@ check entering desert-door:
 	if player has bugle, moot bugle;
 	if blot is off-stage and bugle is off-stage, poss-d;
 	now player is in Thickest Thickets instead;
-
-instead of taking odor: say "Impossible."
-
-instead of examining odor: try smelling instead.
 
 check going inside in Rested Desert:
 	if desert-door is visible, try entering desert-door instead;
@@ -3806,19 +3809,16 @@ rule for printing a locale paragraph about the tagged gadget:
 
 does the player mean switching on the gadget: it is likely.
 
-the pit is part of the tagged gadget. pit is undesc.
+the pit is a boringthing. it is part of the tagged gadget. description of pit is "It holds the tip, which points to the gadget's setting.". bore-text of pit is "You don't need to fiddle with the pit--just examine the tip.". bore-rule of pit is bore-pit rule.
 
-instead of doing something with the pit:
-	if action is procedural, continue the action;
-	say "You don't need to fiddle with the pit--just examine the tip."
+this is the bore-pit rule:
+	if current action is examining:
+		say "You check the tip's setting in the pit.";
+		try examining the tip;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
-instead of examining pit: try examining the tip.
-
-the tip is part of the tagged gadget.
-
-instead of doing something with the tip:
-	if action is procedural, continue the action;
-	say "The tip's just there to examine, so you know the gadget's setting."
+the tip is a boringthing. it is part of the tagged gadget. description of tip is "The tip points to [c-r].". bore-text is "The tip's just there to examine, so you know the gadget's setting.".
 
 the block setting it to rule is not listed in any rulebook.
 
@@ -3826,22 +3826,17 @@ check setting it to:
 	if noun is dial, say "[if centrifuge-stopped is true]Oh no. No need for more 'fun.'[else]Try setting it to a number instead.[end if]" instead;
 	say "In this game, SWITCHing things should work better." instead;
 
-instead of switching off gadget: say "There's no way to switch the gadget off, but you can try to SWITCH between certify and rectify." instead.
+check switching off gadget: say "There's no way to switch the gadget off, but you can try to SWITCH between certify and rectify." instead.
 
-instead of switching on tip: try switching on gadget.
+check switching on tip: try switching on gadget.
 
-instead of switching off tip: try switching on gadget.
+check switching off tip: try switching on gadget. [?? check these cases to avoid INSTEAD rules?]
 
 understand "side" as tip.
 
 description of tip is "The tip points to [c-r][if gadget-secured is true] and is stuck there, so you can't[else], but you can[end if] switch it back to [r-c][if button-locked is false] unless you push SECURE[end if].".
 
-the handle is part of the tagged gadget. description of handle is "Just wide enough so the tag won't fall off, and just long enough you can grab it without blocking the screen."
-
-instead of doing something with the handle:
-	if the current action is attacking, say "You couldn't hold the gadget, then." instead;
-	if action is procedural, continue the action;
-	say "The handle is about what it seems to be. Don't worry about it too much."
+the handle is a boringthing. it is part of the tagged gadget. description of handle is "Just wide enough so the tag won't fall off, and just long enough you can grab it without blocking the screen.". bore-text is "The handle is about what it seems to be. Don't worry about it too much."
 
 sg-warn is a truth state that varies.
 
@@ -3870,15 +3865,14 @@ the show hows tag is part of the tagged gadget. understand "show-hows" and "show
 
 does the player mean taking off the magenta nametag when the player is not wearing the magenta nametag: it is very unlikely.
 
-the gadget-screen is undesc. it is part of the tagged gadget. the gadget-screen is privately-named. the printed name of the gadget-screen is "gadget's screen". Understand "gadget screen" and "screen" as the gadget-screen.
+the gadget-screen is a boringthing. it is part of the tagged gadget. the gadget-screen is privately-named. the printed name of the gadget-screen is "gadget's screen". Understand "gadget screen" and "screen" as the gadget-screen. bore-text is "Looking at the tag, you see you probably need to SCAN other objects to change the screen productively. There's probably not much else you want to do with or to the screen.". bore-rule is bore-gadget-screen rule.
 
-instead of examining gadget-screen:
-	say "You see if the gadget registers anything by default.";
-	try scaning the location;
-
-instead of doing something with gadget-screen:
-	if current action is not scaning:
-		say "Looking at the tag, you see you probably need to SCAN other objects to change the screen productively. There's probably not much else you want to do with or to the screen.";
+this is the bore-gadget-screen rule:
+	if current action is examining:
+		say "You see if the gadget registers anything by default.";
+		try scaning the location;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 the s-r is part of the tagged gadget. the s-r is privately-named.
 
@@ -4239,6 +4233,13 @@ to decide which number is regions-to-clue:
 	if temp < 2, decide on 1; [then R appears]
 	decide on temp;
 
+to decide which number is stos-down:
+	let temp be 0;
+	if store f is moot, increment temp;
+	if store i is moot, increment temp;
+	if store m is moot, increment temp;
+	decide on temp;
+
 table of iconmaps
 icon-rule	icon-text
 forest-unsolved rule	"Near Store F, you see yourself walking past innumerable trees, wearing a disguise through a sort of archway, and finally creating some sort of explosion somewhere very cold"
@@ -4521,7 +4522,7 @@ the marquee is part of store b. the marquee is auxiliary. description of the mar
 
 rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of marquee is 6. rpos of marquee is 4. cert-text of marquee is "-[d1][ast]R[d1][d1][d1]". rect-text of marquee is "S[d1][d1][d1][d1][ast]T".
 
-the sorbet is an undesc. the sorbet is amusing.
+the sorbet is an amusing thing. description is "The sorbet is never in play, so this is a BUG."
 
 Store C is an amusing sto in subsite. understand "store/ 3/three" as store c.
 
@@ -4539,11 +4540,9 @@ Store F is a sto. understand "store/ 6/six" as store f. rgtext of store f is "[r
 
 description of store f is "This is odd. It's kind of green on top, brown on the bottom. You smell pine needles and dirt and leaves you can't quite discern[if forest is unvisited]. You think back to the gateway and how you got here. There might be a way to do something to this store[end if]."
 
-the roadsign is undesc. the roadsign is part of store f. understand "road sign" as roadsign.
+the roadsign is boringscen. the roadsign is part of store f. understand "road sign" as roadsign. bore-text is "The road sign too high to do anything except examine. Seeing as how it's green with red lettering, you can read it, as high up as its writing is.".
 
-instead of doing anything other than examining roadsign: say "It's too high to do anything except examine. Seeing as how it's green with red lettering, you can read it, as high up as its writing is.".
-
-understand "writing" as roadsign.
+understand "writing" as roadsign when player is in trips strip and roadsign is in trips strip.
 
 check examining roadsign:
 	say "It's a strain to read, and you wonder if maybe you can look for more natural clues as to what to do with store F. Try and pick out the writing anyway?";
@@ -4554,9 +4553,7 @@ Store G is a sto. understand "store/ 7/seven" as store g.
 
 description of store g is "A flier stapled to the front of the door says [unless you-can-advance]REST?! GO![else]GO REST![end if]. There's nothing else interesting about the store, though."
 
-the go rest flier is scenery in trips strip. go rest flier is undesc.
-
-instead of examining the go rest flier: say "It's just a subtle hint to get on with things[if you-can-advance]--in this case, to your reward in store R[end if]."
+the go rest flier is boringscen in trips strip. description is "The go rest flier is just a subtle hint to get on with things[if you-can-advance]--in this case, to your reward in store R[end if].". bore-text is "The flier is just there for informational purposes."
 
 Store H is a sto. understand "store/ 8/eight" as store h. [description of store h is "Spray painted on this locked store is: others are in the throes of being reshot."]
 
@@ -4945,11 +4942,9 @@ Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, o
 
 the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink."
 
-the iciest cities are bounding scenery in Flesh Shelf. "They are spooky and all, but thankfully, they're too far away."
+section iciest cities
 
-instead of doing something with iciest cities:
-	if action is procedural, continue the action;
-	say "The cities are too far away to do anything with. Or to do anything to you."
+the iciest cities are bounding boringscen in Flesh Shelf. description of cities is "They are spooky and all, but thankfully, they're too far away.". bore-text is "The cities are too far away to do anything with. Or to do anything to you."
 
 instead of going down in Flesh Shelf: try going west instead.
 
@@ -5002,35 +4997,27 @@ understand "can" as canister.
 
 instead of taking the canister: say "It's welded to the shelf.".
 
-the red ring is part of the canister. description of red ring is "It's on top of the canister."
+the red ring is a boringthing. it is part of the canister. description of red ring is "It's on top of the canister.". bore-text is "It's not that important, but it had to be SOME color. You probably want to do stuff with the canister and not the grinder.".
 
-the grinder is part of the canister. description of grinder is "It's got a pair of sabled blades that rotate opposite to each other when activated[if livers are not off-stage]. But you broke it[end if]."
+the grinder is a boringthing. it is part of the canister. description of grinder is "It's got a pair of sabled blades that rotate opposite to each other when activated[if livers are not off-stage]. But you broke it[end if].". bore-text is "The grinder's too sharp to touch. Probably put something in the canister instead."
 
-instead of inserting into grinder: try inserting noun into canister.
+check inserting into grinder: try inserting noun into canister instead. [?? test all these cases]
 
-instead of inserting into red ring: try inserting noun into canister.
+check inserting into red ring: try inserting noun into canister instead.
 
-instead of putting on grinder: try putting noun on canister.
+check putting on grinder: try putting noun on canister instead.
 
-instead of putting on red ring: try putting noun on canister.
+check putting on red ring: try putting noun on canister instead.
 
-instead of putting on canister:
+check putting on canister:
 	say "(I'm going to assume you meant in the canister.)";
 	try inserting noun into canister instead;
 
 understand "blender" as grinder.
 
-instead of doing something with the red ring:
-	if action is procedural, continue the action;
-	say "It's not that important, but it had to be SOME color. You probably want to do stuff with the canister and not the grinder.";
+check entering canister: say "It's too small." [?? test]
 
-instead of doing something with the grinder:
-	if action is procedural, continue the action;
-	say "The grinder's too sharp to touch.";
-
-instead of entering canister: say "It's too small."
-
-the sabled blades are part of the canister. description of blades is "[if livers are off-stage]Sharp[else]Ruined[end if]."
+the sabled blades are a boringthing. they are part of the canister. description of blades is "[if livers are off-stage]Sharp[else]Ruined[end if].". bore-text is "The blades will work when they need to.". [??what if they broke?]
 
 understand "sabled/ blade" as sabled blades
 
@@ -5085,16 +5072,16 @@ section sandwich
 
 a sandwich is in Flesh Shelf. initial appearance is "A sandwich lies on the ground here. It doesn't seem as stuck as the livers[if number of glopmeats in Flesh Shelf < 2] were[end if]."
 
-instead of pulling sandwich: try opening sandwich.
+check pulling sandwich: try opening sandwich. [?? needs test case]
 
-instead of opening sandwich:
+check opening sandwich: [?? needs test case]
 	say "You [if player does not have the sandwich]take the sandwich and [end if]peel the bread from the Spam.";
 	now player has bread;
 	moot sandwich;
 	set the pronoun it to the Spam;
 	now player has the Spam;
 
-instead of eating sandwich: say "It doesn't seem appetizing, and you don't need the energy it might give.".
+check eating sandwich: say "It doesn't seem appetizing, and you don't need the energy it might give." instead; [?? needs test case]
 
 description of sandwich is "Just bread and[one of]--oh dear--[or] [stopping]Spam, lumped together. You could probably PEEL it."
 
@@ -5243,12 +5230,7 @@ description of stick figures is "Each one's not particularly detailed, but it pr
 
 the notes stone is scenery in Gnarliest Triangles. understand "myth" as notes stone.
 
-the stack of tacks is amusing scenery in Gnarliest Triangles. "[bug-report]"
-
-instead of doing something with the stack of tacks:
-	if action is procedural:
-		if current action is not taking, continue the action;
-	say "The tacks are glued to themselves. And, oddly, to the notes stone."
+the stack of tacks is amusing boringscen in Gnarliest Triangles. "[bug-report]". bore-text is "The tacks are glued to themselves. And, oddly, to the notes stone. They aren't useful.".
 
 Instead of taking the notes stone: say "it seems to be glued to the tacks stack. Anyway, you probably only need it for its information."
 
@@ -5341,18 +5323,12 @@ the banshee is scenery in Enclosure. rgtext of banshee is "[rcn][rc][rc][rc][rc]
 
 description of banshee is "You can hear but not see it."
 
-the has-been is useless scenery. the has-been is undesc. understand "has been" and "hasbeen" as has-been.
+the has-been is useless boringscen. understand "has been" and "hasbeen" as has-been. bore-text is "That's just the banshee wants. Attention, even when they are no longer relevant or directly able to make others miserable. You have more important things to do than spend time on the banshee! Though there might be a way to dispel it.". description is "You can't see the banshee, but boy, is it wailing!"
 
 after fliptoing has-been:
 	min-up;
 	moot has-been;
 	continue the action;
-
-instead of doing something with has-been:
-	if has-been is visible:
-		say "That's just what he wants. People thinking about him, remembering his misery, even when he is gone. You have more important things to do!";
-	else:
-		continue the action.
 
 can-pass-crosse is a truth state that varies. can-pass-crosse is usually false.
 
@@ -5379,19 +5355,13 @@ to check-score (a - indexed text):
 
 chapter Ghouls' Slough
 
-Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear. You're not sure where the marsh starts and the lake ends[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL[or][stopping].". nowhere is south of Ghouls' Slough.
+Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough.
 
-the dog is amusing scenery in ghouls' slough. dog is an undesc. instead of doing something with the dog when dog is visible: say "Where was it? Where is it? Eegh. You don't REALLY want to think about it."
+the dog is amusing boringscen in ghouls' slough. bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
 
-the bog is amusing scenery in ghouls' slough. bog is an undesc.
+the bog is amusing boringscen in ghouls' slough. bore-text is "The bog feels like a big old gob that could suck you in. You just want to find a way away from it."
 
 to say end-it: end the story.
-
-instead of doing something with the bog when bog is visible: say "The bog feels like a big old gob that could suck you in. You just want to find a way away from it."
-
-the marshlake are privately-named amusing plural-named scenery in Ghouls' Slough. understand "marsh/lake" as marshlake. the printed name of marshlake is "The marsh and lake".
-
-description of marshlake is "On almost all sides. You worry you may get sucked down into it."
 
 check going in Ghouls' Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead.
 
@@ -5401,44 +5371,61 @@ check examining maps in Ghouls' Slough:
 
 chapter Frost Forts
 
-Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if][one of]. You steel yourself against the sleet[or][stopping]."
-
- after printing the locale description for forts when forts is unvisited:
-	set the pronoun them to vowels;
-
-the ipecac icecap is amusing scenery in frost forts. "Yechier, icy, here."
-
-instead of doing something with icecap: say "It's just there for ambiance."
-
-the sleet is useless scenery in frost forts. "It's painful, almost like steel, when it hits you, but since it's rain mixed with snow, it means you won't freeze...right away."
-
-the iced dice are plural-named amusing scenery in frost forts. "Each side seems to have a big skull-and-crossbones on it. Their fare is fear, with no warm café hidden in any face. Just don't think of them as ice caps, capisce?"
-
-instead of taking dice:
-	if wolves are visible, say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves." instead;
-	say "The dice could crush the vowels easily. But you're not twenty feet tall, so they just sort of add to the atmosphere."
-
-understand "ice" as iced dice.
-
-the fos are privately-named amusing scenery in frost forts. printed name of fos is "forts". understand "forts" and "frost forts" as fos.
-
-the frowns are part of the fos. the frowns are amusing.
-
-description of fos is "Frowny, as if they want you to fry now. Also, impassable. They have no doors but you're worried something will jump at you from them."
-
-check entering fos: say "They would provide no protection from the final conflict you face." instead;
-
-description of frowns is "Probably either sharp or decaying teeth behind them, but the wolves won't get near you."
+Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if]."
 
 Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
 
-the vowels are in Frost Forts. vowels are plural-named and privately-named. "Six large aplastic capitals sway when there is no breeze and stand still when there is."
+check going in Frost Forts: say "[if vowels are in frost forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]." instead.
+
+after printing the locale description for forts when forts is unvisited:
+	set the pronoun them to vowels;
+
+section ipecac icecap
+
+the ipecac icecap is amusing boringscen in frost forts. description of ipecac icecap is "Yechier, icy, here.". bore-text is "The ipecac icecap is just there for ambiance."
+
+section iced dice
+
+the iced dice are plural-named amusing boringscen in frost forts. description of iced dice is "Each side seems to have a big skull-and-crossbones on it. Their fare is fear, with no warm café hidden in any face. Just don't think of them as ice caps, capisce?". bore-text of iced dice is "The dice could crush the [if vowels are in frost forts]vowels[else]wolves[end if] easily. But you're not twenty feet tall, so they just sort of add to the atmosphere.". bore-check of iced dice is bore-iced-dice rule.
+
+this is the bore-iced-dice rule:
+	if wolves are in frost forts and current action is taking:
+		say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves.";
+		the rule succeeds;
+	abide by the bore-exam rule;
+
+understand "ice" as iced dice.
+
+section forts (scenery)
+
+the fos are privately-named amusing boringscen in frost forts. printed name of fos is "forts". understand "forts" and "frost forts" as fos. bore-text of fos is "The forts cannot help you in any way.". bore-rule of fos is bore-forts rule.
+
+this is the bore-forts rule:
+	if current action is entering:
+		say "The frost forts would provide no protection from the final conflict you face.";
+		the rule succeeds;
+	if wolves are in frost forts and current action is taking:
+		say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves.";
+		the rule succeeds;
+	abide by the bore-exam rule;
+
+the frowns are plural-named amusing boringthings. They are part of the fos. description of frowns is "Frowny, as if they want you to fry now. Also, impassable. They have no doors but you're worried something will jump at you from them."
+
+description of frowns is "As unpleasant as the [if wolves are in frost forts]wolves[else]vowels[end if]."
+
+section vowels
+
+the vowels are plural-named boringthings in Frost Forts. . "Six large aplastic capitals sway when there is no breeze and stand still when there is.". bore-text of vowels is "They can't fit in here. They must be something else. One last thing to change, maybe.". bore-rule of vowels is bore-vowels rule.
 
 rgtext of vowels is "[rcn][gc][rc][rc][rc][gc]". lgth of vowels is 6. gpos of vowels is 3. rpos of vowels is 6. cert-text of vowels is "-[ast]O[d1][d1][d1][ast]S". rect-text of vowels is "W[d1][d1][d1][d1][ast]S".
 
 understand "a/e/i/o/u" as vowels when player is in frost forts.
 
-instead of taking vowels: say "They're just way too big. Like that LOVE statue in Philadelphia. But they fill you with fear, unlike the LOVE statue, because they spell AIE OOU, and that's how it sounds as the wind blows through them."
+this is the bore-vowels rule:
+	if current action is taking:
+		say "They're just way too big. Like that LOVE statue in Philadelphia. But they fill you with fear, unlike the LOVE statue, because they spell AIE OOU, and that's how it sounds as the wind blows through them.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 understand "vowels/letters/five/six/tall/aplastic/capital/capitals/pyramid" as vowels when vowels are visible.
 
@@ -5450,13 +5437,11 @@ to say vowel-desc:
 	else:
 		say "A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) 'We're vowels!' Yup, even the Y. The vowels also have bumps where they end.[no line break]"
 
-the gnash hangs are bounding scenery in Frost Forts. "They menace you from all around, ready to jump if you try to escape. The ones you see stay still, but you can hear the ones behind you snapping."
+section gnash hangs
 
-instead of doing something with the gnash hangs: say "The gnash hangs are just there for atmosphere, to force you into the final conflict."
+the gnash hangs are bounding boringscen in Frost Forts. description of gnash hangs is "They menace you from all around, ready to jump if you try to escape. The ones you see stay still, but you can hear the ones behind you snapping.". bore-text of gnash hangs is "The gnash hangs are just there for atmosphere, to force you into the final conflict."
 
-the bumps are part of the vowels. the bumps are plural-named. description of bumps is "They look almost like fangs or very long nails."
-
-check going in Frost Forts: say "[if vowels are in frost forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]." instead.
+the bumps are a plural-named boringthing. the bumps are part of the vowels. bore-text of bumps is "They look almost like fangs or very long nails."
 
 book Sortie
 
@@ -5518,12 +5503,7 @@ instead of doing something with mondale doleman:
 
 section a lid
 
-a lid is scenery. description is "It covers where the dial was, and you probably want to keep it that way."
-
-instead of doing something with lid:
-	if current action is taking or current action is taking or current action is pulling or current action is attacking, say "You don't want to bring the lid back" instead;
-	if action is procedural, continue the action;
-	say "The lid's okay where it is. Better than the dial, anyway.";
+a lid is boringscen. description is "It covers where the dial was, and you probably want to keep it that way.". bore-text is "The lid's okay where it is. It's not pretty, but it's better than if the dial came back.".
 
 section dial setting
 
@@ -5652,9 +5632,7 @@ A room called The Nick is in Sortie. "You're locked in this arty suite of auster
 
 understand "nick" as nick when player is in nick.
 
-t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N". t-n is abstract.
-
-instead of doing something with t-n: if action is procedural, continue the action.
+t-n is privately-named proper-named boundscen in the nick. description of t-n is "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N". t-n is abstract. bore-text is "You need to do something special with the nick."
 
 section how to get here
 
@@ -6030,15 +6008,7 @@ check examining fridge: ignore examine containers rule.
 
 rule for printing room description details of fridge: omit contents in listing.
 
-the manila animal is undesc. it is part of the grief'd fridge. understand "lamina" as manila animal.
-
-the manila animal is amusing.
-
-instead of doing something with the manila animal:
-	if action is procedural, continue the action;
-	say "You've half-destroyed a store already, but you draw the line at aesthetically altering a fridge."
-
-instead of examining the manila animal: say "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
+the manila animal is an amusing boringthing. it is part of the grief'd fridge. understand "lamina" as manila animal. bore-text of manila animal is "You've torn up a [if stos-down > 1]couple stores[else]store[end if] already, but you draw the line at aesthetically altering a fridge. Someone surely put love into decorating it!". descrition of manila animal is "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
 
 description of grief'd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
 
@@ -6310,7 +6280,7 @@ after doing something with hoses:
 	set the pronoun it to hoses;
 	continue the action;
 
-the shoes are a plural-named undesc.
+the shoes are a plural-named boringthing. bore-text is "You're wearing the shoes. They fit fine, like you don't notice. No need to adjust them.".
 
 understand "hose" as hoses.
 
@@ -6471,12 +6441,13 @@ check fliptoing hallway:
 		preef hallway;
 		do nothing instead;
 
-the hallway is scenery. "The hallway isn't much to look at, but whatever's to the east might be."
+the hallway is boringscen. "The hallway isn't much to look at, but whatever's to the east might be.". bore-text is "Now that you made the hallway, you can't do much with it besides walk east through it.". bore-rule is bore-hallway rule.
 
-instead of doing something with the hallway:
-	if current action is entering, try going east instead;
-	if current action is fliptoing, continue the action;
-	say "Now that you made the hallway, you can't do much with it besides walk east through it.";
+this is the bore-hallway rule:
+	if current action is entering:
+		try going east;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 chapter moor
 
@@ -6486,9 +6457,9 @@ the rime mire is bounding scenery in moor. "The moor you're on has stable enough
 
 understand "rime-mire" as rime mire.
 
-m2 is privately-named proper-named scenery in moor. rgtext of m2 is "[rc][gc][gc][rc]". lgth of m2 is 4. gpos of m2 is 4. rpos of m2 is 1. cert-text of m2 is "-[ast]O[ast]O[d1]". rect-text of m2 is "R[d1][d1][ast]M".
+m2 is privately-named proper-named abstract boringscen in moor. printed name of m2 is "the moor". bore-text is "The moor--well, you can mess with parts of it, or you can teleport back to the room, but you can't destroy it all. It surrounds you. It's too big.".
 
-printed name of m2 is "the moor". m2 is undesc. m2 is abstract.
+rgtext of m2 is "[rc][gc][gc][rc]". lgth of m2 is 4. gpos of m2 is 4. rpos of m2 is 1. cert-text of m2 is "-[ast]O[ast]O[d1]". rect-text of m2 is "R[d1][d1][ast]M".
 
 room-flip is a truth state that varies.
 
@@ -6564,17 +6535,16 @@ the roadblock is a thing in the moor. "A roadblock that isn't actually blocking 
 
 understand "block" as roadblock when roadblock is visible.
 
-the road is useless scenery in moor. "[if roadblock is visible]You'd expect to see a road, what with the roadblock, but you don't[else]Removing the roadblock did not make a road appear. But hey, free black door[end if]."
+the road is useless boringscen in moor. description of road is "[if roadblock is visible]You'd expect to see a road, what with the roadblock, but you don't[else]Removing the roadblock did not make a road appear. But hey, free black door[end if].". bore-text is "Though there [if roadblock is in moor]is[else]was[end if] a roadblock, there is no road.". bore-rule of road is bore-road rule.
 
-instead of doing something with road:
-	if action is procedural, continue the action;
-	say "Though there [if roadblock is in moor]is[else]was[end if] a roadblock, there is no road."
-
-instead of climbing roadblock: say "There's no path behind it. Some roadblock, eh? It might be better reincarnated as something else."
-
-the roadblock is fixed in place.
-
-instead of taking roadblock: say "Moving it would be tougher than dock labor."
+this is the bore-road rule:
+	if current action is climbing:
+		say "There's no path behind it. Some roadblock, eh? It might be better reincarnated as something else.";
+		the rule succeeds;
+	if current action is taking:
+		say "Moving it would be tougher than dock labor.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 a black door is a thing. "The black door you made lies here, without a structure to attach it to."
 
@@ -6610,37 +6580,31 @@ instead of entering black door: try opening black door instead.
 
 description of roadblock is "It's about eight feet long and really dark (you pause and hope you don't need to learn COBOL) and dented about halfway through--well, four-ninths of the way from the right. You are utterly unsure what it could possibly be guarding, and you also notice bright red graffiti[one of].[paragraph break]You think back to how your nametag was creased, and how the roadblock probably doesn't change into anything too easy like a broad lock. The moor [if sack is not off-stage]and the sack [end if]already felt a bit easy[or][stopping]."
 
-the bright red graffiti is part of the roadblock.
+the bright red graffiti is a boringthing. it is part of the roadblock. bore-text is "You can really only examine or read it.". bore-rule is the bore-graffiti rule.
 
-instead of doing something with the bright red graffiti:
-	if current action is examining or current action is reading, continue the action;
+this is the bore-graffiti rule:
+	if current action is examining or current action is reading:
+		continue the action;
 	say "You can really only examine or read it.";
+	the rule succeeds;
 
 description of bright red graffiti is "DOC OLBARK has chosen to deface this roadblock, in bright red paint, no less."
 
-the anapest is scenery in moor. rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T".
+the anapest is boringscen in moor. understand "anapests" as anapest. understand "poem/poetry" as anapest when anapest is visible.
 
-description of anapest is "You can't help NOT paying attention to the anapest."
+rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T". bore-text is "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)". description of anapest is "You can't help NOT paying attention to the anapest.". bore-check is bore-anapest rule.
 
-anapest is undesc.
-
-understand "anapests" as anapest.
-
-understand "poem/poetry" as anapest when anapest is visible.
-
-instead of scaning anapest:
-	say "Yes, this sort of poetry doesn't require deep reading, just scanning";
-	if player has gadget:
-		say ". But seriously, your gadget seems to blink with the beat. [run paragraph on]";
-		continue the action;
-	else:
-		say ". Too bad you don't have a device to scan it more practically." instead;
-
-instead of doing something with anapest:
+this is the bore-anapest rule:
 	if the current action is objasking generically, continue the action;
 	if the current action is listening, continue the action;
-	if action is procedural, continue the action;
-	say "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)"
+	if the current action is scaning:
+		say "Yes, this sort of poetry doesn't require deep reading, just scanning";
+		if player has gadget:
+			say ". But seriously, your gadget seems to blink with the beat. [run paragraph on]";
+			continue the action;
+		else:
+			say ". Too bad you don't have a device to scan it more practically.";
+			the rule succeeds;
 
 instead of going nowhere in moor: say "The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 
@@ -6917,12 +6881,13 @@ to block-cedars:
 		now crashing archings are in Trellis;
 		moot trel-priv;
 
-lois is scenery in sacred cedars. "Lois is beyond trivial standard I7 descriptions, so if you see this, it is a [bug-report] Report to the author with a transcript."
+lois is boringscen in sacred cedars. description is "Lois is beyond trivial standard I7 descriptions, so if you see this, it is a [bug-report] Report to the author with a transcript.". bore-text is "Looking for evidence of Lois suggests lack of faith.". bore-rule of lois is bore-lois rule.
 
-instead of doing something with lois:
+this is  the bore-lois rule:
 	if current action is attacking:
 		say "No. Lois is here to help.";
-	say "Looking for evidence of Lois proves lack of faith."
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 drawings are plural-named amusing scenery in sacred cedars.
 
@@ -6986,11 +6951,7 @@ chapter Undesired Underside
 
 Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises the Ol' Hotel to the west."
 
-the tilting titling is scenery in Undesired Underside. description is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if hotel is visited], where you've already been[end if]."
-
-instead of doing something with tilting titling:
-	if action is procedural, continue the action;
-	say "You can't do much with the titling, and you don't need to."
+the tilting titling is boundscen in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
 
 check going inside in Undesired Underside: say "That's ambiguous with the hotel west and the metal door east." instead.
 
@@ -7014,14 +6975,18 @@ does the player mean doing something with soggy letter: it is likely.
 
 to say letter-or-flier:
 	say "a can of beer and a ";
-	if arena dig flier is visible:
+	if arena dig flier is in undesired underside:
 		say "flier";
-	else if soggy letter is visible:
+	else if soggy letter is in undesired underside:
 		say "soggy note";
 	else:
 		say "heap of gunk where an item should be ([bug-report])";
 
-the can of beer is auxiliary scenery in Undesired Underside. description of can of beer is "It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.". rgtext of can of beer is "[rcn][rc][rc][gc][rc][rc][gc][rc]". lgth of can of beer is 8. gpos of can of beer is 2. rpos of can of beer is 1. cert-text of can of beer is "-[d1][d1][ast]D[d1][d1][ast]I[d1]". rect-text of can of beer is "G[d1][d1][d1][d1][d1][d1][ast]A".
+the can of beer is auxiliary boringscen in Undesired Underside. description of can of beer is "It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.". rgtext of can of beer is "[rcn][rc][rc][gc][rc][rc][gc][rc]". lgth of can of beer is 8. gpos of can of beer is 2. rpos of can of beer is 1. cert-text of can of beer is "-[d1][d1][ast]D[d1][d1][ast]I[d1]". rect-text of can of beer is "G[d1][d1][d1][d1][d1][d1][ast]A". bore-text is "You don't really want to get close to the can of beer.". bore-check is bore-beer rule.
+
+this is the bore-beer rule:
+	if current action is drinking, say "Yuck. The beer's name may be even truer now than when some poor sap bought it." instead;
+	abide by the bore-exam rule;
 
 understand "aged rain" and "aged" and "rain" and "beer can" as can of beer.
 
@@ -7030,28 +6995,13 @@ does the player mean doing something with can of beer:
 		it is very unlikely;
 	it is likely.
 
-instead of doing something with the can of beer:
-	if current action is drinking, say "Yuck. The beer's name may be even truer now than when some poor sap bought it." instead;
-	if action is procedural, continue the action;
-	say "You don't really want to get close to it." instead;
-
 does the player mean doing something with the love letter when the love letter is visible: it is very likely.
 
-the soggy love letter is auxiliary scenery. description of soggy love letter is "Someone has written [b]DEAR INGA:[r] in big letters. The waters have smudged the smaller writing, which is probably for the best.". lgth of soggy love letter is 8. gpos of soggy love letter is 7. rpos of soggy love letter is 3. rgtext of soggy letter is "[rcn][rc][rc][rc][rc][gc][rc][gc]". cert-text of soggy love letter is "-[d1][d1][d1][d1][ast]N[d1][ast]A". rect-text of soggy love letter is "G[d1][d1][d1][d1][d1][d1][ast]A".
+the soggy love letter is auxiliary boringscen. description of soggy love letter is "Someone has written [b]DEAR INGA:[r] in big letters. The waters have smudged the smaller writing, which is probably for the best.". lgth of soggy love letter is 8. gpos of soggy love letter is 7. rpos of soggy love letter is 3. rgtext of soggy letter is "[rcn][rc][rc][rc][rc][gc][rc][gc]". cert-text of soggy love letter is "-[d1][d1][d1][d1][ast]N[d1][ast]A". rect-text of soggy love letter is "G[d1][d1][d1][d1][d1][d1][ast]A". bore-text is "You don't really want to get close to the love letter. It's soppy in more ways than one."
 
 understand "dear inga" and "dear/inga" and "soggy note" as soggy love letter when soggy love letter is visible.
 
-instead of doing something with the soggy letter:
-	if action is procedural, continue the action;
-	say "You don't really want to get close to it." instead;
-
-the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rcn][rc][rc][rc][rc][rc][gc][rc]". cert-text of arena dig flier is "-[d1][d1][d1][d1][d1][ast]I[d1]". rect-text of arena dig flier is "G[d1][d1][d1][d1][d1][d1][ast]A". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red."
-
-the arena dig flier is fixed in place.
-
-instead of doing something with the arena dig flier:
-	if action is procedural, continue the action;
-	say "You don't really want to get close to it." instead;
+the arena dig flier is auxiliary boringscen. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rcn][rc][rc][rc][rc][rc][gc][rc]". cert-text of arena dig flier is "-[d1][d1][d1][d1][d1][ast]I[d1]". rect-text of arena dig flier is "G[d1][d1][d1][d1][d1][d1][ast]A". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red.". bore-text is "You don't really want to get close to the flier."
 
 a gardenia is a flower.
 
@@ -7059,11 +7009,7 @@ description of gardenia is "It's white, and it's just one flower instead of the 
 
 section a reading
 
-a-reading is a privately-named thing. printed name of a-reading is "a reading". "[one of]A reading has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage[stopping].". description is "It says A READING in bold red, with AID ANGER below it. The rest seems like nonsense."
-
-instead of doing something with a-reading:
-	if action is procedural, continue the action;
-	say "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc."
+There is a boringthing called A reading. "[one of]A reading has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage[stopping].". description is "It says A READING in bold red, with AID ANGER below it. The rest seems like nonsense.". bore-text is "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc."
 
 section cramped red camp
 
@@ -7314,31 +7260,33 @@ description of instructions is "[if controls are in op]They served you well. No 
 
 section noisome moonies
 
-the noisome moonies are amusing plural-named scenery in Roarings Garrison. description is "They all have that 'I'm so ONE' look about them."
+the noisome moonies are amusing plural-named boringscen in Roarings Garrison. description of noisome moonies is "They all have that 'I'm so ONE' look about them.". bore-text is "The noisome moonies are too wrapped up in themselves to matter.". bore-rule is bore-moonies rule.
 
 Include (-
 	has transparent animate
 -) when defining noisome moonies.
 
-instead of doing something with moonies:
+this is the bore-moonies rule:
 	set the pronoun them to moonies;
-	if current action is objasking or current action is objasking about, say "They're too busy chanting to talk to you, but they have nothing to say." instead;
-	if action is procedural, continue the action;
-	say "The noisome moonies are too wrapped up in themselves to matter.";
+	if current action is objasking or current action is objasking about:
+		say "They're too busy chanting to talk to you, but they have nothing to say.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 section snakebit beatniks
 
-the snakebit beatniks are amusing plural-named scenery in Roarings Garrison. description is "They all be astink (figuratively and literally) ."
+the snakebit beatniks are amusing plural-named boringscen in Roarings Garrison. description of snakebit beatniks is "They all be astink (figuratively and literally).". bore-rule is bore-beatniks rule. bore-text is "The snakebit beatniks are too wrapped up in themselves to matter.".
 
 Include (-
 	has transparent animate
 -) when defining snakebit beatniks.
 
-instead of doing something with beatniks:
+this is the bore-beatniks rule:
 	set the pronoun them to beatniks;
-	if current action is objasking or current action is objasking about, say "They're too busy chanting to talk to you, but they have nothing to say." instead;
-	if action is procedural, continue the action;
-	say "The snakebit beatniks are too wrapped up in themselves to matter.";
+	if current action is objasking or current action is objasking about:
+		say "They're too busy chanting to talk to you, but they have nothing to say.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 chapter Bile Libe
 
@@ -7411,11 +7359,7 @@ the sword is a thing.
 
 section lease easel
 
-the lease easel is scenery in Bile Libe. "It reads PROPERTY OF ELEAS & LEESA SEALE and gives lots of 'profitable' advice (largely on e-sale) starting 'SEE, AL...'[paragraph break][if motto is in bile libe]Somehow clinging to the lease easel is A MOTTO[else]You got a motto from it, and it's pretty much bare now[end if]."
-
-instead of doing something with lease easel:
-	if action is procedural, continue the action;
-	say "The lease easel is part of the Bile Libe. It[if motto is in bile libe]'s[else]was[end if] there to hold the motto and to block you from exploring...well, anywhere else."
+the lease easel is boundscen in Bile Libe. description of lease easel is "It reads PROPERTY OF ELEAS & LEESA SEALE and gives lots of 'profitable' advice (largely on e-sale) starting 'SEE, AL...'[paragraph break][if motto is in bile libe]Somehow clinging to the lease easel is A MOTTO[else]You got a motto from it, and it's pretty much bare now[end if].". bore-text is "The lease easel is part of the Bile Libe. It[if motto is in bile libe]'s[else]was[end if] there to hold the motto and to block you from exploring...well, anywhere else."
 
 section motto-tomato
 
@@ -7478,17 +7422,9 @@ description of the rentals is "The antlers are gone."
 
 check going to Obtains Boastin' Bastion for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
 
-A barnacled candelabra is amusing scenery in Obtains Boastin' Bastion.
-
-description of candelabra is "It's tasteful and clever, as much as you hate to admit it."
-
-instead of doing something with candelabra:
-	if current action is not scaning:
-		say "It's too high above to note if those are even real barnacles.";
-	else:
-		say "You couldn't even jump to get close to it. But it's not important. Someone just put it there because they could.";
-
 description of Obtains Boastin' Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. The talkers seem to take you for a stalker, but nobody wants to get too close[end if]. A barnacled candelabra hangs above[if antlers are visible], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
+
+A barnacled candelabra is amusing boringscen in Obtains Boastin' Bastion. description of candelabra is "It's tasteful and clever, as much as you hate to admit it." bore-text is "You couldn't even jump to get close to it. But it's not important. Someone just put it there because they could.".
 
 the carpets are plural-named useless scenery in Obtains Boastin' Bastion. understand "spectra" and "carpet" as carpets.
 
@@ -7504,17 +7440,12 @@ instead of taking carpets: say "Too bulky, and what if they turned into somethin
 
 to say cake-blab: say "You probably want to [if cake is in Obtains Boastin' Bastion]take the cake and run[else]get going before everyone gets back[end if]"
 
-before going nowhere in Obtains Boastin' Bastion:
-	if bastion-evac is true, say "Best not hang around the scene of the crime." instead;
-
 check going in Obtains Boastin' Bastion:
+	if bastion-evac is true and noun is not south, say "Best not hang around the scene of the crime." instead;
 	if noun is north, say "A guard pushes you away from the SIN BOAT." instead;
 	if noun is east, say "You're pushed away for not respecting Saint Bo." instead;
 	if noun is west, say "You're rudely pushed away as someone says 'SOB... ain't...'" instead;
 	if noun is up, say "You're pushed back. As you leave, someone baits on. You aren't allowed anywhere except the main area." instead;
-	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
-
-check going in Obtains Boastin' Bastion:
 	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
 
 Some dry cake is a singular-named thing in Obtains Boastin' Bastion. "Some dry cake is here[if talkers are visible]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
@@ -7763,11 +7694,7 @@ the barcode is a thing. understand "code" and "bar" as barcode when barcode is v
 
 description of barcode is "[if barcode is part of keycard]It's stuck to the keycard now, and it'd be unwise to peel it off[else]It's got the adhesive backing so it looks like you could PUT it ON something. Barcodes just aren't too handy by themselves[end if]."
 
-the adhesive backing is part of the barcode. adhesive backing is undesc.
-
-instead of doing something with the adhesive backing:
-	if the current action is examining, say "It's clear, and it'll keep the sticky bit on the barcode until you know where to put it." instead;
-	say "You don't need to futz with the adhesive, explicitly. Just do what you want/need with the barcode.";
+the adhesive backing is a boringthing. it is part of the barcode. bore-text of adhesive backing is "You don't need to futz with the adhesive, explicitly. Just do what you want/need with the barcode.". description is "It's clear, and it'll keep the sticky bit on the barcode until you know where to put it.".
 
 to say dont-peel: say "When you're ready to put the barcode on something, you don't need to peel it. Just PUT it ON whatever.".
 
@@ -7851,7 +7778,7 @@ instead of giving something to the night thing:
 		try throwing the tomato at the night thing instead;
 	say "It's roaring too much. It seems upset about something, and you look unlikely to help.";
 
-the cruel ulcer is part of the night thing. description of cruel ulcer is "It's nasty and yellowed and an indication maybe scaring people in the hotel is more stressful than you think. You wonder how food goes down there."
+the cruel ulcer is a boringthing. it is part of the night thing. description of cruel ulcer is "It's nasty and yellowed and an indication maybe scaring people in the hotel is more stressful than you think. You wonder how food goes down there.". bore-text is "It's neither a clue-r nor lucre."
 
 the ketchup bottle is a thing in Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is visible]is roaring nearby[else]was here[end if]."
 
@@ -7947,18 +7874,16 @@ to say get-the-bump:
 	moot bump;
 	now player has the emitter;
 
-the bump is part of the mattress. description of the bump is "Why not examine the whole mattress instead?"
+the bump is a boringthing. it is part of the mattress. description of the bump is "Why not examine the whole mattress instead?". bore-rule of bump is the bore-bump rile.
 
-instead of doing something with bump:
+this is the bore-bump rule:
+	if current action is objhinting, say "(You decide to examine it before asking for hints.)[paragraph break]";
 	say "On getting close to the bump you realize it's due something wedged inside the mattress. You search around, find a small machine that is apparently a termite emitter, and take it.";
 	moot bump;
 	now player has the emitter;
-
-instead of examining the bump: try examining the mattress.
+	the rule succeeds;
 
 understand "something" as bump when bump is part of the mattress and mattress is visible.
-
-instead of taking cruel ulcer: say "That's neither useful nor lucre."
 
 does the player mean throwing the tomato at the night thing: it is very likely.
 
@@ -8130,13 +8055,9 @@ to say nerd-dark:
 
 section Earliest Ateliers
 
-Earliest Ateliers are plural-named bounding scenery in Esoteric Coteries. "The ateliers are full of research that makes stuff like...well, that lit-up tulip. But you don't need to worry about how things are made. You need to get that tulip."
+Earliest Ateliers are plural-named bounding boringscen in Esoteric Coteries. description of Earliest Ateliers is "The ateliers are full of research that makes stuff like...well, that lit-up tulip. But you don't need to worry about how things are made. You need to get that tulip.". bore-text is "You can't do anything meaningful with the Earliest Ateliers. They're for the nerds."
 
-understand "esoteric atelier" and "atelier" as Earliest Ateliers.
-
-instead of doing something with Earliest Ateliers:
-	if action is procedural, continue the action;
-	say "You can't do anything meaningful with the Earliest Ateliers. They're for the nerds."
+understand "earliest atelier" and "atelier" as Earliest Ateliers.
 
 chapter Elm Train Terminal
 
@@ -8254,9 +8175,7 @@ instead of doing something with the script:
 	if current action is scaning or certifying or cring or rectifying, say "[if player is on fuzzy wall]The script doesn't play nice with your gadget[else]Too far away[end if]." instead;
 	say "It's part of the pig--not much else to do but examine it.";
 
-the glowing flowers are part of the neon pig. glowing flowers are undesc. glowing flowers are amusing.
-
-instead of doing something with the glowing flowers: say "Their symbolism is obvious and probably meant to be. You probably want to deal with the whole hog (sorry.)"
+the glowing flowers are a plural-named amusing boringthing. they are part of the neon pig. bore-text of glowing flowers is "The flowers['] symbolism is obvious and probably meant to be. You probably want to deal with the whole hog (sorry.)"
 
 instead of taking neon pig: say "You'd let go of the wall and fall to your doom.".
 
@@ -8293,11 +8212,7 @@ check going nowhere in Bassy Abyss: say "You try to flee, but you feel a sharp h
 
 section aligns signal
 
-the aligns signal is bounding scenery in Bassy Abyss. "You can't see the aligns signal, but you'll probably feel it if you try to cross it. Maybe if you vanquish the [b-b], it'll vanish."
-
-instead of doing something with aligns signal:
-	if action is procedural, continue the action;
-	say "The aligns signal probably comes from the [b-b]. So it's best just to destroy the [b-b] first."
+the aligns signal is bounding boringscen in Bassy Abyss. description of aligns signal is "You can't see the aligns signal, but you'll probably feel it if you try to cross it. Maybe if you vanquish the [b-b], it'll vanish.". bore-text is "The aligns signal probably comes from the [b-b]. So it's best just to destroy the [b-b] first."
 
 section beats-beast
 
@@ -8358,27 +8273,19 @@ check going nowhere in astral altars:
 	now feral flare is in astral altars;
 	say "[one of]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE![or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]" instead;
 
-tiles are plural-named flippable scenery in Astral Altars. "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
+tiles are plural-named flippable boringscen in Astral Altars. description of tiles is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.". bore-text is "There must be some way to magic the stile and/or tiles."
 
 gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles is "[rc][rc][gc][gc][rc]". the lgth of tiles is 5. cert-text of tiles is "-[d1][ast]L[ast]E[d1]". rect-text of tiles is "I[d1][d1][d1][ast]T".
 
-the stile is scenery in Astral Altars. "It's reddish. A stile usually provides passage over something, but it's all by itself here. Maybe it can lead you somewhere else, in a different form."
+the stile is boringscen in Astral Altars. description of stile is "It's reddish. A stile usually provides passage over something, but it's all by itself here. Maybe it can lead you somewhere else, in a different form.". bore-text is "There must be some way to magic the stile and/or tiles."
 
 gpos of stile is 3. rpos of stile is 2. lgth of stile is 5. the rgtext of stile is "[rc][rc][gc][gc][rc]". the lgth of stile is 5. cert-text of stile is "-[d1][d1][d1][d1]". rect-text of stile is "I[d1][d1][d1][ast]T".
 
-instead of doing something with scenery in Altars:
-	if action is procedural, continue the action;
-	say "You probably need to do something with, or to, the stile and tiles."
-
 section feral flare
 
-The feral flare is bounding scenery. "It covers everywhere. Looks like you'll have to find what to do with the altars."
+The feral flare is bounding boringscen. description is "It covers everywhere. Looks like you'll have to find what to do with the altars.". bore-text is "The feral flare is there and likely extremely dangerous to get near. You'll want to try your luck with what's on the altars."
 
-instead of doing something with feral flare:
-	if action is procedural, continue the action;
-	say "The feral flare is there and likely extremely dangerous to get near. You'll want to try your luck with what's on the altars."
-
-chapter Isle
+chapter Leis Isle
 
 Leis Isle is a room in Resort. "[if l2 are in isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if l2 are not in isle], and now the leis here were exposed, you probably want to get going that way, too[end if]."
 
@@ -8418,28 +8325,18 @@ to say lei-down:
 
 woodland-revealed is a truth state that varies.
 
-an odd low woodland is scenery in Leis Isle. "[if woodland-revealed is false]You stare at it for a while, and eventually the word DOWNLOAD... starts blinking. Hmm. It doesn't seem real at all[woodrev][else]It still seems computer-generated, wrong[end if]."
+an odd low woodland is boringscen in Leis Isle. description of woodland is "[if woodland-revealed is false]You stare at it for a while, and eventually the word DOWNLOAD... starts blinking. Hmm. It doesn't seem real at all[woodrev][else]It still seems computer-generated, wrong[end if].". bore-text is "[if woodland-revealed is true]You already know it's a bit hosed. You don't need to do anything with it[else]It seems imposing. You're not sure you want anything to do with it[end if].".
 
 to say woodrev:
 	now woodland-revealed is true;
 
-instead of doing something with odd low woodland:
-	if action is procedural, continue the action;
-	say "[if woodland-revealed is true]You already know it's a bit hosed. You don't need to do anything with it[else]It seems imposing. You're not sure you want anything to do with it[end if]." instead;
-
 section nonbounding scenery
 
-the sand is useless scenery in Leis Isle.
-
-description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if]."
-
-instead of doing something with the sand:
-	if action is procedural, continue the action;
-	say "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here."
+the sand is useless boringscen in Leis Isle. description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if].". bore-text is "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here.".
 
 the tree is useless scenery in Leis Isle.
 
-instead of climbing tree: say "That'll only get you off the sand on the island, not the island."
+check climbing tree: say "That'll only get you off the sand on the island, not the island." [?? test switch from INSTEAD]
 
 description of tree is "It has ALOFT scratched into it[one of]. An arrow points down to the swing, as if to say, the tree can't help you fly[or][stopping]."
 
@@ -8447,7 +8344,7 @@ section swing - wings
 
 the swing is a thing in Isle. "A rudimentary swing hangs from a tree here."
 
-instead of taking the swing: say "It's tied, and you can't climb to untie it."
+check taking the swing: say "It's tied, and you can't climb to untie it."
 
 description of swing is "You can't tell what the swing is made of, but it looks firm and stable. It hangs from a tree branch high up. You won't get to untie it, but you can see something scratched on the tree.". rgtext of swing is "[rcn][rc][rc][rc][rc]". lgth of swing is 5. gpos of swing is 2. rpos of swing is 1. cert-text of swing is "-[d1][d1][d1][d1]". rect-text of swing is "W[d1][d1][d1][ast]S".
 
@@ -8525,11 +8422,7 @@ check going nowhere in Rived Drive: say "You'd probably get lost that way. Besid
 
 section blow bowl
 
-the blow bowl is bounding scenery in rived drive. "You can see a (different) blow bowl whipping around in pretty much any direction except up the [slo-po]."
-
-instead of doing something with blow bowl:
-	if action is procedural, continue the action;
-	say "You don't want to mess with a blow bowl. You can't do much with those letters. There are other things here in Rived Drive."
+the blow bowl is bounding boringscen in rived drive. description of blow bowl is "You can see a (different) blow bowl whipping around in pretty much any direction except up the [slo-po].". bore-text is "You don't want to mess with a blow bowl. You can't do much with those letters. There are other things here in Rived Drive.".
 
 section poles-slope
 
@@ -8565,16 +8458,22 @@ carry out scaning outcroppings: say "They don't seem to give a different scan th
 
 description of outcroppings is "They are something you could put your feet--no, the edge of them--on. They look sturdy enough to hold you, but the problem is, they don't lead anywhere."
 
-the u-lock is undesc. the u-lock is part of the tool shed. understand "lock" as u-lock.
+the u-lock is a boringthing. the u-lock is part of the tool shed. understand "lock" as u-lock. bore-check of u-lock is bore-ulock rule. bore-text is "BUG."
 
-instead of doing something with the u-lock:
+this is the bore-ulock rule:
 	if current action is scaning or current action is cring or current action is certifying or current action is rectifying:
-		say "The gadget is silent. It's probably the tool shed.";
-	say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
-	if the player yes-consents:
-		say "It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently.";
+		say "The gadget is silent. It's probably the tool shed. You want to scan. Do so?";
+		if the player yes-consents:
+			try scaning the tool shed;
+		else:
+			say "OK.";
 	else:
-		say "You don't bother with it."
+		say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
+		if the player yes-consents:
+			say "It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently.";
+		else:
+			say "You don't bother with it."
+	the rule succeeds;
 
 instead of entering tool shed: say "You couldn't break into any stores, and you're not breaking into the tool shed."
 
@@ -9511,14 +9410,13 @@ before opening gateway: say "It's open. It's just unclear where it leads." inste
 
 description of getaway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ[one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping]."
 
-the new land is scenery in notices section.
+the new land is boringscen in notices section. description of new land is "You'll have to go there to see it all.". bore-text is "ENTER the gate to learn more about it.". bore-rule is bore-new-land rule.
 
-description of new land is "You'll have to go there to see it all."
-
-instead of doing something with new land:
-	if current action is entering, try entering the getaway instead;
-	if action is procedural, continue the action;
-	say "Go through the gate to learn more about it."
+this is the bore-new-land rule:
+	if current action is entering:
+		try entering the getaway;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 understand "gate" as getaway when getaway is visible.
 
@@ -9778,7 +9676,7 @@ to say lubeit: now lube-asked is true.
 
 to say ana-true: now anapest-clued is true.
 
-the utterly unreadable book is undesc.
+the utterly unreadable book is a boringthing. bore-text is "Maybe you could EXAMINE or READ the book, but you can't do much else with it."
 
 to say book-in-nerds: now utterly unreadable book is in Esoteric Coteries.
 
@@ -9786,8 +9684,10 @@ check examining the utterly unreadable book:
 	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
 	if the player yes-consents:
 		say "[rcn]Srs. Ek and Rensskad-Knessard";
+		now utterly unreadable book is examined;
 	else:
 		say "Hm, yes. The nerds may give a less cryptic hint."
+	the rule succeeds;
 
 to say rose-sore:
 	if player does not have gardenia:
@@ -10081,9 +9981,14 @@ the current getup is a thing that varies.
 
 understand "disguise" as a disguise-piece.
 
-instead of eating bread: say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use.".
+check eating bread: say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use." instead.
 
-instead of eating beard: say "It's less appetizing as a beard than as bread. And if there WERE anything edible in it, ... eww.".
+check eating beard: say "It's less appetizing as a beard than as bread. And if there WERE anything edible in it, ... eww." instead.
+
+the can't eat unless edible rule is not listed in any rulebook.
+
+check eating (this is the game specific eating rule): [??test eating]
+	if the noun is not a thing or the noun is not edible, say "You don't need to eat anything in this game." instead;
 
 part smilies-missile
 
