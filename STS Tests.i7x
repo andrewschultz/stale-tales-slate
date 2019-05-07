@@ -2,6 +2,20 @@ Version 1/170918 of STS tests by Andrew Schultz begins here.
 
 "Tracks various testing commands that can be used by Shuffling Around or A Roiling Original"
 
+chapter bcheing - not for release
+
+bcheing is an action out of world.
+
+understand the command "bche" as something new.
+
+understand "bche" as bcheing.
+
+carry out bcheing:
+	repeat with Q running through boringthings:
+		if Q is boringscen, say "(scenery) ";
+		say "[Q] ~ [bore-check of q] ~ [bore-text of Q][line break]";
+	the rule succeeds.
+
 chapter scling - not for release
 
 scling is an action out of world.
@@ -16,7 +30,7 @@ carry out scling:
 		say "--[QQ][line break]";
 	the rule succeeds;
 
-chapter etuing
+chapter etuing - not for release
 
 cmdtype is a number that varies.
 
