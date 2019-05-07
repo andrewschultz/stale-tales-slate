@@ -57,6 +57,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "tepid"	378404021	trips strip	--	--	"[tid]."
 "tepidicon"	585662537	trips strip	--	--	"[tid]."
 "icon"	207258516	trips strip	--	--	"[tid]."
+"badge"	202041623	trips strip	--	--	"The badge just has general information. It's not useful on its own."
 "masll"	270164615	trips strip	--	--	"[say-which]."
 "mall"	173890649	trips strip	--	--	"[say-which]."
 "lots"	327550400	trips strip	--	--	"You can manipulate each individual store."

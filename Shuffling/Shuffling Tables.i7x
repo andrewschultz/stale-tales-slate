@@ -408,7 +408,7 @@ broad board	"The broad board's advice is very useful[if gateman is off-stage], e
 mega ant	"The mega ant is blocking the gateway, but it's an odd shade of red. That's a hint, from the broad board, of what you need to do, or summon."
 saltine	"Eating the saltine will give you one hint."
 tepid icon depiction	"The tepid icon depiction will give you some hints what to do in the remaining area(s)." [start STORES]
-wooden sign	"Just a semantic note to try STOREA and not SHOPA."
+begad badge	"Just a semantic note to try STOREA and not SHOPA."
 go rest flier	"Just general encouragement. Store G isn't relevant to the game."
 storeall	"Try hinting a single store instead."
 disamb-store	"Try hinting a single store instead."

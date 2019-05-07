@@ -288,26 +288,35 @@ a flower is a kind of thing. understand "flower" and "flowers" as a flower.
 
 section boringthings
 
-a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually force-exam rule.
+a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
 
 a boringscen is a kind of boringthing.
 
-this is the default-bore rule: do nothing;
+this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
 
-this is the force-exam rule:
-	if current action is not examining:
+this is the bore-exam rule: [note: I caused bugs by saying PROCESS  THE BORE-EXAM RULE instead of ABIDE BY. Enough that I'll write this note in.]
+	if current action is examining:
+		if description of noun is empty:
+			if debug-state is true, say "(DEBUG: pulling bore-text) ";
+			say "[bore-text of noun]";
+			the rule succeeds;
+	else unless action is procedural:
 		say "There's not much to do with [the noun] except examine [if noun is plural-named]them[else]it[end if]. So you do.";
-		try examining the noun instead.
+		try examining the noun;
+		the rule succeeds;
 
 For printing a locale paragraph about a thing (called the item)
 	(this is the don't mention boringscen in room descriptions rule):
 	if the item is boringscen, set the locale priority of the item to 0;
 	continue the activity.
 
-instead of doing something with a boringthing:
-	process the bore-check of noun;
+instead of doing something with a boringthing: [no-irp]
+	say "1. [current action] / [noun] ... rule = [bore-check of noun].";
+	abide by the bore-check of noun;
+	say "2. [current action] / [noun].";
 	if action is procedural, continue the action;
-	say "[bore-text of noun]";
+	say "3. [current action] / [noun].";
+	say "[bore-text of noun]" instead;
 
 chapter colors
 
@@ -1488,7 +1497,7 @@ chapter examining
 
 does the player mean doing something with location of the player: it is unlikely.
 
-instead of doing something with the location of the player (this is the location is too general rule) :
+instead of doing something with the location of the player (this is the location is too general rule): [no-irp]
 	if current action is examining or current action is xrooming or current action is scaning, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
@@ -4171,7 +4180,7 @@ chapter Trips Strip
 
 [yeah, redundancy but...]
 
-Trips Strip is a room in Stores. last-loc of Stores is Trips Strip. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]."
+Trips Strip is a room in Stores. last-loc of Stores is Trips Strip. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in trips strip]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]. A begad-badge inscribed here has some information."
 
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
 	if scented descent is in Trips strip, set the locale priority of scented descent to 6;
@@ -4295,19 +4304,11 @@ check going inside in trips strip:
 
 cool-index is a number that varies.
 
-the wooden sign is scenery in Trips Strip. description of wooden sign is "'A store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'"
-
-instead of taking the wooden sign: say "It's too heavy. And besides, what would you do with it?"
-
-instead of singing in the Trips Strip: say "The sign seems to vibrate. Not enough to pick it up. It's too heavy[if score is 0]. But still, curious[end if]."
+the begad badge is boringscen in Trips Strip. bore-text of begad badge is "'For warping purposes, a store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'".
 
 section hubs bush
 
-the hubs bush is bounding scenery. "The hubs bush encircles the entire Trips Strip, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if sf is visited or trap part is visited or underside is visited]nother[end if] store."
-
-instead of doing something with hubs bush:
-	if action is procedural, continue the action;
-	say "The hubs bush is there now, forcing you back to the stores to focus on whatever it is you need to do."
+the hubs bush is bounding boringscen. description is "The hubs bush encircles the entire Trips Strip, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if sf is visited or trap part is visited or underside is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
 
 check going nowhere in trips strip:
 	if hubs bush is in trips strip, say "The hubs bush forces you back to the center of the strip and the stores." instead;
@@ -4868,54 +4869,58 @@ check going inside in Self-ID Fields: try going north instead.
 
 check going nowhere in Self-ID Fields: say "No going back. Storing's west, sorting's east, and Corses Crosse is north." instead.
 
+section generic guy
+
 Include (-
 	has transparent animate
 -) when defining gy.
 
-gy is privately-named scenery in Self-ID Fields. understand "man" as gy when player is in Self-ID Fields. gy is undesc.
+gy is privately-named boringscen in Self-ID Fields. understand "man" as gy when player is in Self-ID Fields. bore-check is bore-too-late rule.
+
+this is the bore-too-late rule:
+	it-him gy;
+	if action is procedural, say "Any invdividual guy going by doesn't matter." instead;
+	say "Too late. He's gone. But here's another.".
 
 printed name of gy is "bearded man".
 
-understand "bearded/ man/guy/figure" as gy.
+understand "bearded man/guy/figure" and "man/guy/figure" as gy.
 
-instead of doing something with gy: say "Too late. He's gone. But here's another.".
+to it-him (x - a thing):
+	set the pronoun it to x;
+	set the pronoun them to x;
+
+section line of no life
 
 Include (-
 	has transparent animate
 -) when defining line of no life.
 
-a thing called line of no life are plural-named and privately-named scenery in Self-ID Fields. printed name of line of no life is "bearded men". "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you."
+a thing called line of no life is plural-named boringscen in Self-ID Fields. printed name of line of no life is "bearded men". description is "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.". bore-text is "The line of no life is too incorporeal to interact with[if cruel ones' enclosure is unvisited], but maybe you can imitate it partially to go north[end if].". bore-check is bore-line-life rule.
 
-after doing something with line of no life:
-	set the pronoun it to line of no life;
-	set the pronoun him to line of no life;
-	continue the action;
+this is the bore-line-life rule:
+	it-him line of no life;
+	abide by the bore-exam rule;
 
-after doing something with gy:
-	set the pronoun it to line of no life;
-	set the pronoun him to line of no life;
-	continue the action;
+understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as line of no life.
 
-understand "bearded/ men/guys/figures" and "undead" as line of no life.
+section corses crosse
 
-instead of doing something with line of no life:
-	if action is procedural, continue the action;
-	say "The line of no life is too incorporeal to interact with[if cruel ones' enclosure is unvisited], but maybe you can imitate it partially to go north[end if].";
+Corses Crosse is boringscen in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is crosse-enter rule.
 
-Corses Crosse is scenery in Self-ID Fields. "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP."
-
-instead of entering Corses Crosse: try going north.
+this is the crosse-enter rule:
+	if current action is entering, try going north instead;
+	abide by the bore-exam rule;
 
 beard-unmade is a truth state that varies. beard-unmade is usually false.
 
 section selves vessel
 
-The selves vessel is bounding scenery in Self-ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south."
+The selves vessel is boringscen in Self-ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south.". bore-text is "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it.". bore-check is selves-vessel-enter rule.
 
-instead of doing something with selves vessel:
-	if action is procedural, continue the action;
+this is the selves-vessel-enter rule:
 	if current action is entering, try going south instead;
-	say "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it."
+	abide by the bore-exam rule;
 
 check going south in Self-ID Fields:
 	say "Given that the people leaving the selves vessel look dead, you probably don't want to go in." instead;
@@ -8793,19 +8798,13 @@ before asking red bull burdell about: say "Realizing he's not going to help you,
 
 understand "rbb" as Red Bull Burdell.
 
-the thirst t-shirt is undesc.
-
-instead of doing something with thirst t-shirt: say "The Thirst t-shirt is a decent piece of rage gear but not worth bothering with. You're down on the ground, anyway.".
+the thirst t-shirt is a boringthing. description is "The Thirst t-shirt is a decent piece of rage gear but not worth bothering with. You're down on the ground, anyway.".
 
 rule for printing a locale paragraph about Red Bull Burdell: now Red Bull Burdell is mentioned.
 
 description of Red Bull Burdell is "His face is covered with crass scars, and he's wearing a t-shirt saying 'thirst'. He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason."
 
-the crass scars are part of red bull burdell.
-
-description of scars is "Every villain has a few. Red Bull Burdell maxed out his useful attributes, but no amount of leveling up could improve his looks."
-
-instead of doing something with crass scars: say "He'd want to beat you up for looking at them even if he didn't already want to beat you up.".
+the crass scars are a boringthing. They are part of red bull burdell. description of scars is "Every villain has a few. Red Bull Burdell maxed out his useful attributes, but no amount of leveling up could improve his looks.". bore-text of scars is "He'd want to beat you up for looking at them even if he didn't already want to beat you up.".
 
 The toe is part of Red Bull Burdell.
 
@@ -8885,13 +8884,7 @@ the marble is amusing  scenery in Means Manse. "It makes you calm and relaxed en
 
 the spire is amusing scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
 
-the toaster is amusing scenery in Means Manse. description of toaster is "It's just a stupid harmless luxury, here for a last bit of cheap wordplay."
-
-instead of doing something with the toaster:
-	if action is procedural, continue the action;
-	say "No more fiddling. You just want to sit back and let stuff sink in."
-
-before going in Means Manse (this is the clue final verb rule): say "[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! Maybe you're overthinking[stopping]." instead.
+before going in Means Manse (this is the clue final verb rule): say "[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking[stopping]." instead.
 
 section existing
 
@@ -8900,6 +8893,8 @@ section existing
 existing is an action applying to nothing.
 
 understand the command "exist" as something new.
+understand the command "amens" as something new.
+understand the command "names" as something new.
 
 understand "exist" as existing.
 understand "amens" as existing.
@@ -8944,7 +8939,7 @@ Emerita Emirate is a privately-named room. "[bug-report] I have no idea how you 
 
 understand "ll/Emerita Emirate" as Emerita Emirate when debug-state is true.
 
-instead of doing something in Emerita Emirate: say "You probably need to undo things." instead. [ic]
+instead of doing something in Emerita Emirate: say "You probably need to undo things." instead. [ic] [no-irp]
 
 chapter Adorb Bardo
 
