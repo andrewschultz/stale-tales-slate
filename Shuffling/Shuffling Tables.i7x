@@ -564,7 +564,7 @@ smilies	"[one of]The smilies seem like they don't belong on the page. [plus][or]
 panel	"[if panel is not part of silo]How to get the silo working? PUT PANEL ON SILO.[else]The panel is in place.[end if]"
 wires	"The wires aren't important. The panel is."
 drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if]. [plus][or]Anything would be more beautiful than drainage, especially a flower. [plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA. [minus][cycling]" [START METROS]
-a-reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
+a reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
 soggy love letter	"The love letter introduction clues what the drainage could be."
 can of beer	"The beer can's name clues what the drainage could be."
 arena dig flier	"The flier clues what the drainage should be."

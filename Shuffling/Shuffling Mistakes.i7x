@@ -323,7 +323,7 @@ understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry,
 
 chapter undesired underside
 
-understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a-reading is in underside.
+understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a reading is in underside.
 
 [def=nerd door w]
 understand "odor" and "rood" as a mistake ("That door's reinforced. [if Esoteric Coteries is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
