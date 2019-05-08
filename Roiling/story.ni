@@ -301,9 +301,6 @@ after doing something with a guardian:
 
 chapter rules on stub
 
-to rulesOn: [used to turn rules on at the very start of play]
-	(- RulesOnSub(); -)
-
 every turn when strip of profits is visited (this is the region-hint on no score rule):
 	if mrlp is means manse and Gunter is moot:
 		increment turns-spent of mrlp;
@@ -7973,20 +7970,6 @@ carry out teching:
 	say "[line break]And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
-part sitesing
-
-sitesing is an action out of world.
-
-understand the command "sites" as something new.
-
-understand "sites" as sitesing.
-
-carry out sitesing:
-	say "I've probably forgotten some, here, but these are the big ones.[line break]";
-	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
-	say "And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep an occasional backup, or be sure of what you changed, it can save a lot of trouble.";
-	the rule succeeds; [forgot where I found the names from]
-
 chapter optionsing
 
 optionsing is an action out of world.
@@ -10825,16 +10808,14 @@ to say i-u: if magneto montage is unexamined, say ", which looks like a director
 
 section hubs bush
 
-the hubs bush is bounding scenery. "The hubs bush encircles the entire Strip of Profits, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if same mesa is visited or loather rathole is visited or loftier trefoil is visited or posh hops shop is visited or grey gyre is visited or bleary barley is visited]nother[end if] store."
+the hubs bush is bounding scenery. "The hubs bush encircles the entire Strip of Profits, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if same mesa is visited or loather rathole is visited or loftier trefoil is visited or posh hops shop is visited or grey gyre is visited or bleary barley is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
 
-instead of doing something with hubs bush:
-	if action is procedural, continue the action;
-	say "The hubs bush is there now, forcing you back to the stores to focus on whatever it is you need to do."
+the hubs bush is bounding boringscen. description is "The hubs bush encircles the entire Trips Strip, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if sf is visited or trap part is visited or underside is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by stores. Hooray for focus, I guess."
 
 check going nowhere in strip of profits:
 	if hubs bush is in strip of profits, say "The hubs bush forces you back to the center of the strip and the stores." instead;
 	move hubs bush to strip of profits;
-	say "As you try to flee the Strip of Profits, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Strip of Profits." instead;
+	say "As you try to flee the Strip of Profits, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip." instead;
 
 section describing the Strip
 
@@ -26774,7 +26755,7 @@ understand "lili [number]" as liliing.
 
 section winiting
 
-[* WINIT lets you win the game right away, skipping to the Gates ]
+[* WINIT lets you win the game right away, skipping to the Gates. WOO vs WINIT? ]
 
 winiting is an action applying to nothing.
 

@@ -222,7 +222,7 @@ understand "abroad" and "aboard" as a mistake ("Now you have the bad oar and you
 
 chapter cripple clipper
 
-understand "feer" as a mistake ("Fearing won't help, here.") when player is in cripple clipper.
+understand "feer" as a mistake ("Fearing or pretending fake fear won't help, here.") when player is in cripple clipper.
 
 chapter sonancy canyons
 
