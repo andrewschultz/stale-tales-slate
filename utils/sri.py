@@ -13,6 +13,7 @@ shuffling = defaultdict(int)
 roiling = defaultdict(int)
 niceties = defaultdict(int)
 
+list_separately = True
 roiling_shuffling = False
 get_nice = False
 
@@ -21,6 +22,7 @@ def usage(head_text = "COMMAND LINE PARAMETERS"):
     print("=" * 50)
     print("r/rs/sr/s = roiling/shuffling identicals")
     print("n/g/gn/ng = niceties identicals with either roiling or shuffling")
+    print("se = separately, to = together, default =", "separately" if list_separately else "together")
     exit()
 
 def get_unique_lines(linedict, source):
@@ -36,6 +38,8 @@ while cmd_count < len(sys.argv):
     arg = mt.nohy(sys.argv[cmd_count])
     if arg == 'r' or arg == 'rs' or arg == 'sr' or arg == 's': roiling_shuffling = True
     elif arg == 'g' or arg == 'n' or arg == 'ng' or arg == 'gn': get_nice = True
+    elif arg == 'se': list_separately = True
+    elif arg == 'to': list_separately = False
     elif arg == '?': usage()
     else: usage("invalid parameter " + arg)
     cmd_count += 1
@@ -58,15 +62,32 @@ if get_nice:
     count_both = 0
     count_r = 0
     count_s = 0
+    count_tot = 0
+    both = ronly = sonly = big_str = ""
     print("NICETIES MATCHES")
     for x in sorted(niceties, key=niceties.get):
         if x in roiling and x in shuffling:
             count_both += 1
-            print("{:4d} {:5d} SHUFFLING & ROILING {:5d} {:5d} ----".format(count_both, niceties[x], shuffling[x], roiling[x]), x)
+            count_tot += 1
+            temp = "{:4d}/{:4d} {:5d} SHUFFLING & ROILING {:5d} {:5d} ---- {:s}\n".format(count_both, count_tot, niceties[x], shuffling[x], roiling[x], x)
+            both += temp
+            big_str += temp
         elif x in roiling:
             count_r += 1
-            print("{:4d} {:5d} ROILING {:5d} ----".format(count_both, niceties[x], roiling[x]), x)
+            count_tot += 1
+            temp = "{:4d}/{:4d} {:5d} ROILING {:5d} ---- {:s}\n".format(count_r, count_tot, niceties[x], roiling[x], x)
+            ronly += temp
+            big_str += temp
         elif x in shuffling:
             count_s += 1
-            print("{:4d} SHUFFLING {:5d} {:5d} ----".format(count_both, niceties[x], shuffling[x]), x)
+            count_tot += 1
+            temp = "{:4d}/{:4d} SHUFFLING {:5d} {:5d} ---- {:s}\n".format(count_s, count_tot, niceties[x], shuffling[x], x)
+            sonly += temp
+            big_str += temp
+    if list_separately:
+        print(both.rstrip())
+        print(ronly.rstrip())
+        print(sonly.rstrip())
+    else:
+        print(big_str.rstrip())
     print("Total both", count_both, "Total roil", count_r, "Total shuf", count_s)
