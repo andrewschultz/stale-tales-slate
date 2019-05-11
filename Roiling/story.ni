@@ -54,14 +54,6 @@ Are the two modified, and there may be a problem with naming Flexible Windows.i7
 
 volume globals and initializers
 
-include Roiling Random Text by Andrew Schultz.
-
-include Roiling Nudges by Andrew Schultz.
-
-include Roiling Mistakes by Andrew Schultz.
-
-include Roiling Tables by Andrew Schultz.
-
 include Reactable Quips by Michael Martin.
 
 include Quip-based Conversation by Michael Martin. [his extensions must be listed in this order]
@@ -90,6 +82,18 @@ the release number is 4.
 
 [for the purposes of amusement, I'd like to list the release updates.
 --Gasp! Rude Upgrades!]
+
+section game specific stuff
+
+include Roiling Random Text by Andrew Schultz.
+
+include Roiling Nudges by Andrew Schultz.
+
+include Roiling Mistakes by Andrew Schultz.
+
+include Roiling Tables by Andrew Schultz.
+
+include STS Common by Andrew Schultz.
 
 chapter region specs
 
@@ -26057,17 +26061,14 @@ book dbing
 
 dbing is an action applying to nothing.
 
-understand the command "db" as something new.
+understand the command "debug/db" as something new.
 
-understand "db" as dbing.
+understand "debug" and "db" as dbing.
 
 carry out dbing:
-	if debug-state is false:
-		say "Debug state is on now.";
-		now debug-state is true instead;
-	else:
-		say "Debug state is off now.";
-		now debug-state is false instead;
+	now debug-state is whether or not debug-state is false;
+	say "Debugging [if debug-state is true]on[else]off[end if]. Use DP to turn off DEBUG INFO.";
+	the rule succeeds;
 
 book min/max tracking
 

@@ -134,6 +134,8 @@ include Shuffling Nudges by Andrew Schultz.
 
 include Shuffling Mistakes by Andrew Schultz.
 
+include STS Common by Andrew Schultz.
+
 book debug modules - not for release
 
 include Object Response Tests by Juhana Leinonen.
@@ -283,38 +285,6 @@ a thing can be universal, useless, amusing, unimportant, abstract, bounding or p
 a disguise-piece is a kind of thing. a disguise-piece has a number called elevation.
 
 a flower is a kind of thing. understand "flower" and "flowers" as a flower.
-
-section boringthings
-
-a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
-
-a boringscen is a kind of boringthing.
-
-this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
-
-this is the bore-exam rule: [note: I caused bugs by saying PROCESS  THE BORE-EXAM RULE instead of ABIDE BY. Enough that I'll write this note in.]
-	if current action is examining:
-		if description of noun is empty:
-			if debug-state is true, say "(DEBUG: pulling bore-text) ";
-			say "[bore-text of noun]";
-			the rule succeeds;
-	else unless action is procedural:
-		say "There's not much to do with [the noun] except examine [if noun is plural-named]them[else]it[end if]. So you do.";
-		try examining the noun;
-		the rule succeeds;
-
-For printing a locale paragraph about a thing (called the item)
-	(this is the don't mention boringscen in room descriptions rule):
-	if the item is boringscen, set the locale priority of the item to 0;
-	continue the activity.
-
-instead of doing something with a boringthing: [no-irp]
-	say "1. [current action] / [noun] ... rule = [bore-check of noun].";
-	abide by the bore-check of noun;
-	say "2. [current action] / [noun].";
-	if action is procedural, continue the action;
-	say "3. [current action] / [noun].";
-	say "[bore-text of noun]" instead;
 
 chapter colors
 
