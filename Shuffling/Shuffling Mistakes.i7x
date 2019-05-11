@@ -17,31 +17,31 @@ understand "magnet" and "a magnet" as a mistake ("[blurby][line break]") when pl
 
 understand "get a man" as a mistake ("[get-a-man][run paragraph on]")
 
-understand "scan" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "scan" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "scan [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "scan [text]" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "c" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "c" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "c [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "c [text]" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "r" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "r" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "r [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "r [text]" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "cr" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "cr" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "cr [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "cr [text]" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "rc" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "rc" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "rc [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "rc [text]" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
 understand "remove [something] from [something]" as a mistake("To keep things simple, I recommend TAKE as a synonym. REMOVE is also okay, but it defaults to carried or worn items, and I know no way around that.")
 
 book intro
 
-chapter busiest subsite
+chapter Busiest Subsite
 
 to say if-sign-x:
 	say "[if above-sign is not examined]. Maybe the sign means something different[end if]"
@@ -56,14 +56,14 @@ understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be T
 
 understand "try" as a mistake ("[if player is in subsite]You're sure the lecture to the east will be about trying versus doing. Ugh[else]That's more sensible than the five alternatives, but it's not concrete enough[end if].")
 
-chapter rested desert
+chapter Rested Desert
 
-understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in rested desert.
+understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in Rested Desert.
 
 [def=desert-door]
-understand "rood" as a mistake ("[if desert-door is in rested desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in rested desert.
+understand "rood" as a mistake ("[if desert-door is in Rested Desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in Rested Desert.
 
-chapter thickest thickets
+chapter Thickest Thickets
 
 understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is quickvis.
 
@@ -73,9 +73,9 @@ understand "landers" as a mistake ("There will be better hints than a manners ad
 
 understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if darn-slan is false]. Okay, actually, you're close to one point[else] for trying to sneak another point[end if].") when player is in Thickest Thickets.
 
-chapter notices section
+chapter Notices Section
 
-understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.") when player is in notices section and gateman is in notices section.
+understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.") when player is in Notices Section and gateman is in Notices Section.
 
 understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.") when phial is visible.
 
@@ -87,13 +87,13 @@ understand "elastin" and "nailset" as a mistake ("That would make the saltine le
 
 understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.") when show hows tag is visible.
 
-understand "mist" as a mistake ("No, those TMIs on the broad board are useful.") when player is in notices section.
+understand "mist" as a mistake ("No, those TMIs on the broad board are useful.") when player is in Notices Section.
 
 understand "stealin" as a mistake ("You're the good guy, here.") when player has saltine.
 
 book stores
 
-chapter trips strip
+chapter Trips Strip
 
 understand "dater" as a mistake ("This is not a romance game.") when player is in Trips Strip and trade tread is in Trips Strip.
 
@@ -105,21 +105,21 @@ understand "doters" as a mistake ("You don't need people oohing and ahing at you
 
 understand "lost" as a mistake ("No, you need to find your way through individual stores.") when player is in strip.
 
-understand "oyster" as a mistake ("Nice try, but that's next game![fake-clue of store y]") when player is in trips strip.
+understand "oyster" as a mistake ("Nice try, but that's next game![fake-clue of store y]") when player is in Trips Strip.
 
-understand "presto" as a mistake ("Your magic is not advanced enough to change store p! Well, not this game![fake-clue of store p]") when player is in trips strip.
+understand "presto" as a mistake ("Your magic is not advanced enough to change store p! Well, not this game![fake-clue of store p]") when player is in Trips Strip.
 
 understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.") when player is in Trips Strip and trade tread is in Trips Strip.
 
-understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in trips strip.
+understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in Trips Strip.
 
 understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.")
 
-understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in trips strip.
+understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in Trips Strip.
 
-understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]") when player is in trips strip.
+understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]") when player is in Trips Strip.
 
-understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]") when player is in trips strip.
+understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]") when player is in Trips Strip.
 
 book store f
 
@@ -127,7 +127,7 @@ understand "fire [something] at [something]" as a mistake ("You can either FIRE 
 
 understand "shoot [something] with [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.") when player has shotgun.
 
-chapter random forests / softer forest / rest of forest
+chapter random forests / Softer Forest / Rest of Forest
 
 understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is in location of player.
 
@@ -137,21 +137,21 @@ understand "tase" as a mistake ("This game is nonviolent--well, except for a few
 
 understand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is in location of player.
 
-chapter self-id fields
+chapter Self-ID Fields
 
-understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in self-id fields.
+understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in Self-ID Fields.
 
-understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in self-id fields.
+understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in Self-ID Fields.
 
-understand "nile" as a mistake ("Wrong river for the underworld.") when player is in self-id fields.
+understand "nile" as a mistake ("Wrong river for the underworld.") when player is in Self-ID Fields.
 
-understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in self-id fields.
+understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in Self-ID Fields.
 
-understand "scorse" as a mistake ("You can't trade with the dead.") when player is in self-id fields.
+understand "scorse" as a mistake ("You can't trade with the dead.") when player is in Self-ID Fields.
 
 chapter Flesh Shelf
 
-understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in trips strip]behind store M[else]in the Metros[end if] anyway.") when Spam is quickvis or maps are quickvis.
+understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in Trips Strip]behind store M[else]in the Metros[end if] anyway.") when Spam is quickvis or maps are quickvis.
 
 understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is quickvis.
 
@@ -161,9 +161,9 @@ understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder
 
 understand "helf" and "helfs" as a mistake ("While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'") when player is in Flesh Shelf.
 
-understand "inks" as a mistake ("The skin sink bleeds no color.") when player is in flesh shelf.
+understand "inks" as a mistake ("The skin sink bleeds no color.") when player is in Flesh Shelf.
 
-understand "kin" and "kins" as a mistake ("Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers .") when player is in flesh shelf.
+understand "kin" and "kins" as a mistake ("Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers .") when player is in Flesh Shelf.
 
 understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in Flesh Shelf.
 
@@ -207,17 +207,17 @@ understand "spader" as a mistake ("James Spader is pretty cool, but he can't hel
 
 understand "spared" as a mistake ("That is too passive, to ask to be spared.") when red asp is not moot.
 
-chapter ghouls' slough
+chapter Ghouls' Slough
 
-understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.[end-it]") when player is in ghouls' slough.
+understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.[end-it]") when player is in Ghouls' Slough.
 
-understand "god" as a mistake ("You want to tempt the supernatural in somewhere this hellish? Phew.") when player is in ghouls' slough.
+understand "god" as a mistake ("You want to tempt the supernatural in somewhere this hellish? Phew.") when player is in Ghouls' Slough.
 
-chapter frost forts
+chapter Frost Forts
 
-understand "steel" as a mistake ("You'd be crushed if the sleet turned to steel.") when player is in frost forts
+understand "steel" as a mistake ("You'd be crushed if the sleet turned to steel.") when player is in Frost Forts
 
-understand "unpile" as a mistake ("They'd be much less dangerous left in a pile. Maybe you have something that can do that!") when player is in frost forts and wolves are in frost forts.
+understand "unpile" as a mistake ("They'd be much less dangerous left in a pile. Maybe you have something that can do that!") when player is in Frost Forts and wolves are in Frost Forts.
 
 book store i
 
@@ -225,7 +225,7 @@ understand "dumdum" and "dum" and "dum dum" as a mistake ("The mud is stuck that
 
 to decide whether in-i-box:
 	unless mrlp is sortie, no;
-	if player is in nick or player is in moor or player is in sacred cedars, no;
+	if player is in nick or player is in moor or player is in Sacred Cedars, no;
 	yes;
 
 chapter Trap Part
@@ -321,7 +321,7 @@ understand "bates" as a mistake ("You don't need to deal with a knife-wielding p
 
 understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.") when beats are visible or beast is visible.
 
-chapter undesired underside
+chapter Undesired Underside
 
 understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a reading is in underside.
 
@@ -387,7 +387,7 @@ chapter Esoteric Coteries
 [def=nerd door e]
 understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Esoteric Coteries.
 
-chapter bassy abyss
+chapter Bassy Abyss
 
 understand "reins" as a mistake ("Horsing around like that won't hold back the [if beast is visible]beast[else]beats[end if]. You need to get a grip another way, but you're on the right track.") when player is in Bassy Abyss.
 
@@ -409,7 +409,7 @@ understand "download" as a mistake ("[if woodland-revealed is false]The woodland
 
 understand "lies" and "lie" as a mistake ("You reflect on how insidious it was to stick you here in a false paradise.") when player is in isle and l2 are moot.
 
-chapter rived drive
+chapter Rived Drive
 
 understand "loot" as a mistake ("You don't have time for treasure with Red Bull Burdell waiting.") when player is in Rived Drive and tool shed is in Rived Drive.
 
@@ -423,7 +423,7 @@ understand "prose" as a mistake ("There's not much of that left in this game, an
 
 understand "verdi" as a mistake ("You don't need a musical score for this adventure.") when player is in Rived Drive.
 
-chapter potshot hotspot
+chapter Potshot Hotspot
 
 understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not moot], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are in hotspot.
 
@@ -445,7 +445,7 @@ understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't s
 
 understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in hotspot and potters are not moot.
 
-chapter means manse
+chapter Means Manse
 
 understand "amen" and "name" as a mistake ("I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.") when player is in Means Manse.
 

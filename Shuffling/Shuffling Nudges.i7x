@@ -12,7 +12,7 @@ book nudge tables
 
 table of Ordeal Loader nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
-"busiest"	591981617	subsite	--	--	"[loc-rej]." [start busiest subsite]
+"busiest"	591981617	subsite	--	--	"[loc-rej]." [start Busiest Subsite]
 "noentry"	650766775	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
 "slim"	259155804	subsite	--	--	"[name-list]."
 "neat"	302011453	subsite	--	--	"[name-list]."
@@ -21,31 +21,31 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "elevator"	681565093	subsite	--	--	"[word-games]."
 "terraces"	646837211	subsite	--	--	"[word-games]."
 "banner"	371551651	subsite	--	--	"[word-games]."
-"oafs"	199329257	busiest subsite	--	--	"[sofa-there]."
-"oaf"	103055291	busiest subsite	--	--	"[sofa-there]."
-"rested"	561349094	Rested Desert	--	--	"[loc-rej]." [start rested desert]
+"oafs"	199329257	Busiest Subsite	--	--	"[sofa-there]."
+"oaf"	103055291	Busiest Subsite	--	--	"[sofa-there]."
+"rested"	561349094	Rested Desert	--	--	"[loc-rej]." [start Rested Desert]
 "improbable"	570855914	Rested Desert	--	--	"You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler."
 "breeze"	610130653	--	odor	--	"[nope-odor]."
 "smlel"	395782906	--	odor	--	"[nope-odor]."
 "musical"	385455014	--	desert-door	--	"[com-chor]."
 "chord"	236993353	--	desert-door	--	"[com-chor]."
 "horn"	265866187	--	bugle	--	"No, the bugle is a bugle, not just a horn. It's been changed enough."
-"thickets"	584514019	thickest thickets	--	--	"[loc-rej]." [start thickest thickets]
-"thicket"	488240053	thickest thickets	--	--	"[loc-rej]"
-"darnel"	359068166	thickest thickets	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
+"thickets"	584514019	Thickest Thickets	--	--	"[loc-rej]." [start Thickest Thickets]
+"thicket"	488240053	Thickest Thickets	--	--	"[loc-rej]"
+"darnel"	359068166	Thickest Thickets	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
 "shrub"	342404780	thickets	--	--	"The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else]opening in the thickets[end if]."
 "darnels"	455342132	--	darnels	--	"[darnels-inst]."
-"notices"	534448609	notices section	--	--	"[loc-rej]." [start notices section]
-"borda"	201312192	notices section	--	--	"The broad board is just there to read."
-"newland"	450586644	notices section	--	--	"You will have to change the new land one item at a time."
-"tmi"	212178017	notices section	--	--	"The TMIs are there to help you."
-"tmis"	308451983	notices section	--	--	"The TMIs are there to help you."
-"warpy"	399271605	notices section	--	--	"[no-warpy]."
-"old"	149195505	notices section	--	--	"[no-warpy]."
-"doll"	203009344	notices section	--	--	"[stat-at]."
-"house"	440820758	notices section	--	--	"[stat-at]."
-"warmup"	446093313	notices section	--	--	"You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you."
-"gateway"	498185490	notices section	--	--	"Nothing changes. Maybe you just need to walk through it, if and when you're prepared."
+"notices"	534448609	Notices Section	--	--	"[loc-rej]." [start Notices Section]
+"borda"	201312192	Notices Section	--	--	"The broad board is just there to read."
+"newland"	450586644	Notices Section	--	--	"You will have to change the new land one item at a time."
+"tmi"	212178017	Notices Section	--	--	"The TMIs are there to help you."
+"tmis"	308451983	Notices Section	--	--	"The TMIs are there to help you."
+"warpy"	399271605	Notices Section	--	--	"[no-warpy]."
+"old"	149195505	Notices Section	--	--	"[no-warpy]."
+"doll"	203009344	Notices Section	--	--	"[stat-at]."
+"house"	440820758	Notices Section	--	--	"[stat-at]."
+"warmup"	446093313	Notices Section	--	--	"You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you."
+"gateway"	498185490	Notices Section	--	--	"Nothing changes. Maybe you just need to walk through it, if and when you're prepared."
 "oldman"	284365984	--	gateman	--	"He's too old to change. At least, in his present form."
 "dollhouse"	643830102	--	doll house	--	"Thinking that doesn't do much, but the [if static is visible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
 "attic"	272406285	--	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
@@ -53,66 +53,66 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 
 table of Stores nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
-"trips"	411166592	trips strip	--	--	"[loc-rej]." [start trips strip]
-"tepid"	378404021	trips strip	--	--	"[tid]."
-"tepidicon"	585662537	trips strip	--	--	"[tid]."
-"icon"	207258516	trips strip	--	--	"[tid]."
-"badge"	202041623	trips strip	--	--	"The badge just has general information. It's not useful on its own."
-"masll"	270164615	trips strip	--	--	"[say-which]."
-"mall"	173890649	trips strip	--	--	"[say-which]."
-"lots"	327550400	trips strip	--	--	"You can manipulate each individual store."
-"lot"	231276434	trips strip	--	--	"[lotmaso]."
-"lotb"	249695339	trips strip	--	--	"[lotmaso]."
-"lota"	233464252	trips strip	--	--	"[lotmaso]."
-"lotc"	250282019	trips strip	--	--	"[lotmaso]."
-"lotd"	252305523	trips strip	--	--	"[lotmaso]."
-"lote"	359082543	trips strip	--	--	"[lotmaso]."
+"trips"	411166592	Trips Strip	--	--	"[loc-rej]." [start Trips Strip]
+"tepid"	378404021	Trips Strip	--	--	"[tid]."
+"tepidicon"	585662537	Trips Strip	--	--	"[tid]."
+"icon"	207258516	Trips Strip	--	--	"[tid]."
+"badge"	202041623	Trips Strip	--	--	"The badge just has general information. It's not useful on its own."
+"masll"	270164615	Trips Strip	--	--	"[say-which]."
+"mall"	173890649	Trips Strip	--	--	"[say-which]."
+"lots"	327550400	Trips Strip	--	--	"You can manipulate each individual store."
+"lot"	231276434	Trips Strip	--	--	"[lotmaso]."
+"lotb"	249695339	Trips Strip	--	--	"[lotmaso]."
+"lota"	233464252	Trips Strip	--	--	"[lotmaso]."
+"lotc"	250282019	Trips Strip	--	--	"[lotmaso]."
+"lotd"	252305523	Trips Strip	--	--	"[lotmaso]."
+"lote"	359082543	Trips Strip	--	--	"[lotmaso]."
 "lotf"	257791330	--	store f	--	"[lotmaso]."
-"lotg"	263876136	trips strip	--	--	"[lotmaso]."
-"loth"	268558733	trips strip	--	--	"[lotmaso]."
+"lotg"	263876136	Trips Strip	--	--	"[lotmaso]."
+"loth"	268558733	Trips Strip	--	--	"[lotmaso]."
 "loti"	276269280	--	store i	--	"[lotmaso]."
-"lotj"	280236959	trips strip	--	--	"[lotmaso]."
-"lotk"	284209612	trips strip	--	--	"[lotmaso]."
-"lotl"	285090273	trips strip	--	--	"[lotmaso]."
+"lotj"	280236959	Trips Strip	--	--	"[lotmaso]."
+"lotk"	284209612	Trips Strip	--	--	"[lotmaso]."
+"lotl"	285090273	Trips Strip	--	--	"[lotmaso]."
 "lotm"	295351587	--	store m	--	"[lotmaso]."
-"lotn"	300183942	trips strip	--	--	"[lotmaso]."
-"loto"	305629011	trips strip	--	--	"[lotmaso]."
-"lotp"	312742393	trips strip	--	--	"[lotmaso]."
-"lotq"	315682051	trips strip	--	--	"[lotmaso]."
+"lotn"	300183942	Trips Strip	--	--	"[lotmaso]."
+"loto"	305629011	Trips Strip	--	--	"[lotmaso]."
+"lotp"	312742393	Trips Strip	--	--	"[lotmaso]."
+"lotq"	315682051	Trips Strip	--	--	"[lotmaso]."
 "lotr"	316600237	--	store r	--	"[lotmaso]."
-"lott"	334386452	trips strip	--	--	"[lotmaso]."
-"lotu"	336382241	trips strip	--	--	"[lotmaso]."
-"lotv"	338441254	trips strip	--	--	"[lotmaso]."
-"lotw"	339211207	trips strip	--	--	"[lotmaso]."
-"lotx"	344044515	trips strip	--	--	"[lotmaso]."
-"loty"	353635686	trips strip	--	--	"[lotmaso]."
-"lotz"	354246052	trips strip	--	--	"[lotmaso]."
-"malla"	176078467	trips strip	--	--	"[lotmaso]."
-"mallb"	192309554	trips strip	--	--	"[lotmaso]."
-"mallc"	192896234	trips strip	--	--	"[lotmaso]."
-"malld"	194919738	trips strip	--	--	"[lotmaso]."
-"malle"	301696758	trips strip	--	--	"[lotmaso]."
+"lott"	334386452	Trips Strip	--	--	"[lotmaso]."
+"lotu"	336382241	Trips Strip	--	--	"[lotmaso]."
+"lotv"	338441254	Trips Strip	--	--	"[lotmaso]."
+"lotw"	339211207	Trips Strip	--	--	"[lotmaso]."
+"lotx"	344044515	Trips Strip	--	--	"[lotmaso]."
+"loty"	353635686	Trips Strip	--	--	"[lotmaso]."
+"lotz"	354246052	Trips Strip	--	--	"[lotmaso]."
+"malla"	176078467	Trips Strip	--	--	"[lotmaso]."
+"mallb"	192309554	Trips Strip	--	--	"[lotmaso]."
+"mallc"	192896234	Trips Strip	--	--	"[lotmaso]."
+"malld"	194919738	Trips Strip	--	--	"[lotmaso]."
+"malle"	301696758	Trips Strip	--	--	"[lotmaso]."
 "mallf"	200405545	--	store f	--	"[lotmaso]."
-"mallg"	206490351	trips strip	--	--	"[lotmaso]."
-"mallh"	211172948	trips strip	--	--	"[lotmaso]."
+"mallg"	206490351	Trips Strip	--	--	"[lotmaso]."
+"mallh"	211172948	Trips Strip	--	--	"[lotmaso]."
 "malli"	218883495	--	store i	--	"[lotmaso]."
-"mallj"	222851174	trips strip	--	--	"[lotmaso]."
-"mallk"	226823827	trips strip	--	--	"[lotmaso]."
-"malll"	227704488	trips strip	--	--	"[lotmaso]."
+"mallj"	222851174	Trips Strip	--	--	"[lotmaso]."
+"mallk"	226823827	Trips Strip	--	--	"[lotmaso]."
+"malll"	227704488	Trips Strip	--	--	"[lotmaso]."
 "mallm"	237965802	--	store m	--	"[lotmaso]."
-"malln"	242798157	trips strip	--	--	"[lotmaso]."
-"mallo"	248243226	trips strip	--	--	"[lotmaso]."
-"mallp"	255356608	trips strip	--	--	"[lotmaso]."
-"mallq"	258296266	trips strip	--	--	"[lotmaso]."
+"malln"	242798157	Trips Strip	--	--	"[lotmaso]."
+"mallo"	248243226	Trips Strip	--	--	"[lotmaso]."
+"mallp"	255356608	Trips Strip	--	--	"[lotmaso]."
+"mallq"	258296266	Trips Strip	--	--	"[lotmaso]."
 "mallr"	259214452	--	store r	--	"[lotmaso]."
-"malls"	270164615	trips strip	--	--	"[lotmaso]."
-"mallt"	277000667	trips strip	--	--	"[lotmaso]."
-"mallv"	281055469	trips strip	--	--	"[lotmaso]."
-"mallu"	278996456	trips strip	--	--	"[lotmaso]."
-"mallw"	281825422	trips strip	--	--	"[lotmaso]."
-"mallx"	286658730	trips strip	--	--	"[lotmaso]."
-"mally"	296249901	trips strip	--	--	"[lotmaso]."
-"mallz"	296860267	trips strip	--	--	"[lotmaso]."
+"malls"	270164615	Trips Strip	--	--	"[lotmaso]."
+"mallt"	277000667	Trips Strip	--	--	"[lotmaso]."
+"mallv"	281055469	Trips Strip	--	--	"[lotmaso]."
+"mallu"	278996456	Trips Strip	--	--	"[lotmaso]."
+"mallw"	281825422	Trips Strip	--	--	"[lotmaso]."
+"mallx"	286658730	Trips Strip	--	--	"[lotmaso]."
+"mally"	296249901	Trips Strip	--	--	"[lotmaso]."
+"mallz"	296860267	Trips Strip	--	--	"[lotmaso]."
 "storea"	489054291	--	store a	--	"[no-cand]."
 "storec"	505872058	--	store c	--	"[no-cand]."
 "stored"	507895562	--	store d	--	"[no-cand]."
@@ -135,7 +135,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "storex"	599634554	--	store x	--	"[no-way]."
 "storey"	609225725	--	store y	--	"[no-mb]."
 "storez"	609836091	--	store z	--	"[no-way]."
-"marquee"	596710416	trips strip	--	--	"You don't need to change the marquee[unless sorbet is moot], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
+"marquee"	596710416	Trips Strip	--	--	"You don't need to change the marquee[unless sorbet is moot], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
 "depot"	407763752	--	posted depots	--	"You can't do anything to the depots besides ENTER them."
 "depots"	504037718	--	posted depots	--	"You can't do anything to the depots besides ENTER them."
 "scented"	563938384	--	scented descent 	--	"No way. It's your way down to the forest."
@@ -174,7 +174,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "crosse"	499036006	--	Corses Crosse	--	"[crosse-to-you]."
 "cross"	371229897	--	Corses Crosse	--	"[crosse-to-you]."
 "crose"	402762040	--	Corses Crosse	--	"[crosse-to-you]."
-"triangles"	615015609	Gnarliest Triangles	--	--	"The triangles need no alterings." [start gnarliest triangles]
+"triangles"	615015609	Gnarliest Triangles	--	--	"The triangles need no alterings." [start Gnarliest Triangles]
 "triangle"	518741643	Gnarliest Triangles	--	--	"No triangle needs altering."
 "shell"	368990052	Gnarliest Triangles	--	--	"[in-sort of dashes]."
 "bucket"	426379602	Gnarliest Triangles	--	--	"[in-sort of ones]."
@@ -216,25 +216,25 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
-"snow"	347468824	frost forts	--	--	"[froz-ha-ha]."
+"snow"	347468824	Frost Forts	--	--	"[froz-ha-ha]."
 "slough"	399428190	slough	--	--	"[loc-rej]." [START OF GHOULS' SLOUGH]
 "marsh"	285143039	slough	--	--	"[marsh-lake]."
 "lake"	236740944	slough	--	--	"[marsh-lake]."
 "frost"	385575260	frost	--	--	"[loc-rej]." [START OF FROST FORTS]
 "capital"	306763883	--	vowels	--	"You need to deal with all the capitals. And they're specific letters."
 "capitals"	403037849	--	vowels	--	"They aren't just any capitals. They're specific letters."
-"icecap"	294463902	frost forts	--	--	"[froz-ha-ha]."
-"bumps"	365339790	frost forts	--	--	"[froz-ha-ha]."
+"icecap"	294463902	Frost Forts	--	--	"[froz-ha-ha]."
+"bumps"	365339790	Frost Forts	--	--	"[froz-ha-ha]."
 "iced"	212833629	--	iced dice	--	"[froz-ha-ha]."
 "ice"	191804540	--	iced dice	--	"[froz-ha-ha]."
-"sleet"	508810041	frost forts	--	--	"[froz-ha-ha]."
+"sleet"	508810041	Frost Forts	--	--	"[froz-ha-ha]."
 "werewolves"	1016216878	--	wolves	--	"They won't be changed with magic. Thankfully, you've got something more direct."
 "lupine"	482092068	--	wolves	--	"They are the lupine lineup from your notes, but for your purpose, they're wolves."
-"forest"	513381369	--	--	degen-true rule	"[if self-id fields is visited][reg-rej][else][loc-rej][end if]." [end-f]
+"forest"	513381369	--	--	degen-true rule	"[if Self-ID Fields is visited][reg-rej][else][loc-rej][end if]." [end-f]
 
 table of Sortie nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
-"part"	272087598	Trap Part	--	--	"You don't need to change this room[if kitchen is visited], and you don't want to change it BACK to the trap part." [start trap part]
+"part"	272087598	Trap Part	--	--	"You don't need to change this room[if kitchen is visited], and you don't want to change it BACK to the Trap Part." [start Trap Part]
 "sortie"	531859319	--	--	degen-true rule	"[reg-rej]."
 "centrifuge"	741172383	--	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	--	--	b4-cent rule	"[loc-rej]."
@@ -283,7 +283,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lamina"	236164982	--	manila animal	--	"It actually looks pretty nice on the fridge."
 "burlap"	346316131	--	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
 "wart"	298556412	--	warts	--	"Why zap just one wart? Go for all of them!"
-"trellis"	565134420	Trellis	--	--	"[if trel-priv is in Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]" [start stiller trellis]
+"trellis"	565134420	Trellis	--	--	"[if trel-priv is in Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]" [start Stiller Trellis]
 "arching"	290299561	--	crashing archings	--	"Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back."
 "crashing"	386573527	--	crashing archings	--	"[loc-rej]."
 "hay"	161829369	--	hay	--	"Hay is not terribly magical. It's more for trading or building."
@@ -330,7 +330,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "hoot"	289097471	--	hoots button	--	"No, the hoots button is plural."
 "shootbutton"	858376270	--	--	panel-in-silo rule	"No, you're overthinking it. Just the text."
 "treesbutton"	1013324838	--	--	panel-in-silo rule	"No, you're overthinking it. Just the text."
-"cedars"	351626370	cedars	--	--	"[loc-rej]." [start sacred cedars]
+"cedars"	351626370	cedars	--	--	"[loc-rej]." [start Sacred Cedars]
 "cedar"	255352404	cedars	--	--	"[loc-rej]."
 "drawing"	362975539	cedars	--	--	"[best-not-defile]."
 "drawings"	459249505	cedars	--	--	"[best-not-defile]."
@@ -349,7 +349,7 @@ table of Metros nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "metros"	550941626	--	--	degen-true rule	"[reg-rej]."
 "metro"	454667660	--	--	degen-true rule	"[reg-rej]."
-"undesired"	698274326	underside	--	--	"[loc-rej]." [undesired underside]
+"undesired"	698274326	underside	--	--	"[loc-rej]." [Undesired Underside]
 "titling"	451526777	underside	--	--	"No, the tilting titling is unstable enough."
 "sensor"	548937929	underside	--	--	"You don't have the skill to hack the sensor electronically."
 "door"	255058046	underside	--	--	"It can't be that easy to change. Maybe some random door in the wilderness."
@@ -372,7 +372,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "letter"	600969896	--	letter	--	"It's just garbage. The writing inside, too."
 "cramped"	400893516	Underside	--	--	"You can't do much with or to the camp, here or north."
 "camp"	166734515	Underside	--	--	"You can't do much with or to the camp, here or north."
-"roarings"	489962023	Roarings Garrison	--	--	"[loc-rej]." [roarings garrison]
+"roarings"	489962023	Roarings Garrison	--	--	"[loc-rej]." [Roarings Garrison]
 "roaring"	393688057	Roarings Garrison	--	--	"[loc-rej]."
 "tent"	402933653	--	tents	--	"As anti-personal property as the beatniks/moonies are, that'd still annoy them."
 "tents"	499207619	--	tents	--	"As anti-personal property as the beatniks/moonies are, that'd still annoy them."
@@ -473,7 +473,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "irwin"	352151776	--	op	--	"You don't want to mess with the wirin['] [if controls are in op]any further[else]that way[end if]."
 "beats"	347796816	--	--	no-beats rule	"The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here."
 "beta"	251522850	--	beats	--	"This racket isn't just one beat."
-"bassy"	335513907	abyss	--	--	"[loc-rej]." [start bassy abyss]
+"bassy"	335513907	abyss	--	--	"[loc-rej]." [start Bassy Abyss]
 "aligns"	298775679	abyss	--	--	"[aligns-no]."
 "align"	202501713	abyss	--	--	"[aligns-no]."
 "resin"	423304232	--	--	resin-lala rule	"The dust is dust now." [end-m]
@@ -485,7 +485,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "altar"	246623296	Astral Altars	--	--	"[loc-rej]."
 "flare"	295646465	--	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
 "tile"	329722812	Astral Altars	--	--	"No, all the tiles."
-"leis"	322886760	Leis Isle	--	--	"[loc-rej]." [start leis isle]
+"leis"	322886760	Leis Isle	--	--	"[loc-rej]." [start Leis Isle]
 "lie"	226612794	Leis Isle	--	--	"[loc-rej]."
 "woodland"	423607270	Leis Isle	--	--	"[loc-rej]."
 "sand"	188398381	Leis Isle	--	--	"[the-sand]."
@@ -493,7 +493,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "islet"	425996778	Leis Isle	--	--	"Nothing happens. You may need to deal with something specific on the Leis Isle to leave."
 "eter"	444046039	Leis Isle	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
 "oflat"	259979148	Leis Isle	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
-"drive"	386316667	Rived Drive	--	--	"[loc-rej]." [start rived drive]
+"drive"	386316667	Rived Drive	--	--	"[loc-rej]." [start Rived Drive]
 "blow"	254520094	Rived Drive	--	--	"You don't need to make any blow bowl more chaotic."
 "tool"	305629011	--	tool shed	--	"Hm, no, the whole tool shed."
 "shed"	282391463	--	tool shed	--	"Hm, no, the whole tool shed."
@@ -505,7 +505,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lock"	200105179	--	tool shed	--	"Nope. That lock's secure."
 "rope"	368948448	--	ropes	--	"Those are already useful."
 "grip"	244382310	--	grips	--	"Those are already useful."
-"hotsopt"	569947414	hotspot	--	--	"[loc-rej]." [start potshot hotspot]
+"hotsopt"	569947414	hotspot	--	--	"[loc-rej]." [start Potshot Hotspot]
 "ransom"	391120825	hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
 "manor"	294846859	hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
 "rioters"	617183122	--	riot	--	"[simple-riot]."
@@ -528,7 +528,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "crass"	299065138	--	red bull burdell	--	"No time for cosmetic changes."
 "cutlery"	616524413	--	red bull burdell	--	"Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery--maybe somewhere, or something, else?"
 "tshirt"	470092950	--	red bull burdell	--	"You slur out a few consonants--maybe you should work with something closer, lower down."
-"manse"	359250554	Means Manse	--	--	"You like your manse just fine now. No need to change it. It's just all the EXITS you don't want to worry about." [start means manse]
+"manse"	359250554	Means Manse	--	--	"You like your manse just fine now. No need to change it. It's just all the EXITS you don't want to worry about." [start Means Manse]
 "extis"	484951020	Means Manse	--	--	"That's not quite the right sort of nothing."
 "marble"	351625627	Means Manse	--	--	"[ennui]."
 "spire"	435862683	Means Manse	--	--	"[ennui]."
@@ -540,7 +540,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "papesr"	474523614	--	prep paper	--	"[no-2]."
 "prep"	376061830	--	prep paper	--	"[no-2]."
 "sheet"	492278501	--	prep paper	--	"[no-2]."
-"firm"	220906698	--	prep paper	--	"FIMR is just a mnemonic for the [if trips strip is unvisited]places[else]stores[end if] you need to explore[if cur-score of stores is 0], somehow[end if]."
+"firm"	220906698	--	prep paper	--	"FIMR is just a mnemonic for the [if Trips Strip is unvisited]places[else]stores[end if] you need to explore[if cur-score of stores is 0], somehow[end if]."
 "tinfoil"	416684530	--	info-lit	--	"You can't change paranoid ramblings."
 "tagged"	319332438	--	gadget	--	"Bad idea to mess with electronics you don't understand."
 "lemon"	388955186	--	gadget	--	"That's just an example, for CERTIFY."
@@ -566,7 +566,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "point"	372828908	--	--	know-point rule	"There's no secret cheat between NO TIP and OPT IN."
 "parse"	393057655	--	--	can-i-parse rule	"There's no inbetween for the PARSE and SPARE commands for the gadget."
 "angle"	285314976	--	phail phial	--	"There's nothing between ANGLE and GLEAN that you can do with the blue lube."
-"yorpwald"	548467110	--	--	past-loader rule	"[if player is in notices section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
+"yorpwald"	548467110	--	--	past-loader rule	"[if player is in Notices Section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
 "retry"	523922985	--	--	past-strip rule	"Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire."
 "notepad"	478859078	--	--	degen-true rule	"[what-for]."
 "dope"	304653734	--	--	degen-true rule	"[what-for]."
@@ -928,20 +928,20 @@ to say no-2:
 	say "You can't really second-guess the help on the prep paper";
 
 this is the past-strip rule:
-	if self-id fields is visited or underside is visited or Trap Part is visited:
+	if Self-ID Fields is visited or underside is visited or Trap Part is visited:
 		decide yes;
 	decide no;
 
 this is the past-loader rule:
-	if notices section is visited, the rule succeeds;
+	if Notices Section is visited, the rule succeeds;
 	the rule fails;
 
 this is the can-retry rule:
-	if trips strip is visited, the rule succeeds;
+	if Trips Strip is visited, the rule succeeds;
 	the rule fails
 
 to say what-for:
-	say "[if notices section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
+	say "[if Notices Section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
 
 to say no-pen:
 	say "If you changed the pen, you'd have nothing to write with";

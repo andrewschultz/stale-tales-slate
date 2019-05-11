@@ -4335,7 +4335,7 @@ blurb
 "The [ri-tri] continue their bashin['], hoping to banish you." [x]
 "The [ri-tri] decry The Villain In The Villa. The one they're blocking you from. Hooray, mob logic." [x]
 "The [ri-tri] discuss what to hate next. A 'BINGO! AMEN!' restarts their bemoaning." [x]
-"The [ri-tri] seem particularly upset you destroyed store I & R[if store i is in trips strip] (okay, they're wrong about I)[end if]." [x]
+"The [ri-tri] seem particularly upset you destroyed store I & R[if store i is in Trips Strip] (okay, they're wrong about I)[end if]." [x]
 "'Ah, set hates! Haste!'" []
 "'Alien scum! Nice? MAULS!' Masculine calumnies."
 "'Apology? A ploy! Go!'"

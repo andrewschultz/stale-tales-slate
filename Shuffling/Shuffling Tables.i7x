@@ -23,7 +23,7 @@ store f	scented descent	"forest"	"store f"	"The greens and browns of Store F coa
 store i	posted depots	"sortie"	"store i"	"The store rumbles, revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
-cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
+cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end Trips Strip anagrams]
 
 book Forest
 
@@ -489,7 +489,7 @@ silver	"[if silver is part of shotgun]It's ready to fire when needed[else if sho
 shotgun	"[if player has silver and silver is not in shotgun]Put the silver in the shotgun.[else if silver is off-stage]You need to create a bullet for the shotgun.[else if wolves are visible]SHOOT the wolves.[else]You need to find a target, one vulnerable to silver, maybe.[end if]"
 muzzle	"It's the shotgun you need to worry about."
 doorway	"It's not terribly intimidating, but you'll want to be prepared with a guide and possibly self-defense. Things will only get tougher than the liches."
-maps	"[if player is in ghouls' slough]You need to READ the MAPS[else]The maps will be useful to read when you get somewhere unknown[end if]."
+maps	"[if player is in Ghouls' Slough]You need to READ the MAPS[else]The maps will be useful to read when you get somewhere unknown[end if]."
 vowels	"[one of]The vowels seem to be hiding a great evil, a Halloweeny menace. They seem to be saying 'We're Vowels.' [plus][or]Two solutions: WEREWOLVES or WOLVES. [minus][cycling]"
 wolves	"They're due for a violent end."
 bumps	"The bumps clue what the vowels can become."
@@ -580,7 +580,7 @@ leaves	"The leaves['] clinginess clues what the clover should become."
 Velcro	"The Velcro, with its hooks, is useful for sticking to something."
 string	"The string is probably what the clover's stem was. It keeps the Velcro mittens hooked together."
 hooks	--	Velcro
-lease easel	"The lease easel just [if motto is in bile libe]held[else]holds[end if] the (a) motto."
+lease easel	"The lease easel just [if motto is in Bile Libe]held[else]holds[end if] the (a) motto."
 motto	"[one of]The, I mean, a motto probably belongs in the trash in the long term. But it's helpful to you. [plus][or]Who's it by? Too-Apt Pa Otto. How does the song go?[or]Potato, ...[or]TOMATO. [minus][cycling]"
 neon pig	"[one of]That neon pig needs to go. For aesthetic and technical reasons. [plus][or]You can scan it, and that gives you some information. [plus][or]You'd rather have nothing there than the pig, too. [plus][or]It can become an OPENING. [minus][cycling]"
 fuzzy looking wall	"You can climb up the wall with [if player has Velcro]your Velcro[else]something sticky or clingy[end if]."
