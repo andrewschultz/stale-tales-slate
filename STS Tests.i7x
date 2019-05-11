@@ -16,20 +16,6 @@ carry out bcheing:
 		say "[Q] ~ [bore-check of q] ~ [bore-text of Q][line break]";
 	the rule succeeds.
 
-chapter scling - not for release
-
-scling is an action out of world.
-
-understand the command "scl" as something new.
-
-understand "scl" as scling.
-
-carry out scling:
-	say "List of scenery:[line break]";
-	repeat with QQ running through visible scenery:
-		say "--[QQ][line break]";
-	the rule succeeds;
-
 chapter etuing - not for release
 
 cmdtype is a number that varies.

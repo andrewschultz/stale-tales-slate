@@ -25,7 +25,7 @@ TOH=table of hint objects
 TOSH=table of specialized help (for specific rejects, e.g. ELCISH for the liches)
 AIP=check if action is procedural
 
-Note to self: there are many places to put in a SKIP UPCOMING RULEBOOK BREAK, but they're too minor to hunt down. Still, they'd be nice to fix, and anyone who helps me with this will get my gratitude and probably a place in the credits.
+Ancient note to self: there are many places to put in a SKIP UPCOMING RULEBOOK BREAK, but they're too minor to hunt down & probably dealt with better with PROCESS. Still, they'd be nice to fix, and anyone who helps me with this will get my gratitude and probably a place in the credits.
 ]
 
 book disambig
@@ -102,29 +102,9 @@ Include (-
 ];
 -) after "Language.i6t".
 
-book i6 stub(s)
-
-to decide whether the player yes-consents:
-	(- YesOrNoExt(1) -).
-
-to decide whether the player no-consents:
-	(- YesOrNoExt(0) -).
-
-Include (-
-
-[ YesOrNoExt yn;
-	if ( (+ debug-state +) == 1)
-	{
-	    return yn;
-	}
-	return YesOrNo();
-];
-
--)
-
-To process (RL - a rule): (- ProcessRulebook({RL}, 0, true); -)
-
 book separate modules
+
+include Trivial Niceties by Andrew Schultz.
 
 include Shuffling Random Text by Andrew Schultz.
 
@@ -133,8 +113,6 @@ include Shuffling Tables by Andrew Schultz.
 include Shuffling Nudges by Andrew Schultz.
 
 include Shuffling Mistakes by Andrew Schultz.
-
-include STS Common by Andrew Schultz.
 
 book debug modules - not for release
 
@@ -160,43 +138,18 @@ when play begins (this is the debug version info that should not be in the relea
 		if X is a person:
 			say "[X] is a person.";]
 	[end temporary tests]
-	now debug-state is true;
+	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
 	now debug-print is true;
-	[now debug-state is false;
-	now debug-print is false;]
 
 book inform 6 stubs
 
-chapter pronoun setting
-
-[This allows us to refer to a plural noun as it/them. Thanks to Climbingstars!]
-
-To set the/-- pronoun it to (O - an object): (- LanguagePronouns-->3 = {O}; -).
-To set the/-- pronoun him to (O - an object): (- LanguagePronouns-->6 = {O}; -).
-To set the/-- pronoun her to (O - an object): (- LanguagePronouns-->9 = {O}; -).
-To set the/-- pronoun them to (O - an object): (- LanguagePronouns-->12 = {O}; -).
+[most of these have been movd to Trivial Niceties]
 
 section setting specific pronouns
 
 after doing something with a flower:
 	set the pronoun them to the noun;
 	continue the action;
-
-chapter transcripting
-
-[This makes a check for if the transcript is on. I use it to check if a person starts with * but transcripting is off. Thanks to Zarf!]
-
-Include (-
-[ CheckTranscriptStatus;
-#ifdef TARGET_ZCODE;
-return ((0-->8) & 1);
-#ifnot;
-return (gg_scriptstr ~= 0);
-#endif;
-];
--).
-
-To decide whether currently transcripting: (- CheckTranscriptStatus() -)
 
 book d = debug-say
 
@@ -222,8 +175,6 @@ include Flexible Windows by Jon Ingold.
 
 include Glulx Status Window Control by Erik Temple.
 
-include Basic Screen Effects by Emily Short.
-
 include Punctuation Removal by Emily Short.
 
 the story description is "Yorpwald's a weirdly-named land. Perfect for your weird powers to save it."
@@ -239,8 +190,6 @@ Procedural rule: ignore the print final score rule.
 section variables i'd like to NFR but can't quite--mostly debug stubs
 
 showtabname is a truth state that varies.
-
-debug-state is a truth state that varies. debug-state is usually false.
 
 debug-scan is a truth state that varies. debug-scan is usually false. [a testing variable for if we want to check scaning beforehand]
 
@@ -285,6 +234,38 @@ a thing can be universal, useless, amusing, unimportant, abstract, bounding or p
 a disguise-piece is a kind of thing. a disguise-piece has a number called elevation.
 
 a flower is a kind of thing. understand "flower" and "flowers" as a flower.
+
+section boringthings
+
+a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
+
+a boringscen is a kind of boringthing.
+
+this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
+
+this is the bore-exam rule: [note: I caused bugs by saying PROCESS  THE BORE-EXAM RULE instead of ABIDE BY. Enough that I'll write this note in.]
+	if current action is examining:
+		if description of noun is empty:
+			if debug-state is true, say "(DEBUG: pulling bore-text) ";
+			say "[bore-text of noun]";
+			the rule succeeds;
+	else unless action is procedural:
+		say "There's not much to do with [the noun] except examine [if noun is plural-named]them[else]it[end if]. So you do.";
+		try examining the noun;
+		the rule succeeds;
+
+For printing a locale paragraph about a thing (called the item)
+	(this is the don't mention boringscen in room descriptions rule):
+	if the item is boringscen, set the locale priority of the item to 0;
+	continue the activity.
+
+instead of doing something with a boringthing: [no-irp]
+	say "1. [current action] / [noun] ... rule = [bore-check of noun].";
+	abide by the bore-check of noun;
+	say "2. [current action] / [noun].";
+	if action is procedural, continue the action;
+	say "3. [current action] / [noun].";
+	say "[bore-text of noun]" instead;
 
 chapter colors
 
@@ -345,14 +326,6 @@ to say player-descrip:
 	say "."
 
 section diagonals
-
-a direction can be diagonal. a direction is usually not diagonal.
-
-a direction can be ordinal. a direction is usually not ordinal.
-
-northeast,southeast,northwest,southwest are diagonal.
-
-north,east,south,west are ordinal.
 
 before going (this is the reject diagonals rule):
 	if noun is a diagonal:
@@ -456,21 +429,9 @@ bore-text of pockets is "[if location of player is busiest subsite]That would be
 
 chapter say shortcuts
 
-to say i: say "[italic type]".
-
-to say b: say "[bold type]".
-
-to say r: say "[roman type]".
-
-to say on-off of (t - a truth state): say "[if t is true]on[else]off[end if]".
-
-to say off-on of (t - a truth state): say "[if t is true]off[else]on[end if]".
-
 to say email: say "blurglecruncheon@gmail.com".
 
 to say ghsite: say "http://github.com/andrewschultz/stale-tales-slate/Shuffling"
-
-to ital-say (x - indexed text): say "[italic type][bracket]NOTE: [x][close bracket][roman type][line break]".
 
 section debugging flags and such
 
@@ -8852,8 +8813,6 @@ section other stuff
 
 part parser errors
 
-to skip upcoming rulebook break: (- say__pc = PARA_NORULEBOOKBREAKS | PARA_SUPPRESSPROMPTSKIP | PARA_COMPLETED; -).
-
 test lbrk with "gonear hotspot/trio/kilns"
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error: [verb guess]
@@ -10550,14 +10509,6 @@ to say poss-range:
 		say "*[poss-score of mrlp]*";
 
 book stubs
-
-yn-auto is a number that varies.
-
-to decide whether the player direct-consents:
-	if yn-auto is 1, decide yes;
-	if yn-auto is -1, decide no;
-	if the player consents, decide yes; [inside direct-consents]
-	decide no;
 
 section switching
 
@@ -12553,21 +12504,6 @@ carry out ffing:
 		now ff is false;
 	the rule succeeds;
 
-chapter debuging
-
-[* toggles debug state.]
-
-debuging is an action out of world.
-
-understand the command "debug/db" as something new.
-
-understand "debug" and "db" as debuging.
-
-carry out debuging:
-	now debug-state is whether or not debug-state is false;
-	say "Debugging [if debug-state is true]on[else]off[end if]. Use DP to turn off DEBUG INFO.";
-	the rule succeeds;
-
 chapter debug printing
 
 [* toggles if I print debug stuff to file]
@@ -12819,25 +12755,6 @@ understand "shomis" as shomising.
 carry out shomising:
 	carry out the showing what the player missed activity;
 	the rule succeeds;
-
-chapter auing
-
-[ * turn on auto-yes dialogue or auto-no. 1=y 0=nothing -1=no ]
-auing is an action out of world applying to one number.
-
-understand the command "au" as something new.
-
-understand "au [number]" as auing.
-
-carry out auing:
-	if number understood > 1 or number understood < -1, say "1 = auto-yes 0 = auto-off -1 = auto-no." instead;
-	if number understood is yn-auto, say "It's already set to [auto-set]." instead;
-	say "Y/N responses changed from [auto-set] to ";
-	now yn-auto is number understood;
-	say "[auto-set].";
-	the rule succeeds;
-
-to say auto-set: say "[if yn-auto is 1]auto-yes[else if yn-auto is -1]auto-no[else]no auto[end if]".
 
 chapter showtabing
 

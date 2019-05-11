@@ -58,8 +58,6 @@ include Reactable Quips by Michael Martin.
 
 include Quip-based Conversation by Michael Martin. [his extensions must be listed in this order]
 
-include Basic Screen Effects by Emily Short.
-
 include Glimmr Drawing Commands by Erik Temple.
 
 include Glimmr Bitmap Font by Erik Temple.
@@ -84,6 +82,8 @@ the release number is 4.
 --Gasp! Rude Upgrades!]
 
 section game specific stuff
+
+include Trivial Niceties by Andrew Schultz.
 
 include Roiling Random Text by Andrew Schultz.
 
@@ -535,7 +535,7 @@ section debug on - not for release
 
 when play begins (this is the debug by default when debugging rule) :
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
-	now debug-state is true;
+	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
 
 [every turn when player is in dusty study and Gunter is off-stage and debug-state is true:
 	say "Found: [stuff-found].";]
@@ -549,8 +549,6 @@ include Property Checking by Emily Short.
 include Object Response Tests by Juhana Leinonen.
 
 section screenreading and censoring
-
-screenread is a truth state that varies.
 
 when play begins (this is the screenread gender swears and precursor rule) :
 	if debug-state is false:
@@ -999,22 +997,7 @@ to save-present-input: (-
 	else usual_grammar_after = 0;
 -)
 
-chapter pronoun setting
-
-[This allows us to refer to a plural noun as it/them. Thanks to Climbingstars!]
-
-To set the/-- pronoun it to (O - an object): (- LanguagePronouns-->3 = {O}; -).
-To set the/-- pronoun him to (O - an object): (- LanguagePronouns-->6 = {O}; -).
-To set the/-- pronoun her to (O - an object): (- LanguagePronouns-->9 = {O}; -).
-To set the/-- pronoun them to (O - an object): (- LanguagePronouns-->12 = {O}; -).
-
 chapter rules-switch
-
-to force-rules: [again this is simple I6 stuff so that I can capture errors from When Play Begins]
-	(- debug_Rules = 1; -)
-
-to force-all-rules:
-	(- debug_Rules = 2; -)
 
 chapter glulx header
 
@@ -1133,19 +1116,7 @@ auto-hint-proc is a truth state that varies.
 
 chapter transcripting
 
-Include (-
-[ CheckTranscriptStatus;
-#ifdef TARGET_ZCODE;
-return ((0-->8) & 1);
-#ifnot;
-return (gg_scriptstr ~= 0);
-#endif;
-];
--).
-
-To decide whether currently transcripting: (- CheckTranscriptStatus() -)
-
-[thanks to Zarf for the above code. It helps a tester make sure they're testing after their first comment.]
+[main code is in Trivial Niceties]
 
 report switching the story transcript on:
 	if currently transcripting:
@@ -1833,29 +1804,6 @@ check talking to (this is the hint looking not talking rule):
 		say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
 	if the noun provides the property litany and the noun provides the property greeting, do nothing;
 	otherwise say "You may be better off examining non-living things, not talking to them." instead.
-
-section style chat stubs
-
-to ital-say (x - indexed text):
-	say "[italic type][bracket]NOTE: [x][close bracket][roman type][line break]";
-
-to ital-say-n (x - indexed text):
-	say "[italic type][bracket]NOTE: [x][close bracket][roman type]";
-
-to say i:
-	say "[italic type]";
-
-to say b:
-	say "[bold type]";
-
-to say r:
-	say "[roman type]";
-
-to say sp:
-	say "[if screenread is true] [end if]";
-
-to say on-off of (myts - a truth state):
-	say "[if myts is true]on[else]off[end if]"
 
 section specifically
 
@@ -3633,8 +3581,6 @@ chapter d
 
 in-beta is a truth state that varies.
 
-debug-state is a truth state that varies. debug-state is false.
-
 to d (a - indexed text):
 	if debug-state is true:
 		say "DEBUG INFO: [a][line break]"
@@ -3736,10 +3682,10 @@ this is the check final region action rule:
 	repeat through table of end-flips:
 		if noun is thisflip entry or noun is thatflip entry:
 			if warned-yet entry is false:
-				consider the my-prog entry;
+				process the my-prog entry;
 				if the rule succeeded:
 					now warned-yet entry is true;
-					ital-say-n "[pointwarn entry]";
+					ital-say "[pointwarn entry]";
 					say " Continue anyway?";
 					if the player yes-consents:
 						the rule succeeds;
@@ -4630,74 +4576,6 @@ when play begins (this is the hint and other randomization rule):
 volume yes-no substitutes
 
 [this lets the programmer skip over yes/no decides]
-
-chapter complex consents
-
-debug-auto-yes is a truth state that varies.
-
-yn-auto is a number that varies.
-
-chapter auing
-
-auing is an action out of world applying to one number.
-
-understand the command "au" as something new.
-
-understand "au [number]" as auing.
-
-carry out auing:
-	if number understood > 1 or number understood < -1:
-		say "1 = auto-yes 0 = auto-off -1 = auto-no." instead;
-	if number understood is yn-auto:
-		say "It's already set to [auto-set]." instead;
-	say "Y/N responses changed from [auto-set] to ";
-	now yn-auto is number understood;
-	say "[auto-set].";
-	the rule succeeds;
-
-to say auto-set:
-	say "[if yn-auto is 1]auto-yes[else if yn-auto is -1]auto-no[else]no auto[end if]";
-
-chapter basic consents
-
-to decide whether the player test-consents:
-	if debug-state is true:
-		say "[line break]> ";
-	if the player consents: [inside test-consents]
-		decide yes;
-	decide no;
-
-to decide whether the player yes-consents:
-	(- YesOrNoExt(1) -).
-
-to decide whether the player no-consents:
-	(- YesOrNoExt(0) -).
-
-to decide whether the player direct-consents:
-	if yn-auto is 1, decide yes;
-	if yn-auto is -1, decide no;
-	if the player consents, decide yes; [inside direct-consents]
-	decide no;
-
-Include (-
-
-[ YesOrNoDebugForce yn;
-	if ( (+ debug-state +) == 1)
-	{
-	    return ( (+ debug-auto-yes +) );
-	}
-	return YesOrNo();
-];
-
-[ YesOrNoExt yn;
-	if ( (+ debug-state +) == 1)
-	{
-	    return yn;
-	}
-	return YesOrNo();
-];
-
--)
 
 volume anagram and hint operations
 
@@ -7783,7 +7661,7 @@ understand "nospace" and "nos" and "no space" as nospaceing.
 
 carry out nospaceing:
 	if screenread is true:
-		say "No space mode is very problematic with a screen reader, so I have disabled your ability to do so. You can turn screen reading off with ACCESS, if you want." instead;
+		say "No space mode is very problematic with a screen reader, so I have disabled your ability to do so. You can toggle screen reading with SCR or SCREEN, if you want." instead;
 	say "[if setspace is false]Spaces are already[else]Now spaces are[end if] off.";
 	now setspace is false;
 	the rule succeeds;
@@ -10401,7 +10279,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "verbs/verb"	true	"[verb-list]"	"verbs"	false	--	false
 "options" or "opts" or "post opts"	true	"[opts-list]"	"options"	false	--	false
 "parse/spare"	false	"[b]PARSE[r] processes the settler's data for you, but SPARE hides it."	"parse"	false	--	false
-"access"	true	"Typing [b]ACCESS[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."	"access"	false	--	false
+"access"	true	"Typing [b]SCR[r] or [b]SCREEN[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."	"access"	false	--	false
 "free turns" or "free/turns"	true	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like SCORE, will not cost you time if you are in a tight situation."	"free turns"	false
 "saying"	false	"Instead of [b]SAY[r]ing or [b]THINK[r]ing, you can just type the word."	"saying"	false
 "talking"	false	"[b]TALK[r]ing is the equivalent of asking someone about themselves."	"talking"	false
@@ -20764,8 +20642,6 @@ book otters specific verbs
 
 chapter quicklying
 
-to first-status: (- DrawStatusLine(); -);
-
 to get-dead:
 	if location of player is not Inclosure:
 		if joke-death is false:
@@ -21215,7 +21091,7 @@ carry out playing:
 			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock construe trounces and rifest strife: [twiddle of table of animal friends and 5]. Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
 			now otters is solved;
 			now last-solved-region is otters;
-			first-status;
+			force-status;
 			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
 			unless the player direct-consents:
 				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just UNDO at the next command.[paragraph break]For now, you'll be a ... REPOSED DEPOSER.";
@@ -26055,21 +25931,6 @@ carry out egalling:
 
 volume testing - not for release
 
-book dbing
-
-[* debug tracking, turning on and off. Useful to me but not others]
-
-dbing is an action applying to nothing.
-
-understand the command "debug/db" as something new.
-
-understand "debug" and "db" as dbing.
-
-carry out dbing:
-	now debug-state is whether or not debug-state is false;
-	say "Debugging [if debug-state is true]on[else]off[end if]. Use DP to turn off DEBUG INFO.";
-	the rule succeeds;
-
 book min/max tracking
 
 a region has a number called last-max. a region has a number called last-min. a region has a number called orig-min.
@@ -26692,20 +26553,6 @@ every turn (this is the stop and hear the roses rule):
 		say "[b]SMELL:[r]";
 		try smelling;
 
-chapter wooing
-
-[* WOOing ends the story. WOO vs WINIT?]
-
-wooing is an action applying to nothing.
-
-understand the command "woo" as something new.
-
-understand "woo" as wooing.
-
-carry out wooing:
-	end the story finally;
-	the rule succeeds;
-
 chapter mising
 
 [* MIS shows what the player missed after visiting an area]
@@ -26753,21 +26600,6 @@ understand the command "lili" as something new.
 understand "lili" as lili0ing.
 
 understand "lili [number]" as liliing.
-
-section winiting
-
-[* WINIT lets you win the game right away, skipping to the Gates. WOO vs WINIT? ]
-
-winiting is an action applying to nothing.
-
-understand the command "winit" as something new.
-
-understand "winit" as winiting.
-
-carry out winiting:
-	end the story finally;
-	follow the shutdown rules;
-	the rule succeeds.
 
 section extra diagnostic
 
@@ -27785,7 +27617,7 @@ carry out twiding:
 		say "Number must be 1-[chatrow]." instead;
 	if debug-state is true:
 		say "(Turning debug state off)";
-		now debug-state is false;
+		now debug-state is false; [for grepping, this is to see how a table looks earlier.]
 	choose row number understood in table of megachatter;
 	if go-ahead entry is not bzzt rule:
 		say "That does not follow the BZZT rule. Try one of [list-of-randos]." instead;
