@@ -283,7 +283,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lamina"	236164982	--	manila animal	--	"It actually looks pretty nice on the fridge."
 "burlap"	346316131	--	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
 "wart"	298556412	--	warts	--	"Why zap just one wart? Go for all of them!"
-"trellis"	565134420	Trellis	--	--	"[if trel-priv is in Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]" [start Stiller Trellis]
+"trellis"	565134420	Trellis	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]" [start Stiller Trellis]
 "arching"	290299561	--	crashing archings	--	"Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back."
 "crashing"	386573527	--	crashing archings	--	"[loc-rej]."
 "hay"	161829369	--	hay	--	"Hay is not terribly magical. It's more for trading or building."
@@ -386,7 +386,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "control"	478865907	--	controls	--	"You've already changed the lost corn into the controls, and you don't need to do more."
 "leavse"	515052661	--	clover	--	"It's the whole clover you need to change."
 "fuzzy"	499919191	--	clover	--	"The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover."
-"string"	431207843	--	velcro	--	"No need to mess with the string joining the Velcro mittens."
+"string"	431207843	--	Velcro	--	"No need to mess with the string joining the Velcro mittens."
 "cordoned"	491806337	Roarings Garrison	--	--	"[condo-visit]."
 "condo"	257647336	Roarings Garrison	--	--	"[condo-visit]."
 "redtents"	733366620	Roarings Garrison	--	--	"Not nice. It's the only home the deadbeats have."
@@ -396,10 +396,10 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "reeding"	508465166	--	deadbeat	--	"[beat-man]."
 "lost"	327550400	--	lost corn	--	"It's not just that it's lost, it's CORN[dead-help]."
 "corn"	247589473	--	lost corn	--	"It's not just that it's corn, it's LOST too[dead-help]."
-"glove"	395737047	--	velcro	--	"[mits-are]."
-"gloves"	492011013	--	velcro	--	"[mits-are]."
-"mitten"	512001652	--	velcro	--	"[mits-are]."
-"mittens"	608275618	--	velcro	--	"[mits-are]."
+"glove"	395737047	--	Velcro	--	"[mits-are]."
+"gloves"	492011013	--	Velcro	--	"[mits-are]."
+"mitten"	512001652	--	Velcro	--	"[mits-are]."
+"mittens"	608275618	--	Velcro	--	"[mits-are]."
 "library"	412420266	Roarings Garrison	--	--	"The library could use renovation, but that's out of the scope of your quest, now."
 "boastin"	408243638	Obtains Boastin' Bastion	--	--	"[loc-rej]." [boastin-obtains bastion]
 "obtain"	311969672	Obtains Boastin' Bastion	--	--	"[loc-rej]."
@@ -516,7 +516,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "protesters"	980846328	--	protest	--	"They're just a simple protest."
 "potter"	575168484	--	potters	--	"Picking one person out of a crowd never works."
 "clay"	197366494	--	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is visible]protest[else]trio[end if] really wants to do."
-"three"	481328338	--	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
+"three"	481328338	--	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in Potshot Hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "chainlinks"	489297393	--	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
 "tugtoe"	546084231	--	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
 "red"	234159001	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
@@ -752,7 +752,7 @@ to say marsh-lake:
 section sortie nudges
 
 this is the no-d rule:
-	if player is in Gnarliest Triangles or player is in fields or player is in Flesh Shelf, the rule succeeds;
+	if player is in Gnarliest Triangles or player is in Self-ID Fields or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
 
 this is the sf-or-rf rule:
@@ -894,13 +894,13 @@ to say simple-riot:
 	say "Perhaps it's best to keep it simple and cut down the riot"
 
 this is the hotspot-no-kilns rule:
-	if player is in hotspot:
-		if kilns are not in hotspot:
-			if protest is in hotspot or riot is in hotspot, the rule succeeds;
+	if player is in Potshot Hotspot:
+		if kilns are not in Potshot Hotspot:
+			if protest is in Potshot Hotspot or riot is in Potshot Hotspot, the rule succeeds;
 	the rule fails;
 
 this is the riot-gone rule:
-	if player is in hotspot and riot is moot, the rule succeeds;
+	if player is in Potshot Hotspot and riot is moot, the rule succeeds;
 	the rule fails;
 
 to say ennui:

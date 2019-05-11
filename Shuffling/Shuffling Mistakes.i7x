@@ -67,7 +67,7 @@ chapter Thickest Thickets
 
 understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is quickvis.
 
-understand "gato" as a mistake ("Nice try, but wrong language. Another animal would be more likely to eat through the thickets.") when player is in thickets.
+understand "gato" as a mistake ("Nice try, but wrong language. Another animal would be more likely to eat through the thickets.") when player is in Thickest Thickets.
 
 understand "landers" as a mistake ("There will be better hints than a manners advice column once you move on[if darn-slan is false], though the darnels make you see red for a bit[end if].") when player is in Thickest Thickets.
 
@@ -103,7 +103,7 @@ understand "destro" as a mistake ("It's going to get evil enough even without a 
 
 understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Trips Strip.
 
-understand "lost" as a mistake ("No, you need to find your way through individual stores.") when player is in strip.
+understand "lost" as a mistake ("No, you need to find your way through individual stores.") when player is in Trips Strip.
 
 understand "oyster" as a mistake ("Nice try, but that's next game![fake-clue of store y]") when player is in Trips Strip.
 
@@ -264,7 +264,7 @@ understand "shoe" as a mistake ("You need more than one shoe.") when player is i
 
 chapter Stiller Trellis
 
-understand "tillers" as a mistake ("You aren't going to sea in this game.") when player is in Trellis and archings are not in Trellis.
+understand "tillers" as a mistake ("You aren't going to sea in this game.") when player is in Stiller Trellis and archings are not in Stiller Trellis.
 
 chapter MOOR
 
@@ -301,36 +301,36 @@ understand "yah" as a mistake ("[if peasant is visible]It's not nice to make fun
 
 chapter Sacred Cedars
 
-understand "cadres" as a mistake ("You must do this on your own.") when player is in cedars.
+understand "cadres" as a mistake ("You must do this on your own.") when player is in Sacred Cedars.
 
-understand "ecards" and "e-cards" as a mistake ("Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.") when player is in cedars.
+understand "ecards" and "e-cards" as a mistake ("Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.") when player is in Sacred Cedars.
 
 understand "lois" as a mistake ("[what-to-ask-lois].") when cedars is visited
 
-understand "potus" as a mistake ("This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.") when player is in cedars.
+understand "potus" as a mistake ("This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.") when player is in Sacred Cedars.
 
 understand "pray" as a mistake ("[if player is in sacred cedars]It's been so long, you only mouth a 'Yarp!'[else]Things aren't THAT bad.[end if]")
 
-understand "serve" as a mistake ("You must serve by going forth on your mission of warlikeness and love.") when player is in cedars.
+understand "serve" as a mistake ("You must serve by going forth on your mission of warlikeness and love.") when player is in Sacred Cedars.
 
-understand "sever" as a mistake ("Violence or vandalism in such a holy place? For shame.") when player is in cedars.
+understand "sever" as a mistake ("Violence or vandalism in such a holy place? For shame.") when player is in Sacred Cedars.
 
 book store m
 
-understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in abyss]along with the beats[else if player is in Hotel or player is in underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
+understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in Bassy Abyss]along with the beats[else if player is in Hotel or player is in Undesired Underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
 
 understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.") when beats are visible or beast is visible.
 
 chapter Undesired Underside
 
-understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in underside and a reading is in underside.
+understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in Undesired Underside and a reading is in Undesired Underside.
 
 [def=nerd door w]
-understand "odor" and "rood" as a mistake ("That door's reinforced. [if Esoteric Coteries is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
+understand "odor" and "rood" as a mistake ("That door's reinforced. [if Esoteric Coteries is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in Undesired Underside.
 
-understand "senors" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in underside.
+understand "senors" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in Undesired Underside.
 
-understand "snores" as a mistake ("Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.") when player is in underside.
+understand "snores" as a mistake ("Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.") when player is in Undesired Underside.
 
 chapter Roarings Garrison
 
@@ -405,9 +405,9 @@ understand "slite" as a mistake ("That's bad spelling, and it won't shrink your 
 
 chapter Leis Isle
 
-understand "download" as a mistake ("[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if l2 are not in isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].") when player is in isle.
+understand "download" as a mistake ("[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if l2 are not in Leis Isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].") when player is in Leis Isle.
 
-understand "lies" and "lie" as a mistake ("You reflect on how insidious it was to stick you here in a false paradise.") when player is in isle and l2 are moot.
+understand "lies" and "lie" as a mistake ("You reflect on how insidious it was to stick you here in a false paradise.") when player is in Leis Isle and l2 are moot.
 
 chapter Rived Drive
 
@@ -425,25 +425,25 @@ understand "verdi" as a mistake ("You don't need a musical score for this advent
 
 chapter Potshot Hotspot
 
-understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not moot], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are in hotspot.
+understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not moot], but you see red from wanting to do so[end if].") when player is in Potshot Hotspot and chain links are in Potshot Hotspot.
 
-understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in hotspot and red bull burdell is in hotspot.
+understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in Potshot Hotspot and red bull burdell is in Potshot Hotspot.
 
-understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are visible]Maybe they can get a purpose, able to use those kilns[else]Give them something constructive to do[end if].") when player is in hotspot and protest is in hotspot.
+understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are visible]Maybe they can get a purpose, able to use those kilns[else]Give them something constructive to do[end if].") when player is in Potshot Hotspot and protest is in Potshot Hotspot.
 
-understand "i rot" as a mistake ("Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.") when player is in hotspot and riot is in hotspot.
+understand "i rot" as a mistake ("Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.") when player is in Potshot Hotspot and riot is in Potshot Hotspot.
 
-understand "lacy" as a mistake ("No, the clay is a clue to what the protest really wants to do.") when player is in hotspot and protest is in hotspot.
+understand "lacy" as a mistake ("No, the clay is a clue to what the protest really wants to do.") when player is in Potshot Hotspot and protest is in Potshot Hotspot.
 
-understand "morans" and "moran" as a mistake ("A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!") when player is in hotspot and ransom manors are in hotspot.
+understand "morans" and "moran" as a mistake ("A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!") when player is in Potshot Hotspot and ransom manors are in Potshot Hotspot.
 
 understand "roister" as a mistake ("That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.") when protest is visible.
 
-understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.") when player is in hotspot and ransom manors are in hotspot.
+understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.") when player is in Potshot Hotspot and ransom manors are in Potshot Hotspot.
 
-understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in hotspot
+understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in Potshot Hotspot
 
-understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in hotspot and potters are not moot.
+understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in Potshot Hotspot and potters are not moot.
 
 chapter Means Manse
 

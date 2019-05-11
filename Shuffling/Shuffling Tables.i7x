@@ -133,7 +133,7 @@ to say give-sword:
 		now player has the sword;
 	else:
 		say "jumps and slides out of your hand";
-		now sword is in Abyss;
+		now sword is in Bassy Abyss;
 
 to say holds-1:
 	reg-inc;
@@ -279,7 +279,7 @@ to say spec-help of (itm - a thing):
 			say "You made your choice.";
 			continue the action;
 	if itm is oils and oils are not in cask:
-		say "[if player is in cedars]Changing Lois is highly unlikely, and y[else]Y[end if]ou should possess the oils before doing anything with them.";
+		say "[if player is in Sacred Cedars]Changing Lois is highly unlikely, and y[else]Y[end if]ou should possess the oils before doing anything with them.";
 		continue the action;
 	if itm is a xtrhelp listed in the table of spechelp:
 		choose row with xtrhelp of itm in table of spechelp;
@@ -605,24 +605,24 @@ merchandise	"You only need the heaths or begonias."
 heaths	"[one of]You can change the heaths into something that can hold something you can change the words into[if player has tagged gadget]. The tagged gadget turns up all reds, but it can't detect letter shifts[end if]. [plus][or]Make a SHEATH. [minus][cycling]"
 stems	"The stems clue what the heaths can be."
 begonias	"[one of]Two words on the gadget. Something that holds something. [plus][or]Also, one word is related to sound. [plus][or]Create a NOISE BAG. [minus][cycling]"
-noise bag	"[if player is in Bile Libe and words are in Bile Libe]OPEN the noise bag to get the words.[else if words are in Bile Libe]The noise bag, if opened, can contain sounds.[else if player is in abyss and beast is in abyss]You can OPEN the noise bag to defeat the beast.[else if player is in abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
-words	"[if player is in abyss]This is the place to change the words[else if begonias are in Fo' Real Florae and heaths are in Fo' Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo' Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
+noise bag	"[if player is in Bile Libe and words are in Bile Libe]OPEN the noise bag to get the words.[else if words are in Bile Libe]The noise bag, if opened, can contain sounds.[else if player is in Bassy Abyss and beast is in Bassy Abyss]You can OPEN the noise bag to defeat the beast.[else if player is in Bassy Abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
+words	"[if player is in Bassy Abyss]This is the place to change the words[else if begonias are in Fo' Real Florae and heaths are in Fo' Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo' Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
 sword	"[if beast is visible and siren is not visible]Attack the beast[else if beast is visible]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
 torn cue	"It indicates the brocade [if brocade is in Fo' Real Florae]is[else]was[end if] free."
-sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
+sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in Bassy Abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
 controls	"The controls need to fit into a recess[if neon pig is moot], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
 red glowing cursive script	"Provides a clue what the neon pig should become."
 nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question. [plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing. [plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is... [plus][or]DARKNESS. [plus][or] ASK NERDS ABOUT DARKNESS. [minus][cycling]"
 utterly unreadable book	"The book gives clues what to ask the nerds about."
 tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
-lit-up tulip	"The lit-up tulip [if player is in abyss]is providing light[else]can provide light[end if]."
+lit-up tulip	"The lit-up tulip [if player is in Bassy Abyss]is providing light[else]can provide light[end if]."
 op	"[if controls are part of op]You've fixed the power.[else][one of]The opening at the top of the climbable wall is interesting. [plus][or]It appears to have a bunch of circuit-ends, etc. [plus][or]The controls can override the power surge to the east. [plus][or]PUT CONTROLS IN OPENING. [minus][cycling][end if]"
 siren	"[one of]The siren is irritating. [plus][or]You can disable it and make something you need. [plus][or]It becomes RESIN. [minus][cycling]"
 resin	"With the resin on your hands, you can get a better grip on things. You don't need to do anything."
-hilt	"[if siren is in abyss]The hilt is too slippery to grab[else]Now that you got the resin, you can grab the hilt--and the sword[end if]."
-beats	"[if player is not in abyss]Nothing to do about the beats until you get to the source.[else]The beats can be changed into a BEAST.[end if]"
+hilt	"[if siren is in Bassy Abyss]The hilt is too slippery to grab[else]Now that you got the resin, you can grab the hilt--and the sword[end if]."
+beats	"[if player is not in Bassy Abyss]Nothing to do about the beats until you get to the source.[else]The beats can be changed into a BEAST.[end if]"
 beast	"You need to attack the beast with a weapon! You [if sword is off-stage]don't have one[else]can use your sword[end if]."
 emitter	"[if dry cake is in Obtains Boastin' Bastion]The emitter is useful to lower property values. Specifically, the Bastion's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
 tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]

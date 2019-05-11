@@ -3430,7 +3430,7 @@ blurb
 "'Resuspended? Undepressed!'"
 "'Retain raw rainwater? Earn a writ!'"
 "'Rifleman! Inflamer!'"
-"'Rile! Obtain liberation!'"
+"'Rile! Obtain Bile Liberation!'"
 "'Roil, pure, our peril, purer: OIL!'"
 "'Rouse, self! Free souls!'"
 "'Rush, rush? Urr, shush!'"
@@ -4419,12 +4419,12 @@ this is the in-mensa rule:
 section resort rules
 
 this is the protests rule:
-	if player is in hotspot:
-		if riot is in hotspot or protest is in hotspot, the rule succeeds;
+	if player is in Potshot Hotspot:
+		if riot is in Potshot Hotspot or protest is in Potshot Hotspot, the rule succeeds;
 	the rule fails;
 
 this is the burdell rule:
-	if player is in hotspot and burdell is in hotspot, the rule succeeds;
+	if player is in Potshot Hotspot and burdell is in Potshot Hotspot, the rule succeeds;
 	the rule fails;
 
 Shuffling Random Text ends here.
