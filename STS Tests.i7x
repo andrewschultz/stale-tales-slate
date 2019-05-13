@@ -2,6 +2,8 @@ Version 1/170918 of STS tests by Andrew Schultz begins here.
 
 "Tracks various testing commands that can be used by Shuffling Around or A Roiling Original"
 
+"Some parts are based heavily on Emily Short's very useful Property Checking extension but modified to count what is done and ignore certain important cases."
+
 chapter bcheing - not for release
 
 bcheing is an action out of world.
@@ -162,6 +164,52 @@ to ply-table (tn - a table name):
 		if in-room is true:
 			say ".[line break](NOT VALID) [this-cmd entry] [hashval entry] is in this room but not valid";
 	say "."
+
+chapter redefining Emily Short's property checking
+
+When play begins (this is the modified run property checks at the start of play rule):
+	if the description of the player is "As good-looking as ever.":
+		say "The player has the default description.";
+		increment undescribed-people;
+	repeat with item running through rooms:
+		follow the property-check rules for item;
+	if undescribed-rooms is 0, say "DEBUG Yay all rooms described.";
+	repeat with item running through things:
+		if item is a person, follow the property-check rules for item;
+	repeat with item running through people:
+		if item is not blank-appear-okay and initial appearance of item is empty:
+			increment init-mt-ppl;
+			say "APPEARANCE IN ROOM [init-mt-ppl] [item].";
+	repeat with item running through things:
+		if item is not a person, follow the property-check rules for item;
+	if undescribed-objects is 0, say "DEBUG Yay all objects described.";
+	if undescribed-people is 0, say "DEBUG Yay all people described.";
+	if init-mt-ppl is 0, say "DEBUG Yay all people have initial appearances.";
+
+The property-check rules are an object-based rulebook.
+
+undescribed-rooms is a number that varies.
+undescribed-objects is a number that varies.
+undescribed-people is a number that varies.
+init-mt-ppl is a number that varies.
+
+A property-check rule for a thing (called the target) (this is the modified things must have description rule):
+	unless target provides the property description, do nothing;
+	if the description of target is non-empty, do nothing;
+	if target is abstract or target is a boringthing, do nothing;
+	if target is a person:
+		increment undescribed-people;
+		say "PERSON [undescribed-people]";
+	else:
+		increment undescribed-objects;
+		say "OBJECT [undescribed-objects]";
+	say " [target] [if target is plural-named]have[else]has[end if] no description.";
+
+A property-check rule for a room (called the target) (this is the modified rooms must have descriptions rule):
+	if description of target is empty:
+		unless target is abstract:
+			increment undescribed-rooms;
+			say "ROOM [undescribed-rooms] [target] has no description.";
 
 STS tests ends here.
 
