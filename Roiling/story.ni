@@ -74,6 +74,8 @@ the story headline is "(or ailing) Squeeal! A Sequel!"
 
 the story description is "Dear, Lo! Ordeal reload!"
 
+use authorial modesty.
+
 release along with cover art.
 
 the release number is 4.
@@ -1836,13 +1838,13 @@ check objasking it about (This is the check for object information rule):
 			say "It acts all ghostly and asks you to take it where the ruby might be.[paragraph break]You describe the path to take to get to the ruby, neglecting why you know--fortunately, the haunter doesn't seem to care.";
 			if player is in anger range:
 				try going west;
-				consider the track haunter rule;
+				process the track haunter rule;
 			if player is in achers' arches:
 				try going north;
-				consider the track haunter rule;
+				process the track haunter rule;
 			if player is in horned hedron:
 				try going west;
-				consider the track haunter rule;
+				process the track haunter rule;
 			the rule succeeds;
 	if noun is Leo or noun is Rand:
 		if noun is fightin:
@@ -2880,7 +2882,7 @@ to say current-known:
 				increment yays;
 				now itxt is "[itxt][my-let entry]";
 	say "[itxt]";
-	consider the got-y rule;
+	process the got-y rule;
 	if the rule succeeded:
 		increment yays;
 		say "Orange: Y.";
@@ -3605,7 +3607,7 @@ you-used-pills is a truth state that varies.
 
 to solve-region (sre - a region):
 	let tokers-home be false;
-	consider the notify score changes rule;
+	process the notify score changes rule;
 	now sre is solved;
 	now last-solved-region is sre;
 	if sre is Means Manse:
@@ -4011,7 +4013,7 @@ definition: a thing (called ge) is good-enuf:
 
 to say reject:
 	if sss is true: [inform 7 gives extra space if I just follow the rule as-is]
-		consider the show blues rule;
+		process the show blues rule;
 	now cmdhash is the hash of the player's command;
 	now firstwordhash is the hash of word number 1 in the player's command;
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
@@ -4140,7 +4142,7 @@ to reg-inc:
 		if mrlp is stores and cur-score of stores is max-score of stores:
 			now stores is solved;
 			now last-solved-region is stores;
-	if suppress-score is false, consider the notify score changes rule;
+	if suppress-score is false, process the notify score changes rule;
 	let tru-sco be cur-score of mrlp;
 	if mrlp is otters and cinders are moot:
 		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this is a hack]
@@ -5952,7 +5954,7 @@ after reading a command:
 		ital-say "you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.";
 		now long-sent-warn is true;
 		pad-rec "long commands";
-	consider the trailing-a rule;
+	process the trailing-a rule;
 	if the rule succeeded:
 		reject the player's command;
 	if word number 1 in player's command is "a":
@@ -5983,10 +5985,10 @@ after reading a command:
 		if QQ is a the-from listed in regana of mrlp:
 			if the player's command matches right-cmd entry:
 				try fliptoing the-to entry;
-				consider the notify score changes rule;
+				process the notify score changes rule;
 				[save-present-input;]
-				consider the hint flags checkoff rule;
-				consider the scam rule instead;
+				process the hint flags checkoff rule;
+				process the scam rule instead;
 	if Gunter is off-stage and the player's command includes "gunter", say "[if stuff-found >= 3]Who?[else]Gunter's outside, but to interact meaningfully, you should SWITCH the liaison.[end if]" instead;
 	if e-s is visible and the player's command includes "presto":
 		unless the player's command includes "test", say "Presto is the word you said to reveal the, er, spot." instead;
@@ -6177,9 +6179,9 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 		if the player's command matches right-cmd entry:
 			if the-from entry is fungible:
 				try fliptoing the-to entry;
-				consider the notify score changes rule;
-				consider the hint flags checkoff rule;
-				consider the scam rule instead;
+				process the notify score changes rule;
+				process the hint flags checkoff rule;
+				process the scam rule instead;
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
@@ -8013,14 +8015,14 @@ to two-up:
 check fliptoing (this is the check ending flip rule):
 	if noun is a thisflip listed in table of end-flips:
 		choose row with thisflip of noun in table of end-flips;
-		consider the check final region action rule for noun;
+		process the check final region action rule for noun;
 		if the rule succeeded:
 			do nothing;
 		else:
 			do nothing instead;
 	else if noun is a thatflip listed in table of end-flips:
 		choose row with thatflip of noun in table of end-flips;
-		consider the check final region action rule for noun;
+		process the check final region action rule for noun;
 		if the rule succeeded:
 			do nothing;
 		else:
@@ -8065,7 +8067,7 @@ check fliptoing when player is in dusty study and gunter is off-stage (this is t
 						now tried-flip is true;
 						say "[if the-from entry is palm]You don't need a light source, yet[else if the-from entry is giant pin]There's no need to tidy your study up just now[else if the-from entry is satchel]Hmm, maybe there is something in there if you needed to go adventuring, but you don't, yet[else]Hm, well, that'd be a way to move around if you needed to sneak out. But you don't, yet[end if][one of]. Still, that seems right, so you file that idea away for later[or][stopping].";
 						preef the-from entry;
-						consider the Gunter knocks rule;
+						process the Gunter knocks rule;
 						do nothing instead;
 				else:
 					say "Worth trying later, but no need to pre-flip, flipper. See about that visitor, first.";
@@ -8158,13 +8160,13 @@ carry out fliptoing:
 					solve-region the map region of the location of the player;
 					the rule succeeds;
 				move player to roomjump entry;
-				consider the show blues rule; [for debugging]
-				consider the process random dialogue rule;
+				process the show blues rule; [for debugging]
+				process the process random dialogue rule;
 				the rule succeeds;
 			else if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
-				consider the Gunter Knocks rule;
+				process the Gunter Knocks rule;
 			else if the-to entry is not visible:	[components aren't broken off]
 				if the-to entry is not the-from entry and the-to entry is not a backdrop:
 					move the-to entry to location of player;
@@ -8172,7 +8174,7 @@ carry out fliptoing:
 				now bean-smell is true;
 				now dusty study is lit;
 				if latches are off-stage, now player has latches;
-				consider the adjust light rule;
+				process the adjust light rule;
 			if the-to entry is not the-from entry and the-from entry is not reflexed, moot the-from entry; [this is to drop a new item in place]
 			if the-to entry is visible:
 				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
@@ -19645,7 +19647,7 @@ check giving to Tetris Sitter:
 	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
 	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
-	consider the maxminchange check rule;
+	process the maxminchange check rule;
 	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	moot flowerpot instead;
 
@@ -20176,7 +20178,7 @@ chapter guardian taunt tables
 after fliptoing reed's ale:
 	moot lars eede;
 	moot elsa erde;
-	consider the guardian taunt rule;
+	process the guardian taunt rule;
 	if player is male, shuffle-guardians lars eede;
 	if player is female, shuffle-guardians elsa erde;
 	continue the action;
@@ -21463,7 +21465,7 @@ after fliptoing a mack-idea:
 		moot list of all mack-ideas;
 		try talking to Gretta;
 		continue the action;
-	consider the macks hitting on rule;
+	process the macks hitting on rule;
 	if debug-state is true and noun is not ment:
 		say "NOTE: The player can't have known this yet, but since you're testing, I'll let it fly.";
 		continue the action;
@@ -21666,7 +21668,7 @@ every turn when player is in Disowned Downside and macks are in Disowned Downsid
 				continue the action;
 			now loop is true;
 			now cur-mack-blab is 1;
-		consider the find-mack-idea rule;
+		process the find-mack-idea rule;
 		if the rule succeeded:
 			if loop is true:
 				if ever-loop-mack is false:
@@ -23035,7 +23037,7 @@ check going north in Gates Stage:
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
 		min-and;
-		consider the notify score changes rule;
+		process the notify score changes rule;
 	now others is solved;
 	if debug-state is true:
 		append "Test passed for Others.[line break]" to the file of debuggery;
@@ -23181,7 +23183,7 @@ check inserting into lost slot:
 	moot storage box;
 	moot s-i;
 	now player has popstar's passport;
-	consider the retract halt lath rule;
+	process the retract halt lath rule;
 	the rule succeeds;
 
 the popstar's passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too. Written on the bottom is some nonsense about how it's not enough to have the passport to improve quality of life--you need to use it, too."
@@ -24959,7 +24961,7 @@ Rule for amusing a victorious player:
 				if there is no do-i-print entry:
 					say "[2da][yux entry][line break]";
 				else:
-					consider the do-i-print entry;
+					process the do-i-print entry;
 					if the rule succeeded:
 						say "[2da][yux entry][line break]";
 
@@ -25300,7 +25302,7 @@ rule for showing alternate routes:
 	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The Means Manse and Routes have no mutually exclusive solutions. This list overlaps very little with the MISSED list which shows actual points missed.";
 	d "[list of solved regions].";
 	repeat with myr running through regions-in-order:
-		if myr is solved, consider the altroutes of myr;
+		if myr is solved, process the altroutes of myr;
 
 to say presto-3 of (n - a number):
 	if n is not 1, say "pushing the skid to the shack with the yak on it";
@@ -25823,7 +25825,7 @@ carry out a5ing:
 	now towers is solved;
 	now suppress-score is false;
 	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to OTTERS. I also gave you the settler and purse and notepad, in case.";
-	consider the notify score changes rule;
+	process the notify score changes rule;
 	ital-say "you may wish to SEED 1 so you can make the macks talk blearily, nastily and bossily, if you are in an automatic testing situation."
 
 chapter hfing
@@ -25949,7 +25951,7 @@ when play begins:
 		now last-min of rr is min-score of rr;
 		now orig-min of rr is min-score of rr.
 
-every turn: consider the maxminchange check rule;
+every turn: process the maxminchange check rule;
 
 after fliptoing (this is the maxminchange check rule):
 	if last-max of mrlp > poss-score of mrlp:
@@ -26940,8 +26942,8 @@ carry out ploping:
 	the rule succeeds;
 
 after fliptoing when uber-rand-cheat is true:
-	consider the uber-towers rule;
-	consider the uber-otters rule;
+	process the uber-towers rule;
+	process the uber-otters rule;
 	continue the action;
 
 every turn when player is in Disowned Downside and macks are in Disowned Downside and uber-rand-cheat is true (this is the uber-otters rule):
@@ -27237,7 +27239,7 @@ understand the command "thisalt" as something new.
 understand "thisalt" as thisalting.
 
 carry out thisalting:
-	consider the altroutes of mrlp;
+	process the altroutes of mrlp;
 	the rule succeeds;
 
 chapter elving
@@ -27320,7 +27322,7 @@ carry out scoing:
 	the rule succeeds;
 
 after fliptoing when scotrack is true (this is the score track debug rule):
-	consider the score debug rule;
+	process the score debug rule;
 	continue the action;
 
 scotrack is a truth state that varies.

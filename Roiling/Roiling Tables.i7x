@@ -548,7 +548,7 @@ to say extra-c:
 
 after fliptoing hump:
 	if Leo is in grey gyre:
-		consider the Leo-Rand lackey rule;
+		process the Leo-Rand lackey rule;
 	continue the action;
 
 instead of doing something with satchel when player has satchel:

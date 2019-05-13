@@ -169,6 +169,8 @@ release along with cover art. [and a website?]
 
 use American dialect.
 
+use authorial modesty.
+
 include Conditional Undo by Jesse McGrew.
 
 include Flexible Windows by Jon Ingold.
@@ -429,10 +431,6 @@ bore-text of pockets is "[if location of player is Busiest Subsite]That would be
 
 chapter say shortcuts
 
-to say email: say "blurglecruncheon@gmail.com".
-
-to say ghsite: say "http://github.com/andrewschultz/stale-tales-slate/Shuffling"
-
 section debugging flags and such
 
 debug-print is a truth state that varies. debug-print is usually false.
@@ -578,7 +576,7 @@ every turn (this is the process random dialogue rule):
 	if current action is hinting, do nothing instead;
 	if current action is fliptoing, do nothing instead;
 	now chat-rand is true;
-	consider the find-blather rule;
+	process the find-blather rule;
 	now chat-rand is false;
 
 this is the find-blather rule:
@@ -586,7 +584,7 @@ this is the find-blather rule:
 	repeat through table of megachatter:
 		if eturn entry is chat-rand:
 			if there is a go-ahead entry:
-				consider the go-ahead entry;
+				process the go-ahead entry;
 				if the rule succeeded:
 					if chat-rand is true and talk-quiet is true and done-once entry is true, the rule succeeds;
 					if showtabname is true:
@@ -621,7 +619,7 @@ to say randbla:
 	repeat through table of megachatter:
 		if eturn entry is chat-rand:
 			if there is a go-ahead entry:
-				consider the go-ahead entry;
+				process the go-ahead entry;
 				if the rule succeeded:
 					if showtabname is true:
 						say "([mytab entry])";
@@ -1657,7 +1655,7 @@ understand the command "parse" as something new.
 understand "parse" as parseing.
 
 carry out parseing:
-	consider the gadget-okay rule;
+	process the gadget-okay rule;
 	if the rule succeeded:
 		say "The game is [if parse-output is true]already[else]now[end if] parsing output from the gadget.";
 		now parse-output is true;
@@ -1671,7 +1669,7 @@ understand the command "spare" as something new.
 understand "spare" as spareing.
 
 carry out spareing:
-	consider the gadget-okay rule;
+	process the gadget-okay rule;
 	if the rule succeeded:
 		say "The game is [if parse-output is false]already[else]now[end if] not parsing output from the gadget.";
 		now parse-output is false;
@@ -2138,6 +2136,8 @@ Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regtab
 
 Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regtab of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
+orig-region is a region that varies. orig-region is Ordeal Loader.
+
 book fliptoing
 
 chapter the verb
@@ -2203,7 +2203,7 @@ carry out fliptoing (this is the main flipping rule) :
 		now just-print is false;
 		try mainhelping;
 		now just-print is true;
-	consider the notify score changes rule;
+	process the notify score changes rule;
 	if mything is the player:
 		say "Something went wrong here. It should not have, but it did. [bug-report]";
 	the rule succeeds;
@@ -4198,7 +4198,7 @@ to say icon-depict:
 	let cycled be false;
 	while cycled is false or icon-index is not current-icon:
 		choose row current-icon in table of iconmaps;
-		consider the icon-rule entry;
+		process the icon-rule entry;
 		increment current-icon;
 		if current-icon > number of rows in table of iconmaps:
 			now current-icon is 1;
@@ -6505,13 +6505,7 @@ instead of entering black door: try opening black door instead.
 
 description of roadblock is "It's about eight feet long and really dark (you pause and hope you don't need to learn COBOL) and dented about halfway through--well, four-ninths of the way from the right. You are utterly unsure what it could possibly be guarding, and you also notice bright red graffiti[one of].[paragraph break]You think back to how your nametag was creased, and how the roadblock probably doesn't change into anything too easy like a broad lock. The moor [if sack is not off-stage]and the sack [end if]already felt a bit easy[or][stopping]."
 
-the bright red graffiti is a boringthing. it is part of the roadblock. bore-text is "You can really only examine or read it.". bore-check is the bore-graffiti rule.
-
-this is the bore-graffiti rule:
-	if current action is examining or current action is reading:
-		continue the action;
-	say "You can really only examine or read it.";
-	the rule succeeds;
+the bright red graffiti is a boringthing. it is part of the roadblock. bore-text is "You can really only examine or read it.".
 
 description of bright red graffiti is "DOC OLBARK has chosen to deface this roadblock, in bright red paint, no less."
 
@@ -6808,7 +6802,7 @@ to block-cedars:
 
 lois is boringscen in Sacred Cedars. description is "Lois is beyond trivial standard I7 descriptions, so if you see this, it is a [bug-report] Report to the author with a transcript.". bore-text is "Looking for evidence of Lois suggests lack of faith.". bore-check of lois is bore-lois rule.
 
-this is  the bore-lois rule:
+this is the bore-lois rule:
 	if current action is attacking:
 		say "No. Lois is here to help.";
 		the rule succeeds;
@@ -7869,7 +7863,7 @@ check putting on the sensor (this is the reject silly sensor tries rule) :
 	say "'Special place is special!' barks the sensor. You'll probably need something more high-tech to slip, ace." instead;
 
 check putting keycard on sensor:
-	consider the bother-nerds rule;
+	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if barcode is not part of keycard, say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
 	if metallic door is open:
@@ -7883,7 +7877,7 @@ check putting keycard on sensor:
 	now metallic door is open instead;
 
 check going east in Undesired Underside:
-	consider the bother-nerds rule;
+	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if metallic door is open, continue the action;
 	if player has the keycard and barcode is part of the keycard:
@@ -7899,7 +7893,7 @@ check opening the metallic door:
 		say "The door slides open as you step near it.";
 		now metallic door is open;
 		the rule succeeds;
-	consider the bother-nerds rule;
+	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if keycard-put is true:
 		say "You use the keycard to open the door again.";
@@ -8739,7 +8733,7 @@ carry out existing:
 		say "[wfak][line break]I...what? End a pad with a deadpan: GIVE A HANG? DANG, I HAVE! TREMENDOUS = ME (ENDS TOUR).";
 		reg-inc;
 		now resort is solved;
-		consider the notify score changes rule;
+		process the notify score changes rule;
 		say "[line break]Final rank: a smart gamin['] anagrammist.[paragraph break]...well, final, until you feel like playing the second installment in the Stale Tales Slate: [i]A Roiling Original[r].";
 		sort table of megachatter in reverse table-size order;
 		repeat through table of megachatter:
@@ -9033,7 +9027,7 @@ after reading a command:
 				say "You watch [if mystore entry is visible][mystore entry][else if myport entry is visible]the [myport entry][end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
 				now myreg entry is bypassed;
 				if mystore entry is visible, reg-inc;
-				consider the notify score changes rule;
+				process the notify score changes rule;
 				reject the player's command;
 	if the player's command matches the regular expression "\bdoor\b":
 		if odor is visible:
@@ -10529,7 +10523,7 @@ reg-sto of metros is store m. reg-ent of metros is trade tread.
 reg-sto of resort is store r. reg-ent of resort is r-p.
 
 to solve-region (sre - a region):
-	consider the notify score changes rule;
+	process the notify score changes rule;
 	say "[line break][sre] node: done! A bump-up, bam![wfak]";
 	now sre is solved;
 	if sre is not Ordeal Loader:
@@ -12673,7 +12667,7 @@ carry out foing:
 		the rule succeeds;
 	let GGG be a random visible guider;
 	try going godir of GGG;
-	consider the notify score changes rule;
+	process the notify score changes rule;
 	the rule succeeds;
 
 chapter dscing
@@ -12805,7 +12799,7 @@ carry out apping:
 	the rule succeeds;
 
 after fliptoing when show-prep is true:
-	consider the prep-rehash rule;
+	process the prep-rehash rule;
 	continue the action;
 
 every turn when player has prep paper and show-prep is true (this is the prep-rehash rule):

@@ -125,7 +125,7 @@ every turn (this is the process random dialogue rule) :
 	if current action is hinting, do nothing instead;
 	if current action is fliptoing, do nothing instead;
 	now chat-rand is true;
-	consider the find-blather rule;
+	process the find-blather rule;
 	now chat-rand is false;
 
 ever-hit-last is a truth state that varies. just-hit-last is a truth state that varies.
@@ -142,7 +142,7 @@ this is the find-blather rule:
 	repeat through table of megachatter:
 		if eturn entry is chat-rand:
 			if there is a go-ahead entry:
-				consider the go-ahead entry;
+				process the go-ahead entry;
 				if the rule succeeded:
 					if chat-rand is true and talk-quiet is true and done-once entry is true, the rule succeeds;
 					if showtabname is true:
@@ -193,7 +193,7 @@ to say randbla:
 	repeat through table of megachatter:
 		if eturn entry is chat-rand:
 			if there is a go-ahead entry:
-				consider the go-ahead entry;
+				process the go-ahead entry;
 				if the rule succeeded:
 					if showtabname is true:
 						say "([mytab entry])";
