@@ -170,6 +170,8 @@ Others is an unsolved region. regtab of Others is table of others nudges. regana
 
 Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
 
+orig-region is a region that varies. orig-region is Means Manse.
+
 a thing has a region called lreg. lreg of a thing is usually Means Manse.
 
 chapter things
@@ -505,7 +507,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 690.
+use MAX_VERBS of 700.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -521,7 +523,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 710. [delta=20]
+use MAX_VERBS of 720. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -544,7 +546,7 @@ section test extensions - not for release
 
 Include Direction Response Testing by Andrew Schultz.
 
-include Property Checking by Emily Short.
+[include Property Checking by Emily Short.]
 
 include Object Response Tests by Juhana Leinonen.
 
@@ -3684,8 +3686,8 @@ this is the check final region action rule:
 			if warned-yet entry is false:
 				process the my-prog entry;
 				if the rule succeeded:
+					ital-txt "[pointwarn entry]";
 					now warned-yet entry is true;
-					ital-say "[pointwarn entry]";
 					say " Continue anyway?";
 					if the player yes-consents:
 						the rule succeeds;
@@ -6713,19 +6715,14 @@ chapter eating
 understand the command "eat" as something new.
 understand "eat [something]" as eating.
 
-procedural rule while eating: [taking before eating]
-	if noun is lamb or noun is tea tray or noun is clam or noun is oyster-x or noun is b-b or noun is lobster or noun is clear catsup or noun is deli rye:
-		ignore the carrying requirements rule.
+procedural rule while eating something:
+	unless noun is deli rye, ignore the carrying requirements rule. [It mostly gets rejected anyway, and you never need to take anything. The deli rye should be mapped to TAKE]
 
 check eating (this is the general eating rule):
 	if noun is a hintpastry:
-		say "You'll want to put the pastry in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
-	if noun is escaroles:
-		say "They aren't nearly substantial enough." instead;
-	if noun is casserole:
-		say "Ugh. You're not sure what's in it, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
-	if noun is deli rye:
-		try taking deli rye instead;
+		say "You'll want to put [the noun] in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
+	if noun is escaroles, say "The escaroles aren't nearly substantial enough." instead;
+	if noun is casserole, say "Ugh. You're not sure what's in the casserole, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
 	say "That's not in a test-taste state." instead;
 
 check eating grid:
@@ -7121,7 +7118,7 @@ check listening (this is the you can hear stuff some places rule):
 	if Rand is visible and Rand is washed up: [presto] [this needs to come first, since there is a lot to listen to in Dirge Ridge]
 		say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
 		try asking a random washed up person about "rannygazoo" instead;
-	if player is in Dirge Ridge and odes song is in dirge ridge, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DEN SOS GO, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DEN SOS GO also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DEN SOS go also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead;
+	if player is in Dirge Ridge and odes song is in dirge ridge, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DENS SO OG, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DENS SO OG also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DENS SO OG also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead;
 	if player is in Dirge Ridge, say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite dealing with Rand and Leo[end if]." instead;
 	if player is in hacks' shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
@@ -9864,7 +9861,7 @@ instead of switching off the tech etcha', try pushing the tech etcha' instead;
 
 check pushing the tech etcha':
 	say "You push the teach-cheat button, and it's now [if cheat-on is true]off. Hooray for more challenge[otherwise]on. Hooray for more information[end if][one of] when you SCAN in the future--though you can push the button to go back to normal mode[or][stopping][if cheat-on is false and seen-blues is false]. The logo seems to change colors as well[end if].";
-	now cheat-on is whether or not cheat-on is false;
+	now cheat-on is whether or not cheat-on is false instead;
 
 does the player mean doing something with the equals sign: it is unlikely.
 
@@ -10690,9 +10687,9 @@ to say i-u: if magneto montage is unexamined, say ", which looks like a director
 
 section hubs bush
 
-the hubs bush is bounding scenery. "The hubs bush encircles the entire Strip of Profits, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if same mesa is visited or loather rathole is visited or loftier trefoil is visited or posh hops shop is visited or grey gyre is visited or bleary barley is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
+[?? hubs bush can be linked in STS common.i7x if I can be bothered]
 
-the hubs bush is bounding boringscen. description is "The hubs bush encircles the entire Trips Strip, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if sf is visited or trap part is visited or underside is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by stores. Hooray for focus, I guess."
+the hubs bush is bounding boringscen. description is "The hubs bush encircles the entire Strip of Profits, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if same mesa is visited or loather rathole is visited or loftier trefoil is visited or posh hops shop is visited or grey gyre is visited or bleary barley is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
 
 check going nowhere in strip of profits:
 	if hubs bush is in strip of profits, say "The hubs bush forces you back to the center of the strip and the stores." instead;
@@ -11738,7 +11735,7 @@ a-text of the-b is "RYRYYRR". b-text of the-b is "RYRYYRR". parse-text of the-b 
 understand "bean" as the-b.
 
 check pushing the-b:
-	say "The drama armada joins in to push the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order."
+	say "The drama armada joins in to push the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order." instead;
 
 check going when the-b is visible:
 	if noun is down:
@@ -13718,7 +13715,7 @@ for writing a paragraph about a bruisin person:
 
 every turn when player is in dirge ridge:
 	if Leo is fightin:
-		say "Leo bulls at you, but you're easily able to outrun and outwit him. Maybe it's as easy to take him down for good." instead;
+		say "Leo bulls at you, but you're easily able to outrun and outwit him. Maybe you can easily discourage him, too." instead;
 	if Rand is fightin:
 		say "Rand charges at you straightforwardly, but as lumbering as Leo. He can probably be tricked by a similar fake-out." instead;
 
@@ -13769,7 +13766,10 @@ a-text of sods gone odes song is "RYYRRYRR". b-text of sods gone odes song is "R
 
 this is the bore-sods rule:
 	if current action is examining:
-		say "The only way to examine is to listen, so you do.";
+		say "You can really only listen to the song.";
+		try listening instead;
+	unless the action is procedural:
+		say "You can really only listen to the song.";
 		try listening instead;
 	abide by the bore-exam rule;
 

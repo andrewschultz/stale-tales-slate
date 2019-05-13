@@ -639,7 +639,7 @@ to say twiddle of (tn - a table name) and (nums - a number):
 			increment curcount;
 			if curcount is 5 and twiddle-warn is false and skip-past is false:
 				now twiddle-warn is true;
-				ital-say "you can see all this at the end, so no need to page through all [tr] entries.";
+				ital-txt "you can see all this at the end, so no need to page through all [tr] entries.";
 		else:
 			if debug-state is false:
 				say " [bracket]That's all![close bracket][line break]";
