@@ -118,7 +118,7 @@ book debug modules - not for release
 
 include Object Response Tests by Juhana Leinonen.
 
-include Property Checking by Emily Short.
+[include Property Checking by Emily Short.]
 
 include Direction Response Testing by Andrew Schultz.
 
@@ -766,7 +766,7 @@ sol	chosen
 book section-victory
 
 to metro-victory:
-	say "You draw your sword with the improvised battle cry 'At fencing I'm magnificent!' doing your best impression of St. Abe, or is it St. Bea?[paragraph break]Whichever, the beast scratches you, which you sort of deserve, but then your sword acts as a microphone, converting the beast's remaining beats to equally horrendous lyrics and providing feedback that makes it wince. It gives an owly yowl, tone-deaf: 'Fate! Done!' and runs off.[paragraph break]People can finally think again, so they figure how to find you quickly in the abyss![paragraph break]'How? Who? Ohh wow. You merit this mitre!' someone says. But all you want is to get on with your quest. The trade tread in Undesired Underside reveals itself again. You note the ol['] hotel (L'Hote Helot) is now Le Hot Hotel, the terminal lean, trim. You then turn your sore to a rose, lead a pared parade and, for slower fun, plant a sunflower before returning to the Trips Strip.[paragraph break]You wonder if you could've just tried to SAY BS to get rid of the metros without trying. Maybe it'd be useful in a future alternate universe.";
+	say "You draw your sword with the improvised battle cry 'At fencing I'm magnificent!' doing your best impression of St. Abe, or is it St. Bea?[paragraph break]Whichever, the beast scratches you, which you sort of deserve, but then your sword acts as a microphone, converting the beast's remaining beats to equally horrendous lyrics and providing feedback that makes it wince. It gives an owly yowl, tone-deaf: 'Fate! Done!' and runs off.[paragraph break]People can finally think again, so they figure how to find you quickly in the abyss![paragraph break]'How? Who? Ohh wow. You merit this mitre!' someone says. But all you want is to get on with your quest. The trade tread in Undesired Underside reveals itself again. You note the ol['] hotel (L'Hôte Helot) is now Le Hot Hotel, the terminal lean, trim. A fellow named Ace F shows up, vying to revive the cafe face. You then turn your sore to a rose, lead a pared parade and, for slower fun, plant a sunflower before returning to the Trips Strip.[paragraph break]You wonder if you could've just tried to SAY BS to get rid of the metros without trying. Maybe it'd be useful in a future alternate universe.";
 	now stickyhanded is false;
 	reg-inc;
 	solve-region metros;
@@ -1110,11 +1110,11 @@ carry out metros-hinting:
 	if player is in Esoteric Coteries:
 		if player has lit-up tulip, all-say "Nothing more to do here." instead;
 		try objhinting nerds instead;
-	if player is in Elm Train Terminal or player is on fuzzy looking wall:
+	if player is in Elm Train Terminal or player is on cafe face:
 		if power-shut is true, all-say "You've done what you can here[if player does not have tulip]. You'll need a light source to go east across the rail[end if][if Esoteric Coteries are unvisited]. You haven't been behind the door east of the Underside, yet[end if]." instead;
-		if clover is in camp, all-say "You need something sticky to climb the wall. Go back to the camp." instead;
+		if clover is in camp, all-say "You need something sticky to climb the cafe face. Go back to the camp." instead;
 		if player has clover, try objhinting clover instead;
-		if player is not wearing Velcro and player is not on fuzzy looking wall, all-say "You can WEAR the Velcro to climb the wall." instead;
+		if player is not wearing Velcro and player is not on cafe face, all-say "You can WEAR the Velcro to climb the cafe face." instead;
 		if neon pig is in Elm Train Terminal, try objhinting neon pig instead;
 		if controls are off-stage:
 			if bastion-evac is false, all-say "You need to [if camp is unvisited]see someone up north[else]please the deadbeat[end if] to get an item to replace the neon pig in the opening." instead;
@@ -1342,7 +1342,7 @@ instead of waving hands:
 
 instead of jumping:
 	if player is in Busiest Subsite, say "Apparently, it's your career that needs the jump, not you." instead;
-	if player is on fuzzy wall, say "Bad idea. Just climb down instead." instead;
+	if player is on cafe face, say "Bad idea. Just climb down instead." instead;
 	if player is in Rived Drive, say "You don't get anywhere close to over the [slo-po]. Perhaps it's better to [if poles are visible]try to [end if]CLIMB." instead;
 	say "What am I supposed to do with THAT four-letter mess?"
 
@@ -1417,7 +1417,7 @@ check touching:
 	if noun is blades, say "They begin to whir at your finger's presence." instead;
 	if noun is bolt, say "You can't quite. It's as if an invisible lock is around it." instead;
 	if noun is missile, say "You hear a small FWEE, as if from a party favor." instead;
-	if noun is Velcro or noun is fuzzy wall, say "Kind of rough and gritty." instead;
+	if noun is Velcro or noun is cafe face, say "Kind of rough and gritty." instead;
 	if noun is thorn, say "Pain, a nip, like a pin." instead;
 	if noun is spread, say "The spread lashes back--it turns into a red asp! You back off quickly, but fortunately, the asp is only a vicious guardian, not a vicious attacker[red-to]." instead;
 	say "Touch's not [i]tons[r] couth." instead;
@@ -2017,7 +2017,7 @@ carry out cring:
 		buzz-or-no-noise noun;
 		the rule succeeds;
 	now marcos-trumped is true;
-	if noun is pig and player is not on fuzzy looking wall, say "You are too far away at the moment." instead;
+	if noun is pig and player is not on cafe face, say "You are too far away at the moment." instead;
 	now ever-scan is true;
 	if gadget is cert:
 		say "You get to scanning, twiddling from certify to rectify and back.";
@@ -4717,7 +4717,7 @@ book Forest
 
 chapter Softer Forest (sf)
 
-sf is a privately-named room in Softer Forest. the printed name of sf is "Softer Forest".
+sf is a privately-named room in Forest. the printed name of sf is "Softer Forest".
 
 after printing the locale description for sf when sf is unvisited: set the pronoun it to a random guider in sf.
 
@@ -4766,7 +4766,7 @@ understand "noise/sound" as rambling shout when rambling shout is in location of
 
 chapter Rest of Forest
 
-rf is a privately-named room in Softer Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint]."
+rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint]."
 
 after printing the locale description for rf when rf is unvisited: set the pronoun it to a random guider in rf.
 
@@ -4780,7 +4780,7 @@ the forest-leaves are in rf and sf.
 
 chapter Self-ID Fields
 
-Self-ID Fields is a room in Softer Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes from a selves vessel to the south through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north."
+Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes from a selves vessel to the south through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north."
 
 after looking in Self-ID Fields:
 	set the pronoun it to gy;
@@ -4802,7 +4802,7 @@ Include (-
 gy is privately-named boringscen in Self-ID Fields. understand "man" as gy when player is in Self-ID Fields. bore-check is bore-too-late rule.
 
 this is the bore-too-late rule:
-	it-him gy;
+	it-them gy;
 	if action is procedural, say "Any invdividual guy going by doesn't matter." instead;
 	say "Too late. He's gone. But here's another.".
 
@@ -4810,7 +4810,7 @@ printed name of gy is "bearded man".
 
 understand "bearded man/guy/figure" and "man/guy/figure" as gy.
 
-to it-him (x - a thing):
+to it-them (x - a thing):
 	set the pronoun it to x;
 	set the pronoun them to x;
 
@@ -4823,7 +4823,7 @@ Include (-
 a thing called line of no life is plural-named boringscen in Self-ID Fields. printed name of line of no life is "bearded men". description is "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.". bore-text is "The line of no life is too incorporeal to interact with[if Cruel Ones' Enclosure is unvisited], but maybe you can imitate it partially to go north[end if].". bore-check is bore-line-life rule.
 
 this is the bore-line-life rule:
-	it-him line of no life;
+	it-them line of no life;
 	abide by the bore-exam rule;
 
 understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as line of no life.
@@ -4865,7 +4865,7 @@ to say nosey: say "[one of]a fake warty witch's conker[or]a fake parrot beak[or]
 
 chapter Flesh Shelf
 
-Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Softer Forest.
+Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Forest.
 
 the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink."
 
@@ -5137,7 +5137,7 @@ understand "glop" and "glob" as livers.
 
 chapter Gnarliest Triangles
 
-Gnarliest Triangles is east of Self-ID Fields. Gnarliest Triangles is in Softer Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
+Gnarliest Triangles is east of Self-ID Fields. Gnarliest Triangles is in Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
 
 check going nowhere in Gnarliest Triangles: say "You don't need an alert sign to know running into the walls any direction but east would cause a real sting." instead;
 
@@ -5173,7 +5173,7 @@ after choosing notable locale objects when player is in Gnarliest Triangles:
 	repeat with item running through containers in Gnarliest Triangles:
 		set the locale priority of the item to 0;
 
-the bucket is an opaque container in Gnarliest Triangles. printed name of bucket is "bucket[if ones are in bucket] full of ones[end if]".
+the bucket is a container in Gnarliest Triangles. printed name of bucket is "bucket[if ones are in bucket] full of ones[end if]".
 
 the shell is a container in Gnarliest Triangles. printed name of shell is "shell[if dashes are in shell] full of dashes[end if]".
 
@@ -5200,11 +5200,11 @@ the elegy is part of the bubble.
 
 the description of the elegy is "It's in a bright red that seems entirely wrong: [i][first custom style]Uthgon's Hut-Song:[paragraph break]Hognuts! Un-ghost no thugs! Go! Shunt![line break]Og hunts gnus, tho['] gush not tons, ugh.[r]"
 
-instead of taking bucket: say "Buckets be stuck here, unsurprisingly."
+check taking bucket: say "Buckets be stuck here, unsurprisingly." instead
 
-instead of taking bubble: say "It's welded to the wall."
+check taking bubble: say "It's welded to the side of."
 
-instead of taking shell: say "It's welded to the wall."
+check taking shell: say "It's welded to the side of the Flesh Shelf." instead;
 
 check inserting into:
 	if second noun is trel-priv, say "Maybe you mean to put something in the wall instead?" instead;
@@ -5228,7 +5228,7 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure.
 
-Cruel Ones' Enclosure is north of Self-ID Fields. It is in Softer Forest. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
+Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
 
 after looking in Enclosure:
 	if banshee is in enclosure:
@@ -5282,7 +5282,7 @@ to check-score (a - indexed text):
 
 chapter Ghouls' Slough
 
-Ghouls' Slough is inside of Enclosure. It is in Softer Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough.
+Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough.
 
 the dog is amusing boringscen in Ghouls' Slough. bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
 
@@ -5298,7 +5298,7 @@ check examining maps in Ghouls' Slough:
 
 chapter Frost Forts
 
-Frost Forts is a room in Softer Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if]."
+Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if]."
 
 Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
 
@@ -6119,15 +6119,15 @@ instead of tying to (this is the check for big quest item attachment rule):
 		now tie-warn is true;
 	if noun is missile or noun is hay or noun is straw or noun is panel or noun is black door, try inserting noun into second noun instead;
 	if second noun is missile or second noun is hay or second noun is straw or second noun is panel or second noun is black door, try inserting second noun into noun instead;
-	if second noun is fuzzy looking wall:
-		if op is not visible, say "[if player is on wall]The wall doesn't have any sort of recess[else]Sticking something to the steel wool would do very little[end if]." instead;
-		if player is not on wall, say "You'd need to climb the wall first." instead;
+	if second noun is cafe face:
+		if op is not visible, say "[if player is on cafe face]The cafe face doesn't have any sort of recess[else]Sticking something to the steel wool would do very little[end if]." instead;
+		if player is not on cafe face, say "You'd need to climb the cafe face first." instead;
 		try inserting noun into op instead;
 	if second noun is op, try inserting noun into op instead;
 	continue the action;
 
-instead of putting a thing on the fuzzy looking wall:
-	if player is on the fuzzy looking wall:
+instead of putting a thing on the cafe face:
+	if player is on the cafe face:
 		if op is not visible, say "The neon pig is in the way." instead;
 		try putting noun on op instead;
 	say "Something might stick, but it wouldn't do much there."
@@ -6162,13 +6162,13 @@ check inserting it into (this is the straw-hay insert rule):
 		ignore the can't insert what's not held rule;
 		if second noun is silo, say "Farming isn't what you need to do, here[if door is not part of silo], and anyway, you've got no door to schlep things through." instead;
 		if noun is straw:
-			if second noun is scraped wall, say "That would be perfectly sensible, to make the wall impermeable. The scraped wall seems to indicate the need for a hallway, though." instead;
+			if second noun is scraped wall, say "Straw would be perfectly sensible, to make the scraped wall impermeable. It seems to indicate the need for a hallway, though. Maybe another material." instead;
 			if second noun is not sack, say "The straw is probably more useful thatching a cottage or something. You haven't seen any, yet." instead;
 	if second noun is silo:
 		if noun is not missile and noun is not panel and noun is not door, say "That doesn't belong in or on the silo." instead;
-	if second noun is fuzzy looking wall:
+	if second noun is cafe face:
 		if op is visible, try putting noun on op instead;
-		say "[if player is on fuzzy wall]There's no place something'll stick on the wall this high up. Well, not yet[else]The bottom of the wall doesn't seem like a useful place to stick things[end if]." instead;
+		say "[if player is on cafe face]There's no place something'll stick on the cafe face this high up. Well, not yet[else]The bottom of the cafe face doesn't seem like a useful place to stick things[end if]." instead;
 
 check putting on scraped wall: try inserting noun into scraped wall instead.
 
@@ -6874,7 +6874,7 @@ book metros
 
 chapter Undesired Underside
 
-Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol' Hotel to the west."
+Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west."
 
 the tilting titling is boringscen in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
 
@@ -6882,7 +6882,7 @@ check going inside in Undesired Underside: say "That's ambiguous with the hotel 
 
 check going outside in Undesired Underside: say "You already are in the not-so-great outdoors." instead.
 
-the building is scenery in Undesired Underside. understand "hotel" as building. description of building is "[if drainage is in Undesired Underside]It says L'HOTE HELOT[else][first custom style]AND I RAGE[r] is written in red.[end if]"
+the building is scenery in Undesired Underside. understand "hotel" as building. description of building is "[if drainage is in Undesired Underside]It says L'HÔTE HELOT[else][first custom style]AND I RAGE[r] is written in red.[end if]"
 
 the drainage is in Undesired Underside. It is fixed in place. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. You see [letter-or-flier] in it. Cleaning it up would help take this city back."
 
@@ -7087,15 +7087,15 @@ Report taking the clover:
 some Velcro is a singular-named thing. it is not fixed in place. understand "mittens" and "gloves" as Velcro when Velcro is visible.
 
 check taking off Velcro:
-	if player is on fuzzy wall, say "You'd fall. Best get down from the wall, first." instead;
+	if player is on cafe face, say "You'd fall. Best get down from the cafe face, first." instead;
 	if player is in Bassy Abyss, say "Maybe if you had something that gave you an even better grip, you could. But that siren is distracting." instead;
 
 check wearing Velcro:
 	if player is in Bassy Abyss, say "[if siren is in Bassy Abyss]That's not useful in this sticky situation[else]The resin is more useful for you to grab stuff[end if]." instead;
 
-instead of tying Velcro to fuzzy wall: say "You test to make sure it sticks. It does. You could climb up, if you wanted.".
+instead of tying Velcro to cafe face: say "You test to make sure it sticks. It does. You could climb up, if you wanted.".
 
-instead of putting Velcro on fuzzy wall: try tying Velcro to fuzzy wall instead.
+instead of putting Velcro on cafe face: try tying Velcro to cafe face instead.
 
 after doing something with controls:
 	set the pronoun it to controls;
@@ -7677,7 +7677,7 @@ chapter The Ol' Hotel
 
 There is a room called The Ol' Hotel.
 
-The Ol' Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HOTE HELOT scribbled about. The only way out is east.". Hotel is in Metros.
+The Ol' Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HÔTE HELOT scribbled about. The only way out is east.". Hotel is in Metros.
 
 The Night Thing is a neuter person in Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
 
@@ -7719,7 +7719,7 @@ check inserting into the bottle: say "Ketchup bottles have those narrow necks, s
 
 instead of eating the ketchup: say "You don't know where it's been. Oh, wait, even worse, you DO.".
 
-check going nowhere in Hotel: say "You don't want to find that L'Hote Helot is The Hell, Too. Better to find a way to fix it, or the city." instead.
+check going nowhere in Hotel: say "You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city." instead.
 
 check going outside in Hotel: try going east instead.
 
@@ -7986,23 +7986,21 @@ understand "earliest atelier" and "atelier" as Earliest Ateliers.
 
 chapter Elm Train Terminal
 
-to say if-piggy: say "[if neon pig is visible]neon pig embedded in the wall seems even sillier[else if controls are in op]controls are working nicely in the opening you made[else]empty opening you made needs something to fit[end if][run paragraph on]"
+Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in op]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in op], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if]."
 
-Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station with, err, min-alert customer service[one of], but at least the stop's labeled ELM, so you finally know what street you're on[or][stopping][if power-shut is false]. It's a bit dark, but not as bad as below, where noise seems to be echoing[else]. The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should strain for the darkness below, with more rats in than trains.[paragraph break]You could go back north, [if player is on fuzzy looking wall]though you may need to get off the wall[pigcon] first[else]and there's a fuzzy looking wall you can climb, and a scrolling display reads PA'S PSA[if-fade], but the [if-piggy][end if]. A rail is to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]."
+to say terminal-if-piggy: say "[if neon pig is visible]a neon pig embedded in the cafe face above a fading cafe face. It seems terribly inappropriate[else if controls are in op]controls working nicely in the opening you made above[else]an empty opening where the neon pig was. Perhaps something could fit in it[end if]"
 
-to say if-fade: say "[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]"
-
-to say pigcon: say "[if pig is visible] with the pig[else if controls are not in op] and away from the opening you made[else] and away from the controls you put in[end if]".
+to say terminal-if-pigcon: say "[if pig is visible] with the pig[else if controls are not in op] and away from the opening you made[else] and away from the controls you put in[end if]".
 
 check scaning in Elm Train Terminal (this is the can't scan some things til you climbed rule):
 	if noun is neon pig or noun is op:
-		if player is not on fuzzy looking wall, say "The pig doesn't register. Maybe you're too far away, and you'd have to climb the wall to get near it." instead;
+		if player is not on cafe face, say "The pig doesn't register. Maybe you're too far away, and you'd have to climb the cafe face to get near it." instead;
 
-check going west in Elm Train Terminal: say "The big fuzzy wall is that way." instead.
+check going west in Elm Train Terminal: say "The cafe face is in the way. Maybe you could climb it[if cafe-climbed is true] again[end if]." instead.
 
 check going nowhere in Elm Train Terminal: say "The tracks lead down east, and the city is back north." instead.
 
-the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims TRANSIT FOR ARTISAN AND TSARINA and also that it's an anti-sot station."
+the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims ARTISAN, TSARINA: TRANSIT!!! and also that it's an anti-sot 'I sat not to stain' station. Which doesn't help you."
 
 Pa's PSA is amusing scenery in Elm Train Terminal. "[randbla]."
 
@@ -8012,20 +8010,17 @@ after examining Pa's PSA for the first time:
 
 understand "psas" as pa's psa.
 
-the fuzzy looking wall is scenery in Elm Train Terminal. "The wall looks and feels like steel wool, from top to bottom."
+the cafe face is a scenery supporter in Elm Train Terminal. "The cafe face looks rough and tangled, like steel wool."
 
-the fuzzy looking wall is a supporter.
+check touching cafe face: say "The cafe face feels rough and tangled, like steel wool." instead;
 
-check going up in Elm Train Terminal: try climbing the fuzzy looking wall instead.
+check going up in Elm Train Terminal: try climbing the cafe face instead.
 
 power-shut is a truth state that varies. power-shut is usually false.
-
-down-tried is a truth state that varies. down-tried is usually true.
 
 check going down in Elm Train Terminal: try going east instead.
 
 check going east in Elm Train Terminal:
-	now down-tried is true;
 	if power-shut is false, say "There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are moot]. Even those rubber shoes won't insulate you[end if]." instead;
 	if player does not have tulip, say "You go east but reach a thin ledge. It needs to be lightened before you go further. You have no item to help with that." instead;
 	if player does not have sheath and player does not have noise bag, say "You hear an even worse roaring than usual. Nothing you're carrying seems up to defeating it. You double back." instead;
@@ -8033,24 +8028,27 @@ check going east in Elm Train Terminal:
 	if player has sheath and sword is not in sheath, say "You hear an even worse noise as you walk across the tracks. You run back across where you can reflect how it would be nice if you had a weapon in that sheath." instead;
 	say "Your lit-up tulip gives a welcoming anemic glow. You're ready to tackle whatever's lying craven in the cavern. Unfortunately, the glow, while it helps you avoid tripping over rails, doesn't save you from a passage weakened by the beats. You tumble down.";
 
-does the player mean climbing the fuzzy looking wall: it is very likely.
+does the player mean climbing the cafe face: it is very likely.
 
 check scaning op (this is the too far from opening rule):
-	if player is not on fuzzy looking wall, say "You're too far away." instead;
+	if player is not on cafe face, say "You're too far away." instead;
 
-check climbing:
-	if player is in Elm Train Terminal:
-		if noun is not fuzzy looking wall:
-			say "Hm. Perhaps you meant to climb the fuzzy wall instead.";
+check climbing when player is in Elm Train Terminal:
+	if noun is not cafe face:
+		say "You can only climb the cafe face here. So you try that.";
+		try climbing cafe face instead;
 
-check climbing fuzzy looking wall:
-	if player is on fuzzy looking wall, say "You can't see anything worth getting to above the [if neon pig is visible]neon pig[else]recess[end if]. And you're up dangerously high as is." instead;
+cafe-climbed is a truth state that varies.
+
+check climbing cafe face:
+	if player is on cafe face, say "You can't see anything worth getting to above the [if neon pig is visible]neon pig[else]recess[end if]. And you're up dangerously high as is." instead;
 	if player has Velcro and player is not wearing the Velcro:
 		say "You can't climb up there with bare hands, so you decide to wear the Velcro. [run paragraph on]";
 		try silently wearing the Velcro;
-	if player is not wearing the Velcro, say "The wall's vertical. You'd need something that sticks to the bits of steel wool." instead;
-	say "The Velcro strip is just the thing to climb the wall and reach the [if neon pig is visible]pig[else]small recess[end if].";
-	now player is on the fuzzy looking wall instead;
+	if player is not wearing the Velcro, say "The cafe face is vertical. You'd need something that sticks to the bits of steel wool." instead;
+	say "The Velcro strip is just the thing to climb the cafe face and reach the [if neon pig is visible]pig[else]small recess[end if].";
+	now cafe-climbed is true;
+	now player is on the cafe face instead;
 
 the neon pig is scenery in Elm Train Terminal.
 
@@ -8060,9 +8058,9 @@ the op is proper-named privately-named scenery container. understand "opening/re
 
 procedural rule while examining op: ignore the examine containers rule.
 
-description of op is "[if controls are in op]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on fuzzy looking wall]You can see that the opening isn't just a blank area, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you READ, you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if]."
+description of op is "[if controls are in op]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on cafe face]You can see that the opening isn't just a blank area, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you READ, you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if]."
 
-the tracks are scenery in Elm Train Terminal. understand "rail" and "rails" and "track" as tracks.
+the tracks are plural-named scenery in Elm Train Terminal. understand "rail" and "rails" and "track" as tracks.
 
 instead of taking tracks:
 	if power-shut is false:
@@ -8072,18 +8070,18 @@ instead of taking tracks:
 
 instead of putting something on tracks: say "Good way to get electrocuted. You'll need to find some place to switch them off before you get near them.".
 
-after examining tracks:
-	set pronoun it to noun;
-	set pronoun them to noun;
+after doing something with tracks:
+	it-them tracks;
+	continue the action;
 
-description of tracks is "[if power-shut is false]Sparking dangerously. If you want to get by, you'll probably have to figure where to shut the tracks off[else]Much calmer now that you switched the power off[end if]."
+description of tracks is "[if power-shut is false]Sparking dangerously. If you want to get by, you'll probably have to figure where to shut the tracks off[else]Much calmer now that you switched the power off[end if]. Each rail leads LIAR LAIR, unsurprisingly, so you may have to prepare yourself other ways, too."
 
-check climbing the op: say "(I'm assuming you meant the wall leading to it.)".
+check climbing the op: say "(I'm assuming you meant the cafe face leading to it.)".
 
-description of neon pig is "This flashing half-sign is [if player is not on fuzzy looking wall]obviously awful and tacky and worse than nothing, even from this distance. It's eating a bunch of glowing flowers and is probably hogging (sorry) electricity and causing the tracks to sputter[else]even tackier up close and in person, err, pig. Thankfully, the neon isn't painfully bright, but it would be nice to just dispose of it somehow[end if]."
+description of neon pig is "This flashing half-sign is [if player is not on cafe face]obviously awful and tacky and worse than nothing, even from this distance. It's eating a bunch of glowing flowers and is probably hogging (sorry) electricity and causing the tracks to sputter[else]even tackier up close and in person, err, pig. Thankfully, the neon isn't painfully bright, but it would be nice to just dispose of it somehow[end if]."
 
 after examining the neon pig:
-	if player is on fuzzy looking wall:
+	if player is on cafe face:
 		say "The 'artist' seems to have signed his name--do you want a look?";
 		if the player yes-consents:
 			say "The swine who conceived this is, according to the red glowing cursive script, named [first custom style]INPENGO[r].";
@@ -8091,22 +8089,22 @@ after examining the neon pig:
 			say "Don't blame you.";
 	continue the action;
 
-the red glowing cursive script is part of the pig.
+the red glowing cursive script is part of the pig. [??a useless thing]
 
 description of cursive script is "It spells [first custom style]INPENGO[r]."
 
 instead of doing something with the script:
 	if current action is examining, continue the action;
-	if current action is scaning or certifying or cring or rectifying, say "[if player is on fuzzy wall]The script doesn't play nice with your gadget[else]Too far away[end if]." instead;
+	if current action is scaning or certifying or cring or rectifying, say "[if player is on cafe face]The script doesn't play nice with your gadget[else]Too far away[end if]." instead;
 	say "It's part of the pig--not much else to do but examine it.";
 
 the glowing flowers are a plural-named amusing boringthing. they are part of the neon pig. bore-text of glowing flowers is "The flowers['] symbolism is obvious and probably meant to be. You probably want to deal with the whole hog (sorry.)"
 
-instead of taking neon pig: say "You'd let go of the wall and fall to your doom.".
+instead of taking neon pig: say "You'd let go of the cafe face and fall to your doom.".
 
 check inserting into op:
 	if power-shut is true, say "You've already uncrossed things." instead;
-	if player is not on fuzzy looking wall, say "You'd need to climb the wall to do that." instead;
+	if player is not on cafe face, say "You'd need to climb the cafe face to do that." instead;
 	if noun is keycard, say "You wave the keycard around the opening, since the keycard's too small to fit, but no passage opens." instead;
 	if noun is not controls, say "Won't fit, wouldn't stay anyway. You need something squarish and electrical. Or electronic." instead;
 	say  "They fit well. One of the red buttons starts blinking and whirring, and you flip the switch by it and, BAM! You hear a rush of power. The tracks below seem to stop sparking.";
@@ -10003,7 +10001,7 @@ carry out gotoing:
 	if noun is cedars and caskfillings is 2, say "You can't go back there." instead; [end sortie]
 	if noun is Obtains Boastin' Bastion and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
 	if noun is Esoteric Coteries and player has tulip, say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
-	if player is in Bassy Abyss, say "No going back now. This is the final confrontation." instead; [end metros]
+	if player is in Bassy Abyss, say "No going back now. You came here to defeat the [b-b]." instead; [end metros]
 	if mrlp is resort:
 		if red bull burdell is in Potshot Hotspot, say "He's saying GET OUT just to be obnoxious and intimidating." instead;
 		if player is in Means Manse, say "But you want to NOT go anywhere. NOT take any exits." instead;
@@ -10584,7 +10582,7 @@ up-nearby is a truth state that varies.
 
 before going up:
 	if player is in Rived Drive, try going east instead;
-	if player is in Elm Train Terminal or player is in Obtains Boastin' Bastion or player is in Undesired Underside or player is on fuzzy looking wall, continue the action;
+	if player is in Elm Train Terminal or player is in Obtains Boastin' Bastion or player is in Undesired Underside or player is on cafe face, continue the action;
 [	if up-nearby is true:
 		say "[if cur-score of Ordeal Loader is 0]I, uh, lied. There's nowhere you can go up in the game. Or nearby. But that was a clue[else]Well, since you've scored a point, you might guess why 'I'd go nearby or up' is a hint[end if].";
 		now up-nearby is false instead;]
@@ -10595,7 +10593,7 @@ before going down in Busiest Subsite: say "You're not waiting for the elevator b
 
 before going down:
 	if player is in Busiest Subsite or player is in Obtains Boastin' Bastion, continue the action;
-	if player is on fuzzy looking wall, try getting off the fuzzy looking wall instead;
+	if player is on cafe face, try getting off the cafe face instead;
 	if player is in Trips Strip:
 		if posted depots are visible or trade tread is visible, continue the action;
 		say "You can't see any [if sortie is solved or metros is solved]other [end if]way down[if sortie is not solved or metros is not solved][else] any more[end if]." instead;
@@ -11352,7 +11350,7 @@ rule for supplying a missing noun while sring (this is the switch directions rul
 carry out sring:
 	if player is in sf or player is in rf, say "In here, odd things might happen if you change the puzzle. But changing it at the fields will send you to the Trips Strip." instead;
 	let uf be false;
-	if noun is inside or noun is outside or noun is up or noun is down, say "You need to specify a planar compass direction for SR/RS. Usage is as follows:[paragraph break]SR NW means you should go north in Softer Forest, west in Rest of Forest.[line break]SR W means you go west in Softer, east in Rest of.[line break]RS flips these two directions in all cases." instead;
+	if noun is inside or noun is outside or noun is up or noun is down, say "You need to specify a planar compass direction for SR/RS. Usage is as follows:[paragraph break]SR NW means you should go north in Softer, west in Rest of.[line break]SR W means you go west in Softer, east in Rest of.[line break]RS flips these two directions in all cases." instead;
 	if noun is north or noun is west or noun is south or noun is east:
 		repeat with gi running through guiders:
 			if godir of gi is noun:
@@ -12063,17 +12061,17 @@ test met-all with "test metros-s-n1/ua 3/test metros-s-n2/ua 3/test metros-n-n1/
 
 test metros with "test metros-s-n1" in Trips Strip
 
-test metmin with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/keycard/s/e/y/give gardenia to faeries/get brocade/get heaths/w/w/sheath/sword/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/ask nerds about darkness/s/opening/climb wall/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
+test metmin with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/keycard/s/e/y/give gardenia to faeries/get brocade/get heaths/w/w/sheath/sword/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/ask nerds about darkness/s/opening/climb face/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
 
-test metros-s-n1 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get heaths/w/w/sheath/sword/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/ask nerds about darkness/s/opening/climb wall/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
+test metros-s-n1 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get heaths/w/w/sheath/sword/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/ask nerds about darkness/s/opening/climb face/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
 
-test metros-s-n2 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get heaths/w/w/sheath/sword/barcode/put barcode on keycard/e/show emitter to deadbeat/controls/velcro/wear velcro/s/e/switch emitter/s/opening/climb wall/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
+test metros-s-n2 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get heaths/w/w/sheath/sword/barcode/put barcode on keycard/e/show emitter to deadbeat/controls/velcro/wear velcro/s/e/switch emitter/s/opening/climb face/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
 
-test metros-n-n1 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get begonias/w/w/noise bag/open noise bag/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/ask nerds about darkness/s/opening/climb wall/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
+test metros-n-n1 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get begonias/w/w/noise bag/open noise bag/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/ask nerds about darkness/s/opening/climb face/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
 
-test metros-n-n2 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get begonias/w/w/noise bag/open noise bag/barcode/put barcode on keycard/e/show emitter to deadbeat/controls/velcro/wear velcro/s/e/switch emitter/w/s/opening/climb wall/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
+test metros-n-n2 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get begonias/w/w/noise bag/open noise bag/barcode/put barcode on keycard/e/show emitter to deadbeat/controls/velcro/wear velcro/s/e/switch emitter/w/s/opening/climb face/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
 
-test metros-n-n3 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get begonias/w/w/noise bag/open noise bag/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/open bag/s/opening/climb wall/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
+test metros-n-n3 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/rentals/keycard/s/e/y/give gardenia to faeries/get brocade/get begonias/w/w/noise bag/open noise bag/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/open bag/s/opening/climb face/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
 
 [get sword/resin/sword/beast/attack beast]
 
