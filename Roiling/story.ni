@@ -7121,7 +7121,7 @@ check listening (this is the you can hear stuff some places rule):
 	if Rand is visible and Rand is washed up: [presto] [this needs to come first, since there is a lot to listen to in Dirge Ridge]
 		say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
 		try asking a random washed up person about "rannygazoo" instead;
-	if player is in Dirge Ridge and odes song is in dirge ridge, say "The sods-gone odes song makes Dirge Ridge an unwelcoming place, but not totally inhospitable. You'd like to deal with it, but you don't need to. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DEN SOS GO, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red ingremember DEN SOS GO also wrote the appalling nonsense SEGS DO ON[stopping]." instead;
+	if player is in Dirge Ridge and odes song is in dirge ridge, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DEN SOS GO, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DEN SOS GO also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DEN SOS go also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead;
 	if player is in Dirge Ridge, say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite dealing with Rand and Leo[end if]." instead;
 	if player is in hacks' shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
@@ -13625,7 +13625,7 @@ check scaning tars:
 
 book Dirge Ridge
 
-Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "[if odes song is moot]With the odes song gone, you're ... well, just mad about stuff. [else]A odes song floating around leaves you thinking 'Erg... I'd ...' [end if]A vile veil covers any way except back north.". printed name of Dirge Ridge is "[if odes song is moot]Ires['] Rise[else]Dirge Ridge[end if]".
+Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "[if odes song is moot]With the sods-gone odes song gone, you're ... well, just mad about stuff. [else]Asods-gone odes song floating around leaves you thinking 'Erg... I'd ...' [end if]A vile veil covers any way except back north.". printed name of Dirge Ridge is "[if odes song is moot]Ires['] Rise[else]Dirge Ridge[end if]".
 
 the vile veil is bounding scenery in Dirge Ridge. description is "It's so horrible to even look at, and you realize whatever it is protecting you from must be even worse."
 
@@ -13763,7 +13763,15 @@ check asking about "whassup":
 
 chapter sods gone odes song
 
-the sods gone odes song is LLPish vanishing scenery in Dirge Ridge.
+the sods gone odes song is LLPish vanishing boringscen in Dirge Ridge. bore-text is "You can really only listen to (or X) the song. But maybe, with the right word, you could get rid of it. Not that you need to.". bore-check is bore-sods rule.
+
+a-text of sods gone odes song is "RYYRRYRR". b-text of sods gone odes song is "R?YRRYRR".  parse-text of sods gone odes song is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+
+this is the bore-sods rule:
+	if current action is examining:
+		say "The only way to examine is to listen, so you do.";
+		try listening instead;
+	abide by the bore-exam rule;
 
 book Austerer Treasure
 

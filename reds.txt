@@ -113,6 +113,7 @@ prost,?R?R?=sport=ports
 whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
 #qver of goodness
 goodness,R?YRRYRR=sodsgone=odessong
+goodness,negssodo,densosgo,segsdoon
 #phat path/saps pass
 keys,syke
 #qver of alert
