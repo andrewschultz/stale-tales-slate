@@ -114,6 +114,8 @@ include Shuffling Nudges by Andrew Schultz.
 
 include Shuffling Mistakes by Andrew Schultz.
 
+include STS Common by Andrew Schultz.
+
 book debug modules - not for release
 
 include Object Response Tests by Juhana Leinonen.
@@ -236,38 +238,6 @@ a thing can be universal, useless, amusing, unimportant, abstract, bounding or p
 a disguise-piece is a kind of thing. a disguise-piece has a number called elevation.
 
 a flower is a kind of thing. understand "flower" and "flowers" as a flower.
-
-section boringthings
-
-a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
-
-a boringscen is a kind of boringthing.
-
-this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
-
-this is the bore-exam rule: [note: I caused bugs by saying PROCESS  THE BORE-EXAM RULE instead of ABIDE BY. Enough that I'll write this note in.]
-	if current action is examining:
-		if description of noun is empty:
-			if debug-state is true, say "(DEBUG: pulling bore-text) ";
-			say "[bore-text of noun]";
-			the rule succeeds;
-	else unless action is procedural:
-		say "There's not much to do with [the noun] except examine [if noun is plural-named]them[else]it[end if]. So you do.";
-		try examining the noun;
-		the rule succeeds;
-
-For printing a locale paragraph about a thing (called the item)
-	(this is the don't mention boringscen in room descriptions rule):
-	if the item is boringscen, set the locale priority of the item to 0;
-	continue the activity.
-
-instead of doing something with a boringthing: [no-irp]
-	say "1. [current action] / [noun] ... rule = [bore-check of noun].";
-	abide by the bore-check of noun;
-	say "2. [current action] / [noun].";
-	if action is procedural, continue the action;
-	say "3. [current action] / [noun].";
-	say "[bore-text of noun]" instead;
 
 chapter colors
 
@@ -8249,7 +8219,7 @@ to say woodrev:
 
 section nonbounding scenery
 
-the sand is useless boringscen in Leis Isle. description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if].". bore-text is "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here.".
+There is useless boringscen called sand and sands and sands in Leis Isle. description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if].". bore-text is "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here.".
 
 the tree is useless scenery in Leis Isle.
 
@@ -9958,24 +9928,9 @@ book reg-verbs
 
 part going
 
-gotoing is an action applying to one thing.
-
-understand the command "go [any available-from-here room]" as something new.
-understand the command "go to [any available-from-here room]" as something new.
-understand the command "gt [any available-from-here room]" as something new.
-
-understand "go [any available-from-here room]" as gotoing.
-understand "go to [any available-from-here room]" as gotoing.
-understand "gt [any available-from-here room]" as gotoing.
-
-definition: a room (called rm) is available-from-here:
-	if rm is Trips Strip and Trips Strip is visited, yes; [just to let the player RETRY]
-	if map region of rm is mrlp, no;
-        if rm is not visited, no;
-	yes;
+[see the common file for the main syntax]
 
 carry out gotoing:
-	if noun is location of player, say "You're already here. Or there. The precise grammar's neither here nor there." instead;
 	if noun is Trips Strip and Trips Strip is visited:
 		say "You may mean to RETRY instead. Do so?";
 		if the player yes-consents, try retrying instead;
@@ -10006,7 +9961,7 @@ carry out gotoing:
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error (this is the straighten out go to rule) :
 	if word number 1 in the player's command is "go" or word number 1 in the player's command is "gt":
-		say "That wasn't a room I recognize. You can only go to rooms, not objects.";
+		say "That wasn't a room in the current region that you've visited. You can only go to rooms, not objects.";
 		the rule succeeds;
 	if the player's command matches the regular expression "^(hint|hints|info)\b", case insensitively:
 		say "I couldn't find anything like that to hint." instead;
@@ -10016,8 +9971,7 @@ Rule for printing a parser error when the latest parser error is the noun did no
 part examining
 
 check examining (this is the now-examined rule):
-	if noun is a thing:
-		now noun is examined;
+	if noun is a thing, now noun is examined;
 
 part putting into gun
 

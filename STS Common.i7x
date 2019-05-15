@@ -10,7 +10,41 @@ To process (RL - a rule): [used to avoid Inform giving line breaks when I don't 
 to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
 
+part gotoing framework
+
+gotoing is an action applying to one visible thing.
+
+understand the command "go [any reasonable-goto room]" as something new.
+understand the command "go to [any reasonable-goto room]" as something new.
+understand the command "gt [any reasonable-goto room]" as something new.
+
+understand "go [any reasonable-goto room]" as gotoing.
+understand "go to [any reasonable-goto room]" as gotoing.
+understand "gt [any reasonable-goto room]" as gotoing.
+
+definition: a room (called rm) is reasonable-goto:
+	if rm is Trips Strip and Trips Strip is visited, yes; [just to let the player RETRY]
+	if map region of rm is mrlp, yes;
+    if rm is visited, yes;
+	no;
+
+a room can be shunned. a room is usually not shunned. [GO TO ROOM won't work]
+
+a room has a number called progval. progval of a room is usually 0. [again for GO TO ROOM, from progval of 2 to 1 is not valid]
+
+definition: a room (called myr) is really-nearby:
+	if myr is in mrlp and myr is visited and myr is not shunned, yes;
+	no;
+
+does the player mean going to a really-nearby room: it is very likely.
+
+check gotoing (this is the reject trivial goto rule): if noun is location of player, say "You're already here. Or there. The precise grammar's neither here nor there." instead;
+
 part sitesing
+
+to say email: say "blurglecruncheon@gmail.com".
+
+to say ghsite: say "http://github.com/andrewschultz/stale-tales-slate/Shuffling"
 
 sitesing is an action out of world.
 
@@ -19,7 +53,7 @@ understand the command "sites" as something new.
 understand "sites" as sitesing.
 
 carry out sitesing:
-	if cur-score of Ordeal Loader is 0:
+	if cur-score of orig-region is 0:
 		say "Last chance spoiler warning. Sure you want to look?";
 		if the player yes-consents:
 			do nothing;
@@ -34,6 +68,14 @@ part boring things
 a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
 
 a boringscen is a kind of boringthing.
+a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
+
+a boringscen is a kind of boringthing.
+
+instead of doing something with a boringthing: [no-irp]
+	abide by the bore-check of noun;
+	if action is procedural, continue the action;
+	say "[bore-text of noun]" instead;
 
 this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
 

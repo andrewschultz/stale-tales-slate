@@ -176,10 +176,10 @@ When play begins (this is the modified run property checks at the start of play 
 	if undescribed-rooms is 0, say "DEBUG Yay all rooms described.";
 	repeat with item running through things:
 		if item is a person, follow the property-check rules for item;
-	repeat with item running through people:
-		if item is not blank-appear-okay and initial appearance of item is empty:
+	repeat with person running through people:
+		if initial appearance of person is empty:
 			increment init-mt-ppl;
-			say "APPEARANCE IN ROOM [init-mt-ppl] [item].";
+			say "APPEARANCE IN ROOM [init-mt-ppl] [person].";
 	repeat with item running through things:
 		if item is not a person, follow the property-check rules for item;
 	if undescribed-objects is 0, say "DEBUG Yay all objects described.";
@@ -194,9 +194,9 @@ undescribed-people is a number that varies.
 init-mt-ppl is a number that varies.
 
 A property-check rule for a thing (called the target) (this is the modified things must have description rule):
-	unless target provides the property description, do nothing;
-	if the description of target is non-empty, do nothing;
-	if target is abstract or target is a boringthing, do nothing;
+	unless target provides the property description, continue the action;
+	if the description of target is non-empty, continue the action;
+	if target is abstract or target is a boringthing, continue the action;
 	if target is a person:
 		increment undescribed-people;
 		say "PERSON [undescribed-people]";

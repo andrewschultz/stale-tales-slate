@@ -224,10 +224,6 @@ a room can be stairy. a room is usually not stairy.
 
 a room can be outie or innie. a room is usually outie. [innie has WALL/WALLS for anagrams]
 
-a room can be shunned. a room is usually not shunned. [GO TO ROOM won't work]
-
-a room has a number called progval. progval of a room is usually 0. [again for GO TO ROOM, from progval of 2 to 1 is not valid]
-
 a thing can be ghostly. a thing is usually not ghostly.
 
 a person can be superchatty, subject-talking or terse. a person is usually subject-talking. [terse = they ignore general defaults like asking about Elvira, subject-talking = ignore silly details.]
@@ -1271,32 +1267,13 @@ understand the command "gt" as something new.
 
 gotoing is an action applying to one thing.
 
-understand "goto [any room]" as gotoing.
-understand "go to [any room]" as gotoing.
-understand "gt [any room]" as gotoing.
-
-rule for supplying a missing noun while gotoing:
-	say "That's not something in the game, yet.";
-	reject the player's command;
-
-does the player mean gotoing a kinda-nearby room: it is likely.
-does the player mean gotoing a really-nearby room: it is very likely.
-
-definition: a room (called myr) is kinda-nearby:
-	if myr is in mrlp, yes;
-	no;
-
-definition: a room (called myr) is really-nearby:
-	if myr is in mrlp and myr is visited and myr is not shunned, yes;
-	no;
+understand "goto [any reasonable-goto room]" as gotoing.
+understand "go to [any reasonable-goto room]" as gotoing.
+understand "gt [any reasonable-goto room]" as gotoing.
 
 carry out gotoing:
 	d "Trying location [noun].";
-	if noun is not a room:
-		say "You need to specify a room or a thing." instead;
 	let noureg be map region of location of noun;
-	if noun is location of player:
-		say "You're already here." instead;
 	if noun is strip and strip is visited:
 		say "The command you may be looking for is RETRY. Do that now instead?";
 		if the player yes-consents:
@@ -1414,7 +1391,7 @@ when play begins (this is the seed room progress for GO TO rule) :
 			now progval of rm entry is rmprog entry;
 
 Rule for supplying a missing noun while gotothinging:
-	say "You're referring to something that isn't in the game or isn't available yet.";
+	say "You need to specify somewhere to go.";
 	reject the player's command;
 
 table of progvals [this determines which rooms are definitively ahead of others, so GO TO can't go backwards. Also, if a room is shunned, you can't go there any more.]
