@@ -8,6 +8,9 @@ sortie,riseto
 ################sortie
 ################metros
 ################resort
+#
+#You can take any line and paste it  to the command line to see how well certain clues help you.
+#
 #this line below is important because it notifies reds.pl to let you use the settler by default, so DON'T DELETE IT
 #roil-start
 ################manor

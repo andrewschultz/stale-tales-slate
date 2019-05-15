@@ -13359,7 +13359,9 @@ every turn (this is the leaf-yak rule):
 
 the yak wears a drab yoke.
 
-description of the drab yoke is "[if yak wears yoke]It doesn't look very comfortable, but it also doesn't look locked. It probably has some sort of safety catch, so if the yak runs into anything, it will break off. There are scratchings that look familiar, but you can't get close enough to read them. You could probably read it to see if it has a brand name. But one thing you can read is that the yoke may break if subjected to strong magnetic fields.[otherwise]Looking closely, you see 0123456789 )!@#$%^&*( engraved near the yoke's top, with the 26 letters of the alphabet and all manner of odd punctuation scrawled in an order that seems random--no, worse than random, if you were trying to group them sensibly.[end if]"
+description of the drab yoke is "[if yak wears yoke]It doesn't look very comfortable, but it also doesn't look locked. It probably has some sort of safety catch, so if the yak runs into anything, it will break off. There are scratchings that look familiar, but you can't get close enough to read them. You could probably read it to see if it has a brand name. But one thing you can read is that the yoke may break if subjected to strong magnetic fields.[otherwise]Looking closely, you see 0123456789 )!@#$%^&*( engraved near the yoke's top, with the 26 letters of the alphabet and all manner of odd punctuation scrawled in an order that seems random--no, worse than random, if you were trying to group them sensibly. The drab yoke feels less exciting than just about everything else you've seen here, [yoke-interj][end if]."
+
+to say yoke-interj: say "[if cur-score of presto is 0]and that may come in handy once you figure what's going on[else]so maybe you need a different sort of word for it[end if]"
 
 a-text of drab yoke is "RYORYYRR". b-text of drab yoke is "RYOPYYRR". parse-text of drab yoke is "x[sp]-[sp]y[sp]b[sp]-[sp]-[sp]x[sp]x".
 
@@ -14347,7 +14349,8 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 		if player is not in Hacks' Shack:
 			if noun is keyboard:
 				now try-keyboard is true;
-			if yak is visible:
+			if yak is visible and noun is keyboard:
+				preef keyboard;
 				say "The air of apathy the yak generates spreads to its yoke, which refuses to do what it should. You will need to find a nonviolent way to separate the yak from its yoke. Maybe you can find a way to put the bored yak to sleep." instead;
 			if Hacks' Shack is not visited:
 				say "You might not be safe from Elvira's SHATTER-THREATS legislation here. And you're not sure what to do with that, yet. But that feels right.";
