@@ -126,8 +126,6 @@ include Direction Response Testing by Andrew Schultz.
 
 include Rules-Based Testing by Andrew Schultz.
 
-a thing can be abstract. a thing is usually not abstract.
-
 section default to true debug - not for release
 
 when play begins (this is the debug version info that should not be in the release rule):
@@ -2106,7 +2104,9 @@ Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regtab
 
 Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regtab of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
-orig-region is a region that varies. orig-region is Ordeal Loader.
+orig-region is Ordeal Loader.
+
+hub-region is Stores.
 
 book fliptoing
 
@@ -4073,6 +4073,8 @@ chapter Trips Strip
 
 Trips Strip is a room in Stores. last-loc of Stores is Trips Strip. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores[if hubs bush is in Trips Strip]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]. A begad-badge inscribed here has some information."
 
+hub-room is Trips Strip.
+
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
 	if scented descent is in Trips Strip, set the locale priority of scented descent to 6;
 	if posted depots are in Trips Strip, set the locale priority of posted depots to 7;
@@ -4203,15 +4205,6 @@ check going inside in Trips Strip:
 cool-index is a number that varies.
 
 the begad badge is boringscen in Trips Strip. bore-text of begad badge is "'For warping purposes, a store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'".
-
-section hubs bush
-
-the hubs bush is bounding boringscen. description is "The hubs bush encircles the entire Trips Strip, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if sf is visited or Trap Part is visited or underside is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
-
-check going nowhere in Trips Strip:
-	if hubs bush is in Trips Strip, say "The hubs bush forces you back to the center of the strip and the stores." instead;
-	move hubs bush to Trips Strip;
-	say "As you try to flee the Trips Strip, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip." instead;
 
 section stos
 

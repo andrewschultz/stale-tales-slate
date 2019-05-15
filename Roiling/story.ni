@@ -172,9 +172,13 @@ Others is an unsolved region. regtab of Others is table of others nudges. regana
 
 Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
 
-orig-region is a region that varies. orig-region is Means Manse.
-
 a thing has a region called lreg. lreg of a thing is usually Means Manse.
+
+section region stuff for STS Common
+
+orig-region is Means Manse.
+
+hub-region is Stores.
 
 chapter things
 
@@ -199,8 +203,6 @@ a thing has text called a-text. a thing has text called b-text. a thing has text
 a thing can be warpable. a thing is usually not warpable.
 
 a thing can be LLPish. a thing is usually not LLPish.
-
-a thing can be universal, useless, cluey, amusing, abstract, practical, or bounding. a thing is usually practical.
 
 a thing can be flippable, auxiliary or uncluing or clue-used. a thing is usually uncluing.
 
@@ -10593,7 +10595,9 @@ check taking a sto: say "You can't take that, [if noun is flippable]but you can 
 
 book Strip of Profits
 
-Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if hubs bush is in strip]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]."
+Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if-bush]."
+
+hub-room is Strip of Profits.
 
 understand "trips/profit" as Strip of Profits when debug-state is true.
 
@@ -10660,7 +10664,9 @@ to say i-u: if magneto montage is unexamined, say ", which looks like a director
 
 section hubs bush
 
-[?? hubs bush can be linked in STS common.i7x if I can be bothered]
+[the hubs bush is now linked in STS Common.i7x]
+
+section hubs bush
 
 the hubs bush is bounding boringscen. description is "The hubs bush encircles the entire Strip of Profits, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if Same Mesa is visited or Loather Rathole is visited or Loftier Trefoil is visited or Posh Hops Shop is visited or Grey Gyre is visited or Bleary Barley is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
 
@@ -24518,8 +24524,6 @@ definition: a thing (called disc-tar) is cinder-dissolve:
 	decide yes;
 
 eisihint is a truth state that varies.
-
-a thing can be unimportant. a thing is usually not unimportant.
 
 section what is realized
 
