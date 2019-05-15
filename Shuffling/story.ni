@@ -5659,33 +5659,10 @@ the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc]
 
 understand "chefs/chef/statues/statue" as tall trio.
 
-description of tall trio is "Well, they are actually only six inches tall, the middle chef patting the others['] shoulders. But they're skinny enough that you sort of assume they're tall, or they should be, if proportioned to scale. Well, I'm assuming. There's a loose label attached to the middle one, who is half-hugging both his pals."
+description of tall trio is "Well, they are actually only six inches tall, one with an arm on each other's shoulders. You can probably READ the tall trio to find their names."
 
 this is the part-trio-take rule:
 	if current action is taking, say "You don't need to take the tall trio or any part of it. Maybe there's a way to change things, though." instead;
-
-the middle chef is a boringthing. it is part of the tall trio. description of middle chef is "[mid-chef].". bore-check of middle chef is part-trio-take rule.
-
-the left chef is a boringthing. it is part of the tall trio. left chef is a boringthing. description of left chef is "He's not nearly as interesting as the middle one.". bore-check of left chef is part-trio-take rule.
-
-the right chef is a boringthing. it is part of the tall trio. description of right chef is "He's not nearly as interesting as the middle one.". bore-check of right chef is part-trio-take rule.
-
-to say mid-chef: say "The middle chef has a big smile and is semi-hugging his friends. The loose label sticks out awkwardly. Maybe it has some actual useful information on it".
-
-the loose label is a boringthing. it is part of the tall trio. bore-check of loose label is part-trio-take rule.
-
-instead of taking the loose label: say "You can read it okay without taking it."
-
-does the player mean doing something with the loose label when the tall trio is not visible: it is very unlikely.
-
-description of loose label is "[loo-la]"
-
-to say loo-la:
-	say "'We can help be something to base a whole spicy dish on! A truly MALE meal, not lame! It may help you make a run through a border!' Red writing is on the other side of the label--flip it over to see what it is?";
-	if the player direct-consents:
-		say "--crafted with care by [first custom style]AL TILTRO[r].[no line break]";
-	else:
-		say "Ok.[no line break]";
 
 the tortilla is an ingredient. understand "taco" as tortilla.
 
@@ -10685,6 +10662,8 @@ check reading (this is the reading is almost examining rule):
 	if noun is gadget-screen, try scaning location of player instead;
 	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!";
 	if noun is op and controls are not in op, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
+	if noun is tall trio:
+		say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping].";
 	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
 	try examining the noun instead;
 

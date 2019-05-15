@@ -256,12 +256,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "fridge"	338266445	kitchen	--	--	"[fridge-abuse]."
 "grief"	317237356	kitchen	--	--	"[fridge-abuse]."
 "mud"	190210049	--	--	in-i-main rule	"The mud is just there. You can't change it."
-"middle"	332746125	--	tall trio	--	"[to-trio]."
-"left"	311244862	--	tall trio	--	"[to-trio]."
-"right"	303308668	--	tall trio	--	"[to-trio]."
-"middlechef"	543355014	--	tall trio	--	"[to-trio]."
-"leftchef"	521853751	--	tall trio	--	"[to-trio]."
-"rightchef"	513917557	--	tall trio	--	"[to-trio]."
 "cult"	281035249	--	cult tee	--	"The whole t-shirt."
 "tee"	358722236	--	cult tee	--	"The whole t-shirt."
 "were"	448870794	--	cask	--	"[if sack is abrod]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is abrod]d[else]s[end if] it can be changed."
@@ -275,9 +269,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "bottle"	480611466	--	perfume	--	"[perf-brand]."
 "act"	124303421	--	CATHOUSE	--	"[perf-brand]."
 "houes"	440820758	--	CATHOUSE	--	"[perf-brand]."
-"label"	256040510	--	loose label	--	"[label-no]."
-"loose"	426599068	--	loose label	--	"[label-no]."
-"looselabel"	682639578	--	loose label	--	"[label-no]."
 "cutup"	413793176	--	steak	--	"The steak's just right as is."
 "cutupsteak"	796104265	--	steak	--	"The steak's just right as is."
 "lamina"	236164982	--	manila animal	--	"It actually looks pretty nice on the fridge."
@@ -777,13 +768,9 @@ this is the kitch-visit rule:
 
 to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if cake pan is not moot or grist is not moot], but maybe you can fix something inside it[end if]"
 
-to say to-trio: say "The chefs are all lumped together--a tall trio"
-
 to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
 
 to say perf-brand: say "It's the full name brand that really catches your eye"
-
-to say label-no: say "The tall trio is probably what you want to change, but the label may have information";
 
 this is the rm-or-moor rule:
 	if player is in room or player is in moor, the rule succeeds;

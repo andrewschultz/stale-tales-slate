@@ -509,10 +509,6 @@ spearman	"The spearman can become Parmesan."
 armor	--	signature
 signature	"This signature clues what the spearman can become."
 tall trio	"The tall trio can become a tortilla."
-middle chef	"Each chef is part of a tall trio."
-left chef	--	middle chef
-right chef	--	middle chef
-loose label	"The label gives a clue what the 'tall' trio can be."
 HOTSAUCE	"Part of a meal."
 Parmesan	--	HOTSAUCE
 steak	--	HOTSAUCE
