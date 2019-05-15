@@ -5643,7 +5643,7 @@ check taking an ingredient: [?? put steak on saltine before/after on tortilla]
 	if noun is part of the tortilla, say "No need to undo your efforts." instead;
 	say "It belongs in the kitchen. You don't want to get it dirty if you go adventure elsewhere." instead;
 
-check taking a pregredient: say "It's kind of quirky, but it doesn't seem too useful as-is." instead.
+check taking a pregredient: if noun is not spearman, say "It's kind of quirky, but it doesn't seem too useful as-is." instead.
 
 after printing the locale description for kitchen when kitchen is unvisited:
 	say "Boy. That time in the nick left you hungry. And in need of warmth. Maybe you can get a two-for-one here in the kitchen.";
@@ -5658,6 +5658,8 @@ check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You ca
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
 understand "chefs/chef/statues/statue" as tall trio.
+
+understand "al/tri/lot" as tall trio when player is in kitchen.
 
 description of tall trio is "Well, they are actually only six inches tall, one with an arm on each other's shoulders. You can probably READ the tall trio to find their names."
 
@@ -5778,36 +5780,18 @@ the cheesy spearman is a male pregredient in Kitchen. "A cheesy spearman is here
 
 understand "man" as spearman when spearman is visible. the spearman can be female or male. the spearman is male.
 
-description of spearman is "[spearman-descrip]".
+description of spearman is "[if player does not have spearman]Hmm. You could TAKE him. [end if]He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You could probably READ him for clues, like his name and [if player carries spearman]what's on the base and [end if]so forth.".
 
-to say spearman-descrip:
-	say "He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You notice some writing on his armor--do you wish to read it?";
-	if the player direct-consents:
-		try examining armor;
-		continue the action;
-	else:
-		say "OK.[no line break]";
-
-the armor is part of the spearman.
-
-description of armor is "Don't put me [first custom style]NEAR SPAM[r]. The red all-caps seem more overdone than his thumbs-up[if player does not have spearman]. The spearman wobbles a bit as you look closely at the writing--you can probably pick him up."
-
-report taking the spearman: say "The base of the spearman has something on it. Maybe a signature.".
-
-the signature is part of the spearman. understand "base" as signature.
+report taking the spearman: say "As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.".
 
 check scaning (this is the scan the spearman and not his parts rule):
-	if noun is signature or noun is armor:
+	if noun is spear:
 		say "That's part of the spearman, really, even with the writing on it. At least, the eight lights from your gadget seem to indicate that. [run paragraph on]";
 		try scaning spearman instead;
 
-description of signature is "[if player does not have spearman](looking under the spearman the signature is beneath, which is a slight cheat, but I won't judge)[end if]You see [first custom style]A. SMERNPA[r] on the bottom, in bright red. That must be the sculptor, or whomever."
-
-instead of doing something other than examining or scaning the armor: say "The armor is tied together with the spearman."
-
 understand "spear man" as spearman.
 
-the spear is part of the spearman. description of spear is "It's about as tall as he is, but nothing special about it, other than it makes him a spearman.". spear is useless.
+the spear is a boringthing. it is part of the spearman. bore-text of spear is "The spear is about as tall as the spearman, but there's nothing special about it, other than it makes him a spearman.". spear is useless.
 
 the pile of grated Parmesan cheese is an ingredient. understand "cheese" as Parmesan when Parmesan is visible.
 
@@ -10662,8 +10646,8 @@ check reading (this is the reading is almost examining rule):
 	if noun is gadget-screen, try scaning location of player instead;
 	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!";
 	if noun is op and controls are not in op, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
-	if noun is tall trio:
-		say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping].";
+	if noun is tall trio, say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]." instead;
+	if noun is spearman, say "The spearman's name, in red, is MR. SANE PA[if player carries spearman]. You also read, in red, one of three lines: [one of]MEAN RAPS[or]MS. P. ARENA--crossed out, but red[or]AMEN, RASP[in random order][end if]." instead;
 	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
 	try examining the noun instead;
 

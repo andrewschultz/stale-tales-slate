@@ -506,8 +506,6 @@ skate	"The skate can become steak."
 cult tee	"The cult tee can become lettuce."
 cathouse	"The CATHOUSE perfume can become hot sauce."
 spearman	"The spearman can become Parmesan."
-armor	--	signature
-signature	"This signature clues what the spearman can become."
 tall trio	"The tall trio can become a tortilla."
 HOTSAUCE	"Part of a meal."
 Parmesan	--	HOTSAUCE
