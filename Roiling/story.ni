@@ -212,7 +212,7 @@ a thing can be examined or unexamined. a thing is usually unexamined.
 
 to moot (th - a thing): move th to Meatier Emerita Emirate;
 
-to moot (lt - a list of things):
+to mootl (lt - a list of things):
 	repeat with Q running through lt:
 		move Q to Meatier Emerita Emirate;
 
@@ -1017,14 +1017,14 @@ chapter full-monty
 
 questions-not-flagged is a truth state that varies.
 
-space-warned is a truth state that varies;
+settler-space-warned is a truth state that varies;
 
 to say full-monty of (myobj - a thing):
 	let A be indexed text;
 	let C be indexed text;
 	let D be 13;
 	let qnf be questions-not-flagged;
-	let sw be space-warned;
+	let sw be settler-space-warned;
 	if cheat-on is true:
 		let A be "[b-text of myobj]";
 	otherwise:
@@ -1041,7 +1041,7 @@ to say full-monty of (myobj - a thing):
 				now qnf is true;
 		if C is "*": [word spaces]
 			change current foreground-color to (R 0 G 0 B 0);
-			if Scape Space-warned is false:
+			if settler-space-warned is false:
 				now sw is true;
 		if C is "R" or C is "r": [consonant no match]
 			change current foreground-color to (R 210 G 0 B 0);
@@ -1066,11 +1066,11 @@ to say full-monty of (myobj - a thing):
 	say "[spacies of A]";
 	if parse-now is true and cheat-on is true:
 		say ". You figure out what you can: [parse-text of myobj]";
-	say "[if qnf is true and questions-not-flagged is false]--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation[end if][if sw is true and space-warned is false and myobj is not curst palace]. The black cells would indicate spaces, you guess[end if]";
+	say "[if qnf is true and questions-not-flagged is false]--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation[end if][if sw is true and settler-space-warned is false and myobj is not curst palace]. The black cells would indicate spaces, you guess[end if]";
 	if qnf is true:
 		if questions-not-flagged is false:
 			pad-rec-q "question mark";
-	now space-warned is sw;
+	now settler-space-warned is sw;
 	now questions-not-flagged is qnf;
 
 the question mark is a thing. the question mark is undesc. [question mark is for hinting ONLY]
@@ -1258,20 +1258,10 @@ to item-warp:
 				say "This game just removed an item it should not have: ([list of carried not warpable things]) ([list of worn not warpable things]). [bug-report]";
 			otherwise:
 				say "[one of]An acuter curate relieves you of the items you won't need any more. He points at himself. 'Rod Hare, Hoarder.' He [if player is female]mumbles pensively, 'Her road...[run paragraph on][else]points at you. 'Rad, hero.[run paragraph on][end if]' He points away. 'I scour curios.'[or]The hoarder takes your surplus stuff again.[stopping]";
-		moot list of all carried not warpable things;
-		moot list of all worn not warpable things;
+		mootl list of all carried not warpable things;
+		mootl list of all worn not warpable things;
 
 chapter going to
-
-understand the command "go to" as something new.
-understand the command "goto" as something new.
-understand the command "gt" as something new.
-
-gotoing is an action applying to one thing.
-
-understand "goto [any reasonable-goto room]" as gotoing.
-understand "go to [any reasonable-goto room]" as gotoing.
-understand "gt [any reasonable-goto room]" as gotoing.
 
 carry out gotoing:
 	d "Trying location [noun].";
@@ -6248,7 +6238,7 @@ after printing the name of the stapler while taking inventory:
 
 before listing contents while taking inventory: group hintpastries together giving articles.
 
-show-tools is a truth state that varies. show-tools is true.
+hows-show-tools is a truth state that varies. hows-show-tools is true.
 
 after printing the name of raves saver while taking inventory: say " ([if raves saver is reflexive]dull[else]shinier now[end if])"
 
@@ -6284,7 +6274,7 @@ instead of taking inventory:
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
-	if Hows Show-tools is true:
+	if hows-show-tools is true:
 		if player has super purse:
 			now super purse is unmarked for listing;
 			say "Other things in your super purse";
@@ -6339,8 +6329,8 @@ understand the command "iv" as something new.
 understand "iv" as iving.
 
 carry out iving:
-	now show-tools is whether or not show-tools is false;
-	say "Now I(INVENTORY) [if Hows Show-tools is true]show[else]hide[end if]s your general tools.";
+	now hows-show-tools is whether or not hows-show-tools is false;
+	say "Now I(INVENTORY) [if hows-show-tools is true]show[else]hide[end if]s your general tools.";
 	the rule succeeds;
 
 chapter going
@@ -7992,14 +7982,14 @@ to two-up:
 check fliptoing (this is the check ending flip rule):
 	if noun is a thisflip listed in table of end-flips:
 		choose row with thisflip of noun in table of end-flips;
-		process the check final region action rule for noun;
+		consider the check final region action rule for noun;
 		if the rule succeeded:
 			do nothing;
 		else:
 			do nothing instead;
 	else if noun is a thatflip listed in table of end-flips:
 		choose row with thatflip of noun in table of end-flips;
-		process the check final region action rule for noun;
+		consider the check final region action rule for noun;
 		if the rule succeeded:
 			do nothing;
 		else:
@@ -8167,7 +8157,7 @@ The look around once light available rule is not listed in the for printing the 
 after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
 		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]Hmm. Probably some of this garbage could be turned to more fruit, if you were the sort of person who wanted to do everything, but you'd rather help yourself right now.";
-		moot list of all carried fruits;
+		mootl list of all carried fruits;
 		now player has moss cap;
 		continue the action;
 	if cur-score of others > 3:
@@ -8221,7 +8211,7 @@ after printing the locale description for Dusty Study when Dusty Study is unvisi
 to say think-cue:
 	say "[if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if]"
 
-to decide which number is study-outs:
+to decide which number is dusty-study-outs:
 	let q be 0;
 	if tables are moot:
 		increment q;
@@ -8233,13 +8223,13 @@ to decide which number is study-outs:
 
 after printing the locale description when player is in Dusty Study and gunter is moot:
 	if tables are moot or t-b is moot or niche is moot:
-		say "You take stock of your way[unless study-outs is 1]s[end if] out: ";
+		say "You take stock of your way[unless dusty-study-outs is 1]s[end if] out: ";
 		if tables are not visible:
 			say "You could probably go [b]in[r], to the stable, with the tables gone. ";
 		if t-b are moot:
 			say "You [if tables are moot]also [end if]cleared a path [b]down[r]. ";
 		if niche is moot:
-			say "There's [if Dusty Study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
+			say "There's [if dusty-study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
 		say "[line break]";
 	continue the action;
 
@@ -10666,15 +10656,6 @@ section hubs bush
 
 [the hubs bush is now linked in STS Common.i7x]
 
-section hubs bush
-
-the hubs bush is bounding boringscen. description is "The hubs bush encircles the entire Strip of Profits, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if Same Mesa is visited or Loather Rathole is visited or Loftier Trefoil is visited or Posh Hops Shop is visited or Grey Gyre is visited or Bleary Barley is visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
-
-check going nowhere in Strip of Profits:
-	if hubs bush is in Strip of Profits, say "The hubs bush forces you back to the center of the strip and the stores." instead;
-	move hubs bush to Strip of Profits;
-	say "As you try to flee the Strip of Profits, up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip." instead;
-
 section describing the Strip
 
 to say h-or-others:
@@ -11319,7 +11300,7 @@ carry out insideing:
 
 check fliptoing when player is in Same Mesa (this is the armada keeps you in rule):
 	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
-		if drama armada is in Same Mesaor the-b is in Same Mesa, say "But... [if the-b is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
+		if drama armada is in Same Mesa or the-b is in Same Mesa, say "But... [if the-b is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
 		if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
 
 check fliptoing when player is in Same Mesa (this is the check giant is not in Same Mesa rule):
@@ -11737,7 +11718,7 @@ Cleric Circle is an innie room in Routes. "Things seem less confused here than o
 
 after looking in Cleric Circle:
 	if number of held quest-items is 3:
-		moot list of all quest-items;
+		mootl list of all quest-items;
 		say "'You have all the reagents! Wonderful!' The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Gal Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Gal Logan. That's an odd name. You write it down.";
 		pad-rec "No-Gal Logan";
 		moot Brother Horbert;
@@ -12164,12 +12145,12 @@ the free reef is boringscen in Cripple Clipper. bore-text is "The reef is far aw
 this is the bore-reef rule:
 	if current action is scaning:
 		say "The reef is too far away to scan, and you check the combination of letters anyway. Nothing. Perhaps what you need is on the Cripple Clipper.";
-		the rule succeweds;
+		the rule succeeds;
 	follow the bore-exam rule;
 
 book Sonancy Canyons
 
-Sonancy Canyons is a room in Routes. "[if patters are in Sonancy CanyonsRaptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if yob den is in Sonancy CanyonsThe yob den nearby now provides most of the noise[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if]."
+Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if yob den is in Sonancy Canyons]The yob den nearby now provides most of the noise[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if]."
 
 chapter hurt hog
 
@@ -15025,12 +15006,12 @@ chapter showing
 
 block showing rule is not listed in any rulebook.
 
-show-warn is a truth state that varies.
+hows-show-warn is a truth state that varies.
 
 carry out showing it to:
-	if Hows Show-warn is false:
+	if hows-show-warn is false:
 		say "(Showing usually means giving. I'll try that. Either will work okay.)[paragraph break]";
-		now show-warn is true;
+		now hows-show-warn is true;
 	try giving noun to second noun instead;
 
 chapter keyboarding
@@ -17070,7 +17051,7 @@ to say knob-link:
 
 Lapsin' Plains is north of Anger Range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. Sloppy polyps make travel advisable everywhere except past [if pans are in Lapsin' Plains]the pans[else]where the pans were[end if] and back south."
 
-the sloppy polyps are plural-named bounding scenery in Lapsin' Plains. "Maybe it's holding the plains together, but crossing it would be inadvisable. You can guess why."
+the sloppy polyps are plural-named bounding scenery in Lapsin' Plains. "Maybe the polyps are holding the plains together, but crossing them would be inadvisable. You can guess why."
 
 instead of doing something with the sloppy polyps:
 	if action is procedural, continue the action;
@@ -18207,7 +18188,7 @@ check going down in Loftier Trefoil:
 
 book Topside Deposit
 
-Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. That way's [if adders are in Topside Deposit]un[end if]blocked."
+Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but south, where the Shout-So Hut you [one of]just [or][stopping] left stands, and north. That way's [if adders are in Topside Deposit]un[end if]blocked."
 
 for printing a locale paragraph about a thing (called nongua) in Topside Deposit (this is the lump tarts with toaster rule):
 	if nongua is start tarts and toaster is in Topside Deposit:
@@ -18217,11 +18198,20 @@ for printing a locale paragraph about a thing (called nongua) in Topside Deposit
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
-the fire torn frontier is bounding scenery in Topside Deposit. "It's pretty rough. You don't know what's beyond it, but it can't be anything useful."
+section fire torn frontier
 
-instead of doing something with fire torn frontier:
-	if action is procedural, continue the action;
-	say "The frontier is just there to block and intimidate you. You can't do anything with it. [if adders are in Topside Deposit]You should probably find a way past the adders[else]You got rid of the adders, and that's all you need to do[end if].";
+the fire torn frontier is bounding boringscen in Topside Deposit. description of fire torn frontier is "It's pretty rough. You don't know what's beyond it, but it can't be anything useful.". bore-text is "The frontier is just there to block and intimidate you. You can't do anything with it. [if adders are in Topside Deposit]You should probably find a way past the adders[else]You got rid of the adders, and that's all you need to do[end if].".
+
+section shout so hut
+
+the Shout-So Hut is bounding boringscen in Topside Deposit. bore-text is "You don't want anything more to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule.
+
+this is the bore-shout-hut rule:
+	if current action is entering, try going south instead;
+
+check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those[or][stopping]." instead;
+
+to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]"
 
 chapter dreads adders
 
@@ -18435,7 +18425,9 @@ check taking old ice:
 
 book Unblest Sunbelt
 
-Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. A Shout-So Hut blocks your way south, but you can go any other way. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Unblest Sunbelt]. They're not blocking you, but they do leave you feeling slightly bummed[end if]."
+Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. Screech creches block your way south, but you can go any other way. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Unblest Sunbelt]. They're not blocking you, but they do leave you feeling slightly bummed[end if]."
+
+[?? bounding scenery?]
 
 section organised ego drains
 
@@ -18447,9 +18439,11 @@ instead of doing something with organised ego drains:
 	if action is procedural, continue the action;
 	say "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance."
 
-check going south in Unblest Sunbelt: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those[or][stopping]." instead;
+the screech creches are bounding boringscen in Unblest Sunbelt. bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
 
-to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]"
+this is the bore-creches rule:
+	if current action is entering, try going south instead;
+	abide by the bore-exam rule;
 
 book Anemic Cinema
 
@@ -18940,7 +18934,7 @@ chapter Obscurest Subsector
 
 Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]lie here useless, thanks to the duck[else]are holding someone in captivity[end if]. The ropins hold together a log-gaol that keeps the subsector obscurest and you from going anywhere except back west.".
 
-a log gaol is scenery in Obscurest Subsector. "It surrounds the subsector on four sides, helping keep it obscure."
+a log gaol is bounding scenery in Obscurest Subsector. "It surrounds the subsector on four sides, helping keep it obscure."
 
 subsector-visit is a truth state that varies.
 
@@ -19910,7 +19904,7 @@ a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R?RRR??". 
 
 section muscly
 
-muscly luc sym is a red guardian. "[one of]Someone muscly named [or][stopping]Luc Sym flexes while guarding the way [psgdir of muscly luc sym].".
+Muscly Luc Sym is a red guardian. "[one of]Someone muscly named [or][stopping]Luc Sym flexes while guarding the way [psgdir of muscly luc sym].".
 
 description of luc sym is "He's certainly muscly. He looks relatively light on his toes for his size, too."
 
@@ -19920,7 +19914,7 @@ section snider diners
 
 The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
 
-muscly ms lucy is a female red guardian. "[one of]Someone muscly named [or][stopping]Ms Lucy flexes while guarding the way [psgdir of muscly ms lucy].".
+Muscly Ms Lucy is a female red guardian. "[one of]Someone muscly named [or][stopping]Ms Lucy flexes while guarding the way [psgdir of muscly ms lucy].".
 
 description of muscly ms lucy is "She's certainly muscly. She looks relatively light on her toes for her size, too."
 
@@ -20458,7 +20452,7 @@ after fliptoing a warrior (this is the trefoil exit rule):
 		now all visible warriors are pinko;
 		if vw > 0:
 			decrease poss-score of towers by vw;
-		moot list of all warriors in Loftier Trefoil;
+		mootl list of all warriors in Loftier Trefoil;
 		now player has flowerpot;
 		reposition-guardians;
 		continue the action;
@@ -21438,7 +21432,7 @@ after fliptoing a mack-idea:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
 		moot macks;
-		moot list of all mack-ideas;
+		mootl list of all mack-ideas;
 		try talking to Gretta;
 		continue the action;
 	process the macks hitting on rule;
@@ -22588,7 +22582,7 @@ to coin-eval:
 	let temp be curtis-level;
 	if temp is 4:
 		say "Curtis says 'Boy, you have a lot of goodies now. Wouldn't want to lose them carrying all those fruits.' He helps keep your inventory lean and mean.";
-		moot list of all carried fruits;
+		mootl list of all carried fruits;
 	if number of carried fruits > 0 and temp < 4:
 		if number of carried fruits > 4:
 			say "Curtis goes to take your bounty but backs off on seeing how much there is. 'I, old as...' He snaps his fingers. 'A solid load is laid, so! Lo, aids! Oi, lads!' he booms, and a couple assistants carry away your haul[one of]. 'Do sail!' he exhorts you[or][stopping].";
@@ -22988,7 +22982,7 @@ check going north in Gates Stage:
 		say "'Need ID! Indeed!' the gates say mechanically." instead;
 	if number of carried fruits > 0:
 		say "(First returning the extra fruit[unless number of carried fruits is 1]s[end if])[paragraph break]";
-		moot list of all carried fruits;
+		mootl list of all carried fruits;
 	if gate-level < 2:
 		now perp-check is true;
 		now perp-priv is part of the passport;
@@ -23305,7 +23299,7 @@ to say len-interest:
 	let temp be 0;
 	repeat with QQ running through clearing-hintables:
 		if QQ is in Clangier Clearing, increment temp;
-	if temp is number of entries in Clangier Clearing-hintables: [I could put this all in one line, but this is more readable]
+	if temp is number of entries in clearing-hintables: [I could put this all in one line, but this is more readable]
 		say "welcoming your first transaction";
 	else if temp >= 4:
 		say "ready for negotiation and such";
@@ -27310,7 +27304,7 @@ carry out skiing:
 	if mrlp is not towers:
 		say "You need to be in Towers for this test command.";
 	else:
-		moot list of all guardians;
+		mootl list of all guardians;
 		now agnostic is in Actionless Coastlines;
 		moot gizmo;
 		now bot boat is in Actionless Coastlines;

@@ -18,7 +18,7 @@ to rulesOn: [used to turn rules on at the very start of play]
 
 part thingdefs
 
-a thing can be universal, useless, amusing, unimportant, abstract, bounding or practical. a thing is usually practical.
+a thing can be universal, useless, amusing, cluey, unimportant, abstract, bounding or practical. a thing is usually practical.
 
 part gotoing framework
 
@@ -33,7 +33,7 @@ understand "go to [any reasonable-goto room]" as gotoing.
 understand "gt [any reasonable-goto room]" as gotoing.
 
 definition: a room (called rm) is reasonable-goto:
-	if rm is Trips Strip and Trips Strip is visited, yes; [just to let the player RETRY]
+	if rm is hub-room and hub-room is visited, yes; [just to let the player RETRY]
 	if map region of rm is mrlp, yes;
     if rm is visited, yes;
 	no;
@@ -114,7 +114,7 @@ part hubs bush popup
 
 [must be after boringscen descriptions]
 
-the hubs bush is a boringscen. the hubs bush is bounding. description is "The hubs bush encircles the entire Trips Strip, and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if any-store-visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
+the hubs bush is a boringscen. the hubs bush is bounding. description is "The hubs bush encircles the entire [location of player], and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if any-store-visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
 
 to decide whether any-store-visited:
 	repeat with myr running through regions:

@@ -585,6 +585,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "fire"	284637654	--	Topside Deposit	--	"[ftf]."
 "torn"	331693906	--	Topside Deposit	--	"[ftf]."
 "frontier"	616331560	--	Topside Deposit	--	"[ftf]."
+"hut"	245498124	Topside Deposit	--	--	"[no-hut]."
+"south"	416124667	Topside Deposit	--	--	"[no-hut]."
 "flowerpot"	734674551	--	flowerpot	--	"[flow-fine]."
 "flower"	475745997	--	flowerpot	--	"[flow-fine]."
 "pot"	258928554	--	flowerpot	--	"[flow-fine]."
@@ -644,8 +646,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ravages"	453544036	Shaven Havens	--	--	"[rav-chao]."
 "ravage"	357270070	Shaven Havens	--	--	"[rav-chao]."
 "unblest"	573436152	Unblest Sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
-"hut"	245498124	Unblest Sunbelt	--	--	"[no-hut]."
-"south"	416124667	Unblest Sunbelt	--	--	"[no-hut]."
+"screech"	512503456	Unblest Sunbelt	--	--	"[no-creche]."
+"creech"	416229490	Unblest Sunbelt	--	--	"[no-creche]."
 "smh"	197631418	--	Mel Fish	--	"[all-of-mel]."
 "life"	253127690	--	Mel Fish	--	"[all-of-mel]."
 "mel"	245695101	--	Mel Fish	--	"[all-of-mel]."
@@ -1342,7 +1344,7 @@ to say rev-sum:
 	say "That document is the stone truth! It doesn't need revisionism or embellishment"
 
 to say no-poi:
-	say "The [if player is in Same Mesapoison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
+	say "The [if player is in Same Mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
 
 this is the first-two rule:
 	if player is in Same Mesa, the rule succeeds;
@@ -1695,7 +1697,9 @@ to say shoaly: say "That might cause some bizarre erosion and risk dumping YOU i
 
 to say rav-chao: say "The ravages are chaotic enough. Changing them is a fight you'd lose"
 
-to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it"
+to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway"
+
+to say no-creche: say "You can't change the screech creches. Well, not until you defeat Elvira"
 
 to say all-of-mel: say "No, you need to deal with all of Mel."
 

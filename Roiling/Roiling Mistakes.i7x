@@ -145,7 +145,7 @@ understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, 
 
 understand "apts" as a mistake ("Pat's is a local small business, not nameless, faceless real estate.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesaand armada is in Same Mesa.
+understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesa and armada is in Same Mesa.
 
 understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when below-is-wrong and mrlp is routes.
 
@@ -163,9 +163,9 @@ understand "psat" as a mistake ("You have enough word juggling now. You don't ne
 
 understand "ptas" as a mistake ("Concerned parents won't be able to help you here.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in Same Mesathe MORF-FORM[else]THE BEAN[end if].") when player is in Same Mesa and armada is in Same Mesa.
+understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in Same Mesa]the MORF-FORM[else]THE BEAN[end if].") when player is in Same Mesa and armada is in Same Mesa.
 
-understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesaand old giant is in location of player.
+understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesa and old giant is in location of player.
 
 understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is in location of player], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in Same Mesa.
 
@@ -177,10 +177,10 @@ understand "taps" as a mistake ("You have no bugle. Well, not in this game.") wh
 
 understand "tardies" as a mistake ("You can't tell the giant off for being late.") when old giant is in location of player.
 
-understand "under" as a mistake ("[if grouchy old giant is in location of player]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in Same Mesaand Rude 'N Nuder is not in location of player.
+understand "under" as a mistake ("[if grouchy old giant is in location of player]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
 
 [def=under-generic]
-understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesaand the-b is in Same Mesa.
+understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesa and the-b is in Same Mesa.
 
 chapter Cleric Circle
 
@@ -190,7 +190,7 @@ understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you ne
 
 chapter Adobe Abode
 
-understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe AbodeBesides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Adobe Abode.
+understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Adobe Abode.
 
 understand "poopiest" as a mistake ("This is the wrong area for adjectives. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
 
@@ -226,11 +226,11 @@ understand "feer" as a mistake ("Fearing or pretending fake fear won't help, her
 
 chapter Sonancy Canyons
 
-understand "spatter" as a mistake ("No violence!") when player is in Sonancy Canyonsand patters are in Sonancy Canyons
+understand "spatter" as a mistake ("No violence!") when player is in Sonancy Canyons and patters are in Sonancy Canyons.
 
-understand "tapster" as a mistake ("No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.") when player is in Sonancy Canyonsand patters are in Sonancy Canyons.
+understand "tapster" as a mistake ("No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.") when player is in Sonancy Canyons and patters are in Sonancy Canyons.
 
-understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in Sonancy Canyonsand hurt hog is in Sonancy Canyons.
+understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in Sonancy Canyons and hurt hog is in Sonancy Canyons.
 
 book troves
 
