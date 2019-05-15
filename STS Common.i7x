@@ -38,7 +38,7 @@ definition: a room (called rm) is reasonable-goto:
     if rm is visited, yes;
 	no;
 
-a room can be shunned. a room is usually not shunned. [GO TO ROOM won't work]
+a room can be shunned. a room is usually not shunned. [Force GO TO ROOM to fail even if you've been there and its priority *seems* OK. The two biggest cases so far: Dourest Detours and End Den are blocked off in Oyster once you solve the puzzles to get by them.]
 
 a room has a number called progval. progval of a room is usually 0. [again for GO TO ROOM, from progval of 2 to 1 is not valid]
 
@@ -49,6 +49,10 @@ definition: a room (called myr) is really-nearby:
 does the player mean going to a really-nearby room: it is very likely.
 
 check gotoing (this is the reject trivial goto rule): if noun is location of player, say "You're already here. Or there. The precise grammar's neither here nor there." instead;
+
+Rule for supplying a missing noun while gotoing:
+	say "You need to specify somewhere to go.";
+	reject the player's command;
 
 part gotothinging framework
 
@@ -72,11 +76,15 @@ definition: a thing (called th) is thing-goable:
 carry out gotothinging:
 	try gotoing location of noun instead;
 
+Rule for supplying a missing noun while gotothinging:
+	say "You need to specify somewhere to go.";
+	reject the player's command;
+
 part sitesing
 
 to say email: say "blurglecruncheon@gmail.com".
 
-to say ghsite: say "http://github.com/andrewschultz/stale-tales-slate/Shuffling"
+to say ghsite: say "http://github.com/andrewschultz/stale-tales-slate/[if is-roiling is true]Roiling[else]Shuffling[end if]"
 
 sitesing is an action out of world.
 

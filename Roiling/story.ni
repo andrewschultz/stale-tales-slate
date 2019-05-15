@@ -1354,24 +1354,6 @@ carry out gotoing:
 	if mrlp is towers and can-see-map:
 		draw-my-loc;
 
-understand "go to [any thing]" as gotothinging.
-understand "gt [any thing]" as gotothinging.
-
-gotothinging is an action applying to one visible thing.
-
-does the player mean gotothinging a deregioned thing: it is unlikely.
-
-carry out gotothinging:
-	let newrm be location of noun;
-	d "Trying person/thing [newrm].";
-	if noun is a guardian:
-		ital-say "this could be a bit vague, since each guardian can be seen from two rooms.";
-	if noun is moot:
-		if noun is skid or noun is disk:
-			say "You can flip back to [the noun]." instead;
-		say "That [if noun is a person]person [end if]has served the necessary purpose." instead;
-	try gotoing newrm instead;
-
 when play begins (this is the seed room progress for GO TO rule) :
 	repeat through table of progvals:
 		if there is a regs entry:
@@ -1380,10 +1362,6 @@ when play begins (this is the seed room progress for GO TO rule) :
 					now progval of myrm is rmprog entry;
 		else:
 			now progval of rm entry is rmprog entry;
-
-Rule for supplying a missing noun while gotothinging:
-	say "You need to specify somewhere to go.";
-	reject the player's command;
 
 table of progvals [this determines which rooms are definitively ahead of others, so GO TO can't go backwards. Also, if a room is shunned, you can't go there any more.]
 rm	rmprog	regs	why-not
@@ -4970,6 +4948,7 @@ resident trendies
 rude 'n nuder
 s-c
 sob ever verbose
+sods gone odes song
 sport ports
 sporties' ripostes
 t-formally
@@ -13664,12 +13643,9 @@ for writing a paragraph about a bruisin person:
 		now Leo is mentioned instead;
 	now Leo is mentioned;
 	now Rand is mentioned;
-	if Rand is fightin:
-		say "Rand is here, looking to do a little better than Leo." instead;
-	if Leo is eager:
-		say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is visible] into that computer area they probably don't need to be[end if]." instead;
-	if Rand is washed up and Leo is washed up:
-		say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talking and listening would cue you to help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
+	if Rand is fightin, say "Rand is here, looking to do a little better than Leo." instead;
+	if Leo is eager, say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is visible] to further adventure, though you don't know if you want to share a lodge with them[end if]." instead;
+	if Rand is washed up and Leo is washed up, say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talking and listening would cue you to help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
 
 every turn when player is in Dirge Ridge:
 	if Leo is fightin:
@@ -14638,6 +14614,8 @@ description of labs slab is "It's far from a plain old table, but you can call i
 
 Drive A is proper-named reflexive LLPish container on the labs slab. understand "disk drive" and "eco-trump computer" and "computer" and "hard" and "hard drive" as Drive A.
 
+understand "a drive" as drive a.
+
 a-text of drive a is "YRYRYR". b-text of drive a is "?R?R?R". parse-text of drive a is "?[sp]x[sp]?[sp]x[sp]?[sp]x".
 
 does the player mean doing something with Drive A: it is likely.
@@ -14744,9 +14722,11 @@ after fliptoing when player is in Hacks' Shack:
 		if usb is not off-stage, say "Well, it didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
 	continue the action;
 
-Drive E is proper-named reflexive LLPish scenery in Hacks' Shack. "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if]."
+Drive E is proper-named reflexive LLPish boringscen in Hacks' Shack. "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if].". bore-text is "[if drive e is reflexed]You already improved Drive E[else]There's probably a way to make Drive E more efficient, but it's probably some irregular action[end if].".
 
-a-text of drive e is "RYRYRY". b-text of drive e is "R?R?R?". parse-text of drive e is "x[sp]-[sp]x[sp]-[sp]x[sp]-".
+understand "e drive" as drive e.
+
+a-text of drive e is "RYRYRY". b-text of drive e is "?Y???G". parse-text of drive e is "x[sp]-[sp]x[sp]-[sp]x[sp]-".
 
 instead of inserting into drive e, say "Drive e is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive a may be able to hold stuff[end if].";
 

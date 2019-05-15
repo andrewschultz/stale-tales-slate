@@ -1564,7 +1564,7 @@ to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if
 
 section oyster nudges
 
-to say no-dsk: say "Since there's both Drive A and Drive E, that's ambiguous.";
+to say no-dsk: say "Since there's both Drive A and Drive E, that's ambiguous";
 
 to say patron:
 	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"

@@ -2018,7 +2018,10 @@ check objhinting drive:
 		if rebooted is true, all-say "You have the disk drive working." instead;
 		try objhinting blue button instead;
 
-to say h-d:
+to say h-d: [??]
+	if disk is in drive:
+		say "[one of]The A Drive/Drive A is VARIED, and this opens up a last lousy point.[plus][or]You may want to make Drive A go faster all the time. With more enthusiasm.[plus][or]Drive A can become AVIDER.[minus][cycling]";
+		continue the action;
 	if keyboard is on slab and screen is on slab:
 		say "You need to put the disk in the drive.";
 		continue the action;
