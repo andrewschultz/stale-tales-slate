@@ -1322,35 +1322,34 @@ carry out gotoing:
 				say "(Leo and Rand following.)";
 				move Leo to noun;
 				move Rand to noun;
-	if player is in Fighter Freight: [OYSTER, generic message not enough]
-		say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
-	if noun is end den and gleaner is reflexed, say "No need to go back there." instead;
+	if mrlp is oyster: [OYSTER]
+		if player is in Fighter Freight: [OYSTER, generic message not enough]
+			say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
+		if noun is end den and gleaner is reflexed, say "No need to go back there." instead;
+	if mrlp is towers: [TOWERS]
+		if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
+		if noun is Rawest Waters, say "No, it wasn't fun the first time." instead;
 	d "From [progval of location of player] to [progval of noun].";
 	if progval of noun < progval of location of player:
-		if location of player is Rawest Waters:
-			say "Progress isn't easy when you're flailing in water." instead;
-		if noun is Rawest Waters:
-			say "No, it wasn't fun the first time." instead;
 		repeat through table of progvals:
 			if there is a rm entry and rm entry is noun:
 				say "[why-not entry][line break]" instead;
 			if there is a regs entry and regs entry is mrlp:
 				if rmprog entry is progval of noun:
 					say "[why-not entry][line break]" instead;
-		say "There's no way back. You deserve a reason why, so this is a minor bug." instead;
+		say "There's no way back. You deserve a reason why, so this is a minor bug. Let me know about it at [email]." instead;
 	if noun is shunned:
 		if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
 		if noun is Dourest Detours, say "You got rid of the ant. Nothing more to do there." instead;
-		say "That's off-limits." instead;
-	if location of player is Dourest Detours:
-		say "Aw, c'mon, the ant should be no problem." instead;
+		say "[noun] is off-limits. I should have a better explanation why, so please let me know at [email]." instead;
+	if location of player is Dourest Detours, say "Aw, c'mon, the ant should be no problem." instead;
+	if location of player is Hardest Trashed Dearths, say "You've lost the way back, but the eeks are calling you on." instead;
 	if duck is in location of player and duck is friendly: [TOWERS]
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
 	if player is in Reclusion Inclosure: [OTTERS]
 		elvira-flee-taunt;
-	if mrlp is demo dome:
-		say "You rush, despite having nothing urgent to do.";
+	if mrlp is demo dome, say "You rush, despite having nothing urgent to do.";
 	move player to noun;
 	if mrlp is towers and can-see-map:
 		draw-my-loc;
@@ -3874,13 +3873,11 @@ to recover-items:
 
 chapter say "[reject]" and Meatier Emerita Emirate
 
-Meatier Emerita Emirate is a privately-named room. "[bug-report]"
-
-understand "ll/me/ee/" as Meatier Emerita Emirate when debug-state is true.
-
 Meta Team is an unsolved region.
 
-Meatier Emerita Emirate is in Meta Team.
+Meatier Emerita Emirate is a privately-named room in Meta Team. "[bug-report]"
+
+understand "ll/me/ee/" as Meatier Emerita Emirate when debug-state is true.
 
 last-solved-region is a region that varies. last-solved-region is usually Meta Team.
 

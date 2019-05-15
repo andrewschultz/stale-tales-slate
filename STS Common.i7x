@@ -50,6 +50,28 @@ does the player mean going to a really-nearby room: it is very likely.
 
 check gotoing (this is the reject trivial goto rule): if noun is location of player, say "You're already here. Or there. The precise grammar's neither here nor there." instead;
 
+part gotothinging framework
+
+gotothinging is an action applying to one visible thing.
+
+does the player mean gotothinging a thing carried by the player: it is unlikely.
+does the player mean gotothinging a thing in location of the player: it is unlikely.
+
+understand "go to [any thing-goable thing]" as gotothinging.
+understand "goto [any thing-goable thing]" as gotothinging.
+understand "gt [any thing-goable thing]" as gotothinging.
+understand "gi [any thing-goable thing]" as gotothinging.
+understand "go [any thing-goable thing]" as gotothinging.
+
+definition: a thing (called th) is thing-goable:
+	if th is in Emerita Emirate, no;
+	if th is off-stage, no;
+	if th is not a backdrop and location of th is unvisited, yes;
+	yes;
+
+carry out gotothinging:
+	try gotoing location of noun instead;
+
 part sitesing
 
 to say email: say "blurglecruncheon@gmail.com".

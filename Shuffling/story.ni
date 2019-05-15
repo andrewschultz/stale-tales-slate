@@ -255,7 +255,7 @@ use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 250.
 
-use MAX_VERBS of 420. [-40 from debug]
+use MAX_VERBS of 430. [-40 from debug]
 
 use MAX_VERBSPACE of 4600.
 
@@ -267,7 +267,7 @@ section compiler adjust constant section - not for release
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 460.
+use MAX_VERBS of 470.
 
 use MAX_VERBSPACE of 4900.
 
@@ -530,6 +530,7 @@ to decide whether the action is procedural: [aip]
 	if objasking about, yes;
 	if requesting the score, yes;
 	if taking inventory, yes;
+	if gotothinging, yes;
 [	if out of world, yes;]
 	no;
 
@@ -8669,15 +8670,15 @@ carry out existing:
 
 book Meta Team
 
-Meta Team is an unsolvable region. Emerita Emirate is in Meta Team. [Meta Team is only a region for backdrops.]
+Meta Team is an unsolvable region. [Meta Team is only a region for stuff that's been in play but isn't any more.]
 
 chapter Emerita Emirate
 
 [this region/room is for items that have been consumed, but we don't want to recycle them. It's easier to check if they're off-stage or moot than to define a boolean. Well, for me, anyway.]
 
-Emerita Emirate is a privately-named room. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
+Emerita Emirate is a privately-named room in Meta Team. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
 
-understand "ll/Emerita Emirate" as Emerita Emirate when debug-state is true.
+understand "ll/me/ee" as Emerita Emirate when debug-state is true.
 
 instead of doing something in Emerita Emirate: say "You probably need to undo things." instead. [ic] [no-irp]
 
@@ -9892,9 +9893,9 @@ carry out gotoing:
 		if map region of noun is solved, say "You already solved that area." instead;
 		say "That'd be hyperwarping to another region. Sorry." instead;
 	if noun is unvisited, say "You haven't gotten there yet." instead;
-	if noun is subsite, say "Goodness, no." instead; [start Ordeal Loader]
-	if noun is Rested Desert, say "You can't see the door to get back." instead;
-	if noun is Thickets, say "You can't see the passage back." instead; [end Ordeal Loader]
+	if noun is subsite, say "Goodness, no. [location of player] is way more interesting than the Busiest Subsite." instead; [start Ordeal Loader]
+	if noun is Rested Desert, say "The door from Rested Desert was one-way[if player is in Thickest Thickets]. You can't even see it now[end if]." instead;
+	if noun is Thickets, say "You can't see the passage back to the Thickets." instead; [end Ordeal Loader]
 	if noun is sf or noun is rf, say "You can't retrace your steps." instead; [start forest]
 	if player is in Ghouls' Slough, say "You've done all you could in the enclosure and before. Onward." instead;
 	if player is in Frost Forts, say "It's time to deal with things, not run." instead; [end forest]
