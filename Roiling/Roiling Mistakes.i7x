@@ -26,35 +26,35 @@ understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT 
 
 book means manse
 
-chapter dusty study
+chapter Dusty Study
 
-understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if t-b are in dusty study]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in dusty study and latches are not off-stage.
+understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if t-b are in Dusty Study]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in Dusty Study and latches are not off-stage.
 
-understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if t-b are in dusty study]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].") when player is in dusty study and latches are not off-stage.
+understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if t-b are in Dusty Study]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].") when player is in Dusty Study and latches are not off-stage.
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
 
 understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].") when player has latches or player has satchel.
 
-understand "net" as a mistake ("But the net would still block you.") when player is in study and t-b are in study.
+understand "net" as a mistake ("But the net would still block you.") when player is in Dusty Study and t-b are in Dusty Study.
 
-understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.") when player is in dusty study and giant pin is in dusty study.
+understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.") when player is in Dusty Study and giant pin is in Dusty Study.
 
-understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, trying that[else if dusty study is not lit]No, you need a light source, not a way out[else]The smell would gag you before the shouty youths[end if].") when player is in dusty study.
+understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, trying that[else if Dusty Study is not lit]No, you need a light source, not a way out[else]The smell would gag you before the shouty youths[end if].") when player is in Dusty Study.
 
 understand "palm" as a mistake ("Maybe you could, but you will need the light. You won't need the landscaping.") when player has lamp
 
-understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in study and op-ed is in study.
+understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in Dusty Study and op-ed is in Dusty Study.
 
-understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else if dusty study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when player is in dusty study.
+understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when player is in Dusty Study.
 
 understand "trestle" as a mistake ("The settler is pretty powerful, but it can't build bridges.") when player has settler.
 
-chapter largely all-grey gallery
+chapter Largely All-Grey Gallery
 
 understand "astir" as a mistake ("[if stair is visible]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if].") when stair is visible or stria is in location of player or sitar is in location of player.
 
-understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and t-b are in dusty study.
+understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and t-b are in Dusty Study.
 
 understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
 
@@ -62,9 +62,9 @@ understand "mole" as a mistake ("You can't change Elmo into an animal. Your powe
 
 understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
-chapter carven cavern
+chapter Carven Cavern
 
-understand "craven" as a mistake ("Ok, the carven cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
+understand "craven" as a mistake ("Ok, the Carven Cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
 
 understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.") when elmo is in location of player and elmo has rifle.
 
@@ -74,11 +74,11 @@ understand "petals" as a mistake ("That's already been done, and quite well, by 
 
 understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates are in location of player or player encloses staple.
 
-understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in cavern]scanning the plaster and [end if]twiddling the [if player has staple]staple[else]plates[end if] to get on with things.") when player is in cavern
+understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if]twiddling the [if player has staple]staple[else]plates[end if] to get on with things.") when player is in Carven Cavern.
 
 book stores
 
-chapter strip of profits
+chapter Strip of Profits
 
 understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay-nol of b-b]") when f-o-b is in location of player.
 
@@ -92,15 +92,15 @@ understand "hoster" as a mistake ("That was sort of a given from the warning on 
 
 understand "ouster" as a mistake ("It's your job to be the ouster in Store u, but how to get there?") when Store U is in location of player or routes-x are in location of player.
 
-understand "pteros" as a mistake ("[if store p is in strip or e-s is in strip]You don't need to face any predators[else]They're in the past, and so are Store P and the Presto region[end if].") when player is in strip of profits.
+understand "pteros" as a mistake ("[if store p is in strip or e-s is in strip]You don't need to face any predators[else]They're in the past, and so are Store P and the Presto region[end if].") when player is in Strip of Profits.
 
 understand "repost" as a mistake ("That's not what you need to do with [if store p is in location of player]store P--you even see red trying to figure HOW you would[else]the, er, spot[end if].") when store p is in location of player or e-s is in location of player
 
-understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in strip of profits.
+understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in Strip of Profits.
 
-understand "restow" as a mistake ("[if store w is in location of player]Store W glows red as you try this[else if towers are in location of player]The towers glow red as you try this[else]You did what you could in store W and the towers[end if].") when player is in strip of profits
+understand "restow" as a mistake ("[if store w is in location of player]Store W glows red as you try this[else if towers are in location of player]The towers glow red as you try this[else]You did what you could in store W and the towers[end if].") when player is in Strip of Profits
 
-understand "sportif" as a mistake ("You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.") when player is in strip of profits.
+understand "sportif" as a mistake ("You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.") when player is in Strip of Profits.
 
 understand "stoner" as a mistake ("[if nestor is in location of player]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' You hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something[move-toners].[or]You've teased him enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
 
@@ -114,13 +114,13 @@ understand "throes" as a mistake ("No, you are not in your last throes. Neither 
 
 understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
-understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The hoster does look a bit weird, but you need to enter it, not change it[end if].") when player is in strip of profits
+understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The hoster does look a bit weird, but you need to enter it, not change it[end if].") when player is in Strip of Profits
 
 understand "toyers" as a mistake ("You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the TOYERS with the red line through in the window.") when store y is in location of player.
 
 understand "troyes" as a mistake ("Store Y does not lead to France.") when store y is in location of player.
 
-chapter cruelest lectures
+chapter Cruelest Lectures
 
 understand "ani" and "nia" as a mistake ("Ian's had a big life change, but that might be too big for him!") when player is in Cruelest Lectures.
 
@@ -139,13 +139,13 @@ understand "ouster" as a mistake ("You're the ouster here, trying to get by the 
 
 understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
 
-chapter same mesa
+chapter Same Mesa
 
-understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in same mesa.
+understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in Same Mesa.
 
 understand "apts" as a mistake ("Pat's is a local small business, not nameless, faceless real estate.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
+understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesaand armada is in Same Mesa.
 
 understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when below-is-wrong and mrlp is routes.
 
@@ -157,17 +157,17 @@ understand "indies" as a mistake ("You don't need to worry about art, here.") wh
 
 understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
 
-understand "preposition" and "prepositions" as a mistake ("Yes, but WHICH prepositions?") when player is in same mesa.
+understand "preposition" and "prepositions" as a mistake ("Yes, but WHICH prepositions?") when player is in Same Mesa.
 
 understand "psat" as a mistake ("You have enough word juggling now. You don't need a standardized test, too.") when player is in Same Mesa or player is in Idle Deli.
 
 understand "ptas" as a mistake ("Concerned parents won't be able to help you here.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in mesa]the MORF-FORM[else]THE BEAN[end if].") when player is in same mesa and armada is in same mesa.
+understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in Same Mesathe MORF-FORM[else]THE BEAN[end if].") when player is in Same Mesa and armada is in Same Mesa.
 
-understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in mesa and old giant is in location of player.
+understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesaand old giant is in location of player.
 
-understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is in location of player], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in same mesa.
+understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is in location of player], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in Same Mesa.
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
@@ -177,38 +177,38 @@ understand "taps" as a mistake ("You have no bugle. Well, not in this game.") wh
 
 understand "tardies" as a mistake ("You can't tell the giant off for being late.") when old giant is in location of player.
 
-understand "under" as a mistake ("[if grouchy old giant is in location of player]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in mesa and Rude 'N Nuder is not in location of player.
+understand "under" as a mistake ("[if grouchy old giant is in location of player]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in Same Mesaand Rude 'N Nuder is not in location of player.
 
 [def=under-generic]
-understand "under" as a mistake ("Wrong preposition.") when player is in mesa and the-b is in mesa.
+understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesaand the-b is in Same Mesa.
 
-chapter cleric circle
+chapter Cleric Circle
 
-understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in cleric circle.
+understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in Cleric Circle.
 
 understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you need to stand opposite from. It doesn't seem offensive enough") when list o toils is in location of player.
 
-chapter adobe abode
+chapter Adobe Abode
 
-understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in adobe abode.
+understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe AbodeBesides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Adobe Abode.
 
-understand "poopiest" as a mistake ("This is the wrong area for adjectives. And [if player is not in adobe abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in adobe abode or player has pipe soot.
+understand "poopiest" as a mistake ("This is the wrong area for adjectives. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
 
-chapter idle deli
+chapter Idle Deli
 
-understand "apt" as a mistake ("Actually, Pat's advice may not be apt[if seed pit is reflexive]. Look to the seed pit[end if].") when player is in idle deli.
+understand "apt" as a mistake ("Actually, Pat's advice may not be apt[if seed pit is reflexive]. Look to the seed pit[end if].") when player is in Idle Deli.
 
-understand "atp" as a mistake ("No need for biochemistry, here.") when player is in idle deli.
+understand "atp" as a mistake ("No need for biochemistry, here.") when player is in Idle Deli.
 
-understand "pat pat" and "pat" as a mistake ("Pat doesn't need consolation for his lost business.") when player is in idle deli.
+understand "pat pat" and "pat" as a mistake ("Pat doesn't need consolation for his lost business.") when player is in Idle Deli.
 
-understand "pta" as a mistake ("You don't need to attend any school board meetings.") when player is in idle deli.
+understand "pta" as a mistake ("You don't need to attend any school board meetings.") when player is in Idle Deli.
 
-understand "scarving" as a mistake ("Changing the restaurant to a clothes boutique isn't helpful.") when player is in idle deli.
+understand "scarving" as a mistake ("Changing the restaurant to a clothes boutique isn't helpful.") when player is in Idle Deli.
 
-understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already[if seed pit is reflexive], and he's not letting you in that seed pit without argument[end if].") when player is in idle deli.
+understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already[if seed pit is reflexive], and he's not letting you in that seed pit without argument[end if].") when player is in Idle Deli.
 
-chapter harms marsh
+chapter Harms Marsh
 
 understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
 
@@ -216,21 +216,21 @@ understand "around" as a mistake ("You can't see anything around, yet. It's too 
 
 understand "helos" as a mistake ("Helicopters can't make it underground.") when player is in Harms Marsh.
 
-chapter ripe pier
+chapter Ripe Pier
 
-understand "abroad" and "aboard" as a mistake ("Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.") when player is in cripple clipper.
+understand "abroad" and "aboard" as a mistake ("Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.") when player is in Cripple Clipper.
 
-chapter cripple clipper
+chapter Cripple Clipper
 
-understand "feer" as a mistake ("Fearing or pretending fake fear won't help, here.") when player is in cripple clipper.
+understand "feer" as a mistake ("Fearing or pretending fake fear won't help, here.") when player is in Cripple Clipper.
 
-chapter sonancy canyons
+chapter Sonancy Canyons
 
-understand "spatter" as a mistake ("No violence!") when player is in canyons and patters are in canyons
+understand "spatter" as a mistake ("No violence!") when player is in Sonancy Canyonsand patters are in Sonancy Canyons
 
-understand "tapster" as a mistake ("No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.") when player is in canyons and patters are in canyons.
+understand "tapster" as a mistake ("No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.") when player is in Sonancy Canyonsand patters are in Sonancy Canyons.
 
-understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in canyons and hurt hog is in canyons.
+understand "thru" as a mistake ("Well, sort of, but not so colloquial.") when player is in Sonancy Canyonsand hurt hog is in Sonancy Canyons.
 
 book troves
 
@@ -246,7 +246,7 @@ understand "hate" as a mistake ("You don't want to get burnt up with hate[if hea
 
 understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is in location of player.
 
-understand "real hot" as a mistake ("You need[if cold is moot]ed[end if] a strong concrete emotion to get hot.") when player is in rathole.
+understand "real hot" as a mistake ("You need[if cold is moot]ed[end if] a strong concrete emotion to get hot.") when player is in Loather Rathole.
 
 chapter Boarded Roadbed
 
@@ -274,7 +274,7 @@ understand "broomed" as a mistake ("You are not rich and consequential enough to
 
 understand "maters" and "tamers" as a mistake ("Perhaps they know their trade, well, but you need to, too.") when ME ARTS is in location of player.
 
-chapter browse bowers
+chapter Browse Bowers
 
 understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
 
@@ -284,19 +284,19 @@ understand "once" as a mistake ("Yes! You only need a chance! Once! To get insid
 
 understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
-chapter econ cone
+chapter Econ Cone
 
 understand "penrod" as a mistake ("Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!") when player is in Econ Cone and Pernod is in Econ Cone.
 
-chapter upscale capsule
+chapter Upscale Capsule
 
-understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in upscale capsule and player is in upscale capsule.
+understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
 
-understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when player is in upscale capsule and Marble Blamer Balmer is in upscale capsule.
+understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when player is in Upscale Capsule and Marble Blamer Balmer is in Upscale Capsule.
 
-understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when mbb is in upscale capsule and player is in upscale capsule.
+understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when mbb is in Upscale Capsule and player is in Upscale Capsule.
 
-understand "fren" as a mistake ("No dog walks along dragging Sebastian in their mouth.") when player is in upscale capsule.
+understand "fren" as a mistake ("No dog walks along dragging Sebastian in their mouth.") when player is in Upscale Capsule.
 
 understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is in location of player.
 
@@ -308,13 +308,13 @@ understand "fire [text]" as a mistake ("SHOOT something with the gun instead.") 
 
 understand "shoot [text] with [text]" as a mistake ("Just say what you want to shoot.")
 
-chapter grey gyre
+chapter Grey Gyre
 
 understand "balm" as a mistake ("Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.") when lamb is in location of player
 
 understand "bleep" as a mistake ("I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.") when plebe is not in location of player and mrlp is presto
 
-understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.[paragraph break][uurrgg]") when location of player is grey gyre and maze entry is in grey gyre.
+understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.[paragraph break][uurrgg]") when location of player is Grey Gyre and maze entry is in Grey Gyre.
 
 chapter Char Arch
 
@@ -342,7 +342,7 @@ understand "tard" as a mistake ("[if Rand is in location of player]You pause bef
 
 understand "tars" as a mistake ("But you already took the tsar star FROM the tars. Plus, you'd get all sticky.") when player wears tsar star.
 
-chapter dirge ridge
+chapter Dirge Ridge
 
 understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when wzup is in location of player.
 
@@ -350,23 +350,23 @@ understand "elo" as a mistake ("Somehow, you doubt Leo has a chess rating. Or en
 
 understand "eol" as a mistake ("Somehow, you doubt Leo is into computers.") when Leo is in location of player.
 
-understand "evil" as a mistake ("No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you[if leo is fightin or rand is fightin], or that guy chasing you. That'd be mean[end if].") when player is in ridge.
+understand "evil" as a mistake ("No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you[if leo is fightin or rand is fightin], or that guy chasing you. That'd be mean[end if].") when player is in Dirge Ridge.
 
 understand "leonard" and "renaldo" and "leandro" and "rolande" as a mistake ("That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You [if rand is fightin]just need to outsmart them[else if leo is washed up]need to find a way to cheer them up[else]wouldn't want that, now they're your friends[end if].") when Rand is in location of player.
 
 understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when wzup is not in location of player.
 
-understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when player is in dirge ridge and Leo is washed up.
+understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when player is in Dirge Ridge and Leo is washed up.
 
 understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[otherwise]Leo and Rand won't give you the time to look in the cretins['] cistern for a spare can to put it in.[end if]") when wzup is in location of player.
 
-chapter austerer treasure
+chapter Austerer Treasure
 
-understand "ooph" and "phoo" as a mistake ("That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.") when player is in austerer treasure and hoop is in austerer treasure.
+understand "ooph" and "phoo" as a mistake ("That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.") when player is in Austerer Treasure and hoop is in Austerer Treasure.
 
-understand "pheyoo" as a mistake ("But nothing really smells in here. Perhaps you need something more straightforward and universal.") when player is in Austerer Treasure and ye hoop is in austerer treasure.
+understand "pheyoo" as a mistake ("But nothing really smells in here. Perhaps you need something more straightforward and universal.") when player is in Austerer Treasure and ye hoop is in Austerer Treasure.
 
-chapter marines seminar remains
+chapter Marines Seminar Remains
 
 understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when player has popgun or popgun is in location of player.
 
@@ -374,13 +374,13 @@ understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a
 
 understand "pilots" as a mistake ("You don't need to fly anywhere.") when player has popgun.
 
-understand "smearin" as a mistake ("That may've happened during the seminar, but you don't need that sort of violence here and now.") when player is in marines seminar remains.
+understand "smearin" as a mistake ("That may've happened during the seminar, but you don't need that sort of violence here and now.") when player is in Marines Seminar Remains.
 
-understand "strop" as a mistake ("That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.") when player is in marines seminar remains.
+understand "strop" as a mistake ("That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.") when player is in Marines Seminar Remains.
 
-chapter nowt town
+chapter Nowt Town
 
-understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in nowt town.
+understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in Nowt Town.
 
 understand "lawls" and "lawl" as a mistake ("You try to laugh at the walls, but [if cur-score of presto is 0]such actions don't quite seem to work here[else]then that just might get rid of them and not the electricity restricting your journey through Nowt Town[end if].") when maze walls are in location of player.
 
@@ -392,25 +392,25 @@ chapter room 7 of maze
 
 understand "brig" as a mistake ("There, there. This maze is much less hard to get out of than a prison.") when player is in r22.
 
-chapter saps' pass
+chapter Saps' Pass
 
 understand "asp" and "asps" as a mistake ("Saps['] Pass is dangerous enough.") when player is in Saps' Pass.
 
-understand "psa" and "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in saps' pass.
+understand "psa" and "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in Saps' Pass.
 
 understand "spa" and "spas" as a mistake ("Maybe one day, Saps['] Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.") when player is in Saps' Pass.
 
-chapter phat path
+chapter Phat Path
 
 understand "alter" as a mistake ("Vandalism! For shame!") when harpings phrasing is in location of player.
 
 understand "artel" as a mistake ("You, Rand and Leo have already engaged in a collective effort.") when harpings phrasing is in location of player.
 
-understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
+understand "ptah" as a mistake ("[if hogs are in Phat Path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in Phat Path.
 
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is moot and Leo is in Phat Path.
 
-chapter hacks' shack
+chapter Hacks' Shack
 
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or player has fizzy cola or player has bottle of cola.
 
@@ -430,7 +430,7 @@ understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when
 
 book oyster
 
-chapter posh hops shop
+chapter Posh Hops Shop
 
 [def=insert stein]
 understand "insert [something]" as a mistake ("Almost, but with the stein, there.") when stein is in hops shop and player is in hops shop.
@@ -445,17 +445,17 @@ understand "pacers" as a mistake ("Casper's writing is multifaceted, but he wrot
 
 understand "parsec" as a mistake ("Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.") when casper is in hops shop and player is in hops shop
 
-understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop
+understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop
 
 understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is in hops shop and player is in hops shop.
 
-chapter disease seaside
+chapter Disease Seaside
 
 understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Disease Seaside.
 
 understand "boast" as a mistake ("Batso.") when player is not in Disease Seaside.
 
-understand "fart" as a mistake ("[if buried raft is in location of player]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
+understand "fart" as a mistake ("[if buried raft is in location of player]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and Anger Range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
 
 understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Disease Seaside.
 
@@ -463,33 +463,33 @@ understand "ocean" as a mistake ("As you seek to change the canoe, you hear a ru
 
 understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in Disease Seaside and player is in Disease Seaside.
 
-chapter fighter freight
+chapter Fighter Freight
 
 understand "peal" as a mistake ("The pale plea already sort of is. You need a stronger action than that.") when player is in Fighter Freight.
 
-chapter anger range / hero's shore
+chapter Anger Range / hero's shore
 
-understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in anger range and carps are in anger range.
+understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in Anger Range and carps are in Anger Range.
 
 understand "horse" as a mistake ("A horse won't help you explore the Hedron.") when player is in Anger Range and haunter is moot.
 
 understand "hoser" as a mistake ("It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.") when player is in Anger Range and haunter is moot.
 
-understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in anger range and player is in anger range.
+understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in Anger Range and player is in Anger Range.
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
 
-understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in anger range and carps are in anger range.
+understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in Anger Range and carps are in Anger Range.
 
-understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in anger range or location of player is location of haunter.
+understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in Anger Range or location of player is location of haunter.
 
-chapter hardest trashed dearths
+chapter Hardest Trashed Dearths
 
-understand "hatred" and "hatreds" as a mistake ("There's enough of that going around.") when player is in hardest trashed dearths.
+understand "hatred" and "hatreds" as a mistake ("There's enough of that going around.") when player is in Hardest Trashed Dearths.
 
-understand "thread" and "threads" as a mistake ("There are no clothing stores around, nor is there anything physical to lead you to where the trout is.") when player is in hardest trashed dearths.
+understand "thread" and "threads" as a mistake ("There are no clothing stores around, nor is there anything physical to lead you to where the trout is.") when player is in Hardest Trashed Dearths.
 
-chapter lean lane
+chapter Lean Lane
 
 understand "aet" as a mistake ("Oh, this region won't go into extra time unless you want to do the side quest.") when tea tray is in location of player
 
@@ -503,11 +503,11 @@ understand "neal" as a mistake ("You aren't looking for anyone named Neal. Unles
 
 understand "reangle" as a mistake ("You tilt the gleaner around to try to see it from a different point of view. [if general gleaner is reflexed]You see nothing new--enlarging it seemed to do enough[else]If there are any differences, they're too small for you to see[end if].") when player has general gleaner.
 
-understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when player is in lean lane.
+understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when player is in Lean Lane.
 
 understand "wrap [text]" as a mistake ("The bubble wrap is already covering something.") when player has wrap.
 
-chapter lapsin' plains
+chapter Lapsin' Plains
 
 understand "brides" as a mistake ("No, no time to think about romance, now.") when crate is in location of player.
 
@@ -521,9 +521,9 @@ understand "naps" as a mistake ("You need action, here! Maybe nothing too exhaus
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
 
-understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are in lapsin' plains and player is in lapsin' plains.
+understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are in Lapsin' Plains and player is in Lapsin' Plains.
 
-understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin' Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when player is in lapsin' plains.
+understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin' Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when player is in Lapsin' Plains.
 
 understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
 
@@ -545,11 +545,11 @@ understand "tawse" as a mistake ("You don't need that sort of weapon.") when was
 
 understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.") when player is in Shuttle Hutlets.
 
-chapter horned hedron
+chapter Horned Hedron
 
-understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when player is in hedron and ol' trap is in hedron.
+understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when player is in Horned Hedron and ol' trap is in Horned Hedron.
 
-understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when player is in hedron and ol' trap is in hedron.
+understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when player is in Horned Hedron and ol' trap is in Horned Hedron.
 
 chapter end den
 
@@ -577,13 +577,13 @@ understand "crust" as a mistake ("It probably needs less crust, not more. The wh
 
 understand "a place" as a mistake ("It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.") when mrlp is towers.
 
-chapter loftier trefoil
+chapter Loftier Trefoil
 
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is in location of player.
 
 understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
 
-understand "occurs" as a mistake ("You need to make something occur.") when player is in mislit limits or player has succor crocus.
+understand "occurs" as a mistake ("You need to make something occur.") when player is in Mislit Limits or player has succor crocus.
 
 understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when player is in Loftier Trefoil and Daryl is in Loftier Trefoil.
 
@@ -597,7 +597,7 @@ understand "warden" as a mistake ("Andrew doesn't look like he has the leadershi
 
 understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
 
-chapter topside deposit
+chapter Topside Deposit
 
 understand "dopiest" as a mistake ("You sense that the ur-pine [if ur-pine is in Topside Deposit]is[else]was[end if] one of the easier people to deal with, here, but you don't want to overstate it.") when player is in topside.
 
@@ -605,43 +605,43 @@ understand "posited" as a mistake ("You formulate a proof that the place you are
 
 understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is enclosed by location of player.
 
-chapter scope copse
+chapter Scope Copse
 
 understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when player is in Scope Copse and butlers are in Scope Copse.
 
-understand "copes" as a mistake ("You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.") when player is in scope copse.
+understand "copes" as a mistake ("You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.") when player is in Scope Copse.
 
-understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in scope copse.
+understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in Scope Copse.
 
 understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly ms lucy is in location of player or muscly luc sym is in location of player.
 
 understand "worse" as a mistake ("The brownies don't need to taste any worse.") when player has Brownies.
 
-chapter outer route
+chapter Outer Route
 
-understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].") when player is in outer route.
+understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].") when player is in Outer Route.
 
-chapter baldest blasted saltbed
+chapter Baldest Blasted Saltbed
 
 understand "fluters" as a mistake ("This game has no soundtrack, and if I made one, it wouldn't be very good.") when fluster self rut is in location of player.
 
-chapter unblest sunbelt
+chapter Unblest Sunbelt
 
 understand "file" as a mistake ("You wish you could file Mel Fish away and put him in the past.") when Mel Fish is in location of player.
 
 understand "hms" as a mistake ("No ship comes to take Mel away. It's pretty landlocked here.") when Mel Fish is in location of player.
 
-chapter anemic cinema
+chapter Anemic Cinema
 
 understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't [']til they're gone.") when ingrates are in location of player.
 
-understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in anemic cinema.
+understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in Anemic Cinema.
 
-chapter fringe finger
+chapter Fringe Finger
 
-understand "refing" as a mistake ("You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.") when player is in fringe finger.
+understand "refing" as a mistake ("You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.") when player is in Fringe Finger.
 
-chapter treading gradient
+chapter Treading Gradient
 
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in location of player.
 
@@ -653,11 +653,11 @@ understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anywa
 
 understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is in location of player.
 
-chapter danger garden
+chapter Danger Garden
 
-understand "ranged" as a mistake ("The garden does not get any bigger.") when player is in danger garden.
+understand "ranged" as a mistake ("The garden does not get any bigger.") when player is in Danger Garden.
 
-chapter lost lots
+chapter Lost Lots
 
 understand "prosties" as a mistake ("Not that sort of game. There's some suggestive stuff, but nothing like that.") when ripostes are in location of player.
 
@@ -667,7 +667,7 @@ understand "slot" as a mistake ("If you made it, you might fall in the slot and 
 
 understand "tripose" and "triposes" as a mistake ("No organic chemistry, please.") when ripostes are in location of player.
 
-chapter obscurest subsector
+chapter Obscurest Subsector
 
 understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is the wrong area for pure action[else]Unlocked worked better, here[end if].") when player is in Obscurest Subsector.
 
@@ -681,63 +681,63 @@ understand "olga" as a mistake ("Even if the goal could become a person, they'd 
 
 understand "unlocked" as a mistake ("There's nothing here to unlock. [if Obscurest Subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not friendly]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured]. Still, that's an idea[end if].[preefsay of duck]") when duck is in location of player and prison ropins is not in location of player.
 
-chapter salted deltas
+chapter Salted Deltas
 
-understand "lasted" as a mistake ("The salted deltas have already lasted since well before you were born, and that's a verb, anyway[vis-guar].") when player is in Salted Deltas.
+understand "lasted" as a mistake ("The Salted Deltas have already lasted since well before you were born, and that's a verb, anyway[vis-guar].") when player is in Salted Deltas.
 
-understand "slated" as a mistake ("You're not sure what the salted deltas could be slated for. You're not here for geological research, anyway[vis-guar].") when player is in Salted Deltas.
+understand "slated" as a mistake ("You're not sure what the Salted Deltas could be slated for. You're not here for geological research, anyway[vis-guar].") when player is in Salted Deltas.
 
-chapter actionless coastlines
+chapter Actionless Coastlines
 
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
 
-understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in actionless coastlines and weirder red wire is in actionless coastlines.
+understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in Actionless Coastlines and weirder red wire is in Actionless Coastlines.
 
-chapter rawest waters
+chapter Rawest Waters
 
 understand "earnest" as a mistake ("The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.") when player is in rawest.
 
 understand "prays" as a mistake ("Too late to be a prayers sprayer.") when player is in rawest.
 
-chapter mislit limits
+chapter Mislit Limits
 
-understand "repents" as a mistake ("The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.") when serpent is in mislit limits and player is in mislit limits.
+understand "repents" as a mistake ("The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.") when serpent is in Mislit Limits and player is in Mislit Limits.
 
-understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is in mislit limits and player is in mislit limits.
+understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is in Mislit Limits and player is in Mislit Limits.
 
-chapter mesprise premises
+chapter Mesprise Premises
 
-understand "titres" and "titers" as a mistake ("No physical sciences are necessary here.") when player is in mesprise premises.
+understand "titres" and "titers" as a mistake ("No physical sciences are necessary here.") when player is in Mesprise Premises.
 
 book otters
 
 understand "dialect" as a mistake ("No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.") when location of player is ominous.
 
-chapter bleary barley
+chapter Bleary Barley
 
-understand "end u" as a mistake ("No, end *U*![paragraph break][uurrgg]") when player is in barley and nude dune is in barley.
+understand "end u" as a mistake ("No, end *U*![paragraph break][uurrgg]") when player is in Bleary Barley and nude dune is in Bleary Barley.
 
-understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into laziness.") when player is in barley and Ed Riley is in barley.
+understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into laziness.") when player is in Bleary Barley and Ed Riley is in Bleary Barley.
 
 understand "increds" as a mistake ("You marvel at the possible power of the cinders and even see red at the thought of giving them up.") when player has cinders or location of cinders is location of player
 
-understand "lied" as a mistake ("You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.") when player is in barley and Ed Riley is in barley.
+understand "lied" as a mistake ("You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.") when player is in Bleary Barley and Ed Riley is in Bleary Barley.
 
-understand "reedy" as a mistake ("No, the adverb.") when player is in barley and ed riley is in barley.
+understand "reedy" as a mistake ("No, the adverb.") when player is in Bleary Barley and ed riley is in Bleary Barley.
 
-understand "yer" as a mistake ("Yup! It's Ed's!") when player is in bleary barley and ed riley is in bleary barley.
+understand "yer" as a mistake ("Yup! It's Ed's!") when player is in Bleary Barley and ed riley is in Bleary Barley.
 
 chapter coevals alcoves
 
 understand "drobe" as a mistake ("That's pretty much their whole drobe. You're not here to talk fashion, anyway.") when Merle is in location of player.
 
-chapter disowned downside
+chapter Disowned Downside
 
-understand "slap em" as a mistake ("[if macks are in disowned downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in downside.
+understand "slap em" as a mistake ("[if macks are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
 
-understand "slap me" as a mistake ("That's kind of a silly way to motivate yourself.") when player is in downside.
+understand "slap me" as a mistake ("That's kind of a silly way to motivate yourself.") when player is in Disowned Downside.
 
-chapter loop pool
+chapter Loop Pool
 
 understand "lees" as a mistake ("The eels would be insulted to be referred to as dregs.") when eels are in location of player.
 
@@ -745,7 +745,7 @@ understand "polo" as a mistake ("No time for games! [if eels are moot]Even with 
 
 understand "slee" as a mistake ("The eels aren't what needs to be reduced to rubble, here.") when eels are in location of player.
 
-chapter bran barn
+chapter Bran Barn
 
 understand "whoever" as a mistake ("You wonder whoever could be saying the vow here. You suspect you are very close and very far at once.") when vow here is in location of player.
 
@@ -781,7 +781,7 @@ understand "trays" as a mistake ("You can't transform something living into some
 
 chapter rote moan anteroom
 
-chapter perverse preserve
+chapter Perverse Preserve
 
 understand "hornet" as a mistake ("The thrones are plural. Besides, just one hornet--what could it do?") when thrones are in location of player.
 
@@ -789,39 +789,39 @@ understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]
 
 understand "shorten" as a mistake ("[if thrones are in location of player]Well--not shorten, but break it down...you see red from the effort[else]They're more likely to shorten you with a few stings[end if].") when thrones are in location of player or hornets are in location of player.
 
-understand "slain" and "as nil" as a mistake ("[if nails are in location of player]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in preserve
+understand "slain" and "as nil" as a mistake ("[if nails are in location of player]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in Perverse Preserve
 
-understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in perverse preserve.
+understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in Perverse Preserve.
 
-chapter reclusion inclosure
+chapter Reclusion Inclosure
 
 understand "aliver" as a mistake ("[if player is in inclosure]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
 
-understand "coins lure" as a mistake ("[one of]Elvira momentarily sniffs. 'Money? Where? Mmm, I'll find it after beating this little dorkling up.'[or]Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.[stopping]") when player is in inclosure.
+understand "coins lure" as a mistake ("[one of]Elvira momentarily sniffs. 'Money? Where? Mmm, I'll find it after beating this little dorkling up.'[or]Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.[stopping]") when player is in Reclusion Inclosure.
 
-understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in inclosure.
+understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in Reclusion Inclosure.
 
-understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.[uurrgg]") when player is in Inclosure.
+understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.[uurrgg]") when player is in Reclusion Inclosure.
 
-understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in inclosure.
+understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in Reclusion Inclosure.
 
-understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.[uurrgg]") when player is in Inclosure.
+understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.[uurrgg]") when player is in Reclusion Inclosure.
 
-understand "rule scion" as a mistake ("Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.[uurrgg]") when player is in inclosure.
+understand "rule scion" as a mistake ("Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.[uurrgg]") when player is in Reclusion Inclosure.
 
-understand "sherpa" as a mistake ("You don't need someone to help you climb. You need help fighting Elvira.") when player is in Inclosure.
+understand "sherpa" as a mistake ("You don't need someone to help you climb. You need help fighting Elvira.") when player is in Reclusion Inclosure.
 
 book others
 
-chapter rustic citrus
+chapter Rustic Citrus
 
 understand "boarder" as a mistake ("Rustic Citrus doesn't make for great living quarters.") when player is in Rustic Citrus.
 
 understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when player is in Rustic Citrus.
 
-understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in rustic citrus and pagers are in rustic citrus.
+understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in Rustic Citrus and pagers are in Rustic Citrus.
 
-understand "gasper" as a mistake ("Not as healthy as fruit, to be sure!") when player is in rustic citrus and pagers are in rustic citrus.
+understand "gasper" as a mistake ("Not as healthy as fruit, to be sure!") when player is in Rustic Citrus and pagers are in Rustic Citrus.
 
 understand "miles" as a mistake ("You don't want miles and miles of slime.") when player is in rustic and slime is in rustic.
 
@@ -829,7 +829,7 @@ understand "rapes" and "rape" as a mistake ("[one of]Some things, you can't joke
 
 understand "reaps" as a mistake ("No, not verbs. Well, not here by Curtis.") when spear is in location of player.
 
-understand "sell" and "sell [text]" as a mistake ("You are paving the way for commerce, not interacting.") when player is in citrus or player is in clearing.
+understand "sell" and "sell [text]" as a mistake ("You are paving the way for commerce, not interacting.") when player is in Rustic Citrus or player is in Clangier Clearing.
 
 understand "slump" as a mistake ("Don't get exhausted! This area should be a bit of a break! I hope.") when player is in rustic and lumps are in rustic.
 
@@ -837,7 +837,7 @@ understand "smile" as a mistake ("[if limes are in location of player]You are th
 
 understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis.") when spear is in location of player.
 
-chapter scape space
+chapter Scape Space
 
 understand "allo" as a mistake ("Lola says nothing back.") when player has dollar and player is female.
 
@@ -849,45 +849,45 @@ understand "sonic" as a mistake ("Maybe if you had more than one [if player has 
 
 understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when inapt paint is in location of player.
 
-chapter gates stage
+chapter Gates Stage
 
-understand "poring" as a mistake ("You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.") when player is in gates stage.
+understand "poring" as a mistake ("You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.") when player is in Gates Stage.
 
-understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest Home Videos right now.") when player is in gates stage.
+understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest Home Videos right now.") when player is in Gates Stage.
 
-chapter clangier clearing
+chapter Clangier Clearing
 
-understand "an omg" as a mistake ("Lashing out that way leaves you feeling you must be close to the right way to get a mango.") when player is in clearing and mango is off-stage.
+understand "an omg" as a mistake ("Lashing out that way leaves you feeling you must be close to the right way to get a mango.") when player is in Clangier Clearing and mango is off-stage.
 
-understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.") when player is in clearing.
+understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.") when player is in Clangier Clearing.
 
-understand "go man" as a mistake ("That's the right idea but the wrong sorts of words.") when player is in clearing and mango is off-stage.
+understand "go man" as a mistake ("That's the right idea but the wrong sorts of words.") when player is in Clangier Clearing and mango is off-stage.
 
-understand "lameness" as a mistake ("No need to judge the nameless salesmen. We can't all be heroes.") when player is in clangier clearing.
+understand "lameness" as a mistake ("No need to judge the nameless salesmen. We can't all be heroes.") when player is in Clangier Clearing.
 
-understand "mango" as a mistake ("That's the fruit you need to find. You see red wondering where or how?") when player is in clearing and mango is off-stage.
+understand "mango" as a mistake ("That's the fruit you need to find. You see red wondering where or how?") when player is in Clangier Clearing and mango is off-stage.
 
-understand "nag mo" as a mistake ("[one of]You get all red faced asking people how to trade for a mango, and asking, and asking[or]That'd just get you red-faced again[stopping].") when player is in clearing and mango is off-stage.
+understand "nag mo" as a mistake ("[one of]You get all red faced asking people how to trade for a mango, and asking, and asking[or]That'd just get you red-faced again[stopping].") when player is in Clangier Clearing and mango is off-stage.
 
-understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when player is in clearing.
+understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when player is in Clangier Clearing.
 
-understand "silt" and "slit" as a mistake ("Dirty way to slash prices.") when player is in clearing.
+understand "silt" and "slit" as a mistake ("Dirty way to slash prices.") when player is in Clangier Clearing.
 
-understand "spicer" as a mistake ("You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.") when player is in clearing.
+understand "spicer" as a mistake ("You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.") when player is in Clangier Clearing.
 
-chapter filed field
+chapter Filed Field
 
-understand "banana" as a mistake ("Hm, that's the fruit you want, but which letter to grab? And how?") when an-a is in scape space and player is in scape space.
+understand "banana" as a mistake ("Hm, that's the fruit you want, but which letter to grab? And how?") when an-a is in Scape Space and player is in Scape Space.
 
-understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in scape space], and you don't know if you want him taking that storage box with him[end if].") when player is in scape space and greedy-person is Art Erd
+understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in Scape Space], and you don't know if you want him taking that storage box with him[end if].") when player is in Scape Space and greedy-person is Art Erd
 
 understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is in Filed Field.
 
 understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is in location of player.
 
-understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in scape space and greedy-person is Dr Tera
+understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in Scape Space and greedy-person is Dr Tera
 
-understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people [he-she] 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, [he-she] was being too clever.") when player is in scape space
+understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people [he-she] 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, [he-she] was being too clever.") when player is in Scape Space
 
 book demo dome
 
@@ -895,17 +895,17 @@ chapter evoc-cove
 
 understand "neva" and "lol" as a mistake ("Yeah, the novel is pretty unbelievable, but it's not there to be profound.") when player is in evoc-cove.
 
-chapter hows show
+chapter Hows Show
 
-understand "coed" as a mistake ("Yes, everyone is welcome in the Demo Dome.") when player is in hows show.
+understand "coed" as a mistake ("Yes, everyone is welcome in the Demo Dome.") when player is in Hows Show.
 
-chapter ned's dens
+chapter Ned's Dens
 
-understand "send" as a mistake ("Maybe in another game, you could do that, if you walked around right. But not this one.") when player is in ned's dens.
+understand "send" as a mistake ("Maybe in another game, you could do that, if you walked around right. But not this one.") when player is in Ned's Dens.
 
-chapter sparse spares
+chapter Sparse Spares
 
-understand "spears" as a mistake ("There's nothing you need a weapon to fight against.") when player is in sparse spares.
+understand "spears" as a mistake ("There's nothing you need a weapon to fight against.") when player is in Sparse Spares.
 
 Roiling Mistakes ends here.
 

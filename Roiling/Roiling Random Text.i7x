@@ -20,8 +20,8 @@ mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbefor
 table of random books	false	0	30	read-books rule	Means Manse	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
 table of ad slogans	true	0	30	blurby rule	Means Manse	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
 table of mob chants	false	0	30	mob-chanting rule	Means Manse	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"'Accursed cue-cards!' you hear. They're silent a bit, probably getting ready to re-start."
-table of idiotic lecture points	true	0	15	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
-table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
+table of idiotic lecture points	true	0	15	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
+table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
 table of sicko movies	false	0	50	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
 table of store c competitors	false	0	10	compet-over-ad rule	stores	"Store C competitors"	"You're promised better prices and service than "	"."	"Finally, there's a put-down of Twisted Twit Ed's."
 table of store c ads	false	0	10	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
@@ -33,7 +33,7 @@ table of horbert farewells	false	0	20	horb-bye rule	routes	"Brother Horbert's bl
 table of missing deli foods	false	0	20	ask-deli rule	routes	"Non-foods at the Idle Deli[indic of routes]"	--	""	"'Not even spoiled old pies...'"
 table of sked items	false	0	20	read-tec rule	troves	"Desk-Sked to-dos[indic of troves]"	--	""	"Wow! That's a lot to do. You need to sit and think and build up to believing you can do it all. And quickly."
 table of DIVORCES articles	false	0	30	read-divorces rule	troves	"'Fascinating' DIVORCES articles[indic of troves]"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want." [p]
-table of iffy advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pea[eisiping]"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
+table of iffy advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pea[pep-clue]"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
 table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue[indic of troves]"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
 table of non-skeds	false	0	20	desk-look rule	troves	"Desk-Sked alternatives[if Upscale Capsule is unvisited] (Troves)[end if]"	--	"Slick-Tech Checklist, which is rapidly catching up"
 table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue[indic of troves]"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
@@ -49,7 +49,7 @@ table of bedding brands	false	0	20	read-futon rule	presto	"Sleep aide brands"	--
 table of bar dialogue	true	0	15	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
 table of competing bars	true	0	15	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here. You can't imagine any more bars being discussed.[pre-brk]"
 table of Casper mumbles	false	0	20	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""	"'[if player is male]Rhett Weir[else]Teri Werth[end if], the writer? Eh, err...TWIT!' Casper suddenly flips back to the start of his notes. Perhaps he feels you are not good enough to hear any more of his original thoughts."
-table of fish fries	true	0	15	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if anger range is visited]in anger range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
+table of fish fries	true	0	15	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if Anger Range is visited]in Anger Range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
 table of unpopular girls	true	0	15	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and utterly wrongest, girl they accuse the trout of liking (she's actually pretty nice, but...innuendo.) When you sink that low, you've obviously run out of ideas.[pre-brk]"
 table of tuna gossip	true	0	15	gossip-over-chatter rule	oyster	"Aunt Tuna's gossip[indic of oyster]"	"Aunt Tuna gossips: "	""	"'Edda Dade. Dead. Cleo's Close. Dorithy--Thyroid. Halle's a shell. All she... Heather's Heart. She... diabetes, die, beast!' Aunt Tuna pauses, head in hands. That was the final thing she'd been repressing.[pre-brk]"
 table of aunt tuna chatter	true	0	15	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by...[pre-brk]"
@@ -62,7 +62,7 @@ table of Elvira machines	false	0	20	bzzt rule	otters	"Elvira's machines"	--	""	"
 table of Elvira taunts	false	0	20	Elvira-taunt rule	otters	"Elvira's taunts"	--	""	"'Stellar staller!' Dang, the simplest ones hurt the most.[pre-lb]"
 table of animal friends	false	0	60	bzzt rule	otters	"Your animal friends"	--	""
 table of political slogans	false	0	20	sloganing rule	others	"Political slogans"	--	""
-table of selly yells	false	0	30	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
+table of selly yells	false	0	30	Clangier Clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
 table of help companies	false	0	30	bzzt rule	Meta Team	"Hint guy t-shirt writing[if have-objhinted is false] (occurs first time you request hints)[end if]"	--	""
 table of elmo emo	false	0	30	bzzt rule	Means Manse	"Elmo's romantic complaints[if girls-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
 table of sports chatter	false	0	30	bzzt rule	Means Manse	"Elmo's sports banter[if sports-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
@@ -76,7 +76,7 @@ table of lame movies	false	0	30	bzzt rule	Means Manse	"Bad movies[elv-art]"	""	"
 table of lame tv shows	false	0	30	bzzt rule	Means Manse	"Bad TV shows[elv-art]"	""	""
 table of oldies singers	false	0	30	bzzt rule	Means Manse	"Initial oldies singers[elv-art]"	""	""
 table of lousy hit songs	false	0	30	bzzt rule	Means Manse	"Bad songs[elv-art]"	--	""
-table of self-help bestsellers	false	0	30	bzzt rule	troves	"Self-help bestsellers[eisiping]"	--	""
+table of self-help bestsellers	false	0	30	bzzt rule	troves	"Self-help bestsellers[pep-clue]"	--	""
 table of songs you could write	false	0	30	bzzt rule	troves	"Songs you write on solving Troves"	--	""
 table of sleep rejects	false	0	30	am-sleeping rule	Meta Team	"Sleeping rejects"	--	"[pre-lb]"
 [tmc]
@@ -239,8 +239,7 @@ every turn when wrap-note is true and wrap-note-ver is false (this is the alert 
 	ital-say "you've been repeating looking up something with random text a lot--something with at least ten entries and possibly much more. If you solve the game, you can see it all. Thanks for your (apparent) interest! Oh, you can browse the source code for a chunk of text, too, and it shouldn't spoil the game, since it's all in a table. Just remember single apostrophes have a bracket on each side.";
 	now wrap-note-ver is true;
 
-to say c-c-u:
-	say " [if circle is visited]in the Cleric Circle[else](Routes)[end if]";
+to say c-c-u: say " [if Cleric Circle is visited]in the Cleric Circle[else](Routes)[end if]";
 
 to say indic of (reg - a region):
 	if last-loc of reg is unvisited:
@@ -282,8 +281,7 @@ to say pre-lb:
 	unless otters is solved:
 		say "[line break]";
 
-to say eisiping:
-	say "[if rathole is unvisited] (Troves)[else if Pa Egg Pea is unexamined] (examine Pa Egg Pea)[end if]"
+to say pep-clue: say " ([if Loather Rathole is unvisited]Troves[else if Pa Egg Pea is unexamined]examine Pa Egg Pea[end if])"
 
 to say elv-art:
 	unless dope-read is true:
@@ -347,7 +345,7 @@ this is the pun-quip rule:
 	the rule fails.
 
 this is the mob-chanting rule:
-	if current action is listening and player is in study and gunter is moot, the rule succeeds;
+	if current action is listening and player is in Dusty Study and gunter is moot, the rule succeeds;
 	the rule fails;
 
 section STRIP random text rules
@@ -398,7 +396,7 @@ this is the read-pious-2 rule:
 	the rule fails.
 
 this is the horby rule:
-	if player is in cleric circle and Brother Horbert is in cleric circle, the rule succeeds;
+	if player is in Cleric Circle and Brother Horbert is in Cleric Circle, the rule succeeds;
 	the rule fails;
 
 this is the horb-bye rule:
@@ -446,13 +444,13 @@ this is the read-divorces rule:
 section PRESTO random text rules
 
 this is the chitchat-over-idols rule:
-	unless Rand is washed up and player is in ridge:
+	unless Rand is washed up and player is in Dirge Ridge:
 		the rule fails;
 	if go-with-first of table of Leo-Rand chitchat and table of Leo-Rand idols, the rule succeeds;
 	the rule fails;
 
 this is the Leo-Rand-cry rule:
-	if Rand is washed up and player is in ridge, the rule succeeds;
+	if Rand is washed up and player is in Dirge Ridge, the rule succeeds;
 	the rule fails;
 
 this is the catechism-over-research rule:
@@ -492,11 +490,11 @@ this is the casper-talk rule:
 	the rule fails;
 
 this is the ohai-bullies rule:
-	if carps are in anger range and player is in anger range, the rule succeeds;
+	if carps are in Anger Range and player is in Anger Range, the rule succeeds;
 	the rule fails;
 
 this is the insult-over-girls rule:
-	if player is not in anger range or pikes are not in anger range:
+	if player is not in Anger Range or pikes are not in Anger Range:
 		the rule fails;
 	if go-with-first of table of fish fries and table of unpopular girls, the rule succeeds;
 	the rule fails;
@@ -518,7 +516,7 @@ this is the screed-read rule:
 section TOWERS random text rules
 
 this is the rodney-here rule:
-	if player is in trefoil and rodney is in trefoil, the rule succeeds;
+	if player is in Loftier Trefoil and rodney is in Loftier Trefoil, the rule succeeds;
 	the rule fails;
 
 this is the examining-gizmo rule:
@@ -528,18 +526,18 @@ this is the examining-gizmo rule:
 section OTTERS random text rules
 
 this is the last-battle rule:
-	if current action is playing whistle and player is in Inclosure, the rule succeeds;
+	if current action is playing whistle and player is in Reclusion Inclosure, the rule succeeds;
 	the rule fails.
 
 this is the em-sez rule:
-	if player is in alcoves and Merle is in alcoves:
+	if player is in Coevals' Alcoves and Merle is in Coevals' Alcoves:
 		if Merle is reflexed, the rule succeeds;
 	the rule fails;
 
 this is the alcove-talk rule:
-	if player is in alcoves and Elmer is in alcoves:
+	if player is in Coevals' Alcoves and Elmer is in Coevals' Alcoves:
 		if Merle is reflexed, the rule succeeds;
-		say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]"; [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc]
+		say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]"; [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in Coevals' Alcoves etc]
 	the rule fails;
 
 this is the Elvira-taunt rule:
@@ -551,11 +549,11 @@ this is the Elvira-taunt rule:
 section OTHERS random text rules
 
 this is the sloganing rule:
-	if player is in gates stage and current action is going north, the rule succeeds;
+	if player is in Gates Stage and current action is going north, the rule succeeds;
 	the rule fails;
 
 this is the clearing-listen rule:
-	if player is in clearing and current action is listening, the rule succeeds;
+	if player is in Clangier Clearing and current action is listening, the rule succeeds;
 	the rule fails.
 
 section deciding how to weight rules
@@ -11879,7 +11877,7 @@ blurb	prio
 "Eat Fast at Feast[r], by Asa Fett"
 "Eat, Love: To Leave[r], by Eve Toal"
 "Eat. Run. A Nut Re: Nature[r], by Ren Tua" []
-"Eat, Sing, Set Gain in Stage[r], by Nat Geis"
+"Eat, Sing, Set Gain in Stage[r], by Nat Geis" [ic]
 "Eat Slop to Lapse[r], by Sal Peto"
 "Eat Soup to Pause[r], by Esau Top"
 "Eberling's Inselberg[r], by Ben Sigler"
