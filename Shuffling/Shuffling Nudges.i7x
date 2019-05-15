@@ -463,6 +463,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "psa"	179927743	Elm Train Terminal	--	--	"[psa-vand]."
 "pass"	276201709	Elm Train Terminal	--	--	"[psa-vand]."
 "art"	190621639	Elm Train Terminal	--	--	"There aren't many ways to look at THIS art, and none are constructive, you sense."
+"cafe"	175514408	Elm Train Terminal	--	--	"The cafe face can't transform into anything."
 "faded"	198567001	Elm Train Terminal	--	--	"[faded-ad]."
 "fadedad"	221783908	Elm Train Terminal	--	--	"[faded-ad]."
 "fad"	49731803	Elm Train Terminal	--	--	"[faded-ad]."
@@ -489,7 +490,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lie"	226612794	Leis Isle	--	--	"[loc-rej]."
 "woodland"	423607270	Leis Isle	--	--	"[loc-rej]."
 "sand"	188398381	Leis Isle	--	--	"[the-sand]."
-"thesand"	456596807	Leis Isle	--	--	"[the-sand]."
+"and"	92124415	Leis Isle	--	--	"[the-sand]."
+"sands"	284672347	Leis Isle	--	--	"[the-sand]."
 "islet"	425996778	Leis Isle	--	--	"Nothing happens. You may need to deal with something specific on the Leis Isle to leave."
 "eter"	444046039	Leis Isle	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
 "oflat"	259979148	Leis Isle	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
@@ -888,7 +890,7 @@ to say a-nother:
 	say "a[if The Ol' Hotel is visited]nother[end if]";
 
 to say the-sand:
-	say "The sand is just--well, sand. It won't help you get off the island";
+	say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
 
 to say simple-riot:
 	say "Perhaps it's best to keep it simple and cut down the riot"

@@ -875,8 +875,8 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is m2:
 		if player is in moor, decide yes;
 		decide no; [end of backdrops]
-	if debug-state is true and hintcand is a backdrop:
-		say "WARNING [hintcand] not flagged as backdrop.";
+	if hintcand is a backdrop:
+		if debug-state is true, say "WARNING [hintcand] not flagged as backdrop. You probably don't need to, but just in case...";
 		decide no;
 	let reg1 be map region of location of hintcand;
 	let reg2 be mrlp;
@@ -8167,7 +8167,7 @@ The feral flare is bounding boringscen. description is "It covers everywhere. Lo
 
 chapter Leis Isle
 
-Leis Isle is a room in Resort. "[if l2 are in Leis Isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if l2 are not in Leis Isle], and now the leis here were exposed, you probably want to get going that way, too[end if]."
+Leis Isle is a room in Resort. "[if l2 are in Leis Isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if l2 are not in Leis Isle], and now the leis here were exposed, you probably want to get going that way, too[end if]. The isle is covered with sand and sands and sands, which seem appropriate, if not helpful."
 
 printed name of Leis Isle is "[if l2 are in Leis Isle]Leis[else]Lies[end if] Isle"
 
@@ -10479,7 +10479,7 @@ to solve-region (sre - a region):
 			say "This is (hopefully) a testing bug, but [reg-sto of sre] should not be in the Trips Strip. Sending it away.";
 			moot reg-sto of sre;
 	item-warp;
-	move player to Trips Strip;
+	if player is not in Trips Strip, move player to Trips Strip; ["if" squelches dumb text-reprint bug for testing command TS (#)]
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
 		say "Man! With the SECURE settings on your gadget, you can RECUSE if you want and hit Store R.";
 
