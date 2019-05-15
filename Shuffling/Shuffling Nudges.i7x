@@ -12,15 +12,15 @@ book nudge tables
 
 table of Ordeal Loader nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
-"busiest"	591981617	subsite	--	--	"[loc-rej]." [start Busiest Subsite]
-"noentry"	650766775	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
-"slim"	259155804	subsite	--	--	"[name-list]."
-"neat"	302011453	subsite	--	--	"[name-list]."
-"name"	262976588	subsite	--	--	"[name-list]."
-"list"	298190669	subsite	--	--	"[name-list]."
-"elevator"	681565093	subsite	--	--	"[word-games]."
-"terraces"	646837211	subsite	--	--	"[word-games]."
-"banner"	371551651	subsite	--	--	"[word-games]."
+"busiest"	591981617	Busiest Subsite	--	--	"[loc-rej]." [start Busiest Subsite]
+"noentry"	650766775	Busiest Subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
+"slim"	259155804	Busiest Subsite	--	--	"[name-list]."
+"neat"	302011453	Busiest Subsite	--	--	"[name-list]."
+"name"	262976588	Busiest Subsite	--	--	"[name-list]."
+"list"	298190669	Busiest Subsite	--	--	"[name-list]."
+"elevator"	681565093	Busiest Subsite	--	--	"[word-games]."
+"terraces"	646837211	Busiest Subsite	--	--	"[word-games]."
+"banner"	371551651	Busiest Subsite	--	--	"[word-games]."
 "oafs"	199329257	Busiest Subsite	--	--	"[sofa-there]."
 "oaf"	103055291	Busiest Subsite	--	--	"[sofa-there]."
 "rested"	561349094	Rested Desert	--	--	"[loc-rej]." [start Rested Desert]
@@ -33,7 +33,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "thickets"	584514019	Thickest Thickets	--	--	"[loc-rej]." [start Thickest Thickets]
 "thicket"	488240053	Thickest Thickets	--	--	"[loc-rej]"
 "darnel"	359068166	Thickest Thickets	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
-"shrub"	342404780	thickets	--	--	"The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else]opening in the thickets[end if]."
+"shrub"	342404780	Thickest Thickets	--	--	"The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else]opening in the thickets[end if]."
 "darnels"	455342132	--	darnels	--	"[darnels-inst]."
 "notices"	534448609	Notices Section	--	--	"[loc-rej]." [start Notices Section]
 "borda"	201312192	Notices Section	--	--	"The broad board is just there to read."
@@ -210,16 +210,16 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
 "ville"	387591453	--	river ville liver	--	"[rivliv]."
 "river"	450611381	--	river ville liver	--	"[rivliv]."
-"cruel"	391055143	Enclosure	--	--	"[loc-rej]." [START OF CRUEL ONES ENCLOSURE]
-"ones"	367340160	Enclosure	--	--	"[loc-rej]."
-"enclosure"	758395303	Enclosure	--	--	"[loc-rej]."
+"cruel"	391055143	Cruel Ones' Enclosure	--	--	"[loc-rej]." [START OF CRUEL ONES ENCLOSURE]
+"ones"	367340160	Cruel Ones' Enclosure	--	--	"[loc-rej]."
+"enclosure"	758395303	Cruel Ones' Enclosure	--	--	"[loc-rej]."
 "cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
 "snow"	347468824	Frost Forts	--	--	"[froz-ha-ha]."
-"slough"	399428190	slough	--	--	"[loc-rej]." [START OF GHOULS' SLOUGH]
-"marsh"	285143039	slough	--	--	"[marsh-lake]."
-"lake"	236740944	slough	--	--	"[marsh-lake]."
+"slough"	399428190	Ghouls' Slough	--	--	"[loc-rej]." [START OF GHOULS' SLOUGH]
+"marsh"	285143039	Ghouls' Slough	--	--	"[marsh-lake]."
+"lake"	236740944	Ghouls' Slough	--	--	"[marsh-lake]."
 "frost"	385575260	frost	--	--	"[loc-rej]." [START OF FROST FORTS]
 "capital"	306763883	--	vowels	--	"You need to deal with all the capitals. And they're specific letters."
 "capitals"	403037849	--	vowels	--	"They aren't just any capitals. They're specific letters."
@@ -283,7 +283,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lamina"	236164982	--	manila animal	--	"It actually looks pretty nice on the fridge."
 "burlap"	346316131	--	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
 "wart"	298556412	--	warts	--	"Why zap just one wart? Go for all of them!"
-"trellis"	565134420	Trellis	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]" [start Stiller Trellis]
+"trellis"	565134420	Stiller Trellis	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]" [start Stiller Trellis]
 "arching"	290299561	--	crashing archings	--	"Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back."
 "crashing"	386573527	--	crashing archings	--	"[loc-rej]."
 "hay"	161829369	--	hay	--	"Hay is not terribly magical. It's more for trading or building."
@@ -330,34 +330,34 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "hoot"	289097471	--	hoots button	--	"No, the hoots button is plural."
 "shootbutton"	858376270	--	--	panel-in-silo rule	"No, you're overthinking it. Just the text."
 "treesbutton"	1013324838	--	--	panel-in-silo rule	"No, you're overthinking it. Just the text."
-"cedars"	351626370	cedars	--	--	"[loc-rej]." [start Sacred Cedars]
-"cedar"	255352404	cedars	--	--	"[loc-rej]."
-"drawing"	362975539	cedars	--	--	"[best-not-defile]."
-"drawings"	459249505	cedars	--	--	"[best-not-defile]."
-"verse"	544374807	cedars	--	--	"[best-not-defile]."
-"spout"	460308327	cedars	--	--	"[best-not-defile]."
-"pout"	364034361	cedars	--	--	"[best-not-defile]."
-"minerva"	500458057	cedars	--	--	"[best-not-defile]."
-"chalice"	304094081	cedars	--	--	"[best-not-defile]."
-"candle"	292749948	cedars	--	--	"[best-not-defile]."
-"lance"	271720859	cedars	--	--	"[best-not-defile]."
-"idols"	290462317	cedars	--	--	"[best-not-defile]."
-"cliche"	301906263	cedars	--	--	"[best-not-defile]."
+"cedars"	351626370	Sacred Cedars	--	--	"[loc-rej]." [start Sacred Cedars]
+"cedar"	255352404	Sacred Cedars	--	--	"[loc-rej]."
+"drawing"	362975539	Sacred Cedars	--	--	"[best-not-defile]."
+"drawings"	459249505	Sacred Cedars	--	--	"[best-not-defile]."
+"verse"	544374807	Sacred Cedars	--	--	"[best-not-defile]."
+"spout"	460308327	Sacred Cedars	--	--	"[best-not-defile]."
+"pout"	364034361	Sacred Cedars	--	--	"[best-not-defile]."
+"minerva"	500458057	Sacred Cedars	--	--	"[best-not-defile]."
+"chalice"	304094081	Sacred Cedars	--	--	"[best-not-defile]."
+"candle"	292749948	Sacred Cedars	--	--	"[best-not-defile]."
+"lance"	271720859	Sacred Cedars	--	--	"[best-not-defile]."
+"idols"	290462317	Sacred Cedars	--	--	"[best-not-defile]."
+"cliche"	301906263	Sacred Cedars	--	--	"[best-not-defile]."
 "oil"	173159262	--	oils	--	"[if caskfillings > 2]They're OILS, but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]." [end-i]
 
 table of Metros nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "metros"	550941626	--	--	degen-true rule	"[reg-rej]."
 "metro"	454667660	--	--	degen-true rule	"[reg-rej]."
-"undesired"	698274326	underside	--	--	"[loc-rej]." [Undesired Underside]
-"titling"	451526777	underside	--	--	"No, the tilting titling is unstable enough."
-"sensor"	548937929	underside	--	--	"You don't have the skill to hack the sensor electronically."
-"door"	255058046	underside	--	--	"It can't be that easy to change. Maybe some random door in the wilderness."
-"optical"	378928642	underside	--	--	"Changing the beam is way out of your league."
-"beam"	212487985	underside	--	--	"Changing the beam is way out of your league."
-"building"	389860542	underside	--	--	"[no-hot]."
-"special"	425546122	underside	--	--	"[if Esoteric Coteries is visited]You don't need to perform any tricks, now you've gotten to the Esoteric Coteries[else]That's not the way to get to the special place. You need special ID[end if]."
-"theol"	396364842	underside	--	--	"[no-hot]."
+"undesired"	698274326	Undesired Underside	--	--	"[loc-rej]." [Undesired Underside]
+"titling"	451526777	Undesired Underside	--	--	"No, the tilting titling is unstable enough."
+"sensor"	548937929	Undesired Underside	--	--	"You don't have the skill to hack the sensor electronically."
+"door"	255058046	Undesired Underside	--	--	"It can't be that easy to change. Maybe some random door in the wilderness."
+"optical"	378928642	Undesired Underside	--	--	"Changing the beam is way out of your league."
+"beam"	212487985	Undesired Underside	--	--	"Changing the beam is way out of your league."
+"building"	389860542	Undesired Underside	--	--	"[no-hot]."
+"special"	425546122	Undesired Underside	--	--	"[if Esoteric Coteries is visited]You don't need to perform any tricks, now you've gotten to the Esoteric Coteries[else]That's not the way to get to the special place. You need special ID[end if]."
+"theol"	396364842	Undesired Underside	--	--	"[no-hot]."
 "metallic"	468805207	--	metallic door	--	"No way. That thing's sturdy. [if Esoteric Coteries is visited]Those nerds[else]The people in there[end if] know their stuff."
 "tonr"	331693906	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "cue"	251917501	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
@@ -370,8 +370,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "beer"	359354926	--	beer	--	"It's just garbage."
 "fleir"	338451493	--	arena dig flier	--	"[if-rifle]."
 "letter"	600969896	--	letter	--	"It's just garbage. The writing inside, too."
-"cramped"	400893516	Underside	--	--	"You can't do much with or to the camp, here or north."
-"camp"	166734515	Underside	--	--	"You can't do much with or to the camp, here or north."
+"cramped"	400893516	Undesired Underside	--	--	"You can't do much with or to the camp, here or north."
+"camp"	166734515	Undesired Underside	--	--	"You can't do much with or to the camp, here or north."
 "roarings"	489962023	Roarings Garrison	--	--	"[loc-rej]." [Roarings Garrison]
 "roaring"	393688057	Roarings Garrison	--	--	"[loc-rej]."
 "tent"	402933653	--	tents	--	"As anti-personal property as the beatniks/moonies are, that'd still annoy them."
@@ -410,12 +410,12 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "talker"	425174765	Obtains Boastin' Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
 "caek"	201932690	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	--	dry cake	--	"It isn't just any cake. It's dry cake."
-"rental"	441149095	Obtains Boastin' Bastion	--	--	"[if antlers are in bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
-"thelo"	396364842	Hotel	--	--	"[loc-rej]." [the ol hotel]
-"bottel"	480611466	Hotel	--	--	"[no-ketch]."
-"ketchup"	526708955	Hotel	--	--	"[no-ketch]."
-"catsup"	407149153	Hotel	--	--	"You think of how to make the ketchup slightly classier. [no-ketch]."
-"mattress"	678160851	Hotel	--	--	"Nothing to change the mattress to[if night thing is visible], even if you could move the night thing off[else if emitter is off-stage], but something might be inside it[else], and you already looted it[end if]."
+"rental"	441149095	Obtains Boastin' Bastion	--	--	"[if antlers are in Obtains Boastin' Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
+"thelo"	396364842	The Ol' Hotel	--	--	"[loc-rej]." [the ol hotel]
+"bottel"	480611466	The Ol' Hotel	--	--	"[no-ketch]."
+"ketchup"	526708955	The Ol' Hotel	--	--	"[no-ketch]."
+"catsup"	407149153	The Ol' Hotel	--	--	"You think of how to make the ketchup slightly classier. [no-ketch]."
+"mattress"	678160851	The Ol' Hotel	--	--	"Nothing to change the mattress to[if night thing is visible], even if you could move the night thing off[else if emitter is off-stage], but something might be inside it[else], and you already looted it[end if]."
 "thing"	286892373	--	night thing	--	"The night thing is twisted beyond redemption."
 "potato"	438578967	--	night thing	--	"The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it."
 "lucre"	391055143	--	ulcer	--	"You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway."
@@ -455,27 +455,27 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "asknerds"	550735437	Esoteric Coteries	--	--	"The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit..."
 "asknerd"	454461471	Esoteric Coteries	--	--	"'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
 "tulip"	388488469	--	tulip	--	"[if player has tulip]It's handy as is. It gives light. You can't ask for much more[else]The nerds would gang up on you and take it back, if anything worked, which it won't[end if]."
-"tramline"	550217094	terminal	--	--	"[loc-rej]." [start tramline terminal]
-"lairs"	282592272	terminal	--	--	"[fix-rail]."
-"lair"	186318306	terminal	--	--	"[fix-rail]."
-"track"	262560402	terminal	--	--	"[fix-rail]."
-"tracks"	358834368	terminal	--	--	"[fix-rail]."
-"psa"	179927743	terminal	--	--	"[psa-vand]."
-"pass"	276201709	terminal	--	--	"[psa-vand]."
-"art"	190621639	terminal	--	--	"There aren't many ways to look at THIS art, and none are constructive, you sense."
-"faded"	198567001	terminal	--	--	"[faded-ad]."
-"fadedad"	221783908	terminal	--	--	"[faded-ad]."
-"fad"	49731803	terminal	--	--	"[faded-ad]."
-"deda"	172052105	terminal	--	--	"[faded-ad]."
+"tramline"	550217094	Elm Train Terminal	--	--	"[loc-rej]." [start tramline terminal]
+"lairs"	282592272	Elm Train Terminal	--	--	"[fix-rail]."
+"lair"	186318306	Elm Train Terminal	--	--	"[fix-rail]."
+"track"	262560402	Elm Train Terminal	--	--	"[fix-rail]."
+"tracks"	358834368	Elm Train Terminal	--	--	"[fix-rail]."
+"psa"	179927743	Elm Train Terminal	--	--	"[psa-vand]."
+"pass"	276201709	Elm Train Terminal	--	--	"[psa-vand]."
+"art"	190621639	Elm Train Terminal	--	--	"There aren't many ways to look at THIS art, and none are constructive, you sense."
+"faded"	198567001	Elm Train Terminal	--	--	"[faded-ad]."
+"fadedad"	221783908	Elm Train Terminal	--	--	"[faded-ad]."
+"fad"	49731803	Elm Train Terminal	--	--	"[faded-ad]."
+"deda"	172052105	Elm Train Terminal	--	--	"[faded-ad]."
 "none"	339973702	--	neon pig	--	"It's not just that it's neon, it's that it's a pig."
 "pgi"	159058507	--	neon pig	--	"It's not just that it's a pig, it's that it's neon."
 "recess"	552489538	--	op	--	"You've already made nothing out of something, and instead of reversing that, [if controls are in op]you did what you needed[else]you may need to put something in the opening[end if]."
 "irwin"	352151776	--	op	--	"You don't want to mess with the wirin['] [if controls are in op]any further[else]that way[end if]."
 "beats"	347796816	--	--	no-beats rule	"The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here."
 "beta"	251522850	--	beats	--	"This racket isn't just one beat."
-"bassy"	335513907	abyss	--	--	"[loc-rej]." [start Bassy Abyss]
-"aligns"	298775679	abyss	--	--	"[aligns-no]."
-"align"	202501713	abyss	--	--	"[aligns-no]."
+"bassy"	335513907	Bassy Abyss	--	--	"[loc-rej]." [start Bassy Abyss]
+"aligns"	298775679	Bassy Abyss	--	--	"[aligns-no]."
+"align"	202501713	Bassy Abyss	--	--	"[aligns-no]."
 "resin"	423304232	--	--	resin-lala rule	"The dust is dust now." [end-m]
 
 table of Resort nudges
@@ -505,9 +505,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lock"	200105179	--	tool shed	--	"Nope. That lock's secure."
 "rope"	368948448	--	ropes	--	"Those are already useful."
 "grip"	244382310	--	grips	--	"Those are already useful."
-"hotsopt"	569947414	hotspot	--	--	"[loc-rej]." [start Potshot Hotspot]
-"ransom"	391120825	hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
-"manor"	294846859	hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
+"hotsopt"	569947414	Potshot Hotspot	--	--	"[loc-rej]." [start Potshot Hotspot]
+"ransom"	391120825	Potshot Hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
+"manor"	294846859	Potshot Hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
 "rioters"	617183122	--	riot	--	"[simple-riot]."
 "rioter"	520909156	--	riot	--	"[simple-riot]."
 "people"	546710552	--	riot	--	"[simple-riot]."
@@ -738,8 +738,8 @@ to say bothlivers:
 	say "The one liver seems inactive by itself"
 
 this is the spread-drapes rule:
-	if player is in Enclosure:
-		if drapes are in Enclosure or spread is in Enclosure:
+	if player is in Cruel Ones' Enclosure:
+		if drapes are in Cruel Ones' Enclosure or spread is in Cruel Ones' Enclosure:
 			the rule succeeds;
 	the rule fails;
 
@@ -834,11 +834,11 @@ this is the in-i-main rule:
 	the rule fails;
 
 to say no-hot:
-	say "You can't change the hotel, [if night thing is not in Hotel]and you got rid of the night thing, anyway[else]but you could have [a-nother] look around[end if]";
+	say "You can't change the hotel, [if night thing is not in The Ol' Hotel]and you got rid of the night thing, anyway[else]but you could have [a-nother] look around[end if]";
 
 to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 
-to say condo-visit: say "[if dry cake is in bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
+to say condo-visit: say "[if dry cake is in Obtains Boastin' Bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
 
 to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
 
@@ -885,7 +885,7 @@ this is the resin-lala rule:
 section resort nudges
 
 to say a-nother:
-	say "a[if Hotel is visited]nother[end if]";
+	say "a[if The Ol' Hotel is visited]nother[end if]";
 
 to say the-sand:
 	say "The sand is just--well, sand. It won't help you get off the island";

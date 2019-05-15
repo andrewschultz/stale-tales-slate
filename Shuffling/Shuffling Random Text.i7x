@@ -4409,7 +4409,7 @@ this is the with-hippies rule:
 	the rule fails;
 
 this is the talk-in-bastion rule:
-	if player is in bastion and talkers are in bastion, the rule succeeds;
+	if player is in Obtains Boastin' Bastion and talkers are in Obtains Boastin' Bastion, the rule succeeds;
 	the rule fails;
 
 this is the in-mensa rule:

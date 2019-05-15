@@ -93,7 +93,7 @@ book Resort
 
 table of Resort anagrams [xxtra]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
+tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Leis Isle
 l2	l2	"lies"	"lies"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
@@ -265,7 +265,7 @@ to say m-r-almost:
 		say "You almost feel something picking you up for a second. You must have been close"
 
 to say red-to:
-	now red asp is in Enclosure;
+	now red asp is in Cruel Ones' Enclosure;
 	set the pronoun it to red asp;
 	moot spread;
 
@@ -364,8 +364,8 @@ hint-entry	advice-entry	parallel-entry
 yourself	"[if cur-score of Ordeal Loader is 0]Try hinting objects around you instead[else]You have the ability to anagram things[end if]."
 redness	"Redness means all the letters in a word are wrong, compared to what something should become. E.g. GNAT <-> TANG."
 dope tan notepad	"You will write procedural things in your notepad as you get them."
-acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems animated, almost an animal. [plus][or]This is a LLP and maybe a slightly tricky one. [plus][or]It feels almost kind, mammalian, and the bits read CAN BITE which is in red. [plus][or]NICE BAT. [minus][cycling]"
-cratered bits	"The cratered bits clue what the cabinet can become[if strip is unvisited] once you start your main quest[end if]."
+acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems animated, almost an animal. [plus][or]This is a LLP and maybe a slightly tricky one. [plus][or]It feels almost kind, mammalian, and the bits read CAN BITE which is in red. [plus][or]NICE BAT. [minus][cycling]"
+cratered bits	"The cratered bits clue what the cabinet can become[if Trips Strip is unvisited] once you start your main quest[end if]."
 name list	"The list hints what Shuffling Around is all about."
 above-sign	"The sign seems to be mis-printed, which is a clue what Shuffling Around is all about."
 odd side passage	"You can ENTER the odd side passage, or go IN."
@@ -452,10 +452,10 @@ whiff of stew	"[one of]The stew is a clue which way to go. [plus][or]You should 
 thorn	"[one of]The thorn is a clue which way to go. [plus][or]You should go NORTH. [minus][cycling]"
 rambling shout	"[one of]The shout is a clue which way to go. [plus][or]You should go SOUTH. [minus][cycling]"
 aroma of teas	"[one of]The aroma of teas is a clue which way to go. [plus][or]You should go EAST. [minus][cycling]"
-Corses Crosse	"[if Enclosure is visited]You can come and go as you need[else]You need a way through Corses Crosse--perhaps you should learn to fit in[end if]."
+Corses Crosse	"[if Cruel Ones' Enclosure is visited]You can come and go as you need[else]You need a way through Corses Crosse--perhaps you should learn to fit in[end if]."
 bread	"[one of]The bread can be changed. [plus][or]It becomes a BEARD. [minus][cycling]"
 sandwich	"[one of]The sandwich[i-fle] is useful for two puzzles. It has 'the usual two parts.' [plus][or]Take BREAD to separate the sandwich from the Flesh Shelf into bread and Spam. [minus][cycling]"
-chisel	"[one of]That chisel might be handy for some items[if player is in Enclosure] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers[i-fle]. [minus][cycling]"
+chisel	"[one of]That chisel might be handy for some items[if player is in Cruel Ones' Enclosure] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers[i-fle]. [minus][cycling]"
 liches	"[one of]The liches are a tool of some greater evil, and their descriptions suggest another word (+)[or]Make them into a CHISEL[cycling]."
 River Ville liver	"[put-can]"
 viler liver	"[put-can]"
@@ -478,7 +478,7 @@ red ring	--	grinder
 blades	--	grinder
 elegy	"[if shotgun is off-stage]The elegy, if read correctly, can give you an idea of what the noughts can become[else]The elegy was a hint for the shotgun[end if]."
 gy	--	line of no life
-line of no life	"[if Enclosure is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
+line of no life	"[if Cruel Ones' Enclosure is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
 banshee	"[one of]You don't need to get rid of the banshee to solve the forest, but you can put it even more in the past. [plus][or]What's a name for something that was? [plus][or]HAS-BEEN. With dash, space or no space. [minus][cycling]"
 spread	"[one of]The SPREAD can become something. Well, by magic. If you fiddle with it, it becomes something else. [plus][or]You can't quite cut the spread as-is, but maybe you could transform it into something less intimidating? [plus][or]You can figure out what the word is from there. [plus][or]The SPREAD becomes DRAPES. [minus][cycling]"
 red asp	"[one of]The red asp is too dangerous to fight, but remember, it started as a SPREAD, also red. [plus][or]Attacking the asp gives another clue, since you turn all red. [plus][or] The asp doesn't leave you feeling very homey. [plus][or]The red asp can become DRAPES. [minus][cycling]"
@@ -570,7 +570,7 @@ can of beer	"The beer can's name clues what the drainage could be."
 arena dig flier	"The flier clues what the drainage should be."
 metallic door	"[if nerds-unwelcome is true]You got through the door, but you're not welcome back. No loss[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
 night thing	"You can't kill the night thing on your own. Maybe something equally awful would take care of it?"
-smartest mattress	"[if night thing is in Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
+smartest mattress	"[if night thing is in The Ol' Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
 cruel ulcer	"That cruel ulcer looks like a weak link. If you could throw something in there..."
 ketchup bottle	"The ketchup bottle clues what the night thing likes."
 tomato	"The tomato is rotten enough that throwing it at something may send them off-stage."

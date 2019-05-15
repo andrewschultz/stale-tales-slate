@@ -193,17 +193,17 @@ understand "tone" and "tones" as a mistake ("You aren't sure you need a booming 
 
 chapter cruel ones enclosure
 
-understand "cluer" as a mistake ("[if player is in Enclosure]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is visible or player is in Enclosure.
+understand "cluer" as a mistake ("[if player is in Cruel Ones' Enclosure]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is visible or player is in Cruel Ones' Enclosure.
 
-understand "lucre" as a mistake ("[if player is in Enclosure]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is visible or player is in Enclosure.
+understand "lucre" as a mistake ("[if player is in Cruel Ones' Enclosure]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is visible or player is in Cruel Ones' Enclosure.
 
-understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Enclosure and red asp is not moot.
+understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Cruel Ones' Enclosure and red asp is not moot.
 
-understand "parsed" as a mistake ("You can just read the [if drapes are visible]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Enclosure and red asp is not moot.
+understand "parsed" as a mistake ("You can just read the [if drapes are visible]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Cruel Ones' Enclosure and red asp is not moot.
 
-understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Enclosure and red asp is not moot.
+understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Cruel Ones' Enclosure and red asp is not moot.
 
-understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Enclosure and red asp is not moot.
+understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Cruel Ones' Enclosure and red asp is not moot.
 
 understand "spared" as a mistake ("That is too passive, to ask to be spared.") when red asp is not moot.
 
@@ -254,7 +254,7 @@ understand "stake" as a mistake ("A stake would have no use here. So that might 
 
 understand "takes" as a mistake ("You do a take, then a double take, at how odd this all is.") when steak is visible or skate is visible.
 
-understand "teaks" as a mistake ("Hm. An indoor forest. [if cedars is unvisited]That would be neat to see. But this is a kitchen[else]But you've already seen one[end if].") when steak is visible or skate is visible.
+understand "teaks" as a mistake ("Hm. An indoor forest. [if Sacred Cedars is unvisited]That would be neat to see. But this is a kitchen[else]But you've already seen one[end if].") when steak is visible or skate is visible.
 
 chapter ROOM
 
@@ -317,7 +317,7 @@ understand "sever" as a mistake ("Violence or vandalism in such a holy place? Fo
 
 book store m
 
-understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in Bassy Abyss]along with the beats[else if player is in Hotel or player is in Undesired Underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
+understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in Bassy Abyss]along with the beats[else if player is in The Ol' Hotel or player is in Undesired Underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
 
 understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.") when beats are visible or beast is visible.
 
@@ -360,9 +360,9 @@ understand "trounce" and "trounce counter" as a mistake ("The faeries have very 
 
 chapter tramline terminal
 
-understand "asp" and "asps" as a mistake ("That's just what you need, a snake chasing you with everything else going on.") when player is in Terminal.
+understand "asp" and "asps" as a mistake ("That's just what you need, a snake chasing you with everything else going on.") when player is in Elm Train Terminal.
 
-understand "gip" as a mistake ("Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.") when player is in terminal and neon pig is in terminal.
+understand "gip" as a mistake ("Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.") when player is in Elm Train Terminal and neon pig is in Elm Train Terminal.
 
 understand "lair" and "lairs" as a mistake ("That might work, if the rail did not lead to a lair already.") when player is enclosed by terminal.
 
@@ -370,15 +370,15 @@ understand "liar" and "liars" as a mistake ("The number of liars the rails would
 
 understand "lira" as a mistake ("But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.") when player is enclosed by terminal.
 
-understand "none" as a mistake ("Bummer! You'd think that worked to get rid of the pig, but that's probably too abstract a noun. Probably have to deal with the whole neon pig.") when player is in terminal and neon pig is in terminal.
+understand "none" as a mistake ("Bummer! You'd think that worked to get rid of the pig, but that's probably too abstract a noun. Probably have to deal with the whole neon pig.") when player is in Elm Train Terminal and neon pig is in Elm Train Terminal.
 
-understand "pass" as a mistake ("You take a pass on etiquette advice. You need results right now!") when player is in Terminal.
+understand "pass" as a mistake ("You take a pass on etiquette advice. You need results right now!") when player is in Elm Train Terminal.
 
 understand "rat" as a mistake ("No, you don't need a rat chasing you around.") when player is enclosed by Elm Train Terminal.
 
-understand "sap" and "saps" as a mistake ("The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.") when player is in Terminal.
+understand "sap" and "saps" as a mistake ("The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.") when player is in Elm Train Terminal.
 
-understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") when player is in Terminal.
+understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") when player is in Elm Train Terminal.
 
 understand "tar" as a mistake ("That'd be neat, make the wall sticky so you could climb and deal with that [if neon pig is visible]stupid pig[else]opening you made[end if]...but you might get stuck to it, too. Need something clingy but less gooey.") when player is in Elm Train Terminal.
 

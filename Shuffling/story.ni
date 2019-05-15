@@ -346,7 +346,7 @@ to say tag-status:
 	else:
 		say "[if gateman is visible]at least [end if]not wearing that stupid nametag any more";
 
-instead of dropping tomato: say "Much as you'd like to drop it, it [if player is in Hotel]is actually handy here[else]might come in handy somewhere[end if]."
+instead of dropping tomato: say "Much as you'd like to drop it, it [if player is in The Ol' Hotel]is actually handy here[else]might come in handy somewhere[end if]."
 
 section mootness
 
@@ -1013,7 +1013,7 @@ carry out forest-hinting:
 		if shotgun is off-stage, try objhinting the noughts instead; [this isn't strictly in order, but if the player is in GT they may want to know the noughts are important]
 		if shades are off-stage, try objhinting dashes instead;
 	if player is in Flesh Shelf and bread is part of the sandwich, try objhinting sandwich instead; [this and the above two together mean that you will get local hints first before generic ones]
-	if Enclosure is unvisited:
+	if Cruel Ones' Enclosure is unvisited:
 		if coe-clue is false:
 			now coe-clue is true;
 			try objhinting line of no life instead;
@@ -1031,9 +1031,9 @@ carry out forest-hinting:
 		if viler liver is not off-stage, try objhinting viler liver instead;
 		try objhinting River Ville liver instead;
 	if sliver is off-stage, try objhinting livers instead;
-	if spread is in Enclosure, try objhinting spread instead;
-	if red asp is in Enclosure, try objhinting red asp instead;
-	if drapes are in Enclosure:
+	if spread is in Cruel Ones' Enclosure, try objhinting spread instead;
+	if red asp is in Cruel Ones' Enclosure, try objhinting red asp instead;
+	if drapes are in Cruel Ones' Enclosure:
 		if sliver is off-stage, try objhinting livers instead;
 		try objhinting drapes instead;
 	if shotgun is off-stage, try objhinting noughts instead;
@@ -1041,7 +1041,7 @@ carry out forest-hinting:
 	if shotgun is not loaded, try objhinting shotgun instead;
 	if player does not have maps, try objhinting spam instead;
 	if player is in Ghouls' Slough, try objhinting maps instead;
-	if player is not in Frost Forts, all-say "You should be able to go north [if player is not in Enclosure]from the enclosure [end if]now." instead;
+	if player is not in Frost Forts, all-say "You should be able to go north [if player is not in Cruel Ones' Enclosure]from the enclosure [end if]now." instead;
 	if player is in Frost Forts:
 		if vowels are visible, try objhinting vowels instead;
 		if wolves are visible, try objhinting wolves instead;
@@ -1058,8 +1058,8 @@ carry out objhinting heaths when fairy-worthy is false: try objhinting faeries i
 carry out objhinting tulip when tulip is in Esoteric Coteries: try objhinting nerds instead.
 
 carry out metros-hinting:
-	if player is in Hotel:
-		if night thing is in Hotel, try objhinting night thing instead;
+	if player is in The Ol' Hotel:
+		if night thing is in The Ol' Hotel, try objhinting night thing instead;
 		if player has termite emitter, all-say "Your work in the ol['] hotel is done." instead;
 		all-say "Why not search the mattress? Something's in there." instead;
 	if player is in Obtains Boastin' Bastion, try objhinting dry cake instead;
@@ -1217,7 +1217,7 @@ carry out sortie-hinting:
 			if poem is unexamined, all-say "You should read the poem the peasant gave you. It's not terrible, but it contains some things that don't belong in a poem." instead;
 			try objhinting smilies instead;
 		if soil is not visible or silo is not visible:
-			if cedars is unvisited, all-say "You need to visit the room you opened east of the trellis first." instead;
+			if Sacred Cedars is unvisited, all-say "You need to visit the room you opened east of the trellis first." instead;
 			if cask is moot, all-say "You need to change the sack into a cask to carry the oils from Sacred Cedars." instead;
 			if oils are not in cask, all-say "You need to fill the cask[if soil is in moor]. Yes, again[end if]." instead;
 			try objhinting oils;
@@ -1330,7 +1330,7 @@ the block waving hands rule is not listed in any rulebook
 instead of waving hands:
 	if player is in Busiest Subsite, say "You don't see any friends nearby, sadly. It's all a bit awkward." instead;
 	if player is in notices and gateman is in notices, say "You've already introduced yourself. Just ask him about what you want/need." instead;
-	if player is in hotel and night thing is in hotel, say "Bad idea. Don't know what might make it charge." instead;
+	if player is in The Ol' Hotel and night thing is in The Ol' Hotel, say "Bad idea. Don't know what might make it charge." instead;
 	if player is in Roarings Garrison, say "The dead beat deadbeat nods in return." instead;
 	if player is in Obtains Boastin' Bastion and talkers are in Obtains Boastin' Bastion, say "They pointedly ignore you." instead;
 	if beast is in Bassy Abyss and player is in Bassy Abyss, say "It's not very friendly at all." instead;
@@ -2297,7 +2297,7 @@ check fliptoing (this is the should we bother flipping rule):
 check fliptoing silver:
 	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
 	if sliver is visible:
-		if doorway is not in Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
+		if doorway is not in Cruel Ones' Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
 
 after fliptoing soil:
 	now oils are in Sacred Cedars;
@@ -2362,7 +2362,7 @@ after fliptoing peasant:
 	continue the action;
 
 after fliptoing chisel:
-	now spread is in Enclosure;
+	now spread is in Cruel Ones' Enclosure;
 	continue the action;
 
 after fliptoing protest:
@@ -2554,7 +2554,7 @@ preflip	pretodo
 nametag	"nametag -> gateman" [Ordeal Loader]
 cabinet	"cabinet -> nice bat" [stores]
 silver	"[if livers are not moot]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
-drapes	"spread -> [if red asp is in Enclosure]RED ASP -> [end if]drapes"
+drapes	"spread -> [if red asp is in Cruel Ones' Enclosure]RED ASP -> [end if]drapes"
 sack	"cask -> sack" [sortie]
 r2	"room -> moor"
 hallway	"[if hay is part of scraped wall]wall -> HAYWALL[else]WALL -> haywall[end if] -> hallway"
@@ -4026,14 +4026,14 @@ carry out gleaning:
 		all-say "You see yourself relaxing in a large manse far from here." instead;
 	if mrlp is forest:
 		if Self-ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
-		if Enclosure is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
+		if Cruel Ones' Enclosure is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
 		if livers are off-stage, all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
 		if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
 		unless drapes are moot, all-say "You see yourself slashing at the drapes, which billow out." instead;
 		if shotgun is off-stage, all-say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
 		if spread is visible, all-say "You see the spread fluttering as if outside an open window." instead;
 		if red asp is visible, all-say "You see the a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
-		if drapes are off-stage, all-say "You see yourself changing the [if red asp is in enclosure]red asp[else]spread[end if] [if player is not in enclosure]in the Enclosure [end if]into something easier to cut with the sliver." instead;
+		if drapes are off-stage, all-say "You see yourself changing the [if red asp is in Cruel Ones' Enclosure]red asp[else]spread[end if] [if player is not in Cruel Ones' Enclosure]in the Enclosure [end if]into something easier to cut with the sliver." instead;
 		unless silver is moot, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
 		if Frost Forts is unvisited:
 			if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
@@ -4055,7 +4055,7 @@ carry out gleaning:
 		if hoots button is visible or trees button is visible, all-say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
 		all-say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
 	if mrlp is metros:
-		if night thing is in Hotel, all-say "You see yourself giving something reddish to [if Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
+		if night thing is in The Ol' Hotel, all-say "You see yourself giving something reddish to [if The Ol' Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
 		if cake is in Obtains Boastin' Bastion, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
 		if player has heaths, all-say "You see a weapon at your side, as if tied to a belt." instead;
 		if player has begonias, all-say "You are holding a bag with one hand and plugging an ear with another." instead;
@@ -4667,7 +4667,7 @@ check entering posted depots:
 
 section metros portal
 
-the trade tread is a portal. "A trade tread leads off [if underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
+the trade tread is a portal. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
 
 check climbing trade tread: try entering trade tread instead.
 
@@ -4679,7 +4679,7 @@ to check-2-of-3:
 check entering trade tread:
 	if metros is not unsolved, say "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you." instead;
 	check-2-of-3;
-	say "The elevator's descent is rapidly scented worse. After you pass [one of]a[or]that[stopping] 'Tasers? You bet! Asters? Out, bye!' billboard, an automated voice announces that Mt. Rose has made its freedom more def, so ordinary citizens are motivated to level up and money farm just like Red Bull Burdell, and a funky thumping beat helps them to action.[paragraph break]You jog down the elevator to escape it, but of course it's coming from the city[if drainage is in Undesired Underside]. And you step into some drainage at the bottom. Eww[end if][if underside is visited]. Which you should've remembered from last time[end if].[wfak]";
+	say "The elevator's descent is rapidly scented worse. After you pass [one of]a[or]that[stopping] 'Tasers? You bet! Asters? Out, bye!' billboard, an automated voice announces that Mt. Rose has made its freedom more def, so ordinary citizens are motivated to level up and money farm just like Red Bull Burdell, and a funky thumping beat helps them to action.[paragraph break]You jog down the elevator to escape it, but of course it's coming from the city[if drainage is in Undesired Underside]. And you step into some drainage at the bottom. Eww[end if][if Undesired Underside is visited]. Which you should've remembered from last time[end if].[wfak]";
 	move the player to last-loc of metros;
 	recover-items instead;
 
@@ -4706,7 +4706,7 @@ resort-known is a truth state that varies. resort-known is usually false.
 check fliptoing the r-p:
 	if you-can-advance, continue the action;
 	if store r is visible:
-		say "That seems like it should work, but you sense you have not done enough yet[if Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
+		say "That seems like it should work, but you sense you have not done enough yet[if Leis Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
 		preef store r instead;
 
 check entering the r-p:
@@ -4830,7 +4830,7 @@ understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as lin
 
 section corses crosse
 
-Corses Crosse is boringscen in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is crosse-enter rule.
+Corses Crosse is boringscen in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is crosse-enter rule.
 
 this is the crosse-enter rule:
 	if current action is entering, try going north instead;
@@ -4852,7 +4852,7 @@ check going south in Self-ID Fields:
 section random ID field text
 
 every turn when player is in Self-ID Fields (this is the crosse-guys-through rule):
-	if Enclosure is unvisited:
+	if Cruel Ones' Enclosure is unvisited:
 		say "[guy-by-description]";
 
 to say guy-by-description: say "Dude, an undead! It's got [burns] and is wearing [glasstype] and [nosey]. Corses Crosse glows briefly as the undead walks through."
@@ -5228,25 +5228,25 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure.
 
-Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
+Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
 
-after looking in Enclosure:
-	if banshee is in enclosure:
+after looking in Cruel Ones' Enclosure:
+	if banshee is in Cruel Ones' Enclosure:
 		set the pronoun it to banshee;
 		set the pronoun him to banshee;
 		set the pronoun her to banshee;
-	if liches are in enclosure:
+	if liches are in Cruel Ones' Enclosure:
 		set the pronoun them to liches;
 
 to say d-s: say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]".
 
-check going nowhere in Enclosure: say "You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north." instead.
+check going nowhere in Cruel Ones' Enclosure: say "You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north." instead.
 
 Include (-
 	has transparent animate
 -) when defining banshee.
 
-the banshee is scenery in Enclosure. rgtext of banshee is "[rcn][rc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
+the banshee is scenery in Cruel Ones' Enclosure. rgtext of banshee is "[rcn][rc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
 
 description of banshee is "You can hear but not see it."
 
@@ -5688,9 +5688,9 @@ after printing the locale description for kitchen when kitchen is unvisited:
 
 does the player mean putting an ingredient on the tortilla: it is very likely.
 
-description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
+description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the centrifuge room and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
 
-check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead.
+check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Stiller Trellis is visited] to the trellis[end if]." instead.
 
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -6019,7 +6019,7 @@ check scaning location (this is the air scan rule):
 	if player is in the nick or player is in Esoteric Coteries or player is in moor or player is in roomroom or player is in Means Manse:
 		if player has gadget, try examining gadget instead;
 
-instead of going nowhere in roomroom: say "Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Trellis is visited] to the trellis[end if].".
+instead of going nowhere in roomroom: say "Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if].".
 
 roomroom is east of Trap Part.
 
@@ -6306,7 +6306,7 @@ to say moor-jump:
 
 chapter Stiller Trellis / Crashing Archings
 
-Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is moot]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is moot or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie.
+Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is moot]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if Sacred Cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is moot or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie.
 
 understand "haywall" and "hay wall" as scraped wall when scraped wall is hayfilled.
 
@@ -6314,10 +6314,10 @@ trel-priv is privately-named scenery in Stiller Trellis. printed name of trel-pr
 
 understand "decoration" as trel-priv.
 
-description of trel-priv is "[if cedars is visited]The trellis feels appropriate to guard or indicate the room to the east, now you've been there[else if scraped wall is visible]It arches over the scraped bit of wall, as if the wall wasn't supposed to be there. You could picture a passage through it, somehow[else]You could just walk under it to the east, now[end if]."
+description of trel-priv is "[if Sacred Cedars is visited]The trellis feels appropriate to guard or indicate the room to the east, now you've been there[else if scraped wall is visible]It arches over the scraped bit of wall, as if the wall wasn't supposed to be there. You could picture a passage through it, somehow[else]You could just walk under it to the east, now[end if]."
 
 to say the-trellis:
-	if cedars is visited:
+	if Sacred Cedars is visited:
 		say "The trellis feels appropriate to guard or indicate the room to the east, now you've been there";
 	else:
 		say "The trellis to the east is the only decoration you've seen in this area[if scraped wall is not hayfilled], and the wall below it seems scraped and beaten up a bit[end if]"
@@ -6870,7 +6870,7 @@ chapter Undesired Underside
 
 Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west."
 
-the tilting titling is boringscen in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
+the tilting titling is boringscen in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if The Ol' Hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
 
 check going inside in Undesired Underside: say "That's ambiguous with the hotel west and the metal door east." instead.
 
@@ -7060,7 +7060,7 @@ check going north in Roarings Garrison:
 
 check going nowhere in Roarings Garrison:
 	if noun is up or noun is down, continue the action;
-	say "There's [if bastion is visited]the Obtains Boastin['] Bastion[else]condos[end if] north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south." instead;
+	say "There's [if Obtains Boastin' Bastion is visited]the Obtains Boastin['] Bastion[else]condos[end if] north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south." instead;
 
 the fuzzy clover is a thing in Roarings Garrison. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3. cert-text of clover is "-[d1][d1][d1][d1][d1]". rect-text of clover is "V[d1][d1][d1][d1][ast]O".
 
@@ -7673,7 +7673,7 @@ There is a room called The Ol' Hotel.
 
 The Ol' Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HÔTE HELOT scribbled about. The only way out is east.". Hotel is in Metros.
 
-The Night Thing is a neuter person in Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
+The Night Thing is a neuter person in The Ol' Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
 
 after doing something with the night thing:
 	set the pronoun her to night thing;
@@ -7699,7 +7699,7 @@ instead of giving something to the night thing:
 
 the cruel ulcer is a boringthing. it is part of the night thing. description of cruel ulcer is "It's nasty and yellowed and an indication maybe scaring people in the hotel is more stressful than you think. You wonder how food goes down there.". bore-text is "It's neither a clue-r nor lucre."
 
-the ketchup bottle is a thing in Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is visible]is roaring nearby[else]was here[end if]."
+the ketchup bottle is a thing in The Ol' Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is visible]is roaring nearby[else]was here[end if]."
 
 the description of the ketchup bottle is "It is THE PUCK brand ketchup. And it's shaped that way, too. They apparently put, heck, whatever they want in it! And you'll like it that way!"
 
@@ -7713,9 +7713,9 @@ check inserting into the bottle: say "Ketchup bottles have those narrow necks, s
 
 instead of eating the ketchup: say "You don't know where it's been. Oh, wait, even worse, you DO.".
 
-check going nowhere in Hotel: say "You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city." instead.
+check going nowhere in The Ol' Hotel: say "You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city." instead.
 
-check going outside in Hotel: try going east instead.
+check going outside in The Ol' Hotel: try going east instead.
 
 The termite emitter is a device. "A termite emitter lies here, forgotten. It still looks operational. Perhaps it's part of why the hotel is so beaten up."
 
@@ -7770,7 +7770,7 @@ check switching on the termite emitter:
 	if location is Bassy, say "The termites would put up a valiant but futile effort." instead;
 	say "The termites don't have enough to eat here." instead;
 
-the smartest mattress is a container in Hotel. the mattress is fixed in place.
+the smartest mattress is a container in The Ol' Hotel. the mattress is fixed in place.
 
 does the player mean entering the mattress: it is likely.
 
@@ -9795,7 +9795,7 @@ some maps are plural-named things.
 
 understand "map" as some maps when mrlp is forest.
 
-description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet--[randbla] and [randbla] seem scary, though.[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog--[randbla] and [randbla] seem scary, though. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
+description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Cruel Ones' Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet--[randbla] and [randbla] seem scary, though.[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog--[randbla] and [randbla] seem scary, though. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
 
 the Spam is flippable.
 
@@ -9923,7 +9923,7 @@ Include (-
 	has transparent animate
 -) when defining liches.
 
-The liches are scenery in Enclosure. The liches are flippable. rgtext of liches is "[rcn][rc][rc][rc][gc][rc]". lgth of liches is 6. gpos of liches is 3. rpos of liches is 1. cert-text of liches is "-[d1][d1][d1][ast]E[d1]". rect-text of liches is "C[d1][d1][d1][d1][ast]L".
+The liches are scenery in Cruel Ones' Enclosure. The liches are flippable. rgtext of liches is "[rcn][rc][rc][rc][gc][rc]". lgth of liches is 6. gpos of liches is 3. rpos of liches is 1. cert-text of liches is "-[d1][d1][d1][ast]E[d1]". rect-text of liches is "C[d1][d1][d1][d1][ast]L".
 
 understand "lich" as liches
 
@@ -9933,7 +9933,7 @@ after doing something with liches:
 
 description of liches is "They seem to be moaning about being reduced to a tool of greater evil."
 
-check listening when player is in Enclosure:
+check listening when player is in Cruel Ones' Enclosure:
 	if liches are visible, say "The liches are whining about their former lives. 'Tried to...I rotted...' One was a sculpted abstract artist worth far less than its fees, one cheated others for any amount of money it felt like, and one was an obsessive bodybuilder. All forgot about their spiritual life[if banshee is visible]. They almost drown out the banshee's screams[end if]." instead;
 	if banshee is visible, say "The banshee is still moaning. Not threateningly, but annoyingly. Be nice to get rid of it, if you could." instead;
 
@@ -9941,11 +9941,11 @@ The chisel is a thing. it is not fixed in place.
 
 description of the chisel is "It seems like it can PEEL all sorts of things you may not want to handle."
 
-check going inside in Enclosure:
-	if liches are in Enclosure, say "The liches won't let you past." instead;
-	if drapes are in Enclosure, say "The drapes are too thick. They almost seem to enfold you in darkness before you can run away." instead;
-	if red asp is in Enclosure, say "You need to get rid of the red asp, first." instead;
-	if spread is in Enclosure:
+check going inside in Cruel Ones' Enclosure:
+	if liches are in Cruel Ones' Enclosure, say "The liches won't let you past." instead;
+	if drapes are in Cruel Ones' Enclosure, say "The drapes are too thick. They almost seem to enfold you in darkness before you can run away." instead;
+	if red asp is in Cruel Ones' Enclosure, say "You need to get rid of the red asp, first." instead;
+	if spread is in Cruel Ones' Enclosure:
 		say "As you try to walk through the spread, it reforms into a nasty red asp! You back up quickly.[red-to]";
 		the rule succeeds;
 	if player does not have maps and player does not have Spam, say "[dibb]It's probably dangerous to go there without some sort of guide." instead;
@@ -10079,7 +10079,7 @@ before cutting:
 	if noun is drapes:
 		say "The drapes vanish as they are cut, revealing a doorway.";
 		moot drapes;
-		now doorway is in Enclosure instead;
+		now doorway is in Cruel Ones' Enclosure instead;
 	if noun is wolves, say "You're way outnumbered. And you have a better weapon." instead;
 	if noun is show hows tag or noun is knot:
 		if player has sliver, ask-to-cut instead;
@@ -10108,7 +10108,7 @@ instead of opening doorway: try going inside.
 
 instead of entering doorway: try going inside.
 
-instead of going north in Enclosure: try going inside.
+instead of going north in Cruel Ones' Enclosure: try going inside.
 
 part scoring
 
@@ -12203,10 +12203,10 @@ to unsolve-metros:
 	now clover is not flipped-yet;
 	now Velcro is off-stage;
 	now bastion-evac is false; [Obtains Boastin' Bastion]
-	now dry cake is in bastion;
+	now dry cake is in Obtains Boastin' Bastion;
 	now dry cake is not flipped-yet;
 	now keycard is off-stage;
-	now antlers are in bastion;
+	now antlers are in Obtains Boastin' Bastion;
 	now antlers are not flipped-yet;
 	now brocade is in Fo' Real Florae;	[Fo' Real Florae]
 	now brocade is not flipped-yet;
@@ -12227,7 +12227,7 @@ to unsolve-metros:
 	now tomato is off-stage;
 	now tulip is in Esoteric Coteries;	[special place]
 	now Esoteric Coteries are unvisited;
-	now night thing is in Hotel;	[ol' hotel]
+	now night thing is in The Ol' Hotel;	[ol' hotel]
 	now termite emitter is off-stage;
 	now termite emitter is ungnatted;
 	now power-shut is false;	[train terrain]
@@ -12304,9 +12304,9 @@ to unsolve-forest:
 	now bread is part of sandwich;
 	now spam is part of sandwich;
 	now maps are off-stage;
-	now liches are in Enclosure;
+	now liches are in Cruel Ones' Enclosure;
 	now chisel is off-stage;
-	now spread is in Enclosure;
+	now spread is in Cruel Ones' Enclosure;
 	now vowels are in Frost Forts;
 	now wolves are off-stage;
 	now livers are off-stage;
@@ -12399,7 +12399,7 @@ understand "met [number]" as meting.
 
 carry out meting:
 	if number understood > 2 or number understood < 1, say "1 for heaths, 2 for begonias." instead;
-	if abyss is visited:
+	if Bassy Abyss is visited:
 		say "Sorry, you need to restart to run the MET test command again.";
 	now player has the lit-up tulip;
 	now power-shut is true;
