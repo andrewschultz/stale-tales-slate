@@ -114,7 +114,7 @@ rats,RGRP=tars
 prost,?R?R?=sport=ports
 #dirge ridge
 whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
-#qver of goodness
+#qver of sods gone odes song
 goodness,R?YRRYRR=sodsgone=odessong
 goodness,negssodo,densosgo,segsdoon
 #phat path/saps pass
@@ -173,6 +173,8 @@ search,RY?RRR=chaser=achers=arches
 splain,RRRY??=lapsin=plains
 #qver of span pans
 snap,?R?R=span=pans
+#qver of templar ramplet
+trample,?RYRRRY=templar=ramplet
 #dourest detours
 tan,ant
 #den loft

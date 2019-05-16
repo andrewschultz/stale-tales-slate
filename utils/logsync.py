@@ -20,6 +20,7 @@ got_logic = defaultdict(int)
 got_logic_invis = defaultdict(int)
 got_logic_reds = defaultdict(int)
 open_line = defaultdict(int)
+sim = defaultdict(str)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
@@ -52,9 +53,15 @@ def usage():
 def check_aftertexts():
     okay = defaultdict(bool)
     with open(data_file) as file:
-        for line in file:
+        for (line_count, line) in enumerate(file, 1):
             if line.startswith('#'): continue
             if line.startswith(';'): break
+            ll = line.lower().strip()
+            ary = ll.split(",")
+            if '=' in line:
+                ary = ll.split("=")
+                sim[ary[0]] = ary[1]
+                continue
             ll = line.lower().strip().split(",")
             for x in ll: okay[x] = True
     markedokay = 0
@@ -80,11 +87,11 @@ def check_aftertexts():
             ll = re.split("\t+", line)
             l0 = ll[0].lower()
             in_aftertexts[l0] = line_count
-            print(line_count)
             if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of tabs at line {:d}: {:s}".format(line_count, line))
+            elif len(ll) == 1: print("WARNING need to add full row for line", line_count, l0)
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in need_source_logic.keys():
-                if l0 not in okay.keys():
+                if l0 not in okay.keys() and l0 not in sim.values():
                     suggestions.append("{:s} may be superfluous aftertext at line {:d}".format(l0, line_count))
                     mayneedsource += 1
                 #print(ll[5])
@@ -92,7 +99,7 @@ def check_aftertexts():
                 if verbose: print("Got", ll[0], "in aftertexts.")
     if len(suggestions): print("\n".join(sorted(suggestions)))
     for x in sorted(need_source_logic.keys()):
-        if x not in in_aftertexts.keys():
+        if x not in in_aftertexts.keys() and x not in sim.keys():
             print("May need", x, "in aftertexts table.")
             mayneedaftertext += 1
     for x in okay.keys():
@@ -124,6 +131,8 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
         if launch_message: print(launch_message)
     else:
         print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
+    extraneous = list(set(gots) - set(needs))
+    if len(extraneous): print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), sorted(extraneous))
 
 count = 0
 
