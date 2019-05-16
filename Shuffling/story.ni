@@ -2071,27 +2071,7 @@ Forest	scented descent	"You go to the forest."	"You return to the forest."
 Sortie	posted depots	"You return to the [if last-loc of sortie is moor]moor[else]weird underground area[end if]."
 Metros	trade tread	"You return to the hustle, bustle, etc."
 
-a region has a room called last-loc.
-
-a region has a list of things called item-list.
-
-a region has a list of things called worn-list.
-
 book region division
-
-to decide what region is mrlp: decide on map region of location of player.
-
-a region can be unsolved, unsolvable, bypassed or solved. a region is usually unsolved.
-
-a region has a number called max-score. the max-score of a region is usually zero.
-
-a region has a number called min-score. the min-score of a region is usually zero.
-
-a region has a number called poss-score. the poss-score of a region is usually zero.
-
-a region has a number called cur-score. the cur-score of a region is usually zero.
-
-a region has a table name called regtab. a region has a table name called regana.
 
 Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regtab of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. [both bulge/blot, darnels, static]
 
@@ -2204,40 +2184,21 @@ after fliptoing (this is the set pronouns rule) :
 
 after fliptoing (this is the when to increase min points after flip rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
 	d "[noun].";
-	if noun is nice bat: [STORES]
-		min-up;
-	if noun is grits or noun is pancake: [SORTIE]
-		min-up;
-	if noun is banshee: [FOREST]
-		min-up;
-	if noun is rentals: [METROS]
-		min-up;
+	if noun is nice bat, min-up; [STORES]
+	if noun is grits or noun is pancake, min-up; [SORTIE]
+	if noun is banshee, min-up; [FOREST]
+	if noun is rentals, min-up;[METROS]
 	if noun is cork or noun is wings: [begin RESORT min]
-		if rock is moot and swing is moot:
-			min-up;
+		if rock is moot and swing is moot, min-up;
 	if noun is china:
 		min-up;
 	if noun is toeholds:
-		if sprig is moot:
-			min-up;
-		if spore is moot:
-			min-up;
+		if sprig is moot, min-up;
+		if spore is moot, min-up;
 	if noun is grips or noun is ropes:
-		if toeholds are not off-stage:
-			min-up;
+		if toeholds are not off-stage, min-up;
 	skip upcoming rulebook break;
 	continue the action;
-
-to poss-d: decrement poss-score of mrlp.
-
-to min-up:
-	d "Adding a min point for this flip.";
-	increment min-score of mrlp;
-
-to min-and:
-	d "Adding a point and min point for this flip.";
-	increment min-score of mrlp;
-	reg-inc;
 
 chapter special cases
 

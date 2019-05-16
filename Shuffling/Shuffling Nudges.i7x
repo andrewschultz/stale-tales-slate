@@ -612,6 +612,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 
 book text details
 
+section ordeal loader nudges
+
 to say name-list:
 	say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
 
@@ -669,9 +671,6 @@ to say no-mb:
 
 to say road-sign:
 	say "Hmm...you get the feeling the store itself holds more adventure"
-
-to say dead-pols:
-	say "There's no way to change them, or their legacy. They're all dead now"
 
 to say no-store-m:
 	say "No, it's a map of something behind Store M, it looks like."
@@ -743,14 +742,6 @@ to say marsh-lake:
 	say "The marsh and lake are symptoms of--whatever evil is beyond here"
 
 section sortie nudges
-
-this is the no-d rule:
-	if player is in Gnarliest Triangles or player is in Self-ID Fields or player is in Flesh Shelf, the rule succeeds;
-	the rule fails;
-
-this is the sf-or-rf rule:
-	if player is in sf or player is in rf, the rule succeeds;
-	the rule fails;
 
 this is the cent-spin rule:
 	if the player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
@@ -833,8 +824,6 @@ to say kern-push: say "The buttons and kernels don't need pushing. Or they won't
 
 to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
-to say ug-bug: say "Ugh. Too messy. Mentally and physically"
-
 this is the angst rule:
 	if player has emitter and emitter is angstgnatted, the rule succeeds;
 	the rule fails;
@@ -853,8 +842,6 @@ to say faded-ad: say "The ad and the PSA are just silly. What's to the east is q
 
 to say aligns-no: say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
 
-to say drivwy: say "[if dry cake is in Obtains Boastin' Bastion]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
-
 to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
 
 to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
@@ -872,9 +859,6 @@ this is the resin-lala rule:
 	the rule fails.
 
 section resort nudges
-
-to say a-nother:
-	say "a[if The Ol' Hotel is visited]nother[end if]";
 
 to say the-sand:
 	say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
@@ -898,14 +882,10 @@ to say ennui:
 to say if-rifle:
 	say "The flier has helpful information it'd be better to act on than change"
 
-section general sa nudges
+section general nudges
 
 to say chem-bad:
 	say "Bad idea to mess with chemical compounds you don't understand"
-
-this is the has-lube rule:
-	if the player has the blue lube, the rule succeeds;
-	the rule fails;
 
 to say gad-part:
 	say "You don't need to mess with the gadget or any part of it. It's probably better not to try"
@@ -924,10 +904,6 @@ this is the past-strip rule:
 this is the past-loader rule:
 	if Notices Section is visited, the rule succeeds;
 	the rule fails;
-
-this is the can-retry rule:
-	if Trips Strip is visited, the rule succeeds;
-	the rule fails
 
 to say what-for:
 	say "[if Notices Section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"

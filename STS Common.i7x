@@ -2,6 +2,8 @@ Version 1/190507 of STS Common by Andrew Schultz begins here.
 
 [this is a collection of functions common to A Roiling Original and Shuffling Around. It would be too hard at the moment to integrate things back with Trivial Niceties, but maybe I can one day. ]
 
+part game-dependant variables and super-stubs
+
 is-roiling is a truth state that varies.
 
 orig-region is a region that varies.
@@ -15,6 +17,43 @@ To process (RL - a rule): [used to avoid Inform giving line breaks when I don't 
 
 to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
+
+chapter region stuff
+
+to decide what region is mrlp: decide on map region of location of player.
+
+a region can be solved, unsolvable, unsolved, needed, shortcircuited, bypassed or frivolous. a region is usually unsolved.
+
+a region has a number called max-score. the max-score of a region is usually zero.
+
+a region has a number called min-score. the min-score of a region is usually zero.
+
+a region has a number called poss-score. the poss-score of a region is usually zero.
+
+a region has a number called cur-score. the cur-score of a region is usually zero.
+
+a region has a table name called regtab. a region has a table name called regana.
+
+a region has a room called last-loc.
+
+a region has a list of things called item-list.
+
+a region has a list of things called worn-list.
+
+section region scoring
+
+to poss-d:
+	d "Taking away a max point.";
+	decrement poss-score of mrlp;
+
+to min-up:
+	d "min-up codepath--point likely added in carry out fliptoing rule.";
+	increment min-score of mrlp;
+
+to min-and:
+	d "min-and codepath -- forcing point and min point adding. Should be used for odd non-flip points.";
+	increment min-score of mrlp;
+	reg-inc;
 
 part thingdefs
 
