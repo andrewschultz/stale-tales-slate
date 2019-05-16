@@ -339,7 +339,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bigu"	201117260	r23	--	--	"[just-letter]."
 "unwary"	491818961	Unwary Runway	--	--	"[locname]." [start Unwary Runway]
 "bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
-"dreidl"	353994775	Unwary Runway	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
+"dreidl"	353994775	--	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
 "char"	143799505	Char Arch	--	--	"[locname]." [start Char Arch]
 "mad"	87292060	Char Arch	--	--	"[no-scen]."
 "maddam"	174584120	Char Arch	--	--	"[no-scen]."
@@ -1467,8 +1467,12 @@ to say no-scen:	say "Here in the Char Arch, you don't need to mess with the scen
 
 to say cistern-to-dart: say "[if dart is in cistern]You won't change the cistern, but maybe you can track down the dart[else]You got the dart from the cistern. No need to futz further[end if]"
 
-to say just-letter:
-	say "It's just one letter in the maze. You may want to focus on the whole volt maze"
+to say just-letter: say "It's just one letter in the maze. You may want to focus on the whole volt maze"\
+
+this is the dreidl-dread rule:
+	if l-m is off-stage, the rule fails;
+	if ether is off-stage, the rule succeeds;
+	the rule fails;
 
 this is the Rand-sad rule:
 	if Rand is washed up and player is in Dirge Ridge and Leo is in Dirge Ridge, the rule succeeds;

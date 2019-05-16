@@ -393,7 +393,7 @@ to say wont-maze:
 	if cur-score of presto is 1:
 		say "Why not take care of the big things first? And what better way to start than with an emphatic word? You remember when younger how you could say WON'T. And it works, here, too. The maze dissolved, leaving an ether to the north";
 		continue the action;
-	say "While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses.";
+	say "While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses, but not before you escape back to the south.";
 	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
 
 to say trout-tut:
@@ -408,6 +408,10 @@ to say get-crust:
 to say new-thing:
 	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
 	moot satchel;
+
+after fliptoing n-t-air:
+	go-back Grey Gyre;
+	continue the action;
 
 after fliptoing satchel (this is the give you tons of stuff if Gunter was by rule) :
 	if player does not have treatise:
@@ -426,19 +430,6 @@ after fliptoing towers-x:
 	now ivy tower is in Strip of Profits;
 	now ivory tower is in Strip of Profits;
 	continue the action;
-
-to poss-d:
-	d "Taking away a max point.";
-	decrement poss-score of mrlp;
-
-to min-up:
-	d "min-up codepath--point likely added in carry out fliptoing rule.";
-	increment min-score of mrlp;
-
-to min-and:
-	d "min-and codepath -- forcing point and min point adding. Should be used for odd non-flip points.";
-	increment min-score of mrlp;
-	reg-inc;
 
 check fliptoing bench:
 	if old giant is not visible:

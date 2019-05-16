@@ -103,14 +103,6 @@ a region has a number called max-score. a region has a number called min-score.
 
 a region has a number called poss-score. a region has a number called cur-score.
 
-a region can be solved, unsolved, needed, shortcircuited, bypassed or frivolous. a region is usually needed.
-
-a region has a table name called regtab.
-
-a region has a table name called regana.
-
-a region has a room called last-loc.
-
 a region has a number called turns-spent. a region has a number called last-hint-turns. last-hint-turns of a region is usually 10.
 
 a region can be unspoiled or spoiled. a region is usually unspoiled.
@@ -4068,9 +4060,6 @@ check ansobjing:
 
 chapter status bar and scoring
 
-to decide what region is mrlp:
-	decide on map region of location of player.
-
 no-tip is a truth state that varies.
 
 tip-warn is a truth state that varies.
@@ -6964,7 +6953,7 @@ check pushing the skid to (this is the yak-oof rule):
 			say "You pushed the skid around enough." instead;
 		say "The skid's served its purpose, and maybe it's time to remake it as a disk back in the shack. You go back. Jack.";
 		now skid is in Hacks' Shack;
-		go-back shack;
+		go-back Hacks' Shack;
 		the rule succeeds;
 	if the room second noun of location of player is nowhere:
 		continue the action;
@@ -13153,7 +13142,7 @@ check going north in Grey Gyre:
 	if cur-score of presto < 3:
 		say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
 	if ether is in Grey Gyre:
-		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous ACTING people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where those people are, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
+		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous ACTING people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where dose peoples is, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
 		set the pronoun it to ether instead;
 		now ether-try is true instead;
 	if Saps' Pass is not visited:
@@ -13196,8 +13185,9 @@ to shuffle-nowt-town:
 	remove volt maze from play;
 	remove maze walls from play;
 	remove n-t-air from play;
-	change north exit of Grey Gyre to Phat Path;
 	now ether is in Grey Gyre;
+	now Saps' Pass is mapped north of Grey Gyre;
+	now Grey Gyre is mapped south of Saps' Pass;
 	continue the action;
 
 before fliptoing:
@@ -13250,8 +13240,6 @@ check fliptoing ether:
 after fliptoing ether:
 	now dart is in Grey Gyre;
 	moot dart;
-	now Saps' Pass is mapped north of Grey Gyre;
-	now Grey Gyre is mapped south of Saps' Pass;
 	continue the action;
 
 book Char Arch
@@ -14403,7 +14391,7 @@ after fliptoing the computer screen (this is the turbo back to the shack rule):
 	continue the action;
 
 to go-back (rm - a room):
-	say "[bold type]Back at [rm][roman type][paragraph break]";
+	say "[line break][bold type]Back at [rm][roman type][paragraph break]";
 	move player to rm, without printing a room description;
 
 the block tying rule is not listed in any rulebook.
@@ -15076,6 +15064,8 @@ check going nowhere (this is the zaphint rule) :
 			now symp-yet is true;
 		say "." instead;
 
+the zaphint rule is listed before the spam can't go that way rule in the check going rulebook.
+
 before going up when location of player is a mazeroom or location of player is Unwary Runway (this is the photopia reference rule) :
 	say "You know, there was one really fun text adventure where this was the solution. I'd be plagiarizing if that was here. And if you haven't played it, I don't want to spoil it." instead;
 
@@ -15225,9 +15215,8 @@ check going south in Unwary Runway:
 
 check going north in Unwary Runway:
 	say "The exit! [if l-m is visible]'Shalom, ol['] sham' calls [l-or-m].[paragraph break][end if]You've mapped it out...and just as you are about to cross, [one of]a[or]that[stopping] giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle. It spins back with a monotone 'OY VEY.' [if l-m is off-stage]You see someone coming from the north to check on the noise, but you can't get a really good look.[else][paragraph break][end if]";
-	say "[if voltzap is false]You find the walls really are electric--not too nasty, but bad enough, and you see red and say, with each ZVT(VZT?), Lame-o[zztrue].[else][one of]You manage to avoid the walls this time, but you doubt that dreidl's going away[or]There must be a better way through[stopping].";
-	if l-m is off-stage:
-		now l-m is in Unwary Runway;
+	say "[if voltzap is false]You find the walls really are electric--not too nasty, but bad enough, and you see red and say, with each ZVT(VZT?), LAME-O[zztrue].[else][one of]You manage to avoid the walls this time, but you doubt that dreidl's going away[or]There must be a better way through[stopping].";
+	if l-m is off-stage, now l-m is in Unwary Runway;
 	else if l-m is in Unwary Runway:
 		if l-m is cscanned:
 			say "[drei-you]see someone walk into view to replace Lev Matzo.";
