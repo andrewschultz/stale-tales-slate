@@ -18168,7 +18168,7 @@ check going down in Loftier Trefoil:
 
 book Topside Deposit
 
-Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but south, where the Shout-So Hut you [one of]just [or][stopping] left stands, and north. That way's [if adders are in Topside Deposit]un[end if]blocked."
+Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but south, where the Shout-So Hut you [one of]just [or][stopping]left stands, and north. That way's [if adders are in Topside Deposit]un[end if]blocked."
 
 for printing a locale paragraph about a thing (called nongua) in Topside Deposit (this is the lump tarts with toaster rule):
 	if nongua is start tarts and toaster is in Topside Deposit:
@@ -18189,7 +18189,7 @@ the Shout-So Hut is bounding boringscen in Topside Deposit. bore-text is "You do
 this is the bore-shout-hut rule:
 	if current action is entering, try going south instead;
 
-check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those[or][stopping]." instead;
+check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those.[or][stopping]" instead;
 
 to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]"
 
@@ -18248,13 +18248,20 @@ book Scope Copse
 
 Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A [one of]spec-o-scope (scope, for short)[or]scope[stopping] looks into the ground in the center of this wooded area[if try us yurts are visible], with some yurts looking out of place here[end if]. Paths lead in all directions, though things open up to the north and east."
 
-the Try Us Yurts are plural-named vanishing scenery in Scope Copse. "The Try Us Yurts, of dull sturdy metal, don't look very lived-in, because they're too small. They're mostly for storage, and they're not blocking you, but maybe they're hiding something useful." [yurts are not llpish but brownies--the objects you get from the yurts--are. That's how I wrote the code. I could do it better, but I didn't.]
+the Try Us Yurts are plural-named vanishing boringscen in Scope Copse. description of Try Us Yurts is "The Try Us Yurts, of dull sturdy metal, don't look very lived-in, because they're too small. They're mostly for storage, and they're not blocking you, but maybe they're hiding something useful.". bore-text is "It would be fun to see what is in or behind the yurts, but you probably need to do something magical.". bore-check of Try Us Yurts isbore-yurt rule.
 
-instead of entering try us yurts, say "There's no easy way in. They'd be too cramped once you were inside, anyway."
+[NOTE: yurts are not llpish but brownies--the objects you get from the yurts--are. That's how I wrote the code. I could do it better, but I didn't.]
+
+this is the bore-yurt rule:
+	if current action is entering:
+		say "There's no easy way in. They'd be too cramped once you were inside, anyway.";
+		the rule succeeds;
+	if current action is taking:
+		say "They're too strongly built to even flake a piece off.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 understand "yurt" as try us yurts.
-
-check taking Try Us Yurts: say "They're too strongly built to even flake a piece off." instead;
 
 some Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems."
 
@@ -18262,20 +18269,17 @@ understand "brownie" as brownies.
 
 a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]-[sp]x[sp]-[sp]y". try us yurts are cheat-spoilable.
 
-the spec-o-scope is scenery in Scope Copse. understand "map/scope/specoscope/spec" and "copse scope" as spec-o-scope.
+the spec-o-scope is scenery in Scope Copse. understand "map/scope/specoscope/spec" and "copse scope" as spec-o-scope. [ugh, I would like to call it the spec o scope but then that can conflict with the scope copse]
 
 Include (-
 	has transparent talkable
 -) when defining spec-o-scope.
 
-instead of taking spec-o-scope:
-	say "It's firmly stuck in place. And it might lose its powers if you moved it.";
+check taking spec-o-scope: say "It's firmly stuck in place. And it might lose its powers if you moved it." instead;
 
-instead of searching spec-o-scope:
-	try examining spec-o-scope;
+check searching spec-o-scope: try examining spec-o-scope instead;
 
-before examining spec-o-scope for the first time:
-	say "A telescope! Place to see!"
+before examining spec-o-scope for the first time: say "A telescope! Place to see!"
 
 check examining spec-o-scope:
 	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the scope to a visual one?[close bracket][r][line break]";
@@ -18457,18 +18461,13 @@ every turn when player is in Treading Gradient and weeds are in Treading Gradien
 
 before going down in Treading Gradient: say "[if mended mini denim is in Treading Gradient]The mended mini denim is too thick[else]You try to look into the dark where the mended mini denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
 
-the mended mini denim is LLPish vanishing scenery in Treading Gradient. the indefinite article of mended mini denim is "some".
-
-check taking mended mini denim:	say "You can't get a good grip on the mended mini denim to pull it." instead;
+the mended mini denim is LLPish vanishing boringscen in Treading Gradient. the indefinite article of mended mini denim is "some". bore-text is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear."
 
 a-text of mended mini denim is "RYRYR". b-text of mended mini denim is "?Y?YR". parse-text of mended mini denim is "x[sp]I[sp]x[sp]E[sp]x". mended mini denim is cheat-spoilable.
 
-description of mended mini denim is "Too heavy for normal tools to cut."
-
 the weeds are vanishing scenery in Treading Gradient. "They look like some sort of mutant weeds from the future, maybe a crazy one with multi-layered cities. They blow in some undetectable wind: west, then east a while, then down and south. There may be something inside them, but you can't tell."
 
-check taking weeds:
-	say "They spin around you like a garment before picking you up and placing you away." instead;
+check taking weeds: say "They spin around you like a garment before picking you up and placing you away." instead;
 
 a-text of weeds is "RYRYR". b-text of weeds is "RGRYR". parse-text of weeds is "x[sp]e[sp]x[sp]e[sp]x". weeds are cheat-spoilable.
 
@@ -18478,8 +18477,7 @@ understand "replay/player" and "replay player" as raves saver.
 
 understand "tape recorder" and "tape/recorder" as raves saver.
 
-check opening raves saver:
-	say "It's cheap and rickety enough, the tapes are stuck in like paste. It has no open button or mechanism." instead;
+check opening raves saver: say "It's cheap and rickety enough, the tapes are stuck in like paste. It has no open button or mechanism." instead;
 
 a-text of raves saver is "RYYRRO". b-text of raves saver is "???RR?". parse-text of raves saver is "?[sp]?[sp]?[sp]l[sp]a[sp]?".
 
@@ -20108,7 +20106,7 @@ snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed 
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
-mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool it!"
+mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
 Mel Fish	Unblest Sunbelt	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."

@@ -661,7 +661,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gradient"	485956893	Treading Gradient	--	--	"[gradient-rej]." [TREADING GRADIENT 2 2]
 "scalier"	429403966	--	Éclairs	--	"[eat-pastry]."
 "eclair"	333130000	--	Éclairs	--	"[not-singular-hp]."
-"denim"	326810705	--	denim	--	"You scrape at the mended mini denim bits to see if there is any magic in dem. Well, not the way you thought, apparently."
+"mended"	430653057	--	mended mini denim	--	"[prob-denim]."
+"mini"	222968353	--	mended mini denim	--	"[prob-denim]."
 "liam"	165069656	--	grailman	--	"[grail-name]."
 "garn"	189018831	--	grailman	--	"[grail-name]."
 "lars"	237599426	--	reed's ale	--	"[reed-name]."
@@ -1707,6 +1708,8 @@ to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
 to say gradient-rej:
 	say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
+
+to say prob-denim: say "You look at the denim and it's probably the denim you want to deal with, not its properties."
 
 to say grail-name: say "His full name, Liam Garn"
 
