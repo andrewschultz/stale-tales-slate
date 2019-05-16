@@ -17986,13 +17986,29 @@ Mislit Limits	4	0
 
 book basic guardian work
 
+definition: a guardian (called gu) is mas:
+	if gu is lars eede, yes;
+	if gu is hostile-is-he lot, yes;
+	if gu is muscly luc sym, yes;
+	no;
+
+definition: a guardian (called gu) is fem:
+	if gu is elsa erde, yes;
+	if gu is lois the hostile, yes;
+	if gu is muscly ms lucy, yes;
+	no;
+
+to decide whether bad-gender-match of (myg - a guardian):
+	if myg is mas and player is female, yes;
+	if myg is fem and player is male, yes;
+	no;
+
 for writing a paragraph about a guardian (called gua):
 	if gua is unripe ur-pine or gua is reed's ale:
 		continue the action;
 	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
-		if myg is mas and player is female, next;
-		if myg is female and player is male, next;
+		if bad-gender-match of myg, next;
 		if so-far > 0, say "[line break]";
 		guar-pro myg;
 		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg]";
@@ -18248,7 +18264,7 @@ book Scope Copse
 
 Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A [one of]spec-o-scope (scope, for short)[or]scope[stopping] looks into the ground in the center of this wooded area[if try us yurts are visible], with some yurts looking out of place here[end if]. Paths lead in all directions, though things open up to the north and east."
 
-the Try Us Yurts are plural-named vanishing boringscen in Scope Copse. description of Try Us Yurts is "The Try Us Yurts, of dull sturdy metal, don't look very lived-in, because they're too small. They're mostly for storage, and they're not blocking you, but maybe they're hiding something useful.". bore-text is "It would be fun to see what is in or behind the yurts, but you probably need to do something magical.". bore-check of Try Us Yurts isbore-yurt rule.
+the Try Us Yurts are plural-named vanishing boringscen in Scope Copse. description of Try Us Yurts is "The Try Us Yurts, of dull sturdy metal, don't look very lived-in, because they're too small. They're mostly for storage, and they're not blocking you, but maybe they're hiding something useful.". bore-text is "It would be fun to see what is in or behind the yurts, but you probably need to do something magical.". bore-check of Try Us Yurts is bore-yurt rule.
 
 [NOTE: yurts are not llpish but brownies--the objects you get from the yurts--are. That's how I wrote the code. I could do it better, but I didn't.]
 
@@ -18832,6 +18848,10 @@ chapter reading a dinger
 
 a thing called Reading a Dinger is flippable scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves utter nonsense like someone figuring out centuries-old world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. Saner places would reject it, I'm sure.".
 
+after fliptoing solve a loaves:
+	now player has solve a loaves;
+	continue the action;
+
 printed name of Reading a Dinger is "[i]READING: A Dinger[r]"
 
 check taking dinger:
@@ -18889,35 +18909,30 @@ understand "loud neck" and "loud/neck" as lone duck when id tag is examined.
 check giving something to duck:
 	say "The duck doesn't seem interested in anything edible. Or inedible." instead;
 
-instead of touching the duck:
-	say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]."
+check touching the duck: say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]." instead;
 
-instead of taking the duck:
-	if lone duck is returned:
-		say "It's Dr. Yow's. No stealing." instead;
-	say "It gives you a wobbly blowby [if lone duck is friendly]despite your raves saver[otherwise]and gives a warning honk. Maybe you need to find some way to befriend it[end if]."
+check taking the duck:
+	if lone duck is returned, say "It's Dr. Yow's. No stealing." instead;
+	say "It gives you a wobbly blowby [if lone duck is friendly]despite your raves saver[otherwise]and gives a warning honk. Maybe you need to find some way to befriend it[end if]." instead;
 
 description of lone duck is "A pretty normal duck, but it doesn't seem that interested in you. It's not running away, though. So it's probably domesticated, but a bit timid--so don't make any loud noises[one of]. It pecks at a speck you can't see[or][stopping][if ropins are reflexive].[paragraph break]You see red at how lonely it seems[end if]."
 
-the ID tag is part of the lone duck.
+the ID tag is a boringthing. it is part of the lone duck.
 
-instead of taking the ID tag:
-	say "It's for identification. It's not worth removing."
-
-description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'"
+description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'". bore-text is "It's just there for identification. [if fissure is moot]Probably not a useful clue now, anyway[else]Maybe it'll provide a clue[end if]."
 
 the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
 chapter Obscurest Subsector
 
-Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]lie here useless, thanks to the duck[else]are holding someone in captivity[end if]. The ropins hold together a log-gaol that keeps the subsector obscurest and you from going anywhere except back west.".
+Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]lie here useless, thanks to the duck[else]are holding someone in captivity[end if]. The ropins hold together a log-gaol that keeps the subsector obscurest and you from going anywhere except back west[if dr yow is moot], and with Dr. Yow gone, you don't need to do anything else here[end if].".
 
 a log gaol is bounding scenery in Obscurest Subsector. "It surrounds the subsector on four sides, helping keep it obscure."
 
 subsector-visit is a truth state that varies.
 
 after printing the locale description for Obscurest Subsector when subsector-visit is false:
-	ital-say "you may wish to GO TO GAOL to get back here with less hassle.";
+	ital-say "in the future, you may wish to GO TO/GT GAOL to get back here with less hassle.";
 	now subsector-visit is true;
 	continue the action;
 
@@ -18940,15 +18955,13 @@ check taking ropins:
 
 understand "jail" as prison ropins.
 
-instead of entering prison ropins:
-	say "It's not very full of fun or useful things. If it were, Dr. Yow would've gone all MacGyver and burrowed out without your help.";
+check entering prison ropins: say "It's not very full of fun or useful things. If it were, Dr. Yow would've gone all MacGyver and burrowed out without your help." instead;
 
-instead of going inside in Obscurest Subsector:
-	try entering prison ropins instead;
+check going inside in Obscurest Subsector: try entering prison ropins instead; [?? make sure this isn't short circuited]
 
 a-text of prison ropins is "YRRYRRYR". b-text of prison ropins is "YRRYRRYR". parse-text is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-description of ropins is "[if duck is returned]It's open now, not that you want to enter.[else]The gaol advertises itself as the involuntary home of one Dr. Yow.[end if]"
+description of ropins is "[if duck is returned]The prison ropins are open now, not that you want to enter.[else]The gaol advertises itself as the involuntary home of one Dr. Yow.[end if]"
 
 check examining ropins:
 	ignore the examine containers rule;
@@ -19159,16 +19172,17 @@ carry out rowdying:
 [rowdy -> attentive]
 
 to ag-gets-it:
-	say "The agnostic's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.";
+	say "[line break]The agnostic's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.";
 	if ag-atten is false:
 		say "[line break]It seems to take a bit longer than it should, but Dr. Yow is patient and even having fun. You wonder if you could've helped a bit more, but you did enough--and [ag-first] will find [his-her] own clever life hacks to focus more.";
 	else:
 		say "[line break]The lecture goes extra quickly with [ag-first] attentive! So much common sense, but there's lots of deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
-	say "[line break]The lecture over, [ag-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][agnostic] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! I have this lots-o-tools stool...' but the agnostic's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
+	say "[line break]The lecture over, [ag-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[paragraph break][agnostic] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! I have this lots-o-tools stool...' but the agnostic's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares. Maybe you can rescue them, too!' Unintentional compliments are the nicest.";
 	moot Dr Yow;
 	moot duck;
 	if atblock is in Obscurest Subsector:
 		now ag-atten is false;
+		poss-d;
 	moot atblock;
 	now agnostic is in Actionless Coastlines;
 
@@ -19956,7 +19970,7 @@ a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRR
 
 section mardier admirer
 
-An mardier admirer is a female purple guardian. "A mardier admirer to the [psgdir of mardier admirer] would rather you stay here and listen to their 'honest' evaluations than go past them."
+A mardier admirer is a female purple guardian. "A mardier admirer to the [psgdir of mardier admirer] would rather you stay here and listen to their 'honest' evaluations than go past them."
 
 a-text of mardier admirer is "RYRRYYR". b-text of mardier admirer is "???R?GR". parse-text of mardier admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
 
@@ -20114,7 +20128,7 @@ wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
-grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"This is the first grailman you've ever met, but he seems more than adequate enough to block your way."
+grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"The grailman is the first you've ever met, but he seems more than adequate enough to block your way."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker]
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
@@ -20170,7 +20184,7 @@ arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mecha
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
 stinger	"The stinger continues to fizz and buzz."
 natives	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
-pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
+pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep blue sea."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
 fluster self rut	"The fluster self rut buzzes to remind you that, well, you haven't cleared EVERYONE and EVERYTHING."
 Lars Eede	"[reedale].'"
@@ -20178,7 +20192,7 @@ Elsa Erde	"[reedale].'"
 lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT."
 hostile-is-he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
-mardier admirer	"The mardier admirer oohs and ahhs but then considers there were so many options possible, really."
+mardier admirer	"The mardier admirer oohs and ahhs but then considers, hmm, maybe there were only so many possibilities, really."
 trendies	"The resident trendies whisper that they're too cool to be disappeared like that."
 wait-seer	"The wait-seer coolly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
@@ -20282,9 +20296,9 @@ to shuffle-guardians (goner - a guardian):
 			say "Well, this is the first place you cleared all the guardians from, which feels nice. [if spec-o-scope is unexamined]You don't know if you need any area completely cleared, but maybe you can check the scope[bak-copse] for more guidance[end if].";
 		else if number of not moot guardians is 0:
 			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. To the other side of the lake.";
-		else if number of tower-accessible rooms is 12: [the grid + Outer Route + Shaven Havens + Obscurest Subsector] [?? this is not quite correct. If we clear the stinger/admirer/butlers last, we could have gotten everything. However, it is impossible to clear a red/blue guardian and get all rooms accessible in one swoop. That's because the grid squares each have more than one way to get there.]
+		else if number of tower-accessible rooms >= 12 and Obscurest Subsector is tower-accessible and Shaven Havens are tower-accessible: [the grid + Outer Route + Shaven Havens + Obscurest Subsector] [?? this is not quite correct. If we clear the stinger/admirer/butlers last, we could have gotten everything. However, it is impossible to clear a red/blue guardian and get all rooms accessible in one swoop. That's because the grid squares each have more than one way to get there.]
 			if clear-warn is false:
-				say "You can move everywhere, now, but maybe you can clear a few more passages, if you want.";
+				say "You can move everywhere you need, now[if number of tower-accessible rooms < 14], but maybe you can clear a few more passages, if you want[end if].";
 				now clear-warn is true;
 		else if number of tower-accessible rooms >= 10:
 			say "You probably don't have much left to do, to get everywhere you need.";
@@ -20358,18 +20372,11 @@ after going (this is the guardian reposition after rule):
 
 chapter reposition-guardians
 
-definition: a guardian (called gu) is mas:
-	if gu is lars eede, yes;
-	if gu is hostile-is-he lot, yes;
-	if gu is luc sym, yes;
-	no;
-
 to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
 		if guy entry is not moot:
-			if guy entry is not mardier admirer and player is male and guy entry is female, next;
-			if player is female and guy entry is mas, next;
+			if bad-gender-match of guy entry, next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
 				if there is an aux entry:
@@ -25184,37 +25191,67 @@ this is the routes-alt rule: say "[eq2][b]ROUTES[r] has no alternate, um, routes
 
 this is the troves-alt rule:
 	say "[eq2][b]TROVES[r][eq2][line break]";
-	say "[2da]There were two marble blamers chosen at the start. You got [mbb], but there was also [other-mbb].";
+	if blamer balmer is moot or sister tressi is moot:
+		say "[2da]There were two marble blamers chosen at the start. You got [mbb], but there was also [other-mbb].";
+	else:
+		say "[2da]You will have a choice of disposing of Balmer or Tressi at the end.";
 
 this is the presto-alt rule:
-	say "[eqls]PRESTO[line break][2da]you could've said [if phooeyed is true]POOH instead of PHOOEY[else]PHOOEY instead of POOH[end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
-	say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out Nowt Town, but for fewer points[end if].";
-	say "[2da][if hogs-not-keys is true]SYKE[else]GOSH[end if] was another way around the hogs.";
+	say "[eqls]PRESTO[line break]";
+	if hoop is moot:
+		say "[2da]you could've said [if phooeyed is true]POOH instead of PHOOEY[else]PHOOEY instead of POOH[end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
+	else:
+		say "[2da]You have two ways to remove the hoop ahead.";
+	if maze-points > 0:
+		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out Nowt Town, but for fewer points[end if].";
+	else:
+		say "[2da]There are three ways to get by the maze ahead, each giving a different number of points.";
+	if hogs are moot:
+		say "[2da][if hogs-not-keys is true]SYKE[else]GOSH[end if] was another way around the hogs.";
+	else:
+		say "[2da]You'll have two ways to get by Saps['] Pass.";
 	say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
-	say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
+	if yak is moot:
+		say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
+	else:
+		say "[eqls]you have three ways ahead to get the drab yoke."
 
 this is the oyster-alt rule:
 	say "[eqls]OYSTER[line break]";
-	if pill-warned is false:
-		say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
-	say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop patrons. You needed 3 of 5.";
-	if boats are in shore:
-		say "[2da]you could've tried to BOAST to get the boats['] attention, then LEAP.";
+	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
+	if olde lode is visited:
+		say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop patrons. You needed 3 of 5.";
 	else:
-		say "[2da]you could've tried to [if frat raft is reflexive]FART on the frat raft, then [end if]SOAR to use the oars.";
-	say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
-	if end den is unvisited:
-		say "[2da]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there.";
+		say "[2da]You won't be able to use all actions to leave the shop.";
+	if anger range is unvisited:
+		say "[2da]There is some branching between Disease Seaside and Anger Range.";
+	else:
+		if boats are in disease seaside:
+			say "[2da]you could've tried to BOAST to get the boats['] attention, then LEAP.";
+		else:
+			say "[2da]you could've tried to [if frat raft is reflexive]FART on the frat raft, then [end if]SOAR to use the oars.";
+	if pikes are moot:
+		say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
+	else:
+		say "[2da]you can defeat the carps and pikes two different ways ahead.";
+	if end den is unvisited, say "[2da][if den loft is visited]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there[else]You could jump past the End Den[end if].";
 
 this is the towers-alt rule:
 	say "[eqls]TOWERS[line break]";
-	if bredo is moot, say "[2da]Bredo could've also become [if bredo-bored is true]ROBED[else]BORED[instead].";
+	if bredo is moot:
+		say "[2da]Bredo could've also become [if bredo-bored is true]ROBED[else]BORED[instead].";
+	else if towers is not solved and Bredo is in Loftier Trefoil:
+		say "[2da]Bredo has two solutions.";
+	if towers is not solved and reed's ale is not moot, say "[2da]Two solutions for the Reed's Ale salesman.";
 	if reed's ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
+	if towers is not solved and natives are not moot, say "[2da]Two solutions for the natives.";
 	if natives are moot, say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
-	say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
-	say "[2da]Instead of [ff of true], you could've [ff of false]."
+	if mislit limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
+	if towers is not solved and mislit limits are not visited, say "[2da]Branch upcoming at Mislit Limits.";
+	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
+	if lone duck is moot, say "[2da]Instead of [ff of true], you could've [ff of false].";
 
-to say ff of (j - a truth state): say "[if j is fissure-flip]using the lone duck to make the prison ropins['] UNLOCKED[else]making the fissure FUSSIER[end if]"
+to say ff of (j - a truth state): say "[if j is fissure-flip]making the fissure FUSSIER[else]using the lone duck to make the prison ropins UNLOCKED[end if]"
 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
@@ -25380,10 +25417,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		let xxx be unripe ur-pine;
 		if number of not moot guardians > 0:
 			repeat with gua running through not moot guardians:
-				if player is male:
-					if gua is Elsa Erde or gua is Lois the Hostile, next;
-				if player is female:
-					if gua is Lars Eede or gua is Hostile-Is-He Lot, next;
+				if bad-gender-match of gua, next;
 				now xxx is gua;
 				if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reed's Ale;
 				choose row with the-from of xxx in table of towers anagrams;
@@ -25404,7 +25438,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur-pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if flowerpot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west[else if mesprise is unvisited]gone west for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
+		if flowerpot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise is unvisited]gone west in Mislit Limits for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:
@@ -27165,6 +27199,7 @@ to say miss-types:
 	say "MISSES = this region's misses (may provide nonsense/spoilers).";
 	say "MISSALT = show alternate mutually exclusive routes for solved regions.";
 	say "THISALT = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
+	say "========================Real stuff below[line break]";
 
 chapter thisalting
 

@@ -615,7 +615,7 @@ understand "pecos" as a mistake ("This game ain't a dadgum Western.") when playe
 
 understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly ms lucy is in location of player or muscly luc sym is in location of player.
 
-understand "ursty" and "ur sty" as a mistake ("You're trying to destroy the yurts, not build them up.") when player is in Scope Cops and yurts are in Scope Copse.
+understand "ursty" and "ur sty" as a mistake ("You're trying to destroy the yurts, not build them up.") when player is in Scope Copse and yurts are in Scope Copse.
 
 understand "worse" as a mistake ("The brownies don't need to taste any worse.") when player has Brownies.
 
