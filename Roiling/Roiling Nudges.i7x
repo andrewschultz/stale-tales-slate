@@ -556,8 +556,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "craal"	162518863	Rascal Craals	--	--	"[locname]."
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
-"dourest"	613001369	Plasm Lamps	--	--	"[locname]."
-"plam"	2015427769	Plasm Lamps	--	--	"[locname]." [PLASM LAMPS]
+"plasm"	297816735	Plasm Lamps	--	--	"You already managed to PSALM." [PLASM LAMPS]
+"plam"	2015427769	Plasm Lamps	--	--	"[locname]."
 "ant"	174205344	Plasm Lamps	--	--	"That's close. Something brutal and direct."
 "tenfold"	475534036	tenfold	--	--	"[locname]." [DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."

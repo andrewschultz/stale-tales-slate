@@ -127,14 +127,14 @@ Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts]
 
-Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 50. min-score of towers is 25.
+Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 51. min-score of towers is 25.
 [Necessary points:
-4=4 for regular warriors
+4=4 for minimum warriors to leave Trefoil
 1=5 for dreads adders
 7=12 for the minimum number of other guardians you need to dispel to get through the map
 1=13 for subtler (see rapier repair)
 1=14 for mardier admirer (see the duck)
-2=16 for bonker & stinger (get to subsector)
+2=16 for bonker & stinger (get to obscurest subsector)
 1=17 for weeds
 2=19 for Dr Yow's two voices
 1=20 for lone duck
@@ -150,13 +150,14 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1=13 for sporties' ripostes, 1=14 for old ice
 1=15 for keycar wherever it appears
 1=16 for making the replay player shiny
-1=17 for strudel (Fringe Finger)
-1=18 for organised ego drains (Lost Lots)
-1=19 for tentative (agnostic meets dr yow)
-1=20 for rewired (bot-boat)
-1=21 for giving Tetris Sitter the flowerpot NON-ANAGRAM
-3=24 for unripe ur-pine/serpent/triste in Mislit Limits
-1=25 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+1=17 for Dourest Detours
+1=18 for strudel (Fringe Finger)
+1=19 for organised ego drains (Lost Lots)
+1=20 for tentative (agnostic meets dr yow)
+1=21 for rewired (bot-boat)
+1=22 for giving Tetris Sitter the flowerpot NON-ANAGRAM
+3=25 for unripe ur-pine/serpent/triste in Mislit Limits
+1=26 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
 
@@ -6373,12 +6374,13 @@ Tenfold	"While you can go back outside, you can just finish things here[unless-m
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is visited] back[end if] north[if unripe ur-pine is visible], and the ur-pine's in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
-Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [ag-first] will let you enter[end if]."
+Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [ag-first] will let you enter[end if]."
 Fringe Finger	"Unorg'd ground is every way except back east. Falling there off the Fringe Finger would result in ... grief'n."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
+Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to make your way through. You need a way to change that."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Clarthead Cathedral	"[no-coma]."
 Shiner Shrine	"[no-coma]."
@@ -7048,12 +7050,25 @@ check listening (this is the you can hear stuff some places rule):
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
-	if player is in Sonancy Canyons, say "[if raptest patters are not moot]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead; [routes]
+	if rifle is visible, say "Awkward silence, what with Elmo holding that rifle." instead;
+	if e-s is visible, say "A roar of angry undefinable words swirls from the, er, spot." instead; [stores]
+	if nestor is visible, say "Nestor periodically mumbles about his lost buddies." instead;
+	if tokers are visible and nestor is visible, say "[if nestor is visible]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
+	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
+	if player is in Same Mesa: [routes]
+		if old giant is moot, say "Nice to have silence with the giant gone." instead;
+		if old giant is in Same Mesa, say "Those [i]tirades[r] from the giant. [if bench-end is reflexive][one of]Though he gets staider.[or]'Dear, it's...' he trails off.[or]'Sit. Dare!' he commands. 'Rad site! Rest aid!'[or]'I stared...'[or]He gestures to the bench, turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' he moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' he says, actually going red.[or]'Drat, [']e is!' cries the giant, turning red.[or]He explains what left Ed astir, turning red.[or]He rues the loss of the bench's side-art, his eyes turning red.[in random order][else if elbow is reflexive]Though his swinging elbow is more dangerous now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
+		if the-b is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
+		say "'Mama sees me as...' Irrelevant stuff." instead;
+	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
+	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
+	if player is in Sonancy Canyons, say "[if raptest patters are not moot]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed and bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in Loather Rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if player is in Drain Nadir and Eddie's Song is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
+	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
 	if player is in Econ Cone and praise spirea is reflexive, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
 	if Rand is visible and Rand is washed up: [presto] [this needs to come first, since there is a lot to listen to in Dirge Ridge]
@@ -7063,12 +7078,21 @@ check listening (this is the you can hear stuff some places rule):
 	if player is in Dirge Ridge, say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite dealing with Rand and Leo[end if]." instead;
 	if player is in Hacks' Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
+	if player is in Posh Hops Shop, say "[if tunes are reflexed]Silence. Awkward silence. An occasional cough.[otherwise]The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too.[end if]" instead; [oyster]
+	if player is in Olde Lode and clam is in Olde Lode, say "You hear the clam snapping." instead;
+	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
+	if player is in Fighter Freight, try examining the pale plea instead;
+	if carps are visible, say "You can't help but listen to the carps['] and pikes['] immature, nasty jibes." instead;
+	if player is in Anger Range and carps are moot and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
+	if eeks are visible, say "You hear eeks. Arcing caring. Weeps sweep. 'Eek! Eek! Eek!'" instead;
+	if aunt tuna is visible, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
+	if player is in Achers' Arches, say "Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU." instead;
+	if player is in Tenfold Teflon'd Den Loft and dialer is in Tenfold Teflon'd Den Loft, say "[if pins are in Tenfold Teflon'd Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
 	if player is in Loftier Trefoil: [towers]
 		if number of visible warriors is 1, say "Rodney's intimidating enough, he can keep this place quiet." instead;
 		if number of visible warriors is 0, say "Regular tavern bustle and storytelling once again, but nobody you need to talk to." instead;
 		say "Rodney and his not-so-merry men stand impassive, united." instead;
 	if reed's ale is visible, say "[el-la-f] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
-	if ingrates are visible, say "You see red as the ingrates['] voices sound like tin gears." instead;
 	if diners are in location of the player, say "An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red." instead;
 	if player is in Scope Copse and butlers are in Scope Copse, say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
 	if player is in Shaven Havens, say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
@@ -7079,35 +7103,13 @@ check listening (this is the you can hear stuff some places rule):
 		if Dr Yow is in ropins:
 			if Dr Yow has been rowdy or Dr Yow has been wordy, say "Dr. Yow is silent once again." instead;
 			say "Dr. Yow moans [he-she] could hack less shackles." instead;
-	if ingrates are visible, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[in random order]." instead;
+	if ingrates are visible, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[or]a complaint that sounds like tin gears[in random order]." instead;
 	if player is in Outer Route, say "The rapier repair machine [if dagger is moot]chugs[else]fizzles[end if]along." instead;
 	if mardier admirer is visible, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
 	if atheists are visible, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is visible]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
 	if wait-seer is visible, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in Rawest Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
-	if player is in Achers' Arches, say "Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU." instead;
-	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
-	if player is in Olde Lode and clam is in Olde Lode, say "You hear the clam snapping." instead;
-	if player is in Fighter Freight, try examining the pale plea instead;
-	if player is in Anger Range and carps are moot and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
-	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
-	if old giant is moot and player is in Same Mesa, say "Nice to have silence with the giant gone." instead;
-	if tokers are visible and nestor is visible, say "[if nestor is visible]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
-	if nestor is visible, say "Nestor periodically mumbles about his lost buddies." instead;
-	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
-	if e-s is visible, say "A roar of angry undefinable words swirls from the, er, spot." instead;
-	if rifle is visible, say "Awkward silence, what with Elmo holding that rifle." instead;
-	if player is in Posh Hops Shop, say "[if tunes are reflexed]Silence. Awkward silence. An occasional cough.[otherwise]The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too.[end if]" instead; [oyster]
-	if carps are visible, say "You can't help but listen to the carps['] and pikes['] immature, nasty jibes." instead;
-	if eeks are visible, say "You hear eeks. Arcing caring. Weeps sweep. 'Eek! Eek! Eek!'" instead;
-	if aunt tuna is visible, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
-	if player is in Tenfold Teflon'd Den Loft and dialer is in Tenfold Teflon'd Den Loft, say "[if pins are in Tenfold Teflon'd Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
-	if player is in Same Mesa:
-		if old giant is in Same Mesa, say "Those [i]tirades[r] from the giant. [if bench-end is reflexive][one of]Though he gets staider.[or]'Dear, it's...' he trails off.[or]'Sit. Dare!' he commands. 'Rad site! Rest aid!'[or]'I stared...'[or]He gestures to the bench, turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' he moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' he says, actually going red.[or]'Drat, [']e is!' cries the giant, turning red.[or]He explains what left Ed astir, turning red.[or]He rues the loss of the bench's side-art, his eyes turning red.[in random order][else if elbow is reflexive]Though his swinging elbow is more dangerous now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
-		say "'Mama sees me as...' Irrelevant stuff." instead;
-		if the-b is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
-	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
-	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
+	if player is in dourest detours, say "You hear something that makes you see red. '[one of]OUR DEST[or]OUR DEST: SET, DOUR[or]OUR DEST: SET, DOUR. TROD?! SUE[stopping]!' [one of]There's probably more[or]There may be more[or]That's probably it[stopping]." instead;
 	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead; [towers]
 	if player is in Danger Garden, say "[if bonker is visible]A menacing silence spews from the bonker. Or maybe it's just your imagination[else]Honk, honk[end if]." instead;
 	if player is in Lost Lots and sporties' ripostes are in Lost Lots, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
@@ -16684,15 +16686,9 @@ bogus-lamps is privately-named vanishing LLPish scenery in plasm lamps.
 
 a-text of bogus-lamps is "RRYRR". b-text of bogus-lamps is "?R?R?". parse-text of bogus-lamps is "x[sp]x[sp]-[sp]x[sp]x".
 
-detours-warn is a truth state that varies.
+plasm-warn is a truth state that varies.
 
-check going outside in Plasm Lamps:
-	if detours-warn is false:
-		now detours-warn is true;
-		say "This shouldn't be hard. It's an easy extra point to kill the, well, ant. But if you exit again, I'll let you move on." instead;
-	say "You chicken out! Or, well, maybe you just want to get on with it.";
-	poss-d;
-	move player to Den Loft instead;
+check going outside in Plasm Lamps: say "C'mon. The natant ant isn't meant to be tough. [if bogus-plasm is moot]You already did the bonus preparation[else]Not as tough as the other optional point here[end if]." instead;
 
 after looking in Plasm Lamps:
 	it-him-her the ant;
@@ -19839,6 +19835,29 @@ instead of doing something with shoals aslosh:
 		if player is in Actionless Coastlines and bot boat is in Actionless Coastlines, try entering bot boat instead;
 		say "Go out, eh? Too huge!" instead;
 	say "The shoals aslosh are just there. Not much to do with them. You [if player is in Mislit Limits]found[else]need[end if] a way to cross Leak Lake.";
+
+book Dourest Detours
+
+Dourest Detours is a room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again."
+
+bogus-detours is a privately-named vanishing LLPish boringscen in Dourest Detours.
+
+a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". paste-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
+
+after flipping bogus-detours:
+	move player to last-detour;
+	continue the action;
+
+going west in anemic cinema when ingrates are moot is detour-checking.
+going south in lost lots when natives are moot is detour-checking.
+
+last-detour is a room that varies.
+
+carry out detour-checking:
+	now last-detour is the room noun of location of player;
+	if dourest detours is visited:
+		if lost lots is visited and finger fringe is visited, continue the action;
+	say "You work through the Dourest Detours much more easily this time."
 
 book Towers specific verbs
 

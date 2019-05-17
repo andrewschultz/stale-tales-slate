@@ -291,6 +291,8 @@ weariest,?YYRY?RR=sweatier=waitseer
 restful,R?RRR?R=fluster=selfrut
 #qver of resident trendies
 nerdiest,R?RRY?R?=resident=trendies
+#qver of detours
+rousted,R??RRYR=dourest=detours
 ################otters
 #bleary barley/burnt brunt
 #qver of bleary barley

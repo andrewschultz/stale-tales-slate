@@ -232,6 +232,7 @@ turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and gr
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [ag-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
+bogus-detours	bogus-detours	false	613001369	--	"rousted"	"rousted"	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
 Andres	Andres	false	401528293	--	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
 Archie	Archie	false	316598460	--	"achier"	"achier"	"Archie begins grabbing his joints and moaning 'I reach!' then 'I crack a crick!' until Rodney yells at him to get out. Which he does."
@@ -405,6 +406,10 @@ to say trout-tut:
 to say get-crust:
 	now swears is number of solved regions + charges of toaster;
 	now player has crust;
+
+after fliptoing bogus-detours:
+	move player to last-detours;
+	continue the action;
 
 to say new-thing:
 	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
