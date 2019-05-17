@@ -88,7 +88,9 @@ def check_aftertexts():
             l0 = ll[0].lower()
             in_aftertexts[l0] = line_count
             if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of tabs at line {:d}: {:s}".format(line_count, line))
-            elif len(ll) == 1: print("WARNING need to add full row for line", line_count, l0)
+            elif len(ll) == 1:
+                print("WARNING need to add full row for line", line_count, l0)
+                open_line[mysrc] = line_count
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in need_source_logic.keys():
                 if l0 not in okay.keys() and l0 not in sim.values():
@@ -132,7 +134,11 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
     else:
         print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
     extraneous = list(set(gots) - set(needs))
-    if len(extraneous): print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), sorted(extraneous))
+    if len(extraneous):
+        if data_file not in open_line:
+            open_line[logic_reds] = gots[min(extraneous, key=gots.get)]
+            print(logic_reds, open_line[logic_reds])
+        print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), ', '.join(["{:s}-{:d}".format(x, gots[x]) for x in extraneous]))
 
 count = 0
 
@@ -187,7 +193,7 @@ last_comment_line = 0
 last_question_line = 0
 
 with open(logic_invis) as file:
-    for (line_count, line) in enumerate(file):
+    for (line_count, line) in enumerate(file, 1):
         if 'STORE P' in line:
             hunt_for_comments = True
         ll = line.lower().strip()
@@ -260,5 +266,8 @@ check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.
 
 if open_after:
     for q in open_line.keys():
-        i7.npo(q, open_line[q])
+        i7.npo(q, open_line[q], bail = False)
     if not len(open_line.keys()): print("Nothing to open. Everything worked.")
+    exit()
+elif len(open_line):
+    print("You could open automatically with the -a or -oa flag.")
