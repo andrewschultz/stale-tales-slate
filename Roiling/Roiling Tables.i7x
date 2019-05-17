@@ -1559,7 +1559,6 @@ dour tan rotunda	"It's what the Browse Bowers used to be called."
 praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
 rivets	"[one of]Those rivets stand out.[plus][or][if praise spirea is reflexed]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
 statue	--	rivets
-plasm lamps	"Useful for working late at the Upscale Capsule but not for solving silly word puzzles."
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 big important desk	"Just part of the scenery."
 godlings' lodgings	"[if pernod is off-stage]You can't think of getting into the godlings' lodgings until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the godlings' lodgings.[end if]"

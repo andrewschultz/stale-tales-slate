@@ -301,8 +301,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "divorce"	479674829	--	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 "vanity"	448722262	--	tan ivy vanity	--	"You really don't need to rearrange the vanity."
-"lamps"	297816735	--	plasm lamps	--	"You need that light for late-night work sessions."
-"lamp"	201542769	--	plasm lamps	--	"You already did something with a lamp, and you don't need to do anything with the plasm lamps."
+"phasor"	376886422	--	pharos phasor	--	"[pha-light]."
+"pharo"	280612456	--	pharos phasor	--	"[pha-light]."
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
 "fern"	308552316	Upscale Capsule	--	--	"The fern is mentally, if not physically, unmalleable."
 "sked"	298042342	Upscale Capsule	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
@@ -340,6 +340,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unwary"	491818961	Unwary Runway	--	--	"[locname]." [start Unwary Runway]
 "bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "dreidl"	353994775	--	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
+"matzo"	366695184	--	--	two-levs rule	"No, his full name is the clue, here."
+"lev"	288784768	--	--	two-levs rule	"No, his full name is the clue, here."
+"alvez"	413942204	--	Tom Alvez	--	"No, his full name is the clue, here."
+"tom"	241537748	--	Tom Alvez	--	"No, his full name is the clue, here."
 "char"	143799505	Char Arch	--	--	"[locname]." [start Char Arch]
 "mad"	87292060	Char Arch	--	--	"[no-scen]."
 "maddam"	174584120	Char Arch	--	--	"[no-scen]."
@@ -1411,6 +1415,8 @@ to say cone-rec:
 to say scrapery:
 	say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
 
+to say pha-light: say "You need all that light for late-night work sessions"
+
 this is the salt-gone rule:
 	if st al salt is moot, the rule succeeds;
 	the rule fails;
@@ -1463,11 +1469,16 @@ this is the ether-gone rule:
 to say is-boing:
 	say "[if boing is reflexive]The number's got more numerals than letters[else]You got the boing mechanism working[end if]";
 
-to say no-scen:	say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins['] cistern";
+to say no-scen: say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins['] cistern";
 
 to say cistern-to-dart: say "[if dart is in cistern]You won't change the cistern, but maybe you can track down the dart[else]You got the dart from the cistern. No need to futz further[end if]"
 
-to say just-letter: say "It's just one letter in the maze. You may want to focus on the whole volt maze"\
+to say just-letter: say "It's just one letter in the maze. You may want to focus on the whole volt maze"
+
+this is the two-levs rule:
+	if player is in unwary runway:
+		if l-m is in unwary runway or m-l is in unwary runway, the rule succeeds;
+	the rule fails;
 
 this is the dreidl-dread rule:
 	if l-m is off-stage, the rule fails;

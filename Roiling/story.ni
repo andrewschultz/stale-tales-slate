@@ -442,7 +442,7 @@ Procedural rule: ignore the print final score rule.
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
 
-description of player is "As every[if player is female]wo[end if]mannish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if]."
+description of player is "As every[w-man]nish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if]."
 
 does the player mean examining the player when mrlp is troves: it is very likely.
 
@@ -635,6 +635,8 @@ to decide whether (cho - a number) is irrelevant:
 	decide yes;
 
 section gender specific stubs and/or silliness
+
+to say w-man: say "[if player is female]wo[end if]man";
 
 to say a-b:
 	say "[if player is male]Abe[else]Bea[end if]"
@@ -8762,7 +8764,7 @@ girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend fin
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
 artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
-leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
+leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
 
 book diorama
 
@@ -12768,7 +12770,7 @@ to say capsule-desc:
 	if red vees are in Upscale Capsule:
 		say "This isn't very well populated yet. Just some red vees here";
 	else:
-		say "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the vanity, too[end if]"
+		say "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your big important desk to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the vanity, too[end if]"
 
 to say which-capsule-pics:
 	if blamer balmer is in Upscale Capsule and sister tressi is in Upscale Capsule:
@@ -12858,43 +12860,40 @@ instead of doing something with the nerf fern:
 		continue the action;
 	say "Don't futz with it. It's there for ambiance. The sort of ambiance people less busy than you care about.";
 
-section lamps
+section pharos phasor
 
-the plasm lamps are plural-named scenery in Upscale Capsule. "They start to inspire a Psalm, until you remember you're a busy [guy] with a job to do."
-
-to say guy:
-	say "[if player is female]wo[end if]man";
-
-instead of taking lamps:
-	say "That'd be expensive and toxic."
+the pharos phasor is boringscen . "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with.
 
 chapter desk, checklist and vanity
 
-the big important desk is scenery. "Made of nice to notice eco-tin, it has a Desk-Sked (more popular and efficient than the [randbla]) on it that you could read all day."
+the big important desk is boringscen. "Made of nice to notice eco-tin, this combination desk and schedule is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is."
 
-the Desk Sked is scenery in Upscale Capsule. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked
+the Desk Sked is boringscen in Upscale Capsule. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked
 
 does the player mean doing something with the big important desk: it is very likely.
 
 description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
 
-the tan ivy vanity is auxiliary scenery. "It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. However, it's engraved CEO FOR US? OF COURSE!"
+the tan ivy vanity is boringscen. "It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. However, it's engraved CEO FOR US? OF COURSE!". bore-check is "Maybe the vanity is worth scanning, but that's it.". bore-check of tan ivy vanity is bore-vanity rule.
 
-instead of opening vanity:
-	say "It's not a case sort of vanity. It's just a useless sort of vanity.";
-
-instead of scaning vanity:
-	say "You scan around the vanity for clues.";
-	if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
-		say "Your settler picks up a signal when it moves to the lobster.";
-		try scaning lobster instead;
-	if salt is in Upscale Capsule:
-		say "Your settler picks up a signal when it moves to the salt.";
-		try scaning salt instead;
-	if trance nectar is in Upscale Capsule:
-		say "Your settler picks up a signal when it moves to the trance nectar.";
-		try scaning trance nectar instead;
-	say "You weren't able to find any. But there must be something to do!"
+this is the bore-vanity rule:
+	if current action is opening:
+		say "It's not a case sort of vanity. It's just a useless sort of vanity.";
+		the rule succeeds;
+	if current action is scaning:
+		say "You scan around the vanity for clues.";
+		if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
+			say "Your settler picks up a signal when it moves to the lobster.";
+			try scaning lobster instead;
+		if salt is in Upscale Capsule:
+			say "Your settler picks up a signal when it moves to the salt.";
+			try scaning salt instead;
+		if trance nectar is in Upscale Capsule:
+			say "Your settler picks up a signal when it moves to the trance nectar.";
+			try scaning trance nectar instead;
+		say "You weren't able to find any. But there must be something to do!"
+		the rule succeeds;
+	consider the bore-exam rule;
 
 chapter red vees
 
@@ -12915,7 +12914,7 @@ instead of doing something with red vees:
 after fliptoing red vees:
 	now tan ivy vanity is in Upscale Capsule;
 	now nerf fern is in Upscale Capsule;
-	now plasm lamps are in Upscale Capsule;
+	now pharos phasor is in Upscale Capsule;
 	now DIVORCES magazine is in Upscale Capsule;
 	now St Al Salt is in Upscale Capsule;
 	now the big important desk is in Upscale Capsule;
@@ -15216,7 +15215,8 @@ check going south in Unwary Runway:
 check going north in Unwary Runway:
 	say "The exit! [if l-m is visible]'Shalom, ol['] sham' calls [l-or-m].[paragraph break][end if]You've mapped it out...and just as you are about to cross, [one of]a[or]that[stopping] giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle. It spins back with a monotone 'OY VEY.' [if l-m is off-stage]You see someone coming from the north to check on the noise, but you can't get a really good look.[else][paragraph break][end if]";
 	say "[if voltzap is false]You find the walls really are electric--not too nasty, but bad enough, and you see red and say, with each ZVT(VZT?), LAME-O[zztrue].[else][one of]You manage to avoid the walls this time, but you doubt that dreidl's going away[or]There must be a better way through[stopping].";
-	if l-m is off-stage, now l-m is in Unwary Runway;
+	if l-m is off-stage:
+		now l-m is in Unwary Runway;
 	else if l-m is in Unwary Runway:
 		if l-m is cscanned:
 			say "[drei-you]see someone walk into view to replace Lev Matzo.";
@@ -15944,7 +15944,7 @@ check going in Disease Seaside:
 
 section frat raft
 
-the frat raft is scenery in Disease Seaside. description is "It's a frat raft, by the looks of it. All sorts of Greek symbols and crude jokes are written on it. You probably have to do something pretty hokey to get it fueled up, or whatever.[paragraph break]It's made of oaks which soak and carry interlocking--and completely locked--oars."
+the frat raft is scenery in Disease Seaside. description is "It's a frat raft, by the looks of it. All sorts of Greek symbols and crude jokes are written on it. You probably have to do something pretty hokey to get it fueled up, or whatever.[paragraph break]It's made of oaks-as-OK which soak and carry interlocking--and completely locked--oars."
 
 a-text of frat raft is "RYRR". b-text of frat raft is "RGRP". parse-text of frat raft is "x[sp]a[sp]x[sp]t". frat raft is parse-spoilable.
 
@@ -16511,10 +16511,6 @@ to say are-were-hedron:
 
 to say arch-here:
 	say "[if player is in Achers' Arches]here[else]Achers['] Arches[end if]"
-
-after examining general gleaner when player is in end den and gleaner is reflexed:
-	check-detours;
-	continue the action;
 
 a-text of general gleaner is "YRRYRRY". b-text of general gleaner is "YRR??RY". parse-text of general gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
 
@@ -17487,13 +17483,16 @@ check going south when player is in Horned Hedron and ruby is moot:
 
 chapter theses sheets
 
-the theses sheets are plural-named amusing scenery in Horned Hedron.
+the theses sheets are plural-named amusing boringscen in Horned Hedron. bore-text is "You can really only read the theses sheets for entertainment value.". bore-check is bore-sheets rule.
 
-instead of taking sheets:
-	say "No denial they're nailed."
-
-instead of scaning sheets:
-	say "The words on the theses can certainly be twisted into something worse, but the sheets cannot be changed for the better."
+this is the bore-sheeets rule:
+	if current action is taking:
+		say "No denial they're nailed.";
+		the rule succeeds;
+	if current action is scaning:
+		say "The words on the theses can certainly be twisted into something worse, but the sheets cannot be changed for the better.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 description of theses sheets is "[one of]They could be a heists thesis except they're definitely not shiest. They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan (OH, ENTER NOT HERE) one[or]Another[stopping] point reads: [randbla]"
 
@@ -17506,7 +17505,7 @@ a-text of ol' trap is "RYRRYR". b-text of ol' trap is "RYRRGR". parse-text is "x
 check taking ol' trap:
 	say "That'd be a good way to spring it." instead;
 
-description of ol' trap is "Naturally, it is there to make it hard for you to enter. But there must be some way to disarm it. Somewhere hidden in this room."
+description of ol' trap is "Naturally, it is there to make you rot, pal, if you try to get by it. But there must be some mechanism to disarm it. Somewhere hidden in this room. You just need to look around right."
 
 check fliptoing a-p:
 	if walleyes are not moot:
@@ -17528,13 +17527,11 @@ every turn when player is in Horned Hedron and walleyes are in Horned Hedron (th
 description of walleyes is "Oh, they are seedy, all right. But they seem more interested in laughing at you than attacking. They're probably just flunkies who will take a fall."
 
 check going inside in Horned Hedron:
-	if a-p is visible:
-		try entering a-p instead;
-	if ol' trap is visible:
-		try entering ol' trap instead;
+	if a-p is in Horned Hedron, try entering a-p instead;
+	if ol' trap is in Horned Hedron, try entering ol' trap instead;
+	say "There's nothing to enter at the moment." instead;
 
-check entering ol' trap:
-	say "It's an obvious ol['] trap but likely an effective one." instead;
+check entering ol' trap: say "It's an obvious ol['] trap but likely an effective one." instead;
 
 a-p is privately-named auxiliary scenery. printed name of a-p is "the portal". description of a-p is "It looks safe. It doesn't crackle or anything. The only question is where it leads."
 
@@ -17542,29 +17539,18 @@ a-text of a-p is "RYRRYR". b-text of a-p is "RYPPYR". parse-text of a-p is "p[sp
 
 understand "portal" as a-p.
 
+check going north: try entering a-p instead;
+
 check entering a-p:
 	if ruby is not moot:
 		say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Horned Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
 	if walleyes are in Horned Hedron:
 		say "Not with those walleyes waiting and watching." instead;
 	if find-base is true:
-		check-detours instead;
+		say "You make your way [if Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking.";
 	else:
 		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.[paragraph break]";
 		move player to End Den instead;
-
-to check-detours:
-	if player has lance:
-		say "You use your gleaner to [one of][or]re[stopping]trace the path to the Den Loft. Halfway through, your lance begins to glow as you pass a small passage. Explore?";
-		if the player yes-consents:
-			now ant is in Dourest Detours;
-			now player is in Dourest Detours;
-		otherwise:
-			say "Ok, no nook.";
-			now player is in Tenfold Teflon'd Den Loft;
-		continue the action;
-	say "[one of]You remember the path to the Den Loft from the gleaner. It is not too bad[or]It's easier to find the second time around[stopping].";
-	now player is in Tenfold Teflon'd Den Loft;
 
 chapter patroling
 
