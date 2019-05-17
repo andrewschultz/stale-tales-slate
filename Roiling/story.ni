@@ -201,18 +201,6 @@ a thing can be flippable, auxiliary or uncluing or clue-used. a thing is usually
 
 a thing can be rayed. a thing is usually not rayed.
 
-a thing can be examined or unexamined. a thing is usually unexamined.
-
-to moot (th - a thing): move th to Meatier Emerita Emirate;
-
-to mootl (lt - a list of things):
-	repeat with Q running through lt:
-		move Q to Meatier Emerita Emirate;
-
-definition: a thing (called th) is moot:
-	if th is in Meatier Emerita Emirate, yes;
-	no;
-
 chapter rooms
 
 a room can be stairy. a room is usually not stairy.
@@ -229,19 +217,13 @@ a person has a person called the chum. [a chum is someone whom they imitate in d
 
 chapter portals
 
-a portal is a kind of thing. a portal is usually fixed in place. a portal has a number called diffic.
-
-the specification of portal is "A thing that allows you access to vulnerable areas of Yorpwald."
-
-a portal can be fake-enterable. a portal is usually fake-enterable.
+a portal has a number called diffic.
 
 a portal can be maingame. a portal is usually maingame.
 
 a portal can be lumpable. a portal is usually lumpable.
 
 a portal can be checkedoff or available. a portal is usually available.
-
-a portal can be enter-clued. a portal is usually not enter-clued.
 
 a portal has a region called a go-region.
 
@@ -437,8 +419,6 @@ do-i-chat is a truth state that varies.
 power-back is a truth state that varies.
 
 every-turn-hint is a truth state that varies. every-turn-hint is false.
-
-Procedural rule: ignore the print final score rule.
 
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
@@ -1121,51 +1101,6 @@ report switching the story transcript on:
 
 check quitting the game when currently transcripting:
 	say "Thanks for taking a transcript. Please send it to [email] and I'll be grateful. Thanks!";
-
-chapter hashing
-
-[the hashes are set so that each word/anagram should have a unique value based on its letters. They do, mostly.]
-
-Table of Hashcodes
-Letter(indexed text)	Code
-"a"	2187818
-"b"	18418905
-"c"	19005585
-"d"	21029089
-"e"	127806109
-"f"	26514896
-"g"	32599702
-"h"	37282299
-"i"	44992846
-"j"	48960525
-"k"	52933178
-"l"	53813839
-"m"	64075153
-"n"	68907508
-"o"	74352577
-"p"	81465959
-"q"	84405617
-"r"	85323803
-"s"	96273966
-"t"	103110018
-"u"	105105807
-"v"	107164820
-"w"	107934773
-"x"	112768081
-"y"	122359252
-"z"	122969618
-
-to decide what indexed text is the filtered name of (t - a value of kind K):
-	let s be t in lower case;
-	replace the regular expression "<^abcdefghijklmnopqrstuvwxyz>" in s with "";	[ a-z would include accented characters]
-	decide on s;
-
-to decide which number is the hash of (t - a value of kind K):
-	let s be the filtered name of t;
-	let hash be 0;
-	repeat with c running from 1 to the number of characters in s:
-		increase hash by the Code corresponding to a Letter of character number c in s in the Table of Hashcodes;
-	decide on hash;
 
 when play begins (this is the intro-hashes rule):
 	let wnum be 0;
@@ -24208,13 +24143,6 @@ to all-say (xx - indexed text):
 	else:
 		say "[xx][line break]";
 
-to say plus:
-	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
-
-to say minus:
-	now cur-item is thruhinted;
-	say "[one of] (-) [bracket][i]A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[no line break][r][close bracket][or] (-)[stopping]";
-
 chapter hinting (object)
 
 have-objhinted is a truth state that varies.
@@ -24313,19 +24241,6 @@ understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any
 [understand "hint [any not hintrelevant thing]" as a mistake ("Can't hint that.").]
 
 ever-obj-hinted is a truth state that varies.
-
-rule for asking which do you mean (this is the bypass disambiguation rule):
-	if current action is objhinting or current action is gotothinging or current action is objasking or current action is objasking generically:
-		say "Sorry, [one of]but you may not have been specific enough with the [if current action is gotothinging]going[else if current action is objhinting]hint[else]asking[end if] request. I'm going to err on the side of caution instead of possibly disambiguating something you haven't seen. This is a possible coding bug (and I'd like to know,) but it may also prevent spoilers. For best results, you should try to visit the location of whatever you want hinted or be more detailed in your request[or]this request seems too vague. If it's a bug, let me know[stopping].";
-		bypass disambiguation;
-		the rule succeeds;
-	continue the action;
-
-after asking which do you mean (this is the bypass disambiguation 2 rule):
-	if current action is objhinting or current action is gotothinging or current action is objasking or current action is objasking generically:
-		bypass disambiguation;
-		the rule succeeds;
-	continue the action;
 
 does the player mean objhinting a deregioned object:
 	it is very unlikely.

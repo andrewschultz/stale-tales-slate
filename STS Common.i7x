@@ -6,17 +6,41 @@ part game-dependant variables and super-stubs
 
 is-roiling is a truth state that varies.
 
-orig-region is a region that varies.
+orig-region is a region that varies. [ordeal loader/ (means manse or ordeal reload)]
 
-hub-region is a region that varies.
+hub-region is a region that varies. [stores in each case]
 
-hub-room is a room that varies.
+hub-room is a room that varies. [trips strip/strip of profits]
 
 To process (RL - a rule): [used to avoid Inform giving line breaks when I don't want them]
 	(- ProcessRulebook({RL}, 0, true); -)
 
 to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
+
+to moot (th - a thing): move th to Emerita Emirate; [ it's meateier emerita emirate in roiling, but the namespace works out ok ]
+
+to mootl (lt - a list of things):
+	repeat with Q running through lt:
+		move Q to Emerita Emirate;
+
+definition: a thing (called th) is moot:
+	if th is in Emerita Emirate, yes;
+	no;
+
+a thing can be examined or unexamined. a thing is usually unexamined.
+
+chapter common procedural rules
+
+procedural rule: ignore the print final score rule.
+
+chapter portal basics
+
+a portal is a kind of thing. a portal is usually fixed in place. the specification of portal is "A thing that allows you access to vulnerable areas of Yorpwald."
+
+a portal can be fake-enterable. a portal is usually fake-enterable.
+
+a portal can be enter-clued. a portal is usually not enter-clued.
 
 chapter region stuff
 
@@ -74,7 +98,7 @@ understand "gt [any reasonable-goto room]" as gotoing.
 definition: a room (called rm) is reasonable-goto:
 	if rm is hub-room and hub-room is visited, yes; [just to let the player RETRY]
 	if map region of rm is mrlp, yes;
-    if rm is visited, yes;
+	if rm is visited, yes;
 	no;
 
 a room can be shunned. a room is usually not shunned. [Force GO TO ROOM to fail even if you've been there and its priority *seems* OK. The two biggest cases so far: Dourest Detours and End Den are blocked off in Oyster once you solve the puzzles to get by them.]
@@ -147,9 +171,6 @@ part boring things
 a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
 
 a boringscen is a kind of boringthing.
-a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
-
-a boringscen is a kind of boringthing.
 
 instead of doing something with a boringthing: [no-irp]
 	abide by the bore-check of noun;
@@ -158,7 +179,7 @@ instead of doing something with a boringthing: [no-irp]
 
 this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
 
-this is the bore-exam rule: [note: I caused bugs by saying PROCESS  THE BORE-EXAM RULE instead of ABIDE BY. Enough that I'll write this note in.]
+this is the bore-exam rule: [note: I caused bugs by saying PROCESS THE BORE-EXAM RULE instead of ABIDE BY. Enough that I'll write this note in.]
 	if current action is examining:
 		if description of noun is empty:
 			if debug-state is true, say "(DEBUG: pulling bore-text) ";
@@ -178,6 +199,81 @@ instead of doing something with a boringthing: [no-irp]
 	abide by the bore-check of noun;
 	if action is procedural, continue the action;
 	say "[bore-text of noun]" instead;
+
+part hash codes and values
+
+book hashcodes
+
+[ this is so the computer can determine if we have an anagram without doing crazy string manipulations]
+
+Table of Hashcodes
+Letter(indexed text)	Code
+"a"	2187818
+"b"	18418905
+"c"	19005585
+"d"	21029089
+"e"	127806109
+"f"	26514896
+"g"	32599702
+"h"	37282299
+"i"	44992846
+"j"	48960525
+"k"	52933178
+"l"	53813839
+"m"	64075153
+"n"	68907508
+"o"	74352577
+"p"	81465959
+"q"	84405617
+"r"	85323803
+"s"	96273966
+"t"	103110018
+"u"	105105807
+"v"	107164820
+"w"	107934773
+"x"	112768081
+"y"	122359252
+"z"	122969618
+
+to decide what indexed text is the filtered name of (t - a value of kind K):
+	let s be t in lower case;
+	replace the regular expression "<^abcdefghijklmnopqrstuvwxyz>" in s with "";	[ a-z would include accented characters]
+	decide on s;
+
+to decide what number is the hash of (t - a value of kind K):
+	let s be the filtered name of t;
+	let hash be 0;
+	repeat with c running from 1 to the number of characters in s:
+		increase hash by the Code corresponding to a Letter of character number c in s in the Table of Hashcodes;
+	decide on hash;
+
+part hints
+
+to say plus:
+	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
+
+to say minus:
+	now cur-item is thruhinted;
+	say "[one of] (-) [bracket][i]A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[no line break][r][close bracket][or] (-)[stopping]";
+
+part disambiguation
+
+include Bypass Disambiguation by Climbing Stars.
+
+rule for asking which do you mean (this is the bypass disambiguation rule):
+	if current action is objhinting or current action is gotothinging or current action is objasking or current action is objasking generically:
+		say "Sorry, [one of]but you may not have been specific enough with the [if current action is gotothinging]going[else if current action is objhinting]hint[else]asking[end if] request. I'm going to err on the side of caution instead of possibly disambiguating something you haven't seen. This is a possible coding bug (and I'd like to know,) but it may also prevent spoilers. For best results, you should try to visit the location of whatever you want hinted or be more detailed in your request[or]this request seems too vague. If it's a bug, let me know[stopping].";
+		bypass disambiguation;
+		the rule succeeds;
+	continue the action;
+
+after asking which do you mean (this is the bypass disambiguation 2 rule):
+	if current action is objhinting or current action is gotothinging or current action is objasking or current action is objasking generically:
+		bypass disambiguation;
+		the rule succeeds;
+	continue the action;
+
+volume specific items
 
 part hubs bush popup
 

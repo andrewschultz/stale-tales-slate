@@ -49,7 +49,6 @@ if not get_nice and not roiling_shuffling:
 
 get_unique_lines(shuffling, i7.main_src("sa"))
 get_unique_lines(roiling, i7.main_src("roi"))
-get_unique_lines(niceties, i7.nice)
 
 if roiling_shuffling:
     count = 0
@@ -59,6 +58,7 @@ if roiling_shuffling:
             print("{:4d} SHUFFLING-ROILING {:5d} {:5d} ----".format(count, shuffling[x], roiling[x]), x)
 
 if get_nice:
+    get_unique_lines(niceties, i7.nice)
     count_both = 0
     count_r = 0
     count_s = 0

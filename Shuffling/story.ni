@@ -28,23 +28,6 @@ AIP=check if action is procedural
 Ancient note to self: there are many places to put in a SKIP UPCOMING RULEBOOK BREAK, but they're too minor to hunt down & probably dealt with better with PROCESS. Still, they'd be nice to fix, and anyone who helps me with this will get my gratitude and probably a place in the credits.
 ]
 
-book disambig
-
-include Bypass Disambiguation by Climbing Stars.
-
-rule for asking which do you mean (this is the bypass disambiguation rule):
-	if current action is objasking or current action is objasking generically:
-		say "Sorry, [one of]but you may not have been specific enough with what to ask for. I'm going to err on the side of caution instead of possibly disambiguating something you haven't seen. This is a possible coding bug (and I'd like to know,) but it may also prevent spoilers. For best results, you should try to visit the location of whatever you want hinted or be more detailed in your request[or]this request seems too vague. If this is a bug, let me know[stopping].";
-		bypass disambiguation;
-		the rule succeeds;
-	continue the action;
-
-after asking which do you mean (this is the bypass disambiguation 2 rule):
-	if current action is objasking or current action is objasking generically:
-		bypass disambiguation;
-		the rule succeeds;
-	continue the action;
-
 book i6 replacement
 
 Include (-
@@ -187,8 +170,6 @@ the story genre is "Humor/wordplay"
 
 [release along with a solution.]
 
-Procedural rule: ignore the print final score rule.
-
 section variables i'd like to NFR but can't quite--mostly debug stubs
 
 showtabname is a truth state that varies.
@@ -218,14 +199,6 @@ a thing can be reversible. a thing is usually not reversible.
 a thing has a number called rpos. a thing has a number called gpos. a thing has a number called lgth.
 
 a thing can be padded. a thing is usually not padded.
-
-a portal is a kind of thing. a portal is usually fixed in place.
-
-a portal can be fake-enterable. a portal is usually fake-enterable.
-
-a portal can be enter-clued. a portal is usually not enter-clued.
-
-a thing can be examined or unexamined. a thing is usually unexamined.
 
 a thing can be flipped-yet. a thing is usually not flipped-yet.
 
@@ -316,18 +289,11 @@ to say tag-status:
 
 instead of dropping tomato: say "Much as you'd like to drop it, it [if player is in The Ol' Hotel]is actually handy here[else]might come in handy somewhere[end if]."
 
-section mootness
-
-definition: a thing (called th) is moot:
-	if th is in Emerita Emirate, yes;
-	no;
+section mootness bonus
 
 definition: a thing (called th) is abrod: [ "abroad," geddit? ]
 	if th is in Adorb Bardo, yes;
 	no;
-
-to moot (th - a thing):
-	move th to Emerita Emirate;
 
 chapter help stuff
 
@@ -461,51 +427,6 @@ to say ast: say "[if sr-acc is true or spaces-on is true] [end if]"
 to say d1: say "[ast]-".
 
 to say d2: say "[ast]-[ast]".
-
-book hashcodes
-
-[ this is so the computer can determine if we have an anagram without doing crazy string manipulations]
-
-Table of Hashcodes
-Letter(indexed text)	Code
-"a"	2187818
-"b"	18418905
-"c"	19005585
-"d"	21029089
-"e"	127806109
-"f"	26514896
-"g"	32599702
-"h"	37282299
-"i"	44992846
-"j"	48960525
-"k"	52933178
-"l"	53813839
-"m"	64075153
-"n"	68907508
-"o"	74352577
-"p"	81465959
-"q"	84405617
-"r"	85323803
-"s"	96273966
-"t"	103110018
-"u"	105105807
-"v"	107164820
-"w"	107934773
-"x"	112768081
-"y"	122359252
-"z"	122969618
-
-to decide what indexed text is the filtered name of (t - a value of kind K):
-	let s be t in lower case;
-	replace the regular expression "<^abcdefghijklmnopqrstuvwxyz>" in s with "";	[ a-z would include accented characters]
-	decide on s;
-
-to decide what number is the hash of (t - a value of kind K):
-	let s be the filtered name of t;
-	let hash be 0;
-	repeat with c running from 1 to the number of characters in s:
-		increase hash by the Code corresponding to a Letter of character number c in s in the Table of Hashcodes;
-	decide on hash;
 
 book procedural AIP
 
@@ -759,12 +680,6 @@ understand "hint" and "hints" as hinting.
 hintsoff is a truth state that varies. hintsoff is usually false.
 
 just-print is a truth state that varies. just-print is usually true.
-
-to say minus:
-	now cur-item is thruhinted;
-	say "[one of](-) [italic type][bracket]NOTE: A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[close bracket][r][or](-)[stopping]";
-
-to say plus: say "[one of](+) [italic type][bracket]NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[close bracket][r][or](+)[stopping]".
 
 carry out hinting:
 	if location of player is Busiest Subsite, say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out." instead;
@@ -9507,7 +9422,7 @@ gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat ba
 gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
-nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit. As you do, you are hit with a book[book-in-nerds]![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
+nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn. As you do, you are hit with a book[book-in-nerds]![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
 night thing	"'NYURGH! HUNGRY!' Easier to argue a grue away."
 peasant	"'I don't know much about that, that's sure. But I know from hay, being an abler baler.'"
 red bull burdell	"Your pale plea meets with strung grunts."
