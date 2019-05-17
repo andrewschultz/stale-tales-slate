@@ -191,25 +191,29 @@ if get_stdin:
     print(input_line, end='')
     for line in sys.stdin:
         ll = line.strip().lower()
+        skip = False
         if ll.startswith('?'):
             ll = ll[1:]
             new_arg = re.split("[ ,]", ll.strip())
             for x in new_arg:
                 os.system("start http://www.thefreedictionary.com/{:s}".format(x))
+            skip = True
         if ll.startswith('/'):
             ll = ll[1:]
             new_arg = re.split("[ ,]", ll.strip())
             for x in new_arg:
                 os.system("start http://www.thesaurus.com/browse/{:s}".format(x))
-        if not ll:
+            skip = True
+        if not ll or ll == 'q':
             print("Exiting.")
             exit()
         if re.search("[^a-z, ]", ll, re.IGNORECASE):
             print("WARNING: invalid characters skipped in", ll)
             ll = re.sub("[^a-z, ]", "", ll, 0, re.IGNORECASE)
-        new_arg = re.split("[ ,]", ll.strip())
-        for x in new_arg:
-            anagram_check(x)
+        if not skip:
+            new_arg = re.split("[ ,]", ll.strip())
+            for x in new_arg:
+                anagram_check(x)
         print(input_line, end='')
 else:
     if len(new_arg) > 1: print("Remember -s is stdin. This makes runs go faster in the future.")

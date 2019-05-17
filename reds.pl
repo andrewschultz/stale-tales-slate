@@ -123,13 +123,14 @@ while ( $cur <= $#av ) {
       $prefix =~ s/\+.*//;
       $disableSettler = ( $prefix =~ /n/i );
       $includeLY      = ( $prefix =~ /l/i );
+      my $a2 = "";
       if ( $arg =~ /\+/ ) {
-        my $a2 = $arg;
+        $a2 = $arg;
         $a2 =~ s/.*\+//;
         @extraArray = split( ",", $a2 );
       }
-      $auditString = lc($arg2);
-      $fileName = $reds if !$fileName;
+      $auditString = lc($a2) if $a2;
+      $fileName    = $reds   if !$fileName;
       $cur += 2;
       next;
     };

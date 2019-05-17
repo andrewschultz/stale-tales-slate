@@ -4,16 +4,24 @@ pram,tables,niche,t-b
 all noon gag=noon gag
 bench
 #troves
+ltb=lead
 eddie's song
 rivets
 #oyster
 pale plea
+bogus-plains=plains
+a-s=achers' arches
+bogus-lamps=lamps
 #towers
 prison ropins
 dr yow
 #otters
+b-b=bleary barley
+merle=honestly
+elmer=ideas aides
 merle,sly imp,medals,whiners
 #others
 an-a,pugnacious plant
 auction caution
+s-c=sonic coins
 ;

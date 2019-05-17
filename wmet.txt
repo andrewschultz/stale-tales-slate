@@ -101,8 +101,8 @@ scrap/scan/seek/eat/tutor/tend/swipe
 trace/react/kiss/bonk/snap/splain
 bust/drop/sweat/clean/shape
 warp/bury/unearth/assuage
-search/enlarge/patrol/tan
-prepay/revel/derail/spin/redial
+search/enlarge/patrol/prepay
+trample/psalm/revel/derail/spin/redial
 Towers (min)
 awed/coyer/weedy/yonder
 # North/H guardians

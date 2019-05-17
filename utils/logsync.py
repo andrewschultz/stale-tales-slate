@@ -14,13 +14,13 @@ import sys
 import re
 import os
 
+okay = defaultdict(bool)
 need_logic = defaultdict(int)
 need_source_logic = defaultdict(int)
 got_logic = defaultdict(int)
 got_logic_invis = defaultdict(int)
 got_logic_reds = defaultdict(int)
 open_line = defaultdict(int)
-sim = defaultdict(str)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
@@ -34,15 +34,11 @@ verbose = False
 
 # this is for oddly, badly or privately named items
 # note HONESTLY currently has no ?'s in its b-text
-abbrevs = {
-  "a-s": "achers' arches",
-  "ltb": "lead",
-  "bogus-plains": "plains",
-  "b-b": "bleary barley",
-  "s-c": "sonic coins",
-  "merle": "honestly",
-  "elmer": "ideas aides"
-}
+abbrevs = defaultdict(str)
+
+def shortcutcheck(x):
+    if x in abbrevs: return abbrevs[x]
+    return x
 
 def usage():
     print("-a/oa opens code after if there is a mistake to fix.")
@@ -50,8 +46,7 @@ def usage():
     print("-cou/-ncou turns on/off showing counts of errors, default = off.")
     exit()
 
-def check_aftertexts():
-    okay = defaultdict(bool)
+def read_data_file():
     with open(data_file) as file:
         for (line_count, line) in enumerate(file, 1):
             if line.startswith('#'): continue
@@ -60,10 +55,13 @@ def check_aftertexts():
             ary = ll.split(",")
             if '=' in line:
                 ary = ll.split("=")
-                sim[ary[0]] = ary[1]
+                print(ary[0], 'to', ary[1])
+                abbrevs[ary[0]] = ary[1]
                 continue
             ll = line.lower().strip().split(",")
             for x in ll: okay[x] = True
+
+def check_aftertexts():
     markedokay = 0
     mayneedsource = 0
     mayneedaftertext = 0
@@ -89,11 +87,11 @@ def check_aftertexts():
             in_aftertexts[l0] = line_count
             if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of tabs at line {:d}: {:s}".format(line_count, line))
             elif len(ll) == 1:
-                print("WARNING need to add full row for line", line_count, l0)
+                print("WARNING need to add full row for line", line_count, "in", os.path.basename(mysrc), ":", l0)
                 open_line[mysrc] = line_count
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in need_source_logic.keys():
-                if l0 not in okay.keys() and l0 not in sim.values():
+                if l0 not in okay.keys() and l0 not in abbrevs.values():
                     suggestions.append("{:s} may be superfluous aftertext at line {:d}".format(l0, line_count))
                     mayneedsource += 1
                 #print(ll[5])
@@ -101,7 +99,7 @@ def check_aftertexts():
                 if verbose: print("Got", ll[0], "in aftertexts.")
     if len(suggestions): print("\n".join(sorted(suggestions)))
     for x in sorted(need_source_logic.keys()):
-        if x not in in_aftertexts.keys() and x not in sim.keys():
+        if x not in in_aftertexts.keys() and x not in abbrevs.keys():
             print("May need", x, "in aftertexts table.")
             mayneedaftertext += 1
     for x in okay.keys():
@@ -127,7 +125,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
     if len(t3):
         for y in sorted(t3, key=gots.get):
             need_in_source = need_in_source + 1
-            print(need_in_source, y, "is commented in the logic file line", gots[y] ,"but is not in the source.")
+            print(need_in_source, y, "is commented in {:s} file line".format(outs), gots[y] ,"but is not in the source.")
     if need_in_logic + need_in_source > 0 and other_test:
         print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
         if launch_message: print(launch_message)
@@ -137,7 +135,6 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
     if len(extraneous):
         if data_file not in open_line:
             open_line[logic_reds] = gots[min(extraneous, key=gots.get)]
-            print(logic_reds, open_line[logic_reds])
         print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), ', '.join(["{:s}-{:d}".format(x, gots[x]) for x in extraneous]))
 
 count = 0
@@ -150,16 +147,17 @@ force_next = False
 i7.go_proj("roiling")
 mysrc = i7.src("roiling")
 
+read_data_file()
+
 with open(mysrc) as file:
-    for line in file:
-        count = count + 1
+    for (line_count, line) in enumerate(file, 1):
         if 'logsync.py force next' in line:
             force_next = True
             continue
         if force_next or ('a-text' in line and 'b-text' in line):
             if 'parse-text' not in line and not line.startswith("\t"):
                 print("NEED PARSE-TEXT:", line.strip())
-                if force_next: print("Burned a force_next at line", count)
+                if force_next: print("Burned a force_next at line", line_count)
                 force_next = False
                 continue
             if re.search("b-text.*\?.*parse-text", line) or force_next:
@@ -168,9 +166,10 @@ with open(mysrc) as file:
                 else:
                     scanned = re.sub(" is \".*", "", line.strip().lower())
                     scanned = re.sub("a-text of ", "", scanned)
-                need_source_logic[scanned] = count
+                need_source_logic[scanned] = line_count
                 if scanned.startswith("t-") and 'ly' in scanned: scanned = scanned[2:]
-                need_logic[abbrevs[scanned] if scanned in abbrevs.keys() else scanned] = count
+                # print(scanned, "/", shortcutcheck(scanned), "/", line_count)
+                need_logic[shortcutcheck(scanned)] = line_count
                 force_next = False
 
 count = 0
@@ -182,7 +181,7 @@ with open(i7.sdir("roiling") + "/logic.htm") as file:
             if scanned in got_logic.keys():
                 print("Duplicate logic-for in logic.htm:", scanned, "line", line_count, "originally", got_logic[scanned])
             else:
-                got_logic[scanned] = line_count
+                got_logic[shortcutcheck(scanned)] = line_count
 
 
 count = 0

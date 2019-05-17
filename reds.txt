@@ -45,7 +45,7 @@ astride,itsared,edastir,staider
 #pat's
 despite,speedit,sitdeep
 #harms marsh
-#qver of all noon gag
+#qver of noon gag
 along,??Y??=allno=ongag
 along,nogal,logan
 #cripple clipper
@@ -175,8 +175,11 @@ splain,RRRY??=lapsin=plains
 snap,?R?R=span=pans
 #qver of templar ramplet
 trample,?RYRRRY=templar=ramplet
-#dourest detours
-tan,ant
+#plasm lamps
+#qver of lamps
+psalm,?R?R?=plasm=lamps
+#qver of natant ant
+tan,R?R=nat=ant=ant
 #den loft
 #qver of papery yapper
 prepay,?RY?Y?=papery=yapper
