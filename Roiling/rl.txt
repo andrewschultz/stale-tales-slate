@@ -1,7 +1,9 @@
+# rl.txt = logic clues for A Roiling Original
+#
 out=roiling-logic-invisiclues.htm
 raw=roiling-logic-invisiclues-raw.htm
 !A Roiling Original HTML Logic Clues
-->c:/games/inform/roiling Materials/Release
+->c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling
 # remember to check this with logsync.py
 ====end header
 >GENERAL
@@ -125,7 +127,7 @@ The ?RY? notation shows where the vowel is: O is in the third slot. That's a sta
 Similarly, slots 1 and 4 are F or M, leaving slot 2 as R.
 FROM is more likely than MROF. So there you go.
 >>HARMS MARSH
-#logic for all noon gag
+#logic for noon gag
 ?What do we do with the all noon gag reading?
 The ??Y?? looks intimidating, but the question marks give lots of clues:\n<pre>ALLNO\nONGAG\n??Y??</pre>
 That leaves possibilities of (AO)(LN)(AO)(AN)(OG).
@@ -420,6 +422,17 @@ SEARCH.
 ?What do I need to do to the general gleaner?
 The gleaner gives YRR??RY to start. That means slot 4 is a or e, and slot 5 is n or r. That at least letsus know if a consonant or vowel is in each question slot.
 Here we're going to cheat a bit and assume A is in slot 4, because that forces 1 and 7 to E. E(nrg)(lrg)A(nr)(nrlg)E and here you may have to rely on some red text to cut things down. Al Green helps a bit. E(nrg)(lr)A(nr)(nrlg)E. You may need to brute force here: If R is in slot 3, you get EGRANLE, so it's L. From there, poking around should give ENLARGE.
+>>PSALM LAMPS
+#logic for natant ant
+?Why does the ant give a question mark when I scan it?
+Because it isn't just an ant but a NATANT ANT.
+There are only six possibilities total, with two once you figure the A is in slot number 2.
+And NAT would be a bit trivial. TAN it is.
+#logic for lamps
+?What is with the general scanning here?
+You get ?R?R?R, which looks confusing, but you can figure where the vowel must be.
+Slot 3, as the A's are in slot 2 and 3, but 2 is a consonant. That cuts down the possibilities a lot, especially since slot 4 must be L or P.
+Guesswork shows that L gives nonsense. So P(MS)AL(MS) it is, with PSALM.
 >>TENFOLD TEFLON'D LOFT DEN
 # logic for papery yapper
 ?How do I use cheat mode on the papery yapper?

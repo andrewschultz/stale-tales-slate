@@ -123,7 +123,7 @@ Troves is a region. regtab of Troves is table of troves nudges. regana of Troves
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
+Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 42. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/trample/ant subquest=6, tend dent, SPLAIN in the plains, PSALM in the Plasm Lamps, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts]
 
@@ -1334,9 +1334,9 @@ carry out gotoing:
 		say "There's no way back. You deserve a reason why, so this is a minor bug. Let me know about it at [email]." instead;
 	if noun is shunned:
 		if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
-		if noun is Dourest Detours, say "You got rid of the ant. Nothing more to do there." instead;
+		if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
 		say "[noun] is off-limits. I should have a better explanation why, so please let me know at [email]." instead;
-	if location of player is Dourest Detours, say "Aw, c'mon, the ant should be no problem." instead;
+	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
 	if location of player is Hardest Trashed Dearths, say "You've lost the way back, but the eeks are calling you on." instead;
 	if duck is in location of player and duck is friendly: [TOWERS]
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
@@ -4603,8 +4603,11 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in Horned Hedron and walleyes are moot and ol' trap is in Horned Hedron:
 			now noun is ol' trap;
 			continue the action;
-		if player is in Dourest Detours:
-			now noun is ant;
+		if player is in Plasm Lamps:
+			if bogus-lamps are in Plasm Lamps:
+				now noun is bogus-lamps;
+			else:
+				now noun is ant;
 			continue the action;
 		if player is in tenfold:
 			if yapper is in tenfold:
@@ -4933,6 +4936,7 @@ mardier admirer
 me arts
 mended mini denim
 muscly luc sym
+natant ant
 papery yapper
 reading a dinger
 resident trendies
@@ -4942,6 +4946,7 @@ sob ever verbose
 sods gone odes song
 sport ports
 sporties' ripostes
+starch charts
 t-formally
 tetris sitter
 trance nectar
@@ -5565,7 +5570,7 @@ to decide which thing is oyster-item:
 	if player has gleaner and gleaner is reflexive, decide on gleaner;
 	if player is in Rascal Craals:
 		if player has digger and player has ruby, decide on ruby;
-	if player is in Dourest Detours, decide on ant;
+	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
 		if yapper is in Tenfold Teflon'd Den Loft, decide on yapper;
 		if d2 is in Tenfold Teflon'd Den Loft, decide on d2;
@@ -9949,7 +9954,7 @@ definition: a thing (called candi) is bluable:
 	if player is in Econ Cone:
 		if rivets are reflexive and candi is praise, no; [otherwise we double-print]
 	if candi is tunes, no; [oyster specific]
-	if player is in Dourest Detours and candi is ant, yes;
+	if player is in Plasm Lamps and candi is ant, yes;
 	if candi is haunter and player is in Anger Range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
 	if candi is crate and player is in Lapsin' Plains:
 		if c2 is in Lapsin' Plains, yes;
@@ -16673,11 +16678,15 @@ check fliptoing trout (this is the no teaching while fighting rule) :
 
 book sanctum
 
-Dourest Detours is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel rousted from just a true sod and glad you've suffered no redouts."
+Plasm Lamps is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel rousted from just a true sod and glad you've suffered no redouts."
+
+bogus-lamps is privately-named vanishing LLPish scenery in plasm lamps.
+
+a-text of bogus-lamps is "RRYRR". b-text of bogus-lamps is "?R?R?". parse-text of bogus-lamps is "x[sp]x[sp]-[sp]x[sp]x".
 
 detours-warn is a truth state that varies.
 
-check going outside in Dourest Detours:
+check going outside in Plasm Lamps:
 	if detours-warn is false:
 		now detours-warn is true;
 		say "This shouldn't be hard. It's an easy extra point to kill the, well, ant. But if you exit again, I'll let you move on." instead;
@@ -16685,16 +16694,15 @@ check going outside in Dourest Detours:
 	poss-d;
 	move player to Den Loft instead;
 
-after looking in Dourest Detours:
+after looking in Plasm Lamps:
 	it-him-her the ant;
 	continue the action;
 
-the ant is a flippable animal. "An oddly colored ant is here! It seems more threatening than anything, but your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off."
+the natant ant is a flippable animal. "An oddly colored ant is here! It is swimming about in the plasm on the floor, making it a natant ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are moot]. But maybe you can show something for style points, first[end if]."
 
-check taking ant:
-	say "Dealing with the ant is even easier than TAKE." instead;
+check taking natant ant: say "The action for dealing with the ant is even shorter and easier than TAKE. But not GET." instead;
 
-a-text of ant is "RYR". b-text of ant is "RYR". parse-text of ant is "x[sp]a[sp]x". ant is any-spoilable.
+a-text of natant ant is "RYR". b-text of natant ant is "R?R". parse-text of natant ant is "x[sp]a[sp]x". ant is any-spoilable.
 
 chapter taning
 
@@ -16706,19 +16714,22 @@ understand "tan [something]" as taning.
 understand "tan" as taning.
 
 rule for supplying a missing noun when taning:
-	if location of player is Dourest Detours:
-		now noun is ant;
+	if location of player is Plasm Lamps:
+		now noun is natant ant;
 
-does the player mean taning the ant: it is very likely;
+does the player mean taning the natant ant: it is very likely;
 
 carry out taning:
-	if noun is not ant:
+	if noun is not natant ant:
 		try attacking noun instead;
 	say "Whack! Pow! 'Scum ant! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!";
+	if bogus-lamps are not moot:
+		say "[line break]And yet... you feel you missed a style point. Perhaps a display before thwacking the ant.";
+		poss-d;
 	min-and;
 	moot ant;
 	moot lance;
-	now Dourest Detours is shunned;
+	now Plasm Lamps is shunned;
 	now player is in Tenfold Teflon'd Den Loft instead;
 
 book Den Loft
@@ -24594,7 +24605,7 @@ frat raft	"Now you're on the frat raft, you need to find a way to use the oars."
 knob	"The knob's been dealt with."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
-gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if Dourest Detours is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
+gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if Plasm Lamps is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
 lever	"The lever was designed not to give extra points for pulling it too much."	[end OYSTER]
 turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
 blaster	"You fixed the blaster. Now maybe try the turbos."
@@ -25379,10 +25390,10 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to SWEAT to remove the waste.";
 		else if lance is not cleaned:
 			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
-		else if Dourest Detours is visited and ant is not moot:
+		else if Plasm Lamps is visited and ant is not moot:
 			say "[2dmiss of myreg]you could've tried to TAN the ant.";
 		else if ant is not moot:
-			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
+			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Plasm Lamps.";
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	else if myreg is Towers:
@@ -25586,8 +25597,8 @@ index map with Achers' Arches mapped north of Posh Hops Shop.
 index map with Lean Lane mapped east of Lapsin' Plains.
 index map with Hardest Trashed Dearths mapped east of Lean Lane.
 index map with tenfold mapped north of Horned Hedron.
-index map with Dourest Detours mapped east of tenfold.
-index map with end den mapped east of Dourest Detours.
+index map with Plasm Lamps mapped east of tenfold.
+index map with end den mapped east of Plasm Lamps.
 index map with Shuttle Hutlets mapped east of end den.
 
 [start otters]

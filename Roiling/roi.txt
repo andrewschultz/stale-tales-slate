@@ -1,7 +1,7 @@
 # rl.txt has the logic clues
 #
 !A Roiling Original HTML Clues
-->c:/games/inform/roiling Materials/Release
+->c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling
 out=roiling-invisiclues.htm
 outraw=roiling-invisiclues-raw.htm
 ==endheader
@@ -1338,17 +1338,23 @@ There's more than one.
 Once you get two, they make a general gleaner.
 It's not big enough to see into clearly.
 ENLARGE it.
->>DOUREST DETOURS
+>>PLASM LAMPS
 ?I skipped over this! Is it a fake room or clue?
 No, it's a small side quest.
 You need something from the Shuttle Hutlets.
-The lance. If you have it, the game will alert you.
-?What do I do with the ant?
+The lance. If you have it, and you've done what you need with it, something will pop up in the Den Loft.
+You will need to figure what to do with the Templar Ramplet. It's part of the puzzle.
+?What do I do with the natant ant?
 It should be easy. There are only five possibilities.
 You need to attack it a certain way.
 There are only five possibilities for ANT.
 You need to TAN it.
 Once you do, you go to the den loft.
+?Okay, was/is there anything else to do? That was a bit anticlimactic.
+Yes. The location itself has a bit of a hint.
+A templar is a religious fighter. Maybe you can do a religious thing?
+This word is better known as a noun, but it can also function as a verb.
+You can PSALM while in Plasm Lamps for a bonus point on top of getting rid of the natant ant.
 >>TENFOLD TEFLON'D DEN LOFT
 ?Stupid papery yapper!
 He wants to be bribed, but use a different word, maybe?

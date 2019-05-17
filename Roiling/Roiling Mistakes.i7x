@@ -555,11 +555,13 @@ chapter end den
 
 understand "ned" as a mistake ("That was my name in the first game.") when player is in end den.
 
+chapter Plasm Lamps
+
+understand "atn" as a mistake ("You've already got the ant's attention. You'll need to take care of it, now.") when player is in Plasm Lamps.
+
+understand "nat" as a mistake ("You don't need to name the ant. It's not a pet.") when player is in Plasm Lamps.
+
 chapter Tenfold Teflon'd Den Loft
-
-understand "atn" as a mistake ("You've already got the ant's attention. You'll need to take care of it, now.") when player is in Dourest Detours.
-
-understand "nat" as a mistake ("You don't need to name the ant. It's not a pet.") when player is in Dourest Detours.
 
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
 
