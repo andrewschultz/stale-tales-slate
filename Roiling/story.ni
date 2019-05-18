@@ -119,7 +119,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 24. min-score of Troves is 17. [Pa Egg Pea / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer]
+Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 24. min-score of Troves is 17. [Pa Egg Pea / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
@@ -2633,6 +2633,7 @@ cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is writ
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
+Blamer Mr Beal	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
@@ -4724,7 +4725,6 @@ ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-aut
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 eddie's song	false	true	false	false	"You'd guess it's, well, the song 'I Ceded' that's causing the settler readings. Because when Eddie C. takes a break from singing, the settler's readings stay up."
-rivets	false	false	false	true	"Hmm, the message could've been painted on, but Trevis Vister demanded rivets."
 praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
 marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
@@ -5355,9 +5355,9 @@ carry out troves-hinting:
 	if location of player is Upscale Capsule:
 		if red vees are in Upscale Capsule, try objhinting red vees instead;
 		if salt is in Upscale Capsule, try objhinting salt instead;
-		if tressi is in Upscale Capsule and balmer is in Upscale Capsule:
+		if tressi is in Upscale Capsule and mbb is in Upscale Capsule:
 			if sister-first is true, try objhinting sister tressi instead;
-			try objhinting blamer balmer instead;
+			try objhinting mbb instead;
 		try objhinting trance nectar instead;
 	if spoilit is true:
 		say "--hmmph. Do nothing. This is a BUG, but keep the truffle[no line break]";
@@ -6852,8 +6852,6 @@ check touching:
 
 chapter listening
 
-the you can hear stuff some places rule is listed before the block listening rule in the check listening to rulebook.
-
 to say a-r:
 	say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
 
@@ -6865,7 +6863,7 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-check listening (this is the you can hear stuff some places rule):
+check listening:
 	if player is in Dusty Study: [Ordeal Reload]
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
@@ -10118,6 +10116,7 @@ salt	troves	"You can LAST [if ME ARTS is moot or lobster is moot]now[else]once[e
 song	troves	"You can DECIDE to move on from the Drain Nadir."
 Sister Tressi	Troves	"You can RESIST Sister Tressi."
 Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
+Blamer Mr Beal	Troves	"You can RAMBLE to ignore Blamer Mr Beal."
 DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
 onyx censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
 plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative."
@@ -10573,8 +10572,8 @@ check entering mangiest steaming:
 		now player is in Cruelest Lectures instead;
 	say "Oh, no. Not that again. Country'll have a new alphabet the next time. And a worse lecture." instead;
 
-check smelling when mangiest steaming is visible:
-	say "Err. I can't tell you exactly how the smoke smells. I wouldn't know." instead;
+check smelling:
+	if player is in strip of profits and mangiest steaming is visible, say "Err. I can't tell you exactly how the smoke smells. I wouldn't know." instead;
 
 section tokers
 
@@ -12148,7 +12147,7 @@ book Boarded Roadbed
 every turn when player is in Boarded Roadbed:
 	if bee-score > 0:
 		if current action is not listening:
-			say "How to get down to the cellar? The cellar. The background noise has changed...you may want to listen, too... [if bee-score is 1]though you may also have fun smacking the bee down a bit more.[end if][paragraph break]";
+			say "How to get down to the cellar? The cellar. Distractions have gone, and you're focused there, now[if bee-score is 1]... though you may also have fun smacking the bee down a bit more[end if].[paragraph break]";
 
 Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help."
 
@@ -12402,19 +12401,15 @@ Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheer
 
 a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of Si Reed is "x[sp]-[sp]x[sp]-[sp]x[sp]-". Si Reed is cheat-spoilable.
 
-RESIDE RESIDE is scenery in Browse Bowers. it is cheat-spoilable. "RESIDE RESIDE advertises [randbla]."
+RESIDE RESIDE is boringscen in Browse Bowers. it is cheat-spoilable. "RESIDE RESIDE advertises [randbla].". bore-text is "RESIDE RESIDE is just there for the (useless) advertising. And a clue to get out of the Browse Bowers."
 
 a-text of RESIDE RESIDE is "RYRYRY". b-text of RESIDE RESIDE is "RGPGRG". parse-text of RESIDE RESIDE is "-[sp]e[sp]s[sp]i[sp]-[sp]e".
 
 understand "exhibit" as RESIDE RESIDE when player is in Browse Bowers.
 
-instead of doing something with RESIDE RESIDE:
-	if action is procedural, continue the action;
-	say "RESIDE RESIDE is just there for advertising.";
-
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]While save aves branch out each way, the statue nearby looks so much more important! [if rivets is reflexive and praise spirea is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
+Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Save aves branch out each way. They're okay for lesser people, but the astute statue and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
 
 understand "econ-cone" as Econ Cone.
 
@@ -12454,7 +12449,7 @@ check scaning godlings' lodgings:
 
 chapter astute statue
 
-The astute statue is uncluing scenery in Econ Cone. "[one of]The statue is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Rivets lie at the bottom of the statue in some sort of pattern[one of]. It is not a statue of limitations, for sure[or][stopping]."
+The astute statue is uncluing scenery in Econ Cone. "[one of]The statue is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Red rivets lie at the bottom of the statue[one of]. It is not a statue of limitations, for sure[or][stopping]."
 
 Include (-
 	has transparent talkable
@@ -12462,7 +12457,7 @@ Include (-
 
 understand "trevis/vister" and "trevis vister" as astute statue.
 
-the rivets are part of the statue. description is "[one of]After looking for a few seconds, you realize t[or]T[stopping]he rivets spell out PRAISE. They're probably Vister's idea of art, to show there's more than one way to want to be like him. Or want to want to be like him.". the rivets are reflexive.
+the rivets are part of the statue. description is "They're just there. And red.". the rivets are reflexive.
 
 rivets-first is a truth state that varies.
 
@@ -12567,33 +12562,33 @@ Upscale Capsule is an innie room in Troves. "[capsule-desc]."
 
 to say capsule-desc:
 	if red vees are in Upscale Capsule:
-		say "This isn't very well populated yet. Just some red vees here";
+		say "This isn't very well populated yet. Just some red vees here. You need a lot more to help you REALLY think";
 	else:
-		say "From the nerf fern to the wonga wagon[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too[end if]"
+		say "From the nerf fern to the wonga wagon[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too. You're drawn to it[end if]"
 
 to say which-capsule-pics:
-	if blamer balmer is in Upscale Capsule and sister tressi is in Upscale Capsule:
+	if mbb is in Upscale Capsule and sister tressi is in Upscale Capsule:
 		say ". Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy";
 	else if sister tressi is in Upscale Capsule:
 		say ". Sister Tressi regards you severely";
-	else if blamer balmer is in Upscale Capsule:
-		say ". Blamer Balmer regards you severely";
-	else if blamer balmer is moot:
+	else if mbb is in Upscale Capsule:
+		say ". [mbb] regards you severely";
+	else if mbb is moot:
 		say ". You are no longer hounded by the pictures of [bb-st]"
 
-to say bb-st: say "[one of]Blamer Balmer and Sister Tressi[or]Sister Tressi and Blamer Balmer[at random]"
+to say bb-st: say "[one of][mbb] and Sister Tressi[or]Sister Tressi and [mbb][at random]"
 
 section order the flips
 
 to report-glarers:
-	if balmer is moot and tressi is moot:
-		say "Well! You feel very relaxed now, with both Blamer Balmer and Sister Tressi gone. You feel more in touch with yourself, less obliged to do what society requires...";
+	if mbb is moot and tressi is moot:
+		say "Well! You feel very relaxed now, with both [mbb] and Sister Tressi gone. You feel more in touch with yourself, less obliged to do what society requires...";
 	else:
-		say "You look over to [if balmer is moot]Sister Tressi[else]Blamer Balmer[end if]. Maybe there's a way to get rid of [if balmer is moot]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weight quite so heavily, now."
+		say "You look over to [if mbb is moot]Sister Tressi[else][mbb][end if]. Maybe there's a way to get rid of [if mbb is moot]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weight quite so heavily, now."
 
 chapter sister tressi
 
-the Sister Tressi Siters are vanishing scenery. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as Blamer Balmer's."
+the Sister Tressi Siters are vanishing scenery. "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as [mbb]'s."
 
 a-text of sister tressi siters is "RYRYRR". b-text of sister tressi siters is "RY?Y?R". parse-text of sister tressi siters is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
 
@@ -12617,7 +12612,6 @@ Marble Blamer Mr Beal is proper-named vanishing scenery. description is "[mbb-tx
 printed name of Mr Beal is "Marble Blamer Mr. Beal".
 
 a-text of Marble Blamer Mr Beal is "RYRRRY". b-text of Marble Blamer Mr Beal is "R?R???". parse-text of Marble Blamer Mr Beal is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
-
 after fliptoing mbb:
 	now sister tressi siters are LLPish;
 	report-glarers;
@@ -12643,14 +12637,14 @@ a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-
 
 check fliptoing trance nectar:
 	if mbb is in Upscale Capsule and sister tressi is in Upscale Capsule:
-		say "No. You've done enough. You ... you've come to loathe the trance nectar any more, but you can't quite break free of it. With [mbb] and Sister Tressi staring down at you,you can't quite bring yourself to. Buyt maybe if you dealt with even one of them...";
+		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
 		preef trance nectar instead;
 
 chapter silly Upscale Capsule scenery
 
 section nerf fern
 
-The nerf fern is useless scenery in Upscale Capsule.
+The nerf fern is useless scenery.
 
 description of nerf fern is "It saves time, since you don't have to water it. But you can't see how it gives any new ideas."
 
@@ -12667,7 +12661,7 @@ chapter desk sked, wonga wagon, cark rack
 
 the cark rack is boringscen. "Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is.". understand "dsk" as cark rack.
 
-the Desk Sked is boringscen in Upscale Capsule. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked.
+the Desk Sked is boringscen. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked.
 
 does the player mean doing something with the cark rack: it is very likely.
 
@@ -12701,7 +12695,9 @@ chapter red vees
 [vee/vees/red vee in nudges ??]
 ["'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your wonga wagon changes in tribute."]
 
-The red vees are vanishing plural-named scenery in Upscale Capsule. description is "They look like they could be hooked together, but you csn't do so by standard means."
+The red vees are vanishing plural-named scenery in Upscale Capsule. description is "They look like they could be hooked together, but you can't do so by standard means."
+
+a-text of red vees is "YRRYRRY". b-text of red vees is "GRRYRRY". parse-text of red vees is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 instead of doing something with red vees:
 	if action is procedural, continue the action;
@@ -12717,11 +12713,11 @@ after fliptoing red vees:
 	move St Al Salt to Upscale Capsule;
 	move cark rack to Upscale Capsule;
 	move desk sked to Upscale Capsule;
-	continue the action;
+	continue the action; [Balmer and Tressi don't move until you deal with the salt]
 
 chapter DIVORCES magazine
 
-DIVORCES Magazine is vanishing LLPish scenery in Upscale Capsule. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
+DIVORCES Magazine is vanishing LLPish scenery. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
 
 a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
@@ -12747,7 +12743,13 @@ the St Al Salt is vanishing scenery. printed name of salt is "St. Al Salt".
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
 after fliptoing salt:
+	moot salt;
+	now trance nectar is in Upscale Capsule;
 	now mbb is in Upscale Capsule;
+	repeat through table of troves anagrams:
+		if the-from entry is Marble Blamer Balmer:
+			now the-from entry is mbb;
+			now the-to entry is mbb; [this is part of the silly randomization]
 	now sister tressi is in Upscale Capsule;
 	continue the action;
 
@@ -13211,8 +13213,6 @@ check examining cretins' cistern: ignore the examine containers rule;
 cistern-look is a truth state that varies.
 
 check searching cretins' cistern: try examining cretins' cistern instead;
-
-the block burning rule is not listed in any rulebook.
 
 burn-check is a truth state that varies.
 
@@ -24947,10 +24947,10 @@ this is the routes-alt rule: say "[eq2][b]ROUTES[r] has no alternate, um, routes
 
 this is the troves-alt rule:
 	say "[eq2][b]TROVES[r][eq2][line break]";
-	if blamer balmer is moot or sister tressi is moot:
+	if mbb is moot or sister tressi is moot:
 		say "[2da]There were two marble blamers chosen at the start. You got [mbb], but there was also [other-mbb].";
 	else:
-		say "[2da]You will have a choice of disposing of Balmer or Tressi at the end.";
+		say "[2da]You will have a choice of disposing of [mbb] or Sister Tressi at the end.";
 
 this is the presto-alt rule:
 	say "[eqls]PRESTO[line break]";
@@ -25133,7 +25133,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
 		if DIVORCES is not moot, say "[2drm of Upscale Capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
 		if sister tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to RESIST Sister Tressi.";
-		if Blamer Balmer is not moot, say "[2drm of Upscale Capsule]you could've tried to RAMBLE to ignore Blamer Balmer.";
+		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to RAMBLE to ignore [mbb].";
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
@@ -26727,7 +26727,7 @@ understand the command "missed" as something new.
 understand "missed" as misseding.
 
 carry out misseding:
-	say "[miss-types].";
+	say "[miss-types]";
 	now mrlp is solved;
 	carry out the showing what the player missed activity;
 	now mrlp is unsolved;
@@ -26770,7 +26770,7 @@ to say miss-types:
 	say "MISSES = this region's misses (may provide nonsense/spoilers).";
 	say "MISSALT = show alternate mutually exclusive routes for solved regions.";
 	say "THISALT = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
-	say "========================Real stuff below[line break]";
+	say "========================Real stuff below[paragraph break]";
 
 chapter thisalting
 

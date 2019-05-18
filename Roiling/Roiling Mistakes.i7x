@@ -292,7 +292,7 @@ chapter Upscale Capsule
 
 understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
 
-understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when player is in Upscale Capsule and Marble Blamer Balmer is in Upscale Capsule.
+understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when player is in Upscale Capsule and mbb is in Upscale Capsule.
 
 understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when mbb is in Upscale Capsule and player is in Upscale Capsule.
 

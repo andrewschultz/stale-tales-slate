@@ -257,6 +257,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "care"	234323315	Bustle Sublet	--	--	"Caring and all its offshoots only go so far."
 "boor"	252447862	Bustle Sublet	--	--	"[boor-grub]."
 "grub"	241448217	Bustle Sublet	--	--	"[boor-grub]."
+"snore"	452663963	--	--	bee-head-reflexive rule	"Hmm. Nothing at all. It must be *a* snore."
 "observe"	637146289	--	--	lot-observed rule	"You're already observing by reflex now. No need to tweak things."
 "asidewalk"	509159436	Bustle Sublet	--	--	"[sidewalk-oops]."
 "askew"	387135844	Bustle Sublet	--	--	"[sidewalk-oops]."
@@ -301,16 +302,18 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "divorce"	479674829	--	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 "wagon"	285982378	--	wonga wagon	--	"You really don't need to rearrange the wonga wagon."
+"cark"	159450384	--	cark rack	--	"The cark rack is built to be sturdy. No need to change it."
 "phasor"	376886422	--	pharos phasor	--	"[pha-light]."
 "pharo"	280612456	--	pharos phasor	--	"[pha-light]."
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
 "fern"	308552316	Upscale Capsule	--	--	"The fern is mentally, if not physically, unmalleable."
 "sked"	298042342	Upscale Capsule	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
 "salt"	255385641	--	--	salt-gone rule	"You've lasted long enough. There are new things to look at, now."
-"likeness"	668807521	--	--	tressi-or-balmer rule	"It's whoever's in the likeness that matters--[if Sister Tressi is moot]Blamer Balmer[else if Blamer Balmer is moot]Sister Tressi[else]Sister Tressi and Blamer Balmer[end if], here."
+"likeness"	668807521	--	--	tressi-or-mbb rule	"It's whoever's in the likeness that matters--[if Sister Tressi is moot][mbb][else if mbb is moot]Sister Tressi[else]Sister Tressi and [mbb][end if], here."
+"beal"	202226671	--	Marble Blamer Mr Beal	--	"It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas."
 "marble"	351625627	--	--	marble-gone rule	"[mbb-no]."
 "siter"	457506742	--	Sister Tressi Siters	--	"All the siters."
-"siters"	553780708	--	Sister Tressi Siters	--	"The sister tressi siters are gone. Trying to re-defeat them would be protesting too much."
+"siters"	553780708	--	--	siters-gone rule	"The sister tressi siters are gone. Trying to re-defeat them would be protesting too much."
 "divorces"	575948795	--	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "troev"	497757327	--	--	degen-true rule	"[not-the-reg]."
@@ -1421,9 +1424,9 @@ this is the salt-gone rule:
 	if st al salt is moot, the rule succeeds;
 	the rule fails;
 
-this is the tressi-or-balmer rule:
+this is the tressi-or-mbb rule:
 	if player is in Upscale Capsule:
-		if sister tressi is in Upscale Capsule or blamer balmer is in Upscale Capsule, the rule succeeds;
+		if sister tressi is in Upscale Capsule or mbb is in Upscale Capsule, the rule succeeds;
 	the rule fails;
 
 this is the marble-gone rule:
@@ -1431,6 +1434,10 @@ this is the marble-gone rule:
 	the rule fails;
 
 to say mbb-no: say "You already stopped thinking too much about [mbb]. If you try too hard to keep ignoring [mbb], you'll start thinking about [mbb], again"
+
+this is the siters-gone rule:
+	if player is in Upscale Capsule and sister tressi is moot, the rule succeeds;
+	the rule fails;
 
 this is the divorces-gone rule:
 	if player is in Upscale Capsule and divorces is moot, the rule succeeds;
@@ -1441,6 +1448,10 @@ to say ruts-pull:
 
 to say sidewalk-oops:
 	say "You can't make the sidewalk crumble any more, and you probably don't want to"
+
+this is the bee-head-reflexive rule:
+	if player is in Bustle Sublet and bee's head is not off-stage and bee's head is reflexive, the rule succeeds;
+	the rule fails;
 
 this is the lot-observed rule:
 	if player is in Bustle Sublet and sob ever verbose is moot, the rule succeeds;
