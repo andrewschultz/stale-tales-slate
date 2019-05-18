@@ -12569,7 +12569,7 @@ to say capsule-desc:
 	if red vees are in Upscale Capsule:
 		say "This isn't very well populated yet. Just some red vees here";
 	else:
-		say "From the nerf fern to the wonga wagon[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your big important desk to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too[end if]"
+		say "From the nerf fern to the wonga wagon[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too[end if]"
 
 to say which-capsule-pics:
 	if blamer balmer is in Upscale Capsule and sister tressi is in Upscale Capsule:
@@ -12665,11 +12665,11 @@ the pharos phasor is boringscen . "It gives enough light to keep you awake and n
 
 chapter desk sked, wonga wagon, cark rack
 
-the big important desk is boringscen. "Made of nice to notice eco-tin, this combination desk and schedule is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is."
+the cark rack is boringscen. "Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is.". understand "dsk" as cark rack.
 
-the Desk Sked is boringscen in Upscale Capsule. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked
+the Desk Sked is boringscen in Upscale Capsule. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked.
 
-does the player mean doing something with the big important desk: it is very likely.
+does the player mean doing something with the cark rack: it is very likely.
 
 description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
 
@@ -12708,16 +12708,15 @@ instead of doing something with red vees:
 	say "Hmm. You need to know what to do with the vees, or around them, to fill up your office.";
 
 [?? er go in = old ignore erin/go go/erin One Rig / Rig One Region]
-[??get rid of big important desk and noise as scenery]
 
 after fliptoing red vees:
-	now wonga wagon is in Upscale Capsule;
-	now nerf fern is in Upscale Capsule;
-	now pharos phasor is in Upscale Capsule;
-	now DIVORCES magazine is in Upscale Capsule;
-	now St Al Salt is in Upscale Capsule;
-	now the big important desk is in Upscale Capsule;
-	now desk sked is in Upscale Capsule;
+	move wonga wagon to Upscale Capsule;
+	move nerf fern to Upscale Capsule;
+	move pharos phasor to Upscale Capsule;
+	move DIVORCES magazine to Upscale Capsule;
+	move St Al Salt to Upscale Capsule;
+	move cark rack to Upscale Capsule;
+	move desk sked to Upscale Capsule;
 	continue the action;
 
 chapter DIVORCES magazine

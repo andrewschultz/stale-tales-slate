@@ -1566,7 +1566,7 @@ praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or
 rivets	"[one of]Those rivets stand out.[plus][or][if praise spirea is reflexed]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
 statue	--	rivets
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
-big important desk	"Just part of the scenery."
+cark rack	"Just part of the scenery."
 godlings' lodgings	"[if pernod is off-stage]You can't think of getting into the godlings' lodgings until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the godlings' lodgings.[end if]"
 Pernod	"[one of]Expensive alcohol is for high class reflection, and stuff. Or it advertises itself that way. That is what the Pernod claims to do.[plus][or]In this case, you have two more clues, which is what is on the front of the note tied to the Pernod and the back. 'Derp on, Epdorn.'[plus][or]'Dr. Peno and Ned Orp.'[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
 card	"The card gives a clue, along with the Pernod, of how to get into the godlings' lodgings."
