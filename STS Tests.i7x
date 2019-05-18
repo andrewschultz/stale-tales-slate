@@ -211,6 +211,227 @@ A property-check rule for a room (called the target) (this is the modified rooms
 			increment undescribed-rooms;
 			say "ROOM [undescribed-rooms] [target] has no description.";
 
+volume verbs for testing
+
+chapter cap
+
+[* CAP caps the # of entries in a random table. For testing.]
+
+caping is an action applying to one number.
+
+understand the command "cap" as something new.
+
+understand "cap [number]" as caping.
+
+carry out caping:
+	if number understood < 1, say "You need a positive number to cap the table with." instead;
+	repeat through table of megachatter:
+		if maxidx entry > number understood, now maxidx entry is number understood;
+		if curidx entry > number understood, now curidx entry is number understood;
+	say "Capped all random table entries at [number understood].";
+	the rule succeeds;
+
+chapter ffing
+
+[* FF toggles if flips are unfrozen. Useful to test if you -could- flip something.]
+
+ffing is an action out of world.
+
+understand the command "ff" as something new.
+
+understand "ff" as ffing.
+
+carry out ffing:
+	now ff is whether or not ff is false;
+	say "Flips [if ff is false]un[end if]frozen.";
+	the rule succeeds;
+
+chapter hfing
+
+[* shows full hints each turn]
+
+hfing is an action applying to nothing.
+
+understand the command "hf" as something new.
+
+understand "hf" as hfing.
+
+carry out hfing:
+	now hintfull is whether or not hintfull is false;
+	say "Showing full hints with the game (not recommended for testers unless you are bulldozing through) is [on-off of hintfull].";
+	the rule succeeds;
+
+chapter hfing
+
+[* HF allows you to export hints to roilhints.glksave ]
+
+hfiing is an action applying to nothing.
+
+understand the command "hfi" as something new.
+
+understand "hfi" as hfing.
+
+carry out hfing:
+	now hint-to-file is whether or not hint-to-file is false;
+	say "Hint to file is now on. Exported to [gm-short]. This is largely deprecated with HF, which displays full hints each move.";
+	append "==================[if hint-to-file is true]start[else]end[end if]ing hint debug session[paragraph break]" to the file of gamehints;
+	the rule succeeds;
+
+chapter hintalling
+
+[* HINTALL detects which items still need hinting]
+
+hintalling is an action out of world.
+
+understand the command "hintall" as something new.
+
+understand "hintall" as hintalling.
+
+carry out hintalling:
+	let mycount be 0;
+	let times-found be 0;
+	let should-find be true;
+	repeat with VTH running through all things:
+		now should-find is true;
+		now times-found is 0;
+		if VTH is useless or VTH is amusing or VTH is cluey or VTH is abstract or VTH is bounding, now should-find is false;
+		repeat through table of hintobjs:
+			if hint-entry entry is VTH, increment times-found;
+		if should-find is true:
+			if times-found is not 1:
+				increment mycount;
+				say "[if times-found is 0]Need[else]Too many[end if] [VTH] in table of hintobjs ([mycount]).";
+		else if times-found > 0:
+			increment mycount;
+			say "Need to delete [VTH] from table of hintobjs ([mycount]).";
+	if mycount is 0, say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!";
+	the rule succeeds;
+
+section so hintall works ok
+
+[* this is just so HINTALL can say "everything works." Odd things that aren't items or in the game are rejected.]
+
+main-window is abstract.
+
+Null-bitmap-typeface is abstract.
+
+Null-image-typeface is abstract.
+
+null tileset is abstract.
+
+Glimmr C&C is abstract.
+
+graphics-window is abstract.
+
+chapter hintvising
+
+[* this hints everything visible. It is trumped by hintall but may be useful to the beta tester. ]
+
+hintvising is an action out of world.
+
+understand the command "hintvis" as something new.
+
+understand "hintvis" as hintvising.
+
+carry out hintvising:
+	repeat with VTH running through all visible things:
+		if VTH is vishintable:
+			all-say "Hinting [VTH]: ";
+			try objhinting VTH;
+	the rule succeeds;
+
+definition: a thing (called VT) is vishintable:
+	if VT is publically-named, decide yes;
+	if VT is unscannable, decide no;
+	decide yes;
+
+chapter pluraling
+
+[ * test for plurals ]
+
+pluraling is an action applying to nothing.
+
+understand the command "plural" as something new.
+
+understand "plural" as pluraling.
+
+carry out pluraling:
+	repeat with Q running through things:
+		if q is abstract, next;
+		say "[Q] = [if Q is plural-named]plural[else]singular[end if] and [if Q is fixed in place]fixed[else]takeable[end if].";
+	the rule succeeds;
+
+chapter scoing
+
+[*this tracks score-debugging. There are better ways. But it tells you what increased when in the debug file.]
+
+scoing is an action out of world.
+
+understand the command "sco" as something new.
+
+understand "sco" as scoing.
+
+carry out scoing:
+	now scotrack is whether or not scotrack is false;
+	say "Score-tracking in debug file is [scotrack].";
+	if scotrack is false:
+		now scotrack is true;
+	else:
+		now scotrack is false;
+	the rule succeeds;
+
+after fliptoing when scotrack is true (this is the score track debug rule):
+	process the score debug rule;
+	continue the action;
+
+scotrack is a truth state that varies.
+
+every turn when scotrack is true (this is the score debug rule) :
+	append "[mrlp] > [the player's command] [cur-score of mrlp] / [min-score of mrlp]-[poss-score of mrlp].[line break]" to the file of debuggery;
+
+chapter showtabing
+
+[ * showtab shows the random tables we are choosing ]
+
+showtabing is an action out of world.
+
+understand the command "showtab" as something new.
+
+understand "showtab" as showtabing.
+understand "showtaby" as showtabing when showtabname is false.
+understand "showtabn" as showtabing when showtabname is true.
+
+carry out showtabing:
+	now showtabname is whether or not showtabname is false;
+	say "Showing table names in random text is now [on-off of showtabname].";
+	the rule succeeds;
+
+chapter specsing
+
+[ * SPECS tests the spec-help of all items in table of anagrams]
+
+specsing is an action out of world.
+
+understand the command "specs" as something new.
+
+understand "specs" as specsing.
+
+carry out specsing:
+	let qq be 0;
+	let reg be orig-region;
+	repeat with Q running through regions:
+		if Q is frivolous, next;
+		repeat through regana of Q:
+			unless the-from entry is spayshul:
+				increment qq;
+				if the-from entry is not a backdrop:
+					if the-from entry is not off-stage and the-from entry is not moot:
+						now reg is map region of location of the-from entry;
+				say "[qq]. [the-from entry] -> [the-to entry] [reg] : [spec-help of the-from entry]";
+	if qq is 0:
+		say "Yay! All things are clued.";
+	the rule succeeds;
+
 STS tests ends here.
 
 ---- DOCUMENTATION ----

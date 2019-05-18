@@ -185,8 +185,6 @@ a thing can be unspoilable, any-spoilable, cheat-spoilable or parse-spoilable.
 
 a thing can be attempted. a thing is usually not attempted.
 
-a thing can be unscannable. a thing is usually not unscannable.
-
 a thing can be prefigured or unfigured. a thing is usually unfigured.
 
 a thing can be uncheated, cheatitemed, or cheathinted. a thing is usually uncheated.
@@ -452,9 +450,7 @@ figure yorpwald-1 is the file "yorpwald-1.png"
 
 section external files for testers
 
-the file of roilhints is called "roilhints".
-
-the file of debuggery is called "debug".
+the file of gamehints is called "roilhints".
 
 section glulxy adjustments
 
@@ -1137,7 +1133,7 @@ currently-rejecting is a truth state that varies.
 
 rule for deciding whether to allow undo:
 	if hint-to-file is true:
-		append "UNDO: (no hint)[line break]" to the file of roilhints;
+		append "UNDO: (no hint)[line break]" to the file of gamehints;
 	if undo is prevented and scams is false:
 		if undo-code is -1:
 			say "Don't worry. There's no wrong way through dialogues, nothing disappears, and important stuff is recorded in your pedanto-notepad.";
@@ -5772,7 +5768,7 @@ after reading a command:
 		change the text of the player's command to XX;
 	if the player's command matches the regular expression "^\p" or the player's command matches the regular expression "^<\*;>":
 		if hint-to-file is true:
-			append "COMMENT: [the player's command]" to the file of roilhints;
+			append "COMMENT: [the player's command]" to the file of gamehints;
 		if currently transcripting:
 			say "Noted.";
 		otherwise:
@@ -24060,9 +24056,9 @@ to all-say (xx - indexed text):
 	if auto-hint-proc is true:
 		if hint-to-file is true:
 			if number of words in the player's command > 0:
-				append "[the player's command] ([hash of the player's command]) : [xx][line break]" to the file of roilhints;
+				append "[the player's command] ([hash of the player's command]) : [xx][line break]" to the file of gamehints;
 			else:
-				append "[the player's command] (divided by periods) : [xx][line break]" to the file of roilhints;
+				append "[the player's command] (divided by periods) : [xx][line break]" to the file of gamehints;
 			if hint-to-display is false:
 				continue the action;
 		if hint-to-display is true:
@@ -25629,68 +25625,6 @@ carry out a5ing:
 	process the notify score changes rule;
 	ital-say "you may wish to SEED 1 so you can make the macks talk blearily, nastily and bossily, if you are in an automatic testing situation."
 
-chapter hfing
-
-[* HF allows you to export hints to roilhints.glksave ]
-
-hfing is an action applying to nothing.
-
-understand the command "hf" as something new.
-
-understand "hf" as hfing.
-
-carry out hfing:
-	if hint-to-file is false:
-		say "Hint to file on, exported to roilhints.glksave[if hint-to-file is false]. Type HD to get full hints each move[end if].";
-		append "==================starting hint debug session[paragraph break]" to the file of roilhints;
-		now hint-to-file is true;
-	otherwise:
-		say "Hint to file off.";
-		append "==================ending hint debug session[paragraph break]" to the file of roilhints;
-		now hint-to-file is false;
-	the rule succeeds;
-
-chapter hding
-
-[* HD shows all hints every move. Testers should use HF.]
-
-hding is an action applying to nothing.
-
-understand the command "hd" as something new.
-
-understand "hd" as hding.
-
-carry out hding:
-	if hint-to-display is false:
-		say "Now showing full hints with the game. Not recommended for testers--use hf instead.";
-		now hint-to-display is true;
-	otherwise:
-		say "Hint display off.";
-		now hint-to-display is false;
-	the rule succeeds;
-
-chapter hintvising
-
-[* this hints everything visible. It is trumped by hintall but may be useful to the beta tester. ]
-
-hintvising is an action out of world.
-
-understand the command "hintvis" as something new.
-
-understand "hintvis" as hintvising.
-
-carry out hintvising:
-	repeat with VTH running through all visible things:
-		if VTH is vishintable:
-			all-say "Hinting [VTH]: ";
-			try objhinting VTH;
-	the rule succeeds;
-
-definition: a thing (called VT) is vishintable:
-	if VT is publically-named, decide yes;
-	if VT is unscannable, decide no;
-	decide yes;
-
 chapter endgameing
 
 [* ENDGAME tests the endgame]
@@ -26146,84 +26080,6 @@ carry out hashchecking:
 			say "Bad nudge hash for [this-cmd entry]: [hashval entry] should be [this-hash].";
 	if my-bool is false:
 		say "Hooray! No bad hashes in table of nudges.";
-
-chapter ffing
-
-[* FF toggles if flips are unfrozen. Useful to test if you -could- flip something.]
-
-ffing is an action out of world.
-
-understand the command "ff" as something new.
-
-understand "ff" as ffing.
-
-carry out ffing:
-	now ff is whether or not ff is false;
-	say "Flips [if ff is false]un[end if]frozen.";
-	the rule succeeds;
-
-book pluraling
-
-pluraling is an action applying to nothing.
-
-[* this shows which items are plural named or takeable]
-
-understand the command "plural" as something new.
-
-understand "plural" as pluraling.
-
-carry out pluraling:
-	repeat with QQ running through things:
-		say "[QQ] = [if QQ is plural-named]plural[otherwise]singular[end if] and [if QQ is fixed in place]fixed[otherwise]takeable[end if].";
-	the rule succeeds;
-
-chapter hintalling
-
-[* HINTALL detects which items still need hinting]
-
-hintalling is an action out of world.
-
-understand the command "hintall" as something new.
-
-understand "hintall" as hintalling.
-
-carry out hintalling:
-	let mycount be 0;
-	let times-found be 0;
-	let should-find be true;
-	repeat with VTH running through all things:
-		now should-find is true;
-		now times-found is 0;
-		if vth is a fruit and vth is not hintable, now should-find is false;
-		if VTH is useless or VTH is amusing or VTH is cluey or VTH is abstract or VTH is bounding, now should-find is false;
-		repeat through table of hintobjs:
-			if hint-entry entry is VTH, increment times-found;
-		if should-find is true:
-			if times-found is not 1:
-				increment mycount;
-				say "[if times-found is 0]Need[else]Too many[end if] [VTH] in table of hintobjs ([mycount]).";
-		else if times-found > 0:
-			increment mycount;
-			say "Need to delete [VTH] from table of hintobjs ([mycount]).";
-	if mycount is 0:
-		say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!";
-	the rule succeeds;
-
-section so hintall works ok
-
-[* this is just so HINTALL can say "everything works." Odd things that aren't items or in the game are rejected.]
-
-main-window is abstract.
-
-Null-bitmap-typeface is abstract.
-
-Null-image-typeface is abstract.
-
-null tileset is abstract.
-
-Glimmr C&C is abstract.
-
-graphics-window is abstract.
 
 chapter haing
 
@@ -26854,51 +26710,6 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 			repeat with J running from 1 to 7:
 				place-warrior J and act-index;
 
-chapter cap
-
-[* CAP caps the # of entries in a random table. For testing.]
-
-caping is an action applying to one number.
-
-understand the command "cap" as something new.
-
-understand "cap [number]" as caping.
-
-carry out caping:
-	if number understood > 1000 or number understood < 0:
-		say "Reasonable number, please, 0-999." instead;
-	say "Capping at [number understood].";
-	repeat through table of megachatter:
-		if number of rows in mytab entry < number understood:
-			now maxidx entry is number of rows in mytab entry;
-			if curidx entry >= maxidx entry:
-				now curidx entry is 0;
-		else:
-			if maxidx entry > number understood:
-				now maxidx entry is number understood;
-			if curidx entry > number understood:
-				now curidx entry is number understood;
-	the rule succeeds;
-
-chapter bsing
-
-[* BS turns bugsquash on ]
-
-bsing is an action out of world.
-
-understand the command "bs" as something new.
-
-understand "bs" as bsing.
-
-carry out bsing:
-	if bugsquash is false:
-		say "Bailing on bugs now.";
-		now bugsquash is true;
-	else:
-		say "Not bailing on bugs now.";
-		now bugsquash is false;
-	the rule succeeds;
-
 chapter palling
 
 [* PALL lets you see all the pad]
@@ -27078,59 +26889,6 @@ carry out elving:
 	say "Blah people: [list of blah people].";
 	say "Elvonly people: [list of elvonly people].";
 	the rule succeeds.
-
-chapter specsing
-
-[* this tests the spec-help of all items in tables of anagrams]
-
-to decide whether (ht - a thing) is spayshul:
-	if ht is an xtrhelp listed in the table of spechelp, decide yes;
-	decide no.
-
-specsing is an action out of world.
-
-understand the command "specs" as something new.
-
-understand "specs" as specsing.
-
-carry out specsing:
-	let locidx be 0;
-	let reg be means manse;
-	repeat with QQ running through regions:
-		if QQ is not demo dome:
-			repeat through regana of mrlp:
-				unless the-from entry is spayshul:
-					increment locidx;
-					say "[locidx]. [the-from entry] [QQ] ([right-word entry]) : [spec-help of the-from entry]";
-	if locidx is 0:
-		say "Yay! All things are clued.";
-	the rule succeeds;
-
-chapter scoing
-
-[*this tracks score-debugging. There may be another way. But it tells you what increased when in the debug file.]
-
-scoing is an action out of world.
-
-understand the command "sco" as something new.
-
-understand "sco" as scoing.
-
-carry out scoing:
-	if scotrack is false:
-		now scotrack is true;
-	else:
-		now scotrack is false;
-	the rule succeeds;
-
-after fliptoing when scotrack is true (this is the score track debug rule):
-	process the score debug rule;
-	continue the action;
-
-scotrack is a truth state that varies.
-
-every turn when scotrack is true (this is the score debug rule) :
-	append "[mrlp] > [the player's command] [cur-score of mrlp] / [min-score of mrlp]-[poss-score of mrlp].[line break]" to the file of debuggery;
 
 chapter skiing
 
@@ -27444,23 +27202,6 @@ to say list-of-randos:
 		if go-ahead entry is bzzt rule and reps entry > 1:
 			say " [if comma-yet is true],[end if][XX]";
 			now comma-yet is true;
-
-chapter showtabing
-
-[ * showtab shows the random tables we are choosing ]
-
-showtabing is an action out of world.
-
-understand the command "showtab" as something new.
-
-understand "showtab" as showtabing.
-understand "showtaby" as showtabing when showtabname is false.
-understand "showtabn" as showtabing when showtabname is true.
-
-carry out showtabing:
-	now showtabname is whether or not showtabname is false;
-	say "Showing table names in random text is now [on-off of showtabname].";
-	the rule succeeds;
 
 volume spare ideas
 

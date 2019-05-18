@@ -19,7 +19,9 @@ to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
 
 to say this-sts:
-	(- print(story); -)
+	(- print (string) Story; -)
+
+to say gm-short: say "[if is-roiling is true]Roiling[else]Shuffling[end if]"
 
 to moot (th - a thing): move th to Emerita Emirate; [ it's meateier emerita emirate in roiling, but the namespace works out ok ]
 
@@ -30,6 +32,12 @@ to mootl (lt - a list of things):
 definition: a thing (called th) is moot:
 	if th is in Emerita Emirate, yes;
 	no;
+
+definition: a thing (called ht) is spayshul:
+	if ht is an xtrhelp listed in the table of spechelp, decide yes;
+	decide no.
+
+the file of debuggery is called "debug". [deprecated slightly but still useful for manual runthroughs]
 
 a thing can be examined or unexamined. a thing is usually unexamined.
 
@@ -89,9 +97,17 @@ to min-and:
 	increment min-score of mrlp;
 	reg-inc;
 
+chapter debug variables that need to be in release
+
+hintfull is a truth state that varies. hintfull is usually false.
+
+hint-to-file is a truth state that varies.
+
 part thingdefs
 
 a thing can be universal, useless, amusing, cluey, unimportant, abstract, bounding or practical. a thing is usually practical.
+
+a thing can be unscannable. a thing is usually not unscannable.
 
 volume verbs
 
@@ -194,7 +210,7 @@ part sitesing
 
 to say email: say "blurglecruncheon@gmail.com".
 
-to say ghsite: say "http://github.com/andrewschultz/stale-tales-slate/[if is-roiling is true]Roiling[else]Shuffling[end if]"
+to say ghsite: say "http://github.com/andrewschultz/stale-tales-slate/[gm-short]"
 
 sitesing is an action out of world.
 
@@ -226,7 +242,7 @@ min-alert is a truth state that varies.
 
 carry out possing:
 	now possibles is whether or not possibles is false;
-	say "Switching [on-off of possibls] minimum/maximum available point notification in the status line. ";
+	say "Switching [on-off of possibles] minimum/maximum available point notification in the status line. ";
 	if min-alert is false:
 		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.";
 	else:
@@ -256,7 +272,7 @@ bugsquash is a truth state that varies.
 to abort-if-bugfind:
 	say "Attempting to cut off testing bugsquash = [bugsquash].";
 	if bugsquash is true:
-		say "[word number 1 in the player's command] = first letter.";
+		say "[word number 1 in the player's command] = first letter, [noun] = noun.";
 		if word number 1 in the player's command is not "showme":
 			say "Cutting off testing now.";
 			end the story finally;
@@ -278,6 +294,12 @@ carry out bsing:
 	the rule succeeds;
 
 volume boring things
+
+part rooms are sort of boring
+
+instead of doing something with the location of the player (this is the location is too general rule): [no-irp]
+	if current action is examining or current action is xrooming or current action is scaning or current action is gotothinging, continue the action;
+	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
 part boring things
 
@@ -303,10 +325,9 @@ this is the bore-exam rule: [note: I caused bugs by saying PROCESS THE BORE-EXAM
 		try examining the noun;
 		the rule succeeds;
 
-For printing a locale paragraph about a thing (called the item)
-	(this is the don't mention boringscen in room descriptions rule):
-	if the item is boringscen, set the locale priority of the item to 0;
-	continue the activity.
+after choosing notable locale objects:
+	repeat with item running through boringscen in location of player:
+		set the locale priority of the item to 0;
 
 instead of doing something with a boringthing: [no-irp]
 	abide by the bore-check of noun;

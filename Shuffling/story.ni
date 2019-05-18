@@ -85,6 +85,12 @@ Include (-
 ];
 -) after "Language.i6t".
 
+book modules that need to be included before mine
+
+include Flexible Windows by Jon Ingold.
+
+include Glulx Status Window Control by Erik Temple.
+
 book separate modules
 
 include Trivial Niceties by Andrew Schultz.
@@ -157,10 +163,6 @@ use authorial modesty.
 
 include Conditional Undo by Jesse McGrew.
 
-include Flexible Windows by Jon Ingold.
-
-include Glulx Status Window Control by Erik Temple.
-
 include Punctuation Removal by Emily Short.
 
 the story description is "Yorpwald's a weirdly-named land. Perfect for your weird powers to save it."
@@ -182,6 +184,8 @@ debug-parse is a truth state that varies. debug-scan is usually false. [a testin
 tnt is a truth state that varies.
 
 ff is a truth state that varies.
+
+the file of gamehints is called "shufhints".
 
 chapter basic things about things
 
@@ -231,7 +235,7 @@ use MAX_ACTIONS of 250.
 
 use MAX_VERBS of 430. [-40 from debug]
 
-use MAX_VERBSPACE of 4600.
+use MAX_VERBSPACE of 4700.
 
 use MAX_SYMBOLS of 33000.
 
@@ -243,7 +247,7 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 470.
 
-use MAX_VERBSPACE of 4900.
+use MAX_VERBSPACE of 5000.
 
 use MAX_SYMBOLS of 34000.
 
@@ -369,8 +373,6 @@ section debugging flags and such
 debug-print is a truth state that varies. debug-print is usually false.
 
 helpdebugflag is a truth state that varies. helpdebugflag is usually false.
-
-hintfull is a truth state that varies. hintfull is usually false.
 
 chapter glulx stuff
 
@@ -619,7 +621,7 @@ to show-missed (curr - a region):
 		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
 		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.";
 		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
-		say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them[or]you could also try [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
+		say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them[or]you could also have tried [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
 
 rule for showing what the player missed:
 	now sect-missed is false;
@@ -629,7 +631,7 @@ rule for showing what the player missed:
 	if missed-points is 0:
 		say "You got all the points! Well done! You are definitely ready for the extra challenge of [i]A Roiling Original[r].";
 	else:
-		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed. There is no special ending if you get them all, so don't bother going through the game unless you really had fun. ";
+		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed. There is no special ending if you get them all, so don't bother going through the game unless you really had fun.[paragraph break]";
 	repeat with zq running through solved regions:
 		show-missed zq;
 
@@ -715,15 +717,13 @@ to all-say (a - indexed text):
 		say "[a][line break]";
 		continue the action;
 	if helpdebugflag is true:
-		append "[the player's command]: [a][line break]" to the file of shufhints;
+		append "[the player's command]: [a][line break]" to the file of gamehints;
 	if hintfull is true:
 		say "[if hintfull is true]THIS MOVE'S HINT: [end if][a][if hintfull is true] (turn full hints off with HF)[end if][line break]";
 	[else:
 		say "[word number 1 in a] [word number 2 in a] [number of words in a] [number of characters in a].[line break]";]
 
 outline-print is a truth state that varies. outline-print is usually true.
-
-the file of shufhints is called "shufhints".
 
 ordeal-loader-hinting is an action applying to nothing.
 stores-hinting is an action applying to nothing.
@@ -1301,10 +1301,6 @@ check touching:
 chapter examining
 
 does the player mean doing something with location of the player: it is unlikely.
-
-instead of doing something with the location of the player (this is the location is too general rule): [no-irp]
-	if current action is examining or current action is xrooming or current action is scaning, continue the action;
-	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
 check xrooming astral altars: say "The altars are probably mostly for showcasing the tiles and stile." instead;
 
@@ -2606,7 +2602,7 @@ check taking inventory:
 	now all warpable things enclosed by player are marked for listing;
 	say "Your general tools include:[line break]";
 	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
-	if number of things worn by player > 0, say "You are also wearing [list of things worn by player].";
+	if number of things worn by player > 0, say "You are also wearing [a list of things worn by player].";
 	the rule succeeds;
 
 after printing the name of the emitter while taking inventory: say " ([if emitter is angstgnatted]full of angst gnats[else if bastion-evac is false]full. Uh, you think[else]nothing inside[end if])".
@@ -2949,7 +2945,7 @@ check opening desert-door:
 	say "There's nowhere else to go, though." instead;
 
 check entering desert-door:
-	if player has bugle and bugle-played is false and blot is not moot, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
+	if player has bugle and bugle-played is false and bolt is not moot, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
 	if blot is off-stage, say "The door seems stuck by an invisible force[if bolt is visible]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
 	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of desert-door]Without the bolt, the door swings open easily. [end if]";
 	say "You can't see what's behind, but fortunately it's just a small tumble[if player has bugle], though the bugle gets caught on an outgrowth on the way down[end if]...[wfak]";
@@ -3192,7 +3188,7 @@ Undo flag is a number variable. Undo flag is 0.
 
 rule for deciding whether to allow undo:
 	if helpdebugflag is true:
-		append "UNDO: (no hint)[line break]" to the file of shufhints;
+		append "UNDO: (no hint)[line break]" to the file of gamehints;
 	if undo is prevented:
 		if undo-code is 1:
 			say "Un-eating the saltine entails a huge intent--to win it NOW.[paragraph break]";
@@ -4480,6 +4476,8 @@ section metros portal
 
 the trade tread is a portal. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
 
+understand "metros" as trade tread when player is in Trips Strip and trade tread is in trips strip.
+
 check climbing trade tread: try entering trade tread instead.
 
 to check-2-of-3:
@@ -4968,7 +4966,7 @@ description of stick figures is "Each one's not particularly detailed, but it pr
 
 the notes stone is scenery in Gnarliest Triangles. understand "myth" as notes stone.
 
-the stack of tacks is amusing boringscen in Gnarliest Triangles. "[bug-report]". bore-text is "The tacks are glued to themselves. And, oddly, to the notes stone. They aren't useful.".
+the stack of tacks is amusing boringscen in Gnarliest Triangles. "oops tacks should not be shown.". bore-text is "The tacks are glued to themselves. And, oddly, to the notes stone. They aren't useful.".
 
 Instead of taking the notes stone: say "it seems to be glued to the tacks stack. Anyway, you probably only need it for its information."
 
@@ -4984,11 +4982,11 @@ after choosing notable locale objects when player is in Gnarliest Triangles:
 	repeat with item running through containers in Gnarliest Triangles:
 		set the locale priority of the item to 0;
 
-the bucket is a container in Gnarliest Triangles. printed name of bucket is "bucket[if ones are in bucket] full of ones[end if]".
+the bucket is a container in Gnarliest Triangles. printed name of bucket is "bucket[if ones are in bucket] full of ones[end if]". "!!".
 
-the shell is a container in Gnarliest Triangles. printed name of shell is "shell[if dashes are in shell] full of dashes[end if]".
+the shell is a container in Gnarliest Triangles. printed name of shell is "shell[if dashes are in shell] full of dashes[end if]". "!!!".
 
-the bubble is a container in Gnarliest Triangles. the printed name of bubble is "bubble[if noughts are in bubble] full of noughts[end if]".
+the bubble is a container in Gnarliest Triangles. the printed name of bubble is "bubble[if noughts are in bubble] full of noughts[end if]". "!!!!".
 
 check scaning when player is in Gnarliest Triangles (this is the scan what's in Gnarliest Triangles containers rule):
 	if noun is bucket and ones are in bucket:
@@ -5011,11 +5009,11 @@ the elegy is part of the bubble.
 
 the description of the elegy is "It's in a bright red that seems entirely wrong: [i][first custom style]Uthgon's Hut-Song:[paragraph break]Hognuts! Un-ghost no thugs! Go! Shunt![line break]Og hunts gnus, tho['] gush not tons, ugh.[r]"
 
-check taking bucket: say "Buckets be stuck here, unsurprisingly." instead
+check taking bucket: say "Buckets be stuck here, unsurprisingly." instead;
 
-check taking bubble: say "It's welded to the side of."
+check taking bubble: say "It's welded to the side the room." instead;
 
-check taking shell: say "It's welded to the side of the Flesh Shelf." instead;
+check taking shell: say "It's welded to the side of the room." instead;
 
 check inserting into:
 	if second noun is trel-priv, say "Maybe you mean to put something in the wall instead?" instead;
@@ -10751,7 +10749,7 @@ chapter peeling
 the dont-peel-taken-River Ville rule is listed before the use-cur-liv rule in the does the player mean rulebook.
 the dont-peel-taken-viler rule is listed before the use-cur-liv rule in the does the player mean rulebook.
 
-test pe with "purloin chisel/gonear chicken/rules/peel liver/peel liver"
+test pe with "purloin chisel/gonear viler/rules/peel liver/peel liver"
 
 peeling it with is an action applying to two things.
 
@@ -11034,7 +11032,7 @@ include STS tests by Andrew Schultz.
 description of main-window is "bug"
 
 when play begins (this is the beta tester instruction rule):
-	say "This version of the game involves special tricks for the player to warp through the game. It is 'volume beta testing' in the source and should be marked as NOT FOR RELEASE before release. However, it's okay now.[paragraph break]Type [b]dc[r] for all debug commands, but the one most helpful to me is [b]hd[r], which tracks the hints you receive. Shufhints.glkdata is a text file created and appended every move that you can send to me to make sure hints are valid. It's 2 dirs up in Windows and in /home in Mac.";
+	say "This version of the game involves special tricks for the player to warp through the game. It is 'volume beta testing' in the source and should be marked as NOT FOR RELEASE before release. However, it's okay now.[paragraph break]Type [b]dc[r] for all debug commands, but the one most helpful to me is [b]HF[r], which tracks the hints you receive. [file of gamehints] is a text file created and appended every move that you can send to me to make sure hints are valid. It's 2 dirs up in Windows and in /home in Mac. It's not nearly as critical now that I can run my own hints, but if you remember it, wonderful.";
 	if debug-state is false:
 		say "After pushing a key, you'll be asked to save to a transcript file immediately, so you don't forget. Thanks for Beta testing![wfak]";
 		try switching the story transcript on;
@@ -11279,46 +11277,6 @@ understand the command "dc" as something new.
 understand "dc" as dcing.
 
 carry out dcing: say "[b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[line break]ff freezes flips, so if you want to try, say, X BUTTON and X without undoing, you can.[line break][b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break]hf shows full hints every move.[line break][b]CAP[r] caps the number of random texts printed at the number you type. It is useful for testing the text that appears for the last random text, but lots has been done by me.[line break][b]hd toggles printing full hints to a debug file called shufhints, or shufhints.glkdata. This is bolded annoyingly to stress that any hint transcript is helpful to me, if you can get it working, but don't force it. [r]Shufhints(.glkdata) is a text file that appears in c:\program files\inform 7 (or 2 directories up) on Windows and in your home directory on the Mac.[line break]hn turns hints off.[line break]stit toggles whether you always have x-ray vision."
-
-chapter hfing
-
-[* shows full hints each turn]
-
-hfing is an action applying to nothing.
-
-understand the command "hf" as something new.
-
-understand "hf" as hfing.
-
-carry out hfing:
-	if hintfull is false:
-		say "Now showing full hints with the game. Not recommended for testers--use hd instead.";
-		now hintfull is true;
-	else:
-		say "Now hiding hints.";
-		now hintfull is false;
-	the rule succeeds;
-
-chapter hding
-
-[* dumps hints to a debug file]
-
-hding is an action applying to nothing.
-
-understand the command "hd" as something new.
-
-understand "hd" as hding.
-
-carry out hding:
-	if helpdebugflag is false:
-		say "Hint debugging on, exported to shufhints.glksave[if hintfull is false]. Type HF to get full hints each move[end if].";
-		append "==================starting hint debug session[paragraph break]" to the file of shufhints;
-		now helpdebugflag is true;
-	else:
-		say "Hint debugging off.";
-		append "==================ending hint debug session[paragraph break]" to the file of shufhints;
-		now helpdebugflag is false;
-	the rule succeeds;
 
 chapter tsing
 
@@ -11579,24 +11537,6 @@ carry out disasing:
 	say "The three beard parts are now all disassembled.";
 	the rule succeeds;
 
-chapter cap
-
-[* CAP caps the # of entries in a random table. For testing.]
-
-caping is an action applying to one number.
-
-understand the command "cap" as something new.
-
-understand "cap [number]" as caping.
-
-carry out caping:
-	repeat through table of megachatter:
-		if maxidx entry > number understood:
-			now maxidx entry is number understood;
-		if curidx entry > number understood:
-			now curidx entry is number understood;
-	the rule succeeds;
-
 volume testing commands - not for release
 
 [be sure to do stuff when you're not in the right room. This is CRITICAL to testing.]
@@ -11699,7 +11639,7 @@ get straw]
 
 test pl8 with "j/sortie/d/e/n/ne/16/straw/get straw/e/sack/w/get straw/cask/put straw in cask/sack/e/n/w/kitchen/tortilla/sauce/hot sauce/lettuce/parmesan/steak/put lettuce on steak/put tortilla in lettuce//put tortilla on lettuce/put tortilla in lettuce/put sauce on lettuce/put steak in lettuce/coat/e/scrape wall/i/pad/s/pad" in subsite
 
-test pl7 with "x brazier/m/f/r/hd/hf/hd/hf/in/x cat/pet cat/pet goat/gato/x gato/man/north/goat/go north/x new land/x gateway/open gateway/gate man/open gateway/in/l/x new land/x gadget/x slider/x flipside/x example/get slider/attack small slider/x device/swap/x device/swap/swap gadget/swap slider/swap slider/swap gadget/in/get a way/talk to man/ask about mumbletypeg/ask about toga/ask about goat/ask about slider/ask about gadget/ask about game/x gateway/attack gateman/attack old man/attack gadget/attack slider/attack nat/scan attic/scan attics/scan static/scan doll house/in/x trapdoor/x roster/m/f/r/forest/in/x leaves/m/f/r/smell/door/n/x leaves/x device/door/scan door/x music/x note/x musical chord/scan bulge/scan bugle/bugle/play bugle/in/e/x shell/x bubble/x bucket/nose/shades/hook nose to shades/w/w/open sandwich/beard/hook shades to beard/wear beard/e/n/chisel/s/w/get chicken/get cow/put chicken in canister/put cow in canister" in subsite
+test pl7 with "x brazier/m/f/r/hd/hf/hd/hf/in/x cat/pet cat/pet goat/gato/x gato/man/north/goat/go north/x new land/x gateway/open gateway/gate man/open gateway/in/l/x new land/x gadget/x slider/x flipside/x example/get slider/attack small slider/x device/swap/x device/swap/swap gadget/swap slider/swap slider/swap gadget/in/get a way/talk to man/ask about mumbletypeg/ask about toga/ask about goat/ask about slider/ask about gadget/ask about game/x gateway/attack gateman/attack old man/attack gadget/attack slider/attack nat/scan attic/scan attics/scan static/scan doll house/in/x trapdoor/x roster/m/f/r/forest/in/x leaves/m/f/r/smell/door/n/x leaves/x device/door/scan door/x music/x note/x musical chord/scan bulge/scan bugle/bugle/play bugle/in/e/x shell/x bubble/x bucket/nose/shades/hook nose to shades/w/w/open sandwich/beard/hook shades to beard/wear beard/e/n/chisel/s/w/get viler/get river/put viler in canister/put river in canister" in subsite
 
 chapter ending-testing
 
@@ -11763,9 +11703,9 @@ test fo with "forest/forest/smell/n/s/e/w/enter door" in Trips Strip
 
 test shades with "w/get bread/e/e/dashes/ones/shades/nose/beard/put shades on nose/put nose on beard/disas/put shades on beard/put nose on beard/disas/put nose on beard/put shades on beard/disas/put nose on beard/put shades on nose" in Self-ID Fields
 
-test forest with "forest/enter forest/smell/fo/fo/e/nose/shades/shotgun/put shades on nose/get nose and shotgun/w/w/get bread/get spam/beard/put nose on beard/wear beard/e/n/y/chisel/get chisel/s/w/peel chicken/peel cow/put chicken in canister/put cow in canister/spam/e/n/hasbeen/silver/sliver/silver/drapes/silver/cut drapes/silver/put silver in shotgun/maps/n/read maps/wolves/shoot wolves/v ts" in Trips Strip
+test forest with "forest/enter forest/smell/fo/fo/e/nose/shades/shotgun/put shades on nose/get nose and shotgun/w/w/get bread/get spam/beard/put nose on beard/wear beard/e/n/y/chisel/get chisel/s/w/peel viler/peel river/put viler in canister/put river in canister/spam/e/n/hasbeen/silver/sliver/silver/drapes/silver/cut drapes/silver/put silver in shotgun/maps/n/read maps/wolves/shoot wolves/v ts" in Trips Strip
 
-test formin with "forest/enter forest/smell/fo/fo/e/nose/shades/shotgun/put shades on nose/get nose and shotgun/w/w/get bread/get spam/beard/put nose on beard/wear beard/e/n/y/chisel/get chisel/s/w/peel chicken/peel cow/put chicken in canister/put cow in canister/spam/e/n/silver/sliver/silver/drapes/silver/cut drapes/silver/put silver in shotgun/maps/n/read maps/wolves/shoot wolves/v ts" in Trips Strip
+test formin with "forest/enter forest/smell/fo/fo/e/nose/shades/shotgun/put shades on nose/get nose and shotgun/w/w/get bread/get spam/beard/put nose on beard/wear beard/e/n/y/chisel/get chisel/s/w/peel viler/peel river/put viler in canister/put river in canister/spam/e/n/silver/sliver/silver/drapes/silver/cut drapes/silver/put silver in shotgun/maps/n/read maps/wolves/shoot wolves/v ts" in Trips Strip
 
 chapter metros
 
@@ -12137,21 +12077,6 @@ carry out meting:
 	try going east;
 	the rule succeeds;
 
-chapter pluraling
-
-[ * test for plurals ]
-
-pluraling is an action applying to nothing.
-
-understand the command "plural" as something new.
-
-understand "plural" as pluraling.
-
-carry out pluraling:
-	repeat with Q running through things:
-		say "[Q] = [if Q is plural-named]plural[else]singular[end if] and [if Q is fixed in place]fixed[else]takeable[end if].";
-	the rule succeeds;
-
 chapter scanalling
 
 [* this tries to scan all not inflexible things ]
@@ -12201,25 +12126,6 @@ carry out scanvising:
 		try scaning Q;
 	the rule succeeds;
 
-chapter ffing
-
-[* this freezes flip actions so I don't have to undo in testing]
-
-ffing is an action out of world.
-
-understand the command "ff" as something new.
-
-understand "ff" as ffing.
-
-carry out ffing:
-	if ff is false:
-		say "Flips frozen.";
-		now ff is true;
-	else:
-		say "Flips unfrozen.";
-		now ff is false;
-	the rule succeeds;
-
 chapter debug printing
 
 [* toggles if I print debug stuff to file]
@@ -12245,10 +12151,6 @@ understand the command "privs" as something new.
 
 understand "privs" as privsing.
 
-to decide whether (ht - a thing) is spayshul:
-	if ht is an xtrhelp listed in the table of spechelp, decide yes;
-	decide no.
-
 carry out privsing:
 	let privent be 0;
 	repeat through regana of mrlp:
@@ -12260,47 +12162,6 @@ carry out privsing:
 				say "[the-from entry] should have an entry in the table of spechelp for changing to [the-to entry].";
 				increment privent;
 	say "[privent] new entries needed.";
-	the rule succeeds;
-
-chapter specsing
-
-[ * SPECS tests the spec-help of all items in table of anagrams]
-
-specsing is an action out of world.
-
-understand the command "specs" as something new.
-
-understand "specs" as specsing.
-
-carry out specsing:
-	let qq be 0;
-	let reg be ordeal loader;
-	repeat with Q running through regions:
-		repeat through regana of Q:
-			unless the-from entry is spayshul:
-				increment qq;
-				if the-from entry is not a backdrop:
-					if the-from entry is not off-stage and the-from entry is not moot:
-						now reg is map region of location of the-from entry;
-				say "[qq]. [the-from entry] -> [the-to entry] [reg] : [spec-help of the-from entry]";
-	if qq is 0:
-		say "Yay! All things are clued.";
-	the rule succeeds;
-
-chapter hintvising
-
-[* this hints everything visible. It is trumped by hintall but may be useful to the beta tester. ]
-
-hintvising is an action out of world.
-
-understand the command "hintvis" as something new.
-
-understand "hintvis" as hintvising.
-
-carry out hintvising:
-	repeat with VTH running through all visible things:
-		all-say "Hinting [VTH]: ";
-		try objhinting VTH;
 	the rule succeeds;
 
 chapter evting
@@ -12323,54 +12184,6 @@ carry out evting:
 every turn when ettest is true: [this can be varied based on the test we wish to run]
 	if missile is visible:
 		try shooting the missile;
-
-chapter hintalling
-
-[* HINTALL detects which items still need hinting]
-
-hintalling is an action out of world.
-
-understand the command "hintall" as something new.
-
-understand "hintall" as hintalling.
-
-carry out hintalling:
-	let mycount be 0;
-	let should-hint be true;
-	let times-in-table be 0;
-	repeat with VTH running through all things:
-		now should-hint is true;
-		now times-in-table is 0;
-		if VTH is useless or VTH is amusing or VTH is abstract or VTH is bounding:
-			now should-hint is false;
-		repeat through table of hintobjs:
-			if hint-entry entry is VTH, increment times-in-table;
-		if should-hint is false:
-			if times-in-table > 0:
-				increment mycount;
-				say "[VTH] is in hint table ([times-in-table]) but should not be.";
-		else if times-in-table is not 1:
-			increment mycount;
-			say "[VTH] should be in hint table once but is in [times-in-table] times.";
-	if mycount is 0:
-		say "Everything that needs to be hinted is! Yay!";
-	the rule succeeds;
-
-section so hintall works ok
-
-[ * this is to work with the flexible windows extension so we cna check everything is hinted and abstract tiems/ideas don't show ]
-
-main-window is abstract.
-
-Null-bitmap-typeface is abstract.
-
-Null-image-typeface is abstract.
-
-null tileset is abstract.
-
-Glimmr C&C is abstract.
-
-graphics-window is abstract.
 
 chapter foing
 
@@ -12470,21 +12283,6 @@ understand "shomis" as shomising.
 
 carry out shomising:
 	carry out the showing what the player missed activity;
-	the rule succeeds;
-
-chapter showtabing
-
-[ * this shows table names for auto-testing purposes (random text) ]
-
-showtabing is an action out of world.
-
-understand the command "showtab" as something new.
-
-understand "showtab" as showtabing.
-
-carry out showtabing:
-	now showtabname is whether or not showtabname is false;
-	say "Showing table names in random text is now [on-off of showtabname].";
 	the rule succeeds;
 
 chapter tnting

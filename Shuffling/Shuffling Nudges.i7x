@@ -814,7 +814,11 @@ this is the in-i-main rule:
 	the rule fails;
 
 to say no-hot:
-	say "You can't change the hotel, [if night thing is not in The Ol' Hotel]and you got rid of the night thing, anyway[else]but you could have [a-nother] look around[end if]";
+	say "You can't change the hotel, ";
+	if night thing is not in The Ol' Hotel:
+		say "and you got rid of the night thing, anyway";
+	else:
+		say "but you could have a[if the ol' hotel is visited]nother[else] look around[end if]";
 
 to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 

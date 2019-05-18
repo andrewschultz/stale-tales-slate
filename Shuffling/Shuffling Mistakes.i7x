@@ -89,6 +89,8 @@ understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not of
 
 understand "mist" as a mistake ("No, those TMIs on the broad board are useful.") when player is in Notices Section.
 
+understand "noetics" as a mistake ("There's enough information here.") when player is in Notices Section.
+
 understand "stealin" as a mistake ("You're the good guy, here.") when player has saltine.
 
 book stores
