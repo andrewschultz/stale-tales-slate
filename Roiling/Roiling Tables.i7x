@@ -408,7 +408,7 @@ to say get-crust:
 	now player has crust;
 
 after fliptoing bogus-detours:
-	move player to last-detours;
+	move player to last-detour;
 	continue the action;
 
 to say new-thing:
@@ -776,7 +776,7 @@ thiscode [x allow-lots-tools wall] [tdm3]
 "while ($a = <A>) { if (($a =~ /@ARGV[bracket]0[close bracket]/) && ($a =~ /@ARGV[bracket]1[close bracket]/)) { print '$a matches.'; } } # simple check for if I wrote something already"
 "There's simpler code below just detecting if any anagrams are found in table entries. It's tough to follow, with exceptions for if two of the same word are in an entry, with the same hash as above."
 "There's code of what appears to be copying critical files to a GitHub directory. Shuffling Around and Roiling files are sent to sister directories, along with the compiled release binaries and lots of utilities."
-"The rest is too archaic, but it includes other things I put on [my-repo] include scripts to verify random text anagrams, to create the cheat and non-cheat text in the settler, and even track geometric means of table lengths."
+"The rest is too archaic, but it includes other things I put on [ghsite] include scripts to verify random text anagrams, to create the cheat and non-cheat text in the settler, and even track geometric means of table lengths."
 
 table of observations
 obser [from chic loner chronicle] [tdm4]

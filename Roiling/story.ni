@@ -496,6 +496,8 @@ use MAX_OBJECTS of 950.
 
 use MAX_PROP_TABLE_SIZE of 580000.
 
+use MAX_SYMBOLS of 150000.
+
 section debug on - not for release
 
 [needs to be near the top--well, could place it before all other when play begins rules]
@@ -2553,32 +2555,6 @@ to say ag-fol:
 	move agnostic to Obscurest Subsector;
 	move player to Obscurest Subsector;
 
-chapter basic nonos
-
-check going (this is the odd direction cue rule):
-	if noun is up or noun is down or noun is inside or noun is outside:
-		if the room noun of location of player is nowhere:
-			say "The game should tell you when you are able to go [noun]. You'll mostly need to use the four cardinal directions here." instead;
-
-the odd direction cue rule is listed before the can't go that way rule in the check going rulebook.
-
-section diagonal moves
-
-a direction can be diagonal. a direction is usually not diagonal.
-
-northeast,southeast,northwest,southwest are diagonal.
-
-before going (this is the reject diagonals rule):
-	if noun is a diagonal:
-		if player is in Actionless Coastlines and noun is northeast:
-			try going north instead; [crossing leak lake]
-		say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[in random order][one of][line break][i][bracket]Note: this game's confusing enough without diagonal directions. If you can't find a way to go, type EXITS.[close bracket][r][or][stopping][line break]" instead;
-
-check going:
-	if the noun is up or noun is down:
-		if the room noun of the location of player is nowhere:
-			say "if there is a way [noun], it should be clear in the description. Hopefully. If not, try EXITS." instead;
-
 book reading (vs just examining)
 
 The reading action translates into I6 as "Read".
@@ -4252,7 +4228,7 @@ carry out scaying:
 	now score-after is true;
 	the rule succeeds;
 
-after possing:
+report possing:
 	pad-rec-q "poss";
 	continue the action;
 
@@ -6105,7 +6081,7 @@ hows-show-tools is a truth state that varies. hows-show-tools is true.
 after printing the name of raves saver while taking inventory: say " ([if raves saver is reflexive]dull[else]shinier now[end if])"
 
 instead of taking inventory:
-	say "Item time![paragraph break]";
+	say "Item time![line break]";
 [	if debug-state is true:
 		say "DEBUG: Warpable [list of warpable things carried by player].";
 		say "DEBUG: REGSPECIAL C [list of regspecial things carried by player].";
@@ -8998,7 +8974,7 @@ check going inside in Largely All-Grey Gallery:
 
 book Carven Cavern
 
-Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in Carven Cavern]A curtain may be covering up a passage[else]The psalter looks like it could be blocking something[end if]. You probably don't want to go back outside."
+Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in Carven Cavern]An act-ruin curtain may be covering up a passage[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way."
 
 after looking in Carven Cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in Carven Cavern, set the pronoun them to palest pastel plates;
@@ -9017,6 +8993,7 @@ check exiting in Carven Cavern:
 	say "It's much safer to go in, not out, here." instead;
 
 check going nowhere in Carven Cavern (this is the cavern check rule):
+	if act-ruin curtain is not in Carven Cavern, say "You need to make an exit, first." instead;
 	say "The only way to make progress is inward, through that [if act-ruin curtain is moot]ex-[end if]curtain.";
 	if act-ruin curtain is moot:
 		say "[line break]Go through?";
@@ -9030,7 +9007,7 @@ check going inside in Carven Cavern:
 	if plaster is in Carven Cavern, say "There's nowhere to go in, yet." instead;
 	if act-ruin curtain is in Carven Cavern:
 		now curtain-know is true;
-		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it" instead;
+		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it." instead;
 	say "You walk through the former act-ruin curtain--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	moot satchel;
 	moot teariest treatise;
@@ -9072,7 +9049,7 @@ check inserting into stapler:
 
 after inserting staple into stapler:
 	say "The staple fits in with minimal fuss.";
-	the rule succeeds
+	the rule succeeds;
 
 chapter act-ruin curtain
 
@@ -9081,13 +9058,12 @@ check touching curtain:
 
 curtain-know is a truth state that varies.
 
-the act-ruin curtain is boringscen. "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands.". bore-text is "The curtain needs a specific action here.". bore-check is bore-curtain rule.
+the act-ruin curtain is boringscen. description is "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands.". bore-text is "The curtain needs a specific action here to pull it aside. Perhaps special materials are required.". bore-check is bore-curtain rule.
 
 this is the bore-curtain rule:
 	if current action is opening or current action is pulling or current action is taking:
 		say "[could-staple].";
 		the rule succeeds;
-	if current action is stapleing, continue the action;
 	abide by the bore-exam rule;
 
 to say curt-kno:
@@ -9138,29 +9114,19 @@ understand "staple [something]" as stapleing.
 does the player mean stapleing the act-ruin curtain: it is very likely.
 
 rule for supplying a missing noun when stapleing:
-	if act-ruin curtain is visible:
-		now noun is act-ruin curtain.
+	if act-ruin curtain is visible, now noun is act-ruin curtain.
 
 carry out stapleing:
-	if player does not have stapler:
-		say "You need something to staple with." instead;
+	if player does not have stapler, say "You need something to staple with." instead;
+	if staple is not visible, say "You can't staple with that stapler until you have a staple." instead;
 	if stapler is not in staple and player has staple:
 		say "(Putting the staple in the stapler first)";
 		try inserting staple into stapler;
-		if staple is not in stapler:
-			say "[reject]" instead;
-	if noun is holes:
-		try stapleing act-ruin curtain instead;
-	if noun is treatise:
-		say "It's only one piece of paper. It doesn't need stapling." instead;
-	if noun is not act-ruin curtain:
-		say "That doesn't need stapling." instead;
-	If noun is the player:
-		say "I can't imagine where you want to staple yourself, and I don't want to know." instead;
-	if stapler is off-stage:
-		say "[reject]";
-	if staple is not visible:
-		say "You can't staple with that stapler until you have a staple." instead;
+		if staple is not in stapler, say "[reject]" instead;
+	if noun is holes, try stapleing act-ruin curtain instead;
+	if noun is treatise, say "It's only one piece of paper. It doesn't need stapling." instead;
+	If noun is the player, say "I can't imagine where you want to staple yourself, and I don't want to know." instead;
+	if noun is not act-ruin curtain, say "That doesn't need stapling." instead;
 	say "You staple the act-ruin curtain. The staple is the right strength to cut in all the layers, grab them at once, and peel them back. The act-ruin curtain snaps back, slamming like a door and melting into the wall--and taking the stapler with it. You can't repaper, but [if latches are visible]with those latches, you may[else]you won't[end if] need to prepare to go [b]in[r] to further adventure!";
 	moot act-ruin curtain;
 	moot staple;
@@ -11010,7 +10976,7 @@ chapter ian
 
 Ian a Drug Guardian is a privately-named person in Cruelest Lectures. printed name of Ian is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)"
 
-check doing something with Ian:
+instead of doing something with Ian: [We can't avoid this "instead" rule since Ian kind of has to be a person]
 	if current action is scaning or current action is sbing, say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
 	if current action is attacking, say "He's too big for you." instead;
 	if player does not have pamphlets:
@@ -12720,7 +12686,7 @@ instead of doing something with the nerf fern:
 
 section pharos phasor
 
-the pharos phasor is boringscen . "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with.
+the pharos phasor is boringscen . "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with."
 
 chapter desk, checklist and vanity
 
@@ -12732,14 +12698,14 @@ does the player mean doing something with the big important desk: it is very lik
 
 description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
 
-the tan ivy vanity is boringscen. "It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. However, it's engraved CEO FOR US? OF COURSE!". bore-check is "Maybe the vanity is worth scanning, but that's it.". bore-check of tan ivy vanity is bore-vanity rule.
+the tan ivy vanity is boringscen. "It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. However, it's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the vanity is worth scanning, but that's it.". bore-check of tan ivy vanity is bore-vanity rule.
 
 this is the bore-vanity rule:
 	if current action is opening:
 		say "It's not a case sort of vanity. It's just a useless sort of vanity.";
 		the rule succeeds;
 	if current action is scaning:
-		say "You scan around the vanity for clues.";
+		say "You scan around the vanity for clues.[paragraph break]";
 		if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
 			say "Your settler picks up a signal when it moves to the lobster.";
 			try scaning lobster instead;
@@ -12749,7 +12715,7 @@ this is the bore-vanity rule:
 		if trance nectar is in Upscale Capsule:
 			say "Your settler picks up a signal when it moves to the trance nectar.";
 			try scaning trance nectar instead;
-		say "You weren't able to find any. But there must be something to do!"
+		say "But you weren't able to find any. That's a bug, but still, there must be something to do!";
 		the rule succeeds;
 	consider the bore-exam rule;
 
@@ -16535,7 +16501,7 @@ a-text of bogus-lamps is "RRYRR". b-text of bogus-lamps is "?R?R?". parse-text o
 
 plasm-warn is a truth state that varies.
 
-check going outside in Plasm Lamps: say "C'mon. The natant ant isn't meant to be tough. [if bogus-plasm is moot]You already did the bonus preparation[else]Not as tough as the other optional point here[end if]." instead;
+check going outside in Plasm Lamps: say "C'mon. The natant ant isn't meant to be tough. [if bogus-lamps is moot]You already did the bonus preparation[else]Not as tough as the other optional point here[end if]." instead;
 
 after looking in Plasm Lamps:
 	it-him-her the ant;
@@ -17339,7 +17305,7 @@ chapter theses sheets
 
 the theses sheets are plural-named amusing boringscen in Horned Hedron. bore-text is "You can really only read the theses sheets for entertainment value.". bore-check is bore-sheets rule.
 
-this is the bore-sheeets rule:
+this is the bore-sheets rule:
 	if current action is taking:
 		say "No denial they're nailed.";
 		the rule succeeds;
@@ -19046,6 +19012,8 @@ book Actionless Coastlines
 
 Actionless Coastlines is north of Strati Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor."
 
+check going northeast in actionless coastlines: try going north instead; [crossing leak lake]
+
 section solve-a-loaves
 
 some solve a loaves are an edible plural-named hintpastry. "Some solve-a-loaves have been left here.". description is "Inscribed with 'lo, save,' they are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]."
@@ -19376,6 +19344,8 @@ to decide whether the action is procedural: [aip]
 	if smelling, yes;
 	if reading, yes;
 	if sbing, yes;
+	if player has stapler:
+		if stapleing, yes;
 	if qbc_litany is table of no conversation:
 		if gotoing, yes;
 		if gotothinging, yes;
@@ -19689,18 +19659,18 @@ Dourest Detours is a room in Towers. "Negativity and apathy overwhelm you here. 
 
 bogus-detours is a privately-named vanishing LLPish boringscen in Dourest Detours.
 
-a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". paste-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". parse-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-after flipping bogus-detours:
+after fliptoing bogus-detours:
 	move player to last-detour;
 	continue the action;
 
-going west in anemic cinema when ingrates are moot is detour-checking.
-going south in lost lots when natives are moot is detour-checking.
+check going west in anemic cinema when ingrates are moot: abide by the detour-check rule;
+check going south in danger garden when natives are moot: abide by the detour-check rule;
 
 last-detour is a room that varies.
 
-carry out detour-checking:
+this is the detour-check rule:
 	now last-detour is the room noun of location of player;
 	if dourest detours is visited:
 		if lost lots is visited and finger fringe is visited, continue the action;

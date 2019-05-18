@@ -111,6 +111,15 @@ a thing can be unscannable. a thing is usually not unscannable.
 
 volume verbs
 
+chapter diagonal movements
+
+check going when noun is not planar (this is the reject diagonals and up/down rule):
+	if noun is diagonal:
+		say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[in random order][one of][line break][i][bracket]Note: this game's confusing enough without diagonal directions. If you can't find a way to go, type EXITS.[close bracket][r][or][stopping][line break]" instead;
+	if the noun is vertical:
+		if the room noun of the location of player is nowhere:
+			say "if there is a way [noun], it should be clear in the description. Hopefully. If not, try EXITS." instead;
+
 chapter minor verbs and blocking rules
 
 the block saying yes rule is not listed in any rulebook.

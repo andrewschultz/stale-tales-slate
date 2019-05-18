@@ -275,11 +275,6 @@ to say player-descrip:
 
 section diagonals
 
-before going (this is the reject diagonals rule):
-	if noun is a diagonal:
-		if player is in Busiest Subsite, say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
-		say "[one of](NOTE: you never have to go in a diagonal direction in this game.)[paragraph break][or][stopping][one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
-
 section dropping
 
 check dropping:
@@ -2611,6 +2606,8 @@ chapter Busiest Subsite
 Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage everyone else who skirted the Oafs['] Sofa planted squarely in the center."
 
 last-loc of Ordeal Loader is Busiest Subsite.
+
+check going in busiest subsite when noun is diagonal: say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
 
 section silly scenery
 
