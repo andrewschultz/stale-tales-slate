@@ -4260,27 +4260,9 @@ carry out scaying:
 	now score-after is true;
 	the rule succeeds;
 
-chapter possing
-
-possing is an action out of world.
-
-understand the command "poss" as something new.
-
-understand "poss" as possing.
-
-carry out possing:
-	if possibles is true:
-		now possibles is false;
-	otherwise:
-		now possibles is true;
-	say "Switching [on-off of possibles] minimum/maximum available point notification in the header. ";
-	if min-alert is false:
-		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.";
-	else:
-		say "[line break]";
-	now min-alert is true;
+after possing:
 	pad-rec-q "poss";
-	the rule succeeds;
+	continue the action;
 
 section posfing - not for release
 
@@ -4294,26 +4276,6 @@ carry out posfing:
 	say "Forcing possible point notification on[if possibles is true], though it already is[end if].";
 	now possibles is true;
 	the rule succeeds;
-
-chapter bugtracking
-
-to say my-repo:
-	say "http://github.com/andrewschultz/stale-tales-slate/Roiling";
-
-to say bug-report:
-	abort-if-bugfind;
-	say "BUG! You should not have seen this. Write me at [email] to describe how and where you got this--use the up arrows, or have a transcript ready, if you want to give the last few commands.[paragraph break]You can also report reproducible bugs at [my-repo].";
-
-bugsquash is a truth state that varies.
-
-to abort-if-bugfind:
-	say "Attempting to cut off testing bugsquash = [bugsquash].";
-	if bugsquash is true:
-		say "[word number 1 in the player's command] = first letter.";
-		if word number 1 in the player's command is not "showme":
-			say "Cutting off testing now.";
-			end the story finally;
-			follow the shutdown rules;
 
 chapter exitsing
 
@@ -6364,29 +6326,6 @@ Include (-
 ;
 -) after "Rulebooks.i6t".]
 
-instead of doing something with the location of the player:
-	if current action is xrooming or current action is gotoing, continue the action;
-	say "You may need to change your location at some time, but you never need to do anything with it in a command.";
-
-xrooming is an action applying to one visible thing.
-
-understand "x [any room]" as xrooming.
-understand "examine [any room]" as xrooming.
-
-check examining location of player:
-	if noun is location of player:
-		say "X/EXAMINE (ROOM) is equivalent to LOOK in A Roiling Original.";
-		try looking instead;
-
-check xrooming:
-	if noun is location of player:
-		say "X/EXAMINE (ROOM) is equivalent to LOOK in A Roiling Original.";
-		try examining location of player instead; [shouldn't happen but just in case]
-	say "[if noun is visited]You've been there, but[else]You haven't gotten there yet, and[end if] you can't see that far[x-room-n].";
-
-to say x-room-n:
-	say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
-
 chapter attacking
 
 understand the command "kick" as something new.
@@ -6704,12 +6643,8 @@ instead of jumping:
 chapter push and pull
 
 the can't push what's fixed in place rule is not listed in any rulebook.
-the can't push people rule is not listed in any rulebook.
-the can't push scenery rule is not listed in any rulebook.
 
 the can't pull what's fixed in place rule is not listed in any rulebook.
-the can't pull people rule is not listed in any rulebook.
-the can't pull scenery rule is not listed in any rulebook.
 
 check pushing (this is the new can't push rule) :
 	if noun is t-key:
@@ -7678,7 +7613,7 @@ understand the command "credits" as something new.
 understand "credits" as creditsing.
 
 carry out creditsing:
-	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
+	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [ghsite]." instead;
 
 chapter abouting
 
@@ -7696,7 +7631,7 @@ carry out abouting:
 			say "OK." instead;
 	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
 	say "[line break]A Roiling Original is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, which is just a vanity thing.";
-	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [my-repo]--no need for an account." instead;
+	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [ghsite]--no need for an account." instead;
 
 part releaseing
 
@@ -7724,7 +7659,7 @@ understand "tech" as teching.
 
 carry out teching:
 	say "Many people helped with technical aspects of A Roiling Original. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of Means Manse > 0] in the Stale Tales Slate[end if], Shuffling Around. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
-	say "[line break]And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
+	say "[line break]And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
 chapter optionsing
@@ -13440,16 +13375,12 @@ understand "throw [something preferably held]" as plainthrowing.
 
 understand "throw [something preferably held] at [something]" as throwing it at.
 
-the block throwing at rule is not listed in any rulebook.
-
 carry out plainthrowing:
-	if noun is flowerpot:
-		say "But it's Renato's. You don't have to help him out, but it'd be best not to give up." instead;
+	if noun is flowerpot, say "But it's Renato's. You don't have to help him out, but it'd be best not to give up." instead;
 	if noun is dart:
 		say "The dart was more made for shooting than throwing.";
 		the rule succeeds;
-	if noun is prod:
-		say "Almost. Try something simpler that will cause the prod to fall." instead;
+	if noun is prod, say "Almost. Try something simpler that will cause the prod to fall." instead;
 	if throw-warn is false:
 		ital-say "throwing isn't a useful verb in this game and will default to dropping in the future, except to hint a few items. Also, Inform/gblorb games generally use THROW X AT Y. Also, dropping itself isn't widely useful in this game.";
 		now throw-warn is true instead;
@@ -24150,28 +24081,6 @@ have-objhinted is a truth state that varies.
 before objhinting for the first time:
 	now have-objhinted is true;
 	ital-say "a word of warning before hinting objects. It is possible but very unlikely that this may reveal items you do not know about yet if this is not used carefully.";
-
-[definition: a thing (called hintcand) is hintrelevant:
-	if hintcand is off-stage, decide no;
-	if hintcand is moot, decide no;
-	if hintcand is useless, decide no;
-	if hintcand is the location, decide no;
-	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
-		decide no;
-[	if hintcand is span pans or hintcand is knob:		[Bad Coding. if hintcand is enclosed by a thing: now R1 is map region of location of a thing that encloses hintcand;]
-		if span pans is visible:
-			decide yes;
-		decide no;]
-	let R1 be map region of location of hintcand;
-	let R2 be mrlp;
-	d "[hintcand] [R1] vs [R2].";
-	if R1 is R2:
-		decide yes;
-	decide no;]
-
-[	if hintcand is a backdrop or hintcand is scenery:
-		if hintcand is visible, decide yes;
-		if hintcand is not visible, decide no;] [this code causes a loop & I don't know why]
 
 definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is off-stage, decide no;

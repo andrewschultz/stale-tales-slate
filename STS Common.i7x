@@ -1,6 +1,6 @@
 Version 1/190507 of STS Common by Andrew Schultz begins here.
 
-[this is a collection of functions common to A Roiling Original and Shuffling Around. It would be too hard at the moment to integrate things back with Trivial Niceties, but maybe I can one day. ]
+[this is a collection of functions common to A Roiling Original and Shuffling Around, two games from the Stale Tales Slate with common code.]
 
 part game-dependant variables and super-stubs
 
@@ -18,6 +18,9 @@ To process (RL - a rule): [used to avoid Inform giving line breaks when I don't 
 to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
 
+to say this-sts:
+	(- print(story); -)
+
 to moot (th - a thing): move th to Emerita Emirate; [ it's meateier emerita emirate in roiling, but the namespace works out ok ]
 
 to mootl (lt - a list of things):
@@ -30,9 +33,16 @@ definition: a thing (called th) is moot:
 
 a thing can be examined or unexamined. a thing is usually unexamined.
 
-chapter common procedural rules
+chapter default rules to ignore
 
 procedural rule: ignore the print final score rule.
+
+the block throwing at rule is not listed in any rulebook.
+
+the can't push people rule is not listed in any rulebook.
+the can't push scenery rule is not listed in any rulebook.
+the can't pull people rule is not listed in any rulebook.
+the can't pull scenery rule is not listed in any rulebook.
 
 chapter portal basics
 
@@ -82,6 +92,8 @@ to min-and:
 part thingdefs
 
 a thing can be universal, useless, amusing, cluey, unimportant, abstract, bounding or practical. a thing is usually practical.
+
+volume verbs
 
 part gotoing framework
 
@@ -143,6 +155,41 @@ Rule for supplying a missing noun while gotothinging:
 	say "You need to specify somewhere to go.";
 	reject the player's command;
 
+part xrooming
+
+xrooming is an action applying to one visible thing.
+
+understand "x [any room]" as xrooming.
+understand "examine [any room]" as xrooming.
+
+check examining location of player:
+	if noun is location of player:
+		say "X/EXAMINE (ROOM) is equivalent to LOOK in [this-sts].";
+		try looking instead;
+
+check xrooming:
+	if noun is location of player:
+		say "X/EXAMINE (ROOM) is equivalent to LOOK in [this-sts].";
+		try examining location of player instead; [shouldn't happen but just in case]
+	say "[if noun is visited]You've been there, but[else]You haven't gotten there yet, and[end if] you can't see that far[x-room-n].";
+
+instead of doing something with the location of the player:
+	if current action is xrooming or current action is gotoing, continue the action;
+	say "You may need to change your location at some time, but you never need to do anything with it in a command.";
+
+check examining location of player (this is the fake the scenery rule) : try looking instead.
+
+room-look-warn is a truth state that varies.
+
+check xrooming:
+	if room-look-warn is false:
+		say "X/EXAMINE (ROOM) is usually equivalent to LOOK in Shuffling Around. Sometimes it will describe scenery for you, but it doesn't have critical information.";
+		now room-look-warn is true;
+	if noun is location of player, try looking instead; [shouldn't happen but just in case]
+	say "[if noun is visited]You've been there, but you can't see that far[x-room-n][else]Sorry, I understood the verb, but I didn't understand the noun[end if].";
+
+to say x-room-n: say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
+
 part sitesing
 
 to say email: say "blurglecruncheon@gmail.com".
@@ -165,6 +212,72 @@ carry out sitesing:
 	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
 	say "And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds; [forgot where I found the names from]
+
+part possing
+
+possing is an action out of world.
+
+understand the command "poss" as something new.
+
+understand "poss" as possing.
+
+possibles is a truth state that varies.
+min-alert is a truth state that varies.
+
+carry out possing:
+	now possibles is whether or not possibles is false;
+	say "Switching [on-off of possibls] minimum/maximum available point notification in the status line. ";
+	if min-alert is false:
+		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.";
+	else:
+		say "[line break]";
+	now min-alert is true;
+	pad-rec-q "poss";
+	the rule succeeds;
+
+report requesting the score for the first time: poss-display.
+
+to poss-display:
+	if possibles is false and min-alert is false:
+		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
+		now min-alert is true;
+		pad-rec "poss";
+
+to say poss-range: say "[if poss-score of mrlp is not min-score of mrlp][min-score of mrlp]-[poss-score of mrlp][else]*[poss-score of mrlp]*[end if]";
+
+part bugtracking
+
+to say bug-report:
+	abort-if-bugfind;
+	say "BUG. You should not have seen this. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite], because this is something I want to fix. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc.[paragraph break]You can also report reproducible bugs at [ghsite]. Thanks so much for taking the time!"
+
+bugsquash is a truth state that varies.
+
+to abort-if-bugfind:
+	say "Attempting to cut off testing bugsquash = [bugsquash].";
+	if bugsquash is true:
+		say "[word number 1 in the player's command] = first letter.";
+		if word number 1 in the player's command is not "showme":
+			say "Cutting off testing now.";
+			end the story finally;
+			follow the shutdown rules;
+
+chapter bsing - not for release
+
+[* BS turns bugsquash on ]
+
+bsing is an action out of world.
+
+understand the command "bs" as something new.
+
+understand "bs" as bsing.
+
+carry out bsing:
+	now bugsquash is whether or not bugsquash is false;
+	say "Now bugsquash (end game on <BUG> text) is [on-off of bugsquash].";
+	the rule succeeds;
+
+volume boring things
 
 part boring things
 
@@ -200,11 +313,13 @@ instead of doing something with a boringthing: [no-irp]
 	if action is procedural, continue the action;
 	say "[bore-text of noun]" instead;
 
+volume command hashing -- thanks to Uncle David
+
 part hash codes and values
 
 book hashcodes
 
-[ this is so the computer can determine if we have an anagram without doing crazy string manipulations]
+[ This is so the computer can determine if we have an anagram without doing crazy string manipulations. The precise numbers aren't important. It's been verified that only 16 word-pairs have overlapping hash values, and none of them appear in puzzles. Hashes are much faster than manipulating and sorting a string with regexes, so the tradeoff is worth it. ]
 
 Table of Hashcodes
 Letter(indexed text)	Code

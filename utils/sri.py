@@ -55,7 +55,8 @@ if roiling_shuffling:
     for x in sorted(shuffling, key=shuffling.get):
         if x in roiling:
             count += 1
-            print("{:4d} SHUFFLING-ROILING {:5d} {:5d} ----".format(count, shuffling[x], roiling[x]), x)
+            print("{:s}{:4d} SHUFFLING-ROILING {:5d} {:5d} ----".format("*" if got_last else " ", count, shuffling[x], roiling[x]), x)
+        got_last = x in roiling
 
 if get_nice:
     get_unique_lines(niceties, i7.nice)

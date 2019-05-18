@@ -121,6 +121,7 @@ when play begins (this is the debug version info that should not be in the relea
 		if X is a person:
 			say "[X] is a person.";]
 	[end temporary tests]
+	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
 	now debug-print is true;
 
@@ -350,8 +351,6 @@ to say reject:
 to say verb-cue: say "That's not something you can say, do or see here. For a list of common verbs, type VERBS"
 
 to say set-bug: say "BUG. You shouldn't have the tagged gadget yet. If this is wrong, contact me at [email] or report a bug at [ghsite]. Transcripts are a big help. Up arrows work too."
-
-to say bug-report: say "BUG. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite]. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
 
 a room can be noisy. a room is usually not noisy.
 
@@ -754,9 +753,6 @@ check objhinting a deregioned object: say "That's not something in this region[o
 does the player mean objhinting a deregioned object: it is very unlikely.
 
 does the player mean objhinting a hintrelevant object: it is likely.
-
-[does the player mean objhinting a visible object:
-	it is likely.]
 
 does the player mean objhinting a moot object: it is unlikely. [ic]
 
@@ -1292,8 +1288,6 @@ rule for supplying a missing second noun while throwing:
 		say "No need to go pitching items. [line break]";
 		continue the action;
 
-the block throwing at rule is not listed in any rulebook.
-
 check touching:
 	if noun is toe, say "Just touching wouldn't be enough to cause serious pain." instead;
 	if noun is blades, say "They begin to whir at your finger's presence." instead;
@@ -1312,24 +1306,7 @@ instead of doing something with the location of the player (this is the location
 	if current action is examining or current action is xrooming or current action is scaning, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
-xrooming is an action applying to one visible thing.
-
-understand "x [any room]" as xrooming.
-understand "examine [any room]" as xrooming.
-
-check examining location of player (this is the fake the scenery rule) : try looking instead.
-
-room-look-warn is a truth state that varies.
-
-check xrooming:
-	if room-look-warn is false:
-		say "X/EXAMINE (ROOM) is usually equivalent to LOOK in Shuffling Around. Sometimes it will describe scenery for you, but it doesn't have critical information.";
-		now room-look-warn is true;
-	if noun is astral altars, say "The altars are probably mostly for showcasing the tiles and stile." instead;
-	if noun is location of player, try looking instead; [shouldn't happen but just in case]
-	say "[if noun is visited]You've been there, but you can't see that far[x-room-n][else]Sorry, I understood the verb, but I didn't understand the noun[end if].";
-
-to say x-room-n: say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
+check xrooming astral altars: say "The altars are probably mostly for showcasing the tiles and stile." instead;
 
 chapter throwing
 
@@ -1378,9 +1355,6 @@ check buying:
 
 chapter pushing and pulling
 
-the can't push people rule is not listed in any rulebook.
-the can't push scenery rule is not listed in any rulebook.
-
 check pushing:
 	if noun is the player, say "You push yourself to find the next word that works." instead;
 	if noun is tip, try switching on gadget instead;
@@ -1396,9 +1370,6 @@ check pushing:
 	if noun is panel, say "You give a few hups but fail to push[if panel is part of the silo]. Probably better to put it on something[else]. Maybe push the buttons individually[end if]." instead;
 	if noun is drapes, say "The drapes almost seem to enfold you as you get close. You may need to cut your way through." instead;
 	say "You give a few hups but fail to push." instead;
-
-the can't pull people rule is not listed in any rulebook.
-the can't pull scenery rule is not listed in any rulebook.
 
 check pulling:
 	if noun is the player, say "Whew! All this wordplay makes you nervous." instead;
@@ -10250,40 +10221,6 @@ carry out verbing:
 	say "You read about verbs in your dope tan notepad.";
 	try padding "verbs";
 	the rule succeeds;
-
-part possing
-
-possing is an action out of world.
-
-understand the command "poss" as something new.
-
-understand "poss" as possing.
-
-possibles is a truth state that varies.
-min-alert is a truth state that varies.
-
-carry out possing:
-	now min-alert is true;
-	if possibles is true:
-		now possibles is false;
-	else:
-		now possibles is true;
-	say "Switching [if possibles is true]on[else]off[end if] minimum/maximum available point notification in the status line. [one of][paragraph break][i][bracket]Note: this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an Easter egg. Or watching the minimum score increase may mean you found one.[no line break][r][close bracket][or][stopping][line break]";
-	the rule succeeds;
-
-report requesting the score for the first time: poss-display.
-
-to poss-display:
-	if possibles is false and min-alert is false:
-		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
-		now min-alert is true;
-		pad-rec "poss";
-
-to say poss-range:
-	if poss-score of mrlp > min-score of mrlp:
-		say "[min-score of mrlp]-[poss-score of mrlp]";
-	else:
-		say "*[poss-score of mrlp]*";
 
 book stubs
 
