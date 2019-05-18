@@ -84,7 +84,7 @@ begonias	noise bag	"noise bag"	"begonias"	"The begonias twirl and create a bag. 
 brocade	barcode	"barcode" or "bar code"	"brocade"	"The brocade schlurps and reorganizes into something flatter, but with the same pattern[if player does not have brocade and player does not have barcode]. You pick it up. [end if]."	true	348123886
 dry cake	keycard	"keycard" or "key card"	"dry cake"	"The dry metallic cake turns into a dry metallic keycard[if player does not have dry cake and player does not have keycard], which you take for yourself. Hooray, technology[end if]."	true	430644834
 antlers	rentals	"rentals" or "rental"	"antlers"	"Suddenly, a pair of workers walk in, point to their watches, takes the antlers down with a twist of a screwdriver, and walk off with them[if bastion-evac is true]. You smile and nod, but they has already left. Shame on the hosts, for pretending that ugly expensive thing was theirs[else]. People mumble but stay. The free food and alcohol overcome moral imperatives to shun the fake-rich, for now[end if]."	false	537423061
-neon pig	op	"opening"	"neon pig"	"[if player is on cafe face]Remembering basic electric safety rules and common sense, you move to the side before trying your magic. This saves your bacon. [run paragraph on][end if]The neon pig goes on the fritz, sparking first, then making a big POP. The neon is none! It appears you've created an opening. Now you're bakin[']. Uh, cookin[']. (Okay, no more hamming it up.)"	false	499032209
+neon pig	an opening	"opening"	"neon pig"	"[if player is on cafe face]Remembering basic electric safety rules and common sense, you move to the side before trying your magic. This saves your bacon. [run paragraph on][end if]The neon pig goes on the fritz, sparking first, then making a big POP. The neon is none! It appears you've created an opening. Now you're bakin[']. Uh, cookin[']. (Okay, no more hamming it up.)"	false	499032209
 siren	resin	"resin"	"siren"	"The siren makes some even more spastic noises before grinding into resin powder. You scoop it up and put some on your hands, which feel sticky now. You feel your chances of defeating the [beast-beats] has risen, unless you rinse."	false	423304232
 beats	beast	"beast"	"beats"	"'Our beats! Saboteur!' you hear as a beast replaces the thumping with roaring, which stops when the thing needs to breathe. It's an improvement. For your chance to best a beast."	false	347796816
 words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claiming they didn't mean themselves, giving passive-aggressive threats. But it is too late--they fade, and a sword appears materially.[paragraph break]You sensibly put the sword--as slippery as the final words--into your sheath[in-sheath][else]The words explode from the noise bag, which is blown away by the [which-roar]. In their place is a shining sword that [give-sword][end if]."	false	384914208
@@ -341,7 +341,7 @@ Velcro	"The Velcro remains tangled."
 controls	"The controls stay as they are."
 barcode	"The barcode does not shift."
 keycard	"The keycard remains stiff. Looks like it's as it should be."
-op	"You don't need to close up the opening. [if controls are not in op]Maybe put something there[else]You don't need to close up the opening. The controls are in, and they fill it well enough[end if]."
+an opening	"You don't need to close up the opening. [if controls are not in an opening]Maybe put something there[else]You don't need to close up the opening. The controls are in, and they fill it well enough[end if]."
 sheath	"The sheath remains still."
 noise bag	"The noise bag rumbles ominously. Best not change it into something worse."
 sword	"Meddling with the sword right now, you're worried it might poke you."
@@ -609,7 +609,7 @@ nerds	"[one of]There are alternate ways through, but the most straightforward is
 utterly unreadable book	"The book gives clues what to ask the nerds about."
 tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
 lit-up tulip	"The lit-up tulip [if player is in Bassy Abyss]is providing light[else]can provide light[end if]."
-op	"[if controls are part of op]You've fixed the power.[else][one of]The opening at the top of the cafe face is interesting. [plus][or]It appears to have a bunch of circuit-ends, etc. [plus][or]The controls can override the power surge to the east. [plus][or]PUT CONTROLS IN OPENING. [minus][cycling][end if]"
+an opening	"[if controls are part of an opening]You've fixed the power.[else][one of]The opening at the top of the cafe face is interesting. [plus][or]It appears to have a bunch of circuit-ends, etc. [plus][or]The controls can override the power surge to the east. [plus][or]PUT CONTROLS IN OPENING. [minus][cycling][end if]"
 siren	"[one of]The siren is irritating. [plus][or]You can disable it and make something you need. [plus][or]It becomes RESIN. [minus][cycling]"
 resin	"With the resin on your hands, you can get a better grip on things. You don't need to do anything."
 hilt	"[if siren is in Bassy Abyss]The hilt is too slippery to grab[else]Now that you got the resin, you can grab the hilt--and the sword[end if]."

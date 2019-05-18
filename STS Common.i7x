@@ -45,7 +45,13 @@ chapter default rules to ignore
 
 procedural rule: ignore the print final score rule.
 
+the can't push what's fixed in place rule is not listed in any rulebook.
+the can't pull what's fixed in place rule is not listed in any rulebook.
+
 the block throwing at rule is not listed in any rulebook.
+the block listening rule is not listed in any rulebook.
+the block burning rule is not listed in any rulebook.
+the block smelling rule is not listed in any rulebook.
 
 the can't push people rule is not listed in any rulebook.
 the can't push scenery rule is not listed in any rulebook.

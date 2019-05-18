@@ -454,8 +454,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "deda"	172052105	Elm Train Terminal	--	--	"[faded-ad]."
 "none"	339973702	--	neon pig	--	"It's not just that it's neon, it's that it's a pig."
 "pgi"	159058507	--	neon pig	--	"It's not just that it's a pig, it's that it's neon."
-"recess"	552489538	--	op	--	"You've already made nothing out of something, and instead of reversing that, [if controls are in op]you did what you needed[else]you may need to put something in the opening[end if]."
-"irwin"	352151776	--	op	--	"You don't want to mess with the wirin['] [if controls are in op]any further[else]that way[end if]."
+"recess"	552489538	--	an opening	--	"You've already made nothing out of something, and instead of reversing that, [if controls are in an opening]you did what you needed[else]you may need to put something in the opening[end if]."
+"irwin"	352151776	--	an opening	--	"You don't want to mess with the wirin['] [if controls are in an opening]any further[else]that way[end if]."
 "beats"	347796816	--	--	no-beats rule	"The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here."
 "beta"	251522850	--	beats	--	"This racket isn't just one beat."
 "bassy"	335513907	Bassy Abyss	--	--	"[loc-rej]." [start Bassy Abyss]
@@ -831,7 +831,7 @@ to say nerd-nah: say "The nerds are a little obnoxious, but they've had people t
 
 to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
 
-to say fix-rail: say "[if controls are in op]You fixed the rail[else]You need to fix the rails electronically[end if]";
+to say fix-rail: say "[if controls are in an opening]You fixed the rail[else]You need to fix the rails electronically[end if]";
 
 to say psa-vand: say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
 

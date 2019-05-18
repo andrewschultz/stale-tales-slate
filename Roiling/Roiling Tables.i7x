@@ -407,6 +407,14 @@ to say get-crust:
 	now swears is number of solved regions + charges of toaster;
 	now player has crust;
 
+after fliptoing yapper (this is the A Briber is You rule):
+	moot gleaner;
+	now lever is in Tenfold Teflon'd Den Loft;
+	if wipes are moot:
+		say "As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.";
+		move templar ramplet to Tenfold Teflon'd Den Loft;
+	continue the action;
+
 after fliptoing bogus-detours:
 	move player to last-detour;
 	continue the action;

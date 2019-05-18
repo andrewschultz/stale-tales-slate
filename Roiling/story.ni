@@ -738,7 +738,7 @@ sss is a truth state that varies.
 every turn when sss is true (this is the show blues rule): [this shows everything that looks odd or can be hinted without the player having to type it]
 	if player has settler and sss is true:
 		append ">[the player's command]: [no line break]" to the file of debuggery;
-		show-bluable;
+		show-bluables;
 	continue the action;
 
 section silly variables
@@ -6592,35 +6592,23 @@ instead of jumping:
 
 chapter push and pull
 
-the can't push what's fixed in place rule is not listed in any rulebook.
-
-the can't pull what's fixed in place rule is not listed in any rulebook.
-
 check pushing (this is the new can't push rule) :
-	if noun is t-key:
-		say "[if noun is reflexive]You don't know what it does[else]You'll push it once you're ready to program[end if]." instead;
+	if noun is t-key, say "[if noun is reflexive]You don't know what it does[else]You'll push it once you're ready to program[end if]." instead;
 	if noun is caps lock:
-		if noun is not part of keyboard:
-			say "On its own, you can't push a caps lock." instead;
+		if noun is not part of keyboard, say "On its own, you can't push a caps lock." instead;
 		say "You'll push it once you're ready to program." instead;
-	if noun is a person:
-		say "Pushing live things is probably even less effective than attacking." instead;
-	if noun is skid:
-		say "You need to specify a direction to push the skid." instead;
-	if noun is fixed in place or noun is scenery:
-		say "You give a few hups but fail to push." instead;
+	if noun is a person, say "Pushing live things is probably even less effective than attacking." instead;
+	if noun is skid, say "You need to specify a direction to push the skid." instead;
+	if noun is fixed in place or noun is scenery, say "You give a few hups but fail to push." instead;
 
 report pushing:
 	say "You give a few hups but fail to push.";
 	the rule succeeds;
 
 check pulling (this is the new can't pull rule) :
-	if noun is a person:
-		say "You don't need to corral people." instead;
-	if noun is skid:
-		say "You need to specify a direction to pull the skid." instead;
-	if noun is fixed in place:
-		say "Ullp! You can't pull..." instead;
+	if noun is a person, say "You don't need to corral people." instead;
+	if noun is skid, say "You need to specify a direction to pull the skid." instead;
+	if noun is fixed in place, say "Ullp! You can't pull..." instead;
 
 report pulling:
 	say "Ullp! You can't pull...";
@@ -9576,7 +9564,13 @@ check scaning (this is the scan settler and act-ruin curtain parts rule):
 	if noun is act-ruin curtain or noun is part of act-ruin curtain:
 		say "The act-ruin curtain registers nothing. Perhaps you need to find a way to unlock the small holes in the act-ruin curtain[if staple is off-stage]. You don't have anything that makes holes, yet[else]. Hmm, you have something that could make a small hole[end if]." instead;
 
-the whichs shwich is part of the settler. description is "It doesn't seem to budge easily--maybe that's because it gives some unusually good hints."
+the whichs shwich is a boringthing. it is part of the settler. description is "The whichs switch can be SWITCHed with SS to see everything that can be worked on.". bore-text is "The shwich only lets you do one thing, but it's pretty powerful. The only unusual command that goes with it is SS.". bore-check is the bore-shwich rule.
+
+this is the bore-shwich rule:
+	if current action is switching on:
+		show-bluables;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 instead of switching on the settler:
 	try switching on the whichs shwich instead.
@@ -9625,15 +9619,9 @@ set-sw is a truth state that varies.
 
 ever-switched is a truth state that varies.
 
-instead of pushing or pulling or attacking the whichs shwich:
-	try switching on the whichs shwich;
-
 does the player mean switching on the whichs shwich: it is very likely.
 
-instead of switching on the whichs shwich:
-	show-bluable instead;
-
-to show-bluable:
+to show-bluables:
 	if whichs shwich is not visible:
 		say "[reject]";
 		continue the action;
@@ -9696,7 +9684,7 @@ to say bluable-list:
 		if inc + 1 < QQ2:
 			say ", ";
 
-definition: a thing (called lp) is llpish-plus:
+definition: a thing (called lp) is llpish-plus: [this means it's part of a puzzle already solved?]
 	if lp is llpish, yes;
 	if lp is lobster and me arts are moot, decide yes; [troves]
 	if lp is me arts and lobster is moot, decide yes;
@@ -16535,11 +16523,9 @@ the papery yapper is a vanishing neuter person in Tenfold Teflon'd Den Loft. "A 
 
 after looking in Tenfold Teflon'd Den Loft:
 	if yapper is in Tenfold Teflon'd Den Loft, it-him-her yapper;
-	continue the action;
-
-after fliptoing yapper (this is the A Briber is You rule):
-	moot gleaner;
-	now lever is in Tenfold Teflon'd Den Loft;
+	if yapper is moot and wipes are moot and templar ramplet is off-stage:
+		move templar ramplet to Tenfold Teflon'd Den Loft;
+		say "This time around, you notice something you didn't before. A templar ramplet leading off to the side!";
 	continue the action;
 
 a-text of papery yapper is "RRYRYO". b-text of papery yapper is "?RY?Y?". parse-text of yapper is "?[sp]x[sp]-[sp]?[sp]-[sp]?".
@@ -16672,6 +16658,35 @@ check fliptoing d2:
 	if pins are reflexive:
 		say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard..." instead;
 
+chapter templar ramplet
+
+the templar ramplet is scenery. "The templar ramplet isn't something to be approached lightly. You sense you need the right way to get on it."
+
+chapter trampleing
+
+trampleing is an action applying to one thing.
+
+understand the command "trample" as something new.
+
+understand "trample [thing]" as trampleing.
+
+does the player mean trampleing the templar ramplet: it is very likely.
+
+carry out trampleing:
+	if templar ramplet is not in location of player, say "You have no need to trample anyone or anything here.";
+	if noun is not templar ramplet, say "Wrong thing to trample." instead;
+	if wipes are not moot, say "You should've cleaned the lance before seeing the ramplet. That you don't is a BUG. I don't know what to do, but it's not story-critical. Sorry." instead;
+	say "You make a big show of walking noisily down the templar ramplet. It works! You tumble out in...";
+	min-up;
+	min-up; [you will get another point for TANing the ant]
+	move player to Plasm Lamps;
+	moot templar ramplet;
+	the rule succeeds.
+
+check entering templar ramplet: say "You need to enter the right way." instead;
+
+check pushing templar ramplet: say "The templar ramplet does not budge." instead;
+
 book bubble wrap and drawer
 
 check fliptoing bubble wrap:
@@ -16783,24 +16798,22 @@ does the player mean cleaning the player when player does not have lance:
 	it is very likely;
 
 carry out cleaning:
-	if noun is the player:
-		say "You are morally and physically okay." instead;
-	if noun is lance and lance is cleaned:
-		say "The lance is as shiny as can be." instead;
+	if noun is the player, say "You are morally and physically okay." instead;
+	if noun is lance and lance is cleaned, say "The lance is as shiny as can be." instead;
 	if player does not have wipes:
 		say "You have nothing to clean [if noun is lance]the lance[else]anything[end if] with.";
-		if noun is lance:
-			preef lance;
+		if noun is lance, preef lance;
 		the rule succeeds;
-	if noun is waste:
-		say "The wipes won't begin to clear away the waste. You need good old fashioned physical effort." instead;
-	if noun is not lance:
-		say "You don't need to clean that." instead;
+	if noun is waste, say "The wipes won't begin to clear away the waste. You need good old fashioned physical effort." instead;
+	if noun is not lance, say "You don't need to clean that." instead;
 	now lance is cleaned;
 	now lance is unfigured;
 	now player has lance;
 	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry.";
 	moot wipes;
+	if player is in Den Loft and papery yapper is moot:
+		say "And what is this? You notice a templar ramplet, now you're not distracted by the papery yapper. It may lead to further adventure! Maybe not as important as dealing with the den loft, but hey, it might be fun.";
+		move templar ramplet to Tenfold Teflon'd Den Loft;
 	min-and instead;
 
 book Lapsin' Plains
