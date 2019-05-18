@@ -592,6 +592,7 @@ to say 2dn: say "[unless sr-acc is true]--[end if]".
 
 to show-missed (curr - a region):
 	if cur-score of curr is max-score of curr, continue the action;
+	now sect-missed is false;
 	if curr is Ordeal Loader:
 		if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt into a BLOT.";
 		if bugle is off-stage, say "[2da of Ordeal Loader]you could've changed the bulge into a BUGLE.";
@@ -616,12 +617,11 @@ to show-missed (curr - a region):
 		if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in Leis Isle]to expose the leis as an illusion[else]instead of taking the leis[end if].";
 		if rock is in Leis Isle, say "[2da of resort]the rock on the [isle] was changeable to CORK.";
 		if swing is in Leis Isle, say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
-		if found-lies is false, say "[2da of resort]you could've called out the LIES beforehand.";
 		if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
 		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
 		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.";
 		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
-		say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them[or]you could also have tried [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
+		say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess[or]you could also have tried [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
 
 rule for showing what the player missed:
 	now sect-missed is false;
@@ -1191,7 +1191,6 @@ rule for supplying a missing noun while drinking: now the noun is the player.
 instead of drinking:
 	if noun is phial or noun is lube, say "The lube looks sort of like mercury, now you think of it. Ugh." instead;
 	if noun is oils, say "The oils seem too valuable for that. You're not thirsty, anyway, and they wouldn't help if you were." instead;
-	if noun is beer, say "It's almost water, in its own way, but it's still probably much worse. Or it was. The can is empty." instead;
 	if noun is drainage or noun is skin sink, say "Eww, don't even." instead;
 	say "I show no kind grin on drinking!"
 
@@ -2522,10 +2521,6 @@ to place-random-garbage:
 		now blot-first is true; [hint blot or bugle at door]
 	if a random chance of 1 in 2 succeeds:
 		now rock-first is true;	[hint rock or swing 1st]
-	if a random chance of 1 in 2 succeeds: [what appears in metros]
-		now arena dig flier is in Undesired Underside;
-	else:
-		now love letter is in Undesired Underside;
 	move random guider to sf;
 	d "[random guider in sf] in SF.";
 	move random off-stage guider to rf;
@@ -3360,9 +3355,6 @@ carry out xmxing:
 			preef hallway;
 		ditch-saltine instead;
 	if noun is poem and pat is in the moor, try xmxing the location instead;
-	if noun is dig flier or noun is can of beer or noun is soggy love letter:
-		say "Your focus shifts to the drainage, instead.";
-		try xmxing drainage instead;
 	if noun is oils:
 		say "[v-b][if soil is in moor]you see a silo[else]you see soil, then a silo[end if].";
 		ditch-saltine instead;
@@ -6648,49 +6640,11 @@ check going outside in Undesired Underside: say "You already are in the not-so-g
 
 the building is scenery in Undesired Underside. understand "hotel" as building. description of building is "[if drainage is in Undesired Underside]It says L'HÔTE HELOT[else][first custom style]AND I RAGE[r] is written in red.[end if]"
 
-the drainage is in Undesired Underside. It is fixed in place. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. You see [letter-or-flier] in it. Cleaning it up would help take this city back."
+the drainage is in Undesired Underside. It is fixed in place. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. Cleaning it up would help take this city back."
 
 instead of taking drainage: say "It smells too powerful to even consider taking in its present form. Looks bad, too.".
 
-check fliptoing gardenia:
-	if drainage is visible:
-		moot arena dig flier;
-		moot can of beer;
-		moot soggy love letter;
-
-description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again. A beer can and a [if flier is visible]flier[else]soggy note[end if] float in it.". rgtext of drainage is "[rcn][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 6. cert-text of drainage is "-[d1][d1][d1][d1][d1][d1][d1]". rect-text of drainage is "G[d1][d1][d1][d1][d1][d1][ast]A".
-
-does the player mean doing something with soggy letter: it is likely.
-
-to say letter-or-flier:
-	say "a can of beer and a ";
-	if arena dig flier is in Undesired Underside:
-		say "flier";
-	else if soggy letter is in Undesired Underside:
-		say "soggy note";
-	else:
-		say "heap of gunk where an item should be ([bug-report])";
-
-the can of beer is auxiliary boringscen in Undesired Underside. description of can of beer is "It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.". rgtext of can of beer is "[rcn][rc][rc][gc][rc][rc][gc][rc]". lgth of can of beer is 8. gpos of can of beer is 2. rpos of can of beer is 1. cert-text of can of beer is "-[d1][d1][ast]D[d1][d1][ast]I[d1]". rect-text of can of beer is "G[d1][d1][d1][d1][d1][d1][ast]A". bore-text is "You don't really want to get close to the can of beer.". bore-check is bore-beer rule.
-
-this is the bore-beer rule:
-	if current action is drinking, say "Yuck. The beer's name may be even truer now than when some poor sap bought it." instead;
-	abide by the bore-exam rule;
-
-understand "aged rain" and "aged" and "rain" and "beer can" as can of beer.
-
-does the player mean doing something with can of beer:
-	if can of beer is not visible:
-		it is very unlikely;
-	it is likely.
-
-does the player mean doing something with the love letter when the love letter is visible: it is very likely.
-
-the soggy love letter is auxiliary boringscen. description of soggy love letter is "Someone has written [b]DEAR INGA:[r] in big letters. The waters have smudged the smaller writing, which is probably for the best.". lgth of soggy love letter is 8. gpos of soggy love letter is 7. rpos of soggy love letter is 3. rgtext of soggy letter is "[rcn][rc][rc][rc][rc][gc][rc][gc]". cert-text of soggy love letter is "-[d1][d1][d1][d1][ast]N[d1][ast]A". rect-text of soggy love letter is "G[d1][d1][d1][d1][d1][d1][ast]A". bore-text is "You don't really want to get close to the love letter. It's soppy in more ways than one."
-
-understand "dear inga" and "dear/inga" and "soggy note" as soggy love letter when soggy love letter is visible.
-
-the arena dig flier is auxiliary boringscen. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rcn][rc][rc][rc][rc][rc][gc][rc]". cert-text of arena dig flier is "-[d1][d1][d1][d1][d1][ast]I[d1]". rect-text of arena dig flier is "G[d1][d1][d1][d1][d1][d1][ast]A". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red.". bore-text is "You don't really want to get close to the flier."
+description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again.". rgtext of drainage is "[rcn][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 6. cert-text of drainage is "-[d1][d1][d1][d1][d1][d1][d1]". rect-text of drainage is "G[d1][d1][d1][d1][d1][d1][ast]A".
 
 a gardenia is a flower.
 
@@ -6698,7 +6652,18 @@ description of gardenia is "It's white, and it's just one flower instead of the 
 
 section a reading
 
-There is a boringthing called A reading. "[one of]A reading has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage[stopping].". description is "It says A READING in bold red, with AID ANGER below it. The rest seems like nonsense.". bore-text is "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc."
+There is a boringthing called A reading. "[one of]A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage. Maybe it holds clues[stopping].". description is "It says A READING in bold red. You could probably READ through it for a lot of clues. The content seems like nonsense, but hey, anything to help you see red.". bore-text is "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc.". bore-check is bore-reading rule.
+
+after fliptoing drainage:
+	if A reading is in Undesired Underside, say "The/a reading blows away once the gardenias appear.";
+	moot a reading;
+	continue the action;
+
+this is the bore-reading rule:
+	if current action is taking:
+		say "Eww. Anyway, the (a) reading is probably a good clue for the drainage here.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 section cramped red camp
 
@@ -7984,13 +7949,15 @@ section leis
 
 the l2 are privately-named plural-named scenery in Leis Isle. "Looking at the leis, you half forget you came through Store R to beat Red Bull Burdell."
 
+the lies are a privately-named thing.
+
 understand "leis" as l2 when l2 are in Leis Isle.
 
 found-lies is a truth state that varies.
 
 after fliptoing l2:
 	min-up;
-	moot l2;
+	moot lies;
 	now found-lies is true;
 	continue the action;
 
@@ -8456,7 +8423,7 @@ carry out tuging:
 
 chapter Means Manse
 
-Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The darned [i]exits[r] are all around, making you worry about if you'll have more to do, but hopefully you can just sit and do less than nothing--around the manse, or ignoring said exits[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort.
+Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the [i]exits[r] and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort.
 
 check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead.
 
@@ -8491,13 +8458,13 @@ end-path is a number that varies.
 carry out existing:
 	if player is in Means Manse:
 		if word number 1 in the player's command is "exist":
-			say "You kick back and enjoy yourself. That is all that's left to do. ";
+			say "You kick back and enjoy yourself. That is all that's left to do.";
 			now end-path is 0;
 		else if word number 1 in the player's command is "names":
 			say "You can't help yourself, but it's fun to give names to the places in the Means Manse. It makes you feel more at home. There's the Dusty Study, and that can be the Largely All-Grey Gallery. That's the Farming Framing, and the Highest Heights may be a bit hackneyed, too, but... it's YOUR place, to do as you want with, and it sounds pretty good for now.";
 			now end-path is 1;
 		else:
-			say "You give a few quiet amens to your accomplishments. Perhaps you didn't solve any great philosophical problems, buy hey, you did pretty well. ";
+			say "You give a few quiet amens to your accomplishments. Perhaps you didn't solve any great philosophical problems, buy hey, you did pretty well.";
 			now end-path is 2;
 		say "[line break]It's time to become an adventurer emeritus. Perhaps one day you will resume it, but for now, the allures of your laurels are too great. Doing without the outwith, you begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
 		say "[wfak][line break]I...what? End a pad with a deadpan: GIVE A HANG? DANG, I HAVE! TREMENDOUS = ME (ENDS TOUR).";
@@ -8833,6 +8800,7 @@ after reading a command:
 			now tell-flag is true;
 	repeat with QQ running through fungible things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
 		if QQ is a the-from listed in regana of mrlp:
+			d "candidate fungible: [QQ].";
 			if the player's command matches exact-text entry:
 				d "Found a fungible, [the-from entry], to [the-to entry].";
 				try fliptoing the-to entry;
@@ -10451,16 +10419,17 @@ understand "read [something]" as reading.
 reading is an action applying to one thing.
 
 check reading (this is the reading is almost examining rule):
-	if noun is tiles, say "The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." instead;
-	if noun is great grate, try examining the branding instead;
-	if noun is toga, try examining the toga-writing instead;
+	if noun is toga, try examining the toga-writing instead; [ordeal loader]
 	if noun is gadget, try examining tag instead;
 	if noun is gadget-screen, try scaning location of player instead;
-	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!";
-	if noun is op and controls are not in op, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
+	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
+	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!"; [stores]
+	if noun is great grate, try examining the branding instead; [sortie]
 	if noun is tall trio, say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]." instead;
 	if noun is spearman, say "The spearman's name, in red, is MR. SANE PA[if player carries spearman]. You also read, in red, one of three lines: [one of]MEAN RAPS[or]MS. P. ARENA--crossed out, but red[or]AMEN, RASP[in random order][end if]." instead;
-	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
+	if noun is a reading, say "On one of several pages, you see: [one of]AID ANGER is written[or]conspiracy theories from EDGAR IAN[or]silly musings on being IN A GRADE[or]a horror story: DINER, AAG[or]conspiracy theories from NIA EDGAR[or]an exhortation to RIDE AGAN (sic) on the last page[stopping]. The nonsense makes you see red." instead;
+	if noun is op and controls are not in op, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
+	if noun is tiles, say "The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." instead; [resort]
 	try examining the noun instead;
 
 chapter following

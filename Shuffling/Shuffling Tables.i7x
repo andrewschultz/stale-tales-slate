@@ -75,7 +75,7 @@ book Metros
 
 table of Metros anagrams [xxtma]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-drainage	gardenia	"gardenia"	"drainage" or "aged rain" or "arena dig" or "dear inga"	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
+drainage	gardenia	"gardenia"	"drainage"	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
 clover	Velcro	"Velcro"	"clover"	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
 Motto	tomato	"tomato"	"motto" or "a motto"	"The motto--that is, both words and paper--curls up and bundles into a small sphere, and you almost [if motto is in Bile Libe]hesitate to pick it up[else]drop it[end if]. Amazingly, it's not icky-soft or anything, and it doesn't smell TOO bad."	true	421188161
 lost corn	controls	"controls"	"lost corn"	"The different-colored kernels only flatten out as the lost corn collapses into a circuit board. The controls you possess--for whatever--seem powerful[if deadbeat is visible]. 'Whoah! DUDE!' moans the deadbeat, half staggering to his feet before he collapses from the effort[end if]."	true	575139873
@@ -94,7 +94,7 @@ book Resort
 table of Resort anagrams [xxtra]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Leis Isle
-l2	l2	"lies"	"lies"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"
+l2	lies	"lies"	"lies"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"	false	322886760
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
 sprig	grips	"grips/grip"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
@@ -559,9 +559,6 @@ panel	"[if panel is not part of silo]How to get the silo working? PUT PANEL ON S
 wires	"The wires aren't important. The panel is."
 drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if]. [plus][or]Anything would be more beautiful than drainage, especially a flower. [plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA. [minus][cycling]" [START METROS]
 a reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
-soggy love letter	"The love letter introduction clues what the drainage could be."
-can of beer	"The beer can's name clues what the drainage could be."
-arena dig flier	"The flier clues what the drainage should be."
 metallic door	"[if nerds-unwelcome is true]You got through the door, but you're not welcome back. No loss[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
 night thing	"You can't kill the night thing on your own. Maybe something equally awful would take care of it?"
 smartest mattress	"[if night thing is in The Ol' Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
