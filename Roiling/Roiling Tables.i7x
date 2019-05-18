@@ -1499,8 +1499,8 @@ tokers	"[if nestor is off-stage]You can find the tokers['] friend in store N[els
 mangiest steaming	"[if lecturer is reflexive]You can enter the steaming for a mini-side-quest[else]You've been in the steaming. After how you upended things, it'd be unwise to go back[end if]."
 passage	"If you go there, you'll get a big hint."
 pamphlets	"They are completely useless for actual life lessons, but the settler on 'cheat' mode will knock a vowel out from I USED TO."
-idg	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't work here.[plus][or]Ian's pamphlet is a hint.[plus][or]TEDIOUS + I USED TO will give you a lot of clues. Studio E will give a clincher.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
-lecturer	--	idg	[end stores hinting]
+Ian	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't work here.[plus][or]Ian's pamphlet is a hint.[plus][or]TEDIOUS + I USED TO will give you a lot of clues. Studio E will give a clincher.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
+lecturer	--	Ian	[end stores hinting]
 poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[plus][or][if cur-score of routes > 0]You've already figured one word[else]It's a certain sort of word[end if].[plus][or]Directions are confusing here, and standard ones don't work, but there's another way to get around.[plus][or]PREPOSITIONS.[minus][cycling]"
 bench	"[one of]The bench-end indicates the bench is A GIANT'S. You probably can't touch it wrong.[plus][or]Touching the bench does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
 scripture picturers	"[one of]Going in to the church is not so easy. Simply saying IN isn't churchy enough.[plus][or]You need to be a little more flowery to enter the church. Is there any clue?[plus][or]DIE SIN becomes something new.[plus][or]You can kick the sign to change it to SIN DIE for another clue.[plus][or]INSIDE.[minus][cycling]"	--	"INSIDE"

@@ -1813,7 +1813,7 @@ Elmo	"You already know about his mission and what he's done to help you. No time
 nestor	"[if store k is visible]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
 tokers	"[if store n is visible]'Missing our friend, man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
 lecturer	--
-idg	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
+Ian	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
 old giant	"He is already talking about himself, his complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
@@ -1952,7 +1952,7 @@ table of default-gen-blather	[ask x about nonsense] [tod]
 default-talker	gen-blah
 yourself	"You give an elfish 'Hi, self.' You discuss how maybe the game needs better developed NPCs, or maybe they just need to give more hints."
 tokers	"The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do." [begin stores]
-idg	"He nods at you and the lecturer. It's remarkably effective psychological warfare, to repress you and all."
+Ian	"He nods at you and the lecturer. It's remarkably effective psychological warfare, to repress you and all."
 lecturer	"If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff."
 urgent Gunter	"[bug-report]"
 Mole Elmo	"[bug-report]"
@@ -2147,9 +2147,9 @@ to say ohai-casper:
 table of subject-blather	[ask x about thing they know about] [tosb]
 him-who	person-subj	him-say
 Elmo	settler	"This shouldn't be available." [start INTRO]
-idg	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
-idg	Elvira	"'She didn't get to her position of power by using DRUGS.'"
-idg	idg	"The pamphlets Ian gave you will say enough."
+Ian	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
+Ian	Elvira	"'She didn't get to her position of power by using DRUGS.'"
+Ian	Ian	"The pamphlets Ian gave you will say enough."
 nestor	Elvira	"'So bogusly repressive!'"
 nestor	Store N	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 nestor	tokers	"[if tokers are visible]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
@@ -2519,7 +2519,7 @@ nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
 Gunter	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
-idg	"vitamins/nativism" or "nativism vitamins"	"'Nice an crunchy. Taste good too."
+Ian	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too."
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.]
 person-subj	right-region	him-say
@@ -9081,31 +9081,29 @@ check touching curtain:
 
 curtain-know is a truth state that varies.
 
-the act-ruin curtain is scenery. "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands."
+the act-ruin curtain is boringscen. "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands.". bore-text is "The curtain needs a specific action here.". bore-check is bore-curtain rule.
+
+this is the bore-curtain rule:
+	if current action is opening or current action is pulling or current action is taking:
+		say "[could-staple].";
+		the rule succeeds;
+	if current action is stapleing, continue the action;
+	abide by the bore-exam rule;
 
 to say curt-kno:
 	now curtain-know is true;
 
 to say could-staple:
-	say "You need the right tool to do so. You probably need one that could get a grip on some paper[if player carries stapler]. Maybe you could use the stapler to STAPLE the wall[stapload][end if]";
-
-instead of opening the act-ruin curtain:
-	say "[could-staple].";
+	say "You need the right tool to do so. You probably need one that could get a grip on some fabric or whatever[if player carries stapler]. Maybe you could use the stapler to STAPLE the curtain[stapload][end if]";
 
 to say stapload:
 	say ", [if staple is in stapler]especially since[else]once[end if] it's loaded";
 
-instead of taking act-ruin curtain:
-	try pulling act-ruin curtain instead.
+the vertical stripe is a boringthing. it is part of the act-ruin curtain. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
 
-instead of pulling the act-ruin curtain:
-	say "[could-staple].";
+the horizontal stripes is a plural-named boringthing. it is part of the act-ruin curtain. description of horizontal stripes is "Bluish, and there are about thirty."
 
-the vertical stripe is part of the act-ruin curtain. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
-
-the horizontal stripes are part of the act-ruin curtain. description of horizontal stripes is "Bluish, and there are about thirty."
-
-the small holes are part of the act-ruin curtain. description is "They look like some sort of weird lock or something.". understand "hole" as small holes.
+the small holes is a plural-named boringthing. it is part of the act-ruin curtain. description is "They look like some sort of weird lock or something.". understand "hole" as small holes.
 
 after fliptoing stapler:
 	if act-ruin curtain is not in Carven Cavern:
@@ -9116,11 +9114,7 @@ chapter pastel plates
 
 the palest pastel plates are plural-named scenery in Carven Cavern. description of plates is "They're...a bit squarish. Odd. And they're cracked and useless and appear to be squarish, but each has metallic trim around its edge and even some red writing[if plaster is in Carven Cavern]. The plates seem like they belong with the plaster[end if].".
 
-instead of taking plates:
-	if plaster is visible:
-		say "The plates are wedged in, as if they belonged there. Sort of.";
-	otherwise:
-		say "They are too broken and bulky to be of much use.";
+check taking plates: say "[if plaster is visible]The plates are wedged in, as if they belonged there. Sort of[else]They are too broken and bulky to be of much use[end if]." instead;
 
 a-text of plates is "RRYRRY". b-text of plates is "RR?RRY". parse-text is "x[sp]x[sp]?[sp]x[sp]x[sp]-."
 
@@ -9131,8 +9125,7 @@ the staple is a thing. description is "It looks unbent (well, beyond the two ben
 understand "staples" as staple.
 
 check taking staple:
-	if staple is in stapler:
-		say "It belongs in the stapler." instead;
+	if staple is in stapler, say "It belongs in the stapler." instead;
 
 chapter stapleing
 
@@ -11015,25 +11008,21 @@ description of lecturer is "He's wearing a very expensive suit and tie. You're n
 
 chapter ian
 
-idg is a privately-named person in Cruelest Lectures. printed name of idg is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)"
+Ian a Drug Guardian is a privately-named person in Cruelest Lectures. printed name of Ian is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)"
 
-understand "ian" and "drug guardian" and "guardian" as idg.
-
-instead of doing something with idg:
-	if current action is scaning or current action is sbing:
-		say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
-	if current action is attacking:
-		say "He's too big for you." instead;
+check doing something with Ian:
+	if current action is scaning or current action is sbing, say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
+	if current action is attacking, say "He's too big for you." instead;
 	if player does not have pamphlets:
 		say "Before you can do anything with or to Ian, he thrusts pamphlets about drug use at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take them?";
 		if the player yes-consents:
 			now player has pamphlets;
 			say "'Good choice. Say, if they're good enough, do you think you could put in a word for me--to a lecturer like THAT?" instead;
 		otherwise:
-			say "Ian looks hurt, then blames it on the lack of attention span from the drugs you've been taking. That cheers him up." instead;
+			say "Ian looks hurt but blames it on the lack of attention span from the drugs you've been taking. That cheers him up." instead;
 	otherwise:
 		if action is procedural, continue the action;
-		say "Before you can do anything, Ian points at the pamphlets he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
+		say "Before you can do anything, Ian points at the pamphlets he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do." instead;
 
 section reflections
 
