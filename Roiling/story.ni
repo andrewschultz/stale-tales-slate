@@ -113,9 +113,9 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Means Manse is an unsolved region. regtab of Means Manse is table of Means Manse nudges. regana of Means Manse is table of Means Manse anagrams. max-score of Means Manse is 14. min-score of Means Manse is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
+Ordeal Reload is an unsolved region. regtab of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
 
-last-loc of Means Manse is Dusty Study. [needed for GT command]
+last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
@@ -165,11 +165,11 @@ Others is an unsolved region. regtab of Others is table of others nudges. regana
 
 Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
 
-a thing has a region called lreg. lreg of a thing is usually Means Manse.
+a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
 section region stuff for STS Common
 
-orig-region is Means Manse.
+orig-region is Ordeal Reload.
 
 hub-region is Stores.
 
@@ -281,7 +281,7 @@ after doing something with a guardian:
 chapter rules on stub
 
 every turn when Strip of Profits is visited (this is the region-hint on no score rule):
-	if mrlp is means manse and Gunter is moot:
+	if mrlp is Ordeal Reload and Gunter is moot:
 		increment turns-spent of mrlp;
 	else if mrlp is unspoiled:
 		increment turns-spent of mrlp;
@@ -543,7 +543,7 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		if read-intro is false, continue the action;
 		say "And one final thing: A Roiling Original is a sequel to Shuffling Around. It's strongly recommended you play Shuffling Around first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
 		if the player direct-consents:
-			say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Means Manse as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
+			say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Ordeal Reload as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
 			if the player consents: [start of game]
 				say "Things were, well, anagrams. Store F became the forest. Store I, the sortie. Store M, the metros. You were particularly proud of changing the liches to a chisel and the drapes to a spread.";
 			else:
@@ -1178,7 +1178,7 @@ to item-warp:
 	now last-loc of mrlp is location of the player;
 	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
 		if mrlp is solved:
-			if mrlp is Means Manse or mrlp is others:
+			if mrlp is Ordeal Reload or mrlp is others:
 				say "This game just removed an item it should not have: ([list of carried not warpable things]) ([list of worn not warpable things]). [bug-report]";
 			otherwise:
 				say "[one of]An acuter curate relieves you of the items you won't need any more. He points at himself. 'Rod Hare, Hoarder.' He [if player is female]mumbles pensively, 'Her road...[run paragraph on][else]points at you. 'Rad, hero.[run paragraph on][end if]' He points away. 'I scour curios.'[or]The hoarder takes your surplus stuff again.[stopping]";
@@ -1289,8 +1289,8 @@ when play begins (this is the seed room progress for GO TO rule) :
 
 table of progvals [this determines which rooms are definitively ahead of others, so GO TO can't go backwards. Also, if a room is shunned, you can't go there any more.]
 rm	rmprog	regs	why-not
---	1	means manse	"The Means Manse was surrounded, and you escaped. Bad idea to turn back."
-Carven Cavern	2	--	[means manse]
+--	1	Ordeal Reload	"Your Means Manse was surrounded, and you escaped. Bad idea to turn back."
+Carven Cavern	2	--	[Ordeal Reload]
 --	1	routes	"[if progval of location of player is 4]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
 Harms Marsh	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
 Ripe Pier	3	--	"You have no idea how to turn the Cripple Clipper around, and you don't want to."
@@ -2625,7 +2625,7 @@ definition: a thing (called cand) is readable:
 
 table of readables [tre]
 to-read	what-read	alt-read
-sitar	"Oh, right. You bought it from Trisa Israt." [means manse]
+sitar	"Oh, right. You bought it from Trisa Israt." [Ordeal Reload]
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
@@ -3059,38 +3059,26 @@ before doing something when Elmo is visible:
 	if current action is scaning Elmo or current action is examining Elmo:
 		say "[if rifle is visible]You worry about making any quick movements, even though he doesn't look...enthusiastic about this situation, almost gazing at his rifle with disgust. Maybe you could get rid of the rifle[else]Talk with him, instead[end if]." instead;
 	if rifle is visible:
-		if current action is swearing obscenely or current action is swearing mildly:
-			say "No need for that. Shouldn't be too hard to figure what to do with the rifle." instead;
-		if current action is ss0ing or current action is ssing:
-			say "You can't afford sudden or elaborate movements, but well, there's that rifle." instead;
-		if current action is singing:
-			say "That's not what the high sign is for." instead;
-		if current action is waiting:
-			continue the action;
-		if current action is going:
-			say "Back in the Means Manse won't help, and Elmo won't let you by." instead;
+		if current action is swearing obscenely or current action is swearing mildly, say "No need for that. Shouldn't be too hard to figure what to do with the rifle." instead;
+		if current action is ss0ing or current action is ssing, say "You can't afford sudden or elaborate movements, but well, there's that rifle." instead;
+		if current action is singing, say "That's not what the high sign is for." instead;
+		if current action is waiting, continue the action;
+		if current action is going, say "Back inside the Means Manse won't help, and Elmo won't let you by." instead;
 		if action is procedural, continue the action;
-		if word number 1 in the player's command is "talk" or word number 1 in the player's command is "ask" or word number 1 in the player's command is "say" or word number 1 in the player's command is "tell":
-			say "You aren't brave enough to say 'Disarm, mad sir!'" instead;
+		if word number 1 in the player's command is "talk" or word number 1 in the player's command is "ask" or word number 1 in the player's command is "say" or word number 1 in the player's command is "tell", say "You aren't brave enough to say 'Disarm, mad sir!'" instead;
 		say "You can't do much with Elmo around." instead;
-	if action is blathery:
-		say "You don't want to go off on any tangents, here." instead;
+	if action is blathery, say "You don't want to go off on any tangents, here." instead;
 	if current action is not talking to Elmo and current action is not QBC responding with:
 		say "[convoforce].";
 		reject the player's command;
 
 before doing something when player is in Reclusion Inclosure and current quip is not final-quip (this is the Elvira forces initial convo rule):
-	if current action is fliptoing medals:
-		say "You'll never out-talk Elvira." instead;
-	if current action is fliptoing whistle:
-		say "You'd feel rude playing that whistle during a conversation, even one with Elvira." instead;
-	if current action is fliptoing:
-		say "You'll have to finish this chat first." instead;
+	if current action is fliptoing medals, say "You'll never out-talk Elvira." instead;
+	if current action is fliptoing whistle, say "You'd feel rude playing that whistle during a conversation, even one with Elvira." instead;
+	if current action is fliptoing, say "You'll have to finish this chat first." instead;
 	if action is procedural, continue the action;
-	if action is blathery:
-		say "Elvira's not going to give you any useful information." instead;
-	if current action is not talking to Elvira and current action is not QBC responding with:
-		say "[convoforce]." instead;
+	if action is blathery, say "Elvira's not going to give you any useful information." instead;
+	if current action is not talking to Elvira and current action is not QBC responding with, say "[convoforce]." instead;
 
 talked-to-Elmo is a truth state that varies.
 
@@ -3357,7 +3345,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 			moot macks;
 			now qbc_litany is table of Gretta comments;
 		else:
-			now poss-score of Means Manse is cur-score of Means Manse + 3;
+			now poss-score of Ordeal Reload is cur-score of Ordeal Reload + 3;
 			move the player to Carven Cavern;	[end Elmo's dialogue]
 	else:
 		debug-fallthrough;
@@ -3454,19 +3442,16 @@ to solve-region (sre - a region):
 	process the notify score changes rule;
 	now sre is solved;
 	now last-solved-region is sre;
-	if sre is Means Manse:
-		now all prefigured things are unfigured;
+	if sre is Ordeal Reload, now all prefigured things are unfigured;
 	repeat through table of pres:
 		if there is a thereg entry and thereg entry is sre:
 			now preflip entry is unfigured;[wipe stuff from flips]
 	say "Congratulations! [sre] node: done![paragraph break]";
 	if sre is otters and debug-state is true:
 		append "Test passed for Otters." to the file of debuggery;
-	if sre is stores:
-		continue the action;
+	if sre is stores, continue the action;
 	repeat with po running through portals in Strip of Profits:
-		if go-region of po is sre:
-			moot po;
+		if go-region of po is sre, 	moot po;
 		check-the-store po;
 	if sre is oyster and pills are moot:
 		now you-used-pills is true;
@@ -3916,7 +3901,7 @@ to say generic-reject:
 	say "That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. ";
 	unless qbc_litany is Table of No Conversation:
 		say "Besides, there's someone to deal with.";
-	else if cur-score of Means Manse > 0:
+	else if cur-score of Ordeal Reload > 0:
 		say "(If you are trying to flip something back, you almost never need to.)[line break]";
 	else if last-hash is cmdhash and last-hash > 0:
 		say "[paragraph break]Though it looks like you're a bit stuck. You may need to take a step back and examine things, [mb-ss-ped]to see what you can change. The trickier stuff should have more than one clue.";
@@ -3976,7 +3961,7 @@ to reg-inc:
 		say "BUG NOTE: This location needs a map region!";
 	otherwise:
 		increment the cur-score of mrlp;
-		if mrlp is means manse and rifle is off-stage and cur-score of Means Manse is max-score of Means Manse - 4:
+		if mrlp is Ordeal Reload and rifle is off-stage and cur-score of Ordeal Reload is max-score of Ordeal Reload - 4:
 			say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the gallery now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
 		if mrlp is stores and cur-score of stores is max-score of stores:
 			now stores is solved;
@@ -4002,7 +3987,7 @@ score-after is a truth state that varies.
 
 table of init-points
 myrg	pttot	blurb	doneyet
-means manse	2	"Yay! You're still changing stuff to stuff. For now. But you're on home turf, now. If you get out in the world, it'll be trickier."	false
+Ordeal Reload	2	"Yay! You're still changing stuff to stuff. For now. But you're on home turf, now. If you get out in the world, it'll be trickier."	false
 stores	1	"Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later."
 routes	1	"Well, that was different from the standard directions. But there can't be too many other ways to go."
 troves	1	"Neat. You made progress just thinking. Or not-thinking. It could be either."
@@ -4086,7 +4071,7 @@ carry out requesting the score:
 		d "# of turns = [turn count].";
 		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
 		if cur-score of mrlp is max-score of mrlp:
-			if mrlp is means manse:
+			if mrlp is Ordeal Reload:
 				say ". You should go IN to the Strip of Profits, now";
 			else if mrlp is others:
 				say ". You can go NORTH to the Valence Enclave";
@@ -4302,7 +4287,7 @@ when play begins (this is the basic initialization rule):
 		now doneyet entry is false;
 	move Edictal Citadel backdrop to all ominous rooms;
 	move the curst palace backdrop to all towery rooms;
-	add-errs means manse;
+	add-errs Ordeal Reload;
 	let convo-holes be false;
 	let temp be 0;
 	if debug-state is true:
@@ -4607,7 +4592,7 @@ carry out scaning:
 		the rule fails;
 	if first-good-scan is false:
 		now first-good-scan is true;
-		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is means manse]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
+		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is Ordeal Reload]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
 		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.";
 		pad-rec-q "la";
 		pad-rec-q "spaces";
@@ -4727,11 +4712,11 @@ to say beal-or-balmer: say "Wow! Three names. You don't know if [other-mbb] woul
 [??pad question mark / scan elmer / scan merle]
 table of aftertexts [taf]
 xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
-pram	false	false	false	true	"[cheatfid]." [START means manse]
+pram	false	false	false	true	"[cheatfid]." [START Ordeal Reload]
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
 t-b	false	false	false	true	"[cheatfid]."
-plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
+plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
@@ -4844,7 +4829,7 @@ book begin-region hints
 
 section special parser errors
 
-rule for printing a parser error when the latest parser error is the didn't understand error and mrlp is not means manse and the number of words in the player's command > 1:
+rule for printing a parser error when the latest parser error is the didn't understand error and mrlp is not Ordeal Reload and the number of words in the player's command > 1:
 	if cur-score of mrlp < 10 and mrlp is not parsewrned:
 		choose row with thisreg of mrlp in table of parsewarns;
 		say "[specwarn entry][line break]";
@@ -4857,7 +4842,7 @@ to say pars-trub:
 
 table of parsewarns
 thisreg	specwarn
-means manse	"You need to change certain things to other things."
+Ordeal Reload	"You need to change certain things to other things."
 stores	"[pars-trub]you need to change the stores, here, like you changed the [if tables are moot]tables[else if niche is moot]'my niche' writing[else]ten beams[end if], and you just need one word."
 presto	"[pars-trub]one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five."
 routes	"[pars-trub]one word should work here, with no preface necessary. While one word is eight letters long, the rest are around five or six."
@@ -6136,7 +6121,7 @@ instead of taking inventory:
 check taking inventory:
 	if the first thing held by the player is nothing:
 		say "Not very 'in.'" instead;
-	if mrlp is means manse or mrlp is stores or mrlp is demo dome:
+	if mrlp is Ordeal Reload or mrlp is stores or mrlp is demo dome:
 		continue the action;
 	if number of things worn by player > 0, say "You are also wearing [list of things worn by player].";
 	the rule succeeds;
@@ -6201,8 +6186,8 @@ check going nowhere (this is the spam can't go that way rule) :
 
 table of nowheres [tnw]
 theloc	thereject
-Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [means manse]
-Farming Framing	"No time for mooching around Means Manse. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
+Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
+Farming Framing	"No time for mooching around Ordeal Reload. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is visible]to get the pram out of the way[else]going DOWN the ramp[end if]."
 Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [stores]
 Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. There must be a generic way to leave!"
@@ -6330,7 +6315,7 @@ to say dont-hit of (fi - a person):
 table of attack-specific
 target	nohit
 yourself	"Surly foe: yourself? Lose fury!"
-plaster	"There's too much of it, and it's too hardened." [start Means Manse]
+plaster	"There's too much of it, and it's too hardened." [start Ordeal Reload]
 act-ruin curtain	"It's still too thick, even though some of the plaster is peeled away."
 Elmo	"[if rifle is visible]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
 drama armada	"That'd be a silly way to die." [START routes]
@@ -6446,7 +6431,7 @@ check climbing (this is the climb to enter rule) :
 		try entering noun instead;
 
 check climbing (this is the generic silly climbing reject rule):
-	if noun is ramp: [start Means Manse]
+	if noun is ramp: [start Ordeal Reload]
 		try going down instead;
 	if noun is stair:
 		if player is in Farming Framing:
@@ -6487,12 +6472,9 @@ before dropping something:
 	now drop-try is true;
 
 check dropping something:
-	if player is in Austerer Treasure and hoop is in Austerer Treasure:
-		say "You aren't in the right state of mind to drop all your possessions, even for a half a move. Doing so might let you jump and grab the hoop, but you need to say, the heck with it. Or something." instead;
-	if noun is a fruit:
-		say "Best return the fruit to Curtis, instead." instead;
-	If mrlp is Means Manse:
-		say "You probably need to abscond with everything useful you can get your hands on." instead;
+	if player is in Austerer Treasure and hoop is in Austerer Treasure, say "You aren't in the right state of mind to drop all your possessions, even for a half a move. Doing so might let you jump and grab the hoop, but you need to say, the heck with it. Or something." instead;
+	if noun is a fruit, say "Best return the fruit to Curtis, instead." instead;
+	If mrlp is Ordeal Reload, say "You probably need to abscond with everything useful you can get your hands on." instead;
 	say "Hero[if player is female]in[end if]es shouldn't be litterbugs[if player has purse]! Your super purse should hold whatever.[else]![end if]" instead;
 
 chapter eating
@@ -6735,7 +6717,7 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	say "That word is a mess and holds absolutely no power for you[if player is in Dusty Study and cur-score of Means Manse is 0]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
+	say "That word is a mess and holds absolutely no power for you[if player is in Dusty Study and cur-score of Ordeal Reload is 0]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
 	the rule succeeds;
 
 chapter knocking
@@ -6884,7 +6866,7 @@ to decide whether can-hear-posh:
 	no;
 
 check listening (this is the you can hear stuff some places rule):
-	if player is in Dusty Study: [means manse]
+	if player is in Dusty Study: [Ordeal Reload]
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
@@ -6976,7 +6958,7 @@ check listening (this is the you can hear stuff some places rule):
 chapter smelling
 
 before smelling (this is the you can smell some stuff some places rule):
-	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [means manse]
+	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
 	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
 	if player is in strip: [stores]
@@ -7049,7 +7031,7 @@ to say sleep-reject:
 		say "You found the one place in the game where you needed to sleep";
 	else if location is outie:
 		say "Sleeping outside is dangerous. You'd need somewhere protected";
-	else if mrlp is means manse:
+	else if mrlp is Ordeal Reload:
 		say "You won't need to sleep for a long while.";
 	else if mrlp is presto and shack is unvisited:
 		say "It'd be nice to have somewhere to sleep after tumbling through the gyre";
@@ -7626,7 +7608,7 @@ understand the command "tech" as something new.
 understand "tech" as teching.
 
 carry out teching:
-	say "Many people helped with technical aspects of A Roiling Original. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of Means Manse > 0] in the Stale Tales Slate[end if], Shuffling Around. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "Many people helped with technical aspects of A Roiling Original. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of Ordeal Reload > 0] in the Stale Tales Slate[end if], Shuffling Around. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
 	say "[line break]And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
@@ -7673,7 +7655,7 @@ understand the command "no tip" as something new.
 understand "no tip" as notiping.
 
 carry out notiping:
-	if cur-score of Means Manse < 2:
+	if cur-score of Ordeal Reload < 2:
 		say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
 	say "You [if no-tip is true]already have[else]switch to[end if] NO TIP at a region's start. OPT IN will reverse this.";
 	now no-tip is true;
@@ -7688,7 +7670,7 @@ understand the command "opt in" as something new.
 understand "opt in" as optining.
 
 carry out optining:
-	if cur-score of Means Manse < 2:
+	if cur-score of Ordeal Reload < 2:
 		say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
 	say "You [if no-tip is false]already have[else]switch to[end if] OPT IN at a region's start. NO TIP reverse this.";
 	now no-tip is false;
@@ -7709,12 +7691,9 @@ carry out retrying:
 		if retried is true:
 			say "This is the place you go after retrying--as you probably know. So nothing happens." instead;
 		say "Nothing happens. Perhaps this is where you'd be sent back to [if Loather Rathole is visited or Posh Hops Shop is visited or Danger Garden is visited or Same Mesa is visited or Danger Garden is visited]after going somewhere like you've been[otherwise]once you're able to look around[end if]." instead;
-	if mrlp is demo dome:
-		say "There's nothing to keep track of, here. Just explore around." instead;
-	if mrlp is others:
-		say "This is the only region left to take care of." instead;
-	if Strip of Profits is unvisited:
-		say "You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying the Means Manse." instead;
+	if mrlp is demo dome, say "There's nothing to keep track of, here. Just explore around." instead;
+	if mrlp is others, say "This is the only region left to take care of." instead;
+	if Strip of Profits is unvisited, say "You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying the Means Manse." instead;
 	if mrlp is otters:
 		say "You shouldn't need to go anywhere else[if number of bypassed regions > 0]. While you destroyed some regions with the patcher, you can't revisit them without restarting[end if]. Are you sure?";
 		if the player yes-consents:
@@ -7728,11 +7707,9 @@ carry out retrying:
 			add MI to item-list of mrlp;
 			now lreg of MI is mrlp;
 	now retried is true;
-	if mrlp is towers and can-see-map:
-		wipe-towers-map;
+	if mrlp is towers and can-see-map, wipe-towers-map;
 	now player is in Strip of Profits;
-	if nestor is in Strip of Profits or tokers are in Strip of Profits:
-		say "Fortunately, [if tokers are not in strip]Nestor didn't see[else]none of the tokers saw[end if] you zap back, or you'd probably be forced to explain things, which would take a while.";
+	if nestor is in Strip of Profits or tokers are in Strip of Profits, say "Fortunately, [if tokers are not in strip]Nestor didn't see[else]none of the tokers saw[end if] you zap back, or you'd probably be forced to explain things, which would take a while.";
 	the rule succeeds;
 
 to say rs-left: [unused]
@@ -7838,7 +7815,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			the rule succeeds;
 
 check fliptoing when player is in Dusty Study and gunter is off-stage (this is the don't flip til you should at start rule) :
-	repeat through table of Means Manse anagrams:
+	repeat through table of Ordeal Reload anagrams:
 		if noun is the-to entry and the-from entry is cromulent:
 			if player is in Dusty Study and urgent Gunter is off-stage:
 				if stuff-found < 3:
@@ -8008,13 +7985,13 @@ after fliptoing (this is the fruit cue rule):
 
 the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
 
-volume Means Manse
+volume Ordeal Reload
 
 book Dusty Study
 
 to say tables-beams: if tables are in Dusty Study or t-b are in Dusty Study, say ", [if tables are in Dusty Study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if], and [if t-b are in Dusty Study]beams on another wall[else]a way down where those beams were[end if]";
 
-Dusty Study is an innie room in Means Manse. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
 
 after printing the locale description for Dusty Study when Dusty Study is unvisited:
 	ital-say "you may wish to type ABOUT or VERBS to see information about the game and what words work best.";
@@ -8288,7 +8265,7 @@ one-rigged is a truth state that varies.
 
 carry out rigoneing:
 	if one-rigged is true, say "You already did." instead;
-	if mrlp is not means manse, say "You can only IGNORE REGION in the Dusty Study." instead;
+	if mrlp is not Ordeal Reload, say "You can only IGNORE REGION in the Dusty Study." instead;
 	if player is not in Dusty Study, say "You need to do this in the Dusty Study." instead;
 	if Gunter is not off-stage, say "You need to reset the game to before when Gunter knocks at the door." instead;
 	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
@@ -8296,7 +8273,7 @@ carry out rigoneing:
 	get-cool-stuff;
 	now one-rigged is true;
 	move player to Strip of Profits;
-	now means manse is bypassed;
+	now Ordeal Reload is bypassed;
 	the rule succeeds;
 
 chapter lead in denial
@@ -8315,7 +8292,7 @@ denial is a truth state that varies.
 
 carry out denialnaileding:
 	let patchies be 0;
-	if mrlp is means manse, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if gunter is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead;
+	if mrlp is Ordeal Reload, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if gunter is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead;
 	if denial is true, say "You already used this warp." instead;
 	if player is in Strip of Profits:
 		if denial is true and store t is moot, say "You already did." instead;
@@ -8507,7 +8484,7 @@ table-warn is a truth state that varies.
 before doing something with tables when table-warn is false:
 	if the player's command matches the regular expression "\btable\b":
 		now table-warn is true;
-		ital-say "it's important that the tables are plural, as you [if cur-score of means manse is 0]may find[else]already found[end if].";
+		ital-say "it's important that the tables are plural, as you [if cur-score of Ordeal Reload is 0]may find[else]already found[end if].";
 	else:
 		continue the action;
 
@@ -8845,7 +8822,7 @@ rule for supplying a missing noun when entering:
 		now the noun is the evac-cave.
 
 [x current room]
-Largely All-Grey Gallery is an innie room in Means Manse. It is stairy. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
+Largely All-Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
 diorama is in Dusty Study and Largely All-Grey Gallery. [this is written in here after defining the gallery as a room]
 
@@ -8974,7 +8951,7 @@ check going inside in Largely All-Grey Gallery:
 
 book Carven Cavern
 
-Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in Carven Cavern]An act-ruin curtain may be covering up a passage[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way."
+Carven Cavern is an innie room in Ordeal Reload. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in Carven Cavern]An act-ruin curtain may be covering up a passage[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way."
 
 after looking in Carven Cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in Carven Cavern, set the pronoun them to palest pastel plates;
@@ -9000,7 +8977,7 @@ check going nowhere in Carven Cavern (this is the cavern check rule):
 		if the player direct-consents:
 			try going inside instead;
 		else:
-			say "That is probably the way out of the Means Manse. But you are free to look around." instead;
+			say "That is probably the way out of the Ordeal Reload. But you are free to look around." instead;
 	do nothing instead;
 
 check going inside in Carven Cavern:
@@ -9011,7 +8988,7 @@ check going inside in Carven Cavern:
 	say "You walk through the former act-ruin curtain--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	moot satchel;
 	moot teariest treatise;
-	solve-region Means Manse;
+	solve-region Ordeal Reload;
 	the rule succeeds;
 
 chapter plaster psalter
@@ -9382,7 +9359,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 
 book Farming Framing
 
-Farming Framing is an innie room in Means Manse. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].";
+Farming Framing is an innie room in Ordeal Reload. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].";
 
 the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
@@ -9415,7 +9392,7 @@ instead of doing something with girding ridging:
 
 book Highest Heights
 
-Highest Heights is an innie room in Means Manse. "Well, you're in the top room of the Means Manse, here. The floor is, of course, divided in eighths, set high, with niches up to several inches. The patented closest closets lead back down the chimney again[if ramp is visible], and the ramp you made slopes down[end if]."
+Highest Heights is an innie room in Ordeal Reload. "Well, you're in the top room of the Means Manse, here. The floor is, of course, divided in eighths, set high, with niches up to several inches. The patented closest closets lead back down the chimney again[if ramp is visible], and the ramp you made slopes down[end if]."
 
 after going when heights are visited and Strip of Profits is unvisited:
 	if location of player was unvisited: [and location of player is not heights]
@@ -9943,12 +9920,10 @@ check examining pedanto-notepad for the first time:
 	the rule succeeds;
 
 to decide whether (qq - a truth state) is unrelevant:
-	if qq is false:
-		decide yes;
+	if qq is false, decide yes;
 	let mrl be mrlp;
 	if qq is true:
-		if mrl is Means Manse or mrl is stores:
-			decide no;
+		if mrl is Ordeal Reload or mrl is stores, decide no;
 	decide yes;
 
 to say cur-has:
@@ -10083,7 +10058,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "Leo/Rand" or "Leo and Rand"	false	"Leo and Rand may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
 "haunter"	false	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."	"the haunter"	true	oyster
 "die" or "die thou" or "the/ hideout/hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"DIE THOU"	true	oyster
-"progress"	false	"You note the following: means manse = stuff[other-areas]."	"progress"	false
+"progress"	false	"You note the following: Ordeal Reload = stuff[other-areas]."	"progress"	false
 "curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
 "xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
 "scenery"	false	"St. Teri told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
@@ -10168,7 +10143,7 @@ pre-mang	others	"You can look AMONG once you have currency to haggle in the clea
 to say other-areas:
 	repeat through table of region-spoilers:
 		if last-loc of hint-reg entry is visited:
-			if hint-reg entry is not others and hint-reg entry is not Means Manse and hint-reg entry is not stores:
+			if hint-reg entry is not others and hint-reg entry is not Ordeal Reload and hint-reg entry is not stores:
 				say "[spoil-expl entry]";
 			else:
 				say "(????)";
@@ -23978,7 +23953,7 @@ check hinting:
 
 carry out hinting:
 	if mrlp is demo dome, say "You're already in my clue lyceum." instead;
-	if mrlp is Means Manse, try means-hinting instead;
+	if mrlp is Ordeal Reload, try means-hinting instead;
 	if mrlp is stores, try stores-hinting instead;
 	if mrlp is others, try others-hinting instead;
 	if mrlp is troves, try troves-hinting instead;
@@ -24044,7 +24019,7 @@ definition: a thing (called hintcand) is hintrelevant:
 			decide yes;
 		decide no;
 	if hintcand is closest closets:
-		if mrlp is means manse and Highest Heights is visited, decide yes;
+		if mrlp is Ordeal Reload and Highest Heights is visited, decide yes;
 	if hintcand is red writing, decide yes;
 	if hintcand is Thearchy Hatchery or hintcand is Maturation Natatorium:
 		if mrlp is towers:
@@ -24063,7 +24038,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		if mrlp is routes, decide yes;
 		decide no;
 	if hintcand is closest closets:
-		if mrlp is not means manse, no;
+		if mrlp is not Ordeal Reload, no;
 		if Highest Heights is visited, yes;
 		no;
 	if hintcand is Edictal Citadel:
@@ -24137,7 +24112,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	if noun is a fruit and player has noun, say "[frootz]" instead;
 	if noun is a badbook, say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
 	if noun is the player:
-		all-say "[if cur-score of Means Manse < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
+		all-say "[if cur-score of Ordeal Reload < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
 	if noun is a fruit and player has noun:
 		say "The [noun] is a fruit. You can return it to Curtis." instead;
 	now ever-obj-hinted is true;
@@ -24775,13 +24750,13 @@ table of sexdif [tsx]
 examp
 "[bold type](general)[r] Dropping something."
 "Examining yourself."
-"[bold type](Means Manse)[r] The note from [gtmn] about the purse, and the purse itself too"
+"[bold type](Ordeal Reload)[r] The note from [gtmn] about the purse, and the purse itself too"
 "Ditching Gunter."
 "Complain about the media to Elmo."
 "Many of the books (300+) have alternate authors. Many other random texts adjust for your gender, but books are the main one. Some names are switched, such as Abe/Bea, Dot/Tod, Tio/Toi, Tino/Toni, and Simeon/Simone."
 "One page of the dope op-ed is named differently."
 "The clues for the ramp are different, but the name Mr. Pa is still cringy either way. I hope it's the right sort of cringy."
-"The message for solving the Means Manse."
+"The message for leaving the Means Manse."
 "[bold type](stores)[r] The hoarder/acuter curate says something different when you return."
 "Double dipping on sorbet in Store B."
 "[bold type](routes)[r] Cursing in Cleric Circle."
@@ -24881,7 +24856,7 @@ table of regabr
 this-reg	this-top
 Meta Team	"mt"
 others	"lh"
-means manse	"lm"
+Ordeal Reload	"lo"
 presto	"lp"
 stores	"ls"
 otters	"lt"
@@ -24915,7 +24890,7 @@ rule for showing regional lists:
 					say "[myrow]. Undos[line break]";
 			say "You can type LR to see the next list in your current region.";
 			the rule succeeds;
-	say "To specify a region, you need to say la/lh/lm/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region.";
+	say "To specify a region, you need to say lh/lo/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region, with O being Ordeal Reload. LA=all.";
 
 showing list of lists is an activity.
 
@@ -24941,10 +24916,12 @@ rule for showing list of lists:
 			say "<press Q to quit or another key to see more>";
 			let cholet be the chosen letter;
 			if cholet is 113 or cholet is 81:
-				say "By the way, you can list a region's random text with, say, LM for Means Manse, LY for oyster, etc.";
+				say "[reg-btw].";
 				the rule succeeds;
-	say "By the way, you can list a region's random text with, say, LM for Means Manse, LY for oyster, etc.";
+	say "[reg-btw].";
 	next-list-poke;
+
+to say reg-btw: say "By the way, you can list a region's random text with, say, LO for Ordeal Reload, LY for oyster, etc"
 
 listpoke is a truth state that varies.
 
@@ -24965,7 +24942,7 @@ to say remap-unset:
 
 a region has a rule called altroutes.
 
-this is the manse-alt rule: say "[eq2][b]MEANS MANSE[r] has alternate routes, but nothing mutually exclusive.";
+this is the ordeal-reload-alt rule: say "[eq2][b]ORDEAL RELOAD[r] has alternate routes, but nothing mutually exclusive.";
 
 this is the routes-alt rule: say "[eq2][b]ROUTES[r] has no alternate, um, routes.";
 
@@ -25044,7 +25021,7 @@ this is the others-alt rule:
 
 regions-in-order is a list of regions variable. regions-in-order is { routes, troves, presto, oyster, towers, otters, others }.
 
-altroutes of means manse is the manse-alt rule.
+altroutes of Ordeal Reload is the ordeal-reload-alt rule.
 altroutes of routes is the routes-alt rule.
 altroutes of troves is the troves-alt rule.
 altroutes of presto is the presto-alt rule.
@@ -25054,7 +25031,7 @@ altroutes of otters is the otters-alt rule.
 altroutes of others is the others-alt rule.
 
 rule for showing alternate routes:
-	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The Means Manse and Routes have no mutually exclusive solutions. This list overlaps very little with the MISSED list which shows actual points missed.";
+	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. Ordeal Reload and Routes have no mutually exclusive solutions. This list overlaps very little with the MISSED list which shows actual points missed.";
 	d "[list of solved regions].";
 	repeat with myr running through regions-in-order:
 		if myr is solved, process the altroutes of myr;
@@ -25126,7 +25103,7 @@ anything-missed is a truth state that varies.
 to show-miss (myreg - a region) and (needsolve - a truth state):
 	now miss-room is Meatier Emerita Emirate;
 	if needsolve is true and myreg is not solved, continue the action;
-	if myreg is means manse:
+	if myreg is Ordeal Reload:
 		if giant pin is in Dusty Study, say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
 		if t-b is in Dusty Study, say "[2dmiss of myreg]you could've made the ten beams into a BASEMENT.";
 		if tables are in Dusty Study, say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
@@ -25284,7 +25261,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 	now all regions are not tickedoff;
 	now anything-missed is false;
 	if others is solved, show-miss others and true instead;
-	show-miss Means Manse and true;
+	show-miss Ordeal Reload and true;
 	show-miss stores and true;
 	show-miss routes and true;
 	show-miss troves and true;
@@ -25504,7 +25481,7 @@ carry out tsing:
 	get-cool-stuff;
 	if player has lamp, moot lamp;
 	if player has teariest treatise, moot teariest treatise;
-	now Means Manse is solved;
+	now Ordeal Reload is solved;
 	say "I gave you the purse, settler, and notepad.";
 	the rule succeeds;
 
@@ -25549,7 +25526,7 @@ understand "a5" as a5ing.
 suppress-score is a truth state that varies.
 
 carry out a5ing:
-	now Means Manse is solved;
+	now Ordeal Reload is solved;
 	repeat with MI running through held things:
 		if MI is not warpable:
 			moot MI;
@@ -25595,7 +25572,7 @@ understand "endgame [text]" as endgameing.
 carry out endgameing:
 	let temp be 0;
 	now player has settler;
-	now Means Manse is solved;
+	now Ordeal Reload is solved;
 	if end-jump is true or the player's command matches the regular expression "p":
 		increment temp;
 		now presto is solved;
@@ -26447,7 +26424,7 @@ roming is an action out of world.
 
 understand the command "rom" as something new.
 
-understand "rom" as roming when mrlp is Means Manse.
+understand "rom" as roming when mrlp is Ordeal Reload.
 
 carry out roming:
 	oscan niche;
@@ -26459,7 +26436,7 @@ carry out roming:
 	oscan tables;
 	repeat with rb running through ramabits:
 		oscan rb;
-	say "All things in Means Manse are now scanned both ways.";
+	say "All things in Ordeal Reload are now scanned both ways.";
 
 chapter otwin
 

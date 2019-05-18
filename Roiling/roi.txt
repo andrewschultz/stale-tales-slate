@@ -1,3 +1,5 @@
+# roi.txt = main clues for A Roiling Original
+#
 # rl.txt has the logic clues
 #
 !A Roiling Original HTML Clues
@@ -20,7 +22,7 @@ There may be an embarrassing bug where a female NPC is referred to as male, but 
 Also, if any animals are referred to as male, let me know, as that's a potential bug. I tried to leave them gender-neutral.
 ?Hey! Why do location names change? Does this mean anything?
 There's no deeper meaning, though it means you're probably mostly done with the area.
->MEANS MANSE
+>ORDEAL RELOAD
 >>DUSTY STUDY
 ?What do I do here?
 Just examine stuff to get an idea of what the game is about.

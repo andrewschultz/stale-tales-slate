@@ -9,19 +9,19 @@ version 2 January 2014
 version 3 March 2015</history>
 	</info>
 	<map>
-		<room id="1" name="Dusty Study" subtitle="Start Means Manse" x="-160" y="448" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="#A0A0A0" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="#000000" roomSmallText="" ZOrder="0">
+		<room id="1" name="Dusty Study" subtitle="Start Means Manse" x="-160" y="448" w="96" h="64" region="Ordeal Reload" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="#A0A0A0" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="#000000" roomSmallText="" ZOrder="0">
 			<objects at="wsw" />
 		</room>
-		<room id="2" name="Farming Framing" subtitle="" x="-160" y="352" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+		<room id="2" name="Farming Framing" subtitle="" x="-160" y="352" w="96" h="64" region="Ordeal Reload" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects at="n" custom="yes" customRight="-14" customDown="0">Sitar</objects>
 		</room>
-		<room id="3" name="Highest Heights" subtitle="" x="-32" y="352" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+		<room id="3" name="Highest Heights" subtitle="" x="-32" y="352" w="96" h="64" region="Ordeal Reload" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-12" customDown="0">Pram</objects>
 		</room>
-		<room id="4" name="Largely All-Grey Gallery" subtitle="" x="-288" y="352" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+		<room id="4" name="Largely All-Grey Gallery" subtitle="" x="-288" y="352" w="96" h="64" region="Ordeal Reload" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-30" customDown="0">ISBN Bins</objects>
 		</room>
-		<room id="5" name="Carven Cavern" subtitle="End Means Manse" x="-288" y="256" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="#000000" roomSmallText="" ZOrder="0">
+		<room id="5" name="Carven Cavern" subtitle="End Means Manse" x="-288" y="256" w="96" h="64" region="Ordeal Reload" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="#000000" roomSmallText="" ZOrder="0">
 			<objects at="n" custom="yes" customRight="-34" customDown="0">plaster/plates</objects>
 		</room>
 		<room id="6" name="Strip of Profits" subtitle="Start Stores" x="-288" y="-32" w="96" h="64" region="Stores" handDrawn="yes" allcornersequal="no" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="#606060" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
@@ -633,8 +633,8 @@ version 3 March 2015</history>
 		</colors>
 		<regions>
 			<Demo____Dome Name="Demo Dome" TextColor="Black">#D0D0D0</Demo____Dome>
-			<Means____Manse Name="Means Manse" TextColor="Black">Gray</Means____Manse>
 			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
+			<Ordeal____Reload Name="Ordeal Reload" TextColor="Black">Gray</Ordeal____Reload>
 			<Others Name="Others" TextColor="Black">Lime</Others>
 			<Otters Name="Otters" TextColor="White">#8000FF</Otters>
 			<Oyster Name="Oyster" TextColor="White">#0080FF</Oyster>

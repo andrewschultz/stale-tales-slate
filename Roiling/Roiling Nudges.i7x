@@ -11,7 +11,7 @@ volume table of nudges
 
 book the tables themselves
 
-table of means manse nudges
+table of Ordeal Reload nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "study"	447878132	Dusty Study	--	--	"[locname]." [START DUSTY STUDY]
 "rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future[end if] knock at the door."
@@ -1990,7 +1990,7 @@ to say mild-swear:
 	say "[if mrlp is presto and cur-score of presto > 0]This region has some lame swears, but that's not one of them[else][cussy][end if]";
 
 this is the know-point rule:
-	if cur-score of means manse > 1, the rule succeeds;
+	if cur-score of Ordeal Reload > 1, the rule succeeds;
 	the rule fails;
 
 to say no-special-verb:

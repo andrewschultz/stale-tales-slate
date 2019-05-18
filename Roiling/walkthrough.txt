@@ -35,7 +35,7 @@ You can also access the new area(s) that appeared in releases 2 and 3 by playing
 
 I recommend that you search for the section you want to visit--this document is divided that way. The stores are organized in alphabetical order. I put in whitespace so one store doesn't spoil the next. Currently, you can search for
 
-MEANS MANSE
+ORDEAL RELOAD
 STORE P
 STORE T
 STORE U
@@ -46,7 +46,7 @@ STORE H
 
 Also, I don't cover Last Lousy Points (LLPs) in any section. These are hintable in-game but I also ROT13'd them at the end. Also, for release 3, I wrote up some metrics of how big areas are. They should be included in metrics.htm.
 
-The MEANS MANSE has three ways through. I'll list them all.
+The ORDEAL RELOAD has three separate minimal ways through. I'll list them all.
 
 You need to do semi-constructive things so that Gunter bugs you and you have a chance to see the game's mechanics. There are a lot of things you can do, like try to figure something or look at your notepad. Seven, to be precise.
 
@@ -1967,7 +1967,7 @@ The game has point totals for each region, but how do they compare in size? I de
 
 I think that this overview of complexity isn't fully accurate since complexity likely varies more as (letters ^ 2) or something. So a sum is not so useful. But this gives a bit extra to look at. If you're very interested, a heat map should be attached with this release. WMET.HTM is the file name, for "write metrics."
 
-Means Manse has a minimum of 40 and a maximum of 71. Find only one way out of the study and ignore the giant pin for the minimum score.
+Ordeal Reload has a minimum of 40 and a maximum of 71. Find only one way out of the study and ignore the giant pin for the minimum score.
 
 Stores has a minimum of 36 and a maximum of 67. It is 18 if you use the patcher. You have six stores to open. The Lectures quest gives 19, Store H gives 6, and Store B gives 6.
 

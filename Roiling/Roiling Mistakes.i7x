@@ -24,7 +24,7 @@ understand "paces" as a mistake ("The space capes are already abstract and bizar
 
 understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.") when player has pedanto-notepad.
 
-book means manse
+book Ordeal Reload
 
 chapter Dusty Study
 
