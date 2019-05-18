@@ -111,6 +111,16 @@ a thing can be unscannable. a thing is usually not unscannable.
 
 volume verbs
 
+chapter minor verbs and blocking rules
+
+the block saying yes rule is not listed in any rulebook.
+the block saying no rule is not listed in any rulebook.
+the block waking up rule is not listed in any rulebook.
+the block tasting rule is not listed in any rulebook.
+the block sleeping rule is not listed in any rulebook.
+
+check waking up: say "Wake? Weak!" instead;
+
 part gotoing framework
 
 gotoing is an action applying to one visible thing.

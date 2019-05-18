@@ -9,6 +9,8 @@ import i7
 import sys
 import mytools as mt
 
+sts_test = defaultdict(int)
+sts_common = defaultdict(int)
 shuffling = defaultdict(int)
 roiling = defaultdict(int)
 niceties = defaultdict(int)
@@ -51,11 +53,13 @@ get_unique_lines(shuffling, i7.main_src("sa"))
 get_unique_lines(roiling, i7.main_src("roi"))
 
 if roiling_shuffling:
+    get_unique_lines(sts_test, i7.hdr("STS", "te"))
+    get_unique_lines(sts_common, i7.hdr("STS", "co"))
     count = 0
     for x in sorted(shuffling, key=shuffling.get):
         if x in roiling:
             count += 1
-            print("{:s}{:4d} SHUFFLING-ROILING {:5d} {:5d} ----".format("*" if got_last else " ", count, shuffling[x], roiling[x]), x)
+            print("{:s}{:s}{:s}{:4d} SHUFFLING-ROILING {:5d} {:5d} ----".format(" -test-" if x in sts_test else "", " -common-" if x in sts_common else "", "*" if got_last else " ", count, shuffling[x], roiling[x]), x)
         got_last = x in roiling
 
 if get_nice:

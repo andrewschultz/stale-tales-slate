@@ -1149,7 +1149,6 @@ chapter don't get a rifle
 
 to decide whether got-flier:
 	if player is in Trips Strip, decide yes;
-	if location of player is location of arena dig, decide yes;
 	if player has expo flier, decide yes;
 	decide no;
 
@@ -1161,13 +1160,12 @@ check showing it to (this is the new block showing rule) : say "You can't think 
 
 rule for supplying a missing noun while tasting: now the noun is the player.
 
-instead of tasting:
+check tasting:
 	if noun is saltine, try eating noun instead;
 	say "I have nothing to state about taste."
 
-instead of saying yes: say "[yn]".
-
-instead of saying no: say "[yn]".
+check saying yes: say "[yn]" instead;
+check saying no: say "[yn]" instead;
 
 to say yn: say "I am not yes-no nosey...am I? NOT.[no line break][one of] (Yes and no aren't useful commands here--you'll be prompted when you need to make that choice.)[or][line break][stopping]"
 
@@ -1193,8 +1191,6 @@ instead of drinking:
 	if noun is oils, say "The oils seem too valuable for that. You're not thirsty, anyway, and they wouldn't help if you were." instead;
 	if noun is drainage or noun is skin sink, say "Eww, don't even." instead;
 	say "I show no kind grin on drinking!"
-
-instead of waking up: say "Weak."
 
 instead of sleeping:
 	if mattress is visible and night thing is not visible, say "On that mattress? Eww." instead;
@@ -11826,7 +11822,7 @@ to unsolve-metros:
 	now drainage is in Undesired Underside; [underside]
 	now drainage is not flipped-yet;
 	now gardenia is off-stage;
-	now can of beer is in Undesired Underside;
+	now a reading is off-stage;
 	place-random-garbage;
 	now lost corn is off-stage;	[Roarings Garrison]
 	now lost corn is not flipped-yet;

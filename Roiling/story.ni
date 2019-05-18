@@ -352,12 +352,9 @@ to say email:
 check taking a fruit (this is the probably archaic debug fruit-flips in case rule) :
 	say "Oops! You should've taken this fruit when you flipped it. [bug-report]" instead;
 
-instead of waking:
-	say "Weak!" instead;
-
 yes-no-warn is a truth state that varies.
 
-Instead of saying no:
+check saying no:
 	if block-north is true:
 		do nothing;
 	repeat through table of yesnoes:
@@ -367,15 +364,14 @@ Instead of saying no:
 	say "[randbla]";
 	rhet-q;
 
-Instead of saying yes:
+check saying yes:
 	if block-north is true:
 		do nothing;
 	repeat through table of yesnoes:
 		if the-person entry is in location of player:
 			if there is a yessaying entry:
 				say "[yessaying entry]" instead;
-	if mrlp is troves:
-		say "It's not enough to have positive thinking! YOU MUST HAVE PRODUCTIVE POSITIVE THOUGHTS!" instead;
+	if mrlp is troves, say "It's not enough to have positive thinking! YOU MUST HAVE PRODUCTIVE POSITIVE THOUGHTS!" instead;
 	say "[randbla]";
 	rhet-q;
 
