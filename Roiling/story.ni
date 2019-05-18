@@ -7580,7 +7580,7 @@ carry out abouting:
 		unless the player direct-consents:
 			say "OK." instead;
 	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
-	say "[line break]A Roiling Original is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, which is just a vanity thing.";
+	say "[line break]A Roiling Original is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, but you don't get anything special for that beyond a feeling of accomplishment.";
 	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [ghsite]--no need for an account." instead;
 
 part releaseing
@@ -12569,7 +12569,7 @@ to say capsule-desc:
 	if red vees are in Upscale Capsule:
 		say "This isn't very well populated yet. Just some red vees here";
 	else:
-		say "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your big important desk to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the vanity, too[end if]"
+		say "From the nerf fern to the wonga wagon[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your big important desk to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too[end if]"
 
 to say which-capsule-pics:
 	if blamer balmer is in Upscale Capsule and sister tressi is in Upscale Capsule:
@@ -12663,7 +12663,7 @@ section pharos phasor
 
 the pharos phasor is boringscen . "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with."
 
-chapter desk, checklist and vanity
+chapter desk sked, wonga wagon, cark rack
 
 the big important desk is boringscen. "Made of nice to notice eco-tin, this combination desk and schedule is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is."
 
@@ -12673,14 +12673,14 @@ does the player mean doing something with the big important desk: it is very lik
 
 description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
 
-the tan ivy vanity is boringscen. "It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. However, it's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the vanity is worth scanning, but that's it.". bore-check of tan ivy vanity is bore-vanity rule.
+the wonga wagon is boringscen. "It's utterly useless and tacky. I mean, wonga is tacky slang for money as it is, and it's just, well, there. It's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the wonga wagon is worth scanning, but that's it.". bore-check of wonga wagon is bore-wagon rule.
 
-this is the bore-vanity rule:
+this is the bore-wagon rule:
 	if current action is opening:
-		say "It's not a case sort of vanity. It's just a useless sort of vanity.";
+		say "It's already open.";
 		the rule succeeds;
 	if current action is scaning:
-		say "You scan around the vanity for clues.[paragraph break]";
+		say "You scan around the wonga wagon for clues.[paragraph break]";
 		if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
 			say "Your settler picks up a signal when it moves to the lobster.";
 			try scaning lobster instead;
@@ -12699,7 +12699,7 @@ chapter red vees
 [song or noise + capsule = wrong]
 
 [vee/vees/red vee in nudges ??]
-["'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."]
+["'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your wonga wagon changes in tribute."]
 
 The red vees are vanishing plural-named scenery in Upscale Capsule. description is "They look like they could be hooked together, but you csn't do so by standard means."
 
@@ -12711,7 +12711,7 @@ instead of doing something with red vees:
 [??get rid of big important desk and noise as scenery]
 
 after fliptoing red vees:
-	now tan ivy vanity is in Upscale Capsule;
+	now wonga wagon is in Upscale Capsule;
 	now nerf fern is in Upscale Capsule;
 	now pharos phasor is in Upscale Capsule;
 	now DIVORCES magazine is in Upscale Capsule;
@@ -26921,29 +26921,29 @@ carry out repling:
 		the rule succeeds;
 	say "Doesn't apply here.";
 
-chapter vanscaning
+chapter wwscaning
 
-[* scans vanity every move in troves]
+[* scans wonga wagon every move in troves]
 
-vanscan is a truth state that varies.
+wwscan is a truth state that varies.
 
-vanscaning is an action out of world.
+wwscaning is an action out of world.
 
-understand the command "vanscan" as something new.
+understand the command "wwscan" as something new.
 
-understand "vanscan" as vanscaning.
+understand "wwscan" as wwscaning.
 
-carry out vanscaning:
-	if vanscan is false:
-		now vanscan is true;
+carry out wwscaning:
+	if wwscan is false:
+		now wwscan is true;
 	else:
-		now vanscan is false;
-	say "[if vanscan is true]Scanning vanity every move[else]No longer scanning each move[end if].";
+		now wwscan is false;
+	say "[if wwscan is true]Scanning wonga wagon every move[else]No longer scanning each move[end if].";
 	the rule succeeds;
 
-every turn when vanscan is true:
-	say "Results of scanning vanity:[line break]";
-	try scaning vanity;
+every turn when wwscan is true:
+	say "Results of scanning wonga wagon:[line break]";
+	try scaning wonga wagon;
 
 chapter coping
 

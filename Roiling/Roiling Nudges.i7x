@@ -300,7 +300,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "fief"	225828747	Upscale Capsule	--	--	"[locname-part]."
 "divorce"	479674829	--	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
-"vanity"	448722262	--	tan ivy vanity	--	"You really don't need to rearrange the vanity."
+"wagon"	285982378	--	wonga wagon	--	"You really don't need to rearrange the wonga wagon."
 "phasor"	376886422	--	pharos phasor	--	"[pha-light]."
 "pharo"	280612456	--	pharos phasor	--	"[pha-light]."
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
