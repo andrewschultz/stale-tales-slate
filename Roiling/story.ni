@@ -5107,7 +5107,7 @@ carry out presto-hinting:
 			now spoilit is false;
 		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in Dirge Ridge and ether is not moot]. Maybe Leo and Rand's combined muscle could help you somewhere[end if]." instead;
 	if boing is reflexive and popgun is visible:
-		try objhinting boing mechanism instead;
+		try objhinting boing go bin instead;
 	if popgun is visible:
 		if dart is not visible:
 			all-say "You need to find ammo for your popgun." instead;
@@ -9651,7 +9651,7 @@ to show-bluables:
 	if ever-switched is false:
 		say "[line break]Wow! That's handy! The switch shows you which items identifiably change definability!";
 		now ever-switched is true;
-	if ever-blur was false and ever-blur is true, say "[line break]You'd guess the blurry stuff clues something less critical.";
+	if ever-blur was false and ever-blur is true, say "[line break]You'd guess the blurry stuff indicates something isn't necessary to flip, or maybe it's something that can help with another item.";
 	d "[list of bluable things].";
 
 ever-blur is a truth state that varies.
@@ -12915,8 +12915,7 @@ a-text of lamb is "RRYR". b-text of lamb is "RRYR". parse-text of lamb is "x[sp]
 
 description is "Cute and adorable and so terrified at being away from home she's petrified with fear. Maybe you could scare her home."
 
-check inserting something into mechanism:
-	say "(You mean, loading it next to the mechanism)[line break]";
+check inserting something into boing go bin:
 	try inserting noun into popgun instead;
 
 check going east in Grey Gyre:
@@ -13591,7 +13590,7 @@ rule for printing room description details of the PG-on-up popgun:
 		do nothing.
 
 check scaning popgun when boing is reflexive:
-	say "No reading until you hit the boing mechanism.";
+	say "No reading until you hit the boing-go bin.";
 	try scaning boing instead;
 
 a-text of popgun is "RYRRY". b-text of popgun is "PYRRY". parse-text of popgun is "b[sp]-[sp]x[sp]x[sp]-". popgun is cheat-spoilable.
@@ -13602,31 +13601,24 @@ report taking popgun:
 	say "You take the gun and look it over. You're not one for violence, but the gun doesn't look lethal. But since it's PG- and not G-rated, it can't be totally useless. It could stun an opponent, with the right ammo.";
 	the rule succeeds;
 
-description of PG-on-up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing mechanism is fixed, now[otherwise]. You notice its boing mechanism is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
+description of PG-on-up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing-go bin, now[otherwise]. You notice its boing-go bin, where you put the ammunition, is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
 
 check examining popgun:
 	ignore the examine containers rule;
 
 understand "spoilt/pistol" and "spoilt pistol" as popgun.
 
-The boing mechanism is part of the popgun. the boing mechanism is reflexive. description is "[if boing is reflexive]It's sort of springy, but it doesn't seem to really bounce around. You may need a eureka moment to figure how to fix it[else]The boing mechanism is fully equipped to go boing again. Yay[end if]."
+The boing go bin is a boringthing. it is part of the popgun. the boing go bin is reflexive. description is "[if boing is reflexive]It's sort of springy, but it doesn't seem to really bounce around. You may need a eureka moment to figure how to fix it[else]The boing mechanism is fully equipped to go boing again. Yay[end if].". bore-text is "Your mechanical abilities won't help[if boing is reflexed], but they don't need to[else], but there may be a slick way to get the BOING back[end if].". printed name of boing go bin is "boing-go bin".
 
-a-text of boing is "RYRRY". b-text of boing is "PYRRY". parse-text of boing is "b[sp]-[sp]x[sp]x[sp]-". boing is cheat-spoilable.
+a-text of boing is "RYRRY". b-text of boing is "??RRY". parse-text of boing is "b[sp]-[sp]x[sp]x[sp]-". boing is cheat-spoilable.
 
-instead of doing something with the boing mechanism:
-	unless action is procedural:
-		say "Your mechanical abilities won't help[if boing is reflexed], but they don't need to[else], but there may be a slick way to get the BOING back[end if]." instead;
-	continue the action;
+The serial number is a boringthing. it is part of the popgun. description of serial number is "B09140715.". boretext of serial number is "You can't do much with it except examine it.". bore-check of serial number is bore-serial rule.
 
-The serial number is part of the popgun.
-
-Instead of doing something with the serial number:
+this is the bore-serial rule:
 	if the current action is scaning:
-		try scaning the popgun instead;
-	if action is procedural, continue the action;
-	say "You can't do much with it except examine it.";
-
-description of serial number is "B09140715."
+		try scaning the popgun;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 gun-load-tried is a truth state that varies.
 
@@ -13640,9 +13632,9 @@ check inserting it into (this is the dart-popgun rule):
 	if second noun is popgun and boing is reflexive:
 		if noun is dart:
 			now gun-load-tried is true;
-			say "It seems like it should fit, but it doesn't. You can't quite compress the boing mechanism right, but if you had a moment of insight, you could." instead;
+			say "It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could." instead;
 		else:
-			say "That's not the right shape to fit in the gun to fire. Anyway, the boing mechanism looks broken." instead;
+			say "That's not the right shape to fit in the gun to fire. Anyway, the boing-go bin looks broken." instead;
 	if noun is dart and second noun is not popgun, say "How could that launch the dart?" instead;
 	if noun is not dart and second noun is popgun:
 		say "That's not the right shaped ammo for the popgun." instead;
@@ -13652,13 +13644,13 @@ check inserting it into (this is the dart-popgun rule):
 
 chapter bingoing
 
-after fliptoing boing mechanism:
+after fliptoing boing go bin:
 	set the pronoun it to popgun;
 	continue the action;
 
-check fliptoing boing mechanism (this is the take popgun to fix it rule) :
+check fliptoing boing go bin (this is the take popgun to fix it rule) :
 	if player does not have the PG-on-up popgun and popgun is visible:
-		say "(taking the popgun first while you mess with the boing mechanism)[paragraph break]";
+		say "(taking the popgun first while you mess with the boing-go bin)[paragraph break]";
 		now player has popgun;
 
 chapter sport ports LLP
@@ -24375,7 +24367,7 @@ seed pit	"You got what you needed from the seed pit."
 hurt hog	"[fill-in-here]" [end ROUTES]
 dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if Marines Seminar Remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]." [start PRESTO]
 tsar star	"[if Marines Seminar Remains is visited]The tsar star has done its duty[else]Wearing the tsar star may help you get the authority to get by someone else who knows about decorations[end if]."
-boing	"The boing mechanism works fine now."
+boing go bin	"The boing-go bin works fine now."
 maze walls	"The walls hold no great secrets beyond a clue to volt maze's essence itself."
 log ons letters	"[other-let]."
 alert letters	"[other-let]."

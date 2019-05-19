@@ -1477,8 +1477,7 @@ this is the ether-gone rule:
 	if player is in Grey Gyre and ether is moot, the rule succeeds;
 	the rule fails;
 
-to say is-boing:
-	say "[if boing is reflexive]The number's got more numerals than letters[else]You got the boing mechanism working[end if]";
+to say is-boing: say "[if boing is reflexive]The number's got more numerals than letters[else]You got the boing-go bin working[end if]";
 
 to say no-scen: say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins['] cistern";
 
@@ -1501,7 +1500,7 @@ this is the Rand-sad rule:
 	the rule fails;
 
 to say boing-clue:
-	say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing mechanism inside[else]The popgun is just fine[end if]"
+	say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing-go bin inside[else]The popgun is just fine[end if]"
 
 to say harphr:
 	say "Concentrate on the words of the harpings phrasing"
@@ -1545,12 +1544,9 @@ this is the volt-maze-visible rule:
 	the rule fails.
 
 this is the gun-broken rule:
-	if boing mechanism is reflexed:
-		the rule fails;
-	if Marines Seminar Remains is unvisited:
-		the rule fails;
-	if player does not have popgun:
-		the rule fails;
+	if boing go bin is reflexed, the rule fails;
+	if Marines Seminar Remains is unvisited, the rule fails;
+	if player does not have popgun, the rule fails;
 	the rule succeeds;
 
 this is the path-pass rule:
