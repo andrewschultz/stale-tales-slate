@@ -953,7 +953,7 @@ carry out metros-hinting:
 			if player has dry cake, try objhinting dry cake instead;
 			if player has brocade, try objhinting brocade instead;
 			if player has keycard:
-				if barcode is part of the keycard, all-say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the sensor." instead;
+				if barcode is part of the keycard, all-say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the friend finder." instead;
 				try objhinting keycard instead;
 			if player has barcode:
 				if dry cake is in Obtains Boastin' Bastion, all-say "You need something to put the barcode on. Maybe check out what's north of the Roarings Garrison." instead;
@@ -3863,7 +3863,7 @@ carry out gleaning:
 		if Esoteric Coteries are unvisited:
 			d "dry cake: [location of dry cake].";
 			d "keycard: [location of keycard].";
-			all-say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the sensor in the Underside. Nothing works until you put them together." instead;
+			all-say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the friend finder in the Underside. Nothing works until you put them together." instead;
 		if player does not have tulip:
 			if player has noise bag or player has begonias, all-say "You see yourself grabbing the tulip as the nerds close their ears!" instead;
 			all-say "You see yourself opening the termite emitter so it swarms over the nerds[if emitter is not ungnatted]. You wonder who would be dirty enough to give you a quick refill[end if]." instead;
@@ -4054,7 +4054,7 @@ instead of unlocking:
 	if noun is a sto:
 		say "Forget it. It's good and shut.";
 	else if noun is signers' ingress:
-		say "It has no visible keyholes. The only possible interface seems to be the sensor.";
+		say "It has no visible keyholes. The only possible interface seems to be the friend finder.";
 	else if noun is desert-door:
 		say "[if bugle-played is true]You already did when you played the bugle.[else if bolt is moot]You already got rid of the bolt.[else]No keyholes. Maybe you can break it down some other way?[end if]";
 	else:
@@ -6668,10 +6668,10 @@ section signers' ingress
 
 The signers' ingress is a door. description is "It's very solid[if signes' ingress is open] when it's closed[end if][if player is in Undesired Underside], and a tech etch gives it some semblance of character[end if].". it is east of underside and west of Esoteric Coteries.
 
-check putting keycard on signers' ingress when player is in Undesired Underside: try putting keycard on sensor instead.
+check putting keycard on signers' ingress when player is in Undesired Underside: try putting keycard on friend finder instead.
 check putting keycard on signers' ingress when player is in Esoteric Coteries: try going west instead.
 
-the initial appearance of the signers' ingress is "[one of]A metallic door labeled SIGNERS['] INGRESS is to the east. It looks forbidding, for now[or]The signers['] ingress looms to the [if player is in Esoteric Coteries]west. It's got no sensor on this side, so you can probably just walk back through it[else]east, waiting for, uh, a sign. It has a tech etch repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
+the initial appearance of the signers' ingress is "[one of]A metallic door labeled SIGNERS['] INGRESS is to the east. It looks forbidding, for now, with a friend finder (sensor) attached to it[or]The signers['] ingress looms to the [if player is in Esoteric Coteries]west. It's got no friend finder on this side, so you can probably just walk back through it[else]east, waiting for, uh, a sign. It has a tech etch repelling any old chump from entering. There's also a [one of]sensor (call it a friend finder)[or]friend finder[stopping] off to the side[prob-reads][end if].". understand "metallic/door" and "metallic door" as signers' ingress when player is in Undesired Underside.
 
 to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads something-or-other to let you in[end if]"
 
@@ -6685,13 +6685,11 @@ after examining tech etch for the first time:
 	say "The tech etch is, of course, drawn by one Chet Echt.";
 	continue the action;
 
-The sensor is scenery in Undesired Underside. description of the sensor is "It has a small optical beam."
+The friend finder is scenery in Undesired Underside. description of the sensor is "It has a small optical beam, probably for detecting proper identification.". understand "sensor/senser" as friend finder.
 
-check scaning sensor: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead.
+check scaning friend finder: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead.
 
 to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteric Coteries are visited]guard the tulip[else]want to see[end if]"
-
-understand "senser" as sensor.
 
 chapter Roarings Garrison
 
@@ -7552,18 +7550,18 @@ description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make 
 
 check going nowhere in Esoteric Coteries: say "The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher." instead.
 
-the optical beam is part of the sensor. description of optical beam is "I wouldn't advise staring into it, but you could put something on it."
+the optical beam is part of the friend finder. description of optical beam is "I wouldn't advise staring into it, but you could put something on it."
 
 instead of inserting into the beam: try putting noun on beam.
 
 keycard-put is a truth state that varies. keycard-put is usually false.
 
-check putting barcode on sensor:
-	if barcode is part of the keycard, try putting keycard on sensor instead;
-	say "You try holding the barcode up to the sensor, which pulses a bit. But the door doesn't seem to open. Perhaps the barcode needs to be a part of something." instead;
+check putting barcode on friend finder:
+	if barcode is part of the keycard, try putting keycard on friend finder instead;
+	say "You try holding the barcode up to the friend finder, which pulses a bit. But the door doesn't seem to open. Perhaps the barcode needs to be a part of something." instead;
 
-check inserting into sensor:
-	say "The sensor isn't a container. So you go with putting it ON, instead.";
+check inserting into friend finder:
+	say "The friend finder isn't a container. So you go with putting it ON, instead.";
 	try putting noun on second noun;
 
 nerds-unwelcome is a truth state that varies.
@@ -7581,13 +7579,13 @@ this is the bother-nerds rule:
 		the rule fails;
 	the rule succeeds;
 
-check putting on the sensor (this is the reject silly sensor tries rule) :
+check putting on the friend finder (this is the reject silly friend finder tries rule) :
 	ignore the can't put onto what's not a supporter rule;
 	if noun is gadget, say "The gadget is more for gauging than doing, but yeah, you probably need something high-tech. Oh, the gadget remains silent, too." instead;
 	if noun is the dry cake, say "Opening an electronic door is not such a piece of cake. Something more metallic." instead;
-	say "'Special place is special!' barks the sensor. You'll probably need something more high-tech to slip, ace." instead;
+	say "'Special place is special!' barks the friend finder. You'll probably need something more high-tech to slip, ace." instead;
 
-check putting keycard on sensor:
+check putting keycard on friend finder:
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if barcode is not part of keycard, say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
@@ -7607,7 +7605,7 @@ check going east in Undesired Underside:
 	if signers' ingress is open, continue the action;
 	if player has the keycard and barcode is part of the keycard:
 		if Esoteric Coteries are unvisited, say "Hm, maybe your keycard will do the trick.[paragraph break]";
-		try putting keycard on sensor;
+		try putting keycard on friend finder;
 		continue the action;
 	else:
 		try opening the signers' ingress instead;
@@ -7622,17 +7620,17 @@ check opening the signers' ingress:
 	if the rule failed, the rule succeeds;
 	if keycard-put is true:
 		say "You use the keycard to open the door again.";
-		try putting keycard on sensor instead;
+		try putting keycard on friend finder instead;
 	set the pronoun it to signers' ingress;
 	if location of player is undesired and keycard is off-stage, say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
-	say "The signers' ingress has handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
+	say "The signers' ingress has handle. It's probably operated by the friend finder[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
 
 check putting on the optical beam:
 	ignore the can't put onto what's not a supporter rule;
-	try putting noun on sensor instead;
+	try putting noun on friend finder instead;
 
 check putting it on:
-	if second noun is the optical beam, try putting noun on sensor instead;
+	if second noun is the optical beam, try putting noun on friend finder instead;
 
 ever-shut is a truth state that varies.
 

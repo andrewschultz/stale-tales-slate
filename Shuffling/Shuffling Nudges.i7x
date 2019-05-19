@@ -342,7 +342,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "metro"	454667660	--	--	degen-true rule	"[reg-rej]."
 "undesired"	698274326	Undesired Underside	--	--	"[loc-rej]." [Undesired Underside]
 "titling"	451526777	Undesired Underside	--	--	"No, the tilting titling is unstable enough."
-"sensor"	548937929	Undesired Underside	--	--	"You don't have the skill to hack the sensor electronically."
+"friend"	374574251	Undesired Underside	--	--	"[finder-cond]."
+"sensor"	548937929	Undesired Underside	--	--	"[finder-cond]."
 "metallic"	468805207	Undesired Underside	--	--	"[on-finder]."
 "signers"	552177900	Undesired Underside	--	--	"[on-finder]."
 "signer"	455903934	Undesired Underside	--	--	"[on-finder]."
@@ -809,6 +810,8 @@ this is the af-cent rule:
 this is the in-i-main rule:
 	if in-i-box, the rule succeeds;
 	the rule fails;
+
+to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder."
 
 to say on-finder: say "[if esoteric coteries is visited]You got to the Esoteric Coteries. You don't need any tricks like that[else]The signers['] ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder[end if]."
 
