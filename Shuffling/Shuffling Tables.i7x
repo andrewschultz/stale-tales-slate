@@ -559,7 +559,7 @@ panel	"[if panel is not part of silo]How to get the silo working? PUT PANEL ON S
 wires	"The wires aren't important. The panel is."
 drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if]. [plus][or]Anything would be more beautiful than drainage, especially a flower. [plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA. [minus][cycling]" [START METROS]
 a reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
-metallic door	"[if nerds-unwelcome is true]You got through the door, but you're not welcome back. No loss[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
+signers' ingress	"[if nerds-unwelcome is true]You got through the signers['] ingress, but you're not welcome back. Still, you got something useful[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
 night thing	"You can't kill the night thing on your own. Maybe something equally awful would take care of it?"
 smartest mattress	"[if night thing is in The Ol' Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
 cruel ulcer	"That cruel ulcer looks like a weak link. If you could throw something in there..."
@@ -578,12 +578,12 @@ cafe face	"You can climb up the cafe face with [if player has Velcro]your Velcro
 gardenia	"[if player is in Fo' Real Florae]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
 tilting titling	"The tilting titling is just there for ambience."
 building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
-sensor	"The sensor probably needs something electronic to read."
+friend finder	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the friend finder and the signers['] ingress[end if]."
 lost corn	"[one of]You haven't done anything with the lost corn yet. [plus][or]The kernels look like buttons. [plus][or]The 'lost' adjective is important. [plus][or]The lost corn can become CONTROLS. [minus][cycling]"
 discolored buttons	--	kernels
 yellow kernels	"The different colored kernels may clue what the lost corn should be."
 dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something that will be. [plus][or]The cake becomes a KEYCARD. [minus][cycling]"
-optical beam	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the beam and the metallic door[end if]."
+optical beam	--	friend finder
 antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The antlers seem like a centerpiece to the Bastion. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
 cordoned red condo	"The cordoned red condo is an area [if cake is not in Obtains Boastin' Bastion]where you're not welcome[else]with an item you need[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."

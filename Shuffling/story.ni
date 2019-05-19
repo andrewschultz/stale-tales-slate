@@ -748,8 +748,6 @@ does the player mean objasking about when second noun is enclosed by location of
 
 check objhinting red bull burdell: if red bull burdell is off-stage, say "You haven't found him yet!" instead.
 
-check objhinting a deregioned object: say "That's not something in this region[one of]--note: locations are not available to hint[or][stopping]." instead.
-
 does the player mean objhinting a deregioned object: it is very unlikely.
 
 does the player mean objhinting a hintrelevant object: it is likely.
@@ -1425,7 +1423,7 @@ instead of attacking:
 	if noun is talkers, say "Their inanity inspires violent fantasies, but no.'" instead; [metros]
 	if noun is neon pig, say "No poking a pig even if your name's Penny." instead;
 	if noun is nerds, say "[one of]'Def-con: co-fend!' they yell, seeing you tense up. [or][stopping]They're just annoying and superior, not evil." instead;
-	if noun is the metallic door, say "As you rush at the door, you notice one of the stick figures in the tech etch attacking a door as big and solid as this one! To save your self-esteem, you turn away and forget what you saw." instead;
+	if noun is the signers' ingress, say "As you rush at the door, you notice one of the stick figures in the tech etch attacking a door as big and solid as this one! To save your self-esteem, you turn away and forget what you saw." instead;
 	if noun is mattress:
 		if bump is part of the mattress, say "You might to better to look at that bump before disturbing it." instead;
 		say "Hey, it's not the mattress's fault it only yielded a lousy termite emitter." instead;
@@ -4055,7 +4053,7 @@ before closing:
 instead of unlocking:
 	if noun is a sto:
 		say "Forget it. It's good and shut.";
-	else if noun is metallic door:
+	else if noun is signers' ingress:
 		say "It has no visible keyholes. The only possible interface seems to be the sensor.";
 	else if noun is desert-door:
 		say "[if bugle-played is true]You already did when you played the bugle.[else if bolt is moot]You already got rid of the bolt.[else]No keyholes. Maybe you can break it down some other way?[end if]";
@@ -6666,20 +6664,18 @@ section cramped red camp
 
 the cramped red camp is useless scenery in Undesired Underside. "It's pretty dirty and meager[if Roarings Garrison is visited], as you already saw[else], but maybe you'll get help there[end if]."
 
-section metallic door
+section signers' ingress
 
-The metallic door is a door. it is east of underside and west of Esoteric Coteries.
+The signers' ingress is a door. description is "It's very solid[if signes' ingress is open] when it's closed[end if][if player is in Undesired Underside], and a tech etch gives it some semblance of character[end if].". it is east of underside and west of Esoteric Coteries.
 
-check putting keycard on metallic door when player is in Undesired Underside: try putting keycard on sensor instead.
-check putting keycard on metallic door when player is in Esoteric Coteries: try going west instead.
+check putting keycard on signers' ingress when player is in Undesired Underside: try putting keycard on sensor instead.
+check putting keycard on signers' ingress when player is in Esoteric Coteries: try going west instead.
 
-the initial appearance of the metallic door is "A large metallic door is to the [if player is in Esoteric Coteries]west. It's got no sensor on this side, so you can probably just walk back through it[else]east. It has a tech etch repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
+the initial appearance of the signers' ingress is "[one of]A metallic door labeled SIGNERS['] INGRESS is to the east. It looks forbidding, for now[or]The signers['] ingress looms to the [if player is in Esoteric Coteries]west. It's got no sensor on this side, so you can probably just walk back through it[else]east, waiting for, uh, a sign. It has a tech etch repelling any old chump from entering. There's also a sensor off to the side[prob-reads][end if]."
 
 to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads something-or-other to let you in[end if]"
 
-description of metallic door is "It's very solid[if metallic door is open] when it's closed[end if][if player is in Undesired Underside], and a tech etch gives it some semblance of character[end if]."
-
-the tech etch is part of the metallic door. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
+the tech etch is part of the signers' ingress. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
 
 instead of taking the tech etch: say "Since it's part of the door, you take the tech etch in the metaphorical sense and vow not to act like the poor schelps depicted on it.".
 
@@ -7148,6 +7144,7 @@ check putting keycard on barcode: try putting barcode on keycard instead.
 check putting barcode on keycard:
 	say "You peel the barcode, slap it on the keycard, and it is a perfect fit! Also, you stuff the adhesive backing in your pocket, where you forget about it until you can find a proper garbage can. You haven't seen any in this city yet[if player is in Bile Libe], and you don't want to add to the garbage piles here[end if].";
 	moot adhesive backing;
+	realize keycard;
 	now barcode is part of the keycard instead;
 
 check tying barcode to: try putting barcode on second noun instead.
@@ -7571,9 +7568,9 @@ check inserting into sensor:
 
 nerds-unwelcome is a truth state that varies.
 
-check pushing metallic door: say "It's an automatic door." instead.
+check pushing signers' ingress: say "It's an automatic door." instead.
 
-check pulling metallic door: say "It's an automatic door." instead.
+check pulling signers' ingress: say "It's an automatic door." instead.
 
 this is the bother-nerds rule:
 	if nerds-unwelcome is true:
@@ -7594,7 +7591,7 @@ check putting keycard on sensor:
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if barcode is not part of keycard, say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
-	if metallic door is open:
+	if signers' ingress is open:
 		say "The door is open. So you just walk east instead.";
 		try going east instead;
 	if keycard-put is false:
@@ -7602,33 +7599,33 @@ check putting keycard on sensor:
 		now keycard-put is true;
 	else:
 		say "The door slides open again.";
-	now metallic door is open instead;
+	now signers' ingress is open instead;
 
 check going east in Undesired Underside:
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
-	if metallic door is open, continue the action;
+	if signers' ingress is open, continue the action;
 	if player has the keycard and barcode is part of the keycard:
 		if Esoteric Coteries are unvisited, say "Hm, maybe your keycard will do the trick.[paragraph break]";
 		try putting keycard on sensor;
 		continue the action;
 	else:
-		try opening the metallic door instead;
+		try opening the signers' ingress instead;
 
-check opening the metallic door:
+check opening the signers' ingress:
 	if noun is open, say "But it already is. For now." instead;
 	if location of player is Esoteric Coteries:
 		say "The door slides open as you step near it.";
-		now metallic door is open;
+		now signers' ingress is open;
 		the rule succeeds;
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if keycard-put is true:
 		say "You use the keycard to open the door again.";
 		try putting keycard on sensor instead;
-	set the pronoun it to metallic door;
+	set the pronoun it to signers' ingress;
 	if location of player is undesired and keycard is off-stage, say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
-	say "The metallic door's got no handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
+	say "The signers' ingress has handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
 
 check putting on the optical beam:
 	ignore the can't put onto what's not a supporter rule;
@@ -7639,10 +7636,10 @@ check putting it on:
 
 ever-shut is a truth state that varies.
 
-every turn when metallic door was open:
-	now metallic door is closed;
-	if metallic door is visible:
-		say "The metallic door slides shut.";
+every turn when signers' ingress was open:
+	now signers' ingress is closed;
+	if signers' ingress is visible:
+		say "The signers' ingress slides shut.";
 		if ever-shut is false:
 			now ever-shut is true;
 			if player has tulip:
@@ -10365,7 +10362,7 @@ carry out knocking:
 	if noun is cabinet, say "That's potentially an act of violence." instead;
 	if noun is black door, say "[if black door is part of silo]Nobody answers, unsurprisingly[else]How polite! And ineffective[end if]." instead;
 	if noun is desert-door, say "[if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You brush against the bulge as you knock[end if]. You get no response." instead;
-	if noun is metallic door, say "[if player has tulip]You don't need to go back[else if Esoteric Coteries are visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
+	if noun is signers' ingress, say "[if player has tulip]You don't need to go back[else if Esoteric Coteries are visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
 	if noun is Corses Crosse, say "A good way to scrape your knuckles, seeing how quickly it turns." instead;
 	say "Knock, knock. Who's there? Conkk, conkk." instead;
 

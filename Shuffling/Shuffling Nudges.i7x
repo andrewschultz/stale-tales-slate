@@ -343,13 +343,15 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "undesired"	698274326	Undesired Underside	--	--	"[loc-rej]." [Undesired Underside]
 "titling"	451526777	Undesired Underside	--	--	"No, the tilting titling is unstable enough."
 "sensor"	548937929	Undesired Underside	--	--	"You don't have the skill to hack the sensor electronically."
-"door"	255058046	Undesired Underside	--	--	"It can't be that easy to change. Maybe some random door in the wilderness."
+"metallic"	468805207	Undesired Underside	--	--	"[on-finder]."
+"signers"	552177900	Undesired Underside	--	--	"[on-finder]."
+"signer"	455903934	Undesired Underside	--	--	"[on-finder]."
+"door"	255058046	Undesired Underside	--	--	"[on-finder]."
 "optical"	378928642	Undesired Underside	--	--	"Changing the beam is way out of your league."
 "beam"	212487985	Undesired Underside	--	--	"Changing the beam is way out of your league."
 "building"	389860542	Undesired Underside	--	--	"[no-hot]."
 "special"	425546122	Undesired Underside	--	--	"[if Esoteric Coteries is visited]You don't need to perform any tricks, now you've gotten to the Esoteric Coteries[else]That's not the way to get to the special place. You need special ID[end if]."
 "theol"	396364842	Undesired Underside	--	--	"[no-hot]."
-"metallic"	468805207	--	metallic door	--	"No way. That thing's sturdy. [if Esoteric Coteries is visited]Those nerds[else]The people in there[end if] know their stuff."
 "tonr"	331693906	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "cue"	251917501	--	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "etch"	287204011	--	tech etch	--	"The tech-etch is pretty securely, um, etched on."
@@ -807,6 +809,8 @@ this is the af-cent rule:
 this is the in-i-main rule:
 	if in-i-box, the rule succeeds;
 	the rule fails;
+
+to say on-finder: say "[if esoteric coteries is visited]You got to the Esoteric Coteries. You don't need any tricks like that[else]The signers['] ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder[end if]."
 
 to say no-hot:
 	say "You can't change the hotel, ";
