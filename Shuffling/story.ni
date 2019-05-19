@@ -275,6 +275,11 @@ to say player-descrip:
 
 section diagonals
 
+before going (this is the reject diagonals rule):
+	if noun is a diagonal:
+		if player is in Busiest Subsite, say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
+		say "[one of](NOTE: you never have to go in a diagonal direction in this game.)[paragraph break][or][stopping][one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
+
 section dropping
 
 check dropping:
@@ -992,7 +997,7 @@ carry out metros-hinting:
 		if controls are off-stage:
 			if bastion-evac is false, all-say "You need to [if camp is unvisited]see someone up north[else]please the deadbeat[end if] to get an item to replace the neon pig in the opening." instead;
 			try objhinting lost corn instead;
-		if controls are not in op, try objhinting op instead;
+		if controls are not in gin nope opening, try objhinting gin nope opening instead;
 		all-say "You're done here. You can just go east [if tulip is in Esoteric Coteries]once you've got light[else if words are in Bile Libe]once you have a weapon[else]for the final confrontation[end if]." instead;
 	if location of player is Bassy Abyss:
 		if stickyhanded is false, try objhinting siren instead;
@@ -2607,8 +2612,6 @@ Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll e
 
 last-loc of Ordeal Loader is Busiest Subsite.
 
-check going in busiest subsite when noun is diagonal: say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
-
 section silly scenery
 
 the caterers' terraces are plural-named amusing scenery in Busiest Subsite. "You can't see the caterers working on the terraces, and you probably don't want to disturb them."
@@ -3144,7 +3147,7 @@ to say sortie-prep: say "I-A. [if taco is off-stage]Warm Food[else][second custo
 
 to say forest-prep: say "F-A. [if beard is not wearable]Disguise[else][second custom style]GOT DISGUISE[r][end if] F-B. [if shotgun is off-stage]Get and load weapon[else if silver is off-stage]Load weapon[else][second custom style]GOT LOADED WEAPON[r][end if] F-C. [if player is not in Frost Forts]Find way, d[else]D[end if]efeat an all-ice alliance".
 
-to say metros-prep: say "M-A. [if gardenia is off-stage]Find a flower[else][second custom style]GOT FLOWER[r][end if] M-B. [if tulip is in Esoteric Coteries]Find a light source[else][second custom style]GOT LIT-UP TULIP[r][end if] M-C. [if controls are not in op]Find a way underground[else][second custom style]REPAIRED RAILS[r][end if]"
+to say metros-prep: say "M-A. [if gardenia is off-stage]Find a flower[else][second custom style]GOT FLOWER[r][end if] M-B. [if tulip is in Esoteric Coteries]Find a light source[else][second custom style]GOT LIT-UP TULIP[r][end if] M-C. [if controls are not in gin nope opening]Find a way underground[else][second custom style]REPAIRED RAILS[r][end if]"
 
 check entering the getaway gateway:
 	if gateman is off-stage:
@@ -4169,17 +4172,18 @@ does the player mean entering disamb-store: it is likely.
 
 description of disamb-store is "[sto-desc]".
 
-instead of burning:
+check burning:
 	if noun is a sto:
 		say "The stores have suffered enough.";
 	else if noun is warts:
 		say "That's a false cure that makes them worse.";
 	else:
 		say "You've got no source of fire[if player has lit-up tulip]. The tulip doesn't count--it's child safe and stuff[end if].";
+	the rule succeeds;
 
-instead of pushing a sto: say "Physical activity won't do it, here.".
+check pushing a sto: say "Physical activity won't do it, here." instead;
 
-instead of entering a sto: say "It's closed and locked, and you won't find a key[if noun is flippable]. Maybe you can do something else to it[else]. It doesn't seem like you need to enter, anyway[end if]."
+check entering a sto: say "It's closed and locked, and you won't find a key[if noun is flippable]. Maybe you can do something else to it[else]. It doesn't seem like you need to enter, anyway[end if]." instead;
 
 check taking a sto: say "[ment-not-phys]." instead.
 
@@ -5875,16 +5879,16 @@ instead of tying to (this is the check for big quest item attachment rule):
 	if noun is missile or noun is hay or noun is straw or noun is panel or noun is black door, try inserting noun into second noun instead;
 	if second noun is missile or second noun is hay or second noun is straw or second noun is panel or second noun is black door, try inserting second noun into noun instead;
 	if second noun is cafe face:
-		if op is not visible, say "[if player is on cafe face]The cafe face doesn't have any sort of recess[else]Sticking something to the steel wool would do very little[end if]." instead;
+		if gin nope opening is not visible, say "[if player is on cafe face]The cafe face doesn't have any sort of recess[else]Sticking something to the steel wool would do very little[end if]." instead;
 		if player is not on cafe face, say "You'd need to climb the cafe face first." instead;
-		try inserting noun into op instead;
-	if second noun is op, try inserting noun into op instead;
+		try inserting noun into gin nope opening instead;
+	if second noun is gin nope opening, try inserting noun into gin nope opening instead;
 	continue the action;
 
 instead of putting a thing on the cafe face:
 	if player is on the cafe face:
-		if op is not visible, say "The neon pig is in the way." instead;
-		try putting noun on op instead;
+		if gin nope opening is not visible, say "The neon pig is in the way." instead;
+		try putting noun on gin nope opening instead;
 	say "Something might stick, but it wouldn't do much there."
 
 instead of taking the silo: say "Counterproductive and, uh, very unlikely.".
@@ -5922,7 +5926,7 @@ check inserting it into (this is the straw-hay insert rule):
 	if second noun is silo:
 		if noun is not missile and noun is not panel and noun is not door, say "That doesn't belong in or on the silo." instead;
 	if second noun is cafe face:
-		if op is visible, try putting noun on op instead;
+		if gin nope opening is visible, try putting noun on gin nope opening instead;
 		say "[if player is on cafe face]There's no place something'll stick on the cafe face this high up. Well, not yet[else]The bottom of the cafe face doesn't seem like a useful place to stick things[end if]." instead;
 
 check putting on scraped wall: try inserting noun into scraped wall instead.
@@ -6763,11 +6767,7 @@ instead of giving emitter to deadbeat: try objasking deadbeat about emitter inst
 
 understand "man" as deadbeat when deadbeat is visible.
 
-to say are-were:
-	if controls are in op:
-		say " were";
-	else:
-		say "[']re";
+to say are-were: say "[if controls are in gin nope opening]we[else]['][end if]re"
 
 description of deadbeat is "He's wearing designer reedings."
 
@@ -6890,10 +6890,10 @@ understand "red/black/white buttons/kernels/" and "red/black/white" as discolore
 some controls are a thing.
 
 check taking controls:
-	if controls are in op, say "You don't want to undo your work fixing the rails." instead;
+	if controls are in gin nope opening, say "You don't want to undo your work fixing the rails." instead;
 
 check pushing controls:
-	if controls are in op:
+	if controls are in gin nope opening:
 		say "No need to fiddle further.";
 	else:
 		say "They're not hooked up to anything.";
@@ -6903,7 +6903,7 @@ description of controls is "This panel features all manner of black and yellow a
 
 the instructions are part of the controls.
 
-description of instructions is "[if controls are in op]They served you well. No need to reread.[else]Surprisingly readable, enough so you could just stuff these controls somewhere appropriate and things would get working. Some days you're just lucky, eh?[end if]"
+description of instructions is "[if controls are in gin nope opening]They served you well. No need to reread.[else]Surprisingly readable, enough so you could just stuff these controls somewhere appropriate and things would get working. Some days you're just lucky, eh?[end if]"
 
 section noisome moonies
 
@@ -7708,14 +7708,14 @@ understand "earliest atelier" and "atelier" as Earliest Ateliers.
 
 chapter Elm Train Terminal
 
-Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in op]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in op], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if]."
+Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in gin nope opening]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in gin nope opening], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if]."
 
-to say terminal-if-piggy: say "[if neon pig is visible]a neon pig embedded in the cafe face above a fading cafe face. It seems terribly inappropriate[else if controls are in op]controls working nicely in the opening you made above[else]an empty opening where the neon pig was. Perhaps something could fit in it[end if]"
+to say terminal-if-piggy: say "[if neon pig is visible]a neon pig embedded in the cafe face above a fading cafe face. It seems terribly inappropriate[else if controls are in gin nope opening]controls working nicely in the opening you made above[else]an empty opening where the neon pig was. Perhaps something could fit in it[end if]"
 
-to say terminal-if-pigcon: say "[if pig is visible] with the pig[else if controls are not in op] and away from the opening you made[else] and away from the controls you put in[end if]".
+to say terminal-if-pigcon: say "[if pig is visible] with the pig[else if controls are not in gin nope opening] and away from the opening you made[else] and away from the controls you put in[end if]".
 
 check scaning in Elm Train Terminal (this is the can't scan some things til you climbed rule):
-	if noun is neon pig or noun is op:
+	if noun is neon pig or noun is gin nope opening:
 		if player is not on cafe face, say "The pig doesn't register. Maybe you're too far away, and you'd have to climb the cafe face to get near it." instead;
 
 check going west in Elm Train Terminal: say "The cafe face is in the way. Maybe you could climb it[if cafe-climbed is true] again[end if]." instead.
@@ -7752,7 +7752,7 @@ check going east in Elm Train Terminal:
 
 does the player mean climbing the cafe face: it is very likely.
 
-check scaning op (this is the too far from opening rule):
+check scaning gin nope opening (this is the too far from opening rule):
 	if player is not on cafe face, say "You're too far away." instead;
 
 check climbing when player is in Elm Train Terminal:
@@ -7776,19 +7776,15 @@ the neon pig is scenery in Elm Train Terminal.
 
 lgth of neon pig is 7. gpos of neon pig is 3. rpos of neon pig is 7. rgtext of neon pig is "[rcn][rc][rc][gc][rc][rc][gc]".  cert-text of neon pig is "-[d1][d1][ast]N[d1][d1][ast]G". rect-text of neon pig is "O[d1][d1][d1][d1][d1][ast]G".
 
-the op is proper-named privately-named scenery container. understand "opening/recess" as op. the printed name of op is "the opening"
+the gin nope opening is a scenery container. description is "[if controls are in gin nope opening]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on cafe face]You can see that the opening isn't just a blank area with a 'GIN NOPE' warning, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you READ, you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if].". the printed name of gin nope opening is "the gin-nope opening"
 
-procedural rule while examining op: ignore the examine containers rule.
-
-description of op is "[if controls are in op]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on cafe face]You can see that the opening isn't just a blank area, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you READ, you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if]."
+procedural rule while examining gin nope opening: ignore the examine containers rule.
 
 the tracks are plural-named scenery in Elm Train Terminal. understand "rail" and "rails" and "track" as tracks.
 
-instead of taking tracks:
-	if power-shut is false:
-		say "They're charged, and they're too heavy, anyway.";
-	else:
-		say "And what would you do with the tracks?[if sword is visible] You have a sword as a weapon[else] There's got to be a better weapon if you need it[end if]."
+check taking tracks:
+	if power-shut is false, say "They're charged, and they're too heavy, anyway." instead;
+	say "And what would you do with the tracks?[if sword is visible] You have a sword as a weapon[else] There's got to be a better weapon if you need it[end if]." instead;
 
 instead of putting something on tracks: say "Good way to get electrocuted. You'll need to find some place to switch them off before you get near them.".
 
@@ -7798,7 +7794,9 @@ after doing something with tracks:
 
 description of tracks is "[if power-shut is false]Sparking dangerously. If you want to get by, you'll probably have to figure where to shut the tracks off[else]Much calmer now that you switched the power off[end if]. Each rail leads LIAR LAIR, unsurprisingly, so you may have to prepare yourself other ways, too."
 
-check climbing the op: say "(I'm assuming you meant the cafe face leading to it.)".
+check climbing the gin nope opening:
+	say "(I'm assuming you meant the cafe face leading to it.)";
+	try climbing cafe face instead;
 
 description of neon pig is "This flashing half-sign is [if player is not on cafe face]obviously awful and tacky and worse than nothing, even from this distance. It's eating a bunch of glowing flowers and is probably hogging (sorry) electricity and causing the tracks to sputter[else]even tackier up close and in person, err, pig. Thankfully, the neon isn't painfully bright, but it would be nice to just dispose of it somehow[end if]."
 
@@ -7824,17 +7822,17 @@ the glowing flowers are a plural-named amusing boringthing. they are part of the
 
 instead of taking neon pig: say "You'd let go of the cafe face and fall to your doom.".
 
-check inserting into op:
+check inserting into gin nope opening:
 	if power-shut is true, say "You've already uncrossed things." instead;
 	if player is not on cafe face, say "You'd need to climb the cafe face to do that." instead;
 	if noun is keycard, say "You wave the keycard around the opening, since the keycard's too small to fit, but no passage opens." instead;
 	if noun is not controls, say "Won't fit, wouldn't stay anyway. You need something squarish and electrical. Or electronic." instead;
 	say  "They fit well. One of the red buttons starts blinking and whirring, and you flip the switch by it and, BAM! You hear a rush of power. The tracks below seem to stop sparking.";
 	reg-inc;
-	now controls are in op;
+	now controls are in gin nope opening;
 	now power-shut is true instead;
 
-understand "controls" as op when controls are in op.
+understand "controls" as gin nope opening when controls are in gin nope opening.
 
 chapter Bassy Abyss
 
@@ -9971,13 +9969,10 @@ book senses
 
 part smelling
 
-the block smelling rule is not listed in any rulebook.
-
-before smelling the player: say "As good-smelling as ever. You remembered your deodorant this morning. Yay, you." instead.
-
-instead of entering mattress: try sleeping instead.
+check entering mattress: try sleeping instead. [??]
 
 carry out smelling:
+	if noun is the player, say "As good-smelling as ever. You remembered your deodorant this morning. Yay, you." instead;
 	if noun is desert-door, say "It doesn't smell any more." instead;
 	if noun is clover:
 		if player has clover, say "Still got that planty smell, though it's more the touch that's important." instead;
@@ -10421,7 +10416,7 @@ check reading (this is the reading is almost examining rule):
 	if noun is tall trio, say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]." instead;
 	if noun is spearman, say "The spearman's name, in red, is MR. SANE PA[if player carries spearman]. You also read, in red, one of three lines: [one of]MEAN RAPS[or]MS. P. ARENA--crossed out, but red[or]AMEN, RASP[in random order][end if]." instead;
 	if noun is a reading, say "On one of several pages, you see: [one of]AID ANGER is written[or]conspiracy theories from EDGAR IAN[or]silly musings on being IN A GRADE[or]a horror story: DINER, AAG[or]conspiracy theories from NIA EDGAR[or]an exhortation to RIDE AGAN (sic) on the last page[stopping]. The nonsense makes you see red." instead;
-	if noun is op and controls are not in op, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
+	if noun is gin nope opening and controls are not in gin nope opening, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
 	if noun is tiles, say "The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." instead; [resort]
 	try examining the noun instead;
 
@@ -11859,7 +11854,7 @@ to unsolve-metros:
 	now power-shut is false;	[train terrain]
 	now neon pig is in Elm Train Terminal;
 	now neon pig is not flipped-yet;
-	now op is off-stage;
+	now gin nope opening is off-stage;
 	now resin is off-stage;	[abyss]
 	now siren is in Bassy;
 	now siren is not flipped-yet;
