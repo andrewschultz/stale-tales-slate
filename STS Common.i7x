@@ -41,6 +41,13 @@ the file of debuggery is called "debug". [deprecated slightly but still useful f
 
 a thing can be examined or unexamined. a thing is usually unexamined.
 
+to decide whether the action is talkative:
+	if talking to, yes;
+	if objasking generically, yes;
+	if objasking about, yes;
+	if asking about, yes;
+	no;
+
 chapter default rules to ignore
 
 procedural rule: ignore the print final score rule.

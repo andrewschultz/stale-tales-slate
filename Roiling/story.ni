@@ -43,8 +43,6 @@ Volumes are divided by region for the most part.
 
 [Build this at your own risk. I think you'll get the general idea, but really, it takes 45 seconds to build. Plus you may need special versions of certain modules. They can be found at
 
-http://code.google.com/p/shuffling-around/downloads/list
-
 Glulx Text Effects.i7x
 Flexible Windows.i7x
 
@@ -1737,15 +1735,16 @@ check objasking it about (This is the check for object information rule):
 			if second noun is the person-subj entry:
 				if the chum of the noun is the him-who entry:
 					say "[him-say entry][line break]" instead;
-	if the second noun is a person-subj listed in the table of object-blather:
-		if there is a right-region entry:
-			if right-region entry is not mrlp:
-				say "This is the wrong region to ask about that." instead;
-		if noun is not serpent:
-			say "[him-say entry][line break]" instead;
-	repeat through table of default-sub-blather:
-		if noun is him-who entry:
-			say "[him-say entry][line break]" instead;
+	if the noun is not to-gen-blather:
+		if the second noun is a person-subj listed in the table of object-blather:
+			if there is a right-region entry:
+				if right-region entry is not mrlp:
+					say "This is the wrong region to ask about that." instead;
+			if noun is not serpent:
+				say "[him-say entry][line break]" instead;
+		repeat through table of default-sub-blather:
+			if noun is him-who entry:
+				say "[him-say entry][line break]" instead;
 	repeat through table of default-gen-blather:
 		if noun is default-talker entry:
 			say "[gen-blah entry][line break]";
@@ -1757,6 +1756,10 @@ check objasking it about (This is the check for object information rule):
 	if noun is not a person:
 		say "You can only ask people about things." instead;
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
+
+definition: a thing (called th) is to-gen-blather:
+	if th is bonker or th is stinger or th is fluster self rut, yes;
+	no;
 
 check asking about (This is the check for specific topics rule):
 	if noun is what-a-bee:
@@ -11449,7 +11452,13 @@ check going when the-b is visible:
 
 section a drama armada
 
-a drama armada is plural-named scenery. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way."
+a drama armada is plural-named boringscen. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way.". bore-text is "The drama armada is probably waiting for something, well, dramatic to happen."
+
+this is the bore-armada rule:
+	if the action is talkative:
+		say "You could never win them over with a speech. They need to see action.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 after doing something with drama armada:
 	set the pronoun it to drama armada;
@@ -19020,7 +19029,7 @@ book side-path rooms
 
 chapter Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if organised ego drains are in Lost Lots], and worse, sporties['] ripostes mock you[end if]."
+Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties' ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if]."
 
 after looking in Lost Lots:
 	if strudel is carried by player or strudel is moot, set the pronoun it to gasfield;
@@ -19033,12 +19042,16 @@ check opening a hintpastry:
 
 section sporties' ripostes
 
-the sporties' ripostes are plural-named LLPish vanishing scenery in Lost Lots.
+the sporties' ripostes are plural-named vanishing boringscen in Lost Lots. bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.".
 
-instead of doing something with sporties' ripostes:
-	if action is procedural, continue the action;
-	if current action is taking, say "Actually, you want to find a way to say, you're NOT going to take them any more." instead;
-	say "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way."
+this is the bore-ripostes rule:
+	if current action is taking:
+		say "Actually, you want to find a way to say, you're NOT going to take them any more.";
+		the rule succeeds;
+	if action is talkative:
+		say "Despite your wordplay magic proficiency, you'll never win an argument. Maybe you can be more circumspect to get rid of the ripostes.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 description of sporties' ripostes is "They're mocking you, not enough to feel like you have a right to be mad, but enough to annoy you. Both clever and dumb at the same time, they're also very quick and don't drag it out."
 
@@ -19627,7 +19640,7 @@ book Dourest Detours
 
 Dourest Detours is a room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?"
 
-bogus-detours is a privately-named vanishing LLPish boringscen in Dourest Detours.
+bogus-detours is a privately-named vanishing boringscen in Dourest Detours.
 
 a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". parse-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -19646,6 +19659,8 @@ this is the detour-check rule:
 		if lost lots is not visited or finger fringe is not visited, say "You work through the Dourest Detours much more easily this time.";
 		continue the action;
 	say "Oh no! You get distracted and lost while going down a few side paths. You wind up in...";
+	min-up;
+	min-up;
 	move player to dourest detours;
 	the rule succeeds;
 
@@ -19657,7 +19672,7 @@ to say gd of (zz - a guardian):
 	if zz is the-hostile, say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
 	if zz is atheists, say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
 	if zz is arid den, say "[one of][or] still hawking Nerd-Aid[stopping]";
-	if zz is natives' site van, "[one of][or] (you assume, by how the people inside are talking about the Badlands and looking at you funny)[stopping]";
+	if zz is natives' site van, say "[one of][or] (you assume, by how the people inside are talking about the Badlands and looking at you funny)[stopping]";
 	if zz is ego drains, say "[one of][or] (you know, those barely visible spirits that make you feel bad about doing things quickly and efficiently. They exist in non-magic worlds, too)[stopping]";
 
 to say mb-aswell:
@@ -19921,7 +19936,7 @@ Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you th
 grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"The grailman is the first you've ever met, but he seems more than adequate enough to block your way."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives' site van is visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker]
-natives' site van	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"That natives' site van seems ill-placed, here. Maybe you can help it move somewhere more interesting."
+natives' site van	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting."
 lois the hostile	Strati Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
 hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers."	"Boy! The Lot sure could use some down-home kindness."
 

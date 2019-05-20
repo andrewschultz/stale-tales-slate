@@ -4782,7 +4782,8 @@ check inserting into the scantier canister:
 						now cur-liv is viler liver;
 					else:
 						now cur-liv is River Ville liver;
-			moot noun instead;
+			moot noun;
+			the rule succeeds;
 	if noun is bread, say "You don't need to futz with the bread that way." instead;
 	if noun is the player, say "So, this game hasn't put you through the grinder enough? A Roiling Original, the sequel, will be even bigger-time." instead;
 	say "The canister's for processing food, and that doesn't count." instead;
@@ -4845,7 +4846,8 @@ check taking Spam:
 		now player has bread;
 	now player has Spam;
 	say "It's sort of gross, but hey, it's not moldy.";
-	moot sandwich instead;
+	moot sandwich;
+	the rule succeeds;
 
 [check taking Spam:
 	now bread is not part of sandwich;
@@ -8403,7 +8405,8 @@ carry out tuging:
 				now player has gadget;
 			else:
 				say "[line break]There can't be much more to do but go east and just sit around.";
-			moot red bull burdell instead;
+			moot red bull burdell;
+			the rule succeeds;
 		else:
 			say "You need six letters. You're close." instead;
 	try pulling the noun instead;
@@ -9758,7 +9761,8 @@ check inserting it into (this is the forest-insert rule):
 			say "The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.";
 			now shotgun is loaded;
 			set pronoun it to shotgun;
-			moot silver instead;
+			moot silver;
+			the rule succeeds;
 	if second noun is shotgun:
 		if shotgun is loaded, say "Already loaded." instead;
 		say "You'll need to put a bullet in the shotgun. That's not a bullet." instead;
@@ -10554,7 +10558,8 @@ carry out folding:
 	if noun is tinfoil:
 		if player is in Trips Strip:
 			say "You find a random trash can behind a random store and drop the info-lit in.";
-			moot tinfoil instead;
+			moot tinfoil;
+			the rule succeeds;
 		say "It probably deserves to be crumpled." instead;
 	if noun is shades, say "You try to execute a def move with the shades but fail." instead;
 	if noun is not poem, say "That might be fun, but it won't do much." instead;

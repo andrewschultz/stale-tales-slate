@@ -1126,6 +1126,7 @@ dinger	"[Agnostic] blinks and ruffles [dinger] and yawns before flipping a page,
 agnostic	"[ag-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 atblock	"[ag-first] seems a little more focused, but [he-she] could maybe do even better."
 mended mini denim	"The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
+bogus-plains	"The detours still seem dourest, but a little less dour now."
 sporties' ripostes	"The ripostes seem less cutting for a moment."
 docile old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."

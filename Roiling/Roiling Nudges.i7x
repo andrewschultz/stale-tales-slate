@@ -774,7 +774,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "aps"	179927743	--	talc spa cure	--	"[focus-castle]."
 "cure"	337241304	--	talc spa cure	--	"[focus-castle]."
 "mesprise"	724017911	Mesprise Premises	--	--	"[towersloc]." [MESPRISE PREMISES]
-"emprise"	627743945	Mesprise Premises	--	--	"[towersloc]." [EMPRISE PREMISES] [end-w]
+"emprise"	627743945	Mesprise Premises	--	--	"[towersloc]." [EMPRISE PREMISES]
+"detour"	516727403	Dourest Detours	--	--	"This may technically be a detour, but the area name is detours. So, yeah." [DOUREST DETOURS side room] [end-w]
 
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
