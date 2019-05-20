@@ -701,7 +701,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "drains"	318715030	--	ego drains	--	"[ego-dr]. Plus, if they were boring old drains, you could just step around them."
 "egodrain"	457199452	--	ego drains	--	"[ego-dr]."
 "drain"	222441064	--	ego drains	--	"[ego-dr]. Plus, if it was a boring old drain, you could just step around."
-"native"	454169119	--	natives	--	"[plutry of natives]You'll need to deal with more than one native to make your way south."
+"native"	454169119	--	natives' site van	--	"[plutry of natives' site van]You'll need to deal with more than one native to make your way south."
 "organized"	580169070	--	organised	--	"Nothing seems to happen. Then you remember organized can be spelled with an s and not a z."
 "geese"	512291995	--	--	bonker-gone rule	"The geese are fine as they are. They're just there for scenery, and stuff."
 "lost"	327550400	Lost Lots	--	--	"[towersloc]." [LOST LOTS 3 0]

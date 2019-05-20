@@ -1254,7 +1254,7 @@ The ego-drains are organised. You are crushed with feelings of inadequacy, until
 
 > S
 
-The natives won't budge, but maybe you can convince them to move...
+The natives' site van won't budge, but maybe you can convince them to move...
 
 > VAINEST
 (ALT) > NAIVEST
@@ -1321,7 +1321,7 @@ or, if you're mean,
 
 (ALT) > MARDIER
 
-(As with the natives, choosing one over the other has no effect on gameplay.)
+(As with the natives' site van, choosing one over the other has no effect on gameplay.)
 
 By the way, the keycar appears in the first place that is free of guardians. It's possible to clear the area without seeing the keycar, but not very. The keycar is an LLP. To avoid it altogether, you could avoid changing Muscly, the wait-seer, the reed's ale and the drained arid den. This is probably harder to work out than just disposing of a few more guardians, but in case you were wondering, it is possible.
 

@@ -212,7 +212,7 @@ arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the 
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in Lost Lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 mardier admirer	mardier admirer	false	430738621	--	"married"	"married"	"Your admirer blinks, then looks down a ring on their finger, which may or may not have been there before (the ring, you silly.) They start talking of the old ball and chain, and while it's not clear whether the old ball and chain will help them be a better person, which is how it works in theory, or they are just someone to complain to, well ... the mardier admirer is done with you. Why were they wasting time? Such a leer--a sure lech! Your ex-admirer walks away, spouting spouse opuses."
-natives	natives	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
+natives' site van	natives' site van	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
 sporties' ripostes	sporties' ripostes	false	709599244	--	"prosiest"	"prosiest"	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak. Then he decides not to risk holding his ground any more."
@@ -606,10 +606,10 @@ naiv-nat is a truth state that varies.
 
 to say vain-naiv:
 	if the player's command includes "naivest":
-		say "You remember that alternate solution to the truth-teller and liar puzzle and ask the natives if they've heard of free beer at the Epic Clean Nice Place yet. They don't believe you at first, but you manage to sucker them with 'of course you've heard of it' and 'would I lie about free beer' and so forth. You provide them unbelievably wrong directions to follow, and they soon disappear";
+		say "You remember that alternate solution to the truth-teller and liar puzzle and ask the natives if they've heard of free beer at the Epic Clean Nice Place yet. They don't believe you at first, but you manage to sucker them with 'of course you've heard of it' and 'would I lie about free beer' and so forth. You provide them unbelievably wrong directions to follow, and the site van chugs off";
 		now naiv-nat is true;
 	else:
-		say "You convince the natives that they're really too good to be guarding THIS spot, and in fact, you cleared out some other areas that are even more fun to guard, but you're sure there're even more fun places if you just go--well, this-a-way and that-a-way. They fall for your flattery and go in search of somewhere better"
+		say "You convince the natives that they're really too good to be guarding THIS spot, and in fact, you cleared out some other areas that are even more fun to guard, but you're sure there're even more fun places if you just go--well, this-a-way and that-a-way. They fall for your flattery and start up the site van in search of somewhere better"
 
 to say ahoy-eh:
 	say "The ship hovers a bit, then chugs through the stripe. 'Ahoy, eh? ... Oh, yeah!' you cry as the underground lake expands until the ceiling disappears. The water begins rushing, and you are thrown to the floor of your boat. When you wake up, you find that you are back at the Strip of Profits";
@@ -1109,7 +1109,7 @@ muscly luc sym	"Luc Sym stumbles for a moment."
 muscly ms lucy	"Ms. Lucy stumbles for a moment."
 organised ego drains	"The drains sizzle slightly but go back to menacing quiet."
 mardier admirer	"The mardier admirer looks askance, then returns to evaluating you some more."
-natives	"The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
+natives' site van	"The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 try us yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
 alarming grailman	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
@@ -1758,7 +1758,7 @@ Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
 mardier admirer	"[one of]The mardier admirer needs someone to emote to, hopefully more constructively than with you. To be ... engaged with.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
-natives	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the natives.[plus][or]The natives can become VAINEST, or NAIVEST.[minus][cycling]"
+natives' site van	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the native['] site van.[plus][or]The natives['] site van can become VAINEST, or NAIVEST.[minus][cycling]"
 yurts	"[one of]They look out of place, made of weird metals.[plus][or]You can corrupt them by making them...[plus][or]RUSTY.[minus][cycling]"
 arid den	"[one of]The dandier arid den sells a lot of Nerd-Aid. It appears to be at full power.[plus][or]How could you lessen its power?[plus][or]Try smelling, examining the merchandise for endorsements, etc.[plus][or]DRAINED.[minus][cycling]"
 Nerd-Aid	"The Nerd-Aid gives you a better idea of how to change the arid den, by its name and by seeing who endorses Nerd-Aid."

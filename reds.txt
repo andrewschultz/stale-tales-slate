@@ -295,6 +295,7 @@ restful,R?RRR?R=fluster=selfrut
 nerdiest,R?RRY?R?=resident=trendies
 #qver of dourest detours
 rousted,R??RRYR=dourest=detours
+rousted,ourdest,setdour,trodsue
 ################otters
 #bleary barley/burnt brunt
 #qver of bleary barley
