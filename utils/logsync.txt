@@ -15,6 +15,7 @@ bogus-lamps=lamps
 #towers
 prison ropins
 dr yow
+bogus-detours=dourest detours
 #otters
 b-b=bleary barley
 merle=honestly

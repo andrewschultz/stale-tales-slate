@@ -13610,7 +13610,7 @@ understand "spoilt/pistol" and "spoilt pistol" as popgun.
 
 The boing go bin is a boringthing. it is part of the popgun. the boing go bin is reflexive. description is "[if boing is reflexive]It's sort of springy, but it doesn't seem to really bounce around. You may need a eureka moment to figure how to fix it[else]The boing mechanism is fully equipped to go boing again. Yay[end if].". bore-text is "Your mechanical abilities won't help[if boing is reflexed], but they don't need to[else], but there may be a slick way to get the BOING back[end if].". printed name of boing go bin is "boing-go bin".
 
-a-text of boing is "RYRRY". b-text of boing is "??RRY". parse-text of boing is "b[sp]-[sp]x[sp]x[sp]-". boing is cheat-spoilable.
+a-text of boing go bin is "RYRRY". b-text of boing go bin is "??RRY". parse-text of boing is "b[sp]-[sp]x[sp]x[sp]-". boing go bin is cheat-spoilable.
 
 The serial number is a boringthing. it is part of the popgun. description of serial number is "B09140715.". boretext of serial number is "You can't do much with it except examine it.". bore-check of serial number is bore-serial rule.
 
@@ -17338,7 +17338,7 @@ a-text of a-p is "RYRRYR". b-text of a-p is "RYPPYR". parse-text of a-p is "p[sp
 
 understand "portal" as a-p.
 
-check going north: try entering a-p instead;
+check going north in Horned Hedron: try entering a-p instead;
 
 check entering a-p:
 	if ruby is not moot:
@@ -19652,8 +19652,10 @@ last-detour is a room that varies.
 this is the detour-check rule:
 	now last-detour is the room noun of location of player;
 	if dourest detours is visited:
-		if lost lots is visited and finger fringe is visited, continue the action;
-	say "You work through the Dourest Detours much more easily this time."
+		if lost lots is not visited or finger fringe is not visited, say "You work through the Dourest Detours much more easily this time.";
+		continue the action;
+	say "Oh no! You get distracted and lost while going down a few side paths. You wind up in...";
+	move player to dourest detours;
 
 book Towers specific verbs
 

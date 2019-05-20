@@ -110,6 +110,8 @@ drat,tard
 rats,RYRR=tsar=star
 rats,RGRP=tars
 #marines seminar remains
+#qver of boing go bin
+bingo,?YRRY=boing=gobin
 #qver of sport ports
 prost,?R?R?=sport=ports
 #dirge ridge
@@ -291,7 +293,7 @@ weariest,?YYRY?RR=sweatier=waitseer
 restful,R?RRR?R=fluster=selfrut
 #qver of resident trendies
 nerdiest,R?RRY?R?=resident=trendies
-#qver of detours
+#qver of dourest detours
 rousted,R??RRYR=dourest=detours
 ################otters
 #bleary barley/burnt brunt
