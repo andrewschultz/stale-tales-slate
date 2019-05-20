@@ -6368,7 +6368,7 @@ section pushing the buttons
 
 the hoots button is a thing. description is "It's on the right, and it's labeled HOOTS.".
 
-rgtext of hoots button is "[rcn][rc][gc][rc][rc]". lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4. cert-text of hoots button is "-[d1][ast]O[d1][d1]". rect-text of hoots button is "S[d1][d1][d1][ast]T".
+lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4. cert-text of hoots button is "-[d1][ast]O[d1][d1]". rect-text of hoots button is "S[d1][d1][d1][ast]T". rgtext of hoots button is "[rcn][rc][gc][rc][rc]".
 
 the shoot button is a thing. description is "It's on the right, and it's labeled SHOOT.".
 

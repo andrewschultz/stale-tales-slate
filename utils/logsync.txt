@@ -1,12 +1,18 @@
 #ordeal loader
-nametag>gateman
-odor>door
-bolt>blot
-bulge>bugle
-toga>goat
+#odor>door
+#bolt>blot
+#bulge>bugle
+#toga>goat
+>IGNORE=odor
+>IGNORE=bolt
+>IGNORE=bulge
+>IGNORE=toga
+>IGNORE=darnels
+#the stuff above, you don't have the gadget yet, so scan values don't matter. I could code it, but it has no practical value.
 darnels>slander
 static>attics
 attics>static
+nametag>gateman
 #stores
 store b>sorbet
 store f>forest

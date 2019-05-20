@@ -25,6 +25,7 @@ got_logic_reds = defaultdict(int)
 open_line = defaultdict(int)
 sa_flips = defaultdict(str)
 sa_trans = defaultdict(str)
+sa_ignore = defaultdict(str)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
@@ -58,6 +59,10 @@ def read_data_file():
             if line.startswith('#'): continue
             if line.startswith(';'): break
             ll = line.lower().strip()
+            if ll.startswith(">ignore="):
+                l2 = re.sub(".*=", "", ll)
+                sa_ignore[l2] = True
+                continue
             if ">" in ll:
                 ary = ll.split(">")
                 if "~" in ary[0]:
@@ -119,6 +124,9 @@ def sa_r_g_check():
                     if global_raw and my_raw != global_raw: continue
                     if 'lgth of' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
+                        if my_raw in sa_ignore:
+                            skip = True
+                            continue
                         my_length = int(val_of(q))
                         global_raw = my_raw
                         if nosp_len(my_thing) == my_length:
@@ -165,6 +173,19 @@ def sa_r_g_check():
                             if my_nosp[idx] != sa_flips[my_raw][idx] and x[idx] != '-':
                                 print(my_thing, "to", sa_flips[my_raw], x, "undetected match character", idx, "line", line_count, my_nosp[idx], sa_flips[my_raw][idx], x[idx])
                                 errs["cert-text"] += 1
+                        continue
+                    if 'rect-text of' in q:
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        global_raw = my_raw
+                        x = parse_brackets(val_of(q))
+                        if sa_flips[my_raw][0] != x[0]:
+                            print("First digit of rect-text wrong for", my_thing, "line", line_count, my_nosp, sa_flips[my_raw], x)
+                        l = len(my_nosp)
+                        if sa_flips[my_raw][l-1] != x[l-1]:
+                            print("Last digit of rect-text wrong for", my_thing, "line", line_count, my_nosp, sa_flips[my_raw], x)
+                        for idx in range(1, l-1):
+                            if x[idx] != '-':
+                                print("Digit", idx+1, "should be blanked out for", my_thing, "line", line_count, my_nosp, sa_flips[my_raw], x)
                         continue
                 if global_raw and my_raw != global_raw:
                     print("WARNING code rewrite of", global_raw, "to", my_thing, "at line", line_count)
