@@ -721,9 +721,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "doctor"	377173649	--	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	--	--	agnostic-can-learn rule	"[agnostic-first] is fully attentive. Don't ruin a good thing!"
-"strati"	434998469	Strati Strait	--	--	"[towersloc]." [STRATI STRAIT 3 2]
-"could"	273306897	Strati Strait	--	--	"[could-cloud]."
-"coulds"	369580863	Strati Strait	--	--	"[could-cloud]."
+"strati"	434998469	Artist Traits Strait	--	--	"[towersloc]." [ARTIST TRAITS STRAIT 3 2]
+"trait"	338724503	Artist Traits Strait	--	--	"[could-cloud]."
+"could"	273306897	Artist Traits Strait	--	--	"[could-cloud]."
+"coulds"	369580863	Artist Traits Strait	--	--	"[could-cloud]."
 "actionless"	686724232	Actionless Coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
 "coastline"	590450266	Actionless Coastlines	--	--	"[towersloc]."
 "maturation"	653353366	--	natatorium	--	"The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway"

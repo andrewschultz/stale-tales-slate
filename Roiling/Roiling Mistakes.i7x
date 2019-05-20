@@ -551,9 +551,9 @@ understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and
 
 understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when player is in Horned Hedron and ol' trap is in Horned Hedron.
 
-chapter end den
+chapter End Den
 
-understand "ned" as a mistake ("That was my name in the first game.") when player is in end den.
+understand "ned" as a mistake ("That was my name in the first game.") when player is in End Den.
 
 chapter Plasm Lamps
 
@@ -651,7 +651,7 @@ understand "i mend" as a mistake ("You're more interested in doing the opposite-
 
 understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is in Treading Gradient]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are in location of player.
 
-chapter shoals aslosh
+chapter shoals aslosh (backdrop)
 
 understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is visible.
 

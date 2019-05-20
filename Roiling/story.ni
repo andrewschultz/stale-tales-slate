@@ -2031,7 +2031,7 @@ muscly ms lucy	"She kind of stumbles with dialogue. Maybe you can make her stumb
 bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 fluster self rut	"You feel agitated just talking to the rut, whether or not it decides to talk back. You press yourself hard to think what to ask, but no. That can't quite work."
-organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in Danger Garden]north[else]south[end if][if Danger Garden is visited and Strati Strait is visited], especially since you walked around before[end if]."
+organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in Danger Garden]north[else]south[end if][if Danger Garden is visited and Artist Traits Strait is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
@@ -2540,7 +2540,7 @@ topic	right-region	him-say
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
-	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Strati Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the arid den is moot if this is not true]
+	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the arid den is moot if this is not true]
 	if Mel Fish is not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
 	if wait-seer is not moot:
 		unless gen-gone of lars eede, decide on 6; [this zigzag blocks a clear path east]
@@ -7130,7 +7130,7 @@ instead of swearing obscenely:
 		say "Some example you are." instead;
 	if player is in Disowned Downside and macks are in Disowned Downside:
 		say "The conversation is horrid enough." instead;
-	if player is in Actionless Coastlines or player is in Strati Strait:
+	if player is in Actionless Coastlines or player is in Artist Traits Strait:
 		if lois is in location of player or hostile-is-he lot is in location of player:
 			say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
 	if player is in Reclusion Inclosure:
@@ -17642,7 +17642,7 @@ to decide which number is palace-let: [I could've defined a new variable but it'
 	if location of player is Scope Copse, decide on 5;
 	if location of player is Lost Lots or location of player is Fringe Finger or location of player is Unblest Sunbelt or location of player is Baldest Blasted Saltbed, decide on 6;
 	if location of player is Treading Gradient or location of player is Obscurest Subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is Anemic Cinema, decide on 7;
-	if location of player is Salted Deltas or location of player is Strati Strait, decide on 8;
+	if location of player is Salted Deltas or location of player is Artist Traits Strait, decide on 8;
 	if location of player is Actionless Coastlines or location of player is Rawest Waters, decide on 9;
 	if location of player is Mesprise Premises, decide on 10;
 	if location of player is Mislit Limits, decide on 11;
@@ -17752,7 +17752,7 @@ Salted Deltas	2	1
 Actionless Coastlines	3	1
 Baldest Blasted Saltbed	1	2
 Treading Gradient	2	2
-Strati Strait	3	2
+Artist Traits Strait	3	2
 Outer Route	0	3
 Scope Copse	1	3
 Unblest Sunbelt	2	3
@@ -17877,7 +17877,7 @@ Anemic Cinema	4	--
 Treading Gradient	4	--
 Danger Garden	5	--
 Salted Deltas	6	--
-Strati Strait	6	--
+Artist Traits Strait	6	--
 Shaven Havens	--	"You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form."
 Obscurest Subsector	--	"You're going side-to-side to see the curst palace, but hooray to seeing some other person. Even if he is locked up."
 Lost Lots	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
@@ -18597,7 +18597,7 @@ to check-agnostic:
 				say "Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
 				guar-pro agnostic;
 			else:
-				say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Strati Strait]north[else]east[end if].";
+				say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Artist Traits Strait]north[else]east[end if].";
 		else:
 			say "You hear [if the-hostile are not moot]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
@@ -18633,7 +18633,7 @@ check taking dinger:
 
 a-text of reading a dinger is "RRYYRYR". b-text of reading a dinger is "RR?YR?R". parse-text of reading a dinger is "x[sp]x[sp]?[sp]-[sp]x[sp]?[sp]x".
 
-book Strati Strait
+book Artist Traits Strait
 
 to say relig-mf:
 	if player is male:
@@ -18645,15 +18645,11 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
 	decide on lois the hostile;
 
-Strati Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
+Artist Traits Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Artist Traits Strait is in Towers.
 
-the coulds clouds are useless scenery in Strati Strait. "The strati are definitely coulds-clouds, full of possibility. Just looking at them feels like you have artist traits.". understand "coulds-clouds" as coulds clouds.
+the coulds clouds are useless boringscen in Artist Traits Strait. "The strati are definitely coulds-clouds, full of possibility. They almost make you say 'It's art! I start!'". understand "coulds-clouds" as coulds clouds. bore-text is "The clouds are too far away to do anything other than look at. They won't help you solve anything. They're just there.".
 
-understand "strati" as coulds clouds when player is in Strati Strait.
-
-instead of doing something with coulds clouds:
-	if action is procedural, continue the action;
-	say "The clouds are too far away to do anything other than look at. They won't help you solve anything. They're just there.";
+understand "strati" as coulds clouds when player is in Artist Traits Strait.
 
 book important side rooms
 
@@ -18989,7 +18985,7 @@ to say wordy-hinty:
 
 book Actionless Coastlines
 
-Actionless Coastlines is north of Strati Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor."
+Actionless Coastlines is north of Artist Traits Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor."
 
 check going northeast in actionless coastlines: try going north instead; [crossing leak lake]
 
@@ -19013,11 +19009,11 @@ instead of doing something with Maturation Natatorium:
 
 section Thearchy Hatchery
 
-the Thearchy Hatchery is a backdrop. Thearchy Hatchery is in Actionless Coastlines and Strati Strait.
+the Thearchy Hatchery is a backdrop. Thearchy Hatchery is in Actionless Coastlines and Artist Traits Strait.
 
 instead of doing something with Thearchy Hatchery:
-	if current action is entering and player is in Strati Strait:
-		if player is in Strati Strait:
+	if current action is entering and player is in Artist Traits Strait:
+		if player is in Artist Traits Strait:
 			say "[if the-hostile are moot]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 		say "That would probably be sacrilegious. You'd get a good scolding, I'm sure." instead;
 	if action is procedural, continue the action;
@@ -19613,7 +19609,7 @@ check going west in Mislit Limits:
 
 book Leak Lake (backdrop)
 
-Leak Lake is a useless backdrop. It is in Salted Deltas, Actionless Coastlines, Strati Strait, Mislit Limits. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
+Leak Lake is a useless backdrop. It is in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
 
 instead of doing something with leak lake:
 	if the action is procedural, continue the action;
@@ -19626,7 +19622,7 @@ instead of doing something with leak lake:
 
 book shoals aslosh (backdrop)
 
-the shoals aslosh are a useless plural-named backdrop. they are in Salted Deltas, Actionless Coastlines, Strati Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
+the shoals aslosh are a useless plural-named backdrop. they are in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
 
 instead of doing something with shoals aslosh:
 	if the action is procedural, continue the action;
@@ -19895,7 +19891,7 @@ The stinger is a purple guardian. "The stinger that replaced the bonker remains 
 
 a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
-chapter Strati Strait
+chapter Artist Traits Strait
 
 section lois the hostile
 
@@ -19937,8 +19933,8 @@ grailman	Danger Garden	north	"The grailman, with well-above-average skills for y
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives' site van is visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker]
 natives' site van	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting."
-lois the hostile	Strati Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
-hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers."	"Boy! The Lot sure could use some down-home kindness."
+lois the hostile	Artist Traits Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
+hostile-is-he lot	Artist Traits Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers."	"Boy! The Lot sure could use some down-home kindness."
 
 chapter guardian taunt tables
 
@@ -20049,9 +20045,9 @@ to shuffle-guardians (goner - a guardian):
 			now G is opposite of blockdir entry;
 		now MR is the room G of location of player;
 		if MR is Salted Deltas:
-			now Strati Strait is tower-accessible;
-			now Strati Strait is accessible;
-		if MR is Strati Strait:
+			now Artist Traits Strait is tower-accessible;
+			now Artist Traits Strait is accessible;
+		if MR is Artist Traits Strait:
 			now Salted Deltas is tower-accessible;
 			now Salted Deltas is accessible;
 	now goner is prodded;
@@ -20115,7 +20111,7 @@ to decide which number is gua-to-clear:
 	if Treading Gradient is not accessible, increment temp; [2]
 	if Anemic Cinema is not accessible, increment temp; [3]
 	if Danger Garden is not accessible, increment temp; [4]
-	if Salted Deltas are not accessible and Strati Strait is not accessible, increment temp; [5]
+	if Salted Deltas are not accessible and Artist Traits Strait is not accessible, increment temp; [5]
 	decide on temp. [ the proof of this is straightforward: we need a path (deleted guardian) to get to the each corner. For the NE, either strait/deltas is ok since we must clear the hostile and the atheists. We also need to get by the Scope Copse. Therefore we have 5 separate areas to link up: x+y=0, y=2, x=2, x=1 y=1, x+y=3. This is necessary/sufficient as anything in part 2-3-4 is 1 away from part 5. So if 5 is accessible, anything undone is 1 away from it. If 5 is not accessible, then it is 1 away from something done (except 1, in which case we just see the first area we go to from the 1's) and then the other not accessible areas are 1 away from 5, where we can go next. ]
 
 clear-warn is a truth state that varies.
@@ -24032,7 +24028,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is red writing, decide yes;
 	if hintcand is Thearchy Hatchery or hintcand is Maturation Natatorium:
 		if mrlp is towers:
-			if Actionless Coastlines is visited or Strati Strait is visited, decide yes;
+			if Actionless Coastlines is visited or Artist Traits Strait is visited, decide yes;
 		decide no;
 	if hintcand is n-t-air:
 		if mrlp is presto and zany meter is in Grey Gyre, decide yes;
@@ -24059,7 +24055,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide no;
 	if hintcand is leak lake or hintcand is shoals aslosh:
 		if mrlp is towers:
-			if Salted Deltas is visited or Actionless Coastlines is visited or Strati Strait is visited, decide yes;
+			if Salted Deltas is visited or Actionless Coastlines is visited or Artist Traits Strait is visited, decide yes;
 		decide no;
 	[d "[hintcand] before.";]
 	let R1 be map region of location of hintcand;
