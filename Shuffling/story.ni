@@ -683,13 +683,13 @@ hintsoff is a truth state that varies. hintsoff is usually false.
 just-print is a truth state that varies. just-print is usually true.
 
 carry out hinting:
-	if location of player is Busiest Subsite, say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out." instead;
+	if location of player is Busiest Subsite, say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go." instead;
 	if have-objhinted is false:
 		now have-objhinted is true;
 		say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
 		if player direct-consents:
 			say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
-			continue the action;
+			try mainhelping instead;
 		else:
 			say "Her cheats sachet tempts you, even trying to scathe as you remain chaste. [hintblah]" instead;
 	if hintfull is false:
@@ -761,8 +761,6 @@ definition: a thing (called hthing) is deregioned:
 	decide no.
 
 definition: a thing (called hintcand) is hintrelevant:
-	if mrlp is sortie:
-		if hintcand is Mean Old Mondale Doleman, decide yes;
 	if hintcand is off-stage, decide no;
 	if hintcand is moot, decide no;
 	if hintcand is abrod, decide yes;
@@ -2582,6 +2580,7 @@ check taking inventory:
 	say "Warpable [list of warpable things enclosed by player].";]
 	say "Item time! [run paragraph on]";
 	if mrlp is Ordeal Loader or mrlp is stores, continue the action;
+	if player carries Mean Old Mondale Doleman, now Mean Old Mondale Doleman is unmarked for listing;
 	if the number of regspecial things enclosed by the player is 0:
 		say "You have nothing from this region in particular.";
 	else:
@@ -5215,13 +5214,15 @@ to say dial-hints:
 
 section for Mondale-Doleman to be referenced everywhere
 
-Mean Old Mondale Doleman is a backdrop in sortie. description is "BUG.".
+Mean Old Mondale Doleman is a boringthing. description is "You can't see Mean Old Mondale Doleman, but you'll have to defeat him.". bore-text is "Mondale-Doleman is out there, you know. But thinking about what he's done won't help you solve things.". bore-check is bore-doleman rule.
 
-printed name of Doleman is "Mean Old Mondale-Doleman".
+this is the bore-doleman rule:
+	if current action is scaning:
+		try examining doleman;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
-instead of doing something with mondale doleman:
-	if current action is objhinting, continue the action;
-	say "Mondale-Doleman is out there, you know. But thinking about what he's done won't help you solve things."
+printed name of Mean Old Mondale Doleman is "Mean Old Mondale-Doleman".
 
 section a lid
 
@@ -5347,6 +5348,7 @@ check looking in Trap Part:
 			say "[wfak]Thump. ('Drat, poor trapdoor!' you hear.)";
 			say "[wfak]And you realize his advice was a TRAP, of course it was...";
 			say "[wfak]Your head is spinning. Wait, no, it's the room...";
+			now player has Mean Old Mondale Doleman;
 
 chapter The Nick
 
@@ -5462,7 +5464,6 @@ for printing a locale paragraph about a tacoish thing (called xyzyx) when player
 	now red inn is mentioned;
 	now dud mum mud is mentioned;
 	now grief'd fridge is mentioned;
-	now doleman is mentioned;
 	if xyzyx is a pregredient or xyzyx is an ingredient:
 		if xyzyx is not mentioned and xyzyx is not part of the tortilla:
 			say "The Red Inn contains things that [if number of visible pregredients > 0 and number of separate-visible ingredients > 0]do and don't [else if number of visible pregredients > 0]don't [end if]belong in a kitchen: ";
