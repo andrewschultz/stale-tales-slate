@@ -81,10 +81,12 @@ def read_data_file():
             ll = line.lower().strip().split(",")
             for x in ll: okay[x] = True
 
-def thing_of(q, check_trans = True):
-    retval = re.sub(" +is.*", "", q)
-    retval = re.sub(".* of +", "", retval)
-    return sa_trans[retval] if check_trans and retval in sa_trans else retval
+def things_of(q):
+    ret_2 = re.sub(" +is.*", "", q)
+    ret_2 = re.sub(".* of +", "", ret_2)
+    ret_1 = sa_trans[ret_2] if ret_2 in sa_trans else ret_2
+    ret_3 = nosp(ret_1)
+    return (ret_1, ret_2, ret_3)
 
 def val_of(q):
     return re.sub(".* is +", "", q)
@@ -94,6 +96,14 @@ def nosp_len(q):
 
 def nosp(q): return re.sub(" ", "", q)
 
+def parse_brackets(q):
+    retval = re.sub("\[ast\]", "", q)
+    retval = re.sub("\[d[1-2]\]", "-", retval)
+    retval = re.sub("\"", "", retval)
+    return retval
+
+#current bugs: LGTH must come first
+#also we need to check for if something is a shortening e.g. TREES should be TREES BUTTON
 def sa_r_g_check():
     errs = defaultdict(int)
     count = 0
@@ -103,13 +113,14 @@ def sa_r_g_check():
             if 'gpos of' in line and 'rpos of' in line and 'rgtext of' in line:
                 sent = re.split("\. *", line.lower().strip())
                 skip = False
+                global_raw = ""
                 for q in sent:
                     if skip: continue
-                    global_thing = ""
+                    if global_raw and my_raw != global_raw: continue
                     if 'lgth of' in q:
-                        my_thing = thing_of(q)
+                        (my_thing, my_raw, my_nosp) = things_of(q)
                         my_length = int(val_of(q))
-                        global_thing = my_thing
+                        global_raw = my_raw
                         if nosp_len(my_thing) == my_length:
                             if print_correct_shuf: print("Length of", my_thing, "is (correctly)", my_length)
                             pass
@@ -118,30 +129,25 @@ def sa_r_g_check():
                             print("Length of", my_thing, "should be", nosp_len(my_thing), "but is", my_length)
                         continue
                     if 'gpos of' in q:
-                        my_thing = thing_of(q)
-                        my_raw = thing_of(q, False)
-                        my_nosp = nosp(my_thing)
-                        # print("GPOsing", thing_of(q, False), thing_of(q), my_thing)
-                        #print(my_thing, "!", sa_flips[my_thing], "!", thing_of(q, False), sa_flips[thing_of(q, False)])
-                        # print("RAW:", thing_of(q, False), "FULL:", thing_of(q))
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        global_raw = my_raw
                         if my_raw not in sa_flips:
                             count += 1
-                            print(count, "Need to define flips for", my_thing, "line", line_count)
+                            print(count, "Need to define flips for", my_raw, "/", my_thing, "line", line_count)
                             errs["flip define in logsync.txt"] += 1
                             skip = True
                             continue
                         my_pos = int(val_of(q))
                         if my_nosp[my_pos-1] != sa_flips[my_raw][0]:
                             errs["first-letter"] += 1
-                            print("GPOS fails for", my_thing, "->", sa_flips[my_raw], "is", my_nosp[my_pos-1], "should be", sa_flips[my_raw][0])
+                            print("GPOS fails for", my_thing, "->", sa_flips[my_raw], "position", my_pos, "is", my_nosp[my_pos-1], "should be", sa_flips[my_raw][0])
                         continue
                     if 'rpos of' in q:
-                        # print(line_count, sent)
-                        my_thing = thing_of(q)
-                        my_raw = thing_of(q, False)
-                        my_nosp = nosp(my_thing)
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        global_raw = my_raw
                         if my_raw not in sa_flips:
-                            print(count, "Need to define flips for", my_thing, "line", line_count)
+                            count += 1
+                            print(count, "Need to define flips for", my_raw, "/", my_thing, "line", line_count)
                             errs["flip define in logsync.txt"] += 1
                             skip = True
                             continue
@@ -149,8 +155,19 @@ def sa_r_g_check():
                         # print(my_thing, "letter", my_pos, "is", my_nosp[my_pos-1], "extra", sa_flips[my_raw][-1])
                         if my_nosp[my_pos-1] != sa_flips[my_raw][-1]:
                             errs["last-letter"] += 1
-                            print("RPOS fails for", my_thing, "->", sa_flips[my_raw], "is", my_nosp[my_pos-1], "should be", sa_flips[my_raw][0])
+                            print("RPOS fails for", my_thing, "->", sa_flips[my_raw], "position", my_pos, "is", my_nosp[my_pos-1], "should be", sa_flips[my_raw][-1])
                         continue
+                    if 'cert-text of' in q:
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        global_raw = my_raw
+                        x = parse_brackets(val_of(q))
+                        for idx in range(0, len(my_nosp)):
+                            if my_nosp[idx] != sa_flips[my_raw][idx] and x[idx] != '-':
+                                print(my_thing, "to", sa_flips[my_raw], x, "undetected match character", idx, "line", line_count, my_nosp[idx], sa_flips[my_raw][idx], x[idx])
+                                errs["cert-text"] += 1
+                        continue
+                if global_raw and my_raw != global_raw:
+                    print("WARNING code rewrite of", global_raw, "to", my_thing, "at line", line_count)
     if len(errs):
         for x in sorted(errs, key=errs.get):
             print('SHUFFLING:', x, "had", errs[x], "error{:s}".format(i7.plur(errs[x])))

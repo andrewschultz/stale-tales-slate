@@ -4241,7 +4241,7 @@ rgtext of store b is "[gcn][rc][rc][rc][gc][rc]". lgth of store b is 6. gpos of 
 
 the marquee is part of store b. the marquee is auxiliary. description of the marquee is "It reads: BERTO'S fine (the rest is cut off.)"
 
-rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of marquee is 6. rpos of marquee is 4. cert-text of marquee is "-[d1][ast]R[d1][d1][d1]". rect-text of marquee is "S[d1][d1][d1][d1][ast]T".
+lgth of marquee is 6. gpos of marquee is 6. rpos of marquee is 4. rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". cert-text of marquee is "-[d1][ast]R[d1][d1][d1]". rect-text of marquee is "S[d1][d1][d1][d1][ast]T".
 
 the sorbet is an amusing thing. description is "The sorbet is never in play, so this is a BUG."
 
@@ -6368,13 +6368,13 @@ section pushing the buttons
 
 the hoots button is a thing. description is "It's on the right, and it's labeled HOOTS.".
 
-rgtext of hoots button is "[rcn][rc][gc][rc][rc]". lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4. cert-text of hoots is "-[d1][ast]O[d1][d1]". rect-text of hoots is "S[d1][d1][d1][ast]T".
+rgtext of hoots button is "[rcn][rc][gc][rc][rc]". lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4. cert-text of hoots button is "-[d1][ast]O[d1][d1]". rect-text of hoots button is "S[d1][d1][d1][ast]T".
 
 the shoot button is a thing. description is "It's on the right, and it's labeled SHOOT.".
 
 the trees button is a thing. description is "It's on the left, and it's labeled TREES."
 
-rgtext of trees is "[rcn][rc][gc][gc][rc]". lgth of trees button is 5. gpos of trees button is 5. rpos of trees button is 2. cert-text of trees is "-[d1][ast]E[ast]E[d1]". rect-text of trees is "S[d1][d1][d1][ast]R".
+lgth of trees button is 5. gpos of trees button is 5. rpos of trees button is 2. rgtext of trees button is "[rcn][rc][gc][gc][rc]". cert-text of trees button is "-[d1][ast]E[ast]E[d1]". rect-text of trees button is "S[d1][d1][d1][ast]R".
 
 the steer button is a thing. description is "It's on the left, and it's labeled STEER."
 
@@ -7884,7 +7884,7 @@ Include (-
 
 section siren-resin
 
-the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". rpos of siren is 5. gpos of siren is 3. lgth of siren is 5. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N".
+the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". lgth of siren is 5. rpos of siren is 5. gpos of siren is 3. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N".
 
 instead of doing something with the siren:
 	if action is procedural, continue the action;
@@ -8169,7 +8169,7 @@ description of spore is "It looks too delicate as is to support any weight."
 
 instead of taking the spore: say "You might crush it in its present form."
 
-rgtext of spore is "[rcn][rc][rc][rc][rc]". rpos of spore is 1. gpos of spore is 4. lgth of spore is 5. cert-text of spore is "-[d1][d1][d1][d1]". rect-text of spore is "R[d1][d1][d1][ast]S".
+rgtext of spore is "[rcn][rc][rc][rc][rc]". lgth of spore is 5. rpos of spore is 1. gpos of spore is 4. cert-text of spore is "-[d1][d1][d1][d1]". rect-text of spore is "R[d1][d1][d1][ast]S".
 
 section sprig - grips
 
