@@ -846,7 +846,7 @@ carry out objhinting:
 section Ordeal Loader
 
 carry out ordeal-loader-hinting:
-	if player is in Busiest Subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if above-sign is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
+	if player is in Busiest Subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if vacate caveat is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
 	if player is in Rested Desert:
 		if odor is visible, try objhinting odor instead;
 		if bolt is visible and bulge is visible:
@@ -2481,7 +2481,7 @@ when play begins (this is the don't use any other besides status window when pla
 	now player has the dope tan notepad;
 	now left hand status line is "[location of player] ([mrlp])[last-scan-thing]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Trips Strip is visited] [bracket][number of solved regions][close bracket][end if]";
-	set the pronoun it to the above-sign;
+	set the pronoun it to the vacate caveat;
 	sort the table of iconmaps in random order;
 
 last-was-cert is a truth state that varies.
@@ -2608,7 +2608,7 @@ book Ordeal Loader
 
 chapter Busiest Subsite
 
-Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage everyone else who skirted the Oafs['] Sofa planted squarely in the center."
+Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a vacate caveat over an odd side passage, and also, an Oafs['] Sofa is planted squarely in the center."
 
 last-loc of Ordeal Loader is Busiest Subsite.
 
@@ -2627,29 +2627,28 @@ every turn when player is in Busiest Subsite:
 
 section passage and entry
 
-the odd side passage is scenery in Busiest Subsite. "It's just under the NONE TRY sign. You could probably ENTER it, or go INSIDE. It's not really any direction you can tell, and you could have sworn it was near a different exit before you turned your back on it just a bit ago. It curves quickly so you can't see much of it."
+the odd side passage is scenery in Busiest Subsite. "It seems to say NONE TRY, but when you blink, that changes to NO ENTRY. Nothing is stopping you from ENTERing it or going INSIDE. It's not really any direction you can tell, and you could have sworn it was near a different exit before you turned your back on it just a bit ago. It curves quickly so you can't see much of it."
 
-instead of entering or following the side passage: try going inside.
+check entering side passage: try going inside.
 
 the auditorium entry is useless scenery in Busiest Subsite. "You'd love any excuse not to join everyone else going there."
 
-[??inn's gigs]
-the above-sign is privately-named scenery in Busiest Subsite. the printed name of above-sign is "the sign above the passage". understand "sign" as above-sign when player is in Busiest Subsite.
+section vacate caveat
 
-instead of taking above-sign: say "[grounds]".
+the vacate caveat is scenery in Busiest Subsite.
 
-to say grounds: say "Appropriation of company property is potentially a fireable offense. Oh, wait. It's just useless, seriously."
+check taking vacate caveat: say "[grounds]." instead;
 
-description of above-sign is "It says NONE TRY, and it's just above a side passage people are ignoring."
+to say grounds: say "Appropriation of company property is potentially a fireable offense. Oh, wait. It's just useless, seriously"
+
+description of vacate caveat is "It says NONE TRY, and it's just above a side passage people are ignoring."
 
 section banner
 
 [??endorsable bandoleers]
 The banner is amusing scenery in Busiest Subsite. "'This way: BEING FIRED!'[one of] People walk by, discussing how the DEBRIEFING should make Mondays dynamos again.[or] You're run over by people saying 'This talk will be a FINE BRIDGE to a new job!'[or] Has nobody else noticed this sign? Or what it says?[stopping]"
 
-instead of following banner: try going east instead.
-
-instead of taking banner: say "[grounds]".
+check taking banner: say "[grounds]." instead;
 
 section slim neat name list
 
@@ -2676,7 +2675,7 @@ check going north in Busiest Subsite:
 check going east in Busiest Subsite:
 	say "That way's an hour or two of listening to an under-action denunciator. You sure?";
 	if the player no-consents:
-		say "You look back at the [if above-sign is examined]NONE TRY passage[else]passage you ignored--NONE TRY above it[end if]. Well, obviously it should say NO ENTRY. You hope whatever new job you find has a decent vision plan. But you realize you can't be fussy.[paragraph break]One more look back as you sit in one of the asset-seats. Someone else walks through--he's wearing the same color nametag you are. During the talk--based on a horrendous bowdlerization of Robert Frost's [i]The Road Less Traveled[r]--you mark the feedback survey 'gave core coverage' and try to convince yourself you weren't really missing anything. It doesn't quite work. Maybe you could've done something else?";
+		say "You look back at the passage under the vacate caveat. It says NONE TRY. You blink, and it says NO ENTRY. Ugh! You hope whatever new job you find has a decent vision plan. But you realize you can't be fussy.[paragraph break]One more look back as you sit in one of the asset-seats. Someone else walks through--he's wearing the same color nametag you are. During the talk--based on a horrendous bowdlerization of Robert Frost's [i]The Road Less Traveled[r]--you mark the feedback survey 'gave core coverage' and try to convince yourself you weren't really missing anything. It doesn't quite work. Maybe you could've done something else?";
 		end the story;
 	else:
 		say "You sort of procrastinate the lecture, thinking it'd be fun to just ditch.";
@@ -2687,7 +2686,7 @@ check going south in Busiest Subsite:
 	been-check south instead;
 
 check going outside in Busiest Subsite:
-	if above-sign is examined or passage is examined:
+	if vacate caveat is examined or passage is examined:
 		say "Do you mean trying the passage?";
 		if the player yes-consents, try entering the passage instead;
 		say "Well, it's still there, if you want to enter it." instead;
@@ -2730,7 +2729,7 @@ to been-check (subdir - a direction):
 table of subsitedirchecks
 mydir	explyet	blabola
 north	false	--
-south	false	"[line break]Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it [if above-sign is examined or odd side passage is examined]another [else]a [end if]look.[line break]"
+south	false	"[line break]Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it [if vacate caveat is examined or odd side passage is examined]another [else]a [end if]look.[line break]"
 east	false	"[line break]You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.[line break]"
 west	false	"[line break]The standard, usual directions don't seem to cut it. But there has to be somewhere else.[line break]"
 
@@ -10426,16 +10425,17 @@ understand the command "follow [something]" as something new.
 understand "follow [something]" as following.
 
 carry out following:
-	if noun is above-sign or noun is passage:
+	if noun is the player, say "Tautological." instead;
+	if noun is vacate caveat or noun is passage: [ordeal loader]
 		say "You duck inside the passage.";
 		try going inside instead;
-	if noun is gy or noun is line of no life, try going north instead;
-	if noun is riot or noun is protest, say "They aren't convincing enough to make you hate yourself." instead;
-	if noun is potters, say "Yours is the way of the adventurer, not the artist." instead;
-	if noun is the player, say "Tautological." instead;
-	if noun is the beats:
+	if noun is banner, try going east instead;
+	if noun is gy or noun is line of no life, try going north instead; [forest]
+	if noun is the beats: [metros]
 		if player is in Elm Train Terminal, try going east instead;
 		say "No telling where they're coming from." instead;
+	if noun is riot or noun is protest, say "They aren't convincing enough to make you hate yourself." instead; [resort]
+	if noun is potters, say "Yours is the way of the adventurer, not the artist." instead;
 	say "[if noun is a person]They don't[else]That doesn't[end if] seem to be going anywhere.";
 	the rule succeeds;
 

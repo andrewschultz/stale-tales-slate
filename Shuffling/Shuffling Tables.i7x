@@ -367,7 +367,7 @@ dope tan notepad	"You will write procedural things in your notepad as you get th
 acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems animated, almost an animal. [plus][or]This is a LLP and maybe a slightly tricky one. [plus][or]It feels almost kind, mammalian, and the bits read CAN BITE which is in red. [plus][or]NICE BAT. [minus][cycling]"
 cratered bits	"The cratered bits clue what the cabinet can become[if Trips Strip is unvisited] once you start your main quest[end if]."
 name list	"The list hints what Shuffling Around is all about."
-above-sign	"The sign seems to be mis-printed, which is a clue what Shuffling Around is all about."
+vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what Shuffling Around is all about."
 odd side passage	"You can ENTER the odd side passage, or go IN."
 odor	"[one of]What can the odor turn into? Your random thoughts are not so random. [plus][or]The clues and distractions collapse to anagrams. [plus][or]If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram? [plus][or]A door. [minus][cycling]"
 musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."

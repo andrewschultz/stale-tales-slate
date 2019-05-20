@@ -43,8 +43,7 @@ book intro
 
 chapter Busiest Subsite
 
-to say if-sign-x:
-	say "[if above-sign is not examined]. Maybe the sign means something different[end if]"
+to say if-sign-x: say "[if vacate caveat is not examined]. Maybe the sign means something different[end if]"
 
 understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.") when player is in Busiest Subsite.
 
