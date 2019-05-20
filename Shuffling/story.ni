@@ -2855,7 +2855,7 @@ this is the bore-odor rule:
 		the rule succeeds;
 	abide by the bore-exam rule;
 
-rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
+lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R". rgtext of odor is "[rcn][rc][gc][gc]".
 
 understand "smell" and "breeze" as odor.
 
@@ -2894,7 +2894,7 @@ the bolt is part of the OR DO door. description is "It sticks out from the door.
 
 check taking bolt: say "It's like there's an invisible force field around the bolt." instead.
 
-rgtext of bolt is "[gcn][rc][rc][gc]". lgth of bolt is 4. gpos of bolt is 1. rpos of bolt is 4. cert-text of bolt is "[set-bug]". rect-text of bolt is "[set-bug]".
+lgth of bolt is 4. gpos of bolt is 1. rpos of bolt is 4. cert-text of bolt is "[set-bug]". rect-text of bolt is "[set-bug]". rgtext of bolt is "[gcn][rc][rc][gc]".
 
 bugle-played is a truth state that varies. bugle-played is false.
 
@@ -2913,7 +2913,9 @@ after fliptoing bugle:
 		min-up;
 	continue the action;
 
-the bulge is part of the OR DO door. rgtext of bulge is "[gcn][gc][rc][rc][gc]". lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E".
+the bulge is part of the OR DO door.
+
+lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E". rgtext of bulge is "[gcn][gc][rc][rc][gc]".rgtext of bulge is "[gcn][gc][rc][rc][gc]".
 
 description of the bulge is "It's shaped like a narrow rectangle with rounded corners. It has an upper corner that fans out. There's no way to pry it from the door. [run paragraph on][bugle-clue]."
 
@@ -2957,7 +2959,9 @@ carry out fliptoing goat:
 	set the pronoun him to goat;
 	set the pronoun her to goat;
 
-the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.". the rgtext of toga is "[rc][gc][rc][rc]". the lgth of toga is 4. gpos of toga is 3. rpos of toga is 1. cert-text of toga is "-[ast]O[d1][d1]". rect-text of toga is "G[d1][d1][ast]T".
+the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.".
+
+the lgth of toga is 4. gpos of toga is 3. rpos of toga is 1. cert-text of toga is "-[ast]O[d1][d1]". rect-text of toga is "G[d1][d1][ast]T". the rgtext of toga is "[rc][gc][rc][rc]".
 
 report taking the toga:
 	say "From the smell[if toga is examined] and the writing on it[end if], you doubt wearing it will get you anywhere cool in its current form, but you take it anyway.";
@@ -2975,7 +2979,7 @@ understand "thickets/thickest" and "thickest thickets" as darnels when player is
 
 the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is moot]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
 
-the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 7. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]".
+the lgth of darnels is 7. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]". the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]".
 
 the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
 
@@ -5044,7 +5048,7 @@ Include (-
 	has transparent animate
 -) when defining banshee.
 
-the banshee is scenery in Cruel Ones' Enclosure. rgtext of banshee is "[rcn][rc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
+the banshee is scenery in Cruel Ones' Enclosure. rgtext of banshee is "[rcn][gc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
 
 description of banshee is "You can hear but not see it."
 
@@ -7921,7 +7925,7 @@ gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles 
 
 the stile is boringscen in Astral Altars. description of stile is "It's reddish. A stile usually provides passage over something, but it's all by itself here. Maybe it can lead you somewhere else, in a different form.". bore-text is "There must be some way to magic the stile and/or tiles."
 
-gpos of stile is 3. rpos of stile is 2. lgth of stile is 5. the rgtext of stile is "[rc][rc][gc][gc][rc]". the lgth of stile is 5. cert-text of stile is "-[d1][d1][d1][d1]". rect-text of stile is "I[d1][d1][d1][ast]T".
+gpos of stile is 3. rpos of stile is 2. lgth of stile is 5. the rgtext of stile is "[rc][rc][rc][rc][rc]". the lgth of stile is 5. cert-text of stile is "-[d1][d1][d1][d1]". rect-text of stile is "I[d1][d1][d1][ast]T".
 
 section feral flare
 
@@ -8366,7 +8370,9 @@ to say kicks:
 	if player has gadget:
 		now tagged gadget is in Potshot Hotspot;
 
-the chain links are a plural-named thing. rgtext of chain links is "[rcn][gc][rc][rc][gc]". lgth of links is 5. gpos of links is 4. rpos of links is 5. cert-text of links is "-[ast]I[d1][d1][ast]S". rect-text of links is "K[d1][d1][d1][ast]S".
+the chain links are a plural-named thing.
+
+lgth of chain links is 5. gpos of chain links is 4. rpos of chain links is 5. cert-text of chain links is "-[ast]I[d1][d1][ast]S". rect-text of chain links is "K[d1][d1][d1][ast]S". rgtext of chain links is "[rcn][gc][rc][rc][gc]".
 
 description of chain links is "A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin[']. But they're still more violent things than you'd like, this near the Means Manse."
 

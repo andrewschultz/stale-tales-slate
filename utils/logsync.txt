@@ -9,7 +9,7 @@
 >IGNORE=toga
 >IGNORE=darnels
 #the stuff above, you don't have the gadget yet, so scan values don't matter. I could code it, but it has no practical value.
-darnels>slander
+snarled darnels~darnels>slander
 static>attics
 attics>static
 nametag>gateman
@@ -86,7 +86,7 @@ sprig>grips
 spore>ropes
 riot>trio
 protest>potters
-links>kilns
+chain links~links>kilns
 spread>drapes
 red asp>drapes
 sliver>silver

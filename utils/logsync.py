@@ -105,6 +105,8 @@ def parse_brackets(q):
     retval = re.sub("\[ast\]", "", q)
     retval = re.sub("\[d[1-2]\]", "-", retval)
     retval = re.sub("\"", "", retval)
+    retval = re.sub("\[rc(n?)\]", "r", retval)
+    retval = re.sub("\[gc(n?)\]", "g", retval)
     return retval
 
 #current bugs: LGTH must come first
@@ -125,6 +127,10 @@ def sa_r_g_check():
                     if 'lgth of' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         if my_raw in sa_ignore:
+                            skip = True
+                            continue
+                        if my_raw not in sa_flips:
+                            print(my_raw, "not in flips. Skipping line", line_count)
                             skip = True
                             continue
                         my_length = int(val_of(q))
@@ -187,6 +193,29 @@ def sa_r_g_check():
                             if x[idx] != '-':
                                 print("Digit", idx+1, "should be blanked out for", my_thing, "line", line_count, my_nosp, sa_flips[my_raw], x)
                         continue
+                    if 'rgtext of' in q:
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        global_raw = my_raw
+                        if my_thing == 'magenta nametag': continue #this is a copout for the only asterisk-clue in the game. Letter 6 is A, but we can't definitively say if that's right or wrong.
+                        x = parse_brackets(val_of(q))
+                        if 'else' in x:
+                            print("Bad value", val_of(q), "for", my_thing)
+                            continue
+                        if len(x) != len(my_nosp):
+                            print(val_of(q), x, "has bad length for", my_thing, "line", line_count, len(x), len(my_nosp))
+                            continue
+                        if len(sa_flips[my_raw]) != len(my_nosp):
+                            print(val_of(q), x, "has bad length for", sa_flips[my_raw], "line", line_count)
+                            continue
+                        for idx in range(0, len(x)-1):
+                            if x[idx] == 'r':
+                                if my_nosp[idx] == sa_flips[my_raw][idx]:
+                                    print("False red at line", line_count, "for", my_thing, "character", idx+1, my_thing[idx], sa_flips[my_raw], x)
+                            elif x[idx] == 'g':
+                                if my_nosp[idx] != sa_flips[my_raw][idx]:
+                                    print("False green at line", line_count, "for", my_thing, "character", idx+1, my_thing[idx], sa_flips[my_raw], x)
+                            else:
+                                print("Line", line_count, "has a bad character", x[idx], "at position", idx)
                 if global_raw and my_raw != global_raw:
                     print("WARNING code rewrite of", global_raw, "to", my_thing, "at line", line_count)
     if len(errs):
