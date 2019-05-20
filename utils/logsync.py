@@ -14,6 +14,8 @@ import sys
 import re
 import os
 
+wks = [ 'fails', 'checks out' ]
+
 okay = defaultdict(bool)
 need_logic = defaultdict(int)
 need_source_logic = defaultdict(int)
@@ -21,11 +23,15 @@ got_logic = defaultdict(int)
 got_logic_invis = defaultdict(int)
 got_logic_reds = defaultdict(int)
 open_line = defaultdict(int)
+sa_flips = defaultdict(str)
+sa_trans = defaultdict(str)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
 scanned = ""
 data_file = "logsync.txt"
+
+print_correct_shuf = False
 
 open_after = False
 open_first = True
@@ -52,6 +58,20 @@ def read_data_file():
             if line.startswith('#'): continue
             if line.startswith(';'): break
             ll = line.lower().strip()
+            if ">" in ll:
+                ary = ll.split(">")
+                if "~" in ary[0]:
+                    ary2 = ary[0].split("~")
+                    sa_trans[ary2[0]] = ary2[1]
+                    temp = ary2[0]
+                    space_check = ary2[1]
+                else:
+                    temp = ary[0]
+                    space_check = temp
+                if len(nosp(space_check)) != len(nosp(ary[1])):
+                    sys.exit("Uh oh space mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
+                sa_flips[temp] = ary[1]
+                continue
             ary = ll.split(",")
             if '=' in line:
                 ary = ll.split("=")
@@ -60,6 +80,82 @@ def read_data_file():
                 continue
             ll = line.lower().strip().split(",")
             for x in ll: okay[x] = True
+
+def thing_of(q, check_trans = True):
+    retval = re.sub(" +is.*", "", q)
+    retval = re.sub(".* of +", "", retval)
+    return sa_trans[retval] if check_trans and retval in sa_trans else retval
+
+def val_of(q):
+    return re.sub(".* is +", "", q)
+
+def nosp_len(q):
+    return len(q)-q.count(" ")
+
+def nosp(q): return re.sub(" ", "", q)
+
+def sa_r_g_check():
+    errs = defaultdict(int)
+    count = 0
+    print("=" * 40, "SHUFFLING")
+    with open(s_src) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if 'gpos of' in line and 'rpos of' in line and 'rgtext of' in line:
+                sent = re.split("\. *", line.lower().strip())
+                skip = False
+                for q in sent:
+                    if skip: continue
+                    global_thing = ""
+                    if 'lgth of' in q:
+                        my_thing = thing_of(q)
+                        my_length = int(val_of(q))
+                        global_thing = my_thing
+                        if nosp_len(my_thing) == my_length:
+                            if print_correct_shuf: print("Length of", my_thing, "is (correctly)", my_length)
+                            pass
+                        else:
+                            errs["length"] += 1
+                            print("Length of", my_thing, "should be", nosp_len(my_thing), "but is", my_length)
+                        continue
+                    if 'gpos of' in q:
+                        my_thing = thing_of(q)
+                        my_raw = thing_of(q, False)
+                        my_nosp = nosp(my_thing)
+                        # print("GPOsing", thing_of(q, False), thing_of(q), my_thing)
+                        #print(my_thing, "!", sa_flips[my_thing], "!", thing_of(q, False), sa_flips[thing_of(q, False)])
+                        # print("RAW:", thing_of(q, False), "FULL:", thing_of(q))
+                        if my_raw not in sa_flips:
+                            count += 1
+                            print(count, "Need to define flips for", my_thing, "line", line_count)
+                            errs["flip define in logsync.txt"] += 1
+                            skip = True
+                            continue
+                        my_pos = int(val_of(q))
+                        if my_nosp[my_pos-1] != sa_flips[my_raw][0]:
+                            errs["first-letter"] += 1
+                            print("GPOS fails for", my_thing, "->", sa_flips[my_raw], "is", my_nosp[my_pos-1], "should be", sa_flips[my_raw][0])
+                        continue
+                    if 'rpos of' in q:
+                        # print(line_count, sent)
+                        my_thing = thing_of(q)
+                        my_raw = thing_of(q, False)
+                        my_nosp = nosp(my_thing)
+                        if my_raw not in sa_flips:
+                            print(count, "Need to define flips for", my_thing, "line", line_count)
+                            errs["flip define in logsync.txt"] += 1
+                            skip = True
+                            continue
+                        my_pos = int(val_of(q))
+                        # print(my_thing, "letter", my_pos, "is", my_nosp[my_pos-1], "extra", sa_flips[my_raw][-1])
+                        if my_nosp[my_pos-1] != sa_flips[my_raw][-1]:
+                            errs["last-letter"] += 1
+                            print("RPOS fails for", my_thing, "->", sa_flips[my_raw], "is", my_nosp[my_pos-1], "should be", sa_flips[my_raw][0])
+                        continue
+    if len(errs):
+        for x in sorted(errs, key=errs.get):
+            print('SHUFFLING:', x, "had", errs[x], "error{:s}".format(i7.plur(errs[x])))
+    else:
+        print("I found no errors in the hinting source for Shuffling! Hooray!")
 
 def check_aftertexts():
     markedokay = 0
@@ -70,7 +166,7 @@ def check_aftertexts():
     in_aftertexts = defaultdict(int)
     sug_text = defaultdict(str)
     suggestions = []
-    with open(mysrc) as file:
+    with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             if reading_header:
                 in_table = True
@@ -87,8 +183,8 @@ def check_aftertexts():
             in_aftertexts[l0] = line_count
             if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of tabs at line {:d}: {:s}".format(line_count, line))
             elif len(ll) == 1:
-                print("WARNING need to add full row for line", line_count, "in", os.path.basename(mysrc), ":", l0)
-                open_line[mysrc] = line_count
+                print("WARNING need to add full row for line", line_count, "in", os.path.basename(r_src), ":", l0)
+                open_line[r_src] = line_count
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in need_source_logic.keys():
                 if l0 not in okay.keys() and l0 not in abbrevs.values():
@@ -145,11 +241,12 @@ show_code = True
 force_next = False
 
 i7.go_proj("roiling")
-mysrc = i7.src("roiling")
+r_src = i7.src("roiling")
+s_src = i7.src("shuffling")
 
 read_data_file()
 
-with open(mysrc) as file:
+with open(r_src) as file:
     for (line_count, line) in enumerate(file, 1):
         if 'logsync.py force next' in line:
             force_next = True
@@ -262,6 +359,8 @@ check_aftertexts()
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues", launch_message = "invis.pl rl e")
 check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed > 0), launch_message = "reds.txt")
+
+sa_r_g_check()
 
 if open_after:
     for q in open_line.keys():

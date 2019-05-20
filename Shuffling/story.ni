@@ -2975,7 +2975,7 @@ understand "thickets/thickest" and "thickest thickets" as darnels when player is
 
 the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is moot]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
 
-the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 5. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]".
+the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 7. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]".
 
 the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
 
@@ -3099,7 +3099,7 @@ section acne-bit cabinet
 
 the acne-bit cabinet is an open openable transparent container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping]."
 
-rgtext of cabinet is "[rcn][rc][rc][rc][ast][rc][rc][gc]". rpos of cabinet is 7. gpos of cabinet is 5.
+gpos of cabinet is 5. rpos of cabinet is 7. lgth of cabinet is 7. rgtext of cabinet is "[rcn][rc][rc][rc][ast][rc][rc][gc]".
 
 check inserting into the cabinet:
 	if noun is gadget or noun is saltine or noun is info-lit or noun is phial, say "Nah, it's yours." instead;
@@ -7010,7 +7010,7 @@ section motto-tomato
 
 A motto is a thing in Bile Libe. "A MOTTO (it says it is, in big bold letters) is somehow stuck to the lease easel. On initial inspection, it doesn't seem like a very good motto, but it still is."
 
-rgtext of motto is "[rcn][rc][rc][rc][gc][gc]". lgth of motto is 6. gpos of motto is 4. rpos of motto is 6. cert-text of motto is "-[d1][d1][d1][ast]T[ast]O". rect-text of motto is "T[d1][d1][d1][d1][ast]O".
+rgtext of a motto is "[rcn][rc][rc][rc][gc][gc]". lgth of a motto is 6. gpos of a motto is 4. rpos of a motto is 6. cert-text of a motto is "-[d1][d1][d1][ast]T[ast]O". rect-text of a motto is "T[d1][d1][d1][d1][ast]O".
 
 description of the motto is "It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.[paragraph break]I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable."
 
@@ -9496,7 +9496,7 @@ instead of doing something with the spread:
 	if current action is taking or current action is pushing or current action is pulling or current action is opening, say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it." instead;
 	continue the action;
 
-the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 6. rpos of red asp is 1. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]". cert-text of red asp is "-[d1][d1][d1][d1][d1]". rect-text of red asp is "D[d1][d1][d1][d1][ast]S".
+the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 3. rpos of red asp is 5. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]". cert-text of red asp is "-[d1][d1][d1][d1][d1]". rect-text of red asp is "D[d1][d1][d1][d1][ast]S".
 
 description of red asp is "It's fortunately attached to the north side of the enclosure, much like the spread was before you disturbed it. It's fast, mean, vicious and very red, and you'd be no match for it even with [if player has sliver]that sliver[else]a weapon[end if]."
 

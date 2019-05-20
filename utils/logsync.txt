@@ -1,3 +1,90 @@
+#ordeal loader
+nametag>gateman
+odor>door
+bolt>blot
+bulge>bugle
+toga>goat
+darnels>slander
+static>attics
+attics>static
+#stores
+store b>sorbet
+store f>forest
+store i>sortie
+store m>metros
+store r>resort
+roster>resort
+marquee~bertos>sorbet
+cabinet>nicebat
+#forest
+shout>south
+teas>east
+thorn>north
+stew>west
+ones>nose
+noughts>shotgun
+dashes>shades
+bread>beard
+spam>maps
+livers>sliver
+sliver>silver
+liches>chisel
+banshee>hasbeen
+vowels>wolves
+#sortie
+#(thing name)(optional ~ what to flip) > (what it needs to be)
+grist>grits
+cake pan>pancake
+skate>steak
+anapest>peasant
+warts>straw
+sack>cask
+cask>sack
+cult tee>lettuce
+cathouse>hotsauce
+spearman>parmesan
+tall trio>tortilla
+taco>coat
+smilies>missile
+hoses>shoes
+r2~room>moor
+m2~moor>room
+t-n~the nick>kitchen
+scraped wall~haywall>hallway
+roadblock>blackdoor
+poem~plane>panel
+hoots button~hoots>shoot
+trees button~trees>steer
+#metros
+drainage>gardenia
+a motto>tomato
+clover>velcro
+lost corn>controls
+heaths>sheath
+begonias>noisebag
+brocade>barcode
+antlers>rentals
+dry cake>keycard
+neon pig>opening
+siren>resin
+words>sword
+beats>beast
+#resort
+stile>islet
+tiles>islet
+swing>wings
+rock>cork
+tool shed>toeholds
+poles>slope
+sprig>grips
+spore>ropes
+riot>trio
+protest>potters
+links>kilns
+spread>drapes
+red asp>drapes
+sliver>silver
+####################################roiling below
 #means manse
 pram,tables,niche,t-b
 #routes
