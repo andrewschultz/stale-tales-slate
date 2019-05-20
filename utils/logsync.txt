@@ -55,6 +55,8 @@ smilies>missile
 hoses>shoes
 r2~room>moor
 m2~moor>room
+oils>soil
+oils2~oils>silo
 t-n~the nick>kitchen
 scraped wall~haywall>hallway
 roadblock>blackdoor

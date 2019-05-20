@@ -10602,7 +10602,11 @@ understand the command "fill [something]" as something new.
 
 understand "fill [something]" as filling.
 
-the oils are a plural-named thing in Sacred Cedars. rgtext of oils is "[rcn][if caskfillings is 2][gc][gc][else][rc][rc][end if][rc]". lgth of oils is 4. gpos of oils is 4. rpos of oils is 1. cert-text of oils is "-[d1][if soil is not off-stage]I[ast]L[else]-[d1][end if][d1]". rect-text of oils is "S[d1][d1][ast][if soil is off-stage]L[else]O[end if]".
+the oils are a plural-named thing in Sacred Cedars.
+
+lgth of oils is 4. gpos of oils is 4. rpos of oils is 3. cert-text of oils is "-[d1][d1][d1]". rect-text of oils is "S[d1][d1][ast]L[end if]". rgtext of oils is "[rcn][rc][rc][rc]".
+
+[lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 is "-[ast]I[ast]L[d1]". rect-text of oils2 is "S[d1][d1][ast]O[end if]". rgtext of oils2 is "[rcn][gc][gc][rc]".]
 
 the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 
@@ -10641,7 +10645,10 @@ carry out filling:
 	increment caskfillings;
 	if caskfillings is 2:
 		say "[line break]A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.";
-		now rpos of oils is 3;
+		now rpos of oils is 1;
+		now cert-text of oils is "-[ast]I[ast]L[d1]";
+		now rect-text of oils is "S[d1][d1][ast]O[end if]";
+		now rgtext of oils is "[rcn][gc][gc][rc]";
 	now oils are in cask;
 	the rule succeeds;
 
