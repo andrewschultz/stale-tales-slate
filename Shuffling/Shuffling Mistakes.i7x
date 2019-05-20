@@ -60,8 +60,8 @@ chapter Rested Desert
 
 understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in Rested Desert.
 
-[def=desert-door]
-understand "rood" as a mistake ("[if desert-door is in Rested Desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in Rested Desert.
+[def=OR DO door]
+understand "rood" as a mistake ("[if OR DO door is in Rested Desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in Rested Desert.
 
 chapter Thickest Thickets
 

@@ -27,8 +27,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "improbable"	570855914	Rested Desert	--	--	"You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler."
 "breeze"	610130653	--	odor	--	"[nope-odor]."
 "smlel"	395782906	--	odor	--	"[nope-odor]."
-"musical"	385455014	--	desert-door	--	"[com-chor]."
-"chord"	236993353	--	desert-door	--	"[com-chor]."
+"musical"	385455014	--	OR DO Door	--	"[com-chor]."
+"chord"	236993353	--	OR DO Door	--	"[com-chor]."
 "horn"	265866187	--	bugle	--	"No, the bugle is a bugle, not just a horn. It's been changed enough."
 "thickets"	584514019	Thickest Thickets	--	--	"[loc-rej]." [start Thickest Thickets]
 "thicket"	488240053	Thickest Thickets	--	--	"[loc-rej]"

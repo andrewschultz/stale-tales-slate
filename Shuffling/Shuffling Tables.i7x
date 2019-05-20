@@ -7,7 +7,7 @@ book Ordeal Loader
 table of Ordeal Loader anagrams [toa] [NOTE: PUT NON SCENERY FIRST] [xxta]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
-odor	desert-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start Ordeal Loader anagrams]
+odor	OR DO door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start Ordeal Loader anagrams]
 bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
 toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
 nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
@@ -300,7 +300,7 @@ volume done rejects
 
 table of done rejects [tdr]
 donething	donemsg
-desert-door	"The door is probably the way out. Best not change it into something else." [start Ordeal Loader]
+OR DO door	"The door is probably the way out. Best not change it into something else." [start Ordeal Loader]
 bugle	"The bugle emits a sad 'don't change me back' noise."
 goat	"The goat is happy as-is. No need to go tag a ..."
 gateman	"Don't scramble the gateman. He's here to help."
@@ -375,7 +375,7 @@ bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the d
 bolt	"[one of]You don't have any key, but that bolt is stopping the door from opening.[plus][or]You want to change the bolt into a BLOT. [minus][cycling]"
 blot	"The blot is a clue what the bulge could become. It's not useful by itself."
 bugle	"You should PLAY the bugle."
-desert-door	"You can just ENTER the door[if bugle-played is false and bolt is visible] once you figure how to open it[end if]."
+OR DO door	"You can just ENTER the door[if bugle-played is false and bolt is visible] once you figure how to open it[end if]."
 toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or][or]What could the toga become that might eat through the darnels?[plus][or]The toga can become a GOAT. [minus][cycling]"
 toga-writing	--	toga
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
