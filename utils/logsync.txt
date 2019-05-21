@@ -44,8 +44,7 @@ cake pan>pancake
 skate>steak
 anapest>peasant
 warts>straw
-sack>cask
-cask>sack
+sack%cask
 cult tee>lettuce
 cathouse>hotsauce
 spearman>parmesan
@@ -95,16 +94,15 @@ sliver>silver
 ####################################shuffling above
 roiling
 ####################################roiling below
-#means manse
+########REGION means manse
+####dusty study
 giant pin>painting
 latches>satchel
 palm>lamp
 tables>stable
 my niche>chimney
 t-b~ten beams>basement
-sitar>stair
-stria>stair
-pram>ramp
+##diorama
 pavement>event map
 event map>pavement
 platform>farm plot
@@ -113,10 +111,17 @@ crabgrass>brass crag
 brass crag>crabgrass
 pedestal>steel pad
 steel pad>pedestal
+####farming framing
+sitar>stair
+####largely all-grey gallery
+stria>stair
+####highest heights
+pram>ramp
 isbn bins>snib
 rifle>flier
 plaster>stapler
 plates>staple
+####STRIP OF PROFITS
 store b>sorbet
 store h>others
 store k>tokers
@@ -125,22 +130,401 @@ store p>presto
 tropes poster>presto
 store t>otters
 store u>routes
+roads~sure to setour>routes
 store v>troves
 voters>troves
 store w>towers
 store y>oyster
+####CRUELEST LECTURES
+lecturer~uosdeti>outside
+pamphlets~i used to>outside
 >IGNORE=letters settler
-###################routes
+########REGION routes
 worst ad>towards
+scripture picturers~sin die>inside
+bench~a giant's>against
+bench-end~tirades>astride
 elbow>below
+rude 'n nuder>under
+lairage regalia~oscar's>across
+grubby restaurant~pat's>past
+adsorbing signboard~pat's>past
+cravings carvings~speed it sit deep>despite
 pipe soot>opposite
 morf form>from
 seed pit>despite
 hurt hog>through
 bent ewe>between
+rude 'n nuder>under
+the-b~the bean>beneath
+darkness~unlit>until
 yob den>beyond
-#un-road~nogal logan>around
+all noon gag>along
+un-road>around
 da mist>amidst
+####cripple clipper
+thickness sketchins~whattar tawrath thatraw artthaw>athwart
+########REGION troves
+####loather rathole
+cold~heat>hate
+heat~race acer>care
+sob ever verbose>observe
+stop post>spot
+pa egg pea>gape
+####boarded roadbed
+what-a-bee~evil bee>believe
+bee's head~senora a snore>reason
+cellar door~cellar>recall
+####drain nadir
+diapers>despair
+a spider>despair
+ires pad>despair
+eddie's song~idcede>decide
+####boredom bedroom
+large regal lager>glare
+rubbish story~ergal agler>glare
+bortles lobster>bolster
+me arts>master
+ltb~lead>deal
+####browse bowers
+si reed>desire
+reside reside>desire
+####Econ Cone
+praise spirea>aspire
+rivets>strive
+trevis vister>strive
+pernod>ponder
+card~derp on epdorn dr peno ned orp>ponder
+####upscale capsule
+red vees>deserve
+divorces>discover
+salt>last
+sister tressi siters>resist
+marble blamer mr beal>ramble
+marble blamer balmer>ramble
+trance nectar>recant
+########REGION presto
+####grey gyre
+ether>there
+lamb>blam
+plebe>bleep
+hump>umph
+volt maze>mazeltov
+####nowt town
+maze walls~nowt town>wont
+####unwary runwa
+m-l~lev matzo>mazeltov
+l-m~matzo lev>mazeltov
+tom alvez>mazeltov
+####char arch
+tsar star>rats
+tars>rats
+dart>drat
+bored yak>keyboard
+drab yoke>keyboard
+####dirge ridge
+leo>ole
+rand>darn
+wzup~washups>whassup
+sods gone odes song>goodness
+####austerer treasure
+ye hoop>phooey
+hoop>pooh
+onyx censer~censer>screen
+####marines seminar remains
+popgun~boing go bin>bingo
+sport ports>prost
+boing go bin>bingo
+####saps' pass
+keys>syke
+hogs>gosh
+####phat path
+log ons>so long
+alert>later
+ought>tough
+hawt thaw>what
+starch charts>trasch
+####hacks' shack
+coal>cola
+gum>mug
+drive a>avider
+drive e>derive
+escaroles>casserole
+trim socks>rom sticks
+bakery do>keyboard
+bred okay>keyboard
+day broke>keyboard
+dear koby>keyboard
+ebay dork>keyboard
+yo be dark>keyboard
+clack ops locs pack>capslock
+fount>futon
+skid>disk
+disk>skid
+flea>leaf
+speel>sleep
+usb>sub
+t-key~tba>tab
+compiled code~budge>debug
+small blue button~to be or>reboot
+scratch paper~polemic>compile
+########REGION oyster
+stumbler tumblers~tips pits>spit
+gins sign>sing
+casper spacer>scrape
+capers recaps>scrape
+stein>inset
+tines>inset
+tunes>unset
+perma-amper>remap
+trolls>stroll
+pills>spill
+####olde lode
+clam>calm
+urn>run
+####disease seaside
+canoe>ocean
+frat raft>fart
+oars>soar
+boats>boast
+####fighter freight
+pale plea>leap
+####anger range
+carps>scrap
+pikes>spike
+pre-haun~haunter>unearth
+haunter~sausage>assuage
+####hardest trashed dearths
+cans>scan
+eeks>seek
+####Lean Lane
+trout>tutor
+tea tray~tea>eat
+dent>tend
+wipes>swipe
+wrap>warp
+####lapsin' plains
+c2~crate>trace
+crate>react
+skis>kiss
+span pans>snap
+knob>bonk
+bogus-plains~lapsin' plains>splain
+####shadier airshed
+prod>drop
+tubs>bust
+heaps>shape
+waste>sweat
+lance>clean
+####achers' arches
+a-s~achers' arches>search
+general gleaner>enlarge
+####horned hedron
+ol' trap>patrol
+####rascal craals
+ruby>bury
+####tenfold teflon'd loft den
+papery yapper>prepay
+templar ramplet>trample
+pins>spin
+dialer>derail
+lever>revel
+d2~dialer>redial
+####plasm lamps
+bogus-lamps~plasm lamps>psalm
+natant ant>tan
+########REGION towers
+yacker keycar>creaky
+####loftier trefoil
+geno>gone
+shane>ashen
+tyson>stony
+wade>awed
+edwin>wined
+eldon>olden
+goldy>godly
+royce>coyer
+blake>bleak
+bredo>bored
+daryl>lardy
+dewey>weedy
+ernest>tenser
+marcel>calmer
+marlon>normal
+reggie>eggier
+andres>snared
+rodney>yonder
+andrew>warned
+archie>achier
+barney>nearby
+cedrick>cricked
+demitri>timider
+leander>learned
+preston>pronest
+terrance>recreant
+cinders>discern
+#rodney>droney
+####topside deposit
+dreads adders>sadder
+bluster butlers>subtler
+muscly luc sym>clumsy
+muscly ms lucy>clumsy
+snider diners>rinsed
+try us yurts>rusty
+####fringe finger
+strudel>rustled
+sled rut>rustled
+####baldest blasted saltbed
+traipse pirates>pastier
+fluster self rut>restful
+docile old ice>coiled
+####unblest sunbelt
+smh life mel fish>himself
+nerd-aid>drained
+dandier arid den>drained
+organised ego drains>grandiose
+####lost lots
+sporties' ripostes>prosiest
+####anemic cinema
+angriest ingrates>angstier
+mardier admirer>married
+resident trendies>nerdiest
+####treading gradient
+weeds>sewed
+mended mini denim>mined
+raves saver~replay player>pearly
+sweatier wait-seer>weariest
+lars eede>released
+reed's ale>released
+elsa erde>released
+####danger garden
+alarming grailman>marginal
+bonker>broken
+stinger>resting
+natives' site van>naivest
+####shaven havens
+lone duck>unlocked
+####salted deltas
+asset-hit atheists>hastiest
+####artist traits strait
+lois the hostile>holiest
+hostile-is-he lot>holiest
+####obscurest subsector
+prison ropins~ednulcok>unlocked
+fissure>fussier
+dr yow>wordy
+dr yow2~dr yow>rowdy
+atblock~tentative>attentive
+####actionless coastlines
+turbos>robust
+blaster>stabler
+weirder red wire>rewired
+reading a dinger>grained
+####rawest waters
+eastern shore~eastern>nearest
+####mislit limits
+flowerpot~dingy>dying
+crocus~dingy>dying
+pester'n serpent>present
+unripe ur-pine>punier
+accurst leap>spectacular
+clear catsup>spectacular
+pest accrual>spectacular
+c-p~cactus pearl>spectacular
+pearl cactus>spectacular
+accu-plaster>spectacular
+capsule cart>spectacular
+last acre cup>spectacular
+talc spa cure>spectacular
+curst palace>spectacular
+####mesprise premises
+tetris sitter>triste
+####dourest detours
+bogus-detours~dourest detours>rousted
+########REGION=otters
+####bleary barley
+b-b~bleary barley>barely
+deli rye>reedily
+ed riley>reedily
+er yield>reedily
+####disowned downside
+atmo-moat>atom
+####loop pool
+sea cube>because
+eels>else
+vow here>however
+####bran barn
+ghoul hat>although
+gore ogre>ergo
+####Shiner Shrine
+>IGNORE=sly imp
+imp1~butlery>brutely
+imp2~rangily>angrily
+imp3~legendary>enragedly
+####perverse preserve
+corona>racoon
+thrones>hornets
+pines>snipe
+nails>snail
+raptor%parrot
+####Clarthead Cathedral
+>IGNORE=whiners
+ram1~callosity>stoically
+ram2~restyle>tersely
+ram3~tallyhoing>loathingly
+####lamer realm
+owls>slow
+ocelots>coolest
+leopard>paroled
+badger>garbed
+satyr>artsy
+####reclusion inclosure
+merle~yelthons>honestly
+elmer~ideas aides>aside
+########REGION=others
+pagers>grapes
+spear>pears
+lumps>plums
+slime>limes
+moss cap>compass
+magenta rope>pomegranate
+megaton pear>pomegranate
+rampage note>pomegranate
+mopeage rant>pomegranate
+harmonicas>maraschino
+mad train>tamarind
+eerie blurbs>blueberries
+peanut cola>cantaloupe
+videotape~mr pinsome>persimmon
+####swell wells
+stucco~on stucco>coconuts
+green stain>tangerines
+miser ruble>mulberries
+sorer bogey>gooseberry
+riot cap>apricot
+silly shirt~esp pal>apples
+####filed field
+buried raft>breadfruit
+mean trowel>watermelon
+rapt figure>grapefruit
+pryer bars>raspberry
+barriers west>strawberries
+barber sickle>blackberries
+pipe panel fence~pipe panel>pineapple
+barren cries>cranberries
+briar screen>cranberries
+####clangier clearing
+auction caution~pay asap>papayas
+quince>cinque
+peach>cheap
+nectarine>ancienter
+####scape space
+engaro orange>go near
+an-a~banana>nabana
+####gates stage
+searcher>research
+viewer>review
+perp-priv~perp>prep
 ##############logic file checks
 #means manse
 pram,tables,niche,t-b

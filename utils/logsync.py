@@ -9,6 +9,7 @@
 
 from collections import defaultdict
 
+import __main__ as main
 import i7
 import sys
 import re
@@ -56,6 +57,7 @@ def usage():
     print("-a/oa opens code after if there is a mistake to fix.")
     print("-cod/-ncod turns on/off showing code, default = on.")
     print("-cou/-ncou turns on/off showing counts of errors, default = off.")
+    print("-ed/de/e edits the data file", data_file)
     exit()
 
 def read_data_file():
@@ -76,6 +78,16 @@ def read_data_file():
             if ll == "shuffling":
                 in_roiling = True
                 continue
+            if "%" in ll:
+                ary = ll.split("%")
+                if len(ary) != 2: sys.exit("Bad % at line {:d} -- only one allowed.".format(line_count))
+                if in_roiling:
+                    aro_flips[ary[0]] = ary[1]
+                    aro_flips[ary[1]] = ary[0]
+                else:
+                    sa_flips[ary[0]] = ary[1]
+                    sa_flips[ary[1]] = ary[0]
+                continue
             if ">" in ll:
                 ary = ll.split(">")
                 if "~" in ary[0]:
@@ -87,6 +99,7 @@ def read_data_file():
                 else:
                     temp = ary[0]
                     space_check = temp
+                if not len(nosp(ary[1])): sys.exit("Uh oh line {:d} {:s} has nothing arrowed-to.".format(line_count, ll))
                 if in_roiling:
                     if len(nosp(space_check)) % len(nosp(ary[1])):
                         sys.exit("Uh oh space/multiple mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
@@ -121,7 +134,7 @@ def val_of(q):
 def nosp_len(q):
     return len(q)-q.count(" ")-q.count("-")
 
-def nosp(q): return re.sub("[- ]", "", q)
+def nosp(q): return re.sub("['\- ]", "", q)
 
 def parse_brackets(q):
     retval = re.sub("\[ast\]", "", q)
@@ -268,8 +281,8 @@ def aro_settler_check():
                             break
                         if my_raw not in aro_flips:
                             count += 1
-                            print(count, "Need entry for", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "at line", line_count)
-                            if count > 15: sys.exit()
+                            print("#", count, "Need entry for", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "at line", line_count)
+                            if count >= 25: sys.exit()
                             continue
                         aro_got[my_raw] = True
                         lf = len(aro_flips[my_raw])
@@ -356,18 +369,42 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
             open_line[logic_reds] = gots[min(extraneous, key=gots.get)]
         print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), ', '.join(["{:s}-{:d}".format(x, gots[x]) for x in extraneous]))
 
-count = 0
-
 show_count = False
 show_code = True
 
 force_next = False
 
-i7.go_proj("roiling")
 r_src = i7.src("roiling")
 s_src = i7.src("shuffling")
 
-read_data_file()
+arg_count = 1
+
+while arg_count < len(sys.argv):
+    x = sys.argv[arg_count].lower()
+    if x[0] == '-':
+        x = x[1:]
+    if x == 'cod': show_code = True
+    elif x == 'ncod': show_code = False
+    elif x == 'cou': show_count = True
+    elif x == 'ncou': show_count = False
+    elif x == 'se' or x == 'es':
+        i7.npo(main.__file__)
+        exit()
+    elif x == 'ed' or x == 'de' or x == 'e':
+        os.system(data_file)
+        exit()
+    elif x == 'a' or x == 'oa': open_after = True
+    elif x == 'af' or x == 'oaf':
+        open_after = True
+        open_first = True
+    elif x == 'al' or x == 'oal':
+        open_after = True
+        open_first = False
+    elif x == '?' or x == '-?': usage()
+    else:
+        print("Unknown flag", x)
+        usage()
+    arg_count = arg_count + 1
 
 with open(r_src) as file:
     for (line_count, line) in enumerate(file, 1):
@@ -392,7 +429,9 @@ with open(r_src) as file:
                 need_logic[shortcutcheck(scanned)] = line_count
                 force_next = False
 
-count = 0
+i7.go_proj("roiling")
+read_data_file()
+
 with open(i7.sdir("roiling") + "/logic.htm") as file:
     for (line_count, line) in enumerate(file, 1):
         if '<!--' in line and '-->' in line and 'logic for' in line:
@@ -450,32 +489,6 @@ with open(logic_reds) as file:
             got_logic_reds[scanned] = line_count
             need_question_mark = line_count
         elif '?' in ll or 'qver ignore' in ll or 'qver-ignore' in ll: need_question_mark = 0
-
-arg_count = 1
-
-while arg_count < len(sys.argv):
-    x = sys.argv[arg_count].lower()
-    if x[0] == '-':
-        x = x[1:]
-    if x == 'cod': show_code = True
-    elif x == 'ncod': show_code = False
-    elif x == 'cou': show_count = True
-    elif x == 'ncou': show_count = False
-    elif x == '?' or x == '-?': usage()
-    elif x == 'ed' or x == 'de':
-        os.system(data_file)
-        exit()
-    elif x == 'a' or x == 'oa': open_after = True
-    elif x == 'af' or x == 'oaf':
-        open_after = True
-        open_first = True
-    elif x == 'al' or x == 'oal':
-        open_after = True
-        open_first = False
-    else:
-        print("Unknown flag", x)
-        usage()
-    arg_count = arg_count + 1
 
 check_aftertexts()
 

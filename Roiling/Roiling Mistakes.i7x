@@ -601,9 +601,9 @@ understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing
 
 chapter Topside Deposit
 
-understand "dopiest" as a mistake ("You sense that the ur-pine [if ur-pine is in Topside Deposit]is[else]was[end if] one of the easier people to deal with, here, but you don't want to overstate it.") when player is in topside.
+understand "dopiest" as a mistake ("You sense that the dreads adders [if dreads adders are in Topside Deposit]are[else]were[end if] one of the easier things to deal with, here, but you don't want to overstate it.") when player is in topside deposit.
 
-understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in topside.
+understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in topside deposit.
 
 understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is enclosed by location of player.
 

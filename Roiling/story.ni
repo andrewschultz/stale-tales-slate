@@ -2648,7 +2648,7 @@ drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! 
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
-tumblers	"PITS is written in red on the bottom of some tumblers."
+stumbler tumblers	"PITS is written in red on the bottom of some stumbler tumblers."
 scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
 span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
@@ -10910,8 +10910,7 @@ chapter lecturer
 
 the lecturer is a reflexive person in Cruelest Lectures. "A lecturer lectures lecturingly about why his wasting your time is better for society than how you waste your time. And how the sooner you agree, the less you'll waste HIS time, and the golden rule and stuff."
 
-check scaning lecturer:
-	say "You point your settler at the tedious lecturer.";
+check scaning lecturer: say "You point your settler at the tedious lecturer.";
 
 a-text of lecturer is "YYRRYRY". b-text of lecturer is "YYRRYRY". parse-text of lecturer is "-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
@@ -11789,37 +11788,19 @@ to say to-o:
 
 section all noon gag
 
-the all noon gag is a vanishing thing in Harms Marsh. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful."
+the all noon gag is a vanishing boringthing in Harms Marsh. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
 
 a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text of all noon gag is "?[sp]?[sp]-[sp]?[sp]?".
 
-instead of doing something with noon gag:
-	if action is procedural, continue the action;
-	say "The all noon gag will just carry darkness with you. But maybe you can do something with it."
-
 chapter un-road
 
-the un-road is scenery. "The un-road must lead to No-Gal Logan. But how to follow it?"
-
-instead of doing something with un-road:
-	if action is procedural, continue the action;
-	say "The un-road leads somewhere, you think. But how to follow it to No-Gal Logan?";
+the un-road is vanishing boringscen. description is "The un-road must lead to No-Gal Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Gal Logan?";
 
 understand "trail" as un-road.
 
-a-text of un-road is "YRYRR". b-text of un-road is "YRYRR". parse-text of un-road is "-[sp]x[sp]-[sp]x[sp]x". un-road is cheat-spoilable.
+a-text of un-road is "YRYYRR". b-text of un-road is "YRYYRP". parse-text of un-road is "-[sp]x[sp]-[sp]-[sp]x[sp]d". un-road is cheat-spoilable.
 
 understand "unroad" as un-road.
-
-to decide whether told-of-logan:
-	if mrlp is not routes, decide no;
-	if MORF FORM is off-stage, decide no;
-	if un-road is in Harms Marsh, decide no;
-	decide yes;
-
-chapter along-bogus
-
-the along-bogus is a useless privately-named thing. description is "[bug-report]".
 
 book Ripe Pier
 
@@ -12337,7 +12318,7 @@ a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY". parse-te
 instead of scaning rubbish story:
 	try scaning Large Regal Lager instead;
 
-a-text of lager is "RRYRY". b-text of lager is "RRYRY". parse-text of lager is "x[sp]x[sp]-[sp]x[sp]-".
+a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYRY". parse-text of Large Regal Lager is "x[sp]x[sp]-[sp]x[sp]-".
 
 instead of drinking lager:
 	say "One sip is--nope. Next, a liter, retail. Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way.";
@@ -12527,8 +12508,7 @@ section card
 
 the card is part of the bottle of Pernod. description of card is "It's got red writing on it that you could read."
 
-check taking the card:
-	say "It's glued to the Pernod." instead;
+check taking the card: say "It's glued to the Pernod." instead;
 
 a-text of card is "RYRRYR". b-text of card is "RYRRYR". parse-text is "x[sp]o[sp]x[sp]x[sp]e[sp]x".
 
@@ -12676,7 +12656,7 @@ chapter red vees
 
 The red vees are vanishing plural-named scenery in Upscale Capsule. description is "They look like they could be hooked together, but you can't do so by standard means."
 
-a-text of red vees is "YRRYRRY". b-text of red vees is "GRRYRRY". parse-text of red vees is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
+a-text of red vees is "RYRYRRY". b-text of red vees is "GRRYRRY". parse-text of red vees is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 instead of doing something with red vees:
 	if action is procedural, continue the action;
@@ -14025,7 +14005,7 @@ the clack ops locs pack is a flippable thing in Hacks' Shack. "A Clack Ops Locs 
 
 check taking locs pack: say "It seems to have no use for you in that form." instead;
 
-a-text of locs pack is "RYRRRYRR". b-text of locs pack is "?YR?R???". parse-text of locs pack is "?[sp]-[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
+a-text of clack ops locs pack is "RYRRRYRR". b-text of clack ops locs pack is "?YR?R???". parse-text of clack ops locs pack is "?[sp]-[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
 
 chapter trim socks
 
@@ -15025,10 +15005,13 @@ instead of doing something with patrons:
 		continue the action;
 	say "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if]."
 
-the stumbler tumblers are reflexive plural-named scenery in Posh Hops Shop. "They are labeled TIPS in red but don't have any money in them. Some red writing is at the bottom of one."
+the stumbler tumblers are reflexive plural-named boringscen in Posh Hops Shop. "They are labeled TIPS in red but don't have any money in them. Some red writing is at the bottom of one.". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-tumblers rule.
 
-instead of taking tumblers:
-	say "The people who didn't give tips would notice your rudeness.";
+this is the bore-tumblers rule:
+	if current action is taking:
+		say "The people who didn't give tips would notice your rudeness.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 the gins sign is reflexive scenery in Posh Hops Shop. "It advertises various gins and intox-toxin-tonix--'Thirsty? Try this,' though someone scribbled 'Embrace Beer, Mac!' at the bottom. It advises against sharing garnish as well as making your own music."
 
@@ -15076,7 +15059,7 @@ a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "
 
 The jukebox is uncluing scenery in Posh Hops Shop. It is fixed in place. "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]"
 
-a-text of tumblers is "RRYR". b-text of tumblers is "RRYR". parse-text of tumblers is "x[sp]x[sp]i[sp]x". tumblers are cheat-spoilable.
+a-text of stumbler tumblers is "RRYR". b-text of stumbler tumblers is "RRYR". parse-text of stumbler tumblers is "x[sp]x[sp]i[sp]x". tumblers are cheat-spoilable.
 
 before scaning jukebox:
 	if tunes are visible:
@@ -15130,9 +15113,9 @@ to casper-chat:
 
 understand "author" as Casper Spacer.
 
-understand "fish" as Casper.
+understand "fish" as Casper Spacer.
 
-a-text of casper is "RRRYRY". b-text of casper is "?RRYRY". parse-text of casper is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of casper spacer is "RRRYRY". b-text of casper spacer is "?RRYRY". parse-text of casper spacer is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 Capers Recaps is reflexive scenery in Posh Hops Shop. description of Capers is "It's Casper's latest rough draft journal. A quick glance references an OCD cod named Doc. Capers and looks to be, due to its blackboardy texture, even grittier than Consider I Scorned No Ciders, Pincer Prince or Some Urge Gruesome or This Bane Bathes in the Basin. Which Casper wrote drunk on absinthe."
 
@@ -15148,7 +15131,7 @@ check scaning recaps:
 	if recaps is not reflexed and cheat-on is true:
 		say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
 
-a-text of capers is "RRRYRY". b-text of capers is "RRR??Y". parse-text of capers is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of capers recaps is "RRRYRY". b-text of capers recaps is "RRR??Y". parse-text of capers recaps is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 instead of taking capers recaps:
 	say "The whole bar would beat you up for that. Think of other ways to distract the trolls. Disturb the peace more directly."
@@ -17315,8 +17298,6 @@ check entering ol' trap: say "It's an obvious ol['] trap but likely an effective
 
 a-p is privately-named auxiliary scenery. printed name of a-p is "the portal". description of a-p is "It looks safe. It doesn't crackle or anything. The only question is where it leads."
 
-a-text of a-p is "RYRRYR". b-text of a-p is "RYPPYR". parse-text of a-p is "p[sp]-[sp]x[sp]x[sp]-[sp]l". a-p is cheat-spoilable.
-
 understand "portal" as a-p.
 
 check going north in Horned Hedron: try entering a-p instead;
@@ -17884,12 +17865,11 @@ understand "key" and "key car" and "car" as keycar.
 
 Include (-
 	has transparent animate
--) when defining atmo-moat.
+-) when defining keycar.
 
-check taking keycar:
-	say "The keycar zooms around, bantering about how it's a bit too fast for you." instead;
+check taking keycar: say "The keycar zooms around, bantering about how it's a bit too fast for you." instead;
 
-a-text of keycar is "RRYYRO". b-text of keycar is "RRYYRO". parse-text of keycar is "x[sp]x[sp]-[sp]-[sp]x[sp]y". keycar is cheat-spoilable.
+a-text of yacker keycar is "RRYYRO". b-text of yacker keycar is "RRYYRO". parse-text of yacker keycar is "x[sp]x[sp]-[sp]-[sp]x[sp]y". keycar is cheat-spoilable.
 
 book Loftier Trefoil
 
@@ -18187,13 +18167,9 @@ Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land 
 
 section organised ego drains
 
-the organised ego drains are plural-named LLPish vanishing scenery in Unblest Sunbelt. "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
+the organised ego drains are plural-named LLPish vanishing boringscen in Unblest Sunbelt. description of ego drains is "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red.". bore-text is "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance.".
 
-a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
-
-instead of doing something with organised ego drains:
-	if action is procedural, continue the action;
-	say "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance."
+a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "RRYRRYYRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
 the screech creches are bounding boringscen in Unblest Sunbelt. bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
 
@@ -19473,7 +19449,7 @@ instead of doing something with ur-pine:
 	if current action is attacking, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]" instead;
 	say "The unripe ur-pine just sits there, almost impossibly big."
 
-a-text of ur-pine is "RYRYYR". b-text of ur-pine is "RYRGYR". parse-text of ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
+a-text of unripe ur-pine is "RYRYYR". b-text of unripe ur-pine is "RYRGYR". parse-text of unripe ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
 
 chapter pester'n serpent
 
@@ -19719,7 +19695,7 @@ understand "pirate" as pirates.
 
 pirate-countdown is a number that varies.
 
-every turn when pirates are visible:
+every turn when traipse pirates are visible:
 	if pirate-countdown > 0:
 		decrement pirate-countdown;
 	else:
@@ -19727,7 +19703,7 @@ every turn when pirates are visible:
 			say "A pirate swats at an air pest, red-faced--and reaps it! But it leaves a red welt.";
 			now pirate-countdown is 3;
 
-a-text of pirates is "RYRRYYR". b-text of pirates is "PYRRYGR". parse-text of pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". pirates are cheat-spoilable.
+a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "PYRRYGR". parse-text of traipse pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". traipse pirates are cheat-spoilable.
 
 chapter Anemic Cinema
 
@@ -19764,7 +19740,7 @@ SMH Life Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles
 
 description of Mel Fish is "On his chest, Mel Fish has the word FLEMISH crossed out in red. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
-a-text of Mel Fish is "RYRRYRR". b-text of Mel Fish is "RYRRYRR". parse-text of Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+a-text of SMH Life Mel Fish is "RYRRYRR". b-text of SMH Life Mel Fish is "RYRRYRR". parse-text of SMH Life Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 printed name of Mel Fish is "'SMH, Life' Mel Fish".
 
@@ -21632,11 +21608,11 @@ imp2 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. pri
 
 imp3 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp3 is "the imp's actions". description of imp3 is "[bug-report].".
 
-a-text of imp1 is "YRRRYRO". b-text of imp1 is "YRRRGPB". parse-text of imp1 is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". imp1 is cheat-spoilable.
+a-text of imp1 is "YRRRYRO". b-text of imp1 is "YRRRGPB". parse-text of imp1 is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". imp1 is cheat-spoilable. [brutely]
 
-a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is "a[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". imp2 is cheat-spoilable.
+a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is "a[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". imp2 is cheat-spoilable. [angrily]
 
-a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB". parse-text of imp3 is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y".
+a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB". parse-text of imp3 is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [enragedly]
 
 try-fail-pit-north is a truth state that varies.
 try-fail-cathedral-south is a truth state that varies.
@@ -21847,15 +21823,15 @@ section dummy scenery
 
 ram1 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram1 is undesc. printed name of ram1 is "the whiners['] shrewin[']".
 
-a-text of ram1 is "RRYYRYRRO". b-text of ram1 is "RRYYRYRRB". parse-text of ram1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y".
+a-text of ram1 is "RRYYRYRRO". b-text of ram1 is "RRYYRYRRB". parse-text of ram1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [stoically]
 
 ram2 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram2 is undesc. printed name of ram2 is "the whiners['] shrewin[']".
 
-a-text of ram2 is "RYRRYRO". b-text of ram2 is "RGRRYPO". parse-text of ram2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". ram2 is cheat-spoilable.
+a-text of ram2 is "RYRRYRO". b-text of ram2 is "RGRRYPO". parse-text of ram2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". ram2 is cheat-spoilable. [tersely]
 
 ram3 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram3 is undesc. printed name of ram3 is "the whiners['] shrewin[']".
 
-a-text of ram3 is "RYYRRYRRRO". b-text of ram3 is "RYYRRYRRRO". parse-text of ram3 is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
+a-text of ram3 is "RYYRRYRRRO". b-text of ram3 is "RYYRRYRRRO". parse-text of ram3 is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". [loathingly]
 
 book Perverse Preserve
 
@@ -23265,12 +23241,13 @@ instead of doing something with warding drawing:
 
 chapter paint/guava
 
-The inapt paint is scenery in Scape Space. "DESERVER RESERVED."
+The inapt paint is boringscen in Scape Space. description of inapt paint is "DESERVER RESERVED.". bore-text is "The paint is just there. There's got to be some way to get rid of it.". bore-check is bore-paint rule.
 
-instead of doing something with inapt paint:
-	if action is procedural, continue the action;
-	if current action is taking, say "It's stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something." instead;
-	say "The paint is just there. There's got to be some way to get rid of it."
+this is the bore-paint rule:
+	if current action is taking:
+		say "It's stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?". parse-text of inapt paint is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
 
@@ -24265,14 +24242,10 @@ to say yak-worry:
 	say "You don't need to worry about the yak for a long time[if Leo is not visible]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Phat Path is not visited]. You need to go north of the gyre and the maze, first[end if]"
 
 check objhinting old giant:
-	if bench is reflexive:
-		try objhinting bench instead;
-	if bench-end is reflexive:
-		try objhinting bench-end instead;
-	if elbow is reflexive:
-		try objhinting elbow instead;
-	if Rude 'N Nuder is visible:
-		try objhinting Rude 'N Nuder instead;
+	if bench is reflexive, try objhinting bench instead;
+	if bench-end is reflexive, try objhinting bench-end instead;
+	if elbow is reflexive, try objhinting elbow instead;
+	if Rude 'N Nuder is visible, try objhinting Rude 'N Nuder instead;
 	say "[bug-report]" instead;
 
 to say in-hovels:
@@ -25046,7 +25019,7 @@ showing what the player missed is an activity.
 
 to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
-	if tumblers are not reflexed, add "SPIT" to poshact;
+	if stumbler tumblers are not reflexed, add "SPIT" to poshact;
 	if tines are not reflexed, add "INSET" to poshact;
 	if capers is not reflexed, add "SCRAPE" to poshact;
 	if gins sign is not reflexed, add "SING" to poshact;

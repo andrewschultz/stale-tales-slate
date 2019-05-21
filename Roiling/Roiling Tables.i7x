@@ -61,8 +61,8 @@ Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	"You can't ta
 MORF FORM	the-b	false	250266429	--	"from"	"from"	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
 darkness	darkness	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan, and because you're below ground, you fear no sunlit insult. The marsh doesn't exactly start glowing, but you can notice things better. The sheol holes in particular. You can't find a road, but maybe an un-road. You're not sure which way to go, though. Compass directions are still out."
-sheol holes	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
-un-road	along-bogus	false	231861444	Ripe Pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
+sheol holes	sheol holes	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
+un-road	un-road	false	231861444	Ripe Pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' You protest--you need someone to show you the way. 'You will learn from my sorrow,' says No-Gal Logan. You don't want to be an ol['] nag, so you sit and wait."
 thickness sketchins	thickness sketchins	false	329930229	Sonancy Canyons	"athwart"	"athwart"	"Not just any direction will do. You need something nautical. And there it is. Athewart--helps you navigate around tough bits. You look around. Oh, hey, there's the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction. The bad oar helps you on your way but snaps as you land. You think you yourself, scan yon... so canny... and you wind up somewhere different."
 hurt hog	hurt hog	false	475056505	--	"through"	"through"	"You realize it's time to move on. So you do."
@@ -398,6 +398,10 @@ to say wont-maze:
 	say "While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses, but not before you escape back to the south.";
 	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
 
+after fliptoing ghoul hat:
+	move gore ogre to bran barn;
+	continue the action;
+
 to say trout-tut:
 	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]";
 	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is visible]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are visible], though maybe you could sneak the wipes[end if][if dent is visible]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
@@ -587,8 +591,9 @@ to say bored-robed:
 to say logan-hi:
 	say "'No-Gal Logan. Serial Sailer. Here's our selves-vessel. Not quite the HMS SMH.'[paragraph break]'Hooray...or ahoy?' you say, confused.[paragraph break]But the sail ails where the stripe would be above ground. You sort of think you can see a reddish haze, or maybe it's your imagination. 'Now to hit WIN...where's that button? Hmph, won't let me cross. It's up to you. You seem like a trireme meriter. You'll find the hit win button Ben hid. Did it so well, made sure we didn't use it before we need to. You'll reach the beyond. One way now. Aye,' says No-Gal Logan. 'The end! Boy!'[paragraph break]You see him nod bye as he jumps over. 'Logan!' you cry. 'No lag!' he yells back. Then 'St. Olaf!' He floats, so flat, leaving you for the last of...he cries, 'Harbor!' and you cry 'Rah, Bro!' Then you write down what No-Gal said about the button.";
 
-after fliptoing un-road:
+after fliptoing sheol holes:
 	now stripey pyrites are in Harms Marsh;
+	now un-road is in Harms Marsh;
 	continue the action;
 
 to say get-censer:

@@ -1374,8 +1374,10 @@ to say horb-magic of (tt - a thing):
 	say "[if list o toils is examined]Brother Horbert will work his magic with that[else if player does not have tt]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[else]That seems curiously inert to your attempts[end if]";
 
 this is the am-along rule:
-	if told-of-logan, the rule succeeds;
-	the rule fails;
+	unless player is in Harms Marsh, the rule fails;
+	if MORF FORM is off-stage, the rule fails;
+	unless un-road is off-stage, the rule fails;
+	the rule succeeds;
 
 to say dark-been:
 	say "The darkness has always been there and always will be. You need to find a way to say it was dark"
