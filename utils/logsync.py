@@ -16,6 +16,8 @@ import re
 import os
 
 wks = [ 'fails', 'checks out' ]
+vowels = 'aeiou'
+consonants='bcdfghjklmnpqrstvwxz'
 
 okay = defaultdict(bool)
 need_logic = defaultdict(int)
@@ -129,7 +131,11 @@ def read_data_file():
 def things_of(q):
     ret_2 = re.sub(" +is .*", "", q)
     ret_2 = re.sub(".* of +", "", ret_2)
-    ret_1 = sa_trans[ret_2] if ret_2 in sa_trans else ret_2
+    if ret_2 in sa_trans:
+        ret_1 = sa_trans[ret_2]
+    elif ret_2 in aro_trans:
+        ret_1 = aro_trans[ret_2]
+    else: ret_1 = ret_2
     ret_3 = nosp(ret_1)
     return (ret_1, ret_2, ret_3)
 
@@ -273,17 +279,31 @@ def sa_r_g_check():
     else:
         print("No SA flips missed.")
 
+def settler_read(ltr, ma, mi):
+    if ma and mi: return "?"
+    if ltr == 'y':
+        if ma: return 'b'
+        if mi: return 'o'
+    if ltr in vowels:
+        if ma: return 'g'
+        if mi: return 'y'
+    if ltr in consonants:
+        if ma: return 'p'
+        if mi: return 'r'
+    return "!"
+
 def aro_settler_check():
-    vowels = 'aeiou'
-    consonants='bcdfghjklmnpqrstvwxz'
     count = 0
+    b_count = 0
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
+            skip = False
             if 'a-text of' in line and 'b-text of' in line and "\t" not in line:
                 if 'parse-text' not in line:
                     print("WARNING need to fill in parse-text in line", line_count)
                 elif 'parse-text of' not in line:
-                    print("CODE PEDANTRY fill in object name after parse-text in line", line_count)
+                    pass
+                    #print("CODE PEDANTRY fill in object name after parse-text in line", line_count)
                 sent = re.split("\. *", line.lower().strip())
                 for q in sent:
                     if 'a-text' in q:
@@ -296,6 +316,8 @@ def aro_settler_check():
                             count += 1
                             print("#", count, "Need entry for", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "at line", line_count)
                             if count >= 25: sys.exit()
+                            skip = True
+                            break
                             continue
                         aro_got[my_raw] = True
                         lf = len(aro_flips[my_raw])
@@ -305,6 +327,41 @@ def aro_settler_check():
                             if aro_flips[my_raw][idx] in consonants and v[idx] != 'r': print("Need R at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
                             if aro_flips[my_raw][idx] in vowels and v[idx] != 'y': print("Need Y at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
                             if aro_flips[my_raw][idx] == 'y' and v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                    if 'b-text' in q:
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        if my_thing in aro_ignore:
+                            skip = True
+                            break
+                        aro_got[my_raw] = True
+                        sol = nosp(aro_flips[my_raw])
+                        lf = len(sol)
+                        v = val_of(q)
+                        v = re.sub("\*", "", v)
+                        if 'else' in v:
+                            print("TRICKY STUFF 'else' is in the quoted b-value. Fix this with an IGNORE and commented code to check fully.")
+                            continue
+                        temp = 0
+                        wary = []
+                        matches = [0] * len(v)
+                        mismatches = [0] * len(v)
+                        if my_raw in aro_trans:
+                            chop_string = nosp(aro_trans[my_raw])
+                        else: chop_string = nosp(my_thing)
+                        while temp < len(chop_string):
+                            wary.append(chop_string[temp:temp+len(v)])
+                            temp += len(v)
+                        # print(my_thing, wary, aro_flips[my_raw])
+                        for x in wary:
+                            for y in range (0, lf):
+                                if x[y] == sol[y]: matches[y] = 1
+                                else: mismatches[y] = 1
+                        the_string = ""
+                        for y in range (0, lf):
+                            # print(y, aro_flips[my_raw], matches, mismatches)
+                            the_string += (settler_read(sol[y], matches[y], mismatches[y]))
+                        if v != the_string:
+                            b_count += 1
+                            print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v, "as the given b-text but should have", the_string)
     flip_miss = [x for x in aro_flips if x not in aro_got]
     if len(flip_miss):
         print("Flips missed:", ', '.join(flip_miss))

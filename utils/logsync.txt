@@ -119,8 +119,8 @@ stria>stair
 pram>ramp
 isbn bins>snib
 rifle>flier
-plaster>stapler
-plates>staple
+plaster psalter>stapler
+palest pastel plates>staple
 ####STRIP OF PROFITS
 store b>sorbet
 store h>others
@@ -170,10 +170,10 @@ cold~heat>hate
 heat~race acer>care
 sob ever verbose>observe
 stop post>spot
-pa egg pea>gape
+pa egg pea~pa egg pea peg a page>gape
 ####boarded roadbed
 what-a-bee~evil bee>believe
-bee's head~senora a snore>reason
+bee's head~no ears so near>reason
 cellar door~cellar>recall
 ####drain nadir
 diapers>despair
@@ -184,8 +184,8 @@ eddie's song~idcede>decide
 large regal lager>glare
 rubbish story~ergal agler>glare
 bortles lobster>bolster
-me arts>master
-ltb~lead>deal
+me arts~me arts mr east stream tamers>master
+ltb~lead all a deed>deal
 ####browse bowers
 si reed>desire
 reside reside>desire
@@ -198,7 +198,7 @@ card~derp on epdorn dr peno ned orp>ponder
 ####upscale capsule
 red vees>deserve
 divorces>discover
-salt>last
+salt~st al salt>last
 sister tressi siters>resist
 marble blamer mr beal>ramble
 marble blamer balmer>ramble
@@ -211,8 +211,8 @@ plebe>bleep
 hump>umph
 volt maze>mazeltov
 ####nowt town
-maze walls~nowt town>wont
-####unwary runwa
+maze walls~voltmaze>mazeltov
+####unwary runway
 m-l~lev matzo>mazeltov
 l-m~matzo lev>mazeltov
 tom alvez>mazeltov
@@ -241,15 +241,15 @@ keys>syke
 hogs>gosh
 ####phat path
 log ons>so long
-alert>later
+alert~alert alter retreat all>later
 ought>tough
 hawt thaw>what
 starch charts>trasch
 ####hacks' shack
 coal>cola
 gum>mug
-drive a>avider
-drive e>derive
+drive a~drive a a drive varied>avider
+drive e~drive e e drive>derive
 escaroles>casserole
 trim socks>rom sticks
 bakery do>keyboard
@@ -318,7 +318,7 @@ heaps>shape
 waste>sweat
 lance>clean
 ####achers' arches
-a-s~achers' arches>search
+a-s~achers' chaser arches>search
 general gleaner>enlarge
 ####horned hedron
 ol' trap>patrol
@@ -363,7 +363,8 @@ demitri>timider
 leander>learned
 preston>pronest
 terrance>recreant
-cinders>discern
+#eventually we could make it so we have cinders>discern,rescind
+>IGNORE=cinders
 #rodney>droney
 ####topside deposit
 dreads adders>sadder

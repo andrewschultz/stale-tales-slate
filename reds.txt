@@ -69,6 +69,7 @@ reason,noears,sorena,anorse,oasner,asnero
 #drain nadir
 decide,iceded,cdedei,ecedid
 #boredom bedroom
+glare,RRYR?=large=regal=lager
 glare,regal,lager,ergal,agler
 despair,irespad,asiderp,eradips,ripesad,sparide,rapside,sipreda,padries
 #qver of lead
@@ -119,6 +120,8 @@ whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
 #qver of sods gone odes song
 goodness,R?YRRYRR=sodsgone=odessong
 goodness,negssodo,densosgo,segsdoon
+#nowt town
+wont,RGR?=nowt=town
 #phat path/saps pass
 keys,syke
 #qver of alert
@@ -238,6 +241,8 @@ angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas
 #unblest sunbelt
 himself,melfish,shelfim,smhlife,ehfilms,flemish
 grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
+#qver of traipse pirates
+pastier,?YRRY?R=traipse=pirates
 #qver of dandier arid den
 drained,edindar,rindade
 drained,??YYRGR=dandier=aridden

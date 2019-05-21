@@ -4627,7 +4627,7 @@ chapter scaning air
 [?! how to bother scaning air ]
 
 check scaning heat:
-	say "You look for a clue how to race...";
+	say "You look for a clue how to bother being a race acer...";
 
 check scaning cold:
 	say "You look for a clue how to make some heat..."
@@ -4638,13 +4638,10 @@ check scaning location of the player (this is the location scan rule):
 		say "Only the thickness sketchins pick up anything.";
 		try scaning thickness sketchins instead;
 	if location of player is Loather Rathole: [start troves]
-		if cold is visible:
-			try scaning cold instead;
-		if heat is visible:
-			try scaning heat instead;
+		if cold is visible, try scaning cold instead;
+		if heat is visible, try scaning heat instead;
 	if location of player is Econ Cone:
-		if pernod is visible:
-			try scaning pernod instead;
+		if pernod is visible, try scaning pernod instead;
 		if rivets are reflexive and praise spirea is reflexive:
 			if rivets-first is true:
 				say "The rivets have a weird magnetic pull to them. As if there's brain waves in there pulling you towards it so it can tell you what to do.";
@@ -4666,17 +4663,13 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Hacks' Shack and compiled code is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
 		try scaning compiled code instead;
-	if wzup is visible:
-		try scaning wzup instead;
-	if volt maze is visible:
-		try scaning volt maze instead;
-	if player is in a mazeroom or player is in Unwary Runway:
-		say "The air scans [full-monty of volt maze]." instead;
+	if wzup is visible, try scaning wzup instead;
+	if player is in nowt town, say "Your settler scans [if cheat-on is true]RGR?[else]RYRR[end if] as you wave it around Nowt Town." instead;
+	if volt maze is visible, try scaning volt maze instead;
 	if location of player is Posh Hops Shop: [start oyster]
 		say "The settler points towards the door and the trolls.";
 		try scaning trolls instead;
-	if location of player is freight:
-		try scaning pale plea instead;
+	if location of player is freight, try scaning pale plea instead;
 	if location of player is Hardest Trashed Dearths:
 		say "The air's full of eeks, which your settler picks up." instead;
 		try scaning eeks instead;
@@ -4722,7 +4715,7 @@ plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as yo
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
-ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?" [START troves]
+ltb	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 eddie's song	false	true	false	false	"You'd guess it's, well, the song 'I Ceded' that's causing the settler readings. Because when Eddie C. takes a break from singing, the settler's readings stay up."
@@ -4731,7 +4724,8 @@ marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
 sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
-alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [START presto]
+maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe."
+alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
@@ -6870,7 +6864,9 @@ check listening:
 	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
 	if player is in Sonancy Canyons, say "[if raptest patters are not moot]An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.[else]The raptest patters are gone, and you can fully focus on [next-sonancy].[end if]" instead;
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
-	if player is in Boarded Roadbed and bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
+	if player is in Boarded Roadbed:
+		if bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it. A snore from the bee makes you see red." instead;
+		if bee-head is reflexive, say "A snore from the bee makes you see red.";
 	if player is in Loather Rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if player is in Drain Nadir and Eddie's Song is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
@@ -8969,7 +8965,7 @@ a plaster psalter is scenery in Carven Cavern. "It looks sturdy enough, but out 
 check taking plaster:
 	say "It's stuck to the floor. What would you do with it, anyway?" instead;
 
-a-text of plaster is "RRYRRYR". b-text of plaster is "RRGRRGP". parse-text of plaster is "x[sp]x[sp]A[sp]x[sp]x[sp]E[sp]R".
+a-text plaster psalter is "RRYRRYR". b-text of plaster psalter is "RRGRRGP". parse-text of plaster psalter is "x[sp]x[sp]A[sp]x[sp]x[sp]E[sp]R".
 
 chapter stapler
 
@@ -9040,7 +9036,7 @@ the palest pastel plates are plural-named scenery in Carven Cavern. description 
 
 check taking plates: say "[if plaster is visible]The plates are wedged in, as if they belonged there. Sort of[else]They are too broken and bulky to be of much use[end if]." instead;
 
-a-text of plates is "RRYRRY". b-text of plates is "RR?RRY". parse-text of plates is "x[sp]x[sp]?[sp]x[sp]x[sp]-."
+a-text of palest pastel plates is "RRYRRY". b-text of palest pastel plates is "RR?RRY". parse-text of palest pastel plates is "x[sp]x[sp]?[sp]x[sp]x[sp]-."
 
 chapter staple
 
@@ -11732,7 +11728,7 @@ chapter seed pit and cravings carvings
 
 The cravings carvings are plural-named auxiliary scenery in Idle Deli. "All sorts of food doodles are here, and if you READ them, they might form a message, too."
 
-a-text of cravings carvings is "RYRRYRY". b-text of cravings carvings is "RGRRYRG". parse-text of cravings carvings is "x[sp]e[sp]x[sp]x[sp]i[sp]x[sp]e".
+a-text of cravings carvings is "RYRRYRY". b-text of cravings carvings is "RYRRYRY". parse-text of cravings carvings is "x[sp]e[sp]x[sp]x[sp]i[sp]x[sp]e".
 
 some mushrooms are a quest-item. description of mushrooms is "They have all different lengths of stems, and you're not sure which are poisonous and which aren't."
 
@@ -12012,7 +12008,7 @@ chapter heat
 
 the heat is flippable vanishing scenery. "The heat is nice and all, but being happy for it isn't the right emotion, here, with your possessions stolen."
 
-a-text of heat is "RYRY". b-text of heat is "RGRG". parse-text of heat is "[sp]x[sp]a[sp]x[sp]e". heat is parse-spoilable. [heat -> care, need to race]
+a-text of heat is "RYRY". b-text of heat is "R?R?". parse-text of heat is "[sp]x[sp]a[sp]x[sp]e". heat is parse-spoilable. [heat -> care, need to race]
 
 book Bustle Sublet
 
@@ -12292,7 +12288,7 @@ instead of doing something to ME ARTS:
 
 chapter ltb
 
-ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of ltb is "LEAD". [ ltb = lead the book]
+ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of ltb is "LEAD, All: A Deed". [ ltb = lead the book]
 
 check fliptoing ltb:
 	if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
@@ -12327,7 +12323,7 @@ a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY". parse-te
 instead of scaning rubbish story:
 	try scaning Large Regal Lager instead;
 
-a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYRY". parse-text of Large Regal Lager is "x[sp]x[sp]-[sp]x[sp]-".
+a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYR?". parse-text of Large Regal Lager is "x[sp]x[sp]-[sp]x[sp]-".
 
 instead of drinking lager:
 	say "One sip is--nope. Next, a liter, retail. Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way.";
@@ -12665,7 +12661,7 @@ chapter red vees
 
 The red vees are vanishing plural-named scenery in Upscale Capsule. description is "They look like they could be hooked together, but you can't do so by standard means."
 
-a-text of red vees is "RYRYRRY". b-text of red vees is "GRRYRRY". parse-text of red vees is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
+a-text of red vees is "RYRYRRY". b-text of red vees is "RGRYRRY". parse-text of red vees is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 instead of doing something with red vees:
 	if action is procedural, continue the action;
@@ -13578,7 +13574,7 @@ check scaning popgun when boing is reflexive:
 	say "No reading until you hit the boing-go bin.";
 	try scaning boing instead;
 
-a-text of popgun is "RYRRY". b-text of popgun is "PYRRY". parse-text of popgun is "b[sp]-[sp]x[sp]x[sp]-". popgun is cheat-spoilable.
+a-text of popgun is "RYRRY". b-text of popgun is "?YRRY". parse-text of popgun is "b[sp]-[sp]x[sp]x[sp]-". popgun is cheat-spoilable.
 
 understand "PG-on-up pop/ gun/" as popgun.
 
@@ -13595,7 +13591,7 @@ understand "spoilt/pistol" and "spoilt pistol" as popgun.
 
 The boing go bin is a boringthing. it is part of the popgun. the boing go bin is reflexive. description is "[if boing is reflexive]It's sort of springy, but it doesn't seem to really bounce around. You may need a eureka moment to figure how to fix it[else]The boing mechanism is fully equipped to go boing again. Yay[end if].". bore-text is "Your mechanical abilities won't help[if boing is reflexed], but they don't need to[else], but there may be a slick way to get the BOING back[end if].". printed name of boing go bin is "boing-go bin".
 
-a-text of boing go bin is "RYRRY". b-text of boing go bin is "??RRY". parse-text of boing is "b[sp]-[sp]x[sp]x[sp]-". boing go bin is cheat-spoilable.
+a-text of boing go bin is "RYRRY". b-text of boing go bin is "?YRRY". parse-text of boing is "b[sp]-[sp]x[sp]x[sp]-". boing go bin is cheat-spoilable.
 
 The serial number is a boringthing. it is part of the popgun. description of serial number is "B09140715.". bore-text of serial number is "You can't do much with it except examine it.". bore-check of serial number is bore-serial rule.
 
@@ -14368,12 +14364,7 @@ does the player mean doing something with Drive A: it is likely.
 
 instead of opening Drive A: say "You don't need to. You can just put the sort of stuff that goes in disk drives in the drive.";
 
-the golden dongle is part of Drive A. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it."
-
-instead of doing something with golden dongle:
-	if action is procedural, continue the action;
-	if current action is taking, say "You need the dongle to connect Drive A to other computer parts." instead;
-	say "You don't need to do anything fancy with the dongle."
+the golden dongle is a boringthing. it is part of Drive A. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it.". bore-text is "You don't need to do anything fancy with the dongle. It's there to connect Drive A to other computer parts, and it works."
 
 the USB is a vanishing thing. description is "It's an ordinary USB. Or it would be, around anyone but you.". "The USB that the golden dongle degenerated into lies here."
 
@@ -14797,9 +14788,9 @@ m-l is a person. "[one of]A man introducing himself as[or][stopping] Matzo Lev i
 
 Tom Alvez is a person. "[one of]A man introducing himself as[or][stopping] Tom Alvez is here, more scannable than his predecessors."
 
-a-text of m-l is "RYRYRRYR". b-text of m-l is "PGRYRRYP". parse-text of m-l is "m[sp]a[sp]x[sp]-[sp]x[sp]x[sp]-[sp]v". m-l is cheat-spoilable.
+a-text of m-l is "RYRYRRYR". b-text of m-l is "RYRYRPYR". parse-text of m-l is "m[sp]a[sp]x[sp]-[sp]x[sp]x[sp]-[sp]v". m-l is cheat-spoilable.
 
-a-text of l-m is "RYRYRRYR". b-text of l-m is "RYRYRPYR". parse-text of l-m is "x[sp]-[sp]x[sp]-[sp]x[sp]t[sp]-[sp]x".
+a-text of l-m is "RYRYRRYR". b-text of l-m is "PGRYRRYP". parse-text of l-m is "x[sp]-[sp]x[sp]-[sp]x[sp]t[sp]-[sp]x".
 
 a-text of Tom Alvez is "RYRYRRYR". b-text of Tom Alvez is "RYRYPRYR". parse-text of tom alvez is "x[sp]-[sp]x[sp]-[sp]l[sp]x[sp]-[sp]x".
 
@@ -15698,7 +15689,7 @@ section frat raft
 
 the frat raft is scenery in Disease Seaside. description is "It's a frat raft, by the looks of it. All sorts of Greek symbols and crude jokes are written on it. You probably have to do something pretty hokey to get it fueled up, or whatever.[paragraph break]It's made of oaks-as-OK which soak and carry interlocking--and completely locked--oars."
 
-a-text of frat raft is "RYRR". b-text of frat raft is "RGRP". parse-text of frat raft is "x[sp]a[sp]x[sp]t". frat raft is parse-spoilable.
+a-text of frat raft is "RYRR". b-text of frat raft is "??RP". parse-text of frat raft is "x[sp]a[sp]x[sp]t". frat raft is parse-spoilable.
 
 the frat raft is an enterable reflexive supporter. the frat raft is fixed in place.
 
@@ -16169,10 +16160,8 @@ does the player mean bonking the knob: it is very likely.
 the can't search unless container or supporter rule is not listed in any rulebook.
 
 carry out searching:
-	if noun is ol' trap:
-		say "That's the right idea. But not the right way to search. You need to walk all over the floor, here, to disable the ol['] trap." instead;
-	if noun is a-p:
-		say "The portal has nothing." instead;
+	if noun is ol' trap, say "That's the right idea. But not the right way to search. You need to walk all over the floor, here, to disable the ol['] trap." instead;
+	if noun is a-p, say "The portal has nothing." instead;
 	say "You're not able to find anything hidden." instead;
 
 book Hardest Trashed Dearths
@@ -17246,7 +17235,7 @@ check fliptoing thin hint:
 
 book Horned Hedron
 
-Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if ol' trap is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west."
+Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here. [if ol' trap is in Horned Hedron]An ol['] trap blocks passage to[else]A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west."
 
 check going west when player is in Horned Hedron:
 	if haunter is moot, say "Collapsed old places are that way. No need to go back." instead;
@@ -17277,7 +17266,7 @@ chapter ol trap and portal
 
 the ol' trap is flippable scenery in Horned Hedron. understand "ol trap" and "ol/oltrap" as ol' trap.
 
-a-text of ol' trap is "RYRRYR". b-text of ol' trap is "RYRRGR". parse-text is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
+a-text of ol' trap is "RYRRYR". b-text of ol' trap is "RYPPYR". parse-text is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
 
 check taking ol' trap:
 	say "That'd be a good way to spring it." instead;
@@ -18183,7 +18172,7 @@ section organised ego drains
 
 the organised ego drains are plural-named LLPish vanishing boringscen in Unblest Sunbelt. description of ego drains is "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red.". bore-text is "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance.".
 
-a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "RRYRRYYRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
+a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "R?YRR?YRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
 the screech creches are bounding boringscen in Unblest Sunbelt. bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
 
@@ -19717,7 +19706,7 @@ every turn when traipse pirates are visible:
 			say "A pirate swats at an air pest, red-faced--and reaps it! But it leaves a red welt.";
 			now pirate-countdown is 3;
 
-a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "PYRRYGR". parse-text of traipse pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". traipse pirates are cheat-spoilable.
+a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "?YRRY?R". parse-text of traipse pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". traipse pirates are cheat-spoilable.
 
 chapter Anemic Cinema
 
@@ -19843,7 +19832,7 @@ understand "native" as natives' site van.
 
 description of natives' site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Badlands like they know all about it, and they're looking at you funny, as if they know you don't fit in."
 
-a-text of natives' site van is "RYYRYRR". b-text of natives' site van is "?GYRYRR". parse-text of natives' site van is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
+a-text of natives' site van is "RYYRYRR". b-text of natives' site van is "??YRYRR". parse-text of natives' site van is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
 section bonker
 
@@ -23047,7 +23036,7 @@ check fliptoing papayas when papayas are moot:
 
 the auction caution is reflexive scenery in Clangier Clearing. "It's pretty clear: PAY ASAP covers over half of it. That probably applies to non-auctions, too.". understand "banner" as auction caution.
 
-a-text of auction caution is "RYRYOYR". b-text of auction caution is "RYRYOYR". parse-text of auction caution is "x[sp]a[sp]x[sp]a[sp]y[sp]a[sp]x".
+a-text of auction caution is "RYRYOYR". b-text of auction caution is "PGRGOGR". parse-text of auction caution is "x[sp]a[sp]x[sp]a[sp]y[sp]a[sp]x".
 
 some papayas are a plural-named fruit. description is "Goldish and gourdish."
 
@@ -23384,7 +23373,7 @@ the ENGARO orange is a reflexive fruit in Scape Space. "An orange lies here next
 
 description of ENGARO is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping]."
 
-a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO is "RY*RYYR". parse-text is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
+a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO orange is "RY*RYYR". parse-text of ENGARO orange is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
 instead of taking the orange:
 	say "[one of]With a sleepy, sly 'Eep,' th[or]Th[stopping]e trader whips [his-her] hand out and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and [he-she] goes back to semi-dozing. You think, 'an ogre' and see red. Maybe you need to sneak up somehow."
