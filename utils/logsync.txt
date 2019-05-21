@@ -7,7 +7,7 @@
 >IGNORE=bolt
 >IGNORE=bulge
 >IGNORE=toga
->IGNORE=darnels
+>IGNORE=snarled darnels
 #the stuff above, you don't have the gadget yet, so scan values don't matter. I could code it, but it has no practical value.
 snarled darnels~darnels>slander
 static>attics

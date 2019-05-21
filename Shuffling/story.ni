@@ -2979,7 +2979,7 @@ understand "thickets/thickest" and "thickest thickets" as darnels when player is
 
 the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is moot]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
 
-the lgth of darnels is 7. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]". the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]".
+the lgth of snarled darnels is 7. gpos of snarled darnels is 7. rpos of snarled darnels is 3. cert-text of snarled darnels is "[set-bug]". rect-text of snarled darnels is "[set-bug]". the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]".
 
 the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
 

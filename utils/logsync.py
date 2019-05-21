@@ -26,6 +26,7 @@ open_line = defaultdict(int)
 sa_flips = defaultdict(str)
 sa_trans = defaultdict(str)
 sa_ignore = defaultdict(str)
+sa_got = defaultdict(bool)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
@@ -54,6 +55,7 @@ def usage():
     exit()
 
 def read_data_file():
+    in_roiling = False
     with open(data_file) as file:
         for (line_count, line) in enumerate(file, 1):
             if line.startswith('#'): continue
@@ -63,11 +65,18 @@ def read_data_file():
                 l2 = re.sub(".*=", "", ll)
                 sa_ignore[l2] = True
                 continue
+            if ll == "roiling":
+                in_roiling = True
+                continue
+            if ll == "shuffling":
+                in_roiling = True
+                continue
             if ">" in ll:
                 ary = ll.split(">")
                 if "~" in ary[0]:
                     ary2 = ary[0].split("~")
-                    sa_trans[ary2[0]] = ary2[1]
+                    if in_roiling: aro_trans[ary2[0]] = ary2[1]
+                    else: sa_trans[ary2[0]] = ary2[1]
                     temp = ary2[0]
                     space_check = ary2[1]
                 else:
@@ -75,7 +84,8 @@ def read_data_file():
                     space_check = temp
                 if len(nosp(space_check)) != len(nosp(ary[1])):
                     sys.exit("Uh oh space mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
-                sa_flips[temp] = ary[1]
+                if in_roiling: aro_flips[temp] = ary[1]
+                else: sa_flips[temp] = ary[1]
                 continue
             ary = ll.split(",")
             if '=' in line:
@@ -126,6 +136,7 @@ def sa_r_g_check():
                     if global_raw and my_raw != global_raw: continue
                     if 'lgth of' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
+                        sa_got[my_raw] = True
                         if my_raw in sa_ignore:
                             skip = True
                             continue
@@ -223,6 +234,11 @@ def sa_r_g_check():
             print('SHUFFLING:', x, "had", errs[x], "error{:s}".format(i7.plur(errs[x])))
     else:
         print("I found no errors in the hinting source for Shuffling! Hooray!")
+    flip_miss = [x for x in sa_flips if x not in sa_got]
+    if len(flip_miss):
+        print("Flips missed:", ', '.join(flip_miss))
+    else:
+        print("No SA flips missed.")
 
 def check_aftertexts():
     markedokay = 0
