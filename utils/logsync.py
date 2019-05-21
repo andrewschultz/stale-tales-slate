@@ -28,10 +28,12 @@ sa_flips = defaultdict(str)
 sa_trans = defaultdict(str)
 sa_ignore = defaultdict(str)
 sa_got = defaultdict(bool)
+sa_line = defaultdict(int)
 aro_flips = defaultdict(str)
 aro_trans = defaultdict(str)
 aro_ignore = defaultdict(str)
 aro_got = defaultdict(bool)
+aro_line = defaultdict(int)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
@@ -84,9 +86,11 @@ def read_data_file():
                 if in_roiling:
                     aro_flips[ary[0]] = ary[1]
                     aro_flips[ary[1]] = ary[0]
+                    aro_line[ary[1]] = aro_line[ary[0]] = line_count
                 else:
                     sa_flips[ary[0]] = ary[1]
                     sa_flips[ary[1]] = ary[0]
+                    sa_line[ary[1]] = sa_line[ary[0]] = line_count
                 continue
             if ">" in ll:
                 ary = ll.split(">")
@@ -106,8 +110,12 @@ def read_data_file():
                 else:
                     if len(nosp(space_check)) != len(nosp(ary[1])):
                         sys.exit("Uh oh space mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
-                if in_roiling: aro_flips[temp] = ary[1]
-                else: sa_flips[temp] = ary[1]
+                if in_roiling:
+                    aro_flips[temp] = ary[1]
+                    aro_line[temp] = line_count
+                else:
+                    sa_flips[temp] = ary[1]
+                    sa_line[temp] = line_count
                 continue
             ary = ll.split(",")
             if '=' in line:
@@ -272,6 +280,10 @@ def aro_settler_check():
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             if 'a-text of' in line and 'b-text of' in line and "\t" not in line:
+                if 'parse-text' not in line:
+                    print("WARNING need to fill in parse-text in line", line_count)
+                elif 'parse-text of' not in line:
+                    print("CODE PEDANTRY fill in object name after parse-text in line", line_count)
                 sent = re.split("\. *", line.lower().strip())
                 for q in sent:
                     if 'a-text' in q:
@@ -279,6 +291,7 @@ def aro_settler_check():
                         if my_thing in aro_ignore:
                             skip = True
                             break
+                        aro_got[my_raw] = True
                         if my_raw not in aro_flips:
                             count += 1
                             print("#", count, "Need entry for", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "at line", line_count)
@@ -288,10 +301,15 @@ def aro_settler_check():
                         lf = len(aro_flips[my_raw])
                         v = val_of(q)
                         for idx in range(0, lf - 1):
-                            if aro_flips[my_raw][idx] == ' ' and v[idx] != '*': print("Need * at slot", idx+1, "at line", line_count, "for", my_thing)
-                            if aro_flips[my_raw][idx] in consonants and v[idx] != 'r': print("Need R at slot", idx+1, "at line", line_count, "for", my_thing)
-                            if aro_flips[my_raw][idx] in vowels and v[idx] != 'y': print("Need Y at slot", idx+1, "at line", line_count, "for", my_thing, aro_flips[my_raw][idx], v[idx])
-                            if aro_flips[my_raw][idx] == 'y' and v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "for", my_thing)
+                            if aro_flips[my_raw][idx] == ' ' and v[idx] != '*': print("Need * at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            if aro_flips[my_raw][idx] in consonants and v[idx] != 'r': print("Need R at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            if aro_flips[my_raw][idx] in vowels and v[idx] != 'y': print("Need Y at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            if aro_flips[my_raw][idx] == 'y' and v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+    flip_miss = [x for x in aro_flips if x not in aro_got]
+    if len(flip_miss):
+        print("Flips missed:", ', '.join(flip_miss))
+    else:
+        print("No SA flips missed.")
 
 def check_aftertexts():
     markedokay = 0

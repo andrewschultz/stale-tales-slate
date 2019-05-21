@@ -192,7 +192,7 @@ reside reside>desire
 ####Econ Cone
 praise spirea>aspire
 rivets>strive
-trevis vister>strive
+astute statue~trevis vister>strive
 pernod>ponder
 card~derp on epdorn dr peno ned orp>ponder
 ####upscale capsule
@@ -228,8 +228,9 @@ rand>darn
 wzup~washups>whassup
 sods gone odes song>goodness
 ####austerer treasure
-ye hoop>phooey
-hoop>pooh
+>IGNORE=ye hoop
+hoop2~ye hoop>phooey
+hoop1~hoop>pooh
 onyx censer~censer>screen
 ####marines seminar remains
 popgun~boing go bin>bingo
@@ -423,8 +424,8 @@ reading a dinger>grained
 ####rawest waters
 eastern shore~eastern>nearest
 ####mislit limits
-flowerpot~dingy>dying
-crocus~dingy>dying
+flowerpot~dying>dingy
+crocus~dying>dingy
 pester'n serpent>present
 unripe ur-pine>punier
 accurst leap>spectacular
@@ -436,7 +437,7 @@ accu-plaster>spectacular
 capsule cart>spectacular
 last acre cup>spectacular
 talc spa cure>spectacular
-curst palace>spectacular
+>IGNORE=curst palace
 ####mesprise premises
 tetris sitter>triste
 ####dourest detours
@@ -458,8 +459,8 @@ ghoul hat>although
 gore ogre>ergo
 ####Shiner Shrine
 >IGNORE=sly imp
-imp1~butlery>brutely
-imp2~rangily>angrily
+imp1~rangily>angrily
+imp2~butlery>brutely
 imp3~legendary>enragedly
 ####perverse preserve
 corona>racoon
@@ -481,7 +482,13 @@ satyr>artsy
 ####reclusion inclosure
 merle~yelthons>honestly
 elmer~ideas aides>aside
+whistle~yelped>deeply
+>IGNORE=macks
+>IGNORE=medals
+iqlucky>quickly
+luckyiq>quickly
 ########REGION=others
+####rustic citrus
 pagers>grapes
 spear>pears
 lumps>plums
@@ -496,6 +503,10 @@ mad train>tamarind
 eerie blurbs>blueberries
 peanut cola>cantaloupe
 videotape~mr pinsome>persimmon
+coin>icon
+icons>sonic
+>IGNORE=s-c
+>IGNORE=coins
 ####swell wells
 stucco~on stucco>coconuts
 green stain>tangerines
@@ -518,9 +529,15 @@ auction caution~pay asap>papayas
 quince>cinque
 peach>cheap
 nectarine>ancienter
+lemons>solemn
+>IGNORE=melon
+l-o-p~prices>cripes
+pre-mang~mango>among
 ####scape space
 engaro orange>go near
 an-a~banana>nabana
+inapt paint~reserved deserver>reversed
+pugnacious plant~hrbubar>rhubarb
 ####gates stage
 searcher>research
 viewer>review

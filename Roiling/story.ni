@@ -8969,7 +8969,7 @@ a plaster psalter is scenery in Carven Cavern. "It looks sturdy enough, but out 
 check taking plaster:
 	say "It's stuck to the floor. What would you do with it, anyway?" instead;
 
-a-text of plaster is "RRYRRYR". b-text of plaster is "RRGRRGP". parse-text is "x[sp]x[sp]A[sp]x[sp]x[sp]E[sp]R".
+a-text of plaster is "RRYRRYR". b-text of plaster is "RRGRRGP". parse-text of plaster is "x[sp]x[sp]A[sp]x[sp]x[sp]E[sp]R".
 
 chapter stapler
 
@@ -9040,7 +9040,7 @@ the palest pastel plates are plural-named scenery in Carven Cavern. description 
 
 check taking plates: say "[if plaster is visible]The plates are wedged in, as if they belonged there. Sort of[else]They are too broken and bulky to be of much use[end if]." instead;
 
-a-text of plates is "RRYRRY". b-text of plates is "RR?RRY". parse-text is "x[sp]x[sp]?[sp]x[sp]x[sp]-."
+a-text of plates is "RRYRRY". b-text of plates is "RR?RRY". parse-text of plates is "x[sp]x[sp]?[sp]x[sp]x[sp]-."
 
 chapter staple
 
@@ -9125,7 +9125,7 @@ instead of doing something to the rifle when Elmo is visible:
 		continue the action;
 	say "You're not in a position to do anything physical with the rifle. Maybe it can become something.";
 
-a-text of rifle is "RRYYR". b-text of rifle is "RRYYR". parse-text is "[bug-report]".
+a-text of rifle is "RRYYR". b-text of rifle is "RRYYR". parse-text of rifle is "[bug-report]".
 
 selftalk-warn is a truth state that varies.
 
@@ -9481,7 +9481,7 @@ after examining settler for the first time:
 
 understand "scanner" as settler.
 
-a-text of letters settler is "RYRRRYR". b-text of letters settler is "RGPPRYR". parse-text is "[bug-report]".
+a-text of letters settler is "RYRRRYR". b-text of letters settler is "RGPPRYR". parse-text of letters settler is "[bug-report]".
 
 description of the letters settler is "It's shaped like a hand-held vacuum, with an output display on the front. Weird receptors can SCAN things. Below a colorful logo, you also notice a [if cheat-on is true]glowing[else]dark[end if] button labeled TEACH/CHEAT. I guess it doesn't wish to judge.[paragraph break]You also feel a switch, some sort of slider and a decal on the backside."
 
@@ -11879,7 +11879,9 @@ Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest
 
 chapter hurt hog
 
-the hurt hog is reflexive scenery in Sonancy Canyons. "The hog [if bent ewe is reflexed]seems more relaxed than before[else]is staring the poor bent ewe down. Maybe you can act as peacemaker[end if]."
+the hurt hog is reflexive boringscen in Sonancy Canyons. description is "The hog [if bent ewe is reflexed]seems more relaxed than before[else]is staring the poor bent ewe down. Maybe you can act as peacemaker[end if].". bore-text is "The hurt hog just grunts. You [if hurt hog is reflexive]need a little magic here[else]did what you could. It's doing well enough[end if]."
+
+a-text of hurt hog is "RRRYYRR". b-text of hurt hog is "RRPYYRR". parse-text of hurt hog is "x[sp]x[sp]R[sp]-[sp]-[sp]x[sp]x".
 
 after fliptoing hurt hog:
 	moot bent ewe;
@@ -11891,7 +11893,9 @@ after fliptoing hurt hog:
 
 chapter bent ewe
 
-the bent ewe is reflexive scenery in Sonancy Canyons. "The bent ewe [if bent ewe is reflexed]seems freer now with you blocking the hog's view[else]seems frozen by the hurt hog's gaze[end if]."
+the bent ewe is reflexive boringscen in Sonancy Canyons. description is "The bent ewe [if bent ewe is reflexed]seems freer now with you blocking the hog's view[else]seems frozen by the hurt hog's gaze[end if].". bore-text is "The bent ewe [if bent ewe is reflexive]looks scared of the hurt hog[else]won't be doing much, but you helped it,, so yay[end if]."
+
+a-text of bent ewe is "RYRRYYR". b-text of bent ewe is "PGRRGYR". parse-text of bent ewe is "B[sp]E[sp]x[sp]x[sp]E[sp]E[sp]x".
 
 chapter raptest patters
 
@@ -11906,6 +11910,8 @@ instead of doing something with the raptest patters:
 chapter yob den
 
 the yob den is vanishing scenery. "You're not sure the best way to deal with the yob den is to enter it. But what's a good way to avoid it?"
+
+a-text of yob den is "RYOYRR". b-text of yob den is "RYOYRR". parse-text of yob den is "x[sp]E[sp]Y[sp]O[sp]x[sp]x".
 
 volume troves
 
@@ -12124,7 +12130,7 @@ after looking in Boarded Roadbed:
 
 initial appearance of what-a-bee is "[one of]An[or]The[stopping] [what-a-bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
 
-a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
+a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text of what-a-bee is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
 
 check taking what-a-bee:
 	say "I'll be stingy. Better me than the bee, eh?" instead;
@@ -12232,12 +12238,15 @@ a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of 
 
 section Eddie's Song
 
-Eddie's song is reflexive scenery. "Eddie C. warbles on."
+Eddie's song is reflexive boringscen. "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule.
 
-a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
+a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text of eddie's song is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
 
-instead of examining song:
-	try listening instead;
+this is the bore-id-cede rule:
+	if current action is examining:
+		try listening;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 book Boredom Bedroom
 
@@ -13470,6 +13479,11 @@ instead of attacking Ye Hoop:
 
 a-text of Ye Hoop is "[if ye-rec]RRYYYO[else]RYYR[end if]". b-text of Ye Hoop is "[if ye-rec]RRYGYO[else]RGGR[end if]". parse-text of ye hoop is "[if ye-rec]x[sp]x[sp]-[sp]o[sp]-[sp]y[else]POOH[end if]". ye hoop is cheat-spoilable.
 
+[
+a-text of hoop2 is "RRYYYO". b-text of hoop2 is "RRYGYO". parse-text of hoop2 is "x[sp]x[sp]-[sp]o[sp]-[sp]y".
+a-text of hoop1 is "RYYR". b-text of hoop1 is "RGGR". parse-text of hoop2 is "POOH".
+]
+
 ye-scan is a truth state that varies.
 no-ye-scan is a truth state that varies.
 ever-hoop-both is a truth state that varies.
@@ -13779,7 +13793,7 @@ the log ons letters are a plural-named reflexive thing. the log ons letters are 
 
 understand "logons/letters" and "logons letters" as log ons letters.
 
-a-text of log ons is "RYRYRR". b-text of log ons is "RGRGPR". parse-text of log ons is "x[sp]o[sp]x[sp]o[sp]n[sp]x". log ons is cheat-spoilable.
+a-text of log ons is "RY*RYRR". b-text of log ons is "RG*RGPR". parse-text of log ons is "x[sp]o[sp] [sp]x[sp]o[sp]n[sp]x". log ons is cheat-spoilable.
 
 the alert letters are a plural-named reflexive thing. the alert letters are part of the harpings phrasing. description is "[if alert letters are reflexed]The letters seem dull now you said later[else]They're bolded, IN CAPS and slightly raised[end if]."
 
@@ -14011,7 +14025,7 @@ chapter trim socks
 
 a pair of trim socks are plural-named things in Hacks' Shack. "Trim socks lie here. They're too small for you to wear, but they look comfortable and efficient."
 
-a-text of trim socks is "RYRRRYRRR". b-text of trim socks is "RYRRRYPPP". parse-text of trim socks is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]c[sp]k[sp]s".
+a-text of trim socks is "RYR*RRYRRR". b-text of trim socks is "RYR*RRYPPP". parse-text of trim socks is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]c[sp]k[sp]s".
 
 description of trim socks is "Small and narrow. Probably not critical to figure what they do, but they might save time down the road."
 
@@ -21143,6 +21157,11 @@ check scaning medals:
 
 a-text of medals is "RYYRRRO". b-text of medals is "[if medals-lucky-first is true]RGYRRRO[else]RYYRRRB[end if]". parse-text of medals is "[if medals-lucky-first is false]x[sp]-[sp]-[sp]x[sp]x[sp]x[sp]y[else]x[sp]u[sp]i[sp]x[sp]x[sp]x[sp]y[end if]".
 
+[
+a-text of luckyiq is "RYYRRRO". b-text of luckyiq is "RGYRRRO". parse-text of luckyiq is "x[sp]u[sp]i[sp]x[sp]x[sp]x[sp]y".
+a-text of iqlucky is "RYYRRRO". b-text of iqlucky is "RYYRRRB". parse-text of iqlucky is "x[sp]-[sp]-[sp]x[sp]x[sp]x[sp]y".
+]
+
 chapter mack flipping
 
 ladying is an action applying to nothing.
@@ -21608,9 +21627,9 @@ imp2 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. pri
 
 imp3 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp3 is "the imp's actions". description of imp3 is "[bug-report].".
 
-a-text of imp1 is "YRRRYRO". b-text of imp1 is "YRRRGPB". parse-text of imp1 is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". imp1 is cheat-spoilable. [brutely]
+a-text of imp1 is "YRRRYRO". b-text of imp1 is "YRRRGPB". parse-text of imp1 is "a[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". imp1 is cheat-spoilable. [angrily]
 
-a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is "a[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". imp2 is cheat-spoilable. [angrily]
+a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". imp2 is cheat-spoilable. [brutely]
 
 a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB". parse-text of imp3 is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [enragedly]
 
