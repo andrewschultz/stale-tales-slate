@@ -27,6 +27,10 @@ sa_flips = defaultdict(str)
 sa_trans = defaultdict(str)
 sa_ignore = defaultdict(str)
 sa_got = defaultdict(bool)
+aro_flips = defaultdict(str)
+aro_trans = defaultdict(str)
+aro_ignore = defaultdict(str)
+aro_got = defaultdict(bool)
 
 logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds = "c:\\writing\\dict\\reds.txt"
@@ -63,7 +67,8 @@ def read_data_file():
             ll = line.lower().strip()
             if ll.startswith(">ignore="):
                 l2 = re.sub(".*=", "", ll)
-                sa_ignore[l2] = True
+                if in_roiling: aro_ignore[l2] = True
+                else: sa_ignore[l2] = True
                 continue
             if ll == "roiling":
                 in_roiling = True
@@ -82,8 +87,12 @@ def read_data_file():
                 else:
                     temp = ary[0]
                     space_check = temp
-                if len(nosp(space_check)) != len(nosp(ary[1])):
-                    sys.exit("Uh oh space mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
+                if in_roiling:
+                    if len(nosp(space_check)) % len(nosp(ary[1])):
+                        sys.exit("Uh oh space/multiple mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
+                else:
+                    if len(nosp(space_check)) != len(nosp(ary[1])):
+                        sys.exit("Uh oh space mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
                 if in_roiling: aro_flips[temp] = ary[1]
                 else: sa_flips[temp] = ary[1]
                 continue
@@ -97,19 +106,22 @@ def read_data_file():
             for x in ll: okay[x] = True
 
 def things_of(q):
-    ret_2 = re.sub(" +is.*", "", q)
+    ret_2 = re.sub(" +is .*", "", q)
     ret_2 = re.sub(".* of +", "", ret_2)
     ret_1 = sa_trans[ret_2] if ret_2 in sa_trans else ret_2
     ret_3 = nosp(ret_1)
     return (ret_1, ret_2, ret_3)
 
 def val_of(q):
-    return re.sub(".* is +", "", q)
+    retval = re.sub(".* is +", "", q)
+    if "\"" in retval:
+        retval = re.sub("\"", "", retval)
+    return retval
 
 def nosp_len(q):
-    return len(q)-q.count(" ")
+    return len(q)-q.count(" ")-q.count("-")
 
-def nosp(q): return re.sub(" ", "", q)
+def nosp(q): return re.sub("[- ]", "", q)
 
 def parse_brackets(q):
     retval = re.sub("\[ast\]", "", q)
@@ -239,6 +251,34 @@ def sa_r_g_check():
         print("Flips missed:", ', '.join(flip_miss))
     else:
         print("No SA flips missed.")
+
+def aro_settler_check():
+    vowels = 'aeiou'
+    consonants='bcdfghjklmnpqrstvwxz'
+    count = 0
+    with open(r_src) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if 'a-text of' in line and 'b-text of' in line and "\t" not in line:
+                sent = re.split("\. *", line.lower().strip())
+                for q in sent:
+                    if 'a-text' in q:
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        if my_thing in aro_ignore:
+                            skip = True
+                            break
+                        if my_raw not in aro_flips:
+                            count += 1
+                            print(count, "Need entry for", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "at line", line_count)
+                            if count > 15: sys.exit()
+                            continue
+                        aro_got[my_raw] = True
+                        lf = len(aro_flips[my_raw])
+                        v = val_of(q)
+                        for idx in range(0, lf - 1):
+                            if aro_flips[my_raw][idx] == ' ' and v[idx] != '*': print("Need * at slot", idx+1, "at line", line_count, "for", my_thing)
+                            if aro_flips[my_raw][idx] in consonants and v[idx] != 'r': print("Need R at slot", idx+1, "at line", line_count, "for", my_thing)
+                            if aro_flips[my_raw][idx] in vowels and v[idx] != 'y': print("Need Y at slot", idx+1, "at line", line_count, "for", my_thing, aro_flips[my_raw][idx], v[idx])
+                            if aro_flips[my_raw][idx] == 'y' and v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "for", my_thing)
 
 def check_aftertexts():
     markedokay = 0
@@ -443,6 +483,7 @@ check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", 
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues", launch_message = "invis.pl rl e")
 check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed > 0), launch_message = "reds.txt")
 
+aro_settler_check()
 sa_r_g_check()
 
 if open_after:

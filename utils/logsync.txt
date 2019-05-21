@@ -92,7 +92,56 @@ chain links~links>kilns
 spread>drapes
 red asp>drapes
 sliver>silver
+####################################shuffling above
+roiling
 ####################################roiling below
+#means manse
+giant pin>painting
+latches>satchel
+palm>lamp
+tables>stable
+my niche>chimney
+t-b~ten beams>basement
+sitar>stair
+stria>stair
+pram>ramp
+pavement>event map
+event map>pavement
+platform>farm plot
+farm plot>platform
+crabgrass>brass crag
+brass crag>crabgrass
+pedestal>steel pad
+steel pad>pedestal
+isbn bins>snib
+rifle>flier
+plaster>stapler
+plates>staple
+store b>sorbet
+store h>others
+store k>tokers
+store n>nestor
+store p>presto
+tropes poster>presto
+store t>otters
+store u>routes
+store v>troves
+voters>troves
+store w>towers
+store y>oyster
+>IGNORE=letters settler
+###################routes
+worst ad>towards
+elbow>below
+pipe soot>opposite
+morf form>from
+seed pit>despite
+hurt hog>through
+bent ewe>between
+yob den>beyond
+#un-road~nogal logan>around
+da mist>amidst
+##############logic file checks
 #means manse
 pram,tables,niche,t-b
 #routes

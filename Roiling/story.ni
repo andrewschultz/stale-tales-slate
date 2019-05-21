@@ -8652,7 +8652,7 @@ after examining niche:
 
 understand "ceiling" as niche.
 
-a-text of niche is "RRYRRYO". b-text of niche is "RRYRRYO". parse-text of niche is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]y".
+a-text of my niche is "RRYRRYO". b-text of my niche is "RRYRRYO". parse-text of my niche is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]y".
 
 instead of doing something with niche:
 	if action is procedural, continue the action;
@@ -8703,7 +8703,7 @@ a thing can be hinthelpy. a thing is usually not hinthelpy.
 
 the pavement is part of the diorama. the pavement is spacy. the pavement is hinthelpy. description is "It's sidewalk pavement. It seems like something has been written on it, but it's too bumpy to read, especially since the pavement is so small."
 
-a-text of pavement is "YRYRRRYR". b-text of pavement is "YRYRRRYR". parse-text of pavement is "-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x".
+a-text of pavement is "YRYRR*RYR". b-text of pavement is "YRYRR*RYR". parse-text of pavement is "-[sp]x[sp]-[sp]x[sp]x[sp] [sp]x[sp]-[sp]x".
 
 the event map is a thing. it is hinthelpy. description of event map is "You can read it from here--maybe because you remember it, but you can."
 
@@ -8809,7 +8809,7 @@ after fliptoing ISBN bins:
 	move snib to Largely All-Grey Gallery;
 	continue the action;
 
-understand "bin" and "ISBN bin" as ISBN bins.
+understand "bin" and "ISBN bin" as ISBN bins. ISBN bins are parse-spoilable.
 
 the snib is useless scenery. "The snib is holding your bins together. That might make it snibs, but let's just pretend it sort of links all the bins together so even if they can't be broken into, someone would have to move them all at once."
 
@@ -8819,7 +8819,7 @@ instead of doing something with snib:
 
 understand "snibs" as snib.
 
-a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text of ISBN bins is "x[sp]x[sp]i[sp]x". ISBN bins are parse-spoilable.
+a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text of ISBN bins is "x[sp]x[sp]i[sp]x".
 
 section evac-cave
 
