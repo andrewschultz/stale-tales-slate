@@ -264,7 +264,7 @@ skid>disk
 disk>skid
 flea>leaf
 speel>sleep
-usb>sub
+usb>sub,bus
 t-key~tba>tab
 compiled code~budge>debug
 small blue button~to be or>reboot
@@ -363,8 +363,7 @@ demitri>timider
 leander>learned
 preston>pronest
 terrance>recreant
-#eventually we could make it so we have cinders>discern,rescind
->IGNORE=cinders
+cinders>discern,rescind
 #rodney>droney
 ####topside deposit
 dreads adders>sadder
@@ -507,7 +506,7 @@ videotape~mr pinsome>persimmon
 coin>icon
 icons>sonic
 >IGNORE=s-c
->IGNORE=coins
+coins>sonic,icons
 ####swell wells
 stucco~on stucco>coconuts
 green stain>tangerines

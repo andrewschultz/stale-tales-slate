@@ -57,6 +57,14 @@ def shortcutcheck(x):
     if x in abbrevs: return abbrevs[x]
     return x
 
+def actual_len(q):
+    if ',' not in q: return len(q)
+    j = q.split(',')
+    retval = len(j[0])
+    for x in range(1, len(j)):
+        if len(j[x]) != retval: sys.exit("Oops inconsistent array", j)
+    return retval
+
 def usage():
     print("-a/oa opens code after if there is a mistake to fix.")
     print("-cod/-ncod turns on/off showing code, default = on.")
@@ -107,7 +115,7 @@ def read_data_file():
                     space_check = temp
                 if not len(nosp(ary[1])): sys.exit("Uh oh line {:d} {:s} has nothing arrowed-to.".format(line_count, ll))
                 if in_roiling:
-                    if len(nosp(space_check)) % len(nosp(ary[1])):
+                    if len(nosp(space_check)) % actual_len(nosp(ary[1])):
                         sys.exit("Uh oh space/multiple mismatch between {:s} and {:s} at line {:d}.".format(temp, ary[1], line_count))
                 else:
                     if len(nosp(space_check)) != len(nosp(ary[1])):
@@ -320,13 +328,31 @@ def aro_settler_check():
                             break
                             continue
                         aro_got[my_raw] = True
-                        lf = len(aro_flips[my_raw])
                         v = val_of(q)
+                        vary = aro_flips[my_raw].split(",")
+                        if len(vary) == 1: continue
+                        lf = len(vary[0])
+                        sp = [0] * lf
+                        co = [0] * lf
+                        vo = [0] * lf
+                        ys = [0] * lf
+                        for wd in vary:
+                            for idx in range(0, lf - 1):
+                                if wd[idx] == ' ': sp[idx] = 1
+                                if wd[idx] in vowels: vo[idx] = 1
+                                if wd[idx] in consonants: co[idx] = 1
+                                if wd[idx] == 'y': ys[idx] = 1
                         for idx in range(0, lf - 1):
-                            if aro_flips[my_raw][idx] == ' ' and v[idx] != '*': print("Need * at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
-                            if aro_flips[my_raw][idx] in consonants and v[idx] != 'r': print("Need R at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
-                            if aro_flips[my_raw][idx] in vowels and v[idx] != 'y': print("Need Y at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
-                            if aro_flips[my_raw][idx] == 'y' and v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            if sp[idx] + vo[idx] + co[idx] + ys[idx] > 1:
+                                if v[idx] != '?': print("Need * at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            elif sp[idx]:
+                                if v[idx] != '*': print("Need * at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            elif co[idx]:
+                                if v[idx] != 'r': print("Need R at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            elif vo[idx]:
+                                if v[idx] != 'y': print("Need Y at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                            elif ys[idx]:
+                                if v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
                     if 'b-text' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         if my_thing in aro_ignore:
@@ -334,9 +360,10 @@ def aro_settler_check():
                             break
                         aro_got[my_raw] = True
                         sol = nosp(aro_flips[my_raw])
-                        lf = len(sol)
                         v = val_of(q)
                         v = re.sub("\*", "", v)
+                        sary = sol.split(",")
+                        lf = len(sary[0])
                         if 'else' in v:
                             print("TRICKY STUFF 'else' is in the quoted b-value. Fix this with an IGNORE and commented code to check fully.")
                             continue
@@ -351,14 +378,29 @@ def aro_settler_check():
                             wary.append(chop_string[temp:temp+len(v)])
                             temp += len(v)
                         # print(my_thing, wary, aro_flips[my_raw])
-                        for x in wary:
+                        sp = [0] * lf
+                        co = [0] * lf
+                        vo = [0] * lf
+                        ys = [0] * lf
+                        for s in sary:
                             for y in range (0, lf):
-                                if x[y] == sol[y]: matches[y] = 1
-                                else: mismatches[y] = 1
+                                if s[y] in vowels: vo[y] = 1
+                                elif s[y] in consonants: co[y] = 1
+                                elif s[y] == 'y': ys[y] = 1
+                                else: sys.exit("Uh oh " + s + " has a bad character.")
+                        for x in wary:
+                            for s in sary:
+                                for y in range (0, lf):
+                                    if x[y] == s[y]: matches[y] = 1
+                                    else: mismatches[y] = 1
                         the_string = ""
-                        for y in range (0, lf):
-                            # print(y, aro_flips[my_raw], matches, mismatches)
-                            the_string += (settler_read(sol[y], matches[y], mismatches[y]))
+                        for y in range(0, lf):
+                            if vo[y] + co[y] + ys[y] > 1: the_string += "?"
+                            elif mismatches[y] and matches[y]: the_string += "?"
+                            elif vo[y]: the_string += "g" if matches[y] else "y"
+                            elif co[y]: the_string += "p" if matches[y] else "r"
+                            elif ys[y]: the_string += "b" if matches[y] else "o"
+                            else: sys.exit("Uh oh couldn't find anything to add to " + s + " of " + ','.join(sary))
                         if v != the_string:
                             b_count += 1
                             print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v, "as the given b-text but should have", the_string)
