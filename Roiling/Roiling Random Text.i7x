@@ -56,7 +56,7 @@ table of aunt tuna chatter	true	0	15	ohai-tuna rule	oyster	"Aunt Tuna's complain
 table of theses	false	0	30	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
 table of rodney bluster	true	0	20	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if number of visible warriors is 7]informs his gang[else if number of visible warriors > 3]yells at his remaining troops[else if number of visible warriors is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
 table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts" [p]
-table of Elmer and Merle squabbles	true	0	20	alcove-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines.[pre-lb]"
+table of Elmer and Merle squabbles	true	0	20	inclosure-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines.[pre-lb]"
 table of Elvira battle cries	false	0	20	last-battle rule	otters	"Elvira's battle cries"	--	""	""
 table of Elvira machines	false	0	20	bzzt rule	otters	"Elvira's machines"	--	""	""
 table of Elvira taunts	false	0	20	Elvira-taunt rule	otters	"Elvira's taunts"	--	""	"'Stellar staller!' Dang, the simplest ones hurt the most.[pre-lb]"
@@ -526,22 +526,22 @@ this is the examining-gizmo rule:
 section OTTERS random text rules
 
 this is the last-battle rule:
-	if current action is playing whistle and player is in Reclusion Inclosure, the rule succeeds;
+	if current action is playing whistle and player is in Rancho Archon Anchor, the rule succeeds;
 	the rule fails.
 
 this is the em-sez rule:
-	if player is in Coevals' Alcoves and Merle is in Coevals' Alcoves:
+	if player is in Reclusion Inclosure and Merle is in Reclusion Inclosure:
 		if Merle is reflexed, the rule succeeds;
 	the rule fails;
 
-this is the alcove-talk rule:
-	if player is in Coevals' Alcoves and Elmer is in Coevals' Alcoves:
+this is the inclosure-talk rule:
+	if player is in Reclusion Inclosure and Elmer is in Reclusion Inclosure:
 		if Merle is reflexed, the rule succeeds;
-		say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]"; [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in Coevals' Alcoves etc]
+		say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]"; [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in Reclusion Inclosure etc]
 	the rule fails;
 
 this is the Elvira-taunt rule:
-	if player is in Reclusion Inclosure:
+	if player is in Rancho Archon Anchor:
 		if current action is going east or current action is gotoing:
 			if qbc_litany is not table of Elvira comments, the rule succeeds;
 	the rule fails;

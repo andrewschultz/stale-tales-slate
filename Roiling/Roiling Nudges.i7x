@@ -7,7 +7,7 @@ volume table of nudges
 [nuch.py makes sure that all the nudges have a test case assigned]
 [?? todo: make sure that nothing seeps into non-nudge stuff]
 
-[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Alcoves, Inclosure. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Inclosure, Rancho. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
 
 book the tables themselves
 
@@ -795,7 +795,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rye"	335489164	--	deli rye	--	"[del-ry]."
 "lied"	247641883	--	deli rye	--	"[del-ry]."
 "sandwich"	397613884	--	deli rye	--	"[del-ry]."
-"citadel"	371945304	--	Edictal Citadel	--	"The whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Reclusion Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
+"citadel"	371945304	--	Edictal Citadel	--	"The whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Rancho Archon Anchor is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
 "downside"	562325957	Disowned Downside	--	--	"[locname]." [start Disowned Downside]
 "sample"	425622844	--	Disowned Downside	--	"[maples-no]."
 "maple"	329348878	--	Disowned Downside	--	"[maples-no]."
@@ -869,8 +869,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "here"	378218320	--	vow here	--	"The [i]whole[r] vow here."
 "averts"	521866534	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
 "avert"	425592568	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
-"monstery"	742208386	Coevals' Alcoves	--	--	"[w-change]."
-"monastery"	744396204	Coevals' Alcoves	--	--	"[w-change]."
+"monstery"	742208386	Reclusion Inclosure	--	--	"[w-change]."
+"monastery"	744396204	Reclusion Inclosure	--	--	"[w-change]."
 "eelmr"	458825013	--	--	eelmr rule	"[eelmry]."
 "sober"	402175360	--	sober robes	--	"If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down."
 "bored"	326930483	--	sober robes	--	"[e-m-prank]."
@@ -887,10 +887,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "shades"	380853247	Lamer Realm	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
 "clipons"	438812280	--	slopinc	--	"The ocelots would still be awkward even if they lost the clip-ons."
 "kool"	255452171	--	look-kool	--	"You're not here to mess with fashion."
-"laminas"	332438948	Coevals' Alcoves	--	--	"[no-lam]."
-"lamina"	236164982	Coevals' Alcoves	--	--	"[no-lam]."
-"forces"	429276936	Coevals' Alcoves	--	--	"[fresc]."
-"forec"	333002970	Coevals' Alcoves	--	--	"[fresc]."
+"laminas"	332438948	Reclusion Inclosure	--	--	"[no-lam]."
+"lamina"	236164982	Reclusion Inclosure	--	--	"[no-lam]."
+"forces"	429276936	Reclusion Inclosure	--	--	"[fresc]."
+"forec"	333002970	Reclusion Inclosure	--	--	"[fresc]."
 "preserve"	838970678	Perverse Preserve	--	--	"[locname]." [start Perverse Preserve]
 "uprate"	504999514	--	--	preserve-saved rule	"[locname]."
 "uprates"	601273480	--	--	preserve-saved rule	"[locname]."
@@ -903,26 +903,29 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "raccoon"	343135453	Perverse Preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
 "throne"	496782314	--	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
 "weltish"	 571213850	--	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
-"crone"	375395582	Reclusion Inclosure	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act."
-"alcoves"	480604714	Coevals' Alcoves	--	--	"[locname]." [start Coevals' Alcoves]
-"alcove"	384330748	Coevals' Alcoves	--	--	"[locname]."
-"hydra"	268182261	--	--	hydra-know rule	"[if player is in Reclusion Inclosure]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
-"inclosure"	675582040	Reclusion Inclosure	--	--	"You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help." [start Reclusion Inclosure]
-"tripod"	410274292	Reclusion Inclosure	--	--	"[inclosure-scen]."
-"becharm"	354099672	Reclusion Inclosure	--	--	"[inclosure-scen]."
-"nacht"	230493228	Reclusion Inclosure	--	--	"It's annoying and unswayable, like most chants."
-"stocked"	494510522	Reclusion Inclosure	--	--	"[no-stockade]."
-"vats"	308736622	Reclusion Inclosure	--	--	"[inclosure-scen]."
-"vat"	212462656	Reclusion Inclosure	--	--	"[inclosure-scen]."
-"moisture"	701040279	Reclusion Inclosure	--	--	"[inclosure-scen]."
-"pyre"	416955123	Reclusion Inclosure	--	--	"[inclosure-scen]."
-"stockade"	496698340	Reclusion Inclosure	--	--	"[no-stockade]."
-"warship"	455461464	Reclusion Inclosure	--	--	"[elv-mach]."
-"amulet"	456098744	Reclusion Inclosure	--	--	"[one-toy]."
-"ultimate"	604201608	Reclusion Inclosure	--	--	"[one-toy]."
-"shaper"	430339954	Reclusion Inclosure	--	--	"[one-toy]."
-"purple"	534981476	Reclusion Inclosure	--	--	"[elv-mach]."
-"oranger"	476501320	Reclusion Inclosure	--	--	"[elv-mach]."
+"crone"	375395582	Rancho Archon Anchor	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act."
+"inclosure"	675582040	Reclusion Inclosure	--	--	"[locname]." [start Reclusion Inclosure]
+"enclosure"	758395303	Reclusion Inclosure	--	--	"[locname]."
+"alcoves"	480604714	Reclusion Inclosure	--	--	"Destroy the whole citadel and not just the alcoves."
+"alcove"	384330748	Reclusion Inclosure	--	--	"Destroy the whole citadel and not just an alcove."
+"idea"	196015862	--	Merle	--	"[if elmer is reflexed]You already bugged them both[else]You might be able to bug both of them, not just one[end if]."
+"hydra"	268182261	--	--	hydra-know rule	"[if player is in Rancho Archon Anchor]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
+"archon"	287059590	Rancho Archon Anchor	--	--	"It can't be as easy as changing the Rancho. Elvira wouldn't be so careless to allow THAT. You figure you probably need help." [start Rancho Archon Anchor]
+"tripod"	410274292	Rancho Archon Anchor	--	--	"[rancho-scen]."
+"becharm"	354099672	Rancho Archon Anchor	--	--	"[rancho-scen]."
+"nacht"	230493228	Rancho Archon Anchor	--	--	"It's annoying and unswayable, like most chants."
+"stocked"	494510522	Rancho Archon Anchor	--	--	"[no-stockade]."
+"vats"	308736622	Rancho Archon Anchor	--	--	"[rancho-scen]."
+"vat"	212462656	Rancho Archon Anchor	--	--	"[rancho-scen]."
+"moisture"	701040279	Rancho Archon Anchor	--	--	"[rancho-scen]."
+"pyre"	416955123	Rancho Archon Anchor	--	--	"[rancho-scen]."
+"stockade"	496698340	Rancho Archon Anchor	--	--	"[no-stockade]."
+"warship"	455461464	Rancho Archon Anchor	--	--	"[elv-mach]."
+"amulet"	456098744	Rancho Archon Anchor	--	--	"[one-toy]."
+"ultimate"	604201608	Rancho Archon Anchor	--	--	"[one-toy]."
+"shaper"	430339954	Rancho Archon Anchor	--	--	"[one-toy]."
+"purple"	534981476	Rancho Archon Anchor	--	--	"[elv-mach]."
+"oranger"	476501320	Rancho Archon Anchor	--	--	"[elv-mach]."
 "ottre"	493702525	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	--	degen-true rule	"[not-the-reg]." [end-t]
 
@@ -1114,7 +1117,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of general nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"elvira"	421289235	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Reclusion Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [GENERAL STUFF START]
+"elvira"	421289235	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Rancho Archon Anchor]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [GENERAL STUFF START]
 "yorpwald"	548467110	--	--	degen-true rule	"You can't just unjumble Yorpwald with just one word. You need to deal with individual things."
 "settler"	697243862	--	settler	--	"[no-set]."
 "mark"	204519952	--	settler	--	"[no-set]."
@@ -1822,7 +1825,7 @@ to say both-medals: say "No, it's a combination of what's on both medals"
 
 to say cube-whole: say "The sea cube is unmoved. You may need to concentrate on the whole thing";
 
-to say w-change: say "You can't change the alcoves. It's what's to the west that needs changing"
+to say w-change: say "You can't change the inclosure. It's what's to the west that needs changing" [ic]
 
 to say eelmry:
 	if player is in Bran Barn:
@@ -1831,10 +1834,10 @@ to say eelmry:
 	if player is in Loop Pool:
 		say "[if eels are reflexed]You managed to help Le Mer enough[else if gore ogre is moot]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
 		continue the action;
-	if player is in Coevals' Alcoves and Merle is in Coevals' Alcoves:
+	if player is in Reclusion Inclosure and Merle is in Reclusion Inclosure:
 		say "You can't change Merle and Elmer, but maybe you could find a way to get rid of them";
 		continue the action;
-	if Bran Barn is unvisited and Loop Pool is unvisited and alcoves is unvisited:
+	if Bran Barn is unvisited and Loop Pool is unvisited and Reclusion Inclosure is unvisited:
 		say "You shouldn't know about Merle, Elmer et al yet";
 	else:
 		say "You think back to whom you've met so far once past the Disowned Downside"
@@ -1842,7 +1845,7 @@ to say eelmry:
 to say e-m-prank: say "If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down"
 
 this is the eelmr rule:
-	if player is in Coevals' Alcoves and Elmer is in Coevals' Alcoves, the rule succeeds;
+	if player is in Reclusion Inclosure and Elmer is in Reclusion Inclosure, the rule succeeds;
 	if player is in Bran Barn and mr lee is in Bran Barn, the rule succeeds;
 	if player is in Loop Pool, the rule succeeds;
 	the rule fails;
@@ -1854,13 +1857,13 @@ to say fresc: say "Some art is just out there to troll people. The forces fresco
 to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that"
 
 this is the hydra-know rule:
-	if the player is in Reclusion Inclosure, the rule succeeds;
-	if the player is in Coevals' Alcoves and hydra-known is true, the rule succeeds;
+	if the player is in Rancho Archon Anchor, the rule succeeds;
+	if the player is in Reclusion Inclosure and hydra-known is true, the rule succeeds;
 	the rule fails.
 
 to say no-stockade: say "You can't release any prisoners from the stockade THAT easily. You'd need an army"
 
-to say inclosure-scen: say "You can't just muck around with one part of Elvira's army. You need a way to find allies"
+to say rancho-scen: say "You can't just muck around with one part of Elvira's army. You need a way to find allies"
 
 to say one-toy: say "Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army"
 

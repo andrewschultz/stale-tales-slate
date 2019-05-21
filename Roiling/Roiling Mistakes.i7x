@@ -797,23 +797,27 @@ understand "slain" and "as nil" as a mistake ("[if nails are in location of play
 
 understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in Perverse Preserve.
 
+chapter Rancho Archon Anchor
+
+understand "aliver" as a mistake ("[if player is in Rancho Archon Anchor]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
+
+understand "charon" as a mistake ("The Rancho won't change to the river of the dead just like that, but on the other hand, if you wait around, you'll get to see the river of the dead once Elvira takes action.") when player is in Rancho Archon Anchor.
+
+understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.[uurrgg]") when player is in Rancho Archon Anchor.
+
+understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.[uurrgg]") when player is in Rancho Archon Anchor.
+
+understand "sherpa" as a mistake ("You don't need someone to help you climb. You need help fighting Elvira.") when player is in Rancho Archon Anchor.
+
 chapter Reclusion Inclosure
 
-understand "aliver" as a mistake ("[if player is in inclosure]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
-
-understand "coins lure" as a mistake ("[one of]Elvira momentarily sniffs. 'Money? Where? Mmm, I'll find it after beating this little dorkling up.'[or]Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.[stopping]") when player is in Reclusion Inclosure.
+understand "coins lure" as a mistake ("[if elmer is moot]You're not after loot right now[else]Elmer and Merle look around greedily for a second[end if].") when player is in Reclusion Inclosure.
 
 understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in Reclusion Inclosure.
 
-understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.[uurrgg]") when player is in Reclusion Inclosure.
+understand "nicer soul" as a mistake ("[if elmer is in reclusion inclosure]Elmer and Merle are beyond redemption[else]Yes, you are. But you need to be a braver soul and go west[end if].") when player is in Reclusion Inclosure.
 
-understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in Reclusion Inclosure.
-
-understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.[uurrgg]") when player is in Reclusion Inclosure.
-
-understand "rule scion" as a mistake ("Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.[uurrgg]") when player is in Reclusion Inclosure.
-
-understand "sherpa" as a mistake ("You don't need someone to help you climb. You need help fighting Elvira.") when player is in Reclusion Inclosure.
+understand "rule scion" as a mistake ("That's what you're trying to stop, here[if elmer is in reclusion inclosure]. Besides, Elmer and Merle wouldn't trust your word, anyway[end if].") when player is in Reclusion Inclosure.
 
 book others
 

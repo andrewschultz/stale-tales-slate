@@ -458,7 +458,7 @@ section compiler non-syntax section
 
 use MAX_DICT_ENTRIES of 3000.
 
-use MAX_OBJECTS of 940.
+use MAX_OBJECTS of 950.
 
 use MAX_SYMBOLS of 140000.
 
@@ -490,7 +490,7 @@ use MAX_VERBS of 720. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
-use MAX_OBJECTS of 950.
+use MAX_OBJECTS of 960.
 
 use MAX_PROP_TABLE_SIZE of 580000.
 
@@ -1269,7 +1269,7 @@ carry out gotoing:
 	if duck is in location of player and duck is friendly: [TOWERS]
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
-	if player is in Reclusion Inclosure: [OTTERS]
+	if player is in Rancho Archon Anchor: [OTTERS]
 		elvira-flee-taunt;
 	if mrlp is demo dome, say "You rush, despite having nothing urgent to do.";
 	move player to noun;
@@ -1350,7 +1350,7 @@ persuasion rule for asking an animal to try doing something:
 		say "It's far too apathetic.";
 		persuasion fails;
 	if noun is parrot:
-		if player is in Coevals' Alcoves:
+		if player is in Reclusion Inclosure:
 			say "You aren't sure you want to alert the coevals to the parrot, helpless as it is right now.";
 			persuasion fails;
 		say "The parrot flies around, cocking its head vaguely west.";
@@ -3076,7 +3076,7 @@ before doing something when Elmo is visible:
 		say "[convoforce].";
 		reject the player's command;
 
-before doing something when player is in Reclusion Inclosure and current quip is not final-quip (this is the Elvira forces initial convo rule):
+before doing something when player is in Rancho Archon Anchor and current quip is not final-quip (this is the Elvira forces initial convo rule):
 	if current action is fliptoing medals, say "You'll never out-talk Elvira." instead;
 	if current action is fliptoing whistle, say "You'd feel rude playing that whistle during a conversation, even one with Elvira." instead;
 	if current action is fliptoing, say "You'll have to finish this chat first." instead;
@@ -4508,7 +4508,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in Lamer Realm and owls are in Lamer Realm:
 			now noun is owls;
 			continue the action;
-		if player is in Coevals' Alcoves and parrot is in Coevals' Alcoves:
+		if player is in Reclusion Inclosure and parrot is in Reclusion Inclosure:
 			say "The settler seems to give a reading when pointed at the parrot.";
 			now noun is parrot;
 			continue the action;
@@ -5595,8 +5595,8 @@ to decide which thing is otters-cur-item:
 			decide on raptor;
 		if number of visible pre-animal things > 1:
 			decide on animal-to-hint;
-	if player is in Coevals' Alcoves:
-		if parrot is in Coevals' Alcoves:
+	if player is in Reclusion Inclosure:
+		if parrot is in Reclusion Inclosure:
 			decide on parrot;
 	if power-back is false:
 		decide on the player;
@@ -5650,7 +5650,7 @@ carry out otters-hinting:
 	if player is in Bleary Barley: [if there is no item, see what to do next based on where we can go]
 		all-say "You made a way west. You're done here." instead;
 	else if player is in Disowned Downside:
-		all-say "[if gretta is in Disowned Downside]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if Coevals' Alcoves is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if].";
+		all-say "[if gretta is in Disowned Downside]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if Reclusion Inclosure is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if].";
 	else if player is in Loop Pool or player is in Bran Barn:
 		all-say "You recovered your powers, so there's nothing more to do here.";
 	else if player is in Shiner Shrine:
@@ -5665,7 +5665,7 @@ carry out otters-hinting:
 				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if].";
 			else:
 				all-say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random visible reflexive animal][end if].";
-	else if player is in Coevals' Alcoves:
+	else if player is in Reclusion Inclosure:
 		all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight.";
 	else:
 		all-say "There seems to be nothing to do here.";
@@ -5830,7 +5830,7 @@ after reading a command:
 		if the player's command includes "shovel":
 			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
 			reject the player's command;
-	if hydra-known is true and player is in Coevals' Alcoves and player does not have whistle:
+	if hydra-known is true and player is in Reclusion Inclosure and player does not have whistle:
 		if the player's command matches the regular expression "\b(hardy|hydra)\b":
 			say "You don't want to THINK about taking on the hydra by yourself. You need something much bigger.";
 			reject the player's command;
@@ -6231,12 +6231,12 @@ Obscurest Subsector	"If you could go any way other than back west, the subsector
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
 Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to make your way through. You need a way to change that."
-Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
+Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west." [otters]
 Clarthead Cathedral	"[no-coma]."
 Shiner Shrine	"[no-coma]."
 Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
-Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
+Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
 Filed Field	"[if barriers west are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
@@ -6929,7 +6929,7 @@ check listening:
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
 	if whiners are visible, say "The volume and speed they're at, the actual words don't matter. You need to bite the men's style somehow." instead;
 	if sly imp is visible, say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
-	if player is in Reclusion Inclosure, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
+	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
 	if player is in Rustic Citrus:	[others]
 		if pagers are visible, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead;
 		say "Curtis is mumbling about some perceived slight." instead;
@@ -6977,9 +6977,9 @@ before smelling (this is the you can smell some stuff some places rule):
 	if dandier arid den is in location of player, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if the deli rye is visible or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
 	if player is in Disowned Downside, say "You can [if macks are visible]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
-	if player is in Coevals' Alcoves, say "A clove, likely from one alcove." instead;
+	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
 	if player is in Loop Pool, say "Salt Water. Wet, astral." instead;
-	if player is in Reclusion Inclosure, say "Vast vats['] sulfinyl reek clearly eliminates all hope of silly fun." instead;
+	if player is in Rancho Archon Anchor, say "Vast vats['] sulfinyl reek clearly eliminates all hope of silly fun." instead;
 	if mrlp is others:
 		if player is in rustic and slime is in rustic, say "The slime actually smells...nice, like dishwashing detergent." instead;
 		say "Smells, savory, vary so." instead;
@@ -7105,42 +7105,30 @@ chapter swearing
 instead of swearing obscenely:
 	unless qbc_litany is table of no conversation:
 		say "You're classier than that." instead;
-	if mrlp is presto:
-		if cur-score of presto is 0:
-			say "That's too strong for here. But you have the right idea." instead;
-		if Hacks' Shack is visited:
-			say "While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is [if keyboard is off-stage or censer is off-stage]mostly [end if]over." instead;
-		if plebe is visible:
-			say "The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
-		if hogs are visible:
-			say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
-		say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
-	if player is in Lean Lane:
-		say "You don't want Aunt Tuna to perform a tsk task." instead;
-	if location of player is Cleric Circle:
+	if location of player is Cleric Circle: [ROUTES]
 		if curse-warned is false:
 			now curse-warned is true;
 			say "Only, uh, unholy. You can curse anywhere else except here without repercussion." instead;
 		say "A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!";
 		get-dead;
 		the rule succeeds;
-	if player is in Posh Hops Shop:
-		say "This is the place for it, but you can't bring yourself to be heard." instead;
-	if agnostic is in location of player:
-		say "Some example you are." instead;
-	if player is in Disowned Downside and macks are in Disowned Downside:
-		say "The conversation is horrid enough." instead;
+	if player is in Cripple Clipper, say "Siphon no pish on-ship." instead;
+	if mrlp is presto: [PRESTO]
+		if cur-score of presto is 0, say "That's too strong for here. But you have the right idea." instead;
+		if Hacks' Shack is visited, say "While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is [if keyboard is off-stage or censer is off-stage]mostly [end if]over." instead;
+		if plebe is in location of player, say "The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
+		if hogs are in location of player, say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
+		say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
+	if player is in Posh Hops Shop, say "This is the place for it, but you can't bring yourself to be heard." instead; [OYSTER]
+	if player is in Lean Lane, say "You don't want Aunt Tuna to perform a tsk task." instead;
+	if agnostic is in location of player, say "Some example you are." instead; [TOWERS]
 	if player is in Actionless Coastlines or player is in Artist Traits Strait:
 		if lois is in location of player or hostile-is-he lot is in location of player:
 			say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
-	if player is in Reclusion Inclosure:
-		say "Yup. It's gotten REAL. But that won't help." instead;
-	if player is in Coevals' Alcoves and elmer is in Coevals' Alcoves:
-		say "Merle and Elmer sniff faux-piously." instead;
-	if player is in Cripple Clipper:
-		say "Siphon no pish on-ship." instead;
-	otherwise:
-		say "[randbla][line break]";
+	if player is in Disowned Downside and macks are in Disowned Downside, say "The conversation is horrid enough." instead;
+	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "Merle and Elmer sniff faux-piously." instead;
+	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
+	say "[randbla][line break]";
 
 to say deth:
 	let temp be a random number from 1 to number of rows in table of death messages;
@@ -14848,26 +14836,16 @@ before going up when location of player is a mazeroom or location of player is U
 a direction can be viable.
 
 definition: a direction (called dir) is viable:
-	if player is in Phat Path and dir is north:
-		decide no;
-	if player is in Lapsin' Plains and dir is inside and span pans are in Lapsin' Plains:
-		decide no;
-	if player is in Disowned Downside and atmo-moat is in Disowned Downside and dir is west:
-		decide no;
-	if player is in Coevals' Alcoves and merle is in Disowned Downside and dir is west:
-		decide no;
-	if player is in Gates Stage and player does not have passport and dir is north:
-		decide no;
-	if player is in Achers' Arches and sardine is in Achers' Arches and dir is north:
-		decide no; [these are individual cases]
-	unless the room dir from location of player is nothing:
-		decide yes; [this is the main one. If a room's there, go]
-	if player is in Horned Hedron and dir is inside and walleyes are moot and ol' trap is reflexed:
-		decide yes; [these are fringe cases. Again, you can enter certain places etc. once traps are removed]
-	if player is in Largely All-Grey Gallery and dir is inside:
-		decide yes;
-	if player is in Carven Cavern and dir is inside and act-ruin curtain is moot:
-		decide yes;
+	if player is in Phat Path and dir is north, no;
+	if player is in Lapsin' Plains and dir is inside and span pans are in Lapsin' Plains, no;
+	if player is in Disowned Downside and atmo-moat is in Disowned Downside and dir is west, no;
+	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
+	if player is in Gates Stage and player does not have passport and dir is north, no;
+	if player is in Achers' Arches and sardine is in Achers' Arches and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
+	if player is in Horned Hedron and dir is inside and walleyes are moot and ol' trap is reflexed, yes;
+	if player is in Largely All-Grey Gallery and dir is inside, yes;
+	if player is in Carven Cavern and dir is inside and act-ruin curtain is moot, yes;
+	unless the room dir from location of player is nothing, yes; [this is the main one. If a room's there, go]
 	decide no;
 
 to say exits-lead:
@@ -18084,7 +18062,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  !      *
 [line break]  [pc of cinema and north]~~~~~~
 [line break]+[pc of cinema and west].[pc of cinema and east].[pc of deltas and east].~ +
-[line break]  [pc of saltbed and north] [pc of gradient and north] [pc of strati and north]~
+[line break]  [pc of saltbed and north] [pc of gradient and north] [pc of strait and north]~
 [line break]  .[pc of saltbed and east].[pc of gradient and east].~
 [line break]  [pc of copse and north] [pc of sunbelt and north] [pc of garden and north]~
 [line break]![pc of copse and west].[pc of copse and east].[pc of sunbelt and east].[pc of garden and east]!
@@ -20410,7 +20388,7 @@ book otters specific verbs
 chapter quicklying
 
 to get-dead:
-	if location of player is not Inclosure:
+	if location of player is not Rancho Archon Anchor:
 		if joke-death is false:
 			d "Missed joke-death.";
 		now joke-death is true;
@@ -20420,9 +20398,9 @@ to get-dead:
 		now undo-code is 10;
 	if location of player is freight:
 		ital-say "maybe that pale plea can help you figure how to escape.";
-	else if location of player is inclosure:
+	else if location of player is Rancho Archon Anchor:
 		ital-say "there are a few ways to die here in the confrontation with Elvira, but you should always be able to back out. In fact, you can flee if you think you need to.";
-	else if location of player is alcoves:
+	else if location of player is Reclusion Inclosure:
 		do nothing;
 	else if joke-death is true:
 		ital-say "this death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.";
@@ -20456,7 +20434,7 @@ check fliptoing medals:
 	if Merle is visible:
 		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals instead;
-	if player is not in Coevals' Alcoves:
+	if player is not in Reclusion Inclosure:
 		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf].";
 		 preef medals instead;
 	if nounsolve < 3 or adjsolve < 3:
@@ -20470,7 +20448,7 @@ i-quipped is a truth state that varies.
 
 Elvira-delay is a number that varies.
 
-every turn when player is in Reclusion Inclosure and player was in Reclusion Inclosure (this is the Elvira gains confidence rule):
+every turn when player is in Rancho Archon Anchor and player was in Rancho Archon Anchor (this is the Elvira gains confidence rule):
 	unless action is procedural:
 		if current quip is final-quip:
 			if current action is not playing whistle and current action is not qbc responding with and current action is not objasking generically and current action is not objasking about and current action is not asking about and current action is not asking generically:
@@ -20542,7 +20520,7 @@ carry out discerning:
 		now discern-warn is true;
 		unless the player yes-consents:
 			say "Okay. This nag won't appear again." instead;
-	if player is in Coevals' Alcoves and medals are reflexed and whistle is reflexed:
+	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed:
 		say "Your destiny awaits to the west! You have everything you need." instead;
 	if otters-cur-item is player:
 		say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
@@ -20584,22 +20562,22 @@ carry out discerning:
 			say "You discern which animals can get which help. [if leopard is reflexive]The leopard can be PAROLED. [end if][if ocelots are reflexive]The ocelots can become the COOLEST. [end if][if satyr is reflexive]The satyr can become ARTSY. [end if][if badger is reflexive]The badger can be GARBED. [end if][line break]";
 		else:
 			now do-i-dis is false;
-	else if player is in Coevals' Alcoves:
-		if parrot is in Coevals' Alcoves:
+	else if player is in Reclusion Inclosure:
+		if parrot is in Reclusion Inclosure:
 			say "[if Merle is reflexive]Merle and Elmer's on-the-sly-ness is too sly to discern, though you may not need to. Also, y[else]Y[end if]ou discern the parrot can become a RAPTOR again.";
-		else if Merle is in Coevals' Alcoves and Merle is reflexive:
+		else if Merle is in Reclusion Inclosure and Merle is reflexive:
 			say "There might be a way to make them less annoying, but you discern that annoying isn't as bad as evil, so you won't get wrapped up in their hang-ups.";
 			now do-i-dis is false;
 	else if parrot is moot and medals are reflexive:
-		say "You discern you need to [if player is not in Coevals' Alcoves]go to the alcoves and [end if]see the medals can make you go QUICKLY.";
+		say "You discern you need to [if player is not in Reclusion Inclosure]go to the Reclusion Inclosure and [end if]see the medals can make you go QUICKLY.";
 	else if player has whistle:
 		if whistle is reflexive:
-			say "You discern you may need [if player is in Reclusion Inclosure]to leave the inclosure [end if]to see how to make the whistle play DEEPLY.";
+			say "You discern you may need [if player is in Rancho Archon Anchor]to leave the rancho [end if]to see how to make the whistle play DEEPLY."; [ic]
 		else if nounsolve < 3 or adjsolve < 3:
 			say "You discern you may not have enough allies after you blow the whistle and have them go quickly. You left some behind in [animals-left].";
 			now do-i-dis is false;
 		else:
-			say "You discern you need to play the whistle [if player is in Reclusion Inclosure]here[else]in the inclosure[end if].";
+			say "You discern you need to play the whistle [if player is in Rancho Archon Anchor]here[else]in the rancho[end if]."; [ic]
 	else:
 		now do-i-dis is false;
 	if do-i-dis is false:
@@ -20618,41 +20596,41 @@ to say animals-left:
 	if nounsolve < 3:
 		say "the [Preserve]"
 
-book Coevals' Alcoves
+book Reclusion Inclosure
 
-Coevals' Alcoves is a room in Otters. Alcoves is west of Disowned Downside. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare."
+Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare. The ways north and south lead to coevals['] alcoves which are even less safe."
 
-check going when player is in Coevals' Alcoves:
-	if noun is inside:
-		try going west instead;
-	if noun is outside:
-		try going east instead;
+the coevals' alcoves are boringscen in Reclusion Inclosure. description is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.".
 
-the forces fresco is scenery in Coevals' Alcoves. description of forces fresco is "One glance tells you it deserves an f-score, with or without recs of disturbing violence and amorality."
+check going when player is in Reclusion Inclosure:
+	if noun is inside, try going west instead;
+	if noun is outside, try going east instead;
+
+the forces fresco is scenery in Reclusion Inclosure. description of forces fresco is "One glance tells you it deserves an f-score, with or without recs of disturbing violence and amorality."
 
 instead of doing something with the forces fresco:
 	if current action is examining, continue the action;
 	say "The fresco is just there to taunt and annoy people not aligned with Elvira."
 
-the laminas are useless scenery in Coevals' Alcoves. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". understand "animals/lamina/animal" as laminas.
+the laminas are useless scenery in Reclusion Inclosure. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". understand "animals/lamina/animal" as laminas.
 
 instead of doing something with laminas:
 	if action is procedural, continue the action;
 	say "The laminas are just part of the whole bad-guy ambiance.";
 
-check going east in Coevals' Alcoves:
-	if medals are reflexed and Inclosure is unvisited:
-		say "You don't know when your super-speed will wear off. You'd hate to waste it where you've already been." instead;
+check going east in Reclusion Inclosure:
+	if medals are reflexed and Rancho Archon Anchor is unvisited, say "You don't know when your super-speed will wear off. You'd hate to waste it where you've already been." instead;
 
 chapter elmer and merle
 
 an aide is a kind of person. an aide is usually henchy.
 
-Elmer is a reflexive LLPish aide in Coevals' Alcoves.
+Elmer is a reflexive LLPish aide in Reclusion Inclosure.
 
-Merle is a reflexive LLPish aide in Coevals' Alcoves. The chum of Merle is Elmer.
+Merle is a reflexive LLPish aide in Reclusion Inclosure. The chum of Merle is Elmer.
 
-[??difference between scanning elmer and merle]
+check scaning Elmer when Elmer is reflexed: if Merle is not reflexed, try scaning Merle instead;
+check scaning Merle when Merle is reflexed: if Elmer is not reflexed, try scaning Elmer instead;
 
 a-text of Merle is "RYRYRRRO". b-text of Merle is "RYRYRRRO". parse-text of merle is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
 
@@ -20663,6 +20641,12 @@ to say e-m: say "[one of]Merle[or]Elmer[in random order]";
 initial appearance of Elmer is "[bug-report]".
 initial appearance of Merle is "[bug-report]".
 
+understand "aide" as an aide.
+
+does the player mean doing something with Merle:
+	if a random chance of 1 in 2 succeeds, it is unlikely;
+	it is likely.
+
 rule for printing a locale paragraph about Elmer:
 	say "Elmer and Merle, two robed bored Coevals in scowl cowls, glance over at you contemptuously as they babble[if elmer is reflexive]. They make it clear they're Elvira's ideas aides[end if].";
 	now Merle is mentioned;
@@ -20672,7 +20656,7 @@ description of Elmer is "He wears sober robes. His mouth smiles on the left and 
 
 description of Merle is "He wears sober robes. His mouth smiles on the right and frowns on the left."
 
-the sober robes are plural-named scenery in Coevals' Alcoves.
+the sober robes are plural-named scenery in Reclusion Inclosure.
 
 instead of doing something to sober robes:
 	if action is procedural, continue the action;
@@ -20791,7 +20775,7 @@ check fliptoing the whistle when whistle is reflexive:
 		get-dead;
 		follow the shutdown rules instead;
 	if number of visible people > 1:
-		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Alcoves[end if][if player is in Coevals' Alcoves], or find a way to get rid of everyone else[end if]." instead;
+		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
 
 definition: a person (called pe) is npcish:
 	if pe is the player, decide no;
@@ -20839,13 +20823,13 @@ carry out playing:
 		if parrot has whistle:
 			say "Not while the parrot has it." instead;
 		if whistle is reflexive:
-			if location of player is Reclusion Inclosure:
+			if location of player is Rancho Archon Anchor:
 				say "Elvira looks momentarily worried as you blow on the whistle, then gives laugh more musical than your unpracticed playing. '[randbla]!' As you fall, you hear Elvira giggle '[if player is female]Hereon, [b]I[r], heroine[else]I Master A Mister[end if].'";
 				get-dead;
 				follow the shutdown rules instead;
 			now whistle-play is true;
 			say "A horrible noise[one of][or] again[stopping], as if someone [i]yelped[r][one of]. You can't put up with it more than a split-second, and you probably need to figure how to make a more tolerable, less shrill sound[or]. Hm, how to lower the pitch[stopping]." instead;
-		if location of player is Reclusion Inclosure:
+		if location of player is Rancho Archon Anchor:
 			if nounsolve + adjsolve is 0:
 				say "Elvira looks momentarily worried, then giggles sardonically as nothing happens on your end. Plenty happens on hers. 'Ah, treat a threat.' Maybe you need some help?";
 				get-dead;
@@ -20926,7 +20910,7 @@ carry out whistleing:
 
 book Disowned Downside
 
-Disowned Downside is west of Bleary Barley. It is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if Coevals' Alcoves is unvisited], too big to hide nothing[else if Reclusion Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here."
+Disowned Downside is west of Bleary Barley. It is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited], too big to hide nothing[else if Rancho Archon Anchor is unvisited], with much more than the inclosure you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here." [ic]
 
 after looking in Disowned Downside:
 	if macks are in Disowned Downside:
@@ -20970,7 +20954,7 @@ the Edictal Citadel is a backdrop in Disowned Downside. "It takes up a huge chun
 
 instead of doing something with the Edictal Citadel:
 	unless the action is procedural:
-		say "[if player is in Coevals' Alcoves or player is in Reclusion Inclosure]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if]." instead;
+		say "[if player is in Reclusion Inclosure or player is in Rancho Archon Anchor]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if]." instead;
 	continue the action;
 
 the sad elm is useless scenery in Disowned Downside. description is "It was probably sad before the macks came along, but it's not really important."
@@ -21071,7 +21055,7 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 		if do-i-chat is true:
 			moot hydra;
 			now whistle is reflexed;
-			move player to inclosure;
+			move player to Rancho Archon Anchor;
 	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
 		do nothing;
 	else:
@@ -21133,7 +21117,7 @@ chapter medals
 
 the medals are a reflexive wearable plural-named thing.
 
-understand "iq/lucky medal/medals" and "iq/lucky" as medals.
+understand "iq/lucky medal/medals" and "iq/lucky/medal" as medals.
 
 after printing the name of medals while taking inventory:
 	say "([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][end if])";
@@ -21443,15 +21427,15 @@ book side passages
 
 chapter Bran Barn
 
-Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a Bran Barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in Bran Barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
+Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a Bran Barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in Bran Barn]. A painting covers a good chunk of the interior here[end if]. The only way out is back north[check-vow]."
 
-Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if Coevals' Alcoves is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
+Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if Reclusion Inclosure is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
 
 lee-yet is a truth state that varies.
 
 for printing a locale paragraph about Mr Lee:
 	if lee-yet is false:
-		say "Someone cries 'Hunger, [one of]he rung[or]rehung[in random order],' lamenting his destroyed barley. 'What more can you do to Mr. Lee?'";
+		say "Someone cries 'Hunger, [one of]he rung[or]rehung[in random order],' lamenting his destroyed barley. 'What more can you do to Mr. Lee? Guh, o, halt!' You see red at the last bit.";
 		now lee-yet is true;
 	else:
 		say "Mr. Lee hangs around here, ";
@@ -21490,7 +21474,9 @@ a-text of vow here is "RYRYRYR". b-text of vow here is "RGPYRYR". parse-text of 
 
 chapter Loop Pool
 
-Loop Pool is a room in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a Loop Pool[or]the Loop Pool containing the allot atoll[stopping] and restricts you going every way except back south."
+Loop Pool is a room in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a Loop Pool[or]the Loop Pool containing the allot atoll[stopping] and restricts you going every way except back south[check-vow]."
+
+to say check-vow: if vow here is in location of player, say ". That vow here still echoes. It's not harming you, but maye you could get rid of it"
 
 after looking in Loop Pool for the first time:
 	say "You hear whispering ... 'Le Mer guards the allot atoll from the not worth yet.' Well, it's good to know what to call the center of the Loop Pool.";
@@ -21531,7 +21517,7 @@ Instead of doing something with the sea cube:
 
 section eels
 
-the eels are a plural-named reflexive person in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here[end if]."
+the eels are a plural-named reflexive person in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here between the weir and atoll[end if]."
 
 a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "e[sp]x[sp]x[sp]e". eels are cheat-spoilable.
 
@@ -21586,7 +21572,7 @@ check fliptoing gore ogre:
 	abide by the medal check rules for gore ogre;
 	if Mr Lee wears ghoul hat:
 		preef gore ogre;
-		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if Coevals' Alcoves is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if]." instead;
+		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if Reclusion Inclosure is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if]." instead;
 
 check fliptoing eels:
 	abide by the medal check rules for eels;
@@ -21677,7 +21663,7 @@ instead of doing something with coma camo:
 
 book Lamer Realm
 
-Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer. [end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
 
 printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[end if]"
 
@@ -22012,11 +21998,11 @@ the parrot is a vanishing animal. description is "Pretty much every color of the
 the parrot wears the weltish whistle.
 
 check fliptoing raptor:
-	if location of player is not alcoves:
+	if location of player is not Reclusion Inclosure:
 		say "'Awk! I'd just kill you in that form. Try that around some bad guys.'" instead;
 
 every turn when parrot is visible (this is the parrot-chat rule):
-	if location of player is alcoves:
+	if location of player is Reclusion Inclosure:
 		say "The parrot hides out of sight of Elmer and Merle, eyeing them fearfully.";
 	else if location of player is Lamer Realm:
 		let vra be number of visible reflexive animals;
@@ -22045,36 +22031,33 @@ after fliptoing parrot:
 	now pines are in Perverse Preserve;
 	continue the action;
 
-book Reclusion Inclosure
+book Rancho Archon Anchor
 
 hydra-known is a truth state that varies.
 
-check going west in Coevals' Alcoves (this is the need quick rule):
+check going west in Reclusion Inclosure (this is the need quick rule):
 	if parrot is moot and raptor is moot:
 		if medals are not reflexed:
 			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. 'Last word: drat! Slow!'[paragraph break]The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used[if medals are prefigured], though you sort of figured how, earlier[end if].";
 			get-dead;
 			follow the shutdown rules instead;
 		continue the action;
-	if hydra is in Reclusion Inclosure:
+	if hydra is in Rancho Archon Anchor:
 		now hydra-known is true;
 		say "Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. You[if parrot is visible]r friend the parrot gives a helpful AWWWK as you[end if] double back." instead;
 	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
 
-after printing the locale description for Inclosure when Inclosure is unvisited:
-	if Reclusion Inclosure is unvisited:
-		say "'Proceedings precognised. Rats, the...eh, start the arts,' Elvira mutters as she pulls out the Ultimate Mutilate-It Amulet! A blast of energy flies at you, and reflexively, you yell 'Ail ME? Tut!' The ray fizzles.[paragraph break]'Ooh! Stout! ... Shootout!' She pulls out her phrase shape phaser, but you hum an e-sharp to deflect it. 'Won't kill a know-it-all.'[paragraph break]'Intact? It can't! SPAWN, Pawns!' she cries. 'P. S. Naw,' you say.[paragraph break]Elvira gives a crusty curtsy. 'Oh! Most smooth,' she says, with indulga-languid calm, i.e. malice, and hi-grade hid rage. And the sort of tinkly laugh you always felt forced to trust. 'You temporarily disabled my purple pulper and oranger groaner. I can't attack you first--but, details! You have to admit it was clever, filling Yorpwald with annoying anagrams to frame you!'[paragraph break]And you almost do. She has that glibness blessing! You're almost suckered, yourself. You may need fighters impervious to her charms to get rid of her for good.[paragraph break](Push any key.)[wfak]";
-		say "'Gah, hag!' you say.[paragraph break]'Neat ante. Gas [']em, mages!' But they aren't there. 'Me, cry mercy?'[paragraph break]Stalemate. Lame state. Unless you have a way to kill her[if number of reflexive animals in Lamer Realm > 1 or number of pre-animal things in Perverse Preserve > 1]. Or round up more troops[end if].";
-		if do-i-chat is true:
-			now qbc_litany is litany of Elvira;
-		else:
-			try talking to Elvira;
+after printing the locale description for Rancho Archon Anchor when Rancho Archon Anchor is unvisited:
+	say "'Proceedings precognised. Rats, the...eh, start the arts,' Elvira mutters as she pulls out the Ultimate Mutilate-It Amulet! A blast of energy flies at you, and reflexively, you yell 'Ail ME? Tut!' The ray fizzles.[paragraph break]'Ooh! Stout! ... Shootout!' She pulls out her phrase shape phaser, but you hum an e-sharp to deflect it. 'Won't kill a know-it-all.'[paragraph break]'Intact? It can't! SPAWN, Pawns!' she cries. 'P. S. Naw,' you say.[paragraph break]Elvira gives a crusty curtsy. 'Oh! Most smooth,' she says, with indulga-languid calm, i.e. malice, and hi-grade hid rage. And the sort of tinkly laugh you always felt forced to trust. 'You temporarily disabled my purple pulper and oranger groaner. I can't attack you first--but, details! You have to admit it was clever, filling Yorpwald with annoying anagrams to frame you!'[paragraph break]And you almost do. She has that glibness blessing! You're almost suckered, yourself. You may need fighters impervious to her charms to get rid of her for good.[paragraph break](Push any key.)[wfak]";
+	say "'Gah, hag!' you say.[paragraph break]'Neat ante. Gas [']em, mages!' But they aren't there. 'Me, cry mercy?'[paragraph break]Stalemate. Lame state. Unless you have a way to kill her[if number of reflexive animals in Lamer Realm > 1 or number of pre-animal things in Perverse Preserve > 1]. Or round up more troops[end if].";
+	if do-i-chat is true:
+		now qbc_litany is litany of Elvira;
 	else:
-		say "'Serious issue, or...?'";
+		try talking to Elvira;
 
-Reclusion Inclosure is an innie room in Otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east."
+Rancho Archon Anchor is an innie room in Otters. Rancho Archon Anchor is west of Reclusion Inclosure. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east."
 
-the torpid tripod is amusing scenery in Reclusion Inclosure. tripod is an undesc.
+the torpid tripod is amusing scenery in Rancho Archon Anchor. tripod is an undesc.
 
 to say one-more-evil:
 	say "It's too far away to do anything with and survive. For your purposes, it's just one more bit of evil scenery"
@@ -22082,27 +22065,27 @@ to say one-more-evil:
 instead of doing something with the torpid tripod:
 	say "[one-more-evil]."
 
-the enerve veneer is amusing scenery in Reclusion Inclosure. veneer is an undesc.
+the enerve veneer is amusing scenery in Rancho Archon Anchor. veneer is an undesc.
 
 instead of doing something with enerve veneer:
 	say "[one-more-evil]."
 
-the becharm chamber is amusing scenery in Reclusion Inclosure. chamber is an undesc.
+the becharm chamber is amusing scenery in Rancho Archon Anchor. chamber is an undesc.
 
 instead of doing something with the becharm chamber:
 	say "It's too far away to do anything with. For your purposes, it's just one more bit of evil scenery."
 
-the nacht chant is amusing scenery in Reclusion Inclosure. chant is undesc.
+the nacht chant is amusing scenery in Rancho Archon Anchor. chant is undesc.
 
 instead of doing something with nacht chant:
 	say "You--you're almost getting used to the nacht chant."
 
-the vast vats are amusing plural-named scenery in Reclusion Inclosure. vats are undesc.
+the vast vats are amusing plural-named scenery in Rancho Archon Anchor. vats are undesc.
 
 instead of doing something with vast vats:
 	say "The vats are far away, but you can smell sulfinyl in them reeking sinfully--no silly fun."
 
-carry out going east in Reclusion Inclosure:
+carry out going east in Rancho Archon Anchor:
 	elvira-flee-taunt;
 	continue the action;
 
@@ -22113,17 +22096,17 @@ to elvira-flee-taunt:
 	say "You leave her sin shrine [if current action is not going east]with extra quickness [end if]before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
 	now Elvira-delay is 0;
 
-the warpish warship is amusing scenery in Reclusion Inclosure. warship is undesc.
+the warpish warship is amusing scenery in Rancho Archon Anchor. warship is undesc.
 
 instead of doing something with warship:
 	say "You'll never do anything with the warship on your own. But defeating Elvira will probably disable it."
 
-a stocked stockade is amusing scenery in Reclusion Inclosure. stockade is undesc.
+a stocked stockade is amusing scenery in Rancho Archon Anchor. stockade is undesc.
 
 instead of doing something with stockade:
 	say "You shudder to think what you could do with it--or what it could do to you."
 
-Elvira is a woman in Reclusion Inclosure. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]'Coren,' she cries, over the rapidly vaporizing body of her pet hydra.[or]Elvira seems impatient for you to make a move.[stopping]". description is "Elvira's actually quite attractive. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
+Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]'Coren,' she cries, over the rapidly vaporizing body of her pet hydra.[or]Elvira seems impatient for you to make a move.[stopping]". description is "Elvira's actually quite attractive. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
 
 Elvira wears the Ultimate Mutilate-It Amulet.
 
@@ -22142,7 +22125,7 @@ instead of doing something with the phaser:
 check talking to Elvira when current quip is final-quip:
 	say "'[one of]Neat lob. Notable. Bleat on!' [or]State nag?! Stagnate!' [in random order] Reason won't work, here." instead;
 
-every turn when current quip is final-quip and player is in Reclusion Inclosure:
+every turn when current quip is final-quip and player is in Rancho Archon Anchor:
 	say "Cordial, cold air. [one of]'Make a diss, punk? Kiss and make up!' She pauses. 'Enough of this anagram nonsense! That's playing YOUR game. It's not like YOU ALONE can kill me. No person is brave enough to join you.' [or][stopping][one of]Elvira points out you're just jealous she got here on charisma.[or]Elvira mentions she's making others happy, a more exciting happy than yours.[or]Elvira complains social engineering is not as easy as it looks![or]'I'm still vaguely worried you have something up your sleeve, like Blue Frog Urbfogel!'[or]'It would be kind of exciting to lose, you know. Versus just growing old and dying bored and boring. I get the kingdom I want, too. Win-win.' It all has a lilt.[in random order]";
 
 section Elvira dialogue
@@ -22176,7 +22159,7 @@ prompt	response	enabled
 
 chapter hydra
 
-The hardy hydra is an animal in Reclusion Inclosure. description is "One whiff of the decayin['] cyanide smell proves he melts helmets."
+The hardy hydra is an animal in Rancho Archon Anchor. description is "One whiff of the decayin['] cyanide smell proves he melts helmets."
 
 volume others
 
@@ -23925,7 +23908,7 @@ understand "hint" as hinting. understand "hints" as hinting. understand "info" a
 
 tri-hint is a truth state that varies.
 
-check hinting when player is in Reclusion Inclosure and tri-hint is false:
+check hinting when player is in Rancho Archon Anchor and tri-hint is false:
 	say "'[one of]A dirty aid-try[or]Uum, boy, you bum[at random]!' Elvira shrieks, but she can't PROVE what you just did. Ha!";
 	now tri-hint is true;
 
@@ -23946,7 +23929,7 @@ the force hint blocking rule is listed first in the check hinting rulebook.
 check hinting:
 	if have-objhinted is false:
 		now have-objhinted is true;
-		if player is not in Reclusion Inclosure:
+		if player is not in Rancho Archon Anchor:
 			if hint-to-file is false and hint-to-display is false:
 				say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
 				ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
@@ -24565,7 +24548,7 @@ reg-needed	yux
 --	"SMELLing in various places?"
 --	"LISTENing in various places?"
 --	"ATTACKing various NPCs?"
---	"Asking for a HINT in the Inclosure?"
+--	"Asking for a HINT in the Rancho Archon Anchor?"
 --	"reading Roiling Mistakes.i7x for other 'clever' 'jokes?'"
 routes	"Cursing twice in the Cleric Circle? Or once in the Cripple Clipper?"
 routes	"[if routes is solved]Or[else]Cursing[end if] anywhere?"
@@ -24613,10 +24596,10 @@ towers	"REPAIR TOASTER?"
 --	"OTTERS:"
 --	"SLAIN or AS NIL by the nails?"
 --	"(risque) saying SPINE around the pines? There's another one, too."
---	"Trying to PROD IT or DROP IT in the Inclosure (the torpid tripod is nearby)?"
---	"Making Elvira ALIVER in the Inclosure?"
---	"Trying to make Elvira a NICER SOUL in the Inclosure?"
---	"Saying COINS RULE or RULE, SCION in the Inclosure?"
+--	"Trying to PROD IT or DROP IT in the Rancho Archon Anchor (the torpid tripod is nearby)?"
+--	"Making Elvira ALIVER in the Rancho Archon Anchor?"
+--	"Trying to make Elvira a NICER SOUL in the Rancho Archon Anchor?"
+--	"Saying COINS RULE or RULE, SCION in the Rancho Archon Anchor?"
 others	"OTHERS:"
 others	"making GAPERS around the pagers or grapes?"
 others	"SILT or SLIT around the list in the clearing?"
@@ -25065,7 +25048,7 @@ to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
 	if tumblers are not reflexed, add "SPIT" to poshact;
 	if tines are not reflexed, add "INSET" to poshact;
-	if capers is not in reflexed, add "SCRAPE" to poshact;
+	if capers is not reflexed, add "SCRAPE" to poshact;
 	if gins sign is not reflexed, add "SING" to poshact;
 	if tunes are not reflexed, add "UNSET/REMAP" to poshact;
 	sort poshact in random order;
@@ -25215,6 +25198,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of reflexive animals in Lamer Realm > 0:
 			repeat with A running through flippable things in Lamer Realm:
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
+		if vow here is not moot, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared after you regained your powers in [location of vow here] with HOWEVER.";
 	else if myreg is others:
 		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become pears.";
 		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become plums.";
@@ -25379,7 +25363,7 @@ index map with Shuttle Hutlets mapped east of end den.
 
 [start otters]
 
-index map with Reclusion Inclosure mapped east of Anger Range.
+index map with Rancho Archon Anchor mapped east of Anger Range.
 
 [start towers]
 
@@ -26454,7 +26438,7 @@ understand the command "otwin" as something new.
 understand "otwin" as otwining.
 
 carry out otwining:
-	if player is in Coevals' Alcoves:
+	if player is in Reclusion Inclosure:
 		now adjsolve is 2;
 		now nounsolve is 2;
 	else:
@@ -26467,8 +26451,8 @@ carry out otwining:
 		moot Elmer;
 		now adjsolve is 3;
 		now nounsolve is 3;
-		now player is in Coevals' Alcoves;
-	say "Otters endgame cheats are invoked! You may wish to QUICKLY before attacking Elvira, although of course the instadeath if you forget is relevant too. Also, you need to play the whistle DEEPLY or it won't work in the Inclosure.";
+		now player is in Reclusion Inclosure;
+	say "Otters endgame cheats are invoked! You may wish to QUICKLY before attacking Elvira, although of course the instadeath if you forget is relevant too. Also, you need to play the whistle DEEPLY or it won't work in Rancho Archon Anchor.";
 	the rule succeeds;
 
 chapter mf
