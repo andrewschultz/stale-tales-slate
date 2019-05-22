@@ -149,7 +149,7 @@ book oyster
 
 table of oyster anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
-tumblers	tumblers	false	325842789	--	"spit"	"spit" or "spit on the/ tips"	"Saliva avails to show your disdain for the bar staff and for generosity in general. The bar patrons, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."
+tips pits	tips pits	false	325842789	--	"spit"	"spit" or "spit on the/ tips"	"Saliva avails to show your disdain for the bar staff and for generosity in general. The bar patrons, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."
 gins sign	gins sign	false	242774022 [not really covered in the default verb SING]	--	"sing"	"sing"	"Your singing is abominable. But not as abominable as the lyrics or the 'melody' played in the bar right now. So customers only glare at you, but others order another beer because they're not as drunk as you, clearly." [not really covered in the default verb SING]
 tunes	tunes	false	501203408	--	"unset"	"unset"	"[remap-or-unset]. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect."
 tines	tines	false	441090447	--	"inset"	"inset" or "inset stein/tines"	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."
@@ -1034,7 +1034,7 @@ drive a	"Hmm. Drive A coughs for a bit but doesn't really catch. It could be run
 drive e	"Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it."
 Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe." [START oyster]
 gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
-tumblers	"The tumblers wobble a bit as you try to do ... something ... to them."
+tips pits	"The tips pits wobble a bit as you try to do ... something ... to them."
 tines	"Hm, the stein belongs somewhere you can destroy it, but not QUITE like that."
 tunes	"The tunes grow slightly less annoying, for a moment."
 trolls	"The trolls laugh at you a bit, but nervously."
@@ -1354,7 +1354,7 @@ keyboard	"You don't need to resummon the bored yak. And programming exercises ca
 t-key	"No, the TAB key is what it should be."
 scratch paper	"After compiling, you often need to make small tweaks, but not like that."
 compiled code	"You had to consider all sorts of combinations while debugging, but things will be easier now."
-stumbler tumblers	"You can't and don't want to do anything else to the tumblers." [START oyster]
+tips pits	"You can't and don't want to do anything else to the tips pits." [START oyster]
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
 gins sign	"The sign mainly just disallowed singing."
 tines	"You destroyed the stein, and that's enough."
@@ -1662,7 +1662,7 @@ ogled lodge	"[if player is in Hacks' Shack]You need to build a computer here[els
 golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
 computer screen	"[if Hacks' Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
 trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying other patrons.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	[start OYSTER hinting]
-stumbler tumblers	"[one of]The stumbler tumblers say TIPS.[plus][or]How to turn off the machine is written on the machine. Except the right action is rubbed off.[plus][or]Tips for getting rid of songs that are the pits...[plus][or]SPIT on the machine.[minus][cycling]"
+tips pits	"[one of]The tips pits are for putting something in them.[plus][or]What could go in? A noun or a verb.[plus][or]SPIT into the tips pits.[minus][cycling]"
 song buttons	--	tunes
 jukebox	--	tunes
 perma-amper	"[one of]The perma-amper is kind of complex, but knowing the right way to fiddle with it helps.[plus][or]It's something with a, e, m, p and r.[plus][or]What's another word for reconfigure?[plus][or]REMAP.[minus][cycling]"

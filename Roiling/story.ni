@@ -2193,7 +2193,7 @@ trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sur
 trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
 trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
 trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
-trolls	stumbler tumblers	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
+trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
 trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
 patrons	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot.'"
 patrons	trolls	"'They rather keep us in and make us spend more than kick us out.'"
@@ -2618,7 +2618,6 @@ drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! 
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
-stumbler tumblers	"PITS is written in red on the bottom of some stumbler tumblers."
 scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
 span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
@@ -14963,7 +14962,7 @@ last-loc of Oyster is Posh Hops Shop.
 
 book Posh Hops Shop
 
-Posh Hops Shop is an innie room in oyster. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tumblers are in hops shop], stumbler tumblers lie within reach[end if], and trolls block the way out."
+Posh Hops Shop is an innie room in oyster. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and trolls block the way out."
 
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of patrons to 0;
@@ -14979,9 +14978,9 @@ instead of doing something with patrons:
 		continue the action;
 	say "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if]."
 
-the stumbler tumblers are reflexive plural-named boringscen in Posh Hops Shop. "They are labeled TIPS in red but don't have any money in them. Some red writing is at the bottom of one.". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-tumblers rule.
+the tips pits are reflexive plural-named boringscen in Posh Hops Shop. "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
 
-this is the bore-tumblers rule:
+this is the bore-pits rule:
 	if current action is taking:
 		say "The people who didn't give tips would notice your rudeness.";
 		the rule succeeds;
@@ -15033,7 +15032,7 @@ a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "
 
 The jukebox is uncluing scenery in Posh Hops Shop. It is fixed in place. "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]"
 
-a-text of stumbler tumblers is "RRYR". b-text of stumbler tumblers is "RRYR". parse-text of stumbler tumblers is "x[sp]x[sp]i[sp]x". tumblers are cheat-spoilable.
+a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "x[sp]x[sp]i[sp]x". tips pits are cheat-spoilable.
 
 before scaning jukebox:
 	if tunes are visible:
@@ -15119,7 +15118,7 @@ a-text of stein is "YRRYR". b-text of stein is "YRRYR". parse-text of stein is "
 
 description of stein is "It's undoubtedly from the Set-In-Nites corporation, mostly black but with red writing[one of]. You mentally compare it to the tines, and you reckon if you inserted it, it'd be 20% too big[or][stopping]."
 
-shop-hint-items is a list of thing variable. shop-hint-items is { tines, stumbler tumblers, recaps, gins sign, tunes }.
+shop-hint-items is a list of thing variable. shop-hint-items is { tines, tips pits, recaps, gins sign, tunes }.
 
 chapter min up rule
 
@@ -15165,13 +15164,10 @@ understand "spit in/at/on [something]" as spiting.
 does the player mean spiting the location: it is very likely.
 
 carry out spiting:
-	if noun is tumblers:
-		try fliptoing tumblers instead;
-	if noun is a person:
-		say "You don't want to start a fight." instead;
-	if player is in Cripple Clipper:
-		say "Pointless." instead;
-	say "How rude[if player is in hops shop and tumblers are reflexive], but you could be even ruder spitting elsewhere[end if]!" instead;
+	if noun is tips['] pits, try fliptoing tips pits instead;
+	if noun is a person, say "You don't want to start a fight." instead;
+	if player is in Cripple Clipper, say "Pointless." instead;
+	say "How rude[if player is in hops shop and tips pits are reflexed]. Once is enough!" instead; [?? test double]
 
 chapter inseting
 
@@ -24992,7 +24988,7 @@ showing what the player missed is an activity.
 
 to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
-	if stumbler tumblers are not reflexed, add "SPIT" to poshact;
+	if tips pits are not reflexed, add "SPIT" to poshact;
 	if tines are not reflexed, add "INSET" to poshact;
 	if capers is not reflexed, add "SCRAPE" to poshact;
 	if gins sign is not reflexed, add "SING" to poshact;
