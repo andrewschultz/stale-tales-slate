@@ -151,7 +151,7 @@ understand "below" as a mistake ("Nice try, but wrong preposition for the situat
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when giant has rude 'n nuder or player has u nerd or elbow is in location of player.
 
-understand "bowel" and "bowels" as a mistake ("The giant's spouting enough verbal diarrhea, so, just... no.[paragraph break]Also, you don't need to go THAT far down.") when old giant is in location of player and elbow is reflexive.
+understand "bowel" and "bowels" as a mistake ("[Gast]'s spouting enough verbal diarrhea, so, just... no.[paragraph break]Also, you don't need to go THAT far down.") when Gast is in location of player and Gast's elbow is reflexive.
 
 understand "indies" as a mistake ("You don't need to worry about art, here.") when scripture picturers is in location of player.
 
@@ -165,19 +165,19 @@ understand "ptas" as a mistake ("Concerned parents won't be able to help you her
 
 understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in Same Mesa]the MORF-FORM[else]THE BEAN[end if].") when player is in Same Mesa and armada is in Same Mesa.
 
-understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesa and old giant is in location of player.
+understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesa and Gast is in location of player.
 
 understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is in location of player], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in Same Mesa.
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "staider" as a mistake ("[if bench-end is reflexed]You already did your best with the tirades[else]Not only directions but mind games fail to work here[end if]. The giant will complain if he wants to.") when old giant is in location of player.
+understand "staider" as a mistake ("[if bench-end is reflexed]You already did your best with the tirades[else]Not only directions but mind games fail to work here[end if]. The giant will complain if he wants to.") when Gast is in location of player.
 
 understand "taps" as a mistake ("You have no bugle. Well, not in this game.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "tardies" as a mistake ("You can't tell the giant off for being late.") when old giant is in location of player.
+understand "tardies" as a mistake ("You can't tell the giant off for being late.") when Gast is in location of player.
 
-understand "under" as a mistake ("[if grouchy old giant is in location of player]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
+understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag][end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
 
 [def=under-generic]
 understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesa and the-b is in Same Mesa.

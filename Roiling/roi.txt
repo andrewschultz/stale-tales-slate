@@ -500,13 +500,13 @@ If you haven't scored a point yet, you might not know what to do with these.
 If you have, you know this area relies on prepositions.
 Pat's--you need to go PAST.
 Oscar's--you need to go ACROSS.
-?What is the bench for?
-It's <i>a giant's</i>.
-That means you can lean AGAINST it.
+?What is the ant-sag sit-a-nag for?
+It's <i>a giant's</i>. It's for sitting.
+The anagramming suggests you can lean AGAINST it.
 But you need to have visited the cleric circle and seen the reagent list first.
 ?The giant is here. How do I do stuff with him?
 He blocks trying anything else that moves the story forward.
-You can't climb directly on the bench, but the armrest is thick enough to sit on.
+You can't climb directly on the sit-a-nag, but the armrest is thick enough to sit on.
 Get ASTRIDE it.
 Once you do, you can't leave, but you don't have to.
 Avoid his elbow next.

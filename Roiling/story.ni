@@ -384,7 +384,7 @@ table of yesnoes
 the-person	yessaying	nosaying
 Elvira	"Don't give in like that!"	"Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS."
 Gunter	"Agreeing with Gunter probably wouldn't get him to leave."	"You can't out-argue Gunter or change his mind."
-old giant	"Passively agreeing with him might just keep things going ad infinitum. You need to find the right way to ride out the conversation."	"Disagreeing with the giant might make him too mad. You need to find the right way to ride out the conversation."
+Gast	"Passively agreeing with [him-her] might just keep things going ad infinitum. You need to find the right way to ride out the conversation."	"Disagreeing with [Gast] might make [him-her] too mad. You need to find the right way to ride out the conversation."
 macks	"They're so totally wrong, even a sarcastic yes would be just bad."	"Their arguments are too well-constructed for such a simple reject."
 Ed Riley	"He doesn't look terribly agreeable."	"Too direct. He'd just reject you to show you he's no YIELDER."
 
@@ -577,6 +577,7 @@ to choose-female:
 	general-gender-towers;
 	now agnostic is female;
 	now Dr Yow is female;
+	now Gast is female;
 	now Elsa Erde has Reed's Ale;
 	now Dr Lola is part of droll dollar; [begin others changes]
 	now coin-person is Dr Lola;
@@ -594,6 +595,7 @@ to choose-male:
 	general-gender-towers;
 	now agnostic is male;
 	now Dr Yow is male;
+	now Gast is male;
 	now Lars Eede has Reed's Ale;
 	now Lord Al is part of droll dollar; [begin others changes]
 	now coin-person is Lord Al;
@@ -1212,23 +1214,16 @@ carry out gotoing:
 		try retrying instead;
 	if mrlp is routes: [ROUTES]
 		if player is in Same Mesa:
-			if grouchy old giant is in Same Mesa:
-				say "You can't run from the giant!" instead;
-			if the-b is in Same Mesa:
-				say "You can't go anywhere with the bean and the crowd around!" instead;
-			if MORF FORM is in Same Mesa:
-				say "The MORF-FORM is too big to ignore or walk out on." instead;
+			if Gast is in Same Mesa, say "You can't run from [Gast]!" instead;
+			if the-b is in Same Mesa, say "You can't go anywhere with the bean and the crowd around!" instead;
+			if MORF FORM is in Same Mesa, say "The MORF-FORM is too big to ignore or walk out on." instead;
 	if mrlp is troves: [TROVES]
 		say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead;
-	if noun is unvisited and mrlp is noureg:
-		say "You've never been there yet, so you can't go back." instead;
-	if mrlp is not noureg:
-		say "[if last-loc of noureg is unvisited]You haven't made it to that region, yet[else]That's in the wrong region[end if]." instead;
-	if progval of noun > progval of location of player:
-		say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
+	if noun is unvisited and mrlp is noureg, say "You've never been there yet, so you can't go back." instead;
+	if mrlp is not noureg, say "[if last-loc of noureg is unvisited]You haven't made it to that region, yet[else]That's in the wrong region[end if]." instead;
+	if progval of noun > progval of location of player, say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
 	if noun is a mazeroom or noun is Unwary Runway:
-		if volt maze is moot:
-			say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
+		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
 	if mrlp is presto: [PRESTO]
 		if noun is Saps' Pass and Phat Path is visited:
@@ -1237,16 +1232,14 @@ carry out gotoing:
 			if Leo is dismissed:
 				post-wall-arch;
 				do nothing instead;
-		if player is in Hacks' Shack:
-			abide by the shack-south rule;
+		if player is in Hacks' Shack, abide by the shack-south rule;
 		if Leo is in location of player and Leo is eager:
 			if noun is not a mazeroom:
 				say "(Leo and Rand following.)";
 				move Leo to noun;
 				move Rand to noun;
 	if mrlp is oyster: [OYSTER]
-		if player is in Fighter Freight: [OYSTER, generic message not enough]
-			say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
+		if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 		if noun is end den and gleaner is reflexed, say "No need to go back there." instead;
 	if mrlp is towers: [TOWERS]
 		if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
@@ -1261,7 +1254,7 @@ carry out gotoing:
 					say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug. Let me know about it at [email]." instead;
 	if noun is shunned:
-		if noun is Rascal Craals, say "The Rascal Craals are inaccessible. You don't need or want to hang out there, though." instead;
+		if noun is Rascal Craals, say "The Rascal Craals are inaccessible now that the haunter's torn through them. You don't need or want to hang out there, though." instead;
 		if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
 		if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
 		say "[noun] is off-limits. I should have a better explanation why, so please let me know at [email]." instead;
@@ -1401,8 +1394,8 @@ persuasion rule for asking drama armada to try doing something:
 	say "They're too antsy. But maybe just saying the right word will get them going.";
 	persuasion fails;
 
-persuasion rule for asking old giant to try doing something:
-	say "He's much bigger and louder than you, so, no.";
+persuasion rule for asking Gast to try doing something:
+	say "[Gast] is much bigger and louder than you, so, no.";
 	persuasion fails;
 
 [troves]
@@ -1791,7 +1784,7 @@ tokers	"[if store n is visible]'Missing our friend, man!'[else]You can't think o
 lecturer	--
 Ian	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
-old giant	"He is already talking about himself, his complaints, and so forth."
+Gast	"[Gast] is already talking about [him-her]self, [his-her] complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 armada	"They'll have nothing sensible to say in unison."
@@ -1936,7 +1929,7 @@ Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for pos
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[or]Sparest repasts[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
 drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it. Mob mentality and all."
-old giant	"The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
+Gast	"[Gast] is sort of controlling the conversation, and [he-she]'s bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
 evil bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
@@ -2141,21 +2134,21 @@ Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list y
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
-Brother Horbert	old giant	"'Well-meaning, but his wrath is misplaced. I can hear him from here. You [if giant is moot]did well to listen to him[else]may learn from listening to him, but there is nothing to fear[end if].'"
+Brother Horbert	Gast	"'Well-meaning, but [his-her] wrath is misplaced. I can hear [him-her] from here. You [if Gast is moot]did well to listen to [him-her][else]may profit from listening to [him-her], but there is really nothing to fear[end if].'"
 Brother Horbert	Elvira	"'Perhaps she was good once. But her influence on religion is...disturbing.'"
-old giant	bench	"There's not much dispute over the ownership. And the giant isn't trying to shoo you away. Maybe you should listen to the giant in general."
-old giant	Elvira	"The old giant becomes momentarily more vocal and upset."
+Gast	sit a nag	"There's not much dispute over the ownership. And [Gast] isn't trying to shoo you away. Maybe you should listen to [him-her] in general."
+Gast	Elvira	"[Gast] becomes momentarily more vocal and upset."
 oscar	ashtray	"[if player has pipe soot]Best not to call attention to your thievery.[else]'It's not pretty, but it's mine.'[end if]"
 oscar	pipe soot	"[if player has pipe soot]You don't need to mention you have it.[else]'Potpourri. Don't think you can just take it with me looking.'[end if]"
 oscar	pat	"'I went there once. That SEED PIT...ugh.'"
-oscar	old giant	"'Keeps my home less quiet, I'm sure!'"
+oscar	Gast	"'Keeps my home less quiet, I'm sure!'"
 oscar	Brother Horbert	"'[bh-mw].'"
 oscar	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
 oscar	oscar	"Oscar grumbles. 'I'm ME, you know?'"
 pat	pat	"'Still holding on to the Idle Deli here.'"
 pat	seed pit	"'[if mushrooms are off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'"
 pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
-pat	old giant	"'Probably not good for business.'"
+pat	Gast	"'Probably not good for business.'"
 pat	Brother Horbert	"'Brother Horbert means well, but he's too unfocused to DO anything by himself.'"
 pat	Elvira	"'Business is bad enough. I don't need trouble with her.'" [end routes]
 Si Reed	Elvira	"Si Reed nods pointedly." [begin troves] [end troves]
@@ -4220,7 +4213,7 @@ carry out exitsing:
 		say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world." instead;
 	if mrlp is routes:
 		if player is in Same Mesa:
-			if old giant is in Same Mesa, say "You probably aren't going anywhere with that giant around." instead;
+			if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
 			if MORF FORM is not off-stage, say "You probably don't want to go anywhere with that [if MORF FORM is in Same Mesa]thing[else]bean[end if] around." instead;
 			say "There are plenty of ways to go, but they don't seem to lead anywhere. [if Cleric Circle is visited or Idle Deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
 		if player is in Idle Deli or player is in adobe or player is in Cleric Circle:
@@ -4686,7 +4679,7 @@ niche	false	false	false	true	"[cheatfid]."
 beams	false	false	false	true	"[cheatfid]."
 meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
-bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [START routes]
+sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
 ltb	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!" [START troves]
@@ -5174,45 +5167,31 @@ prep-spoil is a truth state that varies.
 to say p-spo:
 	now prep-spoil is true;
 
-check objhinting when player is in Same Mesa (this is the hide giant hints rule):
-	if noun is bench or noun is bench-end or noun is elbow or noun is Rude 'N Nuder or noun is old giant:
-		if Cleric Circle is unvisited:
-			all-say "You aren't ready to do anything with the bench yet. The church may make you feel better about things." instead;
-		if list o toils is unexamined:
-			all-say "You may want to look at the list-o-toils first." instead;
+check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
+	if noun is sit a nag or noun is bench-end or noun is elbow or noun is Rude 'N Nuder or noun is Gast:
+		if Cleric Circle is unvisited, all-say "You aren't ready to do anything with the [sit a nag] yet. The church may make you feel better about things." instead;
+		if list o toils is unexamined, all-say "You may want to look at the list-o-toils first." instead;
 
-does the player mean objhinting the grouchy giant when mrlp is routes:
-	it is very likely;
+does the player mean objhinting Gast when mrlp is routes: it is very likely;
 
 carry out routes-hinting:
 	if cur-score of routes is 0 and prep-spoil is false:
 		all-say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
 	if MORF FORM is in Same Mesa:
-		if player is in Same Mesa:
-			try objhinting MORF FORM instead;
+		if player is in Same Mesa, try objhinting MORF FORM instead;
 		all-say "[if spoilit is true]The spoon points[else]You should go[end if] outside to the commotion.";
 		now spoilit is false instead;
-	if the-b is in Same Mesa and Harms Marsh is unvisited:
-		try objhinting the-b instead;	[end global stuff]
+	if the-b is in Same Mesa and Harms Marsh is unvisited, try objhinting the-b instead;	[end global stuff]
 	if location of player is Same Mesa:
-		if Cleric Circle is unvisited:
-			try objhinting scripture picturers instead;
-		if bench is reflexive:
-			try objhinting bench instead;
-		if bench-end is reflexive:
-			try objhinting bench-end instead;
-		if elbow is reflexive:
-			try objhinting elbow instead;
-		if Rude 'N Nuder is visible:
-			try objhinting Rude 'N Nuder instead;
-		if old giant is in Same Mesa:
-			try objhinting old giant instead;
-		if Cleric Circle is unvisited:
-			try objhinting scripture picturers instead;
-		if Idle Deli is unvisited:
-			try objhinting adsorbing signboard instead;
-		if Adobe Abode is unvisited:
-			try objhinting lairage regalia instead;
+		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
+		if sit a nag is reflexive, try objhinting sit a nag instead;
+		if bench-end is reflexive, try objhinting bench-end instead;
+		if elbow is reflexive, try objhinting elbow instead;
+		if Rude 'N Nuder is visible, try objhinting Rude 'N Nuder instead;
+		if Gast is in Same Mesa, try objhinting Gast instead;
+		if Cleric Circle is unvisited, 	try objhinting scripture picturers instead;
+		if Idle Deli is unvisited, try objhinting adsorbing signboard instead;
+		if Adobe Abode is unvisited, try objhinting lairage regalia instead;
 	if location of player is Cleric Circle:
 		if list o toils is unexamined:
 			all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils.";
@@ -5227,37 +5206,29 @@ carry out routes-hinting:
 			now spoilit is false instead;
 		try objhinting seed pit instead;
 	if location of player is Adobe Abode:
-		if pipe soot is in adobe:
-			try objhinting pipe soot instead;
+		if pipe soot is in adobe, try objhinting pipe soot instead;
 		all-say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] Oscar's.";
 		now spoilit is false instead;
 	if location of player is Harms Marsh:
-		if darkness is visible:
-			try objhinting darkness instead;
+		if darkness is in Harms Marsh, try objhinting darkness instead;
+		if all noon gag is in Harms Marsh, try objhinting all noon gag instead;
 		try objhinting un-road instead;
-	if location of player is Ripe Pier:
-		try objhinting da mist instead;
-	if location of player is Cripple Clipper:
-		try objhinting thickness sketchins instead;
+	if location of player is Ripe Pier, try objhinting da mist instead;
+	if location of player is Cripple Clipper, try objhinting thickness sketchins instead;
 	if location of player is Sonancy Canyons:
 		if bent ewe is reflexive, try objhinting bent ewe instead;
 		if hurt hog is reflexive, try objhinting hurt hog instead;
 		try objhinting yob den instead;
-	if list o toils is unexamined:
-		all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
-	if player has mushrooms and player has U NERD ENDUR REDUN and player has pipe soot:
-		all-say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items." instead;
+	if list o toils is unexamined, all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
+	if player has mushrooms and player has U NERD ENDUR REDUN and player has pipe soot, all-say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items." instead;
 	if spoilit is true:
+		now spoilit is false;
 		all-say "You can't angle the spoon productively. Maybe use it later." instead;
-		now spoilit is false instead;
 	repeat with QQ running through quest-items:
 		if QQ is off-stage:
-			if QQ is mushrooms:
-				all-say "You need to [if Idle Deli is unvisited]figure how to enter[else]go back to[end if] Pat's for the mushrooms." instead;
-			if QQ is pipe soot:
-				all-say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] Oscar's for the pipe soot." instead;
-			if QQ is U NERD ENDUR REDUN:
-				all-say "You need to work out how to sit all over the giant's bench to get Rude [']N Nuder (which is, trivial spoiler, the runed book)." instead;
+			if QQ is mushrooms, all-say "You need to [if Idle Deli is unvisited]figure how to enter[else]go back to[end if] Pat's for the mushrooms." instead;
+			if QQ is pipe soot, all-say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] Oscar's for the pipe soot." instead;
+			if QQ is U NERD ENDUR REDUN, all-say "You need to work out how to sit all over the [Gast]'s [sit a nag] to get Rude [']N Nuder (which is, trivial spoiler, the runed book)." instead;
 	all-say "I can't give you any advice right now. You may want to hint individual items or even let me know via a transcript (or even a save file) at [email]." instead;
 
 book troves-hinting
@@ -5735,7 +5706,7 @@ after reading a command:
 		change the text of the player's command to XX;
 	if the player's command includes "under":
 		if number of words in the player's command > 1:
-			if old giant is visible:
+			if Gast is visible:
 				if rude 'n nuder is visible:
 					say "Truncating to one word.";
 					change the text of the player's command to "under";
@@ -6264,7 +6235,7 @@ drama armada	"That'd be a silly way to die." [START routes]
 Brother Horbert	"Yorpwald's already got a St. Lip-Split."
 scripture picturers	"A shameful attempt at vandalism."
 the-b	"It's like a dense metal or something. It's more likely it would make something else crack."
-old giant	"You don't have a weapon big enough to take him. One won't appear in your super purse. Anyway, he's not evil, just whiny."
+Gast	"You don't have a weapon big enough to take [Gast]. One won't appear in your super purse. Anyway, [he-she]'s not evil, just whiny."
 Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering." [START troves]
 Leo	"[dont-hit of Leo]" [START Presto]
 Rand	"[dont-hit of Rand]"
@@ -6369,7 +6340,7 @@ chapter climbing
 The block climbing rule is not listed in the check climbing rulebook.
 
 check climbing (this is the climb to enter rule) :
-	if noun is frat raft or noun is cistern or noun is chimney or noun is bench or noun is stair:
+	if noun is frat raft or noun is cistern or noun is chimney or noun is sit a nag or noun is stair:
 		try entering noun instead;
 
 check climbing (this is the generic silly climbing reject rule):
@@ -6527,7 +6498,7 @@ instead of jumping:
 	if player is in Fighter Freight:
 		say "You certainly are feeling jumpy right now, but--well, you want to jump towards the pale plea. And as reflexively as possible." instead;
 	if player is in Same Mesa:
-		say "You [if bench-end is not reflexed]try and jump onto the bench, but that's not quite the way. Hm[else]managed to get on the bench, and you don't need to, again[end if]." instead;
+		say "You [if bench-end is not reflexed]try and jump onto the [sit a nag], but that's not quite the way. Hm[else]managed to get on the [sit a nag], and you don't need to, again[end if]." instead;
 	if player is in austerer and hoop is in austerer:
 		say "You jump but can't quite reach the hoop. You think you hear a voice saying 'O, ye hop!' You turn red.[paragraph break]You consider dropping your treasured possessions so you can grab the hoop, but you can't bring yourself to say the heck with them. Or, rather, you haven't, yet." instead;
 	say "You try a jump but jam up[one of]. Boy, leaps lapse[or][stopping].";
@@ -6804,8 +6775,8 @@ check listening:
 	if tokers are visible and nestor is visible, say "[if nestor is visible]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
 	if player is in Same Mesa: [routes]
-		if old giant is moot, say "Nice to have silence with the giant gone." instead;
-		if old giant is in Same Mesa, say "Those [i]tirades[r] from the giant. [if bench-end is reflexive][one of]Though he gets staider.[or]'Dear, it's...' he trails off.[or]'Sit. Dare!' he commands. 'Rad site! Rest aid!'[or]'I stared...'[or]He gestures to the bench, turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' he moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' he says, actually going red.[or]'Drat, [']e is!' cries the giant, turning red.[or]He explains what left Ed astir, turning red.[or]He rues the loss of the bench's side-art, his eyes turning red.[in random order][else if elbow is reflexive]Though his swinging elbow is more dangerous now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
+		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
+		if Gast is in Same Mesa, say "Those [i]tirades[r] from [Gast]. [if bench-end is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if elbow is reflexive]Though [his-her] swinging elbow is more dangerous now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
 		if the-b is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		say "'Mama sees me as...' Irrelevant stuff." instead;
 	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
@@ -7150,7 +7121,7 @@ carry out sbing:
 	if noun is a person and noun is washed up: [leo/rand]
 		do nothing;
 	else if noun is reflexed:
-		if noun is not dialer and noun is not bench, say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
+		if noun is not dialer and noun is not sit a nag, say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
 	now sb-cur is true;
 	let z be cheat-on;
 	now cheat-on is false;
@@ -10007,8 +9978,8 @@ to say what-can-flip:
 [?? recheck everything in table of pres]
 table of pres [xxpre]
 preflip	thereg	pretodo
-bench	routes	"Find a way to be fearless so you can lean AGAINST the bench." [routes]
-elbow	routes	"You can go BELOW the giant's elbow once he swings it around."
+sit a nag	routes	"Find a way to be fearless so you can lean AGAINST the [sit a nag]." [routes]
+elbow	routes	"You can go BELOW [Gast]'s elbow once he swings it around."
 sheol holes	routes	"You can look AROUND to find the un-road."
 un-road	routes	"You can go ALONG the un-road...once you find it."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
@@ -10914,18 +10885,17 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]A Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if old giant is moot]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]A Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag][else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
 
 after looking in Same Mesa:
-	if old giant is in Same Mesa:
-		it-him-her old giant;
+	if Gast is in Same Mesa:
+		it-him-her Gast;
 	else if the-b is not in Same Mesa:
-		set the pronoun it to bench;
+		set the pronoun it to sit a nag;
 	continue the action;
 
 check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
-	if old giant is visible:
-		say "Even without the giant's unavoidable tirades, your head is spinning too much for directions." instead;
+	if Gast is in Same Mesa, say "Even without [Gast]'s unavoidable tirades, your head is spinning too much for directions." instead;
 	if noun is a direction:
 		if noun is inside:
 			if Cleric Circle is unvisited:
@@ -10937,20 +10907,16 @@ check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 					else:
 						say "That isn't quite how to enter the church. Do you wish to go back to the [if adobe is visited]adobe[else]deli[end if]?";
 						if the player yes-consents:
-							if adobe is visited:
-								move player to adobe instead;
-							else:
-								move player to Idle Deli instead;
+							if adobe is visited, move player to adobe instead;
+							move player to Idle Deli instead;
 				now in-try is true;
 				say "You just can't make it through to the Cleric Circle. Err, well, maybe THROUGH isn't right. Something blocks you--you seemed a bit too glib about getting in, and they're not sure you're on their side[if Adobe Abode is visited or deli is visited]--note, for where you already visited, you need to use [aop][end if]." instead;
 			move player to Cleric Circle instead;
-		if noun is down and the-b is visible:
-			say "Well, not quite DOWN..." instead;
-		if noun is up or noun is down:
-			say "That won't work right now." instead;
+		if noun is down and the-b is visible, say "Well, not quite DOWN..." instead;
+		if noun is up or noun is down, say "That won't work right now." instead;
 		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
 	else:
-		say "No matter where you try to wander, you wind up back where you are.";
+		say "No matter where you try to wander, you wind up back where you are." instead;
 
 part verbs
 
@@ -10963,8 +10929,7 @@ understand the command "inside" as something new.
 understand "inside" as insideing.
 
 carry out insideing:
-	if player is in Same Mesa:
-		try fliptoing picturers instead;
+	if player is in Same Mesa, try fliptoing picturers instead;
 	try going inside instead;
 
 check fliptoing when player is in Same Mesa (this is the armada keeps you in rule):
@@ -10972,10 +10937,10 @@ check fliptoing when player is in Same Mesa (this is the armada keeps you in rul
 		if drama armada is in Same Mesa or the-b is in Same Mesa, say "But... [if the-b is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
 		if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
 
-check fliptoing when player is in Same Mesa (this is the check giant is not in Same Mesa rule):
+check fliptoing when player is in Same Mesa (this is the check Gast is not in Same Mesa rule):
 	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
-		if old giant is visible:
-			say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
+		if Gast is in Same Mesa:
+			say "Walking away would upset the [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
 			preef noun;
 			do nothing instead;
 
@@ -10995,23 +10960,18 @@ part people and things
 
 chapter old giant [NOTE: it's critical to say old giant and not giant, because giant = giant pin according to inform]
 
-the grouchy old giant is a person. "There's a grouchy old giant here sitting on the big bench[if Rude 'N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[otherwise], going on some [i]tirades[r] about something or other[flail]. You're not sure if he needs his space or someone to listen to[end if]."
+Gast is a male person. "[gast] sits here on the anti-sag sit-a-nag[if Rude 'N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[otherwise], going on some [i]tirades[r] about something or other[flail]. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[if gast is male]Ian[else]Nia[end if]".
 
-does the player mean objasking about old giant when mrlp is routes: it is likely.
-does the player mean objasking generically old giant when mrlp is routes: it is likely. [ugh, nothing else works :/ ]
+description of Gast is "You can't do much more than listen to [gast]. [if sit a nag is reflexed]You're not sure what [he-she]'s complaining about, but it seems [he-she] really needs to[else if elbow is reflexed][his-her-c] [i]tirades are as loud as ever, [his-her] arms flailing high in the air[else][he-she-c] seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
 
-description of grouchy old giant is "You can't do much more than listen to the giant. [if bench is reflexed]You're not sure what he's complaining about, but it seems he really needs to[else if elbow is reflexed]His [i]tirades are as loud as ever, his arms flailing high in the air[else]He seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
+check taking Gast: say "You'll have to take [his-her]'s babble, but not [him-her]." instead;
 
-check taking old giant:
-	say "You'll have to take his babble, but not him." instead;
-
-after fliptoing old giant:
+after fliptoing Gast:
 	now tirades are in Same Mesa;
 	continue the action;
 
-check scaning old giant (this is the scan other parts of giant instead rule):
-	if bench-end is reflexive:
-		try scaning the bench-end instead;
+check scaning Gast (this is the scan other things than Gast instead rule):
+	if bench-end is reflexive, try scaning the bench-end instead;
 	if elbow is reflexive:
 		say "The settler registers something only when the elbow is in its way.";
 		try scaning elbow instead;
@@ -11019,51 +10979,36 @@ check scaning old giant (this is the scan other parts of giant instead rule):
 		say "The settler only registers when it's pointed at Rude [']N Nuder.";
 		try scaning nuder instead;
 
-section giant's elbow
+section Gast's elbow
 
-the giant's elbow is part of the grouchy old giant. description is "Well, thankfully, only one is flailing. Both would be extra tough to dodge. [if elbow is reflexed]But you have the hang of it now[else]Still, there's almost a pattern to it, and maybe there's a safe spot[end if]."
+Gast's elbow is a reflexive boringthing. It is part of Gast. description is "Well, thankfully, only one is flailing. Both would be extra tough to dodge. [if elbow is reflexed]But you have the hang of it now[else]Still, there's almost a pattern to it, and maybe there's a safe spot[end if].". bore-text is "You'll need to find the right way to avoid [Gast]'s elbow."
 
-the elbow is reflexive.
+a-text of Gast's elbow is "RYRYR". b-text of Gast's elbow is "RYRGP". parse-text of Gast's elbow is "x[sp]e[sp]x[sp]o[sp]w". elbow is cheat-spoilable.
 
-a-text of elbow is "RYRYR". b-text of elbow is "RYRGP". parse-text of elbow is "x[sp]e[sp]x[sp]o[sp]w". elbow is cheat-spoilable.
+understand "elbows" as Gast's elbow.
 
-understand "elbows" as giant's elbow.
-
-instead of doing something to elbow:
-	if action is procedural, continue the action;
-	say "You'll need to find the right way to avoid it."
-
-to say flail:
-	say "[if elbow is reflexive] and flailing each elbow all about[end if]"
+to say flail: say "[if Gast's elbow is reflexive] and flailing each elbow all about[end if]"
 
 to decide whether below-is-wrong:
-	if player is in Same Mesa and U NERD ENDUR REDUN is in Same Mesa:
-		decide yes;
-	if the-b is in Same Mesa and player is in Same Mesa:
-		decide yes;
+	if player is in Same Mesa and U NERD ENDUR REDUN is in Same Mesa, decide yes;
+	if the-b is in Same Mesa and player is in Same Mesa, decide yes;
 	decide no.
 
 chapter tirades
 
-tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if bench-end is reflexed], and you're more concerned about the giant's elbow[else], but maybe you could position yourself better to listen to them[end if]."
+tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if bench-end is reflexed], and you're more concerned about Gast's elbow[else], but maybe you could position yourself better to listen to them[end if]."
 
 check scaning tirades:
-	if bench-end is reflexive:
-		try scaning bench-end instead;
+	if bench-end is reflexive, try scaning bench-end instead;
 	if elbow is reflexive:
 		say "The settler lights up when the elbow flashes across.";
 		try scaning elbow instead;
-	say "The settler really lights up when the giant waves the book at it.";
+	say "The settler really lights up when [Gast] waves the book at it.";
 	try scaning Nuder instead;
 
 chapter poison stripe
 
-the poison stripe is scenery in Same Mesa.
-
-description of poison stripe is "You can't really see it, but you can FEEL it."
-
-instead of doing something with the poison stripe:
-	say "You can really only sense the poison stripe, which is all you need to do. You will need to look around for a way out."
+the poison stripe is boringscen in Same Mesa. description of poison stripe is "You can't really see it, but you can FEEL it.". bore-text is "You can really only sense the poison stripe, which is all you need to do. You will need to look around for a way out."
 
 chapter cler-scen
 
@@ -11072,23 +11017,16 @@ the cler-scen is privately-named scenery in Same Mesa. "The scripture picturers,
 understand "cleric/circle" and "cleric circle" as cler-scen when player is in Same Mesa.
 
 check entering cler-scen:
-	if player is in Cleric Circle:
-		try going outside instead;
-	else:
-		try going inside instead;
+	if player is in Cleric Circle, try going outside instead;
+	try going inside instead;
 
 does the player mean doing something with rs:
-	if player is in Same Mesa:
-		it is likely;
+	if player is in Same Mesa, it is likely;
 	it is unlikely.
 
 chapter rs (private routes)
 
-rs are privately-named scenery in Same Mesa. understand "routes" as rs. printed name of rs is "routes". "Staring at them makes you lose your sense of direction even further."
-
-instead of doing something with rs:
-	if action is procedural, continue the action;
-	say "They're painful to think about for too long. They wind together and go off in the distance and loop around."
+rs are privately-named boringscen in Same Mesa. understand "routes" as rs. printed name of rs is "routes". "Staring at them makes you lose your sense of direction even further.". bore-text is "They're painful to think about for too long. They wind together and go off in the distance and loop around."
 
 chapter scripture picturers
 
@@ -11145,18 +11083,15 @@ to say aop:
 	say "[if Adobe Abode is not visited]PAST[else if Idle Deli is not visited]ACROSS[else]PAST or ACROSS[end if]";
 
 before entering the cler-scen:
-	if Cleric Circle is unvisited:
-		say "Its doors are open to all, but one does not enter it by brute forcing directions." instead;
-	otherwise:
-		say "You re-enter, no longer worried about the exact preposition for doing so.";
+	if Cleric Circle is unvisited, say "The Cleric Circle's doors are open to all, but one does not enter it by brute forcing directions." instead;
+	say "You re-enter, no longer worried about the exact preposition for doing so.";
 
 chapter dingy dwelling
 
 the dingy dwelling is auxiliary scenery in Same Mesa. "The lairage regalia announces its dwelling as Oscar's."
 
 check entering dingy dwelling:
-	if old giant is in Same Mesa:
-		try fliptoing lairage instead;
+	if Gast is in Same Mesa, try fliptoing lairage instead;
 	if Adobe Abode is unvisited:
 		now oscar-annoy is true;
 		say "You try going directly to Oscar's, but the place curves away from you." instead;
@@ -11173,10 +11108,9 @@ understand "oscar's/oscars/oscar" as the dingy dwelling.
 
 the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's[ast][r]."
 
-to say ast:
-	say "[if screenread is true] ** [end if]"
+to say ast: say "[if screenread is true] ** [end if]"
 
-instead of scaning dingy dwelling:
+check scaning dingy dwelling:
 	say "The lairage regalia gives a reading.";
 	try scaning lairage regalia instead;
 
@@ -11191,10 +11125,8 @@ chapter grubby restaurant
 the grubby restaurant is auxiliary scenery in Same Mesa. "It looks terribly plain. There's a signboard indicating whose it is."
 
 check entering grubby restaurant:
-	if Idle Deli is unvisited:
-		say "You try to do so, but the building shifts further away." instead;
-	if old giant is in Same Mesa:
-		try fliptoing signboard instead;
+	if Idle Deli is unvisited, say "You try to do so, but the building shifts further away." instead;
+	if Gast is in Same Mesa, try fliptoing signboard instead;
 	say "You walk back into Pat's Idle Deli more confidently the second time. The building does not shift.";
 	now player is in Idle Deli instead;
 
@@ -11228,51 +11160,43 @@ instead of entering adsorbing signboard:
 
 chapter bench
 
-the bench is reflexive scenery in Same Mesa. "[if old giant is in Same Mesa]The giant's on it, and he covers enough of it, you could only half squeeze in between him and the armrests[else if old giant is off-stage]It'd be a chore to sit on--it looks like it's a giant's. Probably because the words A GIANT'S are painted where you would sit. Maybe he'll come back[otherwise]The giant probably won't be around here any more[end if]."
+the anti sag sit a nag is reflexive scenery in Same Mesa. "[if Gast is in Same Mesa][Gast]'s on it, and [he-she] covers enough of it, you could only half squeeze in between [him-her] and the armrests[else if Gast is off-stage]It'd be a chore to sit on--it looks like it's a giant's. Probably because the words A GIANT'S are painted where you would sit. Maybe they will arrive[otherwise][Gast] probably won't be around here any more[end if].". printed name of anti sag sit a nag is "anti-sag sit-a-nag".
 
-check entering the bench:
-	say "[if old giant is moot]You don't need to fool with the bench any more.[else if old giant is visible]You don't quite have room. And you're not going to get the giant to scootch over.[otherwise]From the size, the bench seems to be [i]a giant's[r]. If he came along, he could sit on you pretty easily.[end if]" instead;
+check entering the anti sag sit a nag:
+	say "[if Gast is moot]You don't need to fool with the [sit a nag] any more.[else if Gast is in Same Mesa]You don't quite have room. And you're not going to get [Gast] to scootch over.[otherwise]From the size, the [sit a nag] seems to be [i]a giant's[r]. If [he-she] came along, [he-she] could sit on you pretty easily.[end if]" instead;
 
-after fliptoing bench:
-	now old giant has Rude 'N Nuder;
+after fliptoing [sit a nag]:
+	now Gast has Rude 'N Nuder;
 	continue the action;
 
-check taking bench:
-	say "The bench is too big." instead;
+check taking sit a nag: say "The [sit a nag] is too big." instead;
 
-a-text of bench is "YRYYRRR". b-text of bench is "GPYYPRR". parse-text of bench is "a[sp]g[sp]-[sp]-[sp]n[sp]x[sp]x".
+a-text of anti sag sit a nag is "YRYYRRR". b-text of anti sag sit a nag is "GPYYPRR". parse-text of anti sag sit a nag is "a[sp]g[sp]-[sp]-[sp]n[sp]x[sp]x".
 
-check taking bench:
-	say "The bench is way too big." instead;
-
-check scaning bench:
-	if old giant is off-stage:
-		continue the action;
-	if bench is reflexed:
+check scaning sit a nag:
+	if Gast is off-stage, continue the action;
+	if sit a nag is reflexed:
 		if bench-end is reflexive:
-			say "The settler blinks a bit during each lull in the giant's tirades.";
+			say "The settler blinks a bit during each lull in [Gast]'s tirades.";
 			try scaning bench-end instead;
 		if elbow is reflexive:
-			say "Nothing happens until his elbow gets in the way of your scanner.";
+			say "Nothing happens until [Gast]'s elbow gets in the way of your scanner.";
 			try scaning elbow instead;
 		if rude is visible:
-			say "Nothing happens until the giant starts waving Rude [']N Nuder in your face.";
+			say "Nothing happens until [Gast] starts waving Rude [']N Nuder in your face.";
 			try scaning rude instead;
-	if old giant is moot:
-		say "There's no more magic in the bench. Nothing more to do." instead;
+	if Gast is moot, say "There's no more magic in the [sit a nag]. Nothing more to do." instead;
 
 section bench-end
 
-the bench-end is part of the bench. understand "end" as bench-end. description of bench-end is "Thick enough to sit on, with not too much pain, if you found the right way.". the bench-end is reflexive.
+the bench-end is part of the anti-sag sit-a-nag. understand "end" as bench-end. description of bench-end is "Thick enough to sit on, with not too much pain, if you found the right way.". the bench-end is reflexive.
 
 a-text of bench-end is "YRRRYRY". b-text of bench-end is "YRRRYRY". parse-text of bench-end is "-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-check taking bench-end:
-	say "The bench is too well made." instead;
+check taking bench-end: say "The [sit a nag] is too well made." instead;
 
 check fliptoing bench-end:
-	if old giant is not visible:
-		say "[if bench-end is reflexed]Nobody or nothing else big enough to get astride of[else]Not quite the right way to position yourself, yet[end if]." instead
+	if Gast is not in same mesa, say "[if bench-end is reflexed]Nobody or nothing else big enough to get astride of[else]Not quite the right way to position yourself, yet[end if]." instead;
 
 chapter Rude N Nuder
 
@@ -11282,7 +11206,7 @@ description of Rude 'N Nuder is "You aren't able to see the inside, and that's p
 
 instead of doing something to Rude 'N Nuder:
 	if action is procedural, continue the action;
-	if old giant has Rude 'N Nuder:
+	if Gast has Rude 'N Nuder:
 		say "You can't do much with Rude 'N Nuder until you have it." instead;
 	say "You don't need to do anything special with Rude [']N Nuder. Well, maybe apart from the special stuff you've been doing so far this game." instead;
 
@@ -11293,7 +11217,7 @@ check fliptoing Rude 'N Nuder:
 		say "You're already below, but if you were close enough to listen, that could work." instead;
 
 after fliptoing U NERD ENDUR REDUN:
-	moot grouchy old giant;
+	moot Gast;
 	continue the action;
 
 does the player mean doing something with Rude 'N Nuder when Nuder is visible:
@@ -11319,8 +11243,7 @@ chapter worst ad
 the worst ad is LLPish vanishing scenery in Same Mesa. "Dang it, a giant ad for RADWOST, and it's all in red, but it's too lousy to determine what RADWOST is about. Maybe if you point your settler at it, you can pick it up. You're not sure how best to approach it, with all these twisty roads. You're not sure if you need to, really."
 
 to say go-worst:
-	if worst ad is prefigured:
-		say "--the one you tried to go TOWARDS with the giant around";
+	if worst ad is prefigured, say "--the one you tried to go TOWARDS with [Gast] around";
 
 a-text of worst ad is "RYRYRRR". b-text of worst ad is "RGRYRRR". parse-text of worst ad is "x[sp]o[sp]x[sp]a[sp]x[sp]x[sp]x".
 
@@ -18656,8 +18579,7 @@ before scaning a clue-used thing:
 	say "You read what the settler says--and you realize you already took care of something else like [the noun]." instead;
 
 before scaning a reflexed thing:
-	if noun is not dialer and noun is not bench:
-		say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
+	if noun is not dialer and noun is not sit a nag, say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
 
 check opening prison ropins:
 	if Dr Yow is in prison ropins:
@@ -23880,7 +23802,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is moot, decide no;
 	if hintcand is useless, decide no;
 	if hintcand is the location, decide no;
-	if hintcand is old giant and mrlp is routes, decide yes; [he is known-about before he comes on stage officially]
+	if hintcand is Gast and mrlp is routes, decide yes; [Gast is known-about before he comes on stage officially]
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?] [this and below is for backdrops. I don't have a better way to do things.]
 		if player is in Largely All-Grey Gallery or player is in Dusty Study:
 			decide yes;
@@ -24140,8 +24062,8 @@ to say dio-part:
 to say yak-worry:
 	say "You don't need to worry about the yak for a long time[if Leo is not visible]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Phat Path is not visited]. You need to go north of the gyre and the maze, first[end if]"
 
-check objhinting old giant:
-	if bench is reflexive, try objhinting bench instead;
+check objhinting Gast:
+	if sit a nag is reflexive, try objhinting sit a nag instead;
 	if bench-end is reflexive, try objhinting bench-end instead;
 	if elbow is reflexive, try objhinting elbow instead;
 	if Rude 'N Nuder is visible, try objhinting Rude 'N Nuder instead;
@@ -24216,9 +24138,9 @@ praise	"[by-rivets]."
 rivets	"[by-rivets]."
 ME ARTS	"The ME ARTS inspired you enough, [if lobster is moot]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
-bench	"You got the giant to the bench. Now you need to deal with the giant."
-bench-end	"You positioned yourself well to duck the giant and put up with his elbow. Try something else."
-giant's elbow	"You ducked the giant's elbow successfully. Now about that book..."
+sit a nag	"You got [Gast] to the [sit a nag]. Now you need to deal with [Gast]."
+bench-end	"You positioned yourself well to duck [Gast] and put up with [his-her] elbow. Try something else."
+Gast's elbow	"You ducked [Gast]'s elbow successfully. Now about that book..."
 seed pit	"You got what you needed from the seed pit."
 hurt hog	"[fill-in-here]" [end ROUTES]
 dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if Marines Seminar Remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]." [start PRESTO]

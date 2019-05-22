@@ -510,11 +510,11 @@ Hmm, a list of stuff on the wall. Maybe the stuff is in the other locations.
 
 > EXIT
 
-If you examine the bench, it's a giant's.
+If you examine the anti-sag sit-a-nag, it's a giant's. That wraps up what the anagram letters should be.
 
 > AGAINST
 
-Climb up on the bench armrest and hear his tirades.
+Climb up and hear the giant's tirades.
 
 > ASTRIDE
 

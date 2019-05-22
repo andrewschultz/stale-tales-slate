@@ -52,12 +52,12 @@ worst ad	worst ad	false	490212044	--	"towards"	"towards"	"You walk towards the a
 picturers	picturers	false	404002364	Cleric Circle	"inside"	"inside"	"The structure resigns ingress."
 lairage regalia	lairage regalia	false	373417715	Adobe Abode	"across"	"across"	"You walk across, not worrying about what is in front of you. Oscar's appears in front of you. You walk in."
 adsorbing signboard	adsorbing signboard	false	283037761	Idle Deli	"past"	"past"	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."
-bench-end	bench-end	false	480723649	--	"astride"	"astride"	"You sit right on the end of the bench, prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!' he wants his space. He shakes his arms, but you sense he would like to swing them--and he can't, without his elbow hitting you."
+bench-end	bench-end	false	480723649	--	"astride"	"astride"	"You sit right on the end of the [sit a nag], prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!' he wants his space. He shakes his arms, but you sense he would like to swing them--and he can't, without his elbow hitting you."
 elbow	Rude 'N Nuder	false	382326203	--	"below"	"below"	"You watch how the giant swings his elbows as he rants and when. There's a pattern and timing--disappointingly simple--maybe a few words he overemphasizes. He's able to get it all out, and he's kind of exhausted now. He pulls out a book labeled Rude [']N Nuder and proceeds to babble about how this is what Yorpwald is reduced to these days."
-bench	old giant	false	350259676	--	"against"	"against"	"Quakes squeak as the giant approaches, and you back off, because he is a lot bigger than you. He sits down and begins some angst-ail, which segues into tirades. 'Tantrums! Must rant!' The buggin['] biggun wants you to listen."
+sit a nag	Gast	false	350259676	--	"against"	"against"	"Quakes squeak as the giant approaches, and you back off, because he is a lot bigger than you. He sits down and begins some angst-ail, which segues into tirades. 'Tantrums! Must rant!' The buggin['] biggun wants you to listen."
 pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
-Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
+Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the [sit a nag]. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
 MORF FORM	the-b	false	250266429	--	"from"	"from"	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
 darkness	darkness	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan, and because you're below ground, you fear no sunlit insult. The marsh doesn't exactly start glowing, but you can notice things better. The sheol holes in particular. You can't find a road, but maybe an un-road. You're not sure which way to go, though. Compass directions are still out."
@@ -439,19 +439,19 @@ after fliptoing satchel (this is the give you tons of stuff if Gunter was by rul
 	continue the action;
 
 check fliptoing disk:
-	if yak is on skid:
-		say "The yak doesn't need that sort of shock." instead;
-	if location of player is not shack:
-		say "Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.";
+	if yak is on skid, say "The yak doesn't need that sort of shock." instead;
+	if location of player is not shack, say "Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.";
 
 after fliptoing towers-x:
 	now ivy tower is in Strip of Profits;
 	now ivory tower is in Strip of Profits;
 	continue the action;
 
-check fliptoing bench:
-	if old giant is not visible:
-		say "You get astride the bench for a while, but it's pointless with nobody around." instead;
+check fliptoing sit a nag:
+	if Gast is not in Same Mesa:
+		say "You get astride the [sit a nag] for a while, but it's pointless with nobody around.";
+		preef sit a nag;
+	the rule succeeds;
 
 purse-stolen is a truth state that varies.
 
@@ -494,14 +494,13 @@ to say spike-scrap:
 		now spikes is true;
 	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
 
-check fliptoing old giant:
+check fliptoing Gast:
 	if list o toils is unexamined:
-		say "You hear a giant's footsteps and hide under the bench in fear. He can't see anyone and thus runs off, complaining how he has nobody to complain to. Maybe if you had a reason to talk to him, or a purpose here, you might listen a bit better. [if Cleric Circle is not visited]Maybe if you could find a way inside that church[else]Perhaps you could find something to do from Brother Horbert[end if].";
-		preef bench instead;
-	if old giant is off-stage:
+		say "You hear loud footsteps and hide under the [sit a nag] in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. [if Cleric Circle is not visited]Maybe if you could find a way inside that church[else]Perhaps you could find something to do from Brother Horbert[end if].";
+		preef sit a nag instead;
+	if Gast is off-stage:
 		say "You hear a giant's footsteps in the distance--but your talk with Brother Horbert has helped you be fearless.";
-	if U NERD ENDUR REDUN is not off-stage:
-		say "You don't need or want another round of that." instead;
+	if U NERD ENDUR REDUN is not off-stage, say "You don't need or want another round of that." instead;
 
 to say xtra-help:
 	if lager is in Boredom Bedroom and divorces is in Upscale Capsule:
@@ -953,8 +952,8 @@ worst ad	"The ad seems slightly nearer, for a moment."
 scripture picturers	"You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that."
 lairage regalia	"You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close."
 adsorbing signboard	"You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you."
-bench	"You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should."
-bench-end	"Oof! You fail to jump on the bench end. Try mixing things up from what you just did."
+sit a nag	"You hang around the [sit a nag], hoping for something to happen, but nothing happens. Though it seems like it should."
+bench-end	"Oof! You fail to jump on the bench-end. Try mixing things up from what you just did."
 giant's elbow	"[if bench-end is reflexive]You're nowhere close to the giant's elbow[else]You seem like you should be able to avoid the elbow, but you may need to mix things up a bit[end if]."
 MORF FORM	"The MORF-FORM rocks in the air, as if it's about to fall."
 pipe soot	"The soot smells a bit stronger than before for a moment."
@@ -1313,10 +1312,10 @@ nestor	"You rescued him, and that's enough."
 scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
-old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is moot]You had your conversation for the day[else][bug-report][end if]."
-bench	"[if old giant is moot][giant-over][else]You leaned on the bench right. Time to get on it[end if]."
-bench-end	"[if old giant is moot][giant-over][else if nuder is in Same Mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the bench right. Time to start ducking[end if]."
-giant's elbow	"[if old giant is moot][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
+Gast	"[if Gast is in Same Mesa]It wouldn't be wise to argue against [Gast][else if Gast is moot]You had your vigorous conversation for the day[else][bug-report][end if]."
+sit a nag	"[if Gast is moot][giant-over][else]You leaned on the [sit a nag] right. Time to get on it[end if]."
+bench-end	"[if Gast is moot][giant-over][else if nuder is in Same Mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the [sit a nag] right. Time to start ducking[end if]."
+giant's elbow	"[if Gast is moot][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
@@ -1409,7 +1408,7 @@ to say got-e: say "You've got an entry. No need to seal it up"
 
 to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
 
-to say giant-over: say "The bench isn't important with the giant gone"
+to say giant-over: say "The [sit a nag] isn't important with the giant gone"
 
 to say no-rehash: say "[if leo is in Dirge Ridge]They're already off getting to know each other better[else]That'd be an awkward rehash. You need another way to say good-bye[end if]"
 
@@ -1515,7 +1514,7 @@ pamphlets	"They are completely useless for actual life lessons, but the settler 
 Ian	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't work here.[plus][or]Ian's pamphlet is a hint.[plus][or]TEDIOUS + I USED TO will give you a lot of clues. Studio E will give a clincher.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
 lecturer	--	Ian	[end stores hinting]
 poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[plus][or][if cur-score of routes > 0]You've already figured one word[else]It's a certain sort of word[end if].[plus][or]Directions are confusing here, and standard ones don't work, but there's another way to get around.[plus][or]PREPOSITIONS.[minus][cycling]"
-bench	"[one of]The bench-end indicates the bench is A GIANT'S. You probably can't touch it wrong.[plus][or]Touching the bench does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
+sit a nag	"[one of]It's just a bench, but the name brand indicates an anagram.[plus][or]Touching the [sit a nag] does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
 scripture picturers	"[one of]Going in to the church is not so easy. Simply saying IN isn't churchy enough.[plus][or]You need to be a little more flowery to enter the church. Is there any clue?[plus][or]DIE SIN becomes something new.[plus][or]You can kick the sign to change it to SIN DIE for another clue.[plus][or]INSIDE.[minus][cycling]"	--	"INSIDE"
 cler-scen	--	scripture picturers
 Brother Horbert	"He'll mix the reagents once you get them."
@@ -1528,11 +1527,11 @@ adsorbing signboard	"[one of]You can't walk into Pat's as normal. It moves, and 
 grubby restaurant	--	adsorbing signboard
 lairage regalia	"[one of]You can't walk into Oscar's as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to Oscar's?[plus][or]Not down to enter Oscar's--perpendicular.[plus][or]ACROSS.[minus][cycling]"	--	"ACROSS"
 dingy dwelling	--	lairage regalia
-grouchy old giant	"[if old giant is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if old giant is moot]You're done with him[else]BUG. You should be directed to the bench or bench part you need to figure, now[end if]."
-bench-end	"[one of]The giant seems to want you to listen to his tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
+Gast	"[if Gast is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if Gast is moot]You're done with [Gast][else]BUG. You should be directed to the [sit a nag] or relevant part you need to figure, now[end if]."
+bench-end	"[one of][Gast] seems to want you to listen to [his-her] tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
 tirades	--	bench-end
-giant's elbow	"[if elbow is reflexive][one of]Having trouble ducking the giant's elbow there, eh?[plus][or]The giant swings his elbow sort of high...[plus][or]...so you should be BELOW it.[minus][cycling][else]You dealt with the giant's elbow.[end if]"	--	"BELOW"
-Rude 'N Nuder	"[one of]The contents of Rude [']N Nuder are probably worse than the giant's ranting. But again, you need to avoid his flailing entirely. You need to duck something that's over.[or]On cheat mode, Rude [']N Nuder scans oddly and gives you the solution.[plus][or]You need to go UNDER.[cycling]"	--	"UNDER"
+Gast's elbow	"[if gast's elbow is reflexive][one of]Having trouble ducking [Gast]'s elbow there, eh?[plus][or][Gast] swings [his-her] elbow sort of high...[plus][or]...so you should be BELOW it.[minus][cycling][else]You dealt with [Gast]'s elbow.[end if]"	--	"BELOW"
+Rude 'N Nuder	"[one of]The contents of Rude [']N Nuder are probably worse than [Gast] ranting. But again, you need to avoid [his-her] flailing entirely. You need to duck something that's over.[or]On cheat mode, Rude [']N Nuder scans oddly and gives you the solution.[plus][or]You need to go UNDER.[cycling]"	--	"UNDER"
 Oscar	"Oscar has little to say, [if U NERD ENDUR REDUN is in Adobe Abode]but the pipe soot is something you may need[else]and you got the pipe soot[end if]."
 Pat	"Pat has little to say, other than to discourage you from the seed pit, [if seed pit is reflexed]but you got through there[else]so you need to enter it despite Pat's objections[end if]."
 U NERD ENDUR REDUN	"U NERD ENDUR REDUN is part of the spiers['] potion that will help let people see directions again[if Cleric Circle is unvisited]. But you need to get into the Cleric Circle first[end if]."
