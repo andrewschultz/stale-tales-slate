@@ -1261,6 +1261,7 @@ carry out gotoing:
 					say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug. Let me know about it at [email]." instead;
 	if noun is shunned:
+		if noun is Rascal Craals, say "The Rascal Craals are inaccessible. You don't need or want to hang out there, though." instead;
 		if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
 		if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
 		say "[noun] is off-limits. I should have a better explanation why, so please let me know at [email]." instead;
@@ -2621,6 +2622,7 @@ jukebox	"Complicated instructions for, of all things, how to turn off the tunes 
 scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
 span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
+Templar Ramplet	"Someone named LAMPERT (written in red) constructed the templar ramplet."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more[of]a refresher on[stopping] information, if you read again."
@@ -4397,7 +4399,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if crate are in Lapsin' Plains and crate is reflexive:
 				now noun is crate;
 				continue the action;
-			else if c2 is reflexive:
+			else if c2 is in Lapsin' Plains:
 				now noun is c2;
 				continue the action;
 			else if bogus-plains are reflexive:
@@ -6156,7 +6158,8 @@ Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in Achers' Arches], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
-Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
+End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
+Tenfold Teflon'd Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is visited] back[end if] north[if unripe ur-pine is visible], and the ur-pine's in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
@@ -9551,8 +9554,7 @@ to show-bluables:
 		continue the action;
 	let QQ be number of bluable things;
 	let QQQ be nothing;
-	if QQ is 1:
-		now QQQ is a random bluable thing;
+	if QQ is 1, now QQQ is a random bluable thing;
 	if set-sw is false:
 		now set-sw is true;
 		if the player's command does not include "ss":
@@ -14943,7 +14945,7 @@ instead of doing something with patrons:
 		continue the action;
 	say "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if]."
 
-the tips pits are reflexive plural-named boringscen in Posh Hops Shop. "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
+the tips pits are reflexive plural-named boringscen in Posh Hops Shop. description is "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
 
 this is the bore-pits rule:
 	if current action is taking:
@@ -15694,22 +15696,17 @@ some scary crays are plural-named terse people in Fighter Freight. "Scary crays 
 
 understand "scary/ cray" as crays.
 
-the pale plea is vanishing scenery in Fighter Freight. "[one of]'A... [']elp!'[or]'Pal! Pal! Ee!'[in random order]".
+the pale plea is vanishing boringscen in Fighter Freight. description of pale plea is "[one of]'A... [']elp!'[or]'Pal! Pal! Ee!'[in random order]". bore-text of pale plea is "You can't do much besides LISTEN to the plea.".
 
 a-text of pale plea is "RYYR". b-text of pale plea is "RYYR". parse-text of pale is "x[sp]-[sp]-[sp]x". pale plea is cheat-spoilable.
 
 scray-scan is a truth state that varies.
 
 check scaning when player is in Fighter Freight:
-	if scray-scan is true:
-		say "You already scanned around here. You saw RYYR, probably from the pale plea." instead;
+	if scray-scan is true, say "You already scanned around here. You saw RYYR, probably from the pale plea." instead;
 	say "The crays are till slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.";
 	now scray-scan is true;
 	if noun is not plea, try scaning plea instead;
-
-instead of doing something with pale plea:
-	if action is procedural, continue the action;
-	say "You can't do much besides listen to the plea." instead;
 
 chapter leaping
 
@@ -15985,6 +15982,7 @@ every turn (this is the track haunter rule):
 				moot thin hint;
 				move shoer osher to Anger Range;
 				move player to Horned Hedron;
+				now Rascal Craals is shunned;
 				reg-inc;
 				the rule succeeds;
 		else if haunter is visible:
@@ -16167,6 +16165,11 @@ the paler pearl is an undesc. description is "It's a nice pearl but too small to
 
 the general gleaner is a reflexive thing. description is "[if gleaner is reflexed]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][otherwise]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
 
+after examining gleaner when player is in end den and gleaner is reflexed:
+	say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
+	move player to Tenfold Teflon'd Den Loft;
+	continue the action;
+
 after printing the name of the general gleaner while taking inventory:
 	say " ([if gleaner is reflexed]enlarged[else]neat but small[end if])";
 	continue the action;
@@ -16259,7 +16262,7 @@ after fliptoing ruby:
 	moot sandier sardine;
 	continue the action;
 
-some bubble wrap is a flippable thing. indefinite article of bubble wrap is "some". understand "bubbles" as bubble wrap.
+some bubble wrap is a singular-named flippable thing. indefinite article of bubble wrap is "some". understand "bubbles" as bubble wrap.
 
 a-text of wrap is "RYRR". b-text of wrap is "PYRP". parse-text of wrap is "w[sp]a[sp]r[sp]p". wrap is parse-spoilable.
 
@@ -16358,7 +16361,7 @@ after looking in Plasm Lamps:
 	it-him-her the ant;
 	continue the action;
 
-the natant ant is a flippable animal. "An oddly colored ant is here! It is swimming about in the plasm on the floor, making it a natant ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are moot]. But maybe you can show something for style points, first[end if]."
+the natant ant is a flippable animal in Plasm Lamps. "Attn: an ant! It is swimming about in the plasm on the floor, making it a NATANT ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are moot]. But maybe you can show something for style points, first[end if]."
 
 check taking natant ant: say "The action for dealing with the ant is even shorter and easier than TAKE. But not GET." instead;
 
@@ -16380,13 +16383,12 @@ rule for supplying a missing noun when taning:
 does the player mean taning the natant ant: it is very likely;
 
 carry out taning:
-	if noun is not natant ant:
-		try attacking noun instead;
+	if noun is not natant ant, try attacking noun instead;
 	say "Whack! Pow! 'Scum ant! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!";
 	if bogus-lamps are not moot:
-		say "[line break]And yet... you feel you missed a style point. Perhaps a display before thwacking the ant.";
+		say "[line break]And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.";
 		poss-d;
-	min-and;
+	reg-inc; [this is an optional point, but it was already predestined by you entering]
 	moot ant;
 	moot lance;
 	now Plasm Lamps is shunned;
@@ -16395,6 +16397,8 @@ carry out taning:
 book Den Loft
 
 Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do[if yapper is not in Tenfold Teflon'd Den Loft], then a lever to pull[end if]."
+
+understand "loft den" as Tenfold Teflon'd Den Loft.
 
 lev-pull is a truth state that varies.
 
@@ -16410,7 +16414,7 @@ check going outside in Tenfold Teflon'd Den Loft:
 
 the papery yapper is a vanishing neuter person in Tenfold Teflon'd Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
 
-after looking in Tenfold Teflon'd Den Loft:
+after printing the locale description when player is in Tenfold Teflon'd Den Loft:
 	if yapper is in Tenfold Teflon'd Den Loft, it-him-her yapper;
 	if yapper is moot and wipes are moot and templar ramplet is off-stage:
 		move templar ramplet to Tenfold Teflon'd Den Loft;
@@ -16434,13 +16438,6 @@ check giving the gleaner to the papery yapper:
 
 check giving something to the papery yapper:
 	say "'Bribe? Sigh. Gibberish. Maybe we could reclassify the donation with creative financing[if noun is not gleaner], and make it a better donation, too[end if].' You're not sure if he rolled his eyes." instead;
-
-after printing the locale description for Den Loft when Den Loft is unvisited:
-	if player has lance:
-		say "The yapper, seeing your lance, flees! Shortly after, some static from the dialer causes the lance to shatter, but it did its job. Perhaps you didn't need to be so threatening, but hey, you're in.";
-		min-up;
-		poss-d;
-		moot yapper;
 
 the dialer is reflexive scenery in Tenfold Teflon'd Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. [if pins are reflexive and pins are in Tenfold Teflon'd Den Loft]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
 
@@ -16566,7 +16563,7 @@ carry out trampleing:
 	if noun is not templar ramplet, say "Wrong thing to trample." instead;
 	if wipes are not moot, say "You should've cleaned the lance before seeing the ramplet. That you don't is a BUG. I don't know what to do, but it's not story-critical. Sorry." instead;
 	say "You make a big show of walking noisily down the templar ramplet. It works! You tumble out in...";
-	min-up;
+	min-and;
 	min-up; [you will get another point for TANing the ant]
 	move player to Plasm Lamps;
 	moot templar ramplet;
@@ -16642,8 +16639,7 @@ carry out tending:
 		say "You're not sure how to tend that." instead;
 	if dent-tend is false:
 		say "You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and the drawer is in perfect order again. Aunt Tuna is pleased, and Tortu is impressed.";
-		reg-inc;
-		min-up;
+		min-and;
 		now dent-tend is true;
 		moot dent;
 	the rule succeeds;
@@ -16680,11 +16676,9 @@ understand the command "clean" as something new.
 
 understand "clean [something]" as cleaning.
 
-does the player mean cleaning the lance:
-	it is very likely.
+does the player mean cleaning the lance: it is very likely.
 
-does the player mean cleaning the player when player does not have lance:
-	it is very likely;
+does the player mean cleaning the player when player does not have lance: it is very likely;
 
 carry out cleaning:
 	if noun is the player, say "You are morally and physically okay." instead;
@@ -16700,10 +16694,8 @@ carry out cleaning:
 	now player has lance;
 	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry.";
 	moot wipes;
-	if player is in Den Loft and papery yapper is moot:
-		say "And what is this? You notice a templar ramplet, now you're not distracted by the papery yapper. It may lead to further adventure! Maybe not as important as dealing with the den loft, but hey, it might be fun.";
-		move templar ramplet to Tenfold Teflon'd Den Loft;
-	min-and instead;
+	min-and;
+	the rule succeeds; [since you can't pick up the lance before cleaning it, no need to test tricky cases like cleaning the lance in Tenfold]
 
 book Lapsin' Plains
 
@@ -16754,7 +16746,7 @@ the skis are a plural-named flippable thing in Lapsin' Plains. the skis are fixe
 a-text of skis is "RYRR". b-text of skis is "RYRP". parse-text of skis is "x[sp]i[sp]x[sp]s". skis is cheat-spoilable.
 
 check fliptoing skis:
-	if c2 is reflexive:
+	if c2 is in Lapsin' Plains:
 		say "[one of]As you reach to kiss the skis, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
 		preef skis;
 		now bonkies is true;
@@ -16883,7 +16875,7 @@ carry out bonking:
 check fliptoing knob:
 	if knob is reflexed:
 		say "That might undo what you did[if bonkies is true], and it might get you another knock on the noggin anyway[end if]." instead;
-	if c2 is reflexive:
+	if c2 is in Lapsin' Plains:
 		say "[one of]As you reach to smack the knob, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
 		preef knob;
 		now bonkies is true instead;
@@ -17167,8 +17159,7 @@ book Horned Hedron
 
 Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here. [if ol' trap is in Horned Hedron]An ol['] trap blocks passage to[else]A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west."
 
-check going west when player is in Horned Hedron:
-	if haunter is moot, say "Collapsed old places are that way. No need to go back." instead;
+check going west when player is in Horned Hedron: if haunter is moot, say "Collapsed old places are that way. No need to go back." instead;
 
 thug-tell is a truth state that varies.
 
@@ -17231,7 +17222,9 @@ check entering ol' trap: say "It's an obvious ol['] trap but likely an effective
 
 the pol art portal is auxiliary scenery. description of pol art portal is "Despite the pol(itical) art on it prpoagandizing Elvira smashing her opponents, including a grossly inaccurate caricature of you, it looks safe. It doesn't crackle or anything. The only question is where it leads."
 
-check going north in Horned Hedron: try entering pol art portal instead;
+check going north in Horned Hedron:
+	if pol art portal is in Horned Hedron, try entering pol art portal instead;
+	say "No. You might set off an ol['] trap. Look around for a way to disarm it." instead;
 
 check entering pol art portal:
 	if ruby is not moot:
@@ -17239,7 +17232,8 @@ check entering pol art portal:
 	if walleyes are in Horned Hedron:
 		say "Not with those walleyes waiting and watching." instead;
 	if find-base is true:
-		say "You make your way [if Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking.";
+		say "You make your way [if Tenfold Teflon'd Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking.";
+		move player to Tenfold Teflon'd Den Loft instead;
 	else:
 		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.[paragraph break]";
 		move player to End Den instead;
@@ -19540,7 +19534,6 @@ this is the detour-check rule:
 		if lost lots is not visited or finger fringe is not visited, say "You work through the Dourest Detours much more easily this time.";
 		continue the action;
 	say "Oh no! You get distracted and lost while going down a few side paths. You wind up in...";
-	min-up;
 	min-up;
 	move player to dourest detours;
 	the rule succeeds;
@@ -22103,7 +22096,7 @@ instead of doing something with a border arbored:
 
 chapter augural arugula
 
-some augural arugula is an edible thing. description of arugula is "It's not enough for a luau. Arg."
+some augural arugula is a singular-named edible thing. description of arugula is "It's not enough for a luau. Arg."
 
 check eating arugula:
 	say "Not very tasty, but your vision seems clearer. 'La! A guru!' you think to yourself. You can now GURU what you are curious about.";
@@ -23119,7 +23112,7 @@ the pineapple is a fruit.
 
 chapter raspberry
 
-Some pryer bars are a thing in Filed Field. description is "They're not quite crowbars. They have drupelets on them.". "Some pryer bars sit here, and it'd be nice to put them to a less distasteful use than to break into places."
+Some pryer bars are a plural-named thing in Filed Field. description is "They're not quite crowbars. They have drupelets on them.". "Some pryer bars sit here, and it'd be nice to put them to a less distasteful use than to break into places."
 
 check touching pryer bars:
 	say "They feel like spry rebar." instead;
@@ -24853,7 +24846,7 @@ this is the oyster-alt rule:
 	say "[eqls]OYSTER[line break]";
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
 	if olde lode is visited:
-		say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop patrons. You needed 3 of 5.";
+		say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop patrons, though the game restricted you to three of five.";
 	else:
 		say "[2da]You won't be able to use all actions to leave the shop.";
 	if anger range is unvisited:
@@ -25037,8 +25030,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to SWEAT to remove the waste.";
 		else if lance is not cleaned:
 			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
-		else if Plasm Lamps is visited and ant is not moot:
-			say "[2dmiss of myreg]you could've tried to TAN the ant.";
+		else if Plasm Lamps is visited and bogus-lamps are not moot:
+			say "[2dmiss of myreg]you could've tried to PSALM in Plasm Lamps.";
 		else if ant is not moot:
 			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Plasm Lamps.";
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";

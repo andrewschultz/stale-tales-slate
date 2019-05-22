@@ -559,15 +559,16 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "plasm"	297816735	Plasm Lamps	--	--	"You already managed to PSALM." [PLASM LAMPS]
-"plam"	201542769	Plasm Lamps	--	--	"[locname]."
+"plam"	201542769	Plasm Lamps	--	--	"[if bogus-lamps are moot]You did enough[else]Maybe riff on ALL the lamps. But only for fun[end if]."
 "ant"	174205344	Plasm Lamps	--	--	"That's close. Something brutal and direct."
-"tenfold"	475534036	tenfold	--	--	"[locname]." [DEN LOFT]
+"tenfold"	475534036	tenfold	--	--	"[locname]." [TENFOLD TEFLON'D DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."
 "den"	217742706	tenfold	--	--	"[locname-part]."
 "jumble"	418180338	Tenfold Teflon'd Den Loft	--	--	"It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in Tenfold Teflon'd Den Loft]. Well, once the yapper's out of the way[end if]."
 "stupid"	451977685	--	yapper	--	"[its-msg]."
 "papre"	378249648	--	yapper	--	"[its-msg]."
 "necklace"	471465731	--	yapper	--	"[its-msg]."
+"trample"	517782699	--	Templar Ramplet	--	"That's not how to charge across the Templar Ramplet."
 "intercom"	587573599	--	intercom	--	"[i-com]."
 "not"	246370103	--	intercom	--	"Changing the intercom to a ton-crime intercom would be the opposite of what you want to do."
 "crime"	341203496	--	intercom	--	"[i-com]." [end-y]
