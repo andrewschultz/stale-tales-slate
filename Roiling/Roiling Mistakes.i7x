@@ -890,8 +890,6 @@ understand "spicer" as a mistake ("You don't need to summon someone who deals in
 
 chapter Filed Field
 
-understand "banana" as a mistake ("Hm, that's the fruit you want, but which letter to grab? And how?") when an-a is in Scape Space and player is in Scape Space.
-
 understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in Scape Space], and you don't know if you want him taking that storage box with him[end if].") when player is in Scape Space and greedy-person is Art Erd
 
 understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is in Filed Field.

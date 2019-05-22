@@ -4733,7 +4733,7 @@ medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could g
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 pugnacious plant	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
-an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
+a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 noon gag [below here you get a generic response]
 angriest ingrates
@@ -4994,7 +4994,7 @@ field-hintables is a list of things variable. field-hintables is { pryer bars, p
 
 clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, l-o-p, lemons, auction caution, nectarine }.
 
-scapespace-hintables is a list of things variable. scapespace-hintables is { an-a, orange, pugnacious plant, inapt paint }
+scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', orange, pugnacious plant, inapt paint }
 
 to hintlistproc (j - a list of things):
 	repeat with hobj running through j:
@@ -9641,7 +9641,7 @@ atblock	"an aura of tentativeness about [ag-first]" [towers]
 agnostic	"[ag-first]"
 Merle	"Elmer and Merle" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
-an-a	"the A you can maybe grab somehow"
+a banna'	"the/a banna[']"
 perp-priv	"the words 'PERP' forming outside the Valence Enclave"
 coins	"Curtis's coins"
 icons	"the icons you made"
@@ -23167,7 +23167,7 @@ The basket of blackberries is a fruit. description is "It's from Bickerers['] La
 
 book Scape Space
 
-Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if inapt paint is in Scape Space]. You notice inapt paint on another wall, too[end if]."
+Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if a banna' is in Scape Space]. A banna['] takes up one part of the wall[end if][if inapt paint is in Scape Space]. You notice inapt paint on another wall, too[end if]."
 
 chapter warding drawing
 
@@ -23193,15 +23193,9 @@ the guava is a fruit.
 
 chapter banana/a
 
-an-a is a privately-named thing in Scape Space. printed name of the an-a is "An a". "An a is here, waiting for you to take it. Well, take it the right way.". description of an-a is "Greenish, then golden, then a nasty dark brown.". understand "the/an a" and "a" as an-a.
+a banna' is boringscen in Scape Space. description is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna'.
 
-check scaning an-a:
-	say "There should be only three letters, but you see more.";
-
-Instead of taking an-a:
-	say "You feel something ban you from taking an a. The a almost seems to say 'Na-Naa-B' as you take it.";
-
-a-text of an-a is "RYRYRY". b-text of an-a is "YGRYRY". parse-text of an-a is "x[sp]a[sp]x[sp]a[sp]n[sp]a". an-a is parse-spoilable.
+a-text of a banna' is "RYRYRY". b-text of a banna' is "R?RY??". parse-text of a banna' is "b[sp]-[sp]n[sp]a[sp]-[sp]-". a banna' is parse-spoilable.
 
 The small yellow banana is a fruit.
 
@@ -25144,7 +25138,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if quince is not moot, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
 		if nectarine is not moot, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
 		if orange is not moot, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [Scape Space]
-		if banana is not moot, say "[2drm of Scape Space]you could've tried to NAB AN A for a banana.";
+		if banana is not moot, say "[2drm of Scape Space]you could've tried to change a banna['] to a BANANA.";
 		if pugnacious plant is not moot, say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
 		if inapt paint is not moot, say "[2drm of Scape Space]you could've made the inapt paint ('DESERVER RESERVED') REVERSED.";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
