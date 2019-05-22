@@ -4382,8 +4382,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is stop post;
 				continue the action;
 		if player is in Drain Nadir:
-			if Eddie's Song is in Drain Nadir:
-				now noun is Eddie's Song;
+			if I'd Cede is in Drain Nadir:
+				now noun is I'd Cede;
 				continue the action;
 	else if mrlp is presto:
 		if player is in Dirge Ridge and leo is washed up:
@@ -4688,7 +4688,7 @@ thickness sketchins	true	false	false	false	"Those three sentences are certainly 
 ltb	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
-eddie's song	false	true	false	false	"You'd guess it's, well, the song 'I Ceded' that's causing the settler readings. Because when Eddie C. takes a break from singing, the settler's readings stay up."
+I'd Cede	false	true	false	false	"Perhaps if you just heard the instrumentals, the settler would not go crazy. But likely the combination of Eddie C. and [i]I'd Cede[r] is causing the weird behavior."
 praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
 marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
@@ -5278,7 +5278,7 @@ carry out troves-hinting:
 		try objhinting cellar door instead;
 	if player is in Drain Nadir:
 		if diapers are in Drain Nadir, try objhinting diapers instead;
-		try objhinting eddie's song instead;
+		try objhinting I'd Cede instead;
 	if player is in Boredom Bedroom:
 		if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
 			if lobster-first is true, try objhinting lobster instead;
@@ -6812,7 +6812,7 @@ check listening:
 		if bee's head is reflexive, say "A snore from the bee makes you see red.";
 	if player is in Loather Rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
-	if player is in Drain Nadir and Eddie's Song is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
+	if player is in Drain Nadir and I'd Cede is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
 	if player is in Econ Cone and praise spirea is reflexive, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
@@ -12149,9 +12149,10 @@ book Drain Nadir
 
 Drain Nadir is a room in Troves. "While you could escape physically, there's nowhere better to go in your current mental state. [if diapers are in Drain Nadir]You notice trappings of spiritual and material poverty: an Ires Pad, to help you emote RIGHT, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out[else]But you're getting better, you've half cleared the Drain Nadir of negative influences, and now Eddie C's song is playing. Perhaps listening could uplift you fully.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if]."
 
-after fliptoing eddie's song:
+after fliptoing diapers:
 	moot Ires Pad;
 	moot spider;
+	move I'd Cede to Drain Nadir;
 	continue the action;
 
 chapter adeiprs
@@ -12173,11 +12174,11 @@ a spider is scenery in Drain Nadir. "You're don't know whether to crush it or ev
 
 a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of a spider is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]r".
 
-section Eddie's Song
+section I'd Cede
 
-Eddie's song is reflexive boringscen. "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule.
+I'd Cede is reflexive boringscen. "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. I'd Cede is parse-spoilable.
 
-a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text of eddie's song is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
+a-text of I'd Cede is "RYRYRY". b-text of I'd Cede is "RYPYPG". parse-text of I'd Cede is "x[sp]e[sp]x[sp]i[sp]x[sp]e".
 
 this is the bore-id-cede rule:
 	if current action is examining:

@@ -273,9 +273,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "spider"	456891772	--	diapers	--	"The diapers, the Ires Pad--the spider only fits in as *a* spider."
 "ires"	354396724	Drain Nadir	--	--	"It's an ires PAD."
 "pad"	104682866	Drain Nadir	--	--	"It's an IRES pad."
-"song"	272133753	--	Eddie's song	--	"It's the song name--[i]I'd Cede[r]."
-"diapers"	459079590	--	Eddie's song	--	"Don't twist yourself into knots to/from REAL despair." [this relies on Eddie's Song replacing the diapers before you move on to the bedroom]
-"eddie"	342663242	--	Eddie's song	--	"It's the song name--[i]I'd Cede[r]."
+"song"	272133753	--	I'd Cede	--	"[id-cede-full]."
+"cede"	295646892	--	I'd Cede	--	"[id-cede-full]."
+"diapers"	459079590	--	I'd Cede	--	"Don't twist yourself into knots to/from REAL despair." [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
+"eddie"	342663242	--	I'd Cede	--	"[id-cede-full]."
 "bedroom"	465358213	Boredom Bedroom	--	--	"[locname]." [start Boredom Bedroom]
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
 "bowers"	510110133	--	Browse Bowers	--	"[locname]." [start Browse Bowers]
@@ -1196,15 +1197,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 book text details
 
-to say locname:
-	say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
+to say locname: say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
 this is the gunter-yet rule:
 	if player is in Dusty Study and gunter is off-stage, the rule succeeds;
 	the rule fails;
 
-to say locname-part:
-	say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
+to say locname-part: say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
 
 this is the Gunter-left rule:
 	if player is in Dusty Study and Gunter is moot, the rule succeeds;
@@ -1228,21 +1227,17 @@ this is the x-oped-m rule:
 	if dope op-ed is examined, the rule succeeds;
 	the rule fails;
 
-to say vs-oped:
-	say "You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh"
+to say vs-oped: say "You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh"
 
-to say the-books:
-	say "The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first"
+to say the-books: say "The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first"
 
-to say dark-palm:
-	say "[one of]You punch your fist as you realize DARK has no anagrams...right into the palm[or]Oh no, not again. Concentrate on the palm[stopping]"
+to say dark-palm: say "[one of]You punch your fist as you realize DARK has no anagrams...right into the palm[or]Oh no, not again. Concentrate on the palm[stopping]"
 
 this is the dark-study rule:
 	if player is in Dusty Study and study is dark, the rule succeeds;
 	the rule fails.
 
-to say g-pin:
-	say "It's more that it's a giant pin and not, like, a safety pin";
+to say g-pin: say "It's more that it's a giant pin and not, like, a safety pin";
 
 this is the basement-visible rule:
 	if player is in Dusty Study and t-b is not in Dusty Study, the rule succeeds;
@@ -1256,18 +1251,15 @@ this is the stable-visible rule:
 	if player is in Dusty Study and tables are not in Dusty Study, the rule succeeds;
 	the rule fails;
 
-to say curtain-block:
-	say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
+to say curtain-block: say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
 
-to say hisin:
-	say "The high sign is a clue. Bad idea to change it"
+to say hisin: say "The high sign is a clue. Bad idea to change it"
 
 this is the elmo-chat rule:
 	if qbc_litany is table of elmo comments, the rule succeeds;
 	the rule fails;
 
-to say w-twi:
-	say "The ads have probably gone through enough word-twisting"
+to say w-twi: say "The ads have probably gone through enough word-twisting"
 
 to say not-the-reg:	say "Trying to change the current region you're in all at once would be risky, or useless, or maybe both"
 
@@ -1306,20 +1298,15 @@ to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples a
 
 section routes nudges
 
-to say name-worry:
-	say "Perhaps it's better to focus on the proper names instead. Simpler, too";
+to say name-worry: say "Perhaps it's better to focus on the proper names instead. Simpler, too";
 
-to say picturer-change:
-	say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
+to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
-to say board-change:
-	say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
+to say board-change: say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
 
-to say follow-the-list:
-	say "Maybe you can use your powers to get what's on the list, but you don't need to use them on it";
+to say follow-the-list: say "Maybe you can use your powers to get what's on the list, but you don't need to use them on it";
 
-to say fol-reag:
-	say "[if player is in Cleric Circle][follow-the-list][else]Brother Horbert will do [i]his[r] magic on the reagents at the right time";
+to say fol-reag: say "[if player is in Cleric Circle][follow-the-list][else]Brother Horbert will do [i]his[r] magic on the reagents at the right time";
 
 this is the has-reag rule:
 	if list o toils is examined:
@@ -1327,46 +1314,34 @@ this is the has-reag rule:
 		if number of visible quest-items > 0, the rule succeeds;
 	the rule fails;
 
-to say cant-giant:
-	say "The giant is too old and set in his ways. You may just need to listen to him from [if nuder is in Same Mesa]one more angle[else]several different angles[end if]"
+to say cant-giant: say "The giant is too old and set in his ways. You may just need to listen to him from [if nuder is in Same Mesa]one more angle[else]several different angles[end if]"
 
-to say die-sin:
-	say "[if Cleric Circle is visited]The words themselves do nothing. You found the way in[else]Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined[end if]"
+to say die-sin: say "[if Cleric Circle is visited]The words themselves do nothing. You found the way in[else]Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined[end if]"
 
-to say mb-sign:
-	say "The sign wobbles slightly, though there isn't really any wind. Perhaps you could be more straightforward and PUSH it[if Cleric Circle is visited], though you've already been in the circle[end if]"
+to say mb-sign: say "The sign wobbles slightly, though there isn't really any wind. Perhaps you could be more straightforward and PUSH it[if Cleric Circle is visited], though you've already been in the circle[end if]"
 
-to say not-stripe:
-	say "The poison stripe is too incorporeal to do bend to your will"
+to say not-stripe: say "The poison stripe is too incorporeal to do bend to your will"
 
-to say pit-full:
-	say "[if mushrooms are off-stage]The whole seed pit[else]You already got the mushrooms[end if]"
+to say pit-full: say "[if mushrooms are off-stage]The whole seed pit[else]You already got the mushrooms[end if]"
 
-to say no-carv:
-	say "It's not the carvings that need changing[if mushrooms are not off-stage]. You got the mushrooms from the seed pit, and that's what's important[end if]"
+to say no-carv: say "It's not the carvings that need changing[if mushrooms are not off-stage]. You got the mushrooms from the seed pit, and that's what's important[end if]"
 
-to say chanty:
-	say "The chant doesn't change. Chants are good at that"
+to say chanty: say "The chant doesn't change. Chants are good at that"
 
-to say rev-sum:
-	say "That document is the stone truth! It doesn't need revisionism or embellishment"
+to say rev-sum: say "That document is the stone truth! It doesn't need revisionism or embellishment"
 
-to say no-poi:
-	say "The [if player is in Same Mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
+to say no-poi: say "The [if player is in Same Mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
 
 this is the first-two rule:
 	if player is in Same Mesa, the rule succeeds;
 	if brother horbert is visible, the rule succeeds;
 	the rule fails;
 
-to say ash-soot:
-	say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
+to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
 
-to say armad-unr:
-	say "They're too unruly and confused, and you probably need to get away from them, anyway"
+to say armad-unr: say "They're too unruly and confused, and you probably need to get away from them, anyway"
 
-to say horb-magic of (tt - a thing):
-	say "[if list o toils is examined]Brother Horbert will work his magic with that[else if player does not have tt]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[else]That seems curiously inert to your attempts[end if]";
+to say horb-magic of (tt - a thing): say "[if list o toils is examined]Brother Horbert will work his magic with that[else if player does not have tt]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[else]That seems curiously inert to your attempts[end if]";
 
 this is the am-along rule:
 	unless player is in Harms Marsh, the rule fails;
@@ -1374,51 +1349,37 @@ this is the am-along rule:
 	unless un-road is off-stage, the rule fails;
 	the rule succeeds;
 
-to say dark-been:
-	say "The darkness has always been there and always will be. You need to find a way to say it was dark"
+to say dark-been: say "The darkness has always been there and always will be. You need to find a way to say it was dark"
 
-to say btn-by:
-	say "You need to find the right button on or by the controls"
+to say btn-by: say "You need to find the right button on or by the controls"
 
-to say pier-sign:
-	say "That may not help you through the mist. Maybe read the sign instead"
+to say pier-sign: say "That may not help you through the mist. Maybe read the sign instead"
 
-to say sheol-c:
-	say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help"
+to say sheol-c: say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help"
 
-to say py-glow:
-	say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan"
+to say py-glow: say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan"
 
-to say pat-cont:
-	say "It's more the content of the patters that you could deal with, if you wanted"
+to say pat-cont: say "It's more the content of the patters that you could deal with, if you wanted"
 
-to say no-hurt:
-	say "No way you could change even one hurt thru on your own. You just need to get by"
+to say no-hurt: say "No way you could change even one hurt thru on your own. You just need to get by"
 
-to say no-spoil:
-	say "[if cur-score of troves is 0]You've got the right idea...sort of...but you're not worthy of big thoughts, yet[else]You can change Spoiloplis by thinking, but not like that. One idea at a time[end if]"
+to say no-spoil: say "[if cur-score of troves is 0]You've got the right idea...sort of...but you're not worthy of big thoughts, yet[else]You can change Spoiloplis by thinking, but not like that. One idea at a time[end if]"
 
-to say p-hole:
-	say "City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here"
+to say p-hole: say "City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here"
 
-to say ei2pg:
-	say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
+to say ei2pg: say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
 
 this is the glaring-futile rule:
 	if player is in Boredom Bedroom and lager is moot, the rule succeeds;
 	the rule fails;
 
-to say rotun:
-	say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
+to say rotun: say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
 
-to say shmoe-homes:
-	say "The people living in them don't want to change. You can't make them. You need to change something for YOU"
+to say shmoe-homes: say "The people living in them don't want to change. You can't make them. You need to change something for YOU"
 
-to say cone-rec:
-	say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter the godlings['] lodgings[else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering the godlings['] lodgings or being sure you deserve to[end if]"
+to say cone-rec: say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter the godlings['] lodgings[else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering the godlings['] lodgings or being sure you deserve to[end if]"
 
-to say scrapery:
-	say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
+to say scrapery: say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
 
 to say pha-light: say "You need all that light for late-night work sessions"
 
@@ -1445,11 +1406,11 @@ this is the divorces-gone rule:
 	if player is in Upscale Capsule and divorces is moot, the rule succeeds;
 	the rule fails;
 
-to say ruts-pull:
-	say "The ruts will pull you down if you look too far into them"
+to say ruts-pull: say "The ruts will pull you down if you look too far into them"
 
-to say sidewalk-oops:
-	say "You can't make the sidewalk crumble any more, and you probably don't want to"
+to say sidewalk-oops: say "You can't make the sidewalk crumble any more, and you probably don't want to"
+
+to say id-cede-full: say "It's the full song name--[i]I'd Cede[r]"
 
 this is the bee-head-reflexive rule:
 	if player is in Bustle Sublet and bee's head is not off-stage and bee's head is reflexive, the rule succeeds;
@@ -1459,8 +1420,7 @@ this is the lot-observed rule:
 	if player is in Bustle Sublet and sob ever verbose is moot, the rule succeeds;
 	the rule fails;
 
-to say boor-grub:
-	say "You can't change a whole suburb. Better to change yourself"
+to say boor-grub: say "You can't change a whole suburb. Better to change yourself"
 
 section presto nudges
 
@@ -1468,8 +1428,7 @@ this is the in-mazeroom rule:
 	if location of player is mazeroom or location of player is Nowt Town, the rule succeeds;
 	the rule fails;
 
-to say mz-chg:
-	say "It's the maze you need to change, not the zany meter"
+to say mz-chg: say "It's the maze you need to change, not the zany meter"
 
 this is the maze-gone rule:
 	if player is in Grey Gyre and maze is moot, the rule succeeds;
@@ -1501,11 +1460,9 @@ this is the Rand-sad rule:
 	if Rand is washed up and player is in Dirge Ridge and Leo is in Dirge Ridge, the rule succeeds;
 	the rule fails;
 
-to say boing-clue:
-	say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing-go bin inside[else]The popgun is just fine[end if]"
+to say boing-clue: say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing-go bin inside[else]The popgun is just fine[end if]"
 
-to say harphr:
-	say "Concentrate on the words of the harpings phrasing"
+to say harphr: say "Concentrate on the words of the harpings phrasing"
 
 to say shackbut: say "There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though"
 
@@ -1593,36 +1550,27 @@ section oyster nudges
 
 to say no-dsk: say "Since there's both Drive A and Drive E, that's ambiguous";
 
-to say patron:
-	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
+to say patron: say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
 
 this is the clam-gone rule:
 	if player is in Olde Lode and clam is not in Olde Lode, the rule succeeds;
 	the rule fails;
 
-to say dest-esc:
-	say "Destroying the boat would be a bad idea. You need to escape it"
+to say dest-esc: say "Destroying the boat would be a bad idea. You need to escape it"
 
-to say strmlet:
-	say "The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything"
+to say strmlet: say "The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything"
 
-to say raft-is:
-	say "No, best concentrate on what the raft is"
+to say raft-is: say "No, best concentrate on what the raft is"
 
-to say sculpt:
-	say "That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for"
+to say sculpt: say "That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for"
 
-to say river-no:
-	say "That would cause serious injury to people and property, even if it could work";
+to say river-no: say "That would cause serious injury to people and property, even if it could work";
 
-to say all-fish:
-	say "You need to deal with all the bullies at once, somehow, not just one at a time"
+to say all-fish: say "You need to deal with all the bullies at once, somehow, not just one at a time"
 
-to say no-cray:
-	say "No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out";
+to say no-cray: say "No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out";
 
-to say just-tea:
-	say "Best to think of it as just tea";
+to say just-tea: say "Best to think of it as just tea";
 
 this is the crates-menace rule:
 	if player is in Lapsin' Plains and crate is reflexive, the rule succeeds;
@@ -1632,11 +1580,9 @@ this is the plains rule:
 	if player is in Lapsin' Plains, the rule succeeds;
 	the rule fails;
 
-to say knob-skis:
-	say " of the door. More [if knob is reflexive and skis are in Lapsin' Plains]the knob and skis are impeding you[else if skis are in Lapsin' Plains]the skis are blocking the door[else if knob is reflexive]that knob is stuck[else]isn't needed, as you managed to navigate the knob and skis[end if]";
+to say knob-skis: say " of the door. More [if knob is reflexive and skis are in Lapsin' Plains]the knob and skis are impeding you[else if skis are in Lapsin' Plains]the skis are blocking the door[else if knob is reflexive]that knob is stuck[else]isn't needed, as you managed to navigate the knob and skis[end if]";
 
-to say prob-ov:
-	say "You are probably over-thinking it. There's a more direct way to tackle the span pans"
+to say prob-ov: say "You are probably over-thinking it. There's a more direct way to tackle the span pans"
 
 to say polyp-no: say "You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further"
 
@@ -1644,14 +1590,11 @@ to say crate-frag: say "[if crate is reflexed]Not worth messing with the fragmen
 
 to say hutzy: say "[if Shuttle Hutlets is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the pans[end if]"
 
-to say i-com:
-	say "The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead"
+to say i-com: say "The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead"
 
-to say ache-plur:
-	say "[if sardine is in arches]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
+to say ache-plur: say "[if sardine is in arches]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
 
-to say to-dig:
-	say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
+to say to-dig: say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
 
 this is the now-shore rule:
 	if player is in Anger Range and haunter is moot, the rule succeeds;
@@ -1666,13 +1609,11 @@ this is the h-assuaged rule:
 	if haunter is reflexed and haunter is in location of player, the rule succeeds;
 	the rule fails.
 
-to say its-msg:
-	say "You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper"
+to say its-msg: say "You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper"
 
 section towers nudges
 
-to say bland-sad:
-	say "[if Mislit Limits is not visited and waters are not visited]The badlands can't be changed on their own. They must be trekked through[else]You're beyond the badlands now[end if]"
+to say bland-sad: say "[if Mislit Limits is not visited and waters are not visited]The badlands can't be changed on their own. They must be trekked through[else]You're beyond the badlands now[end if]"
 
 to say war-one: say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of moot warriors > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 
@@ -1696,8 +1637,7 @@ to say plutry of (pg - a guardian): now pg is plurtry
 
 to say wait-see: say "The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix."
 
-to say no-fril:
-	say "The saver is hopelessly no-frills. It'll never be anything better. But [if saver is reflexed]you made it look a bit nicer[else if saver is attempted]you might've been onto something looking at its brand name[else]maybe you could revisit its brand name to make it look nicer[end if]. Not that looks ultimately matter"
+to say no-fril: say "The saver is hopelessly no-frills. It'll never be anything better. But [if saver is reflexed]you made it look a bit nicer[else if saver is attempted]you might've been onto something looking at its brand name[else]maybe you could revisit its brand name to make it look nicer[end if]. Not that looks ultimately matter"
 
 to say reed-name: say "No, [el-la-f]'s full name. With Reed's Ale"
 
@@ -1711,8 +1651,7 @@ this is the duck-cant rule:
 	if player is not in Obscurest Subsector and location of duck is location of player, the rule succeeds;
 	the rule fails;
 
-to say no-ropin:
-	say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open[end if]";
+to say no-ropin: say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open[end if]";
 
 to say could-cloud: say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form"
 
@@ -1732,8 +1671,7 @@ to say all-of-mel: say "No, you need to deal with all of Mel."
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
-to say gradient-rej:
-	say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
+to say gradient-rej: say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
 
 to say prob-denim: say "You look at the denim and it's probably the denim you want to deal with, not its properties."
 
@@ -1765,8 +1703,7 @@ to say giz-tex: say "It's so technically detailed, you worry you might break it 
 
 to say wets-no: say "You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future"
 
-to say fix-boat-parts:
-	say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
+to say fix-boat-parts: say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
 
 this is the serpent-hiding rule:
 	if player is in Mislit Limits and serpent is moot, the rule succeeds;
@@ -1774,8 +1711,7 @@ this is the serpent-hiding rule:
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life"
 
-to say flow-fine:
-	say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if Mislit Limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"
+to say flow-fine: say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if Mislit Limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"
 
 this is the got-pot rule:
 	if flowerpot is not off-stage, the rule succeeds;
@@ -1788,8 +1724,7 @@ to say towersloc:
 
 to say rapier-mach: say "The machine is complicated enough. You [if gizmo is off-stage]probably just need to figure what to put in it[else]already got something from it[end if]"
 
-to say diag-dir-rej:
-	say "This game doesn't require you to mess with diagonal directions[if player is in Rawest Waters], so maybe you should consider the other shores[else], so I hope that's a relief[end if]";
+to say diag-dir-rej: say "This game doesn't require you to mess with diagonal directions[if player is in Rawest Waters], so maybe you should consider the other shores[else], so I hope that's a relief[end if]";
 
 to say clay-pal: say "Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead"
 
@@ -1910,17 +1845,13 @@ this is the lemnomel rule:
 	if lemons are visible and melon is not visible, the rule succeeds;
 	the rule fails;
 
-to say papay:
-	say "[if auction caution is reflexive]You're probably over-thinking it--just pay attention to what it says, instead[else]You've taken the banner's advice well enough[end if]";
+to say papay: say "[if auction caution is reflexive]You're probably over-thinking it--just pay attention to what it says, instead[else]You've taken the banner's advice well enough[end if]";
 
-to say 1st-name:
-	say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be";
+to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be";
 
-to say plant-no:
-	say "You may want to listen to what the plant has to say, or what it makes you say";
+to say plant-no: say "You may want to listen to what the plant has to say, or what it makes you say";
 
-to say no-art:
-	say "You don't need to do anything to [if art erd is visible]Art[else]Dr. Tera[end if], especially since [if storage box is in Scape Space]you want to get that storage box[else]you got that storage box[end if]"
+to say no-art: say "You don't need to do anything to [if art erd is visible]Art[else]Dr. Tera[end if], especially since [if storage box is in Scape Space]you want to get that storage box[else]you got that storage box[end if]"
 
 to say slot-no: say "[if lost slot is off-stage]Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear[else]After all that work getting it to appear, you don't want to make the lost slot vanish[end if]"
 
@@ -1965,27 +1896,21 @@ to say if-no-pad:
 		now player has pedanto-notepad;
 		say ". But to do that, you need to take it, first. And you do";
 
-to say xyzzys:
-	say "A hollow voice booms, 'Lo! Of...'[no line break]"
+to say xyzzys: say "A hollow voice booms, 'Lo! Of...'[no line break]"
 
-to say major-swear:
-	say "[if mrlp is presto and cur-score of presto > 0]Curiously enough, you can't do anything with the major swears, and neither could I[else][cussy][end if]";
+to say major-swear: say "[if mrlp is presto and cur-score of presto > 0]Curiously enough, you can't do anything with the major swears, and neither could I[else][cussy][end if]";
 
-to say mild-swear:
-	say "[if mrlp is presto and cur-score of presto > 0]This region has some lame swears, but that's not one of them[else][cussy][end if]";
+to say mild-swear: say "[if mrlp is presto and cur-score of presto > 0]This region has some lame swears, but that's not one of them[else][cussy][end if]";
 
 this is the know-point rule:
 	if cur-score of Ordeal Reload > 1, the rule succeeds;
 	the rule fails;
 
-to say no-special-verb:
-	say "There's no secret verb or verbs to find trying that"
+to say no-special-verb: say "There's no secret verb or verbs to find trying that"
 
-to say dir-cut:
-	say "section has no easter eggs[if mrlp is demo dome], though you're at the director's cut bit right now[end if]"
+to say dir-cut: say "section has no easter eggs[if mrlp is demo dome], though you're at the director's cut bit right now[end if]"
 
-to say meta-rej:
-	say "Meta-commands don't have any easter eggs, sadly"
+to say meta-rej: say "Meta-commands don't have any easter eggs, sadly"
 
 section support
 
@@ -1993,8 +1918,7 @@ section support
 
 slab-pts is a number that varies.
 
-to say cussy:
-	say "You're not fooling ME. Shame on you"
+to say cussy: say "You're not fooling ME. Shame on you"
 
 this is the can-i-parse rule:
 	if elmo is moot, the rule succeeds;

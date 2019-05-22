@@ -267,7 +267,7 @@ understand "aspired" as a mistake ("Now is not the time to fret solely on past d
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in Drain Nadir and Eddie's Song is in Drain Nadir.
+understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in Drain Nadir and I'd Cede is in Drain Nadir.
 
 chapter Boredom Bedroom
 
