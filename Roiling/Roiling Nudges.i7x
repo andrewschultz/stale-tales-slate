@@ -32,8 +32,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "itrash"	369170750	--	--	x-oped-m rule	"[vs-oped]."
 "herarts"	537307816	--	--	x-oped-f rule	"[vs-oped]."
 "billy"	293398681	--	--	x-oped rule	"[vs-oped]."
-"beams"	308761951	--	t-b	--	"Not even one of the beams rattles. You count them up again--there are ten."
-"ten"	299823635	--	t-b	--	"You change neither the number nor the makeup of the ten beams."
+"beams"	308761951	--	meet bans	--	"Not even one of the beams rattles. You count them up again--there are ten."
+"ten"	299823635	--	meet bans	--	"You change neither the number nor the makeup of the ten beams."
 "notice"	438174643	--	notice	--	"You can flip everything on the diorama except the notice."
 "diorama"	294149104	--	diorama	--	"Old Man Almond assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though..."
 "bookshelf"	561748346	--	bookshelf	--	"The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway."
@@ -1237,7 +1237,7 @@ this is the dark-study rule:
 to say g-pin: say "It's more that it's a giant pin and not, like, a safety pin";
 
 this is the basement-visible rule:
-	if player is in Dusty Study and t-b is not in Dusty Study, the rule succeeds;
+	if player is in Dusty Study and meet bans is not in Dusty Study, the rule succeeds;
 	the rule fails;
 
 this is the chimney-visible rule:

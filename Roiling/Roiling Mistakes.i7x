@@ -28,15 +28,15 @@ book Ordeal Reload
 
 chapter Dusty Study
 
-understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if t-b are in Dusty Study]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in Dusty Study and latches are not off-stage.
+understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if tables are in Dusty Study]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in Dusty Study and latches are not off-stage.
 
-understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if t-b are in Dusty Study]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].") when player is in Dusty Study and latches are not off-stage.
+understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].") when player is in Dusty Study and latches are not off-stage.
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
 
 understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].") when player has latches or player has satchel.
 
-understand "net" as a mistake ("But the net would still block you.") when player is in Dusty Study and t-b are in Dusty Study.
+understand "net" and "net beams" and "beams net" as a mistake ("But the net would still block you.") when player is in Dusty Study and meet bans are in Dusty Study.
 
 understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.") when player is in Dusty Study and giant pin is in Dusty Study.
 
@@ -54,7 +54,7 @@ chapter Largely All-Grey Gallery
 
 understand "astir" as a mistake ("[if stair is visible]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if].") when stair is visible or stria is in location of player or sitar is in location of player.
 
-understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and t-b are in Dusty Study.
+understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and meet bans are in Dusty Study.
 
 understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
 

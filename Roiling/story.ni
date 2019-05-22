@@ -3194,7 +3194,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		enact gulp-quip;
 		enact elmomole-quip;
 		enact got-red-yellow-quip;
-		if t-b is escanned and t-b is moot:
+		if meet bans is escanned and meet bans is moot:
 			now basement-quip is Elmo-av;
 		if tables are escanned and tables are moot:
 			now stable-quip is Elmo-av;
@@ -4682,7 +4682,8 @@ xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
 pram	false	false	false	true	"[cheatfid]." [START Ordeal Reload]
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
-t-b	false	false	false	true	"[cheatfid]."
+beams	false	false	false	true	"[cheatfid]."
+meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off."
 plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
@@ -4873,14 +4874,14 @@ carry out means-hinting:
 		if Gunter is off-stage, try objhinting isolani liaison instead;
 		if player does not have lamp, try objhinting palm instead;
 		if settler-hint-yet is false:
-			if tables are in Dusty Study and niche is in Dusty Study and t-b are in Dusty Study:
+			if tables are in Dusty Study and niche is in Dusty Study and meet bans are in Dusty Study:
 				all-say "You have three ways out of the study. You may wish to HINT SETTLER or HINT DIORAMA to figure what to do with them.";
 			else:
 				all-say "You have found a way out of the study. Any way gets you to a secret passage out of the Means Manse, though along the way, you may wish to HINT SETTLER or HINT DIORAMA to figure what to do with them.";
 			now settler-hint-yet is true instead;
 		if tables are in Dusty Study, try objhinting tables instead;
 		if niche is in Dusty Study, try objhinting niche instead;
-		if t-b are in Dusty Study, try objhinting t-b instead;
+		if meet bans are in Dusty Study, try objhinting meet bans instead;
 		all-say "You should move along, now, unless you want to mess with the settler and diorama to be sure of what you are doing." instead;
 	if location of player is heights:
 		if ramp is in Highest Heights, try objhinting ramp instead;
@@ -5926,7 +5927,7 @@ Rule for printing a parser error when the latest parser error is the can't see a
 			say "Hmm. It's not useful in its present state. You think back to how you changed that toga into a goat just by saying 'goat.' Maybe you can do something like that, again." instead;
 		say "You can't see much of anything here, and if you stumble around, that [i]palm[r] might poke your eye out." instead;
 	if the player's command matches the regular expression "^go":
-		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are moot]GO IN or IN or GO TO FRAMING[else if t-b are moot]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
+		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are moot]GO IN or IN or GO TO FRAMING[else if meet bans are moot]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
 	if the player has the rigged digger:
 		if the player's command includes "prod":
 			say "It's a digger, now." instead;
@@ -7722,7 +7723,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 				the rule succeeds;
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip this for a point, maybe it needs to be reflexive or vanishing.";
 		try examining noun instead;
-	if noun is t-b or noun is tables or noun is palm or noun is giant pin or noun is niche:
+	if noun is meet bans or noun is tables or noun is palm or noun is giant pin or noun is niche:
 		if Gunter is not moot:
 			say "Nothing urgent yet[if stuff-found >= 3] except that bangish bashing[end if]. So no need to pre-flip, flipper.";
 			check-get-pad;
@@ -7814,9 +7815,8 @@ carry out fliptoing:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
 				else if the-from entry is coins and the-to entry is s-i:
 					two-up;
-				else if the-to entry is t-b:
-					if Largely All-Grey Gallery is unvisited:
-						two-up;
+				else if the-to entry is meet bans:
+					if Largely All-Grey Gallery is unvisited, two-up;
 				else if the-to entry is onyx censer and the player's command includes "phooey":
 					two-up;
 				else if the-from entry is not part of the diorama:
@@ -7905,7 +7905,7 @@ volume Ordeal Reload
 
 book Dusty Study
 
-to say tables-beams: if tables are in Dusty Study or t-b are in Dusty Study, say ", [if tables are in Dusty Study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if], and [if t-b are in Dusty Study]beams on another wall[else]a way down where those beams were[end if]";
+to say tables-beams: if tables are in Dusty Study or meet bans are in Dusty Study, say ", [if tables are in Dusty Study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if], and [if meet bans are in Dusty Study]beams on another wall[else]a way down where those beams were[end if]";
 
 Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
 
@@ -7918,23 +7918,17 @@ to say think-cue:
 
 to decide which number is dusty-study-outs:
 	let q be 0;
-	if tables are moot:
-		increment q;
-	if t-b are moot:
-		increment q;
-	if niche is moot:
-		increment q;
+	if tables are moot, increment q;
+	if meet bans are moot, increment q;
+	if niche is moot, increment q;
 	decide on q.
 
 after printing the locale description when player is in Dusty Study and gunter is moot:
-	if tables are moot or t-b is moot or niche is moot:
+	if tables are moot or meet bans are moot or niche is moot:
 		say "You take stock of your way[unless dusty-study-outs is 1]s[end if] out: ";
-		if tables are not visible:
-			say "You could probably go [b]in[r], to the stable, with the tables gone. ";
-		if t-b are moot:
-			say "You [if tables are moot]also [end if]cleared a path [b]down[r]. ";
-		if niche is moot:
-			say "There's [if dusty-study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
+		if tables are moot, say "You could probably go [b]in[r], to the stable, with the tables gone. ";
+		if meet bans are moot, say "You [if tables are moot]also [end if]cleared a path [b]down[r]. ";
+		if niche is moot, say "There's [if dusty-study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
 		say "[line break]";
 	continue the action;
 
@@ -8057,7 +8051,7 @@ before going nowhere in Dusty Study:
 		say "[if Gunter is off-stage]Yeah...you do have somewhere to hide., but no full excuse, yet[else]There's a room below. What's it called, again? Boy[end if]." instead;
 	if noun is outside:
 		say "You don't want to go outside, and you don't want to walk around where you might be seen[if Gunter is moot], especially after that chat with Gunter[end if]." instead;
-	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if t-b are visible]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is visible]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
+	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are visible]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is visible]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
 
 Rule for printing the description of a dark room (this is the Dusty Study rule):
 	if location of player is Dusty Study:
@@ -8132,7 +8126,7 @@ instead of doing something with propaganda:
 dope-idx is a number that varies.
 
 after fliptoing when player is in Dusty Study (this is the more min points in Dusty Study rule) :
-	if noun is t-b:
+	if noun is meet bans:
 		if tables are moot or niche is moot:
 			d "Min point for tables or niche.";
 			min-up; [already have way out of study]
@@ -8140,17 +8134,15 @@ after fliptoing when player is in Dusty Study (this is the more min points in Du
 				d "Min point for [if sitar is moot]sitar [end if][if pram is moot]pram [end if].";
 				min-up; [already have way out of study]
 	else if noun is chimney:
-		if t-b is moot or tables are moot:
-			min-up;
+		if meet bans are moot or tables are moot, min-up;
 	else if noun is tables:
-		if t-b is moot or niche is moot:
-			min-up;
+		if meet bans are moot or niche is moot, min-up;
 	continue the action;
 
 after fliptoing ramp (this is the check ramp min-up rule) :
 	if tables are moot and sitar is moot:
 		min-up;
-	else if t-b is moot:
+	else if meet bans are moot:
 		min-up; [check if passage is made via beams or stable->stair]
 	continue the action;
 
@@ -8158,7 +8150,7 @@ after fliptoing stair (this is the check sitar min-up and exits rule) :
 	now Largely All-Grey Gallery is mapped below Farming Framing;
 	if the room below study is nothing:
 		now Farming Framing is mapped above Largely All-Grey Gallery;
-	if t-b is moot:
+	if meet bans are moot:
 		min-up;
 	else if niche is moot and pram is moot:
 		min-up; [check if passage is made via beams or chimney->pram]
@@ -8360,26 +8352,25 @@ check inserting into the satchel:
 instead of taking satchel:
 	say "It may achieve sentimental value one day, but the purse will carry more."
 
+chapter meet bans
+
+The meet bans are plural-named vanishing boringscen in Dusty Study. bore-text is "The MEET BANS are too solid to move physically snd have no obvious flaws. That is no surprise, really."
+
+a-text of meet bans is "RYRYRYRR". b-text of meet bans is "RYRYRYPR". parse-text of meet bans is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]N[sp]x".
+
 chapter ten beams
 
-instead of taking t-b:
-	say "They're too solid to move, physically.";
+the beams are auxiliary boringscen in dusty study. description of ten beams is "You count them, to make sure ... ten beams.". bore-text is "The ten beams are too sturdy to mannipulate meaningfully.". understand "ten" and "ten beams" as beams when mrlp is Ordeal Reload. printed name of beams is "ten beams"
 
-The t-b are privately-named plural-named vanishing scenery in Dusty Study. understand "ten beams" and "ten" and "beams" as t-b. the printed name of t-b is "ten beams".
+description of beams is "You count the beams. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they and the MEET BANS be hiding?"
 
-a-text of t-b is "RYRYRYRR". b-text of t-b is "RYRYRYRR". parse-text of t-b is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
-
-instead of searching t-b:
-	say "Nothing. And you checked all ten beams.";
-
-description of t-b is "You count them. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they be hiding?"
+a-text of beams is "RYRYRYRR". b-text of beams is "RYRYRYRR". parse-text of beams is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]N[sp]x".
 
 chapter tables
 
 The tables are plural-named vanishing scenery in Dusty Study. understand "table" as tables.
 
-check taking tables:
-	say "The tables are written on the wall." instead;
+check taking tables: say "The tables are written on the wall." instead;
 
 after fliptoing tables:
 	now study is mapped inside Farming Framing;
@@ -8387,7 +8378,8 @@ after fliptoing tables:
 	now Farming Framing is mapped inside study;
 	continue the action;
 
-after fliptoing t-b:
+after fliptoing meet bans:
+	moot beams;
 	now Largely All-Grey Gallery is mapped below study;
 	now study is mapped above Largely All-Grey Gallery;
 	continue the action;
@@ -8790,12 +8782,12 @@ does the player mean climbing the stair: it is very likely.
 
 after printing the locale description for Largely All-Grey Gallery when Largely All-Grey Gallery is unvisited:
 	if do-i-chat is false:
-		if tables are in Dusty Study and t-b are in Dusty Study:
+		if tables are in Dusty Study and meet bans are in Dusty Study:
 			say "After your trip down the ramp, you note the stria--and the ten beams. Ten beams, basement--that makes sense. You could probably do something to the stria or visit the closets if you wanted, but you don't have to.";
 		else if tables are in Dusty Study:
 			say "The stria remind you of the stable you walled up a long time ago. It must have been behind the tables you scribbled on the wall so long ago. Maybe not worth going back to uncover.";
-		else if t-b are in Dusty Study:
-			say "[if tables are in Dusty Study][line break][end if]Okay. So that's what the beams in the study were for[if t-b are unexamined]. You remember there were ten now[else]. All ten[end if]. You could uncover them if you were completionist that way.";
+		else if meet bans are in Dusty Study:
+			say "Okay. So that's what MEET-BANS in the study was for. You could dispel or uncover them if you were completionist that way.";
 		if possibles is false and min-alert is false:
 			ital-say "you don't need to do anything else in the Means Manse, but if you want to track what you can do, POSS will do so.";
 			now min-alert is true;
@@ -8809,8 +8801,7 @@ check exiting in Largely All-Grey Gallery:
 	try going inside instead;
 
 check going down in Dusty Study:
-	if t-b are in Dusty Study:
-		say "Ouch! You smack into a bunch of beams. Ten[if Dusty Study is not lit]. It might've hurt less if you'd found a light source[end if]." instead;
+	if meet bans are in Dusty Study, say "Ouch! You smack into the MEET-BANS[if Dusty Study is not lit]. It might've hurt less if you'd found a light source[end if]." instead;
 
 check going in Farming Framing:
 	if noun is inside or noun is outside:
@@ -8832,8 +8823,7 @@ instead of doing something with stair:
 	say "Can't do much but go up or down a stair." instead;
 
 check going up in Largely All-Grey Gallery:
-	if stria are visible and t-b are in Dusty Study:
-		say "Hmm. There should be a way back up. The stria could be disposable." instead;
+	if stria are visible and meet bans are in Dusty Study, say "Hmm. There should be a way back up. The stria could be disposable." instead;
 	if backcheck is false:
 		now backcheck is true;
 		say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
@@ -9335,7 +9325,7 @@ check entering closets:
 			say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
 			if the player direct-consents:
 				now gallery-been is true;
-				say "[if t-b are in Dusty Study]You go back through the closets to your study[else]Woo! You save the effort of climbing up stairs[end if].";
+				say "[if meet bans are in Dusty Study]You go back through the closets to your study[else]Woo! You save the effort of climbing up stairs[end if].";
 				now player is in Dusty Study instead;
 			else:
 				say "Ok, probably best to find a way out." instead;
@@ -9368,7 +9358,7 @@ check going down in Highest Heights:
 	if ramp is not visible:
 		try entering closets instead;
 	else:
-		say "You slide down the ramp--into the basement you [if t-b are not in Dusty Study]uncovered another, easier way to get to[else]nearly forgot you had[end if].";
+		say "You slide down the ramp--into the basement you [if meet bans are not in Dusty Study]uncovered another, easier way to get to[else]nearly forgot you had[end if].";
 	now player is in Largely All-Grey Gallery instead;
 
 check going inside in Highest Heights:
@@ -24974,13 +24964,12 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	if needsolve is true and myreg is not solved, continue the action;
 	if myreg is Ordeal Reload:
 		if giant pin is in Dusty Study, say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
-		if t-b is in Dusty Study, say "[2dmiss of myreg]you could've made the ten beams into a BASEMENT.";
+		if meet bans are in Dusty Study, say "[2dmiss of myreg]you could've made the MEET-BANS into a BASEMENT.";
 		if tables are in Dusty Study, say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
 		if sitar is not moot, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing/[end if]stria in the gallery into a STAIR.";
 		if niche is in Dusty Study, say "[2dmiss of myreg]you could've changed 'my niche' into a CHIMNEY.";
 		if pram is in Highest Heights, say "[2dmiss of myreg]you could've changed the pram into a RAMP[if Highest Heights is unvisited], if you'd gone up from the study[end if].";
 		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a SNIB on the ISBN bins.";
-		if t-b is in Dusty Study, say "[2dmiss of myreg]you could've changed the ten beams in the study to a BASEMENT.";
 	else if myreg is stores:
 		if store B is in stores, say "[2dmiss of myreg]Store B could've given you some SORBET.";
 		if store K is in stores, say "[2dmiss of myreg]Store K could've made some TOKERS.";
@@ -26125,7 +26114,7 @@ understand the command "tut" as something new.
 understand "tut [number]" as tuting.
 
 carry out tuting:
-	let zzzz be { tables, niche, giant pin, t-b, pram, sitar, stria };
+	let zzzz be { tables, niche, giant pin, meet bans, beams, pram, sitar, stria };
 	if player is not in Dusty Study:
 		say "Too late to use the Elmo tutorial. Restart and try again." instead;
 	if number understood is 1:
@@ -26298,7 +26287,8 @@ understand "rom" as roming when mrlp is Ordeal Reload.
 
 carry out roming:
 	oscan niche;
-	oscan t-b;
+	oscan meet bans;
+	oscan beams;
 	oscan pram;
 	oscan giant pin;
 	oscan sitar;

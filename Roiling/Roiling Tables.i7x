@@ -21,7 +21,7 @@ pram	ramp	false	233052733	--	"ramp"	"ramp"	"The pram folds out -- boy, there are
 sitar	stair	false	331888451	--	"stair"	"stair"	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."
 stria	stair	false	331888451	--	"stair"	"stair"	"The stria glow and cascade into a stair leading back up."
 niche	chimney	false	484428752	--	"chimney"	"chimney"	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."
-t-b	t-b	false	608585586	--	"basement"	"basement"	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
+meet bans	meet bans	false	608585586	--	"basement"	"basement"	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
@@ -916,7 +916,7 @@ volume specific help for things you need to flip
 
 table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
-t-b	"The ten beams creak slightly. Maybe not all of them. But a few."
+meet bans	"The ten beams creak slightly. Maybe not all of them. But a few."
 palm	"The palm remains upright but seems slightly brighter."
 niche	"Hm, no, the niche--my niche--won't unfold that way."
 latches	"You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them."
@@ -1450,7 +1450,7 @@ palm	"[one of]Well, you need a light source, but a palm [b]absorbs[r] light.[plu
 lamp	"The lamp will last as long as you need it to."
 yourself	"[one of]You have the same power you had in Shuffling Around.[plus][or][if Gunter is off-stage]Try opening the door and having a chat. You'll see some, err, patterns.[else]Gunter's chat contained a good many things.[end if][plus][or]You had the ability to flip objects into anagrams of each other. This game shows a different side to that power.[minus][cycling]"
 isolani liaison	"[if Gunter is off-stage]You can and should OPEN the door.[else]There's nobody outside the door you wants to see. You'll want another exit.[end if]"
-t-b	"[one of]The ten beams guard something downstairs. What?[plus][or]The number of beams is important.[plus][or]What's a common downstairs place in any house?[plus][or]The beams guard a BASEMENT.[minus][cycling]"
+meet bans	"[one of]The ten beams guard something downstairs. What?[plus][or]The number of beams is important.[plus][or]What's a common downstairs place in any house?[plus][or]The beams guard a BASEMENT.[minus][cycling]"
 tables	"[one of]The tables seem out of place in such a posh mansion.[plus][or]What's more posh than tables?[plus][or]The tables can be a STABLE.[minus][cycling]"
 chimney	"You can CLIMB the chimney or go up it."
 stair	"You can go up or down the stair."
