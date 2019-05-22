@@ -267,8 +267,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "laid"	122023592	Bustle Sublet	--	--	"[sidewalk-oops]."
 "roadbed"	350147390	Boarded Roadbed	--	--	"[locname]." [start Boarded Roadbed]
 "stop"	355202520	Boarded Roadbed	--	--	"The stop post is in the past. No need to p.s. tweaking it."
-"live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
-"bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [what-a-bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
+"live"	333777614	--	evil bee	--	"The bee's description isn't important. It's how you see the bee that matters."
+"bee"	274031123	--	evil bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [evil bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
 "nadir"	222441064	Drain Nadir	--	--	"[locname]." [start Drain Nadir]
 "spider"	456891772	--	diapers	--	"The diapers, the Ires Pad--the spider only fits in as *a* spider."
 "ires"	354396724	Drain Nadir	--	--	"It's an ires PAD."
@@ -957,15 +957,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "note"	374176212	--	mopeage rant	--	"[part-of-lots]."
 "mopeage"	510293427	--	mopeage rant	--	"[part-of-lots]."
 "rant"	259529147	--	mopeage rant	--	"[part-of-lots]."
+"omen"	335141347	--	omen prism	--	"[full-omen-prism]."
+"prism"	372131727	--	omen prism	--	"[full-omen-prism]."
 "dam"	87292060	--	mad train	--	"[whole-item]."
 "train"	304521993	--	mad train	--	"[whole-item]."
-"videotapes"	786189311	--	videotape	--	"[vtc]."
-"videotape"	689915345	--	videotape	--	"[vtc]."
-"videos"	471619407	--	videotape	--	"[vtc]."
-"tapes"	410843870	--	videotape	--	"[vtc]."
-"video"	375345441	--	videotape	--	"[vtc]."
-"taep"	314569904	--	videotape	--	"[vtc]."
-"collection"	639160483	--	videotape	--	"[vtc]."
 "peanut"	488583219	--	peanut cola	--	"[whole-item]."
 "cola"	149359819	--	peanut cola	--	"[whole-item]."
 "moss"	330975662	--	moss cap	--	"[whole-item]." [stuff gotten from Curtis]
@@ -1885,32 +1880,25 @@ this is the preserve-saved rule:
 
 section others nudges
 
-to say plur-fruit:
-	say "Well, you don't technically need plurals for this, but you're on the right track"
+to say plur-fruit: say "Well, you don't technically need plurals for this, but you're on the right track"
 
-to say drink-stand:
-	say "Nothing happens. [if stand is examined]You found enough inside it, anyway[else]Maybe just examine it[end if]"
+to say drink-stand: say "Nothing happens. [if stand is examined]You found enough inside it, anyway[else]Maybe just examine it[end if]"
 
-to say len-part:
-	say "Len Craig doesn't change, and even if you messed with his full name, he wouldn't"
+to say len-part: say "Len Craig doesn't change, and even if you messed with his full name, he wouldn't"
 
-to say part-of-lots:
-	say "No, the [i]whole[r] thing. You see several...similar...items here right now"
+to say part-of-lots: say "No, the [i]whole[r] thing. You see several...similar...items here right now"
 
-to say whole-item:
-	say "Nothing happens. Perhaps it's the whole item that's important"
+to say full-omen-prism: say "Not just omen, or prism. It's an omen prism"
 
-to say count-enuf:
-	say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
+to say whole-item: say "Nothing happens. Perhaps it's the whole item that's important"
 
-to say shirt-sez:
-	say "Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle"
+to say count-enuf: say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
 
-to say rapt-glare:
-	say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon"
+to say shirt-sez: say "Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle"
 
-to say no-pryer:
-	say "No, it's the whole pryer bars"
+to say rapt-glare: say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon"
+
+to say no-pryer: say "No, it's the whole pryer bars"
 
 this is the need-mango rule:
 	if player is in Clangier Clearing and mango is off-stage, the rule succeeds;
@@ -1932,51 +1920,33 @@ to say plant-no:
 to say no-art:
 	say "You don't need to do anything to [if art erd is visible]Art[else]Dr. Tera[end if], especially since [if storage box is in Scape Space]you want to get that storage box[else]you got that storage box[end if]"
 
-to say vtc:
-	say "No, it's not just any videotape collection. It's those awful titles"
+to say slot-no: say "[if lost slot is off-stage]Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear[else]After all that work getting it to appear, you don't want to make the lost slot vanish[end if]"
 
-to say slot-no:
-	if lost slot is off-stage:
-		say "Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear";
-	else:
-		say "After all that work getting it to appear, you don't want to make the lost slot vanish"
+to say border-arbor: say "Bad idea to ruin such life-giving scenery[if compass is off-stage], but maybe you can gain a sense of direction[else if Swell Wells are unvisited]--try going north[else]--the only way is north[end if]"
 
-to say border-arbor:
-	say "Bad idea to ruin such life-giving scenery[if compass is off-stage], but maybe you can gain a sense of direction[else if Swell Wells are unvisited]--try going north[else]--the only way is north[end if]"
+to say no-gate: say "The gate needs to be unlocked some other way"
 
-to say no-gate:
-	say "The gate needs to be unlocked some other way"
+to say val-chg: say "The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too"
 
-to say val-chg:
-	say "The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too"
+to say dome-rm: say "You don't need to flip anything here, really. Certainly not a room"
 
-to say dome-rm:
-	say "You don't need to flip anything here, really. Certainly not a room"
+to say its-a-museum: say "This is a museum! This is a museum! Messing with the exhibits would be very bad form";
 
-to say its-a-museum:
-	say "This is a museum! This is a museum! Messing with the exhibits would be very bad form";
+to say these-docs: say "These are documents of historical records! Revisionism is so Elvira";
 
-to say these-docs:
-	say "These are documents of historical records! Revisionism is so Elvira";
+to say no-no: say "You can't change the book's writing. Well, you could, I guess. But this is a museum"
 
-to say no-no:
-	say "You can't change the book's writing. Well, you could, I guess. But this is a museum"
-
-to say no-mess:
-	say "No need to mess with the helpful sign";
+to say no-mess: say "No need to mess with the helpful sign";
 
 this is the elvira-here rule:
 	if otters is not solved, the rule succeeds;
 	the rule fails;
 
-to say no-set:
-	say "You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though";
+to say no-set: say "You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though";
 
-to say red-wri:
-	say "Red writing is a just clue of what to change. It can't be changed, itself";
+to say red-wri: say "Red writing is a just clue of what to change. It can't be changed, itself";
 
-to say innies:
-	say "You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway"
+to say innies: say "You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway"
 
 this is the in-innie rule:
 	if location of player is innie, the rule succeeds;
@@ -1986,8 +1956,7 @@ this is the past-strip rule:
 	if Strip of Profits is visited, the rule succeeds;
 	the rule fails;
 
-to say dir-rej:
-	say "This game almost never requires you to mess with cardinal directions";
+to say dir-rej: say "This game almost never requires you to mess with cardinal directions";
 
 to say if-no-pad:
 	if player does not have pedanto-notepad:

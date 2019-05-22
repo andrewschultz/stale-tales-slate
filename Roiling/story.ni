@@ -2636,6 +2636,7 @@ sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
+omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
 riot cap	"It's red and [one of]made of I-TARP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
@@ -4986,7 +4987,7 @@ section random hinting
 
 rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, spear, pagers, slime }.
 
-rustic-hard-items is a list of things variable. rustic-hard-items is { mad train, videotape, harmonicas, peanut cola, eerie blurbs, magenta rope }
+rustic-hard-items is a list of things variable. rustic-hard-items is { mad train, omen prism, harmonicas, peanut cola, eerie blurbs, magenta rope }
 
 wells-hintables is a list of things variable. wells-hintables is { riot cap, silly shirt, stucco, sorer bogey, green stain, miser ruble }.
 
@@ -22134,7 +22135,7 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in Rustic Citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if omen prism is in Rustic Citrus]That omen prism you uncovered from the drinks stand lies here, too. [end if]"
 
 a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if]."
 
@@ -22420,7 +22421,7 @@ check going north in Rustic Citrus:
 
 chapter drinks stand
 
-the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
+the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a weird omen prism.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
 
 check taking drinks stand:
 	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
@@ -22428,16 +22429,13 @@ check taking drinks stand:
 the citrus sign is part of the abandoned drinks stand. description is "It says CURTIS['] (sic) RUSTIC CITRUS.". the citrus sign is useless.
 
 after examining abandoned drinks stand (this is the three fruits in drinks stand rule) : [all 3 conditions should be all true or all false, but just in case...]
-	if peanut cola is off-stage:
-		now peanut cola is in Rustic Citrus;
+	if peanut cola is off-stage, now peanut cola is in Rustic Citrus;
 	if magenta rope is off-stage:
-		if pears are not off-stage:
-			now megaton pear is in Rustic Citrus;
+		if pears are not off-stage, now megaton pear is in Rustic Citrus;
 		now magenta rope is in Rustic Citrus;
 		now rampage note is in Rustic Citrus;
 		now mopeage rant is in Rustic Citrus;
-	if videotape collection is off-stage:
-		now videotape collection is in Rustic Citrus;
+	if omen prism is off-stage, now omen prism is in Rustic Citrus;
 	continue the action;
 
 chapter blueberries
@@ -22469,9 +22467,9 @@ chapter persimmon
 
 the persimmon is a fruit.
 
-the videotape collection is scenery. description is "A bunch of weird films in this collection. One title, in red, is [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
+the omen prism is boringscen. description is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
 
-a-text of videotape is "RYRRYRRYR". b-text of videotape is "RYRRYRRYR". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]n".
+a-text of omen prism is "RYRRYRRYR". b-text of omen prism is "RYRRYRRYR". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 chapter pomegranate
 
@@ -25160,7 +25158,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
 			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
 			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
-			if videotape collection is not moot, say "[2drm of Rustic Citrus]The videotape collection's movies could've become a PERSIMMON.";
+			if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a PERSIMMON.";
 		if apples are not moot, say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES."; [Swell Wells]
 		if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
 		if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
