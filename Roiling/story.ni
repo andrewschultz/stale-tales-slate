@@ -4731,7 +4731,7 @@ sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp pr
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
-pugnacious plant	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
+brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
@@ -4994,7 +4994,7 @@ field-hintables is a list of things variable. field-hintables is { pryer bars, p
 
 clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, l-o-p, lemons, auction caution, nectarine }.
 
-scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', orange, pugnacious plant, inapt paint }
+scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', orange, a brr hub, inapt paint }
 
 to hintlistproc (j - a list of things):
 	repeat with hobj running through j:
@@ -6875,7 +6875,7 @@ check listening:
 	if sorer bogey is visible, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
 	if barren cries are visible, say "The barren cries are sour and bitter and tiny." instead;
 	if player is in Clangier Clearing, say "Selly yells. [randbla][paragraph break][if mango is off-stage]Amidst the hustle and haggling, a small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?[end if]" instead;
-	if pugnacious plant is in location of player, say "The pugnacious plant is making an aggressive bb-arr-uh noise and seems to turn red in the process." instead;
+	if brr hub is in location of player, say "A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process." instead;
 	if player has s-i or player has s-c, say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
 	if mrlp is demo dome, say "It's nice and quiet. It [i]IS[r] a museum." instead; [demo dome]
 	say "The air! Hear it! Silent." instead;
@@ -9083,7 +9083,7 @@ before talking to (this is the default talking to rule):
 		repeat through table of default-gen-blather:
 			if noun is default-talker entry:
 				say "[gen-blah entry][line break]" instead;
-		if noun is not pugnacious plant:
+		if noun is not brr hub:
 			say "You can only talk to animate objects. This isn't one, or the game (mistakenly or otherwise) doesn't think it's one." instead;
 
 check talking to Mole Elmo (this is the can't talk while Elmo has the rifle rule) :
@@ -23197,19 +23197,11 @@ The small yellow banana is a fruit.
 
 chapter rhubarb
 
-the pugnacious plant is a thing in Scape Space. "A pugnacious plant looms here, just waiting for you to do something with it."
+a brr hub is a boringthing in Scape Space. "A brr hub looms here, making the Scape Space slightly colder.". printed name of brr hub is "a brr-hub". description of brr hub is "It looks like, well, an evil version of a more straightforward tomato plant. You wonder if it is a vegetable that should be a fruit, a vegetable people prepare like a fruit, or vice versa.". bore-text is "Before you can get too close to the (a) brr-hub, it whips out ... a burr! [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the hub's salvo[or]'Bub...' [greedy-s] distracts you. 'Arrh!' you cry, as you pick out a burr the hub shot at you[in random order].".
 
-a-text of pugnacious plant is "RRYRYRR". b-text of pugnacious plant is "RRYRYRR". parse-text is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
-
-description of pugnacious plant is "It looks like, well, an evil version of a more straightforward tomato plant. You wonder if it is a vegetable that should be a fruit, a vegetable people prepare like a fruit, or vice versa."
+a-text of a brr hub is "RRYRYRR". b-text of a brr hub is "RRYRYRP". parse-text of a brr hub is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]B".
 
 rhubarb is a fruit.
-
-instead of doing something with the pugnacious plant:
-	if action is procedural:
-		if current action is not attacking and current action is not examining:
-			continue the action;
-	say "The plant senses you trying to do something with it and whips a burr at you. [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the plant's reflexive attack[or]'Bub...' [greedy-s] distracts you. 'Arrh!' you cry, as you pick out a burr the plant shot at you[in random order]." instead;
 
 chapter gender dependent greedy person
 
@@ -25135,7 +25127,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if nectarine is not moot, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
 		if orange is not moot, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [Scape Space]
 		if banana is not moot, say "[2drm of Scape Space]you could've tried to change a banna['] to a BANANA.";
-		if pugnacious plant is not moot, say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
+		if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub RHUBARB.";
 		if inapt paint is not moot, say "[2drm of Scape Space]you could've made the inapt paint ('DESERVER RESERVED') REVERSED.";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
 	else if myreg is demo dome:

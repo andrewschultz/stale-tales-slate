@@ -1031,8 +1031,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "art"	190621639	--	Art Erd	--	"[1st-name]."
 "red"	234159001	--	Art Erd	--	"[1st-name]."
 "tera"	318427748	--	Tera Darter	--	"[1st-name]."
-"plant"	309485142	--	pugnacious plant	--	"[plant-no]."
-"pugnacious"	629997575	--	pugnacious plant	--	"[plant-no]."
+"brrhub"	349873522	--	a brr hub	--	"[hub-no]."
 "lots"	327550400	--	so-great storage	--	"[slot-no]."
 "storage"	521653993	--	so-great	--	"You might break what is in the storage."
 "great"	351027450	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
@@ -1844,7 +1843,7 @@ to say papay: say "[if auction caution is reflexive]You're probably over-thinkin
 
 to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be";
 
-to say plant-no: say "You may want to listen to what the plant has to say, or what it makes you say";
+to say hub-no: say "Maybe poking at the brr hub might give more ideas";
 
 to say no-art: say "You don't need to do anything to [if art erd is visible]Art[else]Dr. Tera[end if], especially since [if storage box is in Scape Space]you want to get that storage box[else]you got that storage box[end if]"
 
