@@ -476,7 +476,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
 use MAX_NUM_STATIC_STRINGS of 90000.
 
-use MAX_PROP_TABLE_SIZE of 570000.
+use MAX_PROP_TABLE_SIZE of 590000.
 
 use MAX_STATIC_DATA of 750000.
 
@@ -492,7 +492,7 @@ use SYMBOLS_CHUNK_SIZE of 16000.
 
 use MAX_OBJECTS of 960.
 
-use MAX_PROP_TABLE_SIZE of 580000.
+use MAX_PROP_TABLE_SIZE of 600000.
 
 use MAX_SYMBOLS of 150000.
 
@@ -1623,15 +1623,12 @@ check objasking generically (This is the check for only one sensible object conv
 	if the number of persons enclosed by the location is one:
 		repeat with X running through visible scenery: [talk to non-talkable scenery]
 			repeat through table of default-gen-blather:
-				if X is the default-talker entry:
-					say "[gen-blah entry][line break]" instead;
+				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of persons enclosed by the location is two:
 		repeat with candidate running through visible people:
-			if the candidate is not the player:
-				try objasking candidate about the noun instead;
-	if player is in hops shop:
-		try asking casper about the topic understood instead;
+			if the candidate is not the player, try objasking candidate about the noun instead;
+	if player is in hops shop, try asking casper about the topic understood instead;
 	say "Ambiguous--more than one other person here." instead;
 
 does the player mean objasking about something hintrelevant: it is very likely.
@@ -1656,26 +1653,20 @@ Check asking generically (This is the check for only one sensible converser rule
 	if the number of persons enclosed by the location is one:
 		repeat with X running through visible scenery:
 			repeat through table of default-gen-blather:
-				if X is the default-talker entry:
-					say "[gen-blah entry][line break]" instead;
+				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of persons enclosed by the location is two:
 		repeat with candidate running through visible people:
-			if the candidate is not the player:
-				try asking the candidate about the topic understood instead;
-	if player is in hops shop:
-		try asking casper about the topic understood instead;
+			if the candidate is not the player, try asking the candidate about the topic understood instead;
+	if player is in hops shop, try asking casper about the topic understood instead;
 	say "Ambiguous--more than one other person here." instead;
 
 the can only talk to talkables rule is not listed in any rulebook.
 
 check talking to (this is the hint looking not talking rule):
-	if noun is armada:
-		say "They're not in the mood for remotely reasonable conversation." instead;
-	if noun is statue:
-		say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
-	if the noun provides the property litany and the noun provides the property greeting, do nothing;
-	otherwise say "You may be better off examining non-living things, not talking to them." instead.
+	if noun is armada, say "They're not in the mood for remotely reasonable conversation." instead;
+	if noun is statue, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
+	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead.
 
 section specifically
 
@@ -1689,19 +1680,13 @@ to reason-clue:
 
 check objasking it about (This is the check for object information rule):
 	d "noun=[noun] 2nd noun = [second noun] location = [location of second noun].";
-	if noun is what-a-bee:
-		reason-clue instead;
-	if noun is pedanto-notepad:
-		try consulting pedanto-notepad about "[second noun]" instead;
-	if noun is duck:
-		say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
-	if noun is not a person:
-		try talking to noun instead;
-	if noun is washed up:
-		washup-clue instead;
+	if noun is evil bee, reason-clue instead;
+	if noun is pedanto-notepad, try consulting pedanto-notepad about "[second noun]" instead;
+	if noun is duck, say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
+	if noun is not a person, try talking to noun instead;
+	if noun is washed up, washup-clue instead;
 	if noun is haunter and second noun is ruby:
-		if haunter is reflexive:
-			say "You need to get the haunter to trust you, first." instead;
+		if haunter is reflexive, say "You need to get the haunter to trust you, first." instead;
 		if player is not in Rascal Craals:
 			say "It acts all ghostly and asks you to take it where the ruby might be.[paragraph break]You describe the path to take to get to the ruby, neglecting why you know--fortunately, the haunter doesn't seem to care.";
 			if player is in Anger Range:
@@ -1726,25 +1711,20 @@ check objasking it about (This is the check for object information rule):
 				say "[him-told entry][line break]" instead;
 	repeat through table of subject-blather:
 		if second noun is the person-subj entry:
-			if noun is the him-who entry:
-				say "[him-say entry][line break]" instead;
+			if noun is the him-who entry, say "[him-say entry][line break]" instead;
 	if second noun is the player:
 		say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
 	if the chum of the noun is not yourself:
 		repeat through table of subject-blather:
 			if second noun is the person-subj entry:
-				if the chum of the noun is the him-who entry:
-					say "[him-say entry][line break]" instead;
+				if the chum of the noun is the him-who entry, say "[him-say entry][line break]" instead;
 	if the noun is not to-gen-blather:
 		if the second noun is a person-subj listed in the table of object-blather:
 			if there is a right-region entry:
-				if right-region entry is not mrlp:
-					say "This is the wrong region to ask about that." instead;
-			if noun is not serpent:
-				say "[him-say entry][line break]" instead;
+				if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
+			if noun is not serpent, say "[him-say entry][line break]" instead;
 		repeat through table of default-sub-blather:
-			if noun is him-who entry:
-				say "[him-say entry][line break]" instead;
+			if noun is him-who entry, say "[him-say entry][line break]" instead;
 	repeat through table of default-gen-blather:
 		if noun is default-talker entry:
 			say "[gen-blah entry][line break]";
@@ -1753,8 +1733,7 @@ check objasking it about (This is the check for object information rule):
 				say "[line break]Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
 				pad-rec "talking";
 			do nothing instead;
-	if noun is not a person:
-		say "You can only ask people about things." instead;
+	if noun is not a person, say "You can only ask people about things." instead;
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
 definition: a thing (called th) is to-gen-blather:
@@ -1762,19 +1741,13 @@ definition: a thing (called th) is to-gen-blather:
 	no;
 
 check asking about (This is the check for specific topics rule):
-	if noun is what-a-bee:
-		reason-clue instead;
-	if noun is pedanto-notepad:
-		try consulting pedanto-notepad about "[second noun]" instead;
-	if noun is duck:
-		say "Quack, quack." instead;
-	if noun is not a person:
-		try talking to noun instead;
-	if noun is washed up:
-		washup-clue instead;
+	if noun is evil bee, reason-clue instead;
+	if noun is pedanto-notepad, try consulting pedanto-notepad about "[second noun]" instead;
+	if noun is duck, say "Quack, quack." instead;
+	if noun is not a person, try talking to noun instead;
+	if noun is washed up, washup-clue instead;
 	if noun is haunter:
-		if the topic understood matches the text "ruby":
-			try objasking haunter about ruby instead;
+		if the topic understood matches the text "ruby", try objasking haunter about ruby instead;
 	if noun is Leo or noun is Rand:
 		if noun is fightin:
 			if noun is Rand and Rand-first is false:
@@ -1787,8 +1760,7 @@ check asking about (This is the check for specific topics rule):
 				say "[him-say entry][line break]" instead;
 	if the topic understood is a topic listed in the table of popular-blather:
 		if there is a right-region entry:
-			if right-region entry is not mrlp:
-				say "This is the wrong region to ask about that." instead;
+			if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
 		say "[him-say entry][line break]" instead;
 	repeat through table of default-gen-blather:
 		if the noun is default-talker entry:
@@ -1798,8 +1770,7 @@ check asking about (This is the check for specific topics rule):
 				say "Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
 				pad-rec "talking";
 			do nothing instead;
-	if noun is not a person:
-		say "You can only ask people about things." instead;
+	if noun is not a person, say "You can only ask people about things." instead;
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
 the can only talk to people with things to say rule is not listed in any rulebook.
@@ -1808,8 +1779,7 @@ section talk tables
 
 [talktab]
 
-to say uf:
-	say "Any attempt at conversation would be banefully unflyable.[no line break]"
+to say uf: say "Any attempt at conversation would be banefully unflyable.[no line break]"
 
 table of reflexive-blather	[ask x about x] [tor] [trb]
 him-asked	him-told
@@ -1967,7 +1937,7 @@ Oscar	"He's too grouchy to give much help here. He mutters on about slotted dott
 drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it. Mob mentality and all."
 old giant	"The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
-what-a-bee	"The bee just buzzes. That's what bees do."
+evil bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
 Si Reed	"Si Reed taps his head. You need to THINK right, here! But you sort of already knew that."
 Si Reed	"Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. You'd like to know what Si Reed knows!" [begin troves]
@@ -4656,7 +4626,7 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Boarded Roadbed:
 		if bee-score is 0:
 			say "That bee is all up in your face. So you sort of scan it by default.";
-			try scaning what-a-bee instead;
+			try scaning evil bee instead;
 		try scaning cellar door instead;
 	if location of player is Drain Nadir:
 		if diapers are reflexive, say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the Ires Pad, the diapers, a spider..." instead;
@@ -5329,9 +5299,9 @@ carry out troves-hinting:
 	if player is in Boarded Roadbed:
 		if bee-score is 0:
 			if bee-head-first is true, try objhinting bee's head instead;
-			try objhinting what-a-bee instead;
+			try objhinting evil bee instead;
 		if bee's head is reflexive, try objhinting bee's head instead;
-		if what-a-bee is reflexive, try objhinting what-a-bee instead;
+		if evil bee is reflexive, try objhinting evil bee instead;
 		try objhinting cellar door instead;
 	if player is in Drain Nadir:
 		if diapers are in Drain Nadir, try objhinting diapers instead;
@@ -6190,7 +6160,7 @@ Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel 
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
-Bustle Sublet	"The action's here. You [if what-a-bee is in Bustle Sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
+Bustle Sublet	"The action's here. You [if evil bee is in Bustle Sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad piesy[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
@@ -6866,7 +6836,7 @@ check listening:
 	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
 		if bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it. A snore from the bee makes you see red." instead;
-		if bee-head is reflexive, say "A snore from the bee makes you see red.";
+		if bee's head is reflexive, say "A snore from the bee makes you see red.";
 	if player is in Loather Rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if player is in Drain Nadir and Eddie's Song is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
@@ -8965,7 +8935,7 @@ a plaster psalter is scenery in Carven Cavern. "It looks sturdy enough, but out 
 check taking plaster:
 	say "It's stuck to the floor. What would you do with it, anyway?" instead;
 
-a-text plaster psalter is "RRYRRYR". b-text of plaster psalter is "RRGRRGP". parse-text of plaster psalter is "x[sp]x[sp]A[sp]x[sp]x[sp]E[sp]R".
+a-text of plaster psalter is "RRYRRYR". b-text of plaster psalter is "RRGRRGP". parse-text of plaster psalter is "x[sp]x[sp]A[sp]x[sp]x[sp]E[sp]R".
 
 chapter stapler
 
@@ -12117,46 +12087,44 @@ chapter THE BEE and 2 solutions
 
 section bee proper (believe)
 
-the what-a-bee is a reflexive privately-named thing in Boarded Roadbed. printed name of what-a-bee is "[vile-evil] bee"
+the evil bee is a reflexive privately-named thing in Boarded Roadbed. printed name of evil bee is "[vile-evil] bee"
 
 after looking in Boarded Roadbed:
-	set the pronoun it to what-a-bee;
-	set the pronoun her to what-a-bee;
+	set the pronoun it to evil bee;
+	set the pronoun her to evil bee;
 	continue the action;
 
-initial appearance of what-a-bee is "[one of]An[or]The[stopping] [what-a-bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
+initial appearance of evil bee is "[one of]An[or]The[stopping] [evil bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
 
-a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text of what-a-bee is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
+a-text of evil bee is "RYRYYRY". b-text of evil bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text of evil bee is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
 
-check taking what-a-bee:
-	say "I'll be stingy. Better me than the bee, eh?" instead;
+check taking evil bee: say "I'll be stingy. Better me than the bee, eh?" instead;
 
 Include (-
 	has transparent animate
--) when defining what-a-bee.
+-) when defining evil bee.
 
-description of what-a-bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to the cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][otherwise]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score < 2]. It seems pretty [vile-evil][end if]."
+description of evil bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to the cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][otherwise]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score < 2]. It seems pretty [vile-evil][end if]."
 
-to say vile-evil: say "[if bee-score is 0]evil[else if bee-score is 2]live bee[else]vile[end if]"
+to say vile-evil: say "[if bee-score is 0]evil[else if bee-score is 1]vile[else]live[end if]"
 
 [the below is really awful but I don't see a better way]
 
-understand "bee/evil" and "evil bee" as what-a-bee when bee-score is 0.
-understand "bee/vile" and "vile bee" as what-a-bee when bee-score is 1.
-understand "bee/live" and "live bee" as what-a-bee when bee-score is 2.
+understand "vile" and "vile bee" as evil bee when bee-score > 1.
+understand "live" and "live bee" as evil bee when bee-score is 2.
 
-check scaning what-a-bee:
+check scaning evil bee:
 	if bee-score is 0:
 		if a random chance of 1 in 2 succeeds:
 			say "The bee pokes her head in so near and disrupts your settler's reading.";
 			try scaning bee's head instead;
-	if what-a-bee is reflexed and bee's head is reflexive:
+	if evil bee is reflexed and bee's head is reflexive:
 		say "Nothing shows up until you get to the bee's head.";
 		try scaning bee's head instead;
 	if bee-score is 2, say "The bee rests, silent, and so does your settler." instead;
 
 after fliptoing when player is in Boarded Roadbed:
-	if noun is what-a-bee or noun is bee's head:
+	if noun is evil bee or noun is bee's head:
 		if bee-score is 2:
 			min-up;
 		else:
@@ -12168,7 +12136,7 @@ to say bee-buzz-less:
 
 section bee's head (reason)
 
-the bee's head is part of the what-a-bee. the bee's head is reflexive. description is "[if bee's head is reflexed]It appears a bit duller now, after you reasoned so well against it[else]It shines brightly, as if it is ready for a battle of wits[end if]."
+the bee's head is part of the evil bee. the bee's head is reflexive. description is "[if bee's head is reflexed]It appears a bit duller now, after you reasoned so well against it[else]It shines brightly, as if it is ready for a battle of wits[end if]."
 
 a-text of bee's head is "RYYRYR". b-text of bee's head is "RYYRYR". parse-text of bee's head is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
@@ -12178,7 +12146,7 @@ instead of taking bee's head:
 to decide which number is bee-score:
 	let temp be 0;
 	if bee's head is reflexed, increment temp;
-	if what-a-bee is reflexed, increment temp;
+	if evil bee is reflexed, increment temp;
 	decide on temp;
 
 chapter cellar door (after bee dispatched)
@@ -12198,7 +12166,7 @@ after fliptoing cellar door:
 	continue the action;
 
 check fliptoing cellar door:
-	if what-a-bee is off-stage, say "You haven't forgotten anything important, yet." instead;
+	if evil bee is off-stage, say "You haven't forgotten anything important, yet." instead;
 	if bee-score is 0:
 		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
 		preef cellar door;
@@ -19626,7 +19594,6 @@ to say gd of (zz - a guardian):
 	if zz is atheists, say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
 	if zz is arid den, say "[one of][or] still hawking Nerd-Aid[stopping]";
 	if zz is natives' site van, say "[one of][or] (you assume, by how the people inside are talking about the Badlands and looking at you funny)[stopping]";
-	if zz is ego drains, say "[one of][or] (you know, those barely visible spirits that make you feel bad about doing things quickly and efficiently. They exist in non-magic worlds, too)[stopping]";
 
 to say mb-aswell:
 	if guardians-seen is 3:
@@ -24318,7 +24285,7 @@ table of dont-need-hints [tdnh]
 hint-entry	advice-entry
 Pa Egg Pea	"Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point." [start TROVES]
 stop post	"Now you've spotted the post, it is only good for another clue if you examine it."
-what-a-bee	"You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]."
+evil bee	"You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]."
 bee's head	"[by-bee]."
 diapers	"[by-bee]."
 praise	"[by-rivets]."
@@ -25094,7 +25061,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if worst ad is in Same Mesa, say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
-		if what-a-bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
+		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
 		if bee's head is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
 		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS.";

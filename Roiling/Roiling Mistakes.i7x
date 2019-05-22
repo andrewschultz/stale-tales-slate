@@ -210,6 +210,11 @@ understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already[
 
 chapter Harms Marsh
 
+to decide whether told-of-logan:
+	process the am-along rule;
+	if the rule succeeded, yes;
+	no;
+
 understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
 
 understand "around" as a mistake ("You can't see anything around, yet. It's too unlit, here.[preefsay of sheol holes]") when darkness is in location of player and player is in Harms Marsh.
