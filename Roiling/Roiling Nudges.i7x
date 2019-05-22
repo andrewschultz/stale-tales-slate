@@ -551,7 +551,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "theses"	588552467	--	theses sheets	--	"The hedron's spirit will remain intact even if you meddle there. You must go into its heart."
 "these"	492278501	--	theses sheets	--	"It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead."
 "tarp"	272087598	--	ol' trap	--	"You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating."
-"patrol"	400254014	--	a-p	--	"The portal can't be changed for the better. It already goes where you want."
+"patrol"	400254014	--	pol art portal	--	"The portal can't be changed for the better. It already goes where you want."
 "walleye"	595721739	--	walleyes	--	"Just tacking one walleye won't change the crowd. They're past redemption, anyway."
 "walleyes"	691995705	--	walleyes	--	"The walleyes are a bad crowd, past redemption."
 "craals"	258792829	Rascal Craals	--	--	"[locname]." [RASCAL CRAALS]

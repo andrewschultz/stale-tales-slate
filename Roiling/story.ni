@@ -6154,7 +6154,7 @@ Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in Achers' Arches], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
-Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
+Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
@@ -16091,7 +16091,7 @@ the can't search unless container or supporter rule is not listed in any ruleboo
 
 carry out searching:
 	if noun is ol' trap, say "That's the right idea. But not the right way to search. You need to walk all over the floor, here, to disable the ol['] trap." instead;
-	if noun is a-p, say "The portal has nothing." instead;
+	if noun is pol art portal, say "The portal has nothing." instead;
 	say "You're not able to find anything hidden." instead;
 
 book Hardest Trashed Dearths
@@ -17203,7 +17203,7 @@ check taking ol' trap:
 
 description of ol' trap is "Naturally, it is there to make you rot, pal, if you try to get by it. But there must be some mechanism to disarm it. Somewhere hidden in this room. You just need to look around right."
 
-check fliptoing a-p:
+check fliptoing pol art portal:
 	if walleyes are not moot:
 		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
 		preef ol' trap;
@@ -17223,19 +17223,17 @@ every turn when player is in Horned Hedron and walleyes are in Horned Hedron (th
 description of walleyes is "Oh, they are seedy, all right. But they seem more interested in laughing at you than attacking. They're probably just flunkies who will take a fall."
 
 check going inside in Horned Hedron:
-	if a-p is in Horned Hedron, try entering a-p instead;
+	if pol art portal is in Horned Hedron, try entering pol art portal instead;
 	if ol' trap is in Horned Hedron, try entering ol' trap instead;
 	say "There's nothing to enter at the moment." instead;
 
 check entering ol' trap: say "It's an obvious ol['] trap but likely an effective one." instead;
 
-a-p is privately-named auxiliary scenery. printed name of a-p is "the portal". description of a-p is "It looks safe. It doesn't crackle or anything. The only question is where it leads."
+the pol art portal is auxiliary scenery. description of pol art portal is "Despite the pol(itical) art on it prpoagandizing Elvira smashing her opponents, including a grossly inaccurate caricature of you, it looks safe. It doesn't crackle or anything. The only question is where it leads."
 
-understand "portal" as a-p.
+check going north in Horned Hedron: try entering pol art portal instead;
 
-check going north in Horned Hedron: try entering a-p instead;
-
-check entering a-p:
+check entering pol art portal:
 	if ruby is not moot:
 		say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Horned Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
 	if walleyes are in Horned Hedron:
@@ -17257,14 +17255,14 @@ understand "patrol" as patroling.
 carry out patroling:
 	if player is in Horned Hedron:
 		if ol' trap is visible:
-			try fliptoing a-p instead;
+			try fliptoing pol art portal instead;
 		else:
 			say "You already patrolled." instead;
 	if Horned Hedron is visited:
 		if walleyes are moot and ol' trap is in Horned Hedron and mrlp is oyster:
 			say "You suddenly realize how to search out the ol['] trap in the Horned Hedron.";
 			move player to Horned Hedron, without printing a room description;
-			try fliptoing a-p instead;
+			try fliptoing pol art portal instead;
 		if walleyes are in Horned Hedron and mrlp is oyster:
 			say "That's a good idea. Maybe you can search the Horned Hedron once if the walleyes are gone.";
 			preef ol' trap;

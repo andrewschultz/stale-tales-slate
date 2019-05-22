@@ -174,7 +174,7 @@ trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	"[trout-tu
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
 a-s	a-s	false	367879580	--	"search"	"search"	"'Reach, acher,' you say, stretching a bit more to find something interesting."
-ol' trap	a-p	false	400254014	--	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."
+ol' trap	pol art portal	false	400254014	--	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. As it vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, passages to new locations."
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 tubs	waste	false	322908696	--	"bust"	"bust"	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
@@ -638,7 +638,7 @@ after fliptoing when mrlp is others (this is the slot and singed design appear r
 		if player has so-great storage, slot-appear;
 	continue the action;
 
-after fliptoing a-p:
+after fliptoing pol art portal:
 	moot digger;
 	continue the action;
 
@@ -1369,7 +1369,7 @@ lance	"Your work turned up enough."
 rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
 a-s	"Further searching proves fruitless."
-a-p	"You discovered the portal. No need to look further."
+pol art portal	"You discovered the portal. No need to look further."
 ruby	"You already did in the wrap."
 haunter	"Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby."
 thin hint	"The ruby's hidden well. No need to tinker."
@@ -1717,7 +1717,7 @@ pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][o
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
 ol' trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
-a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
+pol art portal	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea tray is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
