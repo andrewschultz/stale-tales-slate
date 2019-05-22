@@ -441,8 +441,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "debug"	304959612	--	--	time-to-debug rule	"You need to budge the letters about."
 "caps"	198933328	--	caps lock	--	"[caps-no]."
 "lock"	200105179	--	caps lock	--	"[caps-no]."
-"scratch"	362189074	--	scratch paper	--	"[scrapap]."
-"paper"	378249648	--	scratch paper	--	"[scrapap]."
 "tbakey"	426815280	--	t-key	--	"[if t-key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]."
 "pile"	308078753	--	coal	--	"It's not just any pile--it's a pile of coal."
 "stikc"	316315593	--	gum	--	"It's just gum."
@@ -1496,7 +1494,7 @@ this is the bookvis rule:
 
 this is the wise-to-sleep rule:
 	if player is in Hacks' Shack:
-		if scratch paper is visible and scratch paper is reflexive, the rule succeeds;
+		if I'm Le Cop polemic is visible and I'm Le Cop polemic is reflexive, the rule succeeds;
 	the rule fails;
 
 this is the volt-maze-visible rule:
@@ -1532,16 +1530,14 @@ to say slab-score:
 to say full-pack: say "You need to deal with the full [locs pack]"
 
 this is the time-to-compile rule:
-	if scratch paper is reflexive and rebooted is true, the rule succeeds;
+	if I'm Le Cop polemic is reflexive and rebooted is true, the rule succeeds;
 	the rule fails.
 
 this is the time-to-debug rule:
-	if scratch paper is reflexed, the rule succeeds;
+	if I'm Le Cop polemic is reflexed, the rule succeeds;
 	the rule fails.
 
 to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
-
-to say scrapap: say "It's what's on the scratch paper that [if scratch is reflexed]was[else]is[end if] important"
 
 to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if usb is visible]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
 

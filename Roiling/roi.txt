@@ -422,10 +422,10 @@ They are not critical to the game, though they provide a slightly easier alterna
 Make 'em into something more workmanlike, less froufrou. More nourishing.
 CASSEROLE.
 There is too much for you to eat. Maybe a friend or friends can.
-?The scratch paper?
-You can't do anything yet.
-You may notice the polemic by Mel Copi.
-It will teach you how to COMPILE, later.
+?The I'm Le Cop polemic?
+You can't do anything right away, but the signature is another clue.
+Mel Copi will teach you how to build the code...
+...or, well, COMPILE.
 ?The schematic catechism?
 It's not useful til you need to program, then you'll use it automatically.
 So, yeah, it's mostly for amusement.

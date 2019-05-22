@@ -25,7 +25,7 @@ t-b	t-b	false	608585586	--	"basement"	"basement"	"[if Largely All-Grey Gallery i
 tables	tables	false	401610655	--	"stable"	"stable"	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-plaster	stapler	true	549981512	--	"stapler"	"stapler"	"As paper appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The act-ruin curtain behind looks lined but seems solid enough."
+plaster	stapler	true	549981512	--	"stapler"	"stapler"	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
 rifle	rifle	false	338451493	--	"flier"	"flier"	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
 book stores
@@ -132,11 +132,11 @@ skid	disk	true	215229079	--	"disk"	"disk"	"The skid changes back into a disk, wh
 flea	leaf	true	210322662	--	"leaf"	"leaf"	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
 gum	mug	true	201780662	--	"mug"	"mug"	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."
 coal	dirty looking cola	true	149359819	--	"cola"	"cola"	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."
-fount	futon	false	377990806	--	"futon"	"futon"	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if scratch paper is reflexive], though you're not really tired yet[end if]."
+fount	futon	false	377990806	--	"futon"	"futon"	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if I'm Le Cop polemic is reflexive], though you're not really tired yet[end if]."
 onyx censer	computer screen	true	525123080	--	"screen"	"screen"	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
 t-key	t-key	false	123716741	--	"tab"	"tab" or "tab key"	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
-scratch paper	scratch paper	false	465512068	--	"compile"	"compile"	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
+I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
 trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
 trim socks	ROM sticks	true	540067126	--	"romstick"	"romstick" or "rom stick"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
@@ -1027,7 +1027,7 @@ trim socks	"You don't have the available memory in your head to see all the poss
 clack ops locs pack	"NO, REARRANGE AND TRY AGAIN, you think."
 fount	"Hm, might be FUN TO try another guess. Or useful. Or both."
 gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
-piece of scratch paper	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
+I'm Le Cop polemic	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
 BUB DUDE EGG	"Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here, why BUB DUDE EGG is showing."
 drive a	"Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently."
@@ -1352,7 +1352,7 @@ mug	"[if fizzy cola is visible]You'd get cola all over you if you tried anything
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
 t-key	"No, the TAB key is what it should be."
-scratch paper	"After compiling, you often need to make small tweaks, but not like that."
+I'm Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 tips pits	"You can't and don't want to do anything else to the tips pits." [START oyster]
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
@@ -1640,10 +1640,10 @@ disk	"[if skid is off-stage][one of]You can change the disk to something else.[p
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is visible]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 t-key	"[if t-key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
-signature	--	scratch paper
+signature	--	I'm Le Cop polemic
 dirty looking cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is moot]the mug[else]what the gum can become[end if].[minus][cycling]"
 fizzy cola	"Cola is great for drinking (without knowing it) during a long programming session."
-scratch paper	"[if signature is reflexed]Useless now.[else][one of]The signature and the scratch paper are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the scratch paper"
+I'm Le Cop polemic	"[if signature is reflexed]Useless now.[else][one of]The signature and the I'm Le Cop polemic are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the I'm Le Cop polemic"
 scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and this one's resisting in some odd animal fashion. So you need to deal with the yak.[minus][cycling]"
 drab yoke	"[if yak is not moot]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
 BUB DUDE EGG	"[one of]BUB DUDE EGG is a warning message that gives hints.[plus][or]You may notice it has two of five different letters, and random actions point out you see red trying to make the code BUDGE.[plus][or]More specifically, BUB DUDE EGG shows up because there are still bugs to fish out.[plus][or]Therefore, you need to DEBUG.[minus][cycling]"	--	"to DEBUG the code you compiled"

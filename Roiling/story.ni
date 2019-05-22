@@ -5137,7 +5137,7 @@ carry out presto-hinting:
 		if futon is visible and slept is false:
 			if spoilit is true, all-say "Yeech. You're full. You need to SLEEP." instead;
 			try objhinting futon instead;
-		if scratch paper is reflexive, try objhinting scratch paper instead;
+		if I'm Le Cop polemic is reflexive, try objhinting I'm Le Cop polemic instead;
 		if fizzy cola is not in mug, try objhinting mug instead;
 		if BUB DUDE EGG is reflexive, try objhinting BUB DUDE EGG instead;
 		if usb is visible:
@@ -13811,7 +13811,7 @@ a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-
 
 book Hacks' Shack
 
-Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if Hacks' Shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[otherwise]You're in the shack where you probably need to write a program or something[end if][if scratch paper is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in Hacks' Shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if]."
+Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if Hacks' Shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[otherwise]You're in the shack where you probably need to write a program or something[end if][if I'm Le Cop polemic is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in Hacks' Shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if]."
 
 lodge-flips is a number that varies. lodge-flips is 0.
 
@@ -13852,13 +13852,13 @@ for writing a paragraph about a thing (called gbg) in Hacks' Shack:
 				decrement a;
 				if a is 0 and b > 1:
 					say "and ";
-				say "[if myitm is disk]that disk lying on the floor[else if myitm is flea][a-the] flea which looks dead[else if myitm is trim socks][one of]some[or]the[stopping] trim socks, though you don't need to dress up[else if myitm is gum][a-the] stick of gum[else if myitm is coal]the pile of coal[else if myitm is escaroles]some escaroles[else if myitm is casserole]a hot casserole[else][a-the] piece of scratch paper[end if]";
+				say "[if myitm is disk]that disk lying on the floor[else if myitm is flea][a-the] flea which looks dead[else if myitm is trim socks][one of]some[or]the[stopping] trim socks, though you don't need to dress up[else if myitm is gum][a-the] stick of gum[else if myitm is coal]the pile of coal[else if myitm is escaroles]some escaroles[else if myitm is casserole]a hot casserole[else][a-the] I'm Le Cop polemic[end if]";
 				now myitm is mentioned;
 		say ".";
 		continue the action;
 	continue the action;
 
-shack-mess is a list of thing variable. shack-mess is { disk, coal, socks, gum, scratch paper, flea, escaroles, casserole }.
+shack-mess is a list of thing variable. shack-mess is { disk, coal, socks, gum, I'm Le Cop polemic, flea, escaroles, casserole }.
 
 chapter coal and cola
 
@@ -14108,7 +14108,7 @@ check tying it to (this is the put on the slab rule) :
 		say "They keyboard and screen don't tie to each other but to Drive A." instead;
 	say "This game doesn't recognize the ATTACH/TIE verb for either of those objects. Perhaps it should, but you may be better off using PUT ABC ON/IN XYZ." instead;
 
-after fliptoing scratch paper:
+after fliptoing I'm Le Cop polemic:
 	now BUB DUDE EGG is part of the computer screen;
 	if hawt thaw is in Phat Path, poss-d;
 	if lamb is in Grey Gyre, poss-d;
@@ -14158,7 +14158,7 @@ to check-trivial-presto-llp:
 	continue the action;
 
 this is the shack-south rule:
-	if scratch paper is reflexed:
+	if I'm Le Cop polemic is reflexed:
 		say "You're so close. You must be. You can't [i]budge[r] until you...";
 		the rule fails;
 	if keyboard is not off-stage and screen is not off-stage:
@@ -14590,36 +14590,36 @@ description of skidrope is "It's attached so you can pull the skid from room to 
 check pulling skidrope:
 	try pulling skid instead;
 
-check fliptoing scratch paper:
+check fliptoing I'm Le Cop polemic:
 	if player is not in Hacks' Shack:
 		say "There is no computer around.";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 	if computer screen is not visible:
 		say "Good idea, but tough without a screen.";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 	if keyboard is not visible:
 		say "Good idea, but tough to program without a keyboard.";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 	if keyboard is not on slab:
 		say "Good idea, but first, you probably want to put the keyboard on the slab.";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 	if disk is not in Drive A, say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]." instead;
 	if rebooted is false:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 	if disk is not in Drive A:
 		say "You probably want to save your work to disk.";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 	if slept is false:
 		if speel is off-stage:
 			say "You get an NEED IF-DEFINE error the first time you try to compile. 'Up late, a letup,' you think restlessly and dreamily to yourself, 'Then fail the final!'[paragraph break]You're just too exhausted to put up with another compiling speel (you're too tired to check if that's spelt right)...slipping on virtual peels...probably you just switched something or got something backwards.";
 			now speel is in Hacks' Shack;
 		else:
 			say "That stupid NEED IF-DEFINE and that speel, still. You're slipping on peels, unsure what you switched or got backwards[one of][or]. Maybe you misspelled a variable, but you aren't up to logic leeps[stopping].";
-		preef scratch paper instead;
+		preef I'm Le Cop polemic instead;
 
 the speel is auxiliary scenery. "The jargon's a bit beyond you. Maybe if your mind were fully sharp, you'd know what to do."
 
@@ -14649,7 +14649,7 @@ check putting on the keyboard (this is the complete-keyboard rule):
 does the player mean doing something with BUB DUDE EGG: it is likely.
 
 check fliptoing BUB DUDE EGG:
-	if scratch paper is not reflexed:
+	if I'm Le Cop polemic is not reflexed:
 		say "No hope of debugging when you can't even build! No, what is it? Something in the polemic, all garbled.";
 		preef BUB DUDE EGG instead;
 	if fizzy cola is not in mug:
@@ -14679,14 +14679,10 @@ after fliptoing keyboard:
 	check-trivial-presto-llp;
 	continue the action;
 
-the piece of scratch paper is a reflexive thing in Hacks' Shack.
+the I'm Le Cop polemic is a reflexive thing in Hacks' Shack.
 
-every turn when scratch paper is reflexed and usb is not in Hacks' Shack and player is in Hacks' Shack and gum is moot (this is the hint debug verb rule) :
-	say "You find yourself pacing around muttering at the computer. BUDGE, BE DUG, BUDGE.";
-
-check fliptoing scratch paper:
-	if computer screen is not visible:
-		say "Very hard without seeing what you're doing." instead;
+check fliptoing I'm Le Cop polemic:
+	if computer screen is not visible, say "Very hard without seeing what you're doing." instead;
 	if computer screen is not on slab:
 		say "Hmm. You may want to hook the screen up. Do so?";
 		if the player direct-consents:
@@ -14696,15 +14692,15 @@ check fliptoing scratch paper:
 
 does the player mean doing something with the teariest treatise when Strip of Profits is visited: it is unlikely.
 
-description of scratch paper is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder credo seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom."
+description of I'm Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder credo seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom."
 
-a-text of scratch paper is "RYRRYRY". b-text of scratch paper is "RGRRYRY". parse-text of scratch paper is "x[sp]o[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of I'm Le Cop polemic is "RYRRYRY". b-text of I'm Le Cop polemic is "RGRRYRY". parse-text of I'm Le Cop polemic is "x[sp]o[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-the signature is part of the scratch paper.
+the signature is part of the I'm Le Cop polemic.
 
 description of signature is "It's in red and takes a bit of time to decipher. [one of]MEL COPI is this guy's name. There's a bit more[or]The author rails against the McPoeil method[or]The author compares a manual to a lice mop[or]The author bangs on about how I'M LE COP[cycling]."
 
-understand "polemic" as scratch paper.
+understand "polemic" as I'm Le Cop polemic.
 
 book Volt Maze [L to V]
 
@@ -24258,7 +24254,7 @@ maze walls	"The walls hold no great secrets beyond a clue to volt maze's essence
 log ons letters	"[other-let]."
 alert letters	"[other-let]."
 ought letters	"[other-let]."
-scratch paper	"You got things compiling. No more worries there."
+I'm Le Cop polemic	"You got things compiling. No more worries there."
 t-key	"[if t-key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
 frat raft	"Now you're on the frat raft, you need to find a way to use the oars." [start OYSTER]
 knob	"The knob's been dealt with."
