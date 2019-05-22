@@ -2599,7 +2599,8 @@ definition: a thing (called cand) is readable:
 
 table of readables [tre]
 to-read	what-read	alt-read
-sitar	"Oh, right. You bought it from Trisa Israt." [Ordeal Reload]
+giant pin	"GNAT. I NIP is nonsensically written on the giant pin." [Ordeal Reload]
+sitar	"Oh, right. You bought it from Trisa Israt."
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
@@ -8057,24 +8058,25 @@ Rule for printing the description of a dark room (this is the Dusty Study rule):
 	if location of player is Dusty Study:
 		say "[one of]Rats, kid, it's dark[or]Aww, dark. Awkward[in random order]. You probably can't go stumbling around--you'd poke your eye on that palm, or something. Wouldn't be bright." instead;
 
-the giant pin is an LLPish thing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy."
+the giant pin is an LLPish boringthing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "You don't need to change the giant pin, you sense, but you probably could if you wanted.". bore-check is bore-pin rule.
 
-instead of pushing or pulling giant pin:
-	say "It won't budge. It's too thin to hide a way out, too.";
+this is the bore-pin rule:
+	if current action is pushing or pulling: [??check if this works in general]
+		say "It won't budge. It's too thin to hide a way out, too.";
+		the rule succeeds;
+	if current action is taking:
+		say "That'd be dreadfully impractical. It's too [i]giant[r] a t'ing.";
+		the rule succeeds;
 
 a-text of giant pin is "RYYRRYRR". b-text of giant pin is "RYYPPYRR". parse-text of giant pin is "x[sp]-[sp]-[sp]n[sp]t[sp]-[sp]x[sp]x".
 
-instead of taking giant pin:
-	say "That'd be dreadfully impractical. It's too [i]giant[r] a t'ing.";
+the abstract painting is a useless LLPish boringthing. "That painting you changed from a giant pin hangs here.". description is "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.[paragraph break]Its title is, (semi-)inexplicably, Inapt Gin at Pig Inn.". bore-text is "The painting's really just there to be observed and examined. Like most art.". bore-check is bore-painting rule.
 
-the abstract painting is a useless LLPish undesc. "That painting you changed from a giant pin hangs here."
-
-instead of doing something with abstract painting when abstract painting is visible:
+this is the bore-painting rule:
 	if current action is taking or searching or attacking:
-		say "It's a false law there has to be a wall safe behind it. Besides, [if Gunter is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your Means Manse." instead;
-	unless action is procedural:
-		say "The painting's really just there to be observed. Like most art." instead;
-	say "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.";
+		say "It's a false law there has to be a wall safe behind it. Besides, [if Gunter is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your Means Manse.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 propaganda is a kind of thing. propaganda is usually amusing.
 
@@ -8107,8 +8109,7 @@ to say artrash:
 
 dope-read is a truth state that varies.
 
-to say drt:
-	now dope-read is true;
+to say drt: now dope-read is true;
 
 The By Li'l Billy page is propaganda. it is part of the dope op-ed.
 
