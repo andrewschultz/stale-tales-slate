@@ -392,8 +392,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sticks"	412589559	--	rom sticks	--	"[romstix]."
 "rom"	223751533	--	rom sticks	--	"[romstix]."
 "stick"	316315593	--	rom sticks	--	"[romstix]."
-"compiled"	486541157	--	compiled code	--	"The code won't BUDGE."
-"code"	242193360	--	compiled code	--	"The code won't BUDGE."
+"bub"	141943617	--	BUB DUDE EGG	--	"[budge-note]."
+"dude"	274970094	--	BUB DUDE EGG	--	"[budge-note]."
+"egg"	193005513	--	BUB DUDE EGG	--	"[budge-note]."
 "dongle"	378508824	--	dongle	--	"It's built to be sturdy. You don't want to mess with it."
 "boredyak"	504410731	--	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
 "sleep"	487165982	--	--	wise-to-sleep rule	"Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if]."
@@ -1519,6 +1520,8 @@ to say cola-is-cola: say "It's cola, not soda or pop. And you can just drink it"
 to say trimsox: say "They're not just socks, or trim. They're trim socks"
 
 to say romstix: say "You'll know what to do with the sticks when you're ready to program";
+
+to say budge-note: say "Nothing happens. 'Budge, BUDGE!' you mutter, turning red and reading the whole message"
 
 to say kboard-det:
 	if the player's command matches "keyboard" or the player's command matches "key board":

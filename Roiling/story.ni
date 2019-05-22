@@ -4630,9 +4630,9 @@ check scaning location of the player (this is the location scan rule):
 		try scaning cellar door instead;
 	if location of player is Drain Nadir:
 		if diapers are reflexive, say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the Ires Pad, the diapers, a spider..." instead;
-	if location of player is Hacks' Shack and compiled code is visible: [start presto]
+	if location of player is Hacks' Shack and BUB DUDE EGG is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
-		try scaning compiled code instead;
+		try scaning BUB DUDE EGG instead;
 	if wzup is visible, try scaning wzup instead;
 	if player is in nowt town, say "Your settler scans [if cheat-on is true]RGR?[else]RYRR[end if] as you wave it around Nowt Town." instead;
 	if volt maze is visible, try scaning volt maze instead;
@@ -5045,40 +5045,28 @@ book presto-hinting
 carry out presto-hinting:
 	if cur-score of presto is 0 and spoilit is false:
 		all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]There's lots of yelling, and the curst crust is a clue. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
-	if hump is visible:
-		try objhinting hump instead;
+	if hump is visible, try objhinting hump instead;
 	if plebe is visible:
 		if spoilit is true and player does not wear tsar star:
 			all-say "The plebe grimaces as you try to eat the crust. He doesn't seem to respect your authority enough to keep a straight face yet.";
 			now spoilit is false instead;
 		try objhinting plebe instead;
 	if player is in austerer:
-		if ye hoop is in austerer:
-			try objhinting ye hoop instead;
-		if spoilit is false:
-			all-say "You are done here in Austerer Treasure." instead;
-	if tsar star is visible and tsar star is in Char Arch:
-		try objhinting tsar star instead;
-	if dart is visible and dart is in cistern:
-		try objhinting dart instead;
+		if ye hoop is in austerer, try objhinting ye hoop instead;
+		if spoilit is false, all-say "You are done here in Austerer Treasure." instead;
+	if tsar star is visible and tsar star is in Char Arch, try objhinting tsar star instead;
+	if dart is visible and dart is in cistern, try objhinting dart instead;
 	if location of player is Dirge Ridge:
-		if Leo is in Dirge Ridge and Leo is fightin:
-			try objhinting Leo instead;
-		if Rand is in Dirge Ridge and Rand is fightin:
-			try objhinting Rand instead;
-		if Rand is washed up and Leo is washed up:
-			try objhinting wzup instead;
-		if spoilit is true:
-			now spoilit is false;
+		if Leo is in Dirge Ridge and Leo is fightin, try objhinting Leo instead;
+		if Rand is in Dirge Ridge and Rand is fightin, try objhinting Rand instead;
+		if Rand is washed up and Leo is washed up, try objhinting wzup instead;
+		if spoilit is true, now spoilit is false;
 		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in Dirge Ridge and ether is not moot]. Maybe Leo and Rand's combined muscle could help you somewhere[end if]." instead;
-	if boing is reflexive and popgun is visible:
-		try objhinting boing go bin instead;
+	if boing is reflexive and popgun is visible, try objhinting boing go bin instead;
 	if popgun is visible:
-		if dart is not visible:
-			all-say "You need to find ammo for your popgun." instead;
+		if dart is not visible, all-say "You need to find ammo for your popgun." instead;
 		if dart is not in popgun and dart is not moot:
-			if spoilit is true:
-				now spoilit is false;
+			if spoilit is true, now spoilit is false;
 			try objhinting popgun instead;
 	if player is in Marines Seminar Remains:
 		if spoilit is true:
@@ -5086,47 +5074,37 @@ carry out presto-hinting:
 			all-say "Ugh. The crust feels like army rations. Not now." instead;
 		all-say "The popgun [if player has popgun]was[else]is[end if] all the Marines Seminar Remains has to offer." instead;
 	if player is in a mazeroom or player is in Nowt Town or player is in Unwary Runway:
-		if spoilit is false:
-			all-say "[maze-solve]." instead;
+		if spoilit is false, all-say "[maze-solve]." instead;
 		try objhinting volt maze instead;
 	if player is in Grey Gyre:
-		if volt maze is in Grey Gyre:
-			try objhinting volt maze instead;
+		if volt maze is in Grey Gyre, try objhinting volt maze instead;
 		if ether is not moot:
 			if spoilit is false:
-				if player does not have popgun:
-					all-say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the Marines Seminar Remains.[cycling]" instead;
-				if Rand is not eager or Leo is not eager:
-					all-say "[one of]If you've gone through the ether alone, you'll see you've been outnumbered.[or]You'll need allies to even up the numbers in the ether to the north.[or]Anyone here you seen who likes a fight?[or]Fetch the fellows south of the cistern, first.[cycling]" instead;
+				if player does not have popgun, all-say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the Marines Seminar Remains.[cycling]" instead;
+				if Rand is not eager or Leo is not eager, all-say "[one of]If you've gone through the ether alone, you'll see you've been outnumbered.[or]You'll need allies to even up the numbers in the ether to the north.[or]Anyone here you seen who likes a fight?[or]Fetch the fellows south of the cistern, first.[cycling]" instead;
 			else:
 				if dart is not in popgun or boing is reflexive or Leo is not in Grey Gyre:
 					all-say "The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through." instead;
 			try objhinting ether instead;
 	if player is in Grey Gyre or player is in Char Arch:
 		if Hacks' Shack is unvisited:
-			if spoilit is false:
-				all-say "You're all done here for now[if player is in Char Arch] (the yak can be helped later,)[else],[end if] so you maybe should [if Saps' Pass is unvisited]go north[else if Phat Path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if Hacks' Shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+			if spoilit is false, all-say "You're all done here for now[if player is in Char Arch] (the yak can be helped later,)[else],[end if] so you maybe should [if Saps' Pass is unvisited]go north[else if Phat Path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if Hacks' Shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
 	if player is in Saps' Pass:
 		try objhinting lawl wall instead;
 	if player is in Phat Path:
 		if Hacks' Shack is unvisited:
 			if harpings phrasing is visible and shack is unvisited:
-				if Leo is visible:
-					try objhinting harpings phrasing instead;
-				else:
-					all-say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's in that shack[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
+				if Leo is visible, try objhinting harpings phrasing instead;
+				all-say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's in that shack[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
 	if spoilit is true:
 		if Dirge Ridge is not visited or austerer is not visited or marines is not visited:
 			now spoilit is false;
 			all-say "Before taking a bite, you wonder if you've visited everywhere you can yet." instead;
 		if ye hoop is in austerer and austerer is visited:
 			all-say "You think to YE HOOP you saw in Austerer Treasure." instead;
-	if coal is visible:
-		try objhinting coal instead;
-	if flea is visible:
-		try objhinting flea instead;
-	if gum is visible:
-		try objhinting gum instead;
+	if coal is visible, try objhinting coal instead;
+	if flea is visible, try objhinting flea instead;
+	if gum is visible, try objhinting gum instead;
 	if bottle of dirty looking cola is visible:
 		if spoilit is true:
 			all-say "No, you'd rather pour the cola in the mug. It's slightly less nasty than the crust.";
@@ -5134,10 +5112,8 @@ carry out presto-hinting:
 		try objhinting bottle of dirty looking cola instead;
 	if fount is visible, try objhinting fount instead;
 	if clack ops locs pack is visible, try objhinting clack ops locs pack instead;
-	if disk is visible and skid is off-stage:
-		try objhinting disk instead;
-	if yak is visible and spoilit is false:
-		try objhinting yak instead;
+	if disk is visible and skid is off-stage, try objhinting disk instead;
+	if yak is visible and spoilit is false, try objhinting yak instead;
 	if drab yoke is visible:
 		if yak is visible:
 			say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not visible]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
@@ -5161,12 +5137,9 @@ carry out presto-hinting:
 		if futon is visible and slept is false:
 			if spoilit is true, all-say "Yeech. You're full. You need to SLEEP." instead;
 			try objhinting futon instead;
-		if scratch paper is reflexive:
-			try objhinting scratch paper instead;
-		if fizzy cola is not in mug:
-			try objhinting mug;
-		if compiled code is reflexive:
-			try objhinting compiled code instead;
+		if scratch paper is reflexive, try objhinting scratch paper instead;
+		if fizzy cola is not in mug, try objhinting mug instead;
+		if BUB DUDE EGG is reflexive, try objhinting BUB DUDE EGG instead;
 		if usb is visible:
 			try objhinting usb instead;
 	all-say "[if spoilit is true]You can't see much to do here, so you save your crust for somewhere more active[else]There's not much to do here. You may need to look elsewhere[end if]." instead;
@@ -6384,7 +6357,7 @@ chapter drinking
 the block drinking rule is not listed in the check drinking rulebook.
 
 check drinking:
-	say "You don't need to drink anything in this game. Well, there's one place where you sort of need to drink something, but [if compiled code is reflexive]this game skips that[else]you already got through there[end if]." instead;
+	say "You don't need to drink anything in this game. Well, there's one place where you sort of need to drink something, but [if BUB DUDE EGG is reflexive]this game skips that[else]you already got through there[end if]." instead;
 
 chapter climbing
 
@@ -13497,7 +13470,7 @@ check switching on (this is the switch computer pieces rule) :
 	if noun is computer screen or noun is keyboard or noun is dongle:
 		say "You don't need to switch any auxiliary equipment on or off." instead;
 
-the computer screen is a thing. description is "[if computer screen is not on labs slab]Vid-o-Void, since it's not hooked up to anything[else if compiled code is part of the computer screen]Ugh. It's got compiled code, but it doesn't work RIGHT[else]A bunch of nonsense code that might not even work[end if]."
+the computer screen is a thing. description is "[if computer screen is not on labs slab]Vid-o-Void, since it's not hooked up to anything[else if BUB DUDE EGG is part of the computer screen]Ugh. It's got BUB DUDE EGG on the screen. You've compiled, but there's one more thing to do[else]A bunch of nonsense code that might not even work[end if]."
 
 Include (-
 	has transparent talkable
@@ -14072,22 +14045,17 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 			preef noun;
 			do nothing instead;
 
-the compiled code is a reflexive thing. description is "It's too much to consider, at once. It--doesn't quite work, but it does something, but it needs to budge."
+BUB DUDE EGG is proper-named reflexive boringscen. description is "Ugh! There must be something wrong with the code you compiled, to print such a message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!". bore-text is "You can really only examine it--other actions leave you seeing red, thinking 'BUDGE! BUDGE!'".
 
-after fliptoing compiled code:
+after fliptoing BUB DUDE EGG:
 	now USB is in Hacks' Shack;
 	moot golden dongle;
 	continue the action;
 
-a-text of compiled code is "RYRYR". b-text of compiled code is "RYRYR". parse-text of compiled code is "x[sp]-[sp]x[sp]-[sp]x".
+a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "RYRYR". parse-text of BUB DUDE EGG is "x[sp]-[sp]x[sp]-[sp]x".
 
 check scaning computer screen:
-	if compiled code is visible:
-		try scaning compiled code instead;
-
-instead of doing something with the compiled code:
-	if action is procedural, continue the action;
-	say "You can really only examine it--or--what do you do with code that won't budge or be dug?" instead;
+	if BUB DUDE EGG is visible, try scaning BUB DUDE EGG instead;
 
 check restarting the game when player is in Hacks' Shack:
 	say "[if rebooted is false]You look over at Drive A--and the blue and orange buttons--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
@@ -14140,7 +14108,7 @@ check tying it to (this is the put on the slab rule) :
 	say "This game doesn't recognize the ATTACH/TIE verb for either of those objects. Perhaps it should, but you may be better off using PUT ABC ON/IN XYZ." instead;
 
 after fliptoing scratch paper:
-	now compiled code is part of the computer screen;
+	now BUB DUDE EGG is part of the computer screen;
 	if hawt thaw is in Phat Path, poss-d;
 	if lamb is in Grey Gyre, poss-d;
 	if sport ports are reflexive, poss-d;
@@ -14677,15 +14645,15 @@ check putting on the keyboard (this is the complete-keyboard rule):
 	otherwise:
 		say "That's not a key that needs to fit in the keyboard." instead;
 
-does the player mean doing something with compiled code: it is likely.
+does the player mean doing something with BUB DUDE EGG: it is likely.
 
-check fliptoing compiled code:
+check fliptoing BUB DUDE EGG:
 	if scratch paper is not reflexed:
 		say "No hope of debugging when you can't even build! No, what is it? Something in the polemic, all garbled.";
-		preef compiled code instead;
+		preef BUB DUDE EGG instead;
 	if fizzy cola is not in mug:
 		say "The process of debugging is going to take a while. You will need some sort of energy[if dirty looking cola is visible]. That bottle of cola just won't be enough for the task ahead[otherwise]. That coal won't cut it. Too early 20th century[end if].";
-		preef compiled code instead;
+		preef BUB DUDE EGG instead;
 
 chapter showing
 
@@ -24058,12 +24026,9 @@ carry out objhinting (this is the pick object to hint rule) :
 		if Cleric Circle is unvisited:
 			try objhinting scripture picturers instead;
 		all-say "The church isn't so special now you've been in it." instead;
-	if noun is closets:
-		all-say "The closets are just for transporting around the Means Manse quicker, to or from the study." instead;
-	if noun is the location:
-		all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
-	if location of noun is nothing and noun is not a backdrop:
-		all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
+	if noun is closets, all-say "The closets are just for transporting around the Means Manse quicker, to or from the study." instead;
+	if noun is the location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
+	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
 	if noun is moot:
 		if noun is disk:
 			if map region of location of skid is presto:

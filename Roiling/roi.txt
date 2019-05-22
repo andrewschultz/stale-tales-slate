@@ -471,8 +471,9 @@ It's a TAB key. It helps with programming and formatting, but it's not critical.
 First, you need to COMPILE, but you're too tired to get it to work. You're annoyed by the Speel, slipping on peels.
 The cola won't help. You need to crash.
 Or SLEEP.
-?The program still won't budge!
-Of course. It never works at first.
+?I have an error message saying BUB DUDE EGG!
+Of course. Code never works at first. Even simple code.
+Random actions leave you saying "BUDGE! BUDGE!"
 Now you're awake, you've got the energy to DEBUG.
 ?What do I need to do with the USB?
 It'd be nice to have transport out. And you have two options! Lucky you.
