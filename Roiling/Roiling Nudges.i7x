@@ -139,6 +139,7 @@ table of routes nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "mesa"	290343046	Same Mesa	--	--	"[locname]." [SAME MESA]
 "orcas"	277143749	Same Mesa	--	--	"[if regalia is reflexed]No, you found the way in, with the extra s[else]Hm, it's Oscar'S[end if]."
+"towards"	490212044	--	--	got-towards rule	"You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it."
 "dingy"	289888397	Same Mesa	--	--	"[name-worry]."
 "dwelling"	510897705	Same Mesa	--	--	"[name-worry]."
 "scripture"	748407896	Same Mesa	--	--	"[picturer-change]."
@@ -156,14 +157,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reagents"	644015033	--	--	has-reag rule	"[fol-reag]."
 "giatn"	251797892	--	Gast	--	"[Gast] is too old and set in [his-her] ways. You may just need to listen to [him-her] from [if nuder is in Same Mesa]one more angle[else]several different angles[end if]."
 "tirade"	384449683	--	Gast	--	"[if bench-end is reflexive]There's more than one tirade[else]You've sort of dealt with the tirades, but there's still more than one, and you need another way to deal[end if]."
-"bench"	271420406	--	bench	--	"The bench is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
+"bench"	271420406	--	sit a nag	--	"The [sit a nag] is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
 "die"	193828044	Same Mesa	--	--	"[die-sin]."
 "sin"	210174320	Same Mesa	--	--	"[die-sin]."
 "poison"	440345433	Same Mesa	--	--	"[not-stripe]."
 "stripe"	538972701	Same Mesa	--	--	"[not-stripe]."
 "poisonstripe"	979318134	Same Mesa	--	--	"[not-stripe]."
 "pat"	186763795	Same Mesa	--	--	"[if Idle Deli is visited]No, you already went PAST to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
-"elbows"	478600169	--	giant's elbow	--	"[if elbow is reflexed]You already avoided both elbows when you avoided one.[else]Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?[end if]"
+"elbows"	478600169	--	Gast's elbow	--	"[if elbow is reflexed]You already avoided both elbows when you avoided one.[else]Thankfully, [Gast]'s only really swinging one elbow, so--less to deal with, yay?[end if]"
 "grubby"	382226374	Same Mesa	--	--	"[name-worry]."
 "restaurant"	779336668	Same Mesa	--	--	"[name-worry]."
 "cleric"	349947767	Cleric Circle	--	--	"[locname]." [CLERIC CIRCLE]
@@ -1292,6 +1293,10 @@ to say ian-un: say "Ian is unchangeable, but maybe he is movable";
 to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
 
 section routes nudges
+
+this is the got-towards rule:
+	if worst ad is moot, the rule succeeds;
+	the rule fails;
 
 to say name-worry: say "Perhaps it's better to focus on the proper names instead. Simpler, too";
 

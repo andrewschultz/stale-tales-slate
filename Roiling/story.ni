@@ -5211,7 +5211,7 @@ carry out routes-hinting:
 		now spoilit is false instead;
 	if location of player is Harms Marsh:
 		if darkness is in Harms Marsh, try objhinting darkness instead;
-		if all noon gag is in Harms Marsh, try objhinting all noon gag instead;
+		if noon gag is in Harms Marsh, try objhinting noon gag instead;
 		try objhinting un-road instead;
 	if location of player is Ripe Pier, try objhinting da mist instead;
 	if location of player is Cripple Clipper, try objhinting thickness sketchins instead;
@@ -7693,7 +7693,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			if noun is the-to entry and the-from entry is reflexed:
 				print-the-from the-from entry;
 				the rule succeeds;
-		if debug-state is true, say "DEBUG WARNING: if you hoped to flip this for a point, maybe it needs to be reflexive or vanishing.";
+		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [noun] for a point, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
 		try examining noun instead;
 	if noun is meet bans or noun is tables or noun is palm or noun is giant pin or noun is niche:
 		if Gunter is not moot:
@@ -9979,7 +9979,7 @@ to say what-can-flip:
 table of pres [xxpre]
 preflip	thereg	pretodo
 sit a nag	routes	"Find a way to be fearless so you can lean AGAINST the [sit a nag]." [routes]
-elbow	routes	"You can go BELOW [Gast]'s elbow once he swings it around."
+Gast's elbow	routes	"You can go BELOW [Gast]'s elbow once he swings it around."
 sheol holes	routes	"You can look AROUND to find the un-road."
 un-road	routes	"You can go ALONG the un-road...once you find it."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
@@ -10885,7 +10885,7 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]A Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag][else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]A Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -10960,7 +10960,7 @@ part people and things
 
 chapter old giant [NOTE: it's critical to say old giant and not giant, because giant = giant pin according to inform]
 
-Gast is a male person. "[gast] sits here on the anti-sag sit-a-nag[if Rude 'N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[otherwise], going on some [i]tirades[r] about something or other[flail]. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[if gast is male]Ian[else]Nia[end if]".
+Gast is a male person. "[gast] sits here on the [sit a nag][if Rude 'N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[otherwise], going on some [i]tirades[r] about something or other[flail]. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[if gast is male]Ian[else]Nia[end if] Gast".
 
 description of Gast is "You can't do much more than listen to [gast]. [if sit a nag is reflexed]You're not sure what [he-she]'s complaining about, but it seems [he-she] really needs to[else if elbow is reflexed][his-her-c] [i]tirades are as loud as ever, [his-her] arms flailing high in the air[else][he-she-c] seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
 
@@ -11189,7 +11189,7 @@ check scaning sit a nag:
 
 section bench-end
 
-the bench-end is part of the anti-sag sit-a-nag. understand "end" as bench-end. description of bench-end is "Thick enough to sit on, with not too much pain, if you found the right way.". the bench-end is reflexive.
+the bench-end is part of the anti sag sit a nag. understand "end" as bench-end. description of bench-end is "Thick enough to sit on, with not too much pain, if you found the right way.". the bench-end is reflexive.
 
 a-text of bench-end is "YRRRYRY". b-text of bench-end is "YRRRYRY". parse-text of bench-end is "-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
@@ -11200,7 +11200,7 @@ check fliptoing bench-end:
 
 chapter Rude N Nuder
 
-Rude 'N Nuder is a thing.
+Rude 'N Nuder is a vanishing thing.
 
 description of Rude 'N Nuder is "You aren't able to see the inside, and that's probably a good thing. People do tend to get worked up a bit more than they should about this sort of 'work,' whether extolling freedom of speech or saying how tasteless it is."
 
@@ -11212,9 +11212,11 @@ instead of doing something to Rude 'N Nuder:
 
 a-text of Rude 'N Nuder is "YRRYR". b-text of Rude 'N Nuder is "YRPG?". parse-text of Rude 'N Nuder is "u[sp]x[sp]x[sp]e[sp]x". Rude 'n Nuder is cheat-spoilable.
 
-check fliptoing Rude 'N Nuder:
-	if bench-end is reflexive:
-		say "You're already below, but if you were close enough to listen, that could work." instead;
+check fliptoing Gast's elbow: if bench-end is reflexive, say "You're already below, but if you were close enough to listen, that could work." instead;
+
+after fliptoing Gast's elbow:
+	move Rude 'N Nuder to Same Mesa;
+	continue the action;
 
 after fliptoing U NERD ENDUR REDUN:
 	moot Gast;
@@ -11622,9 +11624,15 @@ description of Harms Marsh is "You are in a Harms Marsh, which you know to be fu
 
 section Sheol Holes
 
-the Sheol Holes are plural-named scenery in Harms Marsh. "You can't nail down where they are, but you do know you need to be careful."
+the Sheol Holes are plural-named reflexive boringscen in Harms Marsh. description is "You can't nail down where the Sheol Holes are, but you do know you need to be careful.". bore-text is "The Sheol Holes are to be avoided by moving, well, some unusual way or other."
 
 understand "hole" and "sheol hole" as sheol holes when player is in Harms Marsh.
+
+check fliptoing sheol holes:
+	if darkness is in Harms Marsh:
+		say "You don't have enough light, yet, to go around safely.";
+		preef sheol holes;
+		the rule succeeds;
 
 section stripey pyrites
 
@@ -11634,7 +11642,11 @@ check taking stripey pyrites: say "Take a hint from them, where they may lead yo
 
 chapter darkness
 
-the darkness is vanishing scenery in Harms Marsh. "It is better to create light and move forward than cast about in the darkness."
+the darkness is vanishing boringscen in Harms Marsh. description of darkness is "There's not much to see of the darkness. You just need to get rid of it.". bore-text is "You rage against the darkness, randomly thinking 'Ill unit, nut.' Well, you see red after that."
+
+after fliptoing darkness:
+	now noon gag is in Harms Marsh;
+	continue the action;
 
 a-text of darkness is "YRRYR". b-text of darkness is "GPRGR". parse-text of darkness is "u[sp]n[sp]x[sp]i[sp]x". darkness is cheat-spoilable.
 
@@ -11643,7 +11655,7 @@ to say to-o:
 
 section all noon gag
 
-the all noon gag is a vanishing boringthing in Harms Marsh. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
+the all noon gag is a vanishing boringthing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
 
 a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text of all noon gag is "?[sp]?[sp]-[sp]?[sp]?".
 
@@ -23798,49 +23810,50 @@ before objhinting for the first time:
 	ital-say "a word of warning before hinting objects. It is possible but very unlikely that this may reveal items you do not know about yet if this is not used carefully.";
 
 definition: a thing (called hintcand) is hintrelevant:
-	if hintcand is off-stage, decide no;
-	if hintcand is moot, decide no;
-	if hintcand is useless, decide no;
-	if hintcand is the location, decide no;
-	if hintcand is Gast and mrlp is routes, decide yes; [Gast is known-about before he comes on stage officially]
+	if hintcand is question mark and questions-not-flagged is true, yes;
+	if hintcand is off-stage, no;
+	if hintcand is moot, no;
+	if hintcand is useless, no;
+	if hintcand is the location, no;
+	if hintcand is Gast and mrlp is routes, yes; [Gast is known-about before he comes on stage officially]
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?] [this and below is for backdrops. I don't have a better way to do things.]
 		if player is in Largely All-Grey Gallery or player is in Dusty Study:
-			decide yes;
-		decide no;
+			yes;
+		no;
 	if hintcand is closest closets:
-		if mrlp is Ordeal Reload and Highest Heights is visited, decide yes;
-	if hintcand is red writing, decide yes;
+		if mrlp is Ordeal Reload and Highest Heights is visited, yes;
+	if hintcand is red writing, yes;
 	if hintcand is Thearchy Hatchery or hintcand is Maturation Natatorium:
 		if mrlp is towers:
-			if Actionless Coastlines is visited or Artist Traits Strait is visited, decide yes;
-		decide no;
+			if Actionless Coastlines is visited or Artist Traits Strait is visited, yes;
+		no;
 	if hintcand is n-t-air:
-		if mrlp is presto and zany meter is in Grey Gyre, decide yes;
-		decide no;
+		if mrlp is presto and zany meter is in Grey Gyre, yes;
+		no;
 	if hintcand is curst palace:
-		if mrlp is towers, decide yes;
-		decide no;
+		if mrlp is towers, yes;
+		no;
 	if hintcand is big-let:
-		if Nowt Town is visited, decide yes;
-		decide no;
+		if Nowt Town is visited, yes;
+		no;
 	if hintcand is cler-scen:
-		if mrlp is routes, decide yes;
-		decide no;
+		if mrlp is routes, yes;
+		no;
 	if hintcand is closest closets:
 		if mrlp is not Ordeal Reload, no;
 		if Highest Heights is visited, yes;
 		no;
 	if hintcand is Edictal Citadel:
-		if mrlp is otters and Disowned Downside is visited, decide yes;
-		decide no;
+		if mrlp is otters and Disowned Downside is visited, yes;
+		no;
 	if hintcand is coma camo:
 		if mrlp is otters:
-			if Clarthead Cathedral is visited or Shiner Shrine is visited, decide yes;
-		decide no;
+			if Clarthead Cathedral is visited or Shiner Shrine is visited, yes;
+		no;
 	if hintcand is leak lake or hintcand is shoals aslosh:
 		if mrlp is towers:
-			if Salted Deltas is visited or Actionless Coastlines is visited or Artist Traits Strait is visited, decide yes;
-		decide no;
+			if Salted Deltas is visited or Actionless Coastlines is visited or Artist Traits Strait is visited, yes;
+		no;
 	[d "[hintcand] before.";]
 	let R1 be map region of location of hintcand;
 	[d "[hintcand] after.";]
@@ -23848,10 +23861,10 @@ definition: a thing (called hintcand) is hintrelevant:
 	if R1 is R2:
 		[d "[hintcand] [location of hintcand] vs [R2].";]
 		if progval of location of hintcand < progval of location of player: [check for something inside something else]
-			decide no;
+			no;
 		[d "[hintcand] is relevant.";]
-		decide yes;
-	decide no;
+		yes;
+	no;
 
 objhinting is an action applying to one visible thing.
 
@@ -23878,11 +23891,11 @@ does the player mean objhinting a hintrelevant object:
 does the player mean objhinting a moot object: it is unlikely.
 
 definition: a thing (called hthing) is deregioned:
-	if mrlp is routes and hthing is giant pin, decide yes;
-	if location of hthing is nothing, decide no;
-	if hthing is moot, decide no;
-	if mrlp is not map region of location of hthing, decide yes;
-	decide no.
+	if mrlp is routes and hthing is giant pin, yes;
+	if location of hthing is nothing, no;
+	if hthing is moot, no;
+	if mrlp is not map region of location of hthing, yes;
+	no.
 
 to say qmsp:
 	now qmspoil is true;
@@ -24039,9 +24052,8 @@ carry out objhinting (this is the pick object to hint rule) :
 
 definition: a thing (called disc-tar) is cinder-dissolve:
 	if disc-tar is medals:
-		if nounsolve < 3 or adjsolve < 3:
-			decide no;
-	decide yes;
+		if nounsolve < 3 or adjsolve < 3, no;
+	yes;
 
 eisihint is a truth state that varies.
 
