@@ -603,7 +603,7 @@ to show-missed (curr - a region):
 		if store f is in Trips Strip, say "[2da of stores]store F in the Trips Strip led to a forest.";
 		if store i is in Trips Strip, say "[2da of stores]store I in the Trips Strip led to a sortie. Which is both an exit and a missile launch.";
 		if store m is in Trips Strip, say "[2da of stores]store M in the Trips Strip led to the Metros.";
-		if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've become something really alive. A nice bat.";
+		if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with BACTINE.";
 	if curr is forest and has-been is off-stage, say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
 	if curr is sortie:
 		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a PANCAKE.";
@@ -2039,40 +2039,34 @@ after fliptoing rentals:
 	continue the action;
 
 after fliptoing (this is the set pronouns rule) :
-[	if noun is teleporter:
+	if noun is teleporter:
 		set the pronoun it to location of player;
-		continue the action;]
+		continue the action;
 	if noun is beast or noun is wolves:
 		set the pronoun him to noun;
 		set the pronoun her to noun;
-		continue the action;
 	if noun is rentals, moot noun;
 	if noun is visible:
-		if noun is plural-named:
-			set the pronoun them to noun;
+		if noun is plural-named, set the pronoun them to noun;
 		set the pronoun it to noun; [if noun is singular-named: ... is grammatically proper but this seems more convenient for the user]
-		if noun provides the property male and noun is male:
-			set the pronoun him to noun;
-		if noun provides the property female and noun is female:
-			set the pronoun her to noun;
+		if noun provides the property male and noun is male, set the pronoun him to noun;
+		if noun provides the property female and noun is female, set the pronoun her to noun;
 	continue the action;
 
 after fliptoing (this is the when to increase min points after flip rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
 	d "[noun].";
-	if noun is nice bat, min-up; [STORES]
+	if noun is cabinet, min-up; [STORES]
 	if noun is grits or noun is pancake, min-up; [SORTIE]
 	if noun is banshee, min-up; [FOREST]
 	if noun is rentals, min-up;[METROS]
 	if noun is cork or noun is wings: [begin RESORT min]
 		if rock is moot and swing is moot, min-up;
-	if noun is china:
-		min-up;
+	if noun is china, min-up;
 	if noun is toeholds:
 		if sprig is moot, min-up;
 		if spore is moot, min-up;
 	if noun is grips or noun is ropes:
 		if toeholds are not off-stage, min-up;
-	skip upcoming rulebook break;
 	continue the action;
 
 chapter special cases
@@ -2359,7 +2353,7 @@ to preef (flipper - a thing):
 table of preflip clues [this must have a regular item first due to a small bug in 6g]
 preflip	pretodo
 nametag	"nametag -> gateman" [Ordeal Loader]
-cabinet	"cabinet -> nice bat" [stores]
+cabinet	"cabinet -> bactine" [stores]
 silver	"[if livers are not moot]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
 drapes	"spread -> [if red asp is in Cruel Ones' Enclosure]RED ASP -> [end if]drapes"
 sack	"cask -> sack" [sortie]
@@ -2915,11 +2909,11 @@ after fliptoing bugle:
 
 the bulge is part of the OR DO door.
 
-lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E". rgtext of bulge is "[gcn][gc][rc][rc][gc]".rgtext of bulge is "[gcn][gc][rc][rc][gc]".
+lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E". rgtext of bulge is "[gcn][gc][rc][rc][gc]".
 
 description of the bulge is "It's shaped like a narrow rectangle with rounded corners. It has an upper corner that fans out. There's no way to pry it from the door. [run paragraph on][bugle-clue]."
 
-to say bugle-clue: say "[one of]You give it a few taps, but it's wedged in[or]Maybe it could become some sort of instrument to get rid of the door[or]It's stuck to the door proper, like a tattoo[or]You guess it's your charge to open the door with it[or]You've got no reveilleation, err, revelation, what it should be, yet[or]You pay closer attention--[if player has the gadget]your gadget leaves it solved[else]it can't be that hard to shift around. Maybe you should've taken one of the devices in the cabinet. It's only going to get tougher[end if][cycling]"
+to say bugle-clue: say "[one of]You give it a few taps, but it's wedged in[or]Maybe it could become some sort of instrument to get rid of the door[or]It's stuck to the door proper, like a tattoo[or]You guess it's your charge to open the door with it[or]You've got no reveilleation, err, revelation, what it should be, yet[or]You pay closer attention--it's early on, and surely you don't have to mix letters too much[cycling]"
 
 instead of taking the bulge: say "[bugle-clue]."
 
@@ -3101,45 +3095,31 @@ description of the attics is "They fit perfectly on what was once the top of the
 
 section acne-bit cabinet
 
-the acne-bit cabinet is an open openable transparent container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping]."
+the acne-bit cabinet is an open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne-bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping]."
 
-gpos of cabinet is 5. rpos of cabinet is 7. lgth of cabinet is 7. rgtext of cabinet is "[rcn][rc][rc][rc][ast][rc][rc][gc]".
+gpos of acne-bit cabinet is 3. rpos of acne-bit cabinet is 6. lgth of acne-bit cabinet is 7. rgtext of acne-bit cabinet is "[rcn][gc][rc][rc][rc][rc][gc]".
 
-check inserting into the cabinet:
-	if noun is gadget or noun is saltine or noun is info-lit or noun is phial, say "Nah, it's yours." instead;
-	say "Yes, the cabinet is for storage, but you [if gateman is off-stage]don't have anywhere to go, yet[else]won't be coming back[end if]." instead;
+check inserting into the acne-bit cabinet:
+	if noun is gadget or noun is saltine or noun is info-lit or noun is phial, say "No need to put [the noun] back in the cabinet. It's yours." instead;
+	say "Yes, the cabinet is for storage, but you [if gateman is off-stage]don't have anywhere to go, yet[else if trips strip is visited]only need to put items you're done with in it[else]probably won't be coming back[end if]." instead;
 
-the nice bat is a thing. "A nice bat is here, standing on its rear claws."
+check opening acne-bit cabinet: say "It already is." instead;
 
-description of nice bat is "The items it took from you are somewhere, you're sure. It's a big bat, six feet tall, with wings that probably open like a street-side watch seller's trenchcoat."
+check taking acne-bit cabinet: say "Whatever keeps it floating in place also keeps you from moving it. Besides, it's a bit heavy." instead;
 
-the bw are privately-named plural-named things. printed name of bw is "bat wings". understand "bat wings" and "wings" as bw.
+description of acne-bit cabinet is "It's open[if acne-bit cabinet is not flippable], and you can't see the acne that was there[else]. The acne-bit parts do look red--maybe you can get rid of them[velcro-check][end if]. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
 
-description of bw is "They're not extended right now."
-
-instead of doing something with the nice bat:
-	if the current action is attacking, say "That'd be a spectacular way to fail." instead;
-	if the current action is fliptoing:
-		if number of solved regions < 2:
-			preef cabinet;
-			say "The cabinet hasn't earned it, yet." instead;
-		continue the action;
-	say "The bat does some bizarre cheerleading movement as you turn to look at it. You probably don't want to get too close, though it has been helpful.";
-
-instead of opening acne-bit cabinet: say "It already is.".
-
-instead of taking acne-bit cabinet: say "Whatever keeps it floating in place also keeps you from moving it."
-
-description of acne-bit cabinet is "It's open. The cratered bits, once retraced, spell (in red) CAN BITE. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
+to say velcro-check:
+	say " with the right healing potion or whatever[if metros is solved]. You think back to how the Velcro was sort of a brand name, and maybe you need a common one here[end if]"
 
 check examining cabinet:
-	if location of player is Trips Strip, say "You've no idea where the cabinet puts all its items. Maybe you didn't read the right fantasy books. But--they're there, helping keep your inventory free. A small favor." instead;
+	if location of player is Trips Strip, say "You've no idea where the cabinet puts all its items. Maybe you didn't read the right fantasy books. But--they're there, helping keep your inventory free. A small favor[if number of things in cabinet > 0]. You notice some potentially useful stuff in the cabinet: [list of things in cabinet]." instead;
 
-description of cratered bits is "They read CAN BITE[if doorslammed is true], as you found out when trying to take both those devices[end if]. They're in red."
+description of cratered bits is "The acne-bit parts are very red. Interesting."
 
 check examining cabinet: ignore the examine containers rule.
 
-instead of closing the acne-bit cabinet: say "You don't need to hide anything in there from anyone.".
+check closing the acne-bit cabinet: say "You don't need to hide anything in there from anyone.".
 
 section prep paper
 
@@ -3440,7 +3420,7 @@ section tinfoil info-lit
 
 the tinfoil info-lit is an amusing thing in cabinet. understand "tin/info/lit/paper" as tinfoil info-lit. the tinfoil info-lit is warpable.
 
-description of tinfoil info-lit is "[one of]It's tinfoil only in writing content--it's actually just paper. It's excessively all-caps and underlined, but I'll spare you that.[or]You read it again.[stopping]--If you can change stuff, why can't the people who made the gadget? How do they know you can? Or why couldn't they find someone off the street? Perhaps they're the real enemy and you're the pawn.[line break]--If they really wanted you to clean things up, why can't you take both the cabinet items?[line break]--That NEW DOOR is not really ONE WORD. Same as the guy who can lift it! They are two short words, easier than one big scary seven-letter word.[line break]--Anyone smart enough to untangle this world won't get any fulfillment from doing so. So there, stupider disputer![paragraph break]--Sane Sean, Farce Facer, Saltier Realist[paragraph break][if store f is moot or store i is moot or store m is moot]This seems like total nonsense, now you've found other portals and such[else if player is in Trips Strip]This guy must be wrong. You've gotten to the Trips Strip, and you just need a way out[else]It'd all be distressingly persuasive gotcha-logic if you hadn't been able to flip that toga. But this is a fantasy world, [logic-cracks][end if]."
+description of tinfoil info-lit is "[one of]It's tinfoil only in writing content--it's actually just paper. It's excessively all-caps and underlined, but I'll spare you that.[or]You read it again.[stopping]--If you can change stuff, why can't the people who made the gadget? How do they know you can? Or why couldn't they find someone off the street? Perhaps they're the real enemy and you're the pawn.[line break]--If they really wanted you to clean things up, why don't you have even MORE cluing items?[line break]--That NEW DOOR is not really ONE WORD. Same as the guy who can lift it! They are two short words, easier than one big scary seven-letter word.[line break]--Anyone smart enough to untangle this world won't get any fulfillment from doing so. So there, stupider disputer![paragraph break]--Sane Sean, Farce Facer, Saltier Realist[paragraph break][if store f is moot or store i is moot or store m is moot]This seems like total nonsense, now you've found other portals and such[else if player is in Trips Strip]This guy must be wrong. You've gotten to the Trips Strip, and you just need a way out[else]It'd all be distressingly persuasive gotcha-logic if you hadn't been able to flip that toga. But this is a fantasy world, [logic-cracks][end if]."
 
 to say logic-cracks: say "[if getaway is visible or gateman is visible]and you've already shown cracks in his logic[else]so there's a chance he's wrong[end if]"
 
@@ -3814,8 +3794,7 @@ carry out gleaning:
 		if lube-asked is true:
 			try taking phail phial;
 			if player does not have phail phial, all-say "[bug-report] Please let me know how this happened." instead;
-		else:
-			all-say "You need to take the phial for that to happen. The cabinet may not want to relinquish it right away." instead;
+		all-say "You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe [if gateman is off-stage]find someone to ask[else]ask the gateman[end if]." instead;
 	if blue lube is not visible, all-say "[reject]" instead;
 	all-say "You stare into the blue lube for a bit. You see a small story unfold.[line break]";
 	if location of player is Notices Section:
@@ -8973,13 +8952,11 @@ carry out scaning:
 	if noun is dial:
 		if numset of dial is 16, say "Your gadget is silent. You've figured what to do with the dial." instead;
 		say "The gadget, when over the EXITS part, reads[if player has gadget][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][else][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters EXITS in it, somehow." instead;
-	if noun is cabinet, say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about its acne[else] [rcn][rc][rc][gc][gc][rc][gc] over the bits[end if]." instead;
+	if noun is cabinet, say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about where it is acne-bit and red." instead;
 	if noun is subway map, say "The reading's different over the map of Mt. Rose than the store proper.[if gadget is cert][gcn][rc][rc][rc][rc][rc][else if gadget is rect][gcn][bc][bc][bc][rc][bc][end if]." instead;
 	if noun is magenta nametag:
-		if gadget is cert:
-			now nt-cert is true;
-		if gadget is rect:
-			now nt-rect is true;
+		if gadget is cert, now nt-cert is true;
+		if gadget is rect, now nt-rect is true;
 	if gadget is cert:
 		if noun is not inflexible:
 			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
@@ -9042,11 +9019,9 @@ to check-marcos:
 				if yes-scans > 5:
 					say "You hear a voice. 'Psst! Name's Marcos! Got some help with macros! You can simplify things with [if gadget is rect]RECT or REC or R[else]CERT or CER or C[end if].'";
 
-instead of putting something on cabinet:
+check putting something on cabinet: [??]
 	say "(I'll assume you meant in, not on.)";
 	try inserting noun into cabinet instead;
-
-doorslammed is a truth state that varies. doorslammed is usually false.
 
 section gateway
 
@@ -9191,7 +9166,7 @@ to say goat-toga:
 
 check asking gateman about "world peace": say "That goal's a slog, but I've got confidence." instead.
 
-description of gateman is "His sober robes are tan, but they're not important. 'Stop staring!' he booms. [if player has tagged gadget]'You're ready to go through that gateway, though you can ask me for help.'[else]'You should probably get equipped. Get the gadget in the cabinet.'[end if]"
+description of gateman is "His sober robes are tan, but they're not important. 'Stop staring!' he booms. [if player has tagged gadget]'You're ready to go through that gateway, though you can ask me for help.'[else]'You might need some aids. Get the gadget from the cabinet.'[end if]"
 
 to say your-job: say "[one of]'We need someone to free us from the marauding tyranny of Red Bull Burdell! He has made a plowyard out of Yorpwald! Force alone cannot undo him!'[or]'You. Red Bull Burdell. Win.'[stopping]".
 
@@ -9395,6 +9370,11 @@ does the player mean objasking about the deadbeat: it is unlikely.
 to say roo: pad-rec "advice".
 
 to say ask-red: pad-rec "red"
+
+Check talking to (this is the can only talk to talkables rule):
+	if noun is not a person, say "For the most part, whn you TALK TO, only people can respond. And it's best to ASK them ABOUT something specific. But you really don't have to talk much at all." instead;
+	say "You ask about any old thing (ASK X ABOUT Y is the preferred syntax...)[paragraph break]";
+	try asking noun about "small talk" instead;
 
 table of general-blather
 him-who	topic	him-say
@@ -9690,6 +9670,10 @@ check going inside in Cruel Ones' Enclosure:
 to say dibb: say "A voice booms 'Dash in, be banished!' "
 
 book reg-verbs
+
+part talking to
+
+Talking to is an action applying to one visible thing.  Understand "talk to [something]" as talking to.
 
 part going
 
@@ -10220,10 +10204,8 @@ to solve-region (sre - a region):
 		say "Man! With the SECURE settings on your gadget, you can RECUSE if you want and hit Store R.";
 
 to say espec-xtra:
-	if number of things in cabinet > 0:
-		say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tinfoil is in cabinet]. Well, except the tinfoil info-lit[end if]";
-	if info-lit is in cabinet:
-		moot info-lit;
+	if number of things in cabinet > 0, say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tinfoil is in cabinet]. Well, except the tinfoil info-lit[end if]";
+	if info-lit is in cabinet, moot info-lit;
 	now player has all things in cabinet;
 
 to item-warp:
@@ -10234,9 +10216,8 @@ to item-warp:
 			if mrlp is Ordeal Loader:
 				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
 			else:
-				say "Out of nowhere swoops the [if cabinet is moot]nice bat[else]cabinet[end if]. [run paragraph on][if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is moot]You're still a little spooked, but grateful, as it swoops away[else]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, and you wonder if maybe you can do something for it[end if][espec-xtra].";
-				if cabinet is in Notices Section:
-					now cabinet is in Trips Strip;
+				say "Out of nowhere swoops the [if cabinet is not flippable]acne-bit [end if]cabinet. [if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is not flippable]You're still a little spooked, but grateful, as it bounces around[else]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, but they sound pained. You wonder if you can take a bit of time out from questing to fix that[end if][espec-xtra].";
+				if cabinet is in Notices Section, now cabinet is in Trips Strip;
 		repeat with Q running through all things enclosed by the player:
 			if Q is not warpable, moot Q;
 
@@ -10330,7 +10311,6 @@ understand "bite [something]" as biteing.
 
 carry out biteing:
 	if noun is cabinet, say "The cabinet doesn't deserve that. Plus, no good surface." instead;
-	if noun is nice bat, say "It would bite back harder and germier." instead;
 	if noun is toe, say "It'd be hard to hold in your teeth." instead;
 	if noun is saltine, say "It'll only take one bite to EAT. You can't save half for later and get another hint." instead;
 	try eating noun instead;
@@ -10363,8 +10343,7 @@ does the player mean knocking the OR DO door: it is very likely.
 does the player mean knocking the signers' ingress: it is very likely.
 does the player mean knocking Corses Crosse: it is very likely.
 does the player mean knocking a portal:
-	if cabinet is visible:
-		it is unlikely;
+	if cabinet is visible, it is unlikely;
 	it is very likely;
 
 carry out knocking:
@@ -10413,11 +10392,18 @@ understand "read [something]" as reading.
 
 reading is an action applying to one thing.
 
+cabinet-reads is a number that varies.
+
+to say cabinet-loop:
+	increment cabinet-reads;
+	if cabinet-reads > 1 and the remainder after dividing cabinet-reads by 7 is 0, say "[line break]Well, you've read through it all. But you can read it again, if you'd like.";
+
 check reading (this is the reading is almost examining rule):
 	if noun is toga, try examining the toga-writing instead; [ordeal loader]
 	if noun is gadget, try examining tag instead;
 	if noun is gadget-screen, try scaning location of player instead;
 	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
+	if noun is cabinet and trips strip is visited, say "Here is one of several writings in red in the cabinet: [one of]I C BEATN[or]IN, BE, ACT!!![or]C N-E BAIT??[or]CIT-E BAN!!![or]Numbers for a NITECAB.[or]ABE [']N TIC![or]TEN ABC, I!!![in random order]" instead;
 	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!"; [stores]
 	if noun is great grate, try examining the branding instead; [sortie]
 	if noun is tall trio, say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]." instead;
@@ -10604,7 +10590,7 @@ understand "fill [something]" as filling.
 
 the oils are a plural-named thing in Sacred Cedars.
 
-lgth of oils is 4. gpos of oils is 4. rpos of oils is 3. cert-text of oils is "-[d1][d1][d1]". rect-text of oils is "S[d1][d1][ast]L[end if]". rgtext of oils is "[rcn][rc][rc][rc]".
+lgth of oils is 4. gpos of oils is 4. rpos of oils is 3. cert-text of oils is "-[d1][d1][d1]". rect-text of oils is "S[d1][d1][ast]L". rgtext of oils is "[rcn][rc][rc][rc]".
 
 [lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 is "-[ast]I[ast]L[d1]". rect-text of oils2 is "S[d1][d1][ast]O[end if]". rgtext of oils2 is "[rcn][gc][gc][rc]".]
 
@@ -10647,7 +10633,7 @@ carry out filling:
 		say "[line break]A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.";
 		now rpos of oils is 1;
 		now cert-text of oils is "-[ast]I[ast]L[d1]";
-		now rect-text of oils is "S[d1][d1][ast]O[end if]";
+		now rect-text of oils is "S[d1][d1][ast]O";
 		now rgtext of oils is "[rcn][gc][gc][rc]";
 	now oils are in cask;
 	the rule succeeds;

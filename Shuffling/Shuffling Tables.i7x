@@ -23,7 +23,7 @@ store f	scented descent	"forest"	"store f"	"The greens and browns of Store F coa
 store i	posted depots	"sortie"	"store i"	"The store rumbles, revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
-cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end Trips Strip anagrams]
+cabinet	cabinet	"cabinet"	"cabinet"	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	[end Trips Strip anagrams]
 
 book Forest
 
@@ -177,6 +177,16 @@ to say what-about-gate: say ". [if player has gadget]Not much left to do for you
 to say which-roar:
 	moot noise bag;
 	say "[if beats are visible]loud beats[else]beast's roaring[end if]"
+
+check fliptoing cabinet:
+	say "That is a good idea, but you're not powerful enough yet.";
+	preef cabinet;
+	the rule succeeds;
+
+after fliptoing cabinet:
+	now cratered bits are in Trips Strip;
+	moot cratered bits;
+	continue the action;
 
 volume specific help for things you need to flip
 
@@ -364,8 +374,8 @@ hint-entry	advice-entry	parallel-entry
 yourself	"[if cur-score of Ordeal Loader is 0]Try hinting objects around you instead[else]You have the ability to anagram things[end if]."
 redness	"Redness means all the letters in a word are wrong, compared to what something should become. E.g. GNAT <-> TANG."
 dope tan notepad	"You will write procedural things in your notepad as you get them."
-acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems animated, almost an animal. [plus][or]This is a LLP and maybe a slightly tricky one. [plus][or]It feels almost kind, mammalian, and the bits read CAN BITE which is in red. [plus][or]NICE BAT. [minus][cycling]"
-cratered bits	"The cratered bits clue what the cabinet can become[if Trips Strip is unvisited] once you start your main quest[end if]."
+acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems wounded. Maybe you can help it not be acne-bit. [plus][or]The acne-bit cabinet is a LLP and maybe a slightly tricky one, because it refers to a brand name that has become a word. [plus][or]A healing solution that has no letter slots in common with if you READ the cabinet will work. You could also scan the cabinet for clues, of course. [plus][or]BACTINE. [minus][cycling]"
+cratered bits	"The cratered bits make the cabinet acne-bit and clue what it can become[if Trips Strip is unvisited] once you start your main quest[end if], since they are red, and red means no letters are right."
 name list	"The list hints what Shuffling Around is all about."
 vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what Shuffling Around is all about."
 odd side passage	"You can ENTER the odd side passage, or go IN."
@@ -446,8 +456,6 @@ store w	"[nxt-g]."
 store x	"[no-sto]."
 store y	"[nxt-g]."
 store z	"[no-sto]."
-nice bat	"You don't need to do anything more with the bat now. It's happy as-is."
-bw	--
 whiff of stew	"[one of]The stew is a clue which way to go. [plus][or]You should go WEST. [minus][cycling]" [START FOREST]
 thorn	"[one of]The thorn is a clue which way to go. [plus][or]You should go NORTH. [minus][cycling]"
 rambling shout	"[one of]The shout is a clue which way to go. [plus][or]You should go SOUTH. [minus][cycling]"
