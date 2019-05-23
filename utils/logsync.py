@@ -53,6 +53,9 @@ verbose = False
 # note HONESTLY currently has no ?'s in its b-text
 abbrevs = defaultdict(str)
 
+aro_settings = [ "a-text ", "b-text ", "parse-text " ]
+sa_settings = [ "lgth ", "gpos ", "rpos ", "rgtext ", "cert-text ", "rect-text " ]
+
 def shortcutcheck(x):
     if x in abbrevs: return abbrevs[x]
     return x
@@ -71,6 +74,13 @@ def usage():
     print("-cou/-ncou turns on/off showing counts of errors, default = off.")
     print("-ed/de/e edits the data file", data_file)
     exit()
+
+def match_score(my_l, my_a, lc, str):
+    retval = 0
+    for q in my_a:
+        if q in my_l: retval += 1
+        if q + "is " in my_l: print("WARNING", str, lc, "should have", q, "of <NAME> and not", q, "is")
+    return retval
 
 def read_data_file():
     in_roiling = False
@@ -174,7 +184,9 @@ def sa_r_g_check():
     print("=" * 40, "SHUFFLING")
     with open(s_src) as file:
         for (line_count, line) in enumerate(file, 1):
-            if 'gpos of' in line and 'rpos of' in line and 'rgtext of' in line:
+            ms = match_score(line, sa_settings, line_count, "SA")
+            if ms >= 2 and not line.startswith("\t"):
+                if ms < len(sa_settings): print("WARNING", line_count, "does not have all of", aro_settings)
                 sent = re.split("\. *", line.lower().strip())
                 skip = False
                 global_raw = ""
@@ -312,7 +324,9 @@ def aro_settler_check():
                 l1 = re.sub(" \..*", "", l1)
                 desc_count += 1
                 print('{:02d} "description of {:s}" needed at line {:d} and not just quoted text for description. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
-            if 'a-text of' in line and 'b-text of' in line and "\t" not in line:
+            ms = match_score(line, aro_settings, line_count, "ARO")
+            if ms >= 2 and not line.startswith("\t"):
+                if ms < len(aro_settings): print("WARNING", line_count, "does not have all of", aro_settings)
                 if 'parse-text' not in line:
                     print("WARNING need to fill in parse-text in line", line_count)
                 elif 'parse-text of' not in line:

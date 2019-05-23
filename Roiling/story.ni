@@ -17110,7 +17110,7 @@ chapter ol trap and portal
 
 the ol' trap is flippable scenery in Horned Hedron. understand "ol trap" and "ol/oltrap" as ol' trap.
 
-a-text of ol' trap is "RYRRYR". b-text of ol' trap is "RYPPYR". parse-text is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
+a-text of ol' trap is "RYRRYR". b-text of ol' trap is "RYPPYR". parse-text of ol' trap is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
 
 check taking ol' trap:
 	say "That'd be a good way to spring it." instead;
@@ -18477,7 +18477,7 @@ after printing the locale description for Shaven Havens when havens-visit is fal
 
 The lone duck is an animal in Shaven Havens. "[if lone duck is friendly]That[otherwise]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if agnostic is visible], and it's ignoring the agnostic[end if]."
 
-a-text of lone duck is "YRRYRRYR". b-text of lone duck is "YRRYRRYR". parse-text is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of lone duck is "YRRYRRYR". b-text of lone duck is "YRRYRRYR". parse-text of lone duck is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 understand "loud neck" and "loud/neck" as lone duck when id tag is examined.
 
@@ -18534,7 +18534,7 @@ check entering prison ropins: say "It's not very full of fun or useful things. I
 
 check going inside in Obscurest Subsector: try entering prison ropins instead; [?? make sure this isn't short circuited]
 
-a-text of prison ropins is "YRRYRRYR". b-text of prison ropins is "YRRYRRYR". parse-text is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of prison ropins is "YRRYRRYR". b-text of prison ropins is "YRRYRRYR". parse-text of prison ropins is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 description of ropins is "[if duck is returned]The prison ropins are open now, not that you want to enter.[else]The gaol advertises itself as the involuntary home of one Dr. Yow.[end if]"
 
@@ -19247,7 +19247,7 @@ after fliptoing flowerpot:
 	now crocus is in flowerpot;
 	continue the action;
 
-a-text of crocus is "RYRRO". b-text of crocus is "PYRRO". parse-text is "d[sp]i[sp]x[sp]x[sp]y". crocus is parse-spoilable.
+a-text of crocus is "RYRRO". b-text of crocus is "PYRRO". parse-text of crocus is "d[sp]i[sp]x[sp]x[sp]y". crocus is parse-spoilable.
 
 to say new-yerg-thing:
 	now flip-final-clue is true;
@@ -20793,7 +20793,7 @@ the macks are plural-named flippable reflexive people in Disowned Downside. desc
 
 understand "mack" as macks.
 
-a-text of macks is "BUG". b-text of macks is "BUG". parse-text is "BUG".
+a-text of macks is "BUG". b-text of macks is "BUG". parse-text of macks is "BUG".
 
 rule for printing a locale paragraph about macks:
 	say "[one of]Wait a minute. You think you recognize whom the macks are trying to impress. It's that lady from the picture Elmo showed you: Gretta Garett-Tatger! Their pick-up lines and stories are just horrible, but their technique keeps them afloat. But that's how it is, with macks. Or whatever annoying flirters are called these days. And, well, if she ran, they'd probably cut her off[or]The macks continue trying to impress Gretta[how-macked][stopping].";
@@ -21134,16 +21134,16 @@ For printing a locale paragraph about a mack-idea (called the item):
 	continue the activity.
 
 [pod 1 is 7-letters repeating]
-t-bossily is a mack-idea. pod-num is 1. pod-ord is 1. a-text is "RYRRYRO". b-text is "RYRRYRO". parse-text is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
+t-bossily is a mack-idea. pod-num is 1. pod-ord is 1. a-text of t-bossily is "RYRRYRO". b-text of t-bossily is "RYRRYRO". parse-text of t-bossily is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
 
-t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text is "RYYRYRO". b-text is "RYGRGRO". parse-text is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
+t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text of t-seedily is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
 
-t-cattily is a mack-idea. pod-num is 1. pod-ord is 3. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
+t-cattily is a mack-idea. pod-num is 1. pod-ord is 3. a-text of t-cattily is "RYRRYRO". b-text of t-cattily is "RGRRYPB". parse-text of t-cattily is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
 
-t-tearily-irately is a mack-idea. pod-num is 1. pod-ord is 4. a-text is "??YRYRO". b-text is "??GR?RB". parse-text is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
+t-tearily-irately is a mack-idea. pod-num is 1. pod-ord is 4. a-text of t-tearily-irately is "??YRYRO". b-text of t-tearily-irately is "??GR?RB". parse-text of t-tearily-irately is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
 
 [pod 2 is non-repeating 7-letters]
-t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
+t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
 
 t-shadily is a mack-idea. pod-num is 2. pod-ord is 2. a-text is "RRYRYRO". b-text is "RRYRGRO". parse-text is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
 
