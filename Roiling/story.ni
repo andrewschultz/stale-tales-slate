@@ -2130,7 +2130,7 @@ lecturer	Elvira	"You probably know he's in favor of her."
 lecturer	lecturer	"Oh, his good-for-society rant has enough of his own experiences sprinkled in."
 Brother Horbert	spoon	"'[if spoon is moot]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
-Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
+Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
@@ -4989,7 +4989,7 @@ wells-hintables is a list of things variable. wells-hintables is { riot cap, sil
 
 field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, buried raft, barriers west, barber sickle, mean trowel, rapt figure, barren cries }.
 
-clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, l-o-p, lemons, auction caution, nectarine }.
+clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, prices precis, lemons, auction caution, nectarine }.
 
 scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', orange, a brr hub, inapt paint }
 
@@ -22851,22 +22851,19 @@ a mango is a fruit.
 clearing-fruits is a number that varies.
 
 after fliptoing when player is in Clangier Clearing:
-	if noun is a fruit or noun is l-o-p:
+	if noun is a fruit or noun is prices precis:
 		increment clearing-fruits;
 	continue the action;
 
 a tekno-token is an improper-named thing. description of tekno-token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno-token.
 
-the l-o-p is privately-named proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
+the prices precis is privately-named proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
-check taking l-o-p:
-	say "That'd leave everyone in the market confused[if l-o-p is reflexed] and undo your help fixing the prices[end if]." instead;
+check taking prices precis: say "That'd leave everyone in the market confused[if prices precis is reflexed] and undo your help fixing the prices[end if]." instead;
 
-understand "price list" or "list/ of/ prices" as l-o-p.
+understand "price" and "price precis" as prices precis.
 
-the printed name of l-o-p is "the list of prices".
-
-a-text of l-o-p is "RRYRYR". b-text of l-o-p is "RPGRGP". parse-text of l-o-p is "x[sp]r[sp]i[sp]x[sp]e[sp]s". l-o-p is parse-spoilable.
+a-text of prices precis is "RRYRYR". b-text of prices precis is "RPGRGP". parse-text of prices precis is "x[sp]r[sp]i[sp]x[sp]e[sp]s". prices precis is parse-spoilable.
 
 the kumquat is a fruit. description is "Weird and orange and oblong."
 
@@ -25037,7 +25034,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if papayas are not moot, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
 		if mango is not moot, say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
 		if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
-		if l-o-p is not reflexed, say "[2drm of Clangier Clearing]you could've said CRIPES at the prices.";
+		if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said CRIPES at the prices precis.";
 		if quince is not moot, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
 		if nectarine is not moot, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
 		if orange is not moot, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [Scape Space]

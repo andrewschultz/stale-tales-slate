@@ -1016,7 +1016,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "craig"	184109754	Clangier Clearing	--	--	"[len-part]."
 "price"	358594302	Clangier Clearing	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already took care of stuff[end if]."
 "among"	242122758	--	--	need-mango rule	"Not quite the right way."
-"lits"	298190669	--	l-o-p	--	"[if l-o-p is reflexed]You already messed with the list[else]The list doesn't look odd, but maybe some the prices will make you exclaim something[end if]."
 "overpriced"	774270700	--	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."
 "lemon"	388955186	--	--	lemnomel rule	"You can't focus on just one of the lemons, but you don't need to."
 "nameless"	637144468	Clangier Clearing	--	--	"You can't do anything other than listen to the nameless salesmen, and you don't need to move them out of the way."
