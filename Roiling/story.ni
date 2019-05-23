@@ -4673,14 +4673,13 @@ tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
 beams	false	false	false	true	"[cheatfid]."
 meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off."
-plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
-sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out." [START routes]
+palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
+anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
 ltb	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
-I'd Cede	false	true	false	false	"Perhaps if you just heard the instrumentals, the settler would not go crazy. But likely the combination of Eddie C. and [i]I'd Cede[r] is causing the weird behavior."
 praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
 marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
@@ -4693,7 +4692,7 @@ USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
 Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
-pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five[end if]."
+pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five for the scary crays[end if]."
 a-s	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
@@ -4723,29 +4722,36 @@ sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp pr
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
-brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
-auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
+a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
+auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign--caution has four vowels, but the settler indicates three[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 noon gag [below here you get a generic response]
 angriest ingrates
 asset-hit atheists
 b-b
+boing go bin
 bortles lobster
-capers
-casper
+bub dude egg
+capers recaps
+casper spacer
+clack ops locs pack
 dreads adders
 elmer
 fluster self rut
+frat raft
 gins sign
 inapt paint
-locs pack
+i'm le cop polemic
+large regal lager
 mardier admirer
 me arts
 mended mini denim
 muscly luc sym
 natant ant
+organised ego drains
 papery yapper
+prices precis
 reading a dinger
 resident trendies
 rude 'n nuder
@@ -4756,8 +4762,10 @@ sport ports
 sporties' ripostes
 starch charts
 t-formally
+templar ramplet
 tetris sitter
 trance nectar
+traipse pirates
 tropes poster
 try us yurts
 
@@ -11054,6 +11062,11 @@ after examining picturers:
 
 a-text of scripture picturers is "YRRYRY". b-text of scripture picturers is "YRRYR[if sign-other is true]Y[else]G[end if]". parse-text of scripture picturers is "-[sp]x[sp]x[sp]-[sp]x[sp][if sign-other is true]x[else]e[end if]".
 
+[
+a-text of diesin is "YRRYRY". b-text of diesin is "YRRYRY". parse-text of diesin is "-[sp]x[sp]x[sp]-[sp]x[sp]x".
+a-text of sindie is "YRRYRY". b-text of sindie is "YRRYRG". parse-text of sindie is "-[sp]x[sp]x[sp]-[sp]x[sp]e".
+]
+
 check taking the scripture picturers:
 	say "Appropriation of church property! [if Cleric Circle is visited]Brother Horbert[else]Whoever's in there[end if] wouldn't deserve that." instead;
 
@@ -11993,7 +12006,11 @@ after looking in Boarded Roadbed:
 
 initial appearance of evil bee is "[one of]An[or]The[stopping] [evil bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
 
-a-text of evil bee is "RYRYYRY". b-text of evil bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text of evil bee is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
+a-text of evil bee is "RYRYYRY". b-text of evil bee is "RYRYYRG". parse-text of evil bee is "x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e"
+
+[
+a-text of vile bee is "RYRYYRY". b-text of vile bee is "RYPYYRG". parse-text of evil bee is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]". parse-text of evil bee is "x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e".
+]
 
 check taking evil bee: say "I'll be stingy. Better me than the bee, eh?" instead;
 
@@ -12286,6 +12303,8 @@ Include (-
 	has transparent talkable
 -) when defining astute statue.
 
+a-text of astute statue is "RRRYRY". b-text of astute statue is "RRRYRY". parse-text of astute statue is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
+
 understand "trevis/vister" and "trevis vister" as astute statue.
 
 the rivets are part of the statue. description is "They're just there. And red.". the rivets are reflexive.
@@ -12336,6 +12355,12 @@ chapter pernod
 the bottle of Pernod is a vanishing thing. "A broken bottle of [if label is moot]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
 
 a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR". parse-text of pernod is "[if label is part of pernod]p[else]x[end if][sp]o[sp]x[sp]x[sp]e[sp]x".
+
+[
+a-text of pernod-l is "RYRRYR". b-text of pernod-l is "RYRRYR". parse-text of pernod-l is "x[sp]o[sp]x[sp]x[sp]e[sp]x".
+
+a-text of pernod-n is "RYRRYR". b-text of pernod-n is "PYRRYR". parse-text of pernod-n is "p[sp]o[sp]x[sp]x[sp]e[sp]x".
+]
 
 check reading pernod: try reading card instead;
 
@@ -15188,6 +15213,8 @@ chapter spilling
 
 the jar of pills is in Posh Hops Shop. "A jr. jar of pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory weird pictorial warning suggests that dumping the pills out may cause stick figures and possibly even real people to fall over, and once spilt, it will be split[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping]. There's a lil['] PS in red to read, too."
 
+a-text of pills is "RRYRR". b-text of pills is "RRYPR.". parse-text of pills is "x[sp]x[sp]i[sp]l[sp]x".
+
 printed name of jar of pills is "jr. jar of pills". the indefinite article of jar of pills is "a"
 
 after printing the name of the jar of pills while taking inventory:
@@ -16392,6 +16419,11 @@ check scaning dialer:
 		try scaning d2 instead;
 
 a-text of dialer is "RYRYYR". b-text of dialer is "[if dialer is reflexive]PYRYYR[else]RYRYYR[end if]". parse-text of dialer is "[if dialer is reflexive]d[sp]-[sp]x[sp]-[sp]-[sp]x[else]x[sp]e[sp]x[sp]-[sp]-[sp]l[end if]".
+
+[
+a-text of dialer1 is "RYRYYR". b-text of dialer1 is "PYRYYR". parse-text of dialer1 is "d[sp]-[sp]x[sp]-[sp]-[sp]x".
+
+]
 
 instead of taking or attacking dialer:
 	say "That would only sabotage communications here. You need to sabotage the supplier."

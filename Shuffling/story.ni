@@ -7637,7 +7637,10 @@ initial appearance of nerds is "Some nerds are here, nattering about technology 
 
 description of nerds is "They're sitting around nattering about nerd things. They don't look particularly nerdy, but most of their conversation seems to revolve around how smart other people aren't. They're babblier than most but don't seem bribable. As you look at them, they pause, as if expecting you to ASK NERDS about something."
 
-lgth of nerds is 8. gpos of nerds is 7. rpos of nerds is 2. rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1]R[d1][d1][d1]SS".
+lgth of nerds is 8. gpos of nerds is 7. rpos of nerds is 2. rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1][d1][d1][d1][d1][d1]S". rgtext of nerds is "[rcn][rc][rc][rc][rc][rc][rc][gc]".
+
+asknerds
+darkness
 
 the lit-up tulip is a thing in Esoteric Coteries.
 

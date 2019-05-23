@@ -56,6 +56,9 @@ abbrevs = defaultdict(str)
 aro_settings = [ "a-text ", "b-text ", "parse-text " ]
 sa_settings = [ "lgth ", "gpos ", "rpos ", "rgtext ", "cert-text ", "rect-text " ]
 
+def table_shorten(x):
+    return re.sub("^(all )", "", x)
+
 def shortcutcheck(x):
     if x in abbrevs: return abbrevs[x]
     return x
@@ -138,15 +141,20 @@ def read_data_file():
                     sa_flips[temp] = ary[1]
                     sa_line[temp] = line_count
                 continue
-            ary = ll.split(",")
+            if line.lower().startswith("aft="):
+                ll = line[4:].lower().strip().split(",")
+                for x in ll:
+                    x = re.sub("^(all )", "", x) #all noon gag
+                    okay[x] = True
+                    print(x, "is ok")
+                continue
             if '=' in line:
                 ary = ll.split("=")
                 abbrevs[ary[0]] = ary[1]
                 if ary[0] not in abbrevs: sys.exit("Uh oh to", line.strip())
                 else: print("By-itself abbreviation:", line_count, line.strip())
                 continue
-            ll = line.lower().strip().split(",")
-            for x in ll: okay[x] = True
+            print("Unknown line", line_count, "text", line.lower().strip())
 
 def things_of(q):
     ret_2 = re.sub(" +is .*", "", q)
@@ -207,6 +215,7 @@ def sa_r_g_check():
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         sa_got[my_raw] = True
                         if my_raw in sa_ignore:
+                            if verbose: print("Ignoring", my_thing, "as specified in", data_file)
                             skip = True
                             continue
                         if my_raw not in sa_flips:
@@ -263,7 +272,7 @@ def sa_r_g_check():
                             continue
                         for idx in range(0, len(my_nosp)):
                             if my_nosp[idx] != sa_flips[my_raw][idx] and x[idx] != '-':
-                                print(my_thing, "to", sa_flips[my_raw], x, "undetected match character", idx, "line", line_count, my_nosp[idx], sa_flips[my_raw][idx], x[idx])
+                                print(my_thing, "to", sa_flips[my_raw], x, "undetected CERT-TEXT match character", idx + 1, "line", line_count, my_nosp[idx], sa_flips[my_raw][idx], x[idx])
                                 errs["cert-text"] += 1
                         continue
                     if 'rect-text of' in q:
@@ -358,7 +367,8 @@ def aro_settler_check():
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
-                        if my_thing in aro_ignore:
+                        if my_raw in aro_ignore:
+                            if verbose: print("Ignoring", my_thing, "as specified in", data_file)
                             skip = True
                             break
                         aro_got[my_raw] = True
@@ -409,7 +419,7 @@ def aro_settler_check():
                         sary = sol.split(",")
                         lf = len(sary[0])
                         if 'else' in v:
-                            print("TRICKY STUFF 'else' is in the quoted b-value. Fix this with an IGNORE and commented code to check fully.")
+                            print("TRICKY STUFF 'else' is in the quoted b-value at line {:d}. Fix this with an IGNORE and commented code to check fully.".format(line_count))
                             continue
                         temp = 0
                         wary = []
@@ -468,6 +478,7 @@ def check_aftertexts():
     in_aftertexts = defaultdict(int)
     sug_text = defaultdict(str)
     suggestions = []
+    nsl = [ table_shorten(x) for x in need_source_logic ]
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             if reading_header:
@@ -488,19 +499,19 @@ def check_aftertexts():
                 print("WARNING need to add full row for line", line_count, "in", os.path.basename(r_src), ":", l0)
                 open_line[r_src] = line_count
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
-            if l0 not in need_source_logic.keys():
+            if l0 not in nsl:
                 if l0 not in okay.keys() and l0 not in abbrevs.values():
                     suggestions.append("{:s} may be superfluous aftertext at line {:d}".format(l0, line_count))
                     mayneedsource += 1
                 #print(ll[5])
             else:
                 if verbose: print("Got", ll[0], "in aftertexts.")
-    if len(suggestions): print("\n".join(sorted(suggestions)))
+    if len(suggestions): print("\n".join(sorted(suggestions, key=lambda x:re.sub(".* ", "", x))))
     for x in sorted(need_source_logic.keys()):
-        if x not in in_aftertexts.keys() and x not in abbrevs.keys():
+        if table_shorten(x) not in in_aftertexts.keys() and x not in abbrevs.keys():
             print("May need", x, "in aftertexts table.")
             mayneedaftertext += 1
-    for x in okay.keys():
+    for x in sorted(okay.keys()):
         if x not in in_aftertexts.keys():
             print(x, "marked as okay for table of aftertexts but doesn't appear there.")
             markedokay += 1
@@ -566,6 +577,8 @@ while arg_count < len(sys.argv):
     elif x == 'al' or x == 'oal':
         open_after = True
         open_first = False
+    elif x == 'v': verbose = True
+    elif x == 'nv' or x == 'vn': verbose = False
     elif x == '?' or x == '-?': usage()
     else:
         print("Unknown flag", x)
@@ -657,7 +670,7 @@ with open(logic_reds) as file:
             need_question_mark = line_count
         elif '?' in ll or 'qver ignore' in ll or 'qver-ignore' in ll: need_question_mark = 0
 
-# check_aftertexts()
+check_aftertexts()
 
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues", launch_message = "invis.pl rl e")

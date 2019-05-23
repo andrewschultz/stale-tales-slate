@@ -36,6 +36,8 @@ oyster,toyers
 #same mesa
 inside,diesin
 towards,radwost
+#qver of anti sag sit a nag
+against,?RY??RR=antisag=sitanag
 #qver of rude 'n nuder
 under,YRPG?=ruden=nuder
 #qver of morf form
@@ -147,6 +149,10 @@ capslock,?YR?R???=clackops=locspack
 avider,?R?R?R=drivea=varied=adrive
 #qver of drive e e drive
 derive,?Y???G=drivee=edrive
+#qver of i'm le cop polemic
+compile,R?RRYRY=imlecop=polemic
+#qver of bub dude egg
+debug,???Y?=bubdu=deegg
 #qver of usb
 bus/sub,RY?=usb
 ################oyster
@@ -358,6 +364,8 @@ gooseberry,yeborersgo
 coconuts,scoutcon,onstucco,suncotco
 #clangier clearing
 among,mango,goman
+#qver of prices precis
+cripes,RP?R?P=prices=precis
 #filed field
 watermelon,meantrowel,newtlamore,mrowenlate,moanerwelt
 #scape space

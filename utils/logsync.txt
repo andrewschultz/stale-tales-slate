@@ -72,6 +72,7 @@ begonias>noisebag
 brocade>barcode
 antlers>rentals
 dry cake>keycard
+nerds~asknerds>darkness
 neon pig>opening
 siren>resin
 words>sword
@@ -141,8 +142,10 @@ lecturer~uosdeti>outside
 pamphlets~i used to>outside
 >IGNORE=letters settler
 ########REGION routes
+>IGNORE=scripture picturers
 worst ad>towards
-scripture picturers~sin die>inside
+sindie>inside
+diesin>inside
 anti sag sit a nag>against
 bench-end~tirades>astride
 gast's elbow~elbow>below
@@ -195,7 +198,9 @@ reside reside>desire
 praise spirea>aspire
 rivets>strive
 astute statue~trevis vister>strive
-pernod>ponder
+>IGNORE=pernod
+pernod-n~pernod>ponder
+pernod-l~neprod>ponder
 r cad card~derp on epdorn dr peno ned orp>ponder
 ####upscale capsule
 red vees>deserve
@@ -330,7 +335,8 @@ ruby>bury
 papery yapper>prepay
 templar ramplet>trample
 pins>spin
-dialer>derail
+>IGNORE=dialer
+dialer1~dialer>derail
 lever>revel
 d2~dialer>redial
 ####plasm lamps
@@ -573,21 +579,22 @@ searcher>research
 viewer>review
 perp-priv~perp>prep
 ##############logic file checks (eventually delete this all)
+###################stuff that is okay for aftertexts
 #means manse
-pram,tables,niche,t-b
+AFT=pram,tables,niche,beams,meet bans
 #routes
-bench
 #troves
-eddie's song
 rivets
+#presto
+AFT=maze walls
 #oyster
-pale plea
+AFT=pale plea
 #towers
-prison ropins
-dr yow
+AFT=prison ropins
+AFT=dr yow
 #otters
-merle,sly imp,medals,whiners
+AFT=merle,sly imp,medals,whiners
 #others
-an-a,pugnacious plant
-auction caution
+AFT=a brr hub
+AFT=auction caution
 ;
