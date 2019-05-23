@@ -295,6 +295,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "godlings"	424569229	Econ Cone	--	--	"[scrapery]!"
 "statue"	537593736	--	astute statue	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if]."
 "bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is moot]Pernod[else]N-E-Prod[end if]."
+"card"	127546295	--	r cad card	--	"The card's writing is more important."
+"cad"	42222492	--	r cad card	--	"The card's writing is more important."
 "label"	256040510	--	label	--	"It's not the label but what's on it."
 "upscale"	485659083	Upscale Capsule	--	--	"[locname]." [start Upscale Capsule]
 "office"	319186909	Upscale Capsule	--	--	"[locname]."

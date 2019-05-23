@@ -2540,20 +2540,15 @@ carry out reading:
 		the rule succeeds;
 	if noun is red writing:
 		d "[list of readable things]";
-		if number of readable things is 0:
-			say "No writing around here on anything." instead;
-		if number of readable things is 1:
-			try examining a random readable thing instead;
+		if number of readable things is 0, say "No writing around here on anything." instead;
+		if number of readable things is 1, try examining a random readable thing instead;
 		say "Too much to read." instead;
 	if noun is a to-read listed in the table of readables:
 		choose row with to-read of noun in table of readables;
-		if there is a what-read entry:
-			say "[what-read entry][line break]" instead;
+		if there is a what-read entry, say "[what-read entry][line break]" instead;
 		try reading alt-read entry instead;
-	if noun is large regal lager:
-		try examining rubbish story instead;
-	if noun is drinks stand:
-		try examining blurbs instead;
+	if noun is large regal lager, try examining rubbish story instead;
+	if noun is drinks stand, try examining blurbs instead;
 	try examining noun instead;
 
 the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". understand "words" and "red/-- letters" as writing.
@@ -8726,7 +8721,7 @@ instead of doing something with snib:
 
 understand "snibs" as snib.
 
-a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text of ISBN bins is "x[sp]x[sp]i[sp]x".
+a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text isBN bins is "x[sp]x[sp]i[sp]x".
 
 section evac-cave
 
@@ -11172,7 +11167,7 @@ after fliptoing [sit a nag]:
 
 check taking sit a nag: say "The [sit a nag] is too big." instead;
 
-a-text of anti sag sit a nag is "YRYYRRR". b-text of anti sag sit a nag is "GPYYPRR". parse-text of anti sag sit a nag is "a[sp]g[sp]-[sp]-[sp]n[sp]x[sp]x".
+a-text of anti sag sit a nag is "YRYYRRR". b-text of anti sag sit a nag is "?RY??RR". parse-text of anti sag sit a nag is "a[sp]g[sp]-[sp]-[sp]n[sp]x[sp]x".
 
 check scaning sit a nag:
 	if Gast is off-stage, continue the action;
@@ -12340,13 +12335,11 @@ chapter pernod
 
 the bottle of Pernod is a vanishing thing. "A broken bottle of [if label is moot]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
 
-a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR". parse-text is "[if label is part of pernod]p[else]x[end if][sp]o[sp]x[sp]x[sp]e[sp]x".
+a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR". parse-text of pernod is "[if label is part of pernod]p[else]x[end if][sp]o[sp]x[sp]x[sp]e[sp]x".
 
-check reading pernod:
-	try reading card instead;
+check reading pernod: try reading card instead;
 
-check taking bottle of Pernod:
-	say "The jagged glass would cut your hands, or your super purse's space-capes." instead;
+check taking bottle of Pernod: say "The jagged glass would cut your hands, or your super purse's space-capes." instead;
 
 after fliptoing when location of player is Econ Cone (this is the Pernod appears on first statue success rule):
 	if noun is praise or noun is rivets:
@@ -12375,18 +12368,18 @@ check taking the label:
 	moot label instead;
 
 check examining the label:
-	say "It looks like you could TAKE it off! You wonder if this bottle is a fake. It says PERNOD, but there's also a card tied to the bottle." instead;
+	say "It looks like you could TAKE it off! You wonder if this bottle is a fake. It says PERNOD, but there's also a card (an r-cad card, for blow-off gifts and greetings) tied to the bottle." instead;
 
 instead of scaning the label:
 	try scaning the pernod instead;
 
 section card
 
-the card is part of the bottle of Pernod. description of card is "It's got red writing on it that you could read."
+the r cad card is part of the bottle of Pernod. description of card is "It's got red writing on it that you could read.". printed name of r cad card is "r-cad card".
 
 check taking the card: say "It's glued to the Pernod." instead;
 
-a-text of card is "RYRRYR". b-text of card is "RYRRYR". parse-text is "x[sp]o[sp]x[sp]x[sp]e[sp]x".
+a-text of r cad card is "RYRRYR". b-text of r cad card is "RYRRYR". parse-text of r cad card is "x[sp]o[sp]x[sp]x[sp]e[sp]x".
 
 to say trev:
 	say "Trevis Vister[one of], Ph.D in Life Success[or][stopping]";
@@ -13345,8 +13338,11 @@ instead of attacking Ye Hoop:
 a-text of Ye Hoop is "[if ye-rec]RRYYYO[else]RYYR[end if]". b-text of Ye Hoop is "[if ye-rec]RRYGYO[else]RGGR[end if]". parse-text of ye hoop is "[if ye-rec]x[sp]x[sp]-[sp]o[sp]-[sp]y[else]POOH[end if]". ye hoop is cheat-spoilable.
 
 [
+
+a-text of hoop1 is "RYYR". b-text of hoop1 is "RGGR". parse-text of hoop1 is "POOH".
+
 a-text of hoop2 is "RRYYYO". b-text of hoop2 is "RRYGYO". parse-text of hoop2 is "x[sp]x[sp]-[sp]o[sp]-[sp]y".
-a-text of hoop1 is "RYYR". b-text of hoop1 is "RGGR". parse-text of hoop2 is "POOH".
+
 ]
 
 ye-scan is a truth state that varies.
@@ -13980,7 +13976,7 @@ after fliptoing BUB DUDE EGG:
 	moot golden dongle;
 	continue the action;
 
-a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "RYRYR". parse-text of BUB DUDE EGG is "x[sp]-[sp]x[sp]-[sp]x".
+a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "???Y?". parse-text of BUB DUDE EGG is "x[sp]-[sp]x[sp]-[sp]x".
 
 check scaning computer screen:
 	if BUB DUDE EGG is visible, try scaning BUB DUDE EGG instead;
@@ -14621,7 +14617,7 @@ does the player mean doing something with the teariest treatise when Strip of Pr
 
 description of I'm Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder credo seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom."
 
-a-text of I'm Le Cop polemic is "RYRRYRY". b-text of I'm Le Cop polemic is "RGRRYRY". parse-text of I'm Le Cop polemic is "x[sp]o[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of I'm Le Cop polemic is "RYRRYRY". b-text of I'm Le Cop polemic is "R?RRYRY". parse-text of I'm Le Cop polemic is "x[sp]o[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 the signature is part of the I'm Le Cop polemic.
 
@@ -14937,7 +14933,7 @@ the perma-amper is part of the jukebox. understand "perma/amper" as perma-amper.
 
 the perma-amper is auxiliary. description is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse."
 
-a-text of perma-amper is "RYRYR.". b-text of perma-amper is "R?RYR". parse-text is "x[sp]-[sp]m[sp]a[sp]x". perma-amper is cheat-spoilable.
+a-text of perma-amper is "RYRYR.". b-text of perma-amper is "R?RYR". parse-text of perma-amper is "x[sp]-[sp]m[sp]a[sp]x". perma-amper is cheat-spoilable.
 
 instead of doing something with the perma-amper:
 	if action is procedural, continue the action;
@@ -16472,6 +16468,8 @@ check fliptoing d2:
 chapter templar ramplet
 
 the templar ramplet is scenery. "The templar ramplet isn't something to be approached lightly. You sense you need the right way to get on it."
+
+a-text of templar ramplet is "RRYRRRY". b-text of templar ramplet is "?RYRRRY". parse-text of templar ramplet is "x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]".
 
 chapter trampleing
 
@@ -18682,6 +18680,8 @@ to say what-can-doc-say:
 	say "[if yow-has-said is 2]. [he-she-c] looks repressed, as if [he-she] has so many ways to say things but needs someone to bring it out of him[else if yow-has-said is 1]. [he-she-c] looks slightly agitated, as if [he-she]'s only said half of what [he-she] wants to say[end if]"
 
 a-text of Dr Yow is "RYRRO". b-text of Dr Yow is "RYRRO". parse-text of Dr Yow is "x[sp]o[sp]x[sp]x[sp]y". Dr Yow is cheat-spoilable.
+
+[a-text of Dr Yow2 is "RYRRO". b-text of Dr Yow2 is "RYRRO". parse-text of Dr Yow2 is "x[sp]o[sp]x[sp]x[sp]y". Dr Yow is cheat-spoilable.]
 
 understand "doctor/doc yow" and "doctor/doc" as Dr Yow.
 
@@ -21145,58 +21145,58 @@ t-tearily-irately is a mack-idea. pod-num is 1. pod-ord is 4. a-text of t-tearil
 [pod 2 is non-repeating 7-letters]
 t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
 
-t-shadily is a mack-idea. pod-num is 2. pod-ord is 2. a-text is "RRYRYRO". b-text is "RRYRGRO". parse-text is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
+t-shadily is a mack-idea. pod-num is 2. pod-ord is 2. a-text of t-shadily is "RRYRYRO". b-text of t-shadily is "RRYRGRO". parse-text of t-shadily is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
 
-t-snidely is a mack-idea. pod-num is 2. pod-ord is 3. a-text is "RRYRYRO". b-text is "RRYPYRB". parse-text is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
+t-snidely is a mack-idea. pod-num is 2. pod-ord is 3. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
 
-t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text is "RRYRRRO". b-text is "RRYRRRO". parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
+t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
 
 [pod 3 is 8-letters repeating]
-t-blearily is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRYPB". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
+t-blearily is a mack-idea. pod-num is 3. pod-ord is 1. a-text of t-blearily is "RRYYRYRO". b-text of t-blearily is "RRYYRYPB". parse-text of t-blearily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
 
-t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "?YR?YRRO". parse-text is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
 
-t-coitally is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRO". b-text is "RGYRYRRB". parse-text is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
+t-coitally is a mack-idea. pod-num is 3. pod-ord is 3. a-text of t-coitally is "RYYRYRRO". b-text of t-coitally is "RGYRYRRB". parse-text of t-coitally is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
 
-t-ribaldly is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RYRYRRRO". b-text is "RYRYRRPB". parse-text is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
+t-ribaldly is a mack-idea. pod-num is 3. pod-ord is 4. a-text of t-ribaldly is "RYRYRRRO". b-text of t-ribaldly is "RYRYRRPB". parse-text of t-ribaldly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
 
-t-shabbily is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RRYRRYRO". b-text is "RRYRRYRO". parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
+t-shabbily is a mack-idea. pod-num is 3. pod-ord is 5. a-text of t-shabbily is "RRYRRYRO". b-text of t-shabbily is "RRYRRYRO". parse-text of t-shabbily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
 
-t-silently is a mack-idea. pod-num is 3. pod-ord is 6. a-text is "RYRYRRRO". b-text is "P??YRR?O". parse-text is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-silently is a mack-idea. pod-num is 3. pod-ord is 6. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
 
-t-shoddily is a mack-idea. pod-num is 3. pod-ord is 7. a-text is "RRYRRYRO". b-text is "RRYRRYRO". parse-text is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
+t-shoddily is a mack-idea. pod-num is 3. pod-ord is 7. a-text of t-shoddily is "RRYRRYRO". b-text of t-shoddily is "RRYRRYRO". parse-text of t-shoddily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
 
-t-suddenly is a mack-idea. pod-num is 3. pod-ord is 8. a-text is "RYRRYRRO". b-text is "RYRRYRRO". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
+t-suddenly is a mack-idea. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
 
 [pod 4 is 8-letters non-repeating]
-t-modestly is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RYRYRRRO". b-text is "RYRYRRRO". parse-text is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
+t-modestly is a mack-idea. pod-num is 4. pod-ord is 1. a-text of t-modestly is "RYRYRRRO". b-text of t-modestly is "RYRYRRRO". parse-text of t-modestly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
 
-t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RRYYRYRO". b-text is "?RYYRY?O". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
 
-t-stupidly is a mack-idea. pod-num is 4. pod-ord is 3. a-text is "RRYRYRRO". b-text is "RRYRYRRO". parse-text is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
+t-stupidly is a mack-idea. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
 [pod 5 is 9 letters]
-t-martially is a mack-idea. pod-num is 5. pod-ord is 1. a-text is "RYRRYYRRO". b-text is "PGPRYGPPB". parse-text is "m[sp]a[sp]r[sp]t[sp]i[sp]a[sp]l[sp]l[sp]y". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally".
+t-martially is a mack-idea. pod-num is 5. pod-ord is 1. a-text of t-martially is "RYRRYYRRO". b-text of t-martially is "PGPRYGPPB". parse-text of t-martially is "m[sp]a[sp]r[sp]t[sp]i[sp]a[sp]l[sp]l[sp]y". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally".
 
 t-martially is parse-spoilable.
 
-t-sincerely is a mack-idea. pod-num is 5. pod-ord is 2. a-text is "RYRRYRYRO". b-text is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "Someone shouts 'Celery's in, yes! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
+t-sincerely is a mack-idea. pod-num is 5. pod-ord is 2. a-text of t-sincerely is "RYRRYRYRO". b-text of t-sincerely is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "Someone shouts 'Celery's in! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
 
-t-sobbingly is a mack-idea. pod-num is 5. pod-ord is 3. a-text is "RYRRYRRRO". b-text is "RGPPYRRRO". parse-text is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
+t-sobbingly is a mack-idea. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
 
-t-wearingly is a mack-idea. pod-num is 5. pod-ord is 4. a-text is "RYYRYRRRO". b-text is "RYYRYRRRO". parse-text is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
+t-wearingly is a mack-idea. pod-num is 5. pod-ord is 4. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
 
-t-tediously is a mack-idea. pod-num is 5. pod-ord is 5. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". parse-text is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'You! Idlest!' You see red.". mack-brief is "disparaging a lousy diet". [not alphabetical, but due to lazy coding I wand this last. Tediously has to disappear.]
+t-tediously is a mack-idea. pod-num is 5. pod-ord is 5. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". mack-brief is "disparaging a lousy diet". [not alphabetical, but due to lazy coding I wand this last. Tediously has to disappear.]
 
 [pod 6 is 10-11 letters.]
-t-drawlingly is a mack-idea. pod-num is 6. pod-ord is 1. a-text is "RRYRRYRRRO". b-text is "PPYPRYRRRO". parse-text is "d[sp]r[sp]-[sp]w[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
+t-drawlingly is a mack-idea. pod-num is 6. pod-ord is 1. a-text of t-drawlingly is "RRYRRYRRRO". b-text of t-drawlingly is "PPYPRYRRRO". parse-text of t-drawlingly is "d[sp]r[sp]-[sp]w[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
 
-t-emotionally is a mack-idea. pod-num is 6. pod-ord is 2. a-text is "YRYRYYRYRRO". b-text is "YRYRYYRYRRO". parse-text is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
+t-emotionally is a mack-idea. pod-num is 6. pod-ord is 2. a-text of t-emotionally is "YRYRYYRYRRO". b-text of t-emotionally is "YRYRYYRYRRO". parse-text of t-emotionally is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
 
-t-desperately is a mack-idea. pod-num is 6. pod-ord is 3. a-text is "RYRRYRYRYRO". b-text is "RYRRGRYRYRB". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". mack-move is "The macks stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". mack-brief is "behaving desperately".
+t-desperately is a mack-idea. pod-num is 6. pod-ord is 3. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". mack-move is "The macks stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". mack-brief is "behaving desperately".
 
 [pod5 is a trivial pod. You will always get "despairingly," but you will also get 2 7's and 2 8's]
-t-despairingly is a mack-idea. pod-num is 7. pod-ord is 1. a-text is "RYRRYYRYRRRO". b-text is "RGRRYYRYRRRO". parse-text is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
+t-despairingly is a mack-idea. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
 
 understand "msdp" as t-despairingly when debug-state is true.
 
@@ -21451,7 +21451,7 @@ after doing something with imp:
 check taking imp:
 	say "Simply much too fast." instead;
 
-a-text of sly imp is "BUG". b-text of sly imp is "BUG". parse-text is "BUG".
+a-text of sly imp is "BUG". b-text of sly imp is "BUG". parse-text of sly imp is "BUG".
 
 [These are all dummy items. imp1 = brutely, imp2 = angrily, imp3 = enragedly]
 
@@ -21661,7 +21661,7 @@ Clarthead Cathedral is south of Bleary Barley. Clarthead Cathedral is a room in 
 
 the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 
-a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text is "BUG".
+a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG".
 
 to decide which number is whiner-score:
 	let temp be 0;
@@ -22346,7 +22346,7 @@ the persimmon is a fruit.
 
 the omen prism is boringscen. description of omen prism is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
 
-a-text of omen prism is "RYRRYRRYR". b-text of omen prism is "RYRRYRRYR". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of omen prism is "RYRRYRRYR". b-text of omen prism is "RYRRYRRYR". parse-text of omen prism is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 chapter pomegranate
 
@@ -22711,7 +22711,7 @@ the s-c are privately-named plural-named things. description of s-c is "The coin
 
 understand "coin" and "sonic coin" as s-c when player has s-c.
 
-a-text of s-c is "YRYRR". b-text of s-c is "YRY??". parse-text is "-[sp]x[sp]-[sp]x[sp]x".
+a-text of s-c is "YRYRR". b-text of s-c is "YRY??". parse-text of s-c is "-[sp]x[sp]-[sp]x[sp]x".
 
 the s-i are privately-named plural-named things. description of s-i is "The icons vibrate from the sound they make. They may have some hidden power. Or some trivial one.". understand "sonic/icons" and "sonic icons" as s-i. printed name of s-i is "sonic icons".
 
@@ -22863,7 +22863,7 @@ check taking prices precis: say "That'd leave everyone in the market confused[if
 
 understand "price" and "price precis" as prices precis.
 
-a-text of prices precis is "RRYRYR". b-text of prices precis is "RPGRGP". parse-text of prices precis is "x[sp]r[sp]i[sp]x[sp]e[sp]s". prices precis is parse-spoilable.
+a-text of prices precis is "RRYRYR". b-text of prices precis is "RP?R?P". parse-text of prices precis is "x[sp]r[sp]i[sp]x[sp]e[sp]s". prices precis is parse-spoilable.
 
 the kumquat is a fruit. description is "Weird and orange and oblong."
 
@@ -22945,7 +22945,7 @@ check taking (this is the shoplift in Clangier Clearing rule) :
 
 the pre-mang is privately-named scenery in Clangier Clearing. pre-mang is undesc.
 
-a-text of pre-mang is "YRYRR". b-text of pre-mang is "YRYRR". parse-text is "-[sp]x[sp]-[sp]x[sp]x".
+a-text of pre-mang is "YRYRR". b-text of pre-mang is "YRYRR". parse-text of pre-mang is "-[sp]x[sp]-[sp]x[sp]x".
 
 before fliptoing mango:
 	if player does not have tekno-token:
@@ -23039,7 +23039,7 @@ Some pryer bars are a plural-named thing in Filed Field. description is "They're
 check touching pryer bars:
 	say "They feel like spry rebar." instead;
 
-a-text of pryer bars is "RYRRRYRRO". b-text of pryer bars is "RYRRRYRPO". parse-text is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]r[sp]y".
+a-text of pryer bars is "RYRRRYRRO". b-text of pryer bars is "RYRRRYRPO". parse-text of pryer bars is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]r[sp]y".
 
 check taking pryer bars:
 	say "You don't need to open any crates or fight anyone. This isn't that sort of game. Repurpose them, instead!" instead;

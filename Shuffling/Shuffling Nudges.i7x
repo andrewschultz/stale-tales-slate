@@ -820,7 +820,7 @@ to say no-hot:
 	if night thing is not in The Ol' Hotel:
 		say "and you got rid of the night thing, anyway";
 	else:
-		say "but you could have a[if the ol' hotel is visited]nother[else] look around[end if]";
+		say "but you could have a[if The Ol' Hotel is visited]nother[else] look around[end if]";
 
 to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 

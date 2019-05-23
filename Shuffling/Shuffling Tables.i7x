@@ -23,7 +23,7 @@ store f	scented descent	"forest"	"store f"	"The greens and browns of Store F coa
 store i	posted depots	"sortie"	"store i"	"The store rumbles, revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
-cabinet	cabinet	"cabinet"	"cabinet"	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	[end Trips Strip anagrams]
+cabinet	tenibac	"bactine"	"bactine"	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
 
 book Forest
 
@@ -178,13 +178,15 @@ to say which-roar:
 	moot noise bag;
 	say "[if beats are visible]loud beats[else]beast's roaring[end if]"
 
-check fliptoing cabinet:
-	say "That is a good idea, but you're not powerful enough yet.";
-	preef cabinet;
-	the rule succeeds;
+check fliptoing tenibac:
+	if Trips Strip is unvisited:
+		say "That is a good idea, but you're not powerful enough yet.";
+		preef cabinet;
+		the rule succeeds;
 
-after fliptoing cabinet:
-	now cratered bits are in Trips Strip;
+after fliptoing tenibac:
+	move cabinet to location of player;
+	move cratered bits to location of player;
 	moot cratered bits;
 	continue the action;
 
@@ -291,14 +293,17 @@ to say spec-help of (itm - a thing):
 	if itm is oils and oils are not in cask:
 		say "[if player is in Sacred Cedars]Changing Lois is highly unlikely, and y[else]Y[end if]ou should possess the oils before doing anything with them.";
 		continue the action;
-	if itm is a xtrhelp listed in the table of spechelp:
-		choose row with xtrhelp of itm in table of spechelp;
-		if point is true or tnt is true:
-			say "[helptxt entry][line break]";
-		else if point is false or tnt is true:
-			say "You feel a slight psychic push-pull coming from [if itm is r2 or itm is t-n or itm is m2]all around[else][the itm][end if]. Keep at it.";
+	let got-spec be false;
+	repeat through table of spechelp:
+		if itm is xtrhelp entry:
+			now got-spec is true;
+			if point is true or tnt is true:
+				say "[helptxt entry][line break]";
+			else if point is false or tnt is true:
+				say "You feel a slight psychic push-pull coming from [if itm is r2 or itm is t-n or itm is m2]all around[else][the itm][end if]. Keep at it.";
 			d "There is a spechelp entry for this.";
-	else:
+			break;
+	if got-spec is false:
 		d "Add something to the table of spechelp for [the itm], maybe? Search for to[r]sh.";
 		say "You feel a slight psychic push-pull coming from [the itm]. Keep at it.";
 	if pointcue is false:

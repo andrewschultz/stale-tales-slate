@@ -1979,6 +1979,7 @@ fliptoing is an action applying to one visible thing.
 carry out fliptoing (this is the main flipping rule) :
 	let mything be the player;
 	let got-yet be false;
+	say "Fliptoing [noun].";
 	repeat through regana of mrlp:
 		if the-to entry is noun and got-yet is false and the-from entry is visible:
 			if debug-scan is true and player has gadget:
@@ -2353,7 +2354,7 @@ to preef (flipper - a thing):
 table of preflip clues [this must have a regular item first due to a small bug in 6g]
 preflip	pretodo
 nametag	"nametag -> gateman" [Ordeal Loader]
-cabinet	"cabinet -> bactine" [stores]
+cabinet	"cabinet -> Bactine" [stores]
 silver	"[if livers are not moot]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
 drapes	"spread -> [if red asp is in Cruel Ones' Enclosure]RED ASP -> [end if]drapes"
 sack	"cask -> sack" [sortie]
@@ -3097,11 +3098,11 @@ section acne-bit cabinet
 
 the acne-bit cabinet is an open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne-bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping]."
 
-gpos of acne-bit cabinet is 3. rpos of acne-bit cabinet is 6. lgth of acne-bit cabinet is 7. rgtext of acne-bit cabinet is "[rcn][gc][rc][rc][rc][rc][gc]".
+gpos of acne-bit cabinet is 3. rpos of acne-bit cabinet is 6. lgth of acne-bit cabinet is 7. rgtext of acne-bit cabinet is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of acne-bit cabinet is "-A[d1][d1][d1][d1][d1]". rect-text of acne-bit cabinet is "B[d1][d1][d1][d1][d1]E".
 
 check inserting into the acne-bit cabinet:
 	if noun is gadget or noun is saltine or noun is info-lit or noun is phial, say "No need to put [the noun] back in the cabinet. It's yours." instead;
-	say "Yes, the cabinet is for storage, but you [if gateman is off-stage]don't have anywhere to go, yet[else if trips strip is visited]only need to put items you're done with in it[else]probably won't be coming back[end if]." instead;
+	say "Yes, the cabinet is for storage, but you [if gateman is off-stage]don't have anywhere to go, yet[else if Trips Strip is visited]only need to put items you're done with in it[else]probably won't be coming back[end if]." instead;
 
 check opening acne-bit cabinet: say "It already is." instead;
 
@@ -3120,6 +3121,10 @@ description of cratered bits is "The acne-bit parts are very red. Interesting."
 check examining cabinet: ignore the examine containers rule.
 
 check closing the acne-bit cabinet: say "You don't need to hide anything in there from anyone.".
+
+the tenibac is boringscen. it is privately-named. description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.".
+
+Bactine and Velcro should be capitalized.
 
 section prep paper
 
@@ -3702,7 +3707,7 @@ check taking phial:
 	if cabinet is visible:
 		if lube-asked is false and player is not in Trips Strip:
 			now cabinet-bit-me is true;
-			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, so you don't need bactine[if gateman is in Notices Section][one of]. Nat Egam coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
+			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, at least[if gateman is in Notices Section][one of]. Nat Egam coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
 
 instead of opening the phail phial: say "The blue lube would leak out."
 
@@ -4446,7 +4451,7 @@ section metros portal
 
 the trade tread is a portal. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
 
-understand "metros" as trade tread when player is in Trips Strip and trade tread is in trips strip.
+understand "metros" as trade tread when player is in Trips Strip and trade tread is in Trips Strip.
 
 check climbing trade tread: try entering trade tread instead.
 
@@ -4527,7 +4532,9 @@ check taking a guider:
 		say "Maybe you can take a hint from the [noun], instead.";
 	the rule succeeds;
 
-a whiff of stew is a guider. godir of whiff of stew is west. description of whiff is "It smells pretty good, even if you can't detect any specific ingredients. But which way is it from?". the rgtext of stew is "[rc][rc][rc][rc]". the lgth of stew is 4. gpos of stew is 4. rpos of stew is 2. cert-text of stew is "-[d1][d1][d1][d1]". rect-text of stew is "W[d1][d1][ast]T".
+a whiff of stew is a guider. godir of whiff of stew is west. description of whiff is "It smells pretty good, even if you can't detect any specific ingredients. But which way is it from?".
+
+lgth of stew is 4. gpos of stew is 4. rpos of stew is 2. rgtext of stew is "[rc][rc][rc][rc]". cert-text of stew is "-[d1][d1][d1]". rect-text of stew is "W[d1][d1][ast]T".
 
 understand "smell" as whiff of stew when whiff of stew is in location of player.
 
@@ -7653,7 +7660,7 @@ initial appearance of nerds is "Some nerds are here, nattering about technology 
 
 description of nerds is "They're sitting around nattering about nerd things. They don't look particularly nerdy, but most of their conversation seems to revolve around how smart other people aren't. They're babblier than most but don't seem bribable. As you look at them, they pause, as if expecting you to ASK NERDS about something."
 
-rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1]R[d1][d1][d1]SS".
+lgth of nerds is 8. gpos of nerds is 7. rpos of nerds is 2. rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1]R[d1][d1][d1]SS".
 
 the lit-up tulip is a thing in Esoteric Coteries.
 
@@ -8543,7 +8550,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 					try fliptoing the-from entry;
 					the rule succeeds;
 			if the-to entry is visible and the-to entry is not reversible:
-				d "the-to [myh] [the-to entry] visible.";
+				d "(VERB GUESS CODE) the-to [myh] [the-to entry] visible.";
 				if there is a dubdip entry:
 					say "[dubdip entry][line break]";
 				else:
@@ -10403,7 +10410,7 @@ check reading (this is the reading is almost examining rule):
 	if noun is gadget, try examining tag instead;
 	if noun is gadget-screen, try scaning location of player instead;
 	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
-	if noun is cabinet and trips strip is visited, say "Here is one of several writings in red in the cabinet: [one of]I C BEATN[or]IN, BE, ACT!!![or]C N-E BAIT??[or]CIT-E BAN!!![or]Numbers for a NITECAB.[or]ABE [']N TIC![or]TEN ABC, I!!![in random order]" instead;
+	if noun is cabinet and Trips Strip is visited, say "Here is one of several writings in red in the cabinet: [one of]I C BEATN[or]IN, BE, ACT!!![or]C N-E BAIT??[or]CIT-E BAN!!![or]Numbers for a NITECAB.[or]ABE [']N TIC![or]TEN ABC, I!!![in random order]" instead;
 	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!"; [stores]
 	if noun is great grate, try examining the branding instead; [sortie]
 	if noun is tall trio, say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]." instead;
@@ -11270,6 +11277,7 @@ carry out tsing:
 	now player has the saltine;
 	now player has the phial;
 	now Ordeal Loader is solved;
+	move cabinet to Trips Strip;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
 	say "Note that TS can be used with a number, or TSF can solve everything. 4=metros 2=sortie 1=forest.";
 	let curstuff be number understood;
