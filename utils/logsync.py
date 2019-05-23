@@ -326,6 +326,7 @@ def aro_settler_check():
                 print('{:02d} "description of {:s}" needed at line {:d} and not just quoted text for description. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
             ms = match_score(line, aro_settings, line_count, "ARO")
             if ms >= 2 and not line.startswith("\t"):
+                global_raw = ""
                 if ms < len(aro_settings): print("WARNING", line_count, "does not have all of", aro_settings)
                 if 'parse-text' not in line:
                     print("WARNING need to fill in parse-text in line", line_count)
@@ -336,6 +337,8 @@ def aro_settler_check():
                 for q in sent:
                     if 'a-text' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
+                        if global_raw and my_raw != global_raw: continue
+                        global_raw = my_raw
                         if my_thing in aro_ignore:
                             skip = True
                             break
@@ -375,6 +378,8 @@ def aro_settler_check():
                                 if v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
                     if 'b-text' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
+                        if global_raw and my_raw != global_raw: continue
+                        global_raw = my_raw
                         if my_thing in aro_ignore:
                             skip = True
                             break
@@ -424,6 +429,11 @@ def aro_settler_check():
                         if v != the_string:
                             b_count += 1
                             print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v, "as the given b-text but should have", the_string)
+                    if 'parse-text' if q:
+                        if global_raw and my_raw != global_raw: continue
+                        global_raw = my_raw
+                if global_raw and my_raw != global_raw:
+                    print("WARNING code rewrite of", global_raw, "to", my_thing, "at line", line_count)
     flip_miss = [x for x in aro_flips if x not in aro_got]
     if len(flip_miss):
         print("Flips missed:", ', '.join(flip_miss))
