@@ -303,9 +303,15 @@ def settler_read(ltr, ma, mi):
 def aro_settler_check():
     count = 0
     b_count = 0
+    desc_count = 0
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             skip = False
+            if 'boringscen' in line and 'description of' not in line:
+                l1 = re.sub(" (is|are).*", "", line.lower().strip())
+                l1 = re.sub(" \..*", "", l1)
+                desc_count += 1
+                print('{:02d} "description of {:s}" needed at line {:d} and not just quoted text for description. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
             if 'a-text of' in line and 'b-text of' in line and "\t" not in line:
                 if 'parse-text' not in line:
                     print("WARNING need to fill in parse-text in line", line_count)

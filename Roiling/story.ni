@@ -8321,12 +8321,13 @@ check inserting into the satchel:
 	ignore the can't insert what's not held rule;
 	say "The purse is much handier." instead;
 
-instead of taking satchel:
-	say "It may achieve sentimental value one day, but the purse will carry more."
+check taking satchel:
+	ignore the can't take what's already taken rule;
+	say "It may achieve sentimental value one day, but the purse will carry more." instead [??]
 
-chapter meet bans
+chapter MEET BANS
 
-The meet bans are plural-named vanishing boringscen in Dusty Study. bore-text is "The MEET BANS are too solid to move physically snd have no obvious flaws. That is no surprise, really."
+The MEET BANS are plural-named vanishing boringscen in Dusty Study. description of the meet bans is "The MEETBANS look very secure, but you could unlock them with the right, uh, combination.". bore-text is "The MEET BANS are too solid to move physically snd have no obvious flaws. That is no surprise, really.".
 
 a-text of meet bans is "RYRYRYRR". b-text of meet bans is "RYRYRYPR". parse-text of meet bans is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]N[sp]x".
 
@@ -8910,7 +8911,7 @@ check touching curtain:
 
 curtain-know is a truth state that varies.
 
-the act-ruin curtain is boringscen. description is "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands.". bore-text is "The curtain needs a specific action here to pull it aside. Perhaps special materials are required.". bore-check is bore-curtain rule.
+the act-ruin curtain is boringscen. description of the act-ruin curtain is "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands.". bore-text is "The curtain needs a specific action here to pull it aside. Perhaps special materials are required.". bore-check is bore-curtain rule.
 
 this is the bore-curtain rule:
 	if current action is opening or current action is pulling or current action is taking:
@@ -11026,7 +11027,7 @@ does the player mean doing something with rs:
 
 chapter rs (private routes)
 
-rs are privately-named boringscen in Same Mesa. understand "routes" as rs. printed name of rs is "routes". "Staring at them makes you lose your sense of direction even further.". bore-text is "They're painful to think about for too long. They wind together and go off in the distance and loop around."
+rs are privately-named boringscen in Same Mesa. understand "routes" as rs. printed name of rs is "routes". description of rs is "Staring at them makes you lose your sense of direction even further.". bore-text is "They're painful to think about for too long. They wind together and go off in the distance and loop around."
 
 chapter scripture picturers
 
@@ -11624,7 +11625,7 @@ description of Harms Marsh is "You are in a Harms Marsh, which you know to be fu
 
 section Sheol Holes
 
-the Sheol Holes are plural-named reflexive boringscen in Harms Marsh. description is "You can't nail down where the Sheol Holes are, but you do know you need to be careful.". bore-text is "The Sheol Holes are to be avoided by moving, well, some unusual way or other."
+the Sheol Holes are plural-named reflexive boringscen in Harms Marsh. description of Sheol Holes is "You can't nail down where the Sheol Holes are, but you do know you need to be careful.". bore-text is "The Sheol Holes are to be avoided by moving, well, some unusual way or other."
 
 understand "hole" and "sheol hole" as sheol holes when player is in Harms Marsh.
 
@@ -11661,7 +11662,7 @@ a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text
 
 chapter un-road
 
-the un-road is vanishing boringscen. description is "The un-road must lead to No-Gal Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Gal Logan?";
+the un-road is vanishing boringscen. description of un-road is "The un-road must lead to No-Gal Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Gal Logan?";
 
 understand "trail" as un-road.
 
@@ -11732,7 +11733,7 @@ a-text of thickness sketchins is "YRRRYRR". b-text of thickness sketchins is "?R
 
 chapter free reef
 
-the free reef is boringscen in Cripple Clipper. bore-text is "The reef is far away. You need to find a way to navigate to it.". bore-check is bore-reef rule.
+the free reef is boringscen in Cripple Clipper. description of free reef is "It looks like where you want to go. But how?". bore-text is "The reef is far away. You need to find a way to navigate to it.". bore-check is bore-reef rule.
 
 this is the bore-reef rule:
 	if current action is scaning:
@@ -11746,7 +11747,7 @@ Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest
 
 chapter hurt hog
 
-the hurt hog is reflexive boringscen in Sonancy Canyons. description is "The hog [if bent ewe is reflexed]seems more relaxed than before[else]is staring the poor bent ewe down. Maybe you can act as peacemaker[end if].". bore-text is "The hurt hog just grunts. You [if hurt hog is reflexive]need a little magic here[else]did what you could. It's doing well enough[end if]."
+the hurt hog is reflexive boringscen in Sonancy Canyons. description of hurt hog is "The hog [if bent ewe is reflexed]seems more relaxed than before[else]is staring the poor bent ewe down. Maybe you can act as peacemaker[end if].". bore-text is "The hurt hog just grunts. You [if hurt hog is reflexive]need a little magic here[else]did what you could. It's doing well enough[end if]."
 
 a-text of hurt hog is "RRRYYRR". b-text of hurt hog is "RRPYYRR". parse-text of hurt hog is "x[sp]x[sp]R[sp]-[sp]-[sp]x[sp]x".
 
@@ -11760,7 +11761,7 @@ after fliptoing hurt hog:
 
 chapter bent ewe
 
-the bent ewe is reflexive boringscen in Sonancy Canyons. description is "The bent ewe [if bent ewe is reflexed]seems freer now with you blocking the hog's view[else]seems frozen by the hurt hog's gaze[end if].". bore-text is "The bent ewe [if bent ewe is reflexive]looks scared of the hurt hog[else]won't be doing much, but you helped it,, so yay[end if]."
+the bent ewe is reflexive boringscen in Sonancy Canyons. description of bent ewe is "The bent ewe [if bent ewe is reflexed]seems freer now with you blocking the hog's view[else]seems frozen by the hurt hog's gaze[end if].". bore-text is "The bent ewe [if bent ewe is reflexive]looks scared of the hurt hog[else]won't be doing much, but you helped it,, so yay[end if]."
 
 a-text of bent ewe is "RYRRYYR". b-text of bent ewe is "PGRRGYR". parse-text of bent ewe is "B[sp]E[sp]x[sp]x[sp]E[sp]E[sp]x".
 
@@ -12104,7 +12105,7 @@ a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of 
 
 section I'd Cede
 
-I'd Cede is reflexive boringscen. "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. I'd Cede is parse-spoilable.
+I'd Cede is reflexive boringscen. description of I'd Cede is "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. I'd Cede is parse-spoilable.
 
 a-text of I'd Cede is "RYRYRY". b-text of I'd Cede is "RYPYPG". parse-text of I'd Cede is "x[sp]e[sp]x[sp]i[sp]x[sp]e".
 
@@ -12236,7 +12237,7 @@ Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheer
 
 a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of Si Reed is "x[sp]-[sp]x[sp]-[sp]x[sp]-". Si Reed is cheat-spoilable.
 
-RESIDE RESIDE is boringscen in Browse Bowers. it is cheat-spoilable. "RESIDE RESIDE advertises [randbla].". bore-text is "RESIDE RESIDE is just there for the (useless) advertising. And a clue to get out of the Browse Bowers."
+RESIDE RESIDE is boringscen in Browse Bowers. description of RESIDE RESIDE is "RESIDE RESIDE advertises [randbla].". bore-text is "RESIDE RESIDE is just there for the (useless) advertising. And a clue to get out of the Browse Bowers.". RESIDE RESIDE is cheat-spoilable.
 
 a-text of RESIDE RESIDE is "RYRYRY". b-text of RESIDE RESIDE is "RGPGRG". parse-text of RESIDE RESIDE is "-[sp]e[sp]s[sp]i[sp]-[sp]e".
 
@@ -12489,19 +12490,17 @@ instead of doing something with the nerf fern:
 
 section pharos phasor
 
-the pharos phasor is boringscen . "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with."
+the pharos phasor is boringscen. description of pharos phasor is "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with."
 
 chapter desk sked, wonga wagon, cark rack
 
-the cark rack is boringscen. "Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is.". understand "dsk" as cark rack.
+the cark rack is boringscen. description of cark rack is "Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is.". understand "dsk" as cark rack.
 
-the Desk Sked is boringscen. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked.
+the Desk Sked is boringscen. description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]". bore-text is "The Desk Sked is already optimally tidy."
 
-does the player mean doing something with the cark rack: it is very likely.
+printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked.
 
-description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
-
-the wonga wagon is boringscen. "It's utterly useless and tacky. I mean, wonga is tacky slang for money as it is, and it's just, well, there. It's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the wonga wagon is worth scanning, but that's it.". bore-check of wonga wagon is bore-wagon rule.
+the wonga wagon is boringscen. description of wonga wagon is "The wonga wagon is utterly useless and tacky. I mean, wonga is tacky slang for money as it is, and it's just, well, there. It's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the wonga wagon is worth scanning, but that's it.". bore-check of wonga wagon is bore-wagon rule.
 
 this is the bore-wagon rule:
 	if current action is opening:
@@ -13308,7 +13307,7 @@ check asking about "whassup":
 
 chapter sods gone odes song
 
-the sods gone odes song is LLPish vanishing boringscen in Dirge Ridge. bore-text is "You can really only listen to (or X) the song. But maybe, with the right word, you could get rid of it. Not that you need to.". bore-check is bore-sods rule.
+the sods gone odes song is LLPish vanishing boringscen in Dirge Ridge. description of sods gone odes song is "The song fits Dirge Ridge well, but that's not necessarily a compliment.". bore-text is "You can really only listen to (or X) the song. But maybe, with the right word, you could get rid of it. Not that you need to.". bore-check is bore-sods rule.
 
 a-text of sods gone odes song is "RYYRRYRR". b-text of sods gone odes song is "R?YRRYRR".  parse-text of sods gone odes song is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
@@ -13974,7 +13973,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 			preef noun;
 			do nothing instead;
 
-BUB DUDE EGG is proper-named reflexive boringscen. description is "Ugh! There must be something wrong with the code you compiled, to print such a message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!". bore-text is "You can really only examine it--other actions leave you seeing red, thinking 'BUDGE! BUDGE!'".
+BUB DUDE EGG is proper-named reflexive boringscen. description of Bub Dude Egg is "Ugh! There must be something wrong with the code you compiled, to print such a defiant message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!". bore-text is "You can really only examine it--other actions leave you seeing red, thinking 'BUDGE! BUDGE!'".
 
 after fliptoing BUB DUDE EGG:
 	now USB is in Hacks' Shack;
@@ -14324,7 +14323,7 @@ after fliptoing when player is in Hacks' Shack:
 		if usb is not off-stage, say "Well, it didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
 	continue the action;
 
-Drive E is proper-named reflexive LLPish boringscen in Hacks' Shack. "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if].". bore-text is "[if drive e is reflexed]You already improved Drive E[else]There's probably a way to make Drive E more efficient, but it's probably some irregular action[end if].".
+Drive E is proper-named reflexive LLPish boringscen in Hacks' Shack. description of drive e is "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if].". bore-text is "[if drive e is reflexed]You already improved Drive E[else]There's probably a way to make Drive E more efficient, but it's probably some irregular action[end if].".
 
 understand "e drive" as drive e.
 
@@ -14871,7 +14870,7 @@ instead of doing something with patrons:
 		continue the action;
 	say "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if]."
 
-the tips pits are reflexive plural-named boringscen in Posh Hops Shop. description is "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
+the tips pits are reflexive plural-named boringscen in Posh Hops Shop. description of tips pits is "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
 
 this is the bore-pits rule:
 	if current action is taking:
@@ -17096,7 +17095,7 @@ check going south when player is in Horned Hedron and ruby is moot:
 
 chapter theses sheets
 
-the theses sheets are plural-named amusing boringscen in Horned Hedron. bore-text is "You can really only read the theses sheets for entertainment value.". bore-check is bore-sheets rule.
+the theses sheets are plural-named amusing boringscen in Horned Hedron. description of theses sheets is "[one of]They could be a heists thesis except they're definitely not shiest. They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan (OH, ENTER NOT HERE) one[or]Another[stopping] point reads: [randbla]". bore-text is "You can really only read the theses sheets for entertainment value.". bore-check is bore-sheets rule.
 
 this is the bore-sheets rule:
 	if current action is taking:
@@ -17106,8 +17105,6 @@ this is the bore-sheets rule:
 		say "The words on the theses can certainly be twisted into something worse, but the sheets cannot be changed for the better.";
 		the rule succeeds;
 	abide by the bore-exam rule;
-
-description of theses sheets is "[one of]They could be a heists thesis except they're definitely not shiest. They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan (OH, ENTER NOT HERE) one[or]Another[stopping] point reads: [randbla]"
 
 chapter ol trap and portal
 
@@ -17787,10 +17784,13 @@ the fire torn frontier is bounding boringscen in Topside Deposit. description of
 
 section shout so hut
 
-the Shout-So Hut is bounding boringscen in Topside Deposit. bore-text is "You don't want anything more to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule.
+the Shout-So Hut is bounding boringscen in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. description of shout-so hut is "It doesn't look that intimidating, but it's noisy enough to keep you away."
 
 this is the bore-shout-hut rule:
-	if current action is entering, try going south instead;
+	if current action is entering:
+		try going south;
+		the rule succeeds;
+	abide by the bore-exam rule instead;
 
 check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those.[or][stopping]" instead;
 
@@ -18022,7 +18022,7 @@ the organised ego drains are plural-named LLPish vanishing boringscen in Unblest
 
 a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "R?YRR?YRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
-the screech creches are bounding boringscen in Unblest Sunbelt. bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
+the screech creches are bounding boringscen in Unblest Sunbelt. description of screech creches is "You can't get close enough to the screeching to get a good look at the creches. They're pretty much there just to block you.". bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
 
 this is the bore-creches rule:
 	if current action is entering, try going south instead;
@@ -18060,7 +18060,7 @@ every turn when player is in Treading Gradient and weeds are in Treading Gradien
 
 before going down in Treading Gradient: say "[if mended mini denim is in Treading Gradient]The mended mini denim is too thick[else]You try to look into the dark where the mended mini denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
 
-the mended mini denim is LLPish vanishing boringscen in Treading Gradient. the indefinite article of mended mini denim is "some". bore-text is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear."
+some mended mini denim is LLPish vanishing singular-named boringscen in Treading Gradient. bore-text of mended mini denim is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear.". description of mended mini denim is "It seems sturdy, but maybe there's some unorthodox way to cut it.".
 
 a-text of mended mini denim is "RYRYR". b-text of mended mini denim is "?Y?YR". parse-text of mended mini denim is "x[sp]I[sp]x[sp]E[sp]x". mended mini denim is cheat-spoilable.
 
@@ -18452,7 +18452,7 @@ to decide which guardian is the-hostile:
 
 Artist Traits Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Artist Traits Strait is in Towers.
 
-the coulds clouds are useless boringscen in Artist Traits Strait. "The strati are definitely coulds-clouds, full of possibility. They almost make you say 'It's art! I start!'". understand "coulds-clouds" as coulds clouds. bore-text is "The clouds are too far away to do anything other than look at. They won't help you solve anything. They're just there.".
+the coulds clouds are useless boringscen in Artist Traits Strait. description of coulds clouds is "The strati are definitely coulds-clouds, full of possibility. They almost make you say 'It's art! I start!'". understand "coulds-clouds" as coulds clouds. bore-text is "The clouds are too far away to do anything other than look at. They won't help you solve anything. They're just there.".
 
 understand "strati" as coulds clouds when player is in Artist Traits Strait.
 
@@ -18842,7 +18842,7 @@ check opening a hintpastry:
 
 section sporties' ripostes
 
-the sporties' ripostes are plural-named vanishing boringscen in Lost Lots. bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.".
+the sporties' ripostes are plural-named vanishing boringscen in Lost Lots. description of sporties' ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.".
 
 this is the bore-ripostes rule:
 	if current action is taking:
@@ -19440,7 +19440,7 @@ book Dourest Detours
 
 Dourest Detours is a room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?"
 
-bogus-detours is a privately-named vanishing boringscen in Dourest Detours.
+bogus-detours is a privately-named vanishing boringscen in Dourest Detours. description of bogus-detours is "[bug]". bore-text is "[bug]".
 
 a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". parse-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -20424,7 +20424,7 @@ book Reclusion Inclosure
 
 Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare. The ways north and south lead to coevals['] alcoves which are even less safe."
 
-the coevals' alcoves are boringscen in Reclusion Inclosure. description is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.".
+the coevals' alcoves are boringscen in Reclusion Inclosure. description of coevals' alcoves is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.".
 
 check going when player is in Reclusion Inclosure:
 	if noun is inside, try going west instead;
@@ -22100,7 +22100,7 @@ check going inside in Rustic Citrus:
 
 chapter grapes
 
-some pagers are plural-named boringscen in Rustic Citrus. description is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy.". bore-text is "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods. You don't need one.".
+some pagers are plural-named boringscen in Rustic Citrus. description of pagers is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy.". bore-text is "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods. You don't need one.".
 
 a-text of pagers is "RRYRYR". b-text of pagers is "RRYRYP". parse-text of pagers is "x[sp]x[sp]-[sp]x[sp]-[sp]s".
 
@@ -22344,7 +22344,7 @@ chapter persimmon
 
 the persimmon is a fruit.
 
-the omen prism is boringscen. description is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
+the omen prism is boringscen. description of omen prism is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
 
 a-text of omen prism is "RYRRYRRYR". b-text of omen prism is "RYRRYRRYR". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -23105,7 +23105,7 @@ the guava is a fruit.
 
 chapter banana/a
 
-a banna' is boringscen in Scape Space. description is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna'.
+a banna' is boringscen in Scape Space. description of a banna' is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna'.
 
 a-text of a banna' is "RYRYRY". b-text of a banna' is "R?RY??". parse-text of a banna' is "b[sp]-[sp]n[sp]a[sp]-[sp]-". a banna' is parse-spoilable.
 

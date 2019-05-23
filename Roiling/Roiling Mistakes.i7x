@@ -295,17 +295,25 @@ understand "penrod" as a mistake ("Juvenile children's literature? At a time lik
 
 chapter Upscale Capsule
 
+to decide whether mbb-in:
+	unless player is in upscale capsule, no;
+	if Mr Beal is in upscale capsule, yes;
+	if balmer is in upscale capsule, yes;
+	no;
+
 understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
 
-understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when player is in Upscale Capsule and mbb is in Upscale Capsule.
+understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when mbb-in;
 
 understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when mbb is in Upscale Capsule and player is in Upscale Capsule.
 
 understand "fren" as a mistake ("No dog walks along dragging Sebastian in their mouth.") when player is in Upscale Capsule.
 
-understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is in location of player.
+understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when player is in Upscale Capsule and salt is in Upscale Capsule.
 
-understand "slat" as a mistake ("You're not in the window making business.") when salt is in location of player.
+understand "slat" as a mistake ("You're not in the window making business.") when player is in Upscale Capsule and salt is in Upscale Capsule.
+
+understand "wogan" as a mistake ("You don't need Terry Wogan announcing your progress like it's Eurovision.") when player is in Upscale Capsule and wonga wagon is in Upscale Capsule.
 
 book presto
 
