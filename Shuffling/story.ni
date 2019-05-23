@@ -2521,7 +2521,7 @@ check going when player is in sf or player is in rf:
 				say "You wind up in an area that doesn't look that much different but feels a bit colder.";
 				reg-inc;
 				move player to rf;
-				move leaves to rf
+				move leaves to rf;
 				the rule succeeds;
 			else:
 				say "You follow the path some more, really getting somewhere. 'Mastery of a forest, my!' you say, feeling vainer and promptly tumbling into a ravine! It's too steep to climb, so you walk on some more...";
@@ -2960,10 +2960,6 @@ report taking the toga:
 	say "From the smell[if toga is examined] and the writing on it[end if], you doubt wearing it will get you anywhere cool in its current form, but you take it anyway.";
 	the rule succeeds;
 
-the toga-writing is privately-named. The toga-writing is part of the toga. understand "writing" and "message" and "toga writing" as toga-writing when player is in Thickest Thickets.
-
-description of toga-writing is "It's a dingy grey and says 'You GOT A believe!'[one of][no line break] You'd expect that sort of excruciating grammar on a sports team's t-shirt, but not a toga. Hmm.[or][stopping]"
-
 description of the toga is "On it you see a four-legged animal with a sort of beard and horns. It's not very clear, but there are only so many possibilities--and if you read the toga, maybe you can see what's written on it."
 
 check wearing the toga: say "If the barnyard smell weren't unpleasant enough, you feel pricked by hairs--like a beard--and maybe even horns. You remove the toga and flip it inside-out, but you don't see anything. Odd." instead.
@@ -3121,8 +3117,6 @@ check examining cabinet: ignore the examine containers rule.
 check closing the acne-bit cabinet: say "You don't need to hide anything in there from anyone.".
 
 the tenibac is boringscen. it is privately-named. description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.".
-
-Bactine and Velcro should be capitalized.
 
 section prep paper
 
@@ -3314,7 +3308,7 @@ carry out xmxing:
 	if noun is red asp:
 		say "[v-b]drapes seem to flutter in front of the red asp.";
 		ditch-saltine instead;
-	if noun is ufcex and centrifuge-stopped is false: [start sortie]
+	if noun is trap exits and centrifuge-stopped is false: [start sortie]
 		say "The exits are rushing past too fast to focus on them. But you're in line with the dial.";
 		try xmxing dial instead;
 	if noun is dial and centrifuge-stopped is false:
@@ -4268,7 +4262,7 @@ description of store h is "Inside store H you see such a miscellany that you dou
 
 Store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]". cert-text of store i is "S[d1][d1][d1][d1][d1]". rect-text of store i is "S[d1][d1][d1][d1][ast]E".
 
-description of store i is "Store I has something written on it. You think you see--almost--the outline of a trap door behind them. Perhaps there is something behind, to get you out of here."
+description of store i is "Store I has something written on it. Perhaps there is something behind, trying to get you out of here."
 
 Store J is a sto. understand "store/ 10/ten" as store j.
 
@@ -4374,14 +4368,6 @@ does the player mean examining a direction when player is in Trips Strip: it is 
 
 [check examining a direction in Trips Strip:
 	if player's command matches the regular expression "\b<a-z>$", case insensitively, try examining the store instead;]
-
-td is privately-named scenery in Trips Strip. printed name of td is "trap door". understand "trap/ door" and "trapdoor" and "place" and "outline" as td.
-
-description of td is "There's a message on it. You have to move around to see all the letters behind the pictures, but when you do, it says:[paragraph break][fixed letter spacing]PROPERTY OF[line break]  STORE I[paragraph break]TO ATTACKING[line break]   MISSION[variable letter spacing]. [paragraph break]Whoah, heavy stuff."
-
-instead of opening td: say "You can't get in the store[if cur-score of stores is 0]. It might be easier to try your luck/skill in Store F first.[else]. How did you find a passage through [other-store], again?[end if]".
-
-to say other-store: say "[if scented descent is visible]Store F[else]that other store[end if]".
 
 section general portal checks
 
@@ -5161,26 +5147,24 @@ check going inside when mrlp is sortie:
 
 chapter Trap Part
 
-Trap Part is a room in Sortie. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge. Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
+Trap Part is a room in Sortie. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge, with a dial in the center. Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
 
 check scaning dial when centrifuge-stopped is false: say "You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, [if gadget is cert]all red except for the middle that flashes green[else]green flashing between 5 and 7, red flashing between 1 and 6[end if]. Hm, exits plus two letters. What number could that be, or become." instead.
 
 check going nowhere in Trap Part:
-	if centrifuge-stopped is false, say "That'd be running into a wall, and besides, you have to stop the centrifuge, first." instead;
+	if centrifuge-stopped is false, say "That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first." instead;
 	say "[dmm]. You can only go north to the kitchen or east[if roomroom is visited] to the (plain) room[end if]." instead;
 
 to say maybe-shift: say "[if kitchen is unvisited and roomroom is unvisited], and you're pretty sure they won't fake you out at the last minute[else], and they've been behaving since you fixed that dial[end if]".
 
-the cfuge is privately-named scenery in Trap Part. understand "centrifuge" as cfuge.
-
-description of cfuge is "[if centrifuge-stopped is false]You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it[else]Nothing's spinning any more, thankfully[end if]."
+understand "centrifuge" as dial when centrifuge-stopped is false.
 
 understand "round/den" and "round den" and "unadorned" as Trap Part when centrifuge-stopped is true.
 understand "frenetic/centrifuge" and "frenetic centrifuge" as Trap Part when centrifuge-stopped is false.
 
 The dial is in Trap Part. The dial has a number called numset. The numset of the dial is 0. the dial is fixed in place. the dial is flippable.
 
-the ufcex are privately-named plural-named scenery in Trap Part. understand "exits" and "angle" as ufcex when player is in Trap Part. "[ufcex-descrip].". printed name of ufcex is "exits".
+the trap exits are plural-named scenery in Trap Part. understand "angle" as trap exits when player is in Trap Part. "[ufcex-descrip].".
 
 to say ufcex-descrip:
 	if numset of dial is 16:
@@ -5194,7 +5178,7 @@ check turning the dial:
 
 initial appearance of the dial is "There's a dial laid in the middle of the room. It is at [numset of the dial] and [if centrifuge-stopped is true]should probably be kept it that way. There's nothing else of note here[one of], so you may wish to explore elsewhere[or][stopping][else]is not spinning with the rest of the room, so you can probably turn it[end if]."
 
-description of dial is "You see EXITS [if numset of dial is 16]N E [else]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with TURN DIAL TO or just the number[end if][dial-hints]."
+description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]You see EXITS [if numset of dial is 16]N E [else]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with TURN DIAL TO or just the number[end if][dial-hints]."
 
 to say dial-hints:
 	if numset of dial is 16, the rule succeeds;
@@ -5267,6 +5251,7 @@ check dialsetting it to:
 		say "The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it![paragraph break][if dial is unexamined]You glance at the dial, see EXITS N E and wonder if it was always there[else]The flipping bits in the dial lock in to say EXITS N E[end if]. And you see, yes, exits are north and east now. My hat, that was mathy.[paragraph break]You find yourself in a round den, unadorned.";
 		reg-inc;
 		moot dial;
+		moot trap exits;
 		now lid is in Trap Part;
 		now centrifuge-stopped is true;
 		the rule succeeds;
@@ -5474,9 +5459,9 @@ after printing the locale description for kitchen when kitchen is unvisited:
 
 does the player mean putting an ingredient on the tortilla: it is very likely.
 
-description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the centrifuge room and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
+description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the Trap Part you escaped, and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
 
-check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the centrifuge or east[if Stiller Trellis is visited] to the trellis[end if]." instead.
+check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]." instead.
 
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -5751,7 +5736,7 @@ after fliptoing when player is in kitchen (this is the clue taco rule) :
 
 chapter ROOM
 
-roomroom is a privately-named room in Sortie. the printed name of roomroom is "Room". "[if moor is unvisited]This room is a little too undescribed. It's nice to have a break from all this puzzling, but it's almost too easy a break[tagit][else]Zapping yourself to the moor hasn't made this room any more exciting[end if].[paragraph break]A passage leads west back to the centrifuge, and another leads north."
+roomroom is a privately-named room in Sortie. the printed name of roomroom is "Room". "[if moor is unvisited]This room is a little too undescribed. It's nice to have a break from all this puzzling, but it's almost too easy a break[tagit][else]Zapping yourself to the moor hasn't made this room any more exciting[end if].[paragraph break]A passage leads west back to the Trap Part, and another leads north."
 
 understand "room1" as roomroom when debug-state is true.
 
@@ -6776,15 +6761,11 @@ check going nowhere in Roarings Garrison:
 
 the fuzzy clover is a thing in Roarings Garrison. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3. cert-text of clover is "-[d1][d1][d1][d1][d1]". rect-text of clover is "V[d1][d1][d1][d1][ast]O".
 
-description of clover is "You touch the leaves a bit, and they seem to hook into your skin. You count two layers of five leaves each."
+description of clover is "You touch the leaves a bit, and the are sturdy, fuzzy, almost hooking into your skin. You count two layers of five leaves each."
 
-instead of wearing clover: say "You can't wear that as-is, but it'd be helpful to stick to something if it became wearable.".
+check wearing clover: say "You can't wear that as-is, but it'd be helpful to stick to something if it became wearable.".
 
-The leaves are part of the clover.
-
-description of leaves is "Rather fuzzy--they seem almost to try to stick to you."
-
-instead of taking the leaves: say "Picking the clover apart will just ruin it."
+understand "leaves" as clover when clover is visible.
 
 Report taking the clover:
 	say "You pluck it.";
@@ -8910,7 +8891,6 @@ carry out scaning:
 		say "[one of]You receive a rush of insight unlike anything anywhere else in the game![or]You receive more practical insight![stopping][paragraph break]";
 		say "[one of]Bread, $1 per loaf[or]Condensed cream of mushroom soup, $.39[or]Cabbage, $.19/lb[or]Ice Cream, $2.50/gallon[or]Jack's Pizza, 5/$10, limit 5[or]OnCor entrees, $2[or]Hot dogs, 89 cents[or]7 oz. pasta, 3/$1[or]Milk, $1.99/gallon[or]Root Beer, $.68 per liter bottle[at random] at BreadCo. Much better than [one of]Winn-Dixie[or]Strack and Van Til[or]SuperFresh[or]Marsh[or]Kroger[or]Piggly Wiggly[or]Jewel Finer Foods[or]Aldi[or]Safeway[or]Moo and Oink[at random]!" instead;
 	if noun is pat, say "'Fie!' yells Pat. 'My poem transcends technology! I am sure such a fancy gadget could not even tell me its meter!' Then he gets back to recitation." instead;
-	if noun is td, say "Not likely--it's inside the store." instead;
 	if noun is the broad board, say "The gadget makes no noise[if gateman is visible][cant-change][else]." instead;
 	if noun is the player:
 		if warts are visible:
@@ -10402,7 +10382,7 @@ to say cabinet-loop:
 	if cabinet-reads > 1 and the remainder after dividing cabinet-reads by 7 is 0, say "[line break]Well, you've read through it all. But you can read it again, if you'd like.";
 
 check reading (this is the reading is almost examining rule):
-	if noun is toga, try examining the toga-writing instead; [ordeal loader]
+	if noun is toga, say "A GOT-TA GO ... hmm, not the very best ever." instead; [ordeal loader]
 	if noun is gadget, try examining tag instead;
 	if noun is gadget-screen, try scaning location of player instead;
 	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;

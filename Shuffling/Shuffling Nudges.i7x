@@ -156,7 +156,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "rambling"	370319574	--	rambling shout	--	"[guider-content]."
 "whiff"	243239710	--	whiff of stew	--	"[guider-content]."
 "aroma"	228127169	--	aroma of teas	--	"[guider-content]."
-"leaves"	515052661	--	forest-leaves	--	"You have no time to play with leaves."
+"leaves"	515052661	--	leaves	--	"You have no time to play with leaves."
 "south"	416124667	--	--	first-two-forest rule	"[forest-no]."
 "north"	368976205	--	--	first-two-forest rule	"[forest-no]."
 "west"	435124866	--	--	first-two-forest rule	"[forest-no]."

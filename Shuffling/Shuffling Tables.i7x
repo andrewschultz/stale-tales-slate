@@ -20,7 +20,7 @@ table of Stores anagrams [xxtsa]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
 store f	scented descent	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
-store i	posted depots	"sortie"	"store i"	"The store rumbles, revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
+store i	posted depots	"sortie"	"store i"	"The store rumbles, revealing shady posted depots you can enter to somewhere new."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
 cabinet	tenibac	"bactine"	"bactine"	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
@@ -164,13 +164,6 @@ to say ropes-grips-lying:
 to say tool-clue:
 	if grips are visible and ropes are visible:
 		say ". The combination of grips and ropes is probably enough to make climbing gear[if tool shed is visible]. You can probably try to mess with the tool shed, but it doesn't seem like you need to[end if]";
-
-to say trap-check:
-	if td is visible:
-		say ", collapsing the trap door";
-	else:
-		say ", collapsing a trap door you hadn't noticed otherwise";
-	moot td;
 
 to say what-about-gate: say ". [if player has gadget]Not much left to do for you here[else]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
 
@@ -392,7 +385,6 @@ blot	"The blot is a clue what the bulge could become. It's not useful by itself.
 bugle	"You should PLAY the bugle."
 OR DO door	"You can just ENTER the door[if bugle-played is false and bolt is visible] once you figure how to open it[end if]."
 toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or][or]What could the toga become that might eat through the darnels?[plus][or]The toga can become a GOAT. [minus][cycling]"
-toga-writing	--	toga
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
 brush	--	shrub
 snarled darnels	"[if darn-slan is true]You've already vented your frustrations on the darnels.[else][one of]You don't need to do anything with the darnels, but you'll get an extra point out of it. [plus][or]It may be useful to get mad at them, maybe even say something nasty or nonsensical. For the good of society. [plus][or]It's a bit early for a puzzle this long, but you can import intentions to the plants that aren't there. I think we've all done it. [plus][or]You can SLANDER the darnels. [minus][cycling][end if]"
@@ -432,7 +424,6 @@ marquee	--	store b
 store f	"[one of]Store F has some real earth tones. [plus][or]Trees, leaves, mud. [plus][or]There's a FOREST behind it. [minus][cycling]"
 roadsign	"The road sign gives a clue as to the nature of Store F."
 store i	"[one of]The outline of a trap door is what you need to get to. what word is a synonym for exit and missile launch? [plus]The small poem has red writing which will clear which letters don't fit where.[or]You can also use both settings of the gadget to get four letter placements. [plus][or]You need to create a SORTIE. [minus][cycling]"
-td	"Go down to see what lurks behind store I."
 store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for Store M. It looks like you need to get to a subway station or something. [plus][or][if gadget is cert]The gadget tells you M----- if you scan both the store and the map of Mt. Rose[else if gadget is rect]M----S is only so helpful here, but remember a city and its transport system are being portrayed[else]A city and its transport system are being portrayed[end if]. [plus][or]You need to discover the METROS. [minus][cycling]."
 subway map	"The subway map gives a hint as to what Store M can be."
 store r	"[if you-can-advance][one of]You need to get into store R. [plus][or]The roster provides a hint. Where's a place you can rest? [plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word. [plus][or]You want to go to a RESORT. [minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r][end if]."
@@ -507,8 +498,7 @@ vowels	"[one of]The vowels seem to be hiding a great evil, a Halloweeny menace. 
 wolves	"They're due for a violent end."
 bumps	"The bumps clue what the vowels can become."
 dial	"[if centrifuge-stopped is true]You've dealt with the dial.[else][one of]You'll get hints for turning the dial wrong, but the EXITS at right angles are a clue. [plus][or]You need to figure what the right directions are. [plus][or]If you've tried going diagonally, that doesn't work, leaving four possibilities. [plus][or]You can also just think of a number with X in it, with seven letters. [plus][or]Binary search works, too, but the next clue shows how you can get things in one move. [plus][or]The right number is SIXTEEN. [minus][cycling][end if]"	[START SORTIE]
-ufcex	--	dial
-cfuge	--	dial
+trap exits	--	dial
 Mean Old Mondale Doleman	"You don't need to do anything directly to Mondale Doleman to get through the sortie."
 lid	"The (a) lid is just there to keep the dial from turning."
 great grate	"[one of]There's no gateman to help with the grate. But it is made of HECK TIN. [plus][or]You're feeling very hungry. You wish you could go somewhere to eat, or even make something to eat. [plus][or]The tagged gadget gives a reading without you examining anything. [plus][or]This room becomes a KITCHEN. [minus][cycling]"
