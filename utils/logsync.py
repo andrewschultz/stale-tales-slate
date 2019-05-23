@@ -270,8 +270,8 @@ def sa_r_g_check():
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         global_raw = my_raw
                         x = parse_brackets(val_of(q))
-                        if len(sa_flips[my_raw]) != len(x[0]):
-                            print("RECT-TEXT size violation", x, len(x), sa_flips[raw], len(sa_flips[raw]))
+                        if len(sa_flips[my_raw]) != len(x):
+                            print("RECT-TEXT size violation", x, len(x), sa_flips[my_raw], len(sa_flips[my_raw]), line_count)
                             continue
                         if sa_flips[my_raw][0] != x[0]:
                             print("First digit of rect-text wrong for", my_thing, "line", line_count, my_nosp, sa_flips[my_raw], x)

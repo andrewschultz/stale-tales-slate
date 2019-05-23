@@ -774,9 +774,6 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is tech etch:
 		if player is in Esoteric Coteries or player is in Undesired Underside, decide yes;
 		decide no;
-	if hintcand is forest-leaves:
-		if player is in rf or player is in sf, decide yes;
-		decide no;
 	if hintcand is r2:
 		if player is in roomroom, decide yes;
 		decide no;
@@ -2524,6 +2521,7 @@ check going when player is in sf or player is in rf:
 				say "You wind up in an area that doesn't look that much different but feels a bit colder.";
 				reg-inc;
 				move player to rf;
+				move leaves to rf
 				the rule succeeds;
 			else:
 				say "You follow the path some more, really getting somewhere. 'Mastery of a forest, my!' you say, feeling vainer and promptly tumbling into a ravine! It's too steep to climb, so you walk on some more...";
@@ -4560,9 +4558,7 @@ understand "Rest of Forest/" as rf when mrlp is forest.
 
 understand "forest2" as rf when debug-state is true.
 
-the forest-leaves are a privately-named useless backdrop. "They've already undergone nature's transformation, so they're beautiful rather than useful. They don't leave any clues.". printed name of forest-leaves is "leaves".
-
-the forest-leaves are in rf and sf.
+the leaves are privately-named boringscen in sf. "They've already undergone nature's transformation, so they're beautiful rather than useful. They don't leave any clues.". printed name of leaves is "forest leaves". bore-text of leaves is "You don't need to do anything with the leaves. There's other stuff that should stand out.". understand "forest leaves" as leaves.
 
 chapter Self-ID Fields
 
@@ -10599,7 +10595,9 @@ the oils are a plural-named thing in Sacred Cedars.
 
 lgth of oils is 4. gpos of oils is 4. rpos of oils is 3. cert-text of oils is "-[d1][d1][d1]". rect-text of oils is "S[d1][d1][ast]L". rgtext of oils is "[rcn][rc][rc][rc]".
 
-[lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 is "-[ast]I[ast]L[d1]". rect-text of oils2 is "S[d1][d1][ast]O[end if]". rgtext of oils2 is "[rcn][gc][gc][rc]".]
+[
+lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 is "-[ast]I[ast]L[d1]". rect-text of oils2 is "S[d1][d1][ast]O". rgtext of oils2 is "[rcn][gc][gc][rc]".
+]
 
 the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 
