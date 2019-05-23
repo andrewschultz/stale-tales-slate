@@ -21,7 +21,7 @@ store m>metros
 store r>resort
 roster>resort
 marquee~bertos>sorbet
-cabinet>nicebat
+acne-bit cabinet~cabinet>bactine
 #forest
 shout>south
 teas>east
@@ -101,7 +101,8 @@ latches>satchel
 palm>lamp
 tables>stable
 my niche>chimney
-t-b~ten beams>basement
+meet bans>basement
+beams~ten beams>basement
 ##diorama
 pavement>event map
 event map>pavement
@@ -142,9 +143,9 @@ pamphlets~i used to>outside
 ########REGION routes
 worst ad>towards
 scripture picturers~sin die>inside
-bench~a giant's>against
+anti sag sit a nag>against
 bench-end~tirades>astride
-elbow>below
+gast's elbow~elbow>below
 rude 'n nuder>under
 lairage regalia~oscar's>across
 grubby restaurant~pat's>past
@@ -172,14 +173,15 @@ sob ever verbose>observe
 stop post>spot
 pa egg pea~pa egg pea peg a page>gape
 ####boarded roadbed
-what-a-bee~evil bee>believe
+evil bee>believe
+vile bee>believe
 bee's head~no ears so near>reason
 cellar door~cellar>recall
 ####drain nadir
 diapers>despair
 a spider>despair
 ires pad>despair
-eddie's song~idcede>decide
+i'd cede>decide
 ####boredom bedroom
 large regal lager>glare
 rubbish story~ergal agler>glare
@@ -194,7 +196,7 @@ praise spirea>aspire
 rivets>strive
 astute statue~trevis vister>strive
 pernod>ponder
-card~derp on epdorn dr peno ned orp>ponder
+r cad card~derp on epdorn dr peno ned orp>ponder
 ####upscale capsule
 red vees>deserve
 divorces>discover
@@ -266,11 +268,11 @@ flea>leaf
 speel>sleep
 usb>sub,bus
 t-key~tba>tab
-compiled code~budge>debug
+bub dude egg>debug
 small blue button~to be or>reboot
-scratch paper~polemic>compile
+i'm le cop polemic>compile
 ########REGION oyster
-stumbler tumblers~tips pits>spit
+tips pits>spit
 gins sign>sing
 casper spacer>scrape
 capers recaps>scrape
@@ -450,6 +452,34 @@ ed riley>reedily
 er yield>reedily
 ####disowned downside
 atmo-moat>atom
+t-bossily~i sly sob si bloys>bossily
+t-seedily~eyelids>seedily
+t-cattily~tacitly>cattily
+t-tearily-irately~reality>irately,tearily
+t-nastily~saintly>nastily
+t-shadily~ladyish>shadily
+t-snidely~lindsey>snidely
+t-starkly~krystal>starkly
+t-blearily~reliably>blearily
+t-formally~fly moral a folly mr>formally
+t-coitally~locality>coitally
+t-ribaldly~bridally>ribaldly
+t-shabbily~bbs hal yi>shabbily
+t-silently~snit yell style nit silly net>silently
+t-shoddily~odd sly hi dish loyd>shoddily
+t-martially~maritally>martially
+t-suddenly~desy lund n sly dude>suddenly
+t-modestly~ed my lost styledom yet old ms ty sod mel>modestly
+t-steamily~may islet misty ale slimy tea>steamily
+t-stupidly~duty slip i ply dust tidy plus>stupidly
+t-sincerely~celerys in n slice yer rec lin yes>sincerely
+t-sobbingly~lobbyings>sobbingly
+t-wearingly~lawyering>wearingly
+t-tediously~lousy diet idlest you>tediously
+t-drawlingly~drywalling>drawlingly
+t-emotionally~yolo ailment oo tally mine i yell at moon>emotionally
+t-desperately~patsy leered>desperately
+t-despairingly~redisplaying>despairingly
 ####loop pool
 sea cube>because
 eels>else
@@ -502,11 +532,11 @@ harmonicas>maraschino
 mad train>tamarind
 eerie blurbs>blueberries
 peanut cola>cantaloupe
-videotape~mr pinsome>persimmon
 coin>icon
 icons>sonic
->IGNORE=s-c
 coins>sonic,icons
+s-c~sonic coins>icons
+omen prism>persimmon
 ####swell wells
 stucco~on stucco>coconuts
 green stain>tangerines
@@ -531,43 +561,33 @@ peach>cheap
 nectarine>ancienter
 lemons>solemn
 >IGNORE=melon
-l-o-p~prices>cripes
+prices precis>cripes
 pre-mang~mango>among
 ####scape space
 engaro orange>go near
-an-a~banana>nabana
+a banna'~naa na b a banna>banana
 inapt paint~reserved deserver>reversed
-pugnacious plant~hrbubar>rhubarb
+a brr hub>rhubarb
 ####gates stage
 searcher>research
 viewer>review
 perp-priv~perp>prep
-##############logic file checks
+##############logic file checks (eventually delete this all)
 #means manse
 pram,tables,niche,t-b
 #routes
-all noon gag=noon gag
 bench
 #troves
-ltb=lead
 eddie's song
 rivets
 #oyster
 pale plea
-bogus-plains=plains
-a-s=achers' arches
-bogus-lamps=lamps
 #towers
 prison ropins
 dr yow
-bogus-detours=dourest detours
 #otters
-b-b=bleary barley
-merle=honestly
-elmer=ideas aides
 merle,sly imp,medals,whiners
 #others
 an-a,pugnacious plant
 auction caution
-s-c=sonic coins
 ;

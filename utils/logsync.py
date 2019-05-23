@@ -116,6 +116,7 @@ def read_data_file():
                 ary = ll.split(">")
                 if "~" in ary[0]:
                     ary2 = ary[0].split("~")
+                    abbrevs[ary2[0]] = ary2[1]
                     if in_roiling: aro_trans[ary2[0]] = ary2[1]
                     else: sa_trans[ary2[0]] = ary2[1]
                     temp = ary2[0]
@@ -140,8 +141,9 @@ def read_data_file():
             ary = ll.split(",")
             if '=' in line:
                 ary = ll.split("=")
-                print(ary[0], 'to', ary[1])
                 abbrevs[ary[0]] = ary[1]
+                if ary[0] not in abbrevs: sys.exit("Uh oh to", line.strip())
+                else: print("By-itself abbreviation:", line_count, line.strip())
                 continue
             ll = line.lower().strip().split(",")
             for x in ll: okay[x] = True
@@ -176,6 +178,14 @@ def parse_brackets(q):
     retval = re.sub("\[gc(n?)\]", "g", retval)
     return retval
 
+def err_print(my_line, my_sent, line_num, proj):
+    temp = []
+    for q in my_sent:
+        if q not in my_line:
+            temp.append(q.strip())
+    if len(temp): print("WARNING", proj, line_num, "NEEDS SENTENCE{:s}".format('S' if len(temp) > 1 else ""), ", ".join(temp))
+    return
+
 #current bugs: LGTH must come first
 #also we need to check for if something is a shortening e.g. TREES should be TREES BUTTON
 def sa_r_g_check():
@@ -186,7 +196,7 @@ def sa_r_g_check():
         for (line_count, line) in enumerate(file, 1):
             ms = match_score(line, sa_settings, line_count, "SA")
             if ms >= 2 and not line.startswith("\t"):
-                if ms < len(sa_settings): print("WARNING", line_count, "does not have all of", aro_settings)
+                err_print(line, sa_settings, line_count, "SA")
                 sent = re.split("\. *", line.lower().strip())
                 skip = False
                 global_raw = ""
@@ -245,6 +255,12 @@ def sa_r_g_check():
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         global_raw = my_raw
                         x = parse_brackets(val_of(q))
+                        if len(my_nosp) != len(sa_flips[my_raw]):
+                            print("CERT-TEXT size violation", my_nosp, len(my_nosp), sa_flips[my_raw], len(sa_flips[my_raw]), line_count)
+                            continue
+                        if len(my_nosp) != len(x):
+                            print("CERT-TEXT size violation", my_nosp, len(my_nosp), x, len(x), line_count)
+                            continue
                         for idx in range(0, len(my_nosp)):
                             if my_nosp[idx] != sa_flips[my_raw][idx] and x[idx] != '-':
                                 print(my_thing, "to", sa_flips[my_raw], x, "undetected match character", idx, "line", line_count, my_nosp[idx], sa_flips[my_raw][idx], x[idx])
@@ -254,6 +270,9 @@ def sa_r_g_check():
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         global_raw = my_raw
                         x = parse_brackets(val_of(q))
+                        if len(sa_flips[my_raw]) != len(x[0]):
+                            print("RECT-TEXT size violation", x, len(x), sa_flips[raw], len(sa_flips[raw]))
+                            continue
                         if sa_flips[my_raw][0] != x[0]:
                             print("First digit of rect-text wrong for", my_thing, "line", line_count, my_nosp, sa_flips[my_raw], x)
                         l = len(my_nosp)
@@ -295,7 +314,7 @@ def sa_r_g_check():
         print("I found no errors in the hinting source for Shuffling! Hooray!")
     flip_miss = [x for x in sa_flips if x not in sa_got]
     if len(flip_miss):
-        print("Flips missed:", ', '.join(flip_miss))
+        print("Flips from logsync.txt to SA source missed:", ', '.join(flip_miss))
     else:
         print("No SA flips missed.")
 
@@ -327,7 +346,7 @@ def aro_settler_check():
             ms = match_score(line, aro_settings, line_count, "ARO")
             if ms >= 2 and not line.startswith("\t"):
                 global_raw = ""
-                if ms < len(aro_settings): print("WARNING", line_count, "does not have all of", aro_settings)
+                err_print(line, aro_settings, line_count, "ARO")
                 if 'parse-text' not in line:
                     print("WARNING need to fill in parse-text in line", line_count)
                 elif 'parse-text of' not in line:
@@ -345,7 +364,7 @@ def aro_settler_check():
                         aro_got[my_raw] = True
                         if my_raw not in aro_flips:
                             count += 1
-                            print("#", count, "Need entry for", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "at line", line_count)
+                            print("#", count, "Need logsync.txt entry for what", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "should become at line", line_count)
                             if count >= 25: sys.exit()
                             skip = True
                             break
@@ -429,16 +448,16 @@ def aro_settler_check():
                         if v != the_string:
                             b_count += 1
                             print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v, "as the given b-text but should have", the_string)
-                    if 'parse-text' if q:
+                    if 'parse-text' is q:
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
                 if global_raw and my_raw != global_raw:
                     print("WARNING code rewrite of", global_raw, "to", my_thing, "at line", line_count)
     flip_miss = [x for x in aro_flips if x not in aro_got]
     if len(flip_miss):
-        print("Flips missed:", ', '.join(flip_miss))
+        print("Flips from logsync.txt to ARO source missed:", ', '.join(flip_miss))
     else:
-        print("No SA flips missed.")
+        print("No ARO flips missed.")
 
 def check_aftertexts():
     markedokay = 0
@@ -553,6 +572,9 @@ while arg_count < len(sys.argv):
         usage()
     arg_count = arg_count + 1
 
+i7.go_proj("roiling")
+read_data_file()
+
 with open(r_src) as file:
     for (line_count, line) in enumerate(file, 1):
         if 'logsync.py force next' in line:
@@ -575,9 +597,6 @@ with open(r_src) as file:
                 # print(scanned, "/", shortcutcheck(scanned), "/", line_count)
                 need_logic[shortcutcheck(scanned)] = line_count
                 force_next = False
-
-i7.go_proj("roiling")
-read_data_file()
 
 with open(i7.sdir("roiling") + "/logic.htm") as file:
     for (line_count, line) in enumerate(file, 1):
@@ -630,6 +649,7 @@ with open(logic_reds) as file:
                 if logic_reds not in open_line.keys() or not open_first: open_line[logic_reds] = line_count
                 qm_needed += 1
             scanned = re.sub("#qver (of|for) ", "", ll)
+            scanned = re.sub("~.*", "", scanned)
             if 'qver for' in ll: print("WARNING line", line_count, "qver of = preferred for", ll)
             last_qver = scanned
             if scanned in got_logic_reds.keys(): print("WARNING line", line_count, "duplicates", scanned)
@@ -637,7 +657,7 @@ with open(logic_reds) as file:
             need_question_mark = line_count
         elif '?' in ll or 'qver ignore' in ll or 'qver-ignore' in ll: need_question_mark = 0
 
-check_aftertexts()
+# check_aftertexts()
 
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues", launch_message = "invis.pl rl e")
