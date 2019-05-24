@@ -4726,48 +4726,51 @@ a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-h
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign--caution has four vowels, but the settler indicates three[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
-noon gag [below here you get a generic response]
-angriest ingrates
-asset-hit atheists
-b-b
-boing go bin
-bortles lobster
-bub dude egg
-capers recaps
-casper spacer
-clack ops locs pack
-dreads adders
-elmer
-fluster self rut
-frat raft
-gins sign
-inapt paint
-i'm le cop polemic
-large regal lager
+
+table of aftertexts (continued) [taf]
+xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
+noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
+angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
+asset-hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
+b-b	true	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess."
+boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things."
+bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
+bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
+capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
+casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
+clack ops locs pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
+dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the warriors who had only one name, the dreads adders give a double clue."
+elmer	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
+fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
+frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
+gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
+inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
+i'm le cop polemic	true	true	false	false	"
+large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
 mardier admirer
-me arts
-mended mini denim
-muscly luc sym
-natant ant
-organised ego drains
-papery yapper
-prices precis
-reading a dinger
-resident trendies
+me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
+mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
+muscly luc sym	true	true	false	false	"You've been around thee block enough to know what the variable color must be."
+natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
+organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
+papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
+prices precis	true	true	false	false	"Whoah, only reds and purples. Interesting."
+reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
+resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
 rude 'n nuder
-s-c
-sob ever verbose
-sods gone odes song
-sport ports
-sporties' ripostes
-starch charts
-t-formally
-templar ramplet
-tetris sitter
-trance nectar
-traipse pirates
-tropes poster
-try us yurts
+s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
+sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
+sods gone odes song	true	true	false	false	"My havens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
+sport ports	true	true	false	false	"Maybe you can find where the vowel is. That could help."
+sporties' ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
+starch charts	true	true	false	false	"Starch is calorically and cosonantally (if that's a word) heavy. This must help."
+t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The macks said two things."
+templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
+tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
+trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
+traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
+tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters."
+try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
 
 [?? test qmh toggling and scanning stuff]
 
