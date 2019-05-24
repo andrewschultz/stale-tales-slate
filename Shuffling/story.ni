@@ -3687,9 +3687,7 @@ the PHAIL phial is a thing in acne-bit cabinet. the phial is warpable.
 
 description of PHAIL phial is "It feels tingly and looks glinty. It contains some blue lube that sloshes about a bit[if phial is not in cabinet]. You see the words GLEAN/ANGLE scratched on it, and it also reads, in small print, PROACTIVELY HELPING ADVENTURERS IN LIMBO. Geez, acronyms can be so contrived[else]. It looks like you could read it, if you took it from the cabinet[end if]."
 
-the blue lube is part of the phail phial.
-
-description of blue lube is "[if phial is in cabinet]You have to blink a couple times after looking at it, even from outside the cabinet. It has some weird powers, but you'd probably need to ask how to harness them[else if lube-asked is false]You sense it's powerful, but you need to look at it right[else]You remember what Nat Egam said. You can either ANGLE or GLEAN as you look at it, which may help your quest[end if]."
+the blue lube is a boringthing. it is part of the phail phial. description of blue lube is "[if phial is in cabinet]You have to blink a couple times after looking at it, even from outside the cabinet. It has some weird powers, but you'd probably need to ask how to harness them[else if lube-asked is false]You sense it's powerful, but you need to look at it right[else]You remember what Nat Egam said. You can either ANGLE or GLEAN as you look at it, which may help your quest[end if].". bore-check of blue lube is bore-lube rule. bore-text of blue lube is "The lube's really only good for staring at."
 
 [Rule for deciding whether all includes blue lube while taking (this is the zap lube rule): rule fails.]
 
@@ -3703,13 +3701,17 @@ check taking phial:
 
 instead of opening the phail phial: say "The blue lube would leak out."
 
-instead of doing something with the blue lube:
-	if the current action is objasking generically, continue the action;
-	if the current action is objasking about, continue the action;
+this is the bore-lube rule:
+	if the current action is objasking generically:
+		continue the action;
+		the rule succeeds;
+	if the current action is objasking about:
+		continue the action;
+		the rule succeeds;
 	if the current action is taking:
-		say "[if lube-asked is false]It probably belongs in the PHAIL phial, until you determine otherwise[else]You wouldn't be able to GLEAN or ANGLE then[end if].";
-	if action is procedural, continue the action;
-	say "The lube's really only good for staring at."
+		say "[if lube-asked is false]The blue lube probably belongs in the PHAIL phial, until you determine otherwise[else]You wouldn't be able to GLEAN or ANGLE then[end if].";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 last-lube-turn is a number that varies. last-lube-turn is usually -5.
 
@@ -5675,17 +5677,15 @@ after examining grief'd fridge:
 
 fridge-open is a truth state that varies.
 
-instead of doing something with grist when fridge-open is false:
+check doing something with grist when fridge-open is false: [?? test]
 	if the current action is taking, say "Yes, that's in the fridge, but it's someone else's." instead;
 	say "You guess what is in the fridge, and you are right! There is a cake pan, too.";
 	now fridge-open is true;
-	continue the action;
 
-instead of doing something with cake pan when fridge-open is false:
+check doing something with cake pan when fridge-open is false: [?? test]
 	if the current action is taking, say "Yes, that's in the fridge, but it's someone else's." instead;
 	say "You guess what is in the fridge, and you are right! There is some grist, too.";
 	now fridge-open is true;
-	continue the action;
 
 check opening grief'd fridge:
 	now fridge-open is true;
@@ -6592,9 +6592,9 @@ chapter mud
 
 the mum dud mud is a bounding backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen. description is "Well, it's mud, and not very exciting mud at that."
 
-instead of doing something with mum dud mud:
+check doing something with mum dud mud: [??]
 	if action is procedural, continue the action;
-	say "The mum dud mud isn't easily movable, and it might cause a cave-in if you can. You have enough to explore here."
+	say "The mum dud mud isn't easily movable, and it might cause a cave-in if you can. You have enough to explore here." instead;
 
 book metros
 
@@ -6711,11 +6711,7 @@ instead of entering cordoned red condo, try going north instead;
 
 to say n-of-garrison: say "[if Obtains Boastin' Bastion is visited]bastion[else]condo[end if]"
 
-the tents are useless scenery in Roarings Garrison. understand "commune" as tents.
-
-description of tents is "Decorated with a corny crayon-a-crony."
-
-instead of doing something with the tents: say "Probably a long-hair halo ring in the tents. Less helpful than the deadbeat."
+the tents are useless boringscen in Roarings Garrison. understand "commune" as tents. description of tents is "Decorated with a corny crayon-a-crony.". bore-text is "Probably a long-hair halo ring in the tents. Less helpful than the deadbeat."
 
 the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if bastion-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. Despite your heroism with the cake in the Bastion, he barely acknowledges you[end if]."
 
@@ -7172,17 +7168,11 @@ check objasking faeries about gardenia:
 
 description of freesia faeries is "They are maybe a foot high, but each one of them carries a small wand you're sure you don't want pointed at you."
 
-the wands are part of the faeries. understand "wand" as wands. the wands are useless.
+the wands are a plural-named useless boringthing. they are part of the faeries. understand "wand" as wands. description of wands is "[one of]You lean over to peer at the wands and realize the faeries are watching you stare. You feel embarrassed[or]You've got enough magic for one person. You don't need more[stopping].". bore-text is "The wands are the faeries[']. Best not meddle.".
 
 after doing something with wands:
 	set the pronoun it to wands;
 	continue the action;
-
-description of wands is "[one of]You lean over to peer at the wands and realize the faeries are watching you stare. You feel embarrassed[or]You've got enough magic for one person. You don't need more[stopping]."
-
-instead of doing something with the wands:
-	if action is procedural, continue the action;
-	say "The wands are the faeries[']. Best not meddle.";
 
 to say he-be:
 	if heaths are in Fo' Real Florae or begonias are in Fo' Real Florae:
@@ -7468,11 +7458,8 @@ the smartest mattress is a container in The Ol' Hotel. the mattress is fixed in 
 
 does the player mean entering the mattress: it is likely.
 
-instead of doing something with the mattress when mattress is visible:
-	if night thing is visible:
-		say "Can't do or see much with the night thing on it.";
-	otherwise :
-		continue the action;
+check doing something with the mattress when mattress is in location of player and night thing is in location of player:
+	if night thing is visible, say "Can't do or see much with the night thing on it." instead;
 
 rule for printing a locale paragraph about the smartest mattress:
 	if night thing is not visible:
@@ -7778,15 +7765,6 @@ after examining the neon pig:
 			say "Don't blame you.";
 	continue the action;
 
-the red glowing cursive script is part of the pig. [??a useless thing]
-
-description of cursive script is "It spells [first custom style]INPENGO[r]."
-
-instead of doing something with the script:
-	if current action is examining, continue the action;
-	if current action is scaning or certifying or cring or rectifying, say "[if player is on cafe face]The script doesn't play nice with your gadget[else]Too far away[end if]." instead;
-	say "It's part of the pig--not much else to do but examine it.";
-
 the glowing flowers are a plural-named amusing boringthing. they are part of the neon pig. bore-text of glowing flowers is "The flowers['] symbolism is obvious and probably meant to be. You probably want to deal with the whole hog (sorry.)"
 
 instead of taking neon pig: say "You'd let go of the cafe face and fall to your doom.".
@@ -7854,22 +7832,21 @@ Include (-
 
 section siren-resin
 
-the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". lgth of siren is 5. rpos of siren is 5. gpos of siren is 3. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N".
+the siren is boringscen in Bassy Abyss. description of siren is "Blue and red and flashing and very loud. You'd love to pound it into a powder.". rgtext of siren is "[rcn][rc][rc][rc][gc]". lgth of siren is 5. rpos of siren is 5. gpos of siren is 3. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N". bore-check of siren is bore-siren rule. bore-text is "The siren is too darn loud, even a few feet away. Getting close to it would incapacitate you.";
 
-instead of doing something with the siren:
-	if action is procedural, continue the action;
+this is the bore-siren rule:
 	if current action is xmxing or current action is attacking:
 		continue the action;
-	if siren is not visible, continue the action;
-	say "It's too darn loud, even a few feet away. Getting close to it would incapacitate you.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
-description of siren is "Blue and red and flashing and very loud. You'd love to pound it into a powder."
+some resin is singular-named boringthing. printed name of resin is "some resin[if resin is held] (all over your hands)[end if]". description of resin is "It feels sticky on your hands.".
 
-the resin is a thing. printed name of resin is "some resin[if resin is held] (all over your hands)[end if]"
-
-instead of dropping resin: say "You'll have to wash it off, and there's no running water nearby." instead.
-
-description of resin is "It feels sticky on your hands."
+this is the bore-resin rule:
+	if current action is dropping:
+		say "You'll have to wash it off, and there's no running water nearby.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 stickyhanded is a truth state that varies. stickyhanded is usually false.
 
@@ -9444,9 +9421,15 @@ description of wolves is "Drooling, hate in their eyes, etc. And a bit of fear. 
 
 part drapes-spread-red asp
 
-the spread is flippable scenery. lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rcn][rc][rc][rc][rc][rc]". cert-text of spread is "-[d1][d1][d1][d1][d1]". rect-text of spread is "D[d1][d1][d1][d1][ast]S".
+the spread is flippable boringscen. description of spread is "You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with [if player has sliver]your sliver[else]something[end if]."
 
-description of spread is "You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with [if player has sliver]your sliver[else]something[end if]."
+this is the bore-spreead rule:
+	if current action is taking or current action is pushing or current action is pulling or current action is opening:
+		say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it.";
+		the rule succeeds;
+	abide by the bore-exam rule;
+
+lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rcn][rc][rc][rc][rc][rc]". cert-text of spread is "-[d1][d1][d1][d1][d1]". rect-text of spread is "D[d1][d1][d1][d1][ast]S".
 
 the drapes are plural-named scenery.
 
@@ -9463,10 +9446,6 @@ description of drapes is "Too thick and heavy to walk through."
 the spread is scenery.
 
 understand "cloth" as spread when spread is visible.
-
-instead of doing something with the spread:
-	if current action is taking or current action is pushing or current action is pulling or current action is opening, say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it." instead;
-	continue the action;
 
 the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 3. rpos of red asp is 5. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]". cert-text of red asp is "-[d1][d1][d1][d1][d1]". rect-text of red asp is "D[d1][d1][d1][d1][ast]S".
 
@@ -10395,6 +10374,7 @@ check reading (this is the reading is almost examining rule):
 	if noun is tall trio, say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]." instead;
 	if noun is spearman, say "The spearman's name, in red, is MR. SANE PA[if player carries spearman]. You also read, in red, one of three lines: [one of]MEAN RAPS[or]MS. P. ARENA--crossed out, but red[or]AMEN, RASP[in random order][end if]." instead;
 	if noun is a reading, say "On one of several pages, you see: [one of]AID ANGER is written[or]conspiracy theories from EDGAR IAN[or]silly musings on being IN A GRADE[or]a horror story: DINER, AAG[or]conspiracy theories from NIA EDGAR[or]an exhortation to RIDE AGAN (sic) on the last page[stopping]. The nonsense makes you see red." instead;
+	if noun is neon pig, say "Apparently the neon pig is a creation of one INPENGO." instead;
 	if noun is gin nope opening and controls are not in gin nope opening, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
 	if noun is tiles, say "The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." instead; [resort]
 	try examining the noun instead;
