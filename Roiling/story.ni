@@ -1404,7 +1404,7 @@ persuasion rule for asking Pa Egg Pea to try doing something:
 	say "If it could speak, it'd probably tell you you need to look inside yourself, anyway.";
 	persuasion fails;
 
-persuasion rule for asking astute statue to try doing something:
+persuasion rule for asking Trevis Vister to try doing something:
 	say "Trevis Vister would like the thought of someone asking him to do something. Problem is, he likes to say no a lot on principle, to feel important.";
 	persuasion fails;
 
@@ -1958,7 +1958,7 @@ aunt tuna	"'There is not much to say, with the haunter lurking under Anger Range
 sandier sardine	"He flashes a snider look as he reads in to your talk. 'Ear dins. Wish I worked at Adrien's.'"
 weaselly walleyes	"They snicker menacingly and whisper loudly that you're probably scared of lots of things like ghosts. They aren't. Not even the haunter!"
 haunter	"It does that whoo-whoo thing. WHERE IS MY JEWEL. You think you know which jewel."
-yapper	"The yapper does not shut up about how he cannot be bribed, but he's kind of winking at the same time, and coughing. It seems you may need to do things the right way."
+yapper	"The yapper does not shut up about unbribability but still manages to wink at the same time and coughing. It seems you may need to do things the right way."
 ant	"The ant twitches silently but menacingly."
 dialer	"Your voice would be recognized as not evil enough, even if you got through."
 intercom	"Your voice would be recognized as not evil enough, even if you got through."
@@ -2096,7 +2096,7 @@ him-who	him-say
 yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
 aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
 nestor	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are visible]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
-astute statue	"Trevis would love to be prayed to, and he probably thinks he deserves it."
+Trevis Vister	"Trevis Vister would love to be prayed to, and he probably thinks he deserves it."
 Len Craig	"'No small talk. Just the language of business. Let's haggle.'"
 Curtis	"Curtis is curt. 'Yeah, great job saving Yorpwald and all, what about here?'"
 lamb	"It's a baaaaad conversationalist."
@@ -6258,7 +6258,7 @@ trout	"This game's kind of topsy turvy, but not like THAT."
 knob	"[if knob is reflexed]It's been hit already[else]Yes, but how?[end if]"
 skis	"You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer."
 span pans	"Well, you need to do something to the pans."
-yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. He could take out a rock-man or two, you bet."
+yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. The yapper could take out a rock-man or two, you bet."
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything." [START towers]
 rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
@@ -12260,7 +12260,7 @@ understand "exhibit" as RESIDE RESIDE when player is in Browse Bowers.
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Save aves branch out each way. They're okay for lesser people, but the astute statue and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
+Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Save aves branch out each way. They're okay for lesser people, but the astute statue of Trevis Vister and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to the godlings['] lodgings[end if]."
 
 understand "econ-cone" as Econ Cone.
 
@@ -12271,11 +12271,12 @@ instead of doing something with save aves:
 	say "The save aves are good enough for other people, but not you. You want the best!"
 
 check going inside in Econ Cone:
-	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking. You have not achieved it yet. Your eyes turn [if astute statue is examined]back [end if]to the astute statue." instead;
+	say "You can't just walk in[if Trevis Vister is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking. You have not achieved it yet. Your eyes turn [if Trevis Vister is examined]back [end if]to the astute statue of Trevis Vister, and the rivets beneath it, and the praise spirea nearby." instead;
 
 after looking in Econ Cone:
-	set the pronoun it to astute statue;
-	set the pronoun him to astute statue;
+	set the pronoun it to Trevis Vister;
+	set the pronoun him to Trevis Vister;
+	set the pronoun them to rivets;
 	if pernod is in Econ Cone, set pronoun it to pernod;
 	continue the action;
 
@@ -12298,17 +12299,17 @@ check scaning godlings' lodgings:
 		say "Your settler seems to give the same reading for the Pernod as for the lodgings.";
 		try scaning pernod instead;
 
-chapter astute statue
+chapter Trevis Vister
 
-The astute statue is uncluing scenery in Econ Cone. "[one of]The statue is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Red rivets lie at the bottom of the statue[one of]. It is not a statue of limitations, for sure[or][stopping]."
+Trevis Vister is proper-named uncluing scenery in Econ Cone. "[one of]The statue of Trevis Vister is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Red rivets lie at the bottom of the statue[one of]. It is not a statue of limitations, for sure. [paragraph break]But at least it is not an oil'd idol, or an acts-cast showing Trevis Vister closing a business deal. Sadly, those exist here in Yorpwald, thanks to Elvira's promotions[or][stopping]." [?? X TREVIS when I get a chance ]
 
 Include (-
 	has transparent talkable
--) when defining astute statue.
+-) when defining Trevis Vister.
 
-a-text of astute statue is "RRRYRY". b-text of astute statue is "RRRYRY". parse-text of astute statue is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of Trevis Vister is "RRRYRY". b-text of Trevis Vister is "RRRYRY". parse-text of Trevis Vister is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-understand "trevis/vister" and "trevis vister" as astute statue.
+understand "astute/statue" and "astute statue" as Trevis Vister.
 
 the rivets are part of the statue. description is "They're just there. And red.". the rivets are reflexive.
 
@@ -15292,7 +15293,7 @@ ant	"With the pills dropping around, the ant is distracted, and your wild hacks 
 ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
 scrawl	"The pills slip into the scrawl, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
 haunter	"The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding."
-yapper	"The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves."
+yapper	"The yapper begins bellyaching about picking up the pills, complaining we all know WHOSE job it is to clean things up, before running off to look for a wastebasket--though one of the pills seemed to go in the yapper's mouth."
 d2	 "You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
 dialer	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
 
@@ -15950,8 +15951,8 @@ after fliptoing carps:
 	continue the action;
 
 check fliptoing dialer:
-	if yapper is visible:
-		say "The yapper'd totally tell on you. As it is, it's a good thing he's more interested in telling you off.";
+	if yapper is in location of player:
+		say "The yapper'd totally tell on you. Good thing the yapper's more interested in telling you off.";
 		preef dialer instead;
 
 after fliptoing dialer:
