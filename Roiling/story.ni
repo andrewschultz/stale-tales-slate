@@ -4724,13 +4724,10 @@ a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-h
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign--caution has four vowels, but the settler indicates three[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
-
-table of aftertexts (continued) [taf]
-xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
 noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
 angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
 asset-hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
-b-b	true	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess."
+b-b	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess."
 boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things."
 bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
 bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
@@ -4745,7 +4742,7 @@ gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you thin
 inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
 i'm le cop polemic	true	true	false	false	"
 large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
-mardier admirer
+mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
 me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
 mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
 muscly luc sym	true	true	false	false	"You've been around thee block enough to know what the variable color must be."
@@ -4755,7 +4752,8 @@ papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easie
 prices precis	true	true	false	false	"Whoah, only reds and purples. Interesting."
 reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
-rude 'n nuder
+rivets	false	true	false	false	"Hmm, along with the information for scanning Trevis, you might really have something here." [??what if already STRIVEd]
+rude 'n nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 sods gone odes song	true	true	false	false	"My havens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
@@ -8038,7 +8036,8 @@ this is the bore-pin rule:
 
 a-text of giant pin is "RYYRRYRR". b-text of giant pin is "RYYPPYRR". parse-text of giant pin is "x[sp]-[sp]-[sp]n[sp]t[sp]-[sp]x[sp]x".
 
-the abstract painting is a useless LLPish boringthing. "That painting you changed from a giant pin hangs here.". description is "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.[paragraph break]Its title is, (semi-)inexplicably, Inapt Gin at Pig Inn.". bore-text is "The painting's really just there to be observed and examined. Like most art.". bore-check is bore-painting rule.
+the abstract painting is a useless LLPish boringthing. "That painting you changed from a giant pin hangs here.". description of the abstract painting is
+ "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.[paragraph break]Its title is, (semi-)inexplicably, Inapt Gin at Pig Inn.". bore-text is "The painting's really just there to be observed and examined. Like most art.". bore-check is bore-painting rule.
 
 this is the bore-painting rule:
 	if current action is taking or searching or attacking:
@@ -8545,7 +8544,7 @@ after examining diorama when player is in Dusty Study and niche-found is false:
 	now niche-found is true;
 	say "Oh, hey, there's some words on the ceiling. MY NICHE. Wonder what those could be." instead;
 
-the niche is flippable boringscen in Dusty Study. "The words MY NICHE have a square dotted outline around them.". bore-text is "It's--well, it's not close enough to do much with.";
+the niche is flippable boringscen in Dusty Study. description of the niche is "The words MY NICHE have a square dotted outline around them.". bore-text is "It's--well, it's not close enough to do much with.";
 
 understand "my niche" and "my" as niche
 
@@ -8711,13 +8710,13 @@ understand "bin" and "ISBN bin" as ISBN bins. ISBN bins are parse-spoilable.
 
 a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text isBN bins is "x[sp]x[sp]i[sp]x".
 
-the snib is useless boringscen. description is "The snib is holding your bins together. That might make it snibs, but let's just pretend it sort of links all the bins together so even if they can't be broken into, someone would have to move them all at once.". bore-text is "The snib is secure enough. No need to tinker with it.".
+the snib is useless boringscen. description of the snib is "The snib is holding your bins together. That might make it snibs, but let's just pretend it sort of links all the bins together so even if they can't be broken into, someone would have to move them all at once.". bore-text is "The snib is secure enough. No need to tinker with it.".
 
 understand "snibs" as snib.
 
 section evac-cave
 
-the evac-cave is boringscen in Largely All-Grey Gallery. "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
+the evac-cave is boringscen in Largely All-Grey Gallery. description of the evac-cave is "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
 
 understand "evac/cave" as evac-cave.
 
@@ -8919,7 +8918,7 @@ the vertical stripe is a boringthing. it is part of the act-ruin curtain. descri
 
 the horizontal stripes is a plural-named boringthing. it is part of the act-ruin curtain. description of horizontal stripes is "Bluish, and there are about thirty."
 
-the small holes is a plural-named boringthing. it is part of the act-ruin curtain. description is "They look like some sort of weird lock or something.". understand "hole" as small holes.
+the small holes is a plural-named boringthing. it is part of the act-ruin curtain. description of the small holes is "They look like some sort of weird lock or something.". understand "hole" as small holes.
 
 after fliptoing stapler:
 	if act-ruin curtain is not in Carven Cavern:
@@ -9044,7 +9043,7 @@ check talking to Mole Elmo (this is the can't talk while Elmo has the rifle rule
 
 to say hi-sign: if high-sign is true, say ", even flashing a high sign.";
 
-the high sign is boringscen. description is "Elmo appears to be flashing the numbers 3, 4, 2, 5 and 1 in order with his fingers. Then a pause, then he tries it again[one of]. Hm, nothing here five letters except that rifle[or][cycling].". bore-text is "Not much to do but look."
+the high sign is boringscen. description of the high sign is "Elmo appears to be flashing the numbers 3, 4, 2, 5 and 1 in order with his fingers. Then a pause, then he tries it again[one of]. Hm, nothing here five letters except that rifle[or][cycling].". bore-text is "Not much to do but look."
 
 check scaning when rifle is visible:
 	say "Elmo might shoot you if you went for the settler, which you notice is blinking [spacies of a-text of rifle]. Which has to be the rifle. You hope." instead;
@@ -9240,7 +9239,7 @@ check going inside in Dusty Study:
 
 section girding ridging
 
-the girding ridging is bounding boringscen in Farming Framing. description is "It blocks your way out, but on the other hand, it blocks a mob's way in, which is more important right now.". bore-text is "The girding ridging is probably holding people back from entering. You don't need to do anything. You need a hidden escape[if Largely All-Grey Gallery is visited], like in the gallery below[end if]."
+the girding ridging is bounding boringscen in Farming Framing. description of the girding ridging is "It blocks your way out, but on the other hand, it blocks a mob's way in, which is more important right now.". bore-text is "The girding ridging is probably holding people back from entering. You don't need to do anything. You need a hidden escape[if Largely All-Grey Gallery is visited], like in the gallery below[end if]."
 
 book Highest Heights
 
@@ -9385,13 +9384,13 @@ check taking:
 
 the receptors are part of the letters settler. description is "You know little about electronics and magic theory, and you have no time to find out.". bore-text is "The receptors aren't important. Actually, scratch that, they're too important to fiddle with and break.".
 
-the output display is boringthing. it is undesc. the output display is part of the letters settler. bore-text is "You will be able to examine the output display when you SCAN something."
+the output display is a boringthing. the output display is part of the letters settler. description of output display is "You will be able to examine the output display when you SCAN something.". bore-text is "You need to activate the settler to see useful data on the output display."
 
 check examining output display:
 	say "You look at the display, not really expecting to see anything unless you SCAN something. So you wave the settler around, hoping to pick up something.";
 	try scaning the location instead;
 
-the colorful logo is a undesc boringthing. the colorful logo is part of the settler. bore-text of logo is "The logo's just there to say what it is. And maybe as a hint to examine.";
+the colorful logo is a undesc boringthing. the colorful logo is part of the settler. description of the colorful logo is "The logo's just there to say what it is. And maybe as a hint to examine.". bore-text of logo is "You don't need to do anything to or observe the logo."
 
 seen-blues is a truth state that varies.
 
@@ -9421,7 +9420,7 @@ check scaning (this is the scan settler and act-ruin curtain parts rule):
 	if noun is act-ruin curtain or noun is part of act-ruin curtain:
 		say "The act-ruin curtain registers nothing. Perhaps you need to find a way to unlock the small holes in the act-ruin curtain[if staple is off-stage]. You don't have anything that makes holes, yet[else]. Hmm, you have something that could make a small hole[end if]." instead;
 
-the whichs shwich is a boringthing. it is part of the settler. description is "The whichs switch can be SWITCHed with SS to see everything that can be worked on.". bore-text is "The shwich only lets you do one thing, but it's pretty powerful. The only unusual command that goes with it is SS.". bore-check is the bore-shwich rule.
+the whichs shwich is a boringthing. it is part of the settler. description of the whichs shwich is "The whichs switch can be SWITCHed with SS to see everything that can be worked on.". bore-text is "The shwich only lets you do one thing, but it's pretty powerful. The only unusual command that goes with it is SS.". bore-check is the bore-shwich rule.
 
 this is the bore-shwich rule:
 	if current action is switching on:
@@ -10556,7 +10555,7 @@ description of Store U is "Though Store U is the smallest of the stores that sta
 
 section roads
 
-the roads are a plural-named boringthing. they are part of store u. description is "When you stare just right, the red roads reform to 'Sure to set our...'". bore-text is "The roads are inside the store. You can really only examine them.".
+the roads are a plural-named boringthing. they are part of store u. description of the roads is "When you stare just right, the red roads reform to 'Sure to set our...'". bore-text is "The roads are inside the store. You can really only examine them.".
 
 a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
@@ -10632,7 +10631,7 @@ Store Z is a useless sto in Strip of Profits. understand "store/ 26/twentysix" a
 
 chapter megaton magneto montage
 
-the megaton magneto montage is useless boringscen in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule.
+the megaton magneto montage is useless boringscen in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
 
 this is the bore-megaton-magneto-montage rule:
 	if current action is scaning:
@@ -10641,8 +10640,6 @@ this is the bore-megaton-magneto-montage rule:
 	abide by the bore-exam rule;
 
 understand "mmm/mm" as megaton magneto montage when player is in Strip of Profits.
-
-description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
 
 after examining montage for the first time:
 	say "It was created by Tom Egan. Of course. Can't say he was not game.";
@@ -10940,7 +10937,7 @@ check scaning Gast (this is the scan other things than Gast instead rule):
 
 section Gast's elbow
 
-Gast's elbow is a reflexive boringthing. It is part of Gast. description is "Well, thankfully, only one is flailing. Both would be extra tough to dodge. [if elbow is reflexed]But you have the hang of it now[else]Still, there's almost a pattern to it, and maybe there's a safe spot[end if].". bore-text is "You'll need to find the right way to avoid [Gast]'s elbow."
+Gast's elbow is a reflexive boringthing. It is part of Gast. description of gast's elbow is "Well, thankfully, only one is flailing. Both would be extra tough to dodge. [if elbow is reflexed]But you have the hang of it now[else]Still, there's almost a pattern to it, and maybe there's a safe spot[end if].". bore-text is "You'll need to find the right way to avoid [Gast]'s elbow."
 
 a-text of Gast's elbow is "RYRYR". b-text of Gast's elbow is "RYRGP". parse-text of Gast's elbow is "x[sp]e[sp]x[sp]o[sp]w". elbow is cheat-spoilable.
 
@@ -11618,7 +11615,7 @@ to say to-o:
 
 section all noon gag
 
-the all noon gag is a vanishing boringthing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
+the all noon gag is a vanishing boringthing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description of noon gag is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
 
 a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text of all noon gag is "?[sp]?[sp]-[sp]?[sp]?".
 
@@ -11661,7 +11658,7 @@ instead of doing something to mist:
 
 chapter no-gal's boat
 
-No-Gal's Boat is boringscen in Ripe Pier. description is "You can barely see it, but you can't hear No-Gal Logan calling you.". bore-text is "Just poking it won't help you get there. You need to find a way to it."
+No-Gal's Boat is boringscen in Ripe Pier. description of No-Gal's Boat is "You can barely see it, but you can't hear No-Gal Logan calling you.". bore-text is "Just poking it won't help you get there. You need to find a way to it."
 
 check going inside in Ripe Pier:
 	try entering mist instead;
@@ -11725,7 +11722,7 @@ a-text of bent ewe is "RYRRYYR". b-text of bent ewe is "PGRRGYR". parse-text of 
 
 chapter raptest patters
 
-the raptest patters are plural-named vanishing LLPish boringscen in Sonancy Canyons. "An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.". bore-check is the bore-raptest-patters rule.
+the raptest patters are plural-named vanishing LLPish boringscen in Sonancy Canyons. description of raptest patters is "An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.". bore-check is the bore-raptest-patters rule.
 
 this is the bore-raptest-patters rule:
 	if current action is listening:
@@ -11775,7 +11772,7 @@ book Loather Rathole
 
 Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. Lor['], [i]HEAT[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru.". last-loc of troves is Loather Rathole.
 
-the hurt thru is bounding boringscen in Loather Rathole. description is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
+the hurt thru is bounding boringscen in Loather Rathole. description of the hurt thru is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
 
 to say care-hate-clue:
 	say ". [if cold is moot]Race after the thief, somehow[else]find a way to generate hate[end if]"
@@ -11845,18 +11842,18 @@ chapter useless scenery
 
 section reastier arteries
 
-the reastier arteries are plural-named bounding boringscen in Bustle Sublet. description is "They lead other places even worse, more likely. You need to focus on what to do here.". bore-text is "The reastier arteries will only distract you. Concentrate on what's here."
+the reastier arteries are plural-named bounding boringscen in Bustle Sublet. description of the reastier arteriesis "They lead other places even worse, more likely. You need to focus on what to do here.". bore-text is "The reastier arteries will only distract you. Concentrate on what's here."
 
 section sidewalk
 
-a sidewalk laid askew is useless boringscen in Bustle Sublet. description is "You don't really have time to memorize the sidewalk's cracks.". bore-text is "[more-pos].".
+a sidewalk laid askew is useless boringscen in Bustle Sublet. description of a sidewalk laid askew is "You don't really have time to memorize the sidewalk's cracks.". bore-text is "[more-pos].".
 
 to say more-pos:
 	say "You may want to pay attention to something more positive and alive"
 
 section rustin ruts
 
-the rustin ruts are useless boringscen in Bustle Sublet. printed name of ruts is "rustin['] ruts". understand "rustin ruin" and "rustin/ruin" as ruts. "If you stare too long, you may get in a rut yourself.". bore-text is "[more-pos].".
+the rustin ruts are useless boringscen in Bustle Sublet. printed name of ruts is "rustin['] ruts". understand "rustin ruin" and "rustin/ruin" as ruts. description of the rustin ruts is "If you stare too long, you may get in a rut yourself.". bore-text is "[more-pos].".
 
 chapter sob ever verbose
 
@@ -12156,11 +12153,11 @@ after fliptoing ltb:
 
 chapter shmoe homes
 
-the shmoe homes are plural-named bounding boringscen in Browse Bowers. description is "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!". bore-text is "You DON'T want to do anything with the shmoe homes except let out oh-mes at the thought of ever being associated with them. Perhaps looking at things as Si Reed does will help you be more."
+the shmoe homes are plural-named bounding boringscen in Browse Bowers. description of shmoe homes is "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!". bore-text is "You DON'T want to do anything with the shmoe homes except let out oh-mes at the thought of ever being associated with them. Perhaps looking at things as Si Reed does will help you be more."
 
 chapter dour tan rotunda
 
-the dour tan rotunda is boringscen in Browse Bowers. description is "It looks sad and neglected. It might've been really big before the Browse Bowers, bigger and slicker, came along--say, before Version 4 of this game.". bore-text is "The rotunda has not kept up with progress. Do not worry about it."
+the dour tan rotunda is boringscen in Browse Bowers. description of the dour tan rotunda is "It looks sad and neglected. It might've been really big before the Browse Bowers, bigger and slicker, came along--say, before Version 4 of this game.". bore-text is "The rotunda has not kept up with progress. Do not worry about it."
 
 chapter Si Reed
 
@@ -12182,7 +12179,7 @@ Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've
 
 understand "econ-cone" as Econ Cone.
 
-the save aves are plural-named bounding boringscen in Econ Cone. description is "They lead out every way to less affluent and powerful places.". bore-text is "The save aves are good enough for other people, but not you. You want the best!".
+the save aves are plural-named bounding boringscen in Econ Cone. description of the save aves is "They lead out every way to less affluent and powerful places.". bore-text is "The save aves are good enough for other people, but not you. You want the best!".
 
 check going inside in Econ Cone:
 	say "You can't just walk in[if Trevis Vister is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking. You have not achieved it yet. Your eyes turn [if Trevis Vister is examined]back [end if]to the astute statue of Trevis Vister, and the rivets beneath it, and the praise spirea nearby." instead;
@@ -12360,7 +12357,7 @@ to report-glarers:
 
 chapter sister tressi
 
-the Sister Tressi Siters are plural-named vanishing boringscen. description is "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as [mbb]'s.". bore-text is "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how."
+the Sister Tressi Siters are plural-named vanishing boringscen. description of the sister tressi siters is "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as [mbb]'s.". bore-text is "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how."
 
 after doing something with sister tressi siters:
 	set the pronoun her to sister tressi siters;
@@ -12379,7 +12376,7 @@ to say mbb-txt: say "A stern looking fellow who is big on personal responsibilit
 
 to say other-mbb: say "[if mbb is Balmer]Mr. Beal[else]Balmer[end if]"
 
-Marble Blamer Mr Beal is proper-named vanishing boringscen. description is "[mbb-txt].". bore-text is "Mr. Beal can't be moved by normal means. Maybe you can fight mentally against him."
+Marble Blamer Mr Beal is proper-named vanishing boringscen. description of marble blamer mr beal is "[mbb-txt].". bore-text is "Mr. Beal can't be moved by normal means. Maybe you can fight mentally against him."
 
 printed name of Mr Beal is "Marble Blamer Mr. Beal".
 
@@ -12391,7 +12388,7 @@ after fliptoing mbb:
 
 chapter marble blamer balmer
 
-Marble Blamer Balmer is proper-named vanishing boringscen. description is "[mbb-txt].". bore-text is "Balmer can't be moved by normal means. Maybe you can fight mentally against him."
+Marble Blamer Balmer is proper-named vanishing boringscen. description of marble blamer balmer is "[mbb-txt].". bore-text is "Balmer can't be moved by normal means. Maybe you can fight mentally against him."
 
 a-text of Marble Blamer Balmer is "RYRRRY". b-text of Marble Blamer Balmer is "R?R???". parse-text of Marble Blamer Balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
@@ -12461,7 +12458,7 @@ chapter red vees
 [vee/vees/red vee in nudges ??]
 ["'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your wonga wagon changes in tribute." ??]
 
-The red vees are vanishing plural-named boringscen in Upscale Capsule. description is "They look like they could be hooked together, but you can't do so by standard means.". bore-text is "Hmm. You need to know what to do with the vees, or around them, to fill up your office."
+The red vees are vanishing plural-named boringscen in Upscale Capsule. description of the red vees is "They look like they could be hooked together, but you can't do so by standard means.". bore-text is "Hmm. You need to know what to do with the vees, or around them, to fill up your office."
 
 a-text of red vees is "RYRYRRY". b-text of red vees is "RGRYRRY". parse-text of red vees is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
 
@@ -12889,7 +12886,7 @@ to say yoke-interj: say "[if cur-score of presto is 0]and that may come in handy
 
 a-text of drab yoke is "RYORYYRR". b-text of drab yoke is "RYOPYYRR". parse-text of drab yoke is "x[sp]-[sp]y[sp]b[sp]-[sp]-[sp]x[sp]x".
 
-the scratchings are a plural-named boringthing. they are part of the yoke. description is "[bug-report]". bore-text is "The yoke is more important to manipulate than the scratchings, though they may be worth examining[if yak is not moot] once the yak is gone[end if].". is bore-scratchings rule.
+the scratchings are a plural-named boringthing. they are part of the yoke. description of the scratchings is "[bug-report]". bore-text is "The yoke is more important to manipulate than the scratchings, though they may be worth examining[if yak is not moot] once the yak is gone[end if].". bore-check is bore-scratchings rule.
 
 understand "scratches" as scratchings.
 
@@ -13104,7 +13101,7 @@ book Dirge Ridge
 
 Dirge Ridge is a room in Presto. Dirge Ridge is south of Char Arch. "[if odes song is moot]With the sods-gone odes song gone, you're ... well, just mad about stuff. [else]Asods-gone odes song floating around leaves you thinking 'Erg... I'd ...' [end if]A vile veil covers any way except back north.". printed name of Dirge Ridge is "[if odes song is moot]Ires['] Rise[else]Dirge Ridge[end if]".
 
-the vile veil is bounding boringscen in Dirge Ridge. description is "It's so horrible to even look at, and you realize whatever it is protecting you from must be even worse.". bore-text is "The veil's oppressive to even think about, but it also protects you from falling off. You don't need to do anything with it."
+the vile veil is bounding boringscen in Dirge Ridge. description of the vile veil is "It's so horrible to even look at, and you realize whatever it is protecting you from must be even worse.". bore-text is "The veil's oppressive to even think about, but it also protects you from falling off. You don't need to do anything with it."
 
 after looking in Dirge Ridge:
 	set the pronoun it to vile veil;
@@ -13382,7 +13379,7 @@ check examining popgun:
 
 understand "spoilt/pistol" and "spoilt pistol" as popgun.
 
-The boing go bin is a boringthing. it is part of the popgun. the boing go bin is reflexive. description is "[if boing is reflexive]It's sort of springy, but it doesn't seem to really bounce around. You may need a eureka moment to figure how to fix it[else]The boing mechanism is fully equipped to go boing again. Yay[end if].". bore-text is "Your mechanical abilities won't help[if boing is reflexed], but they don't need to[else], but there may be a slick way to get the BOING back[end if].". printed name of boing go bin is "boing-go bin".
+The boing go bin is a boringthing. it is part of the popgun. the boing go bin is reflexive. description of the boing go bin is "[if boing is reflexive]It's sort of springy, but it doesn't seem to really bounce around. You may need a eureka moment to figure how to fix it[else]The boing mechanism is fully equipped to go boing again. Yay[end if].". bore-text is "Your mechanical abilities won't help[if boing is reflexed], but they don't need to[else], but there may be a slick way to get the BOING back[end if].". printed name of boing go bin is "boing-go bin".
 
 a-text of boing go bin is "RYRRY". b-text of boing go bin is "?YRRY". parse-text of boing is "b[sp]-[sp]x[sp]x[sp]-". boing go bin is cheat-spoilable.
 
@@ -13429,7 +13426,7 @@ check fliptoing boing go bin (this is the take popgun to fix it rule) :
 
 chapter sport ports LLP
 
-the sport ports are plural-named reflexive LLPish boringscen in Marines Seminar Remains. description is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest, and [if sport ports are reflexive]yet, you feel there may be a right way to salute them and the challenge they provide[else]you already showed them some respect[end if]. You can READ the firm who made them.". bore-text is "The sport ports would probably do something unfavorable to you. You don't need to do anything with them."
+the sport ports are plural-named reflexive LLPish boringscen in Marines Seminar Remains. description of the sport ports is "As you get close, you see how tough they might be and think to yourself 'I'm saner.' They won't help with your main quest, and [if sport ports are reflexive]yet, you feel there may be a right way to salute them and the challenge they provide[else]you already showed them some respect[end if]. You can READ the firm who made them.". bore-text is "The sport ports would probably do something unfavorable to you. You don't need to do anything with them."
 
 understand "sport port" and "port" as sport ports when player is in Marines Seminar Remains.
 
@@ -13444,7 +13441,7 @@ check going south in Saps' Pass:
 
 check going north in Saps' Pass: say "Not with the wall and the hogs in the way." instead;
 
-Mount Um-Not is bounding boringscen in Saps' Pass. understand "mount/um/not" as Mount Um-Not. description is "It's as huge and unwelcoming as Cupid's Cuspid isn't.". bore-text is "Mount Um-Not is just there for scenery. Intimidating scenery, but scenery.". bore-check is the bore-mount-um-not rule.
+Mount Um-Not is bounding boringscen in Saps' Pass. understand "mount/um/not" as Mount Um-Not. description of Mount Um-Not is "It's as huge and unwelcoming as Cupid's Cuspid isn't.". bore-text is "Mount Um-Not is just there for scenery. Intimidating scenery, but scenery.". bore-check is the bore-mount-um-not rule.
 
 this is the bore-mount-um-not rule:
 	if current action is climbing or current action is entering:
@@ -13706,7 +13703,7 @@ instead of taking coal:
 
 a-text of coal is "RYRY". b-text of coal is "PGRY". parse-text of coal is "c[sp]o[sp]l[sp]a". coal is cheat-spoilable.
 
-the fizzy cola is a singular-named boringthing. description is "The mug it's in seems to make it is more than usual, too. Cool.". the indefinite article of fizzy cola is "some". bore-text is "Now that the fizzy cola's in the mug, you will ration it as you need to."
+the fizzy cola is a singular-named boringthing. description of the fizzy cola is "The mug it's in seems to make it is more than usual, too. Cool.". the indefinite article of fizzy cola is "some". bore-text is "Now that the fizzy cola's in the mug, you will ration it as you need to."
 
 the bottle of dirty looking cola is a thing. description is "It's Café Fine Caffeine cola, and it's almost empty. In place of nutritional information, you read the following:[paragraph break]O-CAL!!! Soda -> A sod. Pop !-> O.P.P."
 
@@ -14129,7 +14126,7 @@ instead of opening Drive A: say "You don't need to. You can just put the sort of
 
 the golden dongle is a boringthing. it is part of Drive A. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it.". bore-text is "You don't need to do anything fancy with the dongle. It's there to connect Drive A to other computer parts, and it works."
 
-the USB is a vanishing boringthing. description is "It's an ordinary USB. Or it would be, around anyone but you.". "The USB that the golden dongle degenerated into lies here.". bore-text is "No need to do anything fancy with the USB. Well, anything fancy other than using your fancy powers. Really, anything fancy with them. It's only three letters.". bore-check is the bore-usb rule.
+the USB is a vanishing boringthing. description of the USB is "It's an ordinary USB. Or it would be, around anyone but you.". "The USB that the golden dongle degenerated into lies here.". bore-text is "No need to do anything fancy with the USB. Well, anything fancy other than using your fancy powers. Really, anything fancy with them. It's only three letters.". bore-check is the bore-usb rule.
 
 a-text of USB is "RYR". b-text of USB is "RY?". parse-text of usb is "x[sp]u[sp]x". usb is any-spoilable.
 
@@ -16524,7 +16521,7 @@ does the player mean opening the span pans: it is likely.
 
 section crate
 
-the crate is reflexive boringscen in Lapsin' Plains. "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if].". bore-text of crate is "You don't need to fiddle randomly with the debris.".
+the crate is reflexive boringscen in Lapsin' Plains. description of the crate is "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if].". bore-text of crate is "You don't need to fiddle randomly with the debris.".
 
 a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
 
@@ -18362,9 +18359,7 @@ check taking the duck:
 
 description of lone duck is "A pretty normal duck, but it doesn't seem that interested in you. It's not running away, though. So it's probably domesticated, but a bit timid--so don't make any loud noises[one of]. It pecks at a speck you can't see[or][stopping][if ropins are reflexive].[paragraph break]You see red at how lonely it seems[end if]."
 
-the ID tag is a boringthing. it is part of the lone duck.
-
-description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'". bore-text is "It's just there for identification. [if fissure is moot]Probably not a useful clue now, anyway[else]Maybe it'll provide a clue[end if]."
+the ID tag is a boringthing. it is part of the lone duck. description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'". bore-text is "It's just there for identification. [if fissure is moot]Probably not a useful clue now, anyway[else]Maybe it'll provide a clue[end if]."
 
 the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
@@ -21360,7 +21355,7 @@ printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[en
 
 understand "blest/belts" and "blest belts" as Lamer Realm when adjsolve >= 3.
 
-the saturnic curtains are plural-named bounding boringscen in Lamer Realm. description is "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place[if adjsolve >= 3] and my even provide a safeguard for the animals you rescued[end if].". bore-text is "Saturnic means infected with lead poisoning, not just dark or ethereal, so you don't want to do too much with them."
+the saturnic curtains are plural-named bounding boringscen in Lamer Realm. description of the saturnic curtains is "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place[if adjsolve >= 3] and my even provide a safeguard for the animals you rescued[end if].". bore-text is "Saturnic means infected with lead poisoning, not just dark or ethereal, so you don't want to do too much with them."
 
 chapter ocelots
 
@@ -21564,7 +21559,7 @@ to say dsknow:
 
 know-restrict is a truth state that varies.
 
-the CRITTERS RESTRICT is bounding boringscen in Perverse Preserve. descripotion of CRITTERS RESTRICT is "You can't see it, but it doesn't just restrict critters. It restricts you, too.". bore-text is "You can't do anything about the CRITTERS RESTRICT field. But you don't need to go beyond it."
+the CRITTERS RESTRICT is bounding boringscen in Perverse Preserve. description of the CRITTERS RESTRICT is "You can't see it, but it doesn't just restrict critters. It restricts you, too.". bore-text is "You can't do anything about the CRITTERS RESTRICT field. But you don't need to go beyond it."
 
 chapter corona and racoon
 
@@ -21743,7 +21738,7 @@ the enerve veneer is amusing boringscen in Rancho Archon Anchor. description of 
 
 the becharm chamber is amusing boringscen in Rancho Archon Anchor. description of becharm chamber is "It's probably best not to look at the becharm chamber too much. I mean, it could ambush you into liking it. That'd be horrid.". bore-text is "It's too far away to do anything with. For your purposes, it's just one more bit of evil scenery."
 
-the nacht chant is amusing boringscen in Rancho Archon Anchor. description is "At least the nacht chant isn't profane. You probably can't do anything about it.". bore-text is "You--you're almost getting used to the nacht chant."
+the nacht chant is amusing boringscen in Rancho Archon Anchor. description of the nacht chant is "At least the nacht chant isn't profane. You probably can't do anything about it.". bore-text is "You--you're almost getting used to the nacht chant."
 
 the vast vats are amusing plural-named boringscen in Rancho Archon Anchor. description of the vast vats is "You don't want to know what's in the vats.". bore-text is "The vats are far away, but you can smell sulfinyl in them reeking sinfully--no silly fun."
 
@@ -21766,7 +21761,7 @@ Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-c
 
 Elvira wears the Ultimate Mutilate-It Amulet.
 
-the mutilate-it amulet is an amusing boringthing. description is "It's very bare except for the words 'Um...a title?' on it.". bore-text is "Hm, best not to try anything. It can't zap you if you don't mess with it.".
+the mutilate-it amulet is an amusing boringthing. description of the mutilate-it amulet is "It's very bare except for the words 'Um...a title?' on it.". bore-text is "Hm, best not to try anything. It can't zap you if you don't mess with it.".
 
 The phrase shaper phaser is an amusing boringthing. Elvira carries the phrase shaper phaser. description of phrase shaper phaser is "It's curvy and futuristic and gives her the grained endearing to look more like a seraph than an amused medusa.". bore-text is "You heard rumors. But you did not believe it was true. She can just say something, hit someone with it, and make you forget what you were doing. Even if the amulet doesn't work on you." instead;
 
@@ -22173,7 +22168,7 @@ to say pre-pom-blag: say "A glance seems to indicate some unfortunate writing--e
 
 section magenta rope
 
-the magenta rope is a vanishing boringthing. "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant.". bore-check of magenta rope is bore-magenta-rope rule.
+the magenta rope is a vanishing boringthing. description of the magenta rope is "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant.". bore-check of magenta rope is bore-magenta-rope rule.
 
 this is the bore-magenta-rope rule:
 	if current action is taking:

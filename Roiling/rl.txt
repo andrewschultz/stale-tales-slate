@@ -117,6 +117,11 @@ Now you can either read Drive E to see "I'd Veer" in red, or you can try each po
 DIRVEE doesn't quite work, so DERIVE it is.
 >STORE U
 >>SAME MESA
+#logic for anti sag sit a nag
+?What's with the Anti Sag Sit a Nag?
+It has a few question marks, but the double A's help a lot. Slot 4 must be a vowel and 5 must be a consonant, making slot 1 an A. A(GST)(AI)(AI)(NS)(GNST)(NST).
+We can try some gimmicks like placing G in slot 6, giving NGS or NGT or SGN or SGT, none of which make promising words. So AG(AI)(AI)(NS)(NST)(NST) and then SNT/STN clog up a bit, so AG(AI)(AI)N(ST)(ST).
+There are also a few red clues, but AGAINST comes out of all this.
 #logic for rude 'n nuder
 ?How do I decipher what to do with Rude 'N Nuder?
 The YRPG? gives you a lot of clues. The question mark is a consonant, so it's N or R. The green is E, making the first letter U.

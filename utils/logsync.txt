@@ -197,7 +197,7 @@ reside reside>desire
 ####Econ Cone
 praise spirea>aspire
 rivets>strive
-astute statue~trevis vister>strive
+trevis vister>strive
 >IGNORE=pernod
 pernod-n~pernod>ponder
 pernod-l~neprod>ponder
@@ -584,7 +584,7 @@ perp-priv~perp>prep
 AFT=pram,tables,niche,beams,meet bans
 #routes
 #troves
-rivets
+AFT=rivets
 #presto
 AFT=maze walls
 #oyster

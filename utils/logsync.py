@@ -146,7 +146,7 @@ def read_data_file():
                 for x in ll:
                     x = re.sub("^(all )", "", x) #all noon gag
                     okay[x] = True
-                    print(x, "is ok")
+                    if verbose: print(x, "is ok for being in aftertexts")
                 continue
             if '=' in line:
                 ary = ll.split("=")
@@ -154,7 +154,7 @@ def read_data_file():
                 if ary[0] not in abbrevs: sys.exit("Uh oh to", line.strip())
                 else: print("By-itself abbreviation:", line_count, line.strip())
                 continue
-            print("Unknown line", line_count, "text", line.lower().strip())
+            print("Unknown or absent command for line", line_count, "text", line.lower().strip())
 
 def things_of(q):
     ret_2 = re.sub(" +is .*", "", q)
@@ -366,10 +366,11 @@ def aro_settler_check():
                     instead_bore_latest = line_count
                     continue
             if ('boringscen' in first_sentence or 'boringthing' in first_sentence) and 'description of' not in line:
-                l1 = re.sub(" (is|are).*", "", line.lower().strip())
-                l1 = re.sub(" \..*", "", l1)
-                desc_count += 1
-                print('{:02d} "description of {:s}" needed at line {:d} and not just quoted text for description. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
+                if 'propaganda is' not in line:
+                    l1 = re.sub(" (is|are).*", "", line.lower().strip())
+                    l1 = re.sub(" \..*", "", l1)
+                    desc_count += 1
+                    print('{:02d} <description is> replacement needed at line {:d} and not just quoted text. description of {:s} is'.format(desc_count, line_count, l1))
             if 'scenery' in first_sentence and 'bore-text' in line: #these first two checks are so the compiler is less likely to complain
                 l1 = re.sub(" (is|are).*", "", line.lower().strip())
                 l1 = re.sub(" \..*", "", l1)
@@ -397,7 +398,7 @@ def aro_settler_check():
                         aro_got[my_raw] = True
                         if my_raw not in aro_flips:
                             count += 1
-                            print("#", count, "Need logsync.txt entry for what", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "should become at line", line_count)
+                            print("#", count, "Need logsync.txt entry for what", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "should become at line", line_count, "of source.")
                             if count >= 25: sys.exit()
                             skip = True
                             break
@@ -518,7 +519,7 @@ def check_aftertexts():
             ll = re.split("\t+", line)
             l0 = ll[0].lower()
             in_aftertexts[l0] = line_count
-            if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of tabs at line {:d}: {:s}".format(line_count, line))
+            if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of columns (have {:d} need 6) at line {:d}: {:s}".format(len(ll), line_count, line))
             elif len(ll) == 1:
                 print("WARNING need to add full row for line", line_count, "in", os.path.basename(r_src), ":", l0)
                 open_line[r_src] = line_count
