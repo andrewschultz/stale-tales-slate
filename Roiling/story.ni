@@ -2658,14 +2658,11 @@ to lawnmower (mytab - a table-name) :
 chapter quip-variable-text
 
 to say satchel-extra:
-	if satchel is bscanned:
-		continue the action;
-	if satchel is not in Largely All-Grey Gallery:
-		say "quickly go back to the study for the satchel, ";
+	if satchel is bscanned, continue the action;
+	if satchel is not in Largely All-Grey Gallery, say "quickly go back to the study for the satchel, ";
 	say "scan the satchel [if satchel is not escanned]both ways[else]the way you didn't[end if] and ";
 
-to say mo-data:
-	say "[one of]More data[or]Even more data[or]Ok, lots of stuff to look at[stopping]";
+to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, lots of stuff to look at[stopping]";
 
 last-yays is a number that varies.
 
@@ -6354,30 +6351,20 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is ramp: [start Ordeal Reload]
 		try going down instead;
 	if noun is stair:
-		if player is in Farming Framing:
-			move player to Largely All-Grey Gallery instead;
-		else:
-			move player to study instead;
-	if noun is the-b: [routes]
-		say "It's too slippery and round." instead;
-	if noun is godlings' lodgings: [troves]
-		say "Your thought and efforts may lead you to the top, not a physical feat." instead;
-	if noun is mount: [start presto]
-		say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead;
-	if noun is crate: [start OYSTER]
-		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shuttle Hutlets is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
-	if noun is huts: [end OYSTER]
-		say "They're too tall. No good handholds. The span pans guide the only way in." instead;
-	if noun is gaol: [towers]
-		say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead;
-	if noun is prison: [end TOWERS]
-		say "It's actually a decent jungle gym, but you're not here to putz around." instead;
-	if noun is Edictal Citadel: [otters]
-		say "Elvira is in the Edictal Citadel, not on top of it." instead;
-	if noun is wire weir:
-		say "It's a long way down, and it'd take you away from your quest." instead;
-	if noun is gropin' roping: [others]:
-		say "It's a long way down, and you probably want to get north somehow, anyway." instead;
+		if player is in Farming Framing, move player to Largely All-Grey Gallery instead;
+		move player to study instead;
+	if noun is the-b, say "THE BEAN is too slippery and round." instead; [strt routes]
+	if noun is godlings' lodgings, say "Your thought and efforts are what may lead you to the top, not a physical feat." instead; [start troves]
+	if noun is mount um-not, say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead; [start presto]
+	if noun is deil's slide, say "Oh dear. It's more like you'd fall down Deil's Slide instead. Semantics aside, it's a bad idea." instead; [end PRESTO]
+	if noun is crate, say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shuttle Hutlets is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead; [start OYSTER]
+	if noun is huts, say "They're too tall. No good handholds. The span pans guide the only way in." instead; [end OYSTER]
+	if noun is gaol, say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead; [start towers]
+	if noun is prison, say "It's actually a decent jungle gym, but you're not here to putz around." instead; [end TOWERS]
+	if noun is Edictal Citadel, say "Elvira is in the Edictal Citadel, not on top of it." instead; [start otters]
+	if noun is wire weir, say "It's a long way down, and it'd take you away from your quest." instead; [end OTTERS]
+	if noun is s-w, try going down instead; [start others]
+	if noun is gropin' roping, say "It's a long way down, and you probably want to get north somehow, anyway." instead; [end OTHERS]
 	say "You don't need to climb over much of anything in this game. Though in some spots, you may go up or down, or possibly IN." instead;
 
 chapter dropping
@@ -7950,7 +7937,7 @@ carry out examining rich chair: ignore the examine supporters rule.
 
 section sad ads
 
-the sad ads are plural-named boringscen. description is "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare].". bore-text is "There's not much to do with the ads other than reading them.". bore-check is bore-sad-ads rule.
+the sad ads are plural-named boringscen. description of sad ads is "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare].". bore-text is "There's not much to do with the ads other than reading them.". bore-check is bore-sad-ads rule.
 
 7this is the bore-sad-ads rule:
 	if current action is scaning:
@@ -8039,7 +8026,7 @@ Rule for printing the description of a dark room (this is the Dusty Study rule):
 	if location of player is Dusty Study:
 		say "[one of]Rats, kid, it's dark[or]Aww, dark. Awkward[in random order]. You probably can't go stumbling around--you'd poke your eye on that palm, or something. Wouldn't be bright." instead;
 
-the giant pin is an LLPish boringthing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "You don't need to change the giant pin, you sense, but you probably could if you wanted.". bore-check is bore-pin rule.
+the giant pin is an LLPish boringthing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description of boring pin is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "You don't need to change the giant pin, you sense, but you probably could if you wanted.". bore-check is bore-pin rule.
 
 this is the bore-pin rule:
 	if current action is pushing or pulling: [??check if this works in general]
@@ -8327,7 +8314,7 @@ understand "letter" as treatise.
 
 a-text of latches is "RYRRRYR". b-text of latches is "RGPPPGR". parse-text of latches is "[bug-report]".
 
-the satchel is a thing. description is "You doubt it holds anything else in its folds.". "The satchel you managed to conjure lies useless on the [if player is in Farming Framing]ground[else]floor[end if]."
+the satchel is a boringthing. description of satchel is "You doubt it holds anything else in its folds.". "The satchel you managed to conjure lies useless on the [if player is in Farming Framing]ground[else]floor[end if].". bore-text of satchel is "You've gotten the settler from the satchel, and you don't need to do more.".
 
 check inserting into the satchel:
 	ignore the can't insert what's not held rule;
@@ -12453,13 +12440,16 @@ this is the bore-wagon rule:
 		say "You scan around the wonga wagon for clues.[paragraph break]";
 		if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
 			say "Your settler picks up a signal when it moves to the lobster.";
-			try scaning lobster instead;
+			try scaning lobster;
+			the rule succeeds;
 		if salt is in Upscale Capsule:
 			say "Your settler picks up a signal when it moves to the salt.";
-			try scaning salt instead;
+			try scaning salt;
+			the rule succeeds;
 		if trance nectar is in Upscale Capsule:
 			say "Your settler picks up a signal when it moves to the trance nectar.";
-			try scaning trance nectar instead;
+			try scaning trance nectar;
+			the rule succeeds;
 		say "But you weren't able to find any. That's a bug, but still, there must be something to do!";
 		the rule succeeds;
 	consider the bore-exam rule;
@@ -13244,10 +13234,11 @@ a-text of sods gone odes song is "RYYRRYRR". b-text of sods gone odes song is "R
 this is the bore-sods rule:
 	if current action is examining:
 		say "You can really only listen to the song.";
-		try listening instead;
+		try listening;
+		the rule succeeds;
 	unless the action is procedural:
-		say "You can really only listen to the song.";
-		try listening instead;
+		try listening;
+		the rule succeeds;
 	abide by the bore-exam rule;
 
 book Austerer Treasure
@@ -14138,7 +14129,7 @@ instead of opening Drive A: say "You don't need to. You can just put the sort of
 
 the golden dongle is a boringthing. it is part of Drive A. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it.". bore-text is "You don't need to do anything fancy with the dongle. It's there to connect Drive A to other computer parts, and it works."
 
-the USB is a vanishing boringthing. description is "It's an ordinary USB. Or it would be, around anyone but you.". "The USB that the golden dongle degenerated into lies here." bore-text is "No need to do anything fancy with the USB. Well, anything fancy other than using your fancy powers. Really, anything fancy with them. It's only three letters.". bore-check is the bore-usb rule.
+the USB is a vanishing boringthing. description is "It's an ordinary USB. Or it would be, around anyone but you.". "The USB that the golden dongle degenerated into lies here.". bore-text is "No need to do anything fancy with the USB. Well, anything fancy other than using your fancy powers. Really, anything fancy with them. It's only three letters.". bore-check is the bore-usb rule.
 
 a-text of USB is "RYR". b-text of USB is "RY?". parse-text of usb is "x[sp]u[sp]x". usb is any-spoilable.
 
@@ -16424,11 +16415,13 @@ a-text of wipes is "RRYRY". b-text of wipes is "RRYRY". parse-text of wipes is "
 check taking the wipes:
 	say "Aunt Tuna asks 'Really, what COULD you want with those.' She nods at you, and you pull your hand back. Maybe if you were quicker, you could take them." instead;
 
-instead of doing something with the raw red drawer:
-	if action is procedural, continue the action;
-	say "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].";
+the raw red drawer is boringscen in Lean Lane. the raw red drawer is a supporter. description of raw red drawer is "It's, well, raw and red[if dent is part of raw red drawer], with a visible dent[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if].". bore-text of the raw red drawer is "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].". bore-check of raw red drawer is bore-drawer rule.
 
-the raw red drawer is scenery in Lean Lane. the raw red drawer is a supporter.
+this is the bore-drawer rule:
+	if current action is opening:
+		say "[if bubble wrap is not off-stage]There's no secret compartment or anything. No need to be greedy[else if trout is not reflexed]Aunt Tuna mentions subtly-not-so-subtly that a guest is not a thief[else]Aunt Tuna exclaims 'Re-treat? Retreat!' Abashed, you assure yourself she shuffled the duplicate letters around, somehow[end if].";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 understand "raw/-- red/-- warder drawer" as raw red drawer when trout is reflexive.
 understand "raw/-- red/-- reward drawer" as raw red drawer when trout is reflexed.
@@ -16438,16 +16431,6 @@ to say rew-war:
 
 check putting on raw red drawer:
 	say "No. Aunt Tuna keeps her place tidy." instead;
-
-description of raw red drawer is "It's, well, raw and red[if dent is part of raw red drawer], with a visible dent[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if]."
-
-check opening the drawer:
-	if bubble wrap is not off-stage:
-		say "There's no secret compartment or anything. No need to be greedy." instead;
-	if trout is not reflexed:
-		say "Aunt Tuna mentions subtly-not-so-subtly that a guest is not a thief." instead;
-	if trout is reflexed:
-		say "Aunt Tuna exclaims 'Re-treat? Retreat!' Abashed, you assure yourself she shuffled the duplicate letters around, somehow." instead;
 
 chapter tending
 
@@ -16537,13 +16520,11 @@ c2 is vanishing privately-named scenery in Lapsin' Plains. c2 is undesc. printed
 
 a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
 
-instead of doing something with the crate:
-	if action is procedural, continue the action;
-	say "You don't need to fiddle randomly with the debris." instead;
-
 does the player mean opening the span pans: it is likely.
 
-the crate is reflexive scenery in Lapsin' Plains. "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if]."
+section crate
+
+the crate is reflexive boringscen in Lapsin' Plains. "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if].". bore-text of crate is "You don't need to fiddle randomly with the debris.".
 
 a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
 
@@ -16812,11 +16793,7 @@ instead of taking lance:
 
 chapter shadier airshed
 
-the shadier airshed is bounding scenery in Shuttle Hutlets. "The shadier airshed surrounds about half of the Shuttle Hutlets. It doesn't look like there's any way in, and even if there were, you don't know what you'd do there.".
-
-instead of doing something with shadier airshed:
-	if action is procedural, continue the action;
-	say "You can't, and don't need to, do anything with the shadier airshed."
+the shadier airshed is bounding boringscen in Shuttle Hutlets. description of shadier airshed is "The shadier airshed surrounds about half of the Shuttle Hutlets. It doesn't look like there's any way in, and even if there were, you don't know what you'd do there.". bore-text of shadier airshed is "You can't, and don't need to, do anything with the shadier airshed."
 
 chapter shapeing
 
@@ -16865,12 +16842,13 @@ check going in Achers' Arches:
 	if noun is west or noun is south:
 		say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
 
-the handsome sand home is bounding scenery in Achers' Arches. "It's definitely not mean-shod. But you probaby don't want to disturb a private residence."
+the handsome sand home is bounding boringscen in Achers' Arches. description of handsome sand home is "It's definitely not mean-shod. But you probaby don't want to disturb a private residence.". bore-text of handsome sand home is "There's not much to do with the handsome sand home.". bore-check is the bore-handsome-sand-home rule.
 
-instead of doing something with handsome sand home:
-	if action is procedural, continue the action;
-	if current action is entering, try going south instead;
-	say "There's not much to do with the handsome sand home." instead;
+this is the bore-handsome-sand-home rule:
+	if current action is entering:
+		try going south;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 to say hedron-if-v:
 	if Horned Hedron is visited:
@@ -17091,25 +17069,17 @@ Rascal Craals is west of Horned Hedron. "The Rascal Craals, where the Hedron wor
 
 section round bay boundary
 
-the round bay boundary is bounding scenery in Rascal Craals. "It's pretty scenic, and it's also big enough to keeping you from going any way except back east."
-
-instead of doing something with round bay boundary:
-	if action is procedural, continue the action;
-	say "The boundary is nice to look at, but you don't have to do anything with it.";
+the round bay boundary is bounding boringscen in Rascal Craals. description of round bay boundary is "It's pretty scenic, and it's also big enough to keeping you from going any way except back east.". bore-text of round bay boundary is "The boundary is nice to look at, but you don't have to do anything with it."
 
 section thin hint
 
-the thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
+the thin hint is boringscen. description of thin hint is "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back.". bore-text of thin hint is "There's nothing to do with that hint except point it out to someone else, later.". bore-check of thin hint is bore-thin-hint rule.
 
-after fliptoing thin hint:
-	moot ruby;
-	continue the action;
-
-before doing something with thin hint:
-	if action is procedural, continue the action;
+this is the bore-thin-hint rule:
 	if current action is taking:
-		say "You don't need to take a hint you yourself dropped." instead;
-	say "There's nothing to do with that hint except point it out to someone else, later." instead;
+		say "You don't need to take a hint you yourself dropped.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 book End Den
 
@@ -17688,7 +17658,7 @@ this is the bore-shout-hut rule:
 	if current action is entering:
 		try going south;
 		the rule succeeds;
-	abide by the bore-exam rule instead;
+	abide by the bore-exam rule;
 
 check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those.[or][stopping]" instead;
 
@@ -17923,7 +17893,9 @@ a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is
 the screech creches are bounding boringscen in Unblest Sunbelt. description of screech creches is "You can't get close enough to the screeching to get a good look at the creches. They're pretty much there just to block you.". bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
 
 this is the bore-creches rule:
-	if current action is entering, try going south instead;
+	if current action is entering:
+		try going south;
+		the rule succeeds;
 	abide by the bore-exam rule;
 
 book Anemic Cinema
@@ -19056,11 +19028,7 @@ the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description
 
 a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
-the itster is auxiliary scenery in Mesprise Premises. description is "It's red, and MAN what a high score the Tetris Sitter has."
-
-instead of doing something with the itster:
-	if action is procedural, continue the action;
-	say "The itster is the Tetris Sitter's, but maybe you can make her realize there's a lot more to life."
+the itster is auxiliary boringscen in Mesprise Premises. description of itster is "It's red, and MAN what a high score the Tetris Sitter has.". bore-text of the itster is "The itster is the Tetris Sitter's, but maybe you can make her realize there's a lot more to life."
 
 after fliptoing tetris sitter:
 	moot itster;
@@ -19184,11 +19152,7 @@ to say tet-ter:
 
 chapter scaly clays
 
-the scaly clays are plural-named bounding scenery in Mislit Limits. "They rise up at such an angle they'd be dangerous to climb. The curst palace is sprawled out on top of them."
-
-instead of doing something with scaly clays:
-	if action is procedural, continue the action;
-	say "The scaly clays just block you. But you don't need to deal with them to fix the curst palace.";
+the scaly clays are plural-named bounding boringscen in Mislit Limits. description of scaly clays is "They rise up at such an angle they'd be dangerous to climb. The curst palace is sprawled out on top of them.". bore-text of scaly clays is "The scaly clays just block you. But you don't need to deal with them to fix the curst palace."
 
 chapter unripe ur-pine
 
@@ -21225,10 +21189,9 @@ instead of doing something with le mer:
 
 section sea cube
 
-the sea cube is a transparent vanishing container in Loop Pool. description is "You see eels in the cube.". "Eels float inside a sea cube here, just across the Loop Pool[eels-them].".
+the sea cube is a transparent vanishing boringscen in Loop Pool. it is a container. description of sea cube is "You see eels in the cube.". "Eels float inside a sea cube here, just across the Loop Pool[eels-them].". bore-text of sea cube is "You aren't getting across the pool to do anything with the sea cube.".
 
-to say eels-them:
-	set the pronoun them to eels;
+to say eels-them: set the pronoun them to eels;
 
 after fliptoing sea cube:
 	set the pronoun them to eels;
@@ -21239,11 +21202,6 @@ check examining sea cube:
 
 a-text of sea cube is "RYRYYRY". b-text of sea cube is "RGRYGRG". parse-text of sea cube is "x[sp]e[sp]x[sp]a[sp]u[sp]x[sp]e". sea cube is cheat-spoilable.
 
-Instead of doing something with the sea cube:
-	If action is procedural:
-		continue the action;
-	say "You aren't getting across the pool to do anything with the sea cube." instead;
-
 section eels
 
 the eels are a plural-named reflexive person in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here between the weir and atoll[end if]."
@@ -21252,22 +21210,26 @@ a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "e[sp]
 
 section allot atoll
 
-the allot atoll is scenery in Loop Pool. "[if eels are reflexed]You've been there. You don't need to go back[else]It doesn't look like a place everyone's allowed to go. Maybe you can be worthy of getting there[end if].[paragraph break]It's nothing to LOL at.".
+the allot atoll is boringscen in Loop Pool. description of allot atoll is "[if eels are reflexed]You've been there. You don't need to go back[else]It doesn't look like a place everyone's allowed to go. Maybe you can be worthy of getting there[end if].[paragraph break]It's nothing to LOL at.". bore-text of allot atoll is "The allot atoll is behind the wire weir. [if eels are reflexed]You don't need to worry about it[else]It doesn't seem like a place you just visit for yucks[end if].". bore-check is the bore-allot-atoll rule.
 
-instead of doing something with allot atoll:
-	if the action is procedural, continue the action;
-	if current action is entering, say "Too far." instead;
-	say "The allot atoll is behind the wire weir. [if eels are reflexed]You don't need to worry about it[else]It doesn't seem like a place you just visit for yucks[end if]."
+this is the bore-allot-atoll rule:
+	if current action is entering:
+		say "Too far.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 section wire weir
 
-The wire weir is bounding scenery in Loop Pool. "It's there to prevent you from falling into the Loop Pool."
+The wire weir is bounding boringscen in Loop Pool. description of wire weir is "It's there to prevent you from falling into the Loop Pool.". bore-text of wire weir is "The wire weir is there to keep you from going anywhere but back south. No need to mess with it.". bore-check is the bore-wire-weir rule.
 
-instead of doing something with wire weir:
-	if the action is procedural, continue the action;
-	if current action is climbing, say "Tht would be dangerous even without the eels ready to zap intruders[if eels are reflexed]--yes, intruders they already helped[end if]." instead;
-	if current action is touching, say "That might get you zapped a bit." instead;
-	say "The wire weir is there to keep you from going anywhere but back south. No need to mess with it."
+this is the bore-wire-weir rule:
+	if current action is climbing:
+		say "That would be dangerous even without the eels ready to zap intruders[if eels are reflexed]--yes, intruders they already helped[end if].";
+		the rule succeeds;
+	if current action is touching:
+		say "That might get you zapped a bit.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 chapter otters flipto and min points
 
@@ -21783,7 +21745,7 @@ the becharm chamber is amusing boringscen in Rancho Archon Anchor. description o
 
 the nacht chant is amusing boringscen in Rancho Archon Anchor. description is "At least the nacht chant isn't profane. You probably can't do anything about it.". bore-text is "You--you're almost getting used to the nacht chant."
 
-the vast vats are amusing plural-named boringscen in Rancho Archon Anchor. description of the vast vats is "You don't want to know what's in the vats." bore-text is "The vats are far away, but you can smell sulfinyl in them reeking sinfully--no silly fun."
+the vast vats are amusing plural-named boringscen in Rancho Archon Anchor. description of the vast vats is "You don't want to know what's in the vats.". bore-text is "The vats are far away, but you can smell sulfinyl in them reeking sinfully--no silly fun."
 
 carry out going east in Rancho Archon Anchor:
 	elvira-flee-taunt;
@@ -21796,31 +21758,17 @@ to elvira-flee-taunt:
 	say "You leave her sin shrine [if current action is not going east]with extra quickness [end if]before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
 	now Elvira-delay is 0;
 
-the warpish warship is amusing scenery in Rancho Archon Anchor. warship is undesc.
+the warpish warship is amusing boringscen in Rancho Archon Anchor. description of warpish warship is "It's twisted in more ways than one.". bore-text of warpish warship is "You'll never do anything with the warship on your own. But defeating Elvira will probably disable it.".
 
-instead of doing something with warship:
-	say "You'll never do anything with the warship on your own. But defeating Elvira will probably disable it."
-
-a stocked stockade is amusing scenery in Rancho Archon Anchor. stockade is undesc.
-
-instead of doing something with stockade:
-	say "You shudder to think what you could do with it--or what it could do to you."
+a stocked stockade is amusing boringscen in Rancho Archon Anchor. description of a stocked stockade is "You don't know the details, being the good guy and all, but you don't need to.". bore-text is "You shudder to think what you could do with it--or what it could do to you.".
 
 Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]'Coren,' she cries, over the rapidly vaporizing body of her pet hydra.[or]Elvira seems impatient for you to make a move.[stopping]". description is "Elvira's actually quite attractive. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
 
 Elvira wears the Ultimate Mutilate-It Amulet.
 
-the mutilate-it amulet is amusing. description is "It's very bare except for the words 'Um...a title?' on it."
+the mutilate-it amulet is an amusing boringthing. description is "It's very bare except for the words 'Um...a title?' on it.". bore-text is "Hm, best not to try anything. It can't zap you if you don't mess with it.".
 
-instead of doing something with the mutilate-it amulet:
-	if action is procedural, continue the action;
-	say "Hm, best not to try anything. It can't zap you if you don't mess with it."
-
-The phrase shaper phaser is an amusing thing. Elvira carries the phaser. description of phaser is "It's curvy and futuristic and gives her the grained endearing to look more like a seraph than an amused medusa."
-
-instead of doing something with the phaser:
-	if action is procedural, continue the action;
-	say "You heard rumors. But you did not believe it was true. She can just say something, hit someone with it, and make you forget what you were doing. Even if the amulet doesn't work on you." instead;
+The phrase shaper phaser is an amusing boringthing. Elvira carries the phrase shaper phaser. description of phrase shaper phaser is "It's curvy and futuristic and gives her the grained endearing to look more like a seraph than an amused medusa.". bore-text is "You heard rumors. But you did not believe it was true. She can just say something, hit someone with it, and make you forget what you were doing. Even if the amulet doesn't work on you." instead;
 
 check talking to Elvira when current quip is final-quip:
 	say "'[one of]Neat lob. Notable. Bleat on!' [or]State nag?! Stagnate!' [in random order] Reason won't work, here." instead;
@@ -21885,10 +21833,7 @@ to check-fruit-min:
 
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if omen prism is in Rustic Citrus]That omen prism you uncovered from the drinks stand lies here, too. [end if]"
 
-a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if]."
-
-instead of doing something with a border arbored:
-	if action is procedural, continue the action;
+a border arbored is boringscen in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
 
 chapter augural arugula
 
@@ -22097,16 +22042,14 @@ a droll dollar is a thing. description is "It has a picture of some gangster--wa
 
 coin-person is a thing that varies.
 
-Lord Al Ollard is a proper-named thing. description of Lord Al is "[coin-per-d]"
+Lord Al Ollard is a proper-named thing. description of Lord Al is "[coin-per-d]". bore-text of Lord Al Ollard is "[do-coin]."
 
-Dr Lola Ollard is a proper-named thing. description of Dr Lola is "[coin-per-d]". printed name of Dr Lola Ollard is "Dr. Lola Ollard"
+Dr Lola Ollard is a proper-named thing. description of Dr Lola is "[coin-per-d]". printed name of Dr Lola Ollard is "Dr. Lola Ollard". bore-text of Dr Lola Ollard is "[do-coin]."
+
+to say do-coin: say "Doing anything with or too such a horrid counterfeit coin wouldn't be very satisfying or productive. Probably best to get this off your hands for any profit at all"
 
 to say coin-per-d:
 	say "[he-she-c] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
-
-instead of doing something with coin-person:
-	if action is procedural, continue the action;
-	say "Doing anything with or too such a horrid counterfeit coin wouldn't be very satisfying or productive. Probably best to get this off your hands for any profit at all.";
 
 to say ollard-hint:
 	say "[he-she-c] is worse than useless to society but only useless to you. Yay?"
@@ -22154,10 +22097,7 @@ description of compass is "It is property of Camp SOS. Its needle is pointing st
 check examining compass when mrlp is routes:
 	say "It's flipping about uselessly. Guess you can't rely on normal directions here." instead;
 
-the needle is part of the compass. needle is undesc. needle is useless
-
-instead of doing something with the needle:
-	say "The needle's inside the compass, and you don't need to mess with it."
+the needle is a useless boringthing. it is part of the compass. description of the needle is "It seems to keep pointing north as you turn around. Good enough.". bore-text of the needle is "The needle's inside the compass, and you don't need to
 
 a-text of moss cap is "RYRRYRR". b-text of moss cap is "RGRRYRR". parse-text of moss cap is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]x".
 
@@ -22223,46 +22163,47 @@ chapter pomegranate
 
 the pomegranate is a fruit.
 
-the magenta rope is a vanishing thing. "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant."
-
-a-text of magenta rope is "RYRYRRYRYRY". b-text of magenta rope is "RYRGRRGRYRG". parse-text of magenta rope is "x[sp]-[sp]x[sp]e[sp]x[sp]x[sp]a[sp]x[sp]-[sp]x[sp]e".
-
-does the player mean doing something with rampage note when rampage note is visible: it is very likely.
-
-description of magenta rope is "Oddly colored. It's got a yellowish tinge."
-
-instead of doing something with megaton pear:
-	if action is procedural, continue the action;
-	say "It's--well, maybe not a megaton, but it sure is heavy. And certainly inedible. Maybe it can be changed to a real fruit."
-
-instead of doing something with rampage note:
-	if action is procedural, continue the action;
-	say "A glance seems to indicate some unfortunate writing--either Curtis actually still believes that stuff, or he's embarrassed ever to have written it. Either way, he doesn't need to be alerted to you knowing about it. Best to get rid of it."
-
-instead of doing something with mopeage rant:
-	if action is procedural, continue the action;
-	say "A glance seems to indicate some unfortunate writing--either Curtis actually still believes that stuff, or he's embarrassed ever to have written it. Either way, he doesn't need to be alerted to you knowing about it. Best to get rid of it."
-
-instead of taking magenta rope:
-	say "It would uncover Curtis's silly writings--the note and the rant. You'd be best off getting rid of all three, somehow."
-
-the megaton pear plans are plural-named auxiliary scenery. description of megaton pear is "[bug-report]".
-
-a-text of megaton pear is "RYRYRRYRYRY". b-text of megaton pear is "RYRYRRYRYRY". parse-text of megaton pear is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-".
-
-the rampage note is auxiliary scenery. description of rampage note is "[bug-report]".
-
-a-text of rampage note is "RYRYRRYRYRY". b-text of rampage note is "RYPYRRYPYPG". parse-text of rampage note is "x[sp]-[sp]m[sp]-[sp]x[sp]x[sp]-[sp]n[sp]-[sp]t[sp]e".
-
-the mopeage rant is auxiliary scenery. description of mopeage rant is "[bug-report]".
-
-a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY". parse-text of mopeage rant is "x[sp]o[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]a[sp]x[sp]-".
-
 after fliptoing pomegranate: [the magenta rope is already flipped]
 	moot megaton pear;
 	moot rampage note;
 	moot mopeage rant;
 	continue the action;
+
+to say pre-pom-blag: say "A glance seems to indicate some unfortunate writing--either Curtis actually still believes that stuff, or he's embarrassed ever to have written it. Either way, he doesn't need to be alerted to you knowing about it. Best to get rid of it"
+
+section magenta rope
+
+the magenta rope is a vanishing boringthing. "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant.". bore-check of magenta rope is bore-magenta-rope rule.
+
+this is the bore-magenta-rope rule:
+	if current action is taking:
+		say "It would uncover Curtis's silly writings--the note and the rant. You'd be best off getting rid of all three, somehow.";
+		the rule succeeds;
+	abide by the bore-exam rule;
+
+a-text of magenta rope is "RYRYRRYRYRY". b-text of magenta rope is "RYRGRRGRYRG". parse-text of magenta rope is "x[sp]-[sp]x[sp]e[sp]x[sp]x[sp]a[sp]x[sp]-[sp]x[sp]e".
+
+description of magenta rope is "Oddly colored. It's got a yellowish tinge."
+
+section megaton pear plans
+
+the megaton pear plans are plural-named auxiliary boringscen. description of megaton pear is "It's--well, maybe not a megaton, but it sure is heavy. And certainly inedible. Maybe it can be changed to a real fruit.". bore-text is "The megaton pear plans are useless as-is. Change it, maybe?"
+
+a-text of megaton pear is "RYRYRRYRYRY". b-text of megaton pear is "RYRYRRYRYRY". parse-text of megaton pear is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-".
+
+section rampage note
+
+the rampage note is auxiliary boringscen. description of rampage note is "[pre-pom-blah].". bore-text of rampage note is "The rampage note is useless as-is. Change it, maytbe?"
+
+a-text of rampage note is "RYRYRRYRYRY". b-text of rampage note is "RYPYRRYPYPG". parse-text of rampage note is "x[sp]-[sp]m[sp]-[sp]x[sp]x[sp]-[sp]n[sp]-[sp]t[sp]e".
+
+does the player mean doing something with rampage note when rampage note is visible: it is very likely.
+
+section mopeage rant
+
+the mopeage rant is auxiliary boringscen. description of mopeage rant is "[pre-pom-blag].". bore-text of mopeage rant is "It's useless to you in its current form. Try examining it."
+
+a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY". parse-text of mopeage rant is "x[sp]o[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]a[sp]x[sp]-".
 
 book Swell Wells
 
@@ -22298,9 +22239,6 @@ check inserting into s-w:
 		say "Maybe make your own luck by doing something with/to the coin[if noun is coin]s." instead;
 	say "They're dry wells. You can see all the way down. If you want, you can go that way." instead;
 
-check climbing s-w:
-	try going down instead;
-
 check going to Swell Wells for the first time:
 	say "'Ramble, ambler!' Curtis calls.";
 
@@ -22333,31 +22271,21 @@ the gooseberry is a fruit.
 
 the lost slot is a thing. description of lost slot is "It's soft to the touch, as if it could change its shape for the right item."
 
-the silly shirt is a thing in Swell Wells. "A silly shirt lies here."
-
 chapter apricot
 
-the riot cap is a thing in Swell Wells. description is "It's orangish-reddish, an odd pastel. It looks even dumber than the moss cap from Curtis. Red writing is stamped on each side of the riot cap. You can read it.". "A riot cap hangs from one of the wells."
+the riot cap is a boringthing in Swell Wells. description of riot cap is "It's orangish-reddish, an odd pastel. It looks even dumber than the moss cap from Curtis. Red writing is stamped on each side of the riot cap. You can read it.". "A riot cap hangs from one of the wells.". bore-text of riot cap is "The riot cap is pretty sturdy, and less useful for you than the moss cap, unless or until you can change it into a fruit."
 
 a-text of riot cap is "YRRYRYR". b-text of riot cap is "YRRYPYR". parse-text of riot cap is "-[sp]x[sp]x[sp]-[sp]c[sp]-[sp]x".
 
 the apricot is a fruit. "It's a regular apricot. Nothing special."
 
-instead of doing something with riot cap:
-	if action is procedural, continue the action;
-	say "The riot cap is pretty sturdy, and less useful for you than the moss cap, unless or until you can change it into a fruit."
+chapter silly shirt / apples
 
-chapter apples
-
-description of silly shirt is "It's a hideous red-and-green-and-yellow blend with the phrase 'Got ESP, PAL?'"
+the silly shirt is a boringthing in Swell Wells. "A silly shirt lies here.". description of silly shirt is "It's a hideous red-and-green-and-yellow blend with the phrase 'Got ESP, PAL?'". bore-text of silly shirt is "You wouldn't want to take or wear the shirt. Maybe it can be recycled.".
 
 a-text of silly shirt is "YRRRYR". b-text of silly shirt is "YRPRYR". parse-text of silly shirt is "-[sp]x[sp]p[sp]x[sp]-[sp]x". silly shirt is cheat-spoilable.
 
-instead of doing something with silly shirt:
-	if action is procedural, continue the action;
-	say "You wouldn't want to take or wear the shirt. Maybe it can be recycled.";
-
-the apples are plural-named fruit.
+the apples are plural-named fruit. description is "Green, red, yellowish: all kinds, really!"
 
 book Gates Stage
 
@@ -22374,14 +22302,15 @@ check going inside in Gates Stage:
 
 section Valence Enclave
 
-the Valence Enclave is scenery in Gates Stage. "Almost as big as Yorpwald's famous, enormous Admit-Us Stadium, it's reserved for very special events indeed! Whatever could be inside?"
+the Valence Enclave is boringscen in Gates Stage. description of Valence Enclave is "Almost as big as Yorpwald's famous, enormous Admit-Us Stadium, it's reserved for very special events indeed! Whatever could be inside?". bore-text of Valence Enclave is "You can't do much but look at the Valence Enclave. Or try to enter it.". bore-check is the bore-valence-enclave rule.
+
+this is the bore-valence-enclave rule:
+	if current action is entering:
+		try going north;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 understand "near arena" and "near/arena" as valence enclave.
-
-instead of doing something with Valence Enclave:
-	if action is procedural, continue the action;
-	if current action is entering, try going north instead;
-	say "You can't do much but look at the Valence Enclave. Or try to enter it."
 
 section gs = gates
 
@@ -22399,11 +22328,7 @@ understand "gate" as gs.
 
 section halt lath
 
-the halt lath is part of the gs. the halt lath is undesc.
-
-instead of doing something with the halt lath:
-	if action is procedural, continue the action;
-	say "The halt lath looks sturdy and won't budge physically.";
+the halt lath is a boringthing. it is part of the gs. description of halt lath is "The halt lath looks sturdy and won't budge physically.". bore-text is "You probably need to do something non-physical to open the halt lath."
 
 understand "gates" as gs.
 
@@ -22421,11 +22346,7 @@ instead of giving something to gs:
 
 section gropin' roping
 
-the gropin' roping is bounding scenery in Gates Stage. "The gropin['] roping guards you from going west or east."
-
-instead of doing something with the gropin' roping:
-	if action is procedural, continue the action;
-	say "You don't want to tangle with the gropin['] roping, because it will probably tangle with you, back.";
+the gropin' roping is bounding boringscen in Gates Stage. description of gropin' roping is "The gropin['] roping guards you from going west or east.". bore-text is "You don't want to tangle with the gropin['] roping, because it will probably tangle with you, back.".
 
 section check for PERP
 

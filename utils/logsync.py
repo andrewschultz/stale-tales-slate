@@ -344,10 +344,27 @@ def aro_settler_check():
     count = 0
     b_count = 0
     desc_count = 0
+    in_bore_rule = False
+    insteads_in_bore = 0
+    instead_bore_latest = 0
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             skip = False
             first_sentence = re.sub("\..*", "", line)
+            if line.startswith('this is the bore'):
+                in_bore_rule = True
+                continue
+            if '" bore' in line.lower():
+                print("Uh oh line", line_count, "may need period before bore:", line.lower().strip())
+            if in_bore_rule:
+                if not line.strip():
+                    in_bore_rule = False
+                    continue
+                if 'instead;' in line.lower():
+                    print("Extraneous instead at line", line_count, ":", line.strip())
+                    insteads_in_bore += 1
+                    instead_bore_latest = line_count
+                    continue
             if ('boringscen' in first_sentence or 'boringthing' in first_sentence) and 'description of' not in line:
                 l1 = re.sub(" (is|are).*", "", line.lower().strip())
                 l1 = re.sub(" \..*", "", l1)
@@ -474,6 +491,7 @@ def aro_settler_check():
         print("Flips from logsync.txt to ARO source missed:", ', '.join(flip_miss))
     else:
         print("No ARO flips missed.")
+    if insteads_in_bore: print(insteads_in_bore, "insteads in bore-rules. Latest is", instead_bore_latest)
 
 def check_aftertexts():
     markedokay = 0
