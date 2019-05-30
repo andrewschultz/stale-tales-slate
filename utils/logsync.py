@@ -347,11 +347,17 @@ def aro_settler_check():
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             skip = False
-            if 'boringscen' in line and 'description of' not in line:
+            first_sentence = re.sub("\..*", "", line)
+            if ('boringscen' in first_sentence or 'boringthing' in first_sentence) and 'description of' not in line:
                 l1 = re.sub(" (is|are).*", "", line.lower().strip())
                 l1 = re.sub(" \..*", "", l1)
                 desc_count += 1
                 print('{:02d} "description of {:s}" needed at line {:d} and not just quoted text for description. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
+            if 'scenery' in first_sentence and 'bore-text' in line: #these first two checks are so the compiler is less likely to complain
+                l1 = re.sub(" (is|are).*", "", line.lower().strip())
+                l1 = re.sub(" \..*", "", l1)
+                desc_count += 1
+                print('{:02d} Need to change {:s} at line {:d} to boringscen. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
             ms = match_score(line, aro_settings, line_count, "ARO")
             if ms >= 2 and not line.startswith("\t"):
                 global_raw = ""
