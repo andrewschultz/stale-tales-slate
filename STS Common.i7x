@@ -339,9 +339,15 @@ a boringthing is a kind of thing. a boringthing has text called bore-text. a bor
 
 a boringscen is a kind of boringthing.
 
+boring-exception is a truth state that varies.
+
 instead of doing something with a boringthing: [no-irp]
+	if debug-state is true, say "DEBUG note: [current action] with [noun] is under scrutiny.";
 	abide by the bore-check of noun;
-	if action is procedural, continue the action;
+	if action is procedural or boring-exception is true:
+		if debug-state is true and boring-exception is true, say "DEBUG note: [current action] with [noun] slips general boring-thing rules.";
+		now boring-exception is false;
+		continue the action;
 	say "[bore-text of noun]" instead;
 
 this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
@@ -360,11 +366,6 @@ this is the bore-exam rule: [note: I caused bugs by saying PROCESS THE BORE-EXAM
 after choosing notable locale objects:
 	repeat with item running through boringscen in location of player:
 		set the locale priority of the item to 0;
-
-instead of doing something with a boringthing: [no-irp]
-	abide by the bore-check of noun;
-	if action is procedural, continue the action;
-	say "[bore-text of noun]" instead;
 
 volume command hashing -- thanks to Uncle David
 
