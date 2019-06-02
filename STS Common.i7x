@@ -73,6 +73,8 @@ a portal can be fake-enterable. a portal is usually fake-enterable.
 
 a portal can be enter-clued. a portal is usually not enter-clued.
 
+report entering a portal: process the move dumbdrops rule;
+
 chapter region stuff
 
 to decide what region is mrlp: decide on map region of location of player.
@@ -367,6 +369,15 @@ after choosing notable locale objects:
 	repeat with item running through boringscen in location of player:
 		set the locale priority of the item to 0;
 
+part dumbdrops
+
+a dumbdrop is a kind of boringscen. a dumbdrop has a rule called drop-rule. drop-rule of a dumbdrop is usually the degen-false rule.
+
+report going (this is the move dumbdrops rule):
+	repeat with Q running through dumbdrops:
+		process the drop-rule of Q;
+		if the rule succeeded, move Q to location of player;
+
 volume command hashing -- thanks to Uncle David
 
 part hash codes and values
@@ -441,6 +452,12 @@ after asking which do you mean (this is the bypass disambiguation 2 rule):
 		bypass disambiguation;
 		the rule succeeds;
 	continue the action;
+
+volume trivial rules
+
+this is the degen-false rule: the rule fails.
+
+this is the degen-true rule: the rule succeeds.
 
 volume specific items
 

@@ -222,12 +222,7 @@ understand "unpile" as a mistake ("They'd be much less dangerous left in a pile.
 
 book store i
 
-understand "dumdum" and "dum" and "dum dum" as a mistake ("The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].") when in-i-box
-
-to decide whether in-i-box:
-	unless mrlp is sortie, no;
-	if player is in nick or player is in moor or player is in Sacred Cedars, no;
-	yes;
+understand "dumdum" and "dum" and "dum dum" as a mistake ("The mud is stuck that way. You don't need to change it[if moor is visited]. Besides, you already figured how to get out[end if].") when in-i-box.
 
 chapter Trap Part
 

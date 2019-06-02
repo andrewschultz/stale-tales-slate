@@ -255,7 +255,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "ditties"	541314892	kitchen	--	--	"Don't let the songs distract you from your mission."
 "fridge"	338266445	kitchen	--	--	"[fridge-abuse]."
 "grief"	317237356	kitchen	--	--	"[fridge-abuse]."
-"mud"	190210049	--	--	in-i-main rule	"The mud is just there. You can't change it."
+"mud"	190210049	--	--	drop-mud rule	"The mud is just there. You can't change it."
 "cult"	281035249	--	cult tee	--	"The whole t-shirt."
 "tee"	358722236	--	cult tee	--	"The whole t-shirt."
 "were"	448870794	--	cask	--	"[if sack is abrod]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is abrod]d[else]s[end if] it can be changed."
@@ -644,9 +644,6 @@ to say stat-at:
 to say reg-rej:
 	say "You don't want to change a region drastically while you're in it"
 
-this is the degen-true rule:
-	the rule succeeds;
-
 section store nudges
 
 to say tid:
@@ -805,10 +802,6 @@ section metros nudges
 
 this is the af-cent rule:
 	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
-	the rule fails;
-
-this is the in-i-main rule:
-	if in-i-box, the rule succeeds;
 	the rule fails;
 
 to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder."

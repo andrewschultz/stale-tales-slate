@@ -768,9 +768,6 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is beats: [start of backdrops which will throw errors otherwise]
 		if mrlp is metros, decide yes;
 		decide no;
-	if hintcand is mum dud mud:
-		if in-i-box, decide yes;
-		decide no;
 	if hintcand is tech etch:
 		if player is in Esoteric Coteries or player is in Undesired Underside, decide yes;
 		decide no;
@@ -4251,6 +4248,10 @@ Rule for supplying a missing noun while entering (this is the other stuff to ent
 		continue the activity;
 	continue the activity.
 
+to last-loc-move (rg - a region):
+	move player to last-loc of rg;
+	process the move dumbdrops rule;
+
 section forest portal
 
 does the player mean entering the scented descent: it is likely. [forest is first in alphabet and easiest]
@@ -4271,7 +4272,7 @@ check entering the scented descent:
 	if last-loc of forest is rf and rf is unvisited:
 		say "As you walk in the forest, you hear rumors of monsters ravaging the surrounding areas. Not zombies, or vampires, or skeletons. Trying to figure what it is, you daydream maybe YOU could be that hero--so successfully that you get lost!";
 		say "[wfak]Until you stumble on a small clearing. You think you [if shout is in sf]hear something[else if thorn is in sf]stepped on a thorn[else if teas are in sf or stew is in sf]smell something[else]should see a clue, but nothing's there[end if].";
-	now player is in last-loc of forest;
+	last-loc-move forest;
 	recover-items instead;
 
 section sortie portal
@@ -4294,7 +4295,7 @@ to say sortie-have:
 check entering posted depots:
 	if sortie is unsolved:
 		check-2-of-3;
-		move player to last-loc of sortie;
+		last-loc-move sortie;
 		recover-items instead;
 	else:
 		say "You did what you needed in the moor. No sense retracing your steps." instead;
@@ -4316,7 +4317,7 @@ check entering trade tread:
 	if metros is not unsolved, say "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you." instead;
 	check-2-of-3;
 	say "The elevator's descent is rapidly scented worse. After you pass [one of]a[or]that[stopping] 'Tasers? You bet! Asters? Out, bye!' billboard, an automated voice announces that Mt. Rose has made its freedom more def, so ordinary citizens are motivated to level up and money farm just like Red Bull Burdell, and a funky thumping beat helps them to action.[paragraph break]You jog down the elevator to escape it, but of course it's coming from the city[if drainage is in Undesired Underside]. And you step into some drainage at the bottom. Eww[end if][if Undesired Underside is visited]. Which you should've remembered from last time[end if].[wfak]";
-	move the player to last-loc of metros;
+	last-loc-move metros;
 	recover-items instead;
 
 to recover-items:
@@ -4341,7 +4342,7 @@ resort-known is a truth state that varies. resort-known is usually false.
 
 check entering the r-p:
 	say "'You! Find! Unify! Do!' a voice booms. You stride into the resort thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";
-	now the player is in Astral Altars instead;
+	last-loc-move Resort;
 
 book Forest
 
@@ -5152,7 +5153,7 @@ to decide whether (a - a number) and (b - a number) skip:
 
 some warts are a thing. warts are plural-named.
 
-instead of taking the warts: say "They're kind of stuck on, and you've heard cures like burning make them worse."
+check taking the warts: say "They're kind of stuck on, and you've heard cures like burning make them worse." instead;
 
 description of warts is "You can only feel them--no mirrors around--but they're plenty bumpy.". rgtext of warts is "[rcn][rc][gc][rc][rc]". lgth of warts is 5. gpos of warts is 5. rpos of warts is 1. cert-text of warts is "-[d1][ast]R[d1][d1]". rect-text of warts is "S[d1][d1][d1][ast]W".
 
@@ -6371,11 +6372,17 @@ does the player mean taping the spout: it is very likely.
 
 chapter mud
 
-the mum dud mud is a bounding backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen. description is "Well, it's mud, and not very exciting mud at that."
+the mum dud mud is a bounding dumbdrop. description of mum dud mud is "Well, it's mud, and not very exciting mud at that.". bore-text is "You can't do much with, or to, the mud. Even if it were, it would cause a cave-in. You have enough to explore here[if moor is visited] and in the moor beyond[else], and maybe there's another way to leave this lair[end if]."
 
-instead of doing something with mum dud mud: [??]
-	if action is procedural, continue the action;
-	say "The mum dud mud isn't easily movable, and it might cause a cave-in if you can. You have enough to explore here." instead;
+drop-rule is the drop-mud rule.
+
+this is the drop-mud rule:
+	if in-i-box, the rule succeeds;
+	the rule fails;
+
+to decide whether in-i-box:
+	if player is in roomroom or player is in Trap Part or player is in Stiller Trellis or player is in Kitchen, yes;
+	no;
 
 book metros
 
@@ -8692,9 +8699,7 @@ check putting something on cabinet: [??]
 
 section gateway
 
-a portal is a kind of thing. a portal can be enterable. a portal is usually enterable. a portal is fixed in place.
-
-instead of taking a portal: say "It's probably easier to enter than to take.".
+check taking a portal: say "It's probably easier to enter than to take." instead;
 
 the getaway gateway is a portal in Notices Section. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping]."
 

@@ -1262,8 +1262,6 @@ to say not-the-reg:	say "Trying to change the current region you're in all at on
 
 section stores nudges
 
-this is the degen-true rule: the rule succeeds.
-
 to say no-cand: say "Nothing happens. You'd think that store would be a good candidate to change, but it isn't"
 
 to say so-last: say "That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures";
@@ -1921,9 +1919,6 @@ to say cussy: say "You're not fooling ME. Shame on you"
 
 this is the can-i-parse rule:
 	if elmo is moot, the rule succeeds;
-
-this is the degen-false rule:
-	the rule fails.
 
 Roiling Nudges ends here.
 
