@@ -1,4 +1,4 @@
-"A Roiling Original" by Andrew Schultz
+"A Roiling Original" by Andrew Schultz
 
 volume browsing and building notes
 
@@ -1659,7 +1659,7 @@ the can only talk to talkables rule is not listed in any rulebook.
 
 check talking to (this is the hint looking not talking rule):
 	if noun is armada, say "They're not in the mood for remotely reasonable conversation." instead;
-	if noun is statue, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
+	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
 	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead.
 
 section specifically
@@ -1788,11 +1788,11 @@ Gast	"[Gast] is already talking about [him-her]self, [his-her] complaints, and s
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 armada	"They'll have nothing sensible to say in unison."
-statue	"Oh, if it were the real version, you'd regret that."
+Trevis Vister	"Oh, if it were the real version, you'd regret asking him about himself."
 Si Reed	--	[reflex TROVES]
 plebe	 "You figure you should grill him about how worthless he thinks he is, but you lack the right word or words." [reflex PRESTO]
-Rand	"He gives a whole new dimension to small talk. But not for long, thankfully."
-Leo	"He gives a whole new dimension to small talk. But not for long, thankfully."
+Rand	"Rand gives a whole new dimension to small talk. But not for long, thankfully."
+Leo	"Leo gives a whole new dimension to small talk. But not for long, thankfully."
 hogs	"The whole 'Who do you think you are' won't go well with these hogs. They're here to guard you from what's beyond, and that wall is helping."
 l-m	"'I'm here to help, just by being me, apparently.'"
 m-l	"'I'm here to help, just by being me, apparently.'"
@@ -3659,7 +3659,6 @@ check entering a portal:
 	else:
 		d "Can't try recovering items yet.";
 		add-errs grn;
-	now portal-entered-yet is true;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "REPO!";
 		move player to last-loc of grn, without printing a room description;
@@ -4740,7 +4739,7 @@ fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit,
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
 gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
 inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
-i'm le cop polemic	true	true	false	false	"
+i'm le cop polemic	true	true	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
 large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
 mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
 me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
@@ -4766,13 +4765,12 @@ tetris sitter	true	true	false	false	"With only two vowels, this word may be a bi
 trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
 traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
 tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters."
-try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
+try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is."
 
 [?? test qmh toggling and scanning stuff]
 
 check scaning a prefigured thing:
-	if noun is not dialer:
-		say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
+	if noun is not dialer, say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
 
 chapter qmhing
 
@@ -6378,7 +6376,7 @@ before dropping something:
 
 check dropping something:
 	if player is in Austerer Treasure and hoop is in Austerer Treasure, say "You aren't in the right state of mind to drop all your possessions, even for a half a move. Doing so might let you jump and grab the hoop, but you need to say, the heck with it. Or something." instead;
-	if noun is a fruit, say "Best return the fruit to Curtis, instead." instead;
+	if noun is a fruit, say "Best return [the noun] to Curtis, instead." instead;
 	If mrlp is Ordeal Reload, say "You probably need to abscond with everything useful you can get your hands on." instead;
 	say "Hero[if player is female]in[end if]es shouldn't be litterbugs[if player has purse]! Your super purse should hold whatever.[else]![end if]" instead;
 
@@ -7908,12 +7906,13 @@ a rich chair is boringscen in Dusty Study. description of a rich chair is "You t
 
 this is the bore-chair rule:
 	if current action is searching:
-		say "Ah, so that's what that lump is. Some latches, from [gtmn], who helped you when you first arrived. But what're they good for?";
+		if latches are off-stage:
+			say "Ah, so that's what that lump is. Some latches, from [gtmn], who helped you when you first arrived. But what're they good for?";
 			now player has latches;
 		else:
 			say "You find nothing further in the chair.";
 		the rule succeeds;
-	if curent action is entering:
+	if current action is entering:
 		if latches are off-stage:
 			try searching rich chair;
 		else:
@@ -7937,7 +7936,7 @@ section sad ads
 
 the sad ads are plural-named boringscen. description of sad ads is "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare].". bore-text is "There's not much to do with the ads other than reading them.". bore-check is bore-sad-ads rule.
 
-7this is the bore-sad-ads rule:
+this is the bore-sad-ads rule:
 	if current action is scaning:
 		say "Few of the sad ads have deeper meaning. There are so many.";
 		the rule succeeds;
@@ -8028,7 +8027,7 @@ the giant pin is an LLPish boringthing in Dusty Study. "A giant pin (bowling) ha
 
 this is the bore-pin rule:
 	if current action is pushing or pulling: [??check if this works in general]
-		say "It won't budge. It's too thin to hide a way out, too.";
+		say "It won't budge. It's tall but too thin to hide a way out, too.";
 		the rule succeeds;
 	if current action is taking:
 		say "That'd be dreadfully impractical. It's too [i]giant[r] a t'ing.";
@@ -8164,13 +8163,11 @@ understand "leadin denial nailed" and "lead in denial nailed" as denialnaileding
 understand "leadin denial" and "lead in denial" as denialnaileding.
 understand "leadin nailed" and "lead in nailed" as denialnaileding.
 
-portal-entered-yet is a truth state that varies.
-
 denial is a truth state that varies.
 
 carry out denialnaileding:
 	let patchies be 0;
-	if mrlp is Ordeal Reload, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if gunter is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead;
+	if mrlp is Ordeal Reload, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if gunter is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead; [?? test IGNORE REGION and LEADIN DENIAL]
 	if denial is true, say "You already used this warp." instead;
 	if player is in Strip of Profits:
 		if denial is true and store t is moot, say "You already did." instead;
@@ -8180,7 +8177,6 @@ carry out denialnaileding:
 				say "BOOM! Store T shatters.";
 				moot Store T;
 				now otters-x is in Strip of Profits;
-		[if portal-entered-yet is true, say "You already entered a portal, so you'll need to reset the game to clear out everything before Otters. You can use IGNORE REGION to get past it." instead;] [?? get rid of portal-entered-yet truth state]
 	repeat with ZT running through needed regions:
 		if ZT is not otters and ZT is not solved, now ZT is bypassed;
 	repeat with ZT running through patchable things:
@@ -8383,7 +8379,7 @@ check going in Dusty Study:
 			say "You take the latches--they must be useful for something[if player does not have treatise]. There's also a tear-stained paper bound up in them. You pull it out[end if].";
 			now player has latches;
 			now need-line-break is true;
-		if pedanto-notepad is on a rich chair:
+		if pedanto-notepad is in dusty study:
 			if need-line-break is true:
 				say "[line break]";
 			say "You[if need-line-break is true] also[end if] swipe your pedanto-notepad, since it was so helpful your first time shuffling around in the Forest and Sortie and Metros your first time through Yorpwald. It uncovers some sad ads, the sort which have sadly pervaded Yorpwald recently.";
@@ -8708,7 +8704,7 @@ after fliptoing ISBN bins:
 
 understand "bin" and "ISBN bin" as ISBN bins. ISBN bins are parse-spoilable.
 
-a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text isBN bins is "x[sp]x[sp]i[sp]x".
+a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text of ISBN bins is "x[sp]x[sp]i[sp]x".
 
 the snib is useless boringscen. description of the snib is "The snib is holding your bins together. That might make it snibs, but let's just pretend it sort of links all the bins together so even if they can't be broken into, someone would have to move them all at once.". bore-text is "The snib is secure enough. No need to tinker with it.".
 
@@ -9382,7 +9378,7 @@ check taking:
 	if noun is part of the Letters Settler:
 		say "You don't want to go deconstructing the Letters Settler. It was hard enough to create for [gtmn]! (And me, too. But enough about coding.)" instead;
 
-the receptors are part of the letters settler. description is "You know little about electronics and magic theory, and you have no time to find out.". bore-text is "The receptors aren't important. Actually, scratch that, they're too important to fiddle with and break.".
+the receptors are a boringthing. they are part of the letters settler. description is "You know little about electronics and magic theory, and you have no time to find out.". bore-text is "The receptors aren't important. Actually, scratch that, they're too important to fiddle with and break.".
 
 the output display is a boringthing. the output display is part of the letters settler. description of output display is "You will be able to examine the output display when you SCAN something.". bore-text is "You need to activate the settler to see useful data on the output display."
 
@@ -9390,7 +9386,7 @@ check examining output display:
 	say "You look at the display, not really expecting to see anything unless you SCAN something. So you wave the settler around, hoping to pick up something.";
 	try scaning the location instead;
 
-the colorful logo is a undesc boringthing. the colorful logo is part of the settler. description of the colorful logo is "The logo's just there to say what it is. And maybe as a hint to examine.". bore-text of logo is "You don't need to do anything to or observe the logo."
+the colorful logo is a boringthing. the colorful logo is part of the settler. description of the colorful logo is "The logo's just there to say what it is. And maybe as a hint to examine.". bore-text of logo is "You don't need to do anything to or observe the logo."
 
 seen-blues is a truth state that varies.
 
@@ -9713,7 +9709,10 @@ chapter teariest treatise
 
 book pedanto-notepad
 
-the pedanto-notepad is a warpable thing on a rich chair. understand "pad/note/notebook/pedanto/notepad" and "note book" and "note pad" and "pedanto notepad" as pedanto-notepad.
+the pedanto-notepad is a warpable thing in Dusty Study. understand "pad/note/notebook/pedanto/notepad" and "note book" and "note pad" and "pedanto notepad" as pedanto-notepad.
+
+after choosing notable locale objects when player is in Dusty Study:
+	if pedanto-notepad is in Dusty Study, set locale priority of pedanto-notepad to 0;
 
 report taking pedanto-notepad:
 	the rule succeeds;
@@ -10618,7 +10617,7 @@ a-text of Store Y is "YORRYR". b-text of Store Y is "YORRGR". parse-text of stor
 
 description of Store Y is "The store seems filled with water. It's wide but not tall. You think you see shells. The window of store y has TOYERS in red with a line through."
 
-the shells are a boringthing. they are part of store y. the shells are uncluing and undesc. description of shells is "You can't see what you can do with the shells, but maybe they just help show what is behind Store Y.". bore-text of shells is "Messing with the shells won't help you get in Store Y, but maybe they're a clue.".
+the shells are a boringthing. they are part of store y. the shells are uncluing. description of shells is "You can't see what you can do with the shells, but maybe they just help show what is behind Store Y.". bore-text of shells is "Messing with the shells won't help you get in Store Y, but maybe they're a clue.".
 
 the oyster-x is a privately-named portal. diffic of oyster-x is 6. the printed name of oyster-x is "a huge oyster". understand "oyster" as oyster-x. the go-region of oyster-x is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of oyster-x is "It's not particularly tall, but its width suggests there's a lot to do there."
 
@@ -11494,7 +11493,7 @@ check going outside in Adobe Abode:
 
 chapter ashtray
 
-a trashy ashtray is boringsce in Adobe Abode. description is "[if pipe soot is in Adobe Abode]The ashtray is full of pipe soot, but at least, no Pepsi too[else]You emptied the ashtray[end if].". bore-text is "You can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'". bore-check is the bore-ashtray rule.
+a trashy ashtray is boringscen in Adobe Abode. description is "[if pipe soot is in Adobe Abode]The ashtray is full of pipe soot, but at least, no Pepsi too[else]You emptied the ashtray[end if].". bore-text is "You can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'". bore-check is the bore-ashtray rule.
 
 understand "ash/tray" as ashtray.
 
@@ -11842,7 +11841,7 @@ chapter useless scenery
 
 section reastier arteries
 
-the reastier arteries are plural-named bounding boringscen in Bustle Sublet. description of the reastier arteriesis "They lead other places even worse, more likely. You need to focus on what to do here.". bore-text is "The reastier arteries will only distract you. Concentrate on what's here."
+the reastier arteries are plural-named bounding boringscen in Bustle Sublet. description of the reastier arteries is "They lead other places even worse, more likely. You need to focus on what to do here.". bore-text is "The reastier arteries will only distract you. Concentrate on what's here."
 
 section sidewalk
 
@@ -12212,7 +12211,7 @@ check scaning godlings' lodgings:
 
 chapter Trevis Vister
 
-Trevis Vister is proper-named uncluing scenery in Econ Cone. "[one of]The statue of Trevis Vister is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Red rivets lie at the bottom of the statue[one of]. It is not a statue of limitations, for sure. [paragraph break]But at least it is not an oil'd idol, or an acts-cast showing Trevis Vister closing a business deal. Sadly, those exist here in Yorpwald, thanks to Elvira's promotions[or][stopping]." [?? X TREVIS when I get a chance ]
+Trevis Vister is proper-named scenery in Econ Cone. "[one of]The statue of Trevis Vister is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Red rivets lie at the bottom of the statue[one of]. It is not a statue of limitations, for sure. [paragraph break]But at least it is not an oil'd idol, or an acts-cast showing Trevis Vister closing a business deal. Sadly, those exist here in Yorpwald, thanks to Elvira's promotions[or][stopping]." [?? X TREVIS when I get a chance ]
 
 Include (-
 	has transparent talkable
@@ -12222,7 +12221,13 @@ a-text of Trevis Vister is "RRRYRY". b-text of Trevis Vister is "RRRYRY". parse-
 
 understand "astute/statue" and "astute statue" as Trevis Vister.
 
-the rivets are part of the statue. description is "They're just there. And red.". the rivets are reflexive.
+rivets are a plural-named reflexive boringscen in Econ Cone. description of rivets is "After looking for a while, you realize the rivets spell something you could READ.". bore-check is the bore-rivets rule. bore-text is "[if rivets are reflexed]You figured what to do with the rivets[else]You need to figure what to do with the rivets--or what to have them inspire you to do[end if]."
+
+this is the bore-rivets rule:
+	if current action is taking:
+		say "Petty theft is not big thinking! You'd do better to take a message from the rivets.[paragraph break]Plus, you don't have the right tool.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 rivets-first is a truth state that varies.
 
@@ -12241,20 +12246,6 @@ a-text of praise spirea is "YRRYRY". b-text of praise spirea is "YRR?R?". parse-
 check scaning rivets (this is the switch to praise rule):
 	if rivets are reflexed and praise spirea is reflexive, try scaning praise spirea instead;
 
-rivets is a boringscen. description of rivets is "After looking for a while, you realize the rivets spell something you could READ.". bore-check is the bore-rivets rule. bore-text is "[if rivets are reflexed]You figured what to do with the rivets[else]You need to figure what to do with the rivets--or what to have them inspire you to do[end if]."
-
-this is the bore-rivets rule:
-	if current action is taking:
-		say "Petty theft is not big thinking! You'd do better to take a message from the rivets.[paragraph break]Plus, you don't have the right tool.";
-		the rule succeeds;
-	abide by the bore-exam rule;
-
-check scaning statue for the first time: [let statue be the first thing you scan]
-	say "You're pretty sure Trevis Vister did his best to make his statue couldn't be melted down by some silly mind-game, but maybe the settler will turn up something...hmm, nothing, except for the rivets.";
-
-check scaning statue:
-	try scaning rivets instead;
-
 [?? unlock praise/rivets difference]
 a-text of rivets is "RRRYRY". b-text of rivets is "RRRYRY". parse-text of rivets is "x[sp]x[sp]x[sp]i[sp]x[sp]e".
 
@@ -12264,6 +12255,7 @@ after fliptoing praise:
 
 after fliptoing rivets:
 	if praise spirea is reflexive, now praise spirea is llpish;
+	now Trevis Vister is reflexed;
 	continue the action;
 
 chapter pernod
@@ -12398,7 +12390,7 @@ does the player mean doing something with mbb: it is very likely.
 
 chapter Trance Nectar
 
-the Trance Nectar is a vanishing thing. "You notice some trance nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive.". description is "It's guaranteed to keep you focused on what you need to do, if not thrilled about it."
+the Trance Nectar is a vanishing thing. "You notice some trance nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive.". description is "It's guaranteed to keep you focused on what you need to do, if not thrilled about it. But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
 
 check drinking trance nectar: say "No. That can't be it. You want a way to exit, to say this is not me." instead;
 
@@ -12974,44 +12966,6 @@ cistern-look is a truth state that varies.
 check searching cretins' cistern: try examining cretins' cistern instead;
 
 burn-check is a truth state that varies.
-
-check burning:
-	if burn-check is false:
-		ital-say "In this game, you should never have a burning implement, and you should never need one. So this verb is only good for cheap jokes. There are about twenty-five at last count.";
-		now burn-check is true instead;
-	if noun is an animal, say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
-	if noun is a person, say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
-	if noun is a fruit or noun is lobster or noun is tea tray, say "Good thing this game isn't a cooking sim." instead;
-	if noun is chair, say "You think 'I char a rich chair' but have nothing to burn it with." instead; [introduction]
-	if noun is sitar, say "That's not the way to recover rock-star status." instead;
-	if noun is a sto, say "[if noun is flippable]Even if it didn't look important, no[else]No senseless vandalism, please[end if]." instead;
-	if noun is rude 'n nuder, say "I am anti-censorship, even of that sort of thing. Plus you have no source of flame." instead; [routes]
-	if noun is pipe soot, say "It's been through enough of that." instead;
-	if noun is divorces, say "A rubbish society rag deserves such a fate--in an incinerator or something. Maybe you can think DIVORCES into irrelevance, though." instead; [troves]
-	if noun is praise or noun is statue, say "[if noun is reflexive]Perhaps have it create a burning in you[else]It already created a burning in you[end if]." instead;
-	if noun is lager or noun is pernod, say "It's not high enough proof. In fact, it's almost certainly watered-down." instead;
-	if noun is coal, say "You need to burn mental fuel, here." instead; [presto]
-	if noun is on labs slab, say "You may figuratively want to, right now, but that's natural when you're programming something tough." instead;
-	if noun is frat raft, say "[if player is in frat raft]No way. Especially not while you're on it[else]That might be a way across. Somehow[end if]." instead; [oyster]
-	if noun is crate, say "This is totally the wrong genre of game for that." instead;
-	if noun is log gaol, say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead; [towers]
-	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
-	if noun is bot boat, say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
-	if noun is flowerpot or noun is crocus, say "Renato would be so upset." instead;
-	if noun is try us yurts, say "Perhaps another more natural way of decomposition would work better." instead;
-	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
-	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
-	if mrlp is towers and Topside Deposit is unvisited, say "Don't be a brushfire furbisher." instead;
-	if noun is b-b, say "You'd be right in the middle. So, bad idea." instead; [otters]
-	if noun is atmo-moat, say "It's nowhere near greasy enough." instead;
-	if noun is storage, say "It's meant to be nearly indestructible." instead;
-	say "You're a ropy pyro. There's no igniter tiering nearby." instead;
-
-to say way-tow:
-	if Mislit Limits is unvisited:
-		say "way ";
-
-instead of burning the cretins' cistern: say "The cistern may deserve it, but Char Arch is burnt enough already."
 
 instead of entering cretins' cistern:
 	say "You'd feel dumb trying to get out again."
@@ -14768,6 +14722,9 @@ this is the bore-pits rule:
 	if current action is taking:
 		say "The people who didn't give tips would notice your rudeness.";
 		the rule succeeds;
+	if current action is spiting:
+		now boring-exception is true;
+		continue the action;
 	abide by the bore-exam rule;
 
 the gins sign is reflexive scenery in Posh Hops Shop. "It advertises various gins and intox-toxin-tonix--'Thirsty? Try this,' though someone scribbled 'Embrace Beer, Mac!' at the bottom. It advises against sharing garnish as well as making your own music."
@@ -14785,8 +14742,7 @@ check exiting when in Posh Hops Shop: try going outside instead;
 
 the tines are plural-named reflexive scenery in Posh Hops Shop. "They look perfect for fitting a stein into, for refills."
 
-check taking tines:
-	say "[if stein is moot]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
+check taking tines: say "[if stein is moot]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
 
 a-text of tines is "YRRYR". b-text of tines is "YRRGR". parse-text of tines is "i[sp]x[sp]x[sp]e[sp]x". tines is cheat-spoilable.
 
@@ -14805,7 +14761,7 @@ check taking tunes: say "Ironically, they're the sort of tunes you really can't 
 
 a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "u[sp]x[sp]x[sp]e[sp]x". tunes is cheat-spoilable.
 
-The jukebox is uncluing boringthing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox
+The jukebox is uncluing boringthing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
 
 a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "x[sp]x[sp]i[sp]x". tips pits are cheat-spoilable.
 
@@ -14817,7 +14773,7 @@ check scaning jukebox:
 
 the perma-amper is part of the jukebox. understand "perma/amper" as perma-amper.
 
-the perma-amper is auxiliary. description of perma-amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.".
+the perma-amper is an auxiliary boringthing. description of perma-amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.".
 
 a-text of perma-amper is "RYRYR.". b-text of perma-amper is "R?RYR". parse-text of perma-amper is "x[sp]-[sp]m[sp]a[sp]x". perma-amper is cheat-spoilable.
 
@@ -14937,7 +14893,7 @@ understand "spit in/at/on [something]" as spiting.
 does the player mean spiting the location: it is very likely.
 
 carry out spiting:
-	if noun is tips['] pits, try fliptoing tips pits instead;
+	if noun is tips['] pits or noun is location of player, try fliptoing tips pits instead;
 	if noun is a person, say "You don't want to start a fight." instead;
 	if player is in Cripple Clipper, say "Pointless." instead;
 	say "How rude[if player is in hops shop and tips pits are reflexed]. Once is enough!" instead; [?? test double]
@@ -15932,9 +15888,7 @@ check scaning the cans (this is the bonus point rule) :
 	say "You're over-thinking this one.";
 	the rule fails;
 
-to say wipes-too:
-	if wipes are on drawer:
-		say ", and you notice some wipes on it";
+to say wipes-too: if wipes are in Lean Lane, say ", and you notice some wipes on it";
 
 the eeks are plural-named vanishing scenery in Hardest Trashed Dearths. "[bug-report]"
 
@@ -16395,6 +16349,8 @@ check fliptoing bubble wrap:
 		if trout is reflexive:
 			say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'" instead;
 
+section dent
+
 the dent is part of the raw red drawer. the dent is LLPish and flippable. description is "It'd probably take the right sort of futzing to get rid of."
 
 after fliptoing dent:
@@ -16403,16 +16359,9 @@ after fliptoing dent:
 
 a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "t[sp]e[sp]n[sp]d". dent is parse-spoilable.
 
-some wipes are plural-named and auxiliary and reflexive. the wipes are on the raw red drawer.
+section raw red drawer
 
-description of wipes is "I-SPEW wipes is written in red on them."
-
-a-text of wipes is "RRYRY". b-text of wipes is "RRYRY". parse-text of wipes is "x[sp]x[sp]-[sp]x[sp]-".
-
-check taking the wipes:
-	say "Aunt Tuna asks 'Really, what COULD you want with those.' She nods at you, and you pull your hand back. Maybe if you were quicker, you could take them." instead;
-
-the raw red drawer is boringscen in Lean Lane. the raw red drawer is a supporter. description of raw red drawer is "It's, well, raw and red[if dent is part of raw red drawer], with a visible dent[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if].". bore-text of the raw red drawer is "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].". bore-check of raw red drawer is bore-drawer rule.
+the raw red drawer is boringscen in Lean Lane. description of raw red drawer is "It's, well, raw and red[if dent is part of raw red drawer], with a visible dent[end if][if wipes are in lean lane]. There are also some wipes on it[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if].". bore-text of the raw red drawer is "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].". bore-check of raw red drawer is bore-drawer rule.
 
 this is the bore-drawer rule:
 	if current action is opening:
@@ -16420,14 +16369,26 @@ this is the bore-drawer rule:
 		the rule succeeds;
 	abide by the bore-exam rule;
 
-understand "raw/-- red/-- warder drawer" as raw red drawer when trout is reflexive.
-understand "raw/-- red/-- reward drawer" as raw red drawer when trout is reflexed.
+understand "raw warder/reward drawer" as raw red drawer when trout is reflexive.
+understand "red warder/reward drawer" as raw red drawer when trout is reflexive.
+understand "raw red warder/reward drawer" as raw red drawer when trout is reflexive.
 
 to say rew-war:
 	say "[if raw red drawer is reflexive]warder[else]reward[end if]"
 
-check putting on raw red drawer:
-	say "No. Aunt Tuna keeps her place tidy." instead;
+check putting on raw red drawer: say "No. Aunt Tuna keeps her place tidy." instead; [??]
+
+chapter wipes
+
+after choosing notable locale objects when player is in Lean Lane:
+	if wipes are in Lean Lane, set locale priority of wipes to 0;
+
+some wipes are plural-named and reflexive. description of wipes is "I-SPEW wipes is written in red on them.".
+
+a-text of wipes is "RRYRY". b-text of wipes is "RRYRY". parse-text of wipes is "x[sp]x[sp]-[sp]x[sp]-".
+
+check taking the wipes:
+	say "Aunt Tuna asks 'Really, what COULD you want with those.' She nods at you, and you pull your hand back. Maybe if you were quicker, you could take them." instead;
 
 chapter tending
 
@@ -18711,6 +18672,8 @@ section sporties' ripostes
 
 the sporties' ripostes are plural-named vanishing boringscen in Lost Lots. description of sporties' ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.".
 
+a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
+
 this is the bore-ripostes rule:
 	if current action is taking:
 		say "Actually, you want to find a way to say, you're NOT going to take them any more.";
@@ -18719,10 +18682,6 @@ this is the bore-ripostes rule:
 		say "Despite your wordplay magic proficiency, you'll never win an argument. Maybe you can be more circumspect to get rid of the ripostes.";
 		the rule succeeds;
 	abide by the bore-exam rule;
-
-description of sporties' ripostes is "They're mocking you, not enough to feel like you have a right to be mad, but enough to annoy you. Both clever and dumb at the same time, they're also very quick and don't drag it out."
-
-a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
 chapter Fringe Finger
 
@@ -19299,7 +19258,7 @@ book Dourest Detours
 
 Dourest Detours is a room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?"
 
-bogus-detours is a privately-named vanishing boringscen in Dourest Detours. description of bogus-detours is "[bug]". bore-text is "[bug]".
+bogus-detours is a privately-named vanishing boringscen in Dourest Detours. description of bogus-detours is "[bug-report]". bore-text is "[bug-report]".
 
 a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". parse-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -21176,6 +21135,7 @@ Le Mer is a person in Loop Pool. description is "You can't locate where, exactly
 
 after choosing notable locale objects when player is in Loop Pool:
 	set the locale priority of Le Mer to 0;
+	if sea cube is in Loop Pool, set locale priority of eels to 0;
 
 instead of doing something with le mer:
 	if current action is asking generically or current action is objasking generically or current action is objasking or current action is asking about, continue the action;
@@ -21184,7 +21144,7 @@ instead of doing something with le mer:
 
 section sea cube
 
-the sea cube is a transparent vanishing boringscen in Loop Pool. it is a container. description of sea cube is "You see eels in the cube.". "Eels float inside a sea cube here, just across the Loop Pool[eels-them].". bore-text of sea cube is "You aren't getting across the pool to do anything with the sea cube.".
+the sea cube is a vanishing boringscen in Loop Pool. description of sea cube is "You see eels in the cube.". "Eels float inside a sea cube here, just across the Loop Pool[eels-them].". bore-text of sea cube is "You aren't getting across the pool to do anything with the sea cube.".
 
 to say eels-them: set the pronoun them to eels;
 
@@ -21199,7 +21159,7 @@ a-text of sea cube is "RYRYYRY". b-text of sea cube is "RGRYGRG". parse-text of 
 
 section eels
 
-the eels are a plural-named reflexive person in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here between the weir and atoll[end if]."
+the eels are a plural-named reflexive person in Loop Pool. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here between the weir and atoll[end if]."
 
 a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "e[sp]x[sp]x[sp]e". eels are cheat-spoilable.
 
@@ -21363,7 +21323,7 @@ the ocelots are plural-named reflexive neuter animals. description is "[if ocelo
 
 understand "ocelot" as ocelots.
 
-the SlopInc Clip-Ons are a boringthing. the ocelots wear the SlopInc Clip-Ons. description of SlopInc Clip-Ons is "Just terribly un-hip. They make the ocelots look like jive turkeys and not jive cats.". bore-text is "Uncool. Both the clip-ons and paying too much attention to them. And by too much, I mean any. Maybe you can help the ocelots, though."
+the SlopInc Clip-Ons are a boringthing. description of SlopInc Clip-Ons is "Just terribly un-hip. They make the ocelots look like jive turkeys and not jive cats.". bore-text is "Uncool. Both the clip-ons and paying too much attention to them. And by too much, I mean any. Maybe you can help the ocelots, though.". the ocelots wear the SlopInc Clip-Ons.
 
 after fliptoing ocelots:
 	moot slopinc clip-ons;
@@ -21763,7 +21723,7 @@ Elvira wears the Ultimate Mutilate-It Amulet.
 
 the mutilate-it amulet is an amusing boringthing. description of the mutilate-it amulet is "It's very bare except for the words 'Um...a title?' on it.". bore-text is "Hm, best not to try anything. It can't zap you if you don't mess with it.".
 
-The phrase shaper phaser is an amusing boringthing. Elvira carries the phrase shaper phaser. description of phrase shaper phaser is "It's curvy and futuristic and gives her the grained endearing to look more like a seraph than an amused medusa.". bore-text is "You heard rumors. But you did not believe it was true. She can just say something, hit someone with it, and make you forget what you were doing. Even if the amulet doesn't work on you." instead;
+The phrase shaper phaser is an amusing boringthing. description of phrase shaper phaser is "It's curvy and futuristic and gives her the grained endearing to look more like a seraph than an amused medusa.". bore-text is "You heard rumors. But you did not believe it was true. She can just say something, hit someone with it, and make you forget what you were doing. Even if the amulet doesn't work on you.". Elvira carries the phrase shaper phaser.
 
 check talking to Elvira when current quip is final-quip:
 	say "'[one of]Neat lob. Notable. Bleat on!' [or]State nag?! Stagnate!' [in random order] Reason won't work, here." instead;
@@ -22037,9 +21997,9 @@ a droll dollar is a thing. description is "It has a picture of some gangster--wa
 
 coin-person is a thing that varies.
 
-Lord Al Ollard is a proper-named thing. description of Lord Al is "[coin-per-d]". bore-text of Lord Al Ollard is "[do-coin]."
+Lord Al Ollard is a proper-named boringthing. description of Lord Al is "[coin-per-d]". bore-text of Lord Al Ollard is "[do-coin]."
 
-Dr Lola Ollard is a proper-named thing. description of Dr Lola is "[coin-per-d]". printed name of Dr Lola Ollard is "Dr. Lola Ollard". bore-text of Dr Lola Ollard is "[do-coin]."
+Dr Lola Ollard is a proper-named boringthing. description of Dr Lola is "[coin-per-d]". printed name of Dr Lola Ollard is "Dr. Lola Ollard". bore-text of Dr Lola Ollard is "[do-coin]."
 
 to say do-coin: say "Doing anything with or too such a horrid counterfeit coin wouldn't be very satisfying or productive. Probably best to get this off your hands for any profit at all"
 
@@ -22092,7 +22052,7 @@ description of compass is "It is property of Camp SOS. Its needle is pointing st
 check examining compass when mrlp is routes:
 	say "It's flipping about uselessly. Guess you can't rely on normal directions here." instead;
 
-the needle is a useless boringthing. it is part of the compass. description of the needle is "It seems to keep pointing north as you turn around. Good enough.". bore-text of the needle is "The needle's inside the compass, and you don't need to
+the needle is a useless boringthing. it is part of the compass. description of the needle is "It seems to keep pointing north as you turn around. Good enough.". bore-text of the needle is "The needle's inside the compass, and you don't need or want to mess with it."
 
 a-text of moss cap is "RYRRYRR". b-text of moss cap is "RGRRYRR". parse-text of moss cap is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]x".
 
@@ -22164,11 +22124,11 @@ after fliptoing pomegranate: [the magenta rope is already flipped]
 	moot mopeage rant;
 	continue the action;
 
-to say pre-pom-blag: say "A glance seems to indicate some unfortunate writing--either Curtis actually still believes that stuff, or he's embarrassed ever to have written it. Either way, he doesn't need to be alerted to you knowing about it. Best to get rid of it"
+to say pre-pom-blah: say "A glance seems to indicate some unfortunate writing--either Curtis actually still believes that stuff, or he's embarrassed ever to have written it. Either way, he doesn't need to be alerted to you knowing about it. Best to get rid of it"
 
 section magenta rope
 
-the magenta rope is a vanishing boringthing. description of the magenta rope is "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant.". bore-check of magenta rope is bore-magenta-rope rule.
+the magenta rope is a vanishing boringthing. initial appearance of the magenta rope is "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant.". description of magenta rope is "Oddly colored. It's got a yellowish tinge.". bore-check of magenta rope is bore-magenta-rope rule.
 
 this is the bore-magenta-rope rule:
 	if current action is taking:
@@ -22177,8 +22137,6 @@ this is the bore-magenta-rope rule:
 	abide by the bore-exam rule;
 
 a-text of magenta rope is "RYRYRRYRYRY". b-text of magenta rope is "RYRGRRGRYRG". parse-text of magenta rope is "x[sp]-[sp]x[sp]e[sp]x[sp]x[sp]a[sp]x[sp]-[sp]x[sp]e".
-
-description of magenta rope is "Oddly colored. It's got a yellowish tinge."
 
 section megaton pear plans
 
@@ -22196,7 +22154,7 @@ does the player mean doing something with rampage note when rampage note is visi
 
 section mopeage rant
 
-the mopeage rant is auxiliary boringscen. description of mopeage rant is "[pre-pom-blag].". bore-text of mopeage rant is "It's useless to you in its current form. Try examining it."
+the mopeage rant is auxiliary boringscen. description of mopeage rant is "[pre-pom-blah].". bore-text of mopeage rant is "It's useless to you in its current form. Try examining it."
 
 a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY". parse-text of mopeage rant is "x[sp]o[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]a[sp]x[sp]-".
 
@@ -23481,6 +23439,47 @@ instead of doing something with flashed ad shelf:
 
 check examining Flashed Ad Shelf:
 	now Flashed Ad Shelf is exhausted;
+
+volume regular verbs
+
+book burning
+
+check burning:
+	if burn-check is false:
+		ital-say "In this game, you should never have a burning implement, and you should never need one. So this verb is only good for cheap jokes. There are about twenty-five at last count.";
+		now burn-check is true instead;
+	if noun is an animal, say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
+	if noun is a person, say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
+	if noun is a fruit or noun is lobster or noun is tea tray, say "Good thing this game isn't a cooking sim." instead;
+	if noun is chair, say "You think 'I char a rich chair' but have nothing to burn it with." instead; [introduction]
+	if noun is sitar, say "That's not the way to recover rock-star status." instead;
+	if noun is a sto, say "[if noun is flippable]Even if it didn't look important, no[else]No senseless vandalism, please[end if]." instead;
+	if noun is rude 'n nuder, say "I am anti-censorship, even of that sort of thing. Plus you have no source of flame." instead; [routes]
+	if noun is pipe soot, say "It's been through enough of that." instead;
+	if noun is divorces, say "A rubbish society rag deserves such a fate--in an incinerator or something. Maybe you can think DIVORCES into irrelevance, though." instead; [troves]
+	if noun is praise or noun is Trevis Vister, say "[if noun is reflexive]Perhaps have it create a burning in you[else]It already created a burning in you[end if]." instead;
+	if noun is lager or noun is pernod, say "It's not high enough proof. In fact, it's almost certainly watered-down." instead;
+	if noun is cretins' cistern, say "The cistern may deserve it, but Char Arch is burnt enough already." instead;
+	if noun is coal, say "You need to burn mental fuel, here." instead; [presto]
+	if noun is on labs slab, say "You may figuratively want to, right now, but that's natural when you're programming something tough." instead;
+	if noun is frat raft, say "[if player is in frat raft]No way. Especially not while you're on it[else]That might be a way across. Somehow[end if]." instead; [oyster]
+	if noun is crate, say "This is totally the wrong genre of game for that." instead;
+	if noun is log gaol, say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead; [towers]
+	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
+	if noun is bot boat, say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
+	if noun is flowerpot or noun is crocus, say "Renato would be so upset." instead;
+	if noun is try us yurts, say "Perhaps another more natural way of decomposition would work better." instead;
+	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
+	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
+	if mrlp is towers and Topside Deposit is unvisited, say "Don't be a brushfire furbisher." instead;
+	if noun is b-b, say "You'd be right in the middle. So, bad idea." instead; [otters]
+	if noun is atmo-moat, say "It's nowhere near greasy enough." instead;
+	if noun is storage, say "It's meant to be nearly indestructible." instead;
+	say "You're a ropy pyro. There's no igniter tiering nearby." instead;
+
+to say way-tow:
+	if Mislit Limits is unvisited:
+		say "way ";
 
 volume hinting
 
@@ -25320,7 +25319,7 @@ chapter troves
 
 [* this includes tests for troves, troves with mistakes, troves min-points and troves max-points as well as alt ways through]
 
-test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/reason/believe/recall/glare/despair/x lead/deal/z/x brochure/desire/aspire/strive/ponder/deserve/last/master/bolster/x desk/x divorces/discover/last/resign/coff"
+test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/reason/believe/recall/despair/decide/glare/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
 
 test troves-err with "troves/enter troves/pega/gape/peag/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/reclal/recall/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/resing/resign/coff"
 

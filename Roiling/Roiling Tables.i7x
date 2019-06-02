@@ -559,10 +559,6 @@ after fliptoing hump:
 		process the Leo-Rand lackey rule;
 	continue the action;
 
-instead of doing something with satchel when player has satchel:
-	if action is procedural, continue the action;
-	say "You've gotten the settler from the satchel, and you don't need to do more." instead;
-
 to say eicond:
 	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in Loather Rathole]You feel you can and will do better than here[else if player is in Bustle Sublet]You dare to feel superior to whoever might be walking around here[else if player is in Drain Nadir]You know you deserve better than this. It's a temporary setback[else if player is in Boredom Bedroom]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Browse Bowers]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in Upscale Capsule]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
 
@@ -1575,16 +1571,16 @@ ltb	"[one of]Feelings of despair are okay. Working through them can help you lea
 Si Reed	"[one of]Si Reed wnts to help you focus on certain mental stuff.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
 dour tan rotunda	"It's what the Browse Bowers used to be called."
 praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
-rivets	"[one of]Those rivets stand out.[plus][or][if praise spirea is reflexed]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
-statue	--	rivets
+rivets	--	Trevis Vister
+Trevis Vister	"[one of]Trevis Vister (and the rivets) can help you want to be your best. Or well, worth your most.[plus][or]Scanning Trevis Vister in cheeat mode doesn't turn up any question marks.[plus][or]The rivets give a critical abstract clue that Trevis doesn't, since they are red. They help with the vowels.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE" [?? hint before and after]
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 cark rack	"Just part of the scenery."
 godlings' lodgings	"[if pernod is off-stage]You can't think of getting into the godlings' lodgings until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the godlings' lodgings.[end if]"
 Pernod	"[one of]Expensive alcohol is for high class reflection, and stuff. Or it advertises itself that way. That is what the Pernod claims to do.[plus][or]In this case, you have two more clues, which is what is on the front of the note tied to the Pernod and the back. 'Derp on, Epdorn.'[plus][or]'Dr. Peno and Ned Orp.'[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
 card	"The card gives a clue, along with the Pernod, of how to get into the godlings' lodgings."
 label	"If you peel the label (by taking it,) you will get another clue what to do to get in the godlings' lodgings."
-DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
 red vees	"[one of]You have to believe it's worth it for you to do something with the red vees. That you're good enough.[plus][or]You must learn to DESERVE to use them[minus][cycling]."	--	"DESERVE"
+DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
 sister tressi	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
 blamer balmer	"[one of]Blamer Balmer helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"

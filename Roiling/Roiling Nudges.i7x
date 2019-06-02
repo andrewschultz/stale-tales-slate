@@ -895,8 +895,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "preserve"	838970678	Perverse Preserve	--	--	"[locname]." [start Perverse Preserve]
 "uprate"	504999514	--	--	preserve-saved rule	"[locname]."
 "uprates"	601273480	--	--	preserve-saved rule	"[locname]."
-"lit"	201916703	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
-"tail"	204104521	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
+"lit"	201916703	--	a lit tail	--	"[lit-no]."
+"tail"	204104521	--	a lit tail	--	"[lit-no]."
 "pine"	323172422	--	pines	--	"So many pines, hard to pick one. Might as well take care of them all."
 "nail"	169902011	--	nails	--	"So many nails, hard to pick one. Might as well take care of them all."
 "critters"	664946148	Perverse Preserve	--	--	"[restrictr]."
@@ -1784,6 +1784,8 @@ this is the eelmr rule:
 to say no-lam: say "You can't change them, and even if you could, Elvira would probably be alerted"
 
 to say fresc: say "Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second"
+
+to say lit-no: say "It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it"
 
 to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that"
 
