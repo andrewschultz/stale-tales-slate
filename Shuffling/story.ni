@@ -1976,9 +1976,9 @@ fliptoing is an action applying to one visible thing.
 carry out fliptoing (this is the main flipping rule) :
 	let mything be the player;
 	let got-yet be false;
-	say "Fliptoing [noun].";
 	repeat through regana of mrlp:
 		if the-to entry is noun and got-yet is false and the-from entry is visible:
+			if there is a pre-rule entry, abide by the pre-rule entry;
 			if debug-scan is true and player has gadget:
 				try scaning the-from entry;
 			now mything is the-from entry;
@@ -2016,25 +2016,21 @@ carry out fliptoing (this is the main flipping rule) :
 			if the-to entry is a person:
 				set the pronoun him to the-to entry;
 				set the pronoun her to the-to entry;
-	if player does not have the noun and noun is not visible:
-		if noun is shoes:
-			moot noun;
-		else if noun is not teleporter:
-			move noun to location of player; [may need special case for slippery sword]
-	if noun is shoot button or noun is steer button:
-		now noun is part of panel;
-	if hintfull is true or helpdebugflag is true:
-		now just-print is false;
-		try mainhelping;
-		now just-print is true;
-	process the notify score changes rule;
-	if mything is the player:
-		say "Something went wrong here. It should not have, but it did. [bug-report]";
+			if player does not have the noun and noun is not visible:
+				if noun is shoes:
+					moot noun;
+				else if noun is not teleporter:
+					move noun to location of player; [may need special case for slippery sword]
+			if there is a post-rule entry, abide by the post-rule entry;
+			if noun is shoot button or noun is steer button, now noun is part of panel; [?? move this to the post-rule]
+			if hintfull is true or helpdebugflag is true:
+				now just-print is false;
+				try mainhelping;
+				now just-print is true;
+			process the notify score changes rule;
+			continue the action;
+	say "Something went wrong here with flipping to. It should not have, but it did. To file a bug report, To=[the-to entry] From=[the-from entry]. [bug-report]";
 	the rule succeeds;
-
-after fliptoing rentals:
-	moot rentals;
-	continue the action;
 
 after fliptoing (this is the set pronouns rule) :
 	if noun is teleporter:
@@ -2093,116 +2089,11 @@ check fliptoing (this is the should we bother flipping rule):
 		d "[noun] can't seem to be flipped.";
 		say "You can't see anything here like that[if toga is not in Rested Desert], or changeable into that[end if]." instead;
 
-check fliptoing silver:
-	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
-	if sliver is visible:
-		if doorway is not in Cruel Ones' Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
-
-after fliptoing soil:
-	now oils are in Sacred Cedars;
-	continue the action;
-
-after fliptoing silo:
-	now oils are in Sacred Cedars;
-	moot cask;
-	moot sack;
-	continue the action;
-
-check fliptoing soil:
-	if oils are not in cask:
-		if location of player is Sacred Cedars, say "[if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to soil[end if]." instead;
-		if oils are visible:
-			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
-		continue the action;
-	if player is not in moor:
-		say "This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?";
-		preef soil;
-		do nothing instead;
-
-check fliptoing silo:
-	if oils are not in cask:
-		if location of player is Sacred Cedars, say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo[end if]." instead;
-		if oils are visible:
-			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
-		continue the action;
-	if player is not in moor:
-		say "This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?";
-		preef silo;
-		do nothing instead;
-	if soil is not in moor:
-		preef silo;
-		say "The moor's ground, as is, is not stable enough. You need a foundation first." instead;
-
 chapter more special cases
 
 [these could go to the appropriate room but it's just more shuffling around. Ha ha.]
 
-after fliptoing resin:
-	if resin is visible:
-		moot resin;
-		now stickyhanded is true;
-	continue the action;
-
-after fliptoing sorbet:
-	moot sorbet;
-	min-up;
-	continue the action;
-
-check fliptoing silver:
-	unless drapes are moot:
-		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
-		preef silver;
-		do nothing instead;
-
 to say liv-preef: preef silver.
-
-after fliptoing peasant:
-	moot pat;
-	continue the action;
-
-after fliptoing chisel:
-	now spread is in Cruel Ones' Enclosure;
-	continue the action;
-
-after fliptoing protest:
-	now chain links are in Potshot Hotspot;
-	continue the action;
-
-after fliptoing slope:
-	if toeholds are part of the poles:
-		now toeholds are part of the slope;
-	continue the action;
-
-check fliptoing panel:
-	if poem is not folded, say "You'd need to fold the poem into a plane, first." instead;
-
-check fliptoing missile:
-	if smilies are visible:
-		if player is not in moor:
-			say "[one of]Good idea, but not in here. There'd be more room for that outside where you found the poem[or]Need to get outside to the moor[stopping].";
-			preef smilies;
-			do nothing instead;
-
-check fliptoing gateman:
-	if gateman is visible, try examining the gateman instead;
-	if the player's command matches the regular expression "gate ?man", case insensitively:
-		do nothing;
-	else:
-		say "[reject]" instead;
-	if Notices Section is unvisited, say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right." instead;
-	if nametag is not visible and gateman is not visible, badaboom instead;
-	if location of player is not Notices Section and Notices Section is visited, say "Your nametag twitches. Very odd." instead;
-	if player is not in Notices Section:
-		say "That's an idea, but no use summoning a gateman with no gate around.";
-		preef nametag;
-		the rule succeeds;
-	if player wears the nametag:
-		say "If you really CAN change the nametag, you don't want a gateman in your face--so you chuck the nametag away. Not really believing...";
-	now nametag is in location of player;
-
-check fliptoing beast:
-	if beats are visible:
-		if player is not in Bassy Abyss, say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair." instead;
 
 chapter the anagram table
 
@@ -2827,16 +2718,6 @@ understand "nat/egam" and "nat egam" and "tan/mage" and "tan mage" and "gate man
 
 understand "old man" and "man" as gateman when player is in Notices Section and gateman is in Notices Section.
 
-after fliptoing gateman:
-	set the pronoun him to gateman;
-	if mega ant is in Notices Section:
-		say "The gateman looks over to the mega ant and does some weird hand-fu. The ant scampers off. 'There. Should be able to walk in now. I mean, after you ask me for all the help you want.'";
-		moot mega ant;
-	if the player has the bugle:
-		say "The gateman [if ant is moot]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
-		moot bugle;
-	continue the action;
-
 the odor is boringscen. it is in Rested Desert. bore-text is "You smell an odor of adventure and new and different things.". bore-check is bore-odor rule.
 
 this is the bore-odor rule:
@@ -2873,10 +2754,6 @@ to say can-enter-ordo:
 	else:
 		say "But you probably need a way to enter it and leave this empty place"
 
-after fliptoing OR DO door:
-	if min-alert is false, poss-display;
-	continue the action;
-
 initial appearance of OR DO door is "That door you summoned, with OR DO on the front, is here. It has a [bul-blo] on it."
 
 the musical chord is part of the OR DO door. description is "[if bugle-played is true]It was probably just to clue the bugle[else if bulge is part of the OR DO door]It seems to suggest music would be a good idea. Hmm[else]You can't tell what note it is, but maybe it's just a clue to play anything on your bugle[end if]."
@@ -2894,17 +2771,6 @@ bugle-played is a truth state that varies. bugle-played is false.
 the blot is a thing. description of blot is "It almost looks like a musical chord[if bulge is visible]. It stands out by the bulge[end if].". understand "music" as blot.
 
 instead of taking the blot: say "It's pretty much bled into the door."
-
-after fliptoing blot:
-	now blot is part of OR DO door;
-	if bulge is moot:
-		min-up;
-	continue the action;
-
-after fliptoing bugle:
-	if bolt is moot:
-		min-up;
-	continue the action;
 
 the bulge is part of the OR DO door.
 
@@ -4473,12 +4339,6 @@ description of r-p is "Man, it's beautiful, spacious and sunny. Even sunnier tha
 
 resort-known is a truth state that varies. resort-known is usually false.
 
-check fliptoing the r-p:
-	if you-can-advance, continue the action;
-	if store r is visible:
-		say "That seems like it should work, but you sense you have not done enough yet[if Leis Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
-		preef store r instead;
-
 check entering the r-p:
 	say "'You! Find! Unify! Do!' a voice booms. You stride into the resort thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";
 	now the player is in Astral Altars instead;
@@ -5024,11 +4884,6 @@ description of banshee is "You can hear but not see it."
 
 the has-been is useless boringscen. understand "has been" and "hasbeen" as has-been. bore-text is "That's just the banshee wants. Attention, even when they are no longer relevant or directly able to make others miserable. You have more important things to do than spend time on the banshee! Though there might be a way to dispel it.". description is "You can't see the banshee, but boy, is it wailing!"
 
-after fliptoing has-been:
-	min-up;
-	moot has-been;
-	continue the action;
-
 can-pass-crosse is a truth state that varies. can-pass-crosse is usually false.
 
 to say agn: say "[one of][or] again[stopping]".
@@ -5408,11 +5263,6 @@ to say last-store:
 	if sortie is visible:
 		say "the sortie";
 
-after fliptoing kitchen:
-	if straw is in the nick:
-		now straw is in kitchen;
-	continue the action;
-
 to say gad: say "Your gadget's not near anything, but it's registering ".
 
 chapter Kitchen
@@ -5650,9 +5500,6 @@ understand "hot sauce" and "hot/sauce" as HOTSAUCE when player has HOTSAUCE or H
 
 instead of eating HOTSAUCE: say "If you really want to do this, you are obviously too wild and crazy for text adventures.".
 
-check fliptoing HOTSAUCE:
-	if the player's command does not include "hot" and the player's command does not include "hotsauce", say "Close, but you need to say the full name of the sauce." instead;
-
 section red inn
 
 the red inn is scenery in kitchen. "It's for rendin['] dinner[if taco is not off-stage], or it was, until you made that taco[end if]."
@@ -5676,16 +5523,6 @@ after examining grief'd fridge:
 	continue the action;
 
 fridge-open is a truth state that varies.
-
-check doing something with grist when fridge-open is false: [?? test]
-	if the current action is taking, say "Yes, that's in the fridge, but it's someone else's." instead;
-	say "You guess what is in the fridge, and you are right! There is a cake pan, too.";
-	now fridge-open is true;
-
-check doing something with cake pan when fridge-open is false: [?? test]
-	if the current action is taking, say "Yes, that's in the fridge, but it's someone else's." instead;
-	say "You guess what is in the fridge, and you are right! There is some grist, too.";
-	now fridge-open is true;
 
 check opening grief'd fridge:
 	now fridge-open is true;
@@ -5721,18 +5558,9 @@ the pancake is a thing.
 
 description of pancake is "It's too plain to eat. And probably too cold."
 
-instead of eating pancake: say "Too cold and bland. Plus, it's probably someone else's, like Ana Peck. Or Cap. Kane[if taco is off-stage]. You might want to fiddle with what's on the counter[else]. The stuff on the counter was what was really important, anyway[end if]."
+check eating pancake: say "Too cold and bland. Plus, it's probably someone else's, like Ana Peck. Or Cap. Kane[if taco is off-stage]. You might want to fiddle with what's on the counter[else]. The stuff on the counter was what was really important, anyway[end if]." instead;
 
-instead of eating grits: say "You have an attack of conscience and decide to leave them for someone else."
-
-after fliptoing when player is in kitchen (this is the clue taco rule) :
-	if noun is pancake or noun is grits:
-		now noun is in fridge;
-		if fridge-open is false:
-			say "You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
-			now fridge-open is true;
-		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
-	continue the action;
+check eating grits: say "You have an attack of conscience and decide to leave them for someone else." instead;
 
 chapter ROOM
 
@@ -5788,20 +5616,6 @@ check opening cask:
 	say "It already is." instead;
 
 the description of the hole is "Wide enough to FILL the cask, but not to put anything in."
-
-check fliptoing the cask:
-	if sack is visible:
-		if number of things in sack > 0:
-			say "As the sack changes, [the list of things in sack] falls out.";
-			repeat with Q running through things in sack:
-				move Q to location of player;
-
-check fliptoing the sack:
-	if cask is visible:
-		if cask is closed:
-			say "The cask seems to bulge, and you hear a sloshing, but it doesn't do anything. It seems like it should work, though. Perhaps the cask has a safety mechanism against spilling liquid.[paragraph break]Maybe you need to walk around and find someone who can open the cask.";
-			preef sack instead;
-		if oils are in cask, say "That's inadvisable. The oils would leak out." instead;
 
 check taking the straw:
 	if player has sack:
@@ -6004,27 +5818,6 @@ after printing the locale description for moor when moor is unvisited:
 	move r2 backdrop to all moory rooms;
 	continue the action;
 
-check fliptoing teleporter (this is the block moor if not dressed right rule):
-	if player is in roomroom:
-		unless shoes are moot:
-			say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
-			preef r2 instead;
-		if player carries coat and player is not wearing coat:
-			say "(wearing the coat first)[line break]";
-			now player wears the coat;
-		if player is not wearing coat:
-			say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[else]. That coat you made would be handy[end if].";
-			preef r2 instead;
-		if moor is unvisited:
-			if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
-				now sortie-warn is true;
-				say "[gadact] once you jump to the moor. Is this okay?";
-				if the player yes-consents:
-					do nothing;
-				else:
-					say "Okay. Next time, you won't see this warning." instead;
-				now button-locked is true;
-
 to say moor-jump:
 	if moor is visited:
 		if location of player is cedars and caskfillings is 2:
@@ -6092,12 +5885,6 @@ instead of throwing cask at scraped wall: say "The cask bounces off harmlessly, 
 
 section hallwaying
 
-check fliptoing hallway:
-	if scraped wall is not hayfilled:
-		say "Hm, that's possible, but you can't make the hallway until you add something to the wall.";
-		preef hallway;
-		do nothing instead;
-
 the hallway is boringscen. "The hallway isn't much to look at, but whatever's to the east might be.". bore-text is "Now that you made the hallway, you can't do much with it besides walk east through it.". bore-check is bore-hallway rule.
 
 this is the bore-hallway rule:
@@ -6119,12 +5906,6 @@ m2 is privately-named proper-named abstract boringscen in moor. printed name of 
 rgtext of m2 is "[rc][gc][gc][rc]". lgth of m2 is 4. gpos of m2 is 4. rpos of m2 is 1. cert-text of m2 is "-[ast]O[ast]O[d1]". rect-text of m2 is "R[d1][d1][ast]M".
 
 room-flip is a truth state that varies.
-
-after fliptoing r2:
-	if room-flip is false:
-		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
-		now room-flip is true;
-	continue the action;
 
 every turn when player is in moor and pat is in moor: say "The poem [one of]establishes its singsong rhythm early[or][drones][stopping].".
 
@@ -6592,7 +6373,7 @@ chapter mud
 
 the mum dud mud is a bounding backdrop. It is in roomroom, Trap Part, Stiller Trellis, and Kitchen. description is "Well, it's mud, and not very exciting mud at that."
 
-check doing something with mum dud mud: [??]
+instead of doing something with mum dud mud: [??]
 	if action is procedural, continue the action;
 	say "The mum dud mud isn't easily movable, and it might cause a cave-in if you can. You have enough to explore here." instead;
 
@@ -6612,7 +6393,7 @@ the building is scenery in Undesired Underside. understand "hotel" as building. 
 
 the drainage is in Undesired Underside. It is fixed in place. "That drainage you stepped in is [one of][or]still [stopping]around, taunting you as much as drainage can. Cleaning it up would help take this city back."
 
-instead of taking drainage: say "It smells too powerful to even consider taking in its present form. Looks bad, too.".
+check taking drainage: say "It smells too powerful to even consider taking in its present form. Looks bad, too." instead;
 
 description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again.". rgtext of drainage is "[rcn][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 6. cert-text of drainage is "-[d1][d1][d1][d1][d1][d1][d1]". rect-text of drainage is "G[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -6623,11 +6404,6 @@ description of gardenia is "It's white, and it's just one flower instead of the 
 section a reading
 
 There is a boringthing called A reading. "[one of]A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage. Maybe it holds clues[stopping].". description is "It says A READING in bold red. You could probably READ through it for a lot of clues. The content seems like nonsense, but hey, anything to help you see red.". bore-text is "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc.". bore-check is bore-reading rule.
-
-after fliptoing drainage:
-	if A reading is in Undesired Underside, say "The/a reading blows away once the gardenias appear.";
-	moot a reading;
-	continue the action;
 
 this is the bore-reading rule:
 	if current action is taking:
@@ -6827,14 +6603,6 @@ check going to Roarings Garrison:
 
 description of lost corn is "It's got a bunch of different kernels, and some look like buttons because they're not yellow[if player has corn]. The deadbeat might have something to say about it, if you could put up with him. His information would certainly be off the mark, but in Yorpwald, that's better than maybe being wrong[end if]."
 
-check fliptoing keycard:
-	if bastion-evac is false and dry cake is visible:
-		say "[one of]The chatterers would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
-		preef dry cake instead;
-
-check fliptoing controls:
-	if bastion-evac is false and lost corn is visible, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
-
 check taking lost corn:
 	if bastion-evac is false, say "The deadbeat almost gets up[one of]. 'Hey, Man, like, how do we know someone undisreputable doesn't, like, like the Man, man? Hey? Hey?' he says, with no dearth of hatred as he[or]but just[stopping] jerks his thumb north. He might not do anything, but his friends might pour out from their tents. You don't need a fight right now.[paragraph break]Maybe you need to strike a blow against some rich people to show you belong." instead;
 
@@ -6920,18 +6688,6 @@ check taking sword:
 	if stickyhanded is false, say "The sword slips from your hands[if player wears Velcro], and there's nothing the Velcro mittens can hook onto[end if][if resin is not visible]. Hmm, you haven't found anything that'd help you grasp it[end if]." instead;
 	say "The sword is yours, and you grab it firmly in your resined hands!";
 	now player has sword instead;
-
-check fliptoing sword:
-	if player is in Bile Libe:
-		if player does not have sheath:
-			if player has noise bag:
-				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the words, though, being a noise bag.";
-				preef sword instead;
-			say "The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.";
-			preef sword instead;
-		continue the action;
-	if player is not in Bassy Abyss and player does not have sheath, say "The words are sharp enough, but you have nothing to hold a sword in." instead;
-	if player is not in Bassy Abyss, say "[if player has noise bag]The time's not right, yet. There's no threat near you[else]You can't go carrying a sword about the city. You don't need to attract attention[end if]." instead;
 
 check opening noise bag:
 	if player is in Bile Libe:
@@ -7197,10 +6953,6 @@ description of stems is "The stems seem to be forming a narrow tube. It's weird-
 
 the sheath is a wearable container.
 
-after fliptoing sheath:
-	now player wears sheath;
-	continue the action;
-
 after taking sheath:
 	say "It's a bit awkward, but fortunately it can hook on to your pants or shorts or whatever you're wearing.";
 	now player wears the sheath;
@@ -7304,30 +7056,6 @@ to say dont-peel: say "When you're ready to put the barcode on something, you do
 section propflipping Elf Row
 
 to say rude: say "You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is"
-
-check fliptoing sheath:
-	if player is in Fo' Real Florae:
-		if fairy-worthy is false, say "The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof." instead;
-		if begonias are not in Fo' Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
-		if player does not have heaths:
-			try taking heaths;
-		say "[rude].[line break]";
-
-check fliptoing barcode:
-	if player does not have the brocade:
-		say "You take the brocade first--you're a bit embarrassed your magic seems more, well, applied than theirs.";
-		try taking brocade;
-	if player is in Fo' Real Florae:
-		say "[rude].[line break]";
-
-check fliptoing noise bag:
-	if the player's command does not include "noise", say "Yes, the begonias should become a bag, but you need to state what sort fully. Magic isn't THAT easy." instead;
-	if player is in Fo' Real Florae:
-		if fairy-worthy is false, say "The begonias are (still) merchandise. You don't want to know what faeries do to vandals." instead;
-		if heaths are not in Fo' Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
-		if player does not have begonias:
-			try taking begonias;
-		say "[rude].[line break]";
 
 to say in-sheath:
 	now sword is contained in the sheath;
@@ -7458,8 +7186,8 @@ the smartest mattress is a container in The Ol' Hotel. the mattress is fixed in 
 
 does the player mean entering the mattress: it is likely.
 
-check doing something with the mattress when mattress is in location of player and night thing is in location of player:
-	if night thing is visible, say "Can't do or see much with the night thing on it." instead;
+instead of doing something with the mattress when mattress is in location of player and night thing is in location of player:
+	if night thing is visible, say "Can't do or see much with the night thing on it.";
 
 rule for printing a locale paragraph about the smartest mattress:
 	if night thing is not visible:
@@ -7625,9 +7353,6 @@ initial appearance of nerds is "Some nerds are here, nattering about technology 
 description of nerds is "They're sitting around nattering about nerd things. They don't look particularly nerdy, but most of their conversation seems to revolve around how smart other people aren't. They're babblier than most but don't seem bribable. As you look at them, they pause, as if expecting you to ASK NERDS about something."
 
 lgth of nerds is 8. gpos of nerds is 7. rpos of nerds is 2. rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1][d1][d1][d1][d1][d1]S". rgtext of nerds is "[rcn][rc][rc][rc][rc][rc][rc][gc]".
-
-asknerds
-darkness
 
 the lit-up tulip is a thing in Esoteric Coteries.
 
@@ -7891,12 +7616,6 @@ the lies are a privately-named thing.
 understand "leis" as l2 when l2 are in Leis Isle.
 
 found-lies is a truth state that varies.
-
-after fliptoing l2:
-	min-up;
-	moot lies;
-	now found-lies is true;
-	continue the action;
 
 does the player mean doing something with the l2: it is likely.
 
@@ -8240,16 +7959,6 @@ rule for printing a locale paragraph about kilns:
 	if potters are visible:
 		now kilns are mentioned;
 
-after fliptoing potters:
-	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot:
-		hello-bull;
-	continue the action;
-
-after fliptoing kilns:
-	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot:
-		hello-bull;
-	continue the action;
-
 to hello-bull:
 	say "[wfak]Tremors re-storm. 'Eh, we fly!' / 'Why flee?' / 'Erm, it's Mister Smiter!' The potters have wheeled their kilns to a mowed meadow.[paragraph break]You hear a shout from the south and mad snorts from a sandstorm, then see a man too ham-nosed to be handsome. He washes down some walnuts of wan lust with liquid from one purple metal can labeled Sado-Soda, then a bottle of Renegade Green-Ade.[paragraph break]'I am RED BULL BURDELL!' he shouts, in a voice neither earthy nor hearty. 'From my ROOTS to my TORSO! Um, poser? Mo['] super Supremo!'[paragraph break]The size of a large hut, bellowing real thug laughter, he emits 'It's me! I'm set! Sit [']em! Mites-smite times!'";
 	if talk-quiet is true:
@@ -8262,11 +7971,6 @@ to hello-bull:
 	moot potters;
 	moot kilns;
 	now cutlery is in Potshot Hotspot;
-
-after fliptoing china:
-	now links are in Potshot Hotspot;
-	moot china;
-	continue the action;
 
 some china is a useless thing. description is "The china is nice and artsy and fragile but probably not useful to you."
 
@@ -10906,9 +10610,6 @@ rule for listlisting:
 
 book tables
 
-check fliptoing china:
-	if china is moot, say "You already shook that out of the links. You need to concentrate on the links, now." instead.
-
 book undo tags
 
 undo-code is a number that varies. undo-code is usually 0.
@@ -12248,7 +11949,7 @@ carry out apping:
 	say "We now [if show-prep is false]don't [end if]show the prep paper's contents every move.";
 	the rule succeeds;
 
-after fliptoing when show-prep is true:
+after fliptoing when show-prep is true: [general rule]
 	process the prep-rehash rule;
 	continue the action;
 

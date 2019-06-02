@@ -5,108 +5,402 @@ volume main anagram tables
 book Ordeal Loader
 
 table of Ordeal Loader anagrams [toa] [NOTE: PUT NON SCENERY FIRST] [xxta]
-the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
-odor	OR DO door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start Ordeal Loader anagrams]
-bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
-toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
-nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
-static	attics	"attics" or "attic"	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Nat Egam golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
-attics	static	"static"	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true
+the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
+bulge	bugle	"bugle"	"bulge"	a rule	post-bulge-bugle rule	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
+odor	OR DO door	"door"	"odor"	--	post-odor-door rule	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start Ordeal Loader anagrams]
+bolt	blot	"blot"	"bolt"	--	post-bolt-blot rule	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
+toga	goat	"goat"	"toga"	--	--	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
+nametag	gateman	"gateman" or "gate man"	"nametag"	pre-nametag-gateman rule	post-nametag-gateman rule	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
+static	attics	"attics" or "attic"	--	--	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Nat Egam golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
+attics	static	"static"	--	--	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true
 
 book Stores
 
 table of Stores anagrams [xxtsa]
-the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
-store f	scented descent	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
-store i	posted depots	"sortie"	"store i"	"The store rumbles, revealing shady posted depots you can enter to somewhere new."	false	531859319
-store m	trade tread	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
-store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
-cabinet	tenibac	"bactine"	"bactine"	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
+the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
+store b	sorbet	"sorbet"	--	--	post-storeb-sorbet rule	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
+store f	scented descent	"forest"	"store f"	--	--	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
+store i	posted depots	"sortie"	"store i"	--	--	"The store rumbles, revealing shady posted depots you can enter to somewhere new."	false	531859319
+store m	trade tread	"metros/metro"	"store m"	--	--	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
+store r	r-p	"resort"	"store r"	pre-storer-resort rule	--	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
+cabinet	tenibac	"bactine"	"bactine"	--	--	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
 
 book Forest
 
 table of Forest anagrams [xxtfa]
-the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-ones	nose	"nose"	"ones"	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
-dashes	shades	"shades"	"dashes"	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
-noughts	shotgun	"shotgun"	"noughts"	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
-bread	beard	"beard"	"bread"	"[process-sandwich]The bread seems to grow a fuzzy dark mold, then narrows into a sickle. It's now a beard, though not a particularly beautiful one. As you pick it up, you shake it for crumbs, and the hairs don't crumble into mold."	true	254765724
-sliver	silver	"silver"	"silver"	"The sliver changes and grows even more metallic. It becomes a row of six bullets, tied together like plastic twist-off toys, but obviously more lethal."	true	515375383
-livers	sliver	"sliver"	"livers"	"The livers narrow a bit and become more pointy at the end. They are a nice long sliver now[if player does not have sliver], which you pick up[end if]."	true	515375383
-liches	chisel	"chisel"	"liches"	"'Dissolve, vile sods!' you cry for effect. You hear a spectral clapster![paragraph break]As the final shade heads to Hades--sad, eh?--a chisel clatters behind. The chisel doesn't seem to vibrate scarily or anything, so you take it. You're also less distracted now and notice a spread on the north wall--it seems to pulse a bit, as if it could change to something dangerous."	true	379174644
-banshee	has-been	"hasbeen" or "has been" or "has-been"	"banshee"	"The banshee quits moaning and starts screaming as it's sucked in by some dimensional gate opened by a spectral clapster. A gate to--not a better place, but a better suited place. Where the fates feast. As not just a has-been but a has-has-been, its moaning will be more appropriate punishment for the souls who have done much worse than it did."	false	478682714
-red asp	drapes	"drapes"	"red asp"	"Shazam! The red asp crumbles into some far less evil looking drapes. They're still too thick to walk through."	false	414086744
-spread	drapes	"drapes"	"spread"	"The spread briefly turns into a red asp that jumps at you before collapsing into thicker, but less wide, drapes. You won't be able to just walk through them."	false	414086744 [must be 2nd else you get a problem with 2 points]
-Spam	maps	"maps"	"spam"	"[process-sandwich]With a sickening SCHLURP, the [spam] curdles and flattens to form several maps."	true	244002896
-vowels	wolves	"wolves"	"vowels"	"Well, you've done it now. The imposing vowels become werewolves--but they notice your shotgun and stand back. The first forward gets shot--or so they imagine."	false	567346084	"You don't need magic. You have a weapon."
+the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
+ones	nose	"nose"	"ones"	a rule	a rule	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
+dashes	shades	"shades"	"dashes"	--	--	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
+noughts	shotgun	"shotgun"	"noughts"	--	--	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
+bread	beard	"beard"	"bread"	--	--	"[process-sandwich]The bread seems to grow a fuzzy dark mold, then narrows into a sickle. It's now a beard, though not a particularly beautiful one. As you pick it up, you shake it for crumbs, and the hairs don't crumble into mold."	true	254765724
+sliver	silver	"silver"	"silver"	pre-livers-sliver-silver rule	--	"The sliver changes and grows even more metallic. It becomes a row of six bullets, tied together like plastic twist-off toys, but obviously more lethal."	true	515375383
+livers	sliver	"sliver"	"livers"	pre-livers-sliver rule	--	"The livers narrow a bit and become more pointy at the end. They are a nice long sliver now[if player does not have sliver], which you pick up[end if]."	true	515375383
+liches	chisel	"chisel"	"liches"	--	post-liches-chisel rule	"'Dissolve, vile sods!' you cry for effect. You hear a spectral clapster![paragraph break]As the final shade heads to Hades--sad, eh?--a chisel clatters behind. The chisel doesn't seem to vibrate scarily or anything, so you take it. You're also less distracted now and notice a spread on the north wall--it seems to pulse a bit, as if it could change to something dangerous."	true	379174644
+banshee	has-been	"hasbeen" or "has been" or "has-been"	"banshee"	--	post-banshee-hasbeen rule	"The banshee quits moaning and starts screaming as it's sucked in by some dimensional gate opened by a spectral clapster. A gate to--not a better place, but a better suited place. Where the fates feast. As not just a has-been but a has-has-been, its moaning will be more appropriate punishment for the souls who have done much worse than it did."	false	478682714
+red asp	drapes	"drapes"	"red asp"	--	--	"Shazam! The red asp crumbles into some far less evil looking drapes. They're still too thick to walk through."	false	414086744
+spread	drapes	"drapes"	"spread"	--	--	"The spread briefly turns into a red asp that jumps at you before collapsing into thicker, but less wide, drapes. You won't be able to just walk through them."	false	414086744 [must be 2nd else you get a problem with 2 points]
+Spam	maps	"maps"	"spam"	--	--	"[process-sandwich]With a sickening SCHLURP, the [spam] curdles and flattens to form several maps."	true	244002896
+vowels	wolves	"wolves"	"vowels"	--	--	"Well, you've done it now. The imposing vowels become werewolves--but they notice your shotgun and stand back. The first forward gets shot--or so they imagine."	false	567346084	"You don't need magic. You have a weapon."
 
 book Sortie
 
 table of Sortie anagrams [xxtia]
-the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-warts	straw	"straw"	"warts"	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
-skate	steak	"steak"	"skate"	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
-t-n	teleporter	"kitchen"	"the nick"	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	--	kitchen
-cult tee	lettuce	"lettuce"	"lettuce"	"The t-shirt crumples and then shreds before turning into a light green head of lettuce."	false	639757485
-spearman	Parmesan	"parmesan"	"spearman"	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
-cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
-grist	grits	"grits"	"grist"	"With a squelch, the grist in the fridge [if fridge-open is false]you didn't even open yet [end if]refines itself into something more edible. Relatively."	false	362300335
-cake pan	pancake	"pancake"	"cake pan" or "cakepan"	"You hear a clatter, and then you poke into the fridge [if fridge-open is false]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
-tall trio	tortilla	"tortilla"	"tall trio"	"Poof! The doughy fellows maintain their breadiness, but they flatten out into a tortilla."	false	520704758
-taco	coat	"coat"	"taco"	"Before changing the hot-to-your-tongue taco to a warm-to-your-body coat, you wisely take out a few small bites from the bottom (like adults always said not to) to form the arm-holes. Delicious! You ate just enough to feel fortified, and you've got something to wear, too."	false	198655998
-cask	sack	"sack"	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
-sack	cask	"cask"	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
-hoses	shoes	"shoes"	"hoses"	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
-r2	teleporter	"moor"	--	"[moor-jump]"	false	298104110	--	--	moor
-m2	teleporter	"room"	--	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse...'"	false	298104110	--	--	roomroom
-anapest	peasant	"peasant"	"anapest"	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He [exp-fli]storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
-roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is visible]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is visible]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
-poem	panel	"panel"	--	"Poof! The paper plane becomes a panel. It's light enough to carry, you suppose[if player has poem or player has panel]. Well, it doesn't cause an immediate hernia[end if]."	false	334181233
-smilies	missile	"missile"	"smilies"	"The smilies seem to waver. But they sever from the verse, grow, and clump together to form a big yellow missile! You reread the poem. You didn't think it would change much without the smilies, but it's snappier now, pointed, warlike--a restrained, plain-language indictment of not just bad poetry but nastiness and elitism in general!"	false	528228725
-scraped wall	hallway	"hallway"	"haywall"	"Of course! The hay wall you made collapses into a hallway leading east. One you won't even have to duck through!"	false	379579638
-oils	silo	"silo"	--	"You empty the cask again. The oils seep into the moor, and you drop the cask as the silo appears much quicker than you imagined possible. The cask breaks and seeps into the ground."	false	269433228 [this is kludgey code, as this line must come first even though the silo flip comes second.]
-oils	soil	"soil"	--	"You empty the cask. The oils seep into the moor and make a large chunk less squishy and sandy. You could probably build something big on the moor now."	false	269433228
-hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	"The hoots button glows--you touch it (so hot,) and it changes to a shoot button as its letters shift."	false	385371437
-trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005
+the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
+warts	straw	"straw"	"warts"	--	--	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
+skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
+t-n	teleporter	"kitchen"	"the nick"	--	post-thenick-kitchen rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	--	kitchen
+cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The t-shirt crumples and then shreds before turning into a light green head of lettuce."	false	639757485
+spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
+cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	--	pre-cathouse-hotsauce rule	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
+grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist in the fridge [if fridge-open is false]you didn't even open yet [end if]refines itself into something more edible. Relatively."	false	362300335
+cake pan	pancake	"pancake"	"cake pan" or "cakepan"	--	post-fridgey-flip rule	"You hear a clatter, and then you poke into the fridge [if fridge-open is false]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
+tall trio	tortilla	"tortilla"	"tall trio"	--	--	"Poof! The doughy fellows maintain their breadiness, but they flatten out into a tortilla."	false	520704758
+taco	coat	"coat"	"taco"	--	--	"Before changing the hot-to-your-tongue taco to a warm-to-your-body coat, you wisely take out a few small bites from the bottom (like adults always said not to) to form the arm-holes. Delicious! You ate just enough to feel fortified, and you've got something to wear, too."	false	198655998
+cask	sack	"sack"	--	pre-cask-sack rule	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
+sack	cask	"cask"	--	pre-sack-cask rule	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
+hoses	shoes	"shoes"	"hoses"	--	--	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
+r2	teleporter	"moor"	--	--	post-room-moor rule	"[moor-jump]"	false	298104110	--	--	moor
+m2	teleporter	"room"	--	--	--	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse...'"	false	298104110	--	--	roomroom
+anapest	peasant	"peasant"	"anapest"	--	post-anapest-peasant rule	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He [exp-fli]storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
+roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	--	--	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is visible]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is visible]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
+poem	panel	"panel"	--	pre-plane-panel rule	--	"Poof! The paper plane becomes a panel. It's light enough to carry, you suppose[if player has poem or player has panel]. Well, it doesn't cause an immediate hernia[end if]."	false	334181233
+smilies	missile	"missile"	"smilies"	pre-smilies-missile rule	--	"The smilies seem to waver. But they sever from the verse, grow, and clump together to form a big yellow missile! You reread the poem. You didn't think it would change much without the smilies, but it's snappier now, pointed, warlike--a restrained, plain-language indictment of not just bad poetry but nastiness and elitism in general!"	false	528228725
+scraped wall	hallway	"hallway"	"haywall"	pre-haywall-hallway rule	--	"Of course! The hay wall you made collapses into a hallway leading east. One you won't even have to duck through!"	false	379579638
+oils	silo	"silo"	--	pre-oils-silo rule	post-oils-silo rule	"You empty the cask again. The oils seep into the moor, and you drop the cask as the silo appears much quicker than you imagined possible. The cask breaks and seeps into the ground."	false	269433228 [this is kludgey code, as this line must come first even though the silo flip comes second.]
+oils	soil	"soil"	--	pre-oils-soil rule	post-oils-soil rule	"You empty the cask. The oils seep into the moor and make a large chunk less squishy and sandy. You could probably build something big on the moor now."	false	269433228
+hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	--	--	"The hoots button glows--you touch it (so hot,) and it changes to a shoot button as its letters shift."	false	385371437
+trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	--	--	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005
 
 book Metros
 
 table of Metros anagrams [xxtma]
-the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-drainage	gardenia	"gardenia"	"drainage"	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
-clover	Velcro	"Velcro"	"clover"	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
-Motto	tomato	"tomato"	"motto" or "a motto"	"The motto--that is, both words and paper--curls up and bundles into a small sphere, and you almost [if motto is in Bile Libe]hesitate to pick it up[else]drop it[end if]. Amazingly, it's not icky-soft or anything, and it doesn't smell TOO bad."	true	421188161
-lost corn	controls	"controls"	"lost corn"	"The different-colored kernels only flatten out as the lost corn collapses into a circuit board. The controls you possess--for whatever--seem powerful[if deadbeat is visible]. 'Whoah! DUDE!' moans the deadbeat, half staggering to his feet before he collapses from the effort[end if]."	true	575139873
-heaths	sheath	"sheath"	"heaths"	"The heath grows, tangles around itself, and lumps into a sheath. It's too bulky to carry, so you wear it."	true	403942509
-begonias	noise bag	"noise bag"	"begonias"	"The begonias twirl and create a bag. One with weird triangular spikes on the inside. You exclaim surprise at it--the bag whooshes every time you say something."	true	465539431
-brocade	barcode	"barcode" or "bar code"	"brocade"	"The brocade schlurps and reorganizes into something flatter, but with the same pattern[if player does not have brocade and player does not have barcode]. You pick it up. [end if]."	true	348123886
-dry cake	keycard	"keycard" or "key card"	"dry cake"	"The dry metallic cake turns into a dry metallic keycard[if player does not have dry cake and player does not have keycard], which you take for yourself. Hooray, technology[end if]."	true	430644834
-antlers	rentals	"rentals" or "rental"	"antlers"	"Suddenly, a pair of workers walk in, point to their watches, takes the antlers down with a twist of a screwdriver, and walk off with them[if bastion-evac is true]. You smile and nod, but they has already left. Shame on the hosts, for pretending that ugly expensive thing was theirs[else]. People mumble but stay. The free food and alcohol overcome moral imperatives to shun the fake-rich, for now[end if]."	false	537423061
-neon pig	gin nope opening	"opening"	"neon pig"	"[if player is on cafe face]Remembering basic electric safety rules and common sense, you move to the side before trying your magic. This saves your bacon. [run paragraph on][end if]The neon pig goes on the fritz, sparking first, then making a big POP. The neon is none! It appears you've created an opening. A warning written on it makes it a gin-nope opening. Anyone operating there will need to be sharp.[paragraph break]Now you're bakin[']. Uh, cookin[']. (Okay, no more hamming it up.)"	false	499032209
-siren	resin	"resin"	"siren"	"The siren makes some even more spastic noises before grinding into resin powder. You scoop it up and put some on your hands, which feel sticky now. You feel your chances of defeating the [beast-beats] has risen, unless you rinse."	false	423304232
-beats	beast	"beast"	"beats"	"'Our beats! Saboteur!' you hear as a beast replaces the thumping with roaring, which stops when the thing needs to breathe. It's an improvement. For your chance to best a beast."	false	347796816
-words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claiming they didn't mean themselves, giving passive-aggressive threats. But it is too late--they fade, and a sword appears materially.[paragraph break]You sensibly put the sword--as slippery as the final words--into your sheath[in-sheath][else]The words explode from the noise bag, which is blown away by the [which-roar]. In their place is a shining sword that [give-sword][end if]."	false	384914208
+the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
+drainage	gardenia	"gardenia"	"drainage"	--	post-drainage-gardenia rule	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
+clover	Velcro	"Velcro"	"clover"	--	--	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
+Motto	tomato	"tomato"	"motto" or "a motto"	--	--	"The motto--that is, both words and paper--curls up and bundles into a small sphere, and you almost [if motto is in Bile Libe]hesitate to pick it up[else]drop it[end if]. Amazingly, it's not icky-soft or anything, and it doesn't smell TOO bad."	true	421188161
+lost corn	controls	"controls"	"lost corn"	pre-lostcorn-controls rule	--	"The different-colored kernels only flatten out as the lost corn collapses into a circuit board. The controls you possess--for whatever--seem powerful[if deadbeat is visible]. 'Whoah! DUDE!' moans the deadbeat, half staggering to his feet before he collapses from the effort[end if]."	true	575139873
+heaths	sheath	"sheath"	"heaths"	pre-heaths-sheath rule	post-heaths-sheath rule	"The heath grows, tangles around itself, and lumps into a sheath. It's too bulky to carry, so you wear it."	true	403942509
+begonias	noise bag	"noise bag"	"begonias"	pre-begonias-noisebag rule	--	"The begonias twirl and create a bag. One with weird triangular spikes on the inside. You exclaim surprise at it--the bag whooshes every time you say something."	true	465539431
+brocade	barcode	"barcode" or "bar code"	"brocade"	pre-brocade-barcode rule	--	"The brocade schlurps and reorganizes into something flatter, but with the same pattern[if player does not have brocade and player does not have barcode]. You pick it up. [end if]."	true	348123886
+dry cake	keycard	"keycard" or "key card"	"dry cake"	pre-drycake-keycard rule	--	"The dry metallic cake turns into a dry metallic keycard[if player does not have dry cake and player does not have keycard], which you take for yourself. Hooray, technology[end if]."	true	430644834
+antlers	rentals	"rentals" or "rental"	"antlers"	--	post-antlers-rentals rule	"Suddenly, a pair of workers walk in, point to their watches, takes the antlers down with a twist of a screwdriver, and walk off with them[if bastion-evac is true]. You smile and nod, but they has already left. Shame on the hosts, for pretending that ugly expensive thing was theirs[else]. People mumble but stay. The free food and alcohol overcome moral imperatives to shun the fake-rich, for now[end if]."	false	537423061
+neon pig	gin nope opening	"opening"	"neon pig"	--	--	"[if player is on cafe face]Remembering basic electric safety rules and common sense, you move to the side before trying your magic. This saves your bacon. [run paragraph on][end if]The neon pig goes on the fritz, sparking first, then making a big POP. The neon is none! It appears you've created an opening. A warning written on it makes it a gin-nope opening. Anyone operating there will need to be sharp.[paragraph break]Now you're bakin[']. Uh, cookin[']. (Okay, no more hamming it up.)"	false	499032209
+siren	resin	"resin"	"siren"	--	post-siren-resin rule	"The siren makes some even more spastic noises before grinding into resin powder. You scoop it up and put some on your hands, which feel sticky now. You feel your chances of defeating the [beast-beats] has risen, unless you rinse."	false	423304232
+beats	beast	"beast"	"beats"	pre-beats-beast rule	--	"'Our beats! Saboteur!' you hear as a beast replaces the thumping with roaring, which stops when the thing needs to breathe. It's an improvement. For your chance to best a beast."	false	347796816
+words	sword	"sword"	"words"	pre-words-sword rule	--	"[if player has sheath]The words go slippery, claiming they didn't mean themselves, giving passive-aggressive threats. But it is too late--they fade, and a sword appears materially.[paragraph break]You sensibly put the sword--as slippery as the final words--into your sheath[in-sheath][else]The words explode from the noise bag, which is blown away by the [which-roar]. In their place is a shining sword that [give-sword][end if]."	false	384914208
 
 book Resort
 
 table of Resort anagrams [xxtra]
-the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Leis Isle
-l2	lies	"lies"	"lies"	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"	false	322886760
-rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
-swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
-sprig	grips	"grips/grip"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
-spore	ropes	"ropes/rope"	"spore"	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
-poles	slope	"slope"	"poles"	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450
-tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
-riot	protest	"trio"	"riot"	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
-protest	potters	"potters/potter"	"protest" or "riot"	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
-links	china	"china"	"china"	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
-links	kilns	"kilns/kiln"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
+the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
+tiles	teleporter	"islet"	"tiles"	a rule	a rule	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Leis Isle
+l2	lies	"lies"	"lies"	--	post-leis-lies rule	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"	false	322886760
+rock	cork	"cork"	"rock"	--	--	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
+swing	wings	"wings"	"swing"	--	--	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
+sprig	grips	"grips/grip"	"sprig"	--	--	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
+spore	ropes	"ropes/rope"	"spore"	--	--	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
+poles	slope	"slope"	"poles"	--	post-poles-slope rule	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450
+tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	--	--	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
+riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
+protest	potters	"potters/potter"	"protest" or "riot"	--	post-protest-potters rule	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
+links	china	"china"	"china"	pre-chain-china rule	post-chain-china rule	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
+links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
 
 book what anagrams refer to (I can move each 'say' to the appropriate book eventually)
+
+this is the post-siren-resin rule:
+	if resin is visible:
+		moot resin;
+		now stickyhanded is true;
+	continue the action;
+
+this is the post-storeb-sorbet rule:
+	moot sorbet;
+	min-up;
+	continue the action;
+
+this is the pre-silver-sliver rule:
+	unless drapes are moot:
+		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
+		preef silver;
+		do nothing instead;
+
+this is the post-anapest-peasant rule:
+	moot pat;
+	continue the action;
+
+this is the post-liches-chisel rule:
+	now spread is in Cruel Ones' Enclosure;
+	continue the action;
+
+this is the post-riot-protest rule:
+	now chain links are in Potshot Hotspot;
+	continue the action;
+
+this is the post-poles-slope rule:
+	if toeholds are part of the poles:
+		now toeholds are part of the slope;
+	continue the action;
+
+this is the pre-plane-panel rule:
+	if poem is not folded, say "You'd need to fold the poem into a plane, first." instead;
+
+this is the pre-smilies-missile rule:
+	if smilies are visible:
+		if player is not in moor:
+			say "[one of]Good idea, but not in here. There'd be more room for that outside where you found the poem[or]Need to get outside to the moor[stopping].";
+			preef smilies;
+			do nothing instead;
+
+this is the pre-nametag-gateman rule:
+	if gateman is visible, try examining the gateman instead;
+	if the player's command matches the regular expression "gate ?man", case insensitively:
+		do nothing;
+	else:
+		say "[reject]" instead;
+	if Notices Section is unvisited, say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right." instead;
+	if nametag is not visible and gateman is not visible, badaboom instead;
+	if location of player is not Notices Section and Notices Section is visited, say "Your nametag twitches. Very odd." instead;
+	if player is not in Notices Section:
+		say "That's an idea, but no use summoning a gateman with no gate around.";
+		preef nametag;
+		the rule succeeds;
+	if player wears the nametag:
+		say "If you really CAN change the nametag, you don't want a gateman in your face--so you chuck the nametag away. Not really believing...";
+	now nametag is in location of player;
+
+this is the pre-beats-beast rule:
+	if player is not in Bassy Abyss and beats are visible:
+		say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.";
+		the rule fails;
+
+this is the post-antlers-rentals rule:
+	moot rentals;
+	continue the action;
+
+this is the pre-livers-sliver rule:
+	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
+	if sliver is visible:
+		if doorway is not in Cruel Ones' Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
+
+this is the pre-livers-sliver-silver rule:
+	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
+	unless drapes are moot:
+		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
+		preef silver;
+		do nothing instead;
+
+this is the post-oils-soil rule:
+	now oils are in Sacred Cedars;
+	continue the action;
+
+this is the post-oils-silo rule:
+	now oils are in Sacred Cedars;
+	moot cask;
+	moot sack;
+	continue the action;
+
+this is the pre-oils-soil rule:
+	if oils are not in cask:
+		if location of player is Sacred Cedars, say "[if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to soil[end if]." instead;
+		if oils are visible:
+			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
+		continue the action;
+	if player is not in moor:
+		say "This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?";
+		preef soil;
+		do nothing instead;
+
+this is the pre-oils-silo rule:
+	if oils are not in cask:
+		if location of player is Sacred Cedars, say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo[end if]." instead;
+		if oils are visible:
+			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
+		continue the action;
+	if player is not in moor:
+		say "This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?";
+		preef silo;
+		do nothing instead;
+	if soil is not in moor:
+		preef silo;
+		say "The moor's ground, as is, is not stable enough. You need a foundation first." instead;
+
+this is the post-nametag-gateman rule:
+	set the pronoun him to gateman;
+	if mega ant is in Notices Section:
+		say "The gateman looks over to the mega ant and does some weird hand-fu. The ant scampers off. 'There. Should be able to walk in now. I mean, after you ask me for all the help you want.'";
+		moot mega ant;
+	if the player has the bugle:
+		say "The gateman [if ant is moot]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
+		moot bugle;
+	continue the action;
+
+this is the post-odor-door rule:
+	if min-alert is false, poss-display;
+	continue the action;
+
+this is the post-bolt-blot rule:
+	now blot is part of OR DO door;
+	if bulge is moot:
+		min-up;
+	continue the action;
+
+this is the post-bulge-bugle rule:
+	if bolt is moot:
+		min-up;
+	continue the action;
+
+this is the pre-storer-resort rule:
+	if you-can-advance, continue the action;
+	if store r is visible:
+		say "That seems like it should work, but you sense you have not done enough yet[if Leis Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
+		preef store r instead;
+
+this is the post-banshee-hasbeen rule:
+	min-up;
+	moot has-been;
+	continue the action;
+
+this is the post-thenick-kitchen rule:
+	if straw is in the nick, now straw is in kitchen;
+	the rule succeeds;
+
+this is the pre-cathouse-hotsauce rule:
+	if the player's command does not include "hot" and the player's command does not include "hotsauce", say "Close, but you need to say the full name of the sauce." instead;
+
+this is the post-fridgey-flip rule:
+	if noun is pancake or noun is grits:
+		now noun is in fridge;
+		if fridge-open is false:
+			say "You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
+			now fridge-open is true;
+			now fridge is transparent;
+		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
+	continue the action;
+
+this is the pre-sack-cask rule:
+	if sack is visible:
+		if number of things in sack > 0:
+			say "As the sack changes, [the list of things in sack] falls out.";
+			repeat with Q running through things in sack:
+				move Q to location of player;
+
+this is the pre-cask-sack rule:
+	if cask is visible:
+		if cask is closed:
+			say "The cask seems to bulge, and you hear a sloshing, but it doesn't do anything. It seems like it should work, though. Perhaps the cask has a safety mechanism against spilling liquid.[paragraph break]Maybe you need to walk around and find someone who can open the cask.";
+			preef sack instead;
+		if oils are in cask, say "That's inadvisable. The oils would leak out." instead;
+
+this is the block moor if not dressed right rule:
+	if player is in roomroom:
+		unless shoes are moot:
+			say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
+			preef r2 instead;
+		if player carries coat and player is not wearing coat:
+			say "(wearing the coat first)[line break]";
+			now player wears the coat;
+		if player is not wearing coat:
+			say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[else]. That coat you made would be handy[end if].";
+			preef r2 instead;
+		if moor is unvisited:
+			if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
+				now sortie-warn is true;
+				say "[gadact] once you jump to the moor. Is this okay?";
+				if the player yes-consents:
+					do nothing;
+				else:
+					say "Okay. Next time, you won't see this warning." instead;
+				now button-locked is true;
+
+this is the pre-haywall-hallway rule:
+	if scraped wall is not hayfilled:
+		say "Hm, that's possible, but you can't make the hallway until you add something to the wall.";
+		preef hallway;
+		do nothing instead;
+
+this is the post-room-moor rule:
+	if room-flip is false:
+		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
+		now room-flip is true;
+	continue the action;
+
+this is the post-drainage-gardenia rule:
+	if A reading is in Undesired Underside, say "The/a reading blows away once the gardenias appear.";
+	moot a reading;
+	continue the action;
+
+this is the pre-drycake-keycard rule:
+	if bastion-evac is false and dry cake is visible:
+		say "[one of]The chatterers would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
+		preef dry cake instead;
+
+this is the pre-lostcorn-controls rule:
+	if bastion-evac is false and lost corn is visible, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
+
+this is the pre-words-sword rule:
+	if player is in Bile Libe:
+		if player does not have sheath:
+			if player has noise bag:
+				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the words, though, being a noise bag.";
+				preef sword instead;
+			say "The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.";
+			preef sword instead;
+		continue the action;
+	if player is not in Bassy Abyss and player does not have sheath, say "The words are sharp enough, but you have nothing to hold a sword in." instead;
+	if player is not in Bassy Abyss, say "[if player has noise bag]The time's not right, yet. There's no threat near you[else]You can't go carrying a sword about the city. You don't need to attract attention[end if]." instead;
+
+this is the post-heaths-sheath rule:
+	now player wears sheath;
+	continue the action;
+
+this is the pre-heaths-sheath rule:
+	if player is in Fo' Real Florae:
+		if fairy-worthy is false, say "The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof." instead;
+		if begonias are not in Fo' Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
+		if player does not have heaths:
+			try taking heaths;
+		say "[rude].[line break]";
+
+this is the pre-brocade-barcode rule:
+	if player does not have the brocade:
+		say "You take the brocade first--you're a bit embarrassed your magic seems more, well, applied than theirs.";
+		try taking brocade;
+	if player is in Fo' Real Florae:
+		say "[rude].[line break]";
+
+this is the pre-begonias-noisebag rule:
+	if the player's command does not include "noise", say "Yes, the begonias should become a bag, but you need to state what sort fully. Magic isn't THAT easy." instead;
+	if player is in Fo' Real Florae:
+		if fairy-worthy is false, say "The begonias are (still) merchandise. You don't want to know what faeries do to vandals." instead;
+		if heaths are not in Fo' Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
+		if player does not have begonias:
+			try taking begonias;
+		say "[rude].[line break]";
+
+this is the post-leis-lies rule:
+	min-up;
+	moot lies;
+	now found-lies is true;
+	continue the action;
+
+this is the post-protest-potters rule:
+	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot:
+		hello-bull;
+	continue the action;
+
+this is the post-links-kilns rule:
+	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot:
+		hello-bull;
+	continue the action;
+
+this is the post-chain-china rule:
+	now links are in Potshot Hotspot;
+	moot china;
+	continue the action;
+
+this is the pre-chain-china rule:
+	if china is moot, say "You already shook that out of the links. You need to concentrate on the links, now." instead.
 
 to say exp-fli:
 	if player has expo flier:
@@ -607,7 +901,6 @@ torn cue	"It indicates the brocade [if brocade is in Fo' Real Florae]is[else]was
 sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in Bassy Abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
 controls	"The controls need to fit into a recess[if neon pig is moot], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
-red glowing cursive script	"Provides a clue what the neon pig should become."
 nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question. [plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing. [plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is... [plus][or]DARKNESS. [plus][or] ASK NERDS ABOUT DARKNESS. [minus][cycling]"
 utterly unreadable book	"The book gives clues what to ask the nerds about."
 tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
