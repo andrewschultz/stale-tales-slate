@@ -130,10 +130,12 @@ when play begins (this is the debug version info that should not be in the relea
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
 	now debug-print is true;
+	repeat with Q running through things:
+		if Q is abstract, next;
 
 book inform 6 stubs
 
-[most of these have been movd to Trivial Niceties]
+[most of these have been moved to Trivial Niceties]
 
 section setting specific pronouns
 
@@ -1975,7 +1977,9 @@ carry out fliptoing (this is the main flipping rule) :
 	let got-yet be false;
 	repeat through regana of mrlp:
 		if the-to entry is noun and got-yet is false and the-from entry is visible:
-			if there is a pre-rule entry, abide by the pre-rule entry;
+			if there is a pre-rule entry:
+				if debug-state is true, say "DEBUG: checking [pre-rule entry].";
+				abide by the pre-rule entry;
 			if debug-scan is true and player has gadget:
 				try scaning the-from entry;
 			now mything is the-from entry;
@@ -2018,8 +2022,9 @@ carry out fliptoing (this is the main flipping rule) :
 					moot noun;
 				else if noun is not teleporter:
 					move noun to location of player; [may need special case for slippery sword]
-			if there is a post-rule entry, abide by the post-rule entry;
-			if noun is shoot button or noun is steer button, now noun is part of panel; [?? move this to the post-rule]
+			if there is a post-rule entry:
+				if debug-state is true, say "DEBUG: checking [post-rule entry].";
+				abide by the post-rule entry;
 			if hintfull is true or helpdebugflag is true:
 				now just-print is false;
 				try mainhelping;
@@ -2808,12 +2813,6 @@ chapter Thickest Thickets
 Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in Thickest Thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
 
 check going nowhere in Thickest Thickets: say "[one of]You hit a snag, and the [if toga is visible]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]." instead.
-
-carry out fliptoing goat:
-	if player has toga:
-		now toga is in location of player;
-	set the pronoun him to goat;
-	set the pronoun her to goat;
 
 the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.".
 
@@ -4252,11 +4251,30 @@ to last-loc-move (rg - a region):
 	move player to last-loc of rg;
 	process the move dumbdrops rule;
 
+check entering a portal:
+	let gr be go-region of noun;
+	if gr is not unsolved, say "[solved-text of noun]" instead;
+	check-2-of-3;
+	last-loc-move gr;
+	recover-items;
+	the rule succeeds;
+
+to recover-items:
+	repeat with JJJ running through item-list of mrlp:
+		now player has JJJ;
+	repeat with JJJJ running through worn-list of mrlp:
+		now player wears JJJJ;
+
+to check-2-of-3:
+	if button-locked is true:
+		if number of solved regions is 3:
+			say "You think you hear oohing and aahing in the background at the adventurer who has decided to do more than the bare minimum.[paragraph break][i][bracket]Fourth wall note: you can UNDO and recuse if you want to.[close bracket][r][line break]"
+
 section forest portal
 
 does the player mean entering the scented descent: it is likely. [forest is first in alphabet and easiest]
 
-the scented descent is a portal. the printed name of scented descent is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". scented descent is a portal. scented descent is fixed in place.
+the scented descent is a portal. go-region of scented descent is Forest. the printed name of scented descent is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". solved-text of scented descent is "You already [if forest is bypassed]bypassed[else]solved[end if] the forest. Maybe you should look elsewhere?". entry-rule of scented descent is the forest-entry rule.
 
 understand "forest" as scented descent.
 
@@ -4266,23 +4284,31 @@ button-locked is a truth state that varies.
 
 secure-warn is a truth state that varies.
 
-check entering the scented descent:
-	if Forest is solved, say "You already solved the forest. Maybe you should look elsewhere?" instead;
-	check-2-of-3;
+this is the forest-entry rule:
 	if last-loc of forest is rf and rf is unvisited:
 		say "As you walk in the forest, you hear rumors of monsters ravaging the surrounding areas. Not zombies, or vampires, or skeletons. Trying to figure what it is, you daydream maybe YOU could be that hero--so successfully that you get lost!";
 		say "[wfak]Until you stumble on a small clearing. You think you [if shout is in sf]hear something[else if thorn is in sf]stepped on a thorn[else if teas are in sf or stew is in sf]smell something[else]should see a clue, but nothing's there[end if].";
-	last-loc-move forest;
-	recover-items instead;
 
 section sortie portal
 
-the posted depots are a plural-named portal. "Posted depots stand where store I used to be. [if Trap Part is visited]You can ENTER again, to finish business.[else]They're a sortie...but to where?[end if]"
+the posted depots are a plural-named portal. go-region of posted depots is Sortie. "Posted depots stand where store I used to be. [if Trap Part is visited]You can ENTER again, to finish business.[else]They're a sortie...but to where?[end if]". solved-text of posted depots is "You [if sortie is solved]did[else]bypassed[end if] what you needed in the moor. No sense retracing your steps.". entry-rule of posted depots is sortie-entry rule.
+
+this is the sortie-entry rule:
+	if centrifuge-stopped is false and Trap Part is visited:
+		say "You're prepared for the tumble, but it's still disorienting once the Trap Part starts spinning, again.";
+	else if Trap Part is unvisited:
+		say "You climb down a larded ladder, slip, and hear people chattering about Mean Old Mondale-Doleman, finances fan since... once a money yeoman, the frugalest till the fear gluts, but who'd nag nary a granny for late fees. Generous? Gone sour. Got antsy, then nasty... more garnish, less sharing... stern rents, a splinter should rent slip... a testier treatise from his Taxman, Tan Max... claiming to feel raw and that the welfare era flew! 'No grace in ignorance, caring one!' A cold clod, now. He may even have aborted a debtor...";
+		say "[wfak]You hear cases for destroying his castle and for showing love. Then someone comes along, introduces himself as Patt Parr. 'Rapt, rapt!' he says, telling you how to get to Mondale-Doleman. You follow his advice...";
+		say "[wfak]You see and avoid tripwires, and just as you feel your wit's riper, a snare nears. You swat at a pest and miss a step, then tumble madly wide of a middle way...";
+		say "[wfak]You roll down a gradient, tirade, nag to yourself...";
+		say "[wfak]Thump. ('Drat, poor trapdoor!' you hear.)";
+		say "[wfak]And you realize his advice was a TRAP, of course it was...";
+		say "[wfak]Your head is spinning. Wait, no, it's the room...";
+		now player has Mean Old Mondale Doleman;
 
 understand "sortie" as depots when player is in Trips Strip and depots are in Trips Strip.
 
-check exiting in Trips Strip:
-	try entering noun instead; [?? what if no noun]
+check exiting in Trips Strip: try entering noun instead;
 
 description of posted depots is "It's a stairway. For making a sortie. Exiting[sortie-have]"
 
@@ -4292,57 +4318,32 @@ to say sortie-have:
 	else:
 		say ". Though you probably want to ENTER it to exit the strips[if trade tread is not visible]. Or go DOWN[end if].[no line break]"
 
-check entering posted depots:
-	if sortie is unsolved:
-		check-2-of-3;
-		last-loc-move sortie;
-		recover-items instead;
-	else:
-		say "You did what you needed in the moor. No sense retracing your steps." instead;
-
 section metros portal
 
-the trade tread is a portal. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it."
+the trade tread is a portal. go-region of trade tread is Metros. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it.". solved-text of trade tread is "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you.". entry-rule of trade tread is metros-entry rule.
 
 understand "metros" as trade tread when player is in Trips Strip and trade tread is in Trips Strip.
 
 check climbing trade tread: try entering trade tread instead.
 
-to check-2-of-3:
-	if button-locked is true:
-		if number of solved regions is 3:
-			say "You think you hear oohing and aahing in the background at the adventurer who has decided to do more than the bare minimum.[paragraph break][i][bracket]Fourth wall note: you can UNDO and recuse if you want to.[close bracket][r][line break]"
-
 check entering trade tread:
-	if metros is not unsolved, say "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you." instead;
 	check-2-of-3;
-	say "The elevator's descent is rapidly scented worse. After you pass [one of]a[or]that[stopping] 'Tasers? You bet! Asters? Out, bye!' billboard, an automated voice announces that Mt. Rose has made its freedom more def, so ordinary citizens are motivated to level up and money farm just like Red Bull Burdell, and a funky thumping beat helps them to action.[paragraph break]You jog down the elevator to escape it, but of course it's coming from the city[if drainage is in Undesired Underside]. And you step into some drainage at the bottom. Eww[end if][if Undesired Underside is visited]. Which you should've remembered from last time[end if].[wfak]";
-	last-loc-move metros;
-	recover-items instead;
-
-to recover-items:
-	repeat with JJJ running through item-list of mrlp:
-		now player has JJJ;
-	repeat with JJJJ running through worn-list of mrlp:
-		now player wears JJJJ;
+this is the metros-entry rule:
+	if last-loc of metros is not visited:
+		say "The elevator's descent is rapidly scented worse. After you pass [one of]a[or]that[stopping] 'Tasers? You bet! Asters? Out, bye!' billboard, an automated voice announces that Mt. Rose has made its freedom more def, so ordinary citizens are motivated to level up and money farm just like Red Bull Burdell, and a funky thumping beat helps them to action.[paragraph break]You jog down the elevator to escape it, but of course it's coming from the city[if drainage is in Undesired Underside]. And you step into some drainage at the bottom. Eww[end if][if Undesired Underside is visited]. Which you should've remembered from last time[end if].[wfak]";
+	else:
+		say "Back to the metros...";
 
 section resort portal
 
-the r-p is a privately-named thing. "You see a big resort is here. It seems like it's all for you! All you have to do is enter.".
-
-the r-p is a portal.
+the r-p is a privately-named portal. go-region of r-p is Resort. description of r-p is "Man, it's beautiful, spacious and sunny. Even sunnier than the Trips Strip, which is much nicer since you started cleaning up, but still...". initial appearance of r-p is "You see a big resort here. It seems like it's all for you! All you have to do is enter.". entry-rule of r-p is resort-entry rule. solved-text of r-p is "Somehow, you got back to the Trips Strip after solving the game. I'd love to know how! Send me a bug report with a transcript."
 
 the printed name of r-p is "resort". understand "resort" as r-p.
 
-instead of taking r-p: say "Enter it instead.".
+check taking r-p: say "Enter it instead." instead;
 
-description of r-p is "Man, it's beautiful, spacious and sunny. Even sunnier than the Trips Strip, which is much nicer since you started cleaning up, but still..."
-
-resort-known is a truth state that varies. resort-known is usually false.
-
-check entering the r-p:
+this is the resort-entry rule:
 	say "'You! Find! Unify! Do!' a voice booms. You stride into the resort thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";
-	last-loc-move Resort;
 
 book Forest
 
@@ -5169,18 +5170,6 @@ check setting the dial to: say "Try a number instead. Or, if you typed out a num
 
 centrifuge-stopped is a truth state that varies. centrifuge-stopped is usually false.
 
-check looking in Trap Part:
-	if player was not in Trap Part:
-		if centrifuge-stopped is false:
-			say "You climb down a larded ladder, slip, and hear people chattering about Mean Old Mondale-Doleman, finances fan since... once a money yeoman, the frugalest till the fear gluts, but who'd nag nary a granny for late fees. Generous? Gone sour. Got antsy, then nasty... more garnish, less sharing... stern rents, a splinter should rent slip... a testier treatise from his Taxman, Tan Max... claiming to feel raw and that the welfare era flew! 'No grace in ignorance, caring one!' A cold clod, now. He may even have aborted a debtor...";
-			say "[wfak]You hear cases for destroying his castle and for showing love. Then someone comes along, introduces himself as Patt Parr. 'Rapt, rapt!' he says, telling you how to get to Mondale-Doleman. You follow his advice...";
-			say "[wfak]You see and avoid tripwires, and just as you feel your wit's riper, a snare nears. You swat at a pest and miss a step, then tumble madly wide of a middle way...";
-			say "[wfak]You roll down a gradient, tirade, nag to yourself...";
-			say "[wfak]Thump. ('Drat, poor trapdoor!' you hear.)";
-			say "[wfak]And you realize his advice was a TRAP, of course it was...";
-			say "[wfak]Your head is spinning. Wait, no, it's the room...";
-			now player has Mean Old Mondale Doleman;
-
 chapter The Nick
 
 A room called The Nick is in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
@@ -5215,9 +5204,7 @@ after looking in kitchen for the first time:
 	now warts are part of the player;
 	now startmod5 is the remainder after dividing (turn count + 4) by 5;
 
-The great grate is scenery in The Nick. "Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read."
-
-the branding is part of the great grate. description of branding is "The grate seems to be made by [first custom style]HECK TIN[r]. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.". understand "brand" as branding.
+The great grate is scenery in The Nick. "Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! It's branded with red writing you could probably READ."
 
 check opening great grate: say "You utterly fail to move it. If it could speak, it might sarcastically say [one of]Boring? Brig? No![or]Give up! And mean it, inmate![or]Denied, Indeed![or]Weak Try, Raw Tyke![at random]" instead.
 
@@ -10073,20 +10060,28 @@ to say cabinet-loop:
 	if cabinet-reads > 1 and the remainder after dividing cabinet-reads by 7 is 0, say "[line break]Well, you've read through it all. But you can read it again, if you'd like.";
 
 check reading (this is the reading is almost examining rule):
-	if noun is toga, say "A GOT-TA GO ... hmm, not the very best ever." instead; [ordeal loader]
 	if noun is gadget, try examining tag instead;
 	if noun is gadget-screen, try scaning location of player instead;
-	if noun is gateway, say "'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." instead;
-	if noun is cabinet and Trips Strip is visited, say "Here is one of several writings in red in the cabinet: [one of]I C BEATN[or]IN, BE, ACT!!![or]C N-E BAIT??[or]CIT-E BAN!!![or]Numbers for a NITECAB.[or]ABE [']N TIC![or]TEN ABC, I!!![in random order]" instead;
-	if noun is store i, say "Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!"; [stores]
-	if noun is great grate, try examining the branding instead; [sortie]
-	if noun is tall trio, say "The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]." instead;
-	if noun is spearman, say "The spearman's name, in red, is MR. SANE PA[if player carries spearman]. You also read, in red, one of three lines: [one of]MEAN RAPS[or]MS. P. ARENA--crossed out, but red[or]AMEN, RASP[in random order][end if]." instead;
-	if noun is a reading, say "On one of several pages, you see: [one of]AID ANGER is written[or]conspiracy theories from EDGAR IAN[or]silly musings on being IN A GRADE[or]a horror story: DINER, AAG[or]conspiracy theories from NIA EDGAR[or]an exhortation to RIDE AGAN (sic) on the last page[stopping]. The nonsense makes you see red." instead;
-	if noun is neon pig, say "Apparently the neon pig is a creation of one INPENGO." instead;
-	if noun is gin nope opening and controls are not in gin nope opening, say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
-	if noun is tiles, say "The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." instead; [resort]
+	repeat through table of readables:
+		if noun is to-read entry:
+			say "[the-red entry]";
+			the rule succeeds;
+	say "You found nothing to read, so you just EXAMINE, instead.";
 	try examining the noun instead;
+
+table of readables
+to-read	the-red
+toga	"A GOT-TA GO ... hmm, not the very best ever." [ordeal loader]
+gateway	"'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]."
+cabinet	"Here is one of several writings in red in the cabinet: [one of]I C BEATN[or]IN, BE, ACT!!![or]C N-E BAIT??[or]CIT-E BAN!!![or]Numbers for a NITECAB.[or]ABE [']N TIC![or]TEN ABC, I!!![in random order]"
+store i	"Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!" [stores]
+great grate	"The grate seems to be made by [first custom style]HECK TIN[r]. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit." [sortie]
+tall trio	"The names are Al, Tri, and Lot. [one of]If you READ again, maybe one of the six combinations will make you see red[or]AL/LOT/TRI makes you see red, for whatever reason[stopping]."
+spearman	"The spearman's name, in red, is MR. SANE PA[if player carries spearman]. You also read, in red, one of three lines: [one of]MEAN RAPS[or]MS. P. ARENA--crossed out, but red[or]AMEN, RASP[in random order][end if]."
+a reading	"On one of several pages, you see: [one of]AID ANGER is written[or]conspiracy theories from EDGAR IAN[or]silly musings on being IN A GRADE[or]a horror story: DINER, AAG[or]conspiracy theories from NIA EDGAR[or]an exhortation to RIDE AGAN (sic) on the last page[stopping]. The nonsense makes you see red."
+neon pig	"Apparently the neon pig is a creation of one INPENGO."
+gin nope opening	"You [if controls are in gin nope opening]remember[else]notice[end if] that it's underwritten (in red) by Orton LSC, whoever they are."
+tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." [resort]
 
 chapter following
 
