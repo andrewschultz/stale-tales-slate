@@ -383,6 +383,8 @@ icons,nisco
 sonic,nisco
 #qver of melon
 lenmo/molen,?????=melon
+#qver of no ammo gang
+among,YRY??=noamm=ogang
 #qver of naa na b a banna
 banana,R?RY??=abanna=naanab
 ;
