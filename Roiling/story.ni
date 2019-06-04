@@ -221,11 +221,9 @@ a portal can be lumpable. a portal is usually lumpable.
 
 a portal can be checkedoff or available. a portal is usually available.
 
-a portal has a region called a go-region.
-
 definition: a portal is slick if its diffic is 11 or less.
 
-instead of taking a portal:
+check taking a portal:
 	say "You try taking the portal in the entering sense.";
 	try entering the noun instead;
 
@@ -503,7 +501,6 @@ section debug on - not for release
 when play begins (this is the debug by default when debugging rule) :
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
-
 [every turn when player is in Dusty Study and Gunter is off-stage and debug-state is true:
 	say "Found: [stuff-found].";]
 
@@ -3414,7 +3411,7 @@ to solve-region (sre - a region):
 		append "Test passed for Otters." to the file of debuggery;
 	if sre is stores, continue the action;
 	repeat with po running through portals in Strip of Profits:
-		if go-region of po is sre, 	moot po;
+		if go-region of po is sre, moot po;
 		check-the-store po;
 	if sre is oyster and pills are moot:
 		now you-used-pills is true;
@@ -7746,6 +7743,7 @@ carry out fliptoing:
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
 				say "[the-to entry] to [the-from entry] denied! Push ff to change this![line break]" instead;
 			d "OK, [the-from entry] to [the-to entry].";
+			if there is a pre-rule entry, abide by the pre-rule entry;
 			if the-from entry is reflexive, now the-from entry is reflexed;
 			now the-from entry is unfigured;
 			if location of player is preserve:
@@ -7815,7 +7813,9 @@ carry out fliptoing:
 			if the-to entry is visible:
 				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
 				if the-to entry is plural-named, set the pronoun them to the-to entry;
+			if there is a post-rule entry, process the post-rule entry;
 			follow the show blues rule instead; [for debugging]
+			the rule succeeds;
 	repeat through regana of mrlp:
 		if noun is the-from entry and location of noun is location of player, say "You can't seem to change things back to how they were." instead;
 	say "This case with [the player's command] in [location of player] shouldn't have happened. BUG." instead;
@@ -20419,11 +20419,6 @@ check fliptoing the whistle when whistle is reflexive:
 	if number of visible people > 1:
 		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
 
-definition: a person (called pe) is npcish:
-	if pe is the player, decide no;
-	if location of pe is the location of the player, decide yes;
-	decide no;
-
 does the player mean playing the whistle: it is very likely.
 
 instead of taking whistle when parrot has the whistle:
@@ -22529,10 +22524,6 @@ to decide which number is gate-level:
 		increment A;
 	decide on A.
 
-check fliptoing when gate-level is 2:
-	if noun is part of the passport:
-		say "No need to over-study or over-think. Through the gates!" instead;
-
 to upgrade-passport:
 	if gate-level is 2:
 		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
@@ -22541,11 +22532,6 @@ to upgrade-passport:
 	continue the action;
 
 chapter reviewing
-
-after fliptoing when player has passport (this is the part-of-passport rule):
-	if noun is searcher or noun is viewer or noun is perp-priv:
-		upgrade-passport;
-	continue the action.
 
 book Clangier Clearing
 
