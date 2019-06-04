@@ -4478,8 +4478,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			now noun is perp-priv;
 			continue the action;
 		if player is in Clangier Clearing:
-			if pre-mang is in Clangier Clearing:
-				now noun is pre-mang;
+			if No Ammo Gangni  is in Clangier Clearing:
+				now noun is No Ammo Gang;
 				continue the action;
 	say "You wave the settler, but it doesn't pick up any random data.";
 	reject the player's command;
@@ -4634,7 +4634,7 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Bleary Barley and b-b is reflexive: [start otters]
 		try scaning b-b instead;
 	if location of player is clangier: [start others]
-		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of pre-mang] on your settler." instead;
+		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of No Ammo Gang] on your settler." instead;
 	if location of player is Swell Wells:
 		if sorer bogey is visible:
 			try scaning sorer bogey instead;
@@ -4986,7 +4986,7 @@ wells-hintables is a list of things variable. wells-hintables is { riot cap, sil
 
 field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, buried raft, barriers west, barber sickle, mean trowel, rapt figure, barren cries }.
 
-clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, prices precis, lemons, auction caution, nectarine }.
+clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, No Ammo Gang, quince, prices precis, lemons, auction caution, nectarine }.
 
 scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', orange, a brr hub, inapt paint }
 
@@ -9979,7 +9979,7 @@ ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [if player h
 gore ogre	otters	"You can say ERGO to deal with the Gore Ogre."
 atmo-moat	otters	"You can collapse the atmo-moat to an ATOM once you have the power."
 medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
-pre-mang	others	"You can look AMONG once you have currency to haggle in the clearing." [others]
+No Ammo Gang	others	"You can look AMONG once you have currency to haggle in the clearing." [others]
 
 to say other-areas:
 	repeat through table of region-spoilers:
@@ -22674,9 +22674,9 @@ a-text of peach is "RRYYR". b-text of peach is "RRYYR". parse-text of peach is "
 check taking (this is the shoplift in Clangier Clearing rule) :
 	if noun is in Clangier Clearing, say "No stealing. This is a marketplace!" instead;
 
-the pre-mang is privately-named scenery in Clangier Clearing. pre-mang is undesc.
+the No Ammo Gang are plural-named people in Clangier Clearing. "People labeled the No Ammo Gang wander about, babbling. Maybe you could find the right way to chat them up.".
 
-a-text of pre-mang is "YRYRR". b-text of pre-mang is "YRYRR". parse-text of pre-mang is "-[sp]x[sp]-[sp]x[sp]x".
+a-text of No Ammo Gang is "YRYRR". b-text of No Ammo Gang is "YRY??". parse-text of No Ammo Gang is "-[sp]x[sp]-[sp]x[sp]x".
 
 before fliptoing mango:
 	if player does not have tekno-token:
