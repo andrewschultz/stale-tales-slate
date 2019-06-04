@@ -568,7 +568,6 @@ nectarine>ancienter
 lemons>solemn
 >IGNORE=melon
 prices precis>cripes
-pre-mang~mango>among
 ####scape space
 engaro orange>go near
 a banna'~naa na b a banna>banana

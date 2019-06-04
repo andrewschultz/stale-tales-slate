@@ -60,6 +60,12 @@ Slot 3 is a vowel, too, and it can't be E, so it's O. That makes slot 6 E.
 -OO--E-- is left. But the s's in slots 1, 4 and 5 for the clue words mean they must be in slots 7 and 8 at the end. -OO--ESS.
 You can just keep listening to it for clues or use trial and error to get GOODNESS.
 >>MARINES SEMINAR REMAINS
+# logic for boing go bin
+?What is with the boing-go bin?
+For the boing go bin, we have ?YRRY. This isn't a huge clue, since it only means letter 1 is a consonant but can't be N.
+We can, however, figure out the vowels. Slot 2 is I, since it can't be O, making slot 5 O.
+Regular clues kill a few other possibilities, giving us (BG)I(NG)(BG)O. This makes slot 3 N.
+Now GINBO is not a word, but BINGO is what we want.
 # logic for sport ports
 ?What do you say to the sport ports?
 The Sport Ports seem to give a huge mess, but actually, they work out okay if you poke at the details. ?R?R?. But looking at the undefined slots, only one could be a vowel: slot 3, since slots 1 and 5 leave a choice between two consonants. Therefore, we have --O--.
@@ -101,6 +107,13 @@ This is a relatively tricky one. But we know where the second vowel is. It must 
 The big question is, where are the c's? CL/A/PSLK/CS/CLS/O/CP/SK is what we have. This looks really sticky, but we can do some educated guessing. For starters, S cannot be in slot 8. If it were, we'd have CL/A/PLK/C/CL/O/CP/S. Then 1 or 5 would have to be C, and then 7 is P and 3 is K. (CL)/AKC/(CL)/OPS.
 CL/A/PSL/CS/CLS/O/CP/K is left. Now if P is in slot 7, we get CL/A/SL/CS/CLS/O/P/K. LASCCOPK, CAL(CS/SC)OPK aren't words, so try our luck with L in slov 5. C/A/PS/CS/L/O/CP/K is what is left. This is CASCLOPK or CAPSLOCK. CAPSLOCK.
 We can also use the red letter clues to make things a bit easier. PC Cloaks eliminates S in slot 8. POLACCKS puts L in slot 5 immediately. But it's still a bit tricky. Still, there are other clues that I hope makes up for it.
+#logic for bub dude egg
+?What is with Bub Dude Egg?
+You have BUBDU and DEEGG. They give ???Y?. This looks like a tall task.
+(BD)(EU)(BE)(EU)(UG) pops out. Then you can try the usual logic tricks.
+D and G are only possible one place, giving us D(EU)(BE)(EU)G.
+But now B is only possible one place! D(EU)B(EU)G. DUBEG doesn't quite work.
+DEBUG.
 #logic for drive a a drive varied
 ?Why does Drive A throw out all these question marks?
 It's A Drive, Varied, as well. This presents a lot of potential conflicts, but it makes some things easy, too.
@@ -155,6 +168,11 @@ Here is how things look:\n<pre>PAEG\nGPEA\nPEGA\nPAGE</pre>
 The third slot is red and can't be G, so it's P.
 The first letter is P or G, meaning G.
 That leaves GEPA and GAPE. GAPE.
+# logic for race acer
+?How can I be a race acer?
+The two question marks in R?R? must be vowels. That leaves A in slot 2 and E in slot 4.
+Now consonant 1 can't be R and 3 can't be C, because of the red letters.
+CARE.
 >>BUSTLE SUBLET
 # logic for sob ever verbose
 ?What about the Sob Ever Verbose?
@@ -185,6 +203,12 @@ In fact, each slot is one of two consonants.
 (BL)O(LST)(TS)(LT)E(RS).
 B must be in slot 1, R in slot 7. That leaves three possibilities based on what slot 3 is.
 BOLSTER turns out to be the right one.
+# logic for large regal lager
+?How do I deal with the Large Regal Lager?
+Pour it out on the curb in memory of your departed homies. Oh, wait, you want to get the last lousy point.
+The question mark at the end means ELR, but it must be a vowel, so, E.
+The rest is standard logic: the first consonant can't be L or R, so it is G. The remaining vowel in slot 3 must be E.
+That leaves GRALE or GLARE, and while Nigel Molesworth might spell "grail" GRALE, Store V features passive verbs and this is a noun. Also, GLARE works great.
 # logic for lead all a deed
 ?What do I do with _Lead_?
 For <b>LEAD</b>, by the two authors, ???R looks painful indeed. But the red means a consonant which can't be D. So it's L. Fortunately, there are just three choices.
@@ -403,6 +427,12 @@ Casper Spacer gives ?RRYRY, meaning the first letter is a consonant, C or S. He 
 CAPERS RECAPS gives RRR??Y. That means either E or A is in slot 4, and the C and R in slot 1 are wrong. Along with the information about Casper, this tells us the word we need starts with S. Also, one of R/P is right in slot 5.
 Note that slot 3 is a consonant but not P, C or (slot 1) S. So it is R.
 S(CP)R(ae)(rp)(ae) then becomes SCR(ae)P(ae). SCRAPE.
+>>DISEASE SEASIDE
+# logic for frat raft
+?Why does the frat raft give so many question marks?
+Well, it does give you one exact letter, which is T.
+That leaves (FR)(RA)(AF)T. But the RAFT is already there.
+You need to FART.
 >>LAPSIN' PLAINS
 # logic for span pans
 ?What's with the span pans' double clue?
@@ -514,6 +544,12 @@ I(CS)ON(CS) remains, where ICONS wins over ISONC.
 The melon seems like it should not be that hard, but it pops up question marks even on non-cheat mode. What is going on is that, well, you need to talk to Len, and there are two ways to do it.
 The RYR??/????? suggests that a M, E and L work in some cases but not in others. You can say LEN, MO or MO, LEN to get the melon.
 While this is tricky, there are a lot of other ways to get points, so I hope it's not too disappointing that the settler conks out, especially since it is five letters--and one solution simply switches two. And actually asking Len, or noticing he is part of "Melon," makes it a bit easier to ask for what you need.
+# logic for no ammo gang
+?Can I make friends with the No Ammo Gang easily?
+Yes. The two question marks don't mean much. In fact, they give good information.
+Divide the words as NOAMM / OGANG. Then O can't be in slot 1, which is a vowel. So A-O--.
+Also, G must be in slot 5. It can't be in slot 2, and the question mark means MN is in slot 4.
+That leaves ANOMG or AMONG. Now, AN OMG is ... possible, but AMONG is a better way to mingle.
 >>SCAPE SPACE
 # logic for reserved deserver
 ?What should the inapt paint become?
@@ -521,3 +557,6 @@ With more than five letters, it's what it says.
 The inapt paint says DESERVER RESERVED. It has a lot of question marks, but all three vowels are green in cheat mode, and one consonant even works out, giving you
 -E-ER-E-
 (dr)E(sv)ER(sv)E(dr) is rather easy to sift through, since there are only four possibilities. REVERSED.
+#logic for naa na b a banna
+?Is a banna that tough, with all those question marks?
+Not really. Naa Na b / a banna has only one vowel, A. So you can figure a bit out.
