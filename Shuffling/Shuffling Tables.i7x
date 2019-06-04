@@ -115,7 +115,9 @@ this is the post-trees-steer rule:
 	now steer button is part of panel;
 
 this is the post-toga-goat rule:
-	if player has toga, now toga is in location of player;
+	if player has toga or player has goat:
+		now toga is in location of player;
+		now goat is in location of player;
 	set the pronoun him to goat;
 	set the pronoun her to goat;
 

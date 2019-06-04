@@ -8688,7 +8688,7 @@ section gateway
 
 check taking a portal: say "It's probably easier to enter than to take." instead;
 
-the getaway gateway is a portal in Notices Section. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping]."
+the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping]."
 
 before opening gateway: say "It's open. It's just unclear where it leads." instead.
 
@@ -8731,15 +8731,14 @@ asking generically is an action applying to one topic. Understand "ask about [te
 objasking generically is an action applying to one visible thing. Understand "ask about [any thing]" or "talk about [any thing]" or "a [any thing]" as objasking generically.
 
 check objasking generically (This is the check for only one sensible object converser rule):
-	d "[list of people in the location of the player].";
-	if the number of persons enclosed by the location of the player is one:
+	if the number of NPCish persons in location of the player is 0:
 		repeat with X running through visible scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
-	if the number of persons enclosed by the location of the player is two:
-		repeat with candidate running through visible people:
-			if the candidate is not the player, try objasking candidate about the noun instead;
+	if the number of NPCish persons in the location of the player is 1:
+		try objasking a random NPCish person about the noun instead;
+	if debug-state is true, say "[list of NPCish people].";
 	say "Ambiguous--more than two people here." instead;
 
 does the player mean asking scenery about: it is unlikely.
@@ -8767,14 +8766,14 @@ understand the command "tell [thing] about [text]" as something new.
 understand "tell [thing] about [text]" as asking it about.
 
 Check asking generically (This is the check for only one sensible converser rule):
-	if the number of persons enclosed by the location of the player is one:
+	if the number of npcish people in location of the player is 0:
 		repeat with X running through visible scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
-	if the number of persons enclosed by the location of the player is two:
-		repeat with candidate running through visible people:
-			if the candidate is not the player, try asking the candidate about the topic understood instead;
+	if the number of NPCish people in location of player is 1:
+		try asking a random NPCish person about the topic understood instead;
+	if debug-state is true, say "[list of NPCish people].";
 	say "Ambiguous--more than two people here." instead;
 
 to say lazy-adv: say "'Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me.' It shouldn't be too hard to humor him.".

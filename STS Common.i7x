@@ -73,6 +73,10 @@ a portal can be fake-enterable. a portal is usually fake-enterable.
 
 a portal can be enter-clued. a portal is usually not enter-clued.
 
+a portal has a region called go-region. a portal has text called solved-text.
+
+a portal has a rule called entry-rule. entry-rule of a portal is usually the degen-true rule.
+
 report entering a portal: process the move dumbdrops rule;
 
 chapter region stuff
@@ -97,6 +101,10 @@ a region has a list of things called item-list.
 
 a region has a list of things called worn-list.
 
+definition: a region (called rg) is explored:
+	if last-loc of rg is visited, yes;
+	no;
+
 section region scoring
 
 to poss-d:
@@ -111,6 +119,13 @@ to min-and:
 	d "min-and codepath -- forcing point and min point adding. Should be used for odd non-flip points.";
 	increment min-score of mrlp;
 	reg-inc;
+
+chapter person stuff
+
+definition: a person (called pe) is npcish:
+	if pe is the player, decide no;
+	if location of pe is the location of the player, decide yes;
+	decide no;
 
 chapter debug variables that need to be in release
 
