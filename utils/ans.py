@@ -4,6 +4,7 @@ from collections import defaultdict
 import sys
 import re
 import time
+import i7
 
 red_note = ["--------", "RED TEXT"]
 
@@ -15,6 +16,22 @@ max_lines = 0
 
 searches = []
 default_ana = "compile"
+
+def array_from_file():
+    ret_ary = []
+    from_file_ana = defaultdict(str)
+    with open("ans.txt") as file:
+        for (line_count, line) in enumerate(file, 1):
+            if line.startswith("#"): continue
+            if line.startswith(";"): break
+            l = line.lower().strip("/\n")
+            for cand in l:
+                if to_alf(cand) in from_file_ana:
+                    sys.stderr.write("Warning ... {:s} is already in, as {:s} -> {:s}".format(cand, to_alf(cand), from_file_ana[to_alf(cand)]))
+                else:
+                    from_file_ana[to_alf(cand)] = cand
+            ret_ary += l.split("/")
+    return ret_ary
 
 def letters_only(x):
     return re.sub("[^a-z]", "", x.lower())
@@ -63,7 +80,11 @@ def look_for_line(ana_alf, l):
 start_time = time.time()
 
 while cmd_count < len(sys.argv):
-    searches.append(sys.argv[cmd_count])
+    arg = sys.argv[cmd_count]
+    if arg == 'f':
+        searches += array_from_file()
+    else:
+        searches.append(arg)
     cmd_count += 1
 
 if not len(searches):
@@ -87,4 +108,5 @@ for ana in searches:
             print(x.strip(), ana_types[x], "<", ana, '-', x, red_note[redtext(ana, x)], "> first line {:d}".format(first_line[letters_only(x)]))
 
 end_time = time.time()
-print("Time elapsed:", end_time - start_time, "seconds")
+ls = len(searches)
+print("Time elapsed:", end_time - start_time, "seconds", "for", ls, "total anagram{:s}".format('s' if ls != 1 else ''), "average =", end_time / ls)
