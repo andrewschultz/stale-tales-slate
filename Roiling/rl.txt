@@ -107,6 +107,11 @@ This is a relatively tricky one. But we know where the second vowel is. It must 
 The big question is, where are the c's? CL/A/PSLK/CS/CLS/O/CP/SK is what we have. This looks really sticky, but we can do some educated guessing. For starters, S cannot be in slot 8. If it were, we'd have CL/A/PLK/C/CL/O/CP/S. Then 1 or 5 would have to be C, and then 7 is P and 3 is K. (CL)/AKC/(CL)/OPS.
 CL/A/PSL/CS/CLS/O/CP/K is left. Now if P is in slot 7, we get CL/A/SL/CS/CLS/O/P/K. LASCCOPK, CAL(CS/SC)OPK aren't words, so try our luck with L in slov 5. C/A/PS/CS/L/O/CP/K is what is left. This is CASCLOPK or CAPSLOCK. CAPSLOCK.
 We can also use the red letter clues to make things a bit easier. PC Cloaks eliminates S in slot 8. POLACCKS puts L in slot 5 immediately. But it's still a bit tricky. Still, there are other clues that I hope makes up for it.
+#logic for i'm le cop polemic
+?The I'm Le Cop Polemic seems sticky. What gives?
+Seven letters is a lot! But we can make progress with the one question mark. It needs to be a vowel, so it must be O and not M.
+From here, you may need to look at red text, because neither of the remaining vowels gets a clue to cancel it out. But you my be able to guess the computer term involved.
+MEL COPI in red means I can't be in slot 7. -O--I-E. (CL)O(CMP)(LMP)I(CLM)E.
 #logic for bub dude egg
 ?What is with Bub Dude Egg?
 You have BUBDU and DEEGG. They give ???Y?. This looks like a tall task.
@@ -291,6 +296,12 @@ SRTUY is not a word, so RUSTY it is.
 R?RRR?R leaves only vowels in the question mark spots. The first is L or E, the second E or U. That makes -E---U-.
 The fluster/self-rut cuts down a lot of possibilities, but now we can cut out even more with examining and so forth. TRU-SELF and FURLETS help a lot.
 This, like many in store W, may have you reflect on the meaning of the final word. In this case, what is calm at the end? And with TRUSELF and FURLETS, you're left with REFTSUL and RESTFUL, e.g. RESTFUL.
+# logic for traipse pirates
+?What about the question marks for the traipse pirates?
+The <b>traipse pirates</b> give ?YRRY?R, and slot 1 must be a consonant (T or P,) making slot 6 (E or S) a vowel. So slot 6 is E. That leaves (PT)(AI)(PST)(PRST)(AI)E(PRT).
+That's all we can do with the question marks, but there is a lot of red text. You can talk to the pirates or try to go by them to see the red text.
+We could also do some guesswork here.  Perhaps we could guess that adjectives are likely end in -er, and -aer is a bad ending.
+That would eventually give us PASTIER.
 # logic for docile old ice
 ?How does the docile old ice work?
 The R?YRYR scan means letter 2 is O or L. Count the consonants and vowels, and it needs to be O.
@@ -303,6 +314,12 @@ The dandier arid den appears to give two annoying question marks to start in che
 The ??YYRGR gives three known vowels and two consonants, so we need two consonants. A or D in slot 1 is D, and A or R in slot 2 is R. Also, slot 6 is E because of the green.
 DR---E- seems much more manageable. Since slot 3 is a vowel and can't be I, it's A, and slot 4 is the other vowel, I.
 DRAI-E- now has red in slot 5, so it can't be D from the arid den. It's N. DRAINED.
+# logic for organised ego drains
+?Those organised ego drains look tough!
+That's part of why they are an LLP.
+R?YRR?YRY has 2 as a forced consonant, R or G, and 6 is a forced vowel, A or I. That's not a lot of clues.
+So there's not much you can do except examine them for red text. NO EGAD SIR and so forth work, but they take a while.
+They eventually become GRANDIOSE.
 >>ANEMIC CINEMA
 # logic for angriest ingrates
 ?How do I resolve the question marks for the angriest ingrates?
@@ -387,6 +404,12 @@ Yes, though you don't need to.
 The reading is ?GRYR?R. But since slot 1 must be a consonant, we can count consonants and vowels to realize that slot 6 must be a vowel. E or R means E. Also, we can pick of slot 2, since it's green.
 With -E---E- and a vowel in slot 4, we get -E-I-E-. Now from the settler's scan, 1 is W or R, and 3 and 5 can't be D. That means 7 is D. -E-I-ED.
 There are three possibilities left, but RERIWED and WERIRED aren't words. REWIRED.
+>>DOUREST DETOURS
+# logic for dourest detours
+?I've been redirected to the dourest detours! How can I get away?
+The dourest detours need to be more exciting. They are, at first, R??RRYR.
+Each question mark must be a vowel, since we already have four consonant slots known. That makes slot 3 U.
+So (RST)(OE)U(DST)(DRST)(OE)(DR) is left. Listening helps here to get a lot of red. Or you could guess the first letter right.
 >>MISLIT LIMITS
 # logic for pester'n serpent
 ?How do I interpret the pester'n serpent scans?
@@ -475,6 +498,13 @@ The clues for the yapper are ?RY?Y?. That puts the Y in slot 1 or 6: we can't te
 But now slot 4 is a question mark, so it's E or P. E is taken, so it's P.
 (py)(pr)EPA(ry) is left. That's enough to use brute force.
 YPEPAR or PREPAY are the only two choices. PREPAY.
+# logic for templar ramplet
+?The templar ramplet that appeared--how to finagle it?
+The templar ramplet gives ?RYRRRY. This is a tough hand, logically.
+You may guess that RM/RL/RT/RP are all highly unlikely starts for words, and you would be right. There are no such words of length 7. So T it is.
+Then the next letter is very likely R. Again, TL and TM and TP don't start any words of length 7. Well, there's tmesis, but that's the wrong length.
+TR(AE)(ML)(MP)(MLP)(AE) remains and has six possibilities. You can guess, or reading will kill off possibilities.
+LAMPERT as red text leaves TRAMPLE.
 >STORE T
 >>BLEARY BARLEY
 # logic for bleary barley
@@ -544,6 +574,12 @@ I(CS)ON(CS) remains, where ICONS wins over ISONC.
 The melon seems like it should not be that hard, but it pops up question marks even on non-cheat mode. What is going on is that, well, you need to talk to Len, and there are two ways to do it.
 The RYR??/????? suggests that a M, E and L work in some cases but not in others. You can say LEN, MO or MO, LEN to get the melon.
 While this is tricky, there are a lot of other ways to get points, so I hope it's not too disappointing that the settler conks out, especially since it is five letters--and one solution simply switches two. And actually asking Len, or noticing he is part of "Melon," makes it a bit easier to ask for what you need.
+# logic for prices precis
+?How do I figure the Prices Precis?
+Well, the letters that match are a big clue. And the question marks must be vowels.
+We get -R(IE)-(IE)S but then slot 4 can't be C so it is P.
+CRIPES or CREPIS. CRIPES.
+Incidentally, before this was just PRICES, and the cheat setting was enough to determine the right word exactly. But I think it's easy enough here.
 # logic for no ammo gang
 ?Can I make friends with the No Ammo Gang easily?
 Yes. The two question marks don't mean much. In fact, they give good information.

@@ -1064,7 +1064,7 @@ The settler gives seven letters.
 What can be done to get closer to the eastern shore?
 Make it NEAREST.
 ?Hey! I never saw this location. What gives? Is this a fake clue?
-You skip over Rawest Waters if you fix a bot-boat completely. If you'd only half-fixed them, you'd have landed here. The puzzle is about as easy as the other two, so I figured it'd be neat to have two ways through.
+You skip over Rawest Waters if you fix a bot-boat completely. If you'd only half-fixed it, you'd have landed here. The puzzle is about as easy as the other two, and I figured it'd be neat to have two ways through.
 >>LEAK LAKE
 ?What does Elk Akela want?
 Akela is waiting for Kala Keel, obviously.
@@ -1072,6 +1072,16 @@ AKA Kelle.
 If you're very careful and you've already solved Store P, you can hook back to a hidden path under Harm's Marsh and Mount Um-Not to reveal a rare secret.
 It's so rare, it's not even in the game, because there's no way to get to Leak Lake. Leak Lake is just a backdrop.
 Yeah, I had to write in a joke clue. Right after one people might think was a joke, just for extra misdirection.
+Oh, and before a location people might think was a joke, too. Minor spoiler!
+>>DOUREST DETOURS
+?Is this location a joke?
+Well, not a total joke. It's there, but it's a bit floating.
+It can be approached from two different rooms: west of Anemic Cinema or south of Danger/Gander garden.
+Once you've been through once, you can't return.
+?Am I trapped?
+No. You need an anagram for dourest and detours.
+You need something that will wake you up, get you going.
+ROUSTED.
 >>MISLIT LIMITS
 ?What can I do about the pester'n serpent?
 You don't need to get rid of it, strictly. Unless you want maximum points.
