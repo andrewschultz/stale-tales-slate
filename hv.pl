@@ -291,26 +291,26 @@ sub wordit {
 sub matchHash {
   my %inFile;
   print "Matching hashes for $_[0].\n";
-  open( A, "c:/games/inform/$_[0].inform/source/story.ni" )
-    || die("No source file");
+  my $fi =
+"c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] tables.i7x";
+  open( A, $fi ) || die("No source file");
   while ( $line = <A> )    #first read in the source with table of anagrams
   {
-    $lineNum++;
     if ( $line =~ /^table of anagrams/ ) { $inTable = 1; }
     if ( $inTable && ( $line =~ /\t[0-9]/ ) ) {
       chomp($line);
       $b = $line;
       $b =~ s/.*\t//g;
       $b =~ s/[^0-9].*//g;
-      $inFile{$b} = $lineNum;
+      $inFile{$b} = $.;
       $inLong{$b} = $line;
     }
     if ( $line !~ /[a-z]/i ) { $inTable = 0; }
   }
   close(A);
-  open( A,
-"c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x"
-  ) || die("No nudge file");
+  $fi =
+"c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x";
+  open( A, $fi ) || die("No nudge/table file");
   while ( $line = <A> )    #first read in the source with table of anagrams
   {
     if ( $line =~ /^table of nudges/ ) { $inTable = 1; }
@@ -329,7 +329,9 @@ sub matchHash {
 
 sub lookBoth    #save some code looking for source and side file
 {
-  lookFor( $_[0], "c:/games/inform/$_[1].inform/source/story.ni" );
+  lookFor( $_[0],
+"c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[1] tables.i7x"
+  );
   lookFor( $_[0],
 "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[1] nudges.i7x"
   );

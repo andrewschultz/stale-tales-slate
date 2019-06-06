@@ -22,7 +22,8 @@ from filecmp import cmp
 from collections import defaultdict
 
 cfg_file = "c:/writing/scripts/rorg.txt"
-to_ignore = defaultdict(bool)
+ignore_full = defaultdict(bool)
+ignore_start = defaultdict(bool)
 
 verbose = False
 
@@ -57,8 +58,11 @@ def usage(err_cmd = "General usage"):
     exit()
 
 def invalid_conditional(s):
-    if s == "stopping" or s == "else" or s == "end if" or s == 'i' or s == 'r' or s == 'or' or s == "'" or s == 'paragraph break' or s == 'one of' or s == 'run paragraph on': return True
-    if s.startswith("unless ") or s.startswith("else if ") or s.startswith("if ") or s.startswith("start "): return True
+    sl = s.lower()
+    for full in ignore_full:
+        if sl == full: return True
+    for start in ignore_start:
+        if sl.startswith(start): return True
     return False
 
 def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, exp_cols = 0):
@@ -142,7 +146,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
                 if line.startswith("this is "):
-                    temp = re.sub("^this is (the )?", "", line.strip())
+                    temp = re.sub("^this is (the )?", "", line.lower().strip())
                     temp = re.sub(" *:.*", "", temp)
                     if verbose: print(temp, "listed at line", line_count)
                     sect_order[temp] = line_count
@@ -161,21 +165,25 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         print("Never tried to sort table. Need {:s} in first column.".format(table_col_0))
         bail = True
     if bail_force and bail: sys.exit()
-    x = list(set(sect_order) - set(table_order) - set(to_ignore))
+    x = list(set(sect_order) - set(table_order) - set(ignore_full))
     if len(x):
         print("Print commands not in table:")
+        count = 0
         for cmd in sorted(x, key=lambda x:sect_order[x]):
-            print("Line {:5d} has print command {:s}.".format(sect_order[cmd], cmd))
-    y = list(set(table_order) - set(sect_order) - set(to_ignore))
+            count += 1
+            print("{:2d} Line {:5d} has print command {:s}.".format(count, sect_order[cmd], cmd))
+    y = list(set(table_order) - set(sect_order) - set(ignore_full))
     if len(y):
         print("Table commands not in print:")
+        count = 0
         for cmd in sorted(y, key=lambda x:table_order[x]):
-            print("Line {:5d} has print command {:s}.".format(table_order[cmd][0], cmd))
+            count += 1
+            print("{:2d} Line {:5d} has print command {:s}.".format(count, table_order[cmd][0], cmd))
     if not len(x) and not len(y): print("Table and print commands all match up! Yay!")
     elif bail_on_mismatch: sys.exit("Bailing on mismatches.")
     ts = sorted(table_starts, key=table_starts.get)
     for q in sorted(table_order, key=table_order.get):
-        if q in to_ignore: continue
+        if q in ignore_full: continue
         if q not in cur_full_quote:
             print(q, "line", table_order[q][0], "is in a table but not in auxiliary/ignore.")
         # print(q, table_order[q], ts, ts[0], table_starts[ts[0]])
@@ -229,9 +237,15 @@ with open(cfg_file) as file:
     for (line_count, line) in enumerate(file, 1):
         if line.startswith(";"): break
         if line.startswith("#"): continue
-        line = re.sub("#.*", "", line) # comments after listed items are okay
-        lary = [ x.strip() for x in line.strip().lower().split(",") ] # a, b and a,b should work
-        for l in lary: to_ignore[l] = True
+        line = re.sub("#.*", "", line.lower()) # comments after listed items are okay
+        start_dict = False
+        if line.startswith("start:"):
+            line = line[6:]
+            start_dict = True
+        lary = [ x.lstrip() for x in line.strip().lower().split(",") ] # a, b and a,b should work, but a, b will want the space at the end
+        for l in lary:
+            if start_dict: ignore_start[l] = True
+            else: ignore_full[l] = True
 
 for x in game_ary:
     if do_nudges:
