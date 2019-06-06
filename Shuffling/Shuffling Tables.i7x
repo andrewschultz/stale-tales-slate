@@ -59,7 +59,7 @@ taco	coat	"coat"	"taco"	--	--	"Before changing the hot-to-your-tongue taco to a 
 cask	sack	"sack"	--	pre-cask-sack rule	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
 sack	cask	"cask"	--	pre-sack-cask rule	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
 hoses	shoes	"shoes"	"hoses"	--	--	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
-r2	teleporter	"moor"	--	--	post-room-moor rule	"[moor-jump]"	false	298104110	--	--	moor
+r2	teleporter	"moor"	--	pre-room-moor rule	post-room-moor rule	"[moor-jump]"	false	298104110	--	--	moor
 m2	teleporter	"room"	--	--	--	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse...'"	false	298104110	--	--	roomroom
 anapest	peasant	"peasant"	"anapest"	--	post-anapest-peasant rule	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He [exp-fli]storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
 roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	--	--	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is visible]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is visible]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
@@ -106,7 +106,7 @@ protest	potters	"potters/potter"	"protest" or "riot"	--	post-protest-potters rul
 links	china	"china"	"china"	pre-chain-china rule	post-chain-china rule	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
 links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
 
-book what anagrams refer to (I can move each 'say' to the appropriate book eventually)
+book auxiliary text and rules
 
 this is the post-hoots-shoot rule:
 	now shoot button is part of panel;
@@ -131,12 +131,6 @@ this is the post-storeb-sorbet rule:
 	moot sorbet;
 	min-up;
 	continue the action;
-
-this is the pre-silver-sliver rule:
-	unless drapes are moot:
-		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
-		preef silver;
-		do nothing instead;
 
 this is the post-anapest-peasant rule:
 	moot pat;
@@ -181,6 +175,20 @@ this is the pre-nametag-gateman rule:
 	if player wears the nametag:
 		say "If you really CAN change the nametag, you don't want a gateman in your face--so you chuck the nametag away. Not really believing...";
 	now nametag is in location of player;
+
+to say in-sheath:
+	now sword is contained in the sheath;
+
+to say moor-jump:
+	if moor is visited:
+		if location of player is cedars and caskfillings is 2:
+			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return.";
+		else:
+			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if].";
+	if moor is unvisited:
+		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if].";
+	else:
+		say "Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if].";
 
 this is the pre-beats-beast rule:
 	if player is not in Bassy Abyss and beats are visible:
@@ -305,26 +313,25 @@ this is the pre-cask-sack rule:
 			preef sack instead;
 		if oils are in cask, say "That's inadvisable. The oils would leak out." instead;
 
-this is the block moor if not dressed right rule:
-	if player is in roomroom:
-		unless shoes are moot:
-			say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
-			preef r2 instead;
-		if player carries coat and player is not wearing coat:
-			say "(wearing the coat first)[line break]";
-			now player wears the coat;
-		if player is not wearing coat:
-			say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[else]. That coat you made would be handy[end if].";
-			preef r2 instead;
-		if moor is unvisited:
-			if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
-				now sortie-warn is true;
-				say "[gadact] once you jump to the moor. Is this okay?";
-				if the player yes-consents:
-					do nothing;
-				else:
-					say "Okay. Next time, you won't see this warning." instead;
-				now button-locked is true;
+this is the pre-room-moor rule:
+	unless shoes are moot:
+		say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
+		preef r2 instead;
+	if player carries coat and player is not wearing coat:
+		say "(wearing the coat first)[line break]";
+		now player wears the coat;
+	if player is not wearing coat:
+		say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[else]. That coat you made would be handy[end if].";
+		preef r2 instead;
+	if moor is unvisited:
+		if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
+			now sortie-warn is true;
+			say "[gadact] once you jump to the moor. Is this okay?";
+			if the player yes-consents:
+				do nothing;
+			else:
+				say "Okay. Next time, you won't see this warning." instead;
+			now button-locked is true;
 
 this is the pre-haywall-hallway rule:
 	if scraped wall is not hayfilled:

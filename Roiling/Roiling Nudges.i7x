@@ -9,7 +9,7 @@ volume table of nudges
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Inclosure, Rancho. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
 
-book the tables themselves
+book nudge tables
 
 table of Ordeal Reload nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -1192,7 +1192,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "version"	604821629	--	--	degen-true rule	"[meta-rej]"
 "something"	649400178	--	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on." [end-gen]
 
-book text details
+book auxiliary text and rules
 
 to say locname: say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
@@ -1909,7 +1909,7 @@ to say dir-cut: say "section has no easter eggs[if mrlp is demo dome], though yo
 
 to say meta-rej: say "Meta-commands don't have any easter eggs, sadly"
 
-section support
+book support rules
 
 [these are used elsewhere throughout the nudges file]
 

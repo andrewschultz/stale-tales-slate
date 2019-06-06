@@ -5806,17 +5806,6 @@ after printing the locale description for moor when moor is unvisited:
 	move r2 backdrop to all moory rooms;
 	continue the action;
 
-to say moor-jump:
-	if moor is visited:
-		if location of player is cedars and caskfillings is 2:
-			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return.";
-		else:
-			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if].";
-	if moor is unvisited:
-		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if].";
-	else:
-		say "Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if].";
-
 chapter Stiller Trellis / Crashing Archings
 
 Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is moot]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if Sacred Cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is moot or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie.
@@ -6025,6 +6014,7 @@ this is the bore-anapest rule:
 		else:
 			say ". Too bad you don't have a device to scan it more practically.";
 			the rule succeeds;
+	abide by the bore-exam rule;
 
 instead of going nowhere in moor: say "The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 
@@ -7051,10 +7041,6 @@ section propflipping Elf Row
 
 to say rude: say "You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is"
 
-to say in-sheath:
-	now sword is contained in the sheath;
-	do nothing;
-
 the block buying rule is not listed in any rulebook.
 
 instead of buying:
@@ -7203,7 +7189,7 @@ this is the bore-bump rule:
 	say "On getting close to the bump you realize it's due something wedged inside the mattress. You search around, find a small machine that is apparently a termite emitter, and take it.";
 	moot bump;
 	now player has the emitter;
-	the rule succeeds;
+	abide by the bore-exam rule;
 
 understand "something" as bump when bump is part of the mattress and mattress is visible.
 
@@ -7762,7 +7748,7 @@ carry out scaning outcroppings: say "They don't seem to give a different scan th
 
 description of outcroppings is "They are something you could put your feet--no, the edge of them--on. They look sturdy enough to hold you, but the problem is, they don't lead anywhere."
 
-the u-lock is a boringthing. the u-lock is part of the tool shed. understand "lock" as u-lock. bore-check of u-lock is bore-ulock rule. bore-text is "BUG."
+the u-lock is a boringthing. the u-lock is part of the tool shed. understand "lock" as u-lock. bore-check of u-lock is bore-ulock rule. bore-text is "You probably won't be able to do anything with the u-lock. But you could RAD it."
 
 this is the bore-ulock rule:
 	if current action is scaning or current action is cring or current action is certifying or current action is rectifying:
@@ -7771,13 +7757,15 @@ this is the bore-ulock rule:
 			try scaning the tool shed;
 		else:
 			say "OK.";
-	else:
+			the rule succeeds;
+	else if current action is not procedural:
 		say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
 		if the player yes-consents:
 			say "It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently.";
 		else:
 			say "You don't bother with it.";
-	the rule succeeds;
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 instead of entering tool shed: say "You couldn't break into any stores, and you're not breaking into the tool shed."
 

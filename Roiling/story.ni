@@ -8020,6 +8020,7 @@ this is the bore-pin rule:
 	if current action is taking:
 		say "That'd be dreadfully impractical. It's too [i]giant[r] a t'ing.";
 		the rule succeeds;
+	abide by the bore-exam rule;
 
 a-text of giant pin is "RYYRRYRR". b-text of giant pin is "RYYPPYRR". parse-text of giant pin is "x[sp]-[sp]-[sp]n[sp]t[sp]-[sp]x[sp]x".
 
@@ -9304,7 +9305,7 @@ check taking:
 	if noun is part of the Letters Settler:
 		say "You don't want to go deconstructing the Letters Settler. It was hard enough to create for [gtmn]! (And me, too. But enough about coding.)" instead;
 
-the receptors are a boringthing. they are part of the letters settler. description is "You know little about electronics and magic theory, and you have no time to find out.". bore-text is "The receptors aren't important. Actually, scratch that, they're too important to fiddle with and break.".
+the receptors are a boringthing. they are part of the letters settler. description of receptors is "You know little about electronics and magic theory, and you have no time to find out.". bore-text is "The receptors aren't important. Actually, scratch that, they're too important to fiddle with and break.".
 
 the output display is a boringthing. the output display is part of the letters settler. description of output display is "You will be able to examine the output display when you SCAN something.". bore-text is "You need to activate the settler to see useful data on the output display."
 
@@ -10612,6 +10613,7 @@ this is the bore-windows rule:
 	if current action is attacking:
 		say "Unfortunately, if you enter a store that way, while it's still a store, there'd be nothing worth exploring.[paragraph break]Plus Elvira'd have a field day if and when you get caught.";
 		the rule succeeds;
+	abide by the bore-exam rule;
 
 book Cruelest Lectures
 
@@ -11340,7 +11342,7 @@ check going outside in Adobe Abode:
 
 chapter ashtray
 
-a trashy ashtray is boringscen in Adobe Abode. description is "[if pipe soot is in Adobe Abode]The ashtray is full of pipe soot, but at least, no Pepsi too[else]You emptied the ashtray[end if].". bore-text is "You can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'". bore-check is the bore-ashtray rule.
+a trashy ashtray is boringscen in Adobe Abode. description of a trashy ashtray is "[if pipe soot is in Adobe Abode]The ashtray is full of pipe soot, but at least, no Pepsi too[else]You emptied the ashtray[end if].". bore-text is "You can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'". bore-check is the bore-ashtray rule.
 
 understand "ash/tray" as ashtray.
 
@@ -11522,7 +11524,7 @@ this is the bore-reef rule:
 	if current action is scaning:
 		say "The reef is too far away to scan, and you check the combination of letters anyway. Nothing. Perhaps what you need is on the Cripple Clipper.";
 		the rule succeeds;
-	follow the bore-exam rule;
+	abide by the bore-exam rule;
 
 book Sonancy Canyons
 
@@ -11542,13 +11544,13 @@ a-text of bent ewe is "RYRRYYR". b-text of bent ewe is "PGRRGYR". parse-text of 
 
 chapter raptest patters
 
-the raptest patters are plural-named vanishing LLPish boringscen in Sonancy Canyons. description of raptest patters is "An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.". bore-check is the bore-raptest-patters rule.
+the raptest patters are plural-named vanishing LLPish boringscen in Sonancy Canyons. description of raptest patters is "An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.". bore-check is the bore-raptest-patters rule. bore-text is "All you can do with the raptest patters is LISTEN."
 
 this is the bore-raptest-patters rule:
 	if current action is listening:
 		try examining the raptest patters;
 		the rule succeeds;
-	say "All you can do with the patters is LISTEN.";
+	abide by the bore-exam rule;
 
 chapter yob den
 
@@ -12154,7 +12156,7 @@ this is the bore-wagon rule:
 			the rule succeeds;
 		say "But you weren't able to find any. That's a bug, but still, there must be something to do!";
 		the rule succeeds;
-	consider the bore-exam rule;
+	abide by the bore-exam rule;
 
 chapter red vees
 
@@ -12171,7 +12173,7 @@ a-text of red vees is "RYRYRRY". b-text of red vees is "RGRYRRY". parse-text of 
 
 chapter DIVORCES magazine
 
-DIVORCES Magazine is vanishing LLPish boringscen. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]". bore-text is "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise.". bore-check is bore-divorces rule.
+DIVORCES Magazine is vanishing LLPish boringscen. description of DIVORCES magazine is "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]". bore-text is "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise.". bore-check is bore-divorces rule.
 
 a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
 

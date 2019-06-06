@@ -608,7 +608,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "version"	604821629	--	--	degen-true rule	"[meta-rej]"
 "something"	649400178	--	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
 
-book text details
+book auxiliary text and rules
 
 section ordeal loader nudges
 
@@ -880,9 +880,6 @@ this is the riot-gone rule:
 to say ennui:
 	say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
 
-to say if-rifle:
-	say "The flier has helpful information it'd be better to act on than change"
-
 section general nudges
 
 to say chem-bad:
@@ -948,6 +945,8 @@ to say no-cred-spec:
 
 to say meta-rej:
 	say "Meta-commands don't have any easter eggs, sadly"
+
+book support rules
 
 Shuffling Nudges ends here.
 

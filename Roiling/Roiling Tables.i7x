@@ -1,6 +1,6 @@
 Version 1/180729 of Roiling Tables by Andrew Schultz begins here.
 
-volume tables that are easier to search in a header file
+volume main anagram tables
 
 book Ordeal Reload
 
