@@ -1,5 +1,5 @@
 #
-#nud.py
+#rorg.py
 #
 #arrange nudge file alphabetically
 #
@@ -13,6 +13,8 @@ import sys
 
 from filecmp import cmp
 from collections import defaultdict
+
+to_ignore = [ "degen-true rule", "drop-mud rule" ]
 
 verbose = False
 
@@ -42,7 +44,7 @@ def usage(err_cmd = "General usage"):
 
 def invalid_conditional(s):
     if s == "stopping" or s == "else" or s == "end if" or s == 'i' or s == 'r' or s == 'or' or s == "'" or s == 'paragraph break' or s == 'one of' or s == 'run paragraph on': return True
-    if s.startswith("unless ") or s.startswith("else if ") or s.startswith("if "): return True
+    if s.startswith("unless ") or s.startswith("else if ") or s.startswith("if ") or s.startswith("start "): return True
     return False
 
 def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, exp_cols = 0):
@@ -98,7 +100,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                 lary = line.lower().split("\t")
                 if exp_cols and len(lary) != exp_cols: print("Bad # of tabs in table at line {:d}. Should have 6.".format(line_count))
                 for x in range(0, len(lary)):
-                    if lary[x].endswith(" rule") and lary[x] != 'a rule':
+                    if lary[x].endswith(" rule") and lary[x] != 'a rule' and lary[x] not in table_order:
                         temp = re.sub("^the ", "", lary[x].lower())
                         table_order[lary[x]] = (line_count, x)
                         continue
@@ -106,7 +108,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     my_str = re.sub("^\"", "", lary[x])
                     my_str = re.sub("\".*", "", my_str)
                     line_not = x
-                    for brax in re.findall("\[[^\]]*\]", lary[x]):
+                    for brax in re.findall("\[[^\]]*\]", my_str):
                         brax = re.sub("[\[\]]", "", brax)
                         if invalid_conditional(brax): continue
                         brax = re.sub(" +of .*", "", brax)
@@ -144,16 +146,22 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         print("Never tried to sort table. Need {:s} in first column.".format(table_col_0))
         bail = True
     if bail: sys.exit()
-    x = list(set(sect_order) - set(table_order))
+    x = list(set(sect_order) - set(table_order) - set(to_ignore))
     if len(x): print("Print commands not in table:", len(x), x)
-    y = list(set(table_order) - set(sect_order))
+    y = list(set(table_order) - set(sect_order) - set(to_ignore))
     if len(y): print("Table commands not in print:", len(y), y)
+    if not len(x) and not len(y): print("Table and print commands all match up! Yay!")
     ts = sorted(table_starts, key=table_starts.get)
     for q in sorted(table_order, key=table_order.get):
+        if q in to_ignore: continue
+        if q not in cur_full_quote:
+            print(q, "line", line_count, "is in a table but not in auxiliary/ignore.")
         # print(q, table_order[q], ts, ts[0], table_starts[ts[0]])
         if len(ts) and table_order[q][0] > table_starts[ts[0]]:
+            #if not pop_yet: temp_out.write("\n")
             temp_out.write("section {:s} auxiliary\n\n".format(ts[0]))
             ts.pop(0)
+            #if not pop_yet: temp_out.write("\n")
         temp_out.write(cur_full_quote[q] + "\n")
     temp_out.write(ending_bit)
     temp_out.close()
