@@ -1,7 +1,14 @@
 #
 #rorg.py
 #
-#arrange nudge file alphabetically
+#arrange table and nudge files' auxiliary sections in the same order they appear in the table
+#
+# abc rule / def rule / "[ghi]"
+# jkl rule / mno rule / "[pqr] [ghi]"
+#
+# would list lines with abc, def, ghi, jkl. mno, pqr.
+#
+# to fix: hard coded ignore and alf_stuff calls
 #
 #
 

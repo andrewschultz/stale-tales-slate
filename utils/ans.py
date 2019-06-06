@@ -15,7 +15,7 @@ cmd_count = 1
 max_lines = 0
 
 searches = []
-default_ana = "compile"
+default_ana = "roster"
 
 def array_from_file():
     ret_ary = []
@@ -103,10 +103,11 @@ for ana in searches:
             look_for_line(ana_alf, line.lower().strip())
 
     if len(ana_types):
-        print("Possible anagrams found:")
+        print("Possible anagrams found for {:s}:".format(ana))
         for x in sorted(ana_types, key=ana_types.get, reverse=True):
-            print(x.strip(), ana_types[x], "<", ana, '-', x, red_note[redtext(ana, x)], "> first line {:d}".format(first_line[letters_only(x)]))
+            print("{:5d} of {:15s}".format(ana_types[x], x.strip()), "<", ana, '~', x.strip(), red_note[redtext(ana, x)], "> First line: {:d}".format(first_line[letters_only(x)]))
 
 end_time = time.time()
+time_delta = end_time - start_time
 ls = len(searches)
-print("Time elapsed:", end_time - start_time, "seconds", "for", ls, "total anagram{:s}".format('s' if ls != 1 else ''), "average =", end_time / ls)
+print("Time elapsed:", time_delta, "seconds", "for", ls, "total anagram{:s}".format('s' if ls != 1 else ''), "average =", time_delta / ls)
