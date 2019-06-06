@@ -21,7 +21,8 @@ import sys
 from filecmp import cmp
 from collections import defaultdict
 
-to_ignore = [ "degen-true rule", "drop-mud rule" ]
+cfg_file = "c:/writing/scripts/rorg.txt"
+to_ignore = defaultdict(bool)
 
 verbose = False
 
@@ -32,12 +33,16 @@ game_ary = [ "sa", "roi" ]
 do_nudges = True
 do_tables = False
 
+bail_force = False
+bail_on_mismatch = False
+
 table_starts = defaultdict(int)
 table_order = defaultdict(tuple)
 first_table = defaultdict(str)
 sect_order = defaultdict(int)
 
 temp_file = os.path.join(i7.extdir, "temp.i7x")
+tbase = os.path.basename(temp_file)
 
 def usage(err_cmd = "General usage"):
     print(err_cmd)
@@ -46,6 +51,8 @@ def usage(err_cmd = "General usage"):
     print("n/t tells whether to alphabetize nudges or tables")
     print("c/nc/cn tells whether to copy back")
     print("v/nv/vn toggles verbose output")
+    print("b/bf/fb forces bail if a section is missed")
+    print("bm/mb bails on mismatch")
     print("? gives this")
     exit()
 
@@ -69,6 +76,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     ever_table = False
     ever_sort_start = False
     temp_out = open(temp_file, "w")
+    fbase = os.path.basename(my_f)
     with open(my_f) as file:
         for (line_count, line) in enumerate(file, 1):
             if not write_lines and sort_end in line:
@@ -152,17 +160,24 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     if not ever_table:
         print("Never tried to sort table. Need {:s} in first column.".format(table_col_0))
         bail = True
-    if bail: sys.exit()
+    if bail_force and bail: sys.exit()
     x = list(set(sect_order) - set(table_order) - set(to_ignore))
-    if len(x): print("Print commands not in table:", len(x), x)
+    if len(x):
+        print("Print commands not in table:")
+        for cmd in sorted(x, key=lambda x:sect_order[x]):
+            print("Line {:5d} has print command {:s}.".format(sect_order[cmd], cmd))
     y = list(set(table_order) - set(sect_order) - set(to_ignore))
-    if len(y): print("Table commands not in print:", len(y), y)
+    if len(y):
+        print("Table commands not in print:")
+        for cmd in sorted(y, key=lambda x:table_order[x]):
+            print("Line {:5d} has print command {:s}.".format(table_order[cmd][0], cmd))
     if not len(x) and not len(y): print("Table and print commands all match up! Yay!")
+    elif bail_on_mismatch: sys.exit("Bailing on mismatches.")
     ts = sorted(table_starts, key=table_starts.get)
     for q in sorted(table_order, key=table_order.get):
         if q in to_ignore: continue
         if q not in cur_full_quote:
-            print(q, "line", line_count, "is in a table but not in auxiliary/ignore.")
+            print(q, "line", table_order[q][0], "is in a table but not in auxiliary/ignore.")
         # print(q, table_order[q], ts, ts[0], table_starts[ts[0]])
         if len(ts) and table_order[q][0] > table_starts[ts[0]]:
             #if not pop_yet: temp_out.write("\n")
@@ -176,14 +191,14 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         print("Files matched!")
         return
     else:
-        print("Mismatches!")
-        mytools.cs(my_f, temp_file, True)
+        print("Mismatches between {:s} and {:s}!".format(tbase, fbase))
+        mytools.cs(my_f, temp_file, True, 20)
     if copy_file:
         filecpy(temp_file, my_f)
     else:
         i7.wm(temp_file, my_f)
     #os.remove(temp_file)
-    print("Finished", os.path.basename(my_f))
+    print("Finished", fbase)
     sys.exit()
 
 cmd_count = 1
@@ -200,6 +215,8 @@ while cmd_count < len(sys.argv):
     elif arg == 't':
         do_nudges = False
         do_tables = True
+    elif arg == 'b' or arg == 'bf' or arg == 'fb': bail_force = True
+    elif arg == 'bm' or arg == 'mb': bail_on_mismatch = True
     elif arg == 'rs': game_ary = [ "roi", "sa" ]
     elif arg == 'sr': game_ary = [ "sa", "roi" ]
     elif arg == 'r' or arg == 'roi': game_ary = [ "roi" ]
@@ -207,6 +224,14 @@ while cmd_count < len(sys.argv):
     elif arg == '?': usage()
     else: usage("Bad command " + arg)
     cmd_count += 1
+
+with open(cfg_file) as file:
+    for (line_count, line) in enumerate(file, 1):
+        if line.startswith(";"): break
+        if line.startswith("#"): continue
+        line = re.sub("#.*", "", line) # comments after listed items are okay
+        lary = [ x.strip() for x in line.strip().lower().split(",") ] # a, b and a,b should work
+        for l in lary: to_ignore[l] = True
 
 for x in game_ary:
     if do_nudges:
