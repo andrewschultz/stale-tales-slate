@@ -51,7 +51,7 @@ skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts u
 t-n	teleporter	"kitchen"	"the nick"	--	post-thenick-kitchen rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	--	kitchen
 cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The t-shirt crumples and then shreds before turning into a light green head of lettuce."	false	639757485
 spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
-cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	--	pre-cathouse-hotsauce rule	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
+cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	pre-cathouse-hotsauce rule	--	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
 grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist in the fridge [if fridge-open is false]you didn't even open yet [end if]refines itself into something more edible. Relatively."	false	362300335
 cake pan	pancake	"pancake"	"cake pan" or "cakepan"	--	post-fridgey-flip rule	"You hear a clatter, and then you poke into the fridge [if fridge-open is false]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
 tall trio	tortilla	"tortilla"	"tall trio"	--	--	"Poof! The doughy fellows maintain their breadiness, but they flatten out into a tortilla."	false	520704758
@@ -125,29 +125,22 @@ this is the post-siren-resin rule:
 	if resin is visible:
 		moot resin;
 		now stickyhanded is true;
-	continue the action;
 
 this is the post-storeb-sorbet rule:
 	moot sorbet;
 	min-up;
-	continue the action;
 
 this is the post-anapest-peasant rule:
 	moot pat;
-	continue the action;
 
 this is the post-liches-chisel rule:
 	now spread is in Cruel Ones' Enclosure;
-	continue the action;
 
 this is the post-riot-protest rule:
 	now chain links are in Potshot Hotspot;
-	continue the action;
 
 this is the post-poles-slope rule:
-	if toeholds are part of the poles:
-		now toeholds are part of the slope;
-	continue the action;
+	if toeholds are part of the poles, now toeholds are part of the slope;
 
 this is the pre-plane-panel rule:
 	if poem is not folded, say "You'd need to fold the poem into a plane, first." instead;
@@ -197,7 +190,6 @@ this is the pre-beats-beast rule:
 
 this is the post-antlers-rentals rule:
 	moot rentals;
-	continue the action;
 
 this is the pre-livers-sliver rule:
 	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
@@ -213,21 +205,18 @@ this is the pre-livers-sliver-silver rule:
 
 this is the post-oils-soil rule:
 	now oils are in Sacred Cedars;
-	continue the action;
 
 this is the post-oils-silo rule:
 	now oils are in Sacred Cedars;
 	moot cask;
 	moot sack;
-	continue the action;
 
 this is the pre-oils-soil rule:
 	if oils are not in cask:
 		if location of player is Sacred Cedars, say "[if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to soil[end if]." instead;
 		if oils are visible:
 			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
-		continue the action;
-	if player is not in moor:
+	else if player is not in moor:
 		say "This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?";
 		preef soil;
 		do nothing instead;
@@ -254,22 +243,16 @@ this is the post-nametag-gateman rule:
 	if the player has the bugle:
 		say "The gateman [if ant is moot]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
 		moot bugle;
-	continue the action;
 
 this is the post-odor-door rule:
 	if min-alert is false, poss-display;
-	continue the action;
 
 this is the post-bolt-blot rule:
 	now blot is part of OR DO door;
-	if bulge is moot:
-		min-up;
-	continue the action;
+	if bulge is moot, min-up;
 
 this is the post-bulge-bugle rule:
-	if bolt is moot:
-		min-up;
-	continue the action;
+	if bolt is moot, min-up;
 
 this is the pre-storer-resort rule:
 	if you-can-advance, continue the action;
@@ -280,11 +263,9 @@ this is the pre-storer-resort rule:
 this is the post-banshee-hasbeen rule:
 	min-up;
 	moot has-been;
-	continue the action;
 
 this is the post-thenick-kitchen rule:
 	if straw is in the nick, now straw is in kitchen;
-	the rule succeeds;
 
 this is the pre-cathouse-hotsauce rule:
 	if the player's command does not include "hot" and the player's command does not include "hotsauce", say "Close, but you need to say the full name of the sauce." instead;
@@ -297,7 +278,6 @@ this is the post-fridgey-flip rule:
 			now fridge-open is true;
 			now fridge is transparent;
 		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
-	continue the action;
 
 this is the pre-sack-cask rule:
 	if sack is visible:
@@ -343,12 +323,10 @@ this is the post-room-moor rule:
 	if room-flip is false:
 		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
 		now room-flip is true;
-	continue the action;
 
 this is the post-drainage-gardenia rule:
 	if A reading is in Undesired Underside, say "The/a reading blows away once the gardenias appear.";
 	moot a reading;
-	continue the action;
 
 this is the pre-drycake-keycard rule:
 	if bastion-evac is false and dry cake is visible:
@@ -372,7 +350,6 @@ this is the pre-words-sword rule:
 
 this is the post-heaths-sheath rule:
 	now player wears sheath;
-	continue the action;
 
 this is the pre-heaths-sheath rule:
 	if player is in Fo' Real Florae:
@@ -402,22 +379,16 @@ this is the post-leis-lies rule:
 	min-up;
 	moot lies;
 	now found-lies is true;
-	continue the action;
 
 this is the post-protest-potters rule:
-	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot:
-		hello-bull;
-	continue the action;
+	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
 
 this is the post-links-kilns rule:
-	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot:
-		hello-bull;
-	continue the action;
+	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
 
 this is the post-chain-china rule:
 	now links are in Potshot Hotspot;
 	moot china;
-	continue the action;
 
 this is the pre-chain-china rule:
 	if china is moot, say "You already shook that out of the links. You need to concentrate on the links, now." instead.
