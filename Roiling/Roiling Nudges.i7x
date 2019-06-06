@@ -76,6 +76,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle is moot] that needed changing[end if]."
 "cavern"	410395643	Carven Cavern	--	--	"[locname]." [start Carven Cavern]
 "terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
+"act"	124303421	myrm	--	--	"[curtain-block]."
+"ruin"	304329964	myrm	--	--	"[curtain-block]."
+"curtain"	428633385	myrm	--	--	"[curtain-block]."
 "manse"	359250554	--	--	degen-true rule	"[not-the-reg]." [end-manse]
 
 table of stores nudges
@@ -329,6 +332,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "mazeentry"	824545388	--	zany meter	--	"[mz-chg]."
 "zany"	316424196	--	zany meter	--	"[mz-chg]."
 "meter"	508121192	--	zany meter	--	"[mz-chg]."
+"volt"	338441254	--	--	volt-maze-visible rule	"That can't be it. It's a volt MAZE."
+"maze"	317038698	--	--	volt-maze-visible rule	"That can't be it. It's a VOLT maze."
 "bigl"	149825292	Nowt Town	--	--	"The big L may be some sort of clue, but you can't do anything with it."
 "mazeltov"	655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if Saps' Pass is visited]back [end if]north."
@@ -342,6 +347,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bigs"	192285419	r32	--	--	"[just-letter]."
 "bigt"	199121471	r33	--	--	"[just-letter]."
 "bigu"	201117260	r23	--	--	"[just-letter]."
+"floor"	314357692	--	big-let	--	"You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle."
 "unwary"	491818961	Unwary Runway	--	--	"[locname]." [start Unwary Runway]
 "bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "dreidl"	353994775	--	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
@@ -360,10 +366,17 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "cretin"	449145869	Char Arch	--	--	"[cistern-to-dart]."
 "cistern"	545419835	Char Arch	--	--	"[cistern-to-dart]."
 "tar"	190621639	--	tars	--	"The tars remain heterogeneous. And very sticky. And the same size."
+"yak"	177480248	--	yak	--	"The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help."
+"yoke"	377451116	--	drab yoke	--	"It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak."
+"drab"	126959615	--	drab yoke	--	"It's not just drab. It's a drab yoke. On the bored yak."
+"scratchings"	604963096	--	drab yoke	--	"You may wish to decipher the scratchings, instead."
+"scratching"	508689130	--	drab yoke	--	"You may wish to decipher the scratchings, instead."
 "dirge"	311751549	Dirge Ridge	--	--	"[locname]." [start Dirge Ridge]
 "liev"	333777614	Dirge Ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "leonard"	433420743	--	Rand	--	"[if lawl wall is moot]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 "austerer"	732937433	austerer	--	--	"[locname]." [start Austerer Treasure]
+"onyx"	378387418	--	onyx censer	--	"You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be."
+"onyxcenser"	903510498	--	onyx censer	--	"You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter."
 "marines"	489567203	Marines Seminar Remains	--	--	"[locname]." [start Marines Seminar Remains]
 "marine"	393293237	Marines Seminar Remains	--	--	"[locname]."
 "port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]No, all the ports[else]You already observed all the ports. No need to try to single one out[end if]."
@@ -372,9 +385,47 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
+"drat"	211650728	--	dart	--	"[if dart is in marines]Some 4-letter word or other will get the dart.[else]Don't need to do anything else.[end if]"
+"bingo"	239271538	--	--	gun-broken rule	"Not quite. You're close to an a-ha moment, though."
+"fountain"	494078978	--	fount	--	"It's too small to be a fountain--really, just a fount."
+"lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
+"ssap"	276201709	Saps' Pass	--	--	"[locname]." [Saps' Pass]
+"mount"	415551063	--	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
+"deil"	247641883	--	--	path-pass rule	"[d-sli]."
+"deils"	343915849	--	--	path-pass rule	"[d-sli]."
+"hog"	144234578	--	--	path-pass rule	"You need to deal with all the hogs."
+"key"	303098539	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
+"phat"	224046094	Phat Path	--	--	"[locname]." [start Phat Path]
+"saps"	276201709	Phat Path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks' Shack is visited]back [end if]north, here."
+"clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
+"entyr"	507506690	Phat Path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
+"lodge"	309601316	--	ogled lodge	--	"You'll need to [if Hacks' Shack is visited]re-enter the shack[else]enter the lodge[end if] to take care of things here."
 "harpings"	449033901	--	harpings phrasing	--	"[harphr]."
 "harping"	352759935	--	harpings phrasing	--	"[harphr]."
 "chart"	246909523	--	starch charts	--	"No, the chartS."
+"shakc"	207682846	Hacks' Shack	--	--	"[locname]." [start hacks shack]
+"hack"	111408880	Hacks' Shack	--	--	"[locname]."
+"algorithm"	497738055	Hacks' Shack	--	--	"[no-txtbk]."
+"algorithms"	594012021	Hacks' Shack	--	--	"[no-txtbk]."
+"labs"	170694528	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
+"alb"	74420562	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
+"dead"	172052105	--	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
+"clack"	146946005	--	clack ops locs pack	--	"[full-pack]."
+"ops"	252092502	--	clack ops locs pack	--	"[full-pack]."
+"locs"	243445967	--	clack ops locs pack	--	"[full-pack]."
+"pack"	155592540	--	clack ops locs pack	--	"[full-pack]."
+"reboot"	483363989	Hacks' Shack	--	--	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
+"nottobe"	570057712	Hacks' Shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
+"caps"	198933328	--	caps lock	--	"[caps-no]."
+"lock"	200105179	--	caps lock	--	"[caps-no]."
+"tbakey"	426815280	--	t-key	--	"[if t-key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]."
+"pile"	308078753	--	coal	--	"It's not just any pile--it's a pile of coal."
+"stikc"	316315593	--	gum	--	"It's just gum."
+"stickofgum"	618963728	--	gum	--	"It's just gum."
+"catechism"	513739379	Hacks' Shack	--	--	"[no-txtbk]."
+"textbook"	666851463	Hacks' Shack	--	--	"[no-txtbk]."
+"bkoo"	220057237	Hacks' Shack	--	--	"[no-txtbk]."
+"drive"	386316667	Hacks' Shack	--	--	"[no-dsk]."
 "rebuff"	389684416	Hacks' Shack	--	--	"The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise."
 "magnetic"	462684739	Hacks' Shack	--	--	"The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise."
 "computer"	660245011	Hacks' Shack	--	--	"You need to fix the program in the computer[if number of things on labs slab < 4], well, once you get it running[end if]."
@@ -400,56 +451,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dongle"	378508824	--	dongle	--	"It's built to be sturdy. You don't want to mess with it."
 "boredyak"	504410731	--	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
 "sleep"	487165982	--	--	wise-to-sleep rule	"Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if]."
-"onyx"	378387418	--	onyx censer	--	"You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be."
-"onyxcenser"	903510498	--	onyx censer	--	"You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter."
 "trimsocks"	636341092	--	rom sticks	--	"The ROM sticks can probably make your computer go faster. Why fiddle further?"
-"floor"	314357692	--	big-let	--	"You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle."
-"yak"	177480248	--	yak	--	"The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help."
-"yoke"	377451116	--	drab yoke	--	"It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak."
-"drab"	126959615	--	drab yoke	--	"It's not just drab. It's a drab yoke. On the bored yak."
-"scratchings"	604963096	--	drab yoke	--	"You may wish to decipher the scratchings, instead."
-"scratching"	508689130	--	drab yoke	--	"You may wish to decipher the scratchings, instead."
-"volt"	338441254	--	--	volt-maze-visible rule	"That can't be it. It's a volt MAZE."
-"maze"	317038698	--	--	volt-maze-visible rule	"That can't be it. It's a VOLT maze."
-"drat"	211650728	--	dart	--	"[if dart is in marines]Some 4-letter word or other will get the dart.[else]Don't need to do anything else.[end if]"
-"bingo"	239271538	--	--	gun-broken rule	"Not quite. You're close to an a-ha moment, though."
-"fountain"	494078978	--	fount	--	"It's too small to be a fountain--really, just a fount."
-"lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
-"ssap"	276201709	Saps' Pass	--	--	"[locname]." [Saps' Pass]
-"mount"	415551063	--	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
-"deil"	247641883	--	--	path-pass rule	"[d-sli]."
-"deils"	343915849	--	--	path-pass rule	"[d-sli]."
-"hog"	144234578	--	--	path-pass rule	"You need to deal with all the hogs."
-"key"	303098539	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
-"phat"	224046094	Phat Path	--	--	"[locname]." [start Phat Path]
-"saps"	276201709	Phat Path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks' Shack is visited]back [end if]north, here."
-"clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
-"entyr"	507506690	Phat Path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
-"lodge"	309601316	--	ogled lodge	--	"You'll need to [if Hacks' Shack is visited]re-enter the shack[else]enter the lodge[end if] to take care of things here."
-"shakc"	207682846	Hacks' Shack	--	--	"[locname]." [start hacks shack]
-"hack"	111408880	Hacks' Shack	--	--	"[locname]."
-"algorithm"	497738055	Hacks' Shack	--	--	"[no-txtbk]."
-"algorithms"	594012021	Hacks' Shack	--	--	"[no-txtbk]."
-"labs"	170694528	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
-"alb"	74420562	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
-"dead"	172052105	--	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
-"clack"	146946005	--	clack ops locs pack	--	"[full-pack]."
-"ops"	252092502	--	clack ops locs pack	--	"[full-pack]."
-"locs"	243445967	--	clack ops locs pack	--	"[full-pack]."
-"pack"	155592540	--	clack ops locs pack	--	"[full-pack]."
-"reboot"	483363989	Hacks' Shack	--	--	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
-"nottobe"	570057712	Hacks' Shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
-"debug"	304959612	--	--	time-to-debug rule	"You need to budge the letters about."
-"caps"	198933328	--	caps lock	--	"[caps-no]."
-"lock"	200105179	--	caps lock	--	"[caps-no]."
-"tbakey"	426815280	--	t-key	--	"[if t-key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]."
-"pile"	308078753	--	coal	--	"It's not just any pile--it's a pile of coal."
-"stikc"	316315593	--	gum	--	"It's just gum."
-"stickofgum"	618963728	--	gum	--	"It's just gum."
-"catechism"	513739379	Hacks' Shack	--	--	"[no-txtbk]."
-"textbook"	666851463	Hacks' Shack	--	--	"[no-txtbk]."
-"bkoo"	220057237	Hacks' Shack	--	--	"[no-txtbk]."
-"drive"	386316667	Hacks' Shack	--	--	"[no-dsk]."
 "storep"	568332432	--	--	degen-true rule	"[not-the-reg]." [end-p]
 
 table of oyster nudges
@@ -1240,13 +1242,11 @@ this is the basement-visible rule:
 	if player is in Dusty Study and meet bans is not in Dusty Study, the rule succeeds;
 	the rule fails;
 
-this is the chimney-visible rule:
-	if player is in Dusty Study and niche is not in Dusty Study, the rule succeeds;
-	the rule fails;
-
 this is the stable-visible rule:
 	if player is in Dusty Study and tables are not in Dusty Study, the rule succeeds;
 	the rule fails;
+
+to say just-c: say "Just return the fruit to Curtis. No need for another change"
 
 to say curtain-block: say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
 
@@ -1315,8 +1315,6 @@ this is the has-reag rule:
 
 to say die-sin: say "[if Cleric Circle is visited]The words themselves do nothing. You found the way in[else]Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined[end if]"
 
-to say mb-sign: say "The sign wobbles slightly, though there isn't really any wind. Perhaps you could be more straightforward and PUSH it[if Cleric Circle is visited], though you've already been in the circle[end if]"
-
 to say not-stripe: say "The poison stripe is too incorporeal to do bend to your will"
 
 to say pit-full: say "[if mushrooms are off-stage]The whole seed pit[else]You already got the mushrooms[end if]"
@@ -1328,11 +1326,6 @@ to say chanty: say "The chant doesn't change. Chants are good at that"
 to say rev-sum: say "That document is the stone truth! It doesn't need revisionism or embellishment"
 
 to say no-poi: say "The [if player is in Same Mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
-
-this is the first-two rule:
-	if player is in Same Mesa, the rule succeeds;
-	if brother horbert is visible, the rule succeeds;
-	the rule fails;
 
 to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
 
@@ -1347,10 +1340,6 @@ this is the am-along rule:
 	the rule succeeds;
 
 to say dark-been: say "The darkness has always been there and always will be. You need to find a way to say it was dark"
-
-to say btn-by: say "You need to find the right button on or by the controls"
-
-to say pier-sign: say "That may not help you through the mist. Maybe read the sign instead"
 
 to say sheol-c: say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help"
 
@@ -1403,9 +1392,7 @@ this is the divorces-gone rule:
 	if player is in Upscale Capsule and divorces is moot, the rule succeeds;
 	the rule fails;
 
-to say ruts-pull: say "The ruts will pull you down if you look too far into them"
-
-to say sidewalk-oops: say "You can't make the sidewalk crumble any more, and you probably don't want to"
+to say sidewalk-oops: say "The sidewalk's condition can't be changed. For better or worse"
 
 to say id-cede-full: say "It's the full song name--[i]I'd Cede[r]"
 
@@ -1511,16 +1498,6 @@ this is the path-pass rule:
 	if player is in Phat Path or player is in Saps' Pass, the rule succeeds;
 	the rule fails;
 
-this is the washup rule:
-	if player is in Dirge Ridge:
-		if Leo is not washed up or Rand is not washed up:
-			the rule fails;
-	the rule succeeds;
-
-this is the enemy-lines rule:
-	if ether is moot and player is in Grey Gyre and Leo is in Grey Gyre, the rule succeeds;
-	the rule fails;
-
 to say d-sli: say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
 
 to say slab-score:
@@ -1528,14 +1505,6 @@ to say slab-score:
 	say "[if slab-pts > 5]+++ (tired yet?)[run paragraph on][else][slab-pts][end if]";
 
 to say full-pack: say "You need to deal with the full [locs pack]"
-
-this is the time-to-compile rule:
-	if I'm Le Cop polemic is reflexive and rebooted is true, the rule succeeds;
-	the rule fails.
-
-this is the time-to-debug rule:
-	if I'm Le Cop polemic is reflexed, the rule succeeds;
-	the rule fails.
 
 to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
 
@@ -1567,18 +1536,6 @@ to say no-cray: say "No way. You're not changing the crays--and if you changed o
 
 to say just-tea: say "Best to think of it as just tea";
 
-this is the crates-menace rule:
-	if player is in Lapsin' Plains and crate is reflexive, the rule succeeds;
-	the rule fails;
-
-this is the plains rule:
-	if player is in Lapsin' Plains, the rule succeeds;
-	the rule fails;
-
-to say knob-skis: say " of the door. More [if knob is reflexive and skis are in Lapsin' Plains]the knob and skis are impeding you[else if skis are in Lapsin' Plains]the skis are blocking the door[else if knob is reflexive]that knob is stuck[else]isn't needed, as you managed to navigate the knob and skis[end if]";
-
-to say prob-ov: say "You are probably over-thinking it. There's a more direct way to tackle the span pans"
-
 to say polyp-no: say "You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further"
 
 to say crate-frag: say "[if crate is reflexed]Not worth messing with the fragments any more[else]They're fragments of a crate--this may or may not help[end if]"
@@ -1599,10 +1556,6 @@ this is the is-hauntable rule:
 	if player is in Anger Range and haunter is off-stage, the rule succeeds;
 	if haunter is visible, the rule succeeds;
 	the rule fails;
-
-this is the h-assuaged rule:
-	if haunter is reflexed and haunter is in location of player, the rule succeeds;
-	the rule fails.
 
 to say its-msg: say "You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper"
 
@@ -1649,10 +1602,6 @@ this is the duck-cant rule:
 to say no-ropin: say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open[end if]";
 
 to say could-cloud: say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form"
-
-to say ray-part: say "You can't do much with either part of Ray's name. Plus he has that keycar"
-
-to say out-rou: say "Changing the direction or the composition of the trail won't do anything"
 
 to say shoaly: say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
 
@@ -1844,11 +1793,9 @@ this is the lemnomel rule:
 
 to say papay: say "[if auction caution is reflexive]You're probably over-thinking it--just pay attention to what it says, instead[else]You've taken the banner's advice well enough[end if]";
 
-to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be";
+to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be, especially since you [if storage box is in Scape Space]want to get [else]got[end if] that storage box";
 
 to say hub-no: say "Maybe poking at the brr hub might give more ideas";
-
-to say no-art: say "You don't need to do anything to [if art erd is visible]Art[else]Dr. Tera[end if], especially since [if storage box is in Scape Space]you want to get that storage box[else]you got that storage box[end if]"
 
 to say slot-no: say "[if lost slot is off-stage]Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear[else]After all that work getting it to appear, you don't want to make the lost slot vanish[end if]"
 
@@ -1909,16 +1856,16 @@ to say dir-cut: say "section has no easter eggs[if mrlp is demo dome], though yo
 
 to say meta-rej: say "Meta-commands don't have any easter eggs, sadly"
 
+this is the can-i-parse rule:
+	if elmo is moot, the rule succeeds;
+
 book support rules
 
-[these are used elsewhere throughout the nudges file]
+[These are used elsewhere throughout the nudges file, but they are not main rules listed in a table.]
 
 slab-pts is a number that varies.
 
 to say cussy: say "You're not fooling ME. Shame on you"
-
-this is the can-i-parse rule:
-	if elmo is moot, the rule succeeds;
 
 Roiling Nudges ends here.
 
