@@ -18,12 +18,27 @@ verbose = False
 
 copy_file = False
 
+# default is to do everything
+game_ary = [ "sa", "roi" ]
+do_nudges = True
+do_tables = False
+
 table_starts = defaultdict(int)
 table_order = defaultdict(tuple)
 first_table = defaultdict(str)
 sect_order = defaultdict(int)
 
 temp_file = os.path.join(i7.extdir, "temp.i7x")
+
+def usage(err_cmd = "General usage"):
+    print(err_cmd)
+    print("=" * 50)
+    print("r/s or both tell whether to use roiling or shuffling")
+    print("n/t tells whether to alphabetize nudges or tables")
+    print("c/nc/cn tells whether to copy back")
+    print("v/nv/vn toggles verbose output")
+    print("? gives this")
+    exit()
 
 def invalid_conditional(s):
     if s == "stopping" or s == "else" or s == "end if" or s == 'i' or s == 'r' or s == 'or' or s == "'" or s == 'paragraph break' or s == 'one of' or s == 'run paragraph on': return True
@@ -68,6 +83,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
             if line.startswith("table of") and in_necc_section:
                 my_table = re.sub("table of ", "", line.lower().strip())
                 my_table = re.sub(" *\[.*", "", my_table)
+                my_table = re.sub(" *(nudges|anagrams)", "", my_table)
                 table_starts[my_table] = line_count
                 continue
             if line.startswith(table_col_0):
@@ -136,7 +152,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     for q in sorted(table_order, key=table_order.get):
         # print(q, table_order[q], ts, ts[0], table_starts[ts[0]])
         if len(ts) and table_order[q][0] > table_starts[ts[0]]:
-            temp_out.write("section {:s} nudges\n\n".format(ts[0]))
+            temp_out.write("section {:s} auxiliary\n\n".format(ts[0]))
             ts.pop(0)
         temp_out.write(cur_full_quote[q] + "\n")
     temp_out.write(ending_bit)
@@ -152,6 +168,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     else:
         i7.wm(temp_file, my_f)
     #os.remove(temp_file)
+    print("Finished", os.path.basename(my_f))
     sys.exit()
 
 cmd_count = 1
@@ -159,9 +176,25 @@ while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count].lower()
     if arg == 'c': copy_file = True
     elif arg == 'nc' or arg == 'cn': copy_file = False
+    elif arg == 'v': verbose = True
+    elif arg == 'nv' or arg == 'vn': verbose = False
+    elif arg == 'nt' or arg == 'tn': do_tables = do_nudges = True
+    elif arg == 'n':
+        do_nudges = True
+        do_tables = False
+    elif arg == 't':
+        do_nudges = False
+        do_tables = True
+    elif arg == 'rs': game_ary = [ "roi", "sa" ]
+    elif arg == 'sr': game_ary = [ "sa", "roi" ]
+    elif arg == 'r' or arg == 'roi': game_ary = [ "roi" ]
+    elif arg == 'sa' or arg == 's': game_ary = [ "sa" ]
+    elif arg == '?': usage()
+    else: usage("Bad command " + arg)
     cmd_count += 1
 
-#alf_stuff(i7.hdr("roi", "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", 6)
-#alf_stuff(i7.hdr("sa", "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", 6)
-alf_stuff(i7.hdr("sa", "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "volume specific help for things you need to flip", "the-from", 0)
-#alf_stuff(i7.hdr("roi", "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "volume demo dome tables", "the-from", 0)
+for x in game_ary:
+    if do_nudges:
+        alf_stuff(i7.hdr(x, "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", 6)
+    if do_tables:
+        alf_stuff(i7.hdr(x, "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "volume demo dome tables" if x == "roi" else "volume specific help for things you need to flip", "the-from", 0)
