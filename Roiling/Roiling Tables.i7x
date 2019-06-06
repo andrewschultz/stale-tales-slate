@@ -24,8 +24,8 @@ niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney ru
 meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-basement rule	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
-plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	--	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
+plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is visible]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
+plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	--	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
 book stores
@@ -34,11 +34,11 @@ table of stores anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 Store B	Store B	false	505285378	--	"sorbet"	"sorbet"	a rule	a rule	"You ask 'Got any sorbet?' and a seedy man beckons you in. You talk for a bit, and he talks about how he wants to be a writer and his name is Obert (O-Bert) and you suggest he might be a better writer just by calling himself OB-ert (short o.) It's the most ridiculous things he's ever heard. He thumps you eleven times and throws you out. But the free sample was delicious."
 Store H	hoster	false	524148772	--	"others"	"others"	--	--	"You manage to discover a secret place set aside in Store H. You wonder who could be there or even if you should go there."
-Store K	tokers	false	539799651	--	"tokers"	"tokers"	--	--	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"
+Store K	tokers	false	539799651	--	"tokers"	"tokers"	--	post-storek-tokers rule	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"
 Store N	nestor	false	555773981	--	"nestor"	"nestor"	--	--	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"
 lecturer	lecturer	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	--	--	"Ian and the lecturer are swept from the doorway and stage, respectively, by something unseen. The lecturer frantically babbles something about how this is why we need to fight drugs, but he is too busy backwards somersaulting to establish eye contact with his audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers assure you that'd waste money. They explain the munchies help reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."
 Store P	e-s	false	568332432	--	"presto"	"presto"	--	--	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, not a blotch. Call it an, er, spot. You can ENTER, if you dare."
-Store T	otters-x	false	589976491	--	"otters"	"otters"	--	--	"The store divides in two until it becomes a path with gargoyles on each side. I mean, otters."
+Store T	otters-x	false	589976491	--	"otters"	"otters"	--	post-storet-otters rule	"The store divides in two until it becomes a path with gargoyles on each side. I mean, otters."
 Store U	routes-x	false	591972280	--	"routes"	"routes"	--	--	"The routes coalesce and flatten and grow. You can ENTER them to see where they lead."
 Store V	troves-x	false	594031293	--	"troves"	"troves"	--	--	"You look more closely at Store V. Yes, those are definitely troves. Store V collapses--you duck as the walls fall out and somehow sink into the ground."
 Store W	towers-x	false	594801246	--	"towers"	"towers"	--	--	"The store becomes a pair of twin towers, connected at the base where you can enter them."
@@ -60,10 +60,10 @@ pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	--	--	"You inch to t
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	--	--	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
 MORF FORM	the-b	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	--	--	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
-darkness	darkness	false	375930018	--	"until"	"until"	--	--	"The one preposition gives you confidence you will find No-Gal Logan, and because you're below ground, you fear no sunlit insult. The darkness is largely sucked into an odd item, which looks like an all noon gag. And while the marsh isn't exactly glowing now, but you can notice things better. The sheol holes in particular, though some will still ambush you. You can't find a road, but maybe an un-road. But which way to go? Compass directions are still out."
-sheol holes	sheol holes	false	356906602	--	"around"	"around"	--	--	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
+darkness	darkness	false	375930018	--	"until"	"until"	--	post-unlit-unilt rule	"The one preposition gives you confidence you will find No-Gal Logan, and because you're below ground, you fear no sunlit insult. The darkness is largely sucked into an odd item, which looks like an all noon gag. And while the marsh isn't exactly glowing now, but you can notice things better. The sheol holes in particular, though some will still ambush you. You can't find a road, but maybe an un-road. But which way to go? Compass directions are still out."
+sheol holes	sheol holes	false	356906602	--	"around"	"around"	--	post-sheol-holes rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	un-road	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
-da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' You protest--you need someone to show you the way. 'You will learn from my sorrow,' says No-Gal Logan. You don't want to be an ol['] nag, so you sit and wait."
+da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	post-damist-amidst rule	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' You protest--you need someone to show you the way. 'You will learn from my sorrow,' says No-Gal Logan. You don't want to be an ol['] nag, so you sit and wait."
 thickness sketchins	thickness sketchins	false	329930229	Sonancy Canyons	"athwart"	"athwart"	--	--	"Not just any direction will do. You need something nautical. And there it is. Athewart--helps you navigate around tough bits. You look around. Oh, hey, there's the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction. The bad oar helps you on your way but snaps as you land. You think you yourself, scan yon... so canny... and you wind up somewhere different."
 hurt hog	hurt hog	false	475056505	--	"through"	"through"	--	--	"You realize it's time to move on. So you do."
 bent ewe	bent ewe	false	681789531	--	"between"	"between"	--	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
@@ -79,25 +79,25 @@ cold	heat	false	270386244	--	"hate"	"hate"	--	--	"You feel a rife fire in your h
 heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	--	--	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	--	--	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	--	--	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief! You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
-bee's head	bee's head	false	454851781	--	"reason"	"reason"	--	bee-less-active rule	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
-evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
-cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	--	--	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's that trap door? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
-diapers	diapers	false	459079590	--	"despair"	"despair"	--	--	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
+bee's head	bee's head	false	454851781	--	"reason"	"reason"	--	bee-less-active rule	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[else]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
+evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[else]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
+cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's that trap door? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
+diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair rule	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 I'd Cede	I'd Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
-lager	lager	false	301731271	--	"glare"	"glare"	--	--	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
+lager	lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	--	--	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	--	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
-praise	praise	false	438050501	--	"aspire"	"aspire"	--	--	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
-rivets	rivets	false	564671562	--	"strive"	"strive"	--	--	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
+praise	praise	false	438050501	--	"aspire"	"aspire"	--	post-spirea-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
+rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	--	--	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 red vees	red vees	false	693210005	--	"deserve"	"deserve"	--	--	"You believe you can, and you can! Once you do, your office fills up with meaningful and productive stuff. The salt, though the smallest, may be the most important. The rest is just trappings."
 salt	salt	false	255385641	--	"last"	"last"	--	--	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom.[paragraph break]In addition, there's more 'fine art' to help you focus on your work. [bb-st] now look down on you disapprovingly. For motivation, of course. For motivation."
 sister tressi	sister tressi	false	553780708	--	"resist"	"resist"	--	--	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
 Blamer Balmer	Blamer Balmer	false	351625627	--	"ramble"	"ramble"	--	--	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	--	--	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
-trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	--	--	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
+trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	pre-nectar-recant rule	post-nectar-recant rule	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
 book presto
 
@@ -107,7 +107,7 @@ lamb	lamb	false	138495715	--	"blam"	"blam"	a rule	a rule	"You make pretend the g
 hump	hump	false	287929218	Austerer Treasure	"umph"	"umph"	--	--	"You ham up 'Hup, ma!' to get over a hump, which vanishes[if Leo is visible]. Leo and Rand follow, jumping unnecessarily[end if]."
 star	star	true	286895605	--	"rats"	"rats"	--	post-tsar-star rule	"The tsar star seems lodged in the tars. But you twist it around saying RATS, and it seems to wiggle a bit. Just as you're about to give up, you give one more twiddle, and the tsar star pops in the air![paragraph break]You manage to juggle it before it falls in the tars again, and you just manage to swat it onto dry ground before it falls. You take time to wipe the remaining tars off the tsar star, and as you do, the main tars themselves schlurp into the ground.[paragraph break]Now the tsar star is clean, you see you can affix it to your clothes. So you do."
 dart	dart	true	211650728	--	"drat"	"drat"	--	--	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."
-plebe	plebe	false	409310921	--	"bleep"	"bleep"	--	--	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing tsar star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[otherwise]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"
+plebe	plebe	false	409310921	--	"bleep"	"bleep"	pre-plebe-bleep rule	--	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing tsar star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[else]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"
 boing	boing	false	239271538	--	"bingo"	"bingo"	--	--	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. [gun-load-if]."
 sport ports	sport ports	false	440526323	--	"prost"	"prost"	--	--	"You mentally toast the abilities of people able to navigate the sport ports. It feels good, this act of sportsmanship."
 odes song	odes song	false	591595494	--	"goodness"	"goodness"	--	--	"You manage to let our a 'goodness!' at the worst parts of the odes song. Somehow, it works. While you may not have done anything super-significant, your task here feels a bit easier."
@@ -116,8 +116,8 @@ Rand	Rand	false	177448218	--	"darn"	"darn"	--	post-rand-darn rule	"You pretend t
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	pre-wzup rule	post-wzup rule	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble.[paragraph break]'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
 ye hoop	censer	true	267453412	--	"pooh"	"pooh"	--	--	"[get-censer]."
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	--	"[get-censer]."
-n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	--	--	"[wont-maze]."
-maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	--	--	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
+n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	--	"[wont-maze]."
+maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	--	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	--	--	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	--	--	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	--	--	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
@@ -133,14 +133,14 @@ flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dea
 gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."
 coal	dirty looking cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if I'm Le Cop polemic is reflexive], though you're not really tired yet[end if]."
-onyx censer	computer screen	true	525123080	--	"screen"	"screen"	--	--	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"
-drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	--	--	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
-t-key	t-key	false	123716741	--	"tab"	"tab" or "tab key"	--	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
-I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	--	--	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
+onyx censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	--	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"
+drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	--	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
+t-key	t-key	false	123716741	--	"tab"	"tab" or "tab key"	pre-tba-tab rule	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
+I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	--	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
 trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	--	--	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
 trim socks	ROM sticks	true	540067126	--	"romstick"	"romstick" or "rom stick"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
-BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	--	post-bub-dude-egg	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"
+BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	pre-bub-dude-egg rule	post-bub-dude-egg rule	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"
 drive a	drive a	false	388504485	--	"avider"	"avider"	--	--	"Drive A coughs and whirrs a bit before humming a bit louder. You see the status on the side change from VARIED to AVIDER. Yay! It should work faster now."
 drive e	drive e	false	514122776	--	"derive"	"derive"	--	--	"You inspect Drive E and, with some educated guesswork, figure why it is out of whack. A few common-sense steps later, it's fixed."
 USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	--	--	"[sub-bus]!"
@@ -157,12 +157,12 @@ recaps	recaps	false	412063240	--	"scrape"	"scrape"	--	--	"Skr-r-r-r. You give [i
 trolls	trolls	false	466688042	Olde Lode	"stroll"	"stroll" or "stroll past/by trolls"	--	--	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"
 clam	clam	false	139082395	--	"calm"	"calm"	--	--	"You try some odd combination of singing and storytelling and jokes which really shouldn't work at all, but then, clams aren't very smart, so it goes over okay. The clam ...(cl)ambulates...off. You notice what it was guarding so aggressively: a beautiful urn you feel pulled to and you can't walk away from!"
 urn	urn	false	259337118	Disease Seaside	"run"	"run"	--	--	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."
-boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boats"	--	--	"You start yelling about how great you are and how you deserve a free ride. A beat-foil lifeboat (not shippish) passes you by, but eventually a Fighter Freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"
+boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boats"	pre-boats-boast rule	--	"You start yelling about how great you are and how you deserve a free ride. A beat-foil lifeboat (not shippish) passes you by, but eventually a Fighter Freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"
 pale plea	pale plea	false	265273725	Anger Range	"leap"	"leap" or "leap at plea" or "leap at pale plea"	--	--	"You're a bit scared to jump, but when it's a majestic leap--whee! You jump overboard, and nobody can really follow you, since the boat is moving away, and they don't want to be left behind. Even if they could swim better. Your super purse remains water-tight, so no possessions get soaked."
-oars	oars	false	258138164	Anger Range	"soar"	"soar"	--	--	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the frat raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
-frat raft	frat raft	false	217136535	--	"fart"	"fart" or "fart on raft"	--	--	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"
-carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	--	"[spike-scrap]."
-carps	carps	false	403472058	--	"spike"	"spike" or "spike pikes"	--	--	"[spike-scrap]."
+oars	oars	false	258138164	Anger Range	"soar"	"soar"	pre-oars-soar rule	--	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the frat raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
+frat raft	frat raft	false	217136535	--	"fart"	"fart" or "fart on raft"	pre-raft-fart rule	--	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"
+carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-scrap-carps rule	"[spike-scrap]."
+carps	carps	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-scrap-carps rule	"[spike-scrap]."
 pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	--	--	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
 c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	--	--	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
@@ -176,7 +176,7 @@ bubble wrap	ruby	false	276912353	--	"warp"	"warp"	--	--	"You warp the bubble wra
 a-s	a-s	false	367879580	--	"search"	"search"	--	--	"'Reach, acher,' you say, stretching a bit more to find something interesting."
 ol' trap	pol art portal	false	400254014	--	"patrol"	"patrol"	--	--	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. As it vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, passages to new locations."
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-eeks-seek rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
-tubs	waste	false	322908696	--	"bust"	"bust"	--	--	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
+tubs	waste	false	322908696	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	--	--	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
 waste	lance	false	437312684	--	"sweat"	"sweat"	--	--	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. It's a bit too dirty to take."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	--	--	"You channel your inner artist and make something beautiful out of the heaps."
@@ -184,7 +184,7 @@ ruby	thin hint	false	331207767	--	"bury"	"bury"	--	--	"You bury the ruby with yo
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."
 lever	lever	false	501914680	--	"revel"	"revel"	--	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	--	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
-yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
+yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
 bogus-lamps	bogus-lamps	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	--	--	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	--	--	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
@@ -204,7 +204,7 @@ Ms Lucy	Ms Lucy	false	460633602	--	"clumsy"	"clumsy"	--	--	"Ms. Lucy's muscles s
 Mel Fish	Mel Fish	false	450759108	--	"himself"	"himself"	--	--	"Mel Fish has a think. 'I'm flesh!' he yells, 'and that's all that matters!' He rejects labels and such, recalling aloud a horrible incident when someone, probably a Burmese bemuser, ungrammatically called him selfish for being hisself. He vows to insult bad grammar more in the future. Then he thanks you and leaves."
 bonker	bonker	false	427742080	--	"broken"	"broken"	--	--	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. The way east is clear now."
 stinger	stinger	false	559013952	--	"resting"	"resting"	--	--	"The stinger whirs around, wheezes, then flops on the ground and rolls off. Your path east is clear now!"
-weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	--	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
+weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	--	--	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
 ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	--	--	"The ur-pine shrinks and flails. As it does, a succor crocus rolls out from under. You take the succor crocus and put it in the welt-proof flowerpot."
@@ -214,7 +214,7 @@ strudel	strudel	false	592462631	--	"rustled"	"rustled"	--	--	"You manage to take
 mardier admirer	mardier admirer	false	430738621	--	"married"	"married"	--	--	"Your admirer blinks, then looks down a ring on their finger, which may or may not have been there before (the ring, you silly.) They start talking of the old ball and chain, and while it's not clear whether the old ball and chain will help them be a better person, which is how it works in theory, or they are just someone to complain to, well ... the mardier admirer is done with you. Why were they wasting time? Such a leer--a sure lech! Your ex-admirer walks away, spouting spouse opuses."
 natives' site van	natives' site van	false	550443085	--	"naivest"	"vainest" or "naivest"	--	--	"[vain-naiv]. Now that the natives have moved on, you can go south."
 sporties' ripostes	sporties' ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
-reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	--	--	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
+reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	--	post-reeds-ale rule	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"marginal"	--	--	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak. Then he decides not to risk holding his ground any more."
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	--	post-agnostic-blocker rule	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	--	post-agnostic-blocker rule	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
@@ -228,9 +228,9 @@ mended mini denim	Éclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	--	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	--	post-yow-free rule	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	--	--	"[agnostic] snaps further to attention, even more eager than before!"
-turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
-blaster	blaster	false	486934458	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
-weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	--	--	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [ag-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
+turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[else]marginally safer[end if] crossing the river on the boat now."
+blaster	blaster	false	486934458	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[else]marginally safer[end if] crossing the river on the boat now."
+weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	--	--	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [agnostic-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	--	--	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
 bogus-detours	bogus-detours	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
 Andres	Andres	false	401528293	--	"snared"	"snared"	--	--	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."
@@ -258,8 +258,8 @@ Shane	Shane	false	332457700	--	"ashen"	"ashen"	--	--	"Suddenly, the color rushes
 Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	--	--	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	--	--	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	--	--	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
-Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	--	--	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut where voices boom 'Stop! Die!' But where you wind up is a bit quieter, but there's someone or something still a bit threatening."
-Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	--	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
+Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	pre-rodney rule	post-rodney rule	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut where voices boom 'Stop! Die!' But where you wind up is a bit quieter, but there's someone or something still a bit threatening."
+Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-sitter-triste rule	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
 try us yurts	brownies	true	512172846	--	"rusty"	"rusty"	--	--	"The yurts quickly tarnish and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	--	--	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	--	--	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."
@@ -269,14 +269,14 @@ book otters
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 b-b	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect a beryl."
-cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	--	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
+cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."
-imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	--	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
-imp2	imp2	false	615937733	--	"brutely"	"brutely"	--	--	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
-imp3	imp3	false	641833229	--	"enragedly"	"enragedly"	--	--	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
-ram1	ram1	false	593419698	--	"loathingly"	"loathingly"	--	--	"[shout-check]"
-ram2	ram2	false	569909740	--	"stoically"	"stoically"	--	--	"[shout-check]"
-ram3	ram3	false	716493096	--	"tersely"	"tersely"	--	--	"[shout-check]"
+imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
+imp2	imp2	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
+imp3	imp3	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
+ram1	ram1	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
+ram2	ram2	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
+ram3	ram3	false	716493096	--	"tersely"	"tersely"	--	post-whiners-flip rule	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	--	ghoul-hat-although rule	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--the ghoul hat--they said it would stop the Gore Ogre.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. The Gore Ogre still seems unwilling to actually attack."
 Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	--	--	"Blam! The gore ogre vanishes! Mr. Lee blinks. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He perks up. ' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]As you two rip up the poster for fun, he also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."
 vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the vow here suitably, until ... it is not here any more. Hooray for removing distractions!"
@@ -314,7 +314,7 @@ t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	-
 Merle	Merle	false	683905568	--	"honestly"	"honestly"	--	--	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 Elmer	Elmer	false	292289828	--	"aside"	"aside"	--	--	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit far west and hear the roar of a hardy hydra. You step back, and when Merle and Elmer laugh at you, you mention THEY could never be that intimidating. That shuts them up."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	--	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
-parrot	raptor	false	431763978	--	"raptor"	"raptor"	--	--	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west! Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+parrot	raptor	false	431763978	--	"raptor"	"raptor"	--	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west! Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	--	--	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
 corona	racoon	false	324129868	--	"racoon"	"racoon/raccoon"	--	--	"[extra-c]The corona grows wider, becoming a living thing."
 nails	snail	false	266175977	--	"snail"	"snail"	--	--	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."
@@ -394,24 +394,29 @@ this is the post-rand-darn rule:
 	set the pronoun them to wzup;
 	now Rand is washed up;
 
-after fliptoing reed's ale:
+to say check-tokers:
+	say "[if tokers are in Strip of Profits]motion to the mangiest steaming.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][else]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
+
+to say check-nestor:
+	now mangiest steaming is in Strip of Profits;
+	say "[paragraph break][if nestor is in Strip of Profits]What's more, you seem to have rescued their friend, Nestor! 'Hey, dudes, I like went back to the wrong store or something.'[no line break][else]They spend some time complaining about their one toker friend who like went out to get the really good stuff and never like reappeared.[no line break][end if]"
+
+this is the post-reeds-ale rule:
 	moot lars eede;
 	moot elsa erde;
 	process the guardian taunt rule;
 	if player is male, shuffle-guardians lars eede;
 	if player is female, shuffle-guardians elsa erde;
-	continue the action;
 
-after fliptoing rodney:
+this is the post-rodney rule:
 	pad-rec-q "curst palace";
-	continue the action;
 
-check fliptoing trance nectar:
+this is the pre-nectar-recant rule:
 	if mbb is in Upscale Capsule and sister tressi is in Upscale Capsule:
 		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
 		preef trance nectar instead;
 
-check fliptoing plebe:
+this is the pre-plebe-bleep rule:
 	if player is not wearing tsar star:
 		say "You try and cuss, but the plebe is not intimidated by your civilian clothes[if Rand is in Grey Gyre] or even your companions[end if]. Perhaps you need something proclaiming your authority.";
 		preef plebe;
@@ -426,15 +431,19 @@ this is the post-wzup rule:
 	now Leo is eager;
 	now Rand is eager;
 
-check fliptoing the computer screen:
+this is the pre-censer-screen rule:
 	if onyx censer is visible:
 		if Hacks' Shack is unvisited:
 			say "[one of]You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den[or]Not yet[stopping].";
 			preef onyx censer instead;
 
-check fliptoing t-key: if yak is in location of player, say "The yak generates an apathy that doesn't allow this. Yet." instead;
+this is the pre-tba-tab rule:
+	if yak is in location of player or yak is on skid:
+		say "The yak generates an apathy that doesn't allow this. Yet.";
+		preef t-key;
+		do nothing instead;
 
-check fliptoing I'm Le Cop polemic:
+this is the pre-polemic-compile rule:
 	if player is not in Hacks' Shack:
 		say "There is no computer around.";
 		preef I'm Le Cop polemic instead;
@@ -465,20 +474,20 @@ check fliptoing I'm Le Cop polemic:
 			say "That stupid NEED IF-DEFINE and that speel, still. You're slipping on peels, unsure what you switched or got backwards[one of][or]. Maybe you misspelled a variable, but you aren't up to logic leeps[stopping].";
 		preef I'm Le Cop polemic instead;
 
-check fliptoing BUB DUDE EGG:
+this is the pre-bub-dude-egg rule:
 	if I'm Le Cop polemic is not reflexed:
 		say "No hope of debugging when you can't even build! No, what is it? Something in the polemic, all garbled.";
 		preef BUB DUDE EGG instead;
 	if fizzy cola is not in mug:
-		say "The process of debugging is going to take a while. You will need some sort of energy[if dirty looking cola is visible]. That bottle of cola just won't be enough for the task ahead[otherwise]. That coal won't cut it. Too early 20th century[end if].";
+		say "The process of debugging is going to take a while. You will need some sort of energy[if dirty looking cola is visible]. That bottle of cola just won't be enough for the task ahead[else]. That coal won't cut it. Too early 20th century[end if].";
 		preef BUB DUDE EGG instead;
 
-check fliptoing keyboard:
+this is the pre-yak-keyboard rule:
 	if yak is visible:
 		say "The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.[paragraph break]Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.";
 		preef keyboard instead;
 
-check fliptoing I'm Le Cop polemic:
+this is the pre-polemic-compile rule:
 	if computer screen is not visible, say "Very hard without seeing what you're doing." instead;
 	if computer screen is not on slab:
 		say "Hmm. You may want to hook the screen up. Do so?";
@@ -487,129 +496,152 @@ check fliptoing I'm Le Cop polemic:
 		else:
 			say "Ok, but by 'may want' I meant 'really probably need to.'" instead;
 
-check fliptoing maze walls:
+this is the pre-solve-maze rule:
 	if player is not in Grey Gyre:
 		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
 		move player to Grey Gyre, without printing a room description;
 
-check fliptoing boats:
+this is the pre-boats-boast rule:
 	if frat raft is reflexed, say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
 
-check fliptoing oars:
+this is the pre-oars-soar rule:
 	if raft is not reflexed, say "The oars have no gas, or whatever they might run on[if player is not on raft]. Plus you're not on the raft anyway[end if]." instead;
 	if player is not on raft, say "That'd leave the raft behind you. Get on it first." instead;
 
-check fliptoing raft:
+this is the pre-raft-fart rule:
 	if player is not on raft and raft is reflexive:
 		say "Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.";
 		preef raft;
 		the rule succeeds;
 
-check fliptoing pre-haun:
-	if player has digger and ruby is moot:
-		continue the action;
+this is the pre-unearth rule:
+	if player has digger and ruby is moot, continue the action;
 	d "[whether or not player has digger], [location of ruby].";
 	say "[h-not-yet].";
 	preef pre-haun;
 	the rule succeeds;
 
-check fliptoing crate:
+this is the pre-crate-react rule:
 	if c2 is in Lapsin' Plains:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
 		preef crate;
 		the rule succeeds;
 
-check fliptoing ruby:
+this is the pre-warp-wrap rule:
 	now warp-try is true;
+	if player is in Lean Lane and trout is reflexive:
+		say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'";
+		preef ruby;
+		do nothing instead;
 	if Aunt Tuna is in location of player:
 		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe it needs to be saved [']til you find the right person to annoy.";
 		preef ruby;
-		the rule succeeds;
+		do nothing instead;
 	if player is not in Achers' Arches:
 		say "That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.";
 		preef ruby;
-		the rule succeeds;
+		do nothing instead;
 
-check fliptoing trout (this is the no teaching while fighting rule) :
-	if player is in Anger Range, say "[if carps are visible]You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here[otherwise]The poor trout's probably getting beaten up for learning in the first place[end if]." instead;
+this is the pre-tutor-trout rule:
+	if player is in Anger Range, say "[if carps are visible]You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here[else]The poor trout's probably getting beaten up for learning in the first place[end if]." instead;
 
-check fliptoing lever:
+this is the pre-lever-revel rule:
 	if yapper is in location of player:
 		preef lever;
 		say "Nothing to celebrate yet--dispose of the yapper first." instead;
 
-check fliptoing d2:
+this is the pre-dialer-redial rule:
 	if pins are reflexive, say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard..." instead;
 
-check fliptoing bubble wrap:
-	if player is in Lean Lane and trout is reflexive, say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'" instead;
-
-check fliptoing skis:
+this is the pre-kiss-skis rule:
 	if c2 is in Lapsin' Plains:
-		say "[one of]As you reach to kiss the skis, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
+		say "[one of]That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
 		preef skis;
 		now bonkies is true;
 		the rule succeeds;
 	if crate is reflexive:
-		say "[if bonkies is true]You would, but you would probably get hit with the crate. You need to anticipate, somehow[else]You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. But that seems right[end if].";
+		if bonkies is false:
+			say "You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. But that seems right.";
+		else:
+			say "You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...";
 		preef skis;
 		now bonkies is true;
 		the rule succeeds;
 
-check fliptoing knob:
+this is the pre-bonk-knob rule:
 	if knob is reflexed, say "That might undo what you did[if bonkies is true], and it might get you another knock on the noggin anyway[end if]." instead;
-	if c2 is in Lapsin' Plains:
-		say "[one of]As you reach to smack the knob, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
-		preef knob;
-		now bonkies is true instead;
-	if crate is reflexive:
-		say "[if bonkies is true]You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate[else]You flinch, a second too late. You can trace the crate, but you can't -- use your reflexes. But that seems right[end if].";
-		preef knob;
-		now bonkies is true instead;
+	abide by the pre-kiss-skis rule;
 
-check fliptoing lance:
+this is the pre-clean-lance rule:
 	if waste is reflexed, say "You've had enough of that." instead;
 
-check fliptoing a-s:
+this is the pre-search-arches rule:
 	if sardine is visible, say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
 		preef a-s instead;
 
-check fliptoing thin hint:
+to say increm:
+	if the player's command includes "tough":
+		say "You add an extra 'Hut! Go!' for emphasis.[paragraph break]";
+	if rebuked is false:
+		say "'But we ain't bored yet, boss!' You convince them they sort of are, what they are getting there, and it works a bit, without using any too-charged words. A bit more, and you'll veto their vote.[no line break]";
+		now rebuked is true;
+	else:
+		say "'Us? Lot louts?' You manage to be firm but fair. You convince Leo and Rand that the computers inside may have viruses, and they understand.[paragraph break]'Real brave of ya, boss.'[paragraph break]'Dat was a good dust-up, wadn't it, boss? We'se sure glad we could helps ya. Tanks for makin['] us stuges feel like guests. You do good in da Sekret Sekter, now. Friend finder.' They go back to Dirge Ridge, muttering about workouts and high-powered workout food. 'Nyurgh! Hungry!' Maybe you can bribe them later to help you.[no line break]";
+		pad-rec-q "Leo and Rand";
+		now Leo is in Dirge Ridge;
+		now Rand is in Dirge Ridge;
+		now Leo is dismissed;
+		now Rand is dismissed;
+		now alert letters are reflexed;
+		now log ons letters are reflexed;
+		now ought letters are reflexed;
+		now starch charts are in Phat Path;
+		if odes song is in Dirge Ridge, min-up;
+
+to say sub-bus:
+	let issub be false;
+	if the player's command includes "sub":
+		now issub is true;
+	moot crust;
+	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Esoteric Coteries way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
+
+this is the pre-bury-ruby rule:
 	if player does not have rigged digger:
 		if player has prod:
 			say "Your prod from the Shuttle Hutlets should be able to bury stuff if you tinker right. Jar it the right way." instead;
 		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shuttle Hutlets is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 
-check fliptoing pol art portal:
+this is the pre-patrol-ol-trap rule:
 	if walleyes are not moot:
 		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
 		preef ol' trap;
 		do nothing instead;
 
-check fliptoing prison ropins:
+this is the pre-unlocked rule:
 	if duck is not in location of player:
 		say "You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
 		preef prison ropins;
 		do nothing instead;
 
-check fliptoing fissure:
+this is the pre-fussier rule:
 	if duck is not in location of player:
 		say "The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.";
 		preef fissure;
 		do nothing instead;
 
-check fliptoing flowerpot:
+this is the pre-dingy rule:
 	if crocus is not visible:
 		say "A more dingy flowerpot wouldn't help things. Maybe you need to put something in it.";
 		preef flowerpot;
 		do nothing instead;
 
-check fliptoing curst palace when player is not in Mislit Limits:
-	say "Your word, stupendous as it is, has no effect. Yet. You [if player is in Mesprise Premises]may just need to go back outside[else]are probably not close enough[end if].";
-	preef curst palace;
-	the rule fails;
+this is the pre-curst-palace-spectacular rule:
+	if player is not in Mislit Limits:
+		say "Your word, stupendous as it is, has no effect. Yet. You [if player is in Mesprise Premises]may just need to go back outside[else]are probably not close enough[end if].";
+		preef curst palace;
+		do nothing instead;
 
-check fliptoing medals:
+this is the pre-medals-quickly rule:
 	if Merle is visible:
 		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals instead;
@@ -620,7 +652,7 @@ check fliptoing medals:
 		say "You feel a surge, but not enough. [if nounsolve < 3 and adjsolve < 3]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still[med-unf].";
 		 preef medals instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 
-check fliptoing the whistle:
+this is the pre-whistle-deeply rule:
 	if Elvira is in location of player:
 		say "Elvira summons her monsters to attack as you learn to play the whistle. 'Sorriest resistor! Apt end, pedant.' is the last you hear. Maybe you should've practiced somewhere else.";
 		get-dead;
@@ -628,7 +660,7 @@ check fliptoing the whistle:
 	if number of NPCish people > 0:
 		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
 
-check fliptoing atmo-moat: [?? preef beforehand to tidy code?]
+this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
 	if macks are in Disowned Downside:
 		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
 		preef atmo-moat;
@@ -643,30 +675,30 @@ a medal check rule for a thing (called x):
 		preef x;
 		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if location of player is Bran Barn]Mr. Lee[else]Le Mer[end if] is unmoved." instead;
 
-check fliptoing sea cube:
+this is the pre-seacube-because rule:
 	abide by the medal check rules for sea cube;
 
-check fliptoing gore ogre:
+this is the pre-ogre-ergo rule:
 	abide by the medal check rules for gore ogre;
 	if Mr Lee wears ghoul hat:
 		preef gore ogre;
 		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if Reclusion Inclosure is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if]." instead;
 
-check fliptoing eels:
+this is the pre-eels-else rule:
 	abide by the medal check rules for eels;
 	if sea cube is in location of player:
 		preef eels;
 		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word." instead;
 
-check fliptoing raptor: if location of player is not Reclusion Inclosure, say "'Awk! I'd just kill you in that form. Try that around some bad guys.'" instead;
+this is the pre-parrot-raptor rule: if location of player is not Reclusion Inclosure, say "'Awk! I'd just kill you in that form. Try that around some bad guys.'" instead;
 
-check fliptoing ghoul hat: abide by the medal check rules for ghoul hat;
+this is the pre-ghoul-hat-although rule: abide by the medal check rules for ghoul hat;
 
-check fliptoing kumquat when kumquat is moot: say "Len Craig already gave you enough for your help. Don't push it." instead; [?? this should not matter.]
+this is the pre-kumquat rule: if kumquat is moot, say "Len Craig already gave you enough for your help. Don't push it." instead; [?? this should not matter.]
 
-check fliptoing papayas when papayas are moot: say "You already got credit for prompt payment." instead; [?? this should not matter.
+this is the pre-papayas rule: if papayas are moot, say "You already got credit for prompt payment." instead; [?? this should not matter.]
 
-check fliptoing span pans:
+this is the pre-snap-span-pans rule:
 	if crate is reflexive:
 		say "You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.";
 		preef span pans;
@@ -676,7 +708,7 @@ check fliptoing span pans:
 		preef span pans;
 		the rule succeeds;
 
-check fliptoing ether:
+this is the pre-ether-there rule:
 	if Leo is not in Grey Gyre:
 		say "You suspect someone is in the mist where the maze was. 'THERE!' you yell. But you doubt you fooled or intimidated them. You need backup.";
 		preef ether instead;
@@ -687,7 +719,7 @@ check fliptoing ether:
 		say "Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition[if boing is reflexive] and isn't even working[end if]. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.";
 		preef ether instead;
 
-check fliptoing Rodney:
+this is the pre-rodney rule:
 	if number of visible warriors > 4:
 		if the player's command includes "yonder":
 			say "Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?";
@@ -697,27 +729,23 @@ check fliptoing Rodney:
 		now roddro is true;
 		preef Rodney instead;
 
-after fliptoing tetris sitter:
+this is the post-tetris-sitter-triste rule:
 	moot itster;
-	continue the action;
 
-after fliptoing cinders:
+this is the post-rescind-cinders rule:
 	now rescind-cinders is true;
-	continue the action;
 
-after fliptoing ocelots:
+this is the post-ocelots-coolest rule:
 	moot slopinc clip-ons;
 	now ocelots wear look-kool shades;
-	continue the action;
 
-after fliptoing owls:
+this is the post-owls-slow rule:
 	now ocelots are in Lamer Realm;
 	now badger is in Lamer Realm;
 	now satyr is in Lamer Realm;
 	now leopard is in Lamer Realm;
-	continue the action;
 
-after fliptoing when player is in Shiner Shrine (this is the break the imp down rule) : [?? post-imp-flip]
+this is the post-imp-flip rule:
 	increment silence-tally;
 	if silence-tally is 2:
 		say "The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.";
@@ -726,41 +754,35 @@ after fliptoing when player is in Shiner Shrine (this is the break the imp down 
 		moot imp2;
 		moot imp3;
 	else:
+		set the pronoun it to sly imp;
 		remove noun from shrine-imp-items, if present;
-	continue the action;
 
-after fliptoing parrot:
+this is the post-raptor-parrot rule:
 	preef parrot;
 	now nails are in Perverse Preserve;
 	now corona is in Perverse Preserve;
 	now thrones are in Perverse Preserve;
 	now pines are in Perverse Preserve;
-	continue the action;
 
-after fliptoing pomegranate: [the magenta rope is already flipped]
+this is the post-pomegranate rule: [the magenta rope is already flipped]
 	moot megaton pear;
 	moot rampage note;
 	moot mopeage rant;
-	continue the action;
 
-after fliptoing cranberries:
+this is the post-cranberries rule:
 	moot briar screen;
 	moot barren cries;
-	continue the action;
 
-check fliptoing when player is in Same Mesa (this is the armada keeps you in rule):
+this is the pre-mesa-dir-flip rule:
 	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
 		if drama armada is in Same Mesa or the-b is in Same Mesa, say "But... [if the-b is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
 		if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
-
-check fliptoing when player is in Same Mesa (this is the check Gast is not in Same Mesa rule):
-	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
 		if Gast is in Same Mesa:
 			say "Walking away would upset the [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
-			preef noun;
+			preef noun; [?? obvious test here is PAST, AGAINST, PAST, PF]
 			do nothing instead;
 
-check fliptoing when player is in Same Mesa (this is the note mesa re-exit rule):
+check fliptoing when player is in Same Mesa (this is the note mesa re-exit rule): [this needs to be in auxiliary ruls as the standard re-flip reject must be skipped]
 	if noun is reflexed:
 		if noun is picturers:
 			say "You go back inside, being a bit over-cautious with protocol. You could've just said IN.";
@@ -777,7 +799,7 @@ check fliptoing bench-end:
 
 check fliptoing Gast's elbow: if bench-end is reflexive, say "You're already below, but if you were close enough to listen, that could work." instead;
 
-after fliptoing when player is in Clarthead Cathedral (this is the de-tallyho rule) : [?? post-whiners-flip rule]
+this is the post-whiners-flip rule:
 	increment quietness;
 	if quietness is 2:
 		say "As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
@@ -786,31 +808,27 @@ after fliptoing when player is in Clarthead Cathedral (this is the de-tallyho ru
 		moot ram2;
 		moot ram3;
 	else:
+		set the pronoun them to whiners;
 		remove noun from cathedral-items, if present;
-	continue the action;
 
-after fliptoing sea cube:
+to say shout-check:
+	say "[one of]The din loses speed, energy, nastiness and volume. A re-count reveals several leavers. But even with them gone, too many are left blocking the way south.[no line break][or]Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.[no line break][stopping]";
+
+this is the post-seacube-because rule:
 	set the pronoun them to eels;
-	continue the action;
-
-after fliptoing ghoul hat:
-	if sea cube is moot, min-up;
-	continue the action;
-
-after fliptoing gore ogre:
-	de-inhib;
-	if eels are reflexed, min-up;
-	continue the action;
-
-after fliptoing sea cube:
 	now eels are in Loop Pool;
 	if ghoul hat is moot, min-up;
-	continue the action;
 
-after fliptoing eels:
+this is the post-ghoulhat-although rule:
+	if sea cube is moot, min-up;
+
+this is the post-ogre-ergo rule:
+	de-inhib;
+	if eels are reflexed, min-up;
+
+this is the post-eels-else rule:
 	de-inhib;
 	if gore ogre is moot, min-up;
-	continue the action;
 
 this is the post-barley-barely rule:
 	set the pronoun them to cinders;
@@ -818,76 +836,64 @@ this is the post-barley-barely rule:
 	move ed riley to Bleary Barley;
 	move cinders to Bleary Barley;
 
-after fliptoing flowerpot:
+this is the post-urpine-punier rule:
 	now crocus is in flowerpot;
-	continue the action;
 
-after fliptoing Curst Palace (this is the overall Towers LLP rule):
+this is the post-curstpalace-spectacular rule:
 	if used-ray is false and no-pastries is false and cur-score of towers is max-score of towers - 1:
 		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere!";
 		increment cur-score of towers;
-	continue the action;
 
 this is the post-detours-rousted rule:
 	move player to last-detour;
 
-after fliptoing ruby:
+this is the post-wrap-warp rule:
 	moot sandier sardine;
-	continue the action;
 
 after fliptoing (this is the oyster min score annoying details rule):
 	if noun is trolls and player does not have pills, min-up;
 	if noun is trout and player has pills and jar-empty is false, min-up;
-	continue the action;
 
-after fliptoing pins:
+this is the post-spin-pins rule:
 	now d2 is in Tenfold Teflon'd Den Loft;
-	continue the action;
 
-after fliptoing dent:
+this is the post-tend-dent rule:
 	set the pronoun it to raw red drawer;
-	continue the action;
 
-after fliptoing waste (this is the tubs give prod and waste rule):
+this is the post-bust-tubs rule:
 	now player has prod;
 	now heaps are in Shuttle Hutlets;
 	set the pronoun them to heaps;
 	set the pronoun it to prod;
-	continue the action;
 
-after fliptoing a-s:
+this is the post-arches-search rule:
 	pearl-check;
-	continue the action;
 
-after fliptoing strudel:
+this is the post-strudel-rustled rule:
 	now player has strudel;
 	moot sled rut;
-	continue the action;
 
-check fliptoing strudel:
+this is the pre-strudel-rustled rule:
 	if player has strudel and strudel is reflexive, say "(Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)";
 
-check fliptoing sheol holes:
+this is the pre-sheol-holes rule:
 	if darkness is in Harms Marsh:
 		say "You don't have enough light, yet, to go around safely.";
 		preef sheol holes;
-		the rule succeeds;
+		do nothing instead;
 
-after fliptoing bonker:
+this is the post-bonker-broken rule:
 	now geese are in Danger Garden;
 	now stinger is in Danger Garden;
 	now gualoc of stinger is Danger Garden;
 	choose row with guy of stinger in table of guard-org;
 	now loc entry is Danger Garden; [need to undo the silly hack I have for the stinger being not-really in Mislit Limits according to the table]
-	continue the action;
 
-after fliptoing atblock:
+this is the post-tentative-attentive rule:
 	now ag-atten is true;
-	continue the action;
 
-after fliptoing solve a loaves:
+this is the post-dinger-grained rule: [?? this should not be necessary if take entry is true]
 	now player has solve a loaves;
-	continue the action;
 
 this is the post-yow-free rule:
 	if noun is fissure, now fissure-flip is true;
@@ -899,7 +905,6 @@ this is the post-yow-free rule:
 		now prison ropins is reflexed;
 		now Dr Yow is in Obscurest Subsector;
 		now duck is returned;
-	continue the action;
 
 this is the post-agnostic-blocker rule:
 	if atheists are moot and the-hostile are moot:
@@ -917,46 +922,41 @@ after fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
 		annoy-trolls;
 		remove noun from shop-hint-items, if present;
-	continue the action;
 
-after fliptoing clam:
+this is the post-calm-clam rule:
 	now urn is in Olde Lode;
 	set the pronoun it to urn;
-	continue the action;
 
-after fliptoing pre-haun:
+this is the post-unearth rule:
 	now haunter is in Anger Range;
-	continue the action;
 
-after fliptoing carps:
+this is the post-scrap-carps rule:
 	now trout is in Lean Lane;
 	moot carps;
 	moot pikes;
 	now scrawl is in Anger Range;
 	now pre-haun is in Anger Range;
-	continue the action;
 
-check fliptoing stop post:
+this is the pre-spot-post-stop rule:
 	if sob ever verbose is visible:
 		say "That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.";
 		preef stop post;
 		do nothing instead;
 
-check fliptoing ltb:
+this is the pre-deal rule:
 	if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
 		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.";
 		preef ltb;
 		the rule succeeds;
 
-check fliptoing dialer:
+this is the pre-dialer-derail rule:
 	if yapper is in location of player:
 		say "The yapper'd totally tell on you. Good thing the yapper's more interested in telling you off.";
 		preef dialer instead;
 
-after fliptoing dialer:
+this is the post-dialer-derail rule:
 	now d2 is in tenfold;
 	now pins are in tenfold;
-	continue the action;
 
 this is the post-eeks-seek rule:
 	now Hardest Trashed Dearths is shunned;
@@ -964,10 +964,9 @@ this is the post-eeks-seek rule:
 	change the west exit of Lean Lane to Anger Range;
 	if cans are in Hardest Trashed Dearths, poss-d;
 
-after fliptoing keyboard:
+this is the post-yak-keyboard rule:
 	moot leaf;
 	check-trivial-presto-llp;
-	continue the action;
 
 this is the post-tunes-unset rule:
 	now remapped is whether or not the player's command includes "remap";
@@ -976,41 +975,37 @@ after fliptoing when player is in Hacks' Shack:
 	if noun is drive e or noun is drive a:
 		if usb is not off-stage, say "Well, flipping [noun] didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
 	increment lodge-flips;
-	continue the action;
 
 this is the post-bub-dude-egg rule:
 	now USB is in Hacks' Shack;
 	moot golden dongle;
 
-after fliptoing the computer screen (this is the turbo back to the shack rule):
+this is the post-censer-screen rule:
 	if Hacks' Shack is visited and player is not in Hacks' Shack:
 		say "That screen would go great with Drive A in the shack. So you go back there.";
 		go-back Hacks' Shack;
 		now player has screen;
-	continue the action;
 
-after fliptoing I'm Le Cop polemic:
+this is the post-polemic-compile rule:
 	now BUB DUDE EGG is part of the computer screen;
 	if hawt thaw is in Phat Path, poss-d;
 	if lamb is in Grey Gyre, poss-d;
 	if sport ports are reflexive, poss-d;
 	if starch charts are in Phat Path, poss-d;
+	if odes song is in Dirge Ridge, poss-d;
 	if player has rom sticks, moot rom sticks;
-	continue the action;
 
-after fliptoing onyx censer (this is the pooh-phooey rule):
+this is the post-pooh-phooey rule (this is the pooh-phooey rule):
 	if the player's command includes "pooh":
 		poss-d;
 	else:
 		min-up;
 		now phooeyed is true;
-	continue the action;
 
-after fliptoing boing go bin:
+this is the post-boing-bingo rule:
 	set the pronoun it to popgun;
-	continue the action;
 
-check fliptoing boing go bin (this is the take popgun to fix it rule) :
+this is the pre-boing-bingo rule:
 	if player does not have the PG-on-up popgun and popgun is visible:
 		say "(taking the popgun first while you mess with the boing-go bin)[paragraph break]";
 		now player has popgun;
@@ -1025,33 +1020,28 @@ after fliptoing when location of player is Econ Cone (this is the Pernod appears
 			say "Your concentration is broken by shattering glass! When you turn around, you notice the person who originally gave you the Peg A. Page book. He has been escorted out by security. They hand him a bottle. There's an argument, he smashes the bottle, and he runs away. Perhaps this is your chance, to take his place now that he has burned out!";
 			now pernod is in Econ Cone;
 			set the pronoun it to pernod;
-	continue the action;
 
-after fliptoing pernod:
+this is the post-pernod-ponder rule:
 	if rivets are reflexive or praise spirea is reflexive, poss-d;
-	continue the action;
 
-after fliptoing sister tressi:
+this is the post-tressi-resist rule:
 	now mbb is LLPish;
 	report-glarers;
-	continue the action;
 
-after fliptoing mbb:
+this is the post-mbb-ramble rule:
 	now sister tressi siters are LLPish;
 	report-glarers;
-	continue the action;
 
-after fliptoing red vees:
+this is the post-redvees-deserve rule:
 	move wonga wagon to Upscale Capsule;
 	move nerf fern to Upscale Capsule;
 	move pharos phasor to Upscale Capsule;
 	move DIVORCES magazine to Upscale Capsule;
 	move St Al Salt to Upscale Capsule;
 	move cark rack to Upscale Capsule;
-	move desk sked to Upscale Capsule;
-	continue the action; [Balmer and Tressi don't move until you deal with the salt]
+	move desk sked to Upscale Capsule; [Balmer and Tressi don't appear until you deal with the salt]
 
-after fliptoing salt:
+this is the post-salt-last rule:
 	moot salt;
 	now trance nectar is in Upscale Capsule;
 	now mbb is in Upscale Capsule;
@@ -1060,66 +1050,57 @@ after fliptoing salt:
 			now the-from entry is mbb;
 			now the-to entry is mbb; [this is part of the silly randomization]
 	now sister tressi is in Upscale Capsule;
-	continue the action;
 
-after fliptoing n-t-air:
+this is the post-nowt-town-wont rule:
 	poss-d;
 	shuffle-nowt-town;
-	unless l-m is cscanned or l-m is ncscanned:
-		poss-d;
+	unless l-m is cscanned or l-m is ncscanned, poss-d;
 	now maze-points is 1;
-	continue the action;
 
-after fliptoing maze walls:
+this is the post-mazeltov rule:
 	min-up;
 	now maze-points is 2;
 	unless l-m is cscanned or l-m is ncscanned:
 		min-up;
 		increment maze-points;
 	shuffle-nowt-town;
-	continue the action;
 
-after fliptoing ether:
+this is the post-ether-there rule:
 	now dart is in Grey Gyre;
 	moot dart;
-	continue the action;
 
 this is the post-tsar-star rule:
 	now player wears tsar star;
 
-after fliptoing lager:
+this is the post-lager-glare rule:
 	set the pronoun it to ltb;
-	continue the action;
 
-after fliptoing ltb:
+this is the post-deal rule:
+	if lager is in Boredom Bedroom, poss-d;
+	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
 	set the pronoun them to Browse Bowers;
-	continue the action;
 
-after fliptoing praise:
+this is the post-spirea-aspire rule:
 	if rivets are reflexive, now rivets are llpish;
-	continue the action;
 
-after fliptoing rivets:
+this is the post-rivets-strive rule:
 	if praise spirea is reflexive, now praise spirea is llpish;
 	now Trevis Vister is reflexed;
-	continue the action;
 
-after fliptoing plaster psalter:
-	now act-ruin curtain is in Carven Cavern;
+this is the post-psalter-stapler rule:
+	if act-ruin curtain is not in Carven Cavern, now act-ruin curtain is in Carven Cavern;
 
-after fliptoing stapler:
-	if act-ruin curtain is not in Carven Cavern:
-		now act-ruin curtain is in Carven Cavern;
-
-after fliptoing rifle:
+this is the post-rifle-flier rule:
 	pad-rec-q "rove over";
 	moot high sign;
 	try talking to Mole Elmo instead;
 
-after fliptoing hoster:
+this is the post-storeh-hoster rule:
 	it-him-her hoster;
 
-after fliptoing lecturer (this is the disable the macks slightly too rule) :
+this is the post-lecturer-outside rule:
+	now mangiest steaming is not maingame;
+	now list-headache is true;
 	moot pamphlets;
 	increase headaches by 10;
 	now lectures is shunned;
@@ -1133,11 +1114,11 @@ after fliptoing lecturer (this is the disable the macks slightly too rule) :
 after fliptoing Gast:
 	now tirades are in Same Mesa;
 
-after fliptoing lairage regalia:
+this is the post-across rule:
 	now dingy dwelling is clue-used;
 
-after fliptoing signboard:
-	now grubby restaurant is clue-used; [?? rivets/Trevis Vister]
+this is the post-past rule:
+	now grubby restaurant is clue-used; [?? rivets/Trevis Vister clue used too?]
 
 after fliptoing Gast's elbow:
 	move Rude 'N Nuder to Same Mesa;
@@ -1147,31 +1128,26 @@ after fliptoing U NERD ENDUR REDUN:
 	moot Gast;
 	continue the action;
 
-after fliptoing the-b:
+this is the post-thebean-beneath rule:
 	if drama armada is off-stage:
 		now drama armada is in Same Mesa;
 		set the pronoun them to drama armada;
-	continue the action;
 
-after fliptoing mushrooms:
+this is the post-seedpit-despite rule:
 	now cravings carvings is clue-used;
-	continue the action;
 
-after fliptoing darkness:
+this is the post-unlit-until rule:
 	now noon gag is in Harms Marsh;
-	continue the action;
 
-after fliptoing thickness sketchins:
+this is the post-athwart rule:
 	moot bad oar;
-	continue the action;
 
-after fliptoing hurt hog:
+this is the post-hurt-hog-through rule:
 	moot bent ewe;
 	moot hurt hog;
 	now yob den is in Sonancy Canyons;
 	set the pronoun it to yob den;
 	set the pronoun them to yob den;
-	continue the action;
 
 this is the bee-less-active rule:
 	if bee-score is 2:
@@ -1179,28 +1155,25 @@ this is the bee-less-active rule:
 	else:
 		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
 
-after fliptoing cellar door:
+this is the post-cellar-recall rule:
 	if bee-score < 2, poss-d;
-	continue the action;
 
-check fliptoing cellar door:
+this is the pre-cellar-recall rule:
 	if evil bee is off-stage, say "You haven't forgotten anything important, yet." instead;
 	if bee-score is 0:
 		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
 		preef cellar door;
 		the rule succeeds;
 
-after fliptoing diapers:
+this is the post-diapers-despair rule:
 	moot Ires Pad;
 	moot spider;
 	move I'd Cede to Drain Nadir;
-	continue the action;
 
 this is the post-master-or-bolster rule:
 	if ME ARTS is in Boredom Bedroom, now ME ARTS is LLPish;
 	if lobster is in Boredom Bedroom, now lobster is LLPish;
 	say "You feel [one of][or]even [stopping]more up to grokking LEAD, now.";
-	continue the action;
 
 this is the post-bins-snib rule:
 	move snib to Largely All-Grey Gallery;
@@ -1230,14 +1203,12 @@ this is the post-sitar-or-stria-to-stair rule:
 	moot stria;
 	moot sitar;
 	move stair backdrop to all stairy rooms;
-	continue the action;
 
 this is the post-pram-ramp rule:
 	if tables are moot and sitar is moot:
 		min-up;
 	else if meet bans are moot:
 		min-up; [check if passage is already available via beams or stable->stair]
-	continue the action;
 
 to say h-n-k: now hogs-not-keys is true;
 
@@ -1273,19 +1244,13 @@ this is the post-yapper-prepay rule:
 	if wipes are moot:
 		say "As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.";
 		move templar ramplet to Tenfold Teflon'd Den Loft;
-	continue the action;
 
-after fliptoing bogus-detours:
+this is the post-detours-rousted rule:
 	move player to last-detour;
-	continue the action;
 
 to say new-thing:
 	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
 	moot satchel;
-
-after fliptoing n-t-air:
-	go-back Grey Gyre;
-	continue the action;
 
 this is the pre-gates-stage-flip rule:
 	if gate-level is 2, say "No need to over-study or over-think. Through the gates!" instead;
@@ -1302,21 +1267,19 @@ this is the pre-skid-disk rule:
 	if yak is on skid, say "The yak doesn't need that sort of shock." instead;
 	if location of player is not shack, say "Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.";
 
-after fliptoing towers-x:
+this is the post-store-w-towers rule:
 	now ivy tower is in Strip of Profits;
 	now ivory tower is in Strip of Profits;
-	continue the action;
 
-check fliptoing sit a nag:
+this is the pre-sitanag-against rule:
 	if Gast is not in Same Mesa:
 		say "You get astride the [sit a nag] for a while, but it's pointless with nobody around.";
 		preef sit a nag;
-	the rule succeeds;
+		the rule succeeds;
 
 purse-stolen is a truth state that varies.
 
-to say purse-gone:
-	now purse-stolen is true;
+to say purse-gone: now purse-stolen is true;
 
 to say dust-b:
 	say "[one of]. You say, 'Dust, be busted' to clear up the mess in the air. You can go [b]IN[r] to the stable, now, to look around there[or][stopping]";
@@ -1363,8 +1326,7 @@ check fliptoing Gast:
 	if U NERD ENDUR REDUN is not off-stage, say "You don't need or want another round of that." instead;
 
 to say xtra-help:
-	if lager is in Boredom Bedroom and divorces is in Upscale Capsule:
-		continue the action;
+	if lager is in Boredom Bedroom and divorces is in Upscale Capsule, continue the action;
 	if lager is moot and divorces is moot:
 		say ". Your songs aren't just soulful, though. They're built on your experience with alcohol and media abuse and glorifying consumerism, from the lager and DIVORCES. They do society good";
 		continue the action;
@@ -1373,8 +1335,7 @@ to say xtra-help:
 		continue the action;
 	say ". Your songs don't cause any social change you hoped, but they do decrease the drinking rate";
 
-instead of fliptoing latches:
-	say "The satchel shakes a bit, but since you removed the settler, it probably can't fully reform the latches. Well, you don't need them."
+check fliptoing latches: say "The satchel shakes a bit, but since you removed the settler, it probably can't fully reform the latches. Well, you don't need them." instead; [?? wait! This should be covered in another rule.]
 
 unset-not-remap is a truth state that varies.
 
@@ -1398,9 +1359,8 @@ to say if-wierd:
 	if the player's command includes "wierder":
 		say "(I before e, ok, let [']em have it.) ";
 
-after fliptoing lamp (this is the move lamp rule):
+this is the post-palm-lamp rule:
 	now dope op-ed is in Dusty Study;
-	continue the action;
 
 to say what-about-ed:
 	if Tetris Sitter is reflexed:
@@ -1414,10 +1374,9 @@ to say extra-c:
 	if word number 1 in the player's command is "raccoon":
 		say "(Ignoring the extra C.) ";
 
-after fliptoing hump:
+this is the post-hump-umph rule:
 	if Leo is in Grey Gyre:
 		process the Leo-Rand lackey rule;
-	continue the action;
 
 to say eicond:
 	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in Loather Rathole]You feel you can and will do better than here[else if player is in Bustle Sublet]You dare to feel superior to whoever might be walking around here[else if player is in Drain Nadir]You know you deserve better than this. It's a temporary setback[else if player is in Boredom Bedroom]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Browse Bowers]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in Upscale Capsule]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
@@ -1430,8 +1389,7 @@ to say tgw:
 	say "that dude[if player is female], uh, dudess[end if], with those powers";
 
 to say preefies:
-	if number of prefigured things > 0:
-		say ". And now you have reason to mess with [the list of prefigured things], too";
+	if number of prefigured things > 0, say ". And now you have reason to mess with [the list of prefigured things], too";
 
 bredo-bored is a truth state that varies.
 
@@ -1446,10 +1404,9 @@ to say bored-robed:
 to say logan-hi:
 	say "'No-Gal Logan. Serial Sailer. Here's our selves-vessel. Not quite the HMS SMH.'[paragraph break]'Hooray...or ahoy?' you say, confused.[paragraph break]But the sail ails where the stripe would be above ground. You sort of think you can see a reddish haze, or maybe it's your imagination. 'Now to hit WIN...where's that button? Hmph, won't let me cross. It's up to you. You seem like a trireme meriter. You'll find the hit win button Ben hid. Did it so well, made sure we didn't use it before we need to. You'll reach the beyond. One way now. Aye,' says No-Gal Logan. 'The end! Boy!'[paragraph break]You see him nod bye as he jumps over. 'Logan!' you cry. 'No lag!' he yells back. Then 'St. Olaf!' He floats, so flat, leaving you for the last of...he cries, 'Harbor!' and you cry 'Rah, Bro!' Then you write down what No-Gal said about the button.";
 
-after fliptoing sheol holes:
+this is the post-sheol-holes rule:
 	now stripey pyrites are in Harms Marsh;
 	now un-road is in Harms Marsh;
-	continue the action;
 
 to say get-censer:
 	if the player's command includes "pooh":
@@ -1474,16 +1431,10 @@ to say vain-naiv:
 to say ahoy-eh:
 	say "The ship hovers a bit, then chugs through the stripe. 'Ahoy, eh? ... Oh, yeah!' you cry as the underground lake expands until the ceiling disappears. The water begins rushing, and you are thrown to the floor of your boat. When you wake up, you find that you are back at the Strip of Profits";
 
-after fliptoing lecturer:
-	now mangiest steaming is not maingame;
-	now list-headache is true;
-	continue the action;
-
 misted is a truth state that varies.
 
-after fliptoing da mist:
+this is the post-damist-amidst rule:
 	now misted is true;
-	continue the action;
 
 behinded is a truth state that varies.
 
@@ -1491,31 +1442,21 @@ after fliptoing when mrlp is others (this is the slot and singed design appear r
 	if noun is iconic, now singed design is part of the noun;
 	if noun is s-i or noun is s-c:
 		if player has so-great storage, slot-appear;
-	continue the action;
 
-after fliptoing pol art portal:
+this is the post-patrol-ol-trap rule:
 	moot digger;
-	continue the action;
 
-after fliptoing lance:
+this is the post-sweat-waste rule:
 	now heaps are in Shuttle Hutlets;
 	moot waste;
-	continue the action;
 
-after fliptoing prod:
+this is the post-bust-tubs rule: [?? is this necessary? ]
 	now waste is in Shuttle Hutlets;
-	continue the action;
 
-after fliptoing ltb:
-	if lager is in Boredom Bedroom, poss-d;
-	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
-	continue the action;
-
-after fliptoing ragged dagger:
+this is the post-weeds-sewed rule:
 	now player has raves saver;
-	continue the action;
 
-after fliptoing raptor:
+this is the post-parrot-raptor rule:
 	now player has whistle;
 	moot raptor;
 	moot hydra;
@@ -1524,75 +1465,67 @@ after fliptoing raptor:
 	if Merle is reflexive, poss-d;
 	if Elmer is reflexive, poss-d;
 	reg-inc;
-	continue the action;
 
-after fliptoing post (this is the cleanup after the post/thief rule) :
+this is the post-stop-spot rule:
 	now purse-stolen is false;
-	continue the action;
 
-after fliptoing (this is the silly edge case pronouns rule):
-	if noun is imp1 or noun is imp2 or noun is imp3, set the pronoun it to sly imp;
-	if noun is ram1 or noun is ram2 or noun is ram3, set the pronoun it to whiners;
-	continue the action;
+this is the post-hogs-bye rule:
+	now Mount Um-Not is in Phat Path;
+	now Deil's Slide is in Phat Path;
+	now Leo is in Phat Path;
+	now Rand is in Phat Path;
+	now Grey Gyre is mapped south of Phat Path;
+	now Phat Path is mapped north of Grey Gyre;
+	if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
+	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as you wind up at...";
+	move player to Phat Path;
 
-after fliptoing (this is the one-of-two and min-up-plus rule):
-	if noun is keys or noun is hogs:
-		now Mount Um-Not is in Phat Path;
-		now Deil's Slide is in Phat Path;
-		now Leo is in Phat Path;
-		now Rand is in Phat Path;
-		now Grey Gyre is mapped south of Phat Path;
-		now Phat Path is mapped north of Grey Gyre;
-		if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
-		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as you wind up at...";
-		move player to Phat Path;
-		continue the action;
-	else if noun is praise or noun is rivets:
+this is the econ-cone-complete rule:
+	if noun is praise or noun is rivets:
 		if praise spirea is reflexed and rivets are reflexed:
 			say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
 			min-up;
 			set the pronoun it to pernod;
-		continue the action;
-	else if noun is lobster or noun is ME ARTS:
-		if ME ARTS is moot and lobster is moot:
-			say "You feel your arch-greed recharged.";
-			min-up;
-		continue the action;
-	else if noun is trance nectar:
-		let temp be 0;
-		if Sister Tressi is prefigured, increment temp;
-		if mbb is prefigured, increment temp;
-		if DIVORCES is prefigured, increment temp;
-		if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, because your desire for more isn't totally drained.)[paragraph break]";
-		increase min-score of troves by temp;
-		increase cur-score of troves by temp;
-	else if noun is LLPish or noun is claire's scalier: [bleah. mended mini Denim isn't reflexive. Neither is giant pin]
-		d "General LLPish min-up for [noun].";
-		min-up;
-	continue the action;
 
-after fliptoing tokers:
+this is the boredom-bedroom-complete rule:
+	if ME ARTS is moot and lobster is moot:
+		say "You feel your arch-greed recharged.";
+		min-up;
+
+this is the post-nectar-recant rule:
+	let temp be 0;
+	if Sister Tressi is prefigured, increment temp;
+	if mbb is prefigured, increment temp;
+	if DIVORCES is prefigured, increment temp;
+	if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, because your desire for more isn't totally drained.)[paragraph break]";
+	increase min-score of troves by temp;
+	increase cur-score of troves by temp;
+
+this is the post-storek-tokers rule:
 	now mangiest steaming is in Strip of Profits;
 	set the pronoun her to tokers;
-	continue the action;
 
 this is the post-disk-skid rule:
 	if disk is not prefigured:
 		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
 		preef disk;
 	now skid is in location of player;
-	continue the action;
 
 shack-flip-yet is a truth state that varies.
 
 after fliptoing when player is in Hacks' Shack:
 	now shack-flip-yet is true;
-	continue the action;
 
-after fliptoing otters-x:
-	if engravings are examined:
-		say "The engravings from Store T seem to have been transferred to the otters.";
+this is the post-storet-otters rule:
+	if engravings are examined, say "The engravings from Store T seem to have been transferred to the otters.";
 	now engravings are part of otters-x;
+
+book general auxiliary rules
+
+after fliptoing (this is the general min up rule):
+	if noun is LLPish or noun is claire's scalier: [bleah. mended mini Denim isn't reflexive. Neither is giant pin]
+		d "General LLPish min-up for [noun].";
+		min-up;
 	continue the action;
 
 volume demo dome tables
@@ -1982,8 +1915,8 @@ lois the hostile	"Lois the Hostile momentarily gives a fake smile, but it's not 
 hostile-is-he lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
 ropins	"The ropins remains secure, with no easy way to open it."
 dinger	"[Agnostic] blinks and ruffles [dinger] and yawns before flipping a page, slightly less interested than before."
-agnostic	"[ag-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
-atblock	"[ag-first] seems a little more focused, but [he-she] could maybe do even better."
+agnostic	"[agnostic-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
+atblock	"[agnostic-first] seems a little more focused, but [he-she] could maybe do even better."
 mended mini denim	"The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
 bogus-plains	"The detours still seem dourest, but a little less dour now."
 sporties' ripostes	"The ripostes seem less cutting for a moment."
@@ -2268,8 +2201,6 @@ to say giant-over: say "The [sit a nag] isn't important with the giant gone"
 
 to say no-rehash: say "[if leo is in Dirge Ridge]They're already off getting to know each other better[else]That'd be an awkward rehash. You need another way to say good-bye[end if]"
 
-to say just-c: say "Just return the fruit to Curtis. No need for another change"
-
 volume table of hints
 
 table of hintobjs [toh]
@@ -2349,7 +2280,7 @@ voters	"You can scan the voters if you can't figure what Store V should be."
 Store W	"[one of]You may wish to look at the description of Store W, though RESTOW also allows a clue.[plus][or]Store W seems taller than the other stores, like it has several levels. It's just an illusion. Plus, the store seems to blur into separate halves when you look at it.[plus][or]What's a name for a tall building, or tall buildings?[plus][or]TOWERS.[minus][cycling]"
 shells	"The shells clue that Store Y might become something that lives in a shell."
 Store Y	"[one of]Hm, store Y looks slimy on the inside, and it smells like saltwater too. It's also a weird shell shape, Store Y is. What sea life do you know that has a Y in it?[plus][or]Also, if you use the Letters Settler, you'll notice a letter that's a new color--orange. A combination of yellow and red.[plus][or]What letter can be a vowel or a consonant?[plus][or]Y. So the settler gives you three letters.[plus][or]You probably see by now--or can use process of elimination--to note Store Y becomes an OYSTER.[minus][cycling]"
-otters-x	"[if you-can-advance]You've solved enough to go there[else if patcher is off-stage]You need to solve more stores to have the strength to make it past the otters[otherwise]You need to solve more stores, or zap them with the patcher, to make it past[end if]."
+otters-x	"[if you-can-advance]You've solved enough to go there[else if patcher is off-stage]You need to solve more stores to have the strength to make it past the otters[else]You need to solve more stores, or zap them with the patcher, to make it past[end if]."
 routes-x	"Just ENTER them."
 troves-x	"Just ENTER them."
 oyster-x	"Just ENTER the oyster."
@@ -2462,7 +2393,7 @@ tsar star	"[one of]The tsar star is stuck in the tars, and taking it is too frus
 tars	--	tsar star
 cretins' cistern	"The cretin's cistern [if dart is in Char Arch]is[else]was[end if] only relevant because it [if dart is in Char Arch]holds[else]held[end if] the dart. You don't need to deal with it directly."
 hump	"[one of]Hm, you can't get over the hump.[plus][or]What's a good word before you give a bunch of effort?[plus][or]UMPH.[minus][cycling]"	--	"UMPH"
-plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has tsar star or player wears tsar star]You've got something that will impress him[otherwise]You need to find something to impress the plebe--you may want to go visit the Char Arch to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has tsar star or player wears tsar star]now[otherwise]once[end if] you have the tsar star.[minus][cycling]"	--	"BLEEP"
+plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has tsar star or player wears tsar star]You've got something that will impress him[else]You need to find something to impress the plebe--you may want to go visit the Char Arch to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has tsar star or player wears tsar star]now[else]once[end if] you have the tsar star.[minus][cycling]"	--	"BLEEP"
 Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost, but you can do a bit better.[plus]What can YE HOOP anagram to?[minus][cycling]"	--	"POOH"
 Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in Hacks' Shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
 Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in Hacks' Shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
@@ -2612,7 +2543,7 @@ hostile-is-he lot	--	lois the hostile
 keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
-agnostic	"[if Obscurest Subsector is unvisited][agnostic]'s not important right now.[else if Dr Yow is in prison ropins][agnostic] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][ag-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][ag-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [ag-first] something to build with. A tool.[else][ag-first]'s bot boat is more important.[end if]"
+agnostic	"[if Obscurest Subsector is unvisited][agnostic]'s not important right now.[else if Dr Yow is in prison ropins][agnostic] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][agnostic-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][agnostic-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [agnostic-first] something to build with. A tool.[else][agnostic-first]'s bot boat is more important.[end if]"
 Reed's Ale	"[one of]Poor [el-la-f]! Having to dress like that. They either want to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-f]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-f].[minus][cycling]"
 Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
@@ -2635,12 +2566,12 @@ retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"
 ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if Shaven Havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
 raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT is the PLAY button.[plus][or]RETAPE is the RECORD button.[plus][or]Combining RETAPE and REPEAT can bring a sound from one end of this region's map to another.[minus][cycling]"
-gizmo	"[if agnostic has gizmo][ag-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][agnostic] in Actionless Coastlines.[plus][or][ag-yow-lect], but now [he-she] needs a tool.[plus][or]Give [ag-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
+gizmo	"[if agnostic has gizmo][agnostic-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][agnostic] in Actionless Coastlines.[plus][or][ag-yow-lect], but now [he-she] needs a tool.[plus][or]Give [agnostic-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
 ID Tag	"[if Obscurest Subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
 log gaol	"It's just there to block you from going anywhere else."
-atblock	"[one of][ag-first] can do a bit better, but this LLP is not critical for the game.[plus][or][ag-first] is tentative. Not able to focus.[plus][or]Or pay full attention.[plus][or]Make [ag-first] ATTENTIVE.[minus][cycling]"
+atblock	"[one of][agnostic-first] can do a bit better, but this LLP is not critical for the game.[plus][or][agnostic-first] is tentative. Not able to focus.[plus][or]Or pay full attention.[plus][or]Make [agnostic-first] ATTENTIVE.[minus][cycling]"
 lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
 savager ravages	"The ravages make sure you have to go back to the main area."
 rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the Treading Gradient[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the agnostic build something.[minus][cycling]"

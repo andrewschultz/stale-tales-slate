@@ -536,6 +536,10 @@ understand "palins" as a mistake ("Michael and Sarah are both funny enough on th
 
 understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are in Lapsin' Plains and player is in Lapsin' Plains.
 
+understand "saplin" as a mistake ("No tre begins to grow. Er, tree.") when player is in Lapsin' Plains.
+
+understand "slapin" and "slap in" as a mistake ("No vilence, err, violence, please.") when player is in Lapsin' Plains.
+
 understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin' Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when player is in Lapsin' Plains.
 
 understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
