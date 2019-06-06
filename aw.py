@@ -24,7 +24,7 @@ def usage():
     print("-s = get STDIN, can be combined with command line")
     print("-? = this usage message")
     print("You can put more than one word on the command line or on STDIN. This is case insensitive, too.")
-    print("?(word) on stdin launches the word in Thefreedictionary. /(word) launches it in thesaurus.com.")
+    print("?(word) on stdin launches the word in Thefreedictionary. /(word) launches it in thesaurus.com. (123)word sends that word * (123) to the anagram server.")
     exit()
 
 def alfy(a):
@@ -192,6 +192,19 @@ if get_stdin:
     for line in sys.stdin:
         ll = line.strip().lower()
         skip = False
+        if ll[0].isdigit():
+            mult = int(ll[0])
+            ll = ll[1:]
+            if mult > 3:
+                print("Multiplier too big. Try 1, 2 or 3.")
+            elif mult == 0:
+                print("A multiplier of 0 doesn't do any good.")
+            else:
+                print("Anagramming", ll, "*", mult)
+                sys_string = "start https://new.wordsmith.org/anagram/anagram.cgi?anagram={:s}^&t=500^&a=n".format(ll * mult)
+                print(sys_string)
+                os.system(sys_string)
+            skip = True
         if ll.startswith('?'):
             ll = ll[1:]
             new_arg = re.split("[ ,]", ll.strip())
@@ -202,6 +215,7 @@ if get_stdin:
             ll = ll[1:]
             new_arg = re.split("[ ,]", ll.strip())
             for x in new_arg:
+                print("Defining", x)
                 os.system("start http://www.thesaurus.com/browse/{:s}".format(x))
             skip = True
         if not ll or ll == 'q':
