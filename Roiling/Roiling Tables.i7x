@@ -43,7 +43,7 @@ Store P	baser braes	false	568332432	--	"presto"	"presto"	--	--	"You say the magi
 Store T	otters-x	false	589976491	--	"otters"	"otters"	--	post-storet-otters rule	"The store divides in two until it becomes a path with gargoyles on each side. I mean, otters."
 Store U	course source	false	591972280	--	"routes"	"routes"	--	--	"Store U splits into strips that snake out. They intertwine dizzingly, making a source course. You can ENTER to see where it leads."
 Store V	troves-x	false	594031293	--	"troves"	"troves"	--	--	"You look more closely at Store V. Yes, those are definitely troves. Store V collapses--you duck as the walls fall out and somehow sink into the ground."
-Store W	towers-x	false	594801246	--	"towers"	"towers"	--	post-store-w-towers rule	"The store becomes a pair of twin towers, connected at the base where you can enter them."
+Store W	truster turrets	false	594801246	--	"towers"	"towers"	--	post-store-w-towers rule	"Store W shakes and seems to sprout up and grow narrower, into a pair of truster turrets. It doesn't seem to matter which one you enter. You hope."
 Store Y	oyster-x	false	609225725	--	"oyster"	"oyster"	--	--	"Blam! The store flattens a bit, rounds out, and becomes an oyster."
 
 book routes
@@ -2067,7 +2067,7 @@ baser braes	"[got-e]."
 otters-x	"[got-e]."
 course source	"[got-e]."
 troves-x	"[got-e]."
-towers-x	"[got-e]."
+truster turrets	"[got-e]."
 oyster-x	"[got-e]."
 hoster	"[got-e]."
 tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
@@ -2260,10 +2260,7 @@ troves-x	"Just ENTER [the noun]."
 oyster-x	"Just ENTER [the noun]."
 baser braes	"Just ENTER [the noun]."
 hoster	"[if roved is true]You can just enter the hoster.[else]You need to save Yorpwald first.[end if]"
-towers-x	"You can just ENTER the towers."
-ivy tower	--	towers-x
-ivory tower	--	towers-x
-tower-base	--	towers-x
+truster turrets	"You can just ENTER the truster turrets."
 engravings	"[one of]Whether a word is italicized or bolded reflects something.[plus][or]Try changing a store and looking again.[plus][or]The italicized words relate to the stores you've figured.[plus][or]Bolded words means an area is solved[plus][or]For instance, 'someone' is bolded, so you solved an area.[plus][or]The engravings are a hint to the figures of speech in the new areas, so you solved an area with nouns.[plus][or]Store W makes 'evil' go italic, so you may guess what sort of words are behind it.[minus][cycling]"
 patcher	"[one of]The patcher can be used to skip certain areas. It's a bit fourth-wall, but it'll do.[plus][or]ZAP (store X) to zap a single store.[plus][or]SWITCH PATCHER to zap them all.[minus][cycling]"
 f-o-b	"You may be able to guess what you need to do with the barley once you get there, but you can't do anything until you get past the otters."

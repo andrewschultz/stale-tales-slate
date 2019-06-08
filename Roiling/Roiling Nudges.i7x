@@ -115,11 +115,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "course"	507867847	--	course source	--	"[just-in-routes]."
 "courses"	604141813	myrm	--	--	"[just-in-routes]."
 "trove"	497757327	--	troves-x	--	"No need to focus on a specific trove. Just enter or take the troves."
-"ivy"	274516918	--	towers-x	--	"[towers-made]."
-"ivory"	434193298	--	towers-x	--	"[towers-made]."
-"ivytower"	773044198	--	towers-x	--	"[towers-made]."
-"ivorytower"	932720578	--	towers-x	--	"[towers-made]."
-"tower"	498527280	--	towers-x	--	"[towers-made]."
+"turret"	609779558	truster turrets	--	--	"[turrets-ok]."
+"turrets"	706053524	truster turrets	--	--	"[turrets-ok]."
+"ivy"	274516918	--	truster turrets	--	"[turrets-ok]."
+"ivory"	434193298	--	truster turrets	--	"[turrets-ok]."
 "otter"	493702525	--	otters-x	--	"You can't divide and conquer, and the otters won't let you by unless you're, well, ready."
 "braes"	330010601	--	Baser Braes	--	"But you already changed Store P."
 "brae"	233736635	--	Baser Braes	--	"But you already changed Store P."
@@ -1277,7 +1276,7 @@ to say just-in-routes: say "You don't need to do anything with an individual rou
 
 to say engs: say "Nothing happens. You probably need to worry about the stores and/or what they become, instead"
 
-to say towers-made: say "What the towers are made of is not important. Just that they're big, and there's a quest behind them"
+to say turrets-ok: say "You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest"
 
 to say not-at-barley: say "You're not near enough to the barley to affect it. You need to ENTER through the otters"
 

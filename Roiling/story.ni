@@ -2589,6 +2589,7 @@ sitar	"Oh, right. You bought it from Trisa Israt."
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
+Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red." [routes]
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
@@ -3621,7 +3622,7 @@ check entering a portal:
 		if grn is otters:
 			say "Elvira is defeated. You don't need to go back." instead;
 		say "You've already solved that area." instead;
-	if noun is towers-x:
+	if noun is truster turrets:
 		if number of kayoed regions < 5:
 			if towers-warn is false:
 				now towers-warn is true;
@@ -5848,7 +5849,7 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 "debug"	store p	baser braes	1
 "redial"	store y	oyster-x	0
 "destroy"	store y	oyster-x	1
-"spectacular"	store w	towers-x	0
+"spectacular"	store w	truster turrets	0
 "decide"	store v	troves-x	3
 "resign"	store v	troves-x	3
 "quickly"	store t	otters-x	-1
@@ -7598,7 +7599,7 @@ course source	Routes	Same Mesa	"[one of]The route turns a bit, then begins branc
 troves-x	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
 baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
-towers-x	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
+truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 otters-x	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
 hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
 
@@ -10085,8 +10086,7 @@ definition: a sto is supporting: [ie need to win before entering store T. K/N do
 
 book what is a sto
 
-does the player mean scaning a sto:
-	it is very likely;
+does the player mean scaning a sto: it is very likely;
 
 a sto is a kind of thing. a sto is usually undescribed. a sto is usually fixed in place. description of a sto is "This is some posh shop or other. But it has been integrated into the whole strip. It can't lead anywhere interesting. It's greyed out, like an area in a video game you can't get to."
 
@@ -10492,28 +10492,9 @@ Store W is a sto in Strip of Profits. understand "store/ 23/twentythree" as Stor
 
 a-text of Store W is "RYRYRR". b-text of Store W is "RYRYRR". parse-text of store w is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-description of Store W is "It's the biggest structure in the strip. You see replicas of two tall, narrow buildings. You can also read a reddish inscription."
+description of Store W is "It's the biggest structure in the strip. You see replicas of two tall, narrow buildings. You can also READ who made it."
 
-the reddish inscription is part of store w. the reddish inscription is cluey. description of reddish inscription is "WESTOR is the name of the company that built this. They used the SET-ROW method."
-
-the towers-x are a plural-named portal. diffic of towers-x is 7. the go-region of towers-x is Towers. understand "two/twin towers" and "ivy/ivory tower" and "towers" as towers-x. the printed name of towers-x is "very tall twin towers". "Two towers, ivy or ivory, are here.". description of towers-x is "Ivy or ivory. You can't tell which is tower, er, two. Both are huge and intricate, and even one would be intimidating to enter."
-
-the tower-base is privately-named. it is part of the towers-x. understand "base" as tower-base. the printed name of tower-base is "tower base". description is "There seems to be no reason you can't enter it if you wanted."
-
-instead of entering tower-base:
-	try entering towers-x;
-
-the ivory tower is scenery. "You're sure it's even further from the real world of Yorpwald than Yorpwald is from, well, the real world."
-
-the ivy tower is scenery. "You could view Troy from the top, if it existed. The ivy offers lousy privacy."
-
-check entering ivy tower:
-	say "You try to enter the ivy tower, but they keep shifting around, and you find yourself walking between them.";
-	try entering towers-x instead;
-
-check entering ivory tower:
-	say "You try to enter the ivory tower, but they keep shifting around, and you find yourself walking between them.";
-	try entering towers-x instead;
+the truster turrets are a plural-named portal. diffic of truster turrets is 7. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be." description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can ENTER. But their size indicates a hefty quest ahead."
 
 chapter store x
 
@@ -10571,7 +10552,7 @@ section engravings
 
 the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
 
-description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of towers-x]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
+description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
 
 to say npoff:
 	now note-progress is false;
@@ -23996,13 +23977,13 @@ carry out a5ing:
 	if store p is in Strip of Profits, try fliptoing baser braes;
 	if store u is in Strip of Profits, try fliptoing course source;
 	if store v is in Strip of Profits, try fliptoing troves-x;
-	if store w is in Strip of Profits, try fliptoing towers-x;
+	if store w is in Strip of Profits, try fliptoing truster turrets;
 	if store y is in Strip of Profits, try fliptoing oyster-x;
 	try fliptoing otters-x;
 	moot baser braes;
 	moot course source;
 	moot troves-x;
-	moot towers-x;
+	moot truster turrets;
 	moot oyster-x;
 	now troves is solved;
 	now routes is solved;
