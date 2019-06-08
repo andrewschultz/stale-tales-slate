@@ -92,9 +92,9 @@ understand "hoster" as a mistake ("That was sort of a given from the warning on 
 
 understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in trips strip]Store U[else]the course source[end if], but how to get there?") when Store U is in location of player or course source is in location of player.
 
-understand "pteros" as a mistake ("[if store p is in strip or e-s is in strip]You don't need to face any predators[else]They're in the past, and so are Store P and the Presto region[end if].") when player is in Strip of Profits.
+understand "pteros" as a mistake ("You don't need to face any predators. Aigh!") when player is in Strip of Profits and store p is in Strip of Profits.
 
-understand "repost" as a mistake ("That's not what you need to do with [if store p is in location of player]store P--you even see red trying to figure HOW you would[else]the, er, spot[end if].") when store p is in location of player or e-s is in location of player
+understand "repost" as a mistake ("That's not what you need to do with Store P--you even see red trying to figure HOW you would.") when player is in Strip of Profits and Store P is in Strip of Profits.
 
 understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in Strip of Profits.
 

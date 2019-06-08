@@ -3577,10 +3577,8 @@ carry out zaping:
 	if noun is Store U, now oyster is bypassed;
 	if noun is Store P, now presto is bypassed;
 	moot noun;
-	say "[if noun is a portal]The patcher obliterates [the-por of noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Well, maybe you'll get someone to help you take care of things behind [the noun] once you're finished here.[end if]" instead;
+	say "[if noun is a portal]The patcher obliterates [the noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Well, maybe you'll get someone to help you take care of things behind [the noun] once you're finished here.[end if]" instead;
 	the rule succeeds;
-
-to say the-por of (por - a thing): say "[if noun is e-s]the, er, spot[else][the noun][end if]"
 
 the chapter patcher is a warpable thing. description is "[if number of needed regions > 1]I bet if you switched it, something cool might happen[else]It's probably useless to warp past the final area[end if].". "A chapter patcher lies here next to the megaton magneto-montage."
 
@@ -5691,8 +5689,6 @@ after reading a command:
 				process the hint flags checkoff rule;
 				process the scam rule instead;
 	if Gunter is off-stage and the player's command includes "gunter", say "[if stuff-found >= 3]Who?[else]Gunter's outside, but to interact meaningfully, you should SWITCH the liaison.[end if]" instead;
-	if e-s is visible and the player's command includes "presto":
-		unless the player's command includes "test", say "Presto is the word you said to reveal the, er, spot." instead;
 	if the player's command includes "tickle" and Elmo is in Largely All-Grey Gallery, say "Really. This is a juvenile computer game, not a juvenile toy." instead;
 	if player is in Clangier Clearing and melon is in Clangier Clearing:
 		if the player's command matches the regular expression "\blen\b" and the player's command matches the regular expression "\bmo\b":
@@ -5847,9 +5843,9 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 "through"	store u	course source	3
 "between"	store u	course source	3
 "beyond"	store u	course source	0
-"bus"	store p	e-s	0
-"sub"	store p	e-s	0
-"debug"	store p	e-s	1
+"bus"	store p	baser braes	0
+"sub"	store p	baser braes	0
+"debug"	store p	baser braes	1
 "redial"	store y	oyster-x	0
 "destroy"	store y	oyster-x	1
 "spectacular"	store w	towers-x	0
@@ -6758,7 +6754,7 @@ check listening:
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
 	if rifle is visible, say "Awkward silence, what with Elmo holding that rifle." instead;
-	if e-s is visible, say "A roar of angry undefinable words swirls from the, er, spot." instead; [stores]
+	if baser braes are visible, say "A roar of angry undefinable words swirls from the baser braes." instead; [stores]
 	if nestor is visible, say "Nestor periodically mumbles about his lost buddies." instead;
 	if tokers are visible and nestor is visible, say "[if nestor is visible]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
@@ -7600,7 +7596,7 @@ table of warps [this gives the text for which portal leads to which area, and wh
 por	reg	lloc	go-text
 course source	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 troves-x	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
-e-s	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
+baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 towers-x	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 otters-x	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
@@ -10174,7 +10170,7 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 			if diffic of EP < curdif:
 				now RP is EP;
 				now curdif is diffic of EP;
-		say "[line break]The[if RP is e-s], er, spot[else if RP is oyster-x] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
+		say "[line break]The[if RP is baser braes], er, spot[else if RP is oyster-x] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
 		if the player direct-consents:
 			try entering RP instead;
 		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
@@ -10401,9 +10397,7 @@ description of Store P is "There's a big poster in the window of this average-si
 
 a-text of Store P is "RRYRRY". b-text of Store P is "RRYRRY". parse-text of store p is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
-the e-s is a proper-named portal. diffic of e-s is 5. the go-region of e-s is Presto. the printed name of e-s is "an, er, spot". description is "It's hecka swirly. You're sure it goes somewhere the speech is louder and so forth.". initial appearance of e-s is "The, er, spot created when you said PRESTO swirls here."
-
-understand "er/spot" and "er spot" as e-s.
+the baser braes are a plural-named portal. diffic of baser braes is 5. the go-region of baser braes is Presto. description is "Braes are generally natural, but these are weird to focus on, as they seem noisy, though it's not clear what's making the noise. Still, you suspect you need to [if grey gyre is visited]re-[end if]ENTER them.". initial appearance of baser braes is "Baser braes take up the space where Store P used to reside,"
 
 the tropes poster is part of Store P. the tropes poster is auxiliary.
 
@@ -10577,7 +10571,7 @@ section engravings
 
 the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
 
-description of engravings is "[emph of e-s]Man, [r][b]SOMEONE[r] [emph of towers-x]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
+description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of towers-x]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
 
 to say npoff:
 	now note-progress is false;
@@ -23999,13 +23993,13 @@ carry out a5ing:
 	now suppress-score is true;
 	if store k is in Strip of Profits, try fliptoing tokers;
 	if store n is in Strip of Profits, try fliptoing nestor;
-	if store p is in Strip of Profits, try fliptoing e-s;
+	if store p is in Strip of Profits, try fliptoing baser braes;
 	if store u is in Strip of Profits, try fliptoing course source;
 	if store v is in Strip of Profits, try fliptoing troves-x;
 	if store w is in Strip of Profits, try fliptoing towers-x;
 	if store y is in Strip of Profits, try fliptoing oyster-x;
 	try fliptoing otters-x;
-	moot e-s;
+	moot baser braes;
 	moot course source;
 	moot troves-x;
 	moot towers-x;
