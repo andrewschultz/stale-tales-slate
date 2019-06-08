@@ -3447,7 +3447,7 @@ to check-the-store (po - a portal):
 	repeat through table of stores anagrams:
 		if the-to entry is po:
 			if the-from entry is not moot:
-				d "Moving [the-from entry] to Meta Team.";
+				d "Moving store [the-from entry] to Meta Team, but it should have been mooted.";
 				moot the-from entry;
 				break;
 
@@ -5844,9 +5844,9 @@ section commands to skip previously solved areas
 
 table of skipcmds
 lastcmd	storedest	portdest	old-rel [old release is last one where this command worked. If 0, it currently works]
-"through"	store u	routes-x	3
-"between"	store u	routes-x	3
-"beyond"	store u	routes-x	0
+"through"	store u	course source	3
+"between"	store u	course source	3
+"beyond"	store u	course source	0
 "bus"	store p	e-s	0
 "sub"	store p	e-s	0
 "debug"	store p	e-s	1
@@ -7598,7 +7598,7 @@ a thing can be warpable. a thing is usually not warpable.
 
 table of warps [this gives the text for which portal leads to which area, and what starting location]
 por	reg	lloc	go-text
-routes-x	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
+course source	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 troves-x	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
 e-s	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
@@ -10476,9 +10476,7 @@ the roads are a plural-named boringthing. they are part of store u. description 
 
 a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
-the routes-x are a privately-named plural-named portal. diffic of routes-x is 3. understand "routes" as routes-x. the printed name of routes-x is "routes extending many confusing directions". initial appearance of routes-x is "odd winding routes".
-
-description of routes-x is "They appear to branch out in all directions."
+the course source is a portal. diffic of course source is 3. understand "routes" as course source when player is in trips strip. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if same mesa is visited]re[end if]enter it."
 
 chapter store v
 
@@ -10579,7 +10577,7 @@ section engravings
 
 the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
 
-description of engravings is "[emph of e-s]Man, [r][b]SOMEONE[r] [emph of towers-x]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of routes-x]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
+description of engravings is "[emph of e-s]Man, [r][b]SOMEONE[r] [emph of towers-x]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
 
 to say npoff:
 	now note-progress is false;
@@ -24002,13 +24000,13 @@ carry out a5ing:
 	if store k is in Strip of Profits, try fliptoing tokers;
 	if store n is in Strip of Profits, try fliptoing nestor;
 	if store p is in Strip of Profits, try fliptoing e-s;
-	if store u is in Strip of Profits, try fliptoing routes-x;
+	if store u is in Strip of Profits, try fliptoing course source;
 	if store v is in Strip of Profits, try fliptoing troves-x;
 	if store w is in Strip of Profits, try fliptoing towers-x;
 	if store y is in Strip of Profits, try fliptoing oyster-x;
 	try fliptoing otters-x;
 	moot e-s;
-	moot routes-x;
+	moot course source;
 	moot troves-x;
 	moot towers-x;
 	moot oyster-x;

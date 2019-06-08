@@ -90,7 +90,7 @@ understand "gots er" as a mistake ("And what would you do with Store G, when you
 
 understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is unexamined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is in location of player.
 
-understand "ouster" as a mistake ("It's your job to be the ouster in Store u, but how to get there?") when Store U is in location of player or routes-x are in location of player.
+understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in trips strip]Store U[else]the course source[end if], but how to get there?") when Store U is in location of player or course source is in location of player.
 
 understand "pteros" as a mistake ("[if store p is in strip or e-s is in strip]You don't need to face any predators[else]They're in the past, and so are Store P and the Presto region[end if].") when player is in Strip of Profits.
 
@@ -108,7 +108,7 @@ understand "storge" as a mistake ("[one of]You have a momentary vision of an apo
 
 understand "stroke" as a mistake ("You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.") when player is in strip and mangiest steaming is off-stage.
 
-understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.") when Store U is in location of player or routes-x are in location of player.
+understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.") when Store U is in location of player or course source is in location of player.
 
 understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. [if otters is solved]Try thinking of a more common word[else]Try looking at the other end of the alphabet[end if].") when Store H is in location of player or hoster is in location of player.
 

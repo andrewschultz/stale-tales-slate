@@ -111,7 +111,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "toker"	443525685	--	tokers	--	"They already lost one of their collective, man. It'd be a bummer if [if nestor is off-stage]they lost another[else]someone replaced Nestor[end if]."
 "someone"	633573999	--	engravings	--	"[engs]."
 "nouned"	466108598	--	engravings	--	"[engs]."
-"route"	495698314	--	routes-x	--	"You don't need to do anything with an individual route. Just go in."
+"route"	495698314	--	course source	--	"[just-in-routes]."
+"course"	507867847	--	course source	--	"[just-in-routes]."
+"courses"	604141813	myrm	--	--	"[just-in-routes]."
 "trove"	497757327	--	troves-x	--	"No need to focus on a specific trove. Just enter or take the troves."
 "ivy"	274516918	--	towers-x	--	"[towers-made]."
 "ivory"	434193298	--	towers-x	--	"[towers-made]."
@@ -1269,6 +1271,8 @@ to say so-last: say "That was soooo last game! Not that Shuffling Around was lam
 to say no-way: say "Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway"
 
 to say shell-no: say "The shells don't move. Perhaps they are just a clue"
+
+to say just-in-routes: say "You don't need to do anything with an individual route. Just go in"
 
 to say engs: say "Nothing happens. You probably need to worry about the stores and/or what they become, instead"
 
