@@ -24182,7 +24182,6 @@ blurb
 "'I can'ts' << antics."
 "I persuade! Super idea!"
 "'I respect receipts' is a good general busy sounding phrase." [p] [x]
-"Idols? SOLID!" []
 "If at a fit: FIAT."
 "If shy, fishy!"
 "In the NOW, whine not." []

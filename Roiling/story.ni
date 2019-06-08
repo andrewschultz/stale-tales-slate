@@ -3435,7 +3435,7 @@ to solve-region (sre - a region):
 	if player is not in Strip of Profits:
 		d "player not currently in Strip of Profits. Player moved from [location of player].";
 		move player to Strip of Profits;
-	if sre is not spoiled and otters-x are examined:
+	if sre is not spoiled and solid idols are examined:
 		now note-progress is true;
 	see-about-patcher;
 	if engravings are examined and eng-change is false:
@@ -3570,7 +3570,7 @@ carry out zaping:
 	if noun is Store K or noun is Store N:
 		say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. [noun] may not be where it's at, according to Elmo, so that's even more reason not to disintegrate it." instead;
 	if noun is Store T, say "The energy you felt from the patcher seems to bounce off Store T and zap you back. You'll have to be a tough customer to enter Store T." instead;
-	if noun is otters-x, say "The energy beam that emits from the patcher fizzles as it hits the otters. Whatever's behind the otters is likely no joke." instead;
+	if noun is solid idols, say "The energy beam that emits from the patcher fizzles as it hits the otters. Whatever's behind the otters is likely no joke." instead;
 	if noun is a portal, now go-region of noun is bypassed;
 	if noun is Store U, now routes is bypassed;
 	if noun is Store V, now troves is bypassed;
@@ -3605,7 +3605,7 @@ check switching on the chapter patcher:
 definition: a thing (called xx) is patchable:
 	if xx is not visible, no;
 	if xx is Store K or xx is Store N or xx is tokers or xx is store C or xx is store B, no;
-	if xx is Store H or xx is Store O or xx is Store T or xx is otters-x, no;
+	if xx is Store H or xx is Store O or xx is Store T or xx is solid idols, no;
 	if xx is a sto and xx is flippable, yes;
 	if xx is a portal, yes;
 	no.
@@ -3646,7 +3646,7 @@ check entering a portal:
 	say "[go-text entry]";
 	if noun is hoster:
 		pad-rec "guru";
-	if noun is otters-x and Bleary Barley is unvisited:
+	if noun is solid idols and Bleary Barley is unvisited:
 		say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]And yet, once through, your powers feel dormant, but thankfully not mordant.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
 		pad-rec-q "asking";
 	let try-recover be false;
@@ -5852,7 +5852,7 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 "spectacular"	store w	truster turrets	0
 "decide"	store v	Tastee Estate	3
 "resign"	store v	Tastee Estate	3
-"quickly"	store t	otters-x	-1
+"quickly"	store t	solid idols	-1
 
 book errors
 
@@ -7600,7 +7600,7 @@ Tastee Estate	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits
 baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
-otters-x	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
+solid idols	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
 hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
 
 to say get-arug:
@@ -8139,7 +8139,7 @@ carry out denialnaileding:
 				increment patchies;
 				say "BOOM! Store T shatters.";
 				moot Store T;
-				now otters-x is in Strip of Profits;
+				now solid idols is in Strip of Profits;
 	repeat with ZT running through needed regions:
 		if ZT is not otters and ZT is not solved, now ZT is bypassed;
 	repeat with ZT running through patchable things:
@@ -10055,7 +10055,7 @@ volume stores
 after choosing notable locale objects when player is in Strip of Profits:
 	if store h is in Strip of Profits, set the locale priority of store h to 0;
 	if hoster is in Strip of Profits, set the locale priority of hoster to 0;
-	if otters-x are in Strip of Profits, set the locale priority of otters-x to 10;
+	if solid idols are in Strip of Profits, set the locale priority of solid idols to 10;
 	if tokers are in Strip of Profits, set the locale priority of tokers to 1;
 	if tokers are in Strip of Profits and nestor is in Strip of Profits, set the locale priority of nestor to 0;
 	continue the action;
@@ -10431,27 +10431,13 @@ a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of stor
 
 description of Store T is "Store T is average-sized, but it seems to repel you. Its window is really lovely stained-glass--it's a depiction of a family of sea animals. There's an engraving below it."
 
-otters-x are a privately-named plural-named not lumpable portal. printed name of otters-x is "the twin otters". understand "twin otters" as otters-x. diffic of otters-x is 8.
+solid idols are a plural-named not lumpable portal. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here, facing each other--it's all blurry behind them."
 
-description of otters-x is "You see a field of barley beyond them. There's also something below their names, and it reads:"
+report examining solid idols: try examining engravings;
 
-after examining otters-x:
-	try examining engravings;
-	now f-o-b is in Strip of Profits;
+understand "otters/idol" as solid idols.
 
-rule for printing a locale paragraph about otters-x:
-	say "Statues of twin otters wait here, facing each other--it's all blurry behind them.";
-	now otters-x is mentioned;
-
-understand "twins/otters/statues/statue" as otters-x.
-
-f-o-b is privately-named scenery. printed name of f-o-b is "the field of barley".
-
-description of f-o-b is "You look behind the otters at the field of barley. [if b-b is reflexed]There's not much left.[else]It's everywhere, up to your waist, with no end in sight.[end if]"
-
-understand "field/ of/ barley" as f-o-b when player is in Strip of Profits and f-o-b is in Strip of Profits.
-
-check entering otters-x:
+check entering solid idols:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
 		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
@@ -10552,7 +10538,7 @@ section engravings
 
 the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
 
-description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
+description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of solid idols]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
 
 to say npoff:
 	now note-progress is false;
@@ -19538,7 +19524,7 @@ to clean-for-roving:
 		moot tokers;
 	if nestor is in strip:
 		moot nestor;
-	moot otters-x;
+	moot solid idols;
 	moot whistle;
 	moot medals;
 	moot magneto;
@@ -23979,7 +23965,7 @@ carry out a5ing:
 	if store v is in Strip of Profits, try fliptoing Tastee Estate;
 	if store w is in Strip of Profits, try fliptoing truster turrets;
 	if store y is in Strip of Profits, try fliptoing oyster-x;
-	try fliptoing otters-x;
+	try fliptoing solid idols;
 	moot baser braes;
 	moot course source;
 	moot Tastee Estate;

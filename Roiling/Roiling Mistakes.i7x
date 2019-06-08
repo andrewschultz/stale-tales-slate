@@ -80,8 +80,6 @@ book stores
 
 chapter Strip of Profits
 
-understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay-nol of b-b]") when f-o-b is in location of player.
-
 understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is in location of player.
 
 understand "gorest" and "go rest" as a mistake ("Store G is too busy to allow that these days.") when Store G is in location of player.

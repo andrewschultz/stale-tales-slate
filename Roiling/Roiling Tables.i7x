@@ -40,7 +40,7 @@ Store K	tokers	false	539799651	--	"tokers"	"tokers"	--	post-storek-tokers rule	"
 Store N	nestor	false	555773981	--	"nestor"	"nestor"	--	--	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"
 lecturer	lecturer	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	--	post-lecturer-outside rule	"Ian and the lecturer are swept from the doorway and stage, respectively, by something unseen. The lecturer frantically babbles something about how this is why we need to fight drugs, but he is too busy backwards somersaulting to establish eye contact with his audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers assure you that'd waste money. They explain the munchies help reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."
 Store P	baser braes	false	568332432	--	"presto"	"presto"	--	--	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, something more nature-like, but daunting. You recognize baser braes, which you can ENTER, if you dare. And you'll probably need to."
-Store T	otters-x	false	589976491	--	"otters"	"otters"	--	post-storet-otters rule	"The store divides in two until it becomes a path with gargoyles on each side. I mean, otters."
+Store T	solid idols	false	589976491	--	"otters"	"otters"	--	post-storet-otters rule	"The store divides in two until it becomes a path with solid idols packed so densely they block your view. They're all of otters, not-so-oddly."
 Store U	course source	false	591972280	--	"routes"	"routes"	--	--	"Store U splits into strips that snake out. They intertwine dizzingly, making a source course. You can ENTER to see where it leads."
 Store V	Tastee Estate	false	594031293	--	"troves"	"troves"	--	--	"You look more closely at Store V. Wouldn't it be nice if there were riches? As you do, up pops the perfect sort of Yorpwaldian place to house troves: a Tastee Estate!"
 Store W	truster turrets	false	594801246	--	"towers"	"towers"	--	post-store-w-towers rule	"Store W shakes and seems to sprout up and grow narrower, into a pair of truster turrets. It doesn't seem to matter which one you enter. You hope."
@@ -1492,7 +1492,7 @@ after fliptoing when player is in Hacks' Shack:
 
 this is the post-storet-otters rule:
 	if engravings are examined, say "The engravings from Store T seem to have been transferred to the otters.";
-	now engravings are part of otters-x;
+	now engravings are part of solid idols;
 
 book general auxiliary rules
 
@@ -2064,7 +2064,7 @@ staple	"Those plates were a mess, and now they're a tidy staple. It's better tha
 stapler	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
 store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!"	[START stores]
 baser braes	"[got-e]."
-otters-x	"[got-e]."
+solid idols	"[got-e]."
 course source	"[got-e]."
 Tastee Estate	"[got-e]."
 truster turrets	"[got-e]."
@@ -2254,7 +2254,7 @@ voters	"You can scan the voters if you can't figure what Store V should be."
 Store W	"[one of]You may wish to look at the description of Store W, though RESTOW also allows a clue.[plus][or]Store W seems taller than the other stores, like it has several levels. It's just an illusion. Plus, the store seems to blur into separate halves when you look at it.[plus][or]What's a name for a tall building, or tall buildings?[plus][or]TOWERS.[minus][cycling]"
 shells	"The shells clue that Store Y might become something that lives in a shell."
 Store Y	"[one of]Hm, store Y looks slimy on the inside, and it smells like saltwater too. It's also a weird shell shape, Store Y is. What sea life do you know that has a Y in it?[plus][or]Also, if you use the Letters Settler, you'll notice a letter that's a new color--orange. A combination of yellow and red.[plus][or]What letter can be a vowel or a consonant?[plus][or]Y. So the settler gives you three letters.[plus][or]You probably see by now--or can use process of elimination--to note Store Y becomes an OYSTER.[minus][cycling]"
-otters-x	"[if you-can-advance]You've solved enough to go there[else if patcher is off-stage]You need to solve more stores to have the strength to make it past the otters[else]You need to solve more stores, or zap them with the patcher, to make it past[end if]."
+solid idols	"[if you-can-advance]You've solved enough to get past the solid idols[else if patcher is off-stage]You need to solve more stores to have the strength to make it past the solid idols[else]You need to solve more stores, or zap them with the patcher, to make it past[end if]."
 course source	"Just ENTER [the noun]."
 Tastee Estate	"Just ENTER [the noun]."
 oyster-x	"Just ENTER [the noun]."
@@ -2263,7 +2263,6 @@ hoster	"[if roved is true]You can just enter the hoster.[else]You need to save Y
 truster turrets	"You can just ENTER the truster turrets."
 engravings	"[one of]Whether a word is italicized or bolded reflects something.[plus][or]Try changing a store and looking again.[plus][or]The italicized words relate to the stores you've figured.[plus][or]Bolded words means an area is solved[plus][or]For instance, 'someone' is bolded, so you solved an area.[plus][or]The engravings are a hint to the figures of speech in the new areas, so you solved an area with nouns.[plus][or]Store W makes 'evil' go italic, so you may guess what sort of words are behind it.[minus][cycling]"
 patcher	"[one of]The patcher can be used to skip certain areas. It's a bit fourth-wall, but it'll do.[plus][or]ZAP (store X) to zap a single store.[plus][or]SWITCH PATCHER to zap them all.[minus][cycling]"
-f-o-b	"You may be able to guess what you need to do with the barley once you get there, but you can't do anything until you get past the otters."
 Nestor	"[if tokers are off-stage]Nestor's pals are in store K[else]Nestor's back with his pals. Not much to do with him now[end if]."
 tokers	"[if nestor is off-stage]You can find the tokers['] friend in store N[else if lecturer is reflexive]They'll give you a treat if you solve the side quest[else]They're of no use to you now[end if]."
 mangiest steaming	"[if lecturer is reflexive]You can enter the steaming for a mini-side-quest[else]You've been in the steaming. After how you upended things, it'd be unwise to go back[end if]."

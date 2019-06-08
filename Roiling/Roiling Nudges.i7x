@@ -120,14 +120,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "turrets"	706053524	truster turrets	--	--	"[turrets-ok]."
 "ivy"	274516918	--	truster turrets	--	"[turrets-ok]."
 "ivory"	434193298	--	truster turrets	--	"[turrets-ok]."
-"otter"	493702525	--	otters-x	--	"You can't divide and conquer, and the otters won't let you by unless you're, well, ready."
+"otter"	493702525	--	solid idols	--	"[idols-no]."
+"idol"	194188351	--	solid idols	--	"[idols-no]."
+"solid"	290462317	--	solid idols	--	"[idols-no]."
 "braes"	330010601	--	Baser Braes	--	"But you already changed Store P."
 "brae"	233736635	--	Baser Braes	--	"But you already changed Store P."
 "engraving"	570489816	--	engravings	--	"The engraving is meant to be read. You can modify it with other actions."
 "engravings"	666763782	--	engravings	--	"You can only change the enrgavings by working through the other stores."
 "patcher"	456181591	--	patcher	--	"The patcher doesn't need to be changed. It does the changing if you point it."
-"field"	274156779	--	f-o-b	--	"[not-at-barley]."
-"barley"	409909726	--	f-o-b	--	"[not-at-barley][barley-check]."
 "mangiest"	539953120	--	mangiest steaming	--	"You can't do anything with the mangiest steaming other than enter it for a side adventure."
 "husb"	257080977	--	hubs bush	--	"[hub-stur]."
 "bhu"	160807011	--	hubs bush	--	"[hub-stur]."
@@ -1281,14 +1281,7 @@ to say tastee-there: say "The Tastee Estate can't be changed and doesn't need to
 
 to say turrets-ok: say "You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER"
 
-to say not-at-barley: say "You're not near enough to the barley to affect it. You need to ENTER through the otters"
-
-to say barley-check:
-	if the player's command includes "barley":
-		if b-b is not prefigured:
-			say ". Still, that seems right, if you get there";
-			preef b-b;
-			continue the action;
+to say idols-no: say "The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready"
 
 to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Strip of Profits"
 
