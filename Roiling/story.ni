@@ -1164,11 +1164,10 @@ when play begins (this is the region initialization rule):
 		now last-loc of reg entry is lloc entry;
 	repeat with REG running through regions:
 		now poss-score of REG is max-score of REG;
-	reset-regions;
-
-to reset-regions:
-	repeat through table of warps:
-		now the item-list of reg entry is {};
+	repeat with Q running through portals:
+		say "before: [item-list of go-region of Q].";
+		now the item-list of go-region of Q is {}; [?? check if this is necessary]
+		say "after: [item-list of go-region of Q].";
 
 to item-warp:
 	d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
@@ -3632,7 +3631,7 @@ check entering a portal:
 					say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of visible portals is 1]stores[else if number of visible flippable stores is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the oyster[end if]. Proceed anyway?";
 					unless the player yes-consents:
 						say "You decide to look around a bit more." instead;
-	if noun is oyster-x:
+	if noun is balancer barnacle:
 		if number of solved regions < 2:
 			if oyster-warn is false:
 				now oyster-warn is true;
@@ -5847,8 +5846,8 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 "bus"	store p	baser braes	0
 "sub"	store p	baser braes	0
 "debug"	store p	baser braes	1
-"redial"	store y	oyster-x	0
-"destroy"	store y	oyster-x	1
+"redial"	store y	balancer barnacle	0
+"destroy"	store y	balancer barnacle	1
 "spectacular"	store w	truster turrets	0
 "decide"	store v	Tastee Estate	3
 "resign"	store v	Tastee Estate	3
@@ -6851,7 +6850,7 @@ before smelling (this is the you can smell some stuff some places rule):
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
 	if player is in strip: [stores]
 		if store y is in strip, say "Seawater scents from Store Y." instead;
-		if oyster-x is in strip, say "Seawater scents from the oyster." instead;
+		if balancer barnacle is in strip, say "Seawater scents from the barnacle balancer." instead;
 		if roved is true and hoster is visible, say "A mix of nice smells from the hoster where Store H was." instead;
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
 	if tokers are in location of player, say "You smell something sweetish coming from the tokers I can't quite describe because, well, -ahem-. I'm for the right to do that sort of thing, on principle, but I don't." instead;
@@ -7597,8 +7596,8 @@ table of warps [this gives the text for which portal leads to which area, and wh
 por	reg	lloc	go-text
 course source	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 Tastee Estate	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
-baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
-oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
+baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
+balancer barncale	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 solid idols	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
 hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
@@ -9579,15 +9578,13 @@ to toggle-slider-note:
 		now slider-toggle is true;
 		continue the action;
 
-after entering oyster-x:
+after entering balancer barnacle:
 	say "You hear a click from the slider[if slider is switched on] as it switches off[else] and you notice it's jammed[end if][if cur-score of oyster is 0]. Hopefully thinking will not be at a premium here[else]. But you know action counts more here[end if].";
 	continue the action;
 
-check pushing slider:
-	twiddle-slider instead;
+check pushing slider: twiddle-slider instead;
 
-check pulling slider:
-	twiddle-slider instead;
+check pulling slider: twiddle-slider instead;
 
 to twiddle-slider:
 	if slider is switched on:
@@ -9599,16 +9596,13 @@ check switching on slider:
 	if mrlp is oyster:
 		say "Geez. It's jammed[if cur-score of oyster > 0]. Well, it's harder for the slider to ascertain actions instead of ideas[else]. Hm, maybe thinking is less important than other things, here[end if]." instead;
 	toggle-slider-note;
-	if slider is switched on:
-		say "It already is." instead;
-	if headaches is 0:
-		say "You can't afford any more headaches." instead;
+	if slider is switched on, say "It already is." instead;
+	if headaches is 0, say "You can't afford any more headaches." instead;
 	now slider is switched on;
 	say "You switch the slider on." instead;
 
 check switching off slider:
-	if slider is switched off:
-		say "It already is." instead;
+	if slider is switched off, say "It already is." instead;
 	now slider is switched off;
 	say "You switch the slider off." instead;
 
@@ -10114,7 +10108,7 @@ check taking a sto: say "You can't take that, [if noun is flippable]but you can 
 
 book Strip of Profits
 
-Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if-bush]."
+Strip of Profits is a room in Stores. last-loc of Stores is Strip of Profits. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if-bush]."
 
 hub-room is Strip of Profits.
 
@@ -10170,14 +10164,12 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 			if diffic of EP < curdif:
 				now RP is EP;
 				now curdif is diffic of EP;
-		say "[line break]The[if RP is baser braes], er, spot[else if RP is oyster-x] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
+		say "[line break]The[if RP is baser braes], er, spot[else if RP is balancer barnacle] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
 		if the player direct-consents:
 			try entering RP instead;
 		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
 	if mangiest steaming is in strip, try entering mangiest steaming instead;
 	say "There's nothing you can enter--the plain old stores don't count. You don't have time to shop." instead;
-
-last-loc of Stores is Strip of Profits.
 
 to say i-u: if magneto montage is unexamined, say ", which looks like a directory of some sort,"
 
@@ -10496,10 +10488,9 @@ description of Store Y is "The store seems filled with water. It's wide but not 
 
 the shells are a boringthing. they are part of store y. the shells are uncluing. description of shells is "You can't see what you can do with the shells, but maybe they just help show what is behind Store Y.". bore-text of shells is "Messing with the shells won't help you get in Store Y, but maybe they're a clue.".
 
-the oyster-x is a privately-named portal. diffic of oyster-x is 6. the printed name of oyster-x is "a huge oyster". understand "oyster" as oyster-x. the go-region of oyster-x is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of oyster-x is "It's not particularly tall, but its width suggests there's a lot to do there."
+the balancer barnacle is a privately-named portal. diffic of balancer barnacle is 6. the go-region of barnacle balancer is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.".
 
-instead of eating oyster-x:
-	say "In Soviet Yorpwald, oyster eat you. Plus, it's all shell, no slime."
+check eating barnacle balancer: say "It is a balancer barnacle. Another would come along to eat you." instead;
 
 chapter store z
 
@@ -10538,17 +10529,16 @@ section engravings
 
 the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
 
-description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of solid idols]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
+description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of barnacle balancer]pay[r] [emph of course source]up[r], [emph of solid idols]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][if note-progress is true][paragraph break]The letter emphases seem to have changed since you last read it.[npoff][end if]"
 
-to say npoff:
-	now note-progress is false;
+to say npoff: now note-progress is false;
 
-to say emph of (r - a portal):
+to say emph of (po - a portal):
 	say "[r]";
-	if go-region of r is solved or go-region of r is bypassed or go-region of r is shortcircuited:
-		say "[b]";
-	if r is visible:
+	if po is in location of player:
 		say "[i]";
+	else if go-region of po is solved or go-region of po is bypassed or go-region of po is shortcircuited:
+		say "[b]";
 
 eng-scan is a truth state that varies.
 
@@ -10674,8 +10664,6 @@ a-text of pamphlets is "YYRRYRY". b-text of pamphlets is "YGRRYRY". parse-text o
 
 volume routes
 
-last-loc of routes is Same Mesa.
-
 check going outside:
 	if mrlp is routes and outside-warned is false and cur-score of routes > 0:
 		say "(That's a preposition, but it's not one you need.)";
@@ -10706,7 +10694,7 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]A Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]A Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -11548,7 +11536,7 @@ check examining Pa Egg Pea for the first time:
 
 book Loather Rathole
 
-Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[else]you feel nothing but bone-chilling poverty here. Lor['], [i]HEAT[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru.". last-loc of troves is Loather Rathole.
+Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[else]you feel nothing but bone-chilling poverty here. Lor['], [i]HEAT[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru.".
 
 the hurt thru is bounding boringscen in Loather Rathole. description of the hurt thru is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
 
@@ -12155,8 +12143,6 @@ a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]
 
 volume presto
 
-last-loc of Presto is Grey Gyre.
-
 section CURST CRUST
 
 the curst crust is a thing. description of crust is "[one of]It's probably from Curt's, the worst bakery in the world. [or][stopping]You have about [swears in words] bites of this disgusting thing left to eat."
@@ -12279,7 +12265,7 @@ to decide whether (int - a thing) is interjective: [this is for hinting in prest
 
 book Grey Gyre
 
-Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the place is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too[else if ether is visible]. The maze entrance north has been replaced by ether[else]. [ether-check]ou can go north[end if][if hump is in Grey Gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
+Grey Gyre is a room in Presto. last-loc of Presto is Grey Gyre. "It's windy here, but nothing dangerous, and the place is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too[else if ether is visible]. The maze entrance north has been replaced by ether[else]. [ether-check]ou can go north[end if][if hump is in Grey Gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
 
 does the player mean doing something with the volt maze when the player is in Grey Gyre: it is very likely.
 
@@ -14115,11 +14101,9 @@ after scaning when player is in Unwary Runway (this is the new random guy in vol
 
 volume oyster
 
-last-loc of Oyster is Posh Hops Shop.
-
 book Posh Hops Shop
 
-Posh Hops Shop is an innie room in oyster. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and trolls block the way out."
+Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and trolls block the way out."
 
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of patrons to 0;
@@ -19340,15 +19324,13 @@ book Bleary Barley
 to say if-ed:
 	say "[if ed riley is in Bleary Barley]You can go west past where Ed Riley was[else]Ed Riley is still blocking the way west[end if]"
 
-Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
+Bleary Barley is a room in Otters. last-loc of otters is Bleary Barley. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
 
 printed name of Bleary Barley is "[if nude dune is in Bleary Barley]Burnt Brunt[else]Bleary Barley[end if]"
 
 check going east in Bleary Barley when b-b is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
 
 [glow red as you want to get rid of them]
-
-last-loc of otters is Bleary Barley.
 
 check going in Bleary Barley:
 	if noun is up or noun is down:
@@ -23964,13 +23946,13 @@ carry out a5ing:
 	if store u is in Strip of Profits, try fliptoing course source;
 	if store v is in Strip of Profits, try fliptoing Tastee Estate;
 	if store w is in Strip of Profits, try fliptoing truster turrets;
-	if store y is in Strip of Profits, try fliptoing oyster-x;
+	if store y is in Strip of Profits, try fliptoing balancer barnacle;
 	try fliptoing solid idols;
 	moot baser braes;
 	moot course source;
 	moot Tastee Estate;
 	moot truster turrets;
-	moot oyster-x;
+	moot balancer barnacle;
 	now troves is solved;
 	now routes is solved;
 	now oyster is solved;

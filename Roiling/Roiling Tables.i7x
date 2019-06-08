@@ -44,7 +44,7 @@ Store T	solid idols	false	589976491	--	"otters"	"otters"	--	post-storet-otters r
 Store U	course source	false	591972280	--	"routes"	"routes"	--	--	"Store U splits into strips that snake out. They intertwine dizzingly, making a source course. You can ENTER to see where it leads."
 Store V	Tastee Estate	false	594031293	--	"troves"	"troves"	--	--	"You look more closely at Store V. Wouldn't it be nice if there were riches? As you do, up pops the perfect sort of Yorpwaldian place to house troves: a Tastee Estate!"
 Store W	truster turrets	false	594801246	--	"towers"	"towers"	--	post-store-w-towers rule	"Store W shakes and seems to sprout up and grow narrower, into a pair of truster turrets. It doesn't seem to matter which one you enter. You hope."
-Store Y	oyster-x	false	609225725	--	"oyster"	"oyster"	--	--	"Blam! The store flattens a bit, rounds out, and becomes an oyster."
+Store Y	balancer barnacle	false	609225725	--	"oyster"	"oyster"	--	--	"Blam! The store flattens a bit, rounds out, and becomes an oyster. There appears to be no way in. But then something behind it schlurps the oyster! A balancer barnacle! You can probably just ENTER safely. Yorpwaldian Balancer barnacles only feast on other seafood."
 
 book routes
 
@@ -2068,7 +2068,7 @@ solid idols	"[got-e]."
 course source	"[got-e]."
 Tastee Estate	"[got-e]."
 truster turrets	"[got-e]."
-oyster-x	"[got-e]."
+balancer barnacle	"[got-e]."
 hoster	"[got-e]."
 tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
 nestor	"You rescued him, and that's enough."
@@ -2257,7 +2257,7 @@ Store Y	"[one of]Hm, store Y looks slimy on the inside, and it smells like saltw
 solid idols	"[if you-can-advance]You've solved enough to get past the solid idols[else if patcher is off-stage]You need to solve more stores to have the strength to make it past the solid idols[else]You need to solve more stores, or zap them with the patcher, to make it past[end if]."
 course source	"Just ENTER [the noun]."
 Tastee Estate	"Just ENTER [the noun]."
-oyster-x	"Just ENTER [the noun]."
+balancer barnacle	"Just ENTER [the noun]."
 baser braes	"Just ENTER [the noun]."
 hoster	"[if roved is true]You can just enter the hoster.[else]You need to save Yorpwald first.[end if]"
 truster turrets	"You can just ENTER the truster turrets."
