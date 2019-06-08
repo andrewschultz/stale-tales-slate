@@ -260,6 +260,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bustle"	504528644	Bustle Sublet	--	--	"[locname]." [start Bustle Sublet]
 "messhole"	677684018	Bustle Sublet	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
 "care"	234323315	Bustle Sublet	--	--	"Caring and all its offshoots only go so far."
+"reastier"	672824472	Bustle Sublet	--	--	"[artery-no]."
+"artery"	526110803	Bustle Sublet	--	--	"[artery-no]."
 "boor"	252447862	Bustle Sublet	--	--	"[boor-grub]."
 "grub"	241448217	Bustle Sublet	--	--	"[boor-grub]."
 "snore"	452663963	--	--	bee-head-reflexive rule	"Hmm. Nothing at all. It must be *a* snore."
@@ -1130,6 +1132,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "displya"	422122769	--	settler	--	"[no-set]."
 "equals"	469593156	--	settler	--	"[no-set]."
 "logo"	235118695	--	settler	--	"[no-set]."
+"which"	246497802	--	settler	--	"[no-set]."
+"whichs"	342771768	--	settler	--	"[no-set]."
 "teach"	289391829	--	settler	--	"Aw, man, a third option for the settler wouldn't be fair. [if Elmo is off-stage]Trust me, i[else]I[end if]t's powerful enough as-is."
 "igns"	242774022	--	settler	--	"You don't need to mess around with the sign on the settler, or any sign, except maybe one place[if hops shop is unvisited], which you'll know when you see it[else if gins sign is reflexed], and you already did something[else], where you took the chance[end if]."
 "slider"	429239652	--	settler	--	"You can just switch the slider if you want to manipulate it."
@@ -1405,6 +1409,8 @@ this is the lot-observed rule:
 	the rule fails;
 
 to say boor-grub: say "You can't change a whole suburb. Better to change yourself"
+
+to say artery-no: say "The reastier arteris cannot be changed. They cannot even change you positively if you follow them"
 
 section presto nudges
 
@@ -1819,7 +1825,7 @@ this is the elvira-here rule:
 	if otters is not solved, the rule succeeds;
 	the rule fails;
 
-to say no-set: say "You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though";
+to say no-set: say "You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place";
 
 to say red-wri: say "Red writing is a just clue of what to change. It can't be changed, itself";
 

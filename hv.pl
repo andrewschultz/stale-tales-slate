@@ -50,6 +50,7 @@ my %ary = (
   "z" => 122969618
 );
 
+my $scratch_file  = "c:/writing/dict/hv.txt";
 my $printIfThere  = 0;
 my $forceNoLaunch = 0;
 
@@ -69,7 +70,7 @@ my @alf = (
 
 #foreach $qq (sort {$ary{$b} <=> $ary{$a} }keys %ary) { print "$qq : $ary{$qq}\n"; } die;
 
-open( B, ">>c:/writing/dict/hv.txt" );
+open( B, ">>$scratch_file" );
 
 # globals
 my $doShuf = 1;
@@ -136,8 +137,9 @@ for my $idx ( 0 .. $#ARGV ) {
       `$cmd`;
       exit;
     };
-    /^-?(c|cl|clean)$/ && do { cleanUp(); exit; };
-    /^-?r[a-z]$/ && do {
+    /^-?(c|cl|clean)$/ && do { cleanUp();  exit; };
+    /^-?(d|dc)$/       && do { dupCheck(); exit; };
+    /^-?r[a-z]$/       && do {
       $region = $regHash{$this};
       if ( !$region ) { $region = "myreg"; }
       $rm = $rmHash{$this};
@@ -414,12 +416,65 @@ sub findHash {
 
 sub cleanUp {
   my $toClean = 0;
-  open( A, "c:/writing/dict/hv.txt" )
+  open( A, $scratch_file )
     || do { print "TEST RESULTS:HV.TXT wasn't read,grey,0.0\n"; return; };
   while ( $line = <A> ) {
     if ( $line =~ /\t[0-9]/ ) { $toClean++; }
   }
   print "TEST RESULTS:HV.TXT clean,3,$toClean,0\n";
+}
+
+sub dupCheck {
+  open( A, $scratch_file );
+  my %hvhash;
+  my %hvword;
+  my %the_dup;
+  my $indup;
+  while ( $line = <A> ) {
+    my @x = split( /\t/, $line );
+    if ( $#x > 1 ) {
+      my $num = $x[1];
+      if ( exists( $hvhash{$num} ) ) {
+        print
+          "INTERNAL DUPLICATE $num $x[0] line $. copies line $hvhash{$num}.\n";
+        $indup++;
+      }
+      else {
+        $hvhash{$num} = $.;
+        $hvword{$num} = $x[0];
+      }
+    }
+  }
+  close(A);
+  print "NO INTERNAL DUPLICATES IN $scratch_file\n" if ( !$indup );
+  for my $proj ( "shuffling", "roiling" ) {
+    for my $hdr ( "nudges", "tables" ) {
+      my $my_file =
+"c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$proj $hdr.i7x";
+      open( A, $my_file );
+      while ( $line = <A> ) {
+        if ( $line =~ /\t[0-9]{6,}\t/ ) {
+          chomp($line);
+          ( my $temp = $line ) =~ s/.*\t([0-9]{6,})\t.*/$1/g;
+          if ( exists( $hvhash{$temp} ) ) {
+            print(
+"Duplicate $proj $hdr line $.: $temp, copying $temp/$hvword{$temp} at line $hvhash{$temp} of $scratch_file.\n"
+            );
+            $the_dup{ $hvhash{$temp} } = 1;
+          }
+        }
+      }
+      close(A);
+
+    }
+  }
+  if ( keys %the_dup ) {
+    print "Duplicate lines: "
+      . join( ', ', ( sort { $a <=> $b } keys %the_dup ) ) . "\n";
+  }
+  else {
+    print "No duplicate lines.\n";
+  }
 }
 
 sub usage {
@@ -428,7 +483,8 @@ sub usage {
 -p = print if there, override if the hash is already in the source
 # = reverse-lookup a hash number
 -oREGION = force region name (deprecated)
--c = run cleanup test on hv.txt
+-c = run is-clean test on hv.txt (anything with tabs left to cut/paste?)
+-d = run duplicate test on hv.txt (is any generated line in roiling/shuffling nudges/header?
 -f = file open after (-ff = force even if nothing open)
 -x = don't open post processing (default is to open if anything is added)
 -s = Shuffling only
