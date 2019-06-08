@@ -5850,8 +5850,8 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 "redial"	store y	oyster-x	0
 "destroy"	store y	oyster-x	1
 "spectacular"	store w	truster turrets	0
-"decide"	store v	troves-x	3
-"resign"	store v	troves-x	3
+"decide"	store v	Tastee Estate	3
+"resign"	store v	Tastee Estate	3
 "quickly"	store t	otters-x	-1
 
 book errors
@@ -7596,7 +7596,7 @@ a thing can be warpable. a thing is usually not warpable.
 table of warps [this gives the text for which portal leads to which area, and what starting location]
 por	reg	lloc	go-text
 course source	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
-troves-x	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
+Tastee Estate	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
 baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
@@ -10484,7 +10484,7 @@ a-text of voters is "RRYRYR". b-text of voters is "RRYRYP". parse-text of voters
 
 a-text of Store V is "RRYRYR". b-text of Store V is "RRGRGR". parse-text of store v is "x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
-troves-x are a privately-named plural-named portal. diffic of troves-x is 2. understand "troves/jewels" as troves-x. printed name of troves-x is "troves of glittering jewels". go-region of troves-x is troves. initial appearance of troves-x is "[if Loather Rathole is visited]empty troves[else]troves of too-good-to-be-true jewels[end if] glisten here.". understand "trove" as troves-x. description of troves-x is "[if Loather Rathole is unvisited]Shiny. Tempting. You have enough room for a few jewels your super purse[else]You could probably go through the ordeal of them vanishing to get back to Spoiloplis[end if]."
+the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeimng too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER."
 
 chapter store w
 
@@ -10552,7 +10552,7 @@ section engravings
 
 the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
 
-description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
+description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of oyster-x]pay[r] [emph of course source]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
 
 to say npoff:
 	now note-progress is false;
@@ -23976,13 +23976,13 @@ carry out a5ing:
 	if store n is in Strip of Profits, try fliptoing nestor;
 	if store p is in Strip of Profits, try fliptoing baser braes;
 	if store u is in Strip of Profits, try fliptoing course source;
-	if store v is in Strip of Profits, try fliptoing troves-x;
+	if store v is in Strip of Profits, try fliptoing Tastee Estate;
 	if store w is in Strip of Profits, try fliptoing truster turrets;
 	if store y is in Strip of Profits, try fliptoing oyster-x;
 	try fliptoing otters-x;
 	moot baser braes;
 	moot course source;
-	moot troves-x;
+	moot Tastee Estate;
 	moot truster turrets;
 	moot oyster-x;
 	now troves is solved;

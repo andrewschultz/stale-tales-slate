@@ -114,7 +114,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "route"	495698314	--	course source	--	"[just-in-routes]."
 "course"	507867847	--	course source	--	"[just-in-routes]."
 "courses"	604141813	myrm	--	--	"[just-in-routes]."
-"trove"	497757327	--	troves-x	--	"No need to focus on a specific trove. Just enter or take the troves."
+"tastee"	560294038	--	Tastee Estate	--	"[tastee-there]."
+"tasty"	427041072	--	Tastee Estate	--	"[tastee-there]."
 "turret"	609779558	truster turrets	--	--	"[turrets-ok]."
 "turrets"	706053524	truster turrets	--	--	"[turrets-ok]."
 "ivy"	274516918	--	truster turrets	--	"[turrets-ok]."
@@ -1276,7 +1277,9 @@ to say just-in-routes: say "You don't need to do anything with an individual rou
 
 to say engs: say "Nothing happens. You probably need to worry about the stores and/or what they become, instead"
 
-to say turrets-ok: say "You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest"
+to say tastee-there: say "The Tastee Estate can't be changed and doesn't need to be. Just ENTER"
+
+to say turrets-ok: say "You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER"
 
 to say not-at-barley: say "You're not near enough to the barley to affect it. You need to ENTER through the otters"
 
