@@ -7609,6 +7609,10 @@ hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed 
 to say get-arug:
 	now player has arugula;
 
+to say get-crust:
+	now swears is number of solved regions + charges of toaster;
+	now player has crust;
+
 book fliptoing
 
 fliptoing is an action applying to one visible thing.

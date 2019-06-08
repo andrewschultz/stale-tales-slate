@@ -1,6 +1,6 @@
 Version 1/190606 of Shuffling Tests by Andrew Schultz begins here.
 
-"This should briefly describe the purpose of Shuffling Tests."
+"This header file has tests used for Shuffling Around. They were moved here to de-clutter the main story.ni file."
 
 volume testing commands - not for release
 

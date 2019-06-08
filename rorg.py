@@ -81,6 +81,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     ever_sort_start = False
     temp_out = open(temp_file, "w")
     fbase = os.path.basename(my_f)
+    dupes = 0
     with open(my_f) as file:
         for (line_count, line) in enumerate(file, 1):
             if not write_lines and sort_end in line:
@@ -142,6 +143,9 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     temp = re.sub(" *:.*", "", temp)
                     temp = re.sub(" +of .*", "", temp)
                     if verbose: print(temp, "listed at line", line_count)
+                    if temp in sect_order:
+                        print("Duplicate section", temp, "line", line_count)
+                        dupes += 1
                     sect_order[temp] = line_count
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
@@ -149,6 +153,9 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     temp = re.sub("^this is (the )?", "", line.lower().strip())
                     temp = re.sub(" *:.*", "", temp)
                     if verbose: print(temp, "listed at line", line_count)
+                    if temp in sect_order:
+                        print("Duplicate section", temp, "line", line_count)
+                        dupes += 1
                     sect_order[temp] = line_count
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
@@ -182,10 +189,14 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     if not len(x) and not len(y): print("Table and print commands all match up! Yay!")
     elif bail_on_mismatch: sys.exit("Bailing on mismatches.")
     ts = sorted(table_starts, key=table_starts.get)
+    table_got = dict(sect_order)
     for q in sorted(table_order, key=table_order.get):
         if q in ignore_full: continue
-        if q not in cur_full_quote:
-            print(q, "line", table_order[q][0], "is in a table but not in auxiliary/ignore.")
+        if q not in cur_full_quote: continue
+        if q in table_got:
+            table_got.pop(q, None)
+        else:
+            print("Something weird happened. Tried to pop", q, "from the table_order dictionary but couldn't.")
         # print(q, table_order[q], ts, ts[0], table_starts[ts[0]])
         if len(ts) and table_order[q][0] > table_starts[ts[0]]:
             #if not pop_yet: temp_out.write("\n")
@@ -193,6 +204,11 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
             ts.pop(0)
             #if not pop_yet: temp_out.write("\n")
         temp_out.write(cur_full_quote[q] + "\n")
+    if len(table_got):
+        print(len(table_got), "unique left over,", dupes, "total duplicates. Dumping unsorted stuff at the end.")
+        temp_out.write("\nbook leftovers\n\n")
+        for q in table_got: temp_out.write("{:s}\n\n".format(cur_full_quote[q]))
+    else: print("Nothing left over. Hooray.")
     temp_out.write(ending_bit)
     temp_out.close()
     if cmp(temp_file, my_f):
@@ -251,4 +267,4 @@ for x in game_ary:
     if do_nudges:
         alf_stuff(i7.hdr(x, "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", 6)
     if do_tables:
-        alf_stuff(i7.hdr(x, "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "volume demo dome tables" if x == "roi" else "volume specific help for things you need to flip", "the-from", 0)
+        alf_stuff(i7.hdr(x, "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "book general auxiliary rules" if x == "roi" else "volume specific help for things you need to flip", "the-from", 0)
