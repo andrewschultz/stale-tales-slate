@@ -75,6 +75,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     cur_rule_or_quote = ""
     cur_full_quote = defaultdict(str)
     ending_bit = ""
+    in_aux = False
     in_necc_section = False
     ever_necc_section = False
     ever_table = False
@@ -82,6 +83,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     temp_out = open(temp_file, "w")
     fbase = os.path.basename(my_f)
     dupes = 0
+    garbage = ""
     with open(my_f) as file:
         for (line_count, line) in enumerate(file, 1):
             if not write_lines and sort_end in line:
@@ -99,6 +101,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                 temp_out.write(line)
             if sort_start in line:
                 ever_sort_start = True
+                in_aux = True
                 write_lines = False
                 temp_out.write("\n")
                 continue
@@ -137,7 +140,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                             if verbose: print("Adding", brax, line_count, my_table, len(table_order))
                             table_order[brax] = (line_count, line_not)
                             line_not += 1
-            else:
+            elif in_aux:
                 if line.startswith("to say"):
                     temp = re.sub("^to say ", "", line.lower().strip())
                     temp = re.sub(" *:.*", "", temp)
@@ -149,7 +152,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     sect_order[temp] = line_count
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
-                if line.startswith("this is "):
+                elif line.startswith("this is "):
                     temp = re.sub("^this is (the )?", "", line.lower().strip())
                     temp = re.sub(" *:.*", "", temp)
                     if verbose: print(temp, "listed at line", line_count)
@@ -159,7 +162,11 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     sect_order[temp] = line_count
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
+                elif not line.startswith("\t") and line.strip(): print("Possible rule misfire", line_count, line.strip())
                 if cur_rule_or_quote: cur_full_quote[cur_rule_or_quote] += line
+                else:
+                    if not line.startswith("\t"): garbage += "\n"
+                    garbage += line
             # print(line_count, in_table, write_lines, line[:20].strip())
     bail = False
     if not ever_necc_section:
@@ -205,10 +212,15 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
             #if not pop_yet: temp_out.write("\n")
         temp_out.write(cur_full_quote[q] + "\n")
     if len(table_got):
-        print(len(table_got), "unique left over,", dupes, "total duplicates. Dumping unsorted stuff at the end.")
+        print(len(table_got), "unique left over,", dupes, "total duplicates. Dumping unsorted stuff at the end:", '/'.join(table_got))
         temp_out.write("\nbook leftovers\n\n")
         for q in table_got: temp_out.write("{:s}\n\n".format(cur_full_quote[q]))
     else: print("Nothing left over. Hooray.")
+    if garbage:
+        temp_out.write("book random leftover garbage")
+        temp_out.write(garbage)
+        print(garbage.count("\n"), "lines of garbage.")
+        temp_out.write("\n")
     temp_out.write(ending_bit)
     temp_out.close()
     if cmp(temp_file, my_f):

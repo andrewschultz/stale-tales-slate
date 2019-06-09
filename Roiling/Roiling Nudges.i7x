@@ -162,7 +162,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reagent"	547741067	--	--	has-reag rule	"[fol-reag]."
 "reagents"	644015033	--	--	has-reag rule	"[fol-reag]."
 "giatn"	251797892	--	Gast	--	"[Gast] is too old and set in [his-her] ways. You may just need to listen to [him-her] from [if nuder is in Same Mesa]one more angle[else]several different angles[end if]."
-"tirade"	384449683	--	Gast	--	"[if bench-end is reflexive]There's more than one tirade[else]You've sort of dealt with the tirades, but there's still more than one, and you need another way to deal[end if]."
+"tirade"	384449683	--	Gast	--	"[if sode art is reflexive]There's more than one tirade[else]You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal[end if]."
 "bench"	271420406	--	sit a nag	--	"The [sit a nag] is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
 "die"	193828044	Same Mesa	--	--	"[die-sin]."
 "sin"	210174320	Same Mesa	--	--	"[die-sin]."

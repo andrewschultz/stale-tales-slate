@@ -5153,7 +5153,7 @@ prep-spoil is a truth state that varies.
 to say p-spo: now prep-spoil is true;
 
 check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
-	if noun is sit a nag or noun is bench-end or noun is elbow or noun is Rude 'N Nuder or noun is Gast:
+	if noun is sit a nag or noun is side art or noun is elbow or noun is Rude 'N Nuder or noun is Gast:
 		if Cleric Circle is unvisited, all-say "You aren't ready to do anything with the [sit a nag] yet. The church may make you feel better about things." instead;
 		if list o toils is unexamined, all-say "You may want to look at the list-o-toils first." instead;
 
@@ -5170,7 +5170,7 @@ carry out routes-hinting:
 	if location of player is Same Mesa:
 		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		if sit a nag is reflexive, try objhinting sit a nag instead;
-		if bench-end is reflexive, try objhinting bench-end instead;
+		if side art is reflexive, try objhinting side art instead;
 		if elbow is reflexive, try objhinting elbow instead;
 		if Rude 'N Nuder is visible, try objhinting Rude 'N Nuder instead;
 		if Gast is in Same Mesa, try objhinting Gast instead;
@@ -6185,6 +6185,7 @@ skis	"You give them a whack, and it hurts much more than it should. You wonder i
 span pans	"Well, you need to do something to the pans."
 yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. The yapper could take out a rock-man or two, you bet."
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
+dialer	"That would only sabotage communications here. You need to sabotage the supplier."
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything." [START towers]
 rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
 mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
@@ -6411,17 +6412,12 @@ check buying:
 
 chapter jumping
 
-instead of jumping:
-	if player is in Grey Gyre and hump is in Grey Gyre:
-		say "This is a silly anagram game, not a silly rhyming game." instead;
-	if player is in Outer Route:
-		say "You jump, clicking your heels and striking a ridiculous smile at the apex." instead;
-	if player is in Fighter Freight:
-		say "You certainly are feeling jumpy right now, but--well, you want to jump towards the pale plea. And as reflexively as possible." instead;
-	if player is in Same Mesa:
-		say "You [if bench-end is not reflexed]try and jump onto the [sit a nag], but that's not quite the way. Hm[else]managed to get on the [sit a nag], and you don't need to, again[end if]." instead;
-	if player is in austerer and hoop is in austerer:
-		say "You jump but can't quite reach the hoop. You think you hear a voice saying 'O, ye hop!' You turn red.[paragraph break]You consider dropping your treasured possessions so you can grab the hoop, but you can't bring yourself to say the heck with them. Or, rather, you haven't, yet." instead;
+check jumping:
+	if player is in Grey Gyre and hump is in Grey Gyre, say "This is a silly anagram game, not a silly rhyming game." instead;
+	if player is in Outer Route, say "You jump, clicking your heels and striking a ridiculous smile at the apex." instead;
+	if player is in Fighter Freight, say "You certainly are feeling jumpy right now, but--well, you want to jump towards the pale plea. And as reflexively as possible." instead;
+	if player is in Same Mesa, say "You [if side art is not reflexed]try and jump onto the [sit a nag], but that's not quite the way. Hm[else]managed to get on the [sit a nag], and you don't need to, again[end if]." instead;
+	if player is in austerer treasure and ye hoop is in austerer treasure, say "You jump but can't quite reach the hoop. You think you hear a voice saying 'O, ye hop!' You turn red.[paragraph break]You consider dropping your treasured possessions so you can grab the hoop, but you can't bring yourself to say the heck with them. Or, rather, you haven't, yet." instead;
 	say "You try a jump but jam up[one of]. Boy, leaps lapse[or][stopping].";
 
 chapter push and pull
@@ -6431,18 +6427,18 @@ check pushing (this is the new can't push rule) :
 	if noun is caps lock:
 		if noun is not part of keyboard, say "On its own, you can't push a caps lock." instead;
 		say "You'll push it once you're ready to program." instead;
-	if noun is a person, say "Pushing live things is probably even less effective than attacking." instead;
-	if noun is skid, say "You need to specify a direction to push the skid." instead;
+	if noun is a person, say "Pushing or pulling live things is probably even less effective than attacking." instead;
+	if noun is skid, say "You need to specify a direction to push or pull the skid." instead;
 	if noun is fixed in place or noun is scenery, say "You give a few hups but fail to push." instead;
 
 report pushing:
 	say "You give a few hups but fail to push.";
 	the rule succeeds;
 
-check pulling (this is the new can't pull rule) :
+check pulling (this is the new can't pull rule):
 	if noun is a person, say "You don't need to corral people." instead;
 	if noun is skid, say "You need to specify a direction to pull the skid." instead;
-	if noun is fixed in place, say "Ullp! You can't pull..." instead;
+	say "Ullp! You can't pull... but you don't need to..." instead;
 
 report pulling:
 	say "Ullp! You can't pull...";
@@ -6697,7 +6693,7 @@ check listening:
 	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
 	if player is in Same Mesa: [routes]
 		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
-		if Gast is in Same Mesa, say "Those [i]tirades[r] from [Gast]. [if bench-end is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if elbow is reflexive]Though [his-her] swinging elbow is more dangerous now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
+		if Gast is in Same Mesa, say "Those [i]tirades[r] from [Gast]. [if side art is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if elbow is reflexive]Though [his-her] swinging elbow is more dangerous now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
 		if the-b is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		say "'Mama sees me as...' Irrelevant stuff." instead;
 	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
@@ -10685,7 +10681,7 @@ description of Gast is "You can't do much more than listen to [gast]. [if sit a 
 check taking Gast: say "You'll have to take [his-her]'s babble, but not [him-her]." instead;
 
 check scaning Gast (this is the scan other things than Gast instead rule):
-	if bench-end is reflexive, try scaning the bench-end instead;
+	if side art is reflexive, try scaning the side art instead;
 	if elbow is reflexive:
 		say "The settler registers something only when the elbow is in its way.";
 		try scaning elbow instead;
@@ -10710,10 +10706,10 @@ to decide whether below-is-wrong:
 
 chapter tirades
 
-tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if bench-end is reflexed], and you're more concerned about Gast's elbow[else], but maybe you could position yourself better to listen to them[end if]."
+tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if side art is reflexed], and you're more concerned about Gast's elbow[else], but maybe you could position yourself better to listen to them[end if]."
 
 check scaning tirades:
-	if bench-end is reflexive, try scaning bench-end instead;
+	if side art is reflexive, try scaning side art instead;
 	if elbow is reflexive:
 		say "The settler lights up when the elbow flashes across.";
 		try scaning elbow instead;
@@ -10883,9 +10879,9 @@ a-text of anti sag sit a nag is "YRYYRRR". b-text of anti sag sit a nag is "?RY?
 check scaning sit a nag:
 	if Gast is off-stage, continue the action;
 	if sit a nag is reflexed:
-		if bench-end is reflexive:
+		if side art is reflexive:
 			say "The settler blinks a bit during each lull in [Gast]'s tirades.";
-			try scaning bench-end instead;
+			try scaning side art instead;
 		if elbow is reflexive:
 			say "Nothing happens until [Gast]'s elbow gets in the way of your scanner.";
 			try scaning elbow instead;
@@ -10894,13 +10890,13 @@ check scaning sit a nag:
 			try scaning rude instead;
 	if Gast is moot, say "There's no more magic in the [sit a nag]. Nothing more to do." instead;
 
-section bench-end
+section side art
 
-the bench-end is part of the anti sag sit a nag. understand "end" as bench-end. description of bench-end is "Thick enough to sit on, with not too much pain, if you found the right way.". the bench-end is reflexive.
+the side art is part of the anti sag sit a nag. description of side art is "Boy! There's a lot here.". the side art is reflexive.
 
-a-text of bench-end is "YRRRYRY". b-text of bench-end is "YRRRYRY". parse-text of bench-end is "-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of side art is "YRRRYRY". b-text of side art is "YRRRYRY". parse-text of side art is "-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-check taking bench-end: say "The [sit a nag] is too well made." instead;
+check taking side art: say "The [sit a nag] is too well made." instead;
 
 chapter Rude N Nuder
 
@@ -11439,11 +11435,11 @@ volume troves
 
 book very basics
 
-before going up in troves:
-	say "Moving on up needs to be a state of mind here." instead;
+check going up in troves: say "Moving on up needs to be a state of mind here." instead;
 
-before going down in troves:
-	say "It is important to be down to earth as you work your way to the top, yes." instead;
+check going down in troves: say "It is important to be down to earth as you work your way to the top, yes." instead;
+
+purse-stolen is a truth state that varies.
 
 chapter Pa Egg Pea (book)
 
@@ -12378,12 +12374,10 @@ check putting it on (this is the yak-skid rule):
 
 the yak-skid rule is listed before the can't put what's not held rule in the check putting it on rulebook;
 
-check pushing yak:
-	say "It groans lazily." instead;
+check pushing yak: say "The yak groans lazily." instead;
 
 check pushing yak to:
-	if yak is on skid:
-		try pushing skid to second noun instead;
+	if yak is on skid, try pushing skid to second noun instead;
 	say "The yak groans lazily. Maybe if it were on something you could push, that would work." instead;
 
 description of yak is "The yak eyes you [if yak is on skid]neutrally, now you fed it[else]warily[end if]. It is clearly not a shining example for beasts of burden everywhere. In fact, its odd reddish tinge is not physically shining. The yak wears a small drab yoke it probably won't let you get near on principle."
@@ -15369,15 +15363,10 @@ understand "loft den" as Tenfold Teflon'd Den Loft.
 
 lev-pull is a truth state that varies.
 
-instead of doing something with lever:
-	if current action is pushing or current action is pulling or current action is taking: [check pulling lever/check pushing lever]
-		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]" instead;
-	if action is procedural, continue the action;
-	say "You're not sure what you can do with the lever, really[if lever is reflexed], and it doesn't seem as fun any more anyway." instead;
-
 check going outside in Tenfold Teflon'd Den Loft:
-	if lev-pull is true:
-		say "You can't leave now. You're so close. The lever doesn't seem to work any more, but the dialer...maybe..." instead;
+	if lev-pull is true, say "You can't leave now. You're so close. The lever doesn't seem to work any more, but the dialer...maybe..." instead;
+
+chapter papery yapper
 
 the papery yapper is a vanishing neuter person in Tenfold Teflon'd Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
 
@@ -15391,6 +15380,8 @@ after printing the locale description when player is in Tenfold Teflon'd Den Lof
 a-text of papery yapper is "RRYRYO". b-text of papery yapper is "?RY?Y?". parse-text of yapper is "?[sp]x[sp]-[sp]?[sp]-[sp]?".
 
 the stupid paper necklace is a cluey thing. description is "It's red and is cut out to read 'Rap? Yep!' It's not very gangsta, but it shows a likely weakness for bling."
+
+section stupid paper necklace
 
 the papery yapper wears the stupid paper necklace.
 
@@ -15421,21 +15412,13 @@ Include (-
 	has transparent talkable
 -) when defining intercom.
 
-check taking intercom:
-	say "You'd probably get a nasty shock and set off an alarm." instead;
+check taking intercom: say "You'd probably get a nasty shock and set off an alarm." instead;
 
-the jumble is part of the dialer. description is "[if dialer is reflexive]DIALER[else]DERAIL[end if] seems to indicate its current task."
+the jumble is a boringthing. it is part of the dialer. description of jumble is "[if dialer is reflexive]DIALER[else]DERAIL[end if] seems to indicate its current task.". bore-text is "The lettering jumble looks like it can be shifted around to things you can do."
 
-instead of doing something with jumble:
-	if action is procedural, continue the action;
-	say "The lettering looks like it can be shifted around to things you can do."
+check scaning jumble: try scaning dialer instead;
 
-check scaning jumble:
-	try scaning dialer instead;
-
-check scaning dialer:
-	if dialer is reflexed:
-		try scaning d2 instead;
+check scaning dialer: if dialer is reflexed, try scaning d2 instead;
 
 a-text of dialer is "RYRYYR". b-text of dialer is "[if dialer is reflexive]PYRYYR[else]RYRYYR[end if]". parse-text of dialer is "[if dialer is reflexive]d[sp]-[sp]x[sp]-[sp]-[sp]x[else]x[sp]e[sp]x[sp]-[sp]-[sp]l[end if]".
 
@@ -15444,12 +15427,19 @@ a-text of dialer1 is "RYRYYR". b-text of dialer1 is "PYRYYR". parse-text of dial
 
 ]
 
-instead of taking or attacking dialer:
-	say "That would only sabotage communications here. You need to sabotage the supplier."
+check taking dialer: try attacking dialer instead;
 
-The lever is reflexive LLPish scenery. "You're quite glad you found it, even if you're not sure how or why to pull it, yet." [it's moved here after the yapper is gone]
+chapter lever
+
+The lever is reflexive LLPish boringscen. description of lever is "You're quite glad you found it, even if you're not sure how or why to pull it, yet.". bore-check is bore-lever rule. bore-text is "You're not sure what you can do with the lever, really[if lever is reflexed], and it doesn't seem as fun any more anyway.". [it's moved here after the yapper is gone]
 
 a-text of lever is "RYRYR". b-text of lever is "RGPGR". parse-text of lever is "x[sp]e[sp]v[sp]e[sp]x". lever is parse-spoilable.
+
+this is the bore-lever rule:
+	if current action is pushing or current action is pulling or current action is taking: [check pulling lever/check pushing lever]
+		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if];
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 check exiting in Tenfold Teflon'd Den Loft:
 	say "You can always find your way back easily enough.";
@@ -22616,7 +22606,7 @@ to say yak-worry:
 
 check objhinting Gast:
 	if sit a nag is reflexive, try objhinting sit a nag instead;
-	if bench-end is reflexive, try objhinting bench-end instead;
+	if side art is reflexive, try objhinting side art instead;
 	if elbow is reflexive, try objhinting elbow instead;
 	if Rude 'N Nuder is visible, try objhinting Rude 'N Nuder instead;
 	say "[bug-report]" instead;
@@ -22691,7 +22681,7 @@ rivets	"[by-rivets]."
 ME ARTS	"The ME ARTS inspired you enough, [if lobster is moot]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
 sit a nag	"You got [Gast] to the [sit a nag]. Now you need to deal with [Gast]."
-bench-end	"You positioned yourself well to duck [Gast] and put up with [his-her] elbow. Try something else."
+side art	"You positioned yourself well to put up with [Gast]'s tirades. Time to try a new direction."
 Gast's elbow	"You ducked [Gast]'s elbow successfully. Now about that book..."
 seed pit	"You got what you needed from the seed pit."
 hurt hog	"[fill-in-here]" [end ROUTES]
@@ -23307,6 +23297,10 @@ this is the presto-alt rule:
 	else:
 		say "[eqls]you have three ways ahead to get the drab yoke."
 
+unset-not-remap is a truth state that varies.
+
+spikes is a truth state that varies.
+
 this is the oyster-alt rule:
 	say "[eqls]OYSTER[line break]";
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
@@ -23326,6 +23320,10 @@ this is the oyster-alt rule:
 	else:
 		say "[2da]you can defeat the carps and pikes two different ways ahead.";
 	if end den is unvisited, say "[2da][if den loft is visited]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there[else]You could jump past the End Den[end if].";
+
+bredo-bored is a truth state that varies.
+
+naiv-nat is a truth state that varies.
 
 this is the towers-alt rule:
 	say "[eqls]TOWERS[line break]";

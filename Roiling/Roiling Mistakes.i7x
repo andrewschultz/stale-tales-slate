@@ -147,7 +147,7 @@ understand "bane" as a mistake ("You fill yourself with the same fear as the dra
 
 understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when below-is-wrong and mrlp is routes.
 
-understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when giant has rude 'n nuder or player has u nerd or elbow is in location of player.
+understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when Gast has rude 'n nuder or player has u nerd or elbow is in location of player.
 
 understand "bowel" and "bowels" as a mistake ("[Gast]'s spouting enough verbal diarrhea, so, just... no.[paragraph break]Also, you don't need to go THAT far down.") when Gast is in location of player and Gast's elbow is reflexive.
 
@@ -169,11 +169,11 @@ understand "seam" as a mistake ("You can't find any crack in the Same Mesa that 
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "staider" as a mistake ("[if bench-end is reflexed]You already did your best with the tirades[else]Not only directions but mind games fail to work here[end if]. The giant will complain if he wants to.") when Gast is in location of player.
+understand "staider" as a mistake ("[if side art is reflexed]You already did your best with the tirades and side art[else][Gast] fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit[end if].") when Gast is in location of player.
 
 understand "taps" as a mistake ("You have no bugle. Well, not in this game.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "tardies" as a mistake ("You can't tell the giant off for being late.") when Gast is in location of player.
+understand "tardies" as a mistake ("You can't tell [Gast] off for being late.") when Gast is in location of player.
 
 understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag][end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
 
