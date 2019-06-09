@@ -5153,7 +5153,7 @@ prep-spoil is a truth state that varies.
 to say p-spo: now prep-spoil is true;
 
 check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
-	if noun is sit a nag or noun is side art or noun is elbow or noun is Rude 'N Nuder or noun is Gast:
+	if noun is sit a nag or noun is side art or noun is WOE BOW BELL or noun is Rude 'N Nuder or noun is Gast:
 		if Cleric Circle is unvisited, all-say "You aren't ready to do anything with the [sit a nag] yet. The church may make you feel better about things." instead;
 		if list o toils is unexamined, all-say "You may want to look at the list-o-toils first." instead;
 
@@ -5171,7 +5171,7 @@ carry out routes-hinting:
 		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		if sit a nag is reflexive, try objhinting sit a nag instead;
 		if side art is reflexive, try objhinting side art instead;
-		if elbow is reflexive, try objhinting elbow instead;
+		if WOE BOW BELL is reflexive, try objhinting WOE BOW BELL instead;
 		if Rude 'N Nuder is visible, try objhinting Rude 'N Nuder instead;
 		if Gast is in Same Mesa, try objhinting Gast instead;
 		if Cleric Circle is unvisited, 	try objhinting scripture picturers instead;
@@ -6693,7 +6693,7 @@ check listening:
 	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
 	if player is in Same Mesa: [routes]
 		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
-		if Gast is in Same Mesa, say "Those [i]tirades[r] from [Gast]. [if side art is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if elbow is reflexive]Though [his-her] swinging elbow is more dangerous now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
+		if Gast is in Same Mesa, say "Those [i]tirades[r] from [Gast]. [if side art is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if WOE BOW BELL is reflexive]Though the ominous WOE BOW BELL has you more distracted now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
 		if the-b is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		say "'Mama sees me as...' Irrelevant stuff." instead;
 	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
@@ -9791,7 +9791,6 @@ to say what-can-flip:
 table of pres [xxpre]
 preflip	thereg	pretodo
 sit a nag	routes	"Find a way to be fearless so you can lean AGAINST the [sit a nag]." [routes]
-Gast's elbow	routes	"You can go BELOW [Gast]'s elbow once he swings it around."
 sheol holes	routes	"You can look AROUND to find the un-road."
 un-road	routes	"You can go ALONG the un-road...once you find it."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
@@ -10672,47 +10671,32 @@ carry out insideing:
 
 part people and things
 
-chapter old giant [NOTE: it's critical to say old giant and not giant, because giant = giant pin according to inform]
+chapter Gast
 
 Gast is a male person. "[gast] sits here on the [sit a nag][if Rude 'N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[else], going on some [i]tirades[r] about something or other[flail]. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[if gast is male]Ian[else]Nia[end if] Gast".
 
-description of Gast is "You can't do much more than listen to [gast]. [if sit a nag is reflexed]You're not sure what [he-she]'s complaining about, but it seems [he-she] really needs to[else if elbow is reflexed][his-her-c] [i]tirades are as loud as ever, [his-her] arms flailing high in the air[else][he-she-c] seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
+description of Gast is "You can't do much more than listen to [gast]. [if sit a nag is reflexed]You're not sure what [he-she]'s complaining about, but it seems [he-she] really needs to[else if WOE BOW BELL is reflexed][his-her-c] is drowned out by the WOE BOW BELL[else][he-she-c] seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
 
 check taking Gast: say "You'll have to take [his-her]'s babble, but not [him-her]." instead;
 
 check scaning Gast (this is the scan other things than Gast instead rule):
 	if side art is reflexive, try scaning the side art instead;
-	if elbow is reflexive:
-		say "The settler registers something only when the elbow is in its way.";
-		try scaning elbow instead;
+	if WOE BOW BELL is reflexive:
+		say "The settler registers something everywhere you point it, probably due to the WOE BOW BELL.";
+		try scaning WOE BOW BELL instead;
 	if nuder is visible:
 		say "The settler only registers when it's pointed at Rude [']N Nuder.";
 		try scaning nuder instead;
 
-section Gast's elbow
-
-Gast's elbow is a reflexive boringthing. It is part of Gast. description of gast's elbow is "Well, thankfully, only one is flailing. Both would be extra tough to dodge. [if elbow is reflexed]But you have the hang of it now[else]Still, there's almost a pattern to it, and maybe there's a safe spot[end if].". bore-text is "You'll need to find the right way to avoid [Gast]'s elbow."
-
-a-text of Gast's elbow is "RYRYR". b-text of Gast's elbow is "RYRGP". parse-text of Gast's elbow is "x[sp]e[sp]x[sp]o[sp]w". elbow is cheat-spoilable.
-
-understand "elbows" as Gast's elbow.
-
-to say flail: say "[if Gast's elbow is reflexive] and flailing each elbow all about[end if]"
-
-to decide whether below-is-wrong:
-	if player is in Same Mesa and U NERD ENDUR REDUN is in Same Mesa, decide yes;
-	if the-b is in Same Mesa and player is in Same Mesa, decide yes;
-	decide no.
-
 chapter tirades
 
-tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if side art is reflexed], and you're more concerned about Gast's elbow[else], but maybe you could position yourself better to listen to them[end if]."
+tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if side art is reflexed], and you're more concerned about the WOE BOW BELL[else], but maybe you could position yourself better to listen to them[end if]."
 
 check scaning tirades:
 	if side art is reflexive, try scaning side art instead;
-	if elbow is reflexive:
-		say "The settler lights up when the elbow flashes across.";
-		try scaning elbow instead;
+	if WOE BOW BELL is reflexive:
+		say "The settler stays lit whether you scan the tirades. Must be the WOE BOW BELL.";
+		try scaning WOE BOW BELL instead;
 	say "The settler really lights up when [Gast] waves the book at it.";
 	try scaning Nuder instead;
 
@@ -10882,9 +10866,9 @@ check scaning sit a nag:
 		if side art is reflexive:
 			say "The settler blinks a bit during each lull in [Gast]'s tirades.";
 			try scaning side art instead;
-		if elbow is reflexive:
-			say "Nothing happens until [Gast]'s elbow gets in the way of your scanner.";
-			try scaning elbow instead;
+		if WOE BOW BELL is reflexive:
+			say "Everywhere you scan, the same setting. It's as ubiquitous as the WOE BOW BELL.";
+			try scaning WOE BOW BELL instead;
 		if rude is visible:
 			say "Nothing happens until [Gast] starts waving Rude [']N Nuder in your face.";
 			try scaning rude instead;
@@ -10892,11 +10876,17 @@ check scaning sit a nag:
 
 section side art
 
-the side art is part of the anti sag sit a nag. description of side art is "Boy! There's a lot here.". the side art is reflexive.
+the side art is part of the anti sag sit a nag. description of side art is "Boy! There's a lot here.". the side art is vanishing.
 
 a-text of side art is "YRRRYRY". b-text of side art is "YRRRYRY". parse-text of side art is "-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 check taking side art: say "The [sit a nag] is too well made." instead;
+
+chapter WOE BOW BELL
+
+the WOE BOW BELL is a vanishing boringthing. description of WOE BOW BELL is "You can only hear it. You can't help hearing it.". bore-text is "You can only hear the WOE BOW BELL. It makes you see red."
+
+a-text of woe bow bell is "RYRYR". b-text of woe bow bell is "RYRYR". parse-text of woe bow bell is "-[sp]E[sp]-[sp]O[sp]-".
 
 chapter Rude N Nuder
 
@@ -22607,7 +22597,7 @@ to say yak-worry:
 check objhinting Gast:
 	if sit a nag is reflexive, try objhinting sit a nag instead;
 	if side art is reflexive, try objhinting side art instead;
-	if elbow is reflexive, try objhinting elbow instead;
+	if WOE BOW BELL is reflexive, try objhinting WOE BOW BELL instead;
 	if Rude 'N Nuder is visible, try objhinting Rude 'N Nuder instead;
 	say "[bug-report]" instead;
 
@@ -22682,7 +22672,6 @@ ME ARTS	"The ME ARTS inspired you enough, [if lobster is moot]though you can kno
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
 sit a nag	"You got [Gast] to the [sit a nag]. Now you need to deal with [Gast]."
 side art	"You positioned yourself well to put up with [Gast]'s tirades. Time to try a new direction."
-Gast's elbow	"You ducked [Gast]'s elbow successfully. Now about that book..."
 seed pit	"You got what you needed from the seed pit."
 hurt hog	"[fill-in-here]" [end ROUTES]
 dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if Marines Seminar Remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]." [start PRESTO]

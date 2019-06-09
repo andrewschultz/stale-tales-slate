@@ -56,8 +56,8 @@ lairage regalia	lairage regalia	false	373417715	Adobe Abode	"across"	"across"	--
 adsorbing signboard	adsorbing signboard	false	283037761	Idle Deli	"past"	"past"	--	post-past rule	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."
 sit a nag	Gast	false	350259676	--	"against"	"against"	pre-sitanag-against rule	post-sitanag-against rule	"Quakes squeak as someone approaches, and you think 'Angst! Ai!' [he-she-c] is a lot bigger than you. [he-she-c] sits down and begins, 'tantrums! Must rant![paragraph break]The buggin['] biggun wants you to LISTEN to its staired tirades but also occasionally gestures to the side art on the [sit a nag][if side art is unexamined] you missed before[end if]."
 side art	side art	480723649	--	"astride"	"astride"	pre-side-art-astride rule	--	"You sit right on the end of the [sit a nag], prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!'[paragraph break][gast] changes pace. "
-Gast's elbow	Gast's elbow	false	382326203	--	"below"	"below"	--	post-elbow rule	"You watch how [gast]'s elbows swing mid-rant, the pattern and timing. It's almost disappointingly simple--maybe a few words overemphasized. But you can get close and duck and pretend you care, allowing [gast] to get exhausted. Before pulling out a book labeled Rude [']N Nuder and launching new complaints about how this is what Yorpwald is reduced to these days."
-Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	--	--	"You can't take the giant waving the, um, literature around. You jump off and duck under the [sit a nag]. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
+WOE BOW BELL	Rude 'N Nuder	false	382326203	--	"below"	"below"	--	post-below rule	"It's worth a shot. You duck below the [sit a nag]. Not actually kneeling, of course, because that would be bowing. But [Gast] decides, why not join you, just in case? After several minutes, the WOE BOW BELL stops. Perhaps there was a correlation. Perhaps not. But [Gast] has decided to change the subject, pulling out a book labeled Rude [']N Nuder and launching new complaints about how this is what Yorpwald is reduced to these days."
+Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	--	--	"You can't take [Gast] waving the, um, literature around. You look under--the parts [Gast] won't let you see--and you wonder what's the big deal. Disgusted that nobody will listen any more, [Gast] throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
 pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	--	--	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	--	post-seedpit-despite rule	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
 MORF FORM	the-b	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
@@ -385,7 +385,7 @@ perp-priv	perp-priv	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	p
 
 book auxiliary text and rules
 
-this is the post-elbow rule:
+this is the post-below rule:
 	now Gast has Rude 'N Nuder;
 
 this is the post-leo-ole rule:
@@ -764,8 +764,8 @@ this is the post-cranberries rule:
 	moot briar screen;
 	moot barren cries;
 
-this is the pre-mesa-dir-flip rule:
-	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
+this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
+	if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:
 		if drama armada is in Same Mesa or the-b is in Same Mesa, say "But... [if the-b is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
 		if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
 		if Gast is in Same Mesa:
@@ -784,8 +784,6 @@ check fliptoing when player is in Same Mesa (this is the note mesa re-exit rule)
 		if noun is adsorbing signboard:
 			say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
 			move player to Idle Deli instead;
-
-check fliptoing Gast's elbow: if side art is reflexive, say "You're already below, but if you were close enough to listen, that could work." instead;
 
 this is the post-whiners-flip rule:
 	increment quietness;
@@ -854,6 +852,7 @@ this is the post-bust-tubs rule:
 	now heaps are in Shuttle Hutlets;
 	set the pronoun them to heaps;
 	set the pronoun it to prod;
+	[now waste is in Shuttle Hutlets;] [??]
 
 this is the post-search-arches rule:
 	pearl-check;
@@ -1116,10 +1115,6 @@ this is the post-across rule:
 this is the post-past rule:
 	now grubby restaurant is clue-used; [?? rivets/Trevis Vister clue used too?]
 
-after fliptoing Gast's elbow:
-	move Rude 'N Nuder to Same Mesa;
-	continue the action;
-
 after fliptoing U NERD ENDUR REDUN:
 	moot Gast;
 	continue the action;
@@ -1233,9 +1228,6 @@ this is the post-yapper-prepay rule:
 	if wipes are moot:
 		say "As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.";
 		move templar ramplet to Tenfold Teflon'd Den Loft;
-
-this is the post-detours-rousted rule:
-	move player to last-detour;
 
 to say new-thing:
 	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
@@ -1405,9 +1397,6 @@ this is the post-patrol-ol-trap rule:
 this is the post-sweat-waste rule:
 	now heaps are in Shuttle Hutlets;
 	moot waste;
-
-this is the post-bust-tubs rule: [?? is this necessary? ]
-	now waste is in Shuttle Hutlets;
 
 this is the post-weeds-sewed rule:
 	now player has raves saver;
@@ -1692,7 +1681,7 @@ lairage regalia	"You twist and tilt your head but can't figure out how to interp
 adsorbing signboard	"You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you."
 sit a nag	"You hang around the [sit a nag], hoping for something to happen, but nothing happens. Though it seems like it should."
 side art	"Oof! That doesn't quite work. It could have, though. You glance  at the side art for clues."
-Gast's elbow	"[if side art is reflexive]You're nowhere close to the [Gast]'s elbow[else]You seem like you should be able to avoid the elbow, but you may need to mix things up a bit[end if]."
+WOE BOW BELL	"You seem like you should be able to avoid the WOE BOW BELL, but you may need to mix things up a bit[end if]."
 MORF FORM	"The MORF-FORM rocks in the air, as if it's about to fall."
 pipe soot	"The soot smells a bit stronger than before for a moment."
 seed pit	"The seed pit seems to bubble slightly."
@@ -2053,7 +2042,7 @@ adsorbing signboard	"No, you don't see any other way around the signboard to ent
 Gast	"[if Gast is in Same Mesa]It wouldn't be wise to argue against [Gast][else if Gast is moot]You had your vigorous conversation for the day[else][bug-report][end if]."
 sit a nag	"[if Gast is moot][giant-over][else]You leaned on the [sit a nag] right. Time to get on it[end if]."
 side art	"[if Gast is moot][giant-over][else if nuder is in Same Mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the [sit a nag] right. Time to start ducking[end if]."
-Gast's elbow	"[if Gast is moot][giant-over][else]You don't need to avoid [Gast]'s elbow any more[end if]."
+WOE BOW BELL	"[if Gast is moot][giant-over][else]You don't need to avoid the WOE BOW BELL any more[end if]."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
@@ -2146,7 +2135,7 @@ to say got-e: say "You've got an entry. No need to seal it up"
 
 to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
 
-to say giant-over: say "The [sit a nag] isn't important with the giant gone"
+to say giant-over: say "The [sit a nag] isn't important with [Gast] gone"
 
 to say no-rehash: say "[if leo is in Dirge Ridge]They're already off getting to know each other better[else]That'd be an awkward rehash. You need another way to say good-bye[end if]"
 
@@ -2262,7 +2251,7 @@ dingy dwelling	--	lairage regalia
 Gast	"[if Gast is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if Gast is moot]You're done with [Gast][else]BUG. You should be directed to the [sit a nag] or relevant part you need to figure, now[end if]."
 side art	"[one of][Gast] seems to want you to listen to [his-her] tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
 tirades	--	side art
-Gast's elbow	"[if gast's elbow is reflexive][one of]Having trouble ducking [Gast]'s elbow there, eh?[plus][or][Gast] swings [his-her] elbow sort of high...[plus][or]...so you should be BELOW it.[minus][cycling][else]You dealt with [Gast]'s elbow.[end if]"	--	"BELOW"
+WOE BOW BELL	"[one of]The WOE BOW BELL doesn't have a ten-letter anagram, but a five-letter one.[plus][or]Since the WOE BOW BELL makes you see red, that also helps with what the letters should be, if you don't want to scan things. There's a direction you can go that might make you feel better about avoiding the bell.[plus][or]Go BELOW[minus][cycling]"	--	"BELOW"
 Rude 'N Nuder	"[one of]The contents of Rude [']N Nuder are probably worse than [Gast] ranting. But again, you need to avoid [his-her] flailing entirely. You need to duck something that's over.[or]On cheat mode, Rude [']N Nuder scans oddly and gives you the solution.[plus][or]You need to go UNDER.[cycling]"	--	"UNDER"
 Oscar	"Oscar has little to say, [if U NERD ENDUR REDUN is in Adobe Abode]but the pipe soot is something you may need[else]and you got the pipe soot[end if]."
 Pat	"Pat has little to say, other than to discourage you from the seed pit, [if seed pit is reflexed]but you got through there[else]so you need to enter it despite Pat's objections[end if]."

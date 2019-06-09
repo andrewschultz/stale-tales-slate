@@ -510,15 +510,15 @@ Hmm, a list of stuff on the wall. Maybe the stuff is in the other locations.
 
 > EXIT
 
-If you examine the anti-sag sit-a-nag, it's a giant's. That wraps up what the anagram letters should be.
+If you examine the anti-sag sit-a-nag, it's a giant's. That wraps up what the anagram letters should be. Gast, the giant, is Ian or Nia based on if you chose male or female.
 
 > AGAINST
 
-Climb up and hear the giant's tirades.
+Climb up near the side art and hear Gast's tirades.
 
 > ASTRIDE
 
-Duck his elbow.
+Hide from the WOE BOW BELL and its noise.
 
 > BELOW
 

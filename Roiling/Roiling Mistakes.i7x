@@ -147,9 +147,11 @@ understand "bane" as a mistake ("You fill yourself with the same fear as the dra
 
 understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when below-is-wrong and mrlp is routes.
 
-understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when Gast has rude 'n nuder or player has u nerd or elbow is in location of player.
+understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when Gast has rude 'n nuder or player has u nerd or WOE BOW BELL is in location of player.
 
-understand "bowel" and "bowels" as a mistake ("[Gast]'s spouting enough verbal diarrhea, so, just... no.[paragraph break]Also, you don't need to go THAT far down.") when Gast is in location of player and Gast's elbow is reflexive.
+understand "bowel" and "elbow" as a mistake ("The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa
+
+understand "ides" and "rat" and "tar" as a mistake ("It's the whole side art you need[if tirades are moot]ed[end if] to deal with.") when player is in Same Mesa and side art is in Same Mesa.
 
 understand "indies" as a mistake ("You don't need to worry about art, here.") when scripture picturers is in location of player.
 

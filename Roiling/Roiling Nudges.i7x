@@ -170,9 +170,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "stripe"	538972701	Same Mesa	--	--	"[not-stripe]."
 "poisonstripe"	979318134	Same Mesa	--	--	"[not-stripe]."
 "pat"	186763795	Same Mesa	--	--	"[if Idle Deli is visited]No, you already went PAST to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
-"elbows"	478600169	--	Gast's elbow	--	"[if elbow is reflexed]You already avoided both elbows when you avoided one.[else]Thankfully, [Gast]'s only really swinging one elbow, so--less to deal with, yay?[end if]"
 "grubby"	382226374	Same Mesa	--	--	"[name-worry]."
 "restaurant"	779336668	Same Mesa	--	--	"[name-worry]."
+"woe"	310093459	--	WOE BOW BELL	--	"The whole WOE BOW BELL."
+"bow"	200706255	--	WOE BOW BELL	--	"The whole WOE BOW BELL."
+"bell"	253852692	--	WOE BOW BELL	--	"The whole WOE BOW BELL."
 "cleric"	349947767	Cleric Circle	--	--	"[locname]." [CLERIC CIRCLE]
 "list"	298190669	Cleric Circle	--	--	"[follow-the-list]."
 "toils"	372543246	Cleric Circle	--	--	"[follow-the-list]."
