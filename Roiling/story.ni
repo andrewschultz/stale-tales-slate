@@ -3643,8 +3643,7 @@ check entering a portal:
 						say "You decide to look around a bit more." instead;
 	choose row with por of noun in table of warps;
 	say "[go-text entry]";
-	if noun is hoster:
-		pad-rec "guru";
+	if noun is Throes Hoster, pad-rec "guru";
 	if noun is solid idols and Bleary Barley is unvisited:
 		say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]And yet, once through, your powers feel dormant, but thankfully not mordant.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
 		pad-rec-q "asking";
@@ -4019,7 +4018,7 @@ carry out requesting the score:
 		left-to-see instead;
 	if roved is true:
 		if player is in Strip of Profits:
-			say "[if store h is in Strip of Profits]You need to figure how to get to store H[else]Enter the hoster for the final region[end if]." instead;
+			say "[if store h is in Strip of Profits]You need to figure how to get to store H[else]Enter the Throes Hoster for the final region[end if]." instead;
 		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region[if min-score of mrlp < max-score of mrlp], but you only need [min-score of mrlp][end if].";
 		eval-fruits;
 		check-guru;
@@ -5002,15 +5001,12 @@ carry out stores-hinting:
 	if location of player is Cruelest Lectures:
 		all-say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or]TEDIOUS is one clue.[plus][or]Ian will also give you his 'I USED TO' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people OUTSIDE.[minus][cycling]" instead;
 	if roved is true:
-		if Store H is visible:
-			try objhinting Store H instead;
-		all-say "Go through the HOSTER to the OTHERS area." instead;
+		if Store H is visible, try objhinting Store H instead;
+		all-say "Go through the THROES HOSTER to the OTHERS area." instead;
 	if number of game-critical stos is 0:
 		all-say "(Note: you've cleared all the stores you need to[if number of needed regions > 0], though you still have work to do behind them[end if].)[line break]";
-		if Store K is visible:
-			try objhinting Store K instead;
-		if Store N is visible:
-			try objhinting Store N instead;
+		if Store K is visible, try objhinting Store K instead;
+		if Store N is visible, try objhinting Store N instead;
 		all-say "You have nothing more to do here. You need to [if number of needed regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
 	if number of portals in Strip of Profits > 0, say "While [the slickest portal in Strip of Profits] [if number of portals in Strip of Profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
 	if cur-hint-sto is not in Strip of Profits:
@@ -5030,8 +5026,7 @@ carry out stores-hinting:
 			all-say "You don't need to change any more stores now." instead; [should not happen but just in case]
 	try objhinting cur-hint-sto instead;
 
-to sto-hint (stosto - a sto):
-	say "Sto hint for [stosto].";
+to sto-hint (stosto - a sto): say "Sto hint for [stosto].";
 
 book presto-hinting
 
@@ -5082,8 +5077,7 @@ carry out presto-hinting:
 	if player is in Grey Gyre or player is in Char Arch:
 		if Hacks' Shack is unvisited:
 			if spoilit is false, all-say "You're all done here for now[if player is in Char Arch] (the yak can be helped later,)[else],[end if] so you maybe should [if Saps' Pass is unvisited]go north[else if Phat Path is unvisited]go see about getting past the lawl wall [hereish of Saps' Pass][else if Hacks' Shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
-	if player is in Saps' Pass:
-		try objhinting lawl wall instead;
+	if player is in Saps' Pass, try objhinting lawl wall instead;
 	if player is in Phat Path:
 		if Hacks' Shack is unvisited:
 			if harpings phrasing is visible and shack is unvisited:
@@ -5093,8 +5087,7 @@ carry out presto-hinting:
 		if Dirge Ridge is not visited or austerer is not visited or marines is not visited:
 			now spoilit is false;
 			all-say "Before taking a bite, you wonder if you've visited everywhere you can yet." instead;
-		if ye hoop is in austerer and austerer is visited:
-			all-say "You think to YE HOOP you saw in Austerer Treasure." instead;
+		if ye hoop is in austerer and austerer is visited, all-say "You think to YE HOOP you saw in Austerer Treasure." instead;
 	if coal is visible, try objhinting coal instead;
 	if flea is visible, try objhinting flea instead;
 	if gum is visible, try objhinting gum instead;
@@ -5133,15 +5126,12 @@ carry out presto-hinting:
 		if I'm Le Cop polemic is reflexive, try objhinting I'm Le Cop polemic instead;
 		if fizzy cola is not in mug, try objhinting mug instead;
 		if BUB DUDE EGG is reflexive, try objhinting BUB DUDE EGG instead;
-		if usb is visible:
-			try objhinting usb instead;
+		if usb is visible, try objhinting usb instead;
 	all-say "[if spoilit is true]You can't see much to do here, so you save your crust for somewhere more active[else]There's not much to do here. You may need to look elsewhere[end if]." instead;
 
 to decide whether can-put-on-slab:
-	if player has keyboard and keyboard is not on slab:
-		decide yes;
-	if player has computer screen and computer screen is not on slab:
-		decide yes;
+	if player has keyboard and keyboard is not on slab, decide yes;
+	if player has computer screen and computer screen is not on slab, decide yes;
 	decide no;
 
 to say k-and-c:
@@ -5160,8 +5150,7 @@ book routes-hinting
 
 prep-spoil is a truth state that varies.
 
-to say p-spo:
-	now prep-spoil is true;
+to say p-spo: now prep-spoil is true;
 
 check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
 	if noun is sit a nag or noun is bench-end or noun is elbow or noun is Rude 'N Nuder or noun is Gast:
@@ -5364,76 +5353,46 @@ to say to-center:
 	say "[if player is in Actionless Coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Fringe Finger]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
 
 carry out towers-hinting:
-	if number of visible warriors > 0:
-		try objhinting h-w instead;
-	if location of player is Rawest Waters:
-		try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
-	if player is in Anemic Cinema and mardier admirer is in Anemic Cinema:
-		try objhinting mardier admirer instead;
-	if player is in Danger Garden and bonker is in Danger Garden:
-		try objhinting bonker instead;
-	if player is in Treading Gradient and weeds is in Treading Gradient:
-		try objhinting weeds instead;
+	if player is in Loftier Trefoil, try objhinting h-w instead;
+	if location of player is Rawest Waters, try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
+	if player is in Anemic Cinema and mardier admirer is in Anemic Cinema, try objhinting mardier admirer instead; [we do some intelligent hinting here for guardians of highest priority]
+	if player is in Danger Garden and bonker is in Danger Garden, try objhinting bonker instead;
+	if player is in Danger Garden and stinger is in Danger Garden, try objhinting stinger instead;
+	if player is in Treading Gradient and weeds is in Treading Gradient, try objhinting weeds instead;
 	if number of visible guardians > 0:
 		d "Looking for mr hinty = [mr-hinty].";
-		if mr-hinty is visible:
-			try objhinting mr-hinty instead;
+		if mr-hinty is visible, try objhinting mr-hinty instead;
 		d "Oops! A bug!";
 		any-guardian-hint instead;
-	if player is in Loftier Trefoil:
-		try objhinting h-w instead;
-	if Scope Copse is unvisited:
-		all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
-	if Shaven Havens is unvisited:
-		all-say "There's an important location in the center of the Bland Sad Badlands, [to-center] of here. You'll want to [if Shaven Havens is accessible]go[else]make a path[end if] there." instead;
-	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient:
-		all-say "Collect the loot from the Treading Gradient." instead;
-	if Obscurest Subsector is unvisited:
-		all-say "[if bonker is moot]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the Scope Copse.[end if]" instead;
-	if Treading Gradient is unvisited:
-		all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit you [seesaw] in the Scope Copse.[end if]" instead;
-	unless Dr Yow has been wordy:
-		all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
-	if duck is aloof:
-		all-say "[one of]That duck [if duck is not visible]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if Shaven Havens is unvisited]Something's in the Treading Gradient.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
-	if duck is not returned:
-		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
-	if Actionless Coastlines is unvisited:
-		all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
-	if agnostic is lonely:
-		all-say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
-	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
-		all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
-	unless Dr Yow has been rowdy:
-		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
+	if player is in Loftier Trefoil, try objhinting h-w instead;
+	if Scope Copse is unvisited, all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
+	if Shaven Havens is unvisited, all-say "There's an important location in the center of the Bland Sad Badlands, [to-center] of here. You'll want to [if Shaven Havens is accessible]go[else]make a path[end if] there." instead;
+	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient, all-say "Collect the loot from the Treading Gradient." instead;
+	if Obscurest Subsector is unvisited, all-say "[if bonker is moot]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the Scope Copse.[end if]" instead;
+	if Treading Gradient is unvisited, all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit you [seesaw] in the Scope Copse.[end if]" instead;
+	unless Dr Yow has been wordy, all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
+	if duck is aloof, all-say "[one of]That duck [if duck is not visible]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if Shaven Havens is unvisited]Something's in the Treading Gradient.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
+	if duck is not returned, all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
+	if Actionless Coastlines is unvisited, all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
+	if agnostic is lonely, all-say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
+	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
+	unless Dr Yow has been rowdy, all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
 	if dinger is in Actionless Coastlines, try objhinting dinger instead;
-	if Outer Route is not visited:
-		all-say "You need to visit west of the Copse Scope[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
+	if Outer Route is not visited, all-say "You need to visit west of the Copse Scope[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
 	if player is in Outer Route:
-		if weeds are in Treading Gradient:
-			all-say "The item you want is behind the weeds in the Treading Gradient." instead;
-		if gizmo is off-stage:
-			try objhinting rapier repair instead;
-	if player has gizmo:
-		try objhinting gizmo instead;
-	if location of player is not Actionless Coastlines:
-		all-say "You'll want to head to the coastlines to make it across the water." instead;
+		if weeds are in Treading Gradient, all-say "The item you want is behind the weeds in the Treading Gradient." instead;
+		if gizmo is off-stage, try objhinting rapier repair instead;
+	if player has gizmo, try objhinting gizmo instead;
+	if location of player is not Actionless Coastlines, all-say "You'll want to head to the coastlines to make it across the water." instead;
 	if rawest is unvisited and limits are unvisited:
-		if t-or-b is reflexive:
-			try objhinting t-or-b instead;
-		if turbos are reflexive:
-			try objhinting turbos instead;
-		if blaster is reflexive:
-			try objhinting blaster instead;
+		if t-or-b is reflexive, try objhinting t-or-b instead;
+		if turbos are reflexive, try objhinting turbos instead;
+		if blaster is reflexive, try objhinting blaster instead;
 	if player is in Mesprise Premises:
-		if player has flowerpot and flowerpot is reflexive:
-			try objhinting crocus instead;
-		if Tetris Sitter is reflexive:
-			try objhinting Tetris Sitter instead;
-		if player has flowerpot:
-			all-say "You should GIVE the succor crocus to the Tetris Sitter for hints." instead;
-	if player is in Mislit Limits:
-		try objhinting curst palace instead;
+		if crocus is in flowerpot or player has crocus, try objhinting crocus instead;
+		if Tetris Sitter is reflexive, try objhinting Tetris Sitter instead;
+		if player has flowerpot, all-say "You should GIVE the succor crocus to the Tetris Sitter for hints." instead;
+	if player is in Mislit Limits, try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
 
 to decide what indexed text is the vul of (w - a warrior):
@@ -5447,29 +5406,19 @@ to decide which direction is the psgdir of (gu - a guardian):
 
 gua-warn is a truth state that varies.
 
-to any-guardian-hint:
+to any-guardian-hint: [note: we are assured there is > 1 guardian]
 	let Z be north;
 	if gua-warn is false:
-		ital-say "in the Towers area, when multiple guardians are visible, I can only guess which you mean. You may wish to HINT (guardian) instead.";
+		ital-say "in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to HINT (guardian) instead.";
 		now gua-warn is true;
 	if number of visible guardians is 1:
 		try objhinting a random visible guardian;
-	repeat with VG running through visible guardians:
-		if psgdir of VG is north:
-			try objhinting VG;
-			continue the action;
-	repeat with VG running through visible guardians:
-		if psgdir of VG is east:
-			try objhinting VG;
-			continue the action;
-	repeat with VG running through visible guardians:
-		if psgdir of VG is south:
-			try objhinting VG;
-			continue the action;
-	repeat with VG running through visible guardians:
-		if psgdir of VG is west:
-			try objhinting VG;
-			continue the action;
+		continue the action;
+	repeat with D running through { north, east, west, south }:
+		repeat with VG running through visible guardians:
+			if psgdir of VG is d:
+				try objhinting VG;
+				continue the action;
 
 book otters-hinting
 
@@ -5490,37 +5439,25 @@ to decide which thing is otters-cur-item:
 	if player is in Loop Pool:
 		if sea cube is not moot, decide on sea cube;
 		if eels are not reflexed, decide on eels;
-	if player is in Shiner Shrine:
-		if sly imp is in Shiner Shrine, decide on sly imp;
-	if player is in Clarthead Cathedral:
-		if whiners are in Clarthead Cathedral, decide on whiners;
+	if player is in Shiner Shrine and sly imp is in Shiner Shrine, decide on sly imp;
+	if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral, decide on whiners;
 	if player is in Lamer Realm:
 		if owls are in Lamer Realm, decide on owls;
-		if number of visible reflexive animals > 1:
-			decide on animal-to-hint;
+		if number of visible reflexive animals > 1, decide on animal-to-hint;
 	if player is in Perverse Preserve:
-		if raptor is visible:
-			decide on raptor;
-		if number of visible pre-animal things > 1:
-			decide on animal-to-hint;
+		if raptor is visible, decide on raptor;
+		if number of visible pre-animal things > 1, decide on animal-to-hint;
 	if player is in Reclusion Inclosure:
-		if parrot is in Reclusion Inclosure:
-			decide on parrot;
-	if power-back is false:
-		decide on the player;
-	if player has whistle and whistle is not reflexed:
-		decide on whistle;
-	if player has medals and medals are not reflexed and medals are not prefigured:
-		decide on medals;
-	if current quip is final-quip:
-		decide on elvira;
+		if parrot is in Reclusion Inclosure, decide on parrot;
+	if power-back is false, decide on the player;
+	if player has whistle and whistle is not reflexed, decide on whistle;
+	if player has medals and medals are not reflexed and medals are not prefigured, decide on medals;
+	if current quip is final-quip, decide on elvira;
 	decide on the player;
 
-to say loop-pool-already:
-	say "[one of]The Bran Barn isn't critical since you've solved the Loop Pool, but it'll get extra points.[paragraph break][or][stopping]";
+to say loop-pool-already: say "[one of]The Bran Barn isn't critical since you've solved the Loop Pool, but it'll get extra points.[paragraph break][or][stopping]";
 
-to say bran-barn-already:
-	say "[one of]The Loop Pool isn't critical since you've solved the Bran Barn, but it'll get extra points.[paragraph break][or][stopping]";
+to say bran-barn-already: say "[one of]The Loop Pool isn't critical since you've solved the Bran Barn, but it'll get extra points.[paragraph break][or][stopping]";
 
 to say tho-work:
 	say ", though you still have work there[if power-back is false], which you might not be up for yet[end if]"
@@ -6848,10 +6785,10 @@ before smelling (this is the you can smell some stuff some places rule):
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
 	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
-	if player is in strip: [stores]
-		if store y is in strip, say "Seawater scents from Store Y." instead;
+	if player is in strip of profits: [stores]
+		if store y is in strip of profits, say "Seawater scents from Store Y." instead;
 		if balancer barnacle is in strip, say "Seawater scents from the barnacle balancer." instead;
-		if roved is true and hoster is visible, say "A mix of nice smells from the hoster where Store H was." instead;
+		if roved is true and throes hoster is in strip of profits, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
 	if tokers are in location of player, say "You smell something sweetish coming from the tokers I can't quite describe because, well, -ahem-. I'm for the right to do that sort of thing, on principle, but I don't." instead;
 	if player is in Adobe Abode, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead; [routes]
@@ -7600,7 +7537,7 @@ baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, s
 balancer barncale	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 solid idols	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
-hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
+throes hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
 
 to say get-arug:
 	now player has arugula;
@@ -10048,7 +9985,7 @@ volume stores
 
 after choosing notable locale objects when player is in Strip of Profits:
 	if store h is in Strip of Profits, set the locale priority of store h to 0;
-	if hoster is in Strip of Profits, set the locale priority of hoster to 0;
+	if throes hoster is in Strip of Profits, set the locale priority of hoster to 0;
 	if solid idols are in Strip of Profits, set the locale priority of solid idols to 10;
 	if tokers are in Strip of Profits, set the locale priority of tokers to 1;
 	if tokers are in Strip of Profits and nestor is in Strip of Profits, set the locale priority of nestor to 0;
@@ -10058,7 +9995,7 @@ book definitions
 
 to decide whether (myp - a thing) is nonpost: [nonpost is short for "a portal, but not to store h"]
 	if myp is not a portal, decide no;
-	if myp is hoster, decide no;
+	if myp is Throes Hoster, decide no;
 	if myp is in Strip of Profits, decide yes;
 	decide no;
 
@@ -10134,7 +10071,7 @@ to say which-stores:
 	now A is "[A in title case]";
 	replace the text "store " in A with "", case insensitively;
 	replace the text "And" in A with "and";
-	say ". Store[if nlt > 1]s[end if] [A] seem[if nlt is 1]s[end if] in decent shape[if hoster is visible], but that hoster you made looks too scary for now[end if].[no line break][tokies] Looks like near the end of the alphabet's where it's at";
+	say ". Store[if nlt > 1]s[end if] [A] seem[if nlt is 1]s[end if] in decent shape[if Throes Hoster is in Strip of Profits], but that hoster you made looks too scary for now[end if].[no line break][tokies] Looks like near the end of the alphabet's where it's at";
 
 to decide whether you-can-advance:
 	let QQ be number of solved regions;
@@ -10151,13 +10088,13 @@ to say tokies:
 
 check going inside in Strip of Profits (this is the which portal rule) : [we choose the "easiest" by default]
 	if number of maingame portals in strip is 1:
-		if hoster is in strip, say "You figure the hoster can be put off [']til later.";
+		if Throes Hoster is in strip, say "You figure the throes hoster can be put off [']til later.";
 		try entering a random visible maingame portal instead;
-	if hoster is in strip and roved is true:
-		say "Yup. Only the hoster's left.";
-		try entering hoster instead;
+	if Throes Hoster is in strip and roved is true:
+		say "Yup. Only the throes hoster's left.";
+		try entering throes hoster instead;
 	if number of maingame portals in strip > 1:
-		say "You have more than one area you can enter[if hoster is in strip], not counting the hoster, which you'll deal with later[end if].";
+		say "You have more than one area you can enter[if Throes Hoster is in strip], not counting the throes hoster, which you'll deal with later[end if].";
 		let RP be nothing;
 		let curdif be 99;
 		repeat with EP running through portals in strip:
@@ -10180,7 +10117,7 @@ section hubs bush
 section describing the Strip
 
 to say h-or-others:
-	say "[if store h is in strip]But Store H remains[else]That hoster remains where Store H was[end if]"
+	say "[if store h is in strip]But Store H remains[else]That throes hoster remains where Store H was[end if]"
 
 after printing the locale description for Strip of Profits when Strip of Profits is unvisited:
 	if roved is false:
@@ -10197,18 +10134,16 @@ description of disamb-store is "[sto-desc].".
 to say sto-desc:
 	say "Some stick out more than others. Some have too many shoppers around. Some seem more solitary and ready to explore[one of]. You notice stores F, I, M and R are missing--of course they are, since you got past them to the forest, sortie, metros and resort last time here[or][stopping]. You can examine one in particular with, say, X STORE Q"
 
-check taking disamb-store:
-	say "You can't take one store, much less all." instead;
+check taking disamb-store: say "You can't take one store, much less all." instead;
 
-instead of entering disamb-store:
-	say "Hmm, you can't enter all the stores at once. You'll need to pick a store--you can also refer to it by its abbreviation, e.g. Q for Store Q.";
+check entering disamb-store: say "Hmm, you can't enter all the stores at once. You'll need to pick a store--you can also refer to it by its abbreviation, e.g. Q for Store Q." instead;
 
 does the player mean examining disamb-store:it is likely.
 does the player mean entering disamb-store: it is likely.
 
 chapter store a
 
-Store A is a sto in Strip of Profits. it is privately-named and useless.
+There is a sto called Store A. It is in Strip of Profits.
 
 chapter store b
 
@@ -10270,19 +10205,17 @@ to it-him-her (x - a thing):
 	set the pronoun her to x;
 	set the pronoun him to x;
 
-the hoster is a not lumpable not maingame portal. "That stupid hoster is here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than save Yorpwald, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. It might be worse if it had a cavity, but it's pretty bad. You're not sure you want to know where it leads.". diffic of hoster is 9.
+the Throes Hoster is a not lumpable not maingame portal. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9.
 
-understand "mouth" as hoster.
+understand "mouth" as Throes Hoster.
 
 does the player mean entering a sto: it is unlikely.
 does the player mean entering a portal: it is likely.
 does the player mean doing something with Store Z: it is unlikely.
 
-check entering hoster:
-	if Rustic Citrus is visited:
-		continue the action;
-	if roved is false:
-		say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
+check entering Throes Hoster:
+	if Rustic Citrus is visited, continue the action;
+	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
 
 chapter store i
 
@@ -10448,7 +10381,7 @@ the roads are a plural-named boringthing. they are part of store u. description 
 
 a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
-the course source is a portal. diffic of course source is 3. understand "routes" as course source when player is in trips strip. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if same mesa is visited]re[end if]enter it."
+the course source is a portal. diffic of course source is 3. understand "routes" as course source when player is in strip of profits. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if same mesa is visited]re[end if]enter it."
 
 chapter store v
 
@@ -10516,7 +10449,7 @@ to say engrav-note:
 	say "[if engravings are examined]Those engravings are at the bottom, too[else]You note engravings craftily hidden below all this[end if]"
 
 check examining magneto montage when roved is true:
-	say "It's not really relevant now that there's just [if store h is visible]Store H[else]the hoster." instead;
+	say "It's not really relevant now that there's just [if store h is in strip of profits]Store H[else]the throes hoster." instead;
 
 change-warn is a truth state that varies.
 
@@ -19498,14 +19431,13 @@ to say lee-or-eels:
 	else:
 		say "A man tags along behind the eels you rescued. [if Bran Barn is visited]It's Mr. Lee, whom you couldn't befriend[hat-gone], but he salutes you in half-apology[else]It's Mr. Lee! He salutes you, and he's little more than a spectator, but he smiles at the machine-slaughter he hopes is ahead.";
 
+to say hat-gone: say "[if ghoul hat is moot] despite zapping that ghoul hat[else], though his ghoul hat's gone[end if]";
+
 to clean-for-roving:
 	now roved is true;
-	if mangiest steaming is in strip:
-		moot mangiest steaming;
-	if tokers are in strip:
-		moot tokers;
-	if nestor is in strip:
-		moot nestor;
+	if mangiest steaming is in strip, moot mangiest steaming;
+	if tokers are in strip, moot tokers;
+	if nestor is in strip, moot nestor;
 	moot solid idols;
 	moot whistle;
 	moot medals;
@@ -19514,11 +19446,7 @@ to clean-for-roving:
 	if number of portals in Strip of Profits > 0:
 		say "Moving [list of portals in Strip of Profits] out of the Strip. They shouldn't be there.";
 		repeat with myport running through portals in Strip of Profits:
-			if myport is not hoster:
-				moot myport;
-
-to say hat-gone:
-	say "[if ghoul hat is moot] despite zapping that ghoul hat[else], though his ghoul hat's gone[end if]";
+			if myport is not Throes Hoster, moot myport;
 
 chapter whistleing
 

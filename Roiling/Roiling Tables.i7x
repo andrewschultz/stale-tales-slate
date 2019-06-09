@@ -35,7 +35,7 @@ book stores
 table of stores anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 Store B	Store B	false	505285378	--	"sorbet"	"sorbet"	a rule	a rule	"You ask 'Got any sorbet?' and a seedy man beckons you in. You talk for a bit, and he talks about how he wants to be a writer and his name is Obert (O-Bert) and you suggest he might be a better writer just by calling himself OB-ert (short o.) It's the most ridiculous things he's ever heard. He thumps you eleven times and throws you out. But the free sample was delicious."
-Store H	hoster	false	524148772	--	"others"	"others"	--	post-storeh-hoster rule	"You manage to discover a secret place set aside in Store H. You wonder who could be there or even if you should go there."
+Store H	Throes Hoster	false	524148772	--	"others"	"others"	--	post-storeh-hoster rule	"You manage to discover a secret place set aside in Store H. You wonder who could be there or even if you should go there."
 Store K	tokers	false	539799651	--	"tokers"	"tokers"	--	post-storek-tokers rule	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"
 Store N	nestor	false	555773981	--	"nestor"	"nestor"	--	--	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"
 lecturer	lecturer	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	--	post-lecturer-outside rule	"Ian and the lecturer are swept from the doorway and stage, respectively, by something unseen. The lecturer frantically babbles something about how this is why we need to fight drugs, but he is too busy backwards somersaulting to establish eye contact with his audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers assure you that'd waste money. They explain the munchies help reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."
@@ -1097,7 +1097,7 @@ this is the post-rifle-flier rule:
 	try talking to Mole Elmo instead;
 
 this is the post-storeh-hoster rule:
-	it-him-her hoster;
+	it-him-her throes hoster;
 
 this is the post-lecturer-outside rule:
 	now mangiest steaming is not maingame;
@@ -2069,7 +2069,7 @@ course source	"[got-e]."
 Tastee Estate	"[got-e]."
 truster turrets	"[got-e]."
 balancer barnacle	"[got-e]."
-hoster	"[got-e]."
+Throes Hoster	"[got-e]."
 tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
 nestor	"You rescued him, and that's enough."
 scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
@@ -2259,7 +2259,7 @@ course source	"Just ENTER [the noun]."
 Tastee Estate	"Just ENTER [the noun]."
 balancer barnacle	"Just ENTER [the noun]."
 baser braes	"Just ENTER [the noun]."
-hoster	"[if roved is true]You can just enter the hoster.[else]You need to save Yorpwald first.[end if]"
+Throes Hoster	"[if roved is true]You can just enter the Throes Hoster.[else]You need to save Yorpwald first.[end if]"
 truster turrets	"You can just ENTER the truster turrets."
 engravings	"[one of]Whether a word is italicized or bolded reflects something.[plus][or]Try changing a store and looking again.[plus][or]The italicized words relate to the stores you've figured.[plus][or]Bolded words means an area is solved[plus][or]For instance, 'someone' is bolded, so you solved an area.[plus][or]The engravings are a hint to the figures of speech in the new areas, so you solved an area with nouns.[plus][or]Store W makes 'evil' go italic, so you may guess what sort of words are behind it.[minus][cycling]"
 patcher	"[one of]The patcher can be used to skip certain areas. It's a bit fourth-wall, but it'll do.[plus][or]ZAP (store X) to zap a single store.[plus][or]SWITCH PATCHER to zap them all.[minus][cycling]"

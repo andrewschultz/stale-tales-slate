@@ -108,11 +108,11 @@ understand "stroke" as a mistake ("You need a stroke of genius, but that's all w
 
 understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.") when Store U is in location of player or course source is in location of player.
 
-understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. [if otters is solved]Try thinking of a more common word[else]Try looking at the other end of the alphabet[end if].") when Store H is in location of player or hoster is in location of player.
+understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. [if otters is solved]Try thinking of a more common word[else]Try looking at the other end of the alphabet[end if].") when Store H is in location of player or Throes Hoster is in location of player.
 
 understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
-understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The hoster does look a bit weird, but you need to enter it, not change it[end if].") when player is in Strip of Profits
+understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The Throes Hoster does look a bit weird, but you need to enter it, not change it[end if].") when player is in Strip of Profits
 
 understand "toyers" as a mistake ("You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the TOYERS with the red line through in the window.") when store y is in location of player.
 
