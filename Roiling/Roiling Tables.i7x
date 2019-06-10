@@ -137,12 +137,12 @@ coal	dirty looking cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dir
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if I'm Le Cop polemic is reflexive], though you're not really tired yet[end if]."
 onyx censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
-t-key	t-key	false	123716741	--	"tab"	"tab" or "tab key"	pre-tba-tab rule	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
+TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	pre-tba-tab rule	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
 I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
 trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	--	--	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
 trim socks	ROM sticks	true	540067126	--	"romstick"	"romstick" or "rom stick"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
-BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	pre-bub-dude-egg rule	post-bub-dude-egg rule	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"
+BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	pre-bub-dude-egg rule	post-bub-dude-egg rule	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if TBA key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"
 drive a	drive a	false	388504485	--	"avider"	"avider"	--	post-drive-flip rule	"Drive A coughs and whirrs a bit before humming a bit louder. You see the status on the side change from VARIED to AVIDER. Yay! It should work faster now."
 drive e	drive e	false	514122776	--	"derive"	"derive"	--	post-drive-flip rule	"You inspect Drive E and, with some educated guesswork, figure why it is out of whack. A few common-sense steps later, it's fixed."
 USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	--	--	"[sub-bus]!"
@@ -450,7 +450,7 @@ this is the pre-among rule:
 this is the pre-tba-tab rule:
 	if yak is in location of player or yak is on skid:
 		say "The yak generates an apathy that doesn't allow this. Yet.";
-		preef t-key;
+		preef TBA key;
 		do nothing instead;
 
 this is the pre-polemic-compile rule:
@@ -1452,9 +1452,7 @@ after fliptoing when player is in Hacks' Shack:
 check fliptoing when mrlp is demo dome: say "This game tried to flip something, but it should not have. BUG." instead;
 
 check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS rule):
-	if noun is leaf or noun is mug or noun is dirty looking cola or noun is keyboard or noun is t-key or noun is skid or noun is disk or noun is rom sticks:
-		if mrlp is not presto:
-			say "[bug-report]" instead;
+	if noun is leaf or noun is mug or noun is dirty looking cola or noun is keyboard or noun is TBA key or noun is skid or noun is disk or noun is rom sticks:
 		if player is not in Hacks' Shack:
 			if noun is keyboard:
 				now try-keyboard is true;
@@ -1831,7 +1829,7 @@ escaroles	"The escaroles seem slightly meatier."
 pile of coal	"Microscopic bubbles seem to form on the coal and burst in the air."
 flea	"The flea makes a crinkly noise but still seems quite dead."
 drab yoke	"It'd take too long to type out all the possibilities, but that seems basically right. Hmm."
-t-key	"The TBA key rattles within the keyboard a bit."
+TBA key	"The TBA key rattles within the keyboard a bit."
 USB	"Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff."
 trim socks	"You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work."
 clack ops locs pack	"NO, REARRANGE AND TRY AGAIN, you think."
@@ -2161,7 +2159,7 @@ caps lock	"YOU HAVE WHAT YOU NEED."
 mug	"[if fizzy cola is visible]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
-t-key	"No, the TAB key is what it should be."
+TBA key	"No, the TAB key is what it should be."
 I'm Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 tips pits	"You can't and don't want to do anything else to the tips pits." [START oyster]
@@ -2443,7 +2441,7 @@ skidrope	"The skid's rope lets you PULL the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is visible]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
-t-key	"[if t-key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
+TBA key	"[if TBA key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
 signature	--	I'm Le Cop polemic
 dirty looking cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is moot]the mug[else]what the gum can become[end if].[minus][cycling]"
 fizzy cola	"Cola is great for drinking (without knowing it) during a long programming session."

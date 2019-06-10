@@ -425,7 +425,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "nottobe"	570057712	Hacks' Shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "caps"	198933328	--	caps lock	--	"[caps-no]."
 "lock"	200105179	--	caps lock	--	"[caps-no]."
-"tbakey"	426815280	--	t-key	--	"[if t-key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]."
+"tbakey"	426815280	--	TBA key	--	"[tba-key-jazz]."
+"yke"	303098539	--	TBA key	--	"[tba-key-jazz]."
 "pile"	308078753	--	coal	--	"It's not just any pile--it's a pile of coal."
 "stikc"	316315593	--	gum	--	"It's just gum."
 "stickofgum"	618963728	--	gum	--	"It's just gum."
@@ -1514,6 +1515,8 @@ to say slab-score:
 to say full-pack: say "You need to deal with the full [locs pack]"
 
 to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
+
+to say tba-key-jazz: say "[if TBA key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]"
 
 to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if usb is visible]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
 

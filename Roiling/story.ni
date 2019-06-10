@@ -6408,7 +6408,7 @@ this is the push-pull-specifics rule:
 
 check pushing (this is the new can't push rule) :
 	abide by the push-pull-specifics rule for the noun;
-	if noun is t-key, say "[if noun is reflexive]You don't know what it does[else]You'll push it once you're ready to program[end if]." instead;
+	if noun is TBA key, say "[if noun is reflexive]You don't know what it does[else]You'll push it once you're ready to program[end if]." instead;
 	if noun is caps lock:
 		if noun is not part of keyboard, say "On its own, you can't push a caps lock." instead;
 		say "You'll push it once you're ready to program." instead;
@@ -12665,7 +12665,7 @@ check putting screen on skid:
 
 the keyboard is a thing.
 
-description of keyboard is "[if caps lock is part of keyboard]It's complete, now, since you put the caps lock button in[else]It's missing a button on the left[end if][if t-key is part of keyboard]. Also, there's a weird 'TBA' key[else]. You fixed the TBA key to a tab key[end if]."
+description of keyboard is "[if caps lock is part of keyboard]It's complete, now, since you put the caps lock button in[else]It's missing a button on the left[end if][if TBA key is part of keyboard]. Also, there's a weird 'TBA' key[else]. You fixed the TBA key to a tab key[end if]."
 
 a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]x[sp]x[sp]x". hump is cheat-spoilable.
 
@@ -13545,30 +13545,25 @@ the caps lock button is a thing. understand "capslock" and "capslock button" as 
 
 description of caps lock is "[if caps lock is part of the keyboard]It is fitting into the keyboard nicely[else]You could probably snap it into a keyboard[end if]."
 
-the t-key is part of the keyboard. the t-key is llpish, reflexive and privately-named. printed name of t-key is "[if t-key is reflexive]TBA[else]TAB[end if] key". description is "[if t-key is reflexive]It says TBA but could be...abort or...hmm[else]It's a tab key, useful for keeping code organized[end if]."
+the TBA key is part of the keyboard. the TBA key is llpish and reflexive. printed name of TBA key is "[if TBA key is reflexive]TBA[else]TAB[end if] key". description is "[if TBA key is reflexive]It says TBA but could be...abort or...hmm[else]It's a tab key, useful for keeping code organized. Okay, spaces may be better, but your text editor should convert a tab to four spaces or whatever[end if]."
 
-check scaning t-key:
+check scaning TBA key:
 	say "You sense there can't be much to do with something saying TBA. Still, go ahead and scan?";
-	unless the player yes-consents:
-		say "OK, you should get it." instead;
+	unless the player yes-consents: say "OK, you should get it now." instead;
 
-a-text of t-key is "RYR". b-text of t-key is "PYR". parse-text of t-key is "t[sp]a[sp]b". t-key is any-spoilable.
+a-text of TBA key is "RYR". b-text of TBA key is "PYR". parse-text of TBA key is "t[sp]a[sp]b". TBA key is any-spoilable.
 
-understand "tba key" and "tba/key" as t-key when t-key is reflexive.
-
-understand "tab key" and "tab/key" as t-key when t-key is reflexed.
+understand "tab key" and "tab" as TBA key when TBA key is reflexed.
 
 The schematic catechism is a thing. it is on the labs slab.
 
 does the player mean doing something with catechism when player is in Hacks' Shack: it is likely;
 
-instead of scaning catechism:
-	say "You think back to an annoying computer science professor who raved you just can't scan books like this and hope to get useful information.[paragraph break]He's literally right, here, but he probably meant just reading, though[if catechism is examined]. As you already did[end if].";
+check scaning catechism: say "You think back to an annoying computer science professor who raved you just can't scan books like this and hope to get useful information.[paragraph break]He's literally right, here, but he probably meant just reading, though[if catechism is examined]. As you already did[end if]." insted;
 
 understand "algorithms logarithms" and "algorithms/logarithms" and "textbook" and "text/book" as schematic catechism.
 
-instead of taking catechism:
-	say "It's pretty much tied to the table and not worth untying--it's too heavy, anyway."
+check taking catechism: say "It's pretty much tied to the table and not worth untying--it's too heavy, anyway." instead;
 
 after examining catechism for the first time:
 	d "[list of things on labs slab].";
@@ -13610,7 +13605,7 @@ the description of the skid is "It's three feet wide by six feet, and it's got s
 
 section oper rope
 
-the oper rope is a boringthing. The oper rope is part of the skid. description of oper rope is "It's attached so you can pull the skid from room to room.". boringtext is "The oper rope isn't special or important except as something that helps you PULL the skid around.
+the oper rope is a boringthing. The oper rope is part of the skid. description of oper rope is "It's attached so you can pull the skid from room to room.". boretext is "The oper rope isn't special or important except as something that helps you PULL the skid around."
 
 check pulling oper rope: try pulling skid instead;
 
@@ -13630,7 +13625,7 @@ check putting on the keyboard (this is the complete-keyboard rule):
 	ignore the can't put onto what's not a supporter rule;
 	if noun is caps lock:
 		if caps lock is part of the keyboard, say "It already is." instead;
-		say "It fits in perfectly, right beneath the [if t-key is reflexed]TAB[else]TBA (ehh? That's not quite right)[end if] key.";
+		say "It fits in perfectly, right beneath the [if TBA key is reflexed]TAB[else]TBA (ehh? That's not quite right)[end if] key.";
 		now caps lock is part of the keyboard instead;
 	say "That's not a key that needs to fit in the keyboard." instead;
 
@@ -19050,7 +19045,7 @@ book Minded Midden
 
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
 
 printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
@@ -22475,7 +22470,7 @@ log ons letters	"[other-let]."
 alert letters	"[other-let]."
 ought letters	"[other-let]."
 I'm Le Cop polemic	"You got things compiling. No more worries there."
-t-key	"[if t-key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
+TBA key	"[if TBA key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
 frat raft	"Now you're on the frat raft, you need to find a way to use the oars." [start OYSTER]
 knob	"The knob's been dealt with."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
@@ -23257,7 +23252,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if hawt thaw is not moot, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
 		if starch charts are not reflexed, say "[2drm of Phat Path]you could've made the starch charts TRASCH.";
 		if rom sticks are off-stage, say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
-		if t-key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
+		if TBA key is reflexive, say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage, say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
 		if drive a is reflexive, say "[2drm of Hacks' Shack]you could've made Drive A AVIDER.";
 		if drive e is reflexive, say "[2drm of Hacks' Shack]you could've taken time to DERIVE how to improve Drive E.";

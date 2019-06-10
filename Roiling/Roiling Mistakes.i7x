@@ -435,6 +435,8 @@ understand "idks" as a mistake ("You'll need to figure stuff out with the [if di
 
 understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is enclosed by location of player]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid is enclosed by location of player or disk is enclosed by location of player.
 
+understand "repo" as a mistake ("Nobody else seems to own the oper rope or the skid.") when skid is in location of player.
+
 understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has dirty looking cola.
 
 understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is in location of player.
@@ -735,6 +737,12 @@ book otters
 understand "dialect" as a mistake ("No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.") when location of player is ominous.
 
 chapter Minded Midden
+
+understand "id mend" and "mend id" as a mistake ("It's not that easy. Find what to mend.") when player is in Minded Midden and bleary barley is in Minded Midden.
+
+understand "dim end" and "end dim" as a mistake ("Okay, if you say so...[paragraph break][uurrgg]") when player is in Minded Midden and bleary barley is in Minded Midden.
+
+understand "dim den" as a mistake ("You remain outside in (relative) light.") when player is in Minded Midden and bleary barley is in Minded Midden.
 
 understand "end u" as a mistake ("No, end *U*![paragraph break][uurrgg]") when player is in Minded Midden and nude dune is in Minded Midden.
 
