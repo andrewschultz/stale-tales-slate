@@ -143,7 +143,7 @@ understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, 
 
 understand "apts" as a mistake ("Pat's is a local small business, not nameless, faceless real estate.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesa and armada is in Same Mesa.
+understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesa and armada is in Same Mesa.
 
 understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when WOE BOW BELL is not in Same Mesa and mrlp is routes.
 
@@ -167,7 +167,7 @@ understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You 
 
 understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesa and Gast is in location of player.
 
-understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is in location of player], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in Same Mesa.
+understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if THE BEAN is in location of player], except maybe under THE BEAN. Wait, not quite UNDER[end if].") when player is in Same Mesa.
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
@@ -180,7 +180,7 @@ understand "tardies" as a mistake ("You can't tell [Gast] off for being late.") 
 understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag][end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
 
 [def=under-generic]
-understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesa and the-b is in Same Mesa.
+understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesa and THE BEAN is in Same Mesa.
 
 chapter Cleric Circle
 
@@ -435,9 +435,9 @@ understand "idks" as a mistake ("You'll need to figure stuff out with the [if di
 
 understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is enclosed by location of player]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid is enclosed by location of player or disk is enclosed by location of player.
 
-understand "repo" as a mistake ("Nobody else seems to own the oper rope or the skid.") when skid is in location of player.
-
 understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has dirty looking cola.
+
+understand "repo" as a mistake ("Nobody else seems to own the oper rope or the skid.") when skid is in location of player.
 
 understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is in location of player.
 
@@ -738,13 +738,13 @@ understand "dialect" as a mistake ("No, a particular accent or odd word won't de
 
 chapter Minded Midden
 
-understand "id mend" and "mend id" as a mistake ("It's not that easy. Find what to mend.") when player is in Minded Midden and bleary barley is in Minded Midden.
+understand "dim den" as a mistake ("You remain outside in (relative) light.") when player is in Minded Midden and bleary barley is in Minded Midden.
 
 understand "dim end" and "end dim" as a mistake ("Okay, if you say so...[paragraph break][uurrgg]") when player is in Minded Midden and bleary barley is in Minded Midden.
 
-understand "dim den" as a mistake ("You remain outside in (relative) light.") when player is in Minded Midden and bleary barley is in Minded Midden.
-
 understand "end u" as a mistake ("No, end *U*![paragraph break][uurrgg]") when player is in Minded Midden and nude dune is in Minded Midden.
+
+understand "id mend" and "mend id" as a mistake ("It's not that easy. Find what to mend.") when player is in Minded Midden and bleary barley is in Minded Midden.
 
 understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into laziness.") when player is in Minded Midden and Ed Riley is in Minded Midden.
 

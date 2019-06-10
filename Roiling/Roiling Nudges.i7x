@@ -215,7 +215,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pipesoot"	683820011	--	pipe soot	--	"[horb-magic of pipe soot]."
 "armada"	176991499	--	drama armada	--	"[armad-unr]."
 "armad"	174803681	--	drama armada	--	"[armad-unr]."
-"bean"	217320340	--	the-b	--	"THE BEAN has too much gravitas to be just a bean."
+"bean"	217320340	--	THE BEAN	--	"THE BEAN has too much gravitas to be just a bean."
 "rude"	339264808	--	nuder	--	"That's not quite the book's whole title."
 "boko"	220057237	--	U NERD	--	"[horb-magic of U NERD]."
 "runedbook"	628229553	--	U NERD	--	"[horb-magic of U NERD]."

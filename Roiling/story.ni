@@ -1216,7 +1216,7 @@ carry out gotoing:
 	if mrlp is routes: [ROUTES]
 		if player is in Same Mesa:
 			if Gast is in Same Mesa, say "You can't run from [Gast]!" instead;
-			if the-b is in Same Mesa, say "You can't go anywhere with the bean and the crowd around!" instead;
+			if THE BEAN is in Same Mesa, say "You can't go anywhere with the bean and the crowd around!" instead;
 			if MORF FORM is in Same Mesa, say "The MORF-FORM is too big to ignore or walk out on." instead;
 	if mrlp is troves: [TROVES]
 		say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead;
@@ -1373,9 +1373,8 @@ persuasion rule for asking scripture picturers to try doing something:
 	say "If they could speak, they'd probably tell you you need to look inside yourself, anyway.";
 	persuasion fails;
 
-persuasion rule for asking the-b to try doing something:
-	if the player's command includes "beneath":
-		try fliptoing the-b instead;
+persuasion rule for asking THE BEAN to try doing something:
+	if the player's command includes "beneath", try fliptoing THE BEAN instead;
 	say "It's not going to move itself.";
 	persuasion fails;
 
@@ -4335,8 +4334,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is darkness;
 				continue the action;
 		if player is in Same Mesa:
-			if the-b is in Same Mesa:
-				now noun is the-b;
+			if THE BEAN is in Same Mesa:
+				now noun is THE BEAN;
 				continue the action;
 			if MORF FORM is in Same Mesa:
 				now noun is MORF FORM;
@@ -5157,7 +5156,7 @@ carry out routes-hinting:
 		if player is in Same Mesa, try objhinting MORF FORM instead;
 		all-say "[if spoilit is true]The spoon points[else]You should go[end if] outside to the commotion.";
 		now spoilit is false instead;
-	if the-b is in Same Mesa and Harms Marsh is unvisited, try objhinting the-b instead;	[end global stuff]
+	if THE BEAN is in Same Mesa and Harms Marsh is unvisited, try objhinting THE BEAN instead;	[end global stuff]
 	if location of player is Same Mesa:
 		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		if sit a nag is reflexive, try objhinting sit a nag instead;
@@ -6147,7 +6146,7 @@ Elmo	"[if rifle is visible]Elmo kind of has the upper hand here[else]No, he's he
 drama armada	"That'd be a silly way to die." [START routes]
 Brother Horbert	"Yorpwald's already got a St. Lip-Split."
 scripture picturers	"A shameful attempt at vandalism."
-the-b	"It's like a dense metal or something. It's more likely it would make something else crack."
+THE BEAN	"It's like a dense metal or something. It's more likely it would make something else crack."
 Gast	"You don't have a weapon big enough to take [Gast]. One won't appear in your super purse. Anyway, [he-she]'s not evil, just whiny."
 Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering." [START troves]
 Leo	"[dont-hit of Leo]" [START Presto]
@@ -6263,7 +6262,7 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is stair:
 		if player is in Farming Framing, move player to Largely All-Grey Gallery instead;
 		move player to study instead;
-	if noun is the-b, say "THE BEAN is too slippery and round." instead; [strt routes]
+	if noun is THE BEAN, say "THE BEAN is too slippery and round." instead; [strt routes]
 	if noun is godlings' lodgings, say "Your thought and efforts are what may lead you to the top, not a physical feat." instead; [start troves]
 	if noun is mount um-not, say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead; [start presto]
 	if noun is deil's slide, say "Oh dear. It's more like you'd fall down Deil's Slide instead. Semantics aside, it's a bad idea." instead; [end PRESTO]
@@ -6401,7 +6400,7 @@ this is the push-pull-specifics rule:
 	if noun is tables, say "They're not that kind of tables. They're tables drawn on the wall." instead;
 	if noun is skid, say "You need to specify a direction to push or pull the skid." instead;
 	if noun is slider, twiddle-slider instead;
-	if noun is the-b, say "The drama armada joins in to move the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order." instead;
+	if noun is THE BEAN, say "The drama armada joins in to move the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order." instead;
 	if noun is the yak, say "The yak groans lazily." instead;
 	if noun is raft, say "It would crash into a boat if you tried to cross the standard way." instead;
 	if noun is templar ramplet, say "The templar ramplet does not budge. You need some other jarring action." instead;
@@ -6654,7 +6653,7 @@ check listening:
 	if player is in Same Mesa: [routes]
 		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
 		if Gast is in Same Mesa, say "Those [i]tirades[r] from [Gast]. [if side art is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if WOE BOW BELL is reflexive]Though the ominous WOE BOW BELL has you more distracted now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
-		if the-b is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
+		if THE BEAN is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		say "'Mama sees me as...' Irrelevant stuff." instead;
 	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
 	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
@@ -10569,7 +10568,7 @@ Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
 		it-him-her Gast;
-	else if the-b is not in Same Mesa:
+	else if THE BEAN is not in Same Mesa:
 		set the pronoun it to sit a nag;
 	continue the action;
 
@@ -10591,7 +10590,7 @@ check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 				now in-try is true;
 				say "You just can't make it through to the Cleric Circle. Err, well, maybe THROUGH isn't right. Something blocks you--you seemed a bit too glib about getting in, and they're not sure you're on their side[if Adobe Abode is visited or deli is visited]--note, for where you already visited, you need to use [aop][end if]." instead;
 			move player to Cleric Circle instead;
-		if noun is down and the-b is visible, say "Well, not quite DOWN..." instead;
+		if noun is down and THE BEAN is in location of player, say "Well, not quite DOWN..." instead;
 		if noun is up or noun is down, say "That won't work right now." instead;
 		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
 	else:
@@ -10888,17 +10887,15 @@ a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of MORF
 
 chapter THE BEAN
 
-the-b is a privately-named vanishing thing. printed name of the-b is "THE BEAN". "Oh, great. A bean landed on the Same Mesa. It's utterly enormous and forbidding. [i]The bean[r] has filled a drama armada surrounding it with b...unspeakable fear.". description of the-b is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.". the-b is fixed in place.
+There is a vanishing thing called THE BEAN. "Oh, great. A bean landed on the Same Mesa. It's utterly enormous and forbidding. [i]The bean[r] has filled a drama armada surrounding it with b...unspeakable fear.". description of THE BEAN is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.". THE BEAN is fixed in place.
 
-check taking the-b:	say "You can't move it. Maybe you can find a way to get inside or under--wait, no, those have been done here." instead;
+check taking THE BEAN:	say "You can't move it. Maybe you can find a way to get inside or under--wait, no, those have been done here." instead;
 
-check entering the-b: say "It doesn't appear cracked." instead;
+check entering THE BEAN: say "It doesn't appear cracked." instead;
 
-a-text of the-b is "RYRYYRR". b-text of the-b is "RYRYYRR". parse-text of the-b is "x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]x".
+a-text of THE BEAN is "RYRYYRR". b-text of THE BEAN is "RYRYYRR". parse-text of THE BEAN is "x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]x".
 
-understand "bean" as the-b.
-
-check going when the-b is in Same Mesa and player is in Same Mesa:
+check going when THE BEAN is in Same Mesa and player is in Same Mesa:
 	if noun is down, say "Maybe there is something below, or something. But you can't prove it." instead;
 	say "The drama armada won't let you go anywhere with the bean present." instead;
 
