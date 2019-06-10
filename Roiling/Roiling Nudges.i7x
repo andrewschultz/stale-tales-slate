@@ -76,9 +76,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle is moot] that needed changing[end if]."
 "cavern"	410395643	Carven Cavern	--	--	"[locname]." [start Carven Cavern]
 "terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
-"act"	124303421	myrm	--	--	"[curtain-block]."
-"ruin"	304329964	myrm	--	--	"[curtain-block]."
-"curtain"	428633385	myrm	--	--	"[curtain-block]."
+"act"	124303421	--	act ruin curtain	--	"[curtain-block]."
+"ruin"	304329964	--	act ruin curtain	--	"[curtain-block]."
+"curtain"	428633385	--	act ruin curtain	--	"[curtain-block]."
 "manse"	359250554	--	--	degen-true rule	"[not-the-reg]." [end-manse]
 
 table of stores nudges
@@ -113,7 +113,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "nouned"	466108598	--	engravings	--	"[engs]."
 "route"	495698314	--	course source	--	"[just-in-routes]."
 "course"	507867847	--	course source	--	"[just-in-routes]."
-"courses"	604141813	myrm	--	--	"[just-in-routes]."
+"courses"	604141813	--	course source	--	"[just-in-routes]."
 "tastee"	560294038	--	Tastee Estate	--	"[tastee-there]."
 "tasty"	427041072	--	Tastee Estate	--	"[tastee-there]."
 "turret"	609779558	truster turrets	--	--	"[turrets-ok]."
@@ -162,7 +162,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reagent"	547741067	--	--	has-reag rule	"[fol-reag]."
 "reagents"	644015033	--	--	has-reag rule	"[fol-reag]."
 "giatn"	251797892	--	Gast	--	"[Gast] is too old and set in [his-her] ways. You may just need to listen to [him-her] from [if nuder is in Same Mesa]one more angle[else]several different angles[end if]."
-"tirade"	384449683	--	Gast	--	"[if sode art is reflexive]There's more than one tirade[else]You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal[end if]."
+"tirade"	384449683	--	Gast	--	"[if side art is reflexive]There's more than one tirade[else]You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal[end if]."
 "bench"	271420406	--	sit a nag	--	"The [sit a nag] is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
 "die"	193828044	Same Mesa	--	--	"[die-sin]."
 "sin"	210174320	Same Mesa	--	--	"[die-sin]."
@@ -521,7 +521,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reward"	429605395	--	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
 "bubble"	341982470	--	bubble wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	--	bubble wrap	--	"It's just wrap, really."
-"dent"	320852724	--	aunt tuna	--	"[if dent is moot]You already fixed the dent. It's gone[else]That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it[end if]."
 "tuna"	279311151	--	tuna	--	"She is a bit fussy, but she is more than okay as she is."
 "eat"	233103945	--	tea tray	--	"Quit playing with your food, already."
 "tray"	312980891	--	tea tray	--	"[just-tea]."

@@ -88,7 +88,7 @@ understand "gots er" as a mistake ("And what would you do with Store G, when you
 
 understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is unexamined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is in location of player.
 
-understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in trips strip]Store U[else]the course source[end if], but how to get there?") when Store U is in location of player or course source is in location of player.
+understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in strip of profits]Store U[else]the course source[end if], but how to get there?") when Store U is in location of player or course source is in location of player.
 
 understand "pteros" as a mistake ("You don't need to face any predators. Aigh!") when player is in Strip of Profits and store p is in Strip of Profits.
 
@@ -145,7 +145,7 @@ understand "apts" as a mistake ("Pat's is a local small business, not nameless, 
 
 understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesa and armada is in Same Mesa.
 
-understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when below-is-wrong and mrlp is routes.
+understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when WOE BOW BELL is not in Same Mesa and mrlp is routes.
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when Gast has rude 'n nuder or player has u nerd or WOE BOW BELL is in location of player.
 
