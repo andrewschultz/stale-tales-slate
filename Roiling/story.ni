@@ -6428,27 +6428,33 @@ check jumping:
 
 chapter push and pull
 
+push-pull-warn is a truth state that varies.
+
+this is the push-pull-specifics rule:
+	if push-pull-warn is false:
+		say "You don't need to push anything unless you need to move it somewhere else.";
+		now push-pull-warn is true;
+	if noun is tables, say "They're not that kind of tables. They're tables drawn on the wall." instead;
+	if noun is skid, say "You need to specify a direction to push or pull the skid." instead;
+	if noun is slider, twiddle-slider instead;
+	if noun is the-b, say "The drama armada joins in to move the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order." instead;
+	if noun is the yak, say "The yak groans lazily." instead;
+	if noun is raft, say "It would crash into a boat if you tried to cross the standard way." instead;
+	if noun is templar ramplet, say "The templar ramplet does not budge. You need some other jarring action." instead;
+
 check pushing (this is the new can't push rule) :
+	abide by the push-pull-specifics rule for the noun;
 	if noun is t-key, say "[if noun is reflexive]You don't know what it does[else]You'll push it once you're ready to program[end if]." instead;
 	if noun is caps lock:
 		if noun is not part of keyboard, say "On its own, you can't push a caps lock." instead;
 		say "You'll push it once you're ready to program." instead;
 	if noun is a person, say "Pushing or pulling live things is probably even less effective than attacking." instead;
-	if noun is skid, say "You need to specify a direction to push or pull the skid." instead;
-	if noun is fixed in place or noun is scenery, say "You give a few hups but fail to push." instead;
-
-report pushing:
-	say "You give a few hups but fail to push.";
-	the rule succeeds;
+	say "You give a few hups but fail to push." instead;
 
 check pulling (this is the new can't pull rule):
+	abide by the push-pull-specifics rule for the noun;
 	if noun is a person, say "You don't need to corral people." instead;
-	if noun is skid, say "You need to specify a direction to pull the skid." instead;
-	say "Ullp! You can't pull... but you don't need to..." instead;
-
-report pulling:
-	say "Ullp! You can't pull...";
-	the rule succeeds;
+	say "Ullp! You can't pull..." instead;
 
 chapter singing
 
@@ -6459,35 +6465,21 @@ i-sung is a truth state that varies.
 lyre-dest is a truth state that varies.
 
 check singing:
-	if player is in hops shop:
-		try fliptoing gins sign instead;
-	if mrlp is oyster and gins sign is moot:
-		say "You remember your last sang-snag." instead;
-	if player is in Peek Keep:
-		say "No, this is a quieter place than the Posh Hops Shop." instead;
-	if Ed Riley is visible:
+	if player is in Same Mesa, say "You look at the scripture picturers for clues, and swirling in the design you see [dssd]. Hmm. You don't know any songs like that." instead; [routes]
+	if player is in Cleric Circle, say "You don't know any appropriate songs, here." instead;
+	if player is in Drain Nadir and I'd Cede is in Drain Nadir, say "You can't quite mimic Eddie C, but maybe you could tweak his singer-ness. You can't move to artists['] straits with your job. You're more suing than 'I sung' now." instead; [troves]
+	if mrlp is troves, say "No hippy trippy blues song about being poor here, if you please. And you will--you're not in power, yet." instead;
+	if player is in hops shop, try fliptoing gins sign instead; [oyster]
+	if clam is visible, say "If you could sing, it might settle the clam down. But you can't, so it doesn't." instead;
+	if mrlp is oyster and gins sign is moot, say "You remember your last sang-snag." instead;
+	if the-hostile is visible, say "That won't make [relig-mf] any less hostile." instead; [towers]
+	if player is in Outer Route, say "[one of]'Oh sappy! So happy!' The birds near the Campiest Campsite go chürp chürp chëëp chëëp[or]Best not encourage cheeps-speech. The dirt itself might burst into song[stopping]!" instead;
+	if Ed Riley is visible: [otters]
 		if lyre-dest is false:
 			now lyre-dest is true;
 			say "Unexpectedly, Ed pulls out a lyre from somewhere and yells 'LYRE! DIE!' like he's in some medieval heavy metal band or something. He's really seeing red as he stomps it to dust." instead;
-		say "You don't want to push your luck. His yelling LYRE DIE and seeing red kind of weirded you out." instead;
-	if clam is visible:
-		say "If you could sing, it might settle the clam down. But you can't, so it doesn't." instead;
-	if the-hostile is visible:
-		say "That won't make [relig-mf] any less hostile." instead;
-	if gins sign is visible:
-		if cheat-on is true and gins sign is escanned:
-			say "Knowing what you know, singing shouldn't work. You sing a song of frustration when you realize you'd need to GISN with what the settler says, here." instead;
-		say "You sing the nicest song you remember about goodness and virtue. After sickening yourself into the bargain with no transport arriving, you notice the sign may've been vandalized, and plus sing/sign was a bit too easy." instead;
-	if location of player is Upscale Capsule:
-		say "You can't quite mimic the singer, but maybe you could tweak his singer-ness. You can't move to artists['] straits with your job. You're more suing than 'I sung' now." instead;
-	if mrlp is troves:
-		say "No hippy trippy blues song about being poor here, if you please. And you will--you're not in power, yet." instead;
-	if player is in Outer Route:
-		say "[one of]'Oh sappy! So happy!' The birds go chürp chürp chëëp chëëp[or]Best not encourage cheeps-speech. The dirt itself might burst into song[stopping]!" instead;
-	if player is in Same Mesa:
-		say "You look at the scripture picturers for clues, and swirling in the design you see [dssd]. Hmm. You don't know any songs like that." instead;
-	if player is in Cleric Circle:
-		say "You don't know any appropriate songs, here." instead;
+		say "You don't want to push your luck. Ed Riley yelling LYRE DIE and seeing red kind of weirded you out." instead;
+	if player is in Peek Keep, say "No, this is a quieter place than the Posh Hops Shop." instead; [demo dome]
 	say "[randbla][line break]" instead;
 
 chapter kissing
@@ -6497,9 +6489,7 @@ does the player mean kissing the skis: it is very likely.
 
 [!! kissing a non-person]
 
-rule for supplying a missing noun when kissing:
-	if skis are visible:
-		now noun is skis;
+rule for supplying a missing noun when kissing: if skis are visible, now noun is skis;
 
 the block kissing rule is not listed in any rulebook.
 
@@ -6507,8 +6497,8 @@ understand the command "kiss" as something new.
 
 Understand "kiss [thing]" as kissing. [needed to kiss skis]
 
-before kissing:
-	if player carries the noun, say "Moisten no items." instead;
+check kissing:
+	if player carries the noun, say "Moisten no items." instead; [general]
 	if noun is the player, say "You feel as good-looking as ever after kissing yourself." instead;
 	if noun is skis, try fliptoing skis instead; [start OYSTER]
 	if noun is haunter, say "The ghost can't respond to affection." instead;
@@ -7888,9 +7878,6 @@ report taking pedanto-notepad:
 		now sad ads are in Dusty Study;
 		say "[line break]Taking the pedanto-notepad uncovered some sad ads on the chair.";
 
-instead of pushing or pulling or searching or opening or closing bookshelf:
-	say "There's no secret passage behind it. And if there were, you couldn't move it. It's got about [book-est] books, after all."
-
 estim is a number that varies.
 
 to say book-est:
@@ -7907,11 +7894,15 @@ to say book-est:
 		continue the action;
 	say "[estim in words] hundred or so";
 
-the bookshelf is amusing scenery in Dusty Study. "[one of]It's sturdy enough to withstand any magic transformations. It's far too heavy to move to make a secret passage, what with [book-est] sloven novels (writing and appearance) you just got SENT, somehow, from trailery to literary discouraging infectious fiction use--the titles blur so fast through your mind, the oeuvres overuse--well, YOU know. Story tyros TRY so.[paragraph break]On glancing at some of the more ridiculous pen names, you also remember how FameHints NameShift and Smokiner Monikers were both allegedly a subsidiary of Elvira's MoneyCo. Nothing proven, and the journalist...well, they haven't written anything lately.[paragraph break]One book you won't remember next move is [or]Another book you won't read. [stopping][i][randbla][r]."
+the bookshelf is amusing boringscen in Dusty Study. description of bookshelf is "[one of]It's sturdy enough to withstand any magic transformations. It's far too heavy to move to make a secret passage, what with [book-est] sloven novels (writing and appearance) you just got SENT, somehow, from trailery to literary discouraging infectious fiction use--the titles blur so fast through your mind, the oeuvres overuse--well, YOU know. Story tyros TRY so.[paragraph break]On glancing at some of the more ridiculous pen names, you also remember how FameHints NameShift and Smokiner Monikers were both allegedly a subsidiary of Elvira's MoneyCo. Nothing proven, and the journalist...well, they haven't written anything lately.[paragraph break]One book you won't remember next move is [or]Another book you won't read. [stopping][i][randbla][r].". bore-check of bookshelf is bore-bookshelf rule. bore-text of bookshelf is "There's no secret passage behind it. And if there were, you couldn't move it. It's got about [book-est] books, after all.".
+
+this is the bore-bookshelf rule:
+	if current action is taking:
+		say "[if Gunter is moot]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if].";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 understand "shelf" and "books" as bookshelf.
-
-check taking bookshelf: say "[if Gunter is moot]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if]." instead;
 
 check exiting in Dusty Study: try going outside instead;
 
@@ -7926,15 +7917,11 @@ every turn when Dusty Study was not lit and lamp is off-stage (this is the clue 
 		say "Hm. You didn't need to change that palm to a lamp before, but it might be a good time, now." instead;
 	say "[one of]Usually, in situations like this, you go in for a four-letter word. But an obscene one wouldn't help much here.[or]No use to blub [']til you produce a lit bulb. Or, better, something that contains one.[or]You need to get light. What's a good plam (sic)?[or]You have ampl (sic) power to change the lamp into something else, you know.[or]You remember changing a toga into a goat before you ever entered Yorpwald. Perhaps the same sort of thing would work here.[or]You remember how a school cafeteria cashier named Pam L. used to light up everyone's day. Well, halfway.[or]There are only 20 possibilities for what the lamp can change into, minus the clues I've already given.[or]Getting lampshady about your special power has made me feel shady.[or]Oh, for a Light Activating Movable Paraphernalia![stopping]"
 
-before going nowhere in Dusty Study:
-	if Dusty Study is not lit:
-		say "You can't really go much of anywhere. You remember secret passages in this study, but you'd probably stumble into that [i]palm[r] first in the dark." instead;
-	if Gunter is off-stage:
-		say "[if stuff-found is 3]You shouldn't just run away when someone is knocking[else]You're just in the mood for quiet time, now, just looking around[end if]." instead;
-	if noun is down:
-		say "[if Gunter is off-stage]Yeah...you do have somewhere to hide., but no full excuse, yet[else]There's a room below. What's it called, again? Boy[end if]." instead;
-	if noun is outside:
-		say "You don't want to go outside, and you don't want to walk around where you might be seen[if Gunter is moot], especially after that chat with Gunter[end if]." instead;
+check going nowhere in Dusty Study:
+	if Dusty Study is not lit, say "You can't really go much of anywhere. You remember secret passages in this study, but you'd probably stumble into that [i]palm[r] first in the dark." instead;
+	if Gunter is off-stage, say "[if stuff-found is 3]You shouldn't just run away when someone is knocking[else]You're just in the mood for quiet time, now, just looking around[end if]." instead;
+	if noun is down, say "[if Gunter is off-stage]Yeah...you do have somewhere to hide., but no full excuse, yet[else]There's a room below. What's it called, again? Boy[end if]." instead;
+	if noun is outside, say "You don't want to go outside, and you don't want to walk around where you might be seen[if Gunter is moot], especially after that chat with Gunter[end if]." instead;
 	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are visible]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is visible]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
 
 Rule for printing the description of a dark room (this is the Dusty Study rule):
@@ -8237,9 +8224,6 @@ chapter tables
 The tables are plural-named vanishing scenery in Dusty Study. understand "table" as tables.
 
 check taking tables: say "The tables are written on the wall." instead;
-
-check pushing tables: say "They're not that kind of tables. They're tables drawn on the wall." instead;
-check pulling tables: say "They're not that kind of tables. They're tables drawn on the wall." instead;
 
 table-warn is a truth state that varies.
 
@@ -9308,17 +9292,12 @@ equals-pushed is a truth state that varies.
 check pushing the equals sign:
 	say "You push the equals sign, and it [if squee is false]lights up[else]darkens[end if].";
 	now equals-pushed is true;
-	if squee is true:
-		now squee is false;
-	otherwise:
-		now squee is true;
+	now squee is whether or not squee is false;
 	the rule succeeds;
 
-instead of switching on the equals sign:
-	try pushing the equals sign instead;
+check switching on the equals sign: try pushing the equals sign instead;
 
-instead of switching off the equals sign:
-	try pushing the equals sign instead;
+check switching off the equals sign: try pushing the equals sign instead;
 
 set-sw is a truth state that varies.
 
@@ -9516,10 +9495,6 @@ to toggle-slider-note:
 after entering balancer barnacle:
 	say "You hear a click from the slider[if slider is switched on] as it switches off[else] and you notice it's jammed[end if][if cur-score of oyster is 0]. Hopefully thinking will not be at a premium here[else]. But you know action counts more here[end if].";
 	continue the action;
-
-check pushing slider: twiddle-slider instead;
-
-check pulling slider: twiddle-slider instead;
 
 to twiddle-slider:
 	if slider is switched on:
@@ -10960,10 +10935,6 @@ a-text of the-b is "RYRYYRR". b-text of the-b is "RYRYYRR". parse-text of the-b 
 
 understand "bean" as the-b.
 
-check pushing the-b: say "The drama armada joins in to push the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order." instead;
-
-check pulling the-b: say "The drama armada joins in to push the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order." instead;
-
 check going when the-b is in Same Mesa and player is in Same Mesa:
 	if noun is down, say "Maybe there is something below, or something. But you can't prove it." instead;
 	say "The drama armada won't let you go anywhere with the bean present." instead;
@@ -12352,8 +12323,6 @@ check putting it on (this is the yak-skid rule):
 
 the yak-skid rule is listed before the can't put what's not held rule in the check putting it on rulebook;
 
-check pushing yak: say "The yak groans lazily." instead;
-
 check pushing yak to:
 	if yak is on skid, try pushing skid to second noun instead;
 	say "The yak groans lazily. Maybe if it were on something you could push, that would work." instead;
@@ -12664,19 +12633,13 @@ after looking in Austerer Treasure:
 	if ye hoop is in Austerer Treasure, set the pronoun it to ye hoop;
 	continue the action;
 
-Ye Hoop is vanishing scenery in Austerer Treasure. Ye Hoop is proper-named. "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is."
+Ye Hoop is proper-named vanishing boringscen in Austerer Treasure. description of Ye Hoop is "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is."
 
-check taking Ye Hoop:
-	say "It's too high up to grab. Especially with your possessions weighing you down. You may need to find the right way to say you don't need them for a moment." instead;
-
-instead of pulling Ye Hoop:
-	try taking ye hoop instead;
-
-instead of pushing Ye Hoop:
-	try taking ye hoop instead;
-
-instead of attacking Ye Hoop:
-	try taking ye hoop instead;
+this is the bore-hoop rule:
+	if current action is jumping or current action is pushing or current action is pulling or current action is taking:
+		say "It's too high up to grab. Especially with your possessions weighing you down. You may need to find the right way to say you don't need them for a moment.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 a-text of Ye Hoop is "[if ye-rec]RRYYYO[else]RYYR[end if]". b-text of Ye Hoop is "[if ye-rec]RRYGYO[else]RGGR[end if]". parse-text of ye hoop is "[if ye-rec]x[sp]x[sp]-[sp]o[sp]-[sp]y[else]POOH[end if]". ye hoop is cheat-spoilable.
 
@@ -12708,8 +12671,7 @@ to decide whether ye-rec:
 		decide yes;
 	decide no;
 
-check going outside in Austerer Treasure:
-	try going east instead.
+check going outside in Austerer Treasure: try going east instead;
 
 phooeyed is a truth state that varies.
 
@@ -13480,8 +13442,7 @@ check pushing small blue button:
 
 understand "code/program" as screen when rebooted is true and player is in Hacks' Shack.
 
-check pushing small orange button:
-	say "It's too bent to push. Seems like the blue button [if rebooted is true]was[else]is[end] more worth pushing." instead;
+check pushing small orange button: say "It's too bent to push. Seems like the blue button [if rebooted is true]was[else]is[end] more worth pushing." instead;
 
 check taking (this is the can't remove computer parts from labs slab rule):
 	if noun is in Drive A, say "The disk is where it should be." instead;
@@ -13985,8 +13946,7 @@ this is the bore-pits rule:
 
 the gins sign is reflexive scenery in Posh Hops Shop. "It advertises various gins and intox-toxin-tonix--'Thirsty? Try this,' though someone scribbled 'Embrace Beer, Mac!' at the bottom. It advises against sharing garnish as well as making your own music."
 
-instead of taking gins sign:
-	say "That'd load you down as you tried to get out.";
+check taking gins sign:	say "That'd load you down as you tried to get out." instead;
 
 a-text of gins sign is "RYRR". b-text of gins sign is "?G?R". parse-text of gins sign is "x[sp]i[sp]x[sp]g". sign is parse-spoilable.
 
@@ -14040,8 +14000,7 @@ this is the bore-perma-amper rule:
 
 the song buttons are part of the jukebox. description is "They're number and letter, though you're not familiar with the song, so no one button seems worse than any other. You hope."
 
-check pushing the song buttons:
-	say "They're probably all pretty terrible. You need to focus on exactly what you want to do, to muck with the tunes." instead;
+check pushing the song buttons: say "They're probably all pretty terrible. You need to focus on exactly what you want to do, to muck with the tunes." instead;
 
 does the player mean doing something with song buttons when player is in Posh Hops Shop: it is likely.
 
@@ -14598,10 +14557,6 @@ a-text of frat raft is "RYRR". b-text of frat raft is "??RP". parse-text of frat
 the frat raft is an enterable reflexive supporter. the frat raft is fixed in place.
 
 check taking raft: say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically.";
-
-check pushing raft: say "It would crash into a boat if you tried to cross the standard way." instead;
-
-check pulling raft: say "It would crash into a boat if you tried to cross the standard way." instead;
 
 check going when player is in raft: say "The raft is a bit clunky. You can't even move the oars." instead;
 
@@ -15425,8 +15380,6 @@ carry out trampleing:
 	the rule succeeds.
 
 check entering templar ramplet: say "You need to enter the right way." instead;
-
-check pushing templar ramplet: say "The templar ramplet does not budge." instead;
 
 book bubble wrap and drawer
 
@@ -19174,13 +19127,16 @@ instead of taking b-b:
 
 chapter nude dune
 
-the nude dune is useless scenery. "It is impressive and blocks your way east."
+the nude dune is useless boringscen. description of nude dune is "It is impressive and blocks your way east.". bore-check of nude dune is bore-dune rule. bore-text is "The dune is just there, blocking your way east. And you don't need to go east.".
 
-instead of doing something with nude dune:
-	if action is procedural, continue the action;
-	if current action is entering, say "That would END U. See what I did there?" instead;
-	if current action is climbing, say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too." instead;
-	say "The dune is just there, blocking your way east. And you don't need to go east."
+this is the bore-dune rule:
+	if current action is entering:
+		say "That would END U. See what I did there?";
+		the rule succeeds;
+	if current action is climbing:
+		say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too.";
+		the rule succeeds;
+	abide by the bore-exam rule;
 
 chapter Ed Riley
 
