@@ -3599,48 +3599,24 @@ definition: a thing (called xx) is patchable:
 
 chapter entering portals
 
-towers-warn is a truth state that varies.
+the first portal entry rule is lissted first in the check entering rules.
 
-oyster-warn is a truth state that varies.
-
-check entering a portal:
+check entering a portal (this is the first portal entry rule):
 	let grn be go-region of noun;
 	if grn is solved: [this shouldn't happen, but yeah.]
 		if grn is otters, say "Elvira is defeated. You don't need to go back." instead;
 		say "You've already solved that area." instead;
-	if noun is truster turrets:
-		if number of kayoed regions < 5:
-			if towers-warn is false:
-				now towers-warn is true;
-				if patcher is visible:
-					say "The towers are imposing enough that you look back at the patcher and feel relieved you can just RETRY and zap your way through in case you get stuck.";
-				else:
-					say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of visible portals is 1]stores[else if number of visible flippable stores is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the oyster[end if]. Proceed anyway?";
-					unless the player yes-consents:
-						say "You decide to look around a bit more." instead;
-	if noun is balancer barnacle:
-		if number of solved regions < 2:
-			if oyster-warn is false:
-				now oyster-warn is true;
-				if patcher is visible:
-					say "The oyster is wide enough that you look back at the patcher and feel relieved you can just RETRY and zap your way through in case you run out of gas.";
-				else:
-					say "The oyster looks very wide but not tall--it's quite possible there's a ton to do. It's not particularly magical or scary--not as much as [if store w is visible]store W[else]the towers[end if], but you may want to warm up your skills somewhere else first. Proceed anyway?";
-					unless the player yes-consents:
-						say "You decide to look around a bit more." instead;
 	abide by entry-rule of noun;
-	if noun is Throes Hoster, pad-rec "guru";
 	let try-recover be false;
 	if last-loc of grn is visited:
 		now try-recover is true;
 	else:
-		d "Can't try recovering items yet.";
+		d "First visit to [grn]. Can't try recovering items yet.";
 		add-errs grn;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "REPO!";
 		move player to last-loc of grn, without printing a room description;
-		if can-see-map:
-			draw-towers-map;
+		if can-see-map, draw-towers-map;
 		reposition-guardians;
 		try looking;
 	else:
@@ -3650,10 +3626,8 @@ check entering a portal:
 
 to add-errs (reg - a region):
 	repeat through regtab of reg:
-		if there is a this-room entry and this-room entry is not a room:
-			d "[this-room entry] wrongly listed as a room in [reg], [this-cmd entry]f.";
-		if there is a this-item entry and this-item entry is a room:
-			d "[this-item entry] wrongly listed as a room in [reg], [this-cmd entry].";
+		if there is a this-room entry and this-room entry is not a room, d "[this-room entry] wrongly listed as a room in [reg], [this-cmd entry]f.";
+		if there is a this-item entry and this-item entry is a room, d "[this-item entry] wrongly listed as a room in [reg], [this-cmd entry].";
 		if there is no this-reg entry or this-reg entry is a region:
 			if there is no hashval entry or hashval entry is 0:
 				let XYZ be the hash of this-cmd entry;
@@ -3661,7 +3635,7 @@ to add-errs (reg - a region):
 				d "Making hashval entry [XYZ] for [this-cmd entry].[line break]";
 			otherwise:
 				continue the action;
-				d "[this-cmd entry] has a hashval entry of [hashval entry].[line break]";
+				[d "[this-cmd entry] has a hashval entry of [hashval entry].[line break]";]
 
 to recover-items:
 	d "ITEMS: [item-list of mrlp]";
@@ -10110,6 +10084,7 @@ the Throes Hoster is a not lumpable not maingame portal. "That stupid throes hos
 this is the enter-others rule:
 	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
 	say "After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
+	if arugula is not moot, pad-rec "guru";
 
 understand "mouth" as Throes Hoster.
 
@@ -10329,7 +10304,16 @@ section truster turrets
 
 the truster turrets are a plural-named portal. diffic of truster turrets is 7. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can ENTER. But their size indicates a hefty quest ahead."
 
+towers-warn is a truth state that varies.
+
 this is the enter-towers rule:
+	if number of kayoed regions < 5 and towers-warn is false:
+		now towers-warn is true;
+		if patcher is in location of player:
+			say "The turrets are imposing enough that you look back at the patcher and feel relieved you can just RETRY and zap your way through in case you get stuck.";
+		else:
+			say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of portals in strip of profits is 1]stores[else if number of stores in strip of profits is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the balancer barnacle[end if]. Proceed anyway?";
+			unless the player yes-consents, say "You decide to look around a bit more." instead;
 	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 
 chapter store x
@@ -10352,7 +10336,16 @@ the balancer barnacle is a privately-named portal. diffic of balancer barnacle i
 
 check eating barnacle balancer: say "It is a balancer barnacle. Another would come along to eat you." instead;
 
+oyster-warn is a truth state that varies.
+
 this is the enter-oyster rule:
+	if number of solved regions < 2 and oyster-warn is false:
+		now oyster-warn is true;
+		if patcher is in location of player:
+			say "The oyster is wide enough that you look back at the patcher and feel relieved you can just RETRY and zap your way through in case you run out of gas.";
+		else:
+			say "The oyster looks very wide but not tall--it's quite possible there's a ton to do. It's not particularly magical or scary--not as much as [if store w is in location of player]store W[else if towers is not unsolved]the towers were[else]the truster turrets[end if], but you may want to warm up your skills somewhere else first. Proceed anyway?";
+			unless the player yes-consents, say "You decide to look around a bit more." instead;
 	say "[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 
 chapter store z
@@ -12191,18 +12184,14 @@ to shuffle-nowt-town:
 
 section hump
 
-the hump is vanishing scenery in Grey Gyre. "It doesn't look like it'd be too hard to get over, but as you walk over to inspect it, you feel a bit drained."
+the hump is vanishing boringscen in Grey Gyre. "It doesn't look like it'd be too hard to get over, but as you walk over to inspect it, you feel a bit drained.". bore-check rule of hump is bore-hump rule. bore-text is "the hump is surprisingly demotivational. You need some succinct way to blow off your laziness.".
 
-check taking hump:
-	say "You can take it if you believe in yourself and motivate yourself the right way!" instead;
+this is th bore-hump rule:
+	if current action is taking:
+		say "You can take it if you believe in yourself and motivate yourself the right way!";
+		the rule succeeds;
 
-check going west in Grey Gyre:
-	if hump is visible:
-		say "You try to be all 'I leap a pile' but can't get over the hump. Hmph." instead;
-
-The hump is fixed in place.
-
-[hump: "This is more a brain game than a brawn game. Perhaps a HMM or EHH might be more useful here. Or not."]
+check going west in Grey Gyre: if hump is in grey gyre, say "You try to be all 'I leap a pile' but can't get over the hump. Hmph." instead;
 
 chapter bleeping
 

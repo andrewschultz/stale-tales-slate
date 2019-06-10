@@ -323,7 +323,9 @@ understand "shoot [text] with [text]" as a mistake ("Just say what you want to s
 
 chapter Grey Gyre
 
-understand "balm" as a mistake ("Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.") when lamb is in location of player
+understand "hm up" and "up hm" as a mistake ("You don't need to levitate the hump. You need a way to jump over it.") when hump is in grey gyre and player is in Grey Gyre.
+
+understand "balm" as a mistake ("Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.") when lamb is in location of player.
 
 understand "bleep" as a mistake ("I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.") when plebe is not in location of player and mrlp is presto
 
