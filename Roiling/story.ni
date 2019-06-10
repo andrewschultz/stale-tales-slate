@@ -4201,35 +4201,23 @@ understand the command "exits" as something new.
 understand "exits" as exitsing.
 
 carry out exitsing:
-	if mrlp is troves:
-		say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world." instead;
+	if player is in strip of profits, say "There are no directional exits here, but you [if number of visible portals is 0]may want to try opening up a store[else if number of visible portals is 1]can go IN to the store-portal you made[else]have multiple ex-stores you can enter[end if]." instead; [start stores]
 	if mrlp is routes:
 		if player is in Same Mesa:
 			if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
 			if MORF FORM is not off-stage, say "You probably don't want to go anywhere with that [if MORF FORM is in Same Mesa]thing[else]bean[end if] around." instead;
 			say "There are plenty of ways to go, but they don't seem to lead anywhere. [if Cleric Circle is visited or Idle Deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
-		if player is in Idle Deli or player is in adobe or player is in Cleric Circle:
-			say "You can go back out." instead;
-		if mrlp is routes:
-			say "Looks like you will need to figure a way to go onward without directions. You've been doing well so far." instead;
-	if player is in Tenfold Teflon'd Den Loft:
-		say "You can go back outside, though you can also finish the job back here." instead;
-	if player is in end den:
-		say "You can go back outside to the Horned Hedron." instead;
-	if player is in Loftier Trefoil:
-		say "You probably aren't going anywhere until Rodney does, first." instead;
-	if player is in Minded Midden and b-b is in Minded Midden:
-		say "Maybe you'll see some exits if you get rid of the barley." instead;
-	if player is in rustic and compass is off-stage:
-		say "You've lost your bearings a bit, but maybe [if player has compass]the compass could help[else]if you got enough fruits, Curtis would help you[end if]." instead;
-	if player is in strip:
-		say "There are no directional exits here, but you [if number of visible portals is 0]may want to try opening up a store[else if number of visible portals is 1]can go IN to the store-portal you made[else]have multiple ex-stores you can enter[end if]." instead;
-	if number of viable directions is 0:
-		say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of visible enterable things > 0], and it looks like there's something to ENTER[end if].";
-	else if number of viable directions is 1:
-		say "You can try to go [list of viable directions].";
-	else:
-		say "There are [number of viable directions in words] viable exits[if mrlp is towers and number of visible guardians > 0], though not all are unblocked[end if]: [list of viable directions].";
+		if player is in Idle Deli or player is in adobe or player is in Cleric Circle, say "You can go back out." instead;
+		say "Looks like you will need to figure a way to go onward without directions. You've been doing well so far." instead;
+	if mrlp is troves, say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world." instead;
+	if player is in Tenfold Teflon'd Den Loft, say "You can go back outside, though you can also finish the job back here." instead; [start oyster]
+	if player is in end den, say "You can go back outside to the Horned Hedron." instead;
+	if player is in Loftier Trefoil, say "You probably aren't going anywhere until Rodney does, first." instead; [start towers]
+	if player is in Minded Midden and bleary barley is in Minded Midden, say "Maybe you'll see some exits if you get rid of the barley." instead; [start otters]
+	if player is in rustic and swell wells is unvisited, say "You've lost your bearings a bit, but maybe [if player has compass]the compass could help[else]if you got enough fruits, Curtis would help you[end if]." instead;
+	if number of viable directions is 0, say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of visible enterable things > 0], and it looks like there's something to ENTER[end if]." instead;
+	if number of viable directions is 1, say "The only way you seem to be able to go is [list of viable directions].";
+	say "There are [number of viable directions in words] viable exits[if mrlp is towers and number of visible guardians > 0], though not all are unblocked[end if]: [list of viable directions].";
 	the rule succeeds;
 
 chapter game-start
@@ -4277,7 +4265,7 @@ when play begins (this is the basic initialization rule):
 	now Nowt Town is mapped east of r10;
 
 definition: a room (called myrm) is ominous:
-	if myrm is Minded Midden and b-b is reflexive, no;
+	if myrm is Minded Midden and bleary barley is reflexive, no;
 	if myrm is in Otters:
 		if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
 		decide yes;
@@ -4435,8 +4423,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			continue the action;
 	else if mrlp is otters:
 		if player is in Minded Midden:
-			if b-b is reflexive:
-				now noun is b-b;
+			if bleary barley is reflexive:
+				now noun is bleary barley;
 				continue the action;
 			if ed riley is in Minded Midden:
 				now noun is ed riley;
@@ -4630,10 +4618,8 @@ check scaning location of the player (this is the location scan rule):
 		say "The air's full of eeks, which your settler picks up." instead;
 		try scaning eeks instead;
 	if location of player is plains:
-		if bogus-plains is reflexive:
-			say "[full-monty of bogus-plains]" instead;
-	if location of player is Minded Midden and b-b is reflexive: [start otters]
-		try scaning b-b instead;
+		if bogus-plains is reflexive, say "[full-monty of bogus-plains]" instead;
+	if location of player is Minded Midden and bleary barley is reflexive, try scaning bleary barley instead; [start otters]
 	if location of player is clangier: [start others]
 		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of Ammo Gang] on your settler." instead;
 	if location of player is Swell Wells:
@@ -4725,7 +4711,7 @@ melon	false	false	false	false	"Now this is weird. It looks like there should be 
 noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
 angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
 asset-hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
-b-b	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess."
+bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess."
 boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things."
 bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
 bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
@@ -5433,7 +5419,7 @@ to say current-mackiness:
 
 to decide which thing is otters-cur-item:
 	if player is in Minded Midden:
-		if b-b is reflexive, decide on b-b;
+		if bleary barley is reflexive, decide on bleary barley;
 		if Ed Riley is in Minded Midden, decide on Ed Riley;
 	if player is in Disowned Downside:
 		if Macks are in Disowned Downside, decide on Gretta;
@@ -6354,21 +6340,16 @@ check eating (this is the try to eat a hint tart rule) :
 				try inserting noun into toaster instead;
 			say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Danger Garden]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
 
-check eating b-b:
-	say "[if b-b is reflexed]Bleah. That'd go down terribly[else]Don't think gluttonously[end if]." instead;
+check eating bleary barley: say "That'd go down terribly." instead;
 
 check eating curst crust:
-	if swears < 1:
-		say "[bug-report]" instead;
-	if mrlp is stores:
-		say "You should probably eat it when you're beyond the, er, spot." instead;
-	if mrlp is not presto:
-		say "The crust fell from the remains of store P. Perhaps it's best to eat it there." instead;
+	if swears < 1, say "[bug-report]" instead;
+	if mrlp is stores, say "You should probably eat it when you're beyond the, er, spot." instead;
+	if mrlp is not presto, say "The crust fell from the remains of store P. Perhaps it's best to eat it there." instead;
 	if crust-warn is false:
 		say "Ugh! This crust may help you out, but it may be--wait for it--distasteful and spoiled. Go ahead anyway?";
 		now crust-warn is true;
-		unless the player yes-consents:
-			say "OK, maybe later. This warning won't appear again." instead;
+		unless the player yes-consents, say "OK, maybe later. This warning won't appear again." instead;
 	say "You wince and prepare to take a bite...";
 	now spoilit is true;
 	try presto-hinting;
@@ -6387,23 +6368,18 @@ chapter buying
 the block buying rule is not listed in any rulebook.
 
 check buying:
-	if player is in tenfold and yapper is in Tenfold Teflon'd Den Loft:
-		say "The papery yapper stage-whispers 'Ix-nay on the Vi-OS-ob-ay. That's not how business is DONE, here!'" instead;
+	if player is in tenfold and yapper is in Tenfold Teflon'd Den Loft, say "The papery yapper stage-whispers 'Ix-nay on the Vi-OS-ob-ay. That's not how business is DONE, here!'" instead;
 	if player is in Clangier Clearing:
-		if player has noun:
-			say "It's already yours." instead;
+		if player has noun, say "It's already yours." instead;
 		say "You need to haggle. With actions. And descriptive words. And so forth." instead;
 	if player is in Scape Space:
 		if player has dollar:
-			if noun is storage:
-				try giving dollar to greedy-person instead;
+			if noun is storage, try giving dollar to greedy-person instead;
 		else:
 			say "You have nothing [greedy-person] wants." instead;
-	if player has tekno-token:
-		say "This isn't a place of commerce." instead;
+	if player has tekno-token, say "This isn't a place of commerce." instead;
 	if player is in Lean Lane:
-		if wipes are in Lean Lane:
-			say "You can't pay for the wipes, but maybe you don't need to." instead;
+		if wipes are in Lean Lane, say "You can't pay for the wipes, but maybe you don't need to." instead;
 	say "There's nothing to buy, and there's nothing to buy it with[if player has ruby]. The ruby's kind of priceless[else if player has pearl]. The pearl isn't really tradeable[end if]." instead;
 
 chapter jumping
@@ -7516,7 +7492,7 @@ Tastee Estate	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits
 baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 balancer barnacle	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
-solid idols	Otters	Minded Midden	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
+solid idols	Otters	Minded Midden	"[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
 throes hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
 
 to say get-arug:
@@ -9202,9 +9178,9 @@ check examining settler (this is the examine to scan under duress rule) :
 	if raptor is visible:
 		say "You reflexively point the settler at the charging raptor as it attacks.";
 		try scaning raptor instead;
-	if player is in Minded Midden and b-b is reflexive:
+	if player is in Minded Midden and bleary barley is reflexive:
 		say "The barley seems to be causing readings on your settler.";
-		try scaning b-b instead;
+		try scaning bleary barley instead;
 
 check taking:
 	if noun is part of the Letters Settler:
@@ -9784,8 +9760,7 @@ lance	oyster	"CLEAN the lance once you have something to wash it with."
 duck	towers	"The lone duck could make SOMETHING unlocked[if Obscurest Subsector is visited]. Maybe the prison ropins[end if]." [towers]
 ropins	towers	"It would be nice if something made the prison ropins UNLOCKED[if duck is prefigured], like, maybe the duck[end if]."
 rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if]."
-b-b	otters	"You can make the barley be BARELY there once you get past the otters." [otters]
-eels	otters	"You can tell the eels ELSE [unless player has medals]once you have[else]now you've got[end if] a token of your goodness."
+eels	otters	"You can tell the eels ELSE [unless player has medals]once you have[else]now you've got[end if] a token of your goodness." [otters]
 sea cube	otters	"You can tell the eels in the sea cube BECAUSE once you know why."
 ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [if player has medals]now you've figured[else]once you figure[end if] where the bad guys are."
 gore ogre	otters	"You can say ERGO to deal with the Gore Ogre."
@@ -19082,35 +19057,29 @@ book Minded Midden
 
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, Bleary barley blocks you completely, stretching out seamlessly, endlessly.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
 
 printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
-check going east in Minded Midden when b-b is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
+check going east in Minded Midden when bleary barley is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
 
 [glow red as you want to get rid of them]
 
 check going in Minded Midden:
 	if noun is up or noun is down, continue the action;
-	if b-b is reflexive, say "The barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
+	if bleary barley is reflexive, say "The bleary barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
 	if Ed Riley is in Minded Midden:
 		if noun is south or noun is north:
 			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
 			continue the action;
 
-chapter b-b
+chapter bleary barley
 
-b-b is privately-named proper-named reflexive scenery in Minded Midden. the printed name of b-b is "the Bleary Barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[else]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
+the bleary barley is reflexive scenery in Minded Midden. description of bleary barley is "It ranges expansively--but the weird thing is, it hasn't flowered. And it's not all planted. Someone must have placed it very carefully or deliberately so you'd progress slowly."
 
-does the player mean gotothinging b-b:
-	if mrlp is otters:
-		it is very likely;
-	it is very unlikely.
+a-text of bleary barley is "RYRYRO". b-text of bleary barley is "P??YRB". parse-text of bleary barley is "b[sp]?[sp]?[sp]e[sp]l[sp]y". bleary barley is cheat-spoilable.
 
-a-text of b-b is "RYRYRO". b-text of b-b is "P??YRB". parse-text of b-b is "b[sp]?[sp]?[sp]e[sp]l[sp]y". b-b is cheat-spoilable.
-
-instead of taking b-b:
-	say "[if b-b is reflexed]It'll be barely useful[else]Your inventory doesn't expand infinitely[end if]."
+check taking bleary barley: say "Your inventory doesn't expand infinitely." instead;
 
 chapter nude dune
 
@@ -22051,7 +22020,7 @@ check burning:
 	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
 	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
 	if mrlp is towers and Topside Deposit is unvisited, say "Don't be a brushfire furbisher." instead;
-	if noun is b-b, say "You'd be right in the middle. So, bad idea." instead; [otters]
+	if noun is blary barley, say "You'd be right in the middle. So, bad idea." instead; [otters]
 	if noun is atmo-moat, say "It's nowhere near greasy enough." instead;
 	if noun is storage, say "It's meant to be nearly indestructible." instead;
 	say "You're a ropy pyro. There's no igniter tiering nearby." instead;
@@ -22523,7 +22492,7 @@ lever	"The lever was designed not to give extra points for pulling it too much."
 turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
 blaster	"You fixed the blaster. Now maybe try the turbos."
 Tetris Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is moot]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
-b-b	"You've cut it down enough. Leave some for next year's crop." [start OTTERS]
+bleary barley	"You've cut it down enough. Who needs that much barley anyway?" [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Elmer	"You can't take on Merle and Elmer by yourself--you need some allies."
 Merle	"You can't take on Merle and Elmer by yourself--you need some allies."	[end OTTERS]

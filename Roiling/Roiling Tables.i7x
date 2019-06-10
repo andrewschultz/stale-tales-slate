@@ -272,7 +272,7 @@ book otters
 
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-b-b	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect a beryl."
+bleary barley	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. Fortunately, y'r able to dance around to avoid the rife fire. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect a beryl."
 cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
@@ -1952,7 +1952,7 @@ serpent	"The serpent calms down for a split-second[ser-try]."
 Tetris Sitter	"The Tetris Sitter breaks her glassy smile."
 ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
-b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
+bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
 imp1	"[imp-nag]."
 imp2	"[imp-nag]."
@@ -2193,7 +2193,7 @@ turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 unripe ur-pine	"You already found a succor crocus. There's not much else there, it seems."
 Tetris Sitter	"St. Teri's back in the real world, now."
-b-b	"You've dealt with the barley. You can move around a lot more, now." [START otters]
+bleary barley	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 eels	"The eels have done enough."
 Merle	"[i]Fine, be beefin[r], you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
@@ -2632,7 +2632,7 @@ succor crocus	"[if flowerpot is reflexive][one of]The crocus looks like it is--w
 flowerpot	--	succor crocus
 Ornate Atoner Renato	"[if Mislit Limits is unvisited]You don't need to worry about Renato's gift until the very end[else if crocus is off-stage]You may find something to put in the flowerpot behind the unripe ur-pine[else if player has crocus]The crocus can be given to someone else[else]You've taken care of Ornate Atoner Renato's gift[end if]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
-b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
+bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [mackiness-hint].[minus][cycling]"	--	"the macks can talk [mackiness-hint]"
 macks	--	Gretta

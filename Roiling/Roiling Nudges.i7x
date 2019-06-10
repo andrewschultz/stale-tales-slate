@@ -790,8 +790,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
-"midden"	347839794	--	b-b	--	"[locname]." [start Minded Midden]
-"bare"	233736635	--	b-b	--	"[adj-needs-ly]."
+"midden"	347839794	--	bleary barley	--	"[locname]." [start Minded Midden]
+"bare"	233736635	--	bleary barley	--	"[adj-needs-ly]."
 "burtn"	380866041	--	nude dune	--	"[locname]." [altname Minded Midden]
 "dune"	322848513	--	nude dune	--	"You can't really shift the dune, but you don't need to."
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
