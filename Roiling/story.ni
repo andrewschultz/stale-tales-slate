@@ -3650,7 +3650,7 @@ check entering a portal:
 	choose row with por of noun in table of warps;
 	say "[go-text entry]";
 	if noun is Throes Hoster, pad-rec "guru";
-	if noun is solid idols and Bleary Barley is unvisited:
+	if noun is solid idols and Minded Midden is unvisited:
 		say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]And yet, once through, your powers feel dormant, but thankfully not mordant.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
 		pad-rec-q "asking";
 	let try-recover be false;
@@ -3961,7 +3961,7 @@ oyster	2	"Bam! More action! You'll still sort of be guessing the verb, but it's 
 towers	1	"Well! You kind of cost him a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
 towers	2	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Trefoil, but this is good practice."
 otters	1	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
-otters	2	"Barley, [if player is in Bleary Barley]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up the [imp-or-whiners] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
+otters	2	"Barley, [if player is in Minded Midden]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up the [imp-or-whiners] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
 others	1	"Hmm. It looks pretty clear what sort of stuff you're trying to make, here."
 
 to say imp-or-whiners:
@@ -4218,7 +4218,7 @@ carry out exitsing:
 		say "You can go back outside to the Horned Hedron." instead;
 	if player is in Loftier Trefoil:
 		say "You probably aren't going anywhere until Rodney does, first." instead;
-	if player is in Bleary Barley and b-b is in Bleary Barley:
+	if player is in Minded Midden and b-b is in Minded Midden:
 		say "Maybe you'll see some exits if you get rid of the barley." instead;
 	if player is in rustic and compass is off-stage:
 		say "You've lost your bearings a bit, but maybe [if player has compass]the compass could help[else]if you got enough fruits, Curtis would help you[end if]." instead;
@@ -4277,11 +4277,9 @@ when play begins (this is the basic initialization rule):
 	now Nowt Town is mapped east of r10;
 
 definition: a room (called myrm) is ominous:
-	if myrm is Bleary Barley and b-b is reflexive:
-		decide no;
+	if myrm is Minded Midden and b-b is reflexive, no;
 	if myrm is in Otters:
-		if myrm is Shiner Shrine or myrm is Clarthead Cathedral:
-			decide no;
+		if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
 		decide yes;
 
 definition: a person (called per) is guardianish:
@@ -4436,11 +4434,11 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			now noun is eastern shore;
 			continue the action;
 	else if mrlp is otters:
-		if player is in Bleary Barley:
+		if player is in Minded Midden:
 			if b-b is reflexive:
 				now noun is b-b;
 				continue the action;
-			if ed riley is in Bleary Barley:
+			if ed riley is in Minded Midden:
 				now noun is ed riley;
 				continue the action;
 		if player is in Loop Pool:
@@ -4634,7 +4632,7 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is plains:
 		if bogus-plains is reflexive:
 			say "[full-monty of bogus-plains]" instead;
-	if location of player is Bleary Barley and b-b is reflexive: [start otters]
+	if location of player is Minded Midden and b-b is reflexive: [start otters]
 		try scaning b-b instead;
 	if location of player is clangier: [start others]
 		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of Ammo Gang] on your settler." instead;
@@ -5434,9 +5432,9 @@ to say current-mackiness:
 	say "[right-word entry in upper case]";
 
 to decide which thing is otters-cur-item:
-	if player is in Bleary Barley:
+	if player is in Minded Midden:
 		if b-b is reflexive, decide on b-b;
-		if Ed Riley is in Bleary Barley, decide on Ed Riley;
+		if Ed Riley is in Minded Midden, decide on Ed Riley;
 	if player is in Disowned Downside:
 		if Macks are in Disowned Downside, decide on Gretta;
 		if atmo-moat is in Disowned Downside and power-back is true, decide on atmo-moat;
@@ -5497,30 +5495,22 @@ shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, 
 cathedral-items is a list of things variable. cathedral-items is {ram1, ram2, ram3}.
 
 carry out otters-hinting:
-	unless otters-cur-item is player:
-		try objhinting otters-cur-item instead;
-	if player is in Bleary Barley: [if there is no item, see what to do next based on where we can go]
-		all-say "You made a way west. You're done here." instead;
-	else if player is in Disowned Downside:
-		all-say "[if gretta is in Disowned Downside]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if Reclusion Inclosure is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if].";
-	else if player is in Loop Pool or player is in Bran Barn:
-		all-say "You recovered your powers, so there's nothing more to do here.";
-	else if player is in Shiner Shrine:
-		all-say "The path north is cleared[tho-work].";
-	else if player is in Clarthead Cathedral:
-		all-say "The path south is cleared[tho-work].";
-	else if player is in Lamer Realm or player is in Perverse Preserve:
+	unless otters-cur-item is player, try objhinting otters-cur-item instead;
+	if player is in Minded Midden, all-say "You made a way west. You're done here." instead; [if there is no item, see what to do next based on where we can go]
+	if player is in Disowned Downside, all-say "[if gretta is in Disowned Downside]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if Reclusion Inclosure is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if]." instead;
+	if player is in Loop Pool or player is in Bran Barn, all-say "You recovered your powers, so there's nothing more to do here." instead;
+	if player is in Shiner Shrine, all-say "The path north is cleared[tho-work]." instead;
+	if player is in Clarthead Cathedral, all-say "The path south is cleared[tho-work]." instead;
+	if player is in Lamer Realm or player is in Perverse Preserve:
 		if power-back is false:
-			all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Bleary Barley]and try to get past Ed Riley[else]west of the barley[end if].";
+			all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Minded Midden]and try to get past Ed Riley[else]west of the barley[end if]." instead;
 		else:
 			if player is in Perverse Preserve:
-				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if].";
+				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if]." instead;
 			else:
-				all-say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random visible reflexive animal][end if].";
-	else if player is in Reclusion Inclosure:
-		all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight.";
-	else:
-		all-say "There seems to be nothing to do here.";
+				all-say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random visible reflexive animal][end if]." instead;
+	if player is in Reclusion Inclosure, all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight." instead;
+	all-say "There seems to be nothing to do here.";
 	the rule succeeds;
 
 definition: a thing (called X) is pre-animal:
@@ -7526,7 +7516,7 @@ Tastee Estate	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits
 baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 balancer barnacle	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
-solid idols	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
+solid idols	Otters	Minded Midden	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
 throes hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
 
 to say get-arug:
@@ -9212,7 +9202,7 @@ check examining settler (this is the examine to scan under duress rule) :
 	if raptor is visible:
 		say "You reflexively point the settler at the charging raptor as it attacks.";
 		try scaning raptor instead;
-	if player is in Bleary Barley and b-b is reflexive:
+	if player is in Minded Midden and b-b is reflexive:
 		say "The barley seems to be causing readings on your settler.";
 		try scaning b-b instead;
 
@@ -18932,13 +18922,13 @@ rescind-cinders is a truth state that varies.
 discern-warn is a truth state that varies.
 
 carry out discerning:
-	if player is in Bleary Barley and cinders are in Bleary Barley:
+	if player is in Minded Midden and cinders are in Minded Midden:
 		say "(taking the cinders first)[line break]";
 		try taking the cinders;
 	if noun is not cinders:
 		if mrlp is not otters:
 			say "[reject]" instead;
-		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You'd need to discern the cinders for that, and they're back at Bleary Barley[end if]." instead;
+		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You'd need to discern the cinders for that, and they're back at Minded Midden[end if]." instead;
 	if discern-warn is false:
 		say "You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is visible]. Plus, it seems a bit early[end if]. Discern anyway?";
 		now discern-warn is true;
@@ -19088,30 +19078,29 @@ instead of doing something to sober robes:
 
 description of sober robes is "Elmer and Merle don't stylize zestily."
 
-book Bleary Barley
+book Minded Midden
 
-to say if-ed:
-	say "[if ed riley is in Bleary Barley]You can go west past where Ed Riley was[else]Ed Riley is still blocking the way west[end if]"
+to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Bleary Barley is a room in Otters. last-loc of otters is Bleary Barley. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
 
-printed name of Bleary Barley is "[if nude dune is in Bleary Barley]Burnt Brunt[else]Bleary Barley[end if]"
+printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
-check going east in Bleary Barley when b-b is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
+check going east in Minded Midden when b-b is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
 
 [glow red as you want to get rid of them]
 
-check going in Bleary Barley:
+check going in Minded Midden:
 	if noun is up or noun is down, continue the action;
 	if b-b is reflexive, say "The barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
-	if Ed Riley is in Bleary Barley:
+	if Ed Riley is in Minded Midden:
 		if noun is south or noun is north:
 			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
 			continue the action;
 
 chapter b-b
 
-b-b is privately-named proper-named reflexive scenery in Bleary Barley. the printed name of b-b is "the Bleary Barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[else]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
+b-b is privately-named proper-named reflexive scenery in Minded Midden. the printed name of b-b is "the Bleary Barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[else]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
 
 does the player mean gotothinging b-b:
 	if mrlp is otters:
@@ -19163,7 +19152,7 @@ a-text of ed riley is "RYYRYRO". b-text of ed riley is "RYYRYRB". parse-text of 
 to say ed-nonsense:
 	say "[one of], and then he bangs on about not trying to sing or attack him[or][or][or][cycling]"
 
-check going west in Bleary Barley: if Ed Riley is visible, say "'Re-yield, yielder! Ye Idler! Er, yield idly [']ere!' booms Ed Riley[ed-nonsense].[paragraph break]He's not bigger than you, but his loud voice scares you. And he could probably swat you with that deli rye. You back away." instead;
+check going west in Minded Midden: if Ed Riley is visible, say "'Re-yield, yielder! Ye Idler! Er, yield idly [']ere!' booms Ed Riley[ed-nonsense].[paragraph break]He's not bigger than you, but his loud voice scares you. And he could probably swat you with that deli rye. You back away." instead;
 
 the weltish whistle is a reflexive thing. description is "It's ugly, that's for sure, but [if parrot wears whistle]the parrot isn't carrying it around for nothing[else if whistle is reflexive]you can probably PLAY it and practice to figure how to use it[else]you do know how to PLAY it, and that's something[end if]. It reads DISCOURAGE-SCOURGE AID. WHISTLES: SHE WILTS. Red writing indicates who crafted it.";
 
@@ -19294,7 +19283,7 @@ carry out whistleing:
 
 book Disowned Downside
 
-Disowned Downside is west of Bleary Barley. It is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited], too big to hide nothing[else if Rancho Archon Anchor is unvisited], with much more than the inclosure you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here." [ic]
+Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited], too big to hide nothing[else if Rancho Archon Anchor is unvisited], with much more than the inclosure you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here." [ic]
 
 after looking in Disowned Downside:
 	if macks are in Disowned Downside:
@@ -19929,7 +19918,7 @@ the medal check rules are an object-based rulebook.
 
 book Shiner Shrine
 
-Shiner Shrine is an innie room in Otters. Shiner Shrine is north of Bleary Barley. "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west."
+Shiner Shrine is an innie room in Otters. Shiner Shrine is north of Minded Midden. "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west."
 
 The sly imp is a flippable neuter person in Shiner Shrine. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
 
@@ -20120,7 +20109,7 @@ after fliptoing an animal:
 
 book Clarthead Cathedral
 
-Clarthead Cathedral is south of Bleary Barley. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are in Clarthead Cathedral]The noise here is just unbearable[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west."
+Clarthead Cathedral is south of Minded Midden. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are in Clarthead Cathedral]The noise here is just unbearable[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west."
 
 the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 

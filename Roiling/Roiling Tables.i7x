@@ -797,7 +797,7 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 this is the post-whiners-flip rule:
 	increment quietness;
 	if quietness is 2:
-		say "As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
+		say "As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		moot whiners;
 		moot ram1;
 		moot ram2;
@@ -829,8 +829,8 @@ this is the post-eels-else rule:
 this is the post-barley-barely rule:
 	set the pronoun them to cinders;
 	set the pronoun him to Ed Riley;
-	move ed riley to Bleary Barley;
-	move cinders to Bleary Barley;
+	move ed riley to Minded Midden;
+	move cinders to Minded Midden;
 
 this is the post-urpine-punier rule:
 	now crocus is in flowerpot;
@@ -2632,7 +2632,7 @@ succor crocus	"[if flowerpot is reflexive][one of]The crocus looks like it is--w
 flowerpot	--	succor crocus
 Ornate Atoner Renato	"[if Mislit Limits is unvisited]You don't need to worry about Renato's gift until the very end[else if crocus is off-stage]You may find something to put in the flowerpot behind the unripe ur-pine[else if player has crocus]The crocus can be given to someone else[else]You've taken care of Ornate Atoner Renato's gift[end if]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
-b-b	"[one of]Hm, to get rid of the Bleary Barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
+b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [mackiness-hint].[minus][cycling]"	--	"the macks can talk [mackiness-hint]"
 macks	--	Gretta

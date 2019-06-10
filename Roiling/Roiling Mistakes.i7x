@@ -734,19 +734,19 @@ book otters
 
 understand "dialect" as a mistake ("No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.") when location of player is ominous.
 
-chapter Bleary Barley
+chapter Minded Midden
 
-understand "end u" as a mistake ("No, end *U*![paragraph break][uurrgg]") when player is in Bleary Barley and nude dune is in Bleary Barley.
+understand "end u" as a mistake ("No, end *U*![paragraph break][uurrgg]") when player is in Minded Midden and nude dune is in Minded Midden.
 
-understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into laziness.") when player is in Bleary Barley and Ed Riley is in Bleary Barley.
+understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into laziness.") when player is in Minded Midden and Ed Riley is in Minded Midden.
 
 understand "increds" as a mistake ("You marvel at the possible power of the cinders and even see red at the thought of giving them up.") when player has cinders or location of cinders is location of player
 
-understand "lied" as a mistake ("You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.") when player is in Bleary Barley and Ed Riley is in Bleary Barley.
+understand "lied" as a mistake ("You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.") when player is in Minded Midden and Ed Riley is in Minded Midden.
 
-understand "reedy" as a mistake ("No, the adverb.") when player is in Bleary Barley and ed riley is in Bleary Barley.
+understand "reedy" as a mistake ("No, the adverb.") when player is in Minded Midden and ed riley is in Minded Midden.
 
-understand "yer" as a mistake ("Yup! It's Ed's!") when player is in Bleary Barley and ed riley is in Bleary Barley.
+understand "yer" as a mistake ("Yup! It's Ed's!") when player is in Minded Midden and ed riley is in Minded Midden.
 
 chapter coevals alcoves
 

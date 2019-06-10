@@ -7,7 +7,7 @@ volume table of nudges
 [nuch.py makes sure that all the nudges have a test case assigned]
 [?? todo: make sure that nothing seeps into non-nudge stuff]
 
-[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Barley/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Inclosure, Rancho. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Midden/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Inclosure, Rancho. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
 
 book nudge tables
 
@@ -790,9 +790,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
-"bleary"	409909726	--	b-b	--	"[locname]." [start Bleary Barley]
+"midden"	347839794	--	b-b	--	"[locname]." [start Minded Midden]
 "bare"	233736635	--	b-b	--	"[adj-needs-ly]."
-"burtn"	380866041	--	nude dune	--	"[locname]." [altname Bleary Barley]
+"burtn"	380866041	--	nude dune	--	"[locname]." [altname Minded Midden]
 "dune"	322848513	--	nude dune	--	"You can't really shift the dune, but you don't need to."
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
 "cinders"	463338906	--	--	cinders-gone rule	"The cinders are gone for good."
@@ -857,7 +857,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "angry"	311378083	--	imp2	--	"[add-ly]."
 "angri"	234011677	--	imp2	--	"[add-ly]."
 "enraged"	465660138	--	imp3	--	"[add-ly]."
-"coma"	159621133	--	--	barley-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
+"coma"	159621133	--	--	midden-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
 "cathedral"	451746378	Clarthead Cathedral	--	--	"[locname]." [start Clarthead Cathedral]
 "whiner"	472247338	Clarthead Cathedral	--	--	"[whiney]."
 "whiners"	568521304	Clarthead Cathedral	--	--	"[whiney]."
@@ -1756,7 +1756,7 @@ to say one-toy: say "Disable one of Elvira's toys, and there's still the other. 
 
 to say elv-mach: say "You have enough to think about without one more of Elvira's machines"
 
-this is the barley-n-s rule:
+this is the midden-n-s rule:
 	if player is in Clarthead Cathedral or player is in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
