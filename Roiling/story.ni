@@ -1839,7 +1839,7 @@ mardier admirer	"'But enough about me! What about you?' You need a way to make t
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 Atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
 Tetris Sitter	"[if flowerpot is moot]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
-Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]."
+Ed Riley	"'I'd ... LEERY!' Ed booms, puffing himself up a bit."
 whiners	--
 macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
 Gretta	"She's got enough people asking about her right now."
@@ -19102,11 +19102,9 @@ check going east in Bleary Barley when b-b is reflexed: say "The dune is too big
 [glow red as you want to get rid of them]
 
 check going in Bleary Barley:
-	if noun is up or noun is down:
-		continue the action;
-	if b-b is reflexive:
-		say "The barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
-	if Ed Riley is visible:
+	if noun is up or noun is down, continue the action;
+	if b-b is reflexive, say "The barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
+	if Ed Riley is in Bleary Barley:
 		if noun is south or noun is north:
 			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
 			continue the action;
@@ -19140,7 +19138,7 @@ this is the bore-dune rule:
 
 chapter Ed Riley
 
-Ed Riley is a vanishing man. description is "'You won't get past Ed Riley, yielder!' he booms. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye."
+Ed Riley is a vanishing man. description is "'Er, yield idly [']ere!' Ed Riley booms at regular intervals. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward, carrying a loaf of deli rye."
 
 check taking ed riley: say "Ed Riley raises up on his toes and booms 'I'm no YIELDER!'" instead;
 
@@ -19162,18 +19160,10 @@ understand "yielder" and "steward" as Ed Riley.
 
 a-text of ed riley is "RYYRYRO". b-text of ed riley is "RYYRYRB". parse-text of ed riley is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]y".
 
-the Er Yield sign is an auxiliary thing. Ed Riley carries the yield sign.
-
-a-text of er yield is "RYYRYRO". b-text of er yield is "RYYRYPO". parse-text of er yield is "x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y".
-
-the description of the er yield sign is "'Spiffy, huh? I was told I could wipe off the 'er' for the first person I scared into not passing me for good.'"
-
 to say ed-nonsense:
 	say "[one of], and then he bangs on about not trying to sing or attack him[or][or][or][cycling]"
 
-check going west in Bleary Barley:
-	if Ed Riley is visible:
-		say "'I will not re-yield! I am no longer a yielder! Ye Idler!' booms Ed Riley[ed-nonsense].[paragraph break]He's not bigger than you, but his loud voice scares you. And he could probably swat you with either that deli rye or er, yield sign. You back away." instead;
+check going west in Bleary Barley: if Ed Riley is visible, say "'Re-yield, yielder! Ye Idler! Er, yield idly [']ere!' booms Ed Riley[ed-nonsense].[paragraph break]He's not bigger than you, but his loud voice scares you. And he could probably swat you with that deli rye. You back away." instead;
 
 the weltish whistle is a reflexive thing. description is "It's ugly, that's for sure, but [if parrot wears whistle]the parrot isn't carrying it around for nothing[else if whistle is reflexive]you can probably PLAY it and practice to figure how to use it[else]you do know how to PLAY it, and that's something[end if]. It reads DISCOURAGE-SCOURGE AID. WHISTLES: SHE WILTS. Red writing indicates who crafted it.";
 
