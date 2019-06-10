@@ -6307,17 +6307,15 @@ check eating (this is the general eating rule):
 		say "You'll want to put [the noun] in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
 	if noun is escaroles, say "The escaroles aren't nearly substantial enough." instead;
 	if noun is casserole, say "Ugh. You're not sure what's in the casserole, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
-	say "That's not in a test-taste state." instead;
+	say "[if noun is plural-named]Those aren't[else]That's not[end if] in a test-taste state." instead;
 
-check eating grid:
-	say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead;
+check eating grid: say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead;
 
 check eating fretful truffle:
 	if truf-warn is false and scams is false:
 		now truf-warn is true;
 		ital-say "this chocolate is a cool cheat that tells you what to [if cur-score of troves is 0]type[else]think next[end if]. Are you sure you want to do this?";
-		unless the player direct-consents:
-			say "Okay. This warning won't appear again." instead;
+		unless the player direct-consents, say "Okay. This warning won't appear again." instead;
 	now spoilit is true;
 	try troves-hinting;
 	now spoilit is false instead;
@@ -6398,7 +6396,7 @@ push-pull-warn is a truth state that varies.
 
 this is the push-pull-specifics rule:
 	if push-pull-warn is false:
-		say "You don't need to push anything unless you need to move it somewhere else.";
+		say "One-time note for future reference: you don't need to push anything unless you need to move it somewhere else.[paragraph break]";
 		now push-pull-warn is true;
 	if noun is tables, say "They're not that kind of tables. They're tables drawn on the wall." instead;
 	if noun is skid, say "You need to specify a direction to push or pull the skid." instead;
@@ -6555,6 +6553,8 @@ chapter push and pull to
 Understand "pull [something] [direction]" or "pull [something] to [direction]" as pushing it to.
 
 yak-sol is a number that varies.
+
+check pushing oper rope to: try pushing the skid to the second noun instead;
 
 check pushing the skid to (this is the yak-oof rule):
 	if yak is moot:
@@ -13586,7 +13586,11 @@ after reading catechism when yak is in Hacks' Shack and no-yak is false:
 	now no-yak is true;
 	continue the action;
 
+chapter disk
+
 the disk is in Hacks' Shack. "[if disk is handled]You see a disk lying on the labs slab here[else]A disk is lying on the floor here[end if]."
+
+chapter skid
 
 the skid is a supporter. "The skid lying here [skid-do]."
 
@@ -13600,17 +13604,17 @@ the skid is pushable between rooms.
 
 a-text of skid is "RYRR". b-text of skid is "RYRR". parse-text of skid is "x[sp]i[sp]x[sp]x". skid is cheat-spoilable.
 
-instead of taking the skid:
-	say "It's too heavy, but you can pull or push it in the direction where you want it to go."
+check taking the skid: say "It's too heavy, but you can pull or push it in the direction where you want it to go." instead;
 
-the description of the skid is "It's three feet wide by six feet, and it's got small straps and niches so you can put an animal on them. It's also got a handy rope so you can PULL it even without sledge ledges."
+the description of the skid is "It's three feet wide by six feet, and it's got small straps and niches so you can put an animal on them. It's also got a handy oper rope so you can PULL or PUSH it even without sledge ledges."
 
-the skidrope is a privately-named thing. The skidrope is part of the skid. understand "rope" as skidrope when skidrope is visible.
+section oper rope
 
-description of skidrope is "It's attached so you can pull the skid from room to room."
+the oper rope is a boringthing. The oper rope is part of the skid. description of oper rope is "It's attached so you can pull the skid from room to room.". boringtext is "The oper rope isn't special or important except as something that helps you PULL the skid around.
 
-check pulling skidrope:
-	try pulling skid instead;
+check pulling oper rope: try pulling skid instead;
+
+chapter speel
 
 the speel is auxiliary boringscen. description of speel is "The jargon's a bit beyond you. Maybe if your mind were fully sharp, you'd know what to do.". bore-text is "It's just plain computer text."
 
@@ -13620,24 +13624,21 @@ check inserting into the keyboard (this is the insert-keyboard rule):
 	ignore the can't insert into what's not a container rule;
 	try putting noun on second noun instead;
 
-check putting the keyboard on (this is the keyboard-on-something rule):
-	ignore the can't put what's not held rule;
+check putting the keyboard on (this is the keyboard-on-something rule): ignore the can't put what's not held rule;
 
 check putting on the keyboard (this is the complete-keyboard rule):
 	ignore the can't put onto what's not a supporter rule;
 	if noun is caps lock:
-		if caps lock is part of the keyboard:
-			say "It already is." instead;
+		if caps lock is part of the keyboard, say "It already is." instead;
 		say "It fits in perfectly, right beneath the [if t-key is reflexed]TAB[else]TBA (ehh? That's not quite right)[end if] key.";
 		now caps lock is part of the keyboard instead;
-	otherwise:
-		say "That's not a key that needs to fit in the keyboard." instead;
+	say "That's not a key that needs to fit in the keyboard." instead;
 
 does the player mean doing something with BUB DUDE EGG: it is likely.
 
 chapter showing
 
-block showing rule is not listed in any rulebook.
+the block showing rule is not listed in any rulebook.
 
 hows-show-warn is a truth state that varies.
 

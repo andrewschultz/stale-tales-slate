@@ -442,7 +442,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "caffeine"	443735767	--	dirty looking cola	--	"[caffeine-no]."
 "fine"	268221359	--	dirty looking cola	--	"[caffeine-no]."
 "cafe"	175514408	--	dirty looking cola	--	"[caffeine-no]."
-"rope"	368948448	--	skid	--	"You don't need to do anything with the skid's rope."
+"rope"	368948448	--	skid	--	"You don't need to do anything tricky with the skid's rope."
 "soda"	193843450	--	--	my-cola rule	"[cola-is-cola]."
 "pop"	237284495	--	--	my-cola rule	"[cola-is-cola]."
 "trim"	297501820	--	trim socks	--	"[trimsox]."
