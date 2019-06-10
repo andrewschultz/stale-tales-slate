@@ -123,8 +123,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "otter"	493702525	--	solid idols	--	"[idols-no]."
 "idol"	194188351	--	solid idols	--	"[idols-no]."
 "solid"	290462317	--	solid idols	--	"[idols-no]."
-"braes"	330010601	--	Baser Braes	--	"But you already changed Store P."
-"brae"	233736635	--	Baser Braes	--	"But you already changed Store P."
+"odorant"	429263390	odorant tornado	--	--	"But you already changed Store P."
 "engraving"	570489816	--	engravings	--	"The engraving is meant to be read. You can modify it with other actions."
 "engravings"	666763782	--	engravings	--	"You can only change the enrgavings by working through the other stores."
 "patcher"	456181591	--	patcher	--	"The patcher doesn't need to be changed. It does the changing if you point it."
@@ -481,7 +480,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "remap"	360858842	--	jukebox	--	"You can't change the bad music selection[if tunes are in Posh Hops Shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are in Posh Hops Shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "lode"	277001614	Olde Lode	--	--	"[locname]." [OLDE LODE]
-"calm"	139082395	--	--	clam-gone rule	"Odd, how you feel a need to panic and flee after calming the clam."
+"calm"	139082395	--	--	clam-gone rule	"Odd! Now, you feel a need to panic and flee after calming the clam."
+"braes"	330010601	Olde Lode	--	--	"The baser braes can't be changed. There is enough to do in the Olde Lode." [technically the baser braes but they are the bounding scenery]
+"brae"	233736635	Olde Lode	--	--	"The baser braes can't be changed. There is enough to do in the Olde Lode."
 "seaside"	516369903	Disease Seaside	--	--	"[locname]." [Disease Seaside]
 "streamlet"	763506833	Disease Seaside	--	--	"[strmlet]."
 "streamlets"	859780799	Disease Seaside	--	--	"[strmlet]."

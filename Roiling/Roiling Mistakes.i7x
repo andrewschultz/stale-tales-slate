@@ -323,13 +323,13 @@ understand "shoot [text] with [text]" as a mistake ("Just say what you want to s
 
 chapter Grey Gyre
 
-understand "hm up" and "up hm" as a mistake ("You don't need to levitate the hump. You need a way to jump over it.") when hump is in grey gyre and player is in Grey Gyre.
-
 understand "balm" as a mistake ("Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.") when lamb is in location of player.
 
 understand "bleep" as a mistake ("I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.") when plebe is not in location of player and mrlp is presto
 
 understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.[paragraph break][uurrgg]") when location of player is Grey Gyre and maze entry is in Grey Gyre.
+
+understand "hm up" and "up hm" as a mistake ("You don't need to levitate the hump. You need a way to jump over it.") when hump is in grey gyre and player is in Grey Gyre.
 
 chapter Char Arch
 
@@ -449,6 +449,8 @@ book oyster
 
 chapter Posh Hops Shop
 
+understand "phos" as a mistake ("The bar fails to change into an ethnic restaurant.") when player is in Posh Hops Shop.
+
 [def=insert stein]
 understand "insert [something]" as a mistake ("Almost, but with the stein, there.") when stein is in hops shop and player is in hops shop.
 
@@ -458,13 +460,23 @@ understand "inset [text]" as a mistake ("[if the number of words in the player's
 
 understand "nites" as a mistake ("Misspellings don't work, here.") when stein is in hops shop and player is in hops shop.
 
-understand "pacers" as a mistake ("Casper's writing is multifaceted, but he wrote a story opposed to cars and car races and stuff.") when casper is in hops shop and player is in hops shop
+understand "pacers" as a mistake ("Casper's writing is multifaceted, but he wrote a story opposed to cars and car races and stuff.") when casper is in hops shop and player is in hops shop.
 
-understand "parsec" as a mistake ("Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.") when casper is in hops shop and player is in hops shop
+understand "parsec" as a mistake ("Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.") when casper is in hops shop and player is in hops shop.
 
-understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop
+understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop.
 
 understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is in hops shop and player is in hops shop.
+
+chapter Olde Lode
+
+understand "dole" as a mistake ("Alas, no unemployment check, pineapple or former Republican presidential candidate arrives.") when player is in Olde Lode.
+
+understand "bear" and "bears" as a mistake ("You don't need any predators chasing you.") when player is in Olde Lode.
+
+understand "bare" and "bares" as a mistake ("A jogger runs by, singing 'Drop-Kick Me, Jesus, Through the Goalposts of Life.'[paragraph break]Really, what did you expect?") when player is in Olde Lode.
+
+understand "sabre" as a mistake ("A weapon won't do much good here. You need action!") when player is in Olde Lode.
 
 chapter Disease Seaside
 

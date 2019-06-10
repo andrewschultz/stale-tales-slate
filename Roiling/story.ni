@@ -3599,7 +3599,7 @@ definition: a thing (called xx) is patchable:
 
 chapter entering portals
 
-the first portal entry rule is lissted first in the check entering rules.
+the first portal entry rule is listed first in the check entering rules.
 
 check entering a portal (this is the first portal entry rule):
 	let grn be go-region of noun;
@@ -5713,9 +5713,9 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 "through"	store u	course source	3
 "between"	store u	course source	3
 "beyond"	store u	course source	0
-"bus"	store p	baser braes	0
-"sub"	store p	baser braes	0
-"debug"	store p	baser braes	1
+"bus"	store p	odorant tornado	0
+"sub"	store p	odorant tornado	0
+"debug"	store p	odorant tornado	1
 "redial"	store y	balancer barnacle	0
 "destroy"	store y	balancer barnacle	1
 "spectacular"	store w	truster turrets	0
@@ -6597,9 +6597,9 @@ check listening:
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
 	if rifle is visible, say "Awkward silence, what with Elmo holding that rifle." instead;
-	if baser braes are visible, say "A roar of angry undefinable words swirls from the baser braes." instead; [stores]
-	if nestor is visible, say "Nestor periodically mumbles about his lost buddies." instead;
-	if tokers are visible and nestor is visible, say "[if nestor is visible]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
+	if odorant tornado is in location of player, say "A roar of angry undefinable words swirls from the odorant tornado." instead; [stores]
+	if nestor is in location of player, say "Nestor periodically mumbles about his lost buddies." instead;
+	if tokers are in location of player and nestor is in location of player, say "[if nestor is in location of player]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
 	if player is in Same Mesa: [routes]
 		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
@@ -6687,7 +6687,9 @@ check listening:
 
 chapter smelling
 
-before smelling (this is the you can smell some stuff some places rule):
+the block smelling rule is not listed in any rulebook.
+
+check smelling (this is the you can smell some stuff some places rule): [see about smelling things]
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
 	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
@@ -6696,7 +6698,8 @@ before smelling (this is the you can smell some stuff some places rule):
 		if balancer barnacle is in strip, say "Seawater scents from the barnacle balancer." instead;
 		if roved is true and throes hoster is in strip of profits, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
-	if tokers are in location of player, say "You smell something sweetish coming from the tokers I can't quite describe because, well, -ahem-. I'm for the right to do that sort of thing, on principle, but I don't." instead;
+	if player is in strip of profits and odorant tornado is in location of player, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
+	if player is in strip of profits and mangiest steaming is in location of player, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know.";
 	if player is in Adobe Abode, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead; [routes]
 	if seed pit is visible, say "The seed pit smells a bit musty." instead;
 	if player is in Ripe Pier, say "It smells of adventure and going [i]abroad[r]--or, at least, a bit away from the brackish, salty whiffs of trash." instead;
@@ -9975,9 +9978,8 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 			if diffic of EP < curdif:
 				now RP is EP;
 				now curdif is diffic of EP;
-		say "[line break]The[if RP is baser braes], er, spot[else if RP is balancer barnacle] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
-		if the player direct-consents:
-			try entering RP instead;
+		say "[line break]The [RP] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
+		if the player direct-consents, try entering RP instead;
 		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
 	if mangiest steaming is in strip, try entering mangiest steaming instead;
 	say "There's nothing you can enter--the plain old stores don't count. You don't have time to shop." instead;
@@ -10079,11 +10081,11 @@ to it-him-her (x - a thing):
 
 section throes hoster
 
-the Throes Hoster is a not lumpable not maingame portal. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-others rule.
+the Throes Hoster is a not lumpable not maingame portal. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-others rule. go-region of Throes Hoster is Others.
 
 this is the enter-others rule:
 	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
-	say "After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
+	say "After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug].";
 	if arugula is not moot, pad-rec "guru";
 
 understand "mouth" as Throes Hoster.
@@ -10127,9 +10129,6 @@ check entering mangiest steaming:
 		min-up;
 		now player is in Cruelest Lectures instead;
 	say "Oh, no. Not that again. Country'll have a new alphabet the next time. And a worse lecture." instead;
-
-check smelling:
-	if player is in strip of profits and mangiest steaming is visible, say "Err. I can't tell you exactly how the smoke smells. I wouldn't know." instead;
 
 section tokers
 
@@ -10205,9 +10204,9 @@ description of tropes poster is "It features many important, if mis-stated, meme
 
 a-text of tropes poster is "RRYRRY". b-text of tropes poster is "??YRRY". parse-text of tropes poster is "x[sp]?[sp]e[sp]x[sp]x[sp]o".
 
-section baser braes
+section odorant tornado
 
-the baser braes are a plural-named portal. diffic of baser braes is 5. the go-region of baser braes is Presto. description is "Braes are generally natural, but these are weird to focus on, as they seem noisy, though it's not clear what's making the noise. Still, you suspect you need to [if grey gyre is visited]re-[end if]ENTER them.". initial appearance of baser braes is "Baser braes take up the space where Store P used to reside.". entry-rule of baser braes is enter-presto rule.
+the odorant tornado is a portal. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if grey gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if grey gyre is visited]re-[end if]ENTER them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-presto rule.
 
 this is the enter-presto rule:
 	say "[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
@@ -10312,7 +10311,7 @@ this is the enter-towers rule:
 		if patcher is in location of player:
 			say "The turrets are imposing enough that you look back at the patcher and feel relieved you can just RETRY and zap your way through in case you get stuck.";
 		else:
-			say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of portals in strip of profits is 1]stores[else if number of stores in strip of profits is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the balancer barnacle[end if]. Proceed anyway?";
+			say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of portals in strip of profits is 1]stores[else if number of stos in strip of profits is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the balancer barnacle[end if]. Proceed anyway?";
 			unless the player yes-consents, say "You decide to look around a bit more." instead;
 	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 
@@ -10385,7 +10384,7 @@ section engravings
 
 the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
 
-description of engravings is "[emph of baser braes]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of barnacle balancer]pay[r] [emph of course source]up[r], [emph of solid idols]hard[r].[paragraph break][i]NOUNED: UNDONE.[r][if note-progress is true][paragraph break]The letter emphases seem to have changed since you last read it.[npoff][end if]"
+description of engravings is "[emph of odorant tornado]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of barnacle balancer]pay[r] [emph of course source]up[r], [emph of solid idols]hard[r].[paragraph break][i]NOUNED: UNDONE.[r][if note-progress is true][paragraph break]The letter emphases seem to have changed since you last read it.[npoff][end if]"
 
 to say npoff: now note-progress is false;
 
@@ -12184,9 +12183,9 @@ to shuffle-nowt-town:
 
 section hump
 
-the hump is vanishing boringscen in Grey Gyre. "It doesn't look like it'd be too hard to get over, but as you walk over to inspect it, you feel a bit drained.". bore-check rule of hump is bore-hump rule. bore-text is "the hump is surprisingly demotivational. You need some succinct way to blow off your laziness.".
+the hump is vanishing boringscen in Grey Gyre. "It doesn't look like it'd be too hard to get over, but as you walk over to inspect it, you feel a bit drained.". bore-check of hump is bore-hump rule. bore-text is "the hump is surprisingly demotivational. You need some succinct way to blow off your laziness.".
 
-this is th bore-hump rule:
+this is the bore-hump rule:
 	if current action is taking:
 		say "You can take it if you believe in yourself and motivate yourself the right way!";
 		the rule succeeds;
@@ -12197,8 +12196,7 @@ chapter bleeping
 
 the plebe is a vanishing person in Grey Gyre. description is "He's got the shaved head, boring monochrome clothes--nothing on him marks him as too special to be yelled at.". "A plebe is standing at attention here to the east, waiting for a command from someone in charge. Or just bossy[if plebe is prefigured and player wears tsar star][one of]. Now that you're wearing that tsar star, maybe you can use that semi-cuss you used earlier[or][stopping][end if]."
 
-check taking plebe:
-	say "That plebe won't be pushed aside." instead;
+check taking plebe: say "That plebe won't be pushed aside." instead;
 
 a-text of plebe is "RRYYR". b-text of plebe is "RPGYR". parse-text of plebe is "x[sp]l[sp]e[sp]e[sp]x". plebe is parse-spoilable.
 
@@ -14430,6 +14428,10 @@ section runing
 understand the command "run" as something new.
 
 understand "run [direction]" as going.
+
+chapter baser braes
+
+the baser braes are plural-named bounding boringscen in Olde Lode. description of baser braes is "Who knows what might be hiding there? You're too scared to walk or stroll into them, which kind of leaves you trapped in the Olde Lode, unless you take evasive action.". bore-text is "The baser braes are all around. They'd be too hard to change.".
 
 book Disease Seaside
 
@@ -23616,13 +23618,13 @@ carry out a5ing:
 	now suppress-score is true;
 	if store k is in Strip of Profits, try fliptoing tokers;
 	if store n is in Strip of Profits, try fliptoing nestor;
-	if store p is in Strip of Profits, try fliptoing baser braes;
+	if store p is in Strip of Profits, try fliptoing odorant tornado;
 	if store u is in Strip of Profits, try fliptoing course source;
 	if store v is in Strip of Profits, try fliptoing Tastee Estate;
 	if store w is in Strip of Profits, try fliptoing truster turrets;
 	if store y is in Strip of Profits, try fliptoing balancer barnacle;
 	try fliptoing solid idols;
-	moot baser braes;
+	moot odorant tornado;
 	moot course source;
 	moot Tastee Estate;
 	moot truster turrets;
