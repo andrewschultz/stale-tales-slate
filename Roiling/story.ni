@@ -1163,17 +1163,6 @@ rule for deciding whether to allow undo:
 
 chapter warp stuff
 
-when play begins (this is the region initialization rule):
-	repeat through table of warps:
-		now go-region of por entry is reg entry;
-		now last-loc of reg entry is lloc entry;
-	repeat with REG running through regions:
-		now poss-score of REG is max-score of REG;
-	repeat with Q running through portals:
-		say "before: [item-list of go-region of Q].";
-		now the item-list of go-region of Q is {}; [?? check if this is necessary]
-		say "after: [item-list of go-region of Q].";
-
 to item-warp:
 	d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
 	now last-loc of mrlp is location of the player;
@@ -3559,17 +3548,12 @@ understand the command "zap [something]" as something new.
 understand "zap [something]" as zaping.
 
 carry out zaping:
-	if player is not in Strip of Profits:
-		say "[reject]" instead;
-	if chapter patcher is not in Strip of Profits:
-		say "You don't have anything that can zap anything." instead;
-	if noun is tokers or noun is nestor:
-		say "You're a text adventurer, not a drug enforcement agent." instead;
-	if noun is not a sto and noun is not a portal:
-		say "The patcher can only zap stores or portals." instead;
+	if player is not in Strip of Profits, say "[reject]" instead;
+	if chapter patcher is not in Strip of Profits, say "You don't have anything that can zap anything." instead;
+	if noun is tokers or noun is nestor, say "You're a text adventurer, not a drug enforcement agent." instead;
+	if noun is not a sto and noun is not a portal, say "The patcher can only zap stores or portals." instead;
 	if noun is store h:
-		if otters is solved:
-			say "You sense that, with Elvira defeated, the patcher wouldn't work to wipe out Store H. Perhaps there isn't enough evil to defeat, so the patcher won't work." instead;
+		if otters is solved, say "You sense that, with Elvira defeated, the patcher wouldn't work to wipe out Store H. Perhaps there isn't enough evil to defeat, so the patcher won't work." instead;
 		say "Store H isn't critical. Yet. Plus there are too many people around. You should maybe look elsewhere." instead;
 	if noun is Store K or noun is Store N:
 		say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. [noun] may not be where it's at, according to Elmo, so that's even more reason not to disintegrate it." instead;
@@ -3587,8 +3571,7 @@ carry out zaping:
 
 the chapter patcher is a warpable thing. description is "[if number of needed regions > 1]I bet if you switched it, something cool might happen[else]It's probably useless to warp past the final area[end if].". "A chapter patcher lies here next to the megaton magneto-montage."
 
-Check taking the chapter patcher:
-	say "It'd be kind of hazardous to carry around[if number of needed regions > 1]. You can just ZAP whatever's left[else]. You're done with it, anyway[end if]." instead;
+Check taking the chapter patcher: say "It'd be kind of hazardous to carry around[if number of needed regions > 1]. You can just ZAP whatever's left[else]. You're done with it, anyway[end if]." instead;
 
 check switching on the chapter patcher:
 	if otters is solved:
@@ -3623,8 +3606,7 @@ oyster-warn is a truth state that varies.
 check entering a portal:
 	let grn be go-region of noun;
 	if grn is solved: [this shouldn't happen, but yeah.]
-		if grn is otters:
-			say "Elvira is defeated. You don't need to go back." instead;
+		if grn is otters, say "Elvira is defeated. You don't need to go back." instead;
 		say "You've already solved that area." instead;
 	if noun is truster turrets:
 		if number of kayoed regions < 5:
@@ -3646,12 +3628,8 @@ check entering a portal:
 					say "The oyster looks very wide but not tall--it's quite possible there's a ton to do. It's not particularly magical or scary--not as much as [if store w is visible]store W[else]the towers[end if], but you may want to warm up your skills somewhere else first. Proceed anyway?";
 					unless the player yes-consents:
 						say "You decide to look around a bit more." instead;
-	choose row with por of noun in table of warps;
-	say "[go-text entry]";
+	abide by entry-rule of noun;
 	if noun is Throes Hoster, pad-rec "guru";
-	if noun is solid idols and Minded Midden is unvisited:
-		say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]And yet, once through, your powers feel dormant, but thankfully not mordant.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
-		pad-rec-q "asking";
 	let try-recover be false;
 	if last-loc of grn is visited:
 		now try-recover is true;
@@ -3667,8 +3645,7 @@ check entering a portal:
 		try looking;
 	else:
 		move player to last-loc of grn;
-	if try-recover is true:
-		recover-items;
+	if try-recover is true, recover-items;
 	the rule succeeds;
 
 to add-errs (reg - a region):
@@ -7484,18 +7461,7 @@ to say rs-left: [unused]
 
 a thing can be warpable. a thing is usually not warpable.
 
-table of warps [this gives the text for which portal leads to which area, and what starting location]
-por	reg	lloc	go-text
-course source	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
-Tastee Estate	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
-baser braes	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
-balancer barnacle	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
-truster turrets	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
-solid idols	Otters	Minded Midden	"[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
-throes hoster	others	Rustic Citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
-
-to say get-arug:
-	now player has arugula;
+to say get-arug: now player has arugula;
 
 to say get-crust:
 	now swears is number of solved regions + charges of toaster;
@@ -7554,10 +7520,8 @@ to print-the-from (frm - a thing):
 check fliptoing (this is the portal palm and reflexive flip rule):
 	d "Trying to flip [noun].";
 	if noun is visible:
-		if noun is a portal:
-			try entering noun instead;
-		if noun is reflexive or noun is vanishing:
-			continue the action;
+		if noun is a portal, try entering noun instead;
+		if noun is reflexive or noun is vanishing, continue the action;
 		repeat through regana of mrlp:
 			if noun is the-to entry and the-from entry is reflexed:
 				print-the-from the-from entry;
@@ -10132,26 +10096,26 @@ description of Store H is "Store H appears broken-down. It sprawls a bit but is 
 
 a-text of store h is "YRRYRR". b-text of store h is "YPRYRR". parse-text of store h is "-[sp]t[sp]x[sp]-[sp]x[sp]x".
 
-check scaning store h:
-	if otters is not solved:
-		say "The settler gives a weird noise, as if it doesn't want to scan this store--yet." instead;
+check scaning store h: if otters is not solved, say "The settler gives a weird noise, as if it doesn't want to scan this store--yet." instead;
 
 to it-him-her (x - a thing):
 	set the pronoun it to x;
 	set the pronoun her to x;
 	set the pronoun him to x;
 
-the Throes Hoster is a not lumpable not maingame portal. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9.
+section throes hoster
+
+the Throes Hoster is a not lumpable not maingame portal. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-others rule.
+
+this is the enter-others rule:
+	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
+	say "After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
 
 understand "mouth" as Throes Hoster.
 
 does the player mean entering a sto: it is unlikely.
 does the player mean entering a portal: it is likely.
 does the player mean doing something with Store Z: it is unlikely.
-
-check entering Throes Hoster:
-	if Rustic Citrus is visited, continue the action;
-	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
 
 chapter store i
 
@@ -10258,13 +10222,20 @@ description of Store P is "There's a big poster in the window of this average-si
 
 a-text of Store P is "RRYRRY". b-text of Store P is "RRYRRY". parse-text of store p is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
-the baser braes are a plural-named portal. diffic of baser braes is 5. the go-region of baser braes is Presto. description is "Braes are generally natural, but these are weird to focus on, as they seem noisy, though it's not clear what's making the noise. Still, you suspect you need to [if grey gyre is visited]re-[end if]ENTER them.". initial appearance of baser braes is "Baser braes take up the space where Store P used to reside."
+section tropes poster
 
 the tropes poster is part of Store P. the tropes poster is auxiliary.
 
 description of tropes poster is "It features many important, if mis-stated, memes, including how certain nonsense words reliably move the plot forward or make something out of nothing. When you think on them, they are so pert, you see red."
 
 a-text of tropes poster is "RRYRRY". b-text of tropes poster is "??YRRY". parse-text of tropes poster is "x[sp]?[sp]e[sp]x[sp]x[sp]o".
+
+section baser braes
+
+the baser braes are a plural-named portal. diffic of baser braes is 5. the go-region of baser braes is Presto. description is "Braes are generally natural, but these are weird to focus on, as they seem noisy, though it's not clear what's making the noise. Still, you suspect you need to [if grey gyre is visited]re-[end if]ENTER them.". initial appearance of baser braes is "Baser braes take up the space where Store P used to reside.". entry-rule of baser braes is enter-presto rule.
+
+this is the enter-presto rule:
+	say "[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 
 chapter store q
 
@@ -10292,16 +10263,19 @@ a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of stor
 
 description of Store T is "Store T is average-sized, but it seems to repel you. Its window is really lovely stained-glass--it's a depiction of a family of sea animals. There's an engraving below it."
 
-solid idols are a plural-named not lumpable portal. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them."
+solid idols are a plural-named not lumpable portal. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-otters rule.
 
 report examining solid idols: try examining engravings;
 
 understand "otters/idol" as solid idols.
 
-check entering solid idols:
+this is the enter-otters rule:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
 		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
+	if minded midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]And yet, once through, your powers feel dormant, but thankfully not mordant.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
+	say "[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
+	pad-rec-q "asking";
 
 chapter store u
 
@@ -10317,7 +10291,12 @@ the roads are a plural-named boringthing. they are part of store u. description 
 
 a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
-the course source is a portal. diffic of course source is 3. understand "routes" as course source when player is in strip of profits. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if same mesa is visited]re[end if]enter it."
+section course source
+
+the course source is a portal. diffic of course source is 3. understand "routes" as course source when player is in strip of profits. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if same mesa is visited]re[end if]enter it.". entry-rule of course source is enter-routes rule.
+
+this is the enter-routes rule:
+	say "[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 
 chapter store v
 
@@ -10331,7 +10310,12 @@ a-text of voters is "RRYRYR". b-text of voters is "RRYRYP". parse-text of voters
 
 a-text of Store V is "RRYRYR". b-text of Store V is "RRGRGR". parse-text of store v is "x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
-the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER."
+section Tastee Estate
+
+the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
+
+this is the enter-troves rule:
+	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 
 chapter store w
 
@@ -10341,7 +10325,12 @@ a-text of Store W is "RYRYRR". b-text of Store W is "RYRYRR". parse-text of stor
 
 description of Store W is "It's the biggest structure in the strip. You see replicas of two tall, narrow buildings. You can also READ who made it."
 
+section truster turrets
+
 the truster turrets are a plural-named portal. diffic of truster turrets is 7. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can ENTER. But their size indicates a hefty quest ahead."
+
+this is the enter-towers rule:
+	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 
 chapter store x
 
@@ -10357,9 +10346,14 @@ description of Store Y is "The store seems filled with water. It's wide but not 
 
 the shells are a boringthing. they are part of store y. the shells are uncluing. description of shells is "You can't see what you can do with the shells, but maybe they just help show what is behind Store Y.". bore-text of shells is "Messing with the shells won't help you get in Store Y, but maybe they're a clue.".
 
+section barnacle balancer
+
 the balancer barnacle is a privately-named portal. diffic of balancer barnacle is 6. the go-region of barnacle balancer is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.".
 
 check eating barnacle balancer: say "It is a balancer barnacle. Another would come along to eat you." instead;
+
+this is the enter-oyster rule:
+	say "[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 
 chapter store z
 
@@ -13546,7 +13540,7 @@ the TBA key is part of the keyboard. the TBA key is llpish and reflexive. printe
 
 check scaning TBA key:
 	say "You sense there can't be much to do with something saying TBA. Still, go ahead and scan?";
-	unless the player yes-consents: say "OK, you should get it now." instead;
+	unless the player yes-consents, say "OK, you should get it now." instead;
 
 a-text of TBA key is "RYR". b-text of TBA key is "PYR". parse-text of TBA key is "t[sp]a[sp]b". TBA key is any-spoilable.
 
@@ -13556,7 +13550,7 @@ The schematic catechism is a thing. it is on the labs slab.
 
 does the player mean doing something with catechism when player is in Hacks' Shack: it is likely;
 
-check scaning catechism: say "You think back to an annoying computer science professor who raved you just can't scan books like this and hope to get useful information.[paragraph break]He's literally right, here, but he probably meant just reading, though[if catechism is examined]. As you already did[end if]." insted;
+check scaning catechism: say "You think back to an annoying computer science professor who raved you just can't scan books like this and hope to get useful information.[paragraph break]He's literally right, here, but he probably meant just reading, though[if catechism is examined]. As you already did[end if]." instead;
 
 understand "algorithms logarithms" and "algorithms/logarithms" and "textbook" and "text/book" as schematic catechism.
 
@@ -13602,7 +13596,7 @@ the description of the skid is "It's three feet wide by six feet, and it's got s
 
 section oper rope
 
-the oper rope is a boringthing. The oper rope is part of the skid. description of oper rope is "It's attached so you can pull the skid from room to room.". boretext is "The oper rope isn't special or important except as something that helps you PULL the skid around."
+the oper rope is a boringthing. The oper rope is part of the skid. description of oper rope is "It's attached so you can pull the skid from room to room.". bore-text is "The oper rope isn't special or important except as something that helps you PULL the skid around."
 
 check pulling oper rope: try pulling skid instead;
 
@@ -20725,7 +20719,7 @@ book Swell Wells
 
 Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing, or down the wells, or west to a Filed Field[if sorer bogey is visible]. You think you hear something from the wells[end if][if green stain is visible]. There's also a green stain among the wells[end if].". Swell Wells is in Others.
 
-s-w are privately-named scenery in swell wells. printed name of s-w is "the wells". understand "wells" and "swell wells" as s-w. "It's been vandalized in oh so many ways. [what-clear]."
+s-w are privately-named scenery. printed name of s-w is "the wells". understand "wells" and "swell wells" as s-w. "It's been vandalized in oh so many ways. [what-clear]."
 
 to say what-clear:
 	if sorer bogey is not in Swell Wells and stucco is not in Swell Wells:
@@ -20828,37 +20822,29 @@ this is the bore-valence-enclave rule:
 
 understand "near arena" and "near/arena" as valence enclave.
 
-section gs = gates
+section Sagest Gate
 
-check entering gs:
-	try going north instead;
+check entering Sagest Gate: try going north instead;
 
-does the player mean entering gs: it is likely;
+does the player mean entering Sagest Gate: it is likely;
 
-gs are privately-named scenery in Gates Stage. printed name of gs is "gates". "They're [if halt lath is in Gates Stage]open for easy entry north[else]closed by a halt lath[end if]."
+the Sagest Gate is scenery in Gates Stage. "The Sagest Gate is [if halt lath is in Gates Stage]open for easy entry north[else]closed by a halt lath[end if]."
 
-check taking gs:
-	say "No way you could move the gates." instead;
+check taking Sagest Gate: say "No way you could move the Sagest Gate." instead;
 
-understand "gate" as gs.
+understand "gates" as Sagest Gate when player is in Gates Stage.
+
+check closing Sagest Gate: say "It's not some late game lame gate.It won't open or close at your whim." instead;
+
+check opening Sagest Gate: say "[if player has passport]You need some sort of passport to get through.[else]You wave the passport and the Sagest Gate starts to creak open.[end if]" instead;
+
+check opening Sagest Gate: try going north instead
+
+check giving something to Sagest Gate: say "The gates seem to have a sensor that can detect if you have ID[if player has passport]. You know, that passport should be enough[end if]."
 
 section halt lath
 
-the halt lath is a boringthing. it is part of the gs. description of halt lath is "The halt lath looks sturdy and won't budge physically.". bore-text is "You probably need to do something non-physical to open the halt lath."
-
-understand "gates" as gs.
-
-check closing gs:
-	say "They're not some late game lame gate. They won't open or close at your whim." instead;
-
-check opening gs:
-	say "[if player has passport]You need some sort of passport to get through.[else]You wave the passport and the grates start to creak open.[end if]" instead;
-
-instead of opening gs:
-	try going north;
-
-instead of giving something to gs:
-	say "The gates seem to have a sensor that can detect if you have ID[if player has passport]. You know, that passport should be enough[end if]."
+the halt lath is a boringthing. it is part of the Sagest Gate. description of halt lath is "The halt lath looks sturdy and won't budge physically.". bore-text is "You probably need to do something non-physical to open the halt lath."
 
 section gropin' roping
 

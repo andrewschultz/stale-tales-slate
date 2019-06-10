@@ -2205,13 +2205,13 @@ melon	"The melon is fine as-is. It's better than the one that was on display, fo
 peach	"You got enough of a discount. Really."
 mango	"Snag mo['] mangos? No mas, G."
 papayas	"You've already established yourself as a prompt payer."
-perp-priv	"Don't want to over-prep[gs-north]."
-searcher	"You've done enough researching[gs-north]."
-viewer	"You've done enough reviewing[gs-north]."
+perp-priv	"Don't want to over-prep[win-north]."
+searcher	"You've done enough researching[win-north]."
+viewer	"You've done enough reviewing[win-north]."
 
 to say play-food: say "Don't play with your food. [if toaster is visible]Maybe put it in the toaster instead[else]There must be something that can prepare it[end if]"
 
-to say gs-north: if gate-level is 2, say ", but you can just go north"
+to say win-north: if gate-level is 2, say ", but you can just go north"
 
 to say got-e: say "You've got an entry. No need to seal it up"
 
@@ -2437,7 +2437,7 @@ rom sticks	"[one of]You can put the sticks in Drive A to make it go faster. The 
 gum	"[one of]Gum comes in more than six flavors at your local supermarket, but there are only five ways to change G-U-M.[plus][or]As for what it's good for, it's everlasting gum, and maybe what it changes into will help other things be everlasting.[plus][or]Oh, the solution?[plus][or]UMG, er, OMG, do you need to ask?[plus][or]You don't need to go to George Mason University.[plus][or]I just put extra clues in to give more clues than anagram possibilities, because I could.[plus][or]MUG. In which you pour liquid.[minus][cycling]"	--	"make a MUG"
 mug	"[one of]Like the never-ending gum it came from, the mug regenerates what's in there.[plus][or]What goes in a mug? Liquid, generally.[plus][or][if coal is not moot]You can probably figure what to do with the coal to make a liquid.[end if]The cola is a liquid.[plus][or]POUR COLA IN MUG.[minus][cycling]"
 skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks' Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
-skidrope	"The skid's rope lets you PULL the skid."
+oper rope	"The oper rope isn't useful on its own, but it lets you PULL the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is visible]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
@@ -2735,7 +2735,7 @@ coin	"[one of]You ultimately need another coin, but perhaps it can be converted 
 coins	"[one of]There are two things to do with the coins.[plus][or]The coins can become another thing, or they can change in quality.[plus][or]The thing coins can become is ICONS.[plus][or]The coins can also become SONIC.[minus][cycling]"
 icon	"You've done what you can with the icon. You need to [if number of moot fruits < 8]get more fruits[else]return to Curtis[end if] to get another coin and make ICONS."
 icons	"[one of]The icons are too inert.[plus][or]The icons can become SONIC.[minus][cycling]"
-gs	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has storage box]You have the storage box[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box [greedy-s] is guarding[end if]."
+Sagest Gate	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has storage box]You have the storage box[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box [greedy-s] is guarding[end if]."
 s-c	"[one of]The sonic coins aren't quite what you need. Nobody wants singing money.[plus][or]The coins can become ICONS.[minus][cycling]"
 s-i	"[if player has storage box]You can put the icons in the lost slot.[else][one of]You need to put the sonic icons somewhere.[plus][or]If you've seen anything that doesn't accept money, that might help.[plus][or]The So-Great Storage doesn't accept money. You need the droll dollar from Curtis.[minus][cycling]"
 storage box	"[if player has dollar]You can trade the dollar for the storage box.[else if player has storage and lost slot is visible]You can put something in the box's slot.[else]There's a way to open the storage box. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
