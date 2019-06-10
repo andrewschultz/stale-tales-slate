@@ -10866,13 +10866,11 @@ chapter worst ad
 
 the worst ad is LLPish vanishing scenery in Same Mesa. "Dang it, a giant ad for RADWOST, and it's all in red, but it's too lousy to determine what RADWOST is about. Maybe if you point your settler at it, you can pick it up. You're not sure how best to approach it, with all these twisty roads. You're not sure if you need to, really."
 
-to say go-worst:
-	if worst ad is prefigured, say "--the one you tried to go TOWARDS with [Gast] around";
+to say go-worst: if worst ad is prefigured, say "--the one you tried to go TOWARDS with [Gast] around";
 
-a-text of worst ad is "RYRYRRR". b-text of worst ad is "RGRYRRR". parse-text of worst ad is "x[sp]o[sp]x[sp]a[sp]x[sp]x[sp]x".
+a-text of worst ad is "RYRYRRR". b-text of worst ad is "R??Y??R". parse-text of worst ad is "x[sp]o[sp]x[sp]a[sp]x[sp]x[sp]x".
 
-check taking worst ad:
-	say "You'd need to get closer." instead;
+check taking worst ad: say "You'd need to get closer. Which isn't easy." instead;
 
 chapter MORF FORM
 
@@ -19045,19 +19043,13 @@ description of Elmer is "He wears sober robes. His mouth smiles on the left and 
 
 description of Merle is "He wears sober robes. His mouth smiles on the right and frowns on the left."
 
-the sober robes are plural-named scenery in Reclusion Inclosure.
-
-instead of doing something to sober robes:
-	if action is procedural, continue the action;
-	say "Elmer and Merle, noticing you looking at their robes, yell 'Us? Drab? Absurd!'"
-
-description of sober robes is "Elmer and Merle don't stylize zestily."
+the sober robes are plural-named boringscen in Reclusion Inclosure. description of sober robes is "Elmer and Merle don't stylize zestily.". bore-text is "Elmer and Merle, noticing you noticing their robes, yell 'Us? Drab? Absurd!'"
 
 book Minded Midden
 
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, Bleary barley blocks you completely, stretching out seamlessly, endlessly.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
 
 printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
@@ -22020,7 +22012,7 @@ check burning:
 	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
 	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
 	if mrlp is towers and Topside Deposit is unvisited, say "Don't be a brushfire furbisher." instead;
-	if noun is blary barley, say "You'd be right in the middle. So, bad idea." instead; [otters]
+	if noun is bleary barley, say "You'd be right in the middle. So, bad idea." instead; [otters]
 	if noun is atmo-moat, say "It's nowhere near greasy enough." instead;
 	if noun is storage, say "It's meant to be nearly indestructible." instead;
 	say "You're a ropy pyro. There's no igniter tiering nearby." instead;

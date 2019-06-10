@@ -57,7 +57,7 @@ aro_settings = [ "a-text ", "b-text ", "parse-text " ]
 sa_settings = [ "lgth ", "gpos ", "rpos ", "rgtext ", "cert-text ", "rect-text " ]
 
 def table_shorten(x):
-    return re.sub("^(all )", "", x)
+    return re.sub("^(all |no )", "", x)
 
 def shortcutcheck(x):
     if x in abbrevs: return abbrevs[x]

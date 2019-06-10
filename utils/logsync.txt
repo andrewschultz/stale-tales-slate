@@ -143,12 +143,12 @@ pamphlets~i used to>outside
 >IGNORE=letters settler
 ########REGION routes
 >IGNORE=scripture picturers
-worst ad>towards
+worst ad~warts do sow drat>towards
 sindie>inside
 diesin>inside
 anti sag sit a nag>against
-bench-end~tirades>astride
-gast's elbow~elbow>below
+side art>astride
+woe bow bell>below
 rude 'n nuder>under
 lairage regalia~oscar's>across
 grubby restaurant~pat's>past
@@ -163,6 +163,7 @@ rude 'n nuder>under
 the-b~the bean>beneath
 darkness~unlit>until
 yob den>beyond
+# note that "all" is clipped in the table_shorten function
 all noon gag>along
 un-road>around
 da mist>amidst
@@ -452,10 +453,9 @@ tetris sitter>triste
 bogus-detours~dourest detours>rousted
 ########REGION=otters
 ####bleary barley
-b-b~bleary barley>barely
+bleary barley>barely
 deli rye>reedily
 ed riley>reedily
-er yield>reedily
 ####disowned downside
 atmo-moat>atom
 t-bossily~i sly sob si bloys>bossily

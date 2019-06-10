@@ -135,6 +135,13 @@ Now you can either read Drive E to see "I'd Veer" in red, or you can try each po
 DIRVEE doesn't quite work, so DERIVE it is.
 >STORE U
 >>SAME MESA
+#logic for warts do sow drat
+?Why does the worst ad give questions? It's only one set of letters.
+READ it carefully. The worst ad reads WARTS DO SOW, DRAT, and it gives R??Y??R. This looks awful, but slot 2 must be O or A, so it is a vowel.
+That means the others must be consonants. Now we should probably be conservative and assume WORSTAD does nothing to help us, giving (DRT)(OA)(RW)(OA)(RST)(AD)(DRSW).
+Slot 6 is D, and that makes things easier. (RT)(OA)(RW)(OA)(RST)D(RSW). We can make an educaated guess that S is the last letter, since .....D(RW) would be nonsense.
+That helps a few things fall out: (RT)(OA)(RW)(OA)(RT)DS, or (RT)(OA)W(RT)DS.
+The RADWOST red text leaves us with TOWARDS.
 #logic for anti sag sit a nag
 ?What's with the Anti Sag Sit a Nag?
 It has a few question marks, but the double A's help a lot. Slot 4 must be a vowel and 5 must be a consonant, making slot 1 an A. A(GST)(AI)(AI)(NS)(GNST)(NST).

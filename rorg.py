@@ -120,7 +120,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                 cur_rule_or_quote = ""
                 continue
             if in_table:
-                lary = line.lower().split("\t")
+                lary = line.lower().strip().split("\t")
                 if exp_cols and len(lary) != exp_cols: print("Bad # of tabs in table at line {:d}. Should have 6.".format(line_count))
                 for x in range(0, len(lary)):
                     if lary[x].endswith(" rule") and lary[x] != 'a rule' and lary[x] not in table_order:
@@ -214,10 +214,10 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     if len(table_got):
         print(len(table_got), "unique left over,", dupes, "total duplicates. Dumping unsorted stuff at the end:", '/'.join(table_got))
         temp_out.write("\nbook leftovers\n\n")
-        for q in table_got: temp_out.write("{:s}\n\n".format(cur_full_quote[q]))
+        for q in table_got: temp_out.write("{:s}\n".format(cur_full_quote[q]))
     else: print("Nothing left over. Hooray.")
     if garbage:
-        temp_out.write("book random leftover garbage")
+        temp_out.write("book random leftover garbage\n")
         temp_out.write(garbage)
         print(garbage.count("\n"), "lines of garbage.")
         temp_out.write("\n")
