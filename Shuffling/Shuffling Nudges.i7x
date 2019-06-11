@@ -630,10 +630,7 @@ to say loc-rej:
 	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
 
 to say darnels-inst:
-	if darn-slan is true:
-		say "You already messed with the darnels";
-	else:
-		say "You might be able to clear the darnels, but they're not as thick as, well, the thicket"
+	say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
 
 to say no-warpy:
 	say "You can't change Old Warpy. You have to just trust it";

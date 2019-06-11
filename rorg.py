@@ -18,6 +18,7 @@ import os
 import i7
 import sys
 
+from shutil import copy
 from filecmp import cmp
 from collections import defaultdict
 
@@ -37,6 +38,9 @@ do_tables = False
 bail_force = False
 bail_on_mismatch = False
 
+max_file_difs = 0
+file_difs = 0
+
 table_starts = defaultdict(int)
 table_order = defaultdict(tuple)
 first_table = defaultdict(str)
@@ -54,6 +58,7 @@ def usage(err_cmd = "General usage"):
     print("v/nv/vn toggles verbose output")
     print("b/bf/fb forces bail if a section is missed")
     print("bm/mb bails on mismatch")
+    print("md# gives maximum number of file diffs to process.")
     print("? gives this")
     exit()
 
@@ -162,7 +167,9 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     sect_order[temp] = line_count
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
-                elif not line.startswith("\t") and line.strip(): print("Possible rule misfire", line_count, line.strip())
+                elif not line.startswith("\t"):
+                    if i7.is_outline_start(line): continue
+                    print("Possible rule misfire", line_count, line.strip())
                 if cur_rule_or_quote: cur_full_quote[cur_rule_or_quote] += line
                 else:
                     if not line.startswith("\t"): garbage += "\n"
@@ -224,18 +231,24 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     temp_out.write(ending_bit)
     temp_out.close()
     if cmp(temp_file, my_f):
-        print("Files matched!")
+        print("Files matched: {:s} and {:s}.".format(fbase, tbase))
         return
     else:
         print("Mismatches between {:s} and {:s}!".format(tbase, fbase))
-        mytools.cs(my_f, temp_file, True, 20)
+        mytools.cs(my_f, temp_file, False, 20)
     if copy_file:
-        filecpy(temp_file, my_f)
+        print("Copying", tbase, "back to", fbase)
+        copy(temp_file, my_f)
     else:
+        print("Use -c flag to copy back instead of showing differences.")
         i7.wm(temp_file, my_f)
     #os.remove(temp_file)
     print("Finished", fbase)
-    sys.exit()
+    global file_difs
+    file_difs += 1
+    if max_file_difs and file_difs == max_file_difs:
+        print("Bailing now we have", file_difs, "different files.")
+        sys.exit()
 
 cmd_count = 1
 while cmd_count < len(sys.argv):
@@ -253,6 +266,9 @@ while cmd_count < len(sys.argv):
         do_tables = True
     elif arg == 'b' or arg == 'bf' or arg == 'fb': bail_force = True
     elif arg == 'bm' or arg == 'mb': bail_on_mismatch = True
+    elif arg[:2] == 'md' and arg[2:].isdigit():
+        max_file_difs = int(arg[2:])
+        if max_file_difs < 0: sys.exit("Need positive max file diffs.")
     elif arg == 'rs': game_ary = [ "roi", "sa" ]
     elif arg == 'sr': game_ary = [ "sa", "roi" ]
     elif arg == 'r' or arg == 'roi': game_ary = [ "roi" ]

@@ -97,8 +97,8 @@ tiles	teleporter	"islet"	"tiles"	a rule	a rule	"The tiles crumble and shift arou
 l2	lies	"lies"	"lies"	--	post-leis-lies rule	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"	false	322886760
 rock	cork	"cork"	"rock"	--	post-rock-cork rule	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	--	post-swing-wings rule	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
-sprig	grips	"grips/grip"	"sprig"	--	post-sprig-grips rule	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
-spore	ropes	"ropes/rope"	"spore"	--	post-spore-ropes rule	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
+sprig	grips	"grips/grip"	"sprig"	--	--	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
+spore	ropes	"ropes/rope"	"spore"	--	--	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
 poles	slope	"slope"	"poles"	--	post-poles-slope rule	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450
 tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	--	post-toolshed-toeholds rule	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
 riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
@@ -108,11 +108,17 @@ links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and s
 
 book auxiliary text and rules
 
-this is the post-hoots-shoot rule:
-	now shoot button is part of panel;
+section ordeal loader auxiliary
 
-this is the post-trees-steer rule:
-	now steer button is part of panel;
+this is the post-bulge-bugle rule:
+	if bolt is moot, min-up;
+
+this is the post-odor-door rule:
+	if min-alert is false, poss-display;
+
+this is the post-bolt-blot rule:
+	now blot is part of OR DO door;
+	if bulge is moot, min-up;
 
 this is the post-toga-goat rule:
 	if player has toga or player has goat:
@@ -120,43 +126,6 @@ this is the post-toga-goat rule:
 		now goat is in location of player;
 	set the pronoun him to goat;
 	set the pronoun her to goat;
-
-this is the post-siren-resin rule:
-	if resin is visible:
-		moot resin;
-		now stickyhanded is true;
-
-this is the post-storeb-sorbet rule:
-	moot sorbet;
-	min-up;
-
-this is the post-anapest-peasant rule:
-	moot pat;
-
-this is the post-liches-chisel rule:
-	now spread is in Cruel Ones' Enclosure;
-
-this is the post-toolshed-toeholds rule:
-	if sprig is not moot, now sprig is LLPish;
-	if spore is not moot, now spore is LLPish;
-	if sprig is moot, min-up;
-	if spore is moot, min-up;
-
-this is the post-riot-protest rule:
-	now chain links are in Potshot Hotspot;
-
-this is the post-poles-slope rule:
-	if toeholds are part of the poles, now toeholds are part of the slope;
-
-this is the pre-plane-panel rule:
-	if poem is not folded, say "You'd need to fold the poem into a plane, first." instead;
-
-this is the pre-smilies-missile rule:
-	if smilies are visible:
-		if player is not in moor:
-			say "[one of]Good idea, but not in here. There'd be more room for that outside where you found the poem[or]Need to get outside to the moor[stopping].";
-			preef smilies;
-			do nothing instead;
 
 this is the pre-nametag-gateman rule:
 	if gateman is visible, try examining the gateman instead;
@@ -175,72 +144,6 @@ this is the pre-nametag-gateman rule:
 		say "If you really CAN change the nametag, you don't want a gateman in your face--so you chuck the nametag away. Not really believing...";
 	now nametag is in location of player;
 
-to say in-sheath:
-	now sword is contained in the sheath;
-
-to say moor-jump:
-	if moor is visited:
-		if location of player is cedars and caskfillings is 2:
-			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return.";
-		else:
-			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if].";
-	if moor is unvisited:
-		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if].";
-	else:
-		say "Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if].";
-
-this is the pre-beats-beast rule:
-	if player is not in Bassy Abyss and beats are visible:
-		say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.";
-		the rule fails;
-
-this is the post-antlers-rentals rule:
-	moot rentals;
-
-this is the pre-livers-sliver rule:
-	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
-	if sliver is visible:
-		if doorway is not in Cruel Ones' Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
-
-this is the pre-livers-sliver-silver rule:
-	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
-	unless drapes are moot:
-		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
-		preef silver;
-		do nothing instead;
-
-this is the post-oils-soil rule:
-	now oils are in Sacred Cedars;
-
-this is the post-oils-silo rule:
-	now oils are in Sacred Cedars;
-	moot cask;
-	moot sack;
-
-this is the pre-oils-soil rule:
-	if oils are not in cask:
-		if location of player is Sacred Cedars, say "[if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to soil[end if]." instead;
-		if oils are visible:
-			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
-	else if player is not in moor:
-		say "This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?";
-		preef soil;
-		do nothing instead;
-
-this is the pre-oils-silo rule:
-	if oils are not in cask:
-		if location of player is Sacred Cedars, say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo[end if]." instead;
-		if oils are visible:
-			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
-		continue the action;
-	if player is not in moor:
-		say "This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?";
-		preef silo;
-		do nothing instead;
-	if soil is not in moor:
-		preef silo;
-		say "The moor's ground, as is, is not stable enough. You need a foundation first." instead;
-
 this is the post-nametag-gateman rule:
 	set the pronoun him to gateman;
 	if mega ant is in Notices Section:
@@ -250,15 +153,17 @@ this is the post-nametag-gateman rule:
 		say "The gateman [if ant is moot]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
 		moot bugle;
 
-this is the post-odor-door rule:
-	if min-alert is false, poss-display;
+to say check-plur:
+	if player's command does not include "attics":
+		say "(Okay, no need to be pedantic about plurals.) [run paragraph on]";
 
-this is the post-bolt-blot rule:
-	now blot is part of OR DO door;
-	if bulge is moot, min-up;
+to say what-about-gate: say ". [if player has gadget]Not much left to do for you here[else]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
 
-this is the post-bulge-bugle rule:
-	if bolt is moot, min-up;
+section stores auxiliary
+
+this is the post-storeb-sorbet rule:
+	moot sorbet;
+	min-up;
 
 this is the pre-storer-resort rule:
 	if you-can-advance, continue the action;
@@ -266,9 +171,56 @@ this is the pre-storer-resort rule:
 		say "That seems like it should work, but you sense you have not done enough yet[if Leis Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
 		preef store r instead;
 
+this is the pre-cabinet-bactine rule:
+	if Trips Strip is unvisited:
+		say "That is a good idea, but you're not powerful enough yet.";
+		preef cabinet;
+		the rule fails;
+
+this is the post-cabinet-bactine rule:
+	move cabinet to location of player;
+	move cratered bits to location of player;
+	moot cratered bits;
+
+section forest auxiliary
+
+to say process-sandwich:
+	if sandwich is visible:
+		say "[if player has sandwich]You juggle the bread and spam, but neither part falls[else]You decide to pick up the sandwich so the other part doesn't fall[end if] to the floor. ";
+		moot sandwich;
+		if the player's command matches the text "beard":
+			now player has spam;
+		if the player's command matches the text "maps":
+			now player has bread;
+
+this is the pre-livers-sliver-silver rule:
+	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
+	unless drapes are moot:
+		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
+		preef silver;
+		do nothing instead;
+
+this is the pre-livers-sliver rule:
+	if livers are visible, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
+	if sliver is visible:
+		if doorway is not in Cruel Ones' Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
+
+this is the post-liches-chisel rule:
+	now spread is in Cruel Ones' Enclosure;
+
 this is the post-banshee-hasbeen rule:
 	min-up;
 	moot has-been;
+
+section sortie auxiliary
+
+to say drop-straw:
+	say ", which is too heavy to carry. You drop it";
+	choose row with short of "warts" in table of pad-stuff;
+	if known entry is true:
+		say ". You run a big line through your entry on warts in your dope tan notepad";
+		now known entry is false;
+	move straw to location of the player;
 
 this is the post-thenick-kitchen rule:
 	if straw is in the nick, now straw is in kitchen;
@@ -285,19 +237,19 @@ this is the post-fridgey-flip rule:
 			now fridge is transparent;
 		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
 
-this is the pre-sack-cask rule:
-	if sack is visible:
-		if number of things in sack > 0:
-			say "As the sack changes, [the list of things in sack] falls out.";
-			repeat with Q running through things in sack:
-				move Q to location of player;
-
 this is the pre-cask-sack rule:
 	if cask is visible:
 		if cask is closed:
 			say "The cask seems to bulge, and you hear a sloshing, but it doesn't do anything. It seems like it should work, though. Perhaps the cask has a safety mechanism against spilling liquid.[paragraph break]Maybe you need to walk around and find someone who can open the cask.";
 			preef sack instead;
 		if oils are in cask, say "That's inadvisable. The oils would leak out." instead;
+
+this is the pre-sack-cask rule:
+	if sack is visible:
+		if number of things in sack > 0:
+			say "As the sack changes, [the list of things in sack] falls out.";
+			repeat with Q running through things in sack:
+				move Q to location of player;
 
 this is the pre-room-moor rule:
 	unless shoes are moot:
@@ -319,28 +271,139 @@ this is the pre-room-moor rule:
 				say "Okay. Next time, you won't see this warning." instead;
 			now button-locked is true;
 
+this is the post-room-moor rule:
+	if room-flip is false:
+		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
+		now room-flip is true;
+
+to say moor-jump:
+	if moor is visited:
+		if location of player is cedars and caskfillings is 2:
+			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return.";
+		else:
+			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if].";
+	if moor is unvisited:
+		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if].";
+	else:
+		say "Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if].";
+
+this is the post-anapest-peasant rule:
+	moot pat;
+
+to say exp-fli:
+	if player has expo flier:
+		say "snatches back the expo flier and ";
+		moot expo flier;
+
+this is the pre-plane-panel rule:
+	if poem is not folded, say "You'd need to fold the poem into a plane, first." instead;
+
+this is the pre-smilies-missile rule:
+	if smilies are visible:
+		if player is not in moor:
+			say "[one of]Good idea, but not in here. There'd be more room for that outside where you found the poem[or]Need to get outside to the moor[stopping].";
+			preef smilies;
+			do nothing instead;
+
 this is the pre-haywall-hallway rule:
 	if scraped wall is not hayfilled:
 		say "Hm, that's possible, but you can't make the hallway until you add something to the wall.";
 		preef hallway;
 		do nothing instead;
 
-this is the post-room-moor rule:
-	if room-flip is false:
-		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
-		now room-flip is true;
+this is the pre-oils-silo rule:
+	if oils are not in cask:
+		if location of player is Sacred Cedars, say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo[end if]." instead;
+		if oils are visible:
+			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
+		continue the action;
+	if player is not in moor:
+		say "This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?";
+		preef silo;
+		do nothing instead;
+	if soil is not in moor:
+		preef silo;
+		say "The moor's ground, as is, is not stable enough. You need a foundation first." instead;
+
+this is the post-oils-silo rule:
+	now oils are in Sacred Cedars;
+	moot cask;
+	moot sack;
+
+this is the pre-oils-soil rule:
+	if oils are not in cask:
+		if location of player is Sacred Cedars, say "[if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to soil[end if]." instead;
+		if oils are visible:
+			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type UNDO and send a transcript of what you did.";
+	else if player is not in moor:
+		say "This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?";
+		preef soil;
+		do nothing instead;
+
+this is the post-oils-soil rule:
+	now oils are in Sacred Cedars;
+
+this is the post-hoots-shoot rule:
+	now shoot button is part of panel;
+
+this is the post-trees-steer rule:
+	now steer button is part of panel;
+
+section metros auxiliary
 
 this is the post-drainage-gardenia rule:
 	if A reading is in Undesired Underside, say "The/a reading blows away once the gardenias appear.";
 	moot a reading;
+
+this is the pre-lostcorn-controls rule:
+	if bastion-evac is false and lost corn is visible, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
+
+this is the pre-heaths-sheath rule:
+	if player is in Fo' Real Florae:
+		if fairy-worthy is false, say "The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof." instead;
+		if begonias are not in Fo' Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
+		if player does not have heaths:
+			try taking heaths;
+		say "[rude].[line break]";
+
+this is the post-heaths-sheath rule:
+	now player wears sheath;
+
+this is the pre-begonias-noisebag rule:
+	if the player's command does not include "noise", say "Yes, the begonias should become a bag, but you need to state what sort fully. Magic isn't THAT easy." instead;
+	if player is in Fo' Real Florae:
+		if fairy-worthy is false, say "The begonias are (still) merchandise. You don't want to know what faeries do to vandals." instead;
+		if heaths are not in Fo' Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
+		if player does not have begonias:
+			try taking begonias;
+		say "[rude].[line break]";
+
+this is the pre-brocade-barcode rule:
+	if player does not have the brocade:
+		say "You take the brocade first--you're a bit embarrassed your magic seems more, well, applied than theirs.";
+		try taking brocade;
+	if player is in Fo' Real Florae:
+		say "[rude].[line break]";
 
 this is the pre-drycake-keycard rule:
 	if bastion-evac is false and dry cake is visible:
 		say "[one of]The chatterers would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
 		preef dry cake instead;
 
-this is the pre-lostcorn-controls rule:
-	if bastion-evac is false and lost corn is visible, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
+this is the post-antlers-rentals rule:
+	moot rentals;
+
+this is the post-siren-resin rule:
+	if resin is visible:
+		moot resin;
+		now stickyhanded is true;
+
+to say beast-beats: say "[if beast is visible]beats[else]beats".
+
+this is the pre-beats-beast rule:
+	if player is not in Bassy Abyss and beats are visible:
+		say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.";
+		the rule fails;
 
 this is the pre-words-sword rule:
 	if player is in Bile Libe:
@@ -354,32 +417,22 @@ this is the pre-words-sword rule:
 	if player is not in Bassy Abyss and player does not have sheath, say "The words are sharp enough, but you have nothing to hold a sword in." instead;
 	if player is not in Bassy Abyss, say "[if player has noise bag]The time's not right, yet. There's no threat near you[else]You can't go carrying a sword about the city. You don't need to attract attention[end if]." instead;
 
-this is the post-heaths-sheath rule:
-	now player wears sheath;
+to say in-sheath:
+	now sword is contained in the sheath;
 
-this is the pre-heaths-sheath rule:
-	if player is in Fo' Real Florae:
-		if fairy-worthy is false, say "The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof." instead;
-		if begonias are not in Fo' Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
-		if player does not have heaths:
-			try taking heaths;
-		say "[rude].[line break]";
+to say which-roar:
+	moot noise bag;
+	say "[if beats are visible]loud beats[else]beast's roaring[end if]"
 
-this is the pre-brocade-barcode rule:
-	if player does not have the brocade:
-		say "You take the brocade first--you're a bit embarrassed your magic seems more, well, applied than theirs.";
-		try taking brocade;
-	if player is in Fo' Real Florae:
-		say "[rude].[line break]";
+to say give-sword:
+	if stickyhanded is true:
+		say "leaps into your hand";
+		now player has the sword;
+	else:
+		say "jumps and slides out of your hand";
+		now sword is in Bassy Abyss;
 
-this is the pre-begonias-noisebag rule:
-	if the player's command does not include "noise", say "Yes, the begonias should become a bag, but you need to state what sort fully. Magic isn't THAT easy." instead;
-	if player is in Fo' Real Florae:
-		if fairy-worthy is false, say "The begonias are (still) merchandise. You don't want to know what faeries do to vandals." instead;
-		if heaths are not in Fo' Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
-		if player does not have begonias:
-			try taking begonias;
-		say "[rude].[line break]";
+section resort auxiliary
 
 this is the post-leis-lies rule:
 	min-up;
@@ -392,46 +445,18 @@ this is the post-rock-cork rule:
 this is the post-swing-wings rule:
 	if rock is not moot, now rock is LLPish;
 
-this is the post-protest-potters rule:
-	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
+to say tool-clue:
+	if grips are visible and ropes are visible:
+		say ". The combination of grips and ropes is probably enough to make climbing gear[if tool shed is visible]. You can probably try to mess with the tool shed, but it doesn't seem like you need to[end if]";
 
-this is the post-links-kilns rule:
-	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
+this is the post-poles-slope rule:
+	if toeholds are part of the poles, now toeholds are part of the slope;
 
-this is the post-chain-china rule:
-	min-up;
-	now links are in Potshot Hotspot;
-	moot china;
-
-this is the pre-chain-china rule:
-	if china is moot, say "You already shook that out of the links. You need to concentrate on the links, now." instead.
-
-to say exp-fli:
-	if player has expo flier:
-		say "snatches back the expo flier and ";
-		moot expo flier;
-
-to say beast-beats: say "[if beast is visible]beats[else]beats".
-
-to say check-plur:
-	if player's command does not include "attics":
-		say "(Okay, no need to be pedantic about plurals.) [run paragraph on]";
-
-to say drop-straw:
-	say ", which is too heavy to carry. You drop it";
-	choose row with short of "warts" in table of pad-stuff;
-	if known entry is true:
-		say ". You run a big line through your entry on warts in your dope tan notepad";
-		now known entry is false;
-	move straw to location of the player;
-
-to say give-sword:
-	if stickyhanded is true:
-		say "leaps into your hand";
-		now player has the sword;
-	else:
-		say "jumps and slides out of your hand";
-		now sword is in Bassy Abyss;
+this is the post-toolshed-toeholds rule:
+	if sprig is not moot, now sprig is LLPish;
+	if spore is not moot, now spore is LLPish;
+	if sprig is moot, min-up;
+	if spore is moot, min-up;
 
 to say holds-1:
 	reg-inc;
@@ -442,15 +467,6 @@ to say holds-1:
 		say "slope";
 		now toeholds are part of the slope;
 
-to say process-sandwich:
-	if sandwich is visible:
-		say "[if player has sandwich]You juggle the bread and spam, but neither part falls[else]You decide to pick up the sandwich so the other part doesn't fall[end if] to the floor. ";
-		moot sandwich;
-		if the player's command matches the text "beard":
-			now player has spam;
-		if the player's command matches the text "maps":
-			now player has bread;
-
 to say ropes-grips-lying:
 	if ropes are visible and grips are visible:
 		say ". You probably don't need those tools you made";
@@ -459,26 +475,22 @@ to say ropes-grips-lying:
 	else if grips are visible:
 		say ". The grips won't be necessary";
 
-to say tool-clue:
-	if grips are visible and ropes are visible:
-		say ". The combination of grips and ropes is probably enough to make climbing gear[if tool shed is visible]. You can probably try to mess with the tool shed, but it doesn't seem like you need to[end if]";
+this is the post-riot-protest rule:
+	now chain links are in Potshot Hotspot;
 
-to say what-about-gate: say ". [if player has gadget]Not much left to do for you here[else]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
+this is the post-protest-potters rule:
+	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
 
-to say which-roar:
-	moot noise bag;
-	say "[if beats are visible]loud beats[else]beast's roaring[end if]"
+this is the pre-chain-china rule:
+	if china is moot, say "You already shook that out of the links. You need to concentrate on the links, now." instead.
 
-this is the pre-cabinet-bactine rule:
-	if Trips Strip is unvisited:
-		say "That is a good idea, but you're not powerful enough yet.";
-		preef cabinet;
-		the rule fails;
+this is the post-chain-china rule:
+	min-up;
+	now links are in Potshot Hotspot;
+	moot china;
 
-this is the post-cabinet-bactine rule:
-	move cabinet to location of player;
-	move cratered bits to location of player;
-	moot cratered bits;
+this is the post-links-kilns rule:
+	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
 
 volume specific help for things you need to flip
 

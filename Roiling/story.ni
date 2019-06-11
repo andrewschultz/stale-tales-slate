@@ -93,7 +93,9 @@ include Roiling Mistakes by Andrew Schultz.
 
 include Roiling Tables by Andrew Schultz.
 
-include Roiling Tests by Andrew Schultz.
+include Rules-Based Testing by Andrew Schultz.
+
+include Roiling Tests by Andrew Schultz. [must come after rules-based testing]
 
 include STS Common by Andrew Schultz.
 

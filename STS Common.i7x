@@ -120,11 +120,11 @@ to poss-d:
 	decrement poss-score of mrlp;
 
 to min-up:
-	d "min-up codepath--point likely added in carry out fliptoing rule.";
+	d "min-up codepath--point likely added in carry out fliptoing rule on LLPish item.";
 	increment min-score of mrlp;
 
 to min-and:
-	d "min-and codepath -- forcing point and min point adding. Should be used for odd non-flip points.";
+	d "min-and codepath -- forcing point and min point adding. This should be used for odd non-flip points.";
 	increment min-score of mrlp;
 	reg-inc;
 

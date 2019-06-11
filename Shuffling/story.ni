@@ -103,7 +103,9 @@ include Shuffling Nudges by Andrew Schultz.
 
 include Shuffling Mistakes by Andrew Schultz.
 
-include Shuffling Tests by Andrew Schultz.
+include Rules-Based Testing by Andrew Schultz.
+
+include Shuffling Tests by Andrew Schultz. [must come after rules-based testing]
 
 include STS Common by Andrew Schultz.
 
@@ -114,10 +116,6 @@ include Object Response Tests by Juhana Leinonen.
 [include Property Checking by Emily Short.]
 
 include Direction Response Testing by Andrew Schultz.
-
-include Rules-Based Testing by Andrew Schultz.
-
-include Shuffling Tests by Andrew Schultz.
 
 section default to true debug - not for release
 
@@ -2795,7 +2793,7 @@ check wearing the toga: say "If the barnyard smell weren't unpleasant enough, yo
 
 understand "thickets/thickest" and "thickest thickets" as darnels when player is in Thickest Thickets.
 
-the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is moot]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
+the snarled darnels are plural-named LLPish scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is moot]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
 
 the lgth of snarled darnels is 7. gpos of snarled darnels is 7. rpos of snarled darnels is 3. cert-text of snarled darnels is "[set-bug]". rect-text of snarled darnels is "[set-bug]". the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]".
 
@@ -2831,8 +2829,8 @@ carry out slandering:
 	if noun is darnels:
 		if darn-slan is false:
 			say "You take some cheap shots at the darnels, pretending they're out to get you, and you feel clever. They're as forbidding as ever, but you feel a confidence boost.";
-			min-and;
 			now darn-slan is true;
+			min-and; [this isn't the way we want to do things, but since the darnels aren't vanishing, it gets tricky.]
 		else:
 			say "It won't be as fun the second time around. Plus, between anagramming and thinking up falsehoods, you're out of ideas.";
 		the rule succeeds;
@@ -2847,7 +2845,7 @@ Notices Section is a room in Ordeal Loader. "[one of]You're not sure what to do 
 
 understand "tmi/tmis" as broad board when player is in Notices Section.
 
-instead of taking gateman: say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions.'"
+check taking gateman: say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions.'" instead; [??]
 
 to say get-a-man:
 	if Notices Section is unvisited:
@@ -7715,10 +7713,11 @@ this is the bore-ulock rule:
 		say "The gadget is silent. It's probably the tool shed. You want to scan. Do so?";
 		if the player yes-consents:
 			try scaning the tool shed;
+			the rule succeeds;
 		else:
 			say "OK.";
 			the rule succeeds;
-	else if current action is not procedural:
+	if action is procedural:
 		say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
 		if the player yes-consents:
 			say "It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently.";
