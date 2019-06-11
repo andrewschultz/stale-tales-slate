@@ -295,4 +295,4 @@ for x in game_ary:
     if do_nudges:
         alf_stuff(i7.hdr(x, "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", 6)
     if do_tables:
-        alf_stuff(i7.hdr(x, "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "book general auxiliary rules" if x == "roi" else "volume specific help for things you need to flip", "the-from", 0)
+        alf_stuff(i7.hdr(x, "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "book general auxiliary rules", 0)

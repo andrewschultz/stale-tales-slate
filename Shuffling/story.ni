@@ -1342,6 +1342,10 @@ check buying:
 
 chapter pushing and pulling
 
+this is the push-or-pull rule:
+	if noun is controls, say "[if controls are in gin nope opening]No need to fiddle further[else]They're not hooked up to anything[end if]." instead;
+	if noun is signers' ingress, say "It's an automatic door." instead.
+
 check pushing:
 	if noun is the player, say "You push yourself to find the next word that works." instead;
 	if noun is tip, try switching on gadget instead;
@@ -1359,6 +1363,7 @@ check pushing:
 	say "You give a few hups but fail to push." instead;
 
 check pulling:
+	abide by the push-or-pull rule;
 	if noun is the player, say "Whew! All this wordplay makes you nervous." instead;
 	if player is in Potshot Hotspot and red bull is in Potshot Hotspot, say "No, not pull, something even shorter." instead;
 	if player is in Means Manse, say "No, something much more passive." instead;
@@ -4545,8 +4550,7 @@ does the player mean inserting River Ville liver into canister when River Ville 
 does the player mean inserting viler liver into canister when viler liver is in canister: it is very unlikely.
 
 check inserting into the scantier canister:
-	if noun is sandwich:
-		try taking the Spam;
+	if noun is sandwich, try taking the Spam;
 	if canister is broken, say "The canister's broken now." instead;
 	if noun is Spam, say "The canister whirrs threateningly before you drop the Spam in. It's probably already been mixed, and the canister possibly even has some bad mechanical memory of being the guilty party. Technology!" instead;
 	if noun is in canister, say "It's already in there." instead;
@@ -4879,6 +4883,7 @@ check going in Ghouls' Slough: say "Without any sort of guide to look at you'd b
 
 check examining maps in Ghouls' Slough:
 	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
+	now maps are realized;
 	move player to Frost Forts instead;
 
 chapter Frost Forts
@@ -6158,11 +6163,13 @@ check putting it on (this is the silo-put rule):
 			ignore the can't put what's not held rule;
 			say "The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.";
 			moot dashed boundary;
+			now black door is realized;
 			now black door is part of the silo instead;
 		if noun is panel:
 			now panel is part of the silo;
 			moot dotted rectangle;
 			say "The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. 'Panel fits. Final step,' you muse.";
+			now panel is realized;
 			now the hoots button is part of the panel;
 			now the trees button is part of the panel instead;
 		if noun is missile:
@@ -6558,15 +6565,7 @@ understand "red/black/white buttons/kernels/" and "red/black/white" as discolore
 
 some controls are a thing.
 
-check taking controls:
-	if controls are in gin nope opening, say "You don't want to undo your work fixing the rails." instead;
-
-check pushing controls:
-	if controls are in gin nope opening:
-		say "No need to fiddle further.";
-	else:
-		say "They're not hooked up to anything.";
-	the rule succeeds;
+check taking controls: if controls are in gin nope opening, say "You don't want to undo your work fixing the rails." instead;
 
 description of controls is "This panel features all manner of black and yellow and red doohickeys and there's a small warning message saying REPLACEMENT CONTROLS IN CASE OF SURGE TO TRACKS. They've got instructions, which are surprisingly clear and even leave you wiser about u-boat wires."
 
@@ -6638,7 +6637,7 @@ check opening noise bag:
 		if location of player is Esoteric Coteries:
 			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later.";
 			moot keycard;
-			now player has the lit-up tulip;
+			get-tulip;
 			reg-inc;
 			choose row 2 in the table of tulip-acq;
 			now chosen entry is true;
@@ -6935,7 +6934,9 @@ check giving gardenia to faeries:
 	moot the gardenia;
 	now fairy-worthy is true instead;
 
-to say take-flower: say "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel".
+to say take-flower:
+	say "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel".
+	now faeries are realized;
 
 report taking heaths:
 	say "'[take-flower].'";
@@ -6986,6 +6987,8 @@ description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[el
 the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. A torn cue is written into the counter, next to a brocade[else]."
 
 the barcode is a thing. understand "code" and "bar" as barcode when barcode is visible.
+
+check objhinting barcode when barcode is part of the keycard: try objhinting keycard instead;
 
 description of barcode is "[if barcode is part of keycard]It's stuck to the keycard now, and it'd be unwise to peel it off[else]It's got the adhesive backing so it looks like you could PUT it ON something. Barcodes just aren't too handy by themselves[end if]."
 
@@ -7085,6 +7088,11 @@ bastion-evac is a truth state that varies. bastion-evac is usually false.
 
 flies-in-emitter is a truth state that varies. flies-in-emitter is false.
 
+to get-tulip:
+	now player has the lit-up tulip;
+	now termite emitter is realized;
+	now dead beat deadbeat is realized;
+
 check switching on the termite emitter:
 	if flies-in-emitter is true:
 		if deadbeat is visible, say "It'd be rude to throw the gift back in the deadbeat's face." instead;
@@ -7094,7 +7102,7 @@ check switching on the termite emitter:
 		if player has lit-up tulip, say "You already have the tulip. That'd be mean." instead;
 		say "The angst gnats rise, fitful, like fruit-flies or as furies flit. The nerds go from woots to ows, but it isn't [']til they start complaining to each other or worrying about the poor repressed deadbeats they didn't do enough for that you snatch the lit-up tulip as they scalp-clasp and flail about.[paragraph break]Angered, enraged nerdage! En garde! (Gee, darn, no grenade.) 'Why didn't you ASK about the DARKNESS?' one moans as he swipes for the tulip--but only knocks the keycard out of your hand.[paragraph break]They continue moaning, but now it is about economic equality. You hear one point out that all this sensitivity to social stuff will make them more sensitive for the ladies. Then another one argues that it's a Heisenberg Uncertainty Principle sort of thing that if people know you might be angling for that emo stuff, it won't work.[paragraph break]You're almost sucked in, until you realize you have a city to save, and you chuck your keycard at them in frustration over how dumb smart people can be before running out.";
 		now nerds-unwelcome is true;
-		now player has the lit-up tulip;
+		get-tulip;
 		moot keycard;
 		choose row 3 in the table of tulip-acq;
 		now chosen entry is true;
@@ -7174,7 +7182,7 @@ check going nowhere in Esoteric Coteries: say "The Earliest Ateliers are not for
 
 the optical beam is part of the friend finder. description of optical beam is "I wouldn't advise staring into it, but you could put something on it."
 
-instead of inserting into the beam: try putting noun on beam.
+check inserting into the beam: try putting noun on beam. [??]
 
 keycard-put is a truth state that varies. keycard-put is usually false.
 
@@ -7187,10 +7195,6 @@ check inserting into friend finder:
 	try putting noun on second noun;
 
 nerds-unwelcome is a truth state that varies.
-
-check pushing signers' ingress: say "It's an automatic door." instead.
-
-check pulling signers' ingress: say "It's an automatic door." instead.
 
 this is the bother-nerds rule:
 	if nerds-unwelcome is true:
@@ -7217,6 +7221,10 @@ check putting keycard on friend finder:
 	if keycard-put is false:
 		say "What do you know? It works! The door slides open!";
 		now keycard-put is true;
+		now keycard is realized;
+		now friend finder is realized;
+		now signers' ingress is realized;
+		now barcode is realized;
 	else:
 		say "The door slides open again.";
 	now signers' ingress is open instead;
@@ -7309,7 +7317,7 @@ instead of switching on tulip: say "It's already lit."
 to say nerd-dark:
 	if player does not have tulip:
 		say "'What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats.'[paragraph break]'Logical call. I go.' You sneak out back west.";
-		now player has the lit-up tulip;
+		get-tulip;
 		reg-inc;
 		choose row 1 in the table of tulip-acq;
 		now chosen entry is true;
@@ -7438,6 +7446,8 @@ check inserting into gin nope opening:
 	say  "They fit well. One of the red buttons starts blinking and whirring, and you flip the switch by it and, BAM! You hear a rush of power. The tracks below seem to stop sparking.";
 	reg-inc;
 	now controls are in gin nope opening;
+	now controls are realized;
+	now gin nope opening is realized;
 	now power-shut is true instead;
 
 understand "controls" as gin nope opening when controls are in gin nope opening.
@@ -9060,9 +9070,9 @@ description of wolves is "Drooling, hate in their eyes, etc. And a bit of fear. 
 
 part drapes-spread-red asp
 
-the spread is flippable boringscen. description of spread is "You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with [if player has sliver]your sliver[else]something[end if]."
+the spread is flippable boringscen. description of spread is "You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with [if player has sliver]your sliver[else]something[end if].". bore-check is bore-spread rule.
 
-this is the bore-spreead rule:
+this is the bore-spread rule:
 	if current action is taking or current action is pushing or current action is pulling or current action is opening:
 		say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it.";
 		the rule succeeds;

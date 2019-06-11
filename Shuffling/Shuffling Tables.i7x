@@ -29,9 +29,9 @@ book Forest
 
 table of Forest anagrams [xxtfa]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
-ones	nose	"nose"	"ones"	a rule	a rule	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
-dashes	shades	"shades"	"dashes"	--	--	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
-noughts	shotgun	"shotgun"	"noughts"	--	--	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
+ones	nose	"nose"	"ones"	a rule	post-ones-nose rule	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
+dashes	shades	"shades"	"dashes"	--	post-dashes-shades rule	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
+noughts	shotgun	"shotgun"	"noughts"	--	post-noughts-shotgun rule	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
 bread	beard	"beard"	"bread"	--	--	"[process-sandwich]The bread seems to grow a fuzzy dark mold, then narrows into a sickle. It's now a beard, though not a particularly beautiful one. As you pick it up, you shake it for crumbs, and the hairs don't crumble into mold."	true	254765724
 sliver	silver	"silver"	"silver"	pre-livers-sliver-silver rule	--	"The sliver changes and grows even more metallic. It becomes a row of six bullets, tied together like plastic twist-off toys, but obviously more lethal."	true	515375383
 livers	sliver	"sliver"	"livers"	pre-livers-sliver rule	--	"The livers narrow a bit and become more pointy at the end. They are a nice long sliver now[if player does not have sliver], which you pick up[end if]."	true	515375383
@@ -97,8 +97,8 @@ tiles	teleporter	"islet"	"tiles"	a rule	a rule	"The tiles crumble and shift arou
 l2	lies	"lies"	"lies"	--	post-leis-lies rule	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"	false	322886760
 rock	cork	"cork"	"rock"	--	post-rock-cork rule	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	--	post-swing-wings rule	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
-sprig	grips	"grips/grip"	"sprig"	--	--	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
-spore	ropes	"ropes/rope"	"spore"	--	--	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
+sprig	grips	"grips/grip"	"sprig"	--	post-ropes-grips rule	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
+spore	ropes	"ropes/rope"	"spore"	--	post-ropes-grips rule	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
 poles	slope	"slope"	"poles"	--	post-poles-slope rule	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450
 tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	--	post-toolshed-toeholds rule	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
 riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
@@ -126,6 +126,15 @@ this is the post-toga-goat rule:
 		now goat is in location of player;
 	set the pronoun him to goat;
 	set the pronoun her to goat;
+
+this is the post-noughts-shotgun rule:
+	now bubble is realized;
+
+this is the post-ones-nose rule:
+	now bucket is realized;
+
+this is the post-dashes-shades rule:
+	now shell is realized;
 
 this is the pre-nametag-gateman rule:
 	if gateman is visible, try examining the gateman instead;
@@ -273,6 +282,8 @@ this is the pre-room-moor rule:
 
 this is the post-room-moor rule:
 	if room-flip is false:
+		now coat is realized;
+		now shoes are realized;
 		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
 		now room-flip is true;
 
@@ -449,8 +460,12 @@ to say tool-clue:
 	if grips are visible and ropes are visible:
 		say ". The combination of grips and ropes is probably enough to make climbing gear[if tool shed is visible]. You can probably try to mess with the tool shed, but it doesn't seem like you need to[end if]";
 
+this is the post-ropes-grips rule:
+	process the realize-rived-drive rule;
+
 this is the post-poles-slope rule:
 	if toeholds are part of the poles, now toeholds are part of the slope;
+	process the realize-rived-drive rule;
 
 this is the post-toolshed-toeholds rule:
 	if sprig is not moot, now sprig is LLPish;
@@ -491,6 +506,14 @@ this is the post-chain-china rule:
 
 this is the post-links-kilns rule:
 	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
+
+book general auxiliary rules
+
+this is the realize-rived-drive rule:
+	if grips are in rived drive and ropes are in rived drive and slope is in rived drive:
+		now slope is realized;
+		now grips are realized;
+		now ropes are realized;
 
 volume specific help for things you need to flip
 
