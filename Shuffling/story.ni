@@ -2400,11 +2400,7 @@ when play begins (this is the initialise anagrams pad and beats rule) :
 	now Obtains Boastin' Bastion is not noisy;
 	now Esoteric Coteries is not noisy;
 	move beats backdrop to all noisy rooms;
-	repeat through table of pad-stuff:
-		if there is no verify entry:
-			now verify entry is true;
 	repeat with Q running through regions:
-		now poss-score of Q is max-score of Q;
 		repeat through regana of Q:
 			if the-from entry is not a room:
 				now the-from entry is flippable;
@@ -2481,7 +2477,7 @@ every turn when player is in Busiest Subsite:
 
 section passage and entry
 
-the odd side passage is scenery in Busiest Subsite. "It seems to say NONE TRY, but when you blink, that changes to NO ENTRY. Nothing is stopping you from ENTERing it or going INSIDE. It's not really any direction you can tell, and you could have sworn it was near a different exit before you turned your back on it just a bit ago. It curves quickly so you can't see much of it."
+the odd side passage is scenery in Busiest Subsite. "It seems to say OPEN a bunch of times in a row. That means it is open, not that you should try to. But if you blink a bit, the OPENs run together and say NOPE. Hmm.[paragraph break]Nothing is stopping you from ENTERing it or going INSIDE. It's not really any direction you can tell, and you could have sworn it was near a different exit before you turned your back on it just a bit ago. It curves quickly so you can't see much of it."
 
 check entering side passage: try going inside.
 
@@ -2489,13 +2485,13 @@ the auditorium entry is useless scenery in Busiest Subsite. "You'd love any excu
 
 section vacate caveat
 
-the vacate caveat is scenery in Busiest Subsite.
+the vacate caveat is scenery in Busiest Subsite. description of vacate caveat is "It advertises the way to ACT AVE, and below it there's side passage.".
+
+understand "act/ave" and "act ave" as vacate caveat when player is in Busiest Subsite.
 
 check taking vacate caveat: say "[grounds]." instead;
 
 to say grounds: say "Appropriation of company property is potentially a fireable offense. Oh, wait. It's just useless, seriously"
-
-description of vacate caveat is "It says NONE TRY, and it's just above a side passage people are ignoring."
 
 section banner
 
@@ -2564,8 +2560,8 @@ check examining (this is the examine-dirs rule):
 	if noun is a direction, say "[if the room noun of location of player is nowhere]That doesn't seem to lead anywhere.[else]Just try going that way instead. Don't be scared! You can always undo![end if]" instead;
 
 check going inside in Busiest Subsite:
-	say "Someone tugs you by the arm. 'Can't you read? It says NO ENTRY! Quit dawdling and get to the DEBRIEFING already!'[paragraph break]You check and make sure. No, still NONE TRY. As you brush him off, you hear 'Nice. Smart. Miscreant!'[paragraph break][wfak]";
-	say "The voice cuts off. The passage behind is gone. You shake off a momentary fear missing the lecture will go in your life file.";
+	say "Someone tugs you by the arm. 'Can't you read? It says NOPE! PEON! But you look at it again, and the passage seems to say OPEN. You brush that someone off, and oddly, they are wearing a NEON POPE t-shirt.[paragraph break]'Nice. Smart. Miscreant!' they snort, as you flee.[paragraph break][wfak]";
+	say "The voice cuts off. The passage behind is gone. You shake off a momentary fear missing the lecture will go in your life file, or you may be charged with an if-ill fee.";
 	set the pronoun it to odor;
 	now player is in Rested Desert instead;
 
