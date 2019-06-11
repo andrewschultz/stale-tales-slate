@@ -386,8 +386,350 @@ perp-priv	perp-priv	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	p
 
 book auxiliary text and rules
 
+section ordeal reload auxiliary
+
+this is the post-palm-lamp rule:
+	now dope op-ed is in Dusty Study;
+
+to say preefies:
+	if number of prefigured things > 0, say ". And now you have reason to mess with [the list of prefigured things], too";
+
+this is the post-latches-satchel rule:
+	if player does not have treatise, now player has treatise;
+	now player has the letters settler;
+	now player has the super purse;
+
+to say new-thing:
+	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
+	moot satchel;
+
+to say read-canflip:
+	say "[one of]. Reading the notice [if notice is examined]again[else]briefly[end if], you see that things won't be this flexible out in the real world[or][stopping]";
+
+this is the post-pram-ramp rule:
+	if tables are moot and sitar is moot:
+		min-up;
+	else if meet bans are moot:
+		min-up; [check if passage is already available via beams or stable->stair]
+
+this is the post-sitar-or-stria-to-stair rule:
+	now Largely All-Grey Gallery is mapped below Farming Framing;
+	if the room below study is nothing:
+		now Farming Framing is mapped above Largely All-Grey Gallery;
+	if meet bans are moot:
+		min-up;
+	else if niche is moot and pram is moot:
+		min-up; [check if passage is made via beams or chimney->pram]
+	moot stria;
+	moot sitar;
+	move stair backdrop to all stairy rooms;
+
+this is the post-my-niche-chimney rule:
+	now Highest Heights are mapped above Dusty Study;
+	now Dusty Study is mapped below Highest Heights;
+
+this is the post-meet-bans-basement rule:
+	moot beams;
+	now Largely All-Grey Gallery is mapped below study;
+	now study is mapped above Largely All-Grey Gallery;
+
+this is the post-tables-stable rule:
+	now study is mapped inside Farming Framing;
+	now study is mapped outside Farming Framing;
+	now Farming Framing is mapped inside study;
+
+to say dust-b:
+	say "[one of]. You say, 'Dust, be busted' to clear up the mess in the air. You can go [b]IN[r] to the stable, now, to look around there[or][stopping]";
+
+this is the post-bins-snib rule:
+	move snib to Largely All-Grey Gallery;
+
+this is the post-psalter-stapler rule:
+	if act ruin curtain is not in Carven Cavern, now act ruin curtain is in Carven Cavern;
+
+this is the post-rifle-flier rule:
+	pad-rec-q "rove over";
+	moot high sign;
+	try talking to Mole Elmo instead;
+
+section stores auxiliary
+
+this is the post-storeh-hoster rule:
+	it-him-her throes hoster;
+
+this is the post-storek-tokers rule:
+	now mangiest steaming is in Strip of Profits;
+	set the pronoun her to tokers;
+
+to say check-nestor:
+	now mangiest steaming is in Strip of Profits;
+	say "[paragraph break][if nestor is in Strip of Profits]What's more, you seem to have rescued their friend, Nestor! 'Hey, dudes, I like went back to the wrong store or something.'[no line break][else]They spend some time complaining about their one toker friend who like went out to get the really good stuff and never like reappeared.[no line break][end if]"
+
+to say check-tokers:
+	say "[if tokers are in Strip of Profits]motion to the mangiest steaming.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][else]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
+
+this is the post-lecturer-outside rule:
+	now mangiest steaming is not maingame;
+	now list-headache is true;
+	moot pamphlets;
+	increase headaches by 10;
+	now lectures is shunned;
+	if t-tediously is in otters:
+		let A be pod-num of t-tediously;
+		now pod-num of t-tediously is 0; [disable "tediously" in otters]
+		let B be a random number from 1 to mack-count of A;
+		place-a-mack A and B;
+	move player to Strip of Profits;
+
+this is the post-storet-otters rule:
+	if engravings are examined, say "The engravings from Store T seem to have been transferred to the otters.";
+	now engravings are part of solid idols;
+
+section routes auxiliary
+
+this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
+	[if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:]
+	if drama armada is in Same Mesa or THE BEAN is in Same Mesa, say "But... [if THE BEAN is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
+	if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
+	if Gast is in Same Mesa:
+		say "Walking away would upset the [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
+		preef noun; [?? obvious test here is PAST, AGAINST, PAST, PF]
+		do nothing instead;
+	if noun is reflexed: [this covers going back to the place]
+		if noun is picturers:
+			say "You go back inside, being a bit over-cautious with protocol. You could've just said IN.";
+			move player to Cleric Circle instead;
+		if noun is lairage:
+			say "Yeah, ACROSS is fewer keystrokes than ENTER OSCAR'S, so hey...";
+			move player to Adobe Abode instead;
+		if noun is adsorbing signboard:
+			say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
+			move player to Idle Deli instead;
+
+this is the post-across rule:
+	now dingy dwelling is clue-used;
+
+this is the post-past rule:
+	now grubby restaurant is clue-used; [?? rivets/Trevis Vister clue used too?]
+
+this is the pre-sitanag-against rule:
+	if list o toils is unexamined:
+		say "You hear loud footsteps and hide under the [sit a nag] in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. [if Cleric Circle is not visited]Maybe if you could find a way inside that church[else]Perhaps you could find something to do from Brother Horbert[end if].";
+		preef sit a nag instead;
+	if Gast is off-stage:
+		say "You hear a giant's footsteps in the distance--but your talk with Brother Horbert has helped you be fearless.";
+	if U NERD ENDUR REDUN is not off-stage, say "You don't need or want another round of that." instead;
+
+this is the post-sitanag-against rule:
+	now tirades are in Same Mesa;
+
+this is the pre-side-art-astride rule:
+	if side art is reflexed, say "You already did that." instead; [?? check rule order]
+	if Gast is not in Same Mesa:
+		say "You get astride the [sit a nag] for a while, but it's pointless with nobody around. Maybe later";
+		preef sit a nag;
+		the rule succeeds;
+
+this is the post-side-art-astride rule:
+	now WOE BOW BELL is in Same Mesa;
+
 this is the post-below rule:
 	now Gast has Rude 'N Nuder;
+
+this is the post-under rule:
+	moot Gast;
+	continue the action;
+
+this is the post-seedpit-despite rule:
+	now cravings carvings is clue-used;
+
+this is the post-thebean-beneath rule:
+	if drama armada is off-stage:
+		now drama armada is in Same Mesa;
+		set the pronoun them to drama armada;
+
+this is the post-unlit-until rule:
+	now noon gag is in Harms Marsh;
+	now sheol holes are in harms marsh;
+
+this is the pre-sheol-holes rule:
+	if darkness is in Harms Marsh:
+		say "You don't have enough light, yet, to go around safely.";
+		preef sheol holes;
+		do nothing instead;
+
+this is the post-sheol-holes rule:
+	now stripey pyrites are in Harms Marsh;
+	now un-road is in Harms Marsh;
+
+this is the post-athwart rule:
+	moot bad oar;
+
+this is the post-hurt-hog-through rule:
+	moot bent ewe;
+	moot hurt hog;
+	now yob den is in Sonancy Canyons;
+	set the pronoun it to yob den;
+	set the pronoun them to yob den;
+
+section troves auxiliary
+
+to say eicond:
+	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in Loather Rathole]You feel you can and will do better than here[else if player is in Bustle Sublet]You dare to feel superior to whoever might be walking around here[else if player is in Drain Nadir]You know you deserve better than this. It's a temporary setback[else if player is in Boredom Bedroom]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Browse Bowers]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in Upscale Capsule]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
+
+to say purse-gone: now purse-stolen is true;
+
+this is the pre-spot-stop-post rule:
+	if sob ever verbose is visible:
+		say "That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.";
+		preef stop post;
+		do nothing instead;
+
+this is the post-spot-stop-post rule:
+	now purse-stolen is false;
+
+this is the bee-less-active rule:
+	if bee-score is 2:
+		min-up;
+	else:
+		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
+
+this is the pre-cellar-recall rule:
+	if evil bee is off-stage, say "You haven't forgotten anything important, yet." instead;
+	if bee-score is 0:
+		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
+		preef cellar door;
+		the rule succeeds;
+
+this is the post-cellar-recall rule:
+	if bee-score < 2, poss-d;
+
+this is the post-diapers-despair rule:
+	moot Ires Pad;
+	moot spider;
+	move I'd Cede to Drain Nadir;
+
+this is the post-master-or-bolster rule:
+	if ME ARTS is in Boredom Bedroom, now ME ARTS is LLPish;
+	if lobster is in Boredom Bedroom, now lobster is LLPish;
+	say "[if ME ARTS is moot and lobster is moot]You feel your arch-greed recharged. [end if]You're [one of][or]even [stopping]more up to grokking LEAD, now.";
+
+this is the post-lager-glare rule:
+	set the pronoun it to ltb;
+
+this is the pre-deal rule:
+	if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
+		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.";
+		preef ltb;
+		the rule succeeds;
+
+this is the post-deal rule:
+	if lager is in Boredom Bedroom, poss-d;
+	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
+	set the pronoun them to Browse Bowers;
+
+this is the post-strive-or-aspire rule:
+	if praise spirea is reflexed and rivets are reflexed:
+		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
+		min-up;
+		set the pronoun it to pernod;
+	else:
+		if pernod is off-stage:
+			say "Your concentration is broken by shattering glass! When you turn around, you notice the person who originally gave you the Peg A. Page book. He has been escorted out by security. They hand him a bottle. There's an argument, he smashes the bottle, and he runs away. Perhaps this is your chance, to take his place now that he has burned out!";
+			now pernod is in Econ Cone;
+			set the pronoun it to pernod;
+		if praise spirea is reflexive, now praise spirea is llpish;
+		if rivets are reflexive, now rivets are llpish;
+
+this is the post-rivets-strive rule:
+	process the post-strive-or-aspire rule;
+	now Trevis Vister is reflexed; [?? this should be something else]
+
+this is the post-pernod-ponder rule:
+	if rivets are reflexive or praise spirea is reflexive, poss-d;
+
+this is the post-redvees-deserve rule:
+	move wonga wagon to Upscale Capsule;
+	move nerf fern to Upscale Capsule;
+	move pharos phasor to Upscale Capsule;
+	move DIVORCES magazine to Upscale Capsule;
+	move St Al Salt to Upscale Capsule;
+	move cark rack to Upscale Capsule;
+	move desk sked to Upscale Capsule; [Balmer and Tressi don't appear until you deal with the salt]
+
+this is the post-salt-last rule:
+	moot salt;
+	now trance nectar is in Upscale Capsule;
+	now mbb is in Upscale Capsule;
+	repeat through table of troves anagrams:
+		if the-from entry is Marble Blamer Balmer:
+			now the-from entry is mbb;
+			now the-to entry is mbb; [this is part of the silly randomization]
+	now sister tressi is in Upscale Capsule;
+
+this is the post-tressi-resist rule:
+	now mbb is LLPish;
+	report-glarers;
+
+this is the post-mbb-ramble rule:
+	now sister tressi siters are LLPish;
+	report-glarers;
+
+this is the pre-nectar-recant rule:
+	if mbb is in Upscale Capsule and sister tressi is in Upscale Capsule:
+		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
+		preef trance nectar instead;
+
+this is the post-nectar-recant rule:
+	let temp be 0;
+	if Sister Tressi is prefigured, increment temp;
+	if mbb is prefigured, increment temp;
+	if DIVORCES is prefigured, increment temp;
+	if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, because your desire for more isn't totally drained.)[paragraph break]";
+	increase min-score of troves by temp;
+	increase cur-score of troves by temp;
+
+to say troend:
+	say "No more trance nectar for you. O glum mogul! You backtrack your trip to the top, gaining spirituality as efficiently as you gained worldly status. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient at doing enough nothing. You hear a knock on the door. You have been fired.[paragraph break]";
+	if lager is in Boredom Bedroom and divorces is in Upscale Capsule:
+		do nothing;
+	else if lager is moot and divorces is moot:
+		say "But you did something for society. A lot. Disposing of DIVORCES and the lager helped you.";
+	else if lager is in Boredom Bedroom:
+		say "At least you struck a blow against gossip culture in general.";
+	else:
+		say "At least you struck a blow against alcohol in general.";
+	say "Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your Upscale Capsule. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
+
+section presto auxiliary
+
+this is the post-hump-umph rule:
+	if Leo is in Grey Gyre:
+		process the Leo-Rand lackey rule;
+
+this is the post-tsar-star rule:
+	now player wears tsar star;
+
+this is the pre-plebe-bleep rule:
+	if player is not wearing tsar star:
+		say "You try and cuss, but the plebe is not intimidated by your civilian clothes[if Rand is in Grey Gyre] or even your companions[end if]. Perhaps you need something proclaiming your authority.";
+		preef plebe;
+		the rule succeeds;
+
+this is the pre-boing-bingo rule:
+	if player does not have the PG-on-up popgun and popgun is visible:
+		say "(taking the popgun first while you mess with the boing-go bin)[paragraph break]";
+		now player has popgun;
+
+this is the post-boing-bingo rule:
+	set the pronoun it to popgun;
+
+to say gun-load-if:
+	if gun-load-tried is false:
+		say "But now, to load it";
+	else:
+		say "You realize you can load the dart into the popgun now, so you do";
+		now dart is in the popgun;
 
 this is the post-leo-ole rule:
 	now Rand is in Dirge Ridge;
@@ -398,34 +740,6 @@ this is the post-rand-darn rule:
 	set the pronoun them to wzup;
 	now Rand is washed up;
 
-to say check-tokers:
-	say "[if tokers are in Strip of Profits]motion to the mangiest steaming.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][else]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
-
-to say check-nestor:
-	now mangiest steaming is in Strip of Profits;
-	say "[paragraph break][if nestor is in Strip of Profits]What's more, you seem to have rescued their friend, Nestor! 'Hey, dudes, I like went back to the wrong store or something.'[no line break][else]They spend some time complaining about their one toker friend who like went out to get the really good stuff and never like reappeared.[no line break][end if]"
-
-this is the post-reeds-ale rule:
-	moot lars eede;
-	moot elsa erde;
-	process the guardian taunt and track progress rule;
-	if player is male, shuffle-guardians lars eede;
-	if player is female, shuffle-guardians elsa erde;
-
-this is the post-rodney rule:
-	pad-rec-q "curst palace";
-
-this is the pre-nectar-recant rule:
-	if mbb is in Upscale Capsule and sister tressi is in Upscale Capsule:
-		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
-		preef trance nectar instead;
-
-this is the pre-plebe-bleep rule:
-	if player is not wearing tsar star:
-		say "You try and cuss, but the plebe is not intimidated by your civilian clothes[if Rand is in Grey Gyre] or even your companions[end if]. Perhaps you need something proclaiming your authority.";
-		preef plebe;
-		the rule succeeds;
-
 this is the pre-wzup rule:
 	if Leo is fightin, say "Leo doesn't seem interested in explaining why he's fighting you." instead;
 	if Rand is fightin, say "Rand isn't in a mood  to be greeted right now." instead;
@@ -435,17 +749,132 @@ this is the post-wzup rule:
 	now Leo is eager;
 	now Rand is eager;
 
+this is the post-pooh rule:
+	poss-d;
+
+to say get-censer:
+	if the player's command includes "pooh":
+		say "You convince yourself reaching the hoop can't be that bad. You jump up, and you grab the hoop! It falls from the wall, revealing an onyx censer from a hidden compartment. Wow! Maybe you didn't get full style points, but you got what you needed";
+	else:
+		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, revealing an onyx censer from a hidden compartment. Wow";
+	if Leo is visible:
+		say "! Leo and Rand applaud your agility";
+
+this is the post-phooey rule:
+	min-up;
+	now phooeyed is true;
+
+this is the pre-solve-maze rule:
+	if noun is maze walls and cur-score of presto < 3:
+		say "You're not messing around! You see the best way to destroy the maze, and you're going for it.[line break]";
+	else if nowt town is unvisited:
+		say "No point actually going through the maze when you can destroy it.[line break]";
+	if player is not in Grey Gyre:
+		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
+		move player to Grey Gyre, without printing a room description;
+
+this is the post-nowt-town-wont rule:
+	poss-d;
+	shuffle-nowt-town;
+	unless l-m is cscanned or l-m is ncscanned, poss-d;
+	now maze-points is 1;
+
+to say wont-maze:
+	if cur-score of presto is 1:
+		say "Why not take care of the big things first? And what better way to start than with an emphatic word? You remember when younger how you could say WON'T. And it works, here, too. The maze dissolved, leaving an ether to the north";
+		continue the action;
+	say "While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses, but not before you escape back to the south.";
+	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
+
+this is the post-mazeltov rule:
+	min-up;
+	now maze-points is 2;
+	unless l-m is cscanned or l-m is ncscanned:
+		min-up;
+		increment maze-points;
+	shuffle-nowt-town;
+
+this is the pre-ether-there rule:
+	if Leo is not in Grey Gyre:
+		say "You suspect someone is in the mist where the maze was. 'THERE!' you yell. But you doubt you fooled or intimidated them. You need backup.";
+		preef ether instead;
+	if player does not have popgun:
+		say "Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.";
+		preef ether instead;
+	if popgun does not contain dart:
+		say "Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition[if boing is reflexive] and isn't even working[end if]. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.";
+		preef ether instead;
+
+this is the post-ether-there rule:
+	now dart is in Grey Gyre;
+	moot dart;
+
+this is the post-hogs-bye rule:
+	now Mount Um-Not is in Phat Path;
+	now Deil's Slide is in Phat Path;
+	now Leo is in Phat Path;
+	now Rand is in Phat Path;
+	now Grey Gyre is mapped south of Phat Path;
+	now Phat Path is mapped north of Grey Gyre;
+	if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
+	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as you wind up at...";
+	move player to Phat Path;
+
+to say h-n-k: now hogs-not-keys is true;
+
+this is the post-harpings-flip rule:
+	remove noun from byebyes, if present;
+	set the pronoun it to harpings phrasing;
+
+to say increm:
+	if the player's command includes "tough":
+		say "You add an extra 'Hut! Go!' for emphasis.[paragraph break]";
+	if rebuked is false:
+		say "'But we ain't bored yet, boss!' You convince them they sort of are, what they are getting there, and it works a bit, without using any too-charged words. A bit more, and you'll veto their vote.[no line break]";
+		now rebuked is true;
+	else:
+		say "'Us? Lot louts?' You manage to be firm but fair. You convince Leo and Rand that the computers inside may have viruses, and they understand.[paragraph break]'Real brave of ya, boss.'[paragraph break]'Dat was a good dust-up, wadn't it, boss? We'se sure glad we could helps ya. Tanks for makin['] us stuges feel like guests. You do good in da Sekret Sekter, now. Friend finder.' They go back to Dirge Ridge, muttering about workouts and high-powered workout food. 'Nyurgh! Hungry!' Maybe you can bribe them later to help you.[no line break]";
+		pad-rec-q "Leo and Rand";
+		now Leo is in Dirge Ridge;
+		now Rand is in Dirge Ridge;
+		now Leo is dismissed;
+		now Rand is dismissed;
+		now alert letters are reflexed;
+		now log ons letters are reflexed;
+		now ought letters are reflexed;
+		now starch charts are in Phat Path;
+		if odes song is in Dirge Ridge, min-up;
+
+this is the post-disk-skid rule:
+	if disk is not prefigured:
+		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
+		preef disk;
+	now skid is in location of player;
+
+this is the pre-skid-disk rule:
+	if yak is on skid, say "The yak doesn't need that sort of shock." instead;
+	if location of player is not shack, say "Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.";
+
 this is the pre-censer-screen rule:
 	if onyx censer is visible:
 		if Hacks' Shack is unvisited:
 			say "[one of]You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den[or]Not yet[stopping].";
 			preef onyx censer instead;
 
-this is the pre-among rule:
-	if player does not have tekno-token:
-		say "You'd look a little too suspicious mingling without anything of value to trade. Maybe when you have something, though.";
-		preef mango;
-		the rule succeeds;
+this is the post-censer-screen rule:
+	if Hacks' Shack is visited and player is not in Hacks' Shack:
+		say "That screen would go great with Drive A in the shack. So you go back there.";
+		go-back Hacks' Shack;
+		now player has screen;
+
+this is the pre-yak-keyboard rule:
+	if yak is visible:
+		say "The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.[paragraph break]Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.";
+		preef keyboard instead;
+
+this is the post-yak-keyboard rule:
+	moot leaf;
+	check-trivial-presto-llp;
 
 this is the pre-tba-tab rule:
 	if yak is in location of player or yak is on skid:
@@ -490,6 +919,15 @@ this is the pre-polemic-compile rule:
 			say "That stupid NEED IF-DEFINE and that speel, still. You're slipping on peels, unsure what you switched or got backwards[one of][or]. Maybe you misspelled a variable, but you aren't up to logic leeps[stopping].";
 		preef I'm Le Cop polemic instead;
 
+this is the post-polemic-compile rule:
+	now BUB DUDE EGG is part of the computer screen;
+	if hawt thaw is in Phat Path, poss-d;
+	if lamb is in Grey Gyre, poss-d;
+	if sport ports are reflexive, poss-d;
+	if starch charts are in Phat Path, poss-d;
+	if odes song is in Dirge Ridge, poss-d;
+	if player has rom sticks, moot rom sticks;
+
 this is the pre-bub-dude-egg rule:
 	if I'm Le Cop polemic is not reflexed:
 		say "No hope of debugging when you can't even build! No, what is it? Something in the polemic, all garbled.";
@@ -498,19 +936,40 @@ this is the pre-bub-dude-egg rule:
 		say "The process of debugging is going to take a while. You will need some sort of energy[if dirty looking cola is visible]. That bottle of cola just won't be enough for the task ahead[else]. That coal won't cut it. Too early 20th century[end if].";
 		preef BUB DUDE EGG instead;
 
-this is the pre-yak-keyboard rule:
-	if yak is visible:
-		say "The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.[paragraph break]Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.";
-		preef keyboard instead;
+this is the post-bub-dude-egg rule:
+	now USB is in Hacks' Shack;
+	moot golden dongle;
 
-this is the pre-solve-maze rule:
-	if noun is maze walls and cur-score of presto < 3:
-		say "You're not messing around! You see the best way to destroy the maze, and you're going for it.[line break]";
-	else if nowt town is unvisited:
-		say "No point actually going through the maze when you can destroy it.[line break]";
-	if player is not in Grey Gyre:
-		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
-		move player to Grey Gyre, without printing a room description;
+this is the post-drive-flip rule:
+	if usb is not off-stage, say "Well, flipping [noun] didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
+
+to say sub-bus:
+	let issub be false;
+	if the player's command includes "sub":
+		now issub is true;
+	moot crust;
+	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Esoteric Coteries way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
+
+section oyster auxiliary
+
+this is the post-tunes-unset rule:
+	if the player's command includes "remap", now remapped is true;
+
+to say remap-or-unset:
+	if word number 1 in the player's command is "unset":
+		say "You fiddle with the knobs and such on the jukebox according to the instructions";
+		now unset-not-remap is true;
+	else:
+		say "You brave the electrical underpinnings of the perma-amper to create an ampish mishap";
+
+to say stein-drop:
+	if player has stein:
+		say "[paragraph break]Oh, as you leave, you drop and break the stein. Tiens";
+	moot stein;
+
+this is the post-calm-clam rule:
+	now urn is in Olde Lode;
+	set the pronoun it to urn;
 
 this is the pre-boats-boast rule:
 	if frat raft is reflexed, say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
@@ -525,6 +984,18 @@ this is the pre-raft-fart rule:
 		preef raft;
 		the rule succeeds;
 
+this is the post-scrap-carps rule:
+	now trout is in Lean Lane;
+	moot carps;
+	moot pikes;
+	now scrawl is in Anger Range;
+	now pre-haun is in Anger Range;
+
+to say spike-scrap:
+	if word number 1 in the player's command is "spike":
+		now spikes is true;
+	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
+
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
 	d "[whether or not player has digger], [location of ruby].";
@@ -532,40 +1003,14 @@ this is the pre-unearth-haunter rule:
 	preef pre-haun;
 	the rule succeeds;
 
+this is the post-unearth-haunter rule:
+	now haunter is in Anger Range;
+
 this is the pre-crate-react rule:
 	if c2 is in Lapsin' Plains:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
 		preef crate;
 		the rule succeeds;
-
-this is the pre-warp-wrap rule:
-	now warp-try is true;
-	if player is in Lean Lane and trout is reflexive:
-		say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'";
-		preef ruby;
-		do nothing instead;
-	if Aunt Tuna is in location of player:
-		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe it needs to be saved [']til you find the right person to annoy.";
-		preef ruby;
-		do nothing instead;
-	if player is not in Achers' Arches:
-		say "That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.";
-		preef ruby;
-		do nothing instead;
-
-this is the pre-tutor-trout rule:
-	if player is in Anger Range:
-		say "[if carps are visible]You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here[else]The poor trout's probably getting beaten up for learning in the first place[end if].";
-		preef trout;
-		do nothing instead;
-
-this is the pre-lever-revel rule:
-	if yapper is in location of player:
-		preef lever;
-		say "Nothing to celebrate yet--dispose of the yapper first." instead; [?? check to make sure preefing is first. Also, maybe have a post-preef rule?]
-
-this is the pre-dialer-redial rule:
-	if pins are reflexive, say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard..." instead;
 
 this is the pre-kiss-skis rule:
 	if c2 is in Lapsin' Plains:
@@ -586,120 +1031,6 @@ this is the pre-bonk-knob rule:
 	if knob is reflexed, say "That might undo what you did[if bonkies is true], and it might get you another knock on the noggin anyway[end if]." instead;
 	abide by the pre-kiss-skis rule;
 
-this is the pre-sweat-waste rule:
-	if waste is reflexed, say "You've had enough of that." instead;
-
-this is the pre-search-arches rule:
-	if sardine is visible, say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
-		preef a-s instead;
-
-to say increm:
-	if the player's command includes "tough":
-		say "You add an extra 'Hut! Go!' for emphasis.[paragraph break]";
-	if rebuked is false:
-		say "'But we ain't bored yet, boss!' You convince them they sort of are, what they are getting there, and it works a bit, without using any too-charged words. A bit more, and you'll veto their vote.[no line break]";
-		now rebuked is true;
-	else:
-		say "'Us? Lot louts?' You manage to be firm but fair. You convince Leo and Rand that the computers inside may have viruses, and they understand.[paragraph break]'Real brave of ya, boss.'[paragraph break]'Dat was a good dust-up, wadn't it, boss? We'se sure glad we could helps ya. Tanks for makin['] us stuges feel like guests. You do good in da Sekret Sekter, now. Friend finder.' They go back to Dirge Ridge, muttering about workouts and high-powered workout food. 'Nyurgh! Hungry!' Maybe you can bribe them later to help you.[no line break]";
-		pad-rec-q "Leo and Rand";
-		now Leo is in Dirge Ridge;
-		now Rand is in Dirge Ridge;
-		now Leo is dismissed;
-		now Rand is dismissed;
-		now alert letters are reflexed;
-		now log ons letters are reflexed;
-		now ought letters are reflexed;
-		now starch charts are in Phat Path;
-		if odes song is in Dirge Ridge, min-up;
-
-to say sub-bus:
-	let issub be false;
-	if the player's command includes "sub":
-		now issub is true;
-	moot crust;
-	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Esoteric Coteries way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
-
-this is the pre-bury-ruby rule:
-	if player does not have rigged digger:
-		if player has prod, say "Your prod from the Shuttle Hutlets should be able to bury stuff if you tinker right. Jar it the right way." instead;
-		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shuttle Hutlets is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
-
-this is the pre-patrol-ol-trap rule:
-	if walleyes are not moot:
-		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
-		preef ol' trap;
-		do nothing instead;
-
-this is the pre-unlocked rule:
-	if duck is not in location of player:
-		say "You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
-		preef prison ropins;
-		do nothing instead;
-
-this is the pre-fussier rule:
-	if duck is not in location of player:
-		say "The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.";
-		preef fissure;
-		do nothing instead;
-
-this is the pre-curst-palace-spectacular rule:
-	if player is not in Mislit Limits:
-		say "Your word, stupendous as it is, has no effect. Yet. You [if player is in Mesprise Premises]may just need to go back outside[else]are probably not close enough[end if].";
-		preef curst palace;
-		do nothing instead;
-
-this is the pre-medals-quickly rule:
-	if Merle is visible:
-		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
-		preef medals instead;
-	if player is not in Reclusion Inclosure:
-		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf].";
-		preef medals instead;
-	if nounsolve < 3 or adjsolve < 3:
-		say "You feel a surge, but not enough. [if nounsolve < 3 and adjsolve < 3]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still[med-unf].";
-		preef medals instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
-
-this is the pre-whistle-deeply rule:
-	if Elvira is in location of player:
-		say "Elvira summons her monsters to attack as you learn to play the whistle. 'Sorriest resistor! Apt end, pedant.' is the last you hear. Maybe you should've practiced somewhere else.";
-		get-dead;
-		follow the shutdown rules instead;
-	if number of NPCish people > 0:
-		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
-
-this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
-	if macks are in Disowned Downside:
-		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
-		preef atmo-moat;
-		do nothing instead;
-	else if power-back is false:
-		say "That seems like it should work, but you just can't summon the power. Someone here should be able to help you, you hope.";
-		preef atmo-moat;
-		do nothing instead;
-
-this is the pre-seacube-because rule:
-	abide by the medal check rules for sea cube;
-
-this is the pre-ogre-ergo rule:
-	abide by the medal check rules for gore ogre;
-	if Mr Lee wears ghoul hat:
-		preef gore ogre;
-		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if Reclusion Inclosure is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if]." instead;
-
-this is the pre-eels-else rule:
-	abide by the medal check rules for eels;
-	if sea cube is in location of player:
-		preef eels;
-		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word." instead;
-
-this is the pre-parrot-raptor rule: if location of player is not Reclusion Inclosure, say "'Awk! I'd just kill you in that form. Try that around some bad guys.'" instead;
-
-this is the pre-ghoul-hat-although rule: abide by the medal check rules for ghoul hat;
-
-this is the pre-kumquat rule: if kumquat is moot, say "Len Craig already gave you enough for your help. Don't push it." instead; [?? this should not matter.]
-
-this is the pre-papayas rule: if papayas are moot, say "You already got credit for prompt payment." instead; [?? this should not matter.]
-
 this is the pre-snap-span-pans rule:
 	if crate is reflexive:
 		say "You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.";
@@ -710,16 +1041,198 @@ this is the pre-snap-span-pans rule:
 		preef span pans;
 		the rule succeeds;
 
-this is the pre-ether-there rule:
-	if Leo is not in Grey Gyre:
-		say "You suspect someone is in the mist where the maze was. 'THERE!' you yell. But you doubt you fooled or intimidated them. You need backup.";
-		preef ether instead;
-	if player does not have popgun:
-		say "Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.";
-		preef ether instead;
-	if popgun does not contain dart:
-		say "Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition[if boing is reflexive] and isn't even working[end if]. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.";
-		preef ether instead;
+this is the post-tend-dent rule:
+	set the pronoun it to raw red drawer;
+
+this is the pre-tutor-trout rule:
+	if player is in Anger Range:
+		say "[if carps are visible]You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here[else]The poor trout's probably getting beaten up for learning in the first place[end if].";
+		preef trout;
+		do nothing instead;
+
+to say trout-tut:
+	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]";
+	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is visible]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are visible], though maybe you could sneak the wipes[end if][if dent is visible]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
+	now player has bubble wrap;
+
+this is the pre-warp-wrap rule:
+	now warp-try is true;
+	if player is in Lean Lane and trout is reflexive:
+		say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'";
+		preef ruby;
+		do nothing instead;
+	if Aunt Tuna is in location of player:
+		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe it needs to be saved [']til you find the right person to annoy.";
+		preef ruby;
+		do nothing instead;
+	if player is not in Achers' Arches:
+		say "That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.";
+		preef ruby;
+		do nothing instead;
+
+this is the post-warp-wrap rule:
+	moot sandier sardine;
+
+this is the pre-search-arches rule:
+	if sardine is visible, say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
+		preef a-s instead;
+
+this is the post-search-arches rule:
+	pearl-check;
+
+this is the pre-patrol-ol-trap rule:
+	if walleyes are not moot:
+		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
+		preef ol' trap;
+		do nothing instead;
+
+this is the post-patrol-ol-trap rule:
+	moot digger;
+
+this is the post-eeks-seek rule:
+	now Hardest Trashed Dearths is shunned;
+	change the east exit of Anger Range to Lean Lane;
+	change the west exit of Lean Lane to Anger Range;
+	if cans are in Hardest Trashed Dearths, poss-d;
+
+this is the post-bust-tubs rule:
+	now player has prod;
+	now heaps are in Shuttle Hutlets;
+	set the pronoun them to heaps;
+	set the pronoun it to prod;
+	[now waste is in Shuttle Hutlets;] [??]
+
+this is the pre-sweat-waste rule:
+	if waste is reflexed, say "You've had enough of that." instead;
+
+this is the post-sweat-waste rule:
+	now heaps are in Shuttle Hutlets;
+	moot waste;
+
+this is the pre-bury-ruby rule:
+	if player does not have rigged digger:
+		if player has prod, say "Your prod from the Shuttle Hutlets should be able to bury stuff if you tinker right. Jar it the right way." instead;
+		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shuttle Hutlets is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
+
+this is the post-yapper-prepay rule:
+	moot gleaner;
+	now lever is in Tenfold Teflon'd Den Loft;
+	if wipes are moot:
+		say "As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.";
+		move templar ramplet to Tenfold Teflon'd Den Loft;
+
+this is the pre-lever-revel rule:
+	if yapper is in location of player:
+		preef lever;
+		say "Nothing to celebrate yet--dispose of the yapper first." instead; [?? check to make sure preefing is first. Also, maybe have a post-preef rule?]
+
+this is the post-spin-pins rule:
+	now d2 is in Tenfold Teflon'd Den Loft;
+
+this is the pre-dialer-redial rule:
+	if pins are reflexive, say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard..." instead;
+
+this is the pre-dialer-derail rule:
+	if yapper is in location of player:
+		say "The yapper'd totally tell on you. Good thing the yapper's more interested in telling you off.";
+		preef dialer;
+		do nothing instead;
+
+this is the post-dialer-derail rule:
+	now d2 is in tenfold;
+	now pins are in tenfold;
+
+section towers auxiliary
+
+this is the post-bonker-broken rule:
+	now geese are in Danger Garden;
+	now stinger is in Danger Garden;
+	now gualoc of stinger is Danger Garden;
+	choose row with guy of stinger in table of guard-org;
+	now loc entry is Danger Garden; [need to undo the silly hack I have for the stinger being not-really in Mislit Limits according to the table]
+
+this is the post-weeds-sewed rule:
+	now player has raves saver;
+
+this is the post-urpine-punier rule:
+	now crocus is in flowerpot;
+
+this is the pre-strudel-rustled rule:
+	if player has strudel and strudel is reflexive, say "(Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)";
+
+this is the post-strudel-rustled rule:
+	now player has strudel;
+	moot sled rut;
+
+to say vain-naiv:
+	if the player's command includes "naivest":
+		say "You remember that alternate solution to the truth-teller and liar puzzle and ask the natives if they've heard of free beer at the Epic Clean Nice Place yet. They don't believe you at first, but you manage to sucker them with 'of course you've heard of it' and 'would I lie about free beer' and so forth. You provide them unbelievably wrong directions to follow, and the site van chugs off";
+		now naiv-nat is true;
+	else:
+		say "You convince the natives that they're really too good to be guarding THIS spot, and in fact, you cleared out some other areas that are even more fun to guard, but you're sure there're even more fun places if you just go--well, this-a-way and that-a-way. They fall for your flattery and start up the site van in search of somewhere better"
+
+this is the post-reeds-ale rule:
+	moot lars eede;
+	moot elsa erde;
+	process the guardian taunt and track progress rule;
+	if player is male, shuffle-guardians lars eede;
+	if player is female, shuffle-guardians elsa erde;
+
+to say rscheck:
+	if word number 1 in the player's command is "resealed":
+		now rese is true;
+
+this is the post-agnostic-blocker rule:
+	if atheists are moot and the-hostile are moot:
+		now agnostic is in Actionless Coastlines;
+		now dinger is in Actionless Coastlines;
+		if player is in Actionless Coastlines:
+			say "Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
+			guar-pro agnostic;
+		else:
+			say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Artist Traits Strait]north[else]east[end if].";
+	else:
+		say "You hear [if the-hostile are not moot]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
+
+this is the post-dinger-grained rule: [?? this should not be necessary if take entry is true]
+	now player has solve a loaves;
+
+this is the pre-fussier rule:
+	if duck is not in location of player:
+		say "The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.";
+		preef fissure;
+		do nothing instead;
+
+this is the post-yow-free rule:
+	if noun is fissure, now fissure-flip is true;
+	if noun is fissure or noun is prison ropins:
+		now duck is unfigured;
+		now prison ropins is unfigured;
+		now fissure is unfigured;
+		moot fissure;
+		now prison ropins is reflexed;
+		now Dr Yow is in Obscurest Subsector;
+		now duck is returned;
+
+this is the pre-unlocked rule:
+	if duck is not in location of player:
+		say "You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
+		preef prison ropins;
+		do nothing instead;
+
+this is the post-tentative-attentive rule:
+	now ag-atten is true;
+
+this is the post-detours-rousted rule:
+	move player to last-detour;
+
+to say bored-robed:
+	if the player's command includes "bored":
+		say "interesting";
+		now bredo-bored is true;
+	else:
+		say "clerically garbed, like he just became,";
+		now bredo-bored is false;
 
 this is the pre-rodney rule:
 	if number of visible warriors > 4:
@@ -731,21 +1244,58 @@ this is the pre-rodney rule:
 		now roddro is true;
 		preef Rodney instead;
 
+this is the post-rodney rule:
+	pad-rec-q "curst palace";
+
+to say rodney-ditch:
+	let vw be number of visible warriors;
+	if the player's command includes "droney":
+		say ". [if vw > 1]Rodney seems to grow tired of giving the orders. He loses his crispness and[else]Rodney begins babbling about something or other, then[end if] looks around, embarrassed--";
+		if vw > 1:
+			say "his remaining pal[if vw > 2]s[end if] can't be bothered to follow such a dry one";
+		else:
+			say "talking to himself, really, now";
+	else:
+		say ". Well, maybe he can repel the lightning and sparks kind, but not yours. He is blown through the doorway and looks up, dazed. Nobody goes to help him";
+		if vw is 0:
+			continue the action;
+		say ". The remaining warrior[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in Loftier Trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
+
+to say add-adj:
+	pad-rec "badlands";
+
 this is the post-tetris-sitter-triste rule:
 	moot itster;
 
+this is the pre-curst-palace-spectacular rule:
+	if player is not in Mislit Limits:
+		say "Your word, stupendous as it is, has no effect. Yet. You [if player is in Mesprise Premises]may just need to go back outside[else]are probably not close enough[end if].";
+		preef curst palace;
+		do nothing instead;
+
+this is the post-curstpalace-spectacular rule:
+	if used-ray is false and no-pastries is false and cur-score of towers is max-score of towers - 1:
+		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere!";
+		increment cur-score of towers;
+
+to say what-about-ed:
+	if Tetris Sitter is reflexed:
+		say "St. Teri comes out to see the results of your magicking. 'Did OK, kiddo!' she yells, shaking your hand";
+	else if serpent is reflexive:
+		say "The serpent slinks away behind the den to the west, to avoid the rumbling";
+	else:
+		say "From inside the den to the west, you hear some bozo yelling about property values. Good for him, you guess"
+
+section otters auxiliary
+
+this is the post-barley-barely rule:
+	set the pronoun them to cinders;
+	set the pronoun him to Ed Riley;
+	move ed riley to Minded Midden;
+	move cinders to Minded Midden;
+
 this is the post-rescind-cinders rule:
 	now rescind-cinders is true;
-
-this is the post-ocelots-coolest rule:
-	moot slopinc clip-ons;
-	now ocelots wear look-kool shades;
-
-this is the post-owls-slow rule:
-	now ocelots are in Lamer Realm;
-	now badger is in Lamer Realm;
-	now satyr is in Lamer Realm;
-	now leopard is in Lamer Realm;
 
 this is the post-imp-flip rule:
 	increment silence-tally;
@@ -758,41 +1308,6 @@ this is the post-imp-flip rule:
 	else:
 		set the pronoun it to sly imp;
 		remove noun from shrine-imp-items, if present;
-
-this is the post-raptor-parrot rule:
-	preef parrot;
-	now nails are in Perverse Preserve;
-	now corona is in Perverse Preserve;
-	now thrones are in Perverse Preserve;
-	now pines are in Perverse Preserve;
-
-this is the post-pomegranate rule: [the magenta rope is already flipped]
-	moot megaton pear;
-	moot rampage note;
-	moot mopeage rant;
-
-this is the post-cranberries rule:
-	moot briar screen;
-	moot barren cries;
-
-this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
-	[if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:]
-	if drama armada is in Same Mesa or THE BEAN is in Same Mesa, say "But... [if THE BEAN is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
-	if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
-	if Gast is in Same Mesa:
-		say "Walking away would upset the [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
-		preef noun; [?? obvious test here is PAST, AGAINST, PAST, PF]
-		do nothing instead;
-	if noun is reflexed: [this covers going back to the place]
-		if noun is picturers:
-			say "You go back inside, being a bit over-cautious with protocol. You could've just said IN.";
-			move player to Cleric Circle instead;
-		if noun is lairage:
-			say "Yeah, ACROSS is fewer keystrokes than ENTER OSCAR'S, so hey...";
-			move player to Adobe Abode instead;
-		if noun is adsorbing signboard:
-			say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
-			move player to Idle Deli instead;
 
 this is the post-whiners-flip rule:
 	increment quietness;
@@ -809,588 +1324,61 @@ this is the post-whiners-flip rule:
 to say shout-check:
 	say "[one of]The din loses speed, energy, nastiness and volume. A re-count reveals several leavers. But even with them gone, too many are left blocking the way south.[no line break][or]Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.[no line break][stopping]";
 
-this is the post-seacube-because rule:
-	set the pronoun them to eels;
-	now eels are in Loop Pool;
-	if ghoul hat is moot, min-up;
+this is the pre-ghoul-hat-although rule: abide by the medal check rules for ghoul hat;
 
 this is the post-ghoul-hat-although rule:
 	move gore ogre to bran barn;
 	if sea cube is moot, min-up;
 
+this is the pre-ogre-ergo rule:
+	abide by the medal check rules for gore ogre;
+	if Mr Lee wears ghoul hat:
+		preef gore ogre;
+		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if Reclusion Inclosure is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if]." instead;
+
 this is the post-ogre-ergo rule:
 	de-inhib;
 	if eels are reflexed, min-up;
+
+to say tgw:
+	say "that dude[if player is female], uh, dudess[end if], with those powers";
+
+this is the pre-seacube-because rule:
+	abide by the medal check rules for sea cube;
+
+this is the post-seacube-because rule:
+	set the pronoun them to eels;
+	now eels are in Loop Pool;
+	if ghoul hat is moot, min-up;
+
+this is the pre-eels-else rule:
+	abide by the medal check rules for eels;
+	if sea cube is in location of player:
+		preef eels;
+		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word." instead;
 
 this is the post-eels-else rule:
 	de-inhib;
 	if gore ogre is moot, min-up;
 
-this is the post-barley-barely rule:
-	set the pronoun them to cinders;
-	set the pronoun him to Ed Riley;
-	move ed riley to Minded Midden;
-	move cinders to Minded Midden;
-
-this is the post-urpine-punier rule:
-	now crocus is in flowerpot;
-
-this is the post-curstpalace-spectacular rule:
-	if used-ray is false and no-pastries is false and cur-score of towers is max-score of towers - 1:
-		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere!";
-		increment cur-score of towers;
-
-this is the post-detours-rousted rule:
-	move player to last-detour;
-
-this is the post-warp-wrap rule:
-	moot sandier sardine;
-
-this is the post-spin-pins rule:
-	now d2 is in Tenfold Teflon'd Den Loft;
-
-this is the post-tend-dent rule:
-	set the pronoun it to raw red drawer;
-
-this is the post-bust-tubs rule:
-	now player has prod;
-	now heaps are in Shuttle Hutlets;
-	set the pronoun them to heaps;
-	set the pronoun it to prod;
-	[now waste is in Shuttle Hutlets;] [??]
-
-this is the post-search-arches rule:
-	pearl-check;
-
-this is the post-strudel-rustled rule:
-	now player has strudel;
-	moot sled rut;
-
-this is the pre-strudel-rustled rule:
-	if player has strudel and strudel is reflexive, say "(Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)";
-
-this is the pre-sheol-holes rule:
-	if darkness is in Harms Marsh:
-		say "You don't have enough light, yet, to go around safely.";
-		preef sheol holes;
+this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
+	if macks are in Disowned Downside:
+		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
+		preef atmo-moat;
+		do nothing instead;
+	else if power-back is false:
+		say "That seems like it should work, but you just can't summon the power. Someone here should be able to help you, you hope.";
+		preef atmo-moat;
 		do nothing instead;
 
-this is the post-bonker-broken rule:
-	now geese are in Danger Garden;
-	now stinger is in Danger Garden;
-	now gualoc of stinger is Danger Garden;
-	choose row with guy of stinger in table of guard-org;
-	now loc entry is Danger Garden; [need to undo the silly hack I have for the stinger being not-really in Mislit Limits according to the table]
-
-this is the post-tentative-attentive rule:
-	now ag-atten is true;
-
-this is the post-dinger-grained rule: [?? this should not be necessary if take entry is true]
-	now player has solve a loaves;
-
-this is the post-yow-free rule:
-	if noun is fissure, now fissure-flip is true;
-	if noun is fissure or noun is prison ropins:
-		now duck is unfigured;
-		now prison ropins is unfigured;
-		now fissure is unfigured;
-		moot fissure;
-		now prison ropins is reflexed;
-		now Dr Yow is in Obscurest Subsector;
-		now duck is returned;
-
-this is the post-agnostic-blocker rule:
-	if atheists are moot and the-hostile are moot:
-		now agnostic is in Actionless Coastlines;
-		now dinger is in Actionless Coastlines;
-		if player is in Actionless Coastlines:
-			say "Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
-			guar-pro agnostic;
-		else:
-			say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Artist Traits Strait]north[else]east[end if].";
-	else:
-		say "You hear [if the-hostile are not moot]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
-
-this is the post-calm-clam rule:
-	now urn is in Olde Lode;
-	set the pronoun it to urn;
-
-this is the post-unearth-haunter rule:
-	now haunter is in Anger Range;
-
-this is the post-scrap-carps rule:
-	now trout is in Lean Lane;
-	moot carps;
-	moot pikes;
-	now scrawl is in Anger Range;
-	now pre-haun is in Anger Range;
-
-this is the pre-spot-stop-post rule:
-	if sob ever verbose is visible:
-		say "That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.";
-		preef stop post;
-		do nothing instead;
-
-this is the pre-deal rule:
-	if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
-		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.";
-		preef ltb;
-		the rule succeeds;
-
-this is the pre-dialer-derail rule:
-	if yapper is in location of player:
-		say "The yapper'd totally tell on you. Good thing the yapper's more interested in telling you off.";
-		preef dialer;
-		do nothing instead;
-
-this is the post-dialer-derail rule:
-	now d2 is in tenfold;
-	now pins are in tenfold;
-
-this is the post-eeks-seek rule:
-	now Hardest Trashed Dearths is shunned;
-	change the east exit of Anger Range to Lean Lane;
-	change the west exit of Lean Lane to Anger Range;
-	if cans are in Hardest Trashed Dearths, poss-d;
-
-this is the post-yak-keyboard rule:
-	moot leaf;
-	check-trivial-presto-llp;
-
-this is the post-tunes-unset rule:
-	if the player's command includes "remap", now remapped is true;
-
-this is the post-drive-flip rule:
-	if usb is not off-stage, say "Well, flipping [noun] didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
-
-this is the post-bub-dude-egg rule:
-	now USB is in Hacks' Shack;
-	moot golden dongle;
-
-this is the post-censer-screen rule:
-	if Hacks' Shack is visited and player is not in Hacks' Shack:
-		say "That screen would go great with Drive A in the shack. So you go back there.";
-		go-back Hacks' Shack;
-		now player has screen;
-
-this is the post-polemic-compile rule:
-	now BUB DUDE EGG is part of the computer screen;
-	if hawt thaw is in Phat Path, poss-d;
-	if lamb is in Grey Gyre, poss-d;
-	if sport ports are reflexive, poss-d;
-	if starch charts are in Phat Path, poss-d;
-	if odes song is in Dirge Ridge, poss-d;
-	if player has rom sticks, moot rom sticks;
-
-this is the post-pooh rule:
-	poss-d;
-
-this is the post-phooey rule:
-	min-up;
-	now phooeyed is true;
-
-this is the post-boing-bingo rule:
-	set the pronoun it to popgun;
-
-this is the pre-boing-bingo rule:
-	if player does not have the PG-on-up popgun and popgun is visible:
-		say "(taking the popgun first while you mess with the boing-go bin)[paragraph break]";
-		now player has popgun;
-
-this is the post-harpings-flip rule:
-	remove noun from byebyes, if present;
-	set the pronoun it to harpings phrasing;
-
-this is the post-pernod-ponder rule:
-	if rivets are reflexive or praise spirea is reflexive, poss-d;
-
-this is the post-tressi-resist rule:
-	now mbb is LLPish;
-	report-glarers;
-
-this is the post-mbb-ramble rule:
-	now sister tressi siters are LLPish;
-	report-glarers;
-
-this is the post-redvees-deserve rule:
-	move wonga wagon to Upscale Capsule;
-	move nerf fern to Upscale Capsule;
-	move pharos phasor to Upscale Capsule;
-	move DIVORCES magazine to Upscale Capsule;
-	move St Al Salt to Upscale Capsule;
-	move cark rack to Upscale Capsule;
-	move desk sked to Upscale Capsule; [Balmer and Tressi don't appear until you deal with the salt]
-
-this is the post-salt-last rule:
-	moot salt;
-	now trance nectar is in Upscale Capsule;
-	now mbb is in Upscale Capsule;
-	repeat through table of troves anagrams:
-		if the-from entry is Marble Blamer Balmer:
-			now the-from entry is mbb;
-			now the-to entry is mbb; [this is part of the silly randomization]
-	now sister tressi is in Upscale Capsule;
-
-this is the post-nowt-town-wont rule:
-	poss-d;
-	shuffle-nowt-town;
-	unless l-m is cscanned or l-m is ncscanned, poss-d;
-	now maze-points is 1;
-
-this is the post-mazeltov rule:
-	min-up;
-	now maze-points is 2;
-	unless l-m is cscanned or l-m is ncscanned:
-		min-up;
-		increment maze-points;
-	shuffle-nowt-town;
-
-this is the post-ether-there rule:
-	now dart is in Grey Gyre;
-	moot dart;
-
-this is the post-tsar-star rule:
-	now player wears tsar star;
-
-this is the post-lager-glare rule:
-	set the pronoun it to ltb;
-
-this is the post-deal rule:
-	if lager is in Boredom Bedroom, poss-d;
-	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
-	set the pronoun them to Browse Bowers;
-
-this is the post-strive-or-aspire rule:
-	if praise spirea is reflexed and rivets are reflexed:
-		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
-		min-up;
-		set the pronoun it to pernod;
-	else:
-		if pernod is off-stage:
-			say "Your concentration is broken by shattering glass! When you turn around, you notice the person who originally gave you the Peg A. Page book. He has been escorted out by security. They hand him a bottle. There's an argument, he smashes the bottle, and he runs away. Perhaps this is your chance, to take his place now that he has burned out!";
-			now pernod is in Econ Cone;
-			set the pronoun it to pernod;
-		if praise spirea is reflexive, now praise spirea is llpish;
-		if rivets are reflexive, now rivets are llpish;
-
-this is the post-rivets-strive rule:
-	process the post-strive-or-aspire rule;
-	now Trevis Vister is reflexed; [?? this should be something else]
-
-this is the post-psalter-stapler rule:
-	if act ruin curtain is not in Carven Cavern, now act ruin curtain is in Carven Cavern;
-
-this is the post-rifle-flier rule:
-	pad-rec-q "rove over";
-	moot high sign;
-	try talking to Mole Elmo instead;
-
-this is the post-storeh-hoster rule:
-	it-him-her throes hoster;
-
-this is the post-lecturer-outside rule:
-	now mangiest steaming is not maingame;
-	now list-headache is true;
-	moot pamphlets;
-	increase headaches by 10;
-	now lectures is shunned;
-	if t-tediously is in otters:
-		let A be pod-num of t-tediously;
-		now pod-num of t-tediously is 0; [disable "tediously" in otters]
-		let B be a random number from 1 to mack-count of A;
-		place-a-mack A and B;
-	move player to Strip of Profits;
-
-this is the post-sitanag-against rule:
-	now tirades are in Same Mesa;
-
-this is the post-across rule:
-	now dingy dwelling is clue-used;
-
-this is the post-past rule:
-	now grubby restaurant is clue-used; [?? rivets/Trevis Vister clue used too?]
-
-this is the post-under rule:
-	moot Gast;
-	continue the action;
-
-this is the post-thebean-beneath rule:
-	if drama armada is off-stage:
-		now drama armada is in Same Mesa;
-		set the pronoun them to drama armada;
-
-this is the post-seedpit-despite rule:
-	now cravings carvings is clue-used;
-
-this is the post-unlit-until rule:
-	now noon gag is in Harms Marsh;
-	now sheol holes are in harms marsh;
-
-this is the post-athwart rule:
-	moot bad oar;
-
-this is the post-hurt-hog-through rule:
-	moot bent ewe;
-	moot hurt hog;
-	now yob den is in Sonancy Canyons;
-	set the pronoun it to yob den;
-	set the pronoun them to yob den;
-
-this is the bee-less-active rule:
-	if bee-score is 2:
-		min-up;
-	else:
-		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
-
-this is the post-cellar-recall rule:
-	if bee-score < 2, poss-d;
-
-this is the pre-cellar-recall rule:
-	if evil bee is off-stage, say "You haven't forgotten anything important, yet." instead;
-	if bee-score is 0:
-		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
-		preef cellar door;
-		the rule succeeds;
-
-this is the post-diapers-despair rule:
-	moot Ires Pad;
-	moot spider;
-	move I'd Cede to Drain Nadir;
-
-this is the post-master-or-bolster rule:
-	if ME ARTS is in Boredom Bedroom, now ME ARTS is LLPish;
-	if lobster is in Boredom Bedroom, now lobster is LLPish;
-	say "[if ME ARTS is moot and lobster is moot]You feel your arch-greed recharged. [end if]You're [one of][or]even [stopping]more up to grokking LEAD, now.";
-
-this is the post-bins-snib rule:
-	move snib to Largely All-Grey Gallery;
-
-this is the post-my-niche-chimney rule:
-	now Highest Heights are mapped above Dusty Study;
-	now Dusty Study is mapped below Highest Heights;
-
-this is the post-tables-stable rule:
-	now study is mapped inside Farming Framing;
-	now study is mapped outside Farming Framing;
-	now Farming Framing is mapped inside study;
-
-this is the post-meet-bans-basement rule:
-	moot beams;
-	now Largely All-Grey Gallery is mapped below study;
-	now study is mapped above Largely All-Grey Gallery;
-
-this is the post-sitar-or-stria-to-stair rule:
-	now Largely All-Grey Gallery is mapped below Farming Framing;
-	if the room below study is nothing:
-		now Farming Framing is mapped above Largely All-Grey Gallery;
-	if meet bans are moot:
-		min-up;
-	else if niche is moot and pram is moot:
-		min-up; [check if passage is made via beams or chimney->pram]
-	moot stria;
-	moot sitar;
-	move stair backdrop to all stairy rooms;
-
-this is the post-pram-ramp rule:
-	if tables are moot and sitar is moot:
-		min-up;
-	else if meet bans are moot:
-		min-up; [check if passage is already available via beams or stable->stair]
-
-to say h-n-k: now hogs-not-keys is true;
-
-to say gun-load-if:
-	if gun-load-tried is false:
-		say "But now, to load it";
-	else:
-		say "You realize you can load the dart into the popgun now, so you do";
-		now dart is in the popgun;
-
-to say wont-maze:
-	if cur-score of presto is 1:
-		say "Why not take care of the big things first? And what better way to start than with an emphatic word? You remember when younger how you could say WON'T. And it works, here, too. The maze dissolved, leaving an ether to the north";
-		continue the action;
-	say "While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses, but not before you escape back to the south.";
-	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
-
-to say trout-tut:
-	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]";
-	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is visible]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are visible], though maybe you could sneak the wipes[end if][if dent is visible]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
-	now player has bubble wrap;
-
-this is the post-yapper-prepay rule:
-	moot gleaner;
-	now lever is in Tenfold Teflon'd Den Loft;
-	if wipes are moot:
-		say "As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.";
-		move templar ramplet to Tenfold Teflon'd Den Loft;
-
-to say new-thing:
-	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
-	moot satchel;
-
-this is the pre-gates-stage-flip rule:
-	if gate-level is 2, say "No need to over-study or over-think. Through the gates!" instead;
-
-this is the post-gates-stage-flip rule:
-	if noun is searcher or noun is viewer or noun is perp-priv, upgrade-passport;
-
-this is the post-latches-satchel rule:
-	if player does not have treatise, now player has treatise;
-	now player has the letters settler;
-	now player has the super purse;
-
-this is the pre-skid-disk rule:
-	if yak is on skid, say "The yak doesn't need that sort of shock." instead;
-	if location of player is not shack, say "Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.";
-
-this is the pre-side-art-astride rule:
-	if side art is reflexed, say "You already did that." instead; [?? check rule order]
-	if Gast is not in Same Mesa:
-		say "You get astride the [sit a nag] for a while, but it's pointless with nobody around. Maybe later";
-		preef sit a nag;
-		the rule succeeds;
-
-this is the post-side-art-astride rule:
-	now WOE BOW BELL is in Same Mesa;
-
-to say purse-gone: now purse-stolen is true;
-
-to say dust-b:
-	say "[one of]. You say, 'Dust, be busted' to clear up the mess in the air. You can go [b]IN[r] to the stable, now, to look around there[or][stopping]";
-
-to say rodney-ditch:
-	let vw be number of visible warriors;
-	if the player's command includes "droney":
-		say ". [if vw > 1]Rodney seems to grow tired of giving the orders. He loses his crispness and[else]Rodney begins babbling about something or other, then[end if] looks around, embarrassed--";
-		if vw > 1:
-			say "his remaining pal[if vw > 2]s[end if] can't be bothered to follow such a dry one";
-		else:
-			say "talking to himself, really, now";
-	else:
-		say ". Well, maybe he can repel the lightning and sparks kind, but not yours. He is blown through the doorway and looks up, dazed. Nobody goes to help him";
-		if vw is 0:
-			continue the action;
-		say ". The remaining warrior[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in Loftier Trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
-
-to say read-canflip:
-	say "[one of]. Reading the notice [if notice is examined]again[else]briefly[end if], you see that things won't be this flexible out in the real world[or][stopping]";
-
-to say stein-drop:
-	if player has stein:
-		say "[paragraph break]Oh, as you leave, you drop and break the stein. Tiens";
-	moot stein;
-
-to say spike-scrap:
-	if word number 1 in the player's command is "spike":
-		now spikes is true;
-	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
-
-this is the pre-sitanag-against rule:
-	if list o toils is unexamined:
-		say "You hear loud footsteps and hide under the [sit a nag] in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. [if Cleric Circle is not visited]Maybe if you could find a way inside that church[else]Perhaps you could find something to do from Brother Horbert[end if].";
-		preef sit a nag instead;
-	if Gast is off-stage:
-		say "You hear a giant's footsteps in the distance--but your talk with Brother Horbert has helped you be fearless.";
-	if U NERD ENDUR REDUN is not off-stage, say "You don't need or want another round of that." instead;
-
-to say remap-or-unset:
-	if word number 1 in the player's command is "unset":
-		say "You fiddle with the knobs and such on the jukebox according to the instructions";
-		now unset-not-remap is true;
-	else:
-		say "You brave the electrical underpinnings of the perma-amper to create an ampish mishap";
-
-to say troend:
-	say "No more trance nectar for you. O glum mogul! You backtrack your trip to the top, gaining spirituality as efficiently as you gained worldly status. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient at doing enough nothing. You hear a knock on the door. You have been fired.[paragraph break]";
-	if lager is in Boredom Bedroom and divorces is in Upscale Capsule:
-		do nothing;
-	else if lager is moot and divorces is moot:
-		say "But you did something for society. A lot. Disposing of DIVORCES and the lager helped you.";
-	else if lager is in Boredom Bedroom:
-		say "At least you struck a blow against gossip culture in general.";
-	else:
-		say "At least you struck a blow against alcohol in general.";
-	say "Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your Upscale Capsule. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
-
-this is the post-palm-lamp rule:
-	now dope op-ed is in Dusty Study;
-
-to say what-about-ed:
-	if Tetris Sitter is reflexed:
-		say "St. Teri comes out to see the results of your magicking. 'Did OK, kiddo!' she yells, shaking your hand";
-	else if serpent is reflexive:
-		say "The serpent slinks away behind the den to the west, to avoid the rumbling";
-	else:
-		say "From inside the den to the west, you hear some bozo yelling about property values. Good for him, you guess"
-
-to say extra-c:
-	if word number 1 in the player's command is "raccoon":
-		say "(Ignoring the extra C.) ";
-
-this is the post-hump-umph rule:
-	if Leo is in Grey Gyre:
-		process the Leo-Rand lackey rule;
-
-to say eicond:
-	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in Loather Rathole]You feel you can and will do better than here[else if player is in Bustle Sublet]You dare to feel superior to whoever might be walking around here[else if player is in Drain Nadir]You know you deserve better than this. It's a temporary setback[else if player is in Boredom Bedroom]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Browse Bowers]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in Upscale Capsule]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
-
-to say rscheck:
-	if word number 1 in the player's command is "resealed":
-		now rese is true;
-
-to say tgw:
-	say "that dude[if player is female], uh, dudess[end if], with those powers";
-
-to say preefies:
-	if number of prefigured things > 0, say ". And now you have reason to mess with [the list of prefigured things], too";
-
-to say bored-robed:
-	if the player's command includes "bored":
-		say "interesting";
-		now bredo-bored is true;
-	else:
-		say "clerically garbed, like he just became,";
-		now bredo-bored is false;
-
-this is the post-sheol-holes rule:
-	now stripey pyrites are in Harms Marsh;
-	now un-road is in Harms Marsh;
-
-to say get-censer:
-	if the player's command includes "pooh":
-		say "You convince yourself reaching the hoop can't be that bad. You jump up, and you grab the hoop! It falls from the wall, revealing an onyx censer from a hidden compartment. Wow! Maybe you didn't get full style points, but you got what you needed";
-	else:
-		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, revealing an onyx censer from a hidden compartment. Wow";
-	if Leo is visible:
-		say "! Leo and Rand applaud your agility";
-
-to say add-adj:
-	pad-rec "badlands";
-
-to say vain-naiv:
-	if the player's command includes "naivest":
-		say "You remember that alternate solution to the truth-teller and liar puzzle and ask the natives if they've heard of free beer at the Epic Clean Nice Place yet. They don't believe you at first, but you manage to sucker them with 'of course you've heard of it' and 'would I lie about free beer' and so forth. You provide them unbelievably wrong directions to follow, and the site van chugs off";
-		now naiv-nat is true;
-	else:
-		say "You convince the natives that they're really too good to be guarding THIS spot, and in fact, you cleared out some other areas that are even more fun to guard, but you're sure there're even more fun places if you just go--well, this-a-way and that-a-way. They fall for your flattery and start up the site van in search of somewhere better"
-
-this is the post-iconic-flip rule:
-	now singed design is part of the noun;
-
-this is the post-sonic-flip rule:
-	if player has so-great storage, slot-appear;
-	now singed design is part of the noun;
-
-this is the post-patrol-ol-trap rule:
-	moot digger;
-
-this is the post-sweat-waste rule:
-	now heaps are in Shuttle Hutlets;
-	moot waste;
-
-this is the post-weeds-sewed rule:
-	now player has raves saver;
+this is the post-raptor-parrot rule:
+	preef parrot;
+	now nails are in Perverse Preserve;
+	now corona is in Perverse Preserve;
+	now thrones are in Perverse Preserve;
+	now pines are in Perverse Preserve;
+
+this is the pre-parrot-raptor rule: if location of player is not Reclusion Inclosure, say "'Awk! I'd just kill you in that form. Try that around some bad guys.'" instead;
 
 this is the post-parrot-raptor rule:
 	now player has whistle;
@@ -1402,42 +1390,72 @@ this is the post-parrot-raptor rule:
 	if Elmer is reflexive, poss-d;
 	reg-inc;
 
-this is the post-spot-stop-post rule:
-	now purse-stolen is false;
+to say extra-c:
+	if word number 1 in the player's command is "raccoon":
+		say "(Ignoring the extra C.) ";
 
-this is the post-hogs-bye rule:
-	now Mount Um-Not is in Phat Path;
-	now Deil's Slide is in Phat Path;
-	now Leo is in Phat Path;
-	now Rand is in Phat Path;
-	now Grey Gyre is mapped south of Phat Path;
-	now Phat Path is mapped north of Grey Gyre;
-	if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
-	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as you wind up at...";
-	move player to Phat Path;
+this is the post-owls-slow rule:
+	now ocelots are in Lamer Realm;
+	now badger is in Lamer Realm;
+	now satyr is in Lamer Realm;
+	now leopard is in Lamer Realm;
 
-this is the post-nectar-recant rule:
-	let temp be 0;
-	if Sister Tressi is prefigured, increment temp;
-	if mbb is prefigured, increment temp;
-	if DIVORCES is prefigured, increment temp;
-	if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, because your desire for more isn't totally drained.)[paragraph break]";
-	increase min-score of troves by temp;
-	increase cur-score of troves by temp;
+this is the post-ocelots-coolest rule:
+	moot slopinc clip-ons;
+	now ocelots wear look-kool shades;
 
-this is the post-storek-tokers rule:
-	now mangiest steaming is in Strip of Profits;
-	set the pronoun her to tokers;
+this is the pre-whistle-deeply rule:
+	if Elvira is in location of player:
+		say "Elvira summons her monsters to attack as you learn to play the whistle. 'Sorriest resistor! Apt end, pedant.' is the last you hear. Maybe you should've practiced somewhere else.";
+		get-dead;
+		follow the shutdown rules instead;
+	if number of NPCish people > 0:
+		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
 
-this is the post-disk-skid rule:
-	if disk is not prefigured:
-		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
-		preef disk;
-	now skid is in location of player;
+this is the pre-medals-quickly rule:
+	if Merle is visible:
+		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
+		preef medals instead;
+	if player is not in Reclusion Inclosure:
+		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf].";
+		preef medals instead;
+	if nounsolve < 3 or adjsolve < 3:
+		say "You feel a surge, but not enough. [if nounsolve < 3 and adjsolve < 3]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still[med-unf].";
+		preef medals instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 
-this is the post-storet-otters rule:
-	if engravings are examined, say "The engravings from Store T seem to have been transferred to the otters.";
-	now engravings are part of solid idols;
+section others auxiliary
+
+this is the post-cranberries rule:
+	moot briar screen;
+	moot barren cries;
+
+this is the post-pomegranate rule: [the magenta rope is already flipped]
+	moot megaton pear;
+	moot rampage note;
+	moot mopeage rant;
+
+this is the pre-kumquat rule: if kumquat is moot, say "Len Craig already gave you enough for your help. Don't push it." instead; [?? this should not matter.]
+
+this is the pre-papayas rule: if papayas are moot, say "You already got credit for prompt payment." instead; [?? this should not matter.]
+
+this is the pre-among rule:
+	if player does not have tekno-token:
+		say "You'd look a little too suspicious mingling without anything of value to trade. Maybe when you have something, though.";
+		preef mango;
+		the rule succeeds;
+
+this is the post-sonic-flip rule:
+	if player has so-great storage, slot-appear;
+	now singed design is part of the noun;
+
+this is the post-iconic-flip rule:
+	now singed design is part of the noun;
+
+this is the pre-gates-stage-flip rule:
+	if gate-level is 2, say "No need to over-study or over-think. Through the gates!" instead;
+
+this is the post-gates-stage-flip rule:
+	if noun is searcher or noun is viewer or noun is perp-priv, upgrade-passport;
 
 book general auxiliary rules
 

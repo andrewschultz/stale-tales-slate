@@ -14927,7 +14927,7 @@ instead of doing something to eeks:
 	if current action is not listening, say "Can't do much more than listen, to find how to follow.";
 	try listening instead;
 
-Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
+Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [rew-war] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
 
 after looking in Lean Lane:
 	if tea tray is in Lean Lane, set the pronoun it to tea tray;
@@ -15323,12 +15323,17 @@ this is the bore-drawer rule:
 		the rule succeeds;
 	abide by the bore-exam rule;
 
-understand "raw warder/reward drawer" as raw red drawer when trout is reflexive.
-understand "red warder/reward drawer" as raw red drawer when trout is reflexive.
-understand "raw red warder/reward drawer" as raw red drawer when trout is reflexive.
+understand "warder drawer" as raw red drawer when trout is reflexive.
+understand "raw/red warder drawer" as raw red drawer when trout is reflexive.
+understand "red warder drawer" as raw red drawer when trout is reflexive.
+understand "raw red warder drawer" as raw red drawer when trout is reflexive.
 
-to say rew-war:
-	say "[if raw red drawer is reflexive]warder[else]reward[end if]"
+understand "reward drawer" as raw red drawer when trout is reflexive.
+understand "raw/red reward drawer" as raw red drawer when trout is reflexive.
+understand "red reward drawer" as raw red drawer when trout is reflexive.
+understand "raw red reward drawer" as raw red drawer when trout is reflexive.
+
+to say rew-war: say "[if trout is reflexive]warder[else]reward[end if]"
 
 check putting on raw red drawer: say "No. Aunt Tuna keeps her place tidy." instead; [??]
 
