@@ -610,7 +610,10 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 
 book auxiliary text and rules
 
-section ordeal loader nudges
+section ordeal loader auxiliary
+
+to say loc-rej:
+	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
 
 to say name-list:
 	say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
@@ -626,9 +629,6 @@ to say nope-odor:
 to say com-chor:
 	say "It's a pretty complex chord[if cur-score of ordeal loader is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
 
-to say loc-rej:
-	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
-
 to say darnels-inst:
 	say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
 
@@ -641,7 +641,7 @@ to say stat-at:
 to say reg-rej:
 	say "You don't want to change a region drastically while you're in it"
 
-section store nudges
+section stores auxiliary
 
 to say tid:
 	say "The depiction is there as a hint, not as a puzzle";
@@ -670,7 +670,11 @@ to say no-store-m:
 to say hub-stur:
 	say "The hubs bush is too sturdy. You can't escape the Trips Strip"
 
-section forest nudges
+section forest auxiliary
+
+this is the first-two-forest rule:
+	if player is in sf or player is in rf, the rule succeeds;
+	the rule fails;
 
 to say no-con:
 	say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
@@ -684,6 +688,9 @@ to say forest-no:
 to say no-un:
 	say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
 
+to say crosse-to-you:
+	say "Whatever you could do to Corses Crosse, it might do worse to you"
+
 to say in-sort of (q - a thing):
 	say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
 
@@ -696,22 +703,12 @@ to say vand-art:
 to say nau-zer-enuf:
 	say "The naughts, err, noughts seem zero-y enough to contain an o";
 
-to say crosse-to-you:
-	say "Whatever you could do to Corses Crosse, it might do worse to you"
-
-to say spec-meat:
-	say "You'll need to be more specific about the meat to poke at"
-
-to say rivliv:
-	say "It's just a liver. No need to parse the brand name"
-
-this is the first-two-forest rule:
-	if player is in sf or player is in rf, the rule succeeds;
-	the rule fails;
-
 this is the see-meats rule:
 	if River Ville is visible or Spam is visible or viler liver is visible or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
+
+to say spec-meat:
+	say "You'll need to be more specific about the meat to poke at"
 
 this is the liv-vis rule:
 	if number of carried glopmeats > 0, the rule succeeds;
@@ -720,6 +717,9 @@ this is the liv-vis rule:
 
 to say bothlivers:
 	say "The one liver seems inactive by itself"
+
+to say rivliv:
+	say "It's just a liver. No need to parse the brand name"
 
 this is the spread-drapes rule:
 	if player is in Cruel Ones' Enclosure:
@@ -733,7 +733,11 @@ to say froz-ha-ha:
 to say marsh-lake:
 	say "The marsh and lake are symptoms of--whatever evil is beyond here"
 
-section sortie nudges
+section sortie auxiliary
+
+this is the b4-cent rule:
+	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
+	the rule fails;
 
 this is the cent-spin rule:
 	if the player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
@@ -741,6 +745,10 @@ this is the cent-spin rule:
 
 this is the nick-visit rule:
 	if nick is visited, the rule succeeds;
+	the rule fails;
+
+this is the af-cent rule:
+	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
 	the rule fails;
 
 this is the kitch-visit rule:
@@ -755,31 +763,35 @@ to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
 
 to say perf-brand: say "It's the full name brand that really catches your eye"
 
-this is the rm-or-moor rule:
-	if player is in room or player is in moor, the rule succeeds;
-	the rule fails;
+to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
 
 this is the got-shoes rule:
 	if shoes are moot, the rule succeeds;
+	the rule fails;
+
+this is the rm-or-moor rule:
+	if player is in room or player is in moor, the rule succeeds;
 	the rule fails;
 
 to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
 
 to say expo-or-anapest: say "Thinking of the flier leads you back to the anapest";
 
-to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
-
 to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
 
 to say pat-poe: say "Pat won't react kindly to modifications of his poem"
 
-to say no-wire: say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
+this is the got-plane rule:
+	if the player has the poem and the poem is folded, the rule succeeds;
+	the rule fails;
 
-to say but-but: say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
+to say no-wire: say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
 
 this is the panel-in-silo rule:
 	if player is in moor and panel is part of the silo, the rule succeeds;
 	the rule fails;
+
+to say but-but: say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
 
 to say what-b-says:
 	say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
@@ -787,19 +799,7 @@ to say what-b-says:
 to say best-not-defile:
 	say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
 
-this is the got-plane rule:
-	if the player has the poem and the poem is folded, the rule succeeds;
-	the rule fails;
-
-this is the b4-cent rule:
-	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
-	the rule fails;
-
-section metros nudges
-
-this is the af-cent rule:
-	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
-	the rule fails;
+section metros auxiliary
 
 to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder."
 
@@ -814,9 +814,17 @@ to say no-hot:
 
 to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 
+to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
+
 to say condo-visit: say "[if dry cake is in Obtains Boastin' Bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
 
-to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
+to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
+
+to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
+
+to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
+
+to say mits-are: say "The mittens are as comfortable as they're going to be"
 
 to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
@@ -838,25 +846,17 @@ to say faded-ad: say "The ad and the PSA are just silly. What's to the east is q
 
 to say nope-gin: say "You already transformed the neon pig to the gin-nope opening. [if controls are in gin nope opening]And you put the controls in. Better not do any more[else]Might be better to see if anything fits there[end if]"
 
-to say aligns-no: say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
-
-to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
-
-to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
-
-to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
-
-to say mits-are: say "The mittens are as comfortable as they're going to be"
-
 this is the no-beats rule:
 	if player is in Esoteric Coteries or player is in Obtains Boastin' Bastion, the rule succeeds;
 	the rule fails;
+
+to say aligns-no: say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
 
 this is the resin-lala rule:
 	if resin is moot, the rule succeeds;
 	the rule fails.
 
-section resort nudges
+section resort auxiliary
 
 to say the-sand:
 	say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
@@ -877,7 +877,10 @@ this is the riot-gone rule:
 to say ennui:
 	say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
 
-section general nudges
+section general auxiliary
+
+to say no-2:
+	say "You can't really second-guess the help on the prep paper";
 
 to say chem-bad:
 	say "Bad idea to mess with chemical compounds you don't understand"
@@ -888,16 +891,22 @@ to say gad-part:
 to say titenot:
 	say "It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway";
 
-to say no-2:
-	say "You can't really second-guess the help on the prep paper";
+this is the know-point rule:
+	if pointcue is true, the rule succeeds;
+	the rule fails.
 
-this is the past-strip rule:
-	if Self-ID Fields is visited or underside is visited or Trap Part is visited:
-		decide yes;
-	decide no;
+this is the can-i-parse rule:
+	if hows tag is moot, the rule fails;
+	if player has gadget:
+		the rule succeeds;
+	the rule fails.
 
 this is the past-loader rule:
 	if Notices Section is visited, the rule succeeds;
+	the rule fails;
+
+this is the past-strip rule:
+	if Self-ID Fields is visited or underside is visited or Trap Part is visited, the rule succeeds;
 	the rule fails;
 
 to say what-for:
@@ -917,16 +926,6 @@ to say xyzzys:
 
 to say cussy:
 	say "You're not fooling ME. Shame on you";
-
-this is the know-point rule:
-	if pointcue is true, the rule succeeds;
-	the rule fails.
-
-this is the can-i-parse rule:
-	if hows tag is moot, the rule fails;
-	if player has gadget:
-		the rule succeeds;
-	the rule fails.
 
 to say no-pock:
 	say "You don't need to mess with your pockets"
