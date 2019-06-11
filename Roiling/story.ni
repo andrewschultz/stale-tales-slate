@@ -2030,6 +2030,7 @@ parrot	"[if Merle is visible]Don't blow his cover![else]'Fear the feather! A bir
 Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're not going to out-debate the vexin['] vixen."
 Curtis	"'Ehh?' says Curtis. 'I don't have time for small talk. More fruit, more fruit.'" [begin others]
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. You get the feeling you asked about something irrelevant, but that advice might help you in general[or]Len's eyes glaze over a bit. Nothing personal, just business[stopping]."
+Ammo Gang	"The No Ammo Gang seems vaguely interested, but you didn't insert yourself enough as part of the conversation."
 Art Erd	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 Dr Tera	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd-Aid...'"
@@ -2323,7 +2324,8 @@ Art Erd	Elvira	"'She wasn't as bad as she was smeared to be!'"
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
 len craig	elvira	"'Less said, the better.'"
-len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'" [end OTHERS]
+len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
+Ammo Gang	mango	"Yes, we sell them. Come join our conversation the right way. You turn red, briefly, thinking it can't be too hard to figure how to get a mango." [end OTHERS]
 
 to say bh-mw:
 	say "Brother Horbert means well, but he's too unfocused to DO anything by himself"
@@ -4179,6 +4181,8 @@ when play begins (this is the basic initialization rule):
 		if there is no introtoo entry, now introtoo entry is false;
 	repeat through table of init-points:
 		now doneyet entry is false;
+	repeat with Q running through regions:
+		now poss-score of Q is max-score of Q;
 	move Edictal Citadel backdrop to all ominous rooms;
 	move the curst palace backdrop to all towery rooms;
 	add-errs Ordeal Reload;
@@ -7667,7 +7671,7 @@ after fliptoing (this is the fruit cue rule):
 				d "[myf] still to do.";
 				continue the action;
 	if another-break is true, say "[line break]";
-	say "You look around and don't see any way to [if player is in Clangier Clearing]bargain for[else]pick off[end if] more fruits here. Maybe it's time to look around elsewhere.";
+	say "You look around and don't see any way to [if player is in Clangier Clearing]bargain for[else]pick off[end if] more fruits here. Maybe there's more to do elsewhere.";
 	continue the action;
 
 the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
@@ -20701,6 +20705,7 @@ Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowl
 after looking in Swell Wells for the first time:
 	say "One thing is not like the others. An un-mod mound looks suspicious--and when you look at it more carefully, it reveals a way down!";
 	say "[line break]And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
+	now miser ruble is in Swell Wells;
 	continue the action;
 
 the un mod mound is scenery in Swell Wells. "It's a way [if scape space is visited]back down[else]down somewher new[end if]."

@@ -151,6 +151,14 @@ a thing can be universal, useless, amusing, cluey, unimportant, abstract, boundi
 
 a thing can be unscannable. a thing is usually not unscannable.
 
+volume when play begins
+
+when play begins:
+	repeat through table of pad-stuff:
+		if there is no verify entry, now verify entry is true;
+	repeat with Q running through regions:
+		now poss-score of Q is max-score of Q;
+
 volume verbs
 
 chapter diagonal movements
