@@ -103,6 +103,8 @@ include Shuffling Nudges by Andrew Schultz.
 
 include Shuffling Mistakes by Andrew Schultz.
 
+include Shuffling Tests by Andrew Schultz.
+
 include STS Common by Andrew Schultz.
 
 book debug modules - not for release
@@ -1628,8 +1630,7 @@ carry out angleing:
 		if lube-asked is true:
 			try taking phail phial;
 			if player does not have phail phial, all-say "[bug-report] Please let me know how this happened." instead;
-		else:
-			say "You'd need to get the phial from the cabinet first." instead;
+		say "You'd need to get the phial from the cabinet first." instead;
 	if player does not have phail phial, all-say "[reject]" instead;
 	if player is in sf or player is in rf:
 		if thorn is not in location of player, say "There's a weird haze in each of the four directions--north, south, east and west." instead;
@@ -1665,21 +1666,11 @@ carry out angleing:
 	pad-rec-q "to-do";
 	the rule succeeds;
 
-after printing the name of cake pan while angleing: say " (faint)".
-
-after printing the name of antlers while angleing: say " (faint)".
-
-after printing the name of banshee while angleing: say " (faint)".
-
-after printing the name of static while angleing: say " (faint)".
-
-after printing the name of grist while angleing: say " (faint)".
+after printing the name of an unnecc thing while angleing: say " (faint)". [unnecc is necessary (heh) because LLPish means you get a point for it, but flipping the attics/static infinitely is possible. ]
 
 definition: a thing (called amiun) is unnecc:
-	if amiun is cake pan or thing is grist, decide yes;
-	if amiun is antlers, decide yes;
-	if amiun is banshee, decide yes;
-	if amiun is static, decide yes;
+	if amiun is LLPish, yes;
+	if amiun is attics or amiun is static, yes;
 	decide no;
 
 definition: a thing (called cand) is angleable:
@@ -1992,20 +1983,14 @@ carry out fliptoing (this is the main flipping rule) :
 			say "[from-msg entry][line break]";
 			if the-to entry is teleporter:
 				d "Teleporter is in [location of teleporter].";
-				if to-room entry is unvisited:
-					reg-inc;
+				if to-room entry is unvisited, reg-inc;
 				move player to to-room entry;
 			else:
-				if the-to entry is not moot and the-to entry is not abrod:
+				if the-to entry is not moot and the-to entry is not abrod: [attics/static can't get infinite points]
 					reg-inc;
-					if the-to entry is attics:
-						min-up;
-				if force-take entry is true or player has the-from entry:
-					now player carries the-to entry;
-				if the-to entry is prefigured:
-					now the-to entry is done-for;
-				if the-from entry is oils:
-					move the-from entry to Sacred Cedars;
+					if the-from entry is LLPish, min-up;
+				if force-take entry is true or player has the-from entry, now player carries the-to entry;
+				if the-to entry is prefigured, now the-to entry is done-for;
 				if vanish entry is true:
 					if the-from entry is a backdrop:
 						move the-from entry to Meta Team;
@@ -2051,31 +2036,15 @@ after fliptoing (this is the set pronouns rule) :
 		if noun provides the property female and noun is female, set the pronoun her to noun;
 	continue the action;
 
-after fliptoing (this is the when to increase min points after flip rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
-	d "[noun].";
-	if noun is cabinet, min-up; [STORES]
-	if noun is grits or noun is pancake, min-up; [SORTIE]
-	if noun is banshee, min-up; [FOREST]
-	if noun is rentals, min-up;[METROS]
-	if noun is cork or noun is wings: [begin RESORT min]
-		if rock is moot and swing is moot, min-up;
-	if noun is china, min-up;
-	if noun is toeholds:
-		if sprig is moot, min-up;
-		if spore is moot, min-up;
-	if noun is grips or noun is ropes:
-		if toeholds are not off-stage, min-up;
-	continue the action;
-
 chapter special cases
 
-before fliptoing when player is in kitchen (this is the tortilla check rule):
+check fliptoing when player is in kitchen (this is the tortilla check rule):
 	if noun is taco and tortilla is visible:
 		if ingredients-in-tort < 4:
 			say "[one of]The tortilla's not ENOUGH of a taco yet.[or][stopping]";
 			try examining tortilla instead;
 
-before fliptoing (this is the enter pray or examine rule):
+check fliptoing (this is the enter pray or examine rule):
 	if noun is visible:
 		if noun is portal and noun is enter-clued:
 			say "(entering instead)";
@@ -2551,9 +2520,9 @@ check taking name list: say "That'd get you escorted out." instead.
 
 section diretcional rejects
 
-instead of entering passage: try going inside instead.
+check entering passage: try going inside instead;
 
-instead of taking brazier: say "That'd probably be illegal.".
+check taking brazier: say "That'd probably be illegal." instead;
 
 check going north in Busiest Subsite:
 	say "That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway[if name list is unexamined], but the name list catches your eye[else], though the name list seems to be mocking you to read it again[end if].";
@@ -2689,11 +2658,7 @@ chapter Rested Desert
 
 Rested Desert is a room in Ordeal Loader.
 
-instead of exiting in Rested Desert:
-	if thorn is visible:
-		say "It looks like there's a passage beyond that thorn, but you'll need to get rid of it, first.";
-	else:
-		say "You feel a sudden sense of vertigo as you walk towards the passage where the thorn was. You realize you have lost your sense of direction, and for whatever reason, you're preoccupied with finding it before you can continue. So, which way is the thorn?"
+check exiting in Rested Desert: say "You'd just get even more lost." instead;
 
 report looking in Rested Desert for the first time: say "[i]So what was that lecture supposed to be about? One word changing how we look at things, how things are? Rubbish. It has to be. You think.[line break][r]"
 
@@ -2842,14 +2807,13 @@ instead of waking the goat: say "If he's having a bad dream, he'll kick at you i
 
 check taking the goat: say "Trying to get the goat would more likely get the goat's goat." instead.
 
-description of goat is "It seems ill-tempered[if thorn is not visible] despite, or perhaps because of, its eclectic recent meal[end if]."
+description of goat is "It seems ill-tempered despite, or perhaps because of, its eclectic recent meal."
 
 darn-slan is a truth state that varies.
 
 check going inside in thickest:
 	if goat is off-stage, say "There's nowhere to go in." instead;
-	if darn-slan is false:
-		poss-d;
+	if darn-slan is false, poss-d;
 	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
 	move player to Notices Section instead;
 
@@ -2928,9 +2892,9 @@ Include (-
 
 section doll house
 
-a doll house is a thing in Notices Section. "You see [if static is visible]an incomplete-looking doll house with a crackling noise coming from a few loud holes[else]that doll house you put those attics on[end if]. It is labeled FOR INSTRUCTIONAL PURPOSES ONLY."
+a doll house is a thing in Notices Section. "You see [if static is in Notices Section]an incomplete-looking doll house with a crackling noise coming from a few loud holes[else]that doll house you put those attics on[end if]. It is labeled FOR INSTRUCTIONAL PURPOSES ONLY."
 
-instead of entering doll house: say "It's way too small. As the house itself says, it's for instructional purposes[if static is flipped-yet], and you've sort of figured things already[else], but you don't have to tinker with the static[end if]."
+check entering doll house: say "It's way too small. As the house itself says, it's for instructional purposes[if static is flipped-yet], and you've sort of figured things already[else], but you don't have to tinker with the static[end if]." instead;
 
 understand "dollhouse" as doll house.
 
@@ -2938,7 +2902,7 @@ instead of taking or attacking the doll house: say "Some hero(ine) you'd be, [if
 
 description of the doll house is "[if attics are visible]It's much nicer and quieter now that you tacked the attics on[else]You hear static hissing from it. Plus, the doll house isn't nearly as tall as it could be. It could use an extra floor or two[end if]."
 
-the static is reversible scenery in Notices Section. lgth of static is 6. gpos of static is 3. rpos of static is 1. rgtext of static is "[rcn][gc][rc][rc][rc][rc]". cert-text of static is "-[ast]T[d1][d1][d1][d1]". rect-text of static is "A[d1][d1][d1][d1][ast]S".
+the static is reversible LLPish scenery in Notices Section. lgth of static is 6. gpos of static is 3. rpos of static is 1. rgtext of static is "[rcn][gc][rc][rc][rc][rc]". cert-text of static is "-[ast]T[d1][d1][d1][d1]". rect-text of static is "A[d1][d1][d1][d1][ast]S".
 
 description of static is "It's not especially painful to listen to, but you probably don't have to."
 
@@ -4075,7 +4039,7 @@ to say gd: say "It's mostly greyed out, like an area in a video game you can't g
 
 to say na: say "There isn't even a store here any more--just a plot. [no line break]"
 
-Store A is a sto. it is in Trips Strip. understand "store/ 1/one" as store a.
+There is a sto called Store A. it is in Trips Strip. understand "store/ 1/one" as store a.
 
 description of store a is "You can't imagine anything as rote as calling itself A Store, but it did."
 
@@ -4376,11 +4340,7 @@ section guiders
 a guider is a kind of thing. a guider is usually scenery. a guider has a direction called godir. a guider is usually flippable.
 
 check taking a guider:
-	if noun is thorn:
-		say "You'd just poke yourself. Maybe you can take a hint from it.";
-	else:
-		say "Maybe you can take a hint from the [noun], instead.";
-	the rule succeeds;
+	say "[if noun is thorn]You'd just poke yourself. Maybe you can take a hint from it[else]Maybe you can take a hint from the [noun], instead[end if]." instead;
 
 a whiff of stew is a guider. godir of whiff of stew is west. description of whiff is "It smells pretty good, even if you can't detect any specific ingredients. But which way is it from?".
 
@@ -4864,7 +4824,7 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure.
 
-Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
+Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
 
 after looking in Cruel Ones' Enclosure:
 	if banshee is in Cruel Ones' Enclosure:
@@ -4882,7 +4842,7 @@ Include (-
 	has transparent animate
 -) when defining banshee.
 
-the banshee is scenery in Cruel Ones' Enclosure. rgtext of banshee is "[rcn][gc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
+the banshee is LLPish scenery in Cruel Ones' Enclosure. rgtext of banshee is "[rcn][gc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
 
 description of banshee is "You can hear but not see it."
 
@@ -5527,7 +5487,7 @@ understand "heapin/ helpin/" as grist
 
 understand "heapin/ helpin/" as grits
 
-the grits are a plural-named thing. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S".
+the grits are a plural-named LLPish thing. the grits are in the fridge.lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S".
 
 rule for deciding whether all includes a thing in fridge: it does not.
 
@@ -5538,7 +5498,7 @@ rule for deciding whether all includes pancake: it does not.
 
 description of grits is "They look more edible than the grist, but you're not THAT hungry right now."
 
-the cake pan is in the fridge. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
+the cake pan is in the fridge. the cake pan is LLPish. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
 
 understand "cakepan" as cake pan.
 
@@ -6289,11 +6249,11 @@ check going west in Sacred Cedars: block-cedars.
 to block-cedars:
 	if caskfillings is 2:
 		say "You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. 'WIN,' she whines.";
-		now printed name of Trellis is "Crashing Archings";
+		now printed name of Stiller Trellis is "Crashing Archings";
 		now crashing archings are in Stiller Trellis;
 		moot trel-priv;
 
-lois is boringscen in Sacred Cedars. description is "Lois is beyond trivial standard I7 descriptions, so if you see this, it is a [bug-report] Report to the author with a transcript.". bore-text is "Looking for evidence of Lois suggests lack of faith.". bore-check of lois is bore-lois rule.
+Lois is boringscen in Sacred Cedars. description is "Lois is beyond mere trivial standard I7 descriptions. She helps those wise enough to know how to ask for help. A mere programmer cannot describe her.". bore-text is "Looking for evidence of Lois by trying all sorts of odd verbs suggests lack of faith.". bore-check of lois is bore-lois rule.
 
 this is the bore-lois rule:
 	if current action is attacking:
@@ -6305,7 +6265,7 @@ drawings are plural-named amusing scenery in Sacred Cedars.
 
 description of drawings is "You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually."
 
-instead of taking drawings: say "Even if they could be moved, that'd be sacrilege.".
+check taking drawings: say "Even if they could be moved, that'd be sacrilege." instead;
 
 understand "vermian minerva" and "vermian/minerva" as drawings.
 understand "cliche chalice" and "cliche/chalice" as drawings.
@@ -6760,7 +6720,7 @@ does the player mean throwing the tomato at the talkers: it is likely.
 
 instead of throwing tomato at talkers: say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them."
 
-the antlers are plural-named scenery in Obtains Boastin' Bastion. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
+the antlers are plural-named LLPish scenery in Obtains Boastin' Bastion. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
 
 instead of taking the antlers: say "They are utterly useless, even for impressing people. Actually, they're all just here for the free food, too."
 
@@ -7513,8 +7473,7 @@ the aligns signal is bounding boringscen in Bassy Abyss. description of aligns s
 
 section beats-beast
 
-to say b-b:
-	say "[if beast is in Bassy Abyss]beast[else]beats[end if]"
+to say b-b: say "[if beast is in Bassy Abyss]beast[else]beats[end if]"
 
 the beats are a plural-named backdrop. rgtext of beats is "[gcn][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. cert-text of beats is "B[ast]E[ast]A[d1][d1]". rect-text of beats is "B[d1][d1][d1][ast]T".
 
@@ -7522,10 +7481,9 @@ understand "thumping" as beats.
 
 description of beats is "You're sure some idiot would call them funky, but you don't have time for aesthetics."
 
-instead of taking the beats: say "Hmph. Your ears are already sort of taking a beating, but that's not really the same thing."
+check taking the beats: say "Hmph. Your ears are already sort of taking a beating, but that's not really the same thing." instead;
 
-check examining beats:
-	if night thing is visible or player is in Bassy or location of player is Esoteric Coteries, say "You can't hear the beats right now, but then, there's [if nerds are visible]chatter[else]chatter[end if] to contend with." instead;
+check examining beats: if night thing is visible or player is in Bassy or location of player is Esoteric Coteries, say "You can't hear the beats right now, but then, there's [if nerds are visible]chatter[else]chatter[end if] to contend with." instead;
 
 The beast is a thing.
 
@@ -8676,13 +8634,14 @@ check putting something on cabinet: [??]
 
 section gateway
 
-check taking a portal: say "It's probably easier to enter than to take." instead;
+the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping].". entry-rule of getaway gateway is enter-gateway rule.
 
-the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping]."
+this is the enter-gateway rule:
+	now cabinet is LLPish;
 
-before opening gateway: say "It's open. It's just unclear where it leads." instead.
+check opening getaway gateway: say "It's open. It's just unclear where it leads." instead.
 
-description of getaway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ[one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping]."
+description of getaway gateway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ[one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping]."
 
 the new land is boringscen in Notices Section. description of new land is "You'll have to go there to see it all.". bore-text is "ENTER the gate to learn more about it.". bore-check is bore-new-land rule.
 

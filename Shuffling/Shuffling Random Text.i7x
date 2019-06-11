@@ -1493,7 +1493,6 @@ blurb
 "melting Mt. Elgin"
 "Mermaids['] Mad Mires"
 "Mind-Rays Sandy Rim"
-"Minded Midden"
 "the mirage-hermitage"
 "Mist of Mo['] Fits"
 "Mold-Hue Mudhole"

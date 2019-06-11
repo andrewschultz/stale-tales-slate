@@ -2712,7 +2712,7 @@ green stain	"[one of]If you try to decipher the green stain, you see red, but it
 riot cap	"[one of]The riot cap's not a very tough color for a combat helmet. What fruit can it become?[plus][or]APRICOT.[minus][cycling]"
 silly shirt	"[one of]You may not need ESP to guess what ESP, PAL on the shirt becomes.[plus][or]APPLES.[minus][cycling]"
 sorer bogey	"[one of]The sorer bogey makes your skin break out in--well, not pimples, they'll go away in a bit.[plus][or]Bumps, more like.[plus][or]Goosebumps.[plus][or]GOOSEBERRY.[minus][cycling]"
-s-w	--	sorer bogey
+un mod mound	--	sorer bogey
 stucco	"[one of]A message is written ON STUCCO, in red. Plus it's for ScoutCon. Those are two clues right there.[plus][or]COCONUTS.[minus][cycling]"
 Len Craig	"Len Craig wants to haggle. You need to poke around, see what fruits and things are in the clearing, and bargain accordingly." [Clangier Clearing hints]
 auction caution	"[one of]The Auction Caution says you need to PAY ASAP.[plus][or]What could you buy with that message?[plus][or]PAPAYAS.[minus][cycling]"

@@ -95,12 +95,12 @@ table of Resort anagrams [xxtra]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
 tiles	teleporter	"islet"	"tiles"	a rule	a rule	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Leis Isle
 l2	lies	"lies"	"lies"	--	post-leis-lies rule	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"	false	322886760
-rock	cork	"cork"	"rock"	--	--	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
-swing	wings	"wings"	"swing"	--	--	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
-sprig	grips	"grips/grip"	"sprig"	--	--	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
-spore	ropes	"ropes/rope"	"spore"	--	--	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
+rock	cork	"cork"	"rock"	--	post-rock-cork rule	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
+swing	wings	"wings"	"swing"	--	post-swing-wings rule	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
+sprig	grips	"grips/grip"	"sprig"	--	post-sprig-grips rule	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
+spore	ropes	"ropes/rope"	"spore"	--	post-spore-ropes rule	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
 poles	slope	"slope"	"poles"	--	post-poles-slope rule	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450
-tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	--	--	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
+tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	--	post-toolshed-toeholds rule	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
 riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
 protest	potters	"potters/potter"	"protest" or "riot"	--	post-protest-potters rule	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
 links	china	"china"	"china"	pre-chain-china rule	post-chain-china rule	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
@@ -135,6 +135,12 @@ this is the post-anapest-peasant rule:
 
 this is the post-liches-chisel rule:
 	now spread is in Cruel Ones' Enclosure;
+
+this is the post-toolshed-toeholds rule:
+	if sprig is not moot, now sprig is LLPish;
+	if spore is not moot, now spore is LLPish;
+	if sprig is moot, min-up;
+	if spore is moot, min-up;
 
 this is the post-riot-protest rule:
 	now chain links are in Potshot Hotspot;
@@ -380,6 +386,12 @@ this is the post-leis-lies rule:
 	moot lies;
 	now found-lies is true;
 
+this is the post-rock-cork rule:
+	if swing is not moot, now swing is LLPish;
+
+this is the post-swing-wings rule:
+	if rock is not moot, now rock is LLPish;
+
 this is the post-protest-potters rule:
 	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
 
@@ -387,6 +399,7 @@ this is the post-links-kilns rule:
 	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
 
 this is the post-chain-china rule:
+	min-up;
 	now links are in Potshot Hotspot;
 	moot china;
 

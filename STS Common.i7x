@@ -39,8 +39,6 @@ definition: a thing (called ht) is spayshul:
 
 the file of debuggery is called "debug". [deprecated slightly but still useful for manual runthroughs]
 
-a thing can be examined or unexamined. a thing is usually unexamined.
-
 to decide whether the action is talkative:
 	if talking to, yes;
 	if objasking generically, yes;
@@ -78,6 +76,16 @@ a portal has a region called go-region. a portal has text called solved-text.
 a portal has a rule called entry-rule. entry-rule of a portal is usually the degen-true rule.
 
 report entering a portal: process the move dumbdrops rule;
+
+section actions on portals
+
+check opening a portal: say "You can just enter." instead;
+
+check closing a portal: say "You can't close [the noun], but there's no need to." instead;
+
+check taking a portal:
+	say "I'll assume you meant 'take' as in entering [the noun]. If not, you can undo.";
+	try entering the noun instead;
 
 chapter region stuff
 
@@ -134,6 +142,10 @@ hintfull is a truth state that varies. hintfull is usually false.
 hint-to-file is a truth state that varies.
 
 part thingdefs
+
+a thing can be examined or unexamined. a thing is usually unexamined.
+
+a thing can be LLPish. a thing is usually not LLPish.
 
 a thing can be universal, useless, amusing, cluey, unimportant, abstract, bounding or practical. a thing is usually practical.
 

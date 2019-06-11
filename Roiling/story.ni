@@ -193,8 +193,6 @@ a thing has text called a-text. a thing has text called b-text. a thing has text
 
 a thing can be warpable. a thing is usually not warpable.
 
-a thing can be LLPish. a thing is usually not LLPish.
-
 a thing can be flippable, auxiliary or uncluing or clue-used. a thing is usually uncluing.
 
 a thing can be rayed. a thing is usually not rayed.
@@ -224,10 +222,6 @@ a portal can be lumpable. a portal is usually lumpable.
 a portal can be checkedoff or available. a portal is usually available.
 
 definition: a portal is slick if its diffic is 11 or less.
-
-check taking a portal:
-	say "You try taking the portal in the entering sense.";
-	try entering the noun instead;
 
 for writing a paragraph about a lumpable portal (called ptl) :
 	say "You have [if number of lumpable portals in location of player > 1]new places[else]a new place[end if] to explore![paragraph break]";
@@ -473,7 +467,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 710.
+use MAX_VERBS of 720.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -489,7 +483,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 730. [delta=20]
+use MAX_VERBS of 740. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -6223,7 +6217,7 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is prison, say "It's actually a decent jungle gym, but you're not here to putz around." instead; [end TOWERS]
 	if noun is Edictal Citadel, say "Elvira is in the Edictal Citadel, not on top of it." instead; [start otters]
 	if noun is wire weir, say "It's a long way down, and it'd take you away from your quest." instead; [end OTTERS]
-	if noun is s-w, try going down instead; [start others]
+	if noun is un mod mound, try going down instead; [start others]
 	if noun is gropin' roping, say "It's a long way down, and you probably want to get north somehow, anyway." instead; [end OTHERS]
 	say "You don't need to climb over much of anything in this game. Though in some spots, you may go up or down, or possibly IN." instead;
 
@@ -6253,13 +6247,16 @@ procedural rule while eating something:
 	unless noun is deli rye, ignore the carrying requirements rule. [It mostly gets rejected anyway, and you never need to take anything. The deli rye should be mapped to TAKE]
 
 check eating (this is the general eating rule):
-	if noun is a hintpastry:
-		say "You'll want to put [the noun] in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
-	if noun is escaroles, say "The escaroles aren't nearly substantial enough." instead;
+	if noun is grid, say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead; [ordeal reload]
+	if noun is balancer barnacle, say "It is a balancer barnacle. Another would come along to eat you." instead; [stores]
+	if noun is Bortles Lobster, say "You don't quite feel you deserve to eat it, yet." instead; [troves]
+	if noun is escaroles, say "The escaroles aren't nearly substantial enough." instead; [presto]
 	if noun is casserole, say "Ugh. You're not sure what's in the casserole, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
+	if noun is clam, say "Biting its shell would make you shout hells." instead; [oyster]
+	if noun is a hintpastry and noun is not heated: [towers]
+		say "You'll want to put [the noun] in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
+	if noun is bleary barley, say "That'd go down terribly." instead; [otters]
 	say "[if noun is plural-named]Those aren't[else]That's not[end if] in a test-taste state." instead;
-
-check eating grid: say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead;
 
 check eating fretful truffle:
 	if truf-warn is false and scams is false:
@@ -6274,21 +6271,15 @@ rule for supplying a missing noun when eating:
 	if player is in Lean Lane and tea tray is in Lean Lane:
 		now the noun is the tea tray;
 
-check eating (this is the try to eat a hint tart rule) :
-	If noun is a hintpastry:
-		if xrayvision is true:
-			say "You're already under the influence of a pastry. XRAY something before continuing.";
-		if diners are visible:
-			say "The diners scoff at you eating something like that cold--well, eating that at all--and you're too embarrassed to do so[if toaster is visible]. But maybe you can put it in the toaster[end if]." instead;
-		if dandier arid den is visible:
-			say "'You know what would go great with that? NERD-AID!' booms a mechanical voice from the dandier arid den." instead;
-		if noun is not heated:
-			if toaster is visible:
-				say "You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad[if diners are visible]. The diners let loose some dry wit about people who enjoy something THAT unrefined[end if].";
-				try inserting noun into toaster instead;
-			say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Danger Garden]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
-
-check eating bleary barley: say "That'd go down terribly." instead;
+check eating a hintpastry (this is the try to eat a hint tart rule) :
+	if xrayvision is true, say "You're already under the influence of a pastry. XRAY something before continuing." instead;
+	if noun is not heated:
+		if diners are in location of player, say "The diners scoff at you eating something like that cold--well, eating that at all--and you're too embarrassed to do so[if player has toaster]. But maybe you can put it in the toaster[end if]." instead;
+		if dandier arid den is in location of player, say "'You know what would go great with that? NERD-AID!' booms a mechanical voice from the dandier arid den." instead;
+		if player has toaster or toaster is in location of player:
+			say "You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad[if diners are visible]. The diners let loose some dry wit about people who enjoy something THAT unrefined[end if].";
+			try inserting noun into toaster instead;
+		say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Danger Garden]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
 
 check eating curst crust:
 	if swears < 1, say "[bug-report]" instead;
@@ -10333,8 +10324,6 @@ section barnacle balancer
 
 the balancer barnacle is a privately-named portal. diffic of balancer barnacle is 6. the go-region of barnacle balancer is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.".
 
-check eating barnacle balancer: say "It is a balancer barnacle. Another would come along to eat you." instead;
-
 oyster-warn is a truth state that varies.
 
 this is the enter-oyster rule:
@@ -11630,9 +11619,7 @@ the BORTLES lobster is vanishing.
 
 a-text of Bortles Lobster is "RYRRRYR". b-text of Bortles Lobster is "?GR??G?". parse-text of Bortles Lobster is "x[sp]o[sp]x[sp]x[sp]x[sp]e[sp]x". lobster is parse-spoilable.
 
-check eating Bortles Lobster: say "You don't quite feel you deserve to eat it, yet." instead;
-
-check taking Bortles Lobster: say "A big executive like you shouldn't worry about procedural details like taking something before eating it." instead;
+check taking Bortles Lobster: say "To become a big thinker, you shouldn't worry about procedural details like taking something before eating it." instead;
 
 section ME ARTS
 
@@ -14357,21 +14344,17 @@ understand "produce redo cup" as produceredocuping.
 produce-redo-cup is a truth state that varies. produce-redo-cup is false.
 
 carry out produceredocuping:
-	if mrlp is not oyster:
-		say "[reject]";
-	if pills are moot:
-		say "Through magic, you get your pills back.";
-		now player has pills;
-	if produce-redo-cup is true:
-		say "You already said the magic words.";
-	else:
-		say "The jar of pills is now un-lose-able.";
-		now produce-redo-cup is true;
+	if mrlp is not oyster, say "[reject]" instead;
+	if pills are moot, say "Through magic, you get your pills back.";
+	say "[if produce-redo-cup is true]You already said the magic words[else]The jar of pills is now un-lose-able[end if].";
+	now produce-redo-cup is true;
+	if pills are in posh hops shop, say "(Also, giving you the pills even though [if player is in posh hops shop]you didn't take them[else]they're back in the Posh Hops Shop[end if].";
+	now player has pills;
 	the rule succeeds;
 
 book Olde Lode
 
-Olde Lode is a room in Oyster. "You've reached what was probably an old mining pit. As in the Hops Shop, you can't tell one direction from another--you probably just want to keep things from blowing up and get out."
+Olde Lode is a room in Oyster. "You've reached what was probably an old mining pit. As in the Hops Shop, you can't tell one direction from another, especially not with those scary baser braes all around. You feel both a need to panic and a need not to panic. But there must be simple action to take to get out of here."
 
 after looking in Olde Lode:
 	if clam is in Olde Lode, set the pronoun it to clam;
@@ -14379,11 +14362,9 @@ after looking in Olde Lode:
 
 chapter clam
 
-the clam is a vanishing animal in Olde Lode. initial appearance of clam is "A clam snaps here, unwilling to let you pass.". description is "Full of chargin['] Chagrin! It's not letting you near the river."
+the clam is a vanishing animal in Olde Lode. initial appearance of clam is "A clam snaps here, unwilling to let you pass.". description is "Full of chargin['] Chagrin! As if being boxed in by the baser braes wasn't bad enough! You'll have to do something other--but maybe simpler--than call [']m Mac."
 
 a-text of clam is "RYRR". b-text of clam is "PYRP". parse-text of clam is "c[sp]a[sp]l[sp]m". clam is parse-spoilable.
-
-check eating clam: say "Biting its shell would make you shout hells." instead;
 
 check taking clam: say "It would put the clamps on your hand." instead;
 
@@ -20708,9 +20689,14 @@ a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY"
 
 book Swell Wells
 
-Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing, or down the wells, or west to a Filed Field[if sorer bogey is visible]. You think you hear something from the wells[end if][if green stain is visible]. There's also a green stain among the wells[end if].". Swell Wells is in Others.
+Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing[one of][or], or down the un-mod mound[stopping], or west to a Filed Field[if sorer bogey is in swell wells]. You think you hear something from the wells[end if][if green stain is visible]. There's also a green stain among the wells[end if].". Swell Wells is in Others.
 
-s-w are privately-named scenery. printed name of s-w is "the wells". understand "wells" and "swell wells" as s-w. "It's been vandalized in oh so many ways. [what-clear]."
+after looking in Swell Wells for the first time:
+	say "One thing is not like the others. An un-mod mound looks suspicious--and when you look at it more carefully, it reveals a way down!";
+	say "[line break]And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
+	continue the action;
+
+the un mod mound is scenery in Swell Wells. "It's a way [if scape space is visited]back down[else]down somewher new[end if]."
 
 to say what-clear:
 	if sorer bogey is not in Swell Wells and stucco is not in Swell Wells:
@@ -20731,17 +20717,11 @@ a-text of stucco is "RYRYRYRR". b-text of stucco is "RYRYRYRR". parse-text of st
 
 the coconuts are a plural-named fruit.
 
-after printing the locale description for Swell Wells when Swell Wells is unvisited:
-	say "And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
-	now miser ruble is in Swell Wells;
-
-check inserting into s-w:
-	if noun is coin or noun is coins:
-		say "Maybe make your own luck by doing something with/to the coin[if noun is coin]s." instead;
+check inserting into un mod mound:
+	if noun is coin or noun is coins, say "Maybe make your own luck by doing something with/to the coin[if noun is coin]s." instead;
 	say "They're dry wells. You can see all the way down. If you want, you can go that way." instead;
 
-check going to Swell Wells for the first time:
-	say "'Ramble, ambler!' Curtis calls.";
+check going to Swell Wells for the first time: say "'Ramble, ambler!' Curtis calls.";
 
 chapter tangerines
 
@@ -22314,6 +22294,7 @@ carry out objhinting (this is the pick object to hint rule) :
 					the rule succeeds;
 		choose row with hint-entry of noun in the table of hintobjs;
 		if there is a parallel-entry entry:
+			if parallel-entry entry is moot, say "You don't need to worry about that any more."; [?? hint mound / hint bogey / gooseberry / hint mound / hint bogey]
 			try objhinting parallel-entry entry instead;
 		if player has Pa Egg Pea and eisihint is false:
 			now eisihint is true;
@@ -22326,10 +22307,8 @@ carry out objhinting (this is the pick object to hint rule) :
 		else if noun is prefigured:
 			ital-say "these hints may lead you to something you already guessed and wrote in your notepad.";
 		all-say "[advice-entry entry]" instead;
-	if noun is a portal:
-		all-say "You can just enter it.";
-	if noun is unimportant:
-		all-say "[noun]: that isn't needed to solve the game." instead;
+	if noun is a portal, all-say "You can just enter it." instead;
+	if noun is unimportant, all-say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
 	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
 
 definition: a thing (called disc-tar) is cinder-dissolve:
