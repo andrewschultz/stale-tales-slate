@@ -939,7 +939,7 @@ sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits 
 controls	"The controls need to fit into a recess[if neon pig is moot], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
 nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question. [plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing. [plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is... [plus][or]DARKNESS. [plus][or] ASK NERDS ABOUT DARKNESS. [minus][cycling]"
-utterly unreadable book	"The book gives clues what to ask the nerds about."
+Memo Tote Tome	"Examining, if not reading, the Memo Tote Tome gives clues what to ask the nerds about."
 tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
 lit-up tulip	"The lit-up tulip [if player is in Bassy Abyss]is providing light[else]can provide light[end if]."
 gin nope opening	"[if controls are part of gin nope opening]You've fixed the power.[else][one of]The opening at the top of the cafe face is interesting. [plus][or]It appears to have a bunch of circuit-ends, etc. [plus][or]The controls can override the power surge to the east. [plus][or]PUT CONTROLS IN OPENING. [minus][cycling][end if]"

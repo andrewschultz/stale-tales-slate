@@ -442,6 +442,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "asknerds"	550735437	Esoteric Coteries	--	--	"The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit..."
 "asknerd"	454461471	Esoteric Coteries	--	--	"'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
 "tulip"	388488469	--	tulip	--	"[if player has tulip]It's handy as is. It gives light. You can't ask for much more[else]The nerds would gang up on you and take it back, if anything worked, which it won't[end if]."
+"memo"	330308992	Esoteric Coteries	--	--	"[memo-tote-no]."
+"tote"	408378722	Esoteric Coteries	--	--	"[memo-tote-no]."
+"tome"	369343857	Esoteric Coteries	--	--	"[memo-tote-no]."
 "tramline"	550217094	Elm Train Terminal	--	--	"[loc-rej]." [start tramline terminal]
 "lairs"	282592272	Elm Train Terminal	--	--	"[fix-rail]."
 "lair"	186318306	Elm Train Terminal	--	--	"[fix-rail]."
@@ -837,6 +840,8 @@ to say coterie-no: say "You don't need to explore the coteries[if player has tul
 to say nerd-nah: say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
 
 to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
+
+to say memo-tote-no: say "Oh no. You'd change it for the worse. And the nerds would be mad."
 
 to say fix-rail: say "[if controls are in gin nope opening]You fixed the rail[else]You need to fix the rails electronically[end if]";
 

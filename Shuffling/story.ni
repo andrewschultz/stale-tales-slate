@@ -7169,14 +7169,12 @@ rule for supplying a missing noun while throwing:
 
 chapter Esoteric Coteries
 
-Esoteric Coteries are a room in Metros.
+Esoteric Coteries are a room in Metros. description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west."
 
 after printing the locale description for Esoteric Coteries when Esoteric Coteries is unvisited:
 	reg-inc;
 	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.";
 	continue the action;
-
-description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west."
 
 check going nowhere in Esoteric Coteries: say "The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher." instead.
 
@@ -7324,6 +7322,16 @@ to say nerd-dark:
 		now player is in Undesired Underside;
 	else:
 		say "'What?! We gave you the tulip! We can't solve all you dumb people's problems. We have our own!' They go on to bemoan how only dumb people seem to enter politics.[run paragraph on]";
+
+section darknessing
+
+darknessing is an action applying to nothing.
+
+understand the command "darkness" as something new.
+
+understand "darkness" as darknessing when player is in esoteric coteries.
+
+carry out darknessing: try asking nerds about "darkness" instead;
 
 section Earliest Ateliers
 
@@ -8913,22 +8921,20 @@ to say lubeit: now lube-asked is true.
 
 to say ana-true: now anapest-clued is true.
 
-the utterly unreadable book is a boringthing. bore-text is "Maybe you could EXAMINE or READ the book, but you can't do much else with it."
+the Memo Tote Tome is a boringthing in Esoteric Coteries. bore-text is "Maybe you could EXAMINE or READ the book, but you can't do much else with it.". initial appearance of Memo Tote Tome is "A Memo Tote Tome lies here. Perhaps it has some simple information useful to you amidst all the weird stuff the nerds use it for."
 
-to say book-in-nerds: now utterly unreadable book is in Esoteric Coteries.
+check reading the Memo Tote Tome: say "Too dense. Really, only examining the Tome briefly [if memo tote tome is examined]could be[else]might've been[end if] worth trying." instead;
 
-check examining the utterly unreadable book:
+check examining the Memo Tote Tome:
 	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
 	if the player yes-consents:
-		say "[rcn]Srs. Ek and Rensskad-Knessard";
-		now utterly unreadable book is examined;
+		say "All in red: [rcn]Srs. Ek and Rensskad-Knessard";
+		now Memo Tote Tome is examined;
 	else:
-		say "Hm, yes. The nerds may give a less cryptic hint.";
+		say "Hm, yes. The nerds may give less cryptic hints, eventually.";
 	the rule succeeds;
 
-to say rose-sore:
-	if player does not have gardenia:
-		say "[one of]. It will probably be tougher than getting a sore and changing it to a rose[or][stopping]"
+to say rose-sore: if player does not have gardenia, say "[one of]. It will probably be tougher than getting a sore and changing it to a rose[or][stopping]"
 
 table of default-gen-blather
 default-talker	gen-blah
@@ -8943,7 +8949,7 @@ gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat ba
 gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
-nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn. As you do, you are hit with a book[book-in-nerds]![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
+nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
 night thing	"'NYURGH! HUNGRY!' Easier to argue a grue away."
 peasant	"'I don't know much about that, that's sure. But I know from hay, being an abler baler.'"
 red bull burdell	"Your pale plea meets with strung grunts."
