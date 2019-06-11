@@ -418,7 +418,7 @@ this is the in-lot-or-ruin rule:
 	the rule fails;
 
 this is the read-deal rule:
-	if current action is examining ltb, the rule succeeds;
+	if current action is examining LEAD, the rule succeeds;
 	the rule fails;
 
 this is the read-reside rule:

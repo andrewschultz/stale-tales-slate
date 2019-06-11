@@ -2540,7 +2540,7 @@ carry out reading:
 
 the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". understand "words" and "red/-- letters" as writing.
 
-does the player mean reading ltb: it is very likely.
+does the player mean reading LEAD: it is very likely.
 does the player mean reading the red writing when number of readable things > 0: it is likely.
 does the player mean reading the red writing when number of readable things is 0: it is unlikely.
 does the player mean examining the red writing when number of readable things > 0: it is likely.
@@ -2582,7 +2582,7 @@ Store H	"'All who enter here risk exclusion. Closed for having a truly frighteni
 Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
-ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
+LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
@@ -4609,7 +4609,7 @@ worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple
 anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out." [START routes]
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
-ltb	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!" [START troves]
+LEAD	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!" [START troves]
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
@@ -5184,7 +5184,7 @@ carry out troves-hinting:
 		if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
 			if lobster-first is true, try objhinting lobster instead;
 			try objhinting me arts instead;
-		try objhinting ltb instead;
+		try objhinting LEAD instead;
 	if player is in Browse Bowers, try objhinting Si Reed instead;
 	if location of player is Econ Cone:
 		if rivets are in Econ Cone and praise spirea is reflexive:
@@ -9678,7 +9678,7 @@ bent ewe	routes	"You can go BETWEEN the hurt hog and bent ewe."
 yob den	routes	"You need to go BEYOND the yob den."
 [Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."]
 stop post	troves	"You can't focus enough to SPOT, yet." [troves]
-ltb	troves	"You aren't quite able to DEAL, yet."
+LEAD	troves	"You aren't quite able to DEAL, yet."
 salt	troves	"You can LAST [if ME ARTS is moot or lobster is moot]now[else]once[end if] you have confidence in your skills."
 song	troves	"You can DECIDE to move on from the Drain Nadir."
 Sister Tressi	Troves	"You can RESIST Sister Tressi."
@@ -11351,7 +11351,7 @@ Pa Egg Pea is a proper-named reflexive LLPish thing. printed name of Pa Egg Pea 
 after printing the name of Pa Egg Pea while taking inventory, say " ([if pa egg pea is reflexive]un[end if]grokked)";
 
 does the player mean doing something with pa egg pea when mrlp is troves: it is likely.
-does the player mean doing something with ltb when mrlp is troves: it is very likely.
+does the player mean doing something with LEAD when mrlp is troves: it is very likely.
 
 description of Pa Egg Pea is "[randbla]".
 
@@ -11633,18 +11633,17 @@ The ME ARTS are plural-named vanishing boringscen in Boredom Bedroom. descriptio
 
 a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
 
-chapter ltb
+chapter LEAD
 
-ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of ltb is "LEAD, All: A Deed". [ ltb = lead the book]
+LEAD is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "LEAD, All: A Deed".
 
-a-text of ltb is "RYYR". b-text of ltb is "???R". parse-text of ltb is "x[sp]e[sp]a[sp]x". ltb is parse-spoilable.
+a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of LEAD is "x[sp]e[sp]a[sp]x". LEAD is parse-spoilable.
 
-understand "copy" and "book" and "lead" as ltb when player is in Boredom Bedroom.
+understand "copy" and "book" as LEAD when player is in Boredom Bedroom.
 
-does the player mean doing something with ltb when the player is in Boredom Bedroom: it is likely.
+does the player mean doing something with LEAD when the player is in Boredom Bedroom: it is likely.
 
-instead of taking the ltb:
-	say "You already have one motivational book. Perhaps you need to find the right way to soak up LEAD's essence."
+check taking LEAD: say "You already have one motivational book. Perhaps you need to find the right way to soak up LEAD's essence." instead;
 
 chapter lager
 

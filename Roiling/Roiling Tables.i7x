@@ -89,7 +89,7 @@ I'd Cede	I'd Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. 
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 lager	lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
-ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
+LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	--	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 praise	praise	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
@@ -615,12 +615,12 @@ this is the post-master-or-bolster rule:
 	say "[if ME ARTS is moot and lobster is moot]You feel your arch-greed recharged. [end if]You're [one of][or]even [stopping]more up to grokking LEAD, now.";
 
 this is the post-lager-glare rule:
-	set the pronoun it to ltb;
+	set the pronoun it to LEAD;
 
 this is the pre-deal rule:
 	if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
 		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.";
-		preef ltb;
+		preef LEAD;
 		the rule succeeds;
 
 this is the post-deal rule:
@@ -1799,7 +1799,7 @@ cold	"You think you feel less cold for a second. But you need to make it last."
 heat	"Meh. Maybe you're closer than you think to motivation. How to make that matter?"
 sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."
 stop post	"You feel silly a bit. You can't let a simple stop post stop you!"
-ltb	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
+LEAD	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
 bee's head	"The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you."
 evil bee	"The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track."
 cellar door	"It's...hmm...you remember all the clues, but what order to place them in, now."
@@ -2392,7 +2392,7 @@ lager	"[one of]The Large Regal Lager [if player is in Boredom Bedroom]here [end 
 I'd Cede	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
 lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is in Boredom Bedroom]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
 ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is in Boredom Bedroom]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
-ltb	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
+LEAD	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
 Si Reed	"[one of]Si Reed wnts to help you focus on certain mental stuff.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
 dour tan rotunda	"It's what the Browse Bowers used to be called."
 praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
