@@ -580,6 +580,10 @@ understand "tawse" as a mistake ("You don't need that sort of weapon.") when was
 
 understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.") when player is in Shuttle Hutlets.
 
+chapter Sclerous Closures
+
+understand "rasche" as a mistake ("Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.") when player is in Sclerous Closures.
+
 chapter Horned Hedron
 
 understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when player is in Horned Hedron and ol' trap is in Horned Hedron.

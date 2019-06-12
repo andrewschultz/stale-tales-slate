@@ -1669,7 +1669,7 @@ check objasking it about (This is the check for object information rule):
 			if player is in Anger Range:
 				try going west;
 				process the track haunter rule;
-			if player is in Achers' Arches:
+			if player is in Sclerous Closures:
 				try going north;
 				process the track haunter rule;
 			if player is in Horned Hedron:
@@ -4292,7 +4292,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			else if bogus-plains are reflexive:
 				now noun is bogus-plains;
 				continue the action;
-		if player is in Achers' Arches:
+		if player is in Sclerous Closures:
 			if a-s are reflexive:
 				now noun is a-s;
 				continue the action;
@@ -5214,8 +5214,8 @@ to decide which thing is oyster-item:
 		if tea tray is visible, decide on tea tray;
 		if trout is reflexive, decide on trout;
 		if bubble wrap is off-stage, decide on drawer;
-	if player is in Achers' Arches:
-		if sardine is in Achers' Arches:
+	if player is in Sclerous Closures:
+		if sardine is in Sclerous Closures:
 			if player has wrap, decide on wrap;
 			decide on sardine;
 		if a-s is reflexive, decide on a-s;
@@ -5238,7 +5238,7 @@ carry out oyster-hinting:
 		all-say "There's a lot of action here. You will need lots of action. So that gives you a clue as to the commands to use." instead;
 	if oyster-item is not player, try objhinting oyster-item instead;
 	if haunter is reflexed and location of haunter is location of player, all-say "You need to show the haunter where the ruby is buried, now." instead;
-	if player is in Achers' Arches and bubble wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
+	if player is in Sclerous Closures and bubble wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
 	if player is in Anger Range and eeks are in Hardest Trashed Dearths, all-say "You may want to visit the trout to the east." instead;
 	if player is in Rascal Craals and player does not have the digger, all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
 	if location of player is Rascal Craals and ruby is off-stage, all-say "This would be a good place to bury something, but you're not sure what." instead;
@@ -5956,7 +5956,7 @@ Fighter Freight	"Directions aren't what matters here. You just need some sort of
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
-Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in Achers' Arches], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
+Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in Sclerous Closures], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
@@ -6598,7 +6598,7 @@ check listening:
 	if player is in Anger Range and carps are moot and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
 	if eeks are visible, say "You hear eeks. Arcing caring. Weeps sweep. 'Eek! Eek! Eek!'" instead;
 	if aunt tuna is visible, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
-	if player is in Achers' Arches, say "Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU." instead;
+	if player is in Sclerous Closures, say "Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU." instead;
 	if player is in Tenfold Teflon'd Den Loft and dialer is in Tenfold Teflon'd Den Loft, say "[if pins are in Tenfold Teflon'd Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
 	if player is in Loftier Trefoil: [towers]
 		if number of visible warriors is 1, say "Rodney's intimidating enough, he can keep this place quiet." instead;
@@ -6675,7 +6675,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Posh Hops Shop, say "You catch a whiff of some mokes['] smoke." instead; [oyster]
 	if player is in Disease Seaside, say "Say, spare sea spray." instead;
 	if player is in Fighter Freight, say "You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly." instead;
-	if player is in Achers' Arches and sardine is in Achers' Arches, say "Sea rind." instead;
+	if player is in Sclerous Closures and sardine is in Sclerous Closures, say "Sea rind." instead;
 	if aunt tuna is visible, say "Antiseptic spice taint." instead;
 	if player is in Rascal Craals, say "This situation only stinks in general, not literally." instead;
 	if player is in Tenfold Teflon'd Den Loft, say "Old heat. Loathed hot lead." instead;
@@ -13639,7 +13639,7 @@ definition: a direction (called dir) is viable:
 	if player is in Disowned Downside and atmo-moat is in Disowned Downside and dir is west, no;
 	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
 	if player is in Gates Stage and player does not have passport and dir is north, no;
-	if player is in Achers' Arches and sardine is in Achers' Arches and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
+	if player is in Sclerous Closures and sardine is in Sclerous Closures and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
 	if player is in Horned Hedron and dir is inside and walleyes are moot and ol' trap is reflexed, yes;
 	if player is in Largely All-Grey Gallery and dir is inside, yes;
 	if player is in Carven Cavern and dir is inside and act ruin curtain is moot, yes;
@@ -14179,10 +14179,8 @@ every turn when mrlp is oyster:
 	d "Current hint item = [oyster-item].";
 
 carry out spilling:
-	if noun is not pills:
-		say "You can't spill that. Or you can, but it won't help you or distract anyone or anything blocking you." instead;
-	if jar-empty is true:
-		say "You already spilled the pills. None are left." instead;
+	if noun is not pills, say "You can't spill that. Or you can, but it won't help you or distract anyone or anything blocking you." instead;
+	if jar-empty is true, say "You already spilled the pills. None are left." instead;
 	if player does not have pills:
 		say "(Taking them first, to be pedantic.)";
 		now player has pills;
@@ -14190,24 +14188,19 @@ carry out spilling:
 		if the player's command does not include "pills":
 			say "You can't spill the jar--just what's in it.";
 	now cheated-guy is nothing;
-	if player is in Achers' Arches:
-		if a-s is prefigured:
-			say "You remember that SEARCHing might've worked better with the sardine gone." instead;
+	if player is in Sclerous Closures:
+		if a-s is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
 	if location of haunter is location of player:
-		if haunter is reflexed:
-			say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
+		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
 	if player is in Rascal Craals:
-		if ruby is off-stage or digger is off-stage:
-			say "A solitary pill tries to burrow into the ground but fails. Hm. Maybe you should come back later if you need to hide something." instead;
-	if player is in End Den:
-		say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
+		if ruby is off-stage or digger is off-stage, say "A solitary pill tries to burrow into the ground but fails. Hm. Maybe you should come back later if you need to hide something." instead;
+	if player is in End Den, say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
 	let oi be oyster-item;
 	d "Spilling [oi].";
 	if pill-warned is false and scams is false:
 		say "[if Anger Range is not visited]You briefly wonder if the pill jar might be better saved for later[else]You have a brief vision of Elvira trolling '[he-she-c] needed DRUGS!' which is silly, but yeah[end if]. Release the pills anyway?";
 		now pill-warned is true;
-		unless the player yes-consents:
-			do nothing instead;
+		unless the player yes-consents, do nothing instead;
 		say "Okay.";
 	if player is in Lean Lane:
 		if bubble wrap is off-stage:
@@ -14919,17 +14912,14 @@ after printing the name of the general gleaner while taking inventory:
 	say " ([if gleaner is reflexed]enlarged[else]neat but small[end if])";
 	continue the action;
 
-check examining gleaner when player is in Tenfold Teflon'd Den Loft:
-	say "You found the way in and know the way out. Better deal with the [if yapper is visible]yapper and [end if]dialer, now." instead;
+check examining gleaner when player is in Tenfold Teflon'd Den Loft: say "You found the way in and know the way out. Better deal with the [if yapper is visible]yapper and [end if]dialer, now." instead;
 
 to say ho-he:
-	say "[if end den is visited]maybe the maze you [are-were-hedron] stuck in[else if player is in Horned Hedron]somewhere, maybe somewhere close[else if Horned Hedron is visited]the Horned Hedron[else if Achers' Arches is visited]a structure, possibly the Horned Hedron north of [arch-here],[else]some structure[end if]";
+	say "[if end den is visited]maybe the maze you [are-were-hedron] stuck in[else if player is in Horned Hedron]somewhere, maybe somewhere close[else if Horned Hedron is visited]the Horned Hedron[else if Sclerous Closures is visited]a structure, possibly the Horned Hedron north of [here-there of Sclerous Closures],[else]some structure[end if]";
 
-to say are-were-hedron:
-	say "[if player is in end den]are[else]were[end if]"
+to say are-were-hedron: say "[if player is in end den]are[else]were[end if]"
 
-to say arch-here:
-	say "[if player is in Achers' Arches]here[else]Achers['] Arches[end if]"
+to say here-there of (rm - a room): say "[if player is in rm]here[else][rm][end if]"
 
 a-text of general gleaner is "YRRYRRY". b-text of general gleaner is "YRR??RY". parse-text of general gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
 
@@ -15636,15 +15626,13 @@ carry out busting:
 		try fliptoing waste instead;
 	try attacking noun instead;
 
-book Achers' Arches
+book Sclerous Closures
 
-Achers' Arches is a room in oyster. Achers' Arches is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. A handsome sand home blocks the way south and west."
+Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west."
 
-check going in Achers' Arches:
-	if noun is west or noun is south:
-		say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
+check going in Sclerous Closures: if noun is west or noun is south, say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
 
-the handsome sand home is bounding boring scenery in Achers' Arches. description of handsome sand home is "It's definitely not mean-shod. But you probaby don't want to disturb a private residence.". bore-text of handsome sand home is "There's not much to do with the handsome sand home.". bore-check is the bore-handsome-sand-home rule.
+the handsome sand home is bounding boring scenery in Sclerous Closures. description of handsome sand home is "It's definitely not mean-shod. But you probaby don't want to disturb a private residence.". bore-text of handsome sand home is "There's not much to do with the handsome sand home.". bore-check is the bore-handsome-sand-home rule.
 
 this is the bore-handsome-sand-home rule:
 	if current action is entering:
@@ -15656,7 +15644,7 @@ to say hedron-if-v:
 	if Horned Hedron is visited:
 		say " to the Horned Hedron"
 
-h-h is privately-named scenery in Achers' Arches. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h. printed name of h-h is "the Horned Hedron".
+h-h is privately-named scenery in Sclerous Closures. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h when player is in clerous Closures. printed name of h-h is "the Horned Hedron". bore-text of h-h is "You can't do much with the Horned Hedron itself, or the insulting sign".
 
 instead of doing something with h-h:
 	if current action is entering:
@@ -15665,24 +15653,20 @@ instead of doing something with h-h:
 		try examining h-h instead;
 	continue the action;
 
-the a-s are plural-named privately-named reflexive scenery in Achers' Arches. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
+the a-s are plural-named privately-named reflexive scenery in Sclerous Closures. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
 
 check taking a-s: say "[if a-s are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
-
-understand "achers/arches" and "achers arches" as a-s.
-
-understand "a-s" as a-s when debug-state is true. [for showme a-s]
 
 a-text of a-s is "RYYRRR". b-text of a-s is "RY?RRR". parse-text of a-s is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
 does the player mean searching the a-s: it is very likely.
 
-instead of searching a-s:
+check searching a-s:
 	if sardine is visible:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
 		preef a-s instead;
 	if the player's command includes "search":
-		try fliptoing a-s;
+		try fliptoing a-s; [?? if something is flipto'd, it should become unfigured, or we should have error checking]
 		now a-s are unfigured;
 		the rule succeeds;
 	if a-s are reflexed:
@@ -15690,11 +15674,9 @@ instead of searching a-s:
 	else:
 		say "No, that is not quite the way to look through the arches.";
 
-check going north in Achers' Arches:
-	if sardine is in Achers' Arches:
-		say "'Sop, no snoop,' says the sardine, pulling you back." instead;
+check going north in Sclerous Closures: if sardine is in Sclerous Closures, say "'Sop, no snoop,' says the sardine, pulling you back." instead;
 
-The sandier sardine is a person in Achers' Arches. description is "He keeps putting his hands to his ears every so often, as if to avoid sudden noise. The right one might set him off.". "A sandier sardine waits nervously here. He seems armed, so you probably can't go north while he's still around."
+The sandier sardine is a person in Sclerous Closures. description is "He keeps putting his hands to his ears every so often, as if to avoid sudden noise. The right one might set him off.". "A sandier sardine waits nervously here. He seems armed, so you probably can't go north while he's still around."
 
 check scaning sardine:
 	say "[one of]The sardine smirks a bit then comments he's glad he can't hear the worst of the infrared noises now that he's a bit older.[or]The sardine barely notices, this time.[stopping][line break]The settler didn't seem to light up when pointed at the sardine. Perhaps you don't need to do anything with him directly." instead;
@@ -15744,7 +15726,7 @@ carry out burying:
 
 book Horned Hedron
 
-Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here. [if ol' trap is in Horned Hedron]An ol['] trap blocks passage to[else]A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west."
+Horned Hedron is north of Sclerous Closures. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here. [if ol' trap is in Horned Hedron]An ol['] trap blocks passage to[else]A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west."
 
 check going west when player is in Horned Hedron: if haunter is moot, say "Collapsed old places are that way. No need to go back." instead;
 
@@ -23392,7 +23374,7 @@ index map with Posh Hops Shop mapped east of Cruelest Lectures.
 index map with Olde Lode mapped east of Posh Hops Shop.
 index map with Disease Seaside mapped east of Olde Lode.
 index map with Fighter Freight mapped east of Disease Seaside.
-index map with Achers' Arches mapped north of Posh Hops Shop.
+index map with Sclerous Closures mapped north of Posh Hops Shop.
 index map with Lean Lane mapped east of Lapsin' Plains.
 index map with Hardest Trashed Dearths mapped east of Lean Lane.
 index map with tenfold mapped north of Horned Hedron.
