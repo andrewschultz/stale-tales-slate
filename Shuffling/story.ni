@@ -239,7 +239,7 @@ use MAX_ACTIONS of 250.
 
 use MAX_VERBS of 440. [-40 from debug]
 
-use MAX_VERBSPACE of 4700.
+use MAX_VERBSPACE of 4800.
 
 use MAX_SYMBOLS of 33000.
 
@@ -251,7 +251,7 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 480.
 
-use MAX_VERBSPACE of 5000.
+use MAX_VERBSPACE of 5100.
 
 use MAX_SYMBOLS of 34000.
 
@@ -6004,7 +6004,7 @@ before giving straw to peasant (this is the straw-peasant rule):
 
 chapter hay
 
-some hay is a singular-named thing. the peasant has the hay.
+some hay is a singular-named thing. the peasant carries the hay.
 
 indefinite article of some hay is "some".
 

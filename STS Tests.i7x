@@ -432,6 +432,30 @@ carry out specsing:
 		say "Yay! All things are clued.";
 	the rule succeeds;
 
+chapter bouing
+
+bouing is an action applying to nothing.
+
+understand the command "bou" as something new.
+
+understand "bou" as bouing.
+
+definition: a room (called rm) is boundy:
+	if number of bounding things in rm > 0, yes;
+	no;
+
+definition: a room (called rm) is noboundy:
+	if map region of rm is Meta Team, no;
+	if number of bounding things in rm is 0, yes;
+	no;
+
+carry out bouing:
+	repeat with Q running through boundy rooms:
+		let BS be number of bounding things in Q;
+		say "[Q] has bounding scenery ([BS]): [list of bounding things in Q].";
+	say "No bounding: [list of noboundy rooms].";
+	the rule succeeds.
+
 STS tests ends here.
 
 ---- DOCUMENTATION ----
