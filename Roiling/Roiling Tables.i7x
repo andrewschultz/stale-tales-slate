@@ -2474,7 +2474,7 @@ clack ops locs pack	"[one of]The locs pack is allegedly for making things quiete
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
 Drive A	"[h-d][line break]"
-ogled lodge	"[if player is in Hacks' Shack]You need to build a computer here[else]The Ogled Lodge just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
+mutism summit	"[if player is in Hacks' Shack]You need to build a computer here[else]The Ogled Lodge just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
 golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
 computer screen	"[if Hacks' Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
 trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying other patrons.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	[start OYSTER hinting]

@@ -405,7 +405,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "saps"	276201709	Phat Path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks' Shack is visited]back [end if]north, here."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "entyr"	507506690	Phat Path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
-"lodge"	309601316	--	ogled lodge	--	"You'll need to [if Hacks' Shack is visited]re-enter the shack[else]enter the lodge[end if] to take care of things here."
+"summit"	477632943	--	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks' Shack]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	--	harpings phrasing	--	"[harphr]."
 "harping"	352759935	--	harpings phrasing	--	"[harphr]."
 "chart"	246909523	--	starch charts	--	"No, the chartS."

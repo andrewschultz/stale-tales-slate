@@ -12719,14 +12719,14 @@ this is the bore-deils-slide rule:
 
 book Phat Path
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's not much left with the wall gone, except for [if harpings phrasing is in Phat Path]a harpings phrasing guarding [end if][one of]a lodge--labeled OGLED LODGE[or]the ogled lodge[stopping] to the north[if starch charts are in Phat Path][desc-starch][end if][if hawt thaw is in Phat Path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's not much left with the wall gone, except for [if harpings phrasing is in Phat Path]a harpings phrasing guarding [end if][one of]a quiet-looking structure which must be a MUTISM SUMMIT[or]the mutism summit[stopping] to the north[if starch charts are in Phat Path][desc-starch][end if][if hawt thaw is in Phat Path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
 to say desc-starch:
 	say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
 
-the ogled lodge is proper-named boring scenery in Phat Path. description of ogled lodge is "[if Hacks' Shack is visited]The ogled lodge/hacks['] shack looks just as you left it[else]The ogled lodge looks cozy and inviting[end if].". bore-text is "Not much to do but enter the shack by going north.". bore-check is the bore-ogled-lodge rule.
+the mutism summit is boring scenery in Phat Path. description of mutism summit is "[if Hacks' Shack is visited]The mutism summit/Hacks['] Shack looks just as you left it[else]The mutism looks quiet and inviting. You won't need interjections once you're in there[end if].". bore-text is "The mutism summit is pretty stable. Not much to do but [if hacks' shack is visited]re[end if]enter to the north.". bore-check is the bore-mutism-summit rule.
 
-this is the bore-ogled-lodge rule:
+this is the bore-mutism-summit rule:
 	if current action is entering:
 		try going north;
 		the rule succeeds;
@@ -12874,8 +12874,11 @@ book Hacks' Shack
 
 Hacks' Shack is an innie room in Presto. Hacks' Shack is north of Phat Path. "[if Hacks' Shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[else]You're in the shack where you probably need to write a program or something[end if][if I'm Le Cop polemic is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in Hacks' Shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if]."
 
-to say my-auth:
-	say "[author of random visible badbook]";
+after looking in hacks' shack for the first time:
+	say "Yes. It is nice and quiet here. No need for interjections. Back to ... well, other ways to do things.";
+	continue the action;
+
+to say my-auth: say "[author of random visible badbook]";
 
 after choosing notable locale objects when player is in Hacks' Shack:
 	set locale priority of slab to 9; [slab should appear first]
