@@ -4293,8 +4293,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is bogus-plains;
 				continue the action;
 		if player is in Sclerous Closures:
-			if a-s are reflexive:
-				now noun is a-s;
+			if Achers' Chaser Arches are reflexive:
+				now noun is Achers' Chaser Arches;
 				continue the action;
 		if player is in Anger Range:
 			if pikes are moot and haunter is off-stage:
@@ -4590,7 +4590,7 @@ Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect
 Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five for the scary crays[end if]."
-a-s	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
+Achers' Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
@@ -5218,7 +5218,7 @@ to decide which thing is oyster-item:
 		if sardine is in Sclerous Closures:
 			if player has wrap, decide on wrap;
 			decide on sardine;
-		if a-s is reflexive, decide on a-s;
+		if Achers' Chaser Arches is reflexive, decide on Achers' Chaser Arches;
 	if player is in Horned Hedron:
 		if walleyes are in Horned Hedron, decide on walleyes;
 		if ol' trap is in Horned Hedron, decide on ol' trap;
@@ -9653,7 +9653,7 @@ plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[el
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
 trolls	oyster	"You can't quite STROLL past the trolls, yet." [oyster]
 haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
-a-s	oyster	"SEARCH the arches."
+Achers' Chaser Arches	oyster	"SEARCH the arches."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
 d2	oyster	"You should be able to REDIAL the dialer with the proper preparation."
 lance	oyster	"CLEAN the lance once you have something to wash it with."
@@ -14162,7 +14162,7 @@ prod	"You spill the pills, which bounce around at your legs until you're annoyed
 heaps	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
 waste	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
 wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, your bubble wrap falls. He flees, and as you run after him, you step on the bubble wrap, causing it to tear and pop.[paragraph break]The wrap feels ruined, now, like you can't warp it, but you do notice a ruby inside. It seems valuable. So you take it."
-a-s	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
+Achers' Chaser Arches	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
 gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
 ol' trap	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
 ant	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
@@ -14189,7 +14189,7 @@ carry out spilling:
 			say "You can't spill the jar--just what's in it.";
 	now cheated-guy is nothing;
 	if player is in Sclerous Closures:
-		if a-s is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
+		if Achers' Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
 	if location of haunter is location of player:
 		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
 	if player is in Rascal Craals:
@@ -14955,20 +14955,17 @@ understand "seek [something]" as seeking.
 does the player mean seeking the eeks: it is very likely.
 
 carry out seeking:
-	if noun is eeks:
-		try fliptoing eeks instead;
-	if noun is a-s:
-		say "Not quite the right way to poke through the arches." instead;
+	if noun is eeks, try fliptoing eeks instead;
+	if noun is Achers' Chaser Arches, say "Not quite the right way to poke through the arches." instead;
 	try searching noun instead;
 	the rule succeeds.
 
-chapter ruby
+chapter bubble wrap
 
 warp-try is a truth state that varies.
 
 After printing the name of the wrap while taking inventory:
-	if warp-try is true:
-		say " (to warp in the right place)";
+	if warp-try is true, say " (to warp in the right place)";
 
 some bubble wrap is a singular-named flippable thing. indefinite article of bubble wrap is "some". understand "bubbles" as bubble wrap.
 
@@ -15628,7 +15625,7 @@ carry out busting:
 
 book Sclerous Closures
 
-Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west."
+Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if Achers' Chaser Arches is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if Achers' Chaser Arches is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west."
 
 check going in Sclerous Closures: if noun is west or noun is south, say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
 
@@ -15644,7 +15641,7 @@ to say hedron-if-v:
 	if Horned Hedron is visited:
 		say " to the Horned Hedron"
 
-h-h is privately-named scenery in Sclerous Closures. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h when player is in clerous Closures. printed name of h-h is "the Horned Hedron". bore-text of h-h is "You can't do much with the Horned Hedron itself, or the insulting sign".
+h-h is privately-named scenery in Sclerous Closures. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h when player is in Sclerous Closures. printed name of h-h is "the Horned Hedron". bore-text of h-h is "You can't do much with the Horned Hedron itself, or the insulting sign".
 
 instead of doing something with h-h:
 	if current action is entering:
@@ -15653,33 +15650,29 @@ instead of doing something with h-h:
 		try examining h-h instead;
 	continue the action;
 
-the a-s are plural-named privately-named reflexive scenery in Sclerous Closures. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
+the Achers' Chaser Arches are plural-named reflexive scenery in Sclerous Closures. description of Achers' Chaser Arches is "[if Achers' Chaser Arches is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].".
 
-check taking a-s: say "[if a-s are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
+check taking Achers' Chaser Arches: say "[if Achers' Chaser Arches are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
 
-a-text of a-s is "RYYRRR". b-text of a-s is "RY?RRR". parse-text of a-s is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
+a-text of Achers' Chaser Arches is "RYYRRR". b-text of Achers' Chaser Arches is "RY?RRR". parse-text of Achers' Chaser Arches is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
-does the player mean searching the a-s: it is very likely.
+does the player mean searching the Achers' Chaser Arches: it is very likely.
 
-check searching a-s:
+check searching Achers' Chaser Arches:
 	if sardine is visible:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
-		preef a-s instead;
+		preef Achers' Chaser Arches instead;
 	if the player's command includes "search":
-		try fliptoing a-s; [?? if something is flipto'd, it should become unfigured, or we should have error checking]
-		now a-s are unfigured;
+		try fliptoing Achers' Chaser Arches; [?? if something is flipto'd, it should become unfigured, or we should have error checking]
+		now Achers' Chaser Arches are unfigured;
 		the rule succeeds;
-	if a-s are reflexed:
-		say "You already searched, which should work.";
-	else:
-		say "No, that is not quite the way to look through the arches.";
+	say "[if Achers' Chaser Arches are reflexed]You already searched, and there's nothing else[else]No, that is not quite the way to look through the arches[end if]." instead;
 
-check going north in Sclerous Closures: if sardine is in Sclerous Closures, say "'Sop, no snoop,' says the sardine, pulling you back." instead;
+check going north in Sclerous Closures: if sardine is in Sclerous Closures, say "'Sop, no snoop,' says the sandier sardine, pulling you back." instead;
 
 The sandier sardine is a person in Sclerous Closures. description is "He keeps putting his hands to his ears every so often, as if to avoid sudden noise. The right one might set him off.". "A sandier sardine waits nervously here. He seems armed, so you probably can't go north while he's still around."
 
-check scaning sardine:
-	say "[one of]The sardine smirks a bit then comments he's glad he can't hear the worst of the infrared noises now that he's a bit older.[or]The sardine barely notices, this time.[stopping][line break]The settler didn't seem to light up when pointed at the sardine. Perhaps you don't need to do anything with him directly." instead;
+check scaning sardine: say "[one of]The sardine smirks a bit then comments he's glad he can't hear the worst of the infrared noises now that he's a bit older.[or]The sardine barely notices, this time.[stopping][line break]The settler didn't seem to light up when pointed at the sardine. Perhaps you don't need to do anything with him directly." instead;
 
 chapter burying
 
@@ -23092,7 +23085,7 @@ to say d-then:
 		say "pull the lever then ";
 [?? need to spill pills vs span pans and pins as well]
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol' trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers' Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol' trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 

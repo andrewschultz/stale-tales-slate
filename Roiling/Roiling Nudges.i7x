@@ -551,7 +551,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bust"	322908696	--	tubs	--	"That didn't make anything go boom."
 "drop"	262171428	--	prod	--	"You're juggling what to do with the prod, here."
 "lance"	271720859	--	lance	--	"The lance is still itself[if lance is cleaned]--and you probably did enough cleaning it[else if player has wipes]--you can't figure how to apply the wipes[else]--but how to make it neater, now[end if]."
-"reachs"	367879580	Achers' Arches	--	--	"[if a-s is reflexed]You did enough with the arches[else]That's not quite what to do with the arches[end if]." [ACHERS' ARCHES]
+"closure"	561681686	Sclerous Closures	--	--	"[locname]." [SCLEROUS CLOSURES]
+"closures"	657955652	Sclerous Closures	--	--	"[locname]."
+"reachs"	367879580	Achers' Arches	--	--	"[if Achers' Chaser Arches is reflexed]You did enough with the arches[else]That's not quite what to do with the arches[end if]." [?? shouldn't this be taken care of by the table of anagrams?]
 "hedron"	414701385	Achers' Arches	--	--	"You'll probably need to destroy the hedron from within."
 "arch"	143799505	Achers' Arches	--	--	"[ache-plur]."
 "acher"	271605614	Achers' Arches	--	--	"[ache-plur]."

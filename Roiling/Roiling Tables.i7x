@@ -176,7 +176,7 @@ dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule
 trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	pre-tutor-trout rule	--	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	--	--	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	pre-warp-wrap rule	post-warp-wrap rule	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
-a-s	a-s	false	367879580	--	"search"	"search"	pre-search-arches rule	post-search-arches rule	"'Reach, acher,' you say, stretching a bit more to find something interesting."
+Achers' Chaser Arches	Achers' Chaser Arches	false	367879580	--	"search"	"search"	pre-search-arches rule	post-search-arches rule	"'Reach, acher,' you say, stretching a bit more to find something interesting."
 ol' trap	pol art portal	false	400254014	--	"patrol"	"patrol"	pre-patrol-ol-trap rule	post-patrol-ol-trap rule	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. As it vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, passages to new locations."
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-eeks-seek rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 tubs	waste	false	322908696	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
@@ -1071,7 +1071,8 @@ this is the post-warp-wrap rule:
 
 this is the pre-search-arches rule:
 	if sardine is visible, say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
-		preef a-s instead;
+		preef Achers' Chaser Arches;
+		do nothing instead;
 
 this is the post-search-arches rule:
 	pearl-check;
@@ -1884,7 +1885,7 @@ waste	"The heaps are still technically waste, but you may want to deal with them
 heaps	"The heaps still look ugly as ever."
 tubs	"Hm. The tubs rattle a bit, but you need to do something strong."
 prod	"You juggle the prod a bit, but it doesn't change into anything. Well, not like that."
-a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
+Achers' Chaser Arches	"Hm, you almost thought you found something. Well, not QUITE like that."
 ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
 haunter	"You're a bit tongue-tied, but that seems close."
 ol' trap	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
@@ -2190,7 +2191,7 @@ waste	"The heaps are still technically waste, but you cleaned them up enough."
 lance	"Your work turned up enough."
 rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
-a-s	"Further searching proves fruitless."
+Achers' Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
 ruby	"You already did in the wrap."
 haunter	"Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby."
@@ -2528,7 +2529,7 @@ prod	"[one of]The prod seems like it should be more than it is, but you can't fi
 rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The digger can get what's in the plain.[plus][or]How would you summon the HAUNTER?[plus][or]You can UNEARTH it.[cycling]"
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not moot][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 h-h	"The Horned Hedron is where you need to go [if Horned Hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
-a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
+Achers' Chaser Arches	"[if Achers' Chaser Arches is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
