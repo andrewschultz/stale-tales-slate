@@ -2319,27 +2319,39 @@ part begin-play
 
 sr-acc is a truth state that varies.
 
-when play begins (this is the don't use any other besides status window when play begins rule):
-	repeat with Q running through things:
-		if Q is a sto:
-			move Q to Trips Strip;
-	now last-loc of sortie is Trap Part;
-	now last-loc of resort is Astral Altars;
-	now last-loc of metros is underside;
-	now last-loc of forest is sf;
-	now the peasant has the hay;
-	say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
-	if the player no-consents:
-		now sr-acc is true;
-	say "OK. This can be toggled at any time with ACCESS.";
-	say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
-	move player to Busiest Subsite, without printing a room description;
+when play begins (this is the initialise anagrams pad and beats rule) :
+	now all rooms in metros are noisy;
+	now Obtains Boastin' Bastion is not noisy;
+	now Esoteric Coteries is not noisy;
+	move beats backdrop to all noisy rooms;
+	repeat with Q running through regions:
+		repeat through regana of Q:
+			if the-from entry is not a room, now the-from entry is flippable;
+			if there is no vanish entry, now vanish entry is true;
+			if there is no force-take entry:
+				d "no force-take for [the-from entry]/[the-to entry].[line break]";
+				now force-take entry is false;
+	place-random-garbage;
+	shuffle-chat-lists;
+	move Red Bull Burdell to Adorb Bardo; [these are concepts that you will ask about]
+	move redness to Adorb Bardo;
 	now player wears magenta nametag;
 	now player has the dope tan notepad;
 	now left hand status line is "[location of player] ([mrlp])[last-scan-thing]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Trips Strip is visited] [bracket][number of solved regions][close bracket][end if]";
 	set the pronoun it to the vacate caveat;
 	sort the table of iconmaps in random order;
+	repeat with Q running through things:
+		if Q is a sto, move Q to Trips Strip;
+
+when play begins (this is the skip small intro if wanted rule):
+	intro-restore-skip;
+	if read-intro is true:
+		say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
+		if the player no-consents, now sr-acc is true;
+		say "OK. This can be toggled at any time with ACCESS.";
+		say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
+	move player to Busiest Subsite, without printing a room description;
 
 last-was-cert is a truth state that varies.
 scan-to-header is a truth state that varies.
@@ -2399,25 +2411,6 @@ check going when player is in sf or player is in rf:
 		say "You go [noun] a bit, but the paths and vegetation multiply. Percuss-spruces behind bush-hubs make warning noises that drive you back to where you were." instead;
 
 to set-other-default: now cask is not flipped-yet.
-
-when play begins (this is the initialise anagrams pad and beats rule) :
-	now all rooms in metros are noisy;
-	now Obtains Boastin' Bastion is not noisy;
-	now Esoteric Coteries is not noisy;
-	move beats backdrop to all noisy rooms;
-	repeat with Q running through regions:
-		repeat through regana of Q:
-			if the-from entry is not a room:
-				now the-from entry is flippable;
-			if there is no vanish entry:
-				now vanish entry is true;
-			if there is no force-take entry:
-				d "no force-take for [the-from entry]/[the-to entry].[line break]";
-				now force-take entry is false;
-	place-random-garbage;
-	shuffle-chat-lists;
-	move Red Bull Burdell to Adorb Bardo; [these are concepts that you will ask about]
-	move redness to Adorb Bardo;
 
 check taking scenery:
 	say "Taking scenery is either illegal or physically impossible or both.";
@@ -4310,7 +4303,7 @@ book Forest
 
 chapter Softer Forest (sf)
 
-sf is a privately-named room in Forest. the printed name of sf is "Softer Forest".
+sf is a privately-named room in Forest. the printed name of sf is "Softer Forest". last-loc of Forest is sf.
 
 after printing the locale description for sf when sf is unvisited: set the pronoun it to a random guider in sf.
 
@@ -4963,7 +4956,7 @@ check going inside when mrlp is sortie:
 
 chapter Trap Part
 
-Trap Part is a room in Sortie. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge, with a dial in the center. Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
+Trap Part is a room in Sortie. last-loc of Sortie is Trap Part. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge, with a dial in the center. Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
 
 check scaning dial when centrifuge-stopped is false: say "You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, [if gadget is cert]all red except for the middle that flashes green[else]green flashing between 5 and 7, red flashing between 1 and 6[end if]. Hm, exits plus two letters. What number could that be, or become." instead.
 
@@ -5981,19 +5974,7 @@ before doing something with the hay when peasant has hay:
 	if the current action is objasking generically or the current action is objasking about or current action is scaning or current action is examining or current action is xmxing, continue the action;
 	say "The hay is the peasant's, and he is bigger than you. But maybe you can give him something for it, if you want it[one of]. You notice him occasionally looking ruefully at it[or][cycling]." instead;
 
-some hay is a singular-named thing.
-
-indefinite article of some hay is "some".
-
-description of hay is "It's hay, hey? Well...there's enough to stuff something pretty substantial."
-
-instead of taking the hay:
-	if peasant has the hay, say "That's the peasant's. Someone already ripped him off, giving it to him." instead;
-	if hay is in sack, say "Keep it in the sack [']til you need it." instead;
-	if player has sack:
-		say "You can't take it all at once, but it can fit in the sack. So you put it there.";
-		now hay is in sack;
-	say "You couldn't see around it if you carried it in your hands, and you've got nothing that'd hold it."
+chapter peasant
 
 description of peasant is "He can't help glancing at the hay he is carrying, frowning a bit."
 
@@ -6020,6 +6001,24 @@ before giving straw to peasant (this is the straw-peasant rule):
 	moot peasant;
 	moot straw;
 	now hay is in sack instead;
+
+chapter hay
+
+some hay is a singular-named thing. the peasant has the hay.
+
+indefinite article of some hay is "some".
+
+description of hay is "It's hay, hey? Well...there's enough to stuff something pretty substantial."
+
+check taking the hay:
+	if peasant has the hay, say "That's the peasant's. Someone already ripped him off, giving it to him." instead;
+	if hay is in sack, say "Keep it in the sack [']til you need it." instead;
+	if player has sack:
+		say "You can't take it all at once, but it can fit in the sack. So you put it there.";
+		now hay is in sack;
+	say "You couldn't see around it if you carried it in your hands, and you've got nothing that'd hold it." instead;
+
+chapter poem
 
 a poem is a thing. lgth of poem is 5. gpos of poem is 1. rpos of poem is 2. rgtext of poem is "[gcn][rc][rc][rc][rc]". cert-text of poem is "P[d1][d1][d1][d1]". rect-text of poem is "P[d1][d1][d1][ast]L".
 
@@ -6324,7 +6323,7 @@ book metros
 
 chapter Undesired Underside
 
-Undesired Underside is a room in Metros. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west."
+Undesired Underside is a room in Metros. last-loc of metros is Undesired Underside. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west."
 
 the tilting titling is boring scenery in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if The Ol' Hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
 
@@ -7527,7 +7526,7 @@ book resort
 
 chapter Astral Altars
 
-Astral Altars is a room in Resort. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
+Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
