@@ -421,6 +421,8 @@ understand "prigs" as a mistake ("Grumbling about prigs, or showing those prigs,
 
 understand "prose" as a mistake ("There's not much of that left in this game, and talking won't help you up the [p-s][if ropes are visible]. The ropes will[else]. The spore can be something sturdier. You see red at the thought of having to read[end if].") when player is in Rived Drive.
 
+understand "repos" as a mistake ("You resolve to organize your programming code better once this adventure is over.") when player is in Rived Drive.
+
 understand "verdi" as a mistake ("You don't need a musical score for this adventure.") when player is in Rived Drive.
 
 chapter Potshot Hotspot

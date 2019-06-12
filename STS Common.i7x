@@ -372,19 +372,18 @@ instead of doing something with the location of the player (this is the location
 
 part boring things
 
-a boringthing is a kind of thing. a boringthing has text called bore-text. a boringthing has a rule called the bore-check. bore-check of boringthing is usually bore-exam rule.
-
-a boringscen is a kind of boringthing.
+a thing can be boring. a thing has text called bore-text. a thing has a rule called the bore-check. bore-check of a thing is usually bore-pass rule.
 
 boring-exception is a truth state that varies.
 
-instead of doing something with a boringthing: [no-irp]
+instead of doing something with a boring thing: [no-irp]
 	if debug-state is true, say "DEBUG note: [current action] with [noun] is under scrutiny.";
 	abide by the bore-check of noun;
 	if action is procedural or boring-exception is true:
 		if debug-state is true and boring-exception is true, say "DEBUG note: [current action] with [noun] slips general boring-thing rules.";
 		now boring-exception is false;
 		continue the action;
+	abide by the bore-exam rule;
 	say "[bore-text of noun]" instead;
 
 this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
@@ -393,20 +392,16 @@ this is the bore-exam rule: [note: I caused bugs by saying PROCESS THE BORE-EXAM
 	if current action is examining:
 		if description of noun is empty:
 			if debug-state is true, say "(DEBUG: pulling bore-text) ";
-			say "[bore-text of noun]";
+			say "[bore-text of noun][line break]";
 			the rule succeeds;
-	else unless action is procedural:
-		say "There's not much to do with [the noun] except examine [if noun is plural-named]them[else]it[end if]. So you do.";
+	else:
+		say "There's not much to do with [the noun] besides examining. So you do.";
 		try examining the noun;
 		the rule succeeds;
 
-after choosing notable locale objects:
-	repeat with item running through boringscen in location of player:
-		set the locale priority of the item to 0;
-
 part dumbdrops
 
-a dumbdrop is a kind of boringscen. a dumbdrop has a rule called drop-rule. drop-rule of a dumbdrop is usually the degen-false rule.
+a dumbdrop is a kind of thing. a dumbdrop is always scenery. a dumbdrop is usually boring. a dumbdrop has a rule called drop-rule. drop-rule of a dumbdrop is usually the degen-false rule.
 
 report going (this is the move dumbdrops rule):
 	repeat with Q running through dumbdrops:
@@ -498,9 +493,9 @@ volume specific items
 
 part hubs bush popup
 
-[must be after boringscen descriptions]
+[must be after boring thing descriptions]
 
-the hubs bush is a boringscen. the hubs bush is bounding. description is "The hubs bush encircles the entire [location of player], and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if any-store-visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
+the hubs bush is boring scenery. the hubs bush is bounding. description is "The hubs bush encircles the entire [location of player], and it's too thorny and thick to get through. You're stuck here, unless you warp through a[if any-store-visited]nother[end if] store.". bore-text is "The hubs bush that sprung up has pinned you by the stores. Hooray for focus, I guess."
 
 to decide whether any-store-visited:
 	repeat with myr running through regions:

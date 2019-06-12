@@ -13,8 +13,8 @@ understand the command "bche" as something new.
 understand "bche" as bcheing.
 
 carry out bcheing:
-	repeat with Q running through boringthings:
-		if Q is boringscen, say "(scenery) ";
+	repeat with Q running through boring things:
+		if Q is scenery, say "(scenery) ";
 		say "[Q] ~ [bore-check of q] ~ [bore-text of Q][line break]";
 	the rule succeeds.
 
@@ -196,7 +196,7 @@ init-mt-ppl is a number that varies.
 A property-check rule for a thing (called the target) (this is the modified things must have description rule):
 	unless target provides the property description, continue the action;
 	if the description of target is non-empty, continue the action;
-	if target is abstract or target is a boringthing, continue the action;
+	if target is abstract, continue the action;
 	if target is a person:
 		increment undescribed-people;
 		say "PERSON [undescribed-people]";
