@@ -40,7 +40,7 @@ Store K	tokers	false	539799651	--	"tokers"	"tokers"	--	post-storek-tokers rule	"
 Store N	nestor	false	555773981	--	"nestor"	"nestor"	--	--	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"
 lecturer	lecturer	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	--	post-lecturer-outside rule	"Ian and the lecturer are swept from the doorway and stage, respectively, by something unseen. The lecturer frantically babbles something about how this is why we need to fight drugs, but he is too busy backwards somersaulting to establish eye contact with his audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers assure you that'd waste money. They explain the munchies help reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."
 Store P	odorant tornado	false	568332432	--	"presto"	"presto"	--	--	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, something more nature-like, but daunting. You recognize an odorant tornado, which you can ENTER, if you dare. You'll probably need to."
-Store T	solid idols	false	589976491	--	"otters"	"otters"	--	post-storet-otters rule	"The store divides in two until it becomes a path with solid idols packed so densely they block your view. They're all of otters, not-so-oddly."
+Store T	solid idols	false	589976491	--	"otters"	"otters"	--	--	"The store divides in two until it becomes a path with solid idols packed so densely they block your view. They're all of otters, not-so-oddly."
 Store U	course source	false	591972280	--	"routes"	"routes"	--	--	"Store U splits into strips that snake out. They intertwine dizzingly, making a source course. You can ENTER to see where it leads."
 Store V	Tastee Estate	false	594031293	--	"troves"	"troves"	--	--	"You look more closely at Store V. Wouldn't it be nice if there were riches? As you do, up pops the perfect sort of Yorpwaldian place to house troves: a Tastee Estate!"
 Store W	truster turrets	false	594801246	--	"towers"	"towers"	--	--	"Store W shakes and seems to sprout up and grow narrower, into a pair of truster turrets. It doesn't seem to matter which one you enter. You hope."
@@ -480,10 +480,6 @@ this is the post-lecturer-outside rule:
 		let B be a random number from 1 to mack-count of A;
 		place-a-mack A and B;
 	move player to Strip of Profits;
-
-this is the post-storet-otters rule:
-	if engravings are examined, say "The engravings from Store T seem to have been transferred to the otters.";
-	now engravings are part of solid idols;
 
 section routes auxiliary
 
