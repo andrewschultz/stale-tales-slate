@@ -11044,17 +11044,10 @@ understand "recipe" as list o toils.
 read-list is a truth state that varies.
 
 to say list-o-toils-text:
-	let missing-one be false;
 	say "Precise recipes # 2: Mix of reagents greatens. Fix mo['].[no line break]";
 	repeat with QQ running through quest-items:
-		say "[line break]";
-		if QQ is enclosed by the player:
-			say "(Y) ";
-		otherwise:
-			now missing-one is true;
-			say "(N) ";
-		say "[if qq is u nerd]runed bool[else][QQ][end if]";
-	if read-list is false and missing-one is true and Brother Horbert is visible:
+		say "[line break]([if QQ is enclosed by the player]Y[else]N[end if]) [if qq is u nerd]runed book[else][QQ][end if]";
+	if read-list is false and Brother Horbert is in location of player and number of quest-items enclosed by player < 3:
 		say "[line break]";
 		pad-rec "reagents";
 		say "[paragraph break]Brother Horbert mumbles something about how if they had any reagents left around here, they'd have used them, but they don't.[no line break]";
@@ -11064,22 +11057,15 @@ book Adobe Abode
 
 Adobe Abode is an innie room in Routes. "A dilapidated residence with a trashy ashtray[if pipe soot is in Adobe Abode], which could use some emptying[end if]. The only exit is out to the Mesa.";
 
-after choosing notable locale objects when player is in Adobe Abode:
-	set the locale priority of pipe soot to 0;
-
-chapter oscar
-
-Oscar is a person in Adobe Abode. description is "He gives a weary hi. 'Haywire.'". "[one of]Someone who must be [or][stopping]Oscar mopes around here, probably not willing to talk about more than himself."
-
-check exiting in Adobe Abode:
-	try going outside instead;
+check exiting in Adobe Abode: try going outside instead;
 
 check going outside in Adobe Abode:
 	say "You leave the adobe/abode.";
 	now player is in Same Mesa instead;
 
-check going outside in Adobe Abode:
-	try exiting instead;
+chapter oscar
+
+Oscar is a person in Adobe Abode. description is "He gives a weary hi. 'Haywire.'". "[one of]Someone who must be [or][stopping]Oscar mopes around here, probably not willing to talk about more than himself."
 
 chapter ashtray
 
@@ -11099,7 +11085,7 @@ oscar-annoy is a truth state that varies. oscar-annoy is usually false.
 
 chapter pipe soot
 
-some pipe soot is a reflexive singular-named quest-item in Adobe Abode. the indefinite article of pipe soot is "some".
+some pipe soot is a reflexive singular-named quest-item in Adobe Abode. it is scenery. the indefinite article of pipe soot is "some".
 
 check taking the pipe soot when soot is in adobe:
 	say "Oscar snaps at you. 'Hey! Whoa! No stealing! Even worthless stuff!'[paragraph break]Maybe if you could position yourself so he can't see you taking it." instead;
@@ -20210,7 +20196,7 @@ the enerve veneer is amusing boring scenery in Rancho Archon Anchor. description
 
 the becharm chamber is amusing boring scenery in Rancho Archon Anchor. description of becharm chamber is "It's probably best not to look at the becharm chamber too much. I mean, it could ambush you into liking it. That'd be horrid.". bore-text is "It's too far away to do anything with. For your purposes, it's just one more bit of evil scenery."
 
-the nacht chant is amusing boring scenery in Rancho Archon Anchor. description of the nacht chant is "At least the nacht chant isn't profane. You probably can't do anything about it.". bore-text is "You--you're almost getting used to the nacht chant."
+the nacht chant is amusing boring scenery in Rancho Archon Anchor. description of the nacht chant is "You probably can't do anything about the nacht chant, but at least it isn't profane. Or chantS. They might snatch and stanch you.". bore-text is "You--you're almost getting used to the nacht chant."
 
 the vast vats are amusing plural-named boring scenery in Rancho Archon Anchor. description of the vast vats is "You don't want to know what's in the vats.". bore-text is "The vats are far away, but you can smell sulfinyl in them reeking sinfully--no silly fun."
 
