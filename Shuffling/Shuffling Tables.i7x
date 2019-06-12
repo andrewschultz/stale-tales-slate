@@ -22,7 +22,7 @@ store b	sorbet	"sorbet"	--	--	post-storeb-sorbet rule	"The store collapses into 
 store f	scented descent	"forest"	"store f"	--	--	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
 store i	posted depots	"sortie"	"store i"	--	--	"The store rumbles, revealing shady posted depots you can enter to somewhere new."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	--	--	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
-store r	r-p	"resort"	"store r"	pre-storer-resort rule	--	"Store R rumbles and reforms into something far posher. A huge resort! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
+store r	ogled lodge	"resort"	"store r"	pre-storer-resort rule	--	"Store R rumbles and reforms into something far posher. Not just a resort, but an ogled lodge! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
 cabinet	tenibac	"bactine"	"bactine"	pre-cabinet-bactine rule	post-cabinet-bactine rule	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
 
 book Forest
@@ -647,7 +647,7 @@ gateman	"Don't scramble the gateman. He's here to help."
 scented descent	"The scented descent to the forest doesn't need to be changed. What's behind it, does." [start stores]
 posted depots	"The posted depots doen't need to be changed. What's behind them, does."
 trade tread	"The trade tread doesn't need to be changed. What's behind it, does."
-r-p	"You already made passage to the resort. It's good enough. Why change it?"
+ogled lodge	"You already made passage to the ogled lodge. It's good enough. Why change it?"
 nose	"Don't get that nose bent out of shape." [start forest]
 shades	"Anything you do to bend the shades might break them."
 shotgun	"Anything you do might violate firearm safety rules, or something."
@@ -760,10 +760,10 @@ store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for S
 subway map	"The subway map gives a hint as to what Store M can be."
 store r	"[if you-can-advance][one of]You need to get into store R. [plus][or]The roster provides a hint. Where's a place you can rest? [plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word. [plus][or]You want to go to a RESORT. [minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r][end if]."
 roster	"The roster is a bit more of a clue for Store R. If you CERTIFY it, it will make things a bit clearer."
-scented descent	"Just enter."
-posted depots	"Just enter."
-trade tread	"Just enter."
-r-p	"Just enter."
+scented descent	"Just enter [the noun]."
+posted depots	"Just enter [the noun]."
+trade tread	"Just enter [the noun]."
+ogled lodge	"Just enter [the noun]."
 store a	"[no-sto]."
 store d	"[no-sto]."
 store e	"[no-sto]."

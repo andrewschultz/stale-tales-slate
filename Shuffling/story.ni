@@ -4301,14 +4301,10 @@ this is the metros-entry rule:
 
 section resort portal
 
-the r-p is a privately-named portal. go-region of r-p is Resort. description of r-p is "Man, it's beautiful, spacious and sunny. Even sunnier than the Trips Strip, which is much nicer since you started cleaning up, but still...". initial appearance of r-p is "You see a big resort here. It seems like it's all for you! All you have to do is enter.". entry-rule of r-p is resort-entry rule. solved-text of r-p is "Somehow, you got back to the Trips Strip after solving the game. I'd love to know how! Send me a bug report with a transcript."
-
-the printed name of r-p is "resort". understand "resort" as r-p.
-
-check taking r-p: say "Enter it instead." instead;
+the ogled lodge is a portal. go-region of ogled lodge is Resort. description of ogled lodge is "Man, it's beautiful, spacious and sunny. Even sunnier than the Trips Strip, which is much nicer since you started cleaning up, but still...". initial appearance of ogled lodge is "You see a big resort here. It seems like it's all for you! All you have to do is enter.". entry-rule of ogled lodge is resort-entry rule. solved-text of ogled lodge is "Somehow, you got back to the Trips Strip after solving the game. I'd love to know how! Send me a bug report with a transcript."
 
 this is the resort-entry rule:
-	say "'You! Find! Unify! Do!' a voice booms. You stride into the resort thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";
+	say "'You! Find! Unify! Do!' a voice booms. You stride into the ogled lodge thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";
 
 book Forest
 
@@ -9807,7 +9803,7 @@ a region has a sto called reg-sto. a region has a portal called reg-ent.
 reg-sto of forest is store f. reg-ent of forest is scented descent.
 reg-sto of sortie is store i. reg-ent of sortie is posted depots.
 reg-sto of metros is store m. reg-ent of metros is trade tread.
-reg-sto of resort is store r. reg-ent of resort is r-p.
+reg-sto of resort is store r. reg-ent of resort is ogled lodge.
 
 to solve-region (sre - a region):
 	process the notify score changes rule;
