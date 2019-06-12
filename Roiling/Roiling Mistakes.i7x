@@ -938,9 +938,9 @@ understand "retard" as a mistake ("You can picture people like [greedy-person] c
 
 book demo dome
 
-chapter evoc-cove
+chapter Evoc-Cove
 
-understand "neva" and "lol" as a mistake ("Yeah, the novel is pretty unbelievable, but it's not there to be profound.") when player is in evoc-cove.
+understand "neva" and "lol" as a mistake ("Yeah, the novel is pretty unbelievable, but it's not there to be profound.") when player is in Evoc Cove.
 
 chapter Hows Show
 

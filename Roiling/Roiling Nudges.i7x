@@ -1079,10 +1079,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "display"	422122769	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
 "spy"	300099177	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
 "dial"	122023592	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
-"evoc"	328329091	evoc-cove	--	--	"[dome-rm]." [EVOC COVE START]
-"novella"	488046510	evoc-cove	--	--	"[no-no]"
-"lol"	181980255	evoc-cove	--	--	"[no-no]."
-"neva"	306066255	evoc-cove	--	--	"[no-no]."
+"evoc"	328329091	Evoc Cove	--	--	"[dome-rm]." [EVOC COVE START]
+"novella"	488046510	Evoc Cove	--	--	"[no-no]"
+"lol"	181980255	Evoc Cove	--	--	"[no-no]."
+"neva"	306066255	Evoc Cove	--	--	"[no-no]."
 "hows"	315843615	Hows Show	--	--	"[dome-rm]."
 "codewall"	459943629	Hows Show	--	--	"[its-a-museum]."
 "codewalls"	556217595	Hows Show	--	--	"[its-a-museum]."

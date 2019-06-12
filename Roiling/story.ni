@@ -391,15 +391,13 @@ throw-warn is a truth state that varies.
 
 pun-warn is a truth state that varies.
 
-instead of eating a fruit:
-	if noun is lemons or noun is melon:
-		say "A [if noun is lemons]lemon[else]melon[end if]? No meal!" instead;
+check eating a fruit:
+	if noun is lemons or noun is melon, say "A [if noun is lemons]lemon[else]melon[end if]? No meal!" instead;
 	say "[one of]You shouldn't eat into Curtis's profits. [or][stopping]";
 	if pun-warn is false:
 		ital-say "if you try again, you'll get a bad anagram pun.";
 		now pun-warn is true instead;
-	else:
-		say "No fruit. Ruf it! On! ([one of]Told you so[or]Yup. Still here[stopping].)";
+	say "No fruit. Ruf it! On! ([one of]Told you so[or]Yup. Still here[stopping].)" instead;
 
 an undesc is a kind of thing. description of undesc is "[bug-report]";
 
@@ -4066,39 +4064,6 @@ definition: a region is markable:
 	if it is solved, yes;
 	no;
 
-an exhibit is a kind of thing. an exhibit can be unnoted, perused or exhausted. an exhibit is usually unnoted.
-
-to left-to-see:
-	if scams is false:
-		say "[line break]";
-	if number of unnoted exhibits is 0:
-		repeat with QQ running through things in Sparse Spares:
-			if QQ is not player and QQ is not examined and QQ is not red writing:
-				say "You could still examine [the QQ] [if player is in Sparse Spares]here[else]in Sparse Spares[end if].";
-				continue the action;
-	repeat through table of xibits:
-		if exhib entry is unnoted:
-			if location of exhib entry is unvisited:
-				say "You still haven't gone [cueloc of exhib entry] from Peek Keep.";
-				continue the action;
-			if exhib entry is unexamined:
-				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine it.";
-				continue the action;
-			say "You still have more of the [exhib entry][if exhib entry is novella and novella is examined] (examined by not read)[end if] to look through.";
-			continue the action;
-	if Sparse Spares is unvisited:
-		say "There's some random junk below the entry to Peek Keep.";
-		continue the action;
-	repeat through table of xibits:
-		if exhib entry is perused:
-			say "You haven't looked all the way through the [exhib entry] [if location of player is location of exhib entry]here [end if]in [location of exhib entry].";
-			continue the action;
-	say "It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!"
-
-to decide which direction is cueloc of (xx - an exhibit):
-	let myway be the best route from Peek Keep to the location of xx;
-	decide on myway.
-
 section scafing - not for release
 
 scafing is an action out of world.
@@ -5563,7 +5528,7 @@ after reading a command:
 	if player is in Clangier Clearing and melon is in Clangier Clearing:
 		if the player's command matches the regular expression "\blen\b" and the player's command matches the regular expression "\bmo\b":
 			try fliptoing melon instead;
-	if player is in evoc-cove and the player's command includes "page":
+	if player is in Evoc Cove and the player's command includes "page":
 		let XX be the player's command;
 		replace the regular expression "page" in XX with "";
 		ital-say "you don't need to say PAGE, just give a number.";
@@ -10482,9 +10447,9 @@ description of lecturer is "He's wearing a very expensive suit and tie. You're n
 
 chapter ian
 
-Ian a Drug Guardian is a privately-named boring person in Cruelest Lectures. printed name of Ian is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)". bore-check of ian is the bore-ian rule. bore-text of ian is "[ian-pamph]".
+Ian a Drug Guardian is a privately-named boring person in Cruelest Lectures. printed name of Ian is "Ian (a Drug Guardian)". description of ian is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". initial appearance of ian is "Standing by the only exit is Ian (a Drug Guardian.)". bore-check of ian a drug guardian is the bore-ian rule. bore-text of ian is "[ian-pamph]".
 
-toi say ian-pamph:
+to say ian-pamph:
 	if player has pamphlets:
 		say "Before you can do anything, Ian points at the pamphlets he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
 	else:
@@ -10495,7 +10460,7 @@ toi say ian-pamph:
 		otherwise:
 			say "Ian looks hurt but blames it on the lack of attention span from the drugs you've been taking. That cheers him up.";
 
-ithis is the bore-ian rule:
+this is the bore-ian rule:
 	if current action is scaning or current action is sbing, say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
 	if current action is attacking, say "Ian's too big for you. With or without righteous roid rage." instead;
 
@@ -21521,11 +21486,41 @@ frroom of small yellow banana is Scape Space.
 
 volume demo dome
 
-chapter the basics
+chapter exhibit definitions
 
-after choosing notable locale objects when mrlp is demo dome:
-	repeat with JJ running through all exhibits in location of player:
-		set the locale priority of JJ to 0;
+an exhibit is a kind of thing. an exhibit can be unnoted, perused or exhausted. an exhibit is usually unnoted. an exhibit is usually boring. an exhibit is always scenery.
+
+to left-to-see:
+	if scams is false, say "[line break]";
+	if number of unnoted exhibits is 0:
+		repeat with QQ running through things in Sparse Spares:
+			if QQ is not player and QQ is not examined and QQ is not red writing:
+				say "You could still examine [the QQ] [if player is in Sparse Spares]here[else]in Sparse Spares[end if].";
+				continue the action;
+	repeat through table of xibits:
+		if exhib entry is unnoted:
+			if location of exhib entry is unvisited:
+				say "You still haven't gone [cueloc of exhib entry] from Peek Keep.";
+				continue the action;
+			if exhib entry is unexamined:
+				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine it.";
+				continue the action;
+			say "You still have more of the [exhib entry][if exhib entry is novella and novella is examined] (examined by not read)[end if] to look through.";
+			continue the action;
+	if Sparse Spares is unvisited:
+		say "There's some random junk below the entry to Peek Keep.";
+		continue the action;
+	repeat through table of xibits:
+		if exhib entry is perused:
+			say "You haven't looked all the way through the [exhib entry] [if location of player is location of exhib entry]here [end if]in [location of exhib entry].";
+			continue the action;
+	say "It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!"
+
+to decide which direction is cueloc of (xx - an exhibit):
+	let myway be the best route from Peek Keep to the location of xx;
+	decide on myway.
+
+chapter the basics
 
 demoing is an action applying to nothing.
 
@@ -21556,27 +21551,13 @@ to demo-dome-status:
 	now left hand status line is "[location of player]";
 	now right hand status line is "Wander, Warden!";
 
-chapter Peek Keep
+book Peek Keep
 
-For printing a locale paragraph about a thing (called the item)	(this is the don't mention exhibits in room descriptions rule):
-	if the item is an exhibit, set the locale priority of the item to 0;
-	continue the activity.
+Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage above, but there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The saying ignsay[one of] (yes, I couldn't resist the Pig Latin joke)[or][stopping] here welcomes you[esi-pro].";
 
-Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage above, but there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The entry sign here welcomes you[esi-pro].";
+the saying ignsay is scenery in Peek Keep. "UNFOLD OLD FUN, MEMOIR: I'M MORE."
 
-to say esi-pro:
-	set the pronoun it to entry sign;
-
-instead of turning the dial:
-	say "The dial is out of reach."
-
-instead of switching on the dial:
-	say "The dial is out of reach."
-
-instead of switching off the dial:
-	say "The dial is out of reach."
-
-the entry sign is scenery in Peek Keep. "UNFOLD OLD FUN, MEMOIR: I'M MORE."
+to say esi-pro: set the pronoun it to saying ignsay;
 
 check going south in Peek Keep:
 	if debug-state is true:
@@ -21598,8 +21579,7 @@ to say unex-left:
 		continue the action;
 	say ", ignoring the [if Y is 1][random unexamined thing in Sparse Spares][else]final [number of unexamined things in Sparse Spares in words] things[end if] in Sparse Spares,";
 
-check going up in Peek Keep:
-	say "The great grate blocks you." instead;
+check going up in Peek Keep: say "The great grate blocks you." instead;
 
 table of xibits
 exhib	orwt
@@ -21611,29 +21591,78 @@ Novella	20
 Flashed Ad Shelf	1
 shiest thesis	10
 
-chapter Evoc-Cove
+section Great Grate
 
-[?? Evoc Cove. Printed name evoc-cove]
-Evoc-Cove is east of Peek Keep. Evoc-Cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella[nov-pro] is propped up against the wall by some invisible force. You can go back west if you want."
+The Great Grate is boring scenery in Peek Keep. description of Great Grate is "The Great Grate can't be moved. It hides the shall-halls which--well, they're under construction. There's also a talks stalk, spy dial display, design-deigns and a spec space.". bore-text is "The great grate was put there just to let you know there will be new stuff from the author--and has been, since the Demo Dome was conceived. Of course, any new stuff you could see would be too raw to be any good. I make bad mistakes in my first drafts.". bore-check is the bore-great-grate rule.
+
+this is the bore-great-grate rule:
+	if current action is opening, say "The great grate is too great for that.";
+
+after examining great grate (this is the keep scenery spill rule)	:
+	move spy dial display to Peek Keep;
+	move spec space to Peek Keep;
+	move shall halls to Peek Keep;
+	move design deigns to Peek Keep;
+	move talks stalk to Peek Keep;
+	continue the action;
+
+section Spy Dial Display
+
+The Spy Dial Display is boring scenery. description of Spy Dial Display is "The Spy Dial Display is behind the Great Grate. It may be for calibrating future games, or other stuff.". bore-text is "The display is currently off and out of reach."
+
+check turning the spy dial display: say "The dial is out of reach." instead;
+
+check switching on the spy dial display: say "The dial is out of reach." instead;
+
+check switching off the spy dial display: say "The dial is out of reach." instead;
+
+section Spec Space
+
+a spec space is boring scenery. description of a spec space is "It could be a spec-scape, with all that's here. It's a bit hard to read--hopefully the author will unjumble it into something fun some time soon.". bore-text is "The spec space is too ill-defined to do much with.".
+
+section Shall Halls
+
+The Shall Halls are boring scenery. description of Shall Halls is "You can't get a very good look at the shall-halls, but the design-deigns scratched at the end fill you with wonder and anticipation all the same. Really!". bore-text is  "I haven't figured where to go in the Shall Halls, and if you can, I'd be jealous.";
+
+understand "shall-halls" as Shall Halls.
+
+section design deigns
+
+The Design Deigns are scenery. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain."
+
+section talks stalk
+
+a talks stalk is scenery. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs.". bore-text is "You can't do much with the stalk on the other side of the Grate. And the author hasn't, yet. One day, the author will write those games and write postmortems.";
+
+section Flashed Ad Shelf
+
+The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City, then to Matt Doerr working through Kingston and Inville, then to someone walking around on a cube in a cavern, and finally to someone walking between Grebeberg and Yelpley to defeat the Diktat Kid in the Dirge Grid.". bore-text is "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
+
+check examining Flashed Ad Shelf: now Flashed Ad Shelf is exhausted;
+
+book Evoc-Cove
+
+Evoc Cove is east of Peek Keep. printed name of Evoc Cove is "Evoc-Cove". Evoc Cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella[nov-pro] is propped up against the wall by some invisible force. You can go back west if you want."
 
 to say nov-pro:
 	set the pronoun it to novella;
 
-check going in evoc-cove:
+check going in Evoc Cove:
 	if noun is east or noun is north or noun is south:
 		say "You quickly run into a bunch of boxes you could probably push around to make a path to a bigger room, but that just wasn't your specialty. Wrong sort of thinking game." instead;
 
 section novella
 
-The novella is an exhibit in Evoc-Cove. "A novella is here. You can READ it without taking it.". description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]. You can also speed-read with [i]rr[r]."
+The novella is an exhibit in Evoc Cove. description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]. You can also speed-read with [i]RR[r].". bore-check is bore-novella rule. bore-text is "You can really only examine or read the novella, or speed-read it with RR."
 
-check taking novella: say "Don't take the art." instead;
+this is the bore-novella rule:
+	if current action is taking, say "Don't take the art." instead;
 
 turbo-novella is a truth state that varies.
 
 understand the command "rr" as something new
 
-understand "rr" as tenpgreading when player is in evoc-cove
+understand "rr" as tenpgreading when player is in Evoc Cove
 
 tenpgreading is an action applying to nothing.
 
@@ -21675,10 +21704,10 @@ to say lowest-unread:
 			continue the action;
 	say "--though you've read everything of interest, you'd guess"
 
-understand "read [number]" as numreading when player is in Evoc-Cove.
-understand "r [number]" as numreading when player is in Evoc-Cove.
-understand "x [number]" as numreading when player is in Evoc-Cove.
-understand "examine [number]" as numreading when player is in Evoc-Cove.
+understand "read [number]" as numreading when player is in Evoc Cove.
+understand "r [number]" as numreading when player is in Evoc Cove.
+understand "x [number]" as numreading when player is in Evoc Cove.
+understand "examine [number]" as numreading when player is in Evoc Cove.
 
 numreading is an action applying to one number.
 
@@ -21714,7 +21743,7 @@ when play begins (this is the seed novella rule) :
 		else:
 			now comprehensible entry is false;
 
-chapter Hows Show
+book Hows Show
 
 Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them[if nuf-hows-examined]: the owl decal code wall and the allow-lots-tools wall[end if]. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
 
@@ -21727,20 +21756,16 @@ to decide whether nuf-hows-examined:
 	if tools wall is examined and code wall is examined, decide yes;
 	decide no;
 
-For printing a locale paragraph about a thing (called the item) when player is in Hows Show:
-	if the item is owl decal or the item is allow lots tools, set the locale priority of the item to 0;
-	continue the activity.
-
 the written walls are plural-named scenery in Hows Show. "There's an owl decal code wall[if any-walls is true and last-wall is owl decal] you've been browsing recently[else if owl decal is examined] full of Inform 7 code[end if] and an allow-lots-tools wall[if any-walls is true and last-wall is allow lots tools] you've been browsing recently[else if allow lots tools is examined] full of PERL tricks[end if][if any-walls is false], and each looks about as interesting as the other[end if]."
 
 check examining written walls for the first time:
-	ital-say "it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for.";
+	ital-say "if you want to understand everything, it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for. But if not, I hope it is still fun.";
 
 any-walls is a truth state that varies.
 
 section inform wall
 
-the owl decal code wall is a proper-named exhibit in Hows Show. "[this-inform]"
+the owl decal code wall is a proper-named exhibit in Hows Show. description of owl decal code wall is "You read some [one of][or]more [stopping]of the owl decal code wall.[paragraph break][this-inform]". bore-text of owl decal code wall is "Not much to do with the owl decal code wall except examine it."
 
 printed name of owl decal code wall is "the owl-decal code wall"
 
@@ -21750,8 +21775,6 @@ after doing something with owl decal code wall:
 	now any-walls is true;
 	now last-wall is owl decal code wall;
 	continue the action;
-
-description of owl decal code wall is "You read some [one of][or]more [stopping]of the owl decal code wall.[paragraph break][this-inform]"
 
 inform-row is a number that varies.
 
@@ -21769,12 +21792,11 @@ after examining owl decal code wall:
 		now owl decal code wall is exhausted;
 	continue the action;
 
-to say-thru:
-	ital-say "you've read all the way through.";
+to say-thru: ital-say "you've read all the way through.";
 
 section allow-lots-tools wall
 
-the allow lots tools wall is a proper-named exhibit in Hows Show. "[this-perl]".
+the allow lots tools wall is a proper-named exhibit in Hows Show. description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.[paragraph break][this-perl]". bore-text of allow lots tools wall is "The tools wall is just there to be read.".
 
 printed name of allow lots tools wall is "the allow-lots-tools wall".
 
@@ -21784,8 +21806,6 @@ after doing something with allow lots tools wall:
 	now any-walls is true;
 	now last-wall is allow lots tools wall;
 	continue the action;
-
-description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.[paragraph break][this-perl]"
 
 perl-row is a number that varies.
 
@@ -21804,141 +21824,89 @@ after examining allow lots tools wall:
 		now allow lots tools wall is exhausted;
 	continue the action;
 
-chapter Intel Inlet
+book Intel Inlet
 
 Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis[the-pro]--whoever wrote it is probably half embarrassed of what's on there."
 
-to say the-pro:
-	set the pronoun it to shiest thesis;
+to say the-pro: set the pronoun it to shiest thesis;
 
-The shiest thesis is an exhibit in Intel Inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that. You resolve to feel less bad about your own mistakes, reading all the things the author let slip in a release, or just in general, while making this project. He's obviously still a little embarrassed about it all.".
+The shiest thesis is an exhibit in Intel Inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that. You resolve to feel less bad about your own mistakes, reading all the things the author let slip in a release, or just in general, while making this project. He's obviously still a little embarrassed about it all.". bore-text is "THe shiest thesis is only for reading.".
 
-after examining shiest thesis:
+after examining shiest thesis: [?? drop "continue the action?"]
 	now shiest thesis is exhausted;
 	continue the action;
 
-The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "[bug-report]".
-
-check examining CareLand Calendar:
-	say "It's divided into several parts based on what is there. You read through one.[paragraph break][part-one-thru]" instead; [bulk-klub]
+The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.[paragraph break][part-one-thru]".
 
 calendar-part is a number that varies.
 
 to say part-one-thru:
-	if calendar-part is 0:
-		now careland calendar is perused;
+	if calendar-part is 0, now careland calendar is perused;
 	increment calendar-part;
-	if calendar-part > number of rows in table of calparts:
-		now calendar-part is 1;
+	if calendar-part > number of rows in table of calparts, now calendar-part is 1;
 	choose row calendar-part in table of calparts;
 	say "[thiscal entry][line break]";
 	if calendar-part is number of rows in table of calparts:
 		say "[line break]That's the end of the calendar.";
 		now careland calendar is exhausted;
 
-chapter Ned's Dens
+book Ned's Dens
 
 Ned's Dens is west of Peek Keep. Ned's Dens is in Demo Dome. "You feel a hush here, as if you're seeing something personal and private. Like that Chic Loner Chronicle[clc-pro]. You can go back east."
 
-to say clc-pro:
-	set the pronoun it to chic loner chronicle;
+to say clc-pro: set the pronoun it to chic loner chronicle;
 
-The Chic Loner Chronicle is an exhibit in Ned's Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]".
+chapter Chic Loner Chronicle
+
+The Chic Loner Chronicle is an exhibit in Ned's Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]". bore-text is "The Chic Loner Chronicle is only there for reading or examining."
 
 chron-row is a number that varies.
 
 to say one-chron:
 	increment chron-row;
-	if chic loner chronicle is unnoted:
-		now chic loner chronicle is perused;
-	if chron-row > number of rows in table of observations:
-		now chron-row is 1;
+	if chic loner chronicle is unnoted, now chic loner chronicle is perused;
+	if chron-row > number of rows in table of observations, now chron-row is 1;
 	choose row chron-row in table of observations;
 	say "[obser entry]";
 	if chron-row is number of rows in table of observations:
 		now chic loner chronicle is exhausted;
 		say "[paragraph break]That's the end of the Chronicle. You can read it again, if you want.[no line break]";
 
-chapter Sparse Spares
+book Sparse Spares
 
 Sparse Spares is below Peek Keep. Sparse Spares is in Demo Dome. "All sorts of weird tools and paraphernalia that couldn't fit into the game proper lie here, likely impulse purchases from Bulk-Klub. You can go back up."
 
-the parcels clasper is a thing in Sparse Spares. description is "Oh, man! It's handy for picking stuff up and moving it around. It looks a bit odd, but boy, if you look for a minute, THAT's how it works."
+to say bore-spares: say "You can't actually do more than examining anything in Sparse Spares, but that's okay, because your quest is nearly over anyway."
 
-the bolt case is a transparent container in Sparse Spares. description is "It contains an obstacle, and it's also not openable, since it's--well-bolted. There's also a can of Best Cola in there."
+a sparething is a kind of thing. a sparething is always boring. bore-text of a sparething is usually "[bore-spares].". bore-check of a sparething is usually the bore-sparse-spares rule.
+
+this is the bore-sparse-spares rule:
+	if current action is taking, say "That's a museum exhibit. About all you can/should do is examine it." instead;
+
+the parcels clasper is a sparething in Sparse Spares. description is "Oh, man! It's handy for picking stuff up and moving it around. It looks a bit odd, but boy, if you look for a minute, THAT's how it works.".
+
+the bolt case is a boring transparent container in Sparse Spares. description is "It contains an obstacle, and it's also not openable, since it's--well-bolted. There's also a can of Best Cola in there."
 
 Rule for printing room description details of bolt case: do nothing instead.
 
 check opening bolt case:
-	say "It's locked, but Best Cola isn't very good for you anyway. Imagine how bad Worst Cola could be." instead;
+	say "It's locked, but Best Cola isn't very good for you anyway. Imagine how bad Worst Cola could be. Even with a cool straw, it could give you loco warts." instead;
 
-the obstacle is in the bolt case. description of the obstacle is "it reads Bulk-Klub."
+the obstacle is a sparething. it is in the bolt case. description of the obstacle is "it reads Bulk-Klub."
 
-The Best Cola is in the bolt case. description is "It's Yorpwald's equivalent of the gross pop I tend to wind up drinking but don't want to when I'm implementing stuff/drawing up features/squashing bugs. I think it's made by AblestCo."
+The Best Cola is a sparething. it is in the bolt case. description is "It's Yorpwald's equivalent of the gross pop I tend to wind up drinking but don't want to when I'm implementing stuff/drawing up features/squashing bugs. I think it's made by AblestCo."
 
-the larded ladder is a thing in Sparse Spares. description is "The larded ladder was originally used as an indication you don't need to go up, but it seemed a bit mean."
+the larded ladder is a sparething in Sparse Spares. description is "The larded ladder was originally used as an indication you don't need to go up, but it seemed a bit mean."
 
-the trifle filter is a thing in Sparse Spares. description is "A finely-tuned device that helped me decide whether silly details were totally irrelevant or just irrelevant enough to be funny and quirky. Or seem that way to me."
+the trifle filter is a sparething in Sparse Spares. description is "A finely-tuned device that helped me decide whether silly details were totally irrelevant or just irrelevant enough to be funny and quirky. Or seem that way to me."
 
-The stand-up dustpan is a thing in Sparse Spares. description is "Useful for sweeping bugs and inconsistencies under the metaphorical rug."
+The stand-up dustpan is a sparething in Sparse Spares. description is "Useful for sweeping bugs and inconsistencies under the metaphorical rug."
 
-The plastic scalp-it is a thing in Sparse Spares. description is "Handy for when a chunk of code--or a story arc--completely didn't work."
+The plastic scalp-it is a sparething in Sparse Spares. description is "Handy for when a chunk of code--or a story arc--completely didn't work."
 
-the parcel placer is a thing in Sparse Spares. description is "Handy for deciding where a good anagram should go--one I wanted to have along, but I didn't know if it should be a thing, a description or random text. Often seen shuffling around (ha! Ha!) the same thing more than once."
+the parcel placer is a sparething in Sparse Spares. description is "Handy for deciding where a good anagram should go--one I wanted to have along, but I didn't know if it should be a thing, a description or random text. Often seen shuffling around (ha! Ha!) the same thing more than once."
 
-the rudest duster is a thing in Sparse Spares. description is "Helped me clean up--or add double entendres--to various things, or find a suggestive anagram or two."
-
-check taking something in Sparse Spares:
-	say "That's a museum exhibit. About all you can/should do is examine it." instead;
-
-section Great Grate
-
-The Great Grate is scenery in Peek Keep. "The Great Grate can't be moved. It hides the shall-halls which--well, they're under construction. There's also a talks stalk, design-deigns and a spec space."
-
-after examining great grate (this is the keep scenery spill rule)	:
-	move spy dial display to Peek Keep;
-	move spec space to Peek Keep;
-	move shall halls to Peek Keep;
-	move design deigns to Peek Keep;
-	move talks stalk to Peek Keep;
-	continue the action;
-
-The Spy Dial Display is scenery. "The display is currently off and out of reach."
-
-instead of taking Spy Dial Display:
-	say "Out of reach behind the grate.";
-
-instead of doing something with Great Grate:
-	if the action is procedural:
-		continue the action;
-	say "It was put there just to let you know there will be new stuff from the author. Of course, if you could see it, it might be too raw to be any good.";
-
-a spec space is boring scenery. description of a spec space is "It could be a spec-scape, with all that's here. It's a bit hard to read--hopefully the author will unjumble it into something fun some time soon.". bore-text is "The spec space is too ill-defined to do much with.".
-
-The Shall Halls are boring scenery in Peek Keep. description of Shall Halls is "You can't get a very good look at the shall-halls, but the design-deigns scratched at the end fill you with wonder and anticipation all the same. Really!". bore-text is  "I haven't figured where to go in the Shall Halls, and if you can, I'd be jealous.";
-
-understand "shall-halls" as Shall Halls.
-
-The Design Deigns are scenery in Peek Keep. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain."
-
-a talks stalk is scenery. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs."
-
-instead of doing something with Talks Stalk:
-	if the action is procedural:
-		continue the action;
-	say "You can't do much with the stalk on the other side of the Grate. And the author hasn't, yet. One day.";
-
-section Flashed Ad Shelf
-
-The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City, then to Matt Doerr working through Kingston and Inville, and finally to someone walking around on a cube in a cavern."
-
-instead of doing something with flashed ad shelf:
-	if the action is procedural:
-		continue the action;
-	say "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
-
-check examining Flashed Ad Shelf:
-	now Flashed Ad Shelf is exhausted;
+the rudest duster is a sparething in Sparse Spares. description is "Helped me clean up--or add double entendres--to various things, or find a suggestive anagram or two."
 
 volume regular verbs
 
@@ -23460,7 +23428,7 @@ index map with r44 mapped west of Hacks' Shack.
 [start demo dome]
 
 index map with Ned's Dens mapped east of Scape Space.
-index map with Intel Inlet mapped north of evoc-cove.
+index map with Intel Inlet mapped north of Evoc Cove.
 index map with Sparse Spares mapped south of Peek Keep.
 
 index map with Meatier Emerita Emirate mapped east of Lost Lots.
