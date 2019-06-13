@@ -1450,7 +1450,14 @@ this is the pre-gates-stage-flip rule:
 	if gate-level is 2, say "No need to over-study or over-think. Through the gates!" instead;
 
 this is the post-gates-stage-flip rule:
-	if noun is searcher or noun is viewer or noun is perp-priv, upgrade-passport;
+	if gate-level is 2:
+		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
+		if player has perp:
+			moot feeling you're a perp;
+			say "[line break]As a bonus, you lose that feeling you're a perp.";
+	else if gate-level is 1:
+		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
+		if player has perp, say "[line break]Also, you feel like a little less of a perp now."
 
 book general auxiliary rules
 

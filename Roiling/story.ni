@@ -4372,8 +4372,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			now noun is whiners;
 			continue the action;
 	else if mrlp is others: [others]
-		if perp-priv is part of the passport and gate-level < 2:
-			now noun is perp-priv;
+		if player has feeling you're a perp:
+			now noun is feeling you're a perp;
 			continue the action;
 		if player is in Clangier Clearing:
 			if Ammo Gang is in Clangier Clearing:
@@ -6724,15 +6724,11 @@ to say sleep-reject:
 
 chapter taking
 
-instead of taking a person:
-	if noun is the player:
-		say "I'm the only one who gets to be self-referential, here. Got it? Good." instead;
-	if noun is the macks:
-		say "They're the pick-up artists, here." instead;
-	if noun is Gretta:
-		say "You might be worse at picking Gretta up than the macks." instead;
-	if noun is eels:
-		say "[if power-back is true]They already gave you a charge[else]That might get you the wrong sort of charge[end if]." instead;
+check taking a person: [?? see about unblocking basic rule if this isn't triggered]
+	if noun is the player, say "I'm the only one who gets to be self-referential, here. Got it? Good." instead;
+	if noun is the macks, say "They're the pick-up artists, here." instead;
+	if noun is Gretta, say "You might be worse at picking Gretta up than the macks." instead;
+	if noun is eels, say "[if power-back is true]They already gave you a charge[else]That might get you the wrong sort of charge[end if]." instead;
 	say "Lifting [if noun is plural-named]people[else]a person[end if] or something [if noun is plural-named]people[else]person[end if]-sized is too heavy for your superpowers. Even if your name happens to be Kate."
 
 chapter looking
@@ -6774,16 +6770,12 @@ after examining:
 chapter tying it to
 
 check tying it to (this is the keyboard and key rule) :
-	if noun is second noun:
-		say "Tautology? Got ya, lout!" instead;
-	if noun is drive a:
-		try tying second noun to noun instead;
-	if second noun is caps lock:
-		try tying second noun to noun instead;
-	if noun is caps lock and second noun is keyboard:
-		if caps lock is not part of the keyboard:
-			say "'Pokey Key-op? Yep. Ok.' you say as you fit it in. No more in-caps panics.";
-			now caps lock is part of the keyboard instead;
+	if noun is second noun, say "Tautology? Got ya, lout!" instead;
+	if noun is drive a, try tying second noun to noun instead;
+	if second noun is caps lock, try tying second noun to noun instead;
+	if noun is caps lock and second noun is keyboard and caps lock is not part of the keyboard:
+		say "'Pokey Key-op? Yep. Ok.' you say as you fit it in. No more in-caps panics.";
+		now caps lock is part of the keyboard instead;
 
 chapter waving
 
@@ -9240,7 +9232,7 @@ agnostic	"[agnostic-first]"
 Merle	"Elmer and Merle" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
 a banna'	"the/a banna[']"
-perp-priv	"the words 'PERP' forming outside the Valence Enclave"
+feeling you're a perp	"the words 'PERP' forming outside the Valence Enclave"
 coins	"Curtis's coins"
 icons	"the icons you made"
 
@@ -9268,7 +9260,7 @@ definition: a thing (called candi) is bluable:
 		if c2 is in Lapsin' Plains, yes;
 	if candi is elmer, no; [otters specific]
 	if player is in Gates Stage and gate-level is 2: [others specific]
-		if candi is perp-priv or candi is searcher or candi is viewer, no;
+		if candi is feeling you're a perp or candi is searcher or candi is viewer, no;
 	if player is in Filed Field and candi is barren cries, no;
 	if candi is visible, yes;
 	decide no;
@@ -20157,14 +20149,12 @@ did-guru is a truth state that varies.
 
 carry out guruing:
 	if can-guru is false:
-		if arugula is moot:
-			say "You lost your guru powers." instead;
+		if arugula is moot, say "You lost your guru powers." instead;
 		say "You'll near to eat the arugula, first." instead;
 	if noun is megaton pear or noun is mopeage rant or noun is rampage note:
 		say "You blink and wind up refocusing on the magenta rope.";
 		try guruing magenta rope instead;
-	if noun is viewer or noun is searcher or noun is perp-priv:
-		say "No. It's got to be pretty simple." instead;
+	if noun is viewer or noun is searcher or noun is feeling you're a perp, say "No. It's got to be pretty simple." instead;
 	repeat through table of others anagrams:
 		if noun is the-from entry:
 			if noun is compass:
@@ -20177,13 +20167,10 @@ carry out guruing:
 			poss-d;
 			the rule succeeds;
 	if noun is iconic:
-		if noun is s-i:
-			say "The icons seem appropriate as-is." instead;
+		if noun is s-i, say "The icons seem appropriate as-is." instead;
 		say "Hm. That's not fruit and not going to be fruit. You are pretty sure you can decide what to do." instead;
-	if noun is the player:
-		say "You don't want to change. Well, not in that way." instead;
-	if noun is a person:
-		say "A person shouldn't and can't be changed into a fruit." instead;
+	if noun is the player, say "You don't want to change. Well, not in that way." instead;
+	if noun is a person, say "A person shouldn't and can't be changed into a fruit." instead;
 	say "Nothing happens. Maybe something else.";
 	the rule succeeds.
 
@@ -20201,12 +20188,10 @@ after printing the locale description for Rustic Citrus:
 	coin-eval;
 
 check giving fruit to curtis:
-	if moss cap is off-stage:
-		say "'No, no. A bit more, then I'll give you a reward." instead;
+	if moss cap is off-stage, say "'No, no. A bit more, then I'll give you a reward." instead;
 	say "Oops. BUG. Curtis should've taken the [noun]." instead;
 
-check going inside in Rustic Citrus:
-	say "You can't go backward. There is enough to do here, including figuring where to go next." instead;
+check going inside in Rustic Citrus: say "You can't go backward. There is enough to do here, including figuring where to go next." instead;
 
 chapter grapes
 
@@ -20222,13 +20207,11 @@ chapter pears
 
 A spear is scenery in Rustic Citrus. description of spear is "It'd make a powerful weapon, but you couldn't hold anything else. Plus, this isn't that sort of game."
 
-to say cutoff:
-	stop game abruptly;
+to say cutoff: stop game abruptly;
 
 a-text of spear is "RYYRR". b-text of spear is "RYYRR". parse-text of spear is "x[sp]-[sp]-[sp]x[sp]x".
 
-instead of taking spear:
-	say "This is a thinking puzzling game, not a violence game. Though I hope the puzzles have not given you violent thoughts."
+check taking spear: say "This is a thinking puzzling game, not a violence game. Though I hope the puzzles have not given you violent thoughts." instead;
 
 the pears are a plural-named fruit.
 
@@ -20246,8 +20229,7 @@ some slime is singular-named scenery in Rustic Citrus. "It's green, like most sl
 
 a-text of slime is "RYRYR". b-text of slime is "RYRYR".parse-text of slime is "x[sp]-[sp]x[sp]-[sp]x".
 
-instead of taking slime:
-	say "Eww. Not in that form you won't."
+check taking slime: say "Eww. Not in that form you won't." instead;
 
 some limes are a plural-named fruit.
 
@@ -20257,8 +20239,7 @@ the harmonicas are a plural-named thing in Rustic Citrus. "Two harmonicas, ruste
 
 description of harmonicas is "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
 
-instead of taking harmonicas:
-	say "They're too rusty.";
+check taking harmonicas: say "They're too rusty." instead;
 
 a-text of harmonicas is "RYRYRRRYRY". b-text of harmonicas is "RGPYRRRYRY". parse-text of harmonicas is "x[sp]a[sp]r[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
@@ -20270,8 +20251,7 @@ The mad train is scenery in Rustic Citrus. description is "It's got quite a frow
 
 a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]a[sp]x[sp]-[sp]r[sp]-[sp]x[sp]x".
 
-instead of taking mad train:
-	say "You'd strain to find a use for trains here.";
+check taking mad train: say "You'd strain to find a use for trains here." instead
 
 a tamarind is a fruit. description is "It looks more like a potato than any fruit you know. But it still counted."
 
@@ -20286,8 +20266,7 @@ to decide which number is curtis-level:
 	decide on 4.
 
 to coin-eval:
-	if number of visible fruits is 0:
-		continue the action;
+	if number of visible fruits is 0, continue the action;
 	let temp be curtis-level;
 	if temp is 4:
 		say "Curtis says 'Boy, you have a lot of goodies now. Wouldn't want to lose them carrying all those fruits.' He helps keep your inventory lean and mean.";
@@ -20342,11 +20321,9 @@ Dr Lola Ollard is a proper-named boring thing. description of Dr Lola is "[coin-
 
 to say do-coin: say "Doing anything with or too such a horrid counterfeit coin wouldn't be very satisfying or productive. Probably best to get this off your hands for any profit at all"
 
-to say coin-per-d:
-	say "[he-she-c] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
+to say coin-per-d: say "[he-she-c] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
 
-to say ollard-hint:
-	say "[he-she-c] is worse than useless to society but only useless to you. Yay?"
+to say ollard-hint: say "[he-she-c] is worse than useless to society but only useless to you. Yay?"
 
 after doing something with coin-person:
 	if coin-person is Lord Al:
@@ -20357,8 +20334,7 @@ after doing something with coin-person:
 
 understand "dollar bill" and "bill" as droll dollar.
 
-to say if-clear:
-	say "[if Clangier Clearing is visited]--ah, you're nodding, you've seen it--[else] [end if]"
+to say if-clear: say "[if Clangier Clearing is visited]--ah, you're nodding, you've seen it--[else] [end if]"
 
 table of coingiving
 levb4	levaf	get-token	get-coin	get-coins	get-dollar	blabber
@@ -20379,8 +20355,7 @@ the moss cap is a thing.
 
 description of moss cap is "The moss bits of the cap go on the outside, leaving the dirty bits to fit over your head. So you'd feel AND look weird wearing it."
 
-instead of wearing moss cap:
-	say "It was a stupid idea, and it'll look stupid if you wear it."
+check wearing moss cap: say "The moss cap is a silly idea in general. It's extra silly if you wear it." instead; [?? test]
 
 chapter compass
 
@@ -20388,8 +20363,7 @@ the compass is a thing.
 
 description of compass is "It is property of Camp SOS. Its needle is pointing steadily north, so at least it wasn't a SpasmCo product."
 
-check examining compass when mrlp is routes:
-	say "It's flipping about uselessly. Guess you can't rely on normal directions here." instead;
+check examining compass when mrlp is routes: say "The compass is flipping about uselessly. Guess you can't rely on normal directions here." instead;
 
 the needle is a useless boring thing. it is part of the compass. description of the needle is "It seems to keep pointing north as you turn around. Good enough.". bore-text of the needle is "The needle's inside the compass, and you don't need or want to mess with it."
 
@@ -20397,16 +20371,14 @@ a-text of moss cap is "RYRRYRR". b-text of moss cap is "RGRRYRR". parse-text of 
 
 check going north in Rustic Citrus:
 	if moss cap is off-stage, try going south instead;
-	if player has moss cap:
-		say "The moss cap isn't helping your sense of direction as much as it should. Well, not in its present form." instead;
+	if player has moss cap, say "The moss cap isn't helping your sense of direction as much as it should. Well, not in its present form." instead;
 	now others is unspoiled;
 
 chapter drinks stand
 
 the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a weird omen prism.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
 
-check taking drinks stand:
-	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
+check taking drinks stand: say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
 
 the citrus sign is part of the abandoned drinks stand. description is "It says CURTIS['] (sic) RUSTIC CITRUS.". the citrus sign is useless.
 
@@ -20426,10 +20398,9 @@ the eerie blurbs are part of the abandoned drinks stand. description is "A weird
 
 a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "RRYYRYRRYYP". parse-text of eerie blurbs is "b[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]s".
 
-check scaning blurbs when cheat-on is true:
-	say "You just generally scan the blurbs, not noting them, and it turns up one positive..."
+check scaning blurbs when cheat-on is true: say "You just generally scan the blurbs, not noting them, and it turns up one positive..."
 
-the blueberries are a plural-named fruit. description is "Yes, they're really more purple, I know."
+the blueberries are a plural-named fruit. description is "Yes, blueberries are really more purple, I know."
 
 chapter cantaloupe
 
@@ -20439,11 +20410,9 @@ the can of peanut cola is a thing. description is "There's an actual peon on one
 
 a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY". parse-text of peanut cola is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
-check drinking peanut cola:
-	say "[one of]Eww. Nasty[or]You don't want to repeat that experiment[stopping]. If only you could change it into something else entirely with just one word!" instead;
+check drinking peanut cola: say "[one of]Eww. Nasty[or]You don't want to repeat that experiment[stopping]. If only you could change it into something else entirely with just one word!" instead;
 
-Instead of taking the peanut cola:
-	say "Blech. Too nasty to touch. You might drink it in a moment of weakness."
+check taking the peanut cola: say "Blech. Too nasty to touch. You might drink it in a moment of weakness." instead;
 
 chapter persimmon
 
@@ -20464,10 +20433,7 @@ section magenta rope
 the magenta rope is a vanishing boring thing. initial appearance of the magenta rope is "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant.". description of magenta rope is "Oddly colored. It's got a yellowish tinge.". bore-check of magenta rope is bore-magenta-rope rule.
 
 this is the bore-magenta-rope rule:
-	if current action is taking:
-		say "It would uncover Curtis's silly writings--the note and the rant. You'd be best off getting rid of all three, somehow.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "It would uncover Curtis's silly writings--the note and the rant. You'd be best off getting rid of all three, somehow.";
 
 a-text of magenta rope is "RYRYRRYRYRY". b-text of magenta rope is "RYRGRRGRYRG". parse-text of magenta rope is "x[sp]-[sp]x[sp]e[sp]x[sp]x[sp]a[sp]x[sp]-[sp]x[sp]e".
 
@@ -20548,8 +20514,7 @@ chapter gooseberry
 
 the sorer bogey is ghostly scenery in Swell Wells. "You can't see the sorer bogey, but knowing it's there makes your skin break out in pimples...no, bumps."
 
-check taking sorer bogey:
-	say "Don't be a silly goose." instead;
+check taking sorer bogey: say "Don't be a silly goose." instead;
 
 a-text of sorer bogey is "RYYRYRYRRO". b-text of sorer bogey is "RGYRYPYRRB". parse-text of sorer bogey is "x[sp]o[sp]-[sp]x[sp]-[sp]b[sp]-[sp]x[sp]x[sp]y".
 
@@ -20583,18 +20548,14 @@ after looking in Gates Stage (this is the retract halt lath rule):
 		moot halt lath;
 	continue the action;
 
-check going inside in Gates Stage:
-	try going north instead;
+check going inside in Gates Stage: try going north instead;
 
 section Valence Enclave
 
 the Valence Enclave is boring scenery in Gates Stage. description of Valence Enclave is "Almost as big as Yorpwald's famous, enormous Admit-Us Stadium, it's reserved for very special events indeed! Whatever could be inside?". bore-text of Valence Enclave is "You can't do much but look at the Valence Enclave. Or try to enter it.". bore-check is the bore-valence-enclave rule.
 
 this is the bore-valence-enclave rule:
-	if current action is entering:
-		try going north;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, try going north instead;
 
 understand "near arena" and "near/arena" as valence enclave.
 
@@ -20630,40 +20591,33 @@ section check for PERP
 
 perp-check is a truth state that varies.
 
-to say two-of-three:
-	say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
+to say two-of-three: say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-perp-priv is a privately-named thing. it is reflexive. description is "bug".
+the feeling you are a perp is a vanishing boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-check rule is "There must be something you can do to shake the feeling you are a perp."
 
-perp-priv is cheat-spoilable.
+a-text of perp is "RRYR". b-text of perp is "PRYP". parse-text of perp is "P[sp]R[sp]E[sp]P".
 
-a-text of perp-priv is "RRYR". b-text of perp-priv is "PRYP". parse-text of perp-priv is "P[sp]R[sp]E[sp]P".
-
-understand "perp-priv" as perp-priv when debug-state is true.
+every turn when player has feeling you are a perp: say "You [one of][or]still [stopping]can't shake that feeling you're [if gate-level is 1]kind of [end if]a PERP.";
 
 chapter big endgame check
 
 check going north in Gates Stage:
-	if player does not have passport:
-		say "'Need ID! Indeed!' the gates say mechanically." instead;
+	if player does not have passport, say "'Need ID! Indeed!' the gates say mechanically." instead;
 	if number of carried fruits > 0:
 		say "(First returning the extra fruit[unless number of carried fruits is 1]s[end if])[paragraph break]";
 		mootl list of all carried fruits;
 	if gate-level < 2:
 		now perp-check is true;
-		now perp-priv is part of the passport;
-	if gate-level is 0:
-		say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
-	else if gate-level is 1:
-		say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
+		now player has feeling you're a perp;
+	if gate-level is 0, say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
+	if gate-level is 1, say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
 	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fly-Heart Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPIREVAL PREVAILER!";
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
 		min-and;
 		process the notify score changes rule;
 	now others is solved;
-	if debug-state is true:
-		append "Test passed for Others.[line break]" to the file of debuggery;
+	if debug-state is true, append "Test passed for Others.[line break]" to the file of debuggery;
 	if epilogue rule is a final response rule listed in the Table of Final Question Options:
 		choose row with final response rule of epilogue rule in the Table of Final Question Options;
 		blank out the whole row; [don't let the player ROVE OVER again]
@@ -20689,10 +20643,6 @@ to say mami:
 		say "[d-word-u] Mister Master Mind";
 	else:
 		say "[if player is in Rustic Citrus]Named It[else]AND TIME,[end if] Mrs. Master Mind";
-
-every turn when player is in Gates Stage and perp-check is true and perp-priv is not reflexed (this is the perp-clue rule):
-	if a random chance of 1 in 2 succeeds:
-		say "The bouncer's yell of 'PERP!' rings in your ears.";
 
 chapter sonicing
 
@@ -20847,15 +20797,8 @@ to decide which number is gate-level:
 	let A be 0;
 	if viewer is reflexed, increment A;
 	if searcher is reflexed, increment A;
-	if perp-priv is reflexed, increment A;
+	if feeling you're a perp is moot, increment A;
 	decide on A.
-
-to upgrade-passport:
-	if gate-level is 2:
-		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
-	else if gate-level is 1:
-		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
-	continue the action;
 
 chapter reviewing
 
