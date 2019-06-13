@@ -119,7 +119,7 @@ wzup	wzup	false	526524588	--	"whassup"	"whassup"	pre-wzup rule	post-wzup rule	"'
 ye hoop	censer	true	267453412	--	"pooh"	"pooh"	--	post-pooh rule	"[get-censer]."
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	post-phooey rule	"[get-censer]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
-maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
+maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-bye rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	--	post-hogs-bye rule	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
@@ -245,7 +245,7 @@ Blake	Blake	false	255159849	--	"bleak"	"bleak"	--	--	"Blake moans, depressed, wh
 Bredo	Bredo	false	326930483	--	"bored"	"bored/robed"	--	--	"Bredo gives an exasperated look, shrugs, and walks off for someone more [bored-robed] to follow. Or beat up. Or philosophize with. Whichever."
 Cedrick	Cedrick	false	370096195	--	"cricked"	"cricked"	--	--	"Suddenly, Cedrick clutches at his knee, then at his elbow. 'I can't do this anymore!' He whines, as he runs upstairs for some rest."
 Daryl	Daryl	false	284713801	--	"lardy"	"lardy"	--	--	"Suddenly, Daryl grows flabby and is really in no shape for fighting. He excuses himself, and Rodney shrugs."
-Demitri	Demitri	false	491329864	--	"timider"	"timider"	--	--	"Demitri's face becomes contorted with fear, perhaps fear at how embarrassing it would be if you managed to beat him and Rodney[if number of visible warriors > 3] and the rest[end if]. He runs away quickly, muttering 'I'm tired.'"
+Demitri	Demitri	false	491329864	--	"timider"	"timider"	--	--	"Demitri's face becomes contorted with fear, perhaps fear at how embarrassing it would be if you managed to beat him and Rodney[if vw > 3] and the rest[end if]. He runs away quickly, muttering 'I'm tired.'"
 Dewey	Dewey	false	506935332	--	"weedy"	"weedy"	--	--	"Dewey loses muscle mass before your eyes (don't worry, he's still in good enough shape.) His armor hangs off him loosely. He flees from embarrassment, but Rodney doesn't care enough to follow. Don't worry--he'll gain his muscle back. Working out is a habit for him!"
 Edwin	Edwin	false	370670325	--	"wined"	"wined"	--	--	"You watch as Edwin's face grows redder and he begins hiccuping. He lurches unsteadily, and then he runs upstairs to where he can lie down. He had only been opposed to alcohol on principle, but he will be more understanding now to others who drink."
 Eldon	Eldon	false	345909122	--	"olden"	"olden"	--	--	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He limps off, muttering he wishes he could help. Once outside the Trefoil and free of your magic, his youth comes back, but he bolts in shame. Hopefully he retained some wisdom."
@@ -259,7 +259,7 @@ Preston	Preston	false	637239940	--	"pronest"	"pronest"	--	--	"Preston suddenly l
 Reggie	Reggie	false	451128271	--	"eggier"	"eggier"	--	--	"Reggie suddenly snaps. As do the people next to him. They both mentioned that he smells a little sulfuric, and he runs outside to freshen up. He doesn't come back."
 Royce	Royce	false	428847326	--	"coyer"	"coyer"	--	--	"Royce clams up, and when Rodney isn't looking, hey slips away."
 Shane	Shane	false	332457700	--	"ashen"	"ashen"	--	--	"Suddenly, the color rushes from Shane's face, and he looks a bit embarrassed. He looks at Rodney, realizing 'He's an...' before running away."
-Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	--	--	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
+Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	--	--	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if vw is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	--	--	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	--	--	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
 Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	pre-rodney rule	post-rodney rule	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut where voices boom 'Stop! Die!' But where you wind up is a bit quieter, but there's someone or something still a bit threatening."
@@ -382,7 +382,7 @@ coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vac
 coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	--	post-iconic-flip rule	"You do a little double-think-move on the coins. They become something entirely different."
 viewer	viewer	false	601028460	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
-perp-priv	perp-priv	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
+feeling you're a perp	feeling you're a perp	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
 
 book auxiliary text and rules
 
@@ -390,6 +390,10 @@ section ordeal reload auxiliary
 
 this is the post-palm-lamp rule:
 	now dope op-ed is in Dusty Study;
+	now bean-smell is true;
+	now Dusty Study is lit;
+	if latches are off-stage, now player has latches;
+	process the adjust light rule;
 
 to say preefies:
 	if number of prefigured things > 0, say ". And now you have reason to mess with [the list of prefigured things], too";
@@ -770,7 +774,7 @@ this is the pre-solve-maze rule:
 this is the post-nowt-town-wont rule:
 	poss-d;
 	shuffle-nowt-town;
-	unless l-m is cscanned or l-m is ncscanned, poss-d;
+	if mazeguide-scanned is false, poss-d;
 	now maze-points is 1;
 
 to say wont-maze:
@@ -783,7 +787,7 @@ to say wont-maze:
 this is the post-mazeltov rule:
 	min-up;
 	now maze-points is 2;
-	unless l-m is cscanned or l-m is ncscanned:
+	if mazeguide-scanned is false:
 		min-up;
 		increment maze-points;
 	shuffle-nowt-town;
@@ -1230,7 +1234,7 @@ to say bored-robed:
 		now bredo-bored is false;
 
 this is the pre-rodney rule:
-	if number of visible warriors > 4:
+	if vw > 4:
 		if the player's command includes "yonder":
 			say "Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?";
 			now rodyon is true;
@@ -1243,7 +1247,6 @@ this is the post-rodney rule:
 	pad-rec-q "curst palace";
 
 to say rodney-ditch:
-	let vw be number of visible warriors;
 	if the player's command includes "droney":
 		say ". [if vw > 1]Rodney seems to grow tired of giving the orders. He loses his crispness and[else]Rodney begins babbling about something or other, then[end if] looks around, embarrassed--";
 		if vw > 1:
@@ -2043,7 +2046,7 @@ icons	"The icons rattle and hum promisingly."
 s-c	"The sonic coins hum almost questioningly."
 viewer	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
-perp-priv	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
+feeling you're a perp	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
 
 to say dior-hint: say "That's not quite it. You can probably look at the diorama to see what to do"
 
@@ -2225,7 +2228,7 @@ melon	"The melon is fine as-is. It's better than the one that was on display, fo
 peach	"You got enough of a discount. Really."
 mango	"Snag mo['] mangos? No mas, G."
 papayas	"You've already established yourself as a prompt payer."
-perp-priv	"Don't want to over-prep[win-north]."
+feeling you're a perp	"Don't want to over-prep[win-north]."
 searcher	"You've done enough researching[win-north]."
 viewer	"You've done enough reviewing[win-north]."
 
@@ -2339,7 +2342,7 @@ lecturer	--	Ian	[end stores hinting]
 poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[plus][or][if cur-score of routes > 0]You've already figured one word[else]It's a certain sort of word[end if].[plus][or]Directions are confusing here, and standard ones don't work, but there's another way to get around.[plus][or]PREPOSITIONS.[minus][cycling]"
 sit a nag	"[one of]It's just a bench, but the name brand indicates an anagram.[plus][or]Touching the [sit a nag] does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
 scripture picturers	"[one of]Going in to the church is not so easy. Simply saying IN isn't churchy enough.[plus][or]You need to be a little more flowery to enter the church. Is there any clue?[plus][or]DIE SIN becomes something new.[plus][or]You can kick the sign to change it to SIN DIE for another clue.[plus][or]INSIDE.[minus][cycling]"	--	"INSIDE"
-cler-scen	--	scripture picturers
+snatchier chantries	--	scripture picturers
 Brother Horbert	"He'll mix the reagents once you get them."
 summary	"It's there for background: why you're doing what you're doing. Oh, about Mum Ray, I can't tell you. It's too sad/confidential/unbelievable."
 snoop spoon	"Examine the snoop spoon for a hint when you need it."
@@ -2419,8 +2422,8 @@ zany meter	--	volt maze
 n-t-air	--	volt maze
 big l	"The big L tells you what letter the maze starts on."
 big-let	"The big letters tell you that the maze goes from L to [if Unwary Runway is visited]some later letter[else]V[end if]."
-l-m	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
-m-l	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
+Lev Tzoma	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
+Zo Mavelt	"You can scan Zo for hints. He's not much for conversation."	--	"MAZEL TOV"
 Tom Alvez	"You can scan Tom for hints. He's not much for conversation."	--	"MAZEL TOV"
 lamb	"[one of]The lamb is petrified with fear, but maybe the right fear would get it going again.[plus][or]What sort of noise can you make to get it going?[plus][or]BLAM.[minus][cycling]"	--	"BLAM"
 onyx censer	"[one of]The censer's black and green and really retro.[plus][or]The censer may remind you of what people used to play text adventures on a long time ago.[plus][or]It can become a SCREEN.[minus][cycling]"	--	"make a SCREEN"
@@ -2489,7 +2492,7 @@ song buttons	--	tunes
 jukebox	--	tunes
 perma-amper	"[one of]The perma-amper is kind of complex, but knowing the right way to fiddle with it helps.[plus][or]It's something with a, e, m, p and r.[plus][or]What's another word for reconfigure?[plus][or]REMAP.[minus][cycling]"
 tunes	"[one of]It's kind of complicated to change the tunes or get rid of them.[plus][or]Just pushing stuff to alter the tunes doesn't work.[plus][or]However, following the instructions can get rid of the tunes, if you do it right.[plus][or]You need to UNSET the tunes.[minus][cycling]"
-jar of pills	"[one of]What can you do with PILLS?[plus][or]You can pop the pills, but the lid is stuck.[plus][or]The pills can make life convenient for your adversaries, if they were on the ground.[plus][or]You would have to SPILL them.[plus][or]You can do so at various places.[minus][cycling]"
+li'l p's pills	"[one of]What can you do with PILLS?[plus][or]You can pop the pills, but the lid is stuck.[plus][or]The pills can make life convenient for your adversaries, if they were on the ground.[plus][or]You would have to SPILL them.[plus][or]You can do so at various places.[minus][cycling]"
 tines	--	stein
 stein	"[one of]The stein is free.[plus][or]How does the stein hook up with the tines?[plus][or]INSERT the stein and you're five-sixths there.[plus][or]INSET the stein.[minus][cycling]"
 casper	"[if recaps is moot]You've disturbed Casper enough.[else][casp-cap][end if]"
@@ -2771,7 +2774,7 @@ passport	"The passport will get you through the gates in the Gates Stage, but yo
 Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"	[end others hinting]
-perp-priv	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]"
+feeling you're a perp	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]"
 Great Grate	"The Great Grate is immovable." [start demo dome hinting, though there's really not much]
 chic loner chronicle	"[dome-blab]"
 shiest thesis	"[dome-blab]"

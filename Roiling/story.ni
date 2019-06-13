@@ -1210,8 +1210,7 @@ carry out gotoing:
 		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
 	if mrlp is presto: [PRESTO]
-		if noun is Saps' Pass and Phat Path is visited:
-			say "Saps['] Pass is sort of the Phat Path, now." instead;
+		if noun is Saps' Pass and Phat Path is visited, say "Saps['] Pass is sort of the Phat Path, now." instead;
 		if noun is Dirge Ridge:
 			if Leo is dismissed:
 				post-wall-arch;
@@ -1231,11 +1230,9 @@ carry out gotoing:
 	d "From [progval of location of player] to [progval of noun].";
 	if progval of noun < progval of location of player:
 		repeat through table of progvals:
-			if there is a rm entry and rm entry is noun:
-				say "[why-not entry][line break]" instead;
+			if there is a rm entry and rm entry is noun, say "[why-not entry][line break]" instead;
 			if there is a regs entry and regs entry is mrlp:
-				if rmprog entry is progval of noun:
-					say "[why-not entry][line break]" instead;
+				if rmprog entry is progval of noun, say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug. Let me know about it at [email]." instead;
 	if noun is shunned:
 		if noun is Rascal Craals, say "The Rascal Craals are inaccessible now that the haunter's torn through them. You don't need or want to hang out there, though." instead;
@@ -1777,9 +1774,9 @@ plebe	"You figure you should grill him about how worthless he thinks he is, but 
 Rand	"Rand gives a whole new dimension to small talk. But not for long, thankfully."
 Leo	"Leo gives a whole new dimension to small talk. But not for long, thankfully."
 hogs	"The whole 'Who do you think you are' won't go well with these hogs. They're here to guard you from what's beyond, and that wall is helping."
-l-m	"'I'm here to help, just by being me, apparently.'"
-m-l	"'I'm here to help, just by being me, apparently.'"
-Tom Alvez	"'I'm here to help, just by being me, apparently.'"
+Zo Mavelt	"'If you scan me and go north, I'll go away, and someone else might appear.'"
+Tom Alvez	"'If you scan me and go north, I'll go away, and someone else might appear.'"
+Lev Tzoma	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 trolls	"They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh." [reflex OYSTER]
 patrons	--
 Casper	"Once he starts, he won't stop. But he's feeling standoffish after his first big lecture."
@@ -1870,8 +1867,7 @@ to say tho-need:
 	if power-back is true:
 		say ", though I feel you may not need the eels['] energy"
 
-to say left-here:
-	say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be"
+to say left-here: say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be"
 
 to say doc-in-prison:
 	say "[he-she-c] gestures to the ropins and then shakes an invisible fence of [his-her] own. As if [he-she] is too exhausted to talk any more[if Dr Yow has been rowdy and Dr Yow has been wordy]. You figured two ways to get [him-her] to talk, and that's probably enough[else if Dr Yow has been rowdy or Dr Yow has been wordy]. Maybe Dr. Yow has a bit more expressiveness in [him-her][end if].";
@@ -1920,8 +1916,8 @@ Si Reed	"Si Reed taps his head. You need to THINK right, here! But you sort of a
 Si Reed	"Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. You'd like to know what Si Reed knows!" [begin troves]
 lamb	"It's a baaaaad conversationalist." [begin presto]
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
-l-m	"[left-here].'"
-m-l	"[left-here].'"
+Lev Tzoma	"[left-here].'"
+Zo Mavelt	"[left-here].'"
 Tom Alvez	"[left-here].'"
 hogs	"They snort and laugh as if you are beneath speaking to or even wasting harsh words at."
 bored yak	"The yak, not being very yakety, does not talk back."
@@ -2146,18 +2142,18 @@ Rand	Leo	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We c
 Leo	Rand	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Leo is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
 Leo	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
 Rand	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
-l-m	Elvira	"'I'm safe from her in this maze. I think?'"
-m-l	Elvira	"'I'm safe from her in this maze. I think?'"
+Lev Tzoma	Elvira	"'I'm safe from her in this maze. I think?'"
+Zo Mavelt	Elvira	"'I'm safe from her in this maze. I think?'"
 Tom Alvez	Elvira	"'I'm safe from her in this maze. I think?'"
-l-m	volt maze	"[maze-end-clue].'"
-m-l	volt maze	"[maze-end-clue].'"
+Lev Tzoma	volt maze	"[maze-end-clue].'"
+Zo Mavelt	volt maze	"[maze-end-clue].'"
 Tom Alvez	volt maze	"[maze-end-clue].'"
-l-m	m-l	"[maze-later]."
-l-m	Tom Alvez	"[maze-later]."
-m-l	l-m	"[maze-before]."
-m-l	Tom Alvez	"[maze-later]."
-Tom Alvez	l-m	"[maze-before]."
-Tom Alvez	m-l	"[maze-before]."
+Zo Mavelt	Lev Tzoma	"[maze-later]."
+Zo Mavelt	Tom Alvez	"[maze-later]."
+Lev Tzoma	Zo Mavelt	"[maze-before]."
+Lev Tzoma	Tom Alvez	"[maze-later]."
+Tom Alvez	Lev Tzoma	"[maze-before]."
+Tom Alvez	Zo Mavelt	"[maze-before]."
 hogs	popgun	"They snicker at the memory."
 hogs	Rand	"They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect."
 hogs	Leo	"They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect."
@@ -2628,15 +2624,13 @@ section debugging
 [this checks to see if lawnmowering worked. What is left over?]
 
 to lawnmower (mytab - a table-name) :
-	if debug-state is false:
-		continue the action;
+	if debug-state is false, continue the action;
 	let mower be true;
 	repeat through mytab:
 		if response entry is not mowered:
 			say "DEBUG: Did not touch [response entry]: [prompt entry][line break]";
 			now mower is false;
-	if mower is true:
-		say "DEBUG: Lawnmowering worked.";
+	if mower is true, say "DEBUG: Lawnmowering worked.";
 
 chapter quip-variable-text
 
@@ -3164,20 +3158,14 @@ after quipping when qbc_litany is the table of Elmo comments:
 		enact gulp-quip;
 		enact elmomole-quip;
 		enact got-red-yellow-quip;
-		if meet bans is escanned and meet bans is moot:
-			now basement-quip is Elmo-av;
-		if tables are escanned and tables are moot:
-			now stable-quip is Elmo-av;
-		if pram is escanned and pram is moot:
-			now ramp-quip is Elmo-av;
-		if giant pin is escanned and giant pin is moot:
-			now painting-quip is Elmo-av;
+		if meet bans is escanned and meet bans is moot, now basement-quip is Elmo-av;
+		if tables are escanned and tables are moot, now stable-quip is Elmo-av;
+		if pram is escanned and pram is moot, now ramp-quip is Elmo-av;
+		if giant pin is escanned and giant pin is moot, now painting-quip is Elmo-av;
 		if sitar is escanned or stria is escanned:
-			if sitar is moot or stria is moot:
-				now stair-quip is Elmo-av;
+			if sitar is moot or stria is moot, now stair-quip is Elmo-av;
 		choose row with short of "diorama" in table of pad-stuff;
-		if known entry is true:
-			enact dio-quip;
+		if known entry is true, enact dio-quip;
 		if niche is escanned and niche is moot:
 			enact chimney-quip;
 			now chimney-quip is Elmo-av;
@@ -3190,11 +3178,9 @@ after quipping when qbc_litany is the table of Elmo comments:
 		say "You now know...[line break][current-known][line break]";
 		enact got-red-yellow-quip;
 		another-Elmo-hint;
-		if scale-quip is mowered and gulp-quip is mowered and elmomole-quip is mowered:
-			enact still-busted-quip;
+		if scale-quip is mowered and gulp-quip is mowered and elmomole-quip is mowered, enact still-busted-quip;
 	else if current quip is still-busted-quip or current quip is got-red-yellow-quip:
-		if chimney-quip is mowered:
-			say "You also note the Y is orange. Red + yellow = orange, and Y can be either a consonant or a vowel.";
+		if chimney-quip is mowered, say "You also note the Y is orange. Red + yellow = orange, and Y can be either a consonant or a vowel.";
 		disable the settler-quip quip;
 		disable the yorp-quip quip;
 		enact gp-quip;
@@ -3242,8 +3228,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 	else if current quip is satchel-quip or current quip is dio-elm-2-quip:
 		unless still-no-gp-quip is mowered or got-it-quip is mowered:
 			enact still-no-gp-quip;
-			if current quip is dio-elm-2-quip:
-				enact dio-2-quip;
+			if current quip is dio-elm-2-quip, enact dio-2-quip;
 	else if current quip is dio-elm-quip:
 		enact dio-elm-2-quip;
 		repeat with rb running through ramabits:
@@ -3272,11 +3257,8 @@ after quipping when qbc_litany is the table of Elmo comments:
 		disable the yorp-quip quip;
 		disable the orange-know-quip quip;
 		disable the orange-dunno-quip quip;
-		if still-no-gp-quip is mowered or got-it-quip is mowered or showset-quip is mowered:
-			enact interr-quip;
-	else if current quip is dio-quip or current quip is trips-quip or current quip is dio-all-quip or current quip is dio-2-quip or current quip is satchel-quip or current quip is yorp-quip or current quip is settler-quip or current quip is strip-quip or current quip is weather-quip or current quip is girls-quip or current quip is sports-quip or current quip is curb-quip or current quip is social-quip or current quip is media-quip-2 or current quip is clues-quip:
-		do nothing;
-	else if current quip is toy-theory-quip:
+		if still-no-gp-quip is mowered or got-it-quip is mowered or showset-quip is mowered, enact interr-quip;
+	else if current quip is dio-quip or current quip is trips-quip or current quip is dio-all-quip or current quip is dio-2-quip or current quip is satchel-quip or current quip is yorp-quip or current quip is settler-quip or current quip is strip-quip or current quip is weather-quip or current quip is girls-quip or current quip is sports-quip or current quip is curb-quip or current quip is social-quip or current quip is media-quip-2 or current quip is clues-quip or current quip is toy-theory-quip:
 		do nothing;
 	else if current quip is bye-Elmo-quip:
 		lawnmower table of Elmo comments;
@@ -3334,29 +3316,20 @@ chapter pause-and-wait
 
 [this is not used, since it clears the screen, but just in case...]
 
-to ptg:
-	if debug-state is false:
-		pause the game;
+to ptg: if debug-state is false, pause the game;
 
 chapter taking scenery
 
 section general
 
 check taking scenery:
-	if noun is forest or noun is sortie or noun is metros:
-		say "You took that area (out) last game." instead;
-	if location of player is Same Mesa:
-		say "Scenery is only here to tell you where to go." instead;
-	if location of player is Cleric Circle:
-		say "That'd be kind of sinful and disruptive." instead;
-	if location of player is Idle Deli:
-		say "The [noun] is part of the ambiance, for better or worse." instead;
-	if location of player is Drain Nadir:
-		say "Nothing here is valuable enough. You need to leave it all behind!" instead;
-	if location of player is Econ Cone:
-		say "Oh, you'll TAKE Spoilopolis, all of it. But you can't lug THAT around." instead;
-	if location of player is Upscale Capsule:
-		say "You don't need to take that. Just take inspiration from it." instead;
+	if noun is forest or noun is sortie or noun is metros, say "You took that area (out) last game." instead;
+	if location of player is Same Mesa, say "Scenery is only here to tell you where to go." instead;
+	if location of player is Cleric Circle, say "That'd be kind of sinful and disruptive." instead;
+	if location of player is Idle Deli, say "The [noun] is part of the ambiance, for better or worse." instead;
+	if location of player is Drain Nadir, say "Nothing here is valuable enough. You need to leave it all behind!" instead;
+	if location of player is Econ Cone, say "Oh, you'll TAKE Spoilopolis, all of it. But you can't lug THAT around." instead;
+	if location of player is Upscale Capsule, say "You don't need to take that. Just take inspiration from it." instead;
 	say "You don't need to take any of the scenery here. Or, well, anywhere. Unless you change it to something else first." instead;
 
 chapter d
@@ -6332,7 +6305,6 @@ i-sung is a truth state that varies.
 lyre-dest is a truth state that varies.
 
 check singing:
-	if player is in Same Mesa, say "You look at the scripture picturers for clues, and swirling in the design you see [dssd]. Hmm. You don't know any songs like that." instead; [routes]
 	if player is in Cleric Circle, say "You don't know any appropriate songs, here." instead;
 	if player is in Drain Nadir and I'd Cede is in Drain Nadir, say "You can't quite mimic Eddie C, but maybe you could tweak his singer-ness. You can't move to artists['] straits with your job. You're more suing than 'I sung' now." instead; [troves]
 	if mrlp is troves, say "No hippy trippy blues song about being poor here, if you please. And you will--you're not in power, yet." instead;
@@ -7528,7 +7500,7 @@ carry out fliptoing:
 					min-up;
 			if the-from entry is maze walls:
 				if the-from entry is maze walls:
-					unless l-m is cscanned or l-m is ncscanned:
+					if Tom Alvez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned:
 						increment the score;
 						increment cur-score of mrlp;
 					two-up; [this is kind of a bad hack--two-up checks the score for increases, hence no min-up in the unless above]
@@ -7562,13 +7534,7 @@ carry out fliptoing:
 				now diorama-flip is true;
 				process the Gunter Knocks rule;
 			else if the-to entry is not visible:	[components aren't broken off]
-				if the-to entry is not the-from entry and the-to entry is not a backdrop:
-					move the-to entry to location of player;
-			if the-to entry is lamp:
-				now bean-smell is true;
-				now Dusty Study is lit;
-				if latches are off-stage, now player has latches;
-				process the adjust light rule;
+				if the-to entry is not the-from entry and the-to entry is not a backdrop, move the-to entry to location of player;
 			if the-to entry is not the-from entry and the-from entry is not reflexed, moot the-from entry; [this is to drop a new item in place]
 			if the-to entry is visible:
 				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
@@ -9407,7 +9373,7 @@ check examining pedanto-notepad for the first time:
 
 to decide whether (qq - a truth state) is unrelevant:
 	if qq is false, decide yes;
-	if mrl is Ordeal Reload or mrl is stores, decide no;
+	if mrlp is Ordeal Reload or mrlp is stores, decide no;
 	decide yes;
 
 to say cur-has:
@@ -10578,7 +10544,7 @@ in-try is a truth state that varies.
 to say aop:
 	say "[if Adobe Abode is not visited]PAST[else if Idle Deli is not visited]ACROSS[else]PAST or ACROSS[end if]";
 
-before entering the cler-scen:
+check entering the snatchier chantries:
 	if Cleric Circle is unvisited, say "The Cleric Circle's doors are open to all, but one does not enter it by brute forcing directions." instead;
 	say "You re-enter, no longer worried about the exact preposition for doing so.";
 
@@ -11929,7 +11895,7 @@ carry out shooting:
 		if noun is fightin, say "That'd just make him madder." instead;
 		if noun is Leo and Rand is fightin, say "That wouldn't help you beat Rand, and if it did, it'd make Leo madder." instead;
 		say "After saying Whassup to them both? That's be cold. Plus, [if noun is Rand]Leo[else]Rand[end if] would avenge his friend." instead;
-	if noun is m-l or noun is l-m or noun is Tom Alvez, say "They aren't preventing you from trying to complete the maze." instead;
+	if noun is a mazeguide, say "[noun] isn't preventing you from trying to complete the maze." instead;
 	if noun is cistern, say "Pointless vandalism." instead;
 	if noun is ether, say "You can't see through it. Plus, the popgun is not a gun of un-fog." instead;
 	if noun is Nowt Town, say "Brute force is a better way to get maze hints." instead;
@@ -13484,30 +13450,35 @@ a mazeroom is a kind of room. the printed name of a mazeroom is usually "Nowt To
 
 the specification of mazeroom is "A room you don't need to visit at all but which might give clues."
 
-l-m is a privately-named person. understand "lev matzo" and "lev/matzo" as l-m when lev-first. printed name of l-m is "Lev Matzo".
+a mazeguide is a kind of person. a mazeguide has a number called maze-order. description of a mazeguide is usually "[one of]A man introducing himself as [or][stopping][the person described] stands here [if the person described is bscanned or person described is escanned]nervously[else]waiting for you to do something[end if]."
 
-to decide whether lev-first:
-	if m-l is not off-stage, decide no;
-	if l-m is in Unwary Runway or l-m is moot, decide yes;
-	decide no;
+mazeguide-scanned is a truth state that varies.
 
-m-l is a privately-named person. understand "matzo lev" and "lev/matzo" as m-l when m-l is not off-stage. printed name of m-l is "Matzo Lev".
+after scaning a mazeguide:
+	now mazeguide-scanned is true;
+	continue the action;
 
-m-l is a person. "[one of]A man introducing himself as[or][stopping] Matzo Lev is here, more scannable than Lev Matzo."
+description of a mazeguide is "Perfectly unremarkable except for being dressed in red and unimpressed with your (not) solving this maze. He looks curiously at your settler."
 
-Tom Alvez is a person. "[one of]A man introducing himself as[or][stopping] Tom Alvez is here, more scannable than his predecessors."
+chapter Zo Mavelt
 
-a-text of m-l is "RYRYRRYR". b-text of m-l is "RYRYRPYR". parse-text of m-l is "m[sp]a[sp]x[sp]-[sp]x[sp]x[sp]-[sp]v". m-l is cheat-spoilable.
+Zo Mavelt is a mazeguide.
 
-a-text of l-m is "RYRYRRYR". b-text of l-m is "PGRYRRYP". parse-text of l-m is "x[sp]-[sp]x[sp]-[sp]x[sp]t[sp]-[sp]x".
+a-text of Zo Mavelt is "RYRYRRYR". b-text of Zo Mavelt is "RYRYRPYR". parse-text of Zo Mavelt is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-a-text of Tom Alvez is "RYRYRRYR". b-text of Tom Alvez is "RYRYPRYR". parse-text of tom alvez is "x[sp]-[sp]x[sp]-[sp]l[sp]x[sp]-[sp]x".
+chapter Tom Alvez
 
-description of l-m is "Perfectly unremarkable and unimpressed with your (not) solving this maze. He looks curiously at your settler."
+Tom Alvez is a mazeguide.
 
-description of m-l is "Perfectly unremarkable and unimpressed with your (not) solving this maze. He looks curiously at your settler."
+a-text of Tom Alvez is "RYRYRRYR". b-text of Tom Alvez is "RYRYRPYR". parse-text of Tom Alvez is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-description of Tom Alvez is "Perfectly unremarkable and unimpressed with your (not) solving this maze. He looks curiously at your settler."
+chapter Lev Tzoma
+
+Tom Alvez is a mazeguide.
+
+a-text of Lev Tzoma is "RYRYRRYR". b-text of Lev Tzoma is "RYRYRPYR". parse-text of Lev Tzoma is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+
+chapter going nowhere in volt maze
 
 voltzap is a truth state that varies.
 
@@ -13558,13 +13529,13 @@ the description of mazeroom is "You're in a maze room with no distinguishing fea
 check going to Nowt Town when player was in Grey Gyre:
 	say "[one of]You hope the maze isn't too big. Then you hope there's a quick way around it--[if zany meter is examined]the zany meter seems to indicate there might be[else]maybe the zany meter has advice[end if][or]You re-enter, not knowing whether to feel bad you're [if Unwary Runway is visited]trying[else]not even patient enough[end if] to brute-force things and run through the maze or bad you want an easy way through[if voltzap is false and Unwary Runway is visited] or too scared to touch any walls[end if][if Unwary Runway is visited and zany meter is unexamined] or too hasty to even read that zany meter this time around[end if][stopping]."
 
-Nowt Town is north of Grey Gyre. Nowt Town is in Presto. "You can exit back south or hit the maze proper to the west. A big L is tiled into the floor here[if m-l is moot]. Nothing really seems to have changed about the maze several times through, and you may flip if you have to go through the L-to-V maze again[end if]."
+Nowt Town is north of Grey Gyre. Nowt Town is in Presto. "You can exit back south or hit the maze proper to the west. A big L is tiled into the floor here[if lev tzoma is escanned]. Nothing really seems to have changed about the maze several times through, and you may flip if you have to go through the L-to-V maze again[end if]."
 
 the big l is scenery in Nowt Town. "It's a decent enough example of an L[if r00 is unvisited]. Maybe there are other letters in the maze[end if].". understand "letter" and "letter l" as big l when player is in Nowt Town.
 
 [is a mazeroom/a mazeroom is usually in presto]
 
-big-let is a privately-named backdrop. big-let is in r10,r00,r01,r02,r12,r22,r32,r33,r23,Unwary Runway. printed name of big-let is "the big letter"
+big-let is a privately-named backdrop. big-let is in r10, r00, r01, r02, r12, r22, r32, r33, r23, Unwary Runway. printed name of big-let is "the big letter"
 
 the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
@@ -13643,53 +13614,39 @@ r14 is a privately-named mazeroom in Presto. it is north of r13.
 
 r04 is a privately-named mazeroom in Presto. it is west of r14.
 
-Unwary Runway is an innie room in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but ahead things narrow--it's a bit scary, and you could be ambushed. Maybe it's worth a try[if l-m is off-stage and m-l is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
+Unwary Runway is an innie room in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but ahead things narrow--it's a bit scary, and you could be ambushed. Maybe it's worth a try[if Zo Mavelt is off-stage and Tom Alvez is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
 
-to say l-or-m:
-	say "[if l-m is visible][l-m][else][m-l][end if]";
-
-to say zztrue:
-	now voltzap is true;
-
-check going south in Unwary Runway:
-	if m-l is in Unwary Runway or l-m is in Unwary Runway:
-		say "'If you go north, someone might relieve me. I'm kinda getting bored here.'";
+to say zztrue: now voltzap is true;
 
 check going north in Unwary Runway:
-	say "The exit! [if l-m is visible]'Shalom, ol['] sham' calls [l-or-m].[paragraph break][end if]You've mapped it out...and just as you are about to cross, [one of]a[or]that[stopping] giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle. It spins back with a monotone 'OY VEY.' [if l-m is off-stage]You see someone coming from the north to check on the noise, but you can't get a really good look.[else][paragraph break][end if]";
-	say "[if voltzap is false]You find the walls really are electric--not too nasty, but bad enough, and you see red and say, with each ZVT(VZT?), LAME-O[zztrue].[else][one of]You manage to avoid the walls this time, but you doubt that dreidl's going away[or]There must be a better way through[stopping].";
-	if l-m is off-stage:
-		now l-m is in Unwary Runway;
-	else if l-m is in Unwary Runway:
-		if l-m is cscanned:
-			say "[drei-you]see someone walk into view to replace Lev Matzo.";
-			now m-l is in Unwary Runway;
-			moot l-m;
-		else:
-			say "[drei-you]see Lev Matzo throwing his hands up as if he wished he could have done more.";
-	else if m-l is in Unwary Runway:
-		if m-l is cscanned:
-			say "[drei-you]see someone else walk into view to replace Matzo Lev.";
-			moot m-l;
-			now Tom Alvez is in Unwary Runway;
-		else:
-			say "[drei-you]see Matzo Lev throwing his hands up as if he wished he could have done more.";
-	else if Tom Alvez is in Unwary Runway:
-		say "[drei-you]hear Tom Alvez moan 'Wait! I don't have a replacement?!'";
+	say "The exit! [if zo mavelt is not off-stage]'Shalom, ol['] sham' calls [random mazeguide in unwary runway].[paragraph break][end if]You've mapped it out...and just as you are about to cross, [one of]a[or]that[stopping] giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle. It spins back with a monotone 'OY VEY.' [if Zo Mavelt is off-stage]You see someone coming from the north to check on the noise, but you can't get a really good look.[else][paragraph break][end if]";
+	say "[if voltzap is false]You find the walls really are electric--not too nasty, but bad enough, and you see red and say, with each ZVT(VZT?), LAME-O[zztrue].[else][one of]You manage to avoid the walls this time, but you doubt that riddle dreidl's going away[or]There must be a better way through[stopping].";
+	replace-mazeguide;
 	go-back Grey Gyre;
 	the rule succeeds;
 
-to say drei-you:
-	say "[line break]As the dreidl chases you away, you "
+section replacing mazeguys
 
-after scaning when player is in Unwary Runway (this is the new random guy in volt maze rule):
-	d "[noun][if noun is cscanned] cscanned[end if][if noun is ncscanned] ncscanned[end if].";
-	if noun is not cscanned:
-		if noun is l-m:
-			say "That helped, but maybe cheat mode would be really useful. At eight letters for the 'best' word, this volt maze is pretty tricky!";
-		else:
-			say "That didn't show anything new. Maybe cheat mode would be better.";
-	continue the action;
+maze-guys is a list of things that varies. maze-guys is { Zo Mavelt, Tom Alvez, Lev Tzoma }.
+
+guide-loop is a truth state that varies.
+
+maze-index is a number that varies.
+
+to replace-mazeguide:
+	if maze-index is 0:
+		say "As you turn your head, you notice someone come into view behind the Riddle Dreidl.";
+		move Zo Mavelt to Unwary Runway;
+	else:
+		let X be entry maze-index in maze-guys;
+		if X is escanned:
+			moot X;
+			increment maze-index;
+			if maze-index > 3:
+				now maze-index is 1;
+				now guide-loop is true;
+			say "As you turn your head, you see someone [if guide-loop is true]familiar[else]new[end if] come into view in the Unwary Runway.";
+			move entry maze-index of maze-guys to Unwary Runway;
 
 volume oyster
 
@@ -13989,7 +13946,7 @@ chapter spilling
 
 the Li'L P's pills is in Posh Hops Shop. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory weird pictorial warning suggests that dumping the pills out may cause stick figures and possibly even real people to fall over, and once spilt, it will be split[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping]."
 
-understand "jar/jr" and "jar of pills" and "pill jar" as pills when player is in posh hops shop or player carries jar of pills.
+understand "jar/jr" and "jar of pills" and "pill jar" as li'l p's pills when player is in posh hops shop or player carries li'l p's pills.
 
 a-text of Li'L P's Pills is "RRYRR". b-text of Li'L P's Pills is "RRY?R.". parse-text of Li'L P's Pills is "x[sp]x[sp]i[sp]l[sp]x".
 
@@ -20593,11 +20550,14 @@ perp-check is a truth state that varies.
 
 to say two-of-three: say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-the feeling you are a perp is a vanishing boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-check rule is "There must be something you can do to shake the feeling you are a perp."
+the feeling you're a perp is a vanishing boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the feeling you're a perp.". bore-check is bore-perp rule.
 
-a-text of perp is "RRYR". b-text of perp is "PRYP". parse-text of perp is "P[sp]R[sp]E[sp]P".
+this is the bore-perp rule:
+	if current action is not objhinting and current action is not fliptoing, say "You just can't shake the feeling you're a perp. Maybe there's a simple way to shift things around." instead;
 
-every turn when player has feeling you are a perp: say "You [one of][or]still [stopping]can't shake that feeling you're [if gate-level is 1]kind of [end if]a PERP.";
+a-text of perp is "RRYR". b-text of perp is "PRYP". parse-text of perp is "P[sp]R[sp]E[sp]P". perp is cheat-spoilable.
+
+every turn when player has feeling you're a perp: say "You [one of][or]still [stopping]can't shake that feeling you're [if gate-level is 1]kind of [end if]a PERP.";
 
 chapter big endgame check
 
@@ -21846,7 +21806,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is big-let:
 		if Nowt Town is visited, yes;
 		no;
-	if hintcand is cler-scen:
+	if hintcand is snatchier chantries:
 		if mrlp is routes, yes;
 		no;
 	if hintcand is closest closets:
@@ -21932,7 +21892,7 @@ carry out objhinting (this is the pick object to hint rule) :
 		all-say "[one of]It's kind of a hint[if r10 is unvisited], and you'll find more later in the maze[else if Unwary Runway is unvisited], and you've certainly seen a lot through the maze, which seems to end here[else], and they seem to be in alphabetical order[end if].[or]I've said a lot with that clue. If you've gotten through the maze, you'll know it's from L to V.[or]Maze, L to V, don't congratulate yourself?[or]MAZEL TOV.[cycling]" instead;
 	if noun is question mark:
 		all-say "[one of]The question mark in the settler seems to give no information, but its ambiguity is actually a potentially huge help. The question mark only appears during cheat mode. It also usually occurs when you have a thing and a description that anagrams it. An example follows.[plus][or]Let's say you ran across SACRED CEDARS and got ??????. This looks completely unhelpful. But it is not![plus][or]The ? indicates the S and C give different readings, as do the A and E, etc. But that means one of them must be right.[plus][or]So we get SC/AE/CD/RA/ER/DS.[plus][or]There are actually only a few possibilities, here. You have S-C--D or C-D--S and -A-RE- or -E-AR-. Two of these are the original words, but there's SECARD and CADRES. So CADRES would be the word. Another example follows with an ESPRIT STRIPE[qmsp].[plus][or]Believe it or not, nearly everything falls out with the clue ?R??R?.[plus][or]The first letter is e/s, the second p/r, the third p/r, the fourth i/r, the fifth r/p/s, and the sixth is e/t.[plus][or]If letter 4 were r, #2 and 3 would both be p. So #4 is i. Also, #5 is r, p or t. If it were r or p, we'd have the same problem again. #5 is t. But #6 must be e or t, so it is e. #1 is e or s, so it must be s. That leaves SRPITE or SPRITE. Maybe it's a can of sprite, a pixel or a spirit. Either way, you have the answer.[minus][cycling]" instead;
-	if noun is cler-scen:
+	if noun is snatchier chantries:
 		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		all-say "The church isn't so special now you've been in it." instead;
 	if noun is closets, all-say "The closets are just for transporting around the Means Manse quicker, to or from the study." instead;
@@ -22384,7 +22344,9 @@ presto	"TARD while getting the dart in Presto/Char Arch?"
 others	"RETARD at the Tarred Trader, [greedy-person], in Others's Scape Space?"
 
 to say super-rude:
-	say "[if presto is not solved and others is not solved]you didn't get a chance to see two mean anagrams not recommended in real life--one is in PRESTO[else]author does not advocate using the word[if presto is solved]s[end if] below in real life[end if]"
+	say "[if presto is not solved and others is not solved]you didn't get a chance to see two mean anagrams not recommended in real life--one is in PRESTO[else]author does not advocate using the word[pres-s] below in real life[end if]"
+
+to say pres-s: if presto is solved and others is solved, say "s"
 
 this is the presto-or-others rule:
 	if presto is solved or others is solved, the rule succeeds;
@@ -22891,7 +22853,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
-		if maze-points is 2, say "[2drm of Grey Gyre]you missed a point by scanning a guy in Nowt Town.";
+		if maze-points is 2, say "[2drm of Grey Gyre]Because you scanned someone in the Unwary Runway, you only got two out of three points for the Volt Maze."; [mazeguide-scanned]
 		if odes song is in Dirge Ridge, say "[2drm of Dirge Ridge]you could've said GOODNESS to the Odes Song.";
 		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
 		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said PROST (a German word to toast someone) to the Sport Ports.";
@@ -23022,10 +22984,8 @@ rule for showing what the player missed: [there may be a way to do things withou
 	show-miss oyster and true;
 	show-miss towers and true;
 	show-miss otters and true;
-	if number of bypassed regions > 0:
-		say "[2da]Next time, you can maybe try the [list of bypassed regions] region[if number of bypassed regions > 1]s[end if]." instead;
-	if anything-missed is false:
-		say "[line break]CONGRATULATIONS, YOU FOUND EVERYTHING is written on it, with confetti drawn all around, too[one of][or]. It just doesn't get old, looking at it. Hey, you deserve to feel good[stopping].";
+	if number of bypassed regions > 0, say "[2da]Next time, you can maybe try the [list of bypassed regions] region[if number of bypassed regions > 1]s[end if]." instead;
+	if anything-missed is false, say "[line break]CONGRATULATIONS, YOU FOUND EVERYTHING is written on it, with confetti drawn all around, too[one of][or]. It just doesn't get old, looking at it. Hey, you deserve to feel good[stopping].";
 
 book epilogue transition
 

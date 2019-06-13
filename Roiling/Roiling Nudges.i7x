@@ -356,10 +356,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unwary"	491818961	Unwary Runway	--	--	"[locname]." [start Unwary Runway]
 "bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "dreidl"	353994775	--	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
-"matzo"	366695184	--	--	two-levs rule	"No, his full name is the clue, here."
-"lev"	288784768	--	--	two-levs rule	"No, his full name is the clue, here."
 "alvez"	413942204	--	Tom Alvez	--	"No, his full name is the clue, here."
 "tom"	241537748	--	Tom Alvez	--	"No, his full name is the clue, here."
+"mavelt"	458157757	--	Zo Mavelt	--	"No, his full name is the clue, here."
+"lev"	288784768	--	Lev Tzoma	--	"No, his full name is the clue, here."
+"tzoma"	366695184	--	Lev Tzoma	--	"No, his full name is the clue, here."
 "char"	143799505	Char Arch	--	--	"[locname]." [start Char Arch]
 "mad"	87292060	Char Arch	--	--	"[no-scen]."
 "maddam"	174584120	Char Arch	--	--	"[no-scen]."
@@ -1441,13 +1442,8 @@ this is the in-mazeroom rule:
 to say just-letter: say "It's just one letter in the maze. You may want to focus on the whole volt maze"
 
 this is the dreidl-dread rule:
-	if l-m is off-stage, the rule fails;
+	if Zo Mavelt is off-stage, the rule fails;
 	if ether is off-stage, the rule succeeds;
-	the rule fails;
-
-this is the two-levs rule:
-	if player is in unwary runway:
-		if l-m is in unwary runway or m-l is in unwary runway, the rule succeeds;
 	the rule fails;
 
 to say no-scen: say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins['] cistern";
