@@ -95,7 +95,7 @@ warp/bury/unearth/assuage
 search/enlarge/patrol
 prepay/derail/spin/redial
 Oyster (max)
-sing/spit/inset/stroll
+unset/inset/scrape/stroll
 calm/run/boast/leap
 scrap/scan/seek/eat/tutor/tend/swipe
 trace/react/kiss/bonk/snap/splain

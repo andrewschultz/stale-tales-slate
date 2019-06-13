@@ -50,13 +50,10 @@ chapter default rules to ignore
 
 procedural rule: ignore the print final score rule.
 
+the can't eat unless edible rule is not listed in any rulebook.
+
 the can't push what's fixed in place rule is not listed in any rulebook.
 the can't pull what's fixed in place rule is not listed in any rulebook.
-
-the block throwing at rule is not listed in any rulebook.
-the block listening rule is not listed in any rulebook.
-the block burning rule is not listed in any rulebook.
-the block smelling rule is not listed in any rulebook.
 
 the can't push people rule is not listed in any rulebook.
 the can't push scenery rule is not listed in any rulebook.
@@ -172,13 +169,33 @@ check going when noun is not planar (this is the reject diagonals and up/down ru
 
 chapter minor verbs and blocking rules
 
+the block burning rule is not listed in any rulebook.
+the block buying rule is not listed in any rulebook.
+the block drinking rule is not listed in any rulebook.
+the block jumping rule is not listed in any rulebook.
+the block kissing rule is not listed in any rulebook.
+the block listening rule is not listed in any rulebook.
 the block saying yes rule is not listed in any rulebook.
 the block saying no rule is not listed in any rulebook.
+the block smelling rule is not listed in any rulebook.
+the block sleeping rule is not listed in any rulebook.
+the block swearing mildly is not listed in any rulebook.
+the block swearing obscenely is not listed in any rulebook.
+the block waving hands rule is not listed in any rulebook
 the block waking up rule is not listed in any rulebook.
 the block tasting rule is not listed in any rulebook.
-the block sleeping rule is not listed in any rulebook.
+the block thinking rule is not listed in any rulebook.
+the block throwing at rule is not listed in any rulebook.
+
+section waking (generic to both games)
 
 check waking up: say "Wake? Weak!" instead;
+
+section showing block
+
+the block showing rule is not listed in any rulebook.
+
+check showing it to (this is the new block showing rule) : say "You can't think why that would impress or help or scare the present company, so, maybe not." instead.
 
 part gotoing framework
 
@@ -489,6 +506,14 @@ this is the degen-false rule: the rule fails.
 
 this is the degen-true rule: the rule succeeds.
 
+volume transcript stuff
+
+check quitting the game when currently transcripting:
+	say "Thanks for taking a transcript. Please send it to [email] and I'll be grateful. Thanks!";
+
+report switching the story transcript on:
+	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type TRANSCRIPT and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
+	continue the action;
 volume specific items
 
 part hubs bush popup

@@ -1150,10 +1150,6 @@ to decide whether got-flier:
 
 chapter sing-wave-jump-sleep-show
 
-the block showing rule is not listed in any rulebook.
-
-check showing it to (this is the new block showing rule) : say "You can't think why that would impress or help or scare the present company, so, maybe not." instead.
-
 rule for supplying a missing noun while tasting: now the noun is the player.
 
 check tasting:
@@ -1171,7 +1167,7 @@ does the player mean swinging the swing: it is very likely.
 
 the block swinging rule is not listed in any rulebook.
 
-instead of swinging:
+check swinging:
 	if noun is the swing, say "Whee! Sitting on the twine hurts a bit, but with a little shifting around, you imagine the swing could make you fly." instead;
 	if noun is sword or noun is shotgun, say "Don't play with weapons." instead;
 	say "That's probably just silly. Or risky. Or impossible." instead;
@@ -1182,23 +1178,21 @@ understand "drink [something]" as drinking.
 
 rule for supplying a missing noun while drinking: now the noun is the player.
 
-instead of drinking:
+check drinking:
 	if noun is phial or noun is lube, say "The lube looks sort of like mercury, now you think of it. Ugh." instead;
 	if noun is oils, say "The oils seem too valuable for that. You're not thirsty, anyway, and they wouldn't help if you were." instead;
 	if noun is drainage or noun is skin sink, say "Eww, don't even." instead;
-	say "I show no kind grin on drinking!"
+	say "I show no kind grin on drinking!" instead;
 
-instead of sleeping:
+check sleeping:
 	if mattress is visible and night thing is not visible, say "On that mattress? Eww." instead;
-	say "On basker breaks? No!"
+	say "On basker breaks? No!" instead;
 
-instead of squeezing: say "That's either icky or impossible or both.".
+check squeezing: say "That's either icky or impossible or both." instead;
 
-instead of singing: say "Oddly, when you start, you see a big sign telling you not to.".
+check singing: say "Oddly, when you start, you see a big sign telling you not to.". instead
 
-the block waving hands rule is not listed in any rulebook
-
-instead of waving hands:
+check waving hands:
 	if player is in Busiest Subsite, say "You don't see any friends nearby, sadly. It's all a bit awkward." instead;
 	if player is in notices and gateman is in notices, say "You've already introduced yourself. Just ask him about what you want/need." instead;
 	if player is in The Ol' Hotel and night thing is in The Ol' Hotel, say "Bad idea. Don't know what might make it charge." instead;
@@ -1209,28 +1203,35 @@ instead of waving hands:
 	if number of visible people > 1, say "There's someone else here, but just TALK TO them or ASK them about something instead." instead;
 	say "An Inform 7 programmer waves at you from behind the fourth wall and points meaningfully to your keyboard or whatever you're typing on.";
 
-instead of jumping:
+check jumping:
 	if player is in Busiest Subsite, say "Apparently, it's your career that needs the jump, not you." instead;
 	if player is on cafe face, say "Bad idea. Just climb down instead." instead;
 	if player is in Rived Drive, say "You don't get anywhere close to over the [slo-po]. Perhaps it's better to [if poles are visible]try to [end if]CLIMB." instead;
-	say "What am I supposed to do with THAT four-letter mess?"
+	say "What am I supposed to do with THAT four-letter mess?" instead;
 
 to say slo-po: say "[if slope is visible]slope[else]poles[end if]"
 
 understand the command "eat [something]" as something new.
 understand "eat [something]" as eating.
 
-instead of eating:
-	if location of player is the nick, say "Man, you'd sure like to be somewhere you could make some food." instead;;
+check eating: [?? eat weird stuff]
+	if noun is snarled darnels, say "[if goat is visible]The goat did enough[else]You're the wrong sort of animal for that, but maybe you can summon the right one[end if]." instead; [ordeal reload]
 	if noun is info-lit, say "If this were a spy game, that would be ideal. But it isn't." instead;
+	if noun is bread, say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use." instead; [forest]
+	if noun is beard, say "It's less appetizing as a beard than as bread. And if there WERE anything edible in it, ... eww." instead;
+	if noun is sandwich, say "It doesn't seem appetizing, and you don't need the energy it might give." instead;
+	if location of player is the nick, say "Man, you'd sure like to be somewhere you could make some food." instead; [sortie]
 	if noun is cake pan, say "Err, it's kind of metal." instead;
 	if noun is grist, say "Ooh. It's almost edible enough. Just needs a little change." instead;
-	if noun is snarled darnels, say "[if goat is visible]The goat did enough[else]You're the wrong sort of animal for that, but maybe you can summon the right one[end if]." instead;
-	if noun is toe, say "That might hurt a bit, but you'd get the worst of toof-foot, or teef-feet, action." instead;
+	if noun is pancake, say "Too cold and bland. Plus, it's probably someone else's, like Ana Peck. Or Cap. Kane[if taco is off-stage]. You might want to fiddle with what's on the counter[else]. The stuff on the counter was what was really important, anyway[end if]." instead;
+	if noun is grits, say "You have an attack of conscience and decide to leave them for someone else." instead;
 	if noun is a pregredient, say "Not in that form, and not by itself." instead;
-	if noun is dry cake, say "It's not terribly palatable, and you don't need the calories. Maybe it's better as something else." instead;
+	if noun is an ingredient and noun is part of the tortilla, tortilla, try eating tortilla instead;
+	if noun is an ingredient, say "No, that may be used to make something better." instead;
+	if noun is dry cake, say "It's not terribly palatable, and you don't need the calories. Maybe it's better as something else." instead; [metros]
+	if noun is toe, say "That might hurt a bit, but you'd get the worst of toof-foot, or teef-feet, action." instead; [resort]
 	if noun is not edible, say "A new odd metabolism is not your magic power." instead;
-	say "[if location of player is the nick]Your hunger is a hint, not a necessity[else]You won't strictly need any food for this game. Well, your character won't[end if]."
+	say "[if location of player is the nick]Your hunger is a hint, not a necessity[else]You won't strictly need any food for this game. Well, your character won't[end if]." instead;
 
 xray-vision is a truth state that varies. xray-vision is usually false.
 
@@ -1474,8 +1475,6 @@ carry out stabing:
 
 chapter kissing
 
-the block kissing rule is not listed in any rulebook.
-
 understand "kiss [something]" as kissing.
 
 check kissing:
@@ -1489,7 +1488,7 @@ check kissing:
 
 chapter thinking
 
-instead of thinking: say "Yes, I hope this game makes you do a little of this, but nothing painful[one of] (if you need hints, HINT will work better, or HINT (OBJECT)[or][stopping]."
+check thinking: say "Yes, I hope this game makes you do a little of this, but nothing painful[one of] (if you need hints, HINT will work better, or HINT (OBJECT)[or][stopping]."
 
 book stub verbs
 
@@ -2795,7 +2794,7 @@ the goat is an animal. "The goat is half-sleeping here. It's probably best left 
 
 understand "animal" as goat when goat is visible.
 
-instead of waking the goat: say "If he's having a bad dream, he'll kick at you in his sleep. If you interrupt a good dream, he'll kick whoever woke him.".
+check waking the goat: say "If he's having a bad dream, he'll kick at you in his sleep. If you interrupt a good dream, he'll kick whoever woke him.".
 
 check taking the goat: say "Trying to get the goat would more likely get the goat's goat." instead.
 
@@ -3215,13 +3214,12 @@ to say salt-text of (xxx - a thing):
 
 to say v-b: say "Your vision blurs a bit, and instead ".
 
-instead of eating the saltine:
+check eating the saltine:
 	if gateman is visible:
 		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is moot or attics are moot]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
 		the rule succeeds;
-	if faeries are visible:
-		say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
+	if faeries are visible, say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
 	choose row with short of "xx" in table of pad-stuff;
 	if known entry is false:
 		say "You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them.";
@@ -4590,8 +4588,6 @@ check opening sandwich: [?? needs test case]
 	set the pronoun it to the Spam;
 	now player has the Spam;
 
-check eating sandwich: say "It doesn't seem appetizing, and you don't need the energy it might give." instead; [?? needs test case]
-
 description of sandwich is "Just bread and[one of]--oh dear--[or] [stopping]Spam, lumped together. You could probably PEEL it."
 
 check taking the bread:
@@ -5338,11 +5334,7 @@ check putting something on an ingredient (this is the funnel kitchen activity to
 	if second noun is part of the tortilla, try putting noun on tortilla instead;
 	if second noun is not tortilla, say "Neither of those is the best ingredient to make a base for a dish--maybe something more bready. But they could be combined eventually." instead;
 
-check eating an ingredient:
-	if ingredient is part of the tortilla, try eating tortilla instead;
-
-check taking an ingredient:
-	if noun is part of the tortilla, say "Don't futz with your culinary creation." instead;
+check taking an ingredient: if noun is part of the tortilla, say "Don't futz with your culinary creation." instead;
 
 the cult tee is a pregredient in Kitchen. rgtext of cult tee is "[rcn][rc][rc][gc][rc][rc][gc]". lgth of cult tee is 7. gpos of cult tee is 3. rpos of cult tee is 7. cert-text of cult tee is "-[d1][d1][ast]T[d1][d1][ast]E". rect-text of cult tee is "L[d1][d1][d1][d1][d1][ast]E".
 
@@ -5495,10 +5487,6 @@ description of cake pan is "It's empty, and you wonder what it's doing in the fr
 the pancake is a thing.
 
 description of pancake is "It's too plain to eat. And probably too cold."
-
-check eating pancake: say "Too cold and bland. Plus, it's probably someone else's, like Ana Peck. Or Cap. Kane[if taco is off-stage]. You might want to fiddle with what's on the counter[else]. The stuff on the counter was what was really important, anyway[end if]." instead;
-
-check eating grits: say "You have an attack of conscience and decide to leave them for someone else." instead;
 
 chapter ROOM
 
@@ -6995,9 +6983,7 @@ section propflipping Elf Row
 
 to say rude: say "You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is"
 
-the block buying rule is not listed in any rulebook.
-
-instead of buying:
+check buying:
 	if noun is player, say "Silly." instead;
 	if player has noun, say "You already have that." instead;
 	if location of player is subsite, say "This is not exactly a shopping mall." instead;
@@ -8743,8 +8729,7 @@ check objasking it about (This is the check for object information rule):
 		if second noun is the person-subj entry:
 			if noun is the him-who entry:
 				say "[him-say entry][line break]";
-				if noun is gateman and second noun is saltine:
-					pad-rec "xx";
+				if noun is gateman and second noun is saltine, pad-rec "xx";
 				the rule succeeds;
 	repeat through table of default-sub-blather:
 		if noun is gateman:
@@ -8816,8 +8801,7 @@ to say about-lube:
 	now lube-asked is true;
 
 after objasking about (this is the post-rec talking rule):
-	if noun is gateman and second noun is saltine:
-		pad-rec "xx";
+	if noun is gateman and second noun is saltine, pad-rec "xx";
 	continue the action;
 
 table of subject-blather [tsb]
@@ -9219,15 +9203,6 @@ to decide what thing is the current getup:
 the current getup is a thing that varies.
 
 understand "disguise" as a disguise-piece.
-
-check eating bread: say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use." instead.
-
-check eating beard: say "It's less appetizing as a beard than as bread. And if there WERE anything edible in it, ... eww." instead.
-
-the can't eat unless edible rule is not listed in any rulebook.
-
-check eating (this is the game specific eating rule): [??test eating]
-	if the noun is not a thing or the noun is not edible, say "You don't need to eat anything in this game." instead;
 
 part smilies-missile
 
@@ -9672,17 +9647,13 @@ carry out walkthroughing:
 
 part swearing
 
-instead of swearing obscenely: say "[one of]No [']scusing on cussing[or]Swearing? [']s wearing[cycling][plus-check]."
+check swearing obscenely: say "[one of]No [']scusing on cussing[or]Swearing? [']s wearing[cycling][plus-check]." instead;
 
-to say plus-check:
-	if Notices Section is visited:
-		say "[one of]. Plus, I checked. Or had someone more vulgar than me check. Nothing[or][stopping]";
+to say plus-check: if Notices Section is visited, say "[one of]. Plus, I checked. Or had someone more vulgar than me check. Nothing[or][stopping]";
 
-instead of swearing mildly:
-	if the player's command matches the text "drat":
-		say "Don't dart to such talk.";
-	else:
-		try swearing obscenely;
+check swearing mildly:
+	if the player's command matches the text "drat", say "Don't dart to such talk." instead;
+	try swearing obscenely instead;
 
 part abouting
 
@@ -9698,10 +9669,6 @@ carry out abouting:
 	say "[line break]POLITE doesn't mean easy, though, and it doesn't guarantee user-friendliness. I also hope there is little guess-the-verb[if cur-score of Ordeal Loader > 0]--well, not VERB, that's the sequel[end if]. Just find the right word to say, type it, and move on. My hope is that the tough ones are clued multiple ways, so you are not too frustrated[if Notices Section is unvisited]. There are hint items[end if].";
 	say "[line break]You can see the testers who gave me transcripts with the CREDITS, which are rather long. They slugged through a lot! If you want to see technical contributions, type TECH. For general release information, type RELEASE.[paragraph break]Also, I still appreciate transcripts! So, if you like, type TRANSCRIPT, then send reports--especially ones with comments (* at the start of a line)--to [email].[paragraph break]If you enjoyed this, the sequel, A Roiling Original, is over twice the size. It has seven areas to explore from [unless Trips Strip is visited]the main world-hub[else]what the Trips Strip becomes[end if].";
 	the rule succeeds;
-
-report switching the story transcript on:
-	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type TRANSCRIPT and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
-	continue the action;
 
 part creditsing
 

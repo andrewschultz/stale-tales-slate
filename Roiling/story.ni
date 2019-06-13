@@ -1085,13 +1085,6 @@ chapter transcripting
 
 [main code is in Trivial Niceties]
 
-report switching the story transcript on:
-	if currently transcripting:
-		say "Thanks for doing this! Email can go to [email].";
-
-check quitting the game when currently transcripting:
-	say "Thanks for taking a transcript. Please send it to [email] and I'll be grateful. Thanks!";
-
 when play begins (this is the intro-hashes rule):
 	let wnum be 0;
 	repeat with QQ running through regions:
@@ -6235,11 +6228,7 @@ understand the command "taste" as something new.
 
 understand "taste [something]" as eating.
 
-the can't eat unless edible rule is not listed in any rulebook.
-
 chapter buying
-
-the block buying rule is not listed in any rulebook.
 
 check buying:
 	if player is in tenfold and yapper is in Tenfold Teflon'd Den Loft, say "The papery yapper stage-whispers 'Ix-nay on the Vi-OS-ob-ay. That's not how business is DONE, here!'" instead;
@@ -6329,8 +6318,6 @@ does the player mean kissing the skis: it is very likely.
 [!! kissing a non-person]
 
 rule for supplying a missing noun when kissing: if skis are visible, now noun is skis;
-
-the block kissing rule is not listed in any rulebook.
 
 understand the command "kiss" as something new.
 
@@ -6476,7 +6463,7 @@ thinko is a truth state that varies.
 
 understand "ponder" as thinking when pernod is not visible.
 
-instead of thinking:
+check thinking:
 	if player is in Dusty Study:
 		if stuff-found < 3:
 			say "You begin [one of]a[or]another[stopping] deep think, [one of]all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, and the n-factorial possibilities--and that tagged gadget to give clues was a bit TOO convenient. It passes the time[or]but mulling and rehashing is no fun[stopping].";
@@ -6757,14 +6744,12 @@ understand the command "wave [something]" as something new.
 
 understand "wave" as waving hands.
 
-instead of waving hands:
-	say "A view! I wave!" instead;
+check waving hands: say "A view! I wave!" instead;
 
 chapter swearing
 
-instead of swearing obscenely:
-	unless qbc_litany is table of no conversation:
-		say "You're classier than that." instead;
+check swearing obscenely:
+	unless qbc_litany is table of no conversation, say "You're classier than that." instead;
 	if location of player is Cleric Circle: [ROUTES]
 		if curse-warned is false:
 			now curse-warned is true;
@@ -6788,7 +6773,7 @@ instead of swearing obscenely:
 	if player is in Disowned Downside and macks are in Disowned Downside, say "The conversation is horrid enough." instead;
 	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "Merle and Elmer sniff faux-piously." instead;
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
-	say "[randbla][line break]";
+	say "[randbla][line break]" instead;
 
 to say deth:
 	let temp be a random number from 1 to number of rows in table of death messages;
@@ -6796,14 +6781,12 @@ to say deth:
 
 curse-warned is a truth state that varies.
 
-to say om:
-	say "[if Rand is off-stage and dart is off-stage]one or two mild swears[else]one more mild swear[end if]";
+to say om: say "[if Rand is off-stage and dart is off-stage]one or two mild swears[else]one more mild swear[end if]";
 
-instead of swearing mildly:
+check swearing mildly:
 	if mrlp is presto:
-		if hogs are visible:
-			say "The hogs groan, as if to say, don't try that again. Maybe another lame swear will set them off." instead;
-		say "[if dart is off-stage or Rand is off-stage]Well, maybe [om] would work here.[else if plebe is visible]The plebe tries hard not to snicker.[else]You had your chance for a swear. And you took it. Yay, you.[end if]" instead;
+		if hogs are visible, say "The hogs groan, as if to say, don't try that again. Maybe another lame swear will set them off." instead;
+		say "[if dart is off-stage or Rand is off-stage]Well, maybe [om] would work here.[else if plebe is in location of player]The plebe tries hard not to snicker.[else]You had your chance for a swear. And you took it. Yay, you.[end if]" instead;
 	try swearing obscenely instead;
 
 understand "bastard" as swearing mildly.
