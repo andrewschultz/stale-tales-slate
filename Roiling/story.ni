@@ -10459,7 +10459,7 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -10652,29 +10652,27 @@ check scaning Uhh Tut Hut:
 
 a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYRP". parse-text of lairage regalia is "-[sp]x[sp]x[sp]-[sp]x[sp]s".
 
-chapter grubby restaurant
+chapter resto store
 
-the grubby restaurant is auxiliary scenery in Same Mesa. "It looks terribly plain. There's a signboard indicating whose it is."
+the resto store is auxiliary scenery in Same Mesa. "The resto store looks terribly plain, but it's somewhere to eat. There's a signboard indicating whose it is."
 
-check entering grubby restaurant:
+check entering resto store:
 	if Idle Deli is unvisited, say "You try to do so, but the building shifts further away." instead;
 	if Gast is in Same Mesa, try fliptoing signboard instead;
 	say "You walk back into Pat's Idle Deli more confidently the second time. The building does not shift.";
 	now player is in Idle Deli instead;
 
-check scaning grubby restaurant:
+check scaning resto store:
 	say "The adsorbing signboard gives a reading.";
 	try scaning adsorbing signboard instead;
 
-does the player mean scaning grubby restaurant: it is likely.
+does the player mean scaning resto store: it is likely.
 
 the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's[ast][r][paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal."
 
 understand "sign/board" and "adsorbing sign/board" as signboard.
 
-understand "pat's/pats" as the grubby restaurant.
-
-a-text of grubby restaurant is "RYRR". b-text of grubby restaurant is "PGRR". parse-text of grubby restaurant is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
+understand "pat's/pats" as the resto store.
 
 a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "PGRR". parse-text of signboard is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
 
@@ -10682,12 +10680,12 @@ does the player mean entering the Uhh Tut Hut:
 	if lairage regalia is reflexed, it is very likely;
 	it is likely;
 
-does the player mean entering the grubby restaurant:
+does the player mean entering the resto store:
 	if adsorbing signboard is reflexed, it is very likely;
 	it is likely;
 
 check entering lairage regalia: try entering Uhh Tut Hut instead;
-check entering adsorbing signboard: try entering grubby restaurant instead;
+check entering adsorbing signboard: try entering resto store instead;
 
 chapter bench
 

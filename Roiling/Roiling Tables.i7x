@@ -504,7 +504,7 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 
 this is the post-across rule: now uhh tut hut is clue-used;
 
-this is the post-past rule: now grubby restaurant is clue-used; [?? rivets/Trevis Vister clue used too?]
+this is the post-past rule: now resto store is clue-used; [?? rivets/Trevis Vister clue used too?]
 
 this is the pre-sitanag-against rule:
 	if list o toils is unexamined:
@@ -2340,7 +2340,7 @@ list o toils	"The list-o-toils tells what you need[if mushrooms are moot]ed[end 
 rs	"They're there to re-enforce your lack of direction."
 worst ad	"[one of]How would you approach the worst ad?[plus][or]RADWOST is what the ad sells, whatever that is. That plus the settler gets you the vowels. A big clue for this Last Lousy Point.[plus][or][if cur-score of routes is 0]I'll check if you want to find what sort of words work here before going on[else]There are only so many prepositions in the English language[end if].[plus][or]TOWARDS.[minus][cycling]"	--	"TOWARDS"
 adsorbing signboard	"[one of]You can't walk into Pat's as normal. It moves, and you never seem to get to the door.[plus][or]You just need to flip two letters to enter Pat's.[plus][or]PAST works.[minus][cycling]"	--	"PAST"
-grubby restaurant	--	adsorbing signboard
+resto store	--	adsorbing signboard
 lairage regalia	"[one of]You can't walk into Oscar's as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to Oscar's?[plus][or]Not down to enter Oscar's--perpendicular.[plus][or]ACROSS.[minus][cycling]"	--	"ACROSS"
 uhh tut hut	--	lairage regalia
 Gast	"[if Gast is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if Gast is moot]You're done with [Gast][else]BUG. You should be directed to the [sit a nag] or relevant part you need to figure, now[end if]."
