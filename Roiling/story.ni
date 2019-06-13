@@ -10541,15 +10541,11 @@ chapter poison stripe
 
 the poison stripe is boring scenery in Same Mesa. description of poison stripe is "You can't really see it, but you can FEEL it.". bore-text is "You can really only sense the poison stripe, which is all you need to do. You will need to look around for a way out."
 
-chapter cler-scen
+chapter snatchier chantries
 
-the cler-scen is privately-named scenery in Same Mesa. "The scripture picturers, a staple for any Yorpwaldian place of worship, are particularly nice here[if picturers are not reflexed]. Maybe they can show you the way in[else]. You feel you almost understand them[end if]."
+the snatchier chantries are scenery in Same Mesa. "The snatchier chantries [if scripture picturers are reflexive]seem to twist about. They don't seem as welcoming as an entry to a place of worship should. Maybe the scripture picturers above can help you out[else]seem more welcoming now that you figured the scripture picturers[end if]."
 
-understand "cleric/circle" and "cleric circle" as cler-scen when player is in Same Mesa.
-
-check entering cler-scen:
-	if player is in Cleric Circle, try going outside instead;
-	try going inside instead;
+check entering snatchier chantries: try going inside instead;
 
 does the player mean doing something with rs:
 	if player is in Same Mesa, it is likely;
@@ -10561,41 +10557,16 @@ rs are privately-named boring scenery in Same Mesa. understand "routes" as rs. p
 
 chapter scripture picturers
 
-the scripture picturers are reflexive flippable scenery in Same Mesa. "[do-i-switch]Parish of Satin Saint Astin[paragraph break][if Cleric Circle is unvisited]Six letters below: [dssd][else]Pal, Meet a Temple! Hubris-b-rubbish![end if]".
+the scripture picturers are reflexive flippable scenery in Same Mesa. "Parish of Satin Saint Astin[paragraph break][if Cleric Circle is unvisited]Six letters below, in red, which seem to flip between odd misleading messages, but right now, they say: [scriran][else]The picturers now say: Pal, Meet a Temple! Hubris-b-rubbish[end if]!".
 
-switch-pic-next is a truth state that varies.
-
-switched-pics-yet is a truth state that varies.
-
-to say do-i-switch:
-	if picturers are reflexive:
-		if switch-pic-next is true:
-			now switched-pics-yet is true;
-			now sign-other is whether or not sign-other is false;
-			say "The picturers changed since you last saw them.";
+to say scriran: say "[one of]Dine? SI[or]DIE SIN[or]Ed is In[cycling]"
 
 understand "scripture picture/picturer" as picturers.
 understand "picture/picturer" as picturers.
 
-after examining when mrlp is routes (this is the switch picturers rule) :
-	if noun is not picturers and picturers are examined, now switch-pic-next is true;
-	continue the action;
+a-text of scripture picturers is "YRRYRY". b-text of scripture picturers is "YRRYRY". parse-text of scripture picturers is "-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-after examining picturers:
-	if switched-pics-yet is true:
-		if picturers are reflexive:
-			say "You can see how the SIN DIE and DIE SIN blend back and forth to make a clever illusion. You feel clever for seeing it, but not too clever. That'd be un-pious.";
-			continue the action;
-
-a-text of scripture picturers is "YRRYRY". b-text of scripture picturers is "YRRYR[if sign-other is true]Y[else]G[end if]". parse-text of scripture picturers is "-[sp]x[sp]x[sp]-[sp]x[sp][if sign-other is true]x[else]e[end if]".
-
-[
-a-text of diesin is "YRRYRY". b-text of diesin is "YRRYRY". parse-text of diesin is "-[sp]x[sp]x[sp]-[sp]x[sp]x".
-a-text of sindie is "YRRYRY". b-text of sindie is "YRRYRG". parse-text of sindie is "-[sp]x[sp]x[sp]-[sp]x[sp]e".
-]
-
-check taking the scripture picturers:
-	say "Appropriation of church property! [if Cleric Circle is visited]Brother Horbert[else]Whoever's in there[end if] wouldn't deserve that." instead;
+check taking the scripture picturers: say "Appropriation of church property! [if Cleric Circle is visited]Brother Horbert[else]Whoever's in there[end if] wouldn't deserve that." instead;
 
 sign-pushed-prompt is a truth state that varies.
 
@@ -10607,9 +10578,6 @@ after scaning scripture picturers:
 			try pushing scripture picturers instead;
 		otherwise:
 			say "Well, if you feel like it later, the sign or whoever put it there will forgive you."
-
-to say dssd:
-	say "[if sign-other is false]SIN DIE (in black)[else]DIE SIN (in red)[end if]"
 
 inwarn is a truth state that varies.
 
@@ -22022,8 +21990,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	if noun is question mark:
 		all-say "[one of]The question mark in the settler seems to give no information, but its ambiguity is actually a potentially huge help. The question mark only appears during cheat mode. It also usually occurs when you have a thing and a description that anagrams it. An example follows.[plus][or]Let's say you ran across SACRED CEDARS and got ??????. This looks completely unhelpful. But it is not![plus][or]The ? indicates the S and C give different readings, as do the A and E, etc. But that means one of them must be right.[plus][or]So we get SC/AE/CD/RA/ER/DS.[plus][or]There are actually only a few possibilities, here. You have S-C--D or C-D--S and -A-RE- or -E-AR-. Two of these are the original words, but there's SECARD and CADRES. So CADRES would be the word. Another example follows with an ESPRIT STRIPE[qmsp].[plus][or]Believe it or not, nearly everything falls out with the clue ?R??R?.[plus][or]The first letter is e/s, the second p/r, the third p/r, the fourth i/r, the fifth r/p/s, and the sixth is e/t.[plus][or]If letter 4 were r, #2 and 3 would both be p. So #4 is i. Also, #5 is r, p or t. If it were r or p, we'd have the same problem again. #5 is t. But #6 must be e or t, so it is e. #1 is e or s, so it must be s. That leaves SRPITE or SPRITE. Maybe it's a can of sprite, a pixel or a spirit. Either way, you have the answer.[minus][cycling]" instead;
 	if noun is cler-scen:
-		if Cleric Circle is unvisited:
-			try objhinting scripture picturers instead;
+		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		all-say "The church isn't so special now you've been in it." instead;
 	if noun is closets, all-say "The closets are just for transporting around the Means Manse quicker, to or from the study." instead;
 	if noun is the location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
