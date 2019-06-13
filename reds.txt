@@ -159,6 +159,8 @@ debug,???Y?=bubdu=deegg
 bus/sub,RY?=usb
 ################oyster
 #hops shop
+#qver of li'l p's pills
+spill,RRY?R=lilps=pills
 #qver of gins sign
 sing,?G?R=gins=sign
 #qver of perma-amper

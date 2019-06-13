@@ -2593,8 +2593,7 @@ drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 clack ops locs pack	"The locs pack mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
 drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end if]."
 drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
-jar of pills	--	ps	[oyster]
-stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
+stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [oyster]
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
 scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
 span pans	"Red writing indicates the pans were made by Nan's Apps."
@@ -4588,7 +4587,8 @@ hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But 
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
 Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
-perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
+li'l p's pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
+perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five for the scary crays[end if]."
 Achers' Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
@@ -14091,29 +14091,26 @@ to check-silly-death:
 
 chapter spilling
 
-the jar of pills is in Posh Hops Shop. "A jr. jar of pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory weird pictorial warning suggests that dumping the pills out may cause stick figures and possibly even real people to fall over, and once spilt, it will be split[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping]. There's a lil['] PS in red to read, too."
+the Li'L P's pills is in Posh Hops Shop. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory weird pictorial warning suggests that dumping the pills out may cause stick figures and possibly even real people to fall over, and once spilt, it will be split[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping]."
 
-a-text of pills is "RRYRR". b-text of pills is "RRYPR.". parse-text of pills is "x[sp]x[sp]i[sp]l[sp]x".
+understand "jar/jr" and "jar of pills" and "pill jar" as pills when player is in posh hops shop or player carries jar of pills.
 
-printed name of jar of pills is "jr. jar of pills". the indefinite article of jar of pills is "a"
+a-text of Li'L P's Pills is "RRYRR". b-text of Li'L P's Pills is "RRY?R.". parse-text of Li'L P's Pills is "x[sp]x[sp]i[sp]l[sp]x".
 
-after printing the name of the jar of pills while taking inventory:
-	if jar-empty is true:
-		say " (empty)";
+after printing the name of the Li'L P's pills while taking inventory:
+	if jar-empty is true, say " (empty)";
 
 Rule for clarifying the parser's choice of pills: do nothing.
 
-the lil['] ps is part of the jar of pills. description is "WARNING: find any use uneasy. These don't solve all your problems. In fact you may look back and wish you had them and we are not responsible for any withdrawal symptoms. Not even that anagrammer person can make anything of a junkie!". the lil['] ps is cluey.
-
 jar-empty is a truth state that varies.
 
-instead of eating the jar:
-	say "[if jar-empty is true]Eating the empty jar would be even unhealthier than popping the pills[else]They're placebos. And you're not sick. Okay, maybe you're sick of a puzzle. But you need to do something else with them[end if]."
+check eating the Li'L P's pills: say "[if jar-empty is true]Eating the empty jar would be even unhealthier than popping the pills[else]They're placebos. And you're not sick. Okay, maybe you're sick of a puzzle. But you need to do something else with them[end if]." instead;
 
-instead of opening the jar:
-	say "[if jar-empty is true]The jar's kind of empty now.[else]It's tamper proof. It's one of those jars you can't open until you're thinking about doing something other than eating them--but what could you do with pills?[end if]";
+check opening the Li'L P's pills: say "[if jar-empty is true]The jar's kind of empty now.[else]It's tamper proof. It's one of those jars you can't open until you're thinking about doing something other than eating them--but what could you do with pills?[end if]" instead;
 
 pill-warned is a truth state that varies.
+
+chapter spilling
 
 spilling is an action applying to one thing.
 
@@ -14141,12 +14138,12 @@ to guy-cheat (gc - a thing):
 		now jar-empty is true;
 		now undo-code is 3;
 	else:
-		say "You blink and notice the jar has filled up again. It's probably less safe to eat the pills than ever, but they could still hint stuff.";
+		say "You blink and notice the jar of Li'L P's Pills has filled up again. It's probably less safe to eat the pills than ever, but they could still hint stuff.";
 		now player has the pills;
 
 table of pill-comments
 pill-thing	pill-do
-eeks	"The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna invites you up."
+eeks	"The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna shakes her head but invites you up."
 c2	"The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from."
 crate	"The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away."
 knob	"The pills gravitate to the knob and turn it forcefully. It won't act up again."
@@ -14297,7 +14294,7 @@ produce-redo-cup is a truth state that varies. produce-redo-cup is false.
 carry out produceredocuping:
 	if mrlp is not oyster, say "[reject]" instead;
 	if pills are moot, say "Through magic, you get your pills back.";
-	say "[if produce-redo-cup is true]You already said the magic words[else]The jar of pills is now un-lose-able[end if].";
+	say "[if produce-redo-cup is true]You already said the magic words[else]The jar of Li'l P's Pills is now un-lose-able[end if].";
 	now produce-redo-cup is true;
 	if pills are in posh hops shop, say "(Also, giving you the pills even though [if player is in posh hops shop]you didn't take them[else]they're back in the Posh Hops Shop[end if].";
 	now player has pills;
