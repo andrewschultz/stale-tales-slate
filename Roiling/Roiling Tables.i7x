@@ -502,11 +502,9 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 			say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
 			move player to Idle Deli instead;
 
-this is the post-across rule:
-	now dingy dwelling is clue-used;
+this is the post-across rule: now uhh tut hut is clue-used;
 
-this is the post-past rule:
-	now grubby restaurant is clue-used; [?? rivets/Trevis Vister clue used too?]
+this is the post-past rule: now grubby restaurant is clue-used; [?? rivets/Trevis Vister clue used too?]
 
 this is the pre-sitanag-against rule:
 	if list o toils is unexamined:
@@ -2344,7 +2342,7 @@ worst ad	"[one of]How would you approach the worst ad?[plus][or]RADWOST is what 
 adsorbing signboard	"[one of]You can't walk into Pat's as normal. It moves, and you never seem to get to the door.[plus][or]You just need to flip two letters to enter Pat's.[plus][or]PAST works.[minus][cycling]"	--	"PAST"
 grubby restaurant	--	adsorbing signboard
 lairage regalia	"[one of]You can't walk into Oscar's as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to Oscar's?[plus][or]Not down to enter Oscar's--perpendicular.[plus][or]ACROSS.[minus][cycling]"	--	"ACROSS"
-dingy dwelling	--	lairage regalia
+uhh tut hut	--	lairage regalia
 Gast	"[if Gast is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if Gast is moot]You're done with [Gast][else]BUG. You should be directed to the [sit a nag] or relevant part you need to figure, now[end if]."
 side art	"[one of][Gast] seems to want you to listen to [his-her] tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
 tirades	--	side art

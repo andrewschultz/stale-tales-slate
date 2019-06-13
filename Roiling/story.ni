@@ -10459,7 +10459,7 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -10622,11 +10622,11 @@ before entering the cler-scen:
 	if Cleric Circle is unvisited, say "The Cleric Circle's doors are open to all, but one does not enter it by brute forcing directions." instead;
 	say "You re-enter, no longer worried about the exact preposition for doing so.";
 
-chapter dingy dwelling
+chapter Uhh Tut Hut
 
-the dingy dwelling is auxiliary scenery in Same Mesa. "The lairage regalia announces its dwelling as Oscar's."
+the Uhh Tut Hut is auxiliary scenery in Same Mesa. "An Uhh Tut Hut probably houses a grouchy resident, one who wants to see people in order to grouse at them a bit.[paragraph break]The lairage regalia announces the Uhh Tut Hut as Oscar's."
 
-check entering dingy dwelling:
+check entering Uhh Tut Hut:
 	if Gast is in Same Mesa, try fliptoing lairage instead;
 	if Adobe Abode is unvisited:
 		now oscar-annoy is true;
@@ -10638,15 +10638,15 @@ check entering dingy dwelling:
 		now player is in Adobe Abode;
 	the rule succeeds;
 
-does the player mean scaning dingy dwelling: it is likely.
+does the player mean scaning Uhh Tut Hut: it is likely.
 
-understand "oscar's/oscars/oscar" as the dingy dwelling.
+understand "oscar's/oscars/oscar" as the Uhh Tut Hut.
 
 the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's[ast][r]."
 
 to say ast: say "[if screenread is true] ** [end if]"
 
-check scaning dingy dwelling:
+check scaning Uhh Tut Hut:
 	say "The lairage regalia gives a reading.";
 	try scaning lairage regalia instead;
 
@@ -10678,13 +10678,16 @@ a-text of grubby restaurant is "RYRR". b-text of grubby restaurant is "PGRR". pa
 
 a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "PGRR". parse-text of signboard is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
 
-does the player mean entering the dingy dwelling: it is very likely.
-does the player mean entering the grubby restaurant: it is very likely.
-does the player mean examining the dingy dwelling: it is likely.
-does the player mean examining the grubby restaurant: it is likely.
+does the player mean entering the Uhh Tut Hut:
+	if lairage regalia is reflexed, it is very likely;
+	it is likely;
 
-instead of entering adsorbing signboard:
-	try entering grubby restaurant instead;
+does the player mean entering the grubby restaurant:
+	if adsorbing signboard is reflexed, it is very likely;
+	it is likely;
+
+check entering lairage regalia: try entering Uhh Tut Hut instead;
+check entering adsorbing signboard: try entering grubby restaurant instead;
 
 chapter bench
 

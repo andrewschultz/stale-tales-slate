@@ -145,8 +145,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "mesa"	290343046	Same Mesa	--	--	"[locname]." [SAME MESA]
 "orcas"	277143749	Same Mesa	--	--	"[if regalia is reflexed]No, you found the way in, with the extra s[else]Hm, it's Oscar'S[end if]."
 "towards"	490212044	--	--	got-towards rule	"You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it."
-"dingy"	289888397	Same Mesa	--	--	"[name-worry]."
-"dwelling"	510897705	Same Mesa	--	--	"[name-worry]."
+"uhh"	179670405	Same Mesa	--	--	"[name-worry]."
+"tut"	311325843	Same Mesa	--	--	"[name-worry]."
 "scripture"	748407896	Same Mesa	--	--	"[picturer-change]."
 "cripture"	652133930	Same Mesa	--	--	"[picturer-change]."
 "picture"	566810127	Same Mesa	--	--	"[picturer-change]."
