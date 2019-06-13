@@ -7121,12 +7121,12 @@ check switching on the termite emitter:
 	if location is Bassy, say "The termites would put up a valiant but futile effort." instead;
 	say "The termites don't have enough to eat here." instead;
 
-the smartest mattress is a container in The Ol' Hotel. the mattress is fixed in place.
+the smartest mattress is a boring fixed in place container in The Ol' Hotel. bore-text of smartest mattress is "The night thing is sitting on the smartest mattress. You'll need to get rid of the mattress. bore-check is bore-mattress rule.
 
 does the player mean entering the mattress: it is likely.
 
-instead of doing something with the mattress when mattress is in location of player and night thing is in location of player:
-	if night thing is visible, say "Can't do or see much with the night thing on it.";
+this is the bore-mattress rule:
+	if action is examining or action is searching or action is reading, say "Not with the night thing on it." instead;
 
 rule for printing a locale paragraph about the smartest mattress:
 	if night thing is not visible:
@@ -9081,19 +9081,13 @@ this is the bore-spread rule:
 
 lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rcn][rc][rc][rc][rc][rc]". cert-text of spread is "-[d1][d1][d1][d1][d1]". rect-text of spread is "D[d1][d1][d1][d1][ast]S".
 
-the drapes are plural-named scenery.
+the drapes are plural-named scenery. description of drapes is "Too thick and heavy to walk through.". bore-text of drapes is "This isn't some living room. (Sorry.) Those drapes are thick and oppressive. You'll need something sharp to cut through them.". bore-check of drapes is drapes-bore rule;
 
 understand "cloth" as drapes when drapes are visible.
 
-instead of doing something with the drapes:
-	if action is procedural, continue the action;
+this is the drapes-bore rule:
 	if current action is cutwithing or current action is unfolding:
-		continue the action;
-	say "This isn't some living room. (Sorry.) Those drapes are thick and oppressive. You'll need something sharp to cut through them."
-
-description of drapes is "Too thick and heavy to walk through."
-
-the spread is scenery.
+		now boring-exception is true;
 
 understand "cloth" as spread when spread is visible.
 
