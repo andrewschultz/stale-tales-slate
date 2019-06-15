@@ -260,7 +260,7 @@ this is the pre-sack-cask rule:
 			repeat with Q running through things in sack:
 				move Q to location of player;
 
-this is the pre-room-moor rule:
+this is the pre-room-moor rule: [(this is the sortie gadget checkpoint rule as well)]
 	unless shoes are moot:
 		say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
 		preef r2 instead;
