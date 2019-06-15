@@ -219,6 +219,12 @@ a disguise-piece is a kind of thing. a disguise-piece has a number called elevat
 
 a flower is a kind of thing. understand "flower" and "flowers" as a flower.
 
+a portal is usually boring. the bore-check of a portal is usually the bore-portal rule. [Roiling portals may not be boring]
+
+this is the bore-portal rule:
+	if the current action is opening, say "Just ENTER [the noun]." instead;
+	if the current action is entering, now boring-exception is true;
+
 chapter colors
 
 when play begins (this is the status window rule):
@@ -834,8 +840,7 @@ carry out objhinting:
 		choose row with hint-entry of noun in the table of hintobjs;
 		if there is a parallel-entry entry, try objhinting parallel-entry entry instead;
 		all-say "[advice-entry entry]" instead;
-	if noun is a portal:
-		all-say "You can just enter it.";
+	if noun is a portal, all-say "You can just enter [the noun]." instead;
 	if noun is unimportant, all-say "[noun]: that isn't needed to solve the game. It's probably just there for local flavor." instead;
 	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
 
@@ -1989,8 +1994,7 @@ carry out fliptoing (this is the main flipping rule) :
 			if there is a pre-rule entry:
 				if debug-state is true, say "DEBUG: checking [pre-rule entry].";
 				abide by the pre-rule entry;
-			if debug-scan is true and player has gadget:
-				try scaning the-from entry;
+			if debug-scan is true and player has gadget, try scaning the-from entry;
 			now mything is the-from entry;
 			if ff is true:
 				all-say "TEST FLIP: [from-msg entry][line break]";
@@ -2020,11 +2024,7 @@ carry out fliptoing (this is the main flipping rule) :
 			if the-to entry is a person:
 				set the pronoun him to the-to entry;
 				set the pronoun her to the-to entry;
-			if player does not have the noun and noun is not visible:
-				if noun is shoes:
-					moot noun;
-				else if noun is not teleporter:
-					move noun to location of player; [may need special case for slippery sword]
+			if player does not have the noun and noun is not visible and noun is not teleporter, move noun to location of player; [?? may need special case for slippery sword]
 			if there is a post-rule entry:
 				if debug-state is true, say "DEBUG: checking [post-rule entry].";
 				abide by the post-rule entry;
@@ -2044,7 +2044,6 @@ after fliptoing (this is the set pronouns rule) :
 	if noun is beast or noun is wolves:
 		set the pronoun him to noun;
 		set the pronoun her to noun;
-	if noun is rentals, moot noun;
 	if noun is visible:
 		if noun is plural-named, set the pronoun them to noun;
 		set the pronoun it to noun; [if noun is singular-named: ... is grammatically proper but this seems more convenient for the user]
@@ -2157,8 +2156,7 @@ to say verb-list:
 	if gadget-active:
 		if button-locked is false:
 			choose row with short of "macros" in table of pad-stuff;
-			if known entry is true:
-				say "[2dn]RC or CR lets you scan both ways.";
+			if known entry is true, say "[2dn]RC or CR lets you scan both ways.";
 	choose row with short of "rectify" in table of pad-stuff;
 	if known entry is true:
 		say "[2dn]RECTIFY[if rectify-short is true], or RECT/REC/R for short,[end if] has the gadget rectify the first and last letters of what you need.";
@@ -2860,7 +2858,7 @@ to say get-a-man:
 
 instead of going outside in Notices Section: try going north instead;
 
-check going inside in Notices Section: try entering getaway instead;
+check going inside in Notices Section: try entering getaway gateway instead;
 
 check going nowhere in Notices Section: say "You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[unless gateman is in Notices Section], though it'd be nice to have some help." instead;
 
@@ -2949,22 +2947,6 @@ to say sortie-prep: say "I-A. [if taco is off-stage]Warm Food[else][second custo
 to say forest-prep: say "F-A. [if beard is not wearable]Disguise[else][second custom style]GOT DISGUISE[r][end if] F-B. [if shotgun is off-stage]Get and load weapon[else if silver is off-stage]Load weapon[else][second custom style]GOT LOADED WEAPON[r][end if] F-C. [if player is not in Frost Forts]Find way, d[else]D[end if]efeat an all-ice alliance".
 
 to say metros-prep: say "M-A. [if gardenia is off-stage]Find a flower[else][second custom style]GOT FLOWER[r][end if] M-B. [if tulip is in Esoteric Coteries]Find a light source[else][second custom style]GOT LIT-UP TULIP[r][end if] M-C. [if controls are not in gin nope opening]Find a way underground[else][second custom style]REPAIRED RAILS[r][end if]"
-
-check entering the getaway gateway:
-	if gateman is off-stage:
-		if mega ant is in notices, say "The mega ant snaps at you, in all its redness! You may need to get someone to dispel it." instead;
-		say "A bright red mega-ant appears from behind the gateway! As you grasp at your nametag, which seems to pulse on its own, you wonder what, or who, could defeat the ant, which is too quick for you to defeat it. Its redness is overdone and clearly, well, wrong. Maybe that's something.";
-		now mega ant is in notices instead;
-	if player does not have tagged gadget and gadget-warned is false:
-		say "'Dang adventurers these days. It's not demo mode out there. If I'd had doohickeys nice as that gadget in the cabinet when I saved that ONE world...I'd of took it! And saved two or three worlds!' He gives a warning, wan grin.";
-		now gadget-warned is true instead;
-	say "Your path is clear. [if player has gadget]'Eh, get at the gate.' Nat Egam gets his hanky out. 'Okay, hunt.'[paragraph break]'Thank you,' you say.[paragraph break]'Plod wary through warpy old Yorpwald!' he say, also handing you a prep paper. 'This all--what I know--very theoretical. But you'll figure it. Oh--remember. If you SECURE the tip to either CERTIFY or RECTIFY, you can RECUSE yourself from the last of the three stores you need to enter. But you don't have to choose [']til the button starts flashing. Also, you can RETRY at any point for Terry to return you to the Strip.'[pad-sec][else]'A fool! Aloof! Ol['] oaf!' cries Nat Egam as you mutter 'rely on only...er...' As you walk through, you hear 'Oh, nope! No hope!'[end if]";
-	if player has gadget:
-		now player has a prep paper;
-		pad-rec-q "retry";
-	say "[line break]The gate disappears behind you[if static is visible] as you hear Nat Egam grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
-	say "[wfak]...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
-	solve-region Ordeal Loader instead;
 
 section salient saltine
 
@@ -8561,16 +8543,29 @@ check putting something on cabinet: [??]
 	say "(I'll assume you meant in, not on.)";
 	try inserting noun into cabinet instead;
 
-section gateway
+section getaway gateway
 
-the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping].". entry-rule of getaway gateway is enter-gateway rule.
+the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping].". entry-rule of getaway gateway is enter-gateway rule. description of getaway gateway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ[one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping].". bore-text of getaway gateway is "It's mostly there to enter, to go somewhere new[if mega ant is in notices section], once you get rid of the mega ant[end if].". bore-check of getaway gateway is bore-gateway rule.
 
 this is the enter-gateway rule:
+	if gateman is off-stage:
+		if mega ant is in notices, say "The mega ant snaps at you, in all its redness! You may need to get someone to dispel it." instead;
+		say "A bright red mega-ant appears from behind the gateway! As you grasp at your nametag, which seems to pulse on its own, you wonder what, or who, could defeat the ant, which is too quick for you to defeat it. Its redness is overdone and clearly, well, wrong. Maybe that's something.";
+		now mega ant is in notices instead;
+	if player does not have tagged gadget and gadget-warned is false:
+		say "'Dang adventurers these days. It's not demo mode out there. If I'd had doohickeys nice as that gadget in the cabinet when I saved that ONE world...I'd of took it! And saved two or three worlds!' He gives a warning, wan grin.";
+		now gadget-warned is true instead;
+	say "Your path is clear. [if player has gadget]'Eh, get at the gate.' Nat Egam gets his hanky out. 'Okay, hunt.'[paragraph break]'Thank you,' you say.[paragraph break]'Plod wary through warpy old Yorpwald!' he say, also handing you a prep paper. 'This all--what I know--very theoretical. But you'll figure it. Oh--remember. If you SECURE the tip to either CERTIFY or RECTIFY, you can RECUSE yourself from the last of the three stores you need to enter. But you don't have to choose [']til the button starts flashing. Also, you can RETRY at any point for Terry to return you to the Strip.'[pad-sec][else]'A fool! Aloof! Ol['] oaf!' cries Nat Egam as you mutter 'rely on only...er...' As you walk through, you hear 'Oh, nope! No hope!'[end if]";
+	if player has gadget:
+		now player has a prep paper;
+		pad-rec-q "retry";
+	say "[line break]The gate disappears behind you[if static is visible] as you hear Nat Egam grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
+	say "[wfak]...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
 	now cabinet is LLPish;
+	solve-region Ordeal Loader instead;
 
-check opening getaway gateway: say "It's open. It's just unclear where it leads." instead;
-
-description of getaway gateway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ[one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping]."
+this is the bore-gateway rule:
+	if current action is opening, say "It's open. It's just unclear where it leads." instead;
 
 the new land is boring scenery in Notices Section. description of new land is "You'll have to go there to see it all.". bore-text is "ENTER the gate to learn more about it.". bore-check is bore-new-land rule.
 
@@ -9169,9 +9164,7 @@ check listening when player is in Cruel Ones' Enclosure:
 	if liches are visible, say "The liches are whining about their former lives. 'Tried to...I rotted...' One was a sculpted abstract artist worth far less than its fees, one cheated others for any amount of money it felt like, and one was an obsessive bodybuilder. All forgot about their spiritual life[if banshee is visible]. They almost drown out the banshee's screams[end if]." instead;
 	if banshee is visible, say "The banshee is still moaning. Not threateningly, but annoyingly. Be nice to get rid of it, if you could." instead;
 
-The chisel is a thing. it is not fixed in place.
-
-description of the chisel is "It seems like it can PEEL all sorts of things you may not want to handle."
+The chisel is a thing. description of the chisel is "It seems like it can PEEL all sorts of things you may not want to handle."
 
 check going inside in Cruel Ones' Enclosure:
 	if liches are in Cruel Ones' Enclosure, say "The liches won't let you past." instead;
@@ -9236,8 +9229,7 @@ Rule for printing a parser error when the latest parser error is the noun did no
 
 part examining
 
-check examining (this is the now-examined rule):
-	if noun is a thing, now noun is examined;
+check examining (this is the now-examined rule): if noun is a thing, now noun is examined;
 
 part putting into gun
 
@@ -9259,10 +9251,9 @@ does the player mean inserting the silver into the shotgun: it is likely.
 
 check inserting it into (this is the forest-insert rule):
 	if second noun is sandwich:
-		if noun is viler liver or noun is River Ville liver, say "That might only make the sandwich grosser, and besides, the bread's already stuck to the meat." instead;
+		if noun is a glopmeat, say "That might only make the sandwich grosser, and besides, the bread's already stuck to the meat." instead;
 		say "The sandwich won't be helped by adding anything." instead;
-	if noun is sliver:
-		if second noun is shotgun, say "It is about the right shape, but it doesn't seem quite molded into the right material." instead;
+	if noun is sliver and second noun is shotgun, say "It is about the right shape, but it doesn't seem quite molded into the right material." instead;
 	if noun is silver:
 		if second noun is shotgun:
 			say "The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.";
@@ -9271,8 +9262,7 @@ check inserting it into (this is the forest-insert rule):
 			moot silver;
 			the rule succeeds;
 	if second noun is shotgun:
-		if shotgun is loaded, say "Already loaded." instead;
-		say "You'll need to put a bullet in the shotgun. That's not a bullet." instead;
+		say "[if shotgun is loaded]Already loaded[else]You'll need to put a bullet in the shotgun. That's not a bullet[end if]." instead;
 
 part cutwithing
 
@@ -9373,8 +9363,7 @@ carry out requesting the score:
 	say "You currently have [cur-score of mrlp] out of [max-score of mrlp] total points for the [mrlp] region.";
 	repeat with Q running through regions:
 		if number of visited rooms in Q > 0:
-			if mrlp is not Q:
-				say "You have scored [cur-score of Q] out of [max-score of Q] total points for the [Q] region.";
+			if mrlp is not Q, say "You have scored [cur-score of Q] out of [max-score of Q] total points for the [Q] region.";
 	if there is a solved region:
 		say "[line break]Won now: the [list of solved regions] region[if number of solved regions > 1]s[and-bypass][end if]";
 	else:
@@ -9384,8 +9373,7 @@ carry out requesting the score:
 		say "(Only seen in debug) See the total scores possible?";
 		if the player yes-consents:
 			repeat with Q running through regions:
-				if max-score of Q > 0:
-					say "[Q] [max-score of Q][line break]";
+				if max-score of Q > 0, say "[Q] [max-score of Q][line break]";
 	the rule succeeds;
 
 part wearing (Self-ID Fields)
@@ -9797,8 +9785,7 @@ numsaves is a number that varies.
 
 report saving the game:
 	increment numsaves;
-	if reminders is true:
-		now first-wfak is false;
+	if reminders is true, now first-wfak is false;
 	continue the action;
 
 chapter pause the game
@@ -9890,8 +9877,7 @@ carry out untieing:
 	if noun is heaths or noun is stems, say "They're actually not tied, though they seem like they should be. Hmph. Magic." instead;
 	if noun is ropes, say "You have better things to do than take apart potentially useful ropes. Like getting up that [p-s] over there." instead;
 	if noun is swing, say "The knots where it is tied to the tree are too high up." instead;
-	say "That doesn't seem tied to anything.";
-	the rule succeeds.
+	say "That doesn't seem tied to anything." instead;
 
 chapter reading
 
@@ -9910,9 +9896,7 @@ check reading (this is the reading is almost examining rule):
 	if noun is gadget, try examining tag instead;
 	if noun is gadget-screen, try scaning location of player instead;
 	repeat through table of readables:
-		if noun is to-read entry:
-			say "[the-red entry]";
-			the rule succeeds;
+		if noun is to-read entry, say "[the-red entry]" instead;
 	say "You found nothing to read, so you just EXAMINE, instead.";
 	try examining the noun instead;
 
@@ -9977,11 +9961,9 @@ carry out playing:
 	if noun is not bugle, say "That's not an instrument you can play." instead;
 	if player is in Notices Section, say "[if mega ant is in Notices Section]The mega ant is not moved[else]Nothing seems to happen to the gateway[end if][if bugle-played is true]. Maybe you need to do something different than play the bugle here[end if]." instead;
 	if player is not in Rested Desert, say "You should not have the bugle at this point, so this is a [bug-report]" instead;
-	if bugle-played is false:
-		say "The note from the bugle causes the door to swing back and forth, [if bolt is moot]just as when you got rid of the bolt[else]even with the bolt in place. You can probably enter now[end if].";
-		now bugle-played is true;
-	else:
-		say "Nothing further happens." instead;
+	if bugle-played is true, say "Nothing further happens." instead;
+	say "The note from the bugle causes the door to swing back and forth, [if bolt is moot]just as when you got rid of the bolt[else]even with the bolt in place. You can probably enter now[end if].";
+	now bugle-played is true;
 	the rule succeeds;
 
 chapter lifting
@@ -10160,16 +10142,6 @@ carry out filling:
 	the rule succeeds;
 
 part odd verbs/actions
-
-chapter badabooming
-
-to badaboom:
-	d "Badabooming.";
-	if the player's command matches the regular expression " ":
-		say "Those words have no power here.";
-	else:
-		say "That word has no power here.";
-	reject the player's command;
 
 chapter xyzzying
 
