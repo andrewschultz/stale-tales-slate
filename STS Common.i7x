@@ -70,9 +70,12 @@ a portal can be enter-clued. a portal is usually not enter-clued.
 
 a portal has a region called go-region. a portal has text called solved-text.
 
-a portal has a rule called entry-rule. entry-rule of a portal is usually the degen-true rule.
+a portal has a rule called entry-rule. entry-rule of a portal is usually the debug-fill-in-here rule.
 
 report entering a portal: process the move dumbdrops rule;
+
+this is the debug-fill-in-here rule:
+	if debug-stat is true, say "We need to fill this in.";
 
 section actions on portals
 
@@ -175,17 +178,22 @@ the block drinking rule is not listed in any rulebook.
 the block jumping rule is not listed in any rulebook.
 the block kissing rule is not listed in any rulebook.
 the block listening rule is not listed in any rulebook.
-the block saying yes rule is not listed in any rulebook.
 the block saying no rule is not listed in any rulebook.
+the block saying sorry rule is not listed in any rulebook.
+the block saying yes rule is not listed in any rulebook.
 the block smelling rule is not listed in any rulebook.
 the block sleeping rule is not listed in any rulebook.
-the block swearing mildly is not listed in any rulebook.
-the block swearing obscenely is not listed in any rulebook.
-the block waving hands rule is not listed in any rulebook
+the block swearing mildly rule is not listed in any rulebook.
+the block swearing obscenely rule is not listed in any rulebook.
+the block waving hands rule is not listed in any rulebook.
 the block waking up rule is not listed in any rulebook.
 the block tasting rule is not listed in any rulebook.
 the block thinking rule is not listed in any rulebook.
 the block throwing at rule is not listed in any rulebook.
+
+section saying sorry
+
+check saying sorry: say "I can't do anything with that apology." instead;
 
 section waking (generic to both games)
 
