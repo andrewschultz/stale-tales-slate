@@ -163,8 +163,8 @@ boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boat
 pale plea	pale plea	false	265273725	Anger Range	"leap"	"leap" or "leap at plea" or "leap at pale plea"	--	--	"You're a bit scared to jump, but when it's a majestic leap--whee! You jump overboard, and nobody can really follow you, since the boat is moving away, and they don't want to be left behind. Even if they could swim better. Your super purse remains water-tight, so no possessions get soaked."
 oars	oars	false	258138164	Anger Range	"soar"	"soar"	pre-oars-soar rule	--	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the frat raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
 frat raft	frat raft	false	217136535	--	"fart"	"fart" or "fart on raft"	pre-raft-fart rule	--	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"
-carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-scrap-carps rule	"[spike-scrap]."
-carps	carps	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-scrap-carps rule	"[spike-scrap]."
+carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-spike-pikes rule	"[spike-and-scrap]."
+carps	carps	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-scrap-carps rule	"[spike-and-scrap]."
 pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
 c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	pre-crate-react rule	--	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
@@ -211,7 +211,7 @@ stinger	stinger	false	559013952	--	"resting"	"resting"	--	--	"The stinger whirs 
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	--	--	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
-ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier rule	"The ur-pine shrinks and flails. As it does, a succor crocus rolls out from under. You take the succor crocus and put it in the welt-proof flowerpot."
+ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier rule	"The ur-pine shrinks and flails. And as it does, you hear a crackle from the welt-proof flowerpot. The blub bulb begins expanding ... into a succor crocus!"
 arid den	arid den	false	371276262	--	"drained"	"drained"	--	--	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	--	--	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if player is in Lost Lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -707,6 +707,7 @@ this is the post-hump-umph rule:
 
 this is the post-tsar-star rule:
 	now player wears tsar star;
+	now tsar star is not boring; [??]
 
 this is the pre-plebe-bleep rule:
 	if player is not wearing tsar star:
@@ -989,10 +990,12 @@ this is the post-scrap-carps rule:
 	now scrawl is in Anger Range;
 	now pre-haun is in Anger Range;
 
-to say spike-scrap:
-	if word number 1 in the player's command is "spike":
-		now spikes is true;
-	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
+this is the post-spike-pikes rule:
+	now spikes is true;
+	process the post-scrap-carps rule;
+
+to say spike-and-scrap:
+	"'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
 
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
@@ -1154,6 +1157,8 @@ this is the post-weeds-sewed rule:
 	now player has raves saver;
 
 this is the post-urpine-punier rule:
+	now blub bulb is in location of player; [?? I forget if this is necessary but I am being overcautious]
+	moot blub bulb;
 	now crocus is in flowerpot;
 
 this is the pre-strudel-rustled rule:
@@ -1244,6 +1249,11 @@ this is the pre-rodney rule:
 		preef Rodney instead;
 
 this is the post-rodney rule:
+	now all warriors in Loftier Trefoil are pinko;
+	if vw > 0, decrease poss-score of towers by vw;
+	mootl list of all warriors in Loftier Trefoil;
+	now player has flowerpot;
+	reposition-guardians;
 	pad-rec-q "curst palace";
 
 to say rodney-ditch:
@@ -2649,7 +2659,7 @@ Shane	"[one of]Shane's skin has a healthy sun-kissed glow.[plus][or]Not if he's 
 Terrance	"[one of]Terrance seems stuck to his task.[plus][or]What if you could make him more RECREANT?[minus][cycling]"
 Tyson	"[one of]Tyson seems quite cheery about this whole adventure, like it's fun. Make him frowny.[plus][or]Or STONY.[minus][cycling]"
 Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.[minus][cycling]"
-succor crocus	"[if flowerpot is reflexive][one of]The crocus looks like it is--well, dying. It just needs a little healthy color back, not a ton.[plus][or]Or it could lose the livid color he has.[plus][or]From DYING to...[plus][or]...DINGY.[minus][cycling][else][one of]You can give the crocus to someone.[plus][or][give-croc].[minus][cycling][end if]"
+succor crocus	"[if mesprise premises is unvisited]Maybe you haven't found where to do something with the crocus[else]You should probably give the succor crocus to the Tetris Sitter[end if]."
 flowerpot	--	succor crocus
 Ornate Atoner Renato	"[if Mislit Limits is unvisited]You don't need to worry about Renato's gift until the very end[else if crocus is off-stage]You may find something to put in the flowerpot behind the unripe ur-pine[else if player has crocus]The crocus can be given to someone else[else]You've taken care of Ornate Atoner Renato's gift[end if]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
