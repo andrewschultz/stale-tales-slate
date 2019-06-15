@@ -9951,7 +9951,7 @@ chapter store n
 
 Store N is a bedruggled LLPish sto in Strip of Profits. understand "store/ 14/fourteen" as Store N when player is in Strip of Profits.
 
-description of Store N is "Someone appears to be in there."
+description of Store N is "Someone appears to be in there. Maybe if you called their name, they'd come out."
 
 a-text of Store N is "RYRRYR". b-text of Store N is "RYRRYR". parse-text of store n is "x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -9960,27 +9960,22 @@ section nestor
 Nestor is a person. description of nestor is "[if tokers are visible or mangiest steaming is visible]Nestor is somewhere among the tokers, you'd guess[else]Nestor pines for his most bummedly lost friends[end if].". initial appearance of Nestor is "Nestor mopes around, hoping his friends drop by."
 
 rule for printing a locale paragraph about nestor:
-	if mangiest steaming is visible or tokers are visible:
-		do nothing instead;
+	if mangiest steaming is visible or tokers are visible, do nothing instead;
 	continue the action;
 
-to say move-toners:
-	now toners are in Strip of Profits.
+to say move-toners: now toners are in Strip of Profits.
 
-check taking toners:
-	say "They aren't yours. And you don't need to look good while adventuring." instead;
+check taking toners: say "They aren't yours. And you don't need to look good while adventuring." instead;
 
 the bottles of toners are a plural-named cluey thing. understand "lotions" as toners. description is "They are trial-sized red bottles of toners for skin care[one of]. Thankfully, they weren't made of Sterno, which wouldn't have helped you at all and makes you see red just imagining[or]. They're so rent you can't see a brand name[or]There's lots--er, tons--to look at if you see it right[stopping]. The bottles are disgracefully red."
 
 chapter store o
 
-Store O is a useless sto in Strip of Profits. understand "store/ 15/fifteen" as Store O when player is in Strip of Profits.
+Store O is a useless sto in Strip of Profits. description of Store O is "You'd think there'd be something you could do with Store O, but you haven't.". understand "store/ 15/fifteen" as Store O when player is in Strip of Profits.
 
 chapter store p
 
-Store P is a sto in Strip of Profits. understand "store/ 16/sixteen" as Store P when player is in Strip of Profits.
-
-description of Store P is "There's a big poster in the window of this average-sized store."
+Store P is a sto in Strip of Profits. description of Store P is "There's a big poster in the window of this average-sized store.". understand "store/ 16/sixteen" as Store P when player is in Strip of Profits.
 
 a-text of Store P is "RRYRRY". b-text of Store P is "RRYRRY". parse-text of store p is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
@@ -14010,7 +14005,7 @@ the baser braes are plural-named bounding boring scenery in Olde Lode. descripti
 
 book Disease Seaside
 
-Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the river. Boats block the whole river, and there's a frat raft docked here. A canoe too!"
+Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packked with boats, and there's a frat raft docked here. A canoe too!"
 
 after looking in Disease Seaside:
 	set the pronoun them to boats;
@@ -14048,15 +14043,14 @@ this is the bore-boats rule:
 
 description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the boats[end if]."
 
-a river is scenery in Disease Seaside. "Boats pass on the river. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
+Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
 
-check taking river: say "The river drips through your fingers." instead;
-
-check entering river: say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll avoid all those boats. Or at least their potentially lethal undersides." instead;
+this is the bore-cascade rule:
+	if current action is taking, say "Saccade Cascade drips through your fingers. You blink." instead;
+	if current action is entering, say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll avoid all those boats. Or at least their potentially lethal undersides." instead;
 
 check going in Disease Seaside:
-	if noun is north:
-		say "You can't cross the river on your own. One of the boats would hit you." instead;
+	if noun is north, say "You can't cross Saccade Cascade on your own. One of the boats would hit you." instead;
 	say "You're not sure how to get back to the Posh Hops Shop, and you're not sure it's worth it. The boats seem hard to get by, and you're not amphibious enough to speed through the deeps." instead;
 
 section frat raft
@@ -14158,8 +14152,7 @@ to say hau-clue:
 to say rub-wr:
 	say "[if player has ruby]ruby[else]wrap[end if]";
 
-check going south in Anger Range:
-	say "You don't want to go back over that river. Your goal must be here." instead;
+check going south in Anger Range: say "You don't want to go back over Saccade Cascade. Your goal must be here." instead;
 
 the scrawl is scenery. "[if carps are visible][reject][else]All in red:[paragraph break]Etahn Ru. Near-Hut Haunter.[end if]"
 
@@ -14228,12 +14221,11 @@ check going in Anger Range:
 
 chapter Shoer Osher
 
-Shoer Osher is scenery. "Everyone knows the story of Shoer Osher and [if player is male]his[else]her[end if] rise to fame from humble farm life, and everyone knows it's sort of fake, but nobody can say much. The statue itself improves Osher's looks and muscle tone. It's quite frankly creepy enough, making you wonder if perhaps you should be looking in the river instead for ways to cross it."
+Shoer Osher is scenery. "Everyone knows the story of Shoer Osher and [if player is male]his[else]her[end if] rise to fame from humble farm life, and everyone knows it's sort of fake, but nobody can say much. The statue itself improves Osher's looks and muscle tone. It's still quite frankly creepy enough. One look and you are that much more eager to dispose of the Horned Hedron and get out of here."
 
 Understand "sculpture" and "super/ cult/ sculpture" as Osher.
 
-check taking Osher:
-	say "You have enough heroism by yourself." instead;
+check taking Osher: say "You have enough heroism by yourself." instead;
 
 chapter scraping
 
@@ -16960,7 +16952,7 @@ check taking sled rut: say "[if strudel is in Outer Route]Maybe take the strudel
 
 chapter a bot boat
 
-description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[else]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across the river[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[else]The blaster hums and shakes erratically[end if].[paragraph break][if bot boat is reflexed]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
+description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[else]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across Leak Lake[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[else]The blaster hums and shakes erratically[end if].[paragraph break][if bot boat is reflexed]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
 
 t-or-b is a thing that varies.
 
@@ -22373,7 +22365,7 @@ to say d-then:
 		say "pull the lever then ";
 [?? need to spill pills vs span pans and pins as well]
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers' Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol' trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers' Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over Saccade Cascade[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol' trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 

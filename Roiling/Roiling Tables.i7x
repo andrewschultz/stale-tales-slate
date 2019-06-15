@@ -232,8 +232,8 @@ mended mini denim	Éclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	--	post-tentative-attentive rule	"[agnostic] snaps further to attention, even more eager than before!"
-turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[else]marginally safer[end if] crossing the river on the boat now."
-blaster	blaster	false	486934458	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[else]marginally safer[end if] crossing the river on the boat now."
+turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! [how-safe]."
+blaster	blaster	false	486934458	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. [how-safe]."
 weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	--	--	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [agnostic-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	--	--	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
 bogus-detours	bogus-detours	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
@@ -1228,6 +1228,8 @@ this is the pre-unlocked rule:
 
 this is the post-tentative-attentive rule:
 	now ag-atten is true;
+
+to say how-safe: say You'd feel [if blaster is reflexive or turbos are reflexive]]marginally safer[else]totally safe[end if] crossing Leak Lake on the boat now"
 
 this is the post-detours-rousted rule:
 	move player to last-detour;

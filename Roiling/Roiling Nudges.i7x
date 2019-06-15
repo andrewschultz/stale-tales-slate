@@ -496,6 +496,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "super"	495975644	Disease Seaside	--	--	"[sculpt]."
 "river"	450611381	Disease Seaside	--	--	"[river-no]."
 "rivera"	452799199	Disease Seaside	--	--	"[river-no]."
+"saccade"	287495970	Disease Seaside	--	--	"[river-no]."
 "oar"	161864198	Disease Seaside	--	--	"If you looked at just one oar, the raft would do no better than go in Cleric Circle."
 "boat"	198069318	Disease Seaside	--	--	"No one boat seems better than the others. Maybe you should widen your focus to all the boats."
 "interlocking"	776745519	--	oars	--	"Whoah, they're just oars. Think simpler. Much simpler."
@@ -505,8 +506,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "crays"	325150424	Fighter Freight	--	--	"[no-cray]."
 "cray"	228876458	Fighter Freight	--	--	"[no-cray]."
 "anger"	316824940	Anger Range	--	--	"[locname]." [ANGER RANGE]
-"hoser"	421038754	--	--	now-shore rule	"You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better."
-"hero"	324764788	--	--	now-shore rule	"You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
+"hoser"	421038754	--	--	now-shore rule	"[hero-er-oh]."
+"hero"	324764788	--	--	now-shore rule	"[hero-er-oh]."
 "scrawl"	364539784	--	scrawl	--	"It's probably not just any scrawl. What the scrawl says may be important."
 "pike"	307198092	--	pikes	--	"[all-fish]."
 "carp"	187983165	--	carps	--	"[all-fish]."
@@ -1546,6 +1547,8 @@ to say no-cray: say "No way. You're not changing the crays--and if you changed o
 this is the now-shore rule:
 	if player is in Anger Range and haunter is moot, the rule succeeds;
 	the rule fails;
+
+to say hero-er-oh: say "You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better"
 
 to say all-fish: say "You need to deal with all the bullies at once, somehow, not just one at a time"
 

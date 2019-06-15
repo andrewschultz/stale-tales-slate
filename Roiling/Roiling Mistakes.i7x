@@ -488,8 +488,6 @@ understand "boast" as a mistake ("Batso.") when player is not in Disease Seaside
 
 understand "fart" as a mistake ("[if buried raft is in location of player]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and Anger Range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
 
-understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on word games.") when player is in Disease Seaside.
-
 understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Disease Seaside.
 
 understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in Disease Seaside and player is in Disease Seaside.
