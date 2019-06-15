@@ -2522,8 +2522,6 @@ carry out reading:
 	if noun is drinks stand, try examining blurbs instead;
 	try examining noun instead;
 
-the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". understand "words" and "red/-- letters" as writing.
-
 does the player mean reading LEAD: it is very likely.
 does the player mean reading the red writing when number of readable things > 0: it is likely.
 does the player mean reading the red writing when number of readable things is 0: it is unlikely.
@@ -2533,22 +2531,6 @@ does the player mean examining the red writing when number of readable things is
 last-read is a thing that varies.
 
 does the player mean reading last-read when last-read is visible: it is likely.
-
-instead of doing something with red writing:
-	if current action is examining or current action is reading:
-		if number of readable things is 0:
-			say "No red writing around here on anything." instead;
-		d "[number of readable things]: [list of readable things].";
-		if number of readable things is 1:
-			try reading a random readable thing instead;
-		if last-read is visible and last-read is not the player:
-			try reading last-read instead;
-		say "That's sensible but ambiguous here with so much to look at--the preferred verb is to READ one of [the list of readable things]." instead;
-	if current action is objhinting:
-		continue the action;
-	if number of readable things is 0:
-		say "There's no red writing here to do anything with." instead;
-	say "You can really only read the writing." instead;
 
 definition: a thing (called cand) is readable:
 	if cand is not a to-read listed in table of readables, decide no;
@@ -2605,6 +2587,22 @@ mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
 orange	"It's stamped with the word ENGARO in red."
 singed design	"The singed design on the [if player has coins or player has s-c]coins[else if player has coin]coin[else if player has icon]icon[else if player has icons]icons[else]BUG[end if] reads, when you look close, property of NISCO."
+
+section red writing
+
+the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". bore-text of red writing is "You can really only read the writing.". bore-check is bore-red-writing rule.
+
+understand "words" and "red/-- letters" as writing.
+
+this is the bore-red-writing rule:
+	if current action is examining or current action is reading:
+		if number of readable things is 0, say "No red writing around here on anything." instead;
+		d "[number of readable things]: [list of readable things].";
+		if number of readable things is 1, try reading a random readable thing instead;
+		if last-read is visible and last-read is not the player, try reading last-read instead;
+		say "That's sensible but ambiguous here with so much to look at--the preferred verb is to READ one of [the list of readable things]." instead;
+	if current action is objhinting, continue the action;
+	if number of readable things is 0, say "There's no red writing here to do anything with." instead;
 
 book quips
 
@@ -5973,9 +5971,8 @@ understand the command "kick" as something new.
 
 understand "kick [something]" as attacking.
 
-instead of attacking: [this takes responses for general types. The table below it is for specific NPCs/objects]
-	if noun is a store: [general stuff here that can't fit into a table]
-		say "Sore at a store?" instead;
+check attacking: [this takes responses for general types. The table below it is for specific NPCs/objects]
+	if noun is a store, say "Sore at a store?" instead; [general stuff here that can't fit into a table]
 	if noun is Elvira:
 		say "'Hater-heart.' She pouts. She summons a proto-troop that easily defeats you. '[one of]Pretty try, pet[or]Gritty try, git[in random order]!' she laughs. 'A feted defeat!' Perhaps you need backup.";
 		get-dead;
@@ -5989,10 +5986,8 @@ instead of attacking: [this takes responses for general types. The table below i
 	if noun is a target listed in the table of attack-specific:
 		choose row with target of noun in table of attack-specific;
 		say "[nohit entry][line break]" instead;
-	if player has lance:
-		say "[if noun is a person]Wrong enemy for the lance[else]." instead;
-	if noun is a guardian:
-		say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Bland Sad Badlands is evil[end if]." instead;
+	if player has lance, say "[if noun is a person]Wrong enemy for the lance[else]." instead;
+	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Bland Sad Badlands is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
 
 sign-other is a truth state that varies.
@@ -8521,10 +8516,8 @@ the act ruin curtain is boring scenery. description of the act ruin curtain is "
 printed name of act ruin curtain is "ACT-RUIN CURTAIN".
 
 this is the bore-curtain rule:
-	if current action is opening or current action is pulling or current action is taking:
-		say "[could-staple].";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is opening or current action is pulling or current action is taking, say "[could-staple]." instead;
+	if current action is stapleing, now boring-exception is true;
 
 to say curt-kno:
 	now curtain-know is true;
@@ -8555,8 +8548,7 @@ the staple is a thing. description is "It looks unbent (well, beyond the two ben
 
 understand "staples" as staple.
 
-check taking staple:
-	if staple is in stapler, say "It belongs in the stapler." instead;
+check taking staple: if staple is in stapler, say "It belongs in the stapler." instead;
 
 chapter stapleing
 
@@ -14107,25 +14099,27 @@ after looking in Disease Seaside:
 	set the pronoun it to frat raft;
 	continue the action;
 
+chapter canoe
+
 the canoe is scenery in Disease Seaside. "The canoe is all red and has a fish carved into it. The fish seems to be trying to cut...a tree?!"
 
 check taking canoe: try entering canoe instead;
 
-the fish is part of the canoe. description of fish is "You can't tell what sort of fish it is. It may not be important. It seems to be cutting down a tree, but you can't tell."
-
-check entering canoe: say "It's too narrow. How stupid of the designer. Plus it has no oars. Maybe the frat raft or boats can get you across.";
-
-instead of doing something with fish:
-	if action is procedural, continue the action;
-	say "Not much you can do with the fish."
+check entering canoe: say "It's too narrow. How stupid of the designer. Plus it has no oars. Maybe the frat raft or boats can get you across." instead;
 
 a-text of canoe is "YRYYR". b-text of canoe is "YRYYR". parse-text of canoe is "-[sp]x[sp]-[sp]-[sp]x".
+
+section fish
+
+the fish is part of the canoe. the fish is boring. description of fish is "You can't tell what sort of fish it is. It may not be important. It seems to be cutting down a tree, but you can't tell.". bore-text of fish is "Not much you can do with the fish embedded in the canoe.
 
 joke-death is a truth state that varies.
 
 to say uurrgg:
 	now joke-death is true;
 	get-dead;
+
+chapter boats
 
 The boats are vanishing plural-named boring scenery in Disease Seaside. bore-rule is bore-boats rule. bore-text is "You're too far away from the boats to do anything to them. Or have them do something to you.".
 
@@ -14560,18 +14554,16 @@ book Hardest Trashed Dearths
 
 Hardest Trashed Dearths is a room in oyster. Hardest Trashed Dearths is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him. With all the crackling and general blurriness, you suspect you are surrounded by potentially lethal spark parks, with no quick directional way out.[paragraph break]You do hear something, though[if cans are visible], and the ground is littered with cans[end if]."
 
-the spark parks are plural-named bounding scenery in Hardest Trashed Dearths. "You can't clearly see or feel the spark parks, and it might hurt if you got close. But you know they're there."
+section spark parks
 
-instead of doing something with spark parks:
-	if action is procedural, continue the action;
-	say "You don't want to do anything with the spark parks, as they might do something to you. You need to find a safe way out."
+the spark parks are plural-named boring bounding scenery in Hardest Trashed Dearths. description is "You can't clearly see or feel the spark parks, and it might hurt if you got close. But you know they're there.". bore-text is "You don't want to do anything with the spark parks, as they might do something to you. You need to find a safe way out.".
 
 after looking in Hardest Trashed Dearths:
 	set the pronoun them to eeks;
 	if cans are in Hardest Trashed Dearths, set the pronoun them to cans;
 	continue the action;
 
-scan-cans is a truth state that varies.
+section cans
 
 the cans are vanishing flippable LLPish scenery in Hardest Trashed Dearths. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
 
@@ -14588,19 +14580,20 @@ check scaning the cans (this is the bonus point rule) :
 	say "You're over-thinking this one.";
 	the rule fails;
 
-to say wipes-too: if wipes are in Lean Lane, say ", and you notice some wipes on it";
+section eeks
 
-the eeks are plural-named vanishing scenery in Hardest Trashed Dearths. "[bug-report]"
+the eeks are plural-named vanishing scenery in Hardest Trashed Dearths. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.".
 
 a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "x[sp]e[sp]e[sp]x". eeks are parse-spoilable.
 
-instead of doing something to eeks:
-	if action is procedural, continue the action;
-	if current action is seeking, continue the action;
-	if current action is not listening, say "Can't do much more than listen, to find how to follow.";
-	try listening instead;
+this is the bore-eeks rule:
+	if current action is seeking or current action is listening, now boring-exception is true;
+
+book Lean Lane
 
 Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [rew-war] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
+
+to say wipes-too: if wipes are in Lean Lane, say ", and you notice some wipes on it";
 
 after looking in Lean Lane:
 	if tea tray is in Lean Lane, set the pronoun it to tea tray;
@@ -14615,8 +14608,7 @@ The tea tray is edible flippable scenery in Lean Lane. description is "Arty, wit
 
 a-text of tea tray is "YYR". b-text of tea tray is "YYR". parse-text of tea is "e[sp]a[sp]t". tea tray is parse-spoilable.
 
-check drinking tea:
-	say "It's food-tea, not drink-tea." instead;
+check drinking tea: say "It's food-tea, not drink-tea." instead;
 
 after scaning tray:
 	if the player's command includes "tray":
@@ -14833,11 +14825,7 @@ the stupid paper necklace is a cluey thing. description is "It's red and is cut 
 
 section stupid paper necklace
 
-the papery yapper wears the stupid paper necklace.
-
-instead of doing something with stupid paper necklace:
-	if action is procedural, continue the action;
-	say "The necklace isn't worth meddling with beyond maybe giving an odd clue."
+the papery yapper wears the stupid paper necklace. description of stupid paper necklace is "Stupid, but readable.". bore-text is "The necklace isn't worth meddling with beyond maybe giving an odd clue."
 
 description of papery yapper is "He looks precisely folded, but also shifty, like he could be bribed. But you probably can't just bribe him directly."
 
@@ -14899,14 +14887,12 @@ chapter pins
 
 [?? if player has pills then reg-inc]
 
-some pins are reflexive plural-named scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in."
+some pins are reflexive boring plural-named scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in.". bore-text of pins is "You need to get the pins out of the way, but don't worry, it's pretty simple.".
 
-instead of doing something with pins:
-	if current action is sniping or current action is spining, continue the action;
+this is the bore-pins rule:
+	if current action is sniping or current action is spining, now boring-exception is true;
 	if current action is dropping, say "Only twenty-four combinations. Two work. The pin(s) will drop." instead;
 	if current action is taking, say "They'd poke you nastily. Give you nips and all." instead;
-	if action is procedural, continue the action;
-	say "You need to get the pins out of the way, but don't worry, it's pretty simple." instead;
 
 a-text of pins is "RRYR". b-text of pins is "RRYR". parse-text of pins is "x[sp]x[sp]I[sp]x".
 
@@ -15364,14 +15350,10 @@ to say hedron-if-v:
 	if Horned Hedron is visited:
 		say " to the Horned Hedron"
 
-h-h is privately-named scenery in Sclerous Closures. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h when player is in Sclerous Closures. printed name of h-h is "the Horned Hedron". bore-text of h-h is "You can't do much with the Horned Hedron itself, or the insulting sign".
+h-h is privately-named scenery in Sclerous Closures. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h when player is in Sclerous Closures. printed name of h-h is "the Horned Hedron". bore-text of h-h is "You can't do much with the Horned Hedron itself, or the insulting sign 'welcoming' you to it". bore-check of h-h is bore-h-h rule.
 
-instead of doing something with h-h:
-	if current action is entering:
-		try going north instead;
-	if action is procedural:
-		try examining h-h instead;
-	continue the action;
+this is the bore-h-h rule:
+	if current action is entering, try going north instead;
 
 the Achers' Chaser Arches are plural-named reflexive scenery in Sclerous Closures. description of Achers' Chaser Arches is "[if Achers' Chaser Arches is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].".
 
@@ -15382,7 +15364,7 @@ a-text of Achers' Chaser Arches is "RYYRRR". b-text of Achers' Chaser Arches is 
 does the player mean searching the Achers' Chaser Arches: it is very likely.
 
 check searching Achers' Chaser Arches:
-	if sardine is visible:
+	if sardine is in Sclerous Closures:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
 		preef Achers' Chaser Arches instead;
 	if the player's command includes "search":
@@ -16235,23 +16217,18 @@ Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre 
 
 section sway ways
 
-sway ways are plural-named bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway."
+sway ways are plural-named boring bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway.". bore-text of sway ways is "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to.".
 
 understand "yaws" and "sway-ways" as sway ways.
 
-instead of doing something with sway ways:
-	if current action is entering:
-		try going west instead; [west is arbitrary here. Any direction gives the same message.]
-	if action is procedural, continue the action;
-	say "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to."
+this is the bore-sway-ways rule:
+	if current action is entering, try going west instead; [west is arbitrary here. Any direction gives the same message.]
 
 section Campiest Campsite
 
-the campiest campsite is useless scenery in Outer Route. understand "camp/site/campsite" and "yon camp" as campsite. "My goodness! The campiest campsite is the MOST! It's a bit redundant and over-the-top, so you might not sensibly make a whole room out of it, but...this is a good place for it."
+the campiest campsite is boring useless scenery in Outer Route. description of campiest campsite is "My goodness! The campiest campsite is the MOST! It's a bit redundant and over-the-top, so you might not sensibly make a whole room out of it, but...this is a good place for it.". bore-text of campiest campsite is "Well, gosh! There's not a whole lot to do with the camp but have fun being around it! Oh, and maybe figure what goes in the rapier repair." instead;
 
-instead of doing something with campiest campsite:
-	if action is procedural, continue the action;
-	say "Well, gosh! There's not a whole lot to do with the camp but have fun being around it! Oh, and maybe figure what goes in the rapier repair." instead;
+understand "camp/site/campsite" and "yon camp" as campsite.
 
 A rapier repair machine is in Outer Route. "A shiny machine labeled RAPIER REPAIR [if dagger is moot]fizzles[else]chugs[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if dagger is not moot]It's nowhere near big enough to clean a lance, but you could probably PUT any blade smaller than a rapier in there[else]You seem to have broken it creating the gizmo[end if]."
 
@@ -17340,34 +17317,35 @@ To decide whether the current action is no-timely: (- meta -)
 
 to decide whether the action is procedural: [aip]
 	if the current action is no-timely, yes;
-	if discerning, yes;
-	if examining, yes;
-	if fliptoing, yes;
-	if attacking, yes;
-	if scaning, yes;
+	if fliptoing, yes; [game progress verbs]
+	if scaning, yes; [hint verbs]
+	if sbing, yes;
 	if ss0ing, yes;
 	if ssing, yes;
 	if scanlasting, yes;
 	if objhinting, yes;
-	if xraying, yes;
+	if taking inventory, yes;
+	if dropping, yes;
+	if objasking about, yes; [talking, because this often fails]
+	if asking about, yes;
+	if objasking generically, yes;
+	if asking generically, yes;
+	if xraying, yes; [cheat verbs]
+	if discerning, yes;
 	if guruing, yes;
-	if smelling, yes;
-	if reading, yes;
-	if sbing, yes;
-	if player has stapler:
-		if stapleing, yes;
-	if qbc_litany is table of no conversation:
-		if gotoing, yes;
-		if gotothinging, yes;
+	if swearing obscenely, yes; [silly verbs]
+	if swearing mildly, yes;
 	if saying yes, yes;
 	if saying no, yes;
-	if dropping, yes;
+	if reading, yes; [senses]
+	if examining, yes;
 	if looking, yes;
-	if objasking about, yes;
-	if taking inventory, yes;
-	if swearing obscenely, yes;
-	if swearing mildly, yes;
+	if attacking, yes;
+	if smelling, yes;
 	if listening, yes;
+	if qbc_litany is table of no conversation: [we can goto something boring with no problen]
+		if gotoing, yes;
+		if gotothinging, yes;
 	no;
 
 definition: a thing is followy:
@@ -17490,12 +17468,10 @@ the scaly clays are plural-named bounding boring scenery in Mislit Limits. descr
 
 chapter unripe ur-pine
 
-the unripe ur-pine is vanishing LLPish scenery in Mislit Limits. understand "pine/urpine" and "unripe pine/urpine" as ur-pine. "It covers a lot of ground[if crocus is not off-stage], but there's probably nothing else beneath it. [one of]Maybe it's hiding something. [or]You see red wondering if you'd see anything as ridiculous in Peru[stopping][end if]."
+the unripe ur-pine is boring vanishing LLPish scenery in Mislit Limits. understand "pine/urpine" and "unripe pine/urpine" as ur-pine. "It covers a lot of ground[if crocus is not off-stage], but there's probably nothing else beneath it. [one of]Maybe it's hiding something. [or]You see red wondering if you'd see anything as ridiculous in Peru[stopping][end if].". bore-text is "The unripe ur-pine just sits there, almost impossibly big. Maybe you could make it smaller.". bore-check is the bore-ur-pine rule.
 
-instead of doing something with ur-pine:
-	if action is procedural, continue the action;
+this is the bore-ur-pine rule:
 	if current action is attacking, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]" instead;
-	say "The unripe ur-pine just sits there, almost impossibly big."
 
 a-text of unripe ur-pine is "RYRYYR". b-text of unripe ur-pine is "RYRGYR". parse-text of unripe ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
 
@@ -17525,8 +17501,7 @@ check examining curst palace when player is not in Mislit Limits:
 max-pal-seen is a number that varies.
 
 check scaning curst palace (this is the nab a few letters rule) :
-	if player is in Loftier Trefoil:
-		say "You'll want to walk outside first, at the very least." instead;
+	if player is in Loftier Trefoil, say "You'll want to walk outside first, at the very least." instead;
 	if player is not in Mislit Limits:
 		if max-pal-seen is 0:
 			say "You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.";
@@ -17600,28 +17575,19 @@ check going west in Mislit Limits:
 
 book Leak Lake (backdrop)
 
-Leak Lake is a useless backdrop. It is in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
+Leak Lake is a proper-named useless boring backdrop. It is in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable.". bore-check is bore-leak-lake rule. bore-text is "[cross-leak-lake].".
 
-instead of doing something with leak lake:
-	if the action is procedural, continue the action;
-	if the current action is smelling, continue the action;
+this is the bore-leak-lake rule:
 	if the current action is drinking, say "Yo, sick! So icky!" instead;
 	if the current action is entering:
 		if player is in Actionless Coastlines and bot boat is in Actionless Coastlines, try entering bot boat instead;
 		say "Go out, eh? Too huge!" instead;
-	say "Leak Lake is just there. Not much to do with it. You [if player is in Mislit Limits]found[else]need[end if] a way to cross it.";
+
+to say cross-leak-lake: say "The [noun] [is-are of noun] just there. Not much to do with [it-them of noun]. You [if player is in Mislit Limits]found[else]need[end if] a way to cross [the noun].";
 
 book shoals aslosh (backdrop)
 
-the shoals aslosh are a useless plural-named backdrop. they are in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
-
-instead of doing something with shoals aslosh:
-	if the action is procedural, continue the action;
-	if the current action is drinking, say "Yo, sick! So icky!" instead;
-	if the current action is entering:
-		if player is in Actionless Coastlines and bot boat is in Actionless Coastlines, try entering bot boat instead;
-		say "Go out, eh? Too huge!" instead;
-	say "The shoals aslosh are just there. Not much to do with them. You [if player is in Mislit Limits]found[else]need[end if] a way to cross Leak Lake.";
+the shoals aslosh are a useless boring plural-named backdrop. they are in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos.". bore-check is the bore-leak-lake rule. bore-text is "[cross-leak-lake]."
 
 book Dourest Detours
 
@@ -17710,11 +17676,7 @@ chapter Baldest Blasted Saltbed
 
 section fluster self rut
 
-the fluster self rut is a red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut]."
-
-instead of doing something with the fluster self rut:
-	if the action is procedural, continue the action;
-	say "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way."
+the fluster self rut is a boring red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut].". bore-text of fluster self rut is "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way."
 
 a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
 
@@ -17783,17 +17745,12 @@ a-text of dandier arid den is "RRYYRYR". b-text of dandier arid den is "??YYRGR"
 
 description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
 
-the bottles of Nerd-Aid are auxiliary plural-named scenery. the arid den carries the nerd-aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid.
+the bottles of Nerd-Aid are boring auxiliary plural-named scenery. the arid den carries the nerd-aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid. description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd-aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.".
 
 a-text of Nerd-Aid is "RRYYRYR". b-text of Nerd-Aid is "RRYYRYP". parse-text of nerd-aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
-description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best."
-
-instead of doing something with the nerd-aid:
-	if current action is taking or current action is eating or current action is drinking:
-		say "You'd need to buy it, and you've no money, and it's pretty much glorified sugar-water anyway." instead;
-	if action is procedural, continue the action;
-	say "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.";
+this is the bore-nerd-aid rule:
+	if current action is taking or current action is eating or current action is drinking, say "You'd need to buy the Nerd-Aid, and you've no money, and it's pretty much glorified sugar-water anyway." instead;
 
 chapter Treading Gradient
 
@@ -18556,7 +18513,9 @@ to say animals-left:
 
 book Reclusion Inclosure
 
-Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare. The ways north and south lead to coevals['] alcoves which are even less safe."
+Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Mythical or extinct animals['] laminas of populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare. The ways north and south lead to coevals['] alcoves which are even less safe."
+
+section coevals' alcoves
 
 the coevals' alcoves are boring scenery in Reclusion Inclosure. description of coevals' alcoves is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.".
 
@@ -18564,20 +18523,17 @@ check going when player is in Reclusion Inclosure:
 	if noun is inside, try going west instead;
 	if noun is outside, try going east instead;
 
-the forces fresco is scenery in Reclusion Inclosure. description of forces fresco is "One glance tells you it deserves an f-score, with or without recs of disturbing violence and amorality."
+section forces fresco
 
-instead of doing something with the forces fresco:
-	if current action is examining, continue the action;
-	say "The fresco is just there to taunt and annoy people not aligned with Elvira."
+the forces fresco is boring scenery in Reclusion Inclosure. description of forces fresco is "One glance tells you it deserves an f-score, with or without recs of disturbing violence and amorality.". bore-text of forces fresco is "The fresco is just there to taunt and annoy people not aligned with Elvira."
 
-the laminas are useless scenery in Reclusion Inclosure. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". understand "animals/lamina/animal" as laminas.
+section animals' laminas
 
-instead of doing something with laminas:
-	if action is procedural, continue the action;
-	say "The laminas are just part of the whole bad-guy ambiance.";
+the animals' laminas are boring useless scenery in Reclusion Inclosure. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". bore-text of animals' laminas say "The laminas are just part of the whole bad-guy ambiance.";
 
-check going east in Reclusion Inclosure:
-	if medals are reflexed and Rancho Archon Anchor is unvisited, say "You don't know when your super-speed will wear off. You'd hate to waste it where you've already been." instead;
+check going east in Reclusion Inclosure: if medals are reflexed and Rancho Archon Anchor is unvisited, say "You don't know when your super-speed will wear off. You'd hate to waste it where you've already been." instead;
+
+understand "animals/lamina/animal" as laminas.
 
 chapter elmer and merle
 
@@ -18616,75 +18572,7 @@ description of Merle is "He wears sober robes. His mouth smiles on the right and
 
 the sober robes are plural-named boring scenery in Reclusion Inclosure. description of sober robes is "Elmer and Merle don't stylize zestily.". bore-text is "Elmer and Merle, noticing you noticing their robes, yell 'Us? Drab? Absurd!'"
 
-book Minded Midden
-
-to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
-
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
-
-printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
-
-check going east in Minded Midden when bleary barley is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
-
-[glow red as you want to get rid of them]
-
-check going in Minded Midden:
-	if noun is up or noun is down, continue the action;
-	if bleary barley is reflexive, say "The bleary barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
-	if Ed Riley is in Minded Midden:
-		if noun is south or noun is north:
-			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
-			continue the action;
-
-chapter bleary barley
-
-the bleary barley is reflexive scenery in Minded Midden. description of bleary barley is "It ranges expansively--but the weird thing is, it hasn't flowered. And it's not all planted. Someone must have placed it very carefully or deliberately so you'd progress slowly."
-
-a-text of bleary barley is "RYRYRO". b-text of bleary barley is "P??YRB". parse-text of bleary barley is "b[sp]?[sp]?[sp]e[sp]l[sp]y". bleary barley is cheat-spoilable.
-
-check taking bleary barley: say "Your inventory doesn't expand infinitely." instead;
-
-chapter nude dune
-
-the nude dune is useless boring scenery. description of nude dune is "It is impressive and blocks your way east.". bore-check of nude dune is bore-dune rule. bore-text is "The dune is just there, blocking your way east. And you don't need to go east.".
-
-this is the bore-dune rule:
-	if current action is entering:
-		say "That would END U. See what I did there?";
-		the rule succeeds;
-	if current action is climbing:
-		say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too.";
-		the rule succeeds;
-	abide by the bore-exam rule;
-
-chapter Ed Riley
-
-Ed Riley is a vanishing man. description is "'Er, yield idly [']ere!' Ed Riley booms at regular intervals. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward, carrying a loaf of deli rye."
-
-check taking ed riley: say "Ed Riley raises up on his toes and booms 'I'm no YIELDER!'" instead;
-
-check taking deli rye: say "Ed Riley snatches it away forcefully. 'I'm no YIELDER!'" instead;
-
-the deli rye is an edible auxiliary thing. description is "It looks delicious enough for Ed not to share with you.". Ed Riley carries the deli rye.
-
-a-text of deli rye is "RYYRYRO". b-text of deli rye is "RGYRYRO". parse-text of deli rye is "x[sp]e[sp]-[sp]x[sp]-[sp]l[sp]y". deli rye is cheat-spoilable.
-
-instead of doing something with Ed Riley:
-	if action is procedural, continue the action;
-	if current action is taking:
-		continue the action;
-	if current action is objasking about or current action is asking about:
-		continue the action;
-	say "You probably don't need much more than your usual tricks to get past him. Even in your diminished state."
-
-understand "yielder" and "steward" as Ed Riley.
-
-a-text of ed riley is "RYYRYRO". b-text of ed riley is "RYYRYRB". parse-text of ed riley is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]y".
-
-to say ed-nonsense:
-	say "[one of], and then he bangs on about not trying to sing or attack him[or][or][or][cycling]"
-
-check going west in Minded Midden: if Ed Riley is visible, say "'Re-yield, yielder! Ye Idler! Er, yield idly [']ere!' booms Ed Riley[ed-nonsense].[paragraph break]He's not bigger than you, but his loud voice scares you. And he could probably swat you with that deli rye. You back away." instead;
+chapter weltish whistle
 
 the weltish whistle is a reflexive thing. description is "It's ugly, that's for sure, but [if parrot wears whistle]the parrot isn't carrying it around for nothing[else if whistle is reflexive]you can probably PLAY it and practice to figure how to use it[else]you do know how to PLAY it, and that's something[end if]. It reads DISCOURAGE-SCOURGE AID. WHISTLES: SHE WILTS. Red writing indicates who crafted it.";
 
@@ -18768,8 +18656,7 @@ carry out playing:
 	say "That doesn't seem like a toy or an instrument." instead;
 	the rule succeeds;
 
-to note-denial:
-	ital-say "also, IGNORE REGION sends you to the Strip of Profits, and LEAD IN/LEADIN (DENIAL or NAILED or both) sends you there with Otters available.";
+to note-denial: ital-say "also, IGNORE REGION sends you to the Strip of Profits, and LEAD IN/LEADIN (DENIAL or NAILED or both) sends you there with Otters available.";
 
 to say lee-or-eels:
 	say "[wfak]";
@@ -18813,6 +18700,71 @@ carry out whistleing:
 		say "Music is not your talents. You'd need an instrument." instead;
 	try playing the whistle instead;
 
+book Minded Midden
+
+to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
+
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if]."
+
+printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
+
+check going east in Minded Midden when bleary barley is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
+
+[glow red as you want to get rid of them]
+
+check going in Minded Midden:
+	if noun is up or noun is down, continue the action;
+	if bleary barley is reflexive, say "The bleary barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
+	if Ed Riley is in Minded Midden:
+		if noun is south or noun is north:
+			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
+			continue the action;
+
+chapter bleary barley
+
+the bleary barley is reflexive scenery in Minded Midden. description of bleary barley is "It ranges expansively--but the weird thing is, it hasn't flowered. And it's not all planted. Someone must have placed it very carefully or deliberately so you'd progress slowly."
+
+a-text of bleary barley is "RYRYRO". b-text of bleary barley is "P??YRB". parse-text of bleary barley is "b[sp]?[sp]?[sp]e[sp]l[sp]y". bleary barley is cheat-spoilable.
+
+check taking bleary barley: say "Your inventory doesn't expand infinitely." instead;
+
+chapter nude dune
+
+the nude dune is useless boring scenery. description of nude dune is "It is impressive and blocks your way east.". bore-check of nude dune is bore-dune rule. bore-text is "The dune is just there, blocking your way east. And you don't need to go east.".
+
+this is the bore-dune rule:
+	if current action is entering:
+		say "That would END U. See what I did there?";
+		the rule succeeds;
+	if current action is climbing:
+		say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too.";
+		the rule succeeds;
+	abide by the bore-exam rule;
+
+chapter Ed Riley
+
+Ed Riley is a vanishing boring man. description is "'Er, yield idly [']ere!' Ed Riley booms at regular intervals. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward, carrying a loaf of deli rye.". bore-text of ed riley is "You probably don't need much more than your usual tricks to get past him. Even in your diminished state."
+
+check taking ed riley: say "Ed Riley raises up on his toes and booms 'I'm no YIELDER!'" instead;
+
+check taking deli rye: say "Ed Riley snatches it away forcefully. 'I'm no YIELDER!'" instead;
+
+the deli rye is an edible auxiliary thing. description is "It looks delicious enough for Ed not to share with you.". Ed Riley carries the deli rye.
+
+a-text of deli rye is "RYYRYRO". b-text of deli rye is "RGYRYRO". parse-text of deli rye is "x[sp]e[sp]-[sp]x[sp]-[sp]l[sp]y". deli rye is cheat-spoilable.
+
+this is the bore-ed-riley rule:
+	if action is procedural, continue the action;
+	if current action is taking, now boring-exception is true;
+
+understand "yielder" and "steward" as Ed Riley.
+
+a-text of ed riley is "RYYRYRO". b-text of ed riley is "RYYRYRB". parse-text of ed riley is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]y".
+
+to say ed-nonsense: say "[one of], and then he bangs on about not trying to sing or attack him[or][or][or][cycling]"
+
+check going west in Minded Midden: if Ed Riley is visible, say "'Re-yield, yielder! Ye Idler! Er, yield idly [']ere!' booms Ed Riley[ed-nonsense].[paragraph break]He's not bigger than you, but his loud voice scares you. And he could probably swat you with that deli rye. You back away." instead;
+
 book Disowned Downside
 
 Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited], too big to hide nothing[else if Rancho Archon Anchor is unvisited], with much more than the inclosure you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here." [ic]
@@ -18843,18 +18795,18 @@ after printing the locale description for Disowned Downside when Disowned Downsi
 		the rule succeeds;
 	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
 
-the Edictal Citadel is a backdrop in Disowned Downside. "It takes up a huge chunk of space to the west."
+section edictal citadel
 
-instead of doing something with the Edictal Citadel:
-	unless the action is procedural:
-		say "[if player is in Reclusion Inclosure or player is in Rancho Archon Anchor]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if]." instead;
-	continue the action;
+the Edictal Citadel is a boring backdrop in Disowned Downside. description is "It takes up a huge chunk of space to the west.". bore-text of Edictal Citadel is "[if player is in Reclusion Inclosure or player is in Rancho Archon Anchor]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if].".
 
-the sad elm is useless scenery in Disowned Downside. description is "It was probably sad before the macks came along, but it's not really important."
+section sad elm
 
-check climbing sad elm:
-	if Gretta is in location of player, say "You can beat [']em, so don't join [']em trying to impress her." instead;
-	say "Yorpwald's still up a tree. Don't join it." instead;
+the sad elm is boring useless scenery in Disowned Downside. description of sad elm is "It was probably sad before the macks came along, but it's not really important.". bore-text of sad elm is "You can't make the elm happier[if player had medals], not even if you do something with the damsel medals you got from it[end if]."
+
+this is the bore-sad-elm rule:
+	if current action is climbing: say "[if Gretta is in location of player]You can beat [']em, so don't join [']em trying to impress her[else]Yorpwald's still up a tree. Don't join it[end if]." instead;
+
+chapter macks
 
 the macks are plural-named flippable reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
@@ -18954,13 +18906,9 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 
 section sample maples
 
-the sample maples are scenery in Disowned Downside. "Well, they're, uh, trees. You could READ one that's been carved."
+the sample maples are boring scenery in Disowned Downside. "Well, they're, uh, trees. You could READ one that's been carved.". bore-text is "No need to mess with the maples. They aren't particularly lovely trees, but they're the best thing about the Disowned Downside."
 
 understand "elm sap" as sample maples.
-
-instead of doing something with sample maples:
-	if the action is procedural, continue the action;
-	say "No need to mess with the maples. They aren't particularly lovely trees, but they're the best thing about the Disowned Downside."
 
 chapter booting - not for release
 
@@ -19380,16 +19328,11 @@ after looking in Loop Pool for the first time:
 
 section le mer
 
-Le Mer is a person in Loop Pool. description is "You can't locate where, exactly, Le Mer is."
+Le Mer is a boring person in Loop Pool. description is "You can't locate where, exactly, Le Mer is.". bore-text is "Le Mer just exists. You can't do much with Le Mer.". Le Mer is scenery.
 
 after choosing notable locale objects when player is in Loop Pool:
 	set the locale priority of Le Mer to 0;
 	if sea cube is in Loop Pool, set locale priority of eels to 0;
-
-instead of doing something with le mer:
-	if current action is asking generically or current action is objasking generically or current action is objasking or current action is asking about, continue the action;
-	if action is procedural, continue the action;
-	say "You can't do much with Le Mer."
 
 section sea cube
 
@@ -19499,11 +19442,7 @@ check going north in Shiner Shrine:
 
 chapter coma camo
 
-the coma camo is a bounding backdrop. It is in Shiner Shrine and Clarthead Cathedral. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent. And yet--you bet you could see a pattern of letters in it, if you look closely enough.".
-
-instead of doing something with coma camo:
-	if action is procedural, continue the action;
-	say "You won't be able to dispel the coma camo, and you won't need to."
+the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthead Cathedral. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent. And yet--you bet you could see a pattern of letters in it, if you look closely enough.". bore-text of coma camo is "You won't be able to dispel the coma camo, and you won't need to.".
 
 book Lamer Realm
 
@@ -20358,7 +20297,7 @@ Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going w
 
 after looking in Gates Stage (this is the retract halt lath rule):
 	if halt lath is in Gates Stage and player has popstar's passport:
-		say "Your popstar's passport beeps quickly. The halt lath rises and retracts into the gates to the north.";
+		say "Your popstar's passport beeps quickly. The halt lath rises and retracts into the gates to the north. The gates are probably still shut for the moment, but it's a start.";
 		moot halt lath;
 	continue the action;
 
@@ -20475,23 +20414,31 @@ a thing can be final-puz. a thing is usually not final-puz.
 s-i is final-puz. s-c is final-puz. coin is final-puz. coins are final-puz. icon is final-puz. icons are final-puz. tekno-token is final-puz.
 
 check giving a final-puz thing to when mrlp is others:
-	if second noun is storage:
-		try inserting noun into second noun instead;
-	if second noun is curtis:
-		say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
-	if second noun is len craig:
-		say "[if noun is tekno-token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
-	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter:
-		say "[second noun] is probably interested in something much more obviously valuable." instead;
+	if second noun is storage, try inserting noun into second noun instead;
+	if second noun is curtis, say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
+	if second noun is len craig, say "[if noun is tekno-token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
+	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter, say "[second noun] is probably interested in something much more obviously valuable." instead;
 	say "No, that's yours. Payment from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
 
 a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "i[sp]c[sp]o[sp]n". coin is cheat-spoilable.
 
+section icon
+
 an icon is a thing. description is "The icon is designed to be too interesting to pitch but not important looking enough to be currency. There's a singed design on it, which is signed."
+
+section coins
 
 some coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
 
-the singed design is part of the coin. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial."
+section singed design
+
+the singed design is part of the coin. the singed design is boring. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.".
+
+this is the bore-singed-design rule:
+	if current action is scaning:
+		let myc be a random thing incorporating singed design;
+		say "(You wind up scanning [the myc] instead.)";
+		try scaning myc instead;
 
 understand "designs" as singed design when mrlp is others
 
@@ -20509,14 +20456,7 @@ check reading (this is the default to singed design rule) :
 		if singed design is not part of the noun, say "BUG: there should be a singed design to read." instead;
 		try reading singed design instead;
 
-instead of doing something with singed design:
-	if current action is scaning:
-		say "(You wind up scanning the coin instead.)";
-		let myc be a random thing incorporating singed design;
-		try scaning myc instead;
-	if current action is examining:
-		continue the action;
-	say "You can't do much with the design except examine it.";
+section iconic
 
 the icons are plural-named things. description is "The icons are designed to be too interesting to pitch but not important looking enough to be currency. Instead of someone important, they each have shattered musical notes on them. Each has a singed design, signed."
 
@@ -20543,11 +20483,15 @@ a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "
 
 a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "-[sp]x[sp]-[sp]x[sp]x".
 
+section sonic coins
+
 the s-c are privately-named plural-named things. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "sonic coins".
 
 understand "coin" and "sonic coin" as s-c when player has s-c.
 
 a-text of s-c is "YRYRR". b-text of s-c is "YRY??". parse-text of s-c is "-[sp]x[sp]-[sp]x[sp]x".
+
+section sonic icons
 
 the s-i are privately-named plural-named things. description of s-i is "The icons vibrate from the sound they make. They may have some hidden power. Or some trivial one.". understand "sonic/icons" and "sonic icons" as s-i. printed name of s-i is "sonic icons".
 
@@ -20561,19 +20505,14 @@ to slot-appear:
 		now lost slot is part of storage box.
 
 check inserting into storage box:
-	if lost slot is visible:
-		say "The box has a slot, so I assume you meant that.";
+	if lost slot is part of the storage box, say "The box has a slot, so I assume you meant that.";
 	try inserting noun into lost slot instead;
 
 check inserting into lost slot:
-	if noun is s-c or noun is coins:
-		say "The coins hum a bit before they're spit back out. You catch them. The box seems averse to money." instead;
-	if noun is tekno-token or noun is coin:
-		say "The box wheezes slightly and spits the monetary item back out." instead;
-	if noun is icon or noun is icons:
-		say "The box splutters for a while but eventually rejects the [noun]. Still, you must be close to having the right thing." instead;
-	if noun is not s-i:
-		say "That doesn't fit." instead;
+	if noun is s-c or noun is coins, say "The coins hum a bit before they're spit back out. You catch them. The box seems averse to money." instead;
+	if noun is tekno-token or noun is coin, say "The box wheezes slightly and spits the monetary item back out." instead;
+	if noun is icon or noun is icons, say "The box splutters for a while but eventually rejects the [noun]. Still, you must be close to having the right thing." instead;
+	if noun is not s-i, say "That doesn't fit." instead;
 	say "As you perform the toll-toss, you think you hear tots['] LOLs. The box opens up, dissolving to reveal a popstar's passport.";
 	moot storage box;
 	moot s-i;
@@ -20866,25 +20805,18 @@ Scape Space is an innie room in Others. Scape Space is below Swell Wells. descri
 
 chapter warding drawing
 
-warding drawing is bounding scenery in Scape Space. "This is a family game, so I can't fully explain the threats contained in the warding drawing for honest people who explore the Scape Space more deeply."
-
-instead of doing something with warding drawing:
-	if action is procedural, continue the action;
-	say "[greedy-person] might not be able to do anything if you messed with the drawing, but [he-she] could call on people who could. The drawing doesn't need to be altered."
+warding drawing is bounding boring scenery in Scape Space. description of warding drawing is "This is a family game, so I can't fully explain the threats contained in the warding drawing for honest people who explore the Scape Space more deeply.". bore-text is "[greedy-person] might not be able to do anything if you messed with the drawing, but [he-she] could call on people who could. The drawing doesn't need to be altered."
 
 chapter paint/guava
 
 The inapt paint is boring scenery in Scape Space. description of inapt paint is "DESERVER RESERVED.". bore-text is "The paint is just there. There's got to be some way to get rid of it.". bore-check is bore-paint rule.
 
 this is the bore-paint rule:
-	if current action is taking:
-		say "It's stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "The inapt paint is stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something." instead;
 
 a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?". parse-text of inapt paint is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
 
-the guava is a fruit.
+the guava is a fruit. [paint gives guava]
 
 chapter banana/a
 
@@ -20960,32 +20892,31 @@ check giving something to greedy-person:
 		say "Traceable. Be real, cat." instead;
 	say "'An empty payment.' He's not interested in that. Just money." instead;
 
-description of Art Erd is "[gree-desc]."
+description of Art Erd is "[gree-desc].". bore-text is "[greedy-sez]?". bore-check is bore-greedy rule.
 
-description of Dr Tera is "[gree-desc]."
+description of Dr Tera is "[gree-desc].". bore-text is "[greedy-sez]?". bore-check is bore-greedy rule.
 
 to say gree-desc:
 	say "Tarred literally and figuratively, [he-she] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her]"
 
-instead of doing something to greedy-person:
+this is the bore-greedy rule:
 	if action is procedural, continue the action;
-	if player has storage:
-		say "You don't want to deal with [greedy-s] any more than you have to." instead;
-	say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
+	if player has storage, say "You don't want to deal with [greedy-s] any more than you have to." instead;
 
-check opening slot:
-	say "It will fit if you give it the right thing." instead;
+to say greedy-sez: say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
 
-check closing slot:
-	say "It needs to be open--or how will you pass the gate?" instead;
+check opening slot: say "It will fit if you give it the right thing." instead;
 
-the ENGARO orange is a reflexive fruit in Scape Space. "An orange lies here next to the tarred trader. It looks like you could read the orange to find its brand name."
+check closing slot: say "It needs to be open--or how will you pass the gate?" instead;
 
-description of ENGARO is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping]."
+section orange
+
+the ENGARO orange is a boring reflexive fruit in Scape Space. "An orange lies here next to the tarred trader. It looks like you could read the orange to find its brand name.". bore-check of ENGARO orange is bore-orange rule. description of ENGARO orange is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping].". bore-text of ENGARO orange is "You [if ENGARO orange is reflexed]don't need to do anything more with the orange except maybe return it to Curtis[else]think you'll have to do something unusual to get that orange[end if]."
 
 a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO orange is "RY*RYYR". parse-text of ENGARO orange is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
-check taking the orange: say "[one of]With a sleepy, sly 'Eep,' th[or]Th[stopping]e trader whips [his-her] hand out and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and [he-she] goes back to semi-dozing. You think, 'an ogre' and see red. Maybe you need to sneak up somehow." instead;
+this is the bore-orange rule:
+	if current action is taking, say "[one of]With a sleepy, sly 'Eep,' th[or]Th[stopping]e trader whips [his-her] hand out and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and [he-she] goes back to semi-dozing. You think, 'an ogre' and see red. Maybe you need to sneak up somehow." instead;
 
 chapter gonearing
 
