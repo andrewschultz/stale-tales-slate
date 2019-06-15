@@ -206,8 +206,8 @@ sweatier wait-seer	sweatier wait-seer	false	695435442	--	"weariest"	"weariest"	-
 Luc Sym	Luc Sym	false	460633602	--	"clumsy"	"clumsy"	--	--	"Luc Sym's muscles shrink, and he loses coordination. 'A hokey KO. Yeah.' But he still stumbles away in embarrassment."
 Ms Lucy	Ms Lucy	false	460633602	--	"clumsy"	"clumsy"	--	--	"Ms. Lucy's muscles shrink, and she loses coordination. 'A hokey KO. Yeah.' But she still stumbles away in embarrassment."
 Mel Fish	Mel Fish	false	450759108	--	"himself"	"himself"	--	--	"Mel Fish has a think. 'I'm flesh!' he yells, 'and that's all that matters!' He rejects labels and such, recalling aloud a horrible incident when someone, probably a Burmese bemuser, ungrammatically called him selfish for being hisself. He vows to insult bad grammar more in the future. Then he thanks you and leaves."
-bonker	bonker	false	427742080	--	"broken"	"broken"	--	post-bonker-broken rule	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. The way east is clear now."
-stinger	stinger	false	559013952	--	"resting"	"resting"	--	--	"The stinger whirs around, wheezes, then flops on the ground and rolls off. Your path east is clear now!"
+bonker	bonker	false	427742080	--	"broken"	"broken"	--	post-bonker-broken rule	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. But from the wreckage of the bonker rises ... a STINGER!"
+stinger	stinger	false	559013952	--	"resting"	"resting"	--	post-stinger-resting rule	"The stinger whirs around, wheezes, then flops on the ground and rolls off. You wait a minute, wondering if something tougher than the stinger will appear. But you only hear a gander that has flown in, no longer scared by a bonker or stinger. The path east is clear now! "
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	--	--	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
@@ -1147,11 +1147,13 @@ this is the post-dialer-derail rule:
 section towers auxiliary
 
 this is the post-bonker-broken rule:
-	now geese are in Danger Garden;
 	now stinger is in Danger Garden;
 	now gualoc of stinger is Danger Garden;
 	choose row with guy of stinger in table of guard-org;
 	now loc entry is Danger Garden; [need to undo the silly hack I have for the stinger being not-really in Mislit Limits according to the table]
+
+this is the post-stinger-resting rule:
+	now geese are in Danger Garden;
 
 this is the post-weeds-sewed rule:
 	now player has raves saver;

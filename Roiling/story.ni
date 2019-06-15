@@ -323,7 +323,7 @@ check objasking about a hintpastry when mrlp is towers:
 	if noun is Dr Yow or noun is agnostic, say "You might get a lecture about all the gross chemicals in there." instead;
 	if second noun is visible:
 		say "You offer the hint-pastry as a gift, instead.";
-		try giving the second noun to the noun;
+		try giving the second noun to the noun instead;
 
 the specification of a hintpastry is "A hintpastry, when heated, lets you see how a thing/item should be described."
 
@@ -352,25 +352,22 @@ check taking a fruit (this is the probably archaic debug fruit-flips in case rul
 yes-no-warn is a truth state that varies.
 
 check saying no:
-	if block-north is true:
-		do nothing;
+	if block-north is true, do nothing instead;
 	repeat through table of yesnoes:
-		if the-person entry is in location of player:
-			if there is a nosaying entry, say "[nosaying entry]" instead;
+		if the-person entry is in location of player and there is a nosaying entry, say "[nosaying entry]" instead;
 	if mrlp is troves, say "Negative thinking isn't the way to the top, here!" instead;
 	say "[randbla]";
 	rhet-q;
+	the rule succeeds;
 
 check saying yes:
-	if block-north is true:
-		do nothing;
+	if block-north is true, do nothing instead;
 	repeat through table of yesnoes:
-		if the-person entry is in location of player:
-			if there is a yessaying entry:
-				say "[yessaying entry]" instead;
+		if the-person entry is in location of player and there is a yessaying entry, say "[yessaying entry]" instead;
 	if mrlp is troves, say "It's not enough to have positive thinking! YOU MUST HAVE PRODUCTIVE POSITIVE THOUGHTS!" instead;
 	say "[randbla]";
 	rhet-q;
+	the rule succeeds;
 
 to rhet-q:
 	if yes-no-warn is false:
@@ -706,6 +703,10 @@ to say s-w:
 
 to say t-w:
 	say "****";
+
+section question
+
+to say qr: say "?[run paragraph on]"
 
 section multiple item operations
 
@@ -1633,7 +1634,7 @@ the can only talk to talkables rule is not listed in any rulebook.
 check talking to (this is the hint looking not talking rule):
 	if noun is armada, say "They're not in the mood for remotely reasonable conversation." instead;
 	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
-	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead.
+	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead;
 
 section specifically
 
@@ -2376,25 +2377,22 @@ check objasking Dr Yow about:
 			say "You don't need to worry about that, now." instead;
 	else if second noun is a guardian or second noun is curst palace:
 		if doc-cheat is false:
-			if second noun is curst palace:
-				say "Dr. Yow scrunches [his-her] head a bit, then shrugs. 'Ouch. Eleven letters. Maybe if it was shorter. Unless you mean getting there...you'd need a craft to cross Leak Lake to the northeast.'" instead;
+			if second noun is curst palace, say "Dr. Yow scrunches [his-her] head a bit, then shrugs. 'Ouch. Eleven letters. Maybe if it was shorter. Unless you mean getting there...you'd need a craft to cross Leak Lake to the northeast.'" instead;
 			choose row with the-from of second noun in the table of towers anagrams;
 			now doc-guar is the-from entry;
 			now doc-cheat is true;
 			say "Dr. Yow sits and thinks a minute after you tell [him-her] where you were stuck. 'Mm, yes. Of course, of course. I'd think you just say [right-word entry in upper case] should work.'";
 			preef the-from entry instead;
 		else:
-			if doc-guar is not noun:
-				say "Dr. Yow rubs [his-her] temples. [he-she-c]'s probably up to more technical stuff, now." instead;
-			if doc-guar is moot:
-				say "You thank Dr. Yow for helping you out." instead;
+			if doc-guar is not noun, say "Dr. Yow rubs [his-her] temples. [he-she-c]'s probably up to more technical stuff, now." instead;
+			if doc-guar is moot, say "You thank Dr. Yow for helping you out." instead;
 			choose row with the-from of second noun in the table of towers anagrams;
-			say "No, you remember, it was [right-word entry in upper case].";
+			say "No, you remember, it was [right-word entry in upper case]." instead;
 
 check objasking len craig about a fruit:
 	if player has second noun:
 		if second noun is raspberry or second noun is pineapple or second noun is grapefruit or second noun is blackberries or second noun is strawberries:
-			say "'A nice fruit, and it's fresh, but I'm selling today.'";
+			say "'A nice fruit, and it's fresh, but I'm selling today.'" instead;
 	else if second noun is visible:
 		say "You are about to haggle, but Len looks at you just SO. You need to go about things the right way.";
 	else if second noun is moot:
@@ -2407,26 +2405,19 @@ check objasking len craig about a fruit:
 		say "'A fine fruit, but I don't deal in that. Maybe someone else does.'";
 	the rule succeeds;
 
-to say no-plebe:
-	say "'I respect da military too much to push him outta da way. Plus I can't yell clever neither.'"
+to say no-plebe: say "'I respect da military too much to push him outta da way. Plus I can't yell clever neither.'"
 
-to say bbbullies:
-	say "She seems more worked up about them than Tortu was[if trout is reflexed], even after your lesson[end if]. But she means well"
+to say bbbullies: say "She seems more worked up about them than Tortu was[if trout is reflexed], even after your lesson[end if]. But she means well"
 
-to say yeah-cute:
-	say "[if silly-acts is 1]The trolls patronize you not to try any more funny stuff.[else if silly-acts is 2]The trolls mention they can still take a little more of your destructive nonsense. They've seen worse. And dealt with it, too.[else]The trolls shoot you a look that says both stay here and get lost at once. Best not to bait them any more.[end if]";
+to say yeah-cute: say "[if silly-acts is 1]The trolls patronize you not to try any more funny stuff.[else if silly-acts is 2]The trolls mention they can still take a little more of your destructive nonsense. They've seen worse. And dealt with it, too.[else]The trolls shoot you a look that says both stay here and get lost at once. Best not to bait them any more.[end if]";
 
-to say lost-faith:
-	say "'One of many of my flock who have lost faith they can help.'[no line break]";
+to say lost-faith: say "'One of many of my flock who have lost faith they can help.'[no line break]";
 
-to say maze-end-clue:
-	say "'I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through";
+to say maze-end-clue: say "'I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through";
 
-to say maze-before:
-	say "'Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have.'"
+to say maze-before: say "'Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have.'"
 
-to say maze-later:
-	say "'Oh! He'll drop by later. I hope you don't need his help too much.'"
+to say maze-later: say "'Oh! He'll drop by later. I hope you don't need his help too much.'"
 
 check objasking a warrior about a warrior:
 	if noun is rodney:
@@ -4443,11 +4434,9 @@ chapter scaning air
 
 [?! how to bother scaning air ]
 
-check scaning heat:
-	say "You look for a clue how to bother being a race acer...";
+check scaning heat: say "You look for a clue how to bother being a race acer...";
 
-check scaning cold:
-	say "You look for a clue how to make some heat..."
+check scaning cold: say "You look for a clue how to make some heat..."
 
 check scaning location of the player (this is the location scan rule):
 	d "scaning player location.";
@@ -6169,6 +6158,8 @@ check eating (this is the general eating rule):
 	if noun is a hintpastry and noun is not heated: [towers]
 		say "You'll want to put [the noun] in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
 	if noun is bleary barley, say "That'd go down terribly." instead; [otters]
+	if noun is the player, try swearing obscenely instead;
+	if noun is a person, say "There's no clean way to interpret that. Behave." instead;
 	say "[if noun is plural-named]Those aren't[else]That's not[end if] in a test-taste state." instead;
 
 check eating fretful truffle:
@@ -6238,7 +6229,7 @@ check jumping:
 	if player is in Fighter Freight, say "You certainly are feeling jumpy right now, but--well, you want to jump towards the pale plea. And as reflexively as possible." instead;
 	if player is in Same Mesa, say "You [if side art is not reflexed]try and jump onto the [sit a nag], but that's not quite the way. Hm[else]managed to get on the [sit a nag], and you don't need to, again[end if]." instead;
 	if player is in austerer treasure and ye hoop is in austerer treasure, say "You jump but can't quite reach the hoop. You think you hear a voice saying 'O, ye hop!' You turn red.[paragraph break]You consider dropping your treasured possessions so you can grab the hoop, but you can't bring yourself to say the heck with them. Or, rather, you haven't, yet." instead;
-	say "You try a jump but jam up[one of]. Boy, leaps lapse[or][stopping].";
+	say "You try a jump but jam up[one of]. Boy, leaps lapse[or][stopping]." instead;
 
 chapter push and pull
 
@@ -6455,29 +6446,29 @@ check thinking:
 			now thinko is true instead;
 		else if Gunter is off-stage:
 			say "Hard to think with that knocking." instead;
-	if player is in Econ Cone and pernod is in Econ Cone:
-		say "No, you need to think a little more soulfully." instead;
-	else if mrlp is troves:
-		say "Yes, how you think is extra important here." instead;
-	else if mrlp is towers and topside is visited:
-		say "Ornate Atoner Renato's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
-	if mrlp is demo dome:
-		try requesting the score instead;
-	say "Nothing immediate comes up. If you need help, just say HINT. K?";
+	if player is in Econ Cone and pernod is in Econ Cone, say "No, you need to think a little more soulfully." instead;
+	if mrlp is troves, say "Yes, how you think is extra important here." instead;
+	if mrlp is towers and topside is visited, say "Ornate Atoner Renato's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
+	if mrlp is demo dome, try requesting the score instead;
+	say "Nothing immediate comes up. If you need help, just say HINT. K?" instead;
 
 chapter touching
 
 check touching:
-	if noun is lamb, say "It's a bit too scared. Too scared to flee where it needs to go." instead;
-	if noun is plaster or noun is act ruin curtain, say "Seems a bit hollow but not enough to bust through." instead;
+	if noun is plaster, say "Seems a bit hollow but not enough to bust through." instead; [ordeal reload]
+	if noun is pews, try entering pews instead;
+	if noun is lamb, say "It's a bit too scared. Too scared to flee where it needs to go." instead; [presto]
+	if noun is maze walls, say "[if player is in Grey Gyre]Nothing. Maybe it's the inside of the walls, in the maze, that is charged[else][one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping][end if]." instead;
+	if noun is lawl wall, say "You're not playing tag, here." instead;
+	if noun is tubs, say "They seem to be made of something fragile, something you could break--porcelain, maybe? You hear something rattling inside." instead; [oyster]
+	if noun is lone duck: say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]." instead; [towers]
+	if noun is pryer bars, say "They feel like spry rebar." instead; [others]
 
 chapter listening
 
-to say a-r:
-	say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
+to say a-r: say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
 
-to say next-sonancy:
-	say "[if hurt hog is moot]the final step[else if bent ewe is reflexed]the hurt hog[else]the hog and the bee[end if]"
+to say next-sonancy: say "[if hurt hog is moot]the final step[else if bent ewe is reflexed]the hurt hog[else]the hog and the bee[end if]"
 
 to decide whether can-hear-posh:
 	if player is in Browse Bowers, yes;
@@ -6486,6 +6477,7 @@ to decide whether can-hear-posh:
 
 check listening:
 	if player is in Dusty Study: [Ordeal Reload]
+		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
@@ -6673,7 +6665,7 @@ check taking a person: [?? see about unblocking basic rule if this isn't trigger
 	if noun is the macks, say "They're the pick-up artists, here." instead;
 	if noun is Gretta, say "You might be worse at picking Gretta up than the macks." instead;
 	if noun is eels, say "[if power-back is true]They already gave you a charge[else]That might get you the wrong sort of charge[end if]." instead;
-	say "Lifting [if noun is plural-named]people[else]a person[end if] or something [if noun is plural-named]people[else]person[end if]-sized is too heavy for your superpowers. Even if your name happens to be Kate."
+	say "Lifting [if noun is plural-named]people[else]a person[end if] or something [if noun is plural-named]people[else]person[end if]-sized is too heavy for your superpowers. Even if your name happens to be Kate." instead;
 
 chapter looking
 
@@ -7979,7 +7971,7 @@ check inserting into the satchel:
 
 check taking satchel:
 	ignore the can't take what's already taken rule;
-	say "It may achieve sentimental value one day, but the purse will carry more." instead [??]
+	say "It may achieve sentimental value one day, but the purse will carry more." instead;
 
 chapter MEET BANS
 
@@ -8027,8 +8019,7 @@ check going in Dusty Study:
 			now player has latches;
 			now need-line-break is true;
 		if pedanto-notepad is in dusty study:
-			if need-line-break is true:
-				say "[line break]";
+			if need-line-break is true, say "[line break]";
 			say "You[if need-line-break is true] also[end if] swipe your pedanto-notepad, since it was so helpful your first time shuffling around in the Forest and Sortie and Metros your first time through Yorpwald. It uncovers some sad ads, the sort which have sadly pervaded Yorpwald recently.";
 			now player has pedanto-notepad;
 			now sad ads are in Dusty Study;
@@ -8480,11 +8471,9 @@ chapter stapler
 
 the stapler is a container. description of stapler is "[if stapler contains staple]Locked and loaded with a staple[else]Empty, but given its width, ready for some heavy-duty ammo[end if].". "An oddly wide metal stapler lies here. The normal material would nearly get lost in it."
 
-check examining stapler:
-	ignore the examine containers rule;
+check examining stapler: ignore the examine containers rule;
 
-check closing stapler:
-	say "No need to futz. [if staple is in stapler]You already have something in there[else]When you put something in the stapler, it'll be good[end if]." instead;
+check closing stapler: say "No need to futz. [if staple is in stapler]You already have something in there[else]When you put something in the stapler, it'll be good[end if]." instead;
 
 check opening stapler:
 	if staple is in stapler:
@@ -8506,9 +8495,6 @@ after inserting staple into stapler:
 
 chapter act-ruin curtain
 
-check touching curtain:
-	try going inside instead;
-
 curtain-know is a truth state that varies.
 
 the act ruin curtain is boring scenery. description of the act ruin curtain is "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands.". bore-text is "The curtain needs a specific action here to pull it aside. Perhaps special materials are required.". bore-check is bore-curtain rule.
@@ -8516,17 +8502,15 @@ the act ruin curtain is boring scenery. description of the act ruin curtain is "
 printed name of act ruin curtain is "ACT-RUIN CURTAIN".
 
 this is the bore-curtain rule:
+	if current action is touching, try going inside instead;
 	if current action is opening or current action is pulling or current action is taking, say "[could-staple]." instead;
 	if current action is stapleing, now boring-exception is true;
 
-to say curt-kno:
-	now curtain-know is true;
+to say curt-kno: now curtain-know is true;
 
-to say could-staple:
-	say "You need the right tool to do so. You probably need one that could get a grip on some fabric or whatever[if player carries stapler]. Maybe you could use the stapler to STAPLE the curtain[stapload][end if]";
+to say could-staple: say "You need the right tool to do so. You probably need one that could get a grip on some fabric or whatever[if player carries stapler]. Maybe you could use the stapler to STAPLE the curtain[stapload][end if]";
 
-to say stapload:
-	say ", [if staple is in stapler]especially since[else]once[end if] it's loaded";
+to say stapload: say ", [if staple is in stapler]especially since[else]once[end if] it's loaded";
 
 the vertical stripe is a boring thing. it is part of the act ruin curtain. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
 
@@ -8928,15 +8912,13 @@ check inserting into the purse:
 		try taking noun instead;
 	say "That should already be in the purse.";
 
-instead of doing something with purse when mrlp is troves and stop post is reflexive:
-	say "Do not worry about wealth you lost. [i]Only worry about the wealth you can create[r].";
+check objhinting super purse when super purse is moot: say "Do not worry about wealth you lost. [i]Only worry about the wealth you can create[r]. Perhaps THE SUPER PURSE WILL RETURN WITH INTEREST WHEN YOU DO." instead;
 
 chapter letters settler
 
 The Letters Settler is a warpable thing. understand "recoded decoder" and "recoded/decoder" and "revised/deviser" and "revised deviser" as letters settler. understand "device" as letters settler.
 
-instead of showing settler to agnostic:
-	try objasking agnostic about settler;
+check giving settler to agnostic: try objasking agnostic about settler instead;
 
 after examining settler for the first time:
 	say "You figure up some heuristics to make the settler easier to use and write them in your notepad.";
@@ -9206,7 +9188,7 @@ the laced decal is part of the letters settler.
 
 description of laced decal is "[bug-report]"
 
-check examining decal: try examining backside instead.
+check examining decal: try examining backside instead;
 
 check taking decal: say "It's really wedged on there. You'd destroy it scraping it off. And besides, maybe it's a hint, too." instead;
 
@@ -10233,8 +10215,7 @@ book Cruelest Lectures
 
 Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium. There's some teasing seating, but you're not sure it'd improve the experience[one of]. People stare at a lecturer as if they've been drugged. Um, hypnotized[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E."
 
-check looking in Cruelest Lectures for the first time:
-	say "As you march through the smoke, you hear 'Freeze! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'IAN. A DRUG GUARDIAN. QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. We finger fringe like you. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
+check looking in Cruelest Lectures for the first time: say "As you march through the smoke, you hear 'Freeze! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'IAN. A DRUG GUARDIAN. QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. We finger fringe like you. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
 
 check exiting in Cruelest Lectures:
 	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [i]tedious[r][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The lecturer isn't as tedious as coworker chitchat, but you never pulled yourself away from THAT, either[or]Tedious, tedious, tedious[or]Your eyes wander to the top of the screen. Um, the screen behind the lecturer, that sort of blends in with the room[stopping]." instead;
@@ -10324,7 +10305,7 @@ a-text of pamphlets is "YYRRYRY". b-text of pamphlets is "YGRRYRY". parse-text o
 
 volume routes
 
-check going outside:
+check going outside when mrlp is routes: [?? what if cur-score of routes is 0]
 	if mrlp is routes and outside-warned is false and cur-score of routes > 0:
 		say "(That's a preposition, but it's not one you need.)";
 		now outside-warned is true;
@@ -10752,8 +10733,6 @@ check looking under pews: try examining pews instead;
 
 check entering pews: say "A voice seems to intone: '[']Tis no sin to sit on, is...? NOT!'" instead;
 
-check touching pews: try examining pews instead;
-
 check examining the pews when summary is off-stage:
 	say "You search through the pews, just as when you were a kid, looking for anything, maybe a note from the last person. You found something from yourself, once. But this time, something actually turns up! It's been hidden carefully, tucked where two woody bits are glued together.[paragraph break]An initial glance reveals nothing about Mum Ray's identity. Is it a woman with a last name of Ray? A silent fellow named Ray who preferred to write? Or just a pen name? They probably needed the anonymity, with the power Rev. Ali had, and either way, there's a lot to read.";
 	now player has the summary instead;
@@ -10806,12 +10785,10 @@ the lament mantle is useless scenery in Cleric Circle. "[one of]It's full of reg
 
 check examining lament mantle for the first time:
 	say "Just a small check-off: there's some religious stuff in here, poking fun at hot button issues. This might be annoying, and I don't want do do that. Do you wish to go ahead?";
-	unless the player direct-consents:
-		say "Okay. This warning will vanish next time." instead;
-	say "Man! This guy is a grouch. You have morals and all, but geez."
+	unless the player direct-consents, say "Okay. This warning will vanish next time." instead;
+	say "Man! Whoever wrote this is a grouch. You have morals and all, but geez."
 
-check asking Brother Horbert about:
-	say "Brother Horbert shrugs. 'I should know more about the exotic outside world, but it's hard, with the poison stripe.'";
+check asking Brother Horbert about: say "Brother Horbert shrugs. 'I should know more about the exotic outside world, but it's hard, with the poison stripe.'" instead;
 
 to say pious1: [otherwise the picture has trouble with randbla for random stuff]
 	now pious-state is whether or not pious-state is false;
@@ -11115,8 +11092,7 @@ after looking in Loather Rathole:
 	set the pronoun them to potholes;
 	continue the action;
 
-check looking in Loather Rathole for the first time:
-	now the player has Pa Egg Pea.
+check looking in Loather Rathole for the first time: now the player has Pa Egg Pea.
 
 check going nowhere (this is the troves general direction reject rule):
 	if mrlp is troves:
@@ -11858,14 +11834,12 @@ check going east in Grey Gyre:
 ether-try is a truth state that varies.
 
 check going north in Grey Gyre:
-	if cur-score of presto < 3:
-		say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
+	if cur-score of presto < 3, say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
 	if ether is in Grey Gyre:
 		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous ACTING people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where dose peoples is, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
 		set the pronoun it to ether instead;
 		now ether-try is true instead;
-	if Saps' Pass is not visited:
-		say "You stride confidently north with your two friends. You can tackle anyone!";
+	if Saps' Pass is not visited, say "You stride confidently north with your two friends. You can tackle anyone!";
 
 section dart
 
@@ -12146,8 +12120,7 @@ description of tsar star is "It's not some paper gold star from Mrs. Crabtree's 
 this is the bore-tsar-star rule:
 	if current action is taking and tsar star is in Char Arch, say "The tsar star whooshes and rotates just enough to frustrate you. You mutter 'bad star' under your breath, but that's almost a bit too harsh even for this area. You figure you'll probably see how to get it once you give up, but you can't give up just to take it." instead;
 
-check taking off tsar star:
-	say "[if plebe is moot]But it looks so jaunty and reminds you of how you got rid of that plebe[else]You shouldn't remove it. You might need to impress someone with it[end if]."
+check taking off tsar star: say "[if plebe is moot]But it looks so jaunty and reminds you of how you got rid of that plebe[else]You shouldn't remove it. You might need to impress someone with it[end if]." instead;
 
 section tars
 
@@ -12170,11 +12143,9 @@ after looking in Dirge Ridge:
 	continue the action;
 
 check going north in Dirge Ridge:
-	if Leo is fightin or Rand is fightin:
-		say "You're able to run away. [if Rand is in Dirge Ridge]Leo's down, and Rand's only interested in his turf, maybe protecting his new friend[else]Leo doesn't seem up to chasing you, so maybe he's not a real bad guy[end if].";
+	if Leo is fightin or Rand is fightin, say "You're able to run away. [if Rand is in Dirge Ridge]Leo's down, and Rand's only interested in his turf, maybe protecting his new friend[else]Leo doesn't seem up to chasing you, so maybe he's not a real bad guy[end if].";
 
-check going to Dirge Ridge for the first time:
-	say "A rather big fellow has his back to you, wishfully blubbing 'Oblige Big Leo. I want a twin.' He turns around and sees...you, a lot smaller than him. 'Sneak! Snake!' Leo runs at you! He's a bit slow, fortunately. But he's a bit mad you caught him in a less-than-macho moment."
+check going to Dirge Ridge for the first time: say "A rather big fellow has his back to you, wishfully blubbing 'Oblige Big Leo. I want a twin.' He turns around and sees...you, a lot smaller than him. 'Sneak! Snake!' Leo runs at you! He's a bit slow, fortunately. But he's a bit mad you caught him in a less-than-macho moment."
 
 a person can be bruisin. a person is usually not bruisin.
 
@@ -12384,8 +12355,7 @@ report taking popgun:
 
 description of PG-on-up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing-go bin, now[else]. You notice its boing-go bin, where you put the ammunition, is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
 
-check examining popgun:
-	ignore the examine containers rule;
+check examining popgun: ignore the examine containers rule;
 
 understand "spoilt/pistol" and "spoilt pistol" as popgun.
 
@@ -12403,25 +12373,20 @@ this is the bore-serial rule:
 
 gun-load-tried is a truth state that varies.
 
-check inserting it into (this is the don't insert if already inserted rule):
-	if noun is in second noun, say "But [the noun] is already in [the second noun], where it needs to be." instead;
-	if noun is dart and noun is in popgun, say "The dart is loaded nicely in the popgun." instead;
+check inserting it into (this is the don't insert if already inserted rule): if noun is in second noun, say "But [the noun] is already in [the second noun], where it needs to be." instead;
 
 the don't insert if already inserted rule is listed before the can't insert what's not held rule in the check inserting it into rulebook.
 
 check inserting it into (this is the dart-popgun rule):
+	if noun is dart and noun is in popgun, say "The dart is loaded nicely in the popgun." instead; [?? do we reach this?]
 	if second noun is popgun and boing is reflexive:
 		if noun is dart:
 			now gun-load-tried is true;
 			say "It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could." instead;
-		else:
-			say "That's not the right shape to fit in the gun to fire. Anyway, the boing-go bin looks broken." instead;
+		say "That's not the right shape to fit in the gun to fire. Anyway, the boing-go bin looks broken." instead;
 	if noun is dart and second noun is not popgun, say "How could that launch the dart?" instead;
-	if noun is not dart and second noun is popgun:
-		say "That's not the right shaped ammo for the popgun." instead;
-	if noun is dart and second noun is popgun:
-		if dart is in popgun, say "It already is!" instead;
-		ignore the can't insert into what's not a container rule;
+	if noun is not dart and second noun is popgun, say "That's not the right shaped ammo for the popgun." instead;
+	if noun is dart and second noun is popgun, ignore the can't insert into what's not a container rule;
 
 chapter sport ports LLP
 
@@ -12435,79 +12400,54 @@ book Saps' Pass
 
 Saps' Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's also a big wall here, blocking the way north. Feels like it's taunting you--must be a lawl wall. It's got keys hanging from it. You can retreat south, too, of course."
 
-check going south in Saps' Pass:
-	say "The hogs snicker as you walk away.";
+check going south in Saps' Pass: say "The hogs snicker as you walk away.";
 
 check going north in Saps' Pass: say "Not with the wall and the hogs in the way." instead;
 
 Mount Um-Not is bounding boring scenery in Saps' Pass. understand "mount/um/not" as Mount Um-Not. description of Mount Um-Not is "It's as huge and unwelcoming as Cupid's Cuspid isn't.". bore-text is "Mount Um-Not is just there for scenery. Intimidating scenery, but scenery.". bore-check is the bore-mount-um-not rule.
 
 this is the bore-mount-um-not rule:
-	if current action is climbing or current action is entering:
-		try going east;
-		the rule succeeds;
-	if current action is taking:
-		say "Stronger adventurers than you couldn't take Mount Um-Not.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is climbing or current action is entering, try going east instead;
+	if current action is taking, say "Stronger adventurers than you couldn't take Mount Um-Not." instead;
 
 [	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead; ?? ]
 
 Deil's Slide is bounding boring scenery in Saps' Pass. description of Deil's Slide is "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
 
 this is the bore-deils-slide rule:
-	if current action is taking:
-		say "The Deil's Slide is more likely to take YOU.";
-		the rule succeeds;
-	if current action is climbing or current action is entering:
-		try going west;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "The Deil's Slide is more likely to take YOU." instead;
+	if current action is climbing or current action is entering, try going west instead;
 
 book Phat Path
 
 Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's not much left with the wall gone, except for [if harpings phrasing is in Phat Path]a harpings phrasing guarding [end if][one of]a quiet-looking structure which must be a MUTISM SUMMIT[or]the mutism summit[stopping] to the north[if starch charts are in Phat Path][desc-starch][end if][if hawt thaw is in Phat Path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
-to say desc-starch:
-	say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
+to say desc-starch: say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
 
 the mutism summit is boring scenery in Phat Path. description of mutism summit is "[if Hacks' Shack is visited]The mutism summit/Hacks['] Shack looks just as you left it[else]The mutism looks quiet and inviting. You won't need interjections once you're in there[end if].". bore-text is "The mutism summit is pretty stable. Not much to do but [if hacks' shack is visited]re[end if]enter to the north.". bore-check is the bore-mutism-summit rule.
 
 this is the bore-mutism-summit rule:
-	if current action is entering:
-		try going north;
-		the rule succeeds;
-	if current action is attacking:
-		say "Whack the shack? Back!";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, try going north instead
+	if current action is attacking,	say "Whack the shack? Back!" instead;
 
-check going west when player is in Saps' Pass or player is in Phat Path:
-		say "The Deil's Slide would make quick work of even [if Leo is in Dirge Ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo." instead;
+check going west when player is in Saps' Pass or player is in Phat Path: say "The Deil's Slide would make quick work of even [if Leo is in Dirge Ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo." instead;
 
 to say swan-puma:
 	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA') or even the LMAO-loam which lures unwary travelers to their death[or][stopping]";
 
-check going east when player is in Saps' Pass or player is in Phat Path:
-		say "[if Leo is visible]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if]. The rest of your journey lies north." instead;
+check going east when player is in Saps' Pass or player is in Phat Path: say "[if Leo is visible]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if]. The rest of your journey lies north." instead;
 
 Check going inside in Phat Path: try going north instead;
 
 the harpings phrasing is scenery in Phat Path. description of harpings phrasing is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!'"
 
-check taking harpings phrasing:
-	say "Removing the warning won't make the warning any less valid." instead;
+check taking harpings phrasing: say "Removing the warning won't make the warning any less valid." instead;
 
-check scaning harpings phrasing:
-	say "It's all over the place. Maybe you should focus on a specific row[if rebuked is true] you haven't worked with yet[end if].";
+check scaning harpings phrasing: say "It's all over the place. Maybe you should focus on a specific row[if rebuked is true] you haven't worked with yet[end if].";
 
 the lawl wall is vanishing scenery in Saps' Pass.
 
-check taking lawl wall:
-	say "You'll need to take the keys, somehow." instead;
-
-instead of touching lawl wall:
-	say "It feels like it is in a state of thaw. Which makes no sense."
+check taking lawl wall: say "You'll need to take the keys, somehow." instead;
 
 description of lawl wall is "A spams-spasm of bad jokes, and I'd tell you a few, but it'd be a bigger time sink than playing games where you point and click instead of just sensibly typing. It seems to be laughing at your lack of progress. You can see keys on the wall."
 
@@ -12531,15 +12471,10 @@ check taking hogs:
 	say "You and Rand and Leo can take [']em. But not literally." instead;
 
 check going north in Phat Path:
-	if lawl wall is visible:
-		say "Not with those hogs guarding the wall you're not." instead;
-	if Leo is visible:
-		say "[one of]You walk north into the hacks['] shack. Leo and Rand follow. An electronic voice booms at them! 'YrNet Entry rejects N-E-Try!' It's one of those high-tech alarm devices, and it's detected them as not smart enough! It's not fair, and it's not nice, but if you need to do some programming, maybe they won't be a help anyway, to say the least.[paragraph break]It'd be sad to see Leo and Rand go, but perhaps a nicer way than yelling at them could help give them time to get to know each other without you standing in the way. Perhaps you could take a cue from that sign by the shack--it might give you some authority[or]You don't want that electronic warning. Leo and Rand don't, either. You glance at the sign again. Whether or not they can read it, you can tell them the gist. It'll be a softer letdown, coming from you[stopping]." instead;
-	if Hacks' Shack is unvisited:
-		say "You feel a small tingle--you've felt it before, from the YrNet Entry which disrupts unwanted visitors. But only people. Sometimes it also breaks up really oppressive software and hardware, too. It doesn't reject you, and that's good."
+	if Leo is in location of player, say "[one of]You walk north into the hacks['] shack. Leo and Rand follow. An electronic voice booms at them! 'YrNet Entry rejects N-E-Try!' It's one of those high-tech alarm devices, and it's detected them as not smart enough! It's not fair, and it's not nice, but if you need to do some programming, maybe they won't be a help anyway, to say the least.[paragraph break]It'd be sad to see Leo and Rand go, but perhaps a nicer way than yelling at them could help give them time to get to know each other without you standing in the way. Perhaps you could take a cue from that sign by the shack--it might give you some authority[or]You don't want that electronic warning. Leo and Rand don't, either. You glance at the sign again. Whether or not they can read it, you can tell them the gist. It'll be a softer letdown, coming from you[stopping]." instead;
+	if Hacks' Shack is unvisited, say "You feel a small tingle--you've felt it before, from the YrNet Entry which disrupts unwanted visitors. But only people. Sometimes it also breaks up really oppressive software and hardware, too. It doesn't reject you, and that's good."
 
-check scaning in Phat Path when Leo is in Phat Path:
-	say "Leo and Rand ooh and ah at how you're using a thing to find out about things.";
+check scaning in Phat Path when Leo is in Phat Path: say "Leo and Rand ooh and aah at how you're using a thing to find out about things.";
 
 byebyes is a list of things variable. byebyes is { log ons letters, alert letters, ought letters}.
 
@@ -12790,8 +12725,7 @@ BUB DUDE EGG is proper-named reflexive boring scenery. description of Bub Dude E
 
 a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "???Y?". parse-text of BUB DUDE EGG is "x[sp]-[sp]x[sp]-[sp]x".
 
-check scaning computer screen:
-	if BUB DUDE EGG is visible, try scaning BUB DUDE EGG instead;
+check scaning computer screen: if BUB DUDE EGG is visible, try scaning BUB DUDE EGG instead;
 
 check restarting the game when player is in Hacks' Shack:
 	say "[if rebooted is false]You look over at Drive A--and the blue and orange buttons--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
@@ -12837,13 +12771,9 @@ check tying it to (this is the put on the slab rule) :
 	say "This game doesn't recognize the ATTACH/TIE verb for either of those objects. Perhaps it should, but you may be better off using PUT ABC ON/IN XYZ." instead;
 
 check going in Hacks' Shack (this is the maybe lock player in rule): [check going in Hacks' Shack]
-	if noun is outside:
-		try going south instead;
-	if noun is not south:
-		if keyboard is not off-stage and censer is not off-stage:
-			say "Nothing [noun], but you need to just sit and finish things here anyway." instead;
-	else:
-		abide by the shack-south rule;
+	if noun is outside, try going south instead;
+	if noun is not south and keyboard is not off-stage and censer is not off-stage, say "Nothing [noun], but you need to just sit and finish things here anyway." instead;
+	abide by the shack-south rule;
 
 after printing the locale description for Hacks' Shack (this is the auto-screen rule):
 	if player has onyx censer:
@@ -12976,7 +12906,7 @@ port-warn is a truth state that varies.
 check inserting into labs slab (this is the on not in slab rule):
 	say "[if port-warn is false]The labs slab has no ports, but you can put stuff on it.[else](on, not in)[line break][end if]";
 	now port-warn is true;
-	try putting the second noun on the labs slab;
+	try putting the second noun on the labs slab instead;
 
 check putting a thing on labs slab (this is the check what to put on labs slab rule):
 	if noun is on labs slab:
@@ -13426,8 +13356,6 @@ a-text of maze walls is "RYRYRRYR". b-text of maze walls is "RYRYRRYR". parse-te
 
 description of maze walls is "[if player is in Grey Gyre]Up north[else]This[end if] is a volt maze, but they don't seem juiced enough to zap you good. Running into them might be a useful lesson in character building. Or an outright clue."
 
-check touching walls: say "[if player is in Grey Gyre]Nothing. Maybe it's the inside of the walls, in the maze, that is charged[else][one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping][end if]." instead;
-
 description of big-let is "It's a letter[if r10 is visited]. Much like back to the L you saw at the beginning[else]. Maybe there are others later along[end if]."
 
 understand "floor" as big-let.
@@ -13655,9 +13583,8 @@ check scaning casper:
 	if recaps are reflexed:
 		try scaning recaps instead;
 
-check scaning recaps:
-	if recaps is not reflexed and cheat-on is true:
-		say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
+check scaning recaps when recaps is not reflexed and cheat-on is true:
+	say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
 
 a-text of capers recaps is "RRRYRY". b-text of capers recaps is "RRR??Y". parse-text of capers recaps is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
@@ -14132,11 +14059,9 @@ description of boats is "They're boats, not shippish, and too dense to swim thro
 
 a river is scenery in Disease Seaside. "Boats pass on the river. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
 
-check taking river:
-	say "The river drips through your fingers." instead;
+check taking river: say "The river drips through your fingers." instead;
 
-instead of entering river:
-	say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll avoid all those boats. Or at least their potentially lethal undersides."
+check entering river: say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll avoid all those boats. Or at least their potentially lethal undersides." instead;
 
 check going in Disease Seaside:
 	if noun is north:
@@ -14151,7 +14076,7 @@ a-text of frat raft is "RYRR". b-text of frat raft is "??RP". parse-text of frat
 
 the frat raft is an enterable reflexive supporter. the frat raft is fixed in place.
 
-check taking raft: say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically.";
+check taking raft: say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically." instead;
 
 check going when player is in raft: say "The raft is a bit clunky. You can't even move the oars." instead;
 
@@ -14577,8 +14502,7 @@ check scaning the cans (this is the bonus point rule) :
 		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths.";
 		min-and;
 		moot cans instead;
-	say "You're over-thinking this one.";
-	the rule fails;
+	say "You're over-thinking this one." instead;
 
 section eeks
 
@@ -14722,13 +14646,9 @@ to say tray-sez: say "[if trout is reflexive]hints you've got enough nourishment
 
 tuna-first is a truth state that varies.
 
-check objasking tuna about:
-	if tuna-first is false:
-		tuna-chat instead;
+check objasking tuna about: if tuna-first is false, tuna-chat instead;
 
-check asking tuna about:
-	if tuna-first is false:
-		tuna-chat instead;
+check asking tuna about: if tuna-first is false, tuna-chat instead;
 
 to tuna-chat:
 	say "Aunt Tuna ignores your specific question and instead launches into a tirade about innocent people not being able to hide from the Die Thou Hideout in the Horned Hedron, and what with the haunter running around, that's one more thing to worry about! And it would be nice if they could be played against each other, but the real world doesn't work that way, even though she TRIES to be optimistic.";
@@ -15245,9 +15165,6 @@ check taking tubs: say "Way too bulky. But actually not as heavy as you thought.
 
 description of tubs is "They seem glued together. Maybe there is a way to break them open to see if there's anything inside."
 
-instead of touching tubs:
-	say "They seem to be made of something fragile, something you could break--porcelain, maybe? You hear something rattling inside.";
-
 a-text of tubs is "RYRR". b-text of tubs is "RGRR". parse-text of tubs is "x[sp]u[sp]x[sp]x". tubs is cheat-spoilable.
 
 the heaps are reflexive plural-named LLPish scenery. "[if heaps are reflexed]You have beautified them. Yay, you.[else]They are just a mess. You're not obligated to beautify Yorpwald, but maybe something could be done to them.[end if]"
@@ -15432,7 +15349,7 @@ thug-tell is a truth state that varies.
 
 check going south when player is in Horned Hedron and ruby is moot:
 	if thug-tell is false:
-		say "You hear snickers as DIE THOU thugs are, presumably, digging up your ruby. If anyone finds them with it, the thugs will be the ones who have it.";
+		say "You hear snickers as DIE THOU thugs are, presumably, digging up your ruby. If anyone or anything is looking for it, the weaselly walleyes will be the ones who have it. Or who are caught with it.";
 		now thug-tell is true;
 
 chapter theses sheets
@@ -16111,8 +16028,7 @@ a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-
 inside of Topside Deposit is nowhere.
 
 check going north in Topside Deposit:
-	if player does not have Rosetta Toaster and dreads adders are not visible:
-		say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
+	if player does not have Rosetta Toaster and dreads adders are not visible, say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
 
 a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here."
 
@@ -16123,11 +16039,9 @@ The Rosetta Toaster is a container. It is in Topside Deposit. "A Rosetta Toaster
 check scaning toaster:
 	say "[one of]The toaster looks like a pretty good diagnostic item as-is, and it doesn't need an upgrade, so you're not disappointed when nothing pops up[or]Still nothing. The toaster probably doesn't need an upgrade[stopping]." instead;
 
-check taking toaster when player is in Actionless Coastlines: [?? double check?]
-	say "You don't need to take it again.";
+check taking toaster when player is in Actionless Coastlines: say "[if toaster is in Actionless Coastlines]Best leave it with the agnostic[else]You don't need to take it again[end if]." instead;
 
-Rule for printing room description details of the Rosetta Toaster:
-	do nothing instead.
+Rule for printing room description details of the Rosetta Toaster: do nothing instead.
 
 the Rosetta Toaster has a number called charges. the charges of the Rosetta Toaster is usually 0.
 
@@ -16165,6 +16079,8 @@ some Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Br
 understand "brownie" as brownies.
 
 a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]-[sp]x[sp]-[sp]y". try us yurts are cheat-spoilable.
+
+chapter spec-o-scope
 
 the spec-o-scope is scenery in Scope Copse. understand "map/scope/specoscope/spec" and "copse scope" as spec-o-scope. [ugh, I would like to call it the spec o scope but then that can conflict with the scope copse]
 
@@ -16209,7 +16125,7 @@ to say pc of (myr - a room) and (myd - a direction): [passage character]
 		if maybe is true and guy entry gendermatches:
 			say "[if guy entry is not moot]x[else if myd is west or myd is east]-[else]|[end if]";
 			continue the action;
-	say "?[run paragraph on]"
+	say "[qr]"
 
 book Outer Route
 
@@ -16232,7 +16148,7 @@ understand "camp/site/campsite" and "yon camp" as campsite.
 
 A rapier repair machine is in Outer Route. "A shiny machine labeled RAPIER REPAIR [if dagger is moot]fizzles[else]chugs[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if dagger is not moot]It's nowhere near big enough to clean a lance, but you could probably PUT any blade smaller than a rapier in there[else]You seem to have broken it creating the gizmo[end if]."
 
-check taking rapier repair:	say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if dagger is moot]Plus you already used it[else]Better to carry something that'd fit into IT[end if]." instead
+check taking rapier repair:	say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if dagger is moot]Plus you already used it[else]Better to carry something that'd fit into IT[end if]." instead;
 
 the I ZOMG Gizmo is a thing. description is "[one of]Whew. I'm buffaloed on this one. Somebody who knows how to build things would probably understand how to activate, much less use, the [randbla] or [randbla]. Hey, if I understood, I would be writing stuff far less silly than this game[or]You find yourself baffled by the [giz-part][stopping]."
 
@@ -16278,16 +16194,11 @@ book Baldest Blasted Saltbed
 
 Baldest Blasted Saltbed is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if number of visible guardians is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if]. The stew wets behind the old ice are too dangerous[tow-dirs]"
 
-check going west in Baldest Blasted Saltbed:
-	say "The stew wets are way too dangerous. But any other way is okay." instead;
+check going west in Baldest Blasted Saltbed: say "The stew wets are way too dangerous. But any other way is okay." instead;
 
 section stew wets (west)
 
-the stew wets are bounding scenery in Baldest Blasted Saltbed. "The stew wets are just another bit of treacherous terrain that help prevent your journey from being more expansive than it already has been."
-
-instead of doing something with stew wets:
-	if action is procedural, continue the action;
-	say "[wets-no]."
+the stew wets are boring bounding scenery in Baldest Blasted Saltbed. description of stew wets is "The stew wets are just another bit of treacherous terrain that help prevent your journey from being more expansive than it already has been.". bore-text of stew wets is "[wets-no]."
 
 section docile old ice
 
@@ -16324,26 +16235,22 @@ Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] th
 after printing the locale description for Anemic Cinema when Anemic Cinema is unvisited:
 	say "The ingrates grumble about how their territory is useless, and that's really not their fault. Maybe you don't really need to get rid of them.[paragraph break]";
 
-The theater thereat is useless scenery in Anemic Cinema. description of theater is "[bug-report]"
+The theater thereat is boring useless scenery in Anemic Cinema. description of theater is "The theater has long since been in disuse. It can't be important. I mean, who needs visual images to have an adventure? Really!". bore-text of theater thereat is "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'I, Manic Menace,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world.".
 
 understand "theatre" and "theatre thereat" as theater thereat.
 
 understand "anemic/cinema" and "anemic cinema" as theater when player is in Anemic Cinema.
 
-check going inside when player is in Anemic Cinema:
-	try entering theater;
+check going inside when player is in Anemic Cinema: try entering theater instead;
 
-instead of doing something with theater:
-	if current action is entering:
-		try entering theater;
-	say "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'I, Manic Menace,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world."
+this is the bore-theater rule:
+	if current action is entering, now boring-exception is true;
 
 book Treading Gradient
 
 Treading Gradient is north of Unblest Sunbelt and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are visible and mended mini denim is visible][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are visible][we-g][else if mended mini denim is visible]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if number of visible guardians is 0], all unobstructed[else if number of visible guardians is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
 
-to say we-g:
-	say "weeds swaying, despite no wind,"
+to say we-g: say "weeds swaying, despite no wind,"
 
 every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient: say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
 
@@ -16489,39 +16396,30 @@ carry out repeating:
 
 book Danger Garden
 
-Danger Garden is a room in Towers. Danger Garden is east of Unblest Sunbelt. printed name of Danger Garden is "[if bonker is visible]Danger[else]Gander[end if] Garden". "[if bonker is visible]This garden seems both describable and indescribable. You're sure it's inspired its share of overblown prose and poetry, and of thinking how things are or should be, but there's no time for that now[else]You hear the geese honking now with the bonker gone, but they are too scared of you[end if]. The curst palace is barely visible in the distance north-ish, and you can take a path any which way.".
+Danger Garden is a room in Towers. Danger Garden is east of Unblest Sunbelt. printed name of Danger Garden is "[if stinger is not moot]Danger[else]Gander[end if] Garden". "[if stinger is not moot]This garden seems both describable and indescribable. You're sure it's inspired its share of overblown prose and poetry, and of thinking how things are or should be, but there's no time for that now[else]You hear a gander of geese honking now with the bonker and stinger gone, but they are too scared of you[end if]. The curst palace is barely visible in the distance north-ish, and you can take a path any which way.".
 
-understand "danger/gander/ garden" as Danger Garden when mrlp is towers.
+understand "gander" as geese when geese are in danger garden.
 
-the geese are useless plural-named scenery. description of geese is "You can't get a glimpse of the geese for all their noise."
+understand "gander garden" as Danger Garden when mrlp is towers and geese are in danger garden..
 
-understand "gander" as geese.
-
-instead of doing something with geese:
-	if action is procedural, continue the action;
-	say "The geese are noisy but not worth poking at." instead;
+the geese are useless boring plural-named scenery. description of gander is "You can't get a glimpse of the gander for all their noise.". bore-text is "The gander is noisy but not worth poking for. None of the geese can help you."
 
 book Salted Deltas
 
 Salted Deltas is north of Treading Gradient and east of Anemic Cinema. "Leak Lake, with its shoals aslosh, is to the north and far too wide to cross[tow-dirs].". Salted Deltas is in Towers.
 
-s-d are useless scenery in salted deltas. understand "salted/ deltas" as s-d. printed name of s-d is "salted deltas".
+s-d are useless scenery in salted deltas. description of s-d is "Not as dangerous as Leak Lake but not worth exploring.". bore-text of s-d is "The Salted Deltas are scenery. No need to futz."
+
+understand "salted/ deltas" as s-d. printed name of s-d is "salted deltas".
 
 to say vis-guar:
-	if number of guardians in Salted Deltas > 0:
-		say ". Might be more productive to deal with [the list of guardians in Salted Deltas], instead";
-		if number of guardians in Salted Deltas is 2:
-			say ". Especially the Atheists";
-	else:
+	let ngs be number of guardians in Salted Deltas;
+	if ngs is 0:
 		say ". You've gotten rid of all nuisances here, anyway";
+	else:
+		say ". Might be more productive to deal with [the list of guardians in Salted Deltas], instead[if ngs is 2]. Especially the Atheists[end if]";
 
-description of s-d is "[bug-report]".
-
-instead of doing something with s-d:
-	say "The Salted Deltas are scenery. No need to futz."
-
-to say agnostic-first:
-	say "[if agnostic is male]Scot[else]Staci[end if]"
+to say agnostic-first: say "[if agnostic is male]Scot[else]Staci[end if]"
 
 the Coasting Agnostic is a person. "[Agnostic], the Coasting Agnostic, [if dinger is in Actionless Coastlines]continues to read listlessly[else]smiles happily[end if] half lost in technical abstract thought."
 
@@ -16706,11 +16604,7 @@ chapter Shaven Havens
 
 Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place wasn't, like, shaved with a razor. It's just free of anything that could hide bad guys, so hooray for small things. Savager ravages impede you any way except back south."
 
-the savager ravages are scenery in Shaven Havens. "They're pretty forbidding. Trust me, you don't want to go any way but back south."
-
-instead of doing something with savager ravages:
-	if action is procedural, continue the action;
-	say "You don't want to mess with the savager ravages." instead;
+the savager ravages are boring bounding scenery in Shaven Havens. description of savager ravages is "They're pretty forbidding. Trust me, you don't want to go any way but back south.". bore-text is "You don't want to mess with the savager ravages.".
 
 havens-visit is a truth state that varies.
 
@@ -16725,10 +16619,7 @@ a-text of lone duck is "YRRYRRYR". b-text of lone duck is "YRRYRRYR". parse-text
 
 understand "loud neck" and "loud/neck" as lone duck when id tag is examined.
 
-check giving something to duck:
-	say "The duck doesn't seem interested in anything edible. Or inedible." instead;
-
-check touching the duck: say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]." instead;
+check giving something to duck: say "The duck doesn't seem interested in anything edible. Or inedible." instead;
 
 check taking the duck:
 	if lone duck is returned, say "It's Dr. Yow's. No stealing." instead;
@@ -16779,8 +16670,7 @@ a-text of prison ropins is "YRRYRRYR". b-text of prison ropins is "YRRYRRYR". pa
 
 description of ropins is "[if duck is returned]The prison ropins are open now, not that you want to enter.[else]The gaol advertises itself as the involuntary home of one Dr. Yow.[end if]"
 
-check examining ropins:
-	ignore the examine containers rule;
+check examining ropins: ignore the examine containers rule;
 
 check scaning ropins:
 	say "The settler does very little until you get near [if ropins are examined]a fissure you didn't see at first[else]the fissure[end if]. The result makes you think you don't need to do anything to the prison as a whole.";
@@ -16912,11 +16802,7 @@ understand "doctor/doc yow" and "doctor/doc" as Dr Yow.
 
 Dr Yow can be rowdy, wordy or calm. Dr Yow is calm.
 
-check entering fissure: say "It's not the right size or shape for you."
-
-check eating a person: [?? stupid joke rule to move to common]
-	if noun is the player, try swearing obscenely instead;
-	say "You have no fork, or anything that could become a fork. Plus, gross." instead;
+check entering fissure: say "It's not the right size or shape for you." instead;
 
 section rowdying
 
@@ -17000,7 +16886,7 @@ to say wordy-hinty:
 
 book Actionless Coastlines
 
-Actionless Coastlines is north of Artist Traits Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor."
+Actionless Coastlines is north of Artist Traits Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are in Actionless Coastlines]. You can go back south, however[else if the-hostile are in Actionless Coastlines]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor."
 
 check going northeast in actionless coastlines: try going north instead; [crossing leak lake]
 
@@ -17012,27 +16898,19 @@ printed name of solve a loaves is "solve-a-loaves".
 
 section Maturation Natatorium
 
-the Maturation Natatorium is a backdrop. the Maturation Natatorium is in Actionless Coastlines and Salted Deltas. description is "It extends [if player is in Actionless Coastlines]west[else]east[end if]. There's no clear way in[if atheists are moot], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT."
+the Maturation Natatorium is a boring backdrop. the Maturation Natatorium is in Actionless Coastlines and Salted Deltas. description is "It extends [if player is in Actionless Coastlines]west[else]east[end if]. There's no clear way in[if atheists are moot], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT.". bore-check is bore-maturation-natatorium rule. bore-text is "There's nothing much to do with the maturation natatorium. It's just a gaudy structure.".
 
-instead of doing something with Maturation Natatorium:
-	if current action is entering and player is in Salted Deltas:
-		say "[if atheists are moot]No need to disturb [relig-mf] now you're past[else]You're worried the atheists might give you a working over, verbal or physical might have you strung up for sacrilege. So HOSTILE[end if]." instead;
-	if action is procedural, continue the action;
-	if current action is entering:
-		say "It doesn't look very fun, whether or not you'd be pestered by atheists." instead;
-	say "There's nothing much to do with the maturation natatorium. It's just a gaudy structure.";
+this is the bore-maturation-natatorium rule:
+	if current action is entering and player is in Salted Deltas, say "[if atheists are moot]No need to disturb [relig-mf] now you're past[else]You're worried the atheists might give you a working over, verbal or physical might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 
 section Thearchy Hatchery
 
-the Thearchy Hatchery is a backdrop. Thearchy Hatchery is in Actionless Coastlines and Artist Traits Strait.
+the Thearchy Hatchery is a boring backdrop. Thearchy Hatchery is in Actionless Coastlines and Artist Traits Strait. bore-text of thearchy hatchery is "There's nothing much to do with the Hatchery. It's just a gaudy structure."
 
-instead of doing something with Thearchy Hatchery:
-	if current action is entering and player is in Artist Traits Strait:
-		if player is in Artist Traits Strait:
-			say "[if the-hostile are moot]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
+this is the bore-thearchy-hatchery rule:
+	if current action is entering:
+		if player is in Artist Traits Strait, say "[if the-hostile are moot]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 		say "That would probably be sacrilegious. You'd get a good scolding, I'm sure." instead;
-	if action is procedural, continue the action;
-	say "There's nothing much to do with the Hatchery. It's just a gaudy structure.";
 
 description of Thearchy Hatchery is "It's a pretty impressive structure, with a note 'RIP once-sad deacons: aced, son (just before release 4).' Hmm[if the-hostile is visible]. You'd think [relig-mf] would belong there, but maybe they are trying to preach to whatever masses drop by[end if]."
 
@@ -17048,8 +16926,7 @@ after looking in Lost Lots:
 
 the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
 
-check opening a hintpastry:
-	say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
+check opening a hintpastry: say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
 
 section sporties' ripostes
 
@@ -17090,101 +16967,13 @@ a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of 
 
 check taking sled rut: say "[if strudel is in Outer Route]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
 
-book Rawest Waters
-
-Rawest Waters is a room in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back southwest, and unable to decide if the northern or eastern shore is closer."
-
-after printing the locale description for Rawest Waters when Rawest Waters is unvisited (this is the adjust min towers score in the waters rule):
-	now poss-score of Towers is 5 + cur-score of towers;
-	now min-score of Towers is 1 + cur-score of towers;
-	if player has strudel and strudel is not reflexed:
-		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also PUNIER, TRISTE, PRESENT and give the Triste Sitter the flowerpot. And the strudel can always be rustled.]
-
-the eastern shore is reflexive scenery in Rawest Waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
-
-southwestern shore is scenery in Rawest Waters. "You can barely see it--the agnostic isn't there either."
-
-northern shore is scenery in Rawest Waters. "You can barely see it--it's as far as the eastern shore--but it seems darker and more foreboding.". northern shore is undesc.
-
-instead of doing something with the southwestern shore:
-	if action is procedural, continue the action;
-	say "No way to get back to the southwestern shore, really."
-
-instead of doing something with the northern shore:
-	if action is procedural, continue the action;
-	say "It's too far to swim or do much more than magick."
-
-does the player mean doing something with eastern shore: it is very likely.
-
-a-text of eastern shore is "RYYRYRR". b-text of eastern shore is "RYYRGRR". parse-text of eastern is "x[sp]-[sp]-[sp]x[sp]e[sp]x[sp]x".
-
-every turn when player is in Rawest Waters:
-	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
-
-the raspy spray is bounding scenery in Rawest Waters. description is "Well, you don't have much time to look at it in detail. You'd just like to get to one of the shores."
-
-does the player mean drinking the spray: it is very likely.
-
-instead of doing something with raspy spray:
-	if current action is drinking, say "You'd hate the taste of the sips." instead;
-	if action is procedural, continue the action;
-	say "You need to worry about getting out of the spray."
-
 chapter a bot boat
-
-check going inside when player is in Actionless Coastlines:
-	if bot boat is in Actionless Coastlines, try entering bot boat instead;
-	say "You can't make up your mind which of the natatorium and hatchery would annoy you less, so you opt for neither. They can't be relevant." instead;
-
-check examining bot boat:
-	if turbos are not part of bot boat:
-		say "The bot boat seem bare-bones at the moment, not ready to ride." instead;
 
 description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[else]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across the river[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[else]The blaster hums and shakes erratically[end if].[paragraph break][if bot boat is reflexed]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
 
-the turbos are a reflexive plural-named thing. description of turbos is "You're not sure how they should work, but [if turbos are reflexed]you managed to[else]maybe you can[end if] counter the agnostic's technical knowledge by tweaking it."
-
-the blaster is a reflexive thing. description of blaster is "You're not sure how it should work, but [if blaster is reflexed]you managed to[else]maybe you can[end if] counter the agnostic's technical knowledge by tweaking it. You see red writing on it."
-
 t-or-b is a thing that varies.
 
-instead of doing something to the turbos:
-	if the action is procedural, continue the action;
-	say "The turbos are too technical for you--you can probably just examine or scan them."
-
-instead of doing something to blaster:
-	if the action is procedural, continue the action;
-	say "The blaster is too technical for you--you can probably just examine or scan it."
-
-a-text of turbos is "RYRYRR". b-text of turbos is "RYRYRR". parse-text of turbos is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
-
-a-text of blaster is "RRYRRYR". b-text of blaster is "RRGRRGP". parse-text of blaster is "x[sp]x[sp]a[sp]x[sp]x[sp]e[sp]r".
-
-no-pastries is a truth state that varies.
-
-to towers-min-adj: [this is when you leave the mainland]
-	wipe-towers-map;
-	d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
-	if mended mini denim is in Scope Copse, d "Left mended mini denim.";
-	if old ice is not moot, d "Left old ice.";
-	if sporties' ripostes are not moot, d "Left sporties['] ripostes.";
-	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
-	now min-score of towers is cur-score of towers + 1; [spectacular]
-	unless turbos are reflexed and blaster is reflexed:
-		increment poss-score of towers; [we get another point for Rawest Waters]
-		min-up;
-	if used-ray is false:
-		increment poss-score of towers;
-		if number of carried hintpastries is 0, min-up; [no way to cheat if we have no hintpastries]
-	if player has strudel and strudel is reflexive, increment poss-score of towers; [we can still make it RUSTLED]
-
-to say mrmamu:
-	say "[if player is female]Ma'am[else]Mister[end if]";
-
-check taking toaster: if toaster is in Actionless Coastlines, say "Best leave it with the agnostic." instead;
-
-check taking bot boat:
-	try entering bot boat instead;
+check taking bot boat: try entering bot boat instead;
 
 check entering bot boat:
 	if turbos are not part of bot boat:
@@ -17208,8 +16997,85 @@ check entering bot boat:
 	towers-min-adj;
 	now player is in Rawest Waters instead;
 
+check going inside when player is in Actionless Coastlines:
+	if bot boat is in Actionless Coastlines, try entering bot boat instead;
+	say "You can't make up your mind which of the natatorium and hatchery would annoy you less, so you opt for neither. They can't be relevant." instead;
+
+check examining bot boat:
+	if turbos are not part of bot boat, say "The bot boat seem bare-bones at the moment, not ready to ride." instead;
+
+section turbos
+
+the turbos are a reflexive boring plural-named thing. description of turbos is "You're not sure how they should work, but [if turbos are reflexed]you managed to[else]maybe you can[end if] counter the agnostic's technical knowledge by tweaking it.". bore-text is "The turbos are too technical for you--you can probably just examine or scan them.".
+
+a-text of turbos is "RYRYRR". b-text of turbos is "RYRYRR". parse-text of turbos is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
+
+section blaster
+
+the blaster is a reflexive thing. description of blaster is "You're not sure how it should work, but [if blaster is reflexed]you managed to[else]maybe you can[end if] counter the agnostic's technical knowledge by tweaking it. You see red writing on it.". bore-text is "The blaster is too technical for you--you can probably just examine or scan it."
+
+a-text of blaster is "RRYRRYR". b-text of blaster is "RRGRRGP". parse-text of blaster is "x[sp]x[sp]a[sp]x[sp]x[sp]e[sp]r".
+
+no-pastries is a truth state that varies.
+
+to towers-min-adj: [this is when you leave the mainland]
+	wipe-towers-map;
+	d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
+	if mended mini denim is in Scope Copse, d "Left mended mini denim.";
+	if old ice is not moot, d "Left old ice.";
+	if sporties' ripostes are not moot, d "Left sporties['] ripostes.";
+	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
+	now min-score of towers is cur-score of towers + 1; [spectacular]
+	unless turbos are reflexed and blaster is reflexed:
+		increment poss-score of towers; [we get another point for Rawest Waters]
+		min-up;
+	if used-ray is false:
+		increment poss-score of towers;
+		if number of carried hintpastries is 0, min-up; [no way to cheat if we have no hintpastries]
+	if player has strudel and strudel is reflexive, increment poss-score of towers; [we can still make it RUSTLED]
+
+to say mrmamu: say "[if player is female]Ma'am[else]Mister[end if]";
+
 check going in Rawest Waters:
 	say "Spirited riptides! You panic a bit, unsure which shore would take the least time to get to--northern, southwestern or eastern. They all seem about the same distance. If only you could force the issue somehow--the [i]eastern[r] looks a bit more pleasant." instead;
+
+book Rawest Waters
+
+Rawest Waters is a room in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back southwest, and unable to decide if the northern or eastern shore is closer."
+
+after printing the locale description for Rawest Waters when Rawest Waters is unvisited (this is the adjust min towers score in the waters rule):
+	now poss-score of Towers is 5 + cur-score of towers;
+	now min-score of Towers is 1 + cur-score of towers;
+	if player has strudel and strudel is not reflexed:
+		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also PUNIER, TRISTE, PRESENT and give the Triste Sitter the flowerpot. And the strudel can always be rustled.]
+
+every turn when player is in Rawest Waters:
+	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
+
+section eastern shore
+
+the eastern shore is boring reflexive scenery in Rawest Waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
+
+does the player mean doing something with eastern shore: it is very likely.
+
+a-text of eastern shore is "RYYRYRR". b-text of eastern shore is "RYYRGRR". parse-text of eastern is "x[sp]-[sp]-[sp]x[sp]e[sp]x[sp]x".
+
+section southwestern shore
+
+the southwestern shore is scenery in Rawest Waters. description of southwestern shore is "You can barely see it--the agnostic isn't there either.". bore-text is "No way to get back to the southwestern shore, really."
+
+section northern shore
+
+the northern shore is scenery in Rawest Waters. description of northern shore is "You can barely see it--it's as far as the eastern shore--but it seems darker and more foreboding.". bore-text is "It's too far to swim or do much more than magick."
+
+section raspy spray
+
+the raspy spray is boring bounding scenery in Rawest Waters. description is "Well, you don't have much time to look at it in detail. You'd just like to get to one of the shores.". bore-text of raspy spray is "You need to worry about getting away from the spray. One of the shores must be reachable."
+
+does the player mean drinking the spray: it is very likely.
+
+this is the bore-raspy-spray rule:
+	if current action is drinking, say "You'd hate the taste of the sips." instead;
 
 book Mislit Limits
 
@@ -17217,16 +17083,13 @@ the accurst leap is auxiliary cluey scenery. "It would be sad if you jumped off 
 
 a-text of accurst leap is "RRYRRYRYRYR". b-text of accurst leap is "RRYRRYRYRGR". parse-text of accurst leap is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]a[sp]x".
 
-check jumping when accurst leap is visible:
-	say "I won't let you! You're too close! You can't do it!" instead;
+check jumping when player is in mislit limits and accurst leap is in mislit limits: say "I won't let you! You're too close! You can't jump into the accurst leap now!" instead;
 
 the packet of clear catsup is auxiliary cluey scenery. "The packet of clear catsup is something you'd have missed without knowing about it. It is the sort of litter that keeps the castle seeming worse than ordinary."
 
-instead of eating clear catsup:
-	say "Yuck.";
+check eating clear catsup: say "Yuck." instead
 
-instead of opening clear catsup:
-	say "Not only is it litter, but it doesn't have any ridged bits to make it open easier. Still, a potential clue is a potential clue."
+check opening clear catsup: say "Not only is it litter, but it doesn't have any ridged bits to make it open easier. Still, a potential clue is a potential clue." instead;
 
 a-text of clear catsup is "RRYRRYRYRYR". b-text of clear catsup is "RRGRRYRYRYR". parse-text of clear catsup is "x[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
 
@@ -17268,11 +17131,9 @@ clue-index is a number that varies.
 after going to Mislit Limits:
 	if flip-final-clue is true:
 		say "You notice something [if clue-index > 0]else [end if]you wouldn't have seen without St. Teri's help.[run paragraph on]";
-		if clue-index > 0:
-			moot entry clue-index in nextclue;
+		if clue-index > 0, moot entry clue-index in nextclue;
 		increment clue-index;
-		if clue-index > number of entries in nextclue:
-			now clue-index is 1;
+		if clue-index > number of entries in nextclue, now clue-index is 1;
 		move entry clue-index in nextclue to Mislit Limits;
 		say " That [entry clue-index in nextclue] must be important. You note it as further scenery in your pedanto-notepad.";
 		pad-rec-q "scenery";
@@ -17280,12 +17141,9 @@ after going to Mislit Limits:
 	continue the action;
 
 check taking scenery in Mislit Limits:
-	if noun is curst palace:
-		say "You need to make it worth taking back." instead;
-	if noun is clear catsup:
-		say "Picking up litter is admirable, but it's small thinking with your powers." instead;
-	if noun is accurst leap:
-		say "Take a leap of logic instead." instead;
+	if noun is curst palace, say "You need to make it worth taking back." instead;
+	if noun is clear catsup, say "Picking up litter is admirable, but it's small thinking with your powers." instead;
+	if noun is accurst leap, say "Take a leap of logic instead." instead;
 	say "You can't and don't need to take it, but maybe you can take a clue from it." instead;
 
 to say 3-random:
@@ -17419,10 +17277,7 @@ check wearing the flowerpot: say "Devo is not accepting new members." instead;
 
 check putting on the flowerpot: say "The flowerpot is just for holding a flower. Or future flowers." instead;
 
-check taking crocus:
-	if crocus is in Mislit Limits:
-		say "It looks a bit TOO colorful for a flower, almost radioactive. In fact, from what you know about the species, that means it's close to DYING. Maybe you could tone it down." instead;
-	say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]."
+check taking crocus: say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]. Taking it from the flowerpot might ruin it for good." instead;
 
 the succor crocus is an LLPish flippable thing. "A succor crocus lies here, full of livid colors that don't make you happier."
 
@@ -17489,14 +17344,13 @@ a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRG??"
 
 chapter curst palace
 
-The Curst Palace is a reflexive backdrop.
+The Curst Palace is a reflexive boring backdrop. description of Curst Palace is "The curst palace Castle Apcur towers high enough to see across the lake. But perhaps it could be much nicer...with just one word...". bore-text of Curst Palace is "The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it.".
 
 towers-min-flag is a truth state that varies;
 
 understand "castle apcur" and "castle/apcur" as the curst palace.
 
-check examining curst palace when player is not in Mislit Limits:
-	say "The curst palace is too far away to make out details beyond its general decrepitude." instead;
+check examining curst palace when player is not in Mislit Limits: say "The curst palace is too far away to make out details beyond its general decrepitude." instead;
 
 max-pal-seen is a number that varies.
 
@@ -17511,60 +17365,28 @@ check scaning curst palace (this is the nab a few letters rule) :
 			say "You don't see any more than you have before[if palace-let < max-pal-seen]. In fact, you have less information than when you were closer[end if].";
 	else if max-pal-seen < 11:
 		say "The entire settler lights up[if max-pal-seen is 0]--but it takes a while. You're lucky you're so close[else], finally[end if]!";
-	if max-pal-seen < palace-let:
-		now max-pal-seen is palace-let;
-
-instead of doing something with the curst palace when player is not in Mislit Limits:
-	if action is procedural, continue the action;
-	say "The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it.";
+	if max-pal-seen < palace-let, now max-pal-seen is palace-let;
 
 [logsync.py force next]
-a-text of curst palace is "[cpset of false]". b-text of curst palace is "[cpset of true]". parse-text of curst palace is "[cpp]".
+a-text of curst palace is "[cpset of pal-a]". b-text of curst palace is "[cpset of pal-b]". parse-text of curst palace is "[cpset of pal-clues]".
+
+pal-clues is text that varies. pal-lets is "xx-xt-x-x-x".
 
 to say cpp:
 	let p-l be palace-let;
-	say "x[sp]x[sp]-[sp]";
-	if p-l < 4:
-		say "x";
-	else:
-		say "?";
-	if p-l < 5:
-		say "t";
-	else:
-		say "?";
-	if p-l < 6:
-		say "-";
-	else:
-		say "?";
-	if p-l < 7:
-		say "x";
-	else:
-		say "?";
-	if p-l < 8:
-		say "-";
-	else:
-		say "?";
-	if p-l < 9:
-		say "x";
-	else:
-		say "?";
-	if p-l < 10:
-		say "-";
-	else:
-		say "?";
-	if p-l < 11:
-		say "x";
-	else:
-		say "?";
+	repeat with L running from 1 to 11:
+		say "[if p-l < L][character L in pal-lets][else]%[end if]"
 
-to say cpset of (mytru - a truth state):
+pal-a is text that varies. pal-a is "RRYRRYRYRYR".
+
+pal-b is text that varies. pal-b is "RRYR?YRYRY?".
+
+to say cpset of (myt - text):
 	let p-l be palace-let;
-	say "RRY[if p-l < 4]*[else]R[end if][if p-l < 5]*[else if mytru is true]?[run paragraph on][else]R[end if][if p-l < 6]*[else]Y[end if][if p-l < 7]*[else]R[end if][if p-l < 8]*[else]Y[end if][if p-l < 9]*[else]R[end if][if p-l < 10]*[else]Y[end if][if p-l < 11]*[else]?[run paragraph on][end if]";
+	repeat with L running from 1 to 11:
+		say "[if p-l < L][character L in myt][else]*[end if]"
 
-instead of entering curst palace:
-	say "No time to Browse Bowers. Plus, it's still cursed."
-
-description of Curst Palace is "The curst palace Castle Apcur towers high enough to see across the lake. But perhaps it could be much nicer...with just one word..."
+check entering curst palace: "Less tours, more roust." instead;
 
 check going inside in Mislit Limits:
 	say "(assuming the way west, since Castle Apcur is too high up)[paragraph break]";
@@ -17598,6 +17420,7 @@ bogus-detours is a privately-named vanishing boring scenery in Dourest Detours. 
 a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". parse-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 check going west in anemic cinema when ingrates are moot: abide by the detour-check rule;
+
 check going south in danger garden when natives' site van is moot: abide by the detour-check rule;
 
 last-detour is a room that varies.
@@ -18170,8 +17993,7 @@ check objhinting a not leaderly warrior (this is the poke Rodney but don't spoil
 		ital-say "Rodney's vulnerable enough now, you can HINT RODNEY if you don't care about maximum points. I will simply plow through his comrades, otherwise.";
 		now rod-hint is true;
 
-check taking a warrior:
-	say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
+check taking a warrior: say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
 
 Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1.
 
@@ -19061,9 +18883,8 @@ macked-out is a number that varies. macked-out is usually 0.
 check talking to Gretta when macks are in Disowned Downside:
 	say "The macks are monopolizing the conversation. They outnumber you." instead;
 
-check going in Disowned Downside when Gretta is visible:
-	if noun is north or noun is south or noun is east:
-		say "[cree-pee].";
+check going in Disowned Downside when Gretta is in Disowned Downside:
+	if noun is north or noun is south or noun is east, say "[cree-pee].";
 
 to say cree-pee:
 	say "A few macks [if player is male]laugh at how you obviously can't give Gretta Garett-Tatger the attention they can[else]let Gretta Garett-Tatger know she's more worth impressing than you[end if] as you leave"
@@ -19495,13 +19316,9 @@ the owls are plural-named terse vanishing animals in Lamer Realm. description of
 
 a-text of owls is "RRYR". b-text of owls is "RRYR". parse-text of owls is "x[sp]x[sp]o[sp]x". owls are cheat-spoilable.
 
-check going south in Lamer Realm:
-	if owls are in Lamer Realm:
-		say "[if power-back is false]You're not ready to deal with the owls yet[else]You'll deal with the owls later[end if].";
+check going south in Lamer Realm: if owls are in Lamer Realm, say "[if power-back is false]You're not ready to deal with the owls yet[else]You'll deal with the owls later[end if].";
 
-check going north in perverse:
-	if raptor is in perverse:
-		say "[if power-back is false]You're not ready to deal with the raptor yet[else]You'll deal with the raptor later[end if].";
+check going north in perverse preserve: if raptor is in perverse preserve, say "[if power-back is false]You're not ready to deal with the raptor yet[else]You'll deal with the raptor later[end if].";
 
 every turn (this is the owls kill you rule):
 	if owls were visible and owls are visible:
@@ -19669,8 +19486,7 @@ the pines are fixed in place.
 check taking pines:
 	say "The effort would crush your spine." instead;
 
-check taking snipe:
-	say "It will follow you when you call."
+check taking snipe: say "It will follow you when you call." instead;
 
 the snipe is a neuter animal. description is "It has a long needle-like bill.". "A snipe is pacing around here."
 
@@ -20004,7 +19820,7 @@ The mad train is scenery in Rustic Citrus. description is "It's got quite a frow
 
 a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]a[sp]x[sp]-[sp]r[sp]-[sp]x[sp]x".
 
-check taking mad train: say "You'd strain to find a use for trains here." instead
+check taking mad train: say "You'd strain to find a use for trains here." instead;
 
 a tamarind is a fruit. description is "It looks more like a potato than any fruit you know. But it still counted."
 
@@ -20328,9 +20144,9 @@ check closing Sagest Gate: say "It's not some late game lame gate.It won't open 
 
 check opening Sagest Gate: say "[if player has passport]You need some sort of passport to get through.[else]You wave the passport and the Sagest Gate starts to creak open.[end if]" instead;
 
-check opening Sagest Gate: try going north instead
+check opening Sagest Gate: try going north instead;
 
-check giving something to Sagest Gate: say "The gates seem to have a sensor that can detect if you have ID[if player has passport]. You know, that passport should be enough[end if]."
+check giving something to Sagest Gate: say "The gates seem to have a sensor that can detect if you have ID[if player has passport]. You know, that passport should be enough[end if]." instead;
 
 section halt lath
 
@@ -20760,9 +20576,6 @@ the pineapple is a fruit.
 chapter raspberry
 
 Some pryer bars are a plural-named thing in Filed Field. description is "They're not quite crowbars. They have drupelets on them.". "Some pryer bars sit here, and it'd be nice to put them to a less distasteful use than to break into places."
-
-check touching pryer bars:
-	say "They feel like spry rebar." instead;
 
 a-text of pryer bars is "RYRRRYRRO". b-text of pryer bars is "RYRRRYRPO". parse-text of pryer bars is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]r[sp]y".
 
@@ -21262,8 +21075,7 @@ to decide whether nuf-hows-examined:
 
 the written walls are plural-named scenery in Hows Show. "There's an owl decal code wall[if any-walls is true and last-wall is owl decal] you've been browsing recently[else if owl decal is examined] full of Inform 7 code[end if] and an allow-lots-tools wall[if any-walls is true and last-wall is allow lots tools] you've been browsing recently[else if allow lots tools is examined] full of PERL tricks[end if][if any-walls is false], and each looks about as interesting as the other[end if]."
 
-check examining written walls for the first time:
-	ital-say "if you want to understand everything, it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for. But if not, I hope it is still fun.";
+check examining written walls for the first time: ital-say "if you want to understand everything, it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for. But if not, I hope it is still fun.";
 
 any-walls is a truth state that varies.
 
@@ -21449,9 +21261,7 @@ check burning:
 	if noun is storage, say "It's meant to be nearly indestructible." instead;
 	say "You're a ropy pyro. There's no igniter tiering nearby." instead;
 
-to say way-tow:
-	if Mislit Limits is unvisited:
-		say "way ";
+to say way-tow: if Mislit Limits is unvisited, say "way ";
 
 volume hinting
 
