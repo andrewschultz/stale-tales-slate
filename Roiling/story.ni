@@ -1866,29 +1866,20 @@ to say left-here: say "'I was told I was left here to help someone who needed it
 to say doc-in-prison:
 	say "[he-she-c] gestures to the ropins and then shakes an invisible fence of [his-her] own. As if [he-she] is too exhausted to talk any more[if Dr Yow has been rowdy and Dr Yow has been wordy]. You figured two ways to get [him-her] to talk, and that's probably enough[else if Dr Yow has been rowdy or Dr Yow has been wordy]. Maybe Dr. Yow has a bit more expressiveness in [him-her][end if].";
 
-before asking Dr Yow about:
-	if Dr Yow is wordy or Dr Yow is rowdy:
-		say "Interrupting is rude. He'll quiet down." instead;
+check asking Dr Yow about: if Dr Yow is wordy or Dr Yow is rowdy, say "Interrupting is rude. [he-she-c]'ll quiet down." instead;
 
-before objasking Dr Yow about:
-	if Dr Yow is wordy or Dr Yow is rowdy:
-		say "Interrupting is rude. He'll quiet down." instead;
+check objasking Dr Yow about: if Dr Yow is wordy or Dr Yow is rowdy, say "Interrupting is rude. [he-she-c]'ll quiet down." instead;
 
 the basic RQ out of range rule is not listed in any rulebook.
 
 An RQ out of range rule for a number (called max) (this is the modified RQ out of range rule):
 	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Gunter is visible]Gunter yells, 'Flounder, foul nerd!'[else if Elmo is visible]'Evil days.' / 'Ay, devils.' [else if macks are visible]You're not tricky enough to change the conversation drastically.[else if Elvira is visible]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type REPEAT to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
 
-to say lrduh:
-	say "'I dunno much about that. I like do stuff not think stuff.'";
+to say lrduh: say "'I dunno much about that. I like do stuff not think stuff.'";
 
 pat-whine is a truth state that varies.
 
-to say pat-rant:
-	if pat-whine is false:
-		now pat-whine is true;
-	else:
-		now pat-whine is false;
+to say pat-rant: now pat-whine is whether or not pat-whine is false; [this is for asking pat anything to get random deli foods]
 
 table of default-gen-blather	[ask x about nonsense] [tod]
 default-talker	gen-blah
@@ -6474,100 +6465,110 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
+listen-candidates is a list that varies. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] gast, raptest patters, [troves] sob ever verbose, I'd Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+
+rule for supplying a missing noun when listening:
+	repeat with Q running through listen-candidates:
+		if Q is in location of player, decide on Q;
+
 check listening:
 	if player is in Dusty Study: [Ordeal Reload]
 		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
-	if rifle is visible, say "Awkward silence, what with Elmo holding that rifle." instead;
-	if odorant tornado is in location of player, say "A roar of angry undefinable words swirls from the odorant tornado." instead; [stores]
-	if nestor is in location of player, say "Nestor periodically mumbles about his lost buddies." instead;
-	if tokers are in location of player and nestor is in location of player, say "[if nestor is in location of player]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
-	if lecturer is visible, say "You're hearing enough without trying, sadly." instead;
-	if player is in Same Mesa: [routes]
+	if noun is elmo, say "[if rifle is moot]You're in a conversation[else]Awkward silence, what with Elmo holding that rifle[end if]." instead;
+	if noun is odorant tornado, say "A roar of angry undefinable words swirls from the odorant tornado." instead; [stores]
+	if noun is tokers, say "[if nestor is in location of player]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
+	if noun is nestor, say "Nestor periodically mumbles about his lost buddies." instead;
+	if player is in Cruelest Lectures, say "You're hearing enough without trying, sadly." instead;
+	if noun is Gast, say "Those [i]tirades[r] from [Gast]. [if side art is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if WOE BOW BELL is reflexive]Though the ominous WOE BOW BELL has you more distracted now.[else]All about that book, Rude [']N Nuder.[end if]" instead; [routes]
+	if player is in Same Mesa:
+		if THE BEAN is in location of player, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
-		if Gast is in Same Mesa, say "Those [i]tirades[r] from [Gast]. [if side art is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if WOE BOW BELL is reflexive]Though the ominous WOE BOW BELL has you more distracted now.[else]All about that book, Rude [']N Nuder.[end if]" instead;
-		if THE BEAN is visible, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		say "'Mama sees me as...' Irrelevant stuff." instead;
 	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
 	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
-	if player is in Sonancy Canyons:
-		if raptest patters are in Sonancy Canyons, try examining raptest patters instead;
-		say "The raptest patters are gone, and you can fully focus on [next-sonancy]." instead;
-	if sob ever verbose is visible, try examining sob ever verbose instead; [troves]
+	if noun is raptest patters, try examining raptest patters instead;
+	if noun is hurt hog, say "[if bent ewe is reflexive]Squealing. It could be calmer[else]Less noisy now you've been peacemaking a bit[end if]." instead;
+	if player is in Sonancy Canyons, say "The raptest patters are gone, and you can fully focus on [next-sonancy]." instead;
+	if noun is sob ever verbose, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
 		if bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it. A snore from the bee makes you see red." instead;
-		if bee's head is reflexive, say "A snore from the bee makes you see red.";
+		if bee's head is reflexive, say "A snore from the bee makes you see red." instead;
+		say "The bee is quiet now." instead;
 	if player is in Loather Rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
-	if player is in Drain Nadir and I'd Cede is in Drain Nadir, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
+	if noun is I'd Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
-	if player is in Econ Cone and praise spirea is reflexive, try examining praise spirea instead;
+	if noun is praise spirea, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
-	if Rand is visible and Rand is washed up: [presto] [this needs to come first, since there is a lot to listen to in Dirge Ridge]
-		say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
-		try asking a random washed up person about "rannygazoo" instead;
-	if player is in Dirge Ridge and odes song is in Dirge Ridge, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DENS SO OG, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DENS SO OG also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DENS SO OG also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead;
+	if noun is odes song, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DENS SO OG, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DENS SO OG also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DENS SO OG also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead; [presto]
+	if noun is Rand or noun is Leo:
+		if Rand is washed up:
+			say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
+			try asking a random washed up person about "rannygazoo" instead;
 	if player is in Dirge Ridge, say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite dealing with Rand and Leo[end if]." instead;
 	if player is in Hacks' Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
-	if player is in Posh Hops Shop, say "[if tunes are reflexed]Silence. Awkward silence. An occasional cough.[else]The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too.[end if]" instead; [oyster]
-	if player is in Olde Lode and clam is in Olde Lode, say "You hear the clam snapping." instead;
+	if noun is tunes, say "The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. Patrons would be upset if something happened." instead; [oyster]
+	if player is in Posh Hops Shop, say "Silence. Awkward silence. An occasional cough." instead;
+	if noun is clam, say "You hear the clam snapping." instead;
 	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
-	if player is in Fighter Freight, try examining the pale plea instead;
-	if carps are visible, say "You can't help but listen to the carps['] and pikes['] immature, nasty jibes." instead;
+	if noun is pale plea, try examining the pale plea instead;
+	if noun is carps or noun is pikes, say "You can't help but listen to the carps['] and pikes['] immature, nasty jibes." instead;
+	if noun is trout, say "[if trout is reflexive]Whimpering slightly[else]Not whimpering any more[end if]." instead;
 	if player is in Anger Range and carps are moot and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
-	if eeks are visible, say "You hear eeks. Arcing caring. Weeps sweep. 'Eek! Eek! Eek!'" instead;
-	if aunt tuna is visible, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
-	if player is in Sclerous Closures, say "Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU." instead;
-	if player is in Tenfold Teflon'd Den Loft and dialer is in Tenfold Teflon'd Den Loft, say "[if pins are in Tenfold Teflon'd Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
-	if player is in Loftier Trefoil: [towers]
-		if vw is 1, say "Rodney's intimidating enough, he can keep this place quiet." instead;
-		if vw is 0, say "Regular tavern bustle and storytelling once again, but nobody you need to talk to." instead;
-		say "Rodney and his not-so-merry men stand impassive, united." instead;
-	if reed's ale is visible, say "[el-la-f] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
-	if diners are in location of the player, say "An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red." instead;
-	if player is in Scope Copse and butlers are in Scope Copse, say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
+	if noun is eeks, say "You hear eeks. Arcing caring. Weeps sweep. 'Eek! Eek! Eek!'" instead;
+	if inoun is aunt tuna, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
+	if player is in Sclerous Closures, say "Silence[if sardine is in sclerous closures]--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU[end if]." instead;
+	if noun is papery yapper, say "Mindless materialistic babble." instead;
+	if noun is dialer, say "[if pins are in Tenfold Teflon'd Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
+	if noun is Rodney, say "Rodney's intimidating enough, he can keep this place quiet." instead; [towers]
+	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead;
+	if noun is lars eede or noun is elsa erde, say "[el-la-f] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
+	if noun is diners, say "An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red." instead;
+	if noun is butlers, say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
 	if player is in Shaven Havens, say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
-	if player is in topside, say "An unconvincing voice moans 'Stop! Die!' but it's not very effective." instead;
-	if player is in Obscurest Subsector:
+	if player is in dopiest topside, say "An unconvincing voice moans 'Stop! Die!' but it's not very effective." instead;
+	if player is in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
 		if Dr Yow is rowdy, say "Dr. Yow is yacking away noisily." instead;
 		if Dr Yow is wordy, say "Dr. Yow is yacking away rapidly." instead;
 		if Dr Yow is in ropins:
 			if Dr Yow has been rowdy or Dr Yow has been wordy, say "Dr. Yow is silent once again." instead;
 			say "Dr. Yow moans [he-she] could hack less shackles." instead;
-	if ingrates are visible, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[or]a complaint that sounds like tin gears[in random order]." instead;
+	if noun is angstier ingrates, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[or]a complaint that sounds like tin gears[in random order]." instead;
 	if player is in Outer Route, say "The rapier repair machine [if dagger is moot]chugs[else]fizzles[end if]along." instead;
-	if mardier admirer is visible, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
-	if atheists are visible, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is visible]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
-	if wait-seer is visible, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
+	if noun is mardier admirer, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
+	if noun is asset-hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is visible]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
+	if noun is wait-seer, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in Rawest Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in dourest detours, say "You hear something that makes you see red. '[one of]OUR DEST[or]OUR DEST: SET, DOUR[or]OUR DEST: SET, DOUR. TROD?! SUE[stopping]!' [one of]There's probably more[or]There may be more[or]That's probably it[stopping]." instead;
-	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead; [towers]
-	if player is in Danger Garden, say "[if bonker is visible]A menacing silence spews from the bonker. Or maybe it's just your imagination[else]Honk, honk[end if]." instead;
-	if player is in Lost Lots and sporties' ripostes are in Lost Lots, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
-	if dandier arid den is in location of player, say "You're dreadin['] the next mechanical sales pitch from the dandier arid den." instead;
-	if natives' site van is visible:
+	if noun is bonker, say A menacing silence spews from the bonker. Or maybe it's just your imagination." instead;
+	if noun is stinger, say A menacing buzz spews from the stinger. Or maybe it's just your imagination." instead;
+	if noun is geese, say "Honk, honk." instead;
+	if noun is sporties' ripostes, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
+	if noun is dandier arid den, say "You're dreadin['] the next mechanical sales pitch from the dandier arid den." instead;
+	if noun is natives' site van:
 		say "The babble from the natives['] site van doesn't stop.";
 		try objasking natives' site van about natives' site van instead;
-	if Ed Riley is visible, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
-	if macks are visible, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
+	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
+	if noun is macks, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is in location of player, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
-	if whiners are visible, say "The volume and speed they're at, the actual words don't matter. You need to bite the men's style somehow." instead;
-	if sly imp is visible, say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
+	if noun is whiners, say "The volume and speed they're at, the actual words don't matter. You need to bite the men's style somehow." instead;
+	if noun is sly imp, say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
-	if player is in Rustic Citrus:	[others]
-		if pagers are visible, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead;
-		say "Curtis is mumbling about some perceived slight." instead;
-	if sorer bogey is visible, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
-	if barren cries are visible, say "The barren cries are sour and bitter and tiny." instead;
-	if player is in Clangier Clearing, say "Selly yells. [randbla][paragraph break][if mango is off-stage]Amidst the hustle and haggling, a small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?[end if]" instead;
-	if brr hub is in location of player, say "A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process." instead;
-	if player has s-i or player has s-c, say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
+	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead; [others]
+	if player is in Rustic Citrus, say "Curtis is mumbling about some perceived slight." instead;
+	if noun is sorer bogey, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
+	if noun is barren cries, say "The barren cries are sour and bitter and tiny." instead;
+	if noun is ammo gang, say "A small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?"
+	if player is in Clangier Clearing, say "Selly yells. [randbla]" instead;
+	if noun is brr hub, say "A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process." instead;
+	if noun is s-i or noun is s-c, say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
 	if mrlp is demo dome, say "It's nice and quiet. It [i]IS[r] a museum." instead; [demo dome]
-	say "The air! Hear it! Silent." instead;
+	say "The air! Hear it! (Silent.)[paragraph break]" instead; [??]
 
 chapter smelling
 
@@ -14043,7 +14044,7 @@ this is the bore-boats rule:
 
 description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the boats[end if]."
 
-Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
+Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade so fast you can't stop blinking and looking around. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
 
 this is the bore-cascade rule:
 	if current action is taking, say "Saccade Cascade drips through your fingers. You blink." instead;
