@@ -3305,7 +3305,6 @@ chapter taking scenery
 section general
 
 check taking scenery:
-	if noun is forest or noun is sortie or noun is metros, say "You took that area (out) last game." instead;
 	if location of player is Same Mesa, say "Scenery is only here to tell you where to go." instead;
 	if location of player is Cleric Circle, say "That'd be kind of sinful and disruptive." instead;
 	if location of player is Idle Deli, say "The [noun] is part of the ambiance, for better or worse." instead;
@@ -9786,6 +9785,14 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 
 to say i-u: if magneto montage is unexamined, say ", which looks like a directory of some sort,"
 
+section exstores
+
+an exstore is a kind of thing. an exstore is scenery. an exstore is boring and useless. bore-check of an exstore is usually the bore-exstore rule. bore-text of an exstore is usually "You did enough with [the noun] last game. Onwards!"
+
+this is the bore-exstore rule:
+	if current action is entering, say "You don't know if you'd be welcome at that tourist trap, and there's nothing more to do there. It was last game." instead;
+	if current action is taking, say "You took that area (out) last game." instead;
+
 section hubs bush
 
 [the hubs bush is now linked in STS Common.i7x]
@@ -9852,12 +9859,7 @@ description of Store E is "It's bolted up but seems to be advertising a stereo s
 
 chapter store f, i mean, forest
 
-the forest is useless scenery in Strip of Profits. understand "store f" and "store/f" as forest when player is in Strip of Profits. "It's not really Store F any more. It's been preserved--a foster forest. But new stores have sprouted up around it since last game. Or, more accurately, at the other end of the alphabet."
-
-check entering forest: say "[t-trap]." instead;
-
-to say t-trap:
-	say "You don't know if you'd be welcome at that tourist trap, and there's nothing more to do there"
+the forest is an exstore in Strip of Profits. understand "store f" and "store/f" as forest when player is in Strip of Profits. "It's not really Store F any more. It's been preserved--a foster forest. But new stores have sprouted up around it since last game. Or, more accurately, at the other end of the alphabet.".
 
 chapter store g
 
@@ -9895,9 +9897,7 @@ does the player mean doing something with Store Z: it is unlikely.
 
 chapter store i
 
-the sortie is useless scenery in Strip of Profits. understand "store i" and "store/i" as sortie when player is in Strip of Profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that. You'll want to fix the other stores."
-
-check entering sortie: say "[t-trap]." instead;
+the sortie is an exstore in Strip of Profits. understand "store i" and "store/i" as sortie when player is in Strip of Profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that. You'll want to fix the other stores."
 
 chapter store j
 
@@ -9913,20 +9913,15 @@ description of Store K is "[one of]A peculiar smell of smoke and incense seeps f
 
 section mangiest steaming
 
-the mangiest steaming is a not maingame not lumpable portal. diffic of mangiest steaming is 1. "The tokers['] mangiest steaming hovers--[if Cruelest Lectures is visited]but you don't want to go back[else]maybe there's a small 'adventure' inside[end if]."
+the mangiest steaming is a not maingame not lumpable portal. diffic of mangiest steaming is 1. "The tokers['] mangiest steaming hovers--[if Cruelest Lectures is visited]but you don't want to go back[else]maybe there's a small 'adventure' inside[end if].". entry-rule of mangiest steaming is enter-steaming rule. description of mangiest steaming is "It hangs all around the tokers, a product of their, umm, activity[if Cruelest Lectures is visited]. You don't really want to go back[else]. But it probably won't kill too many brain cells to ENTER it. You might even expand your consciousness[end if].". go-region of mangiest steaming is stores.
 
-description of mangiest steaming is "It hangs all around the tokers, a product of their, umm, activity[if Cruelest Lectures is visited]. You don't really want to go back[else]. But it probably won't kill too many brain cells to ENTER it. You might even expand your consciousness[end if]."
-
-go-region of mangiest steaming is stores.
-
-check entering mangiest steaming:
-	if nestor is off-stage:
-		say "'Dude, we, like, can't share these righteous fumes unless you help us. Maybe find our friend or something.'" instead;
+this is the enter-steaming rule:
+	if nestor is off-stage, say "'Dude, we, like, can't share these righteous fumes unless you help us. Maybe find our friend or something.'" instead;
 	if lecturer is reflexive:
 		say "The tokers begin singing 'Oh sigh, so high,' then 'TO PHONY TYPHOON!' and you're all 'Rest. OK?' You step into the mangiest steaming and find yourself on a way high highway. (Proof that stuff's an entry drug.) You wind up saving lands similar to Yorpwald which speak Spanish, French, German and Italian.[paragraph break]Well, in a dream, anyway. Then you wake up. A policeman towers over, asking if you're on drugs: 'Don't cop a lie, man. No jukein['] on, junkie.'[paragraph break]After a stern lecture about how using drugs makes you miss obvious details (other than, well, a WANTED poster of you that you see) and you druggies think you're special but there's nothing magical about drugs, the no-[crap] narc-op pushes you to an anti-drug seminar.";
 		min-up;
 		now player is in Cruelest Lectures instead;
-	say "Oh, no. Not that again. Country'll have a new alphabet the next time. And a worse lecture." instead;
+	say "Oh, no. Not that again. Country'll have a new alphabet the next time. And a worse lecture." instead; [we need these in here since it is a nonstandard portal]
 
 section tokers
 
@@ -9938,9 +9933,7 @@ rule for printing a locale paragraph about tokers:
 	now nestor is mentioned;
 	continue the action;
 
-to say if-nest:
-	if nestor is visible:
-		say ", your friend Nestor participating fervently"
+to say if-nest: if nestor is in Strip of Profits, say ", your friend Nestor participating fervently"
 
 chapter store l
 
@@ -9950,11 +9943,9 @@ description of Store L is "You take a peek inside but feel loster and loster as 
 
 chapter store m
 
-the metros are useless plural-named scenery in Strip of Profits. understand "store m" and "store/m" as metros when player is in Strip of Profits.
+the metros are a plural-named exstore in Strip of Profits. understand "store m" and "store/m" as metros when player is in Strip of Profits.
 
 description of metros is "It's probably a quick path to Mt. Rose, which does not need your help. In fact, with public opinion as it is right now, if you showed up there, you might get beaten up for implying there was something wrong with Mt. Rose."
-
-check entering metros: say "[t-trap]." instead;
 
 chapter store n
 
@@ -10010,13 +10001,13 @@ this is the enter-presto rule:
 
 chapter store q
 
-Store Q is a useless sto in Strip of Profits. understand "store/ 17/seventeen" as store Q when player is in Strip of Profits.
+Store Q is a useless sto in Strip of Profits. understand "store 17/seventeen" and "17/seventeen" as store Q when player is in Strip of Profits.
 
 description of store Q is "This is a posh shop like many others in the Strip of Profits. It doesn't look likely to hide any sort of portal, even shared with Store U."
 
 chapter store r
 
-Store R is a useless sto in Strip of Profits. understand "store/ 18/eighteen" as Store R when player is in Strip of Profits.
+the resort is an exstore in Strip of Profits. understand "store r/18" and "store/r" as resort when player is in strip of profits.
 
 description of Store R is "It could lead back to the (not really) resort from your first time, to your Means Manse. But that would be backtracking, and you would not be welcome or safe there."
 

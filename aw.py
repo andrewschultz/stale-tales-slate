@@ -191,6 +191,9 @@ if get_stdin:
     print(input_line, end='')
     for line in sys.stdin:
         ll = line.strip().lower()
+        if not ll or ll == 'q':
+            print("Exiting.")
+            exit()
         skip = False
         if ll[0].isdigit():
             mult = int(ll[0])
@@ -218,9 +221,6 @@ if get_stdin:
                 print("Defining", x)
                 os.system("start http://www.thesaurus.com/browse/{:s}".format(x))
             skip = True
-        if not ll or ll == 'q':
-            print("Exiting.")
-            exit()
         if re.search("[^a-z, ]", ll, re.IGNORECASE):
             print("WARNING: invalid characters skipped in", ll)
             ll = re.sub("[^a-z, ]", "", ll, 0, re.IGNORECASE)
