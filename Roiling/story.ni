@@ -9827,21 +9827,23 @@ does the player mean entering disamb-store: it is likely.
 
 chapter store a
 
-There is a sto called Store A. It is in Strip of Profits.
+There is a sto called Store A. It is in Strip of Profits. It is useless.
+
+understand "store 1/one" and "1/one" as store a when player is in Strip of Profits.
 
 chapter store b
 
-Store B is a LLPish reflexive sto in Strip of Profits. understand "store/ 2/two" as Store B when player is in Strip of Profits.
+Store B is a LLPish reflexive sto in Strip of Profits. description of Store B is "It's not as greyed out as most of the other stores. It reads BERTO'S (crossed out) then OBERT'S BEST, OR... It also claims to be better than Dupree Pureed[if store b is reflexive]. It's probably some sort of food store, and it feels a bit cold nearby[end if][one of]. You think you see who built this--you could examine it again. Red text[or]. The builder's name is REST, BO, in red text[stopping]."
+
+understand "store 2/two" and "2/two" as store b when player is in Strip of Profits.
 
 a-text of store b is "RYRRYR". b-text of store b is "PYRRGR". parse-text of store b is "s[sp]o[sp]x[sp]x[sp]e[sp]x". store b is cheat-spoilable.
 
-description of Store B is "It's not as greyed out as most of the other stores. It reads BERTO'S (crossed out) then OBERT'S BEST, OR... It also claims to be better than Dupree Pureed[if store b is reflexive]. It's probably some sort of food store, and it feels a bit cold nearby[end if][one of]. You think you see who built this--you could examine it again. Red text[or]. The builder's name is REST, BO, in red text[stopping]."
-
 chapter store c
 
-Store C is a useless sto in Strip of Profits. understand "store/ 3/three" as Store C when player is in Strip of Profits.
+Store C is a useless sto in Strip of Profits. description of Store C is "[one of]To porn! Pronto! [or][stopping][randbla]".
 
-description of Store C is "[one of]To porn! Pronto! [or][stopping][randbla]".
+understand "store 3/three" and "3/three" as store c when player is in Strip of Profits.
 
 check examining Store C for the first time:
 	say "You look in, noticing a corset ideal for the escort sector--and that the doorbell if you're (lol) bored is in the basement--but She Bop Phobes cry 'Skeezer! Eekzers! Sicko! So ick!'[paragraph break]";
@@ -9850,25 +9852,33 @@ check examining Store C for the first time:
 
 chapter store d
 
-Store D is a useless sto in Strip of Profits. understand "store/ 4/four" as Store D when player is in Strip of Profits.
+Store D is a useless sto in Strip of Profits.
+
+understand "store 4/four" and "4/four" as store d when player is in Strip of Profits.
 
 chapter store e
 
-Store E is a useless sto in Strip of Profits. understand "store/ 5/five" as Store E when player is in Strip of Profits.
+Store E is a useless sto in Strip of Profits. description of Store E is "It's bolted up but seems to be advertising a stereo sale."
 
-description of Store E is "It's bolted up but seems to be advertising a stereo sale."
+understand "store 5/five" and "5/five" as store e when player is in Strip of Profits.
 
 chapter store f, i mean, forest
 
 the forest is an exstore in Strip of Profits. understand "store f" and "store/f" as forest when player is in Strip of Profits. "It's not really Store F any more. It's been preserved--a foster forest. But new stores have sprouted up around it since last game. Or, more accurately, at the other end of the alphabet.".
 
+understand "store 6/six/f" and "6/six/f" as forest when player is in Strip of Profits.
+
 chapter store g
 
-Store G is a useless sto in Strip of Profits. understand "store/ 7/seven" as Store G when player is in Strip of Profits.
+Store G is a useless sto in Strip of Profits.
+
+understand "store 7/seven" and "7/seven" as store g when player is in Strip of Profits.
 
 chapter store h
 
-Store H is a sto in Strip of Profits. understand "store/ 8/eight" as Store H when player is in Strip of Profits. [description of Store H is "Spray painted on this locked store is: others are in the throes of being reshot."]
+Store H is a sto in Strip of Profits.
+
+understand "store 8/eight" and "8/eight" as store h when player is in Strip of Profits.
 
 description of Store H is "Store H appears broken-down. It sprawls a bit but is not particularly tall. A warning in bright red says:[paragraph break]'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'"
 
@@ -9898,19 +9908,23 @@ does the player mean doing something with Store Z: it is unlikely.
 
 chapter store i
 
-the sortie is an exstore in Strip of Profits. understand "store i" and "store/i" as sortie when player is in Strip of Profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that. You'll want to fix the other stores."
+the sortie is an exstore in Strip of Profits. description of sortie is "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that. You'll want to fix the other stores."
+
+understand "store 9/nine/i" and "9/nine/i" as store i when player is in Strip of Profits.
 
 chapter store j
 
-Store J is a useless sto in Strip of Profits. understand "store/ 10/ten" as Store J when player is in Strip of Profits.
+Store J is a useless sto in Strip of Profits.
+
+understand "store 10/ten" and "10/ten" as store j when player is in Strip of Profits.
 
 chapter store k
 
-Store K is a bedruggled LLPish sto in Strip of Profits. understand "store/ 11/eleven" as Store K when player is in Strip of Profits.
+Store K is a bedruggled LLPish sto in Strip of Profits. description of Store K is "[one of]A peculiar smell of smoke and incense seeps from Store K, but that's probably not the BIG reason this place went downhill. 'Hey! stop violating our privacy, Dude, or we will maybe, like, insult you next time![or]'Dude! We're trying to REST, OK?' someone looks briefly at you through bloodshot eyes.[or]Someone with bloodshot red eyes begins blasting the truly awful music of K. T. Rose.[or]You wonder how they can rest okay while listening to the music of K. T. Rose.[stopping]"
+
+understand "store 11/eleven" and "11/eleven" as store k when player is in Strip of Profits.
 
 a-text of Store K is "RYRYRR". b-text of Store K is "RYRYRR". parse-text of store k is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
-
-description of Store K is "[one of]A peculiar smell of smoke and incense seeps from Store K, but that's probably not the BIG reason this place went downhill. 'Hey! stop violating our privacy, Dude, or we will maybe, like, insult you next time![or]'Dude! We're trying to REST, OK?' someone looks briefly at you through bloodshot eyes.[or]Someone with bloodshot red eyes begins blasting the truly awful music of K. T. Rose.[or]You wonder how they can rest okay while listening to the music of K. T. Rose.[stopping]"
 
 section mangiest steaming
 
@@ -9938,21 +9952,21 @@ to say if-nest: if nestor is in Strip of Profits, say ", your friend Nestor part
 
 chapter store l
 
-Store L is a useless sto in Strip of Profits. understand "store/ 12/twelve" as Store L when player is in Strip of Profits.
+Store L is a useless sto in Strip of Profits. description of Store L is "You take a peek inside but feel loster and loster as you do."
 
-description of Store L is "You take a peek inside but feel loster and loster as you do."
+understand "store 12/twelve" and "12/twelve" as store l when player is in Strip of Profits.
 
 chapter store m
 
-the metros are a plural-named exstore in Strip of Profits. understand "store m" and "store/m" as metros when player is in Strip of Profits.
+the metros are a plural-named exstore in Strip of Profits. description of metros is "It's probably a quick path to Mt. Rose, which does not need your help. In fact, with public opinion as it is right now, if you showed up there, you might get beaten up for implying there was something wrong with Mt. Rose."
 
-description of metros is "It's probably a quick path to Mt. Rose, which does not need your help. In fact, with public opinion as it is right now, if you showed up there, you might get beaten up for implying there was something wrong with Mt. Rose."
+understand "store 13/thirteen/m" and "13/thirteen/m" as metros when player is in Strip of Profits.
 
 chapter store n
 
-Store N is a bedruggled LLPish sto in Strip of Profits. understand "store/ 14/fourteen" as Store N when player is in Strip of Profits.
+Store N is a bedruggled LLPish sto in Strip of Profits. description of Store N is "Someone appears to be in there. Maybe if you called their name, they'd come out."
 
-description of Store N is "Someone appears to be in there. Maybe if you called their name, they'd come out."
+understand "store 14/fourteen" and "14/fourteen" as store n when player is in Strip of Profits.
 
 a-text of Store N is "RYRRYR". b-text of Store N is "RYRRYR". parse-text of store n is "x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -9972,11 +9986,15 @@ the bottles of toners are a plural-named cluey thing. understand "lotions" as to
 
 chapter store o
 
-Store O is a useless sto in Strip of Profits. description of Store O is "You'd think there'd be something you could do with Store O, but you haven't.". understand "store/ 15/fifteen" as Store O when player is in Strip of Profits.
+Store O is a useless sto in Strip of Profits. description of Store O is "You'd think there'd be something you could do with Store O, but you haven't.".
+
+understand "store 15/fifteen" and "15/fifteen" as store o when player is in Strip of Profits.
 
 chapter store p
 
-Store P is a sto in Strip of Profits. description of Store P is "There's a big poster in the window of this average-sized store.". understand "store/ 16/sixteen" as Store P when player is in Strip of Profits.
+Store P is a sto in Strip of Profits. description of Store P is "There's a big poster in the window of this average-sized store.".
+
+understand "store 16/sixteen" and "16/sixteen" as store p when player is in Strip of Profits.
 
 a-text of Store P is "RRYRRY". b-text of Store P is "RRYRRY". parse-text of store p is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
@@ -9997,29 +10015,31 @@ this is the enter-presto rule:
 
 chapter store q
 
-Store Q is a useless sto in Strip of Profits. understand "store 17/seventeen" and "17/seventeen" as store Q when player is in Strip of Profits.
+Store Q is a useless sto in Strip of Profits. description of store Q is "This is a posh shop like many others in the Strip of Profits. It doesn't look likely to hide any sort of portal, even shared with Store U."
 
-description of store Q is "This is a posh shop like many others in the Strip of Profits. It doesn't look likely to hide any sort of portal, even shared with Store U."
+understand "store 17/seventeen" and "17/seventeen" as store q when player is in Strip of Profits.
 
 chapter store r
 
-the resort is an exstore in Strip of Profits. understand "store r/18" and "store/r" as resort when player is in strip of profits.
+the resort is an exstore in Strip of Profits. description of Store R is "It could lead back to the (not really) resort from your first time, to your Means Manse. But that would be backtracking, and you would not be welcome or safe there."
 
-description of Store R is "It could lead back to the (not really) resort from your first time, to your Means Manse. But that would be backtracking, and you would not be welcome or safe there."
+understand "store 18/eighteen" and "18/eighteen" as store r when player is in Strip of Profits.
 
 chapter store s
 
-Store S is a useless sto in Strip of Profits. understand "store/ 19/nineteen" as Store S when player is in Strip of Profits.
+Store S is a useless sto in Strip of Profits. description of Store S is "As you get near, you hear GO AWAY YOU TOSSER. The accent doesn't sound British, so you suspect this person just needed to use a new swear and kind of forced things a bit."
 
-description of Store S is "As you get near, you hear GO AWAY YOU TOSSER. The accent doesn't sound British, so you suspect this person just needed to use a new swear and kind of forced things a bit."
+understand "store 19/nineteen" and "19/nineteen" as store s when player is in Strip of Profits.
 
 chapter store t
 
-Store T is a sto in Strip of Profits. understand "store/ 20/twenty" as Store T when player is in Strip of Profits.
+Store T is a sto in Strip of Profits. description of Store T is "Store T is average-sized, but it seems to repel you. Its window is really lovely stained-glass--it's a depiction of a family of sea animals. There's an engraving below it."
+
+understand "store 20/twenty" and "20/twenty" as store t when player is in Strip of Profits.
 
 a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of store t is "-[sp]t[sp]x[sp]-[sp]x[sp]x".
 
-description of Store T is "Store T is average-sized, but it seems to repel you. Its window is really lovely stained-glass--it's a depiction of a family of sea animals. There's an engraving below it."
+section solid idols portal
 
 solid idols are a plural-named not lumpable portal. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-otters rule. go-region of solid idols is Otters.
 
@@ -10037,11 +10057,11 @@ this is the enter-otters rule:
 
 chapter store u
 
-Store U is a sto in Strip of Profits. understand "store/ 21/twentyone" as Store U when player is in Strip of Profits.
+Store U is a sto in Strip of Profits. description of Store U is "Though Store U is the smallest of the stores that stand out, along with Store V[if store v is not visible] before you changed it[end if], you see a dizzying array of branching possibilities inside. Well, roads, except each seems to have a number or label. The roads are red and almost seem to form letters if you look at them right."
+
+understand "store 21/twentyone" and "21/twentyone" as store u when player is in Strip of Profits.
 
 a-text of Store U is "RYYRYR". b-text of Store U is "RYYRGR". parse-text of store u is "x[sp]-[sp]-[sp]x[sp]e[sp]x".
-
-description of Store U is "Though Store U is the smallest of the stores that stand out, along with Store V[if store v is not visible] before you changed it[end if], you see a dizzying array of branching possibilities inside. Well, roads, except each seems to have a number or label. The roads are red and almost seem to form letters if you look at them right."
 
 section roads
 
@@ -10058,15 +10078,17 @@ this is the enter-routes rule:
 
 chapter store v
 
-Store V is a sto in Strip of Profits. understand "store/ 22/twentytwo" as Store V when player is in Strip of Profits.
+Store V is a sto in Strip of Profits. description of Store V is "Store V would be the smallest of the stores that stand out, but for Store U[if store u is not visible] before you changed it[end if]. Strange garnets lie inside. You also see a hologram of voters."
 
-description of Store V is "Store V would be the smallest of the stores that stand out, but for Store U[if store u is not visible] before you changed it[end if]. Strange garnets lie inside. You also see a hologram of voters."
+understand "store 22/twentytwo" and "22/twentytwo" as store v when player is in Strip of Profits.
+
+a-text of Store V is "RRYRYR". b-text of Store V is "RRGRGR". parse-text of store v is "x[sp]x[sp]o[sp]x[sp]e[sp]x".
+
+section voters
 
 voters are part of Store V. understand "hologram" as voters. description of voters is "The voters in the hologram seem to be complaining 'Elections? Selection. Have to vote. Ha. Pols? Slop.'[paragraph break]An impressive display of defeatist thinking."
 
 a-text of voters is "RRYRYR". b-text of voters is "RRYRYP". parse-text of voters is "x[sp]x[sp]-[sp]x[sp]-[sp]s".
-
-a-text of Store V is "RRYRYR". b-text of Store V is "RRGRGR". parse-text of store v is "x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
 section Tastee Estate
 
@@ -10077,11 +10099,11 @@ this is the enter-troves rule:
 
 chapter store w
 
-Store W is a sto in Strip of Profits. understand "store/ 23/twentythree" as Store W when player is in Strip of Profits.
+Store W is a sto in Strip of Profits. description of Store W is "It's the biggest structure in the strip. You see replicas of two tall, narrow buildings. You can also READ who made it.".
+
+understand "store 23/twentythree" and "23/twentythree" as store w when player is in Strip of Profits.
 
 a-text of Store W is "RYRYRR". b-text of Store W is "RYRYRR". parse-text of store w is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
-
-description of Store W is "It's the biggest structure in the strip. You see replicas of two tall, narrow buildings. You can also READ who made it."
 
 section truster turrets
 
@@ -10101,15 +10123,17 @@ this is the enter-towers rule:
 
 chapter store x
 
-Store X is a useless sto in Strip of Profits. understand "store/ 24/twentyfour" as Store X when player is in Strip of Profits.
+Store X is a useless sto in Strip of Profits.
+
+understand "store 24/twentyfour" and "24/twentyfour" as store x when player is in Strip of Profits.
 
 chapter store y
 
-Store Y is a sto in Strip of Profits. understand "store/ 25/twentyfive" as Store Y when player is in Strip of Profits.
+Store Y is a sto in Strip of Profits. description of Store Y is "The store seems filled with water. It's wide but not tall. You think you see shells. The window of store y has TOYERS in red with a line through."
+
+understand "store 25/twentyfive" and "25/twentyfive" as store y when player is in Strip of Profits.
 
 a-text of Store Y is "YORRYR". b-text of Store Y is "YORRGR". parse-text of store y is "o[sp]y[sp]x[sp]x[sp]e[sp]x". store y is cheat-spoilable.
-
-description of Store Y is "The store seems filled with water. It's wide but not tall. You think you see shells. The window of store y has TOYERS in red with a line through."
 
 the shells are a boring thing. they are part of store y. the shells are uncluing. description of shells is "You can't see what you can do with the shells, but maybe they just help show what is behind Store Y.". bore-text of shells is "Messing with the shells won't help you get in Store Y, but maybe they're a clue.".
 
@@ -10131,7 +10155,9 @@ this is the enter-oyster rule:
 
 chapter store z
 
-Store Z is a useless sto in Strip of Profits. understand "store/ 26/twentysix" as Store Z when player is in Strip of Profits.
+Store Z is a useless sto in Strip of Profits.
+
+understand "store 26/twentysix" and "26/twentysix" as store z when player is in Strip of Profits.
 
 chapter megaton magneto montage
 

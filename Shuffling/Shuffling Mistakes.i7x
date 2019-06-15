@@ -459,6 +459,10 @@ understand "sex it" as a mistake ("[if player is not in means manse]Quit screwin
 
 volume unsorted
 
+to say fake-clue of (myst - a sto):
+	say "[paragraph break]";
+	preef myst;
+
 Shuffling Mistakes ends here.
 
 ---- DOCUMENTATION ----
