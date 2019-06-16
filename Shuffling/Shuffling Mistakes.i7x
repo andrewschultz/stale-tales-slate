@@ -344,7 +344,9 @@ understand "tang" and "tangs" as a mistake ("How the angst gnats taste doesn't m
 
 chapter Obtains Boastin' Bastion
 
-understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.") when player is in Obtains Boastin' Bastion and talkers are in Obtains Boastin' Bastion.
+understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when player is in Obtains Boastin' Bastion and pesos posse are in Obtains Boastin' Bastion.
+
+understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when player is in Obtains Boastin' Bastion and pesos posse are in Obtains Boastin' Bastion.
 
 chapter Fo' Real Florae
 

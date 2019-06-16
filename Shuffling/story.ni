@@ -1207,7 +1207,7 @@ check waving hands:
 	if player is in notices and gateman is in notices, say "You've already introduced yourself. Just ask him about what you want/need." instead;
 	if player is in The Ol' Hotel and night thing is in The Ol' Hotel, say "Bad idea. Don't know what might make it charge." instead;
 	if player is in Roarings Garrison, say "The dead beat deadbeat nods in return." instead;
-	if player is in Obtains Boastin' Bastion and talkers are in Obtains Boastin' Bastion, say "They pointedly ignore you." instead;
+	if player is in Obtains Boastin' Bastion and poses posse are in Obtains Boastin' Bastion, say "They pointedly ignore you." instead;
 	if beast is in Bassy Abyss and player is in Bassy Abyss, say "It's not very friendly at all." instead;
 	if goat is in Thickest Thickets and player is in Thickest Thickets, say "Do you expect it to wave back? It'd probably fall over trying." instead;
 	if number of visible people > 1, say "There's someone else here, but just TALK TO them or ASK them about something instead." instead;
@@ -1274,7 +1274,7 @@ Check asking something for (this is the nobody gives anything rule):
 	if noun is nerds, say "'You can't just bully us, man! This isn't the playground any more!'" instead;
 	if noun is deadbeat, say "He mumbles something about the man taking everything righteous people have." instead;
 	if noun is faeries, say "[if fairy-worthy is true]You've already pleased them[else]They remind you that you need to get a flower for them, first[end if]." instead;
-	if noun is talkers, say "Welfare? Certainly not." instead;
+	if noun is poses posse, say "Welfare? Certainly not." instead;
 	say "Asking directly for stuff doesn't work. If it were that easy, someone already would've. Maybe you want to ask ABOUT." instead;
 
 check objasking gateman about saltine: now asked-gateman is true.
@@ -1283,7 +1283,7 @@ check throwing tomato at nerds: say "They're not a real menace, just annoying." 
 
 check throwing tomato at:
 	if second noun is deadbeat or second noun is tents, say "They don't deserve it. Tonight is not their poetry night[if moor is visited]. They're almost as bad as Woeful Pat[end if]." instead;
-	if second noun is talkers, say "That would cause a brief scuffle, but it'd get cleaned up, and people wouldn't flee for good." instead;
+	if second noun is poses posse, say "That would cause a brief scuffle, but it'd get cleaned up, and people wouldn't flee for good." instead;
 	if second noun is faeries, say "They could probably make it turn back and splatter you." instead;
 	if second noun is neon pig, say "That might feel good, but it wouldn't do anything." instead;
 	if second noun is ulcer or second noun is Night Thing:
@@ -1449,7 +1449,7 @@ check attacking:
 	if noun is scraped wall, say "Hm, pounding on it doesn't help[if hay is part of scraped wall]. You've filled it, though, and maybe you can change it more easily now[else]. The reading on the trellis seems to indicate you need to fill it first[end if]." instead;
 	if noun is tall trio, say "Even this threesome would leave you smote here." instead;
 	if noun is woeful pat, say "Violence against the English language should not beget physical violence." instead;
-	if noun is talkers, say "Their inanity inspires violent fantasies, but no.'" instead; [metros]
+	if noun is poses posse, say "Their inanity inspires violent fantasies, but no.'" instead; [metros]
 	if noun is neon pig, say "No poking a pig even if your name's Penny." instead;
 	if noun is nerds, say "[one of]'Def-con: co-fend!' they yell, seeing you tense up. [or][stopping]They're just annoying and superior, not evil." instead;
 	if noun is the signers' ingress, say "As you rush at the door, you notice one of the stick figures in the tech etch attacking a door as big and solid as this one! To save your self-esteem, you turn away and forget what you saw." instead;
@@ -6647,26 +6647,26 @@ check going inside in Obtains Boastin' Bastion: say "You're already inside." ins
 
 check going outside in Obtains Boastin' Bastion: try going south instead;
 
-the talkers are plural-named amusing scenery in Obtains Boastin' Bastion. understand "talker" as talkers.
+the poses posse are plural-named amusing scenery in Obtains Boastin' Bastion. understand "poso" and "pose posse" as poses posse.
 
 after looking in Obtains Boastin' Bastion:
-	if talkers are in Obtains Boastin' Bastion, set the pronoun them to talkers;
+	if poses posse are in Obtains Boastin' Bastion, set the pronoun them to poses posse;
 	continue the action;
 
-after doing something with talkers:
-	set the pronoun it to talkers;
-	set the pronoun them to talkers;
+after doing something with poses posse:
+	set the pronoun it to poses posse;
+	set the pronoun them to poses posse;
 	continue the action;
 
 Include (-
 	has transparent animate
--) when defining talkers.
+-) when defining poses posse.
 
-description of talkers is "They're obviously part of the upper crust. They speak disdainfully of the Roarings Garrison outside and how if they can't tolerate the beats, they can just buy a condo too."
+description of poses posse is "They're trying hard to be part of the upper crust, speaking disdainfully of the Roarings Garrison outside and how if they can't tolerate the beats, they can just buy a condo too."
 
-does the player mean throwing the tomato at the talkers: it is likely.
+does the player mean throwing the tomato at the poses posse: it is likely.
 
-check throwing tomato at talkers: say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them." instead;
+check throwing tomato at poses posse: say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them." instead;
 
 the antlers are plural-named LLPish scenery in Obtains Boastin' Bastion. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
 
@@ -6680,7 +6680,7 @@ description of the rentals is "The antlers are gone."
 
 check going to Obtains Boastin' Bastion for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
 
-description of Obtains Boastin' Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. The talkers seem to take you for a stalker, but nobody wants to get too close[end if]. A barnacled candelabra hangs above[if antlers are visible], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
+description of Obtains Boastin' Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. A poses posse chatters away amongst themselves here[end if]. A barnacled candelabra hangs above[if antlers are visible], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
 
 A barnacled candelabra is amusing boring scenery in Obtains Boastin' Bastion. description of candelabra is "It's tasteful and clever, as much as you hate to admit it.". bore-text is "You couldn't even jump to get close to it. But it's not important. Someone just put it there because they could.".
 
@@ -6706,7 +6706,7 @@ check going in Obtains Boastin' Bastion:
 	if noun is up, say "You're pushed back. As you leave, someone baits on. You aren't allowed anywhere except the main area." instead;
 	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
 
-Some dry cake is a singular-named thing in Obtains Boastin' Bastion. "Some dry cake is here[if talkers are visible]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
+Some dry cake is a singular-named thing in Obtains Boastin' Bastion. "Some dry cake is here[if poses posse is in Bastion]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
 
 indefinite article of dry cake is "some".
 
@@ -7058,7 +7058,7 @@ check switching on the termite emitter:
 	if location of player is Obtains Boastin' Bastion:
 		if bastion-evac is true, say "It's already crawling with termites." instead;
 		now bastion-evac is true;
-		moot talkers;
+		moot poses posse;
 		reg-inc;
 		say "You activate. They vacate it. 'Raiders, dear sir!' It's like a petard--those who prated, depart and ratchet down the chatter. The emitter shuts with a click after the last termite escapes." instead;
 	if location is Elm Train Terminal, say "The city's public transport has taken enough of a beating. It doesn't need that." instead;
@@ -8821,7 +8821,7 @@ deadbeat	beats	"'They're nice and all for being an excuse not to work but they'r
 deadbeat	nerds	"The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots."
 deadbeat	faeries	"The deadbeat doesn't believe in magic, now. But he did as a kid."
 deadbeat	red bull burdell	"'He is oppressive, man, but he is just a symptom of disparity and malaise.'"
-deadbeat	talkers	"[if talkers are moot]'You showed them, dude!'[else]The deadbeat starts up some nonsense pseudo-sociological mumblings.[end if]"
+deadbeat	poses posse	"[if poses posse are moot]'You showed them, dude!'[else]The deadbeat starts up some nonsense pseudo-sociological mumblings.[end if]"
 deadbeat	lost corn	"[if bastion-evac is false]'Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?'[else if lost corn is visible]'Oh, yeah, it's yours, man, I guess. It's real corn, not that genetically modified stuff from,' he sees red for a sentence, '[first custom style]SLORNTCO[r] or that nasty dried stuff from [first custom style]ST ROLCNO[r].'[else]'Whoah. You must've like did something with that corn. Biosustainibility, man.'"
 deadbeat	termite emitter	"[if player does not have emitter]'What? Do you know something?' he looks furtively around, more convinced than ever you're with The Man, man.[else if bastion-evac is false]'Whoah. No fingerprints, no proof it's mine.' He clearly doesn't trust you, yet.[else][try-flies][no line break][end if]"
 faeries	drainage	"'Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?'"
@@ -8845,7 +8845,7 @@ nerds	faeries	"The nerds assure you science is better than magic."
 nerds	red bull burdell	"'Sometimes Yorpwald is so dumb it deserves a thousand years of his rule. Not that he deserves to rule for a thousand years. We need someone smart enough to ASK NERDS the right thing to help dethrone him!'"
 nerds	tracks	"'We wouldn't touch it, that's for sure. I mean, even if we could see where it went.'"
 nerds	Tulip	"[if player has tulip]'It's not going to burn out for a long time.'[else]'We've got plenty of light here. You can have it, if you know what to ask us about. And if the tulip would help.'[end if]"
-talkers	dry cake	"Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them."
+poses posse	dry cake	"Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them."
 protest	kilns	"'If we were artsy, we'd use [']em. But we're not. Take some magic to MAKE us artsy.'"
 
 to say tip-dialogue:
@@ -8901,7 +8901,7 @@ peasant	"'I don't know much about that, that's sure. But I know from hay, being 
 red bull burdell	"Your pale plea meets with strung grunts."
 riot	"[riot-trio-blather]"
 protest	"[riot-trio-blather]"
-talkers	"You get a few pinched, strained smiles, which is more than you expected, but no actual words."
+poses posse	"You get a few pinched, strained smiles, but no actual words. What would they say? 'TALKERS STALKER?!'"
 woeful pat	"[pat-blather]"
 wolves	"Now is not the time for a heroic lecture, or even a heroic attempt at peace. Now is a time for violence and gore. You have the equipment."
 yourself	"'Self, what should I do now?' 'Self, don't start talking in the third person.' 'Self will make a point of it, self.'"

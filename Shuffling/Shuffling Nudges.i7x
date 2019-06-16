@@ -394,8 +394,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "candelabra"	400868292	Obtains Boastin' Bastion	--	--	"Interior decorating is not your strength."
 "carpets"	515173258	Obtains Boastin' Bastion	--	--	"Interior decorating is not your strength."
 "carpet"	418899292	Obtains Boastin' Bastion	--	--	"Interior decorating is not your strength."
-"talkers"	521448731	Obtains Boastin' Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
-"talker"	425174765	Obtains Boastin' Bastion	--	--	"You can't change who they are. They probably can't, either. It's sad."
+"poses"	476172577	--	Poses Posse	--	"[no-poses]."
+"pose"	379898611	--	Poses Posse	--	"[no-poses]."
 "caek"	201932690	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	--	dry cake	--	"It isn't just any cake. It's dry cake."
 "rental"	441149095	Obtains Boastin' Bastion	--	--	"[if antlers are in Obtains Boastin' Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
@@ -829,6 +829,8 @@ to say beat-man: say "He hasn't let the MAN change his designer reedings, and he
 to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
 
 to say mits-are: say "The mittens are as comfortable as they're going to be"
+
+to say no-poses: say "You can't change who they are. They probably can't, either. It's sad"
 
 to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
