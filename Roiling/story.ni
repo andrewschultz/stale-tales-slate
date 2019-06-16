@@ -7606,23 +7606,18 @@ this is the bore-chair rule:
 			say "Ah, so that's what that lump is. Some latches, from [gtmn], who helped you when you first arrived. But what're they good for?";
 			now player has latches;
 		else:
-			say "You find nothing further in the chair.";
-		the rule succeeds;
+			say "You find nothing further in the chair." instead;
 	if current action is entering:
 		if latches are off-stage:
 			try searching rich chair;
 		else:
-			say "You're too restless right now.";
-		the rule succeeds;
+			say "You're too restless right now." instead;
 	if current action is pushing or current action is pulling or current action is climbing:
 		if niche is in dusty study:
-			say "You don't need to climb the chair--at least, not until you find a way up through the ceiling.";
-			the rule succeeds;
+			say "You don't need to climb the chair--at least, not until you find a way up through the ceiling." instead;
 		else:
 			say "You climb on the chair to go up.";
-			try going up;
-			the rule succeeds;
-	abide by the bore-exam rule.
+			try going up instead;
 
 does the player mean entering the rich chair when Gunter is off-stage: it is very likely.
 
@@ -7633,13 +7628,8 @@ section sad ads
 the sad ads are plural-named boring scenery. description of sad ads is "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare].". bore-text is "There's not much to do with the ads other than reading them.". bore-check is bore-sad-ads rule.
 
 this is the bore-sad-ads rule:
-	if current action is scaning:
-		say "Few of the sad ads have deeper meaning. There are so many.";
-		the rule succeeds;
-	if current action is taking:
-		say "They aren't actual coupons, only ads, so they're not worth taking. You can examine them if you like.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is scaning, say "Few of the sad ads have deeper meaning. There are so many." instead;
+	if current action is taking, say "They aren't actual coupons, only ads, so they're not worth taking. You can examine them if you like." instead;
 
 this-ad is a number that varies. this-ad is usually 0.
 
@@ -7685,10 +7675,7 @@ to say book-est:
 the bookshelf is amusing boring scenery in Dusty Study. description of bookshelf is "[one of]It's sturdy enough to withstand any magic transformations. It's far too heavy to move to make a secret passage, what with [book-est] sloven novels (writing and appearance) you just got SENT, somehow, from trailery to literary discouraging infectious fiction use--the titles blur so fast through your mind, the oeuvres overuse--well, YOU know. Story tyros TRY so.[paragraph break]On glancing at some of the more ridiculous pen names, you also remember how FameHints NameShift and Smokiner Monikers were both allegedly a subsidiary of Elvira's MoneyCo. Nothing proven, and the journalist...well, they haven't written anything lately.[paragraph break]One book you won't remember next move is [or]Another book you won't read. [stopping][i][randbla][r].". bore-check of bookshelf is bore-bookshelf rule. bore-text of bookshelf is "There's no secret passage behind it. And if there were, you couldn't move it. It's got about [book-est] books, after all.".
 
 this is the bore-bookshelf rule:
-	if current action is taking:
-		say "[if Gunter is moot]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if].";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "[if Gunter is moot]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if]." instead;
 
 understand "shelf" and "books" as bookshelf.
 
@@ -7719,13 +7706,8 @@ Rule for printing the description of a dark room (this is the Dusty Study rule):
 the giant pin is an LLPish boring thing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description of boring pin is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "You don't need to change the giant pin, you sense, but you probably could if you wanted.". bore-check is bore-pin rule.
 
 this is the bore-pin rule:
-	if current action is pushing or pulling: [??check if this works in general]
-		say "It won't budge. It's tall but too thin to hide a way out, too.";
-		the rule succeeds;
-	if current action is taking:
-		say "That'd be dreadfully impractical. It's too [i]giant[r] a t'ing.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is pushing or pulling, say "It won't budge. It's tall but too thin to hide a way out, too." instead; [??check if this works in general]
+	if current action is taking, say "That'd be dreadfully impractical. It's too [i]giant[r] a t'ing." instead;
 
 a-text of giant pin is "RYYRRYRR". b-text of giant pin is "RYYPPYRR". parse-text of giant pin is "x[sp]-[sp]-[sp]n[sp]t[sp]-[sp]x[sp]x".
 
@@ -7733,21 +7715,13 @@ the abstract painting is a useless LLPish boring thing. "That painting you chang
  "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.[paragraph break]Its title is, (semi-)inexplicably, Inapt Gin at Pig Inn.". bore-text is "The painting's really just there to be observed and examined. Like most art.". bore-check is bore-painting rule.
 
 this is the bore-painting rule:
-	if current action is taking or searching or attacking:
-		say "It's a false law there has to be a wall safe behind it. Besides, [if Gunter is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your Means Manse.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking or searching or attacking, say "It's a false law there has to be a wall safe behind it. Besides, [if Gunter is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your Means Manse." instead;
 
 propaganda is a kind of thing. propaganda is usually amusing. propaganda is always boring. bore-text of propaganda is usually "The propaganda's not good for much other than reading. It's not really good for reading, either.". bore-check of propaganda is usually the bore-propaganda rule.
 
 this is the bore-propaganda rule:
-	if current action is taking:
-		say "You don't need to take that blunt-lie bulletin, or any part of it. You don't need to take the insults therein, either, unless you really want to.";
-		the rule succeeds;
-	if current action is scaning:
-		say "Err, yeah, scanning is MUCH better than close reading in this case.[paragraph break]Oh, wait, you meant with the settler? Nothing shows up.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "You don't need to take that blunt-lie bulletin, or any part of it. You don't need to take the insults therein, either, unless you really want to." instead;
+	if current action is scaning, say "Err, yeah, scanning is MUCH better than close reading in this case.[paragraph break]Oh, wait, you meant with the settler? Nothing shows up." instead;
 
 the dope op-ed is propaganda. "That 'dope' op-ed Gunter threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [if player is male]I Trash His Art[else]Her Arts Er Trash[end if], and By Li'l Billy."
 
@@ -8356,9 +8330,7 @@ understand "evac/cave" as evac-cave.
 
 this is the bore-evac-cave rule:
 	if current action is entering:
-		try going inside;
-		the rule succeeds;
-	abide by the bore-exam rule;
+		try going inside instead;
 
 section stria
 
@@ -8998,10 +8970,7 @@ check scaning (this is the scan settler and act ruin curtain parts rule):
 the whichs shwich is a boring thing. it is part of the settler. description of the whichs shwich is "The whichs switch can be SWITCHed with SS to see everything that can be worked on.". bore-text is "The shwich only lets you do one thing, but it's pretty powerful. The only unusual command that goes with it is SS.". bore-check is the bore-shwich rule.
 
 this is the bore-shwich rule:
-	if current action is switching on:
-		show-bluables;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is switching on, show-bluables instead;
 
 check  switching on the settler: try switching on the whichs shwich instead;
 
@@ -10174,10 +10143,7 @@ chapter megaton magneto montage
 the megaton magneto montage is useless boring scenery in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
 
 this is the bore-megaton-magneto-montage rule:
-	if current action is scaning:
-		say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is scaning, say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that." instead;
 
 understand "mmm/mm" as megaton magneto montage when player is in Strip of Profits.
 
@@ -10229,10 +10195,7 @@ chapter windows
 the windows are useless plural-named boring scenery in Strip of Profits. understand "window" as windows. description of windows is "Unfortunately, you can't do much with the windows. Since stores sort of have to have them, that gets ambiguous. It's probably simpler to refer to the store you want to inspect.". bore-text is "Unfortunately, with all those windows, it's hard to be specific. But you should be able to refer to the store with the windows you want to look in."
 
 this is the bore-windows rule:
-	if current action is attacking:
-		say "Unfortunately, if you enter a store that way, while it's still a store, there'd be nothing worth exploring.[paragraph break]Plus Elvira'd have a field day if and when you get caught.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is attacking, say "Unfortunately, if you enter a store that way, while it's still a store, there'd be nothing worth exploring.[paragraph break]Plus Elvira'd have a field day if and when you get caught." instead;
 
 book Cruelest Lectures
 
@@ -10655,10 +10618,7 @@ section a drama armada
 a drama armada is plural-named boring scenery. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way.". bore-text is "The drama armada is probably waiting for something, well, dramatic to happen."
 
 this is the bore-armada rule:
-	if the action is talkative:
-		say "You could never win them over with a speech. They need to see action.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if the action is talkative, say "You could never win them over with a speech. They need to see action." instead;
 
 after doing something with drama armada:
 	set the pronoun it to drama armada;
@@ -10862,9 +10822,7 @@ this is the bore-ashtray rule:
 	if current action is sbing or current action is scaning:
 		if player does not have pipe soot:
 			say "Only the pipe soot does anything to the settler, so you focus on that.[paragraph break]";
-			try scaning pipe soot;
-			the rule succeeds;;
-	abide by the bore-exam rule;
+			try scaning pipe soot instead;
 
 oscar-annoy is a truth state that varies. oscar-annoy is usually false.
 
@@ -11021,9 +10979,7 @@ the free reef is boring scenery in Cripple Clipper. description of free reef is 
 
 this is the bore-reef rule:
 	if current action is scaning:
-		say "The reef is too far away to scan, and you check the combination of letters anyway. Nothing. Perhaps what you need is on the Cripple Clipper.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+		say "The reef is too far away to scan, and you check the combination of letters anyway. Nothing. Perhaps what you need is on the Cripple Clipper." instead;
 
 book Sonancy Canyons
 
@@ -11046,10 +11002,7 @@ chapter raptest patters
 the raptest patters are plural-named vanishing LLPish boring scenery in Sonancy Canyons. description of raptest patters is "An over-cheery voice: 'Thou wit!'[paragraph break]A familiar voice...yours... 'Who, I? Tut!'[paragraph break]'Hut! I wot...'[paragraph break]You know, it's tough to know the best way to ignore this sort of flattering nonsense, but the right word generally blocks it out quickly enough.". bore-check is the bore-raptest-patters rule. bore-text is "All you can do with the raptest patters is LISTEN."
 
 this is the bore-raptest-patters rule:
-	if current action is listening:
-		try examining the raptest patters;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is listening, try examining the raptest patters instead;
 
 chapter yob den
 
@@ -11322,10 +11275,7 @@ I'd Cede is reflexive boring scenery. description of I'd Cede is "The song warbl
 a-text of I'd Cede is "RYRYRY". b-text of I'd Cede is "RYPYPG". parse-text of I'd Cede is "x[sp]e[sp]x[sp]i[sp]x[sp]e".
 
 this is the bore-id-cede rule:
-	if current action is examining:
-		try listening;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is examining, try listening instead;
 
 book Boredom Bedroom
 
@@ -11463,10 +11413,7 @@ understand "astute/statue" and "astute statue" as Trevis Vister.
 the rivets are a plural-named reflexive boring scenery in Econ Cone. description of rivets is "After looking for a while, you realize the rivets spell something you could READ.". bore-check is the bore-rivets rule. bore-text is "[if rivets are reflexed]You figured what to do with the rivets[else]You need to figure what to do with the rivets--or what to have them inspire you to do[end if]."
 
 this is the bore-rivets rule:
-	if current action is taking:
-		say "Petty theft is not big thinking! You'd do better to take a message from the rivets.[paragraph break]Plus, you don't have the right tool.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "Petty theft is not big thinking! You'd do better to take a message from the rivets.[paragraph break]Plus, you don't have the right tool." instead;
 
 rivets-first is a truth state that varies.
 
@@ -11618,26 +11565,19 @@ printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked.
 the wonga wagon is boring scenery. description of wonga wagon is "The wonga wagon is utterly useless and tacky. I mean, wonga is tacky slang for money as it is, and it's just, well, there. It's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the wonga wagon is worth scanning, but that's it.". bore-check of wonga wagon is bore-wagon rule.
 
 this is the bore-wagon rule:
-	if current action is opening:
-		say "It's already open.";
-		the rule succeeds;
+	if current action is opening, say "It's already open." instead;
 	if current action is scaning:
 		say "You scan around the wonga wagon for clues.[paragraph break]";
 		if lobster is in Upscale Capsule and ME ARTS is in Boredom Bedroom:
 			say "Your settler picks up a signal when it moves to the lobster.";
-			try scaning lobster;
-			the rule succeeds;
+			try scaning lobster instead;
 		if salt is in Upscale Capsule:
 			say "Your settler picks up a signal when it moves to the salt.";
-			try scaning salt;
-			the rule succeeds;
+			try scaning salt instead;
 		if trance nectar is in Upscale Capsule:
 			say "Your settler picks up a signal when it moves to the trance nectar.";
-			try scaning trance nectar;
-			the rule succeeds;
-		say "But you weren't able to find any. That's a bug, but still, there must be something to do!";
-		the rule succeeds;
-	abide by the bore-exam rule;
+			try scaning trance nectar instead;
+		say "But you weren't able to find any. That's a bug, but still, there must be something to do!" instead;
 
 chapter red vees
 
@@ -11659,10 +11599,7 @@ DIVORCES Magazine is vanishing LLPish boring scenery. description of DIVORCES ma
 a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
 this is the bore-divorces rule:
-	if current action is taking:
-		say "No. It's best read briefly, if at all.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "No. It's best read briefly, if at all." instead;
 
 chapter St Al Salt
 
@@ -11883,9 +11820,7 @@ section hump
 the hump is vanishing boring scenery in Grey Gyre. "It doesn't look like it'd be too hard to get over, but as you walk over to inspect it, you feel a bit drained.". bore-check of hump is bore-hump rule. bore-text is "the hump is surprisingly demotivational. You need some succinct way to blow off your laziness.".
 
 this is the bore-hump rule:
-	if current action is taking:
-		say "You can take it if you believe in yourself and motivate yourself the right way!";
-		the rule succeeds;
+	if current action is taking, say "You can take it if you believe in yourself and motivate yourself the right way!" instead;
 
 check going west in Grey Gyre: if hump is in grey gyre, say "You try to be all 'I leap a pile' but can't get over the hump. Hmph." instead;
 
@@ -11985,18 +11920,9 @@ understand "scratches" as scratchings.
 
 this is the bore-scratchings rule:
 	if yak wears yoke:
-		if current action is taking:
-			say "The yak shifts--it may think you want to tighten the yoke or something.";
-		else:
-			say "You can't get close enough to see or do anything with the scratchings.";
-		the rule succeeds;
-	if current action is examining:
-		try examining yoke;
-		the rule succeeds;
-	if current action is scaning:
-		try scaning yoke;
-		the rule succeeds;
-	abide by the bore-exam rule;
+		say "[if current action is taking]The yak shifts--it may think you want to tighten the yoke or something[else]You can't get close enough to see or do anything with the scratchings[end if]." instead;
+	if current action is examining, try examining yoke instead;
+	if current action is scaning, try scaning yoke instead;
 
 does the player mean showing a badbook to yak: it is very likely.
 
@@ -12244,12 +12170,8 @@ a-text of sods gone odes song is "RYYRRYRR". b-text of sods gone odes song is "R
 this is the bore-sods rule:
 	if current action is examining:
 		say "You can really only listen to the song.";
-		try listening;
-		the rule succeeds;
-	unless the action is procedural:
-		try listening;
-		the rule succeeds;
-	abide by the bore-exam rule;
+		try listening instead;
+	unless the action is procedural, try listening instead;
 
 book Austerer Treasure
 
@@ -12262,10 +12184,7 @@ after looking in Austerer Treasure:
 Ye Hoop is proper-named vanishing boring scenery in Austerer Treasure. description of Ye Hoop is "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is."
 
 this is the bore-hoop rule:
-	if current action is jumping or current action is pushing or current action is pulling or current action is taking:
-		say "It's too high up to grab. Especially with your possessions weighing you down. You may need to find the right way to say you don't need them for a moment.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is jumping or current action is pushing or current action is pulling or current action is taking, say "It's too high up to grab. Especially with your possessions weighing you down. You may need to find the right way to say you don't need them for a moment." instead;
 
 a-text of Ye Hoop is "[if ye-rec]RRYYYO[else]RYYR[end if]". b-text of Ye Hoop is "[if ye-rec]RRYGYO[else]RGGR[end if]". parse-text of ye hoop is "[if ye-rec]x[sp]x[sp]-[sp]o[sp]-[sp]y[else]POOH[end if]". ye hoop is cheat-spoilable.
 
@@ -12378,9 +12297,7 @@ The serial number is a boring thing. it is part of the popgun. description of se
 
 this is the bore-serial rule:
 	if the current action is scaning:
-		try scaning the popgun;
-		the rule succeeds;
-	abide by the bore-exam rule;
+		try scaning the popgun instead;
 
 gun-load-tried is a truth state that varies.
 
@@ -12938,10 +12855,7 @@ a-text of USB is "RYR". b-text of USB is "RY?". parse-text of usb is "x[sp]u[sp]
 usb-scan-warn is a truth state that varies.
 
 this is the bore-usb rule:
-	if current action is taking:
-		say "Well, you don't need to take it in THAT sense.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "Well, you don't need to take it in THAT sense." instead;
 
 check scaning USB:
 	if usb-scan-warn is false:
@@ -13466,13 +13380,8 @@ this is the bore-patrons rule:
 the tips pits are reflexive plural-named boring scenery in Posh Hops Shop. description of tips pits is "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
 
 this is the bore-pits rule:
-	if current action is taking:
-		say "The people who didn't give tips would notice your rudeness.";
-		the rule succeeds;
-	if current action is spiting:
-		now boring-exception is true;
-		continue the action;
-	abide by the bore-exam rule;
+	if current action is taking, say "Even the people who didn't give tips would notice your rudeness." instead;
+	if current action is spiting, now boring-exception is true;
 
 the gins sign is reflexive scenery in Posh Hops Shop. "It advertises various gins and intox-toxin-tonix--'Thirsty? Try this,' though someone scribbled 'Embrace Beer, Mac!' at the bottom. It advises against sharing garnish as well as making your own music."
 
@@ -13524,9 +13433,7 @@ the perma-amper is an auxiliary boring thing. description of perma-amper is "It'
 a-text of perma-amper is "RYRYR.". b-text of perma-amper is "R?RYR". parse-text of perma-amper is "x[sp]-[sp]m[sp]a[sp]x". perma-amper is cheat-spoilable.
 
 this is the bore-perma-amper rule:
-	if current action is remaping:
-		continue the action; [?? this may be a problem]
-	abide by the bore-exam rule;
+	if current action is remaping, now boring-exception is true;
 
 the song buttons are part of the jukebox. description is "They're number and letter, though you're not familiar with the song, so no one button seems worse than any other. You hope."
 
@@ -14771,10 +14678,7 @@ The lever is reflexive LLPish boring scenery. description of lever is "You're qu
 a-text of lever is "RYRYR". b-text of lever is "RGPGR". parse-text of lever is "x[sp]e[sp]v[sp]e[sp]x". lever is parse-spoilable.
 
 this is the bore-lever rule:
-	if current action is pushing or current action is pulling or current action is taking: [check pulling lever/check pushing lever]
-		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is pushing or current action is pulling or current action is taking, say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]" instead; [??check pulling lever/check pushing lever]
 
 check exiting in Tenfold Teflon'd Den Loft:
 	say "You can always find your way back easily enough.";
@@ -14868,10 +14772,7 @@ section raw red drawer
 the raw red drawer is boring scenery in Lean Lane. description of raw red drawer is "It's, well, raw and red[if dent is part of raw red drawer], with a visible dent[end if][if wipes are in lean lane]. There are also some wipes on it[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if].". bore-text of the raw red drawer is "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].". bore-check of raw red drawer is bore-drawer rule.
 
 this is the bore-drawer rule:
-	if current action is opening:
-		say "[if bubble wrap is not off-stage]There's no secret compartment or anything. No need to be greedy[else if trout is not reflexed]Aunt Tuna mentions subtly-not-so-subtly that a guest is not a thief[else]Aunt Tuna exclaims 'Re-treat? Retreat!' Abashed, you assure yourself she shuffled the duplicate letters around, somehow[end if].";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is opening, say "[if bubble wrap is not off-stage]There's no secret compartment or anything. No need to be greedy[else if trout is not reflexed]Aunt Tuna mentions subtly-not-so-subtly that a guest is not a thief[else]Aunt Tuna exclaims 'Re-treat? Retreat!' Abashed, you assure yourself she shuffled the duplicate letters around, somehow[end if]." instead;
 
 understand "warder drawer" as raw red drawer when trout is reflexive.
 understand "raw/red warder drawer" as raw red drawer when trout is reflexive.
@@ -15232,14 +15133,9 @@ check going in Sclerous Closures: if noun is west or noun is south, say "The han
 the handsome sand home is bounding boring scenery in Sclerous Closures. description of handsome sand home is "It's definitely not mean-shod. But you probaby don't want to disturb a private residence.". bore-text of handsome sand home is "There's not much to do with the handsome sand home.". bore-check is the bore-handsome-sand-home rule.
 
 this is the bore-handsome-sand-home rule:
-	if current action is entering:
-		try going south;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, try going south instead;
 
-to say hedron-if-v:
-	if Horned Hedron is visited:
-		say " to the Horned Hedron"
+to say hedron-if-v:	if Horned Hedron is visited, say " to the Horned Hedron"
 
 h-h is privately-named scenery in Sclerous Closures. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h when player is in Sclerous Closures. printed name of h-h is "the Horned Hedron". bore-text of h-h is "You can't do much with the Horned Hedron itself, or the insulting sign 'welcoming' you to it". bore-check of h-h is bore-h-h rule.
 
@@ -15331,13 +15227,8 @@ chapter theses sheets
 the theses sheets are plural-named amusing boring scenery in Horned Hedron. description of theses sheets is "[one of]They could be a heists thesis except they're definitely not shiest. They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan (OH, ENTER NOT HERE) one[or]Another[stopping] point reads: [randbla]". bore-text is "You can really only read the theses sheets for entertainment value.". bore-check is bore-sheets rule.
 
 this is the bore-sheets rule:
-	if current action is taking:
-		say "No denial they're nailed.";
-		the rule succeeds;
-	if current action is scaning:
-		say "The words on the theses can certainly be twisted into something worse, but the sheets cannot be changed for the better.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "No denial they're nailed." instead;
+	if current action is scaning, say "The words on the theses can certainly be twisted into something worse, but the sheets cannot be changed for the better." instead;
 
 chapter ol trap and portal
 
@@ -15424,10 +15315,7 @@ section thin hint
 the thin hint is boring scenery. description of thin hint is "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back.". bore-text of thin hint is "There's nothing to do with that hint except point it out to someone else, later.". bore-check of thin hint is bore-thin-hint rule.
 
 this is the bore-thin-hint rule:
-	if current action is taking:
-		say "You don't need to take a hint you yourself dropped.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "You don't need to take a hint you yourself dropped." instead;
 
 book End Den
 
@@ -15983,10 +15871,7 @@ section shout so hut
 the Shout-So Hut is bounding boring scenery in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. description of shout-so hut is "It doesn't look that intimidating, but it's noisy enough to keep you away."
 
 this is the bore-shout-hut rule:
-	if current action is entering:
-		try going south;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, try going south instead;
 
 check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those.[or][stopping]" instead;
 
@@ -16041,12 +15926,9 @@ the Try Us Yurts are plural-named vanishing boring scenery in Scope Copse. descr
 
 this is the bore-yurt rule:
 	if current action is entering:
-		say "There's no easy way in. They'd be too cramped once you were inside, anyway.";
-		the rule succeeds;
+		say "There's no easy way in. They'd be too cramped once you were inside, anyway." instead;
 	if current action is taking:
-		say "They're too strongly built to even flake a piece off.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+		say "They're too strongly built to even flake a piece off." instead;
 
 understand "yurt" as try us yurts.
 
@@ -16199,10 +16081,7 @@ a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is
 the screech creches are bounding boring scenery in Unblest Sunbelt. description of screech creches is "You can't get close enough to the screeching to get a good look at the creches. They're pretty much there just to block you.". bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
 
 this is the bore-creches rule:
-	if current action is entering:
-		try going south;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, try going south instead;
 
 book Anemic Cinema
 
@@ -16900,13 +16779,8 @@ the sporties' ripostes are plural-named vanishing boring scenery in Lost Lots. d
 a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
 this is the bore-ripostes rule:
-	if current action is taking:
-		say "Actually, you want to find a way to say, you're NOT going to take them any more.";
-		the rule succeeds;
-	if action is talkative:
-		say "Despite your wordplay magic proficiency, you'll never win an argument. Maybe you can be more circumspect to get rid of the ripostes.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "Actually, you want to find a way to say, you're NOT going to take them any more." instead;
+	if action is talkative, say "Despite your wordplay magic proficiency, you'll never win an argument. Maybe you can be more circumspect to get rid of the ripostes." instead;
 
 chapter Fringe Finger
 
@@ -18515,13 +18389,8 @@ chapter nude dune
 the nude dune is useless boring scenery. description of nude dune is "It is impressive and blocks your way east.". bore-check of nude dune is bore-dune rule. bore-text is "The dune is just there, blocking your way east. And you don't need to go east.".
 
 this is the bore-dune rule:
-	if current action is entering:
-		say "That would END U. See what I did there?";
-		the rule succeeds;
-	if current action is climbing:
-		say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, say "That would END U. See what I did there?" instead;
+	if current action is climbing, say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too." instead;
 
 chapter Ed Riley
 
@@ -19134,23 +19003,15 @@ section allot atoll
 the allot atoll is boring scenery in Loop Pool. description of allot atoll is "[if eels are reflexed]You've been there. You don't need to go back[else]It doesn't look like a place everyone's allowed to go. Maybe you can be worthy of getting there[end if].[paragraph break]It's nothing to LOL at.". bore-text of allot atoll is "The allot atoll is behind the wire weir. [if eels are reflexed]You don't need to worry about it[else]It doesn't seem like a place you just visit for yucks[end if].". bore-check is the bore-allot-atoll rule.
 
 this is the bore-allot-atoll rule:
-	if current action is entering:
-		say "Too far.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, say "Too far." instead;
 
 section wire weir
 
 The wire weir is bounding boring scenery in Loop Pool. description of wire weir is "It's there to prevent you from falling into the Loop Pool.". bore-text of wire weir is "The wire weir is there to keep you from going anywhere but back south. No need to mess with it.". bore-check is the bore-wire-weir rule.
 
 this is the bore-wire-weir rule:
-	if current action is climbing:
-		say "That would be dangerous even without the eels ready to zap intruders[if eels are reflexed]--yes, intruders they already helped[end if].";
-		the rule succeeds;
-	if current action is touching:
-		say "That might get you zapped a bit.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is climbing, say "That would be dangerous even without the eels ready to zap intruders[if eels are reflexed]--yes, intruders they already helped[end if]." instead;
+	if current action is touching, say "That might get you zapped a bit." instead;
 
 chapter otters flipto and min points
 
@@ -20394,9 +20255,7 @@ some papayas are a plural-named fruit. description is "Goldish and gourdish."
 
 this is the bore-auction-caution rule:
 	if the current action is taking:
-		say "Vandalism.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+		say "Vandalism." instead;
 
 Len Craig is a person in Clangier Clearing. "[one of]A man introduces himself as Len Craig, proprietor of LargeInc. He's willing to haggle, if you have the right items[or]Len Craig is still here, [len-interest][stopping]."
 

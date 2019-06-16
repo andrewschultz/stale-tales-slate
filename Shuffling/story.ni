@@ -2670,13 +2670,8 @@ understand "old man" and "man" as gateman when player is in Notices Section and 
 the odor is boring scenery. it is in Rested Desert. bore-text is "You smell an odor of adventure and new and different things.". bore-check is bore-odor rule.
 
 this is the bore-odor rule:
-	if current action is smelling:
-		try examining the odor;
-		the rule succeeds;
-	if current action is taking:
-		say "You'll need to make the odor into something more tangible.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is smelling, try examining the odor instead;
+	if current action is taking, say "You'll need to make the odor into something more tangible." instead;
 
 lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R". rgtext of odor is "[rcn][rc][gc][gc]".
 
@@ -3309,9 +3304,7 @@ the pit is a boring thing. it is part of the tagged gadget. description of pit i
 this is the bore-pit rule:
 	if current action is examining:
 		say "You check the tip's setting in the pit.";
-		try examining the tip;
-		the rule succeeds;
-	abide by the bore-exam rule;
+		try examining the tip instead;
 
 the tip is a boring thing. it is part of the tagged gadget. "The tip points to [c-r][if gadget-secured is true] and is stuck there, so you can't[else], but you can[end if] switch it back to [r-c][if button-locked is false] unless you push SECURE[end if].". bore-text is "The tip's just there to examine, so you know the gadget's setting.".
 
@@ -3362,9 +3355,7 @@ the gadget-screen is a boring thing. it is part of the tagged gadget. the gadget
 this is the bore-gadget-screen rule:
 	if current action is examining:
 		say "You see if the gadget registers anything by default.";
-		try scaning the location;
-		the rule succeeds;
-	abide by the bore-exam rule;
+		try scaning the location instead;
 
 the s-r is part of the tagged gadget. the s-r is privately-named.
 
@@ -3485,16 +3476,8 @@ check taking phial:
 check opening the phail phial: say "No. The blue lube would leak out." instead;
 
 this is the bore-lube rule:
-	if the current action is objasking generically:
-		continue the action;
-		the rule succeeds;
-	if the current action is objasking about:
-		continue the action;
-		the rule succeeds;
-	if the current action is taking:
-		say "[if lube-asked is false]The blue lube probably belongs in the PHAIL phial, until you determine otherwise[else]You wouldn't be able to GLEAN or ANGLE then[end if].";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if the current action is objasking generically or current action is objasking about, continue the action; [?? what is procedural]
+	if the current action is taking, say "[if lube-asked is false]The blue lube probably belongs in the PHAIL phial, until you determine otherwise[else]You wouldn't be able to GLEAN or ANGLE then[end if]." instead;
 
 last-lube-turn is a number that varies. last-lube-turn is usually -5.
 
@@ -4414,7 +4397,6 @@ a thing called line of no life is plural-named boring scenery in Self-ID Fields.
 
 this is the bore-line-life rule:
 	it-them line of no life;
-	abide by the bore-exam rule;
 
 understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as line of no life.
 
@@ -4879,10 +4861,7 @@ section iced dice
 the iced dice are plural-named amusing boring scenery in Frost Forts. description of iced dice is "Each side seems to have a big skull-and-crossbones on it. Their fare is fear, with no warm café hidden in any face. Just don't think of them as ice caps, capisce?". bore-text of iced dice is "The dice could crush the [if vowels are in Frost Forts]vowels[else]wolves[end if] easily. But you're not twenty feet tall, so they just sort of add to the atmosphere.". bore-check of iced dice is bore-iced-dice rule.
 
 this is the bore-iced-dice rule:
-	if wolves are in Frost Forts and current action is taking:
-		say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if wolves are in Frost Forts and current action is taking, say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves." instead;
 
 understand "ice" as iced dice.
 
@@ -4891,13 +4870,8 @@ section forts (scenery)
 the fos are privately-named amusing boring scenery in frost forts. printed name of fos is "forts". understand "forts" and "frost forts" as fos. bore-text of fos is "The forts cannot help you in any way.". bore-check of fos is bore-forts rule.
 
 this is the bore-forts rule:
-	if current action is entering:
-		say "The Frost Forts would provide no protection from the final conflict you face.";
-		the rule succeeds;
-	if wolves are in Frost Forts and current action is taking:
-		say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, say "The Frost Forts would provide no protection from the final conflict you face." instead;
+	if wolves are in Frost Forts and current action is taking, say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves." instead;
 
 the frowns are plural-named amusing boring things. They are part of the fos. description of frowns is "Frowny, as if they want you to fry now. Also, impassable. They have no doors but you're worried something will jump at you from them. As unpleasant as the [if wolves are in Frost Forts]wolves[else]vowels[end if]."
 
@@ -4910,10 +4884,7 @@ rgtext of vowels is "[rcn][gc][rc][rc][rc][gc]". lgth of vowels is 6. gpos of vo
 understand "a/e/i/o/u" as vowels when player is in Frost Forts.
 
 this is the bore-vowels rule:
-	if current action is taking:
-		say "They're just way too big. Like that LOVE statue in Philadelphia. But they fill you with fear, unlike the LOVE statue, because they spell AIE OOU, and that's how it sounds as the wind blows through them.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "They're just way too big. Like that LOVE statue in Philadelphia. But they fill you with fear, unlike the LOVE statue, because they spell AIE OOU, and that's how it sounds as the wind blows through them." instead;
 
 understand "vowels/letters/five/six/tall/aplastic/capital/capitals/pyramid" as vowels when vowels are visible.
 
@@ -4978,10 +4949,7 @@ section for Mondale-Doleman to be referenced everywhere
 Mean Old Mondale Doleman is a boring thing. description is "You can't see Mean Old Mondale Doleman, but you'll have to defeat him.". bore-text is "Mondale-Doleman is out there, you know. But thinking about what he's done won't help you solve things.". bore-check is bore-doleman rule.
 
 this is the bore-doleman rule:
-	if current action is scaning:
-		try examining doleman;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is scaning, try examining doleman instead;
 
 printed name of Mean Old Mondale Doleman is "Mean Old Mondale-Doleman".
 
@@ -5757,10 +5725,7 @@ section hallwaying
 the hallway is boring scenery. "The hallway isn't much to look at, but whatever's to the east might be.". bore-text is "Now that you made the hallway, you can't do much with it besides walk east through it.". bore-check is bore-hallway rule.
 
 this is the bore-hallway rule:
-	if current action is entering:
-		try going east;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, try going east instead;
 
 chapter moor
 
@@ -5845,13 +5810,8 @@ understand "block" as roadblock when roadblock is visible.
 the road is useless boring scenery in moor. description of road is "[if roadblock is visible]You'd expect to see a road, what with the roadblock, but you don't[else]Removing the roadblock did not make a road appear. But hey, free black door[end if].". bore-text is "Though there [if roadblock is in moor]is[else]was[end if] a roadblock, there is no road.". bore-check of road is bore-road rule.
 
 this is the bore-road rule:
-	if current action is climbing:
-		say "There's no path behind it. Some roadblock, eh? It might be better reincarnated as something else.";
-		the rule succeeds;
-	if current action is taking:
-		say "Moving it would be tougher than dock labor.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is climbing, say "There's no path behind it. Some roadblock, eh? It might be better reincarnated as something else." instead;
+	if current action is taking, say "Moving it would be tougher than dock labor." instead;
 
 a black door is a thing. "The black door you made lies here, without a structure to attach it to."
 
@@ -5890,14 +5850,7 @@ this is the bore-anapest rule:
 	if the current action is objasking generically, continue the action;
 	if the current action is listening, continue the action;
 	if the current action is scaning:
-		say "Yes, this sort of poetry doesn't require deep reading, just scanning";
-		if player has gadget:
-			say ". But seriously, your gadget seems to blink with the beat. [run paragraph on]";
-			continue the action;
-		else:
-			say ". Too bad you don't have a device to scan it more practically.";
-			the rule succeeds;
-	abide by the bore-exam rule;
+		say "Yes, this sort of poetry doesn't require deep reading, just scanning. [if player has gadget]But seriously, your gadget seems to blink with the beat[else]Too bad you don't have a device to scan it more practically[end if].";
 
 the peasant is a man. "A peasant is here[if peasant has hay], carrying some hay over his shoulder[end if]."
 
@@ -6183,10 +6136,7 @@ to check-block-cedars:
 Lois is boring scenery in Sacred Cedars. description is "Lois is beyond mere trivial standard I7 descriptions. She helps those wise enough to know how to ask for help. A mere programmer cannot describe her.". bore-text is "Looking for evidence of Lois by trying all sorts of odd verbs suggests lack of faith.". bore-check of lois is bore-lois rule.
 
 this is the bore-lois rule:
-	if current action is attacking:
-		say "No. Lois is here to help.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is attacking, say "No. Lois is here to help." instead;
 
 drawings are plural-named amusing scenery in Sacred Cedars.
 
@@ -6277,10 +6227,7 @@ section a reading
 There is a boring thing called A reading. "[one of]A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage. Maybe it holds clues[stopping].". description is "It says A READING in bold red. You could probably READ through it for a lot of clues. The content seems like nonsense, but hey, anything to help you see red.". bore-text is "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc.". bore-check is bore-reading rule.
 
 this is the bore-reading rule:
-	if current action is taking:
-		say "Eww. Anyway, the (a) reading is probably a good clue for the drainage here.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking, say "Eww. Anyway, the (a) reading is probably a good clue for the drainage here." instead;
 
 section cramped red camp
 
@@ -6489,10 +6436,7 @@ Include (-
 
 this is the bore-moonies rule:
 	set the pronoun them to moonies;
-	if current action is objasking or current action is objasking about:
-		say "They're too busy chanting to talk to you, but they have nothing to say.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is objasking or current action is objasking about, say "The moonies are too busy chanting to talk to you, but they have nothing to say." instead;
 
 section snakebit beatniks
 
@@ -6504,10 +6448,7 @@ Include (-
 
 this is the bore-beatniks rule:
 	set the pronoun them to beatniks;
-	if current action is objasking or current action is objasking about:
-		say "They're too busy chanting to talk to you, but they have nothing to say.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is objasking or current action is objasking about, say "The beatniks are too busy chanting to talk to you, but they have nothing to say." instead;
 
 chapter Bile Libe
 
@@ -7033,7 +6974,6 @@ this is the bore-bump rule:
 	say "On getting close to the bump you realize it's due something wedged inside the mattress. You search around, find a small machine that is apparently a termite emitter, and take it.";
 	moot bump;
 	now player has the emitter;
-	abide by the bore-exam rule;
 
 understand "something" as bump when bump is part of the mattress and mattress is visible.
 
@@ -7386,18 +7326,12 @@ section siren-resin
 the siren is boring scenery in Bassy Abyss. description of siren is "Blue and red and flashing and very loud. You'd love to pound it into a powder.". rgtext of siren is "[rcn][rc][rc][rc][gc]". lgth of siren is 5. rpos of siren is 5. gpos of siren is 3. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N". bore-check of siren is bore-siren rule. bore-text is "The siren is too darn loud, even a few feet away. Getting close to it would incapacitate you.";
 
 this is the bore-siren rule:
-	if current action is xmxing or current action is attacking:
-		continue the action;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is xmxing or current action is attacking, now boring-exception is true instead;
 
 some resin is singular-named boring thing. printed name of resin is "some resin[if resin is held] (all over your hands)[end if]". description of resin is "It feels sticky on your hands.".
 
 this is the bore-resin rule:
-	if current action is dropping:
-		say "You'll have to wash it off, and there's no running water nearby.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is dropping, say "You'll have to wash it off, and there's no running water nearby." instead;
 
 stickyhanded is a truth state that varies. stickyhanded is usually false.
 
@@ -7588,19 +7522,12 @@ this is the bore-ulock rule:
 	if current action is scaning or current action is cring or current action is certifying or current action is rectifying:
 		say "The gadget is silent. It's probably the tool shed. You want to scan. Do so?";
 		if the player yes-consents:
-			try scaning the tool shed;
-			the rule succeeds;
+			try scaning the tool shed instead;
 		else:
-			say "OK.";
-			the rule succeeds;
+			say "OK." instead;
 	if action is procedural:
 		say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
-		if the player yes-consents:
-			say "It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently.";
-		else:
-			say "You don't bother with it.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+		say "[if the player yes-consents]It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently[else]You don't bother with it[end if]." instead;
 
 check entering tool shed: say "You couldn't break into any stores, and you're not breaking into the tool shed." instead;
 
@@ -8519,10 +8446,7 @@ this is the bore-gateway rule:
 the new land is boring scenery in Notices Section. description of new land is "You'll have to go there to see it all.". bore-text is "ENTER the gate to learn more about it.". bore-check is bore-new-land rule.
 
 this is the bore-new-land rule:
-	if current action is entering:
-		try entering the getaway;
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is entering, try entering the getaway instead;
 
 understand "gate" as getaway when getaway is visible.
 
@@ -8935,10 +8859,7 @@ part drapes-spread-red asp
 the spread is flippable boring scenery. description of spread is "You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with [if player has sliver]your sliver[else]something[end if].". bore-check is bore-spread rule.
 
 this is the bore-spread rule:
-	if current action is taking or current action is pushing or current action is pulling or current action is opening:
-		say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it.";
-		the rule succeeds;
-	abide by the bore-exam rule;
+	if current action is taking or current action is pushing or current action is pulling or current action is opening, say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it." instead;
 
 lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rcn][rc][rc][rc][rc][rc]". cert-text of spread is "-[d1][d1][d1][d1][d1]". rect-text of spread is "D[d1][d1][d1][d1][ast]S".
 
