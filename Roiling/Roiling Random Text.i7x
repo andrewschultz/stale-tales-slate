@@ -4537,7 +4537,6 @@ blurb
 "Pop Diva Ida Vopp"
 "Pop Lee's Peoples"
 "Pope O['] Pep"
-"Poses Posse"
 "Posing Gipson"
 "Postered Dopester Poser Ted"
 "Prim Past Art Pimps"
@@ -8434,7 +8433,6 @@ blurb
 "PDA Pad"
 "Peace? Silly, Especially"
 "Perhaps-Hep Raps"
-"Pesos Posse" []
 "Phat Kilos: I Talk Shop"
 "Phat Nites in the Past"
 "Phatman's Phantasm"

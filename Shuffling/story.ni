@@ -1186,18 +1186,21 @@ understand "drink [something]" as drinking.
 rule for supplying a missing noun while drinking: now the noun is the player.
 
 check drinking:
+	if noun is CATHOUSE, say "Deadly." instead;
 	if noun is phial or noun is lube, say "The lube looks sort of like mercury, now you think of it. Ugh." instead;
 	if noun is oils, say "The oils seem too valuable for that. You're not thirsty, anyway, and they wouldn't help if you were." instead;
 	if noun is drainage or noun is skin sink, say "Eww, don't even." instead;
 	say "I show no kind grin on drinking!" instead;
 
 check sleeping:
-	if mattress is visible and night thing is not visible, say "On that mattress? Eww." instead;
+	if mattress is in location of player and night thing is moot, say "On that mattress? Eww." instead;
 	say "On basker breaks? No!" instead;
 
 check squeezing: say "That's either icky or impossible or both." instead;
 
-check singing: say "Oddly, when you start, you see a big sign telling you not to.". instead;
+check singing:
+	if location of player is Gnarliest Triangles: say "Alas, the notes stone does not interact favorably with your tones." instead;
+	say "Oddly, when you start, you see a big sign telling you not to.". instead;
 
 check waving hands:
 	if player is in Busiest Subsite, say "You don't see any friends nearby, sadly. It's all a bit awkward." instead;
@@ -2858,7 +2861,7 @@ to say get-a-man:
 	say "Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?";
 	continue the action;
 
-instead of going outside in Notices Section: try going north instead;
+check going outside in Notices Section: try entering getaway gateway instead;
 
 check going inside in Notices Section: try entering getaway gateway instead;
 
@@ -3417,7 +3420,7 @@ to say r-c: say "[unless gadget is cert]CERTIFY[else]RECTIFY[end if]".
 
 the blurb is part of the tagged gadget. description of blurb is "'Ask a qualified person if the [s-r] button is right for you. Or, at least, to learn what it does.'"
 
-instead of examining gadget-screen: try examining gadget.
+check examining gadget-screen: try examining gadget instead;
 
 procedural rule while eating something: ignore the carrying requirements rule.
 
@@ -3429,11 +3432,11 @@ description of the knot is "It's simple but tight, with no way to start to loose
 
 check taking the knot: try untieing the knot instead;
 
-instead of untieing the knot: say "There's no way to do much with the knot. It's simple and tight."
+check untieing the knot: say "There's no way to do much with the knot. It's simple and tight." instead;
 
-instead of untieing tag: try untieing knot instead;
+check untieing tag: try untieing knot instead;
 
-instead of untieing gadget: try untieing knot instead;
+check untieing gadget: try untieing knot instead;
 
 description of show hows tag is "'This gadget is certified untransmogrifiable. It can be used to SCAN objects to determine their transmogrification states. Removing tag invalidates warranty. One beep indicates changeabilty. Two mean a compound word.'[paragraph break]Above a small print disclaimer you see two helpful examples."
 
@@ -3502,7 +3505,7 @@ check taking phial:
 			now cabinet-bit-me is true;
 			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, at least[if gateman is in Notices Section][one of]. Nat Egam coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
 
-instead of opening the phail phial: say "The blue lube would leak out."
+check opening the phail phial: say "No. The blue lube would leak out." instead;
 
 this is the bore-lube rule:
 	if the current action is objasking generically:
@@ -4485,7 +4488,7 @@ section iciest cities
 
 the iciest cities are bounding boring scenery in Flesh Shelf. description of cities is "They are spooky and all, but thankfully, they're too far away.". bore-text is "The cities are too far away to do anything with. Or to do anything to you."
 
-instead of going down in Flesh Shelf: try going west instead;
+check going down in Flesh Shelf: try going west instead;
 
 first-fs-yet is a truth state that varies.
 
@@ -4630,9 +4633,9 @@ check taking the bread:
 		now player has Spam;
 		say "It was somewhat lumped to the Spam inside it, but you were able to peel them apart. The Spam probably doesn't need to go on the floor, so you take that, too." instead;
 
-instead of peelxing bread:
+check peelxing bread:
 	if bread is part of the sandwich, try taking bread instead;
-	say "Peeling crust is a bad habit.";
+	say "Peeling crust is a bad habit." instead;
 
 the bread is part of the sandwich. rgtext of bread is "[gcn][rc][rc][rc][gc]". lgth of bread is 5. gpos of bread is 1. rpos of bread is 5. cert-text of bread is "B[d1][d1][d1][ast]D". rect-text of bread is "B[d1][d1][d1][ast]D". the indefinite article of the bread is "some".
 
@@ -4749,8 +4752,6 @@ to decide whether still-need-in-triangles:
 	if dashes are in shell, yes;
 	if noughts are in bubble, yes;
 	no;
-
-instead of singing in Gnarliest Triangles, say "Alas, the notes stone does not interact favorably with your tones."
 
 check going nowhere in Gnarliest Triangles: say "You can only go back west." instead;
 
@@ -5303,7 +5304,7 @@ check putting something on the tortilla (this is the tortilla-onto rule):
 
 ingredients-in-tort is a number that varies. ingredients-in-tort is 0.
 
-instead of opening HOTSAUCE:
+check opening HOTSAUCE:
 	if tortilla is visible, try inserting the HOTSAUCE into the tortilla instead;
 	say "You don't seem to have anything to put the hot sauce in. Or on." instead;
 
@@ -5354,9 +5355,9 @@ check taking an ingredient: if noun is part of the tortilla, say "Don't futz wit
 
 the cult tee is a pregredient in Kitchen. rgtext of cult tee is "[rcn][rc][rc][gc][rc][rc][gc]". lgth of cult tee is 7. gpos of cult tee is 3. rpos of cult tee is 7. cert-text of cult tee is "-[d1][d1][ast]T[d1][d1][ast]E". rect-text of cult tee is "L[d1][d1][d1][d1][d1][ast]E".
 
-instead of wearing cult tee: say "You appreciate the drawing, but [if r2 is prefigured]it's not warm enough to get you to the moor, and [end if]you never were one for bold t-shirts anyway."
+check wearing cult tee: say "You appreciate the drawing, but [if r2 is prefigured]it's not warm enough to get you to the moor, and [end if]you never were one for bold t-shirts anyway." instead;
 
-instead of wearing skate: say "You can't skate, and there's only one of it."
+check wearing skate: say "You can't skate--well, you definitely can't skate with only one skate." instead;
 
 understand "shirt" as cult tee.
 
@@ -5427,8 +5428,6 @@ understand "cat/ house/ perfume" and "cat/ house/" as CATHOUSE when player is in
 CATHOUSE is in Kitchen.
 
 description of the CATHOUSE is "It's yellow-gold, like most. The bottle seems to advertise a spicy scent too hot for most people's tastes.[paragraph break]By the way, you were never sure if it was one word or two, and what's more, the company who made it probably didn't care, either[one of]. There's something about how it'll free-m-up to love you, which you try to forget[or][stopping]."
-
-instead of drinking the CATHOUSE: say "Deadly."
 
 the large packet of HOTSAUCE is an ingredient.
 
@@ -5513,7 +5512,7 @@ check scaning location (this is the air scan rule):
 	if player is in the nick or player is in Esoteric Coteries or player is in moor or player is in roomroom or player is in Means Manse:
 		if player has gadget, try examining gadget instead;
 
-instead of going nowhere in roomroom: say "Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if].".
+check going nowhere in roomroom: say "Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if].".
 
 roomroom is east of Trap Part.
 
@@ -5583,13 +5582,15 @@ before putting on (this is the put tautology rule) :
 
 to say tau: say "Tautology?! Got ya, lout!".
 
-instead of examining the panel:
+check examining the panel:
 	if panel is not part of the silo, say "It looks kind of electrical. It doesn't seem to have wires, so hopefully you can just slip it where it needs to go." instead;
-	say "There are two buttons, on the left [if trees button is visible]('TREES')[else]('STEER')[end if] and right [if shoot button is visible]('SHOOT.')[else]('HOOTS.')[end if] Both are an important shade of red, and you'll probably have to push them to figure what they do." instead;
+	say "There are two buttons, on the left [if trees button is not moot]('TREES')[else]('STEER')[end if] and right [if shoot button is not moot]('SHOOT.')[else]('HOOTS.')[end if] Both are an important shade of red, and you'll probably have to push them to figure what they do." instead;
 
 tie-warn is a truth state that varies.
 
-instead of tying to (this is the check for big quest item attachment rule):
+the check for big quest item attachment rule is listed first in the check tying rules.
+
+check tying to (this is the check for big quest item attachment rule):
 	if tie-warn is false:
 		ital-say "while this game generally maps ATTACH/TIE X TO Y to PUT X ON/IN Y, PUT ON/IN[i] is a bit more specific and is thus recommended.";
 		now tie-warn is true;
@@ -5602,16 +5603,16 @@ instead of tying to (this is the check for big quest item attachment rule):
 	if second noun is gin nope opening, try inserting noun into gin nope opening instead;
 	continue the action;
 
-instead of putting a thing on the cafe face:
+check putting a thing on the cafe face:
 	if player is on the cafe face:
-		if gin nope opening is not visible, say "The neon pig is in the way." instead;
+		if gin nope opening is off-stage, say "The neon pig is in the way." instead;
 		try putting noun on gin nope opening instead;
-	say "Something might stick, but it wouldn't do much there."
+	say "Something might stick, but it wouldn't do much there." instead;
 
 check taking the silo: say "Counterproductive and, uh, very unlikely." instead;
 
 check taking the soil:
-	if soil is in moor, say "It belongs here[if silo is visible], as a foundation for the silo[end if]." instead;
+	if soil is in moor, say "It belongs here[if silo is in moor], as a foundation for the silo[end if]." instead;
 	say "It'd be a mess to carry." instead;
 
 check inserting it into (this is the straw-hay insert rule):
@@ -5687,9 +5688,9 @@ understand "hose" as hoses.
 
 description of hoses is "Thick, probably better for keeping water out than storing it."
 
-instead of tying hoses to something: say "They are too thick to bend and twist and tie to anything."
+check tying hoses to something: say "They are too thick to bend and twist and tie to anything." instead;
 
-instead of tying something to hoses: say "They are too thick to bend and twist and tie to anything."
+check tying something to hoses: say "They are too thick to bend and twist and tie to anything." instead;
 
 section pouring
 
@@ -5700,8 +5701,7 @@ understand the command "pour [any thing]" as something new.
 understand "pour" as pouring.
 
 rule for supplying a missing noun while pouring:
-	if player has cask:
-		now noun is cask;
+	if player has cask, now noun is cask;
 	say "You don't really have anything you can pour.";
 	reject the player's command;
 
@@ -5714,13 +5714,10 @@ does the player mean filling the cask: it is very likely.
 carry out pouring:
 	if player has sack and cask is abrod, say "Fluids would leak through the sack. The cask you had would be better." instead;
 	if player does not have cask, say "Nothing to pour anything into." instead;
-	if noun is cask:
-		if oils are not in cask, say "Nothing in the cask to pour." instead;
-	if noun is soil:
-		if oils are in cask and noun is soil and soil is not visible, try fliptoing soil instead;
-	if noun is silo:
-		if oils are in cask and noun is silo and soil is not in moor, try fliptoing silo instead;
-	if noun is not visible, say "You can't see any such thing." instead;
+	if noun is cask and oils are not in cask, say "Nothing in the cask to pour." instead;
+	if noun is soil and oils are in cask and soil is not in location of player, try fliptoing soil instead;
+	if noun is silo and if oils are in cask and and soil is in moor, try fliptoing silo instead;
+	if noun is not in location of player, say "You can't see any such thing." instead;
 	if noun is oils and location of player is Sacred Cedars:
 		if oils are in cask, say "[cask-full]." instead;
 		try filling cask instead;
@@ -5728,8 +5725,7 @@ carry out pouring:
 	if noun is spout:
 		say "(I assume you mean the oils into the cask.)";
 		try filling the cask instead;
-	say "You can't pour that!";
-	the rule succeeds;
+	say "You can't pour that!" instead;
 
 to say cask-full: say "The cask is already full of oils"
 
@@ -5798,7 +5794,7 @@ check going nowhere in Stiller Trellis: say "[dmm]. You can only go west or sout
 check inserting into scraped wall:
 	if noun is not straw and noun is not hay, say "That doesn't seem to fit. You need something stuffing-like." instead;
 
-instead of throwing cask at scraped wall: say "The cask bounces off harmlessly, no worse for the wear. You take it back." instead;
+check throwing cask at scraped wall: say "The cask bounces off harmlessly, no worse for the wear. You take it back." instead;
 
 section hallwaying
 
@@ -5913,15 +5909,10 @@ check pushing black door to:
 	if second noun is inside and silo is visible, try pushing black door instead;
 	say "You don't need to get rid of the black door or move it anywhere else." instead;
 
-instead of opening black door:
-	if black door is part of the silo:
-		say "[one of]A quick peek inside, and you see enough machinery to know this is not a grain silo. You quickly close the door--the machinery may be beyond you, and you don't need to deal with it[or]You should probably work at the silo from the outside[stopping].";
-	else:
-		say "Other doors in this game may lead somewhere for no reason, but this doesn't.";
+check opening black door: say "[if black door is part of the silo][one of]A quick peek inside, and you see enough machinery to know this is not a grain silo. You quickly close the door--the machinery may be beyond you, and you don't need to deal with it[or]You should probably work at the silo from the outside[stopping][else]Other doors in this game may lead somewhere for no reason, but this doesn't[end if]." instead;
 
 check taking the black door:
-	if black door is part of the silo, say "It's where it needs to be." instead;
-	say "It's too heavy to lug around for any amount of time, but maybe it can fit in somewhere if you push it, or put it on something." instead;
+	say "[if black door is part of the silo]It's where it needs to be[else]It's too heavy to lug around for any amount of time, but maybe it can fit in somewhere if you push it, or put it on something[end if]." instead;
 
 check taking the panel:	if panel is part of the silo, say "It's where it needs to be." instead;
 
@@ -5952,7 +5943,7 @@ this is the bore-anapest rule:
 			the rule succeeds;
 	abide by the bore-exam rule;
 
-instead of going nowhere in moor: say "The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
+check going nowhere in moor: say "The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 
 the peasant is a man. "A peasant is here[if peasant has hay], carrying some hay over his shoulder[end if]."
 
@@ -6415,11 +6406,11 @@ check giving to deadbeat:
 	if noun is a flower or noun is clover or noun is tulip, say "'Flowers, man? During this totally intense class warfare?'" instead;
 	say "'One act of guilt-driven re-gifting is no plan of general redistribution and fairness, man!'" instead;
 
-instead of giving cake to dead beat deadbeat: say "'I didn't, like, want the cake, man. I just, like, wanted a symbolic blow against... (insert class-warfare cliche here.) Plus, totally not enough icing.'"
+check giving cake to dead beat deadbeat: say "'I didn't, like, want the cake, man. I just, like, wanted a symbolic blow against... (insert class-warfare cliche here.) Plus, totally not enough icing.'" instead;
 
-instead of showing emitter to deadbeat: try objasking deadbeat about emitter instead;
+check showing emitter to deadbeat: try objasking deadbeat about emitter instead;
 
-instead of giving emitter to deadbeat: try objasking deadbeat about emitter instead;
+check giving emitter to deadbeat: try objasking deadbeat about emitter instead;
 
 understand "man" as deadbeat when deadbeat is visible.
 
@@ -6675,7 +6666,7 @@ description of talkers is "They're obviously part of the upper crust. They speak
 
 does the player mean throwing the tomato at the talkers: it is likely.
 
-instead of throwing tomato at talkers: say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them."
+check throwing tomato at talkers: say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them." instead;
 
 the antlers are plural-named LLPish scenery in Obtains Boastin' Bastion. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
 
@@ -6862,7 +6853,7 @@ understand "begonia" as begonias.
 
 the noise bag is an openable closed transparent container. understand "noisebag" as noise bag.
 
-instead of wearing bag: say "Oh, come on, you're not doing that badly. Figuring the begonias was pretty clever, really[if words are not in bag]--you just haven't found what to put in the bag, yet!".
+check wearing bag: say "Oh, come on, you're not doing that badly. Figuring the begonias was pretty clever, really[if words are not in bag]--you just haven't found what to put in the bag, yet!" instead;
 
 description of the noise bag is "Big deal. Idle bag. But it's labeled OPEN TO CAPTURE NOISES."
 
@@ -6883,7 +6874,7 @@ check giving to faeries:
 	if noun is heaths or noun is begonias, say "[if player has noun]The faeries give you a look like, Refund? F U NERD![else]It's not even yours. Yet.[end if]" instead;
 	say "They have no need of adventuresome things." instead;
 
-instead of showing to faeries: try giving noun to faeries.
+check showing to faeries: try giving noun to faeries instead;
 
 check giving gardenia to faeries:
 	say "They're visibly impressed. 'Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one[if brocade is in Fo' Real Florae]. And take the brocade, too[end if]. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need.'";

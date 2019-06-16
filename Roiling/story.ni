@@ -5812,14 +5812,13 @@ carry out iving:
 
 chapter going
 
-check going nowhere (this is the towers-mis-go rule):
-	if mrlp is towers:
-		if noun is inside or noun is outside, say "You can't go in, here." instead;
-		if shoals are visible, say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
+check going nowhere when mrlp is towers (this is the towers-mis-go rule):
+	if noun is inside or noun is outside, say "You can't go in, here." instead;
+	if shoals are visible, say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
 
 upwarned is a truth state that varies.
 
-check going nowhere (this is the spam can't go that way rule) :
+check going nowhere (this is the main can't go that way rule) :
 	if upwarned is false:
 		if noun is up or noun is down:
 			say "You can't go [noun] here[if mrlp is demo dome and player is not in Sparse Spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
@@ -5848,7 +5847,7 @@ Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel 
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
-Bustle Sublet	"The action's here. You [if evil bee is in Bustle Sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
+Bustle Sublet	"The reastier arteries lead nowhere good. You [if evil bee is in Bustle Sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad piesy[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
@@ -11108,8 +11107,7 @@ after looking in Loather Rathole:
 check looking in Loather Rathole for the first time: now the player has Pa Egg Pea.
 
 check going nowhere (this is the troves general direction reject rule):
-	if mrlp is troves:
-		say "Nothing urgent that way. Once you figure out what you need to do, you'll figure if you need to go anywhere. Focus, focus, focus." instead;
+	if mrlp is troves, say "Nothing urgent that way. Once you figure out what you need to do, you'll figure if you need to go anywhere. Focus, focus, focus." instead;
 
 every turn when player is in Loather Rathole (this is the Loather Rathole complaints rule) :
 	say "[if heat is in Loather Rathole]You need your super purse back. But you try and fail to get stoked enough to be a race-acer![else]'Heat...' you think. Then you see red and muse [one of]'[one of]At... eh...[no line break][or]Eh... at...[no line break][in random order]' as you are not sure where you are.[or]'A...the...' your thoughts degenerate.[or]'The...a...' your thoughts degenerate, as your eyes redden.[in random order][end if]";
@@ -11150,8 +11148,6 @@ a-text of heat is "RYRY". b-text of heat is "R?R?". parse-text of heat is "[sp]x
 book Bustle Sublet
 
 Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs, not that you'd risk the reastier arteries to get there. Someone seedy owns this area, [randbla]. This messhole with a sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is in Bustle Sublet]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]." [?? todo rewrite]
-
-check going nowhere in Bustle Sublet: say "The reastier arteries lead nowhere good. Stay here and figure what to do." instead;
 
 after looking in Bustle Sublet:
 	set the pronoun it to sob ever verbose;
@@ -13290,14 +13286,13 @@ voltzap is a truth state that varies.
 
 symp-yet is a truth state that varies.
 
-check going nowhere (this is the zaphint rule) :
-	if location of player is a mazeroom or location of player is Unwary Runway:
-		now voltzap is true;
-		say "[one of]You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT[or]You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory[stopping]";
-		if number of npcish people > 0 and symp-yet is false:
-			say ". [random npcish person] cringes";
-			now symp-yet is true;
-		say "." instead;
+check going nowhere when location of player is a mazeroom or location of player is Unwary Runway (this is the zaphint rule) :
+	now voltzap is true;
+	say "[one of]You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT[or]You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory[stopping]";
+	if number of npcish people > 0 and symp-yet is false:
+		say ". [random npcish person] cringes";
+		now symp-yet is true;
+	say "." instead;
 
 the zaphint rule is listed before the spam can't go that way rule in the check going rulebook.
 
