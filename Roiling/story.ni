@@ -6587,17 +6587,22 @@ chapter smelling
 
 the block smelling rule is not listed in any rulebook.
 
+smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster }
+rule for supplying a missing noun when listening:
+	repeat with Q running through smell-candidates:
+		if Q is in location of player:
+			now the noun is Q;
+			the rule succeeds;
+
 check smelling (this is the you can smell some stuff some places rule): [see about smelling things]
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
 	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
-	if player is in strip of profits: [stores]
-		if store y is in strip of profits, say "Seawater scents from Store Y." instead;
-		if balancer barnacle is in strip, say "Seawater scents from the barnacle balancer." instead;
-		if roved is true and throes hoster is in strip of profits, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
+	if noun is mangiest steaming, "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know." instead;
+	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
+	if noun is store y or noun is barnacle balancer, say "Seawater scents from [the noun]." instead;
+	if noun is throes hoster, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
-	if player is in strip of profits and odorant tornado is in location of player, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
-	if player is in strip of profits and mangiest steaming is in location of player, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know.";
 	if player is in Adobe Abode, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead; [routes]
 	if seed pit is visible, say "The seed pit smells a bit musty." instead;
 	if player is in Ripe Pier, say "It smells of adventure and going [i]abroad[r]--or, at least, a bit away from the brackish, salty whiffs of trash." instead;
