@@ -404,7 +404,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "phat"	224046094	Phat Path	--	--	"[locname]." [start Phat Path]
 "saps"	276201709	Phat Path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks' Shack is visited]back [end if]north, here."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
-"entyr"	507506690	Phat Path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
+"entyr"	507506690	Phat Path	--	--	"[if leo is in location of player]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
 "summit"	477632943	--	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks' Shack]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	--	harpings phrasing	--	"[harphr]."
 "harping"	352759935	--	harpings phrasing	--	"[harphr]."
@@ -467,6 +467,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "posh"	289374801	hops shop	--	--	"[locname]." [HOPS SHOP]
 "tine"	344816481	--	stein	--	"Just one tine doesn't seem up to much."
 "troll"	370414076	hops shop	--	--	"Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take [']em all, somehow."
+"vets"	434354913	Posh Hops Shop	--	--	"[tro-clo]."
+"vet"	338080947	Posh Hops Shop	--	--	"[tro-clo]."
 "recap"	315789274	hops shop	--	--	"Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all."
 "patrons"	511621649	hops shop	--	--	"[patron]."
 "patron"	415347683	hops shop	--	--	"[patron]."
@@ -1403,8 +1405,7 @@ this is the salt-gone rule:
 	the rule fails;
 
 this is the tressi-or-mbb rule:
-	if player is in Upscale Capsule:
-		if sister tressi is in Upscale Capsule or mbb is in Upscale Capsule, the rule succeeds;
+	if player is in Upscale Capsule and mbb-sis-points < 2, the rule succeeds;
 	the rule fails;
 
 this is the marble-gone rule:
@@ -1525,6 +1526,8 @@ this is the wise-to-sleep rule:
 	the rule fails;
 
 section oyster auxiliary
+
+to say tro-clo: say "Focus on the trolls, not their clothes"
 
 to say patron: say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
 

@@ -26,8 +26,8 @@ niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney ru
 meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-basement rule	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
-plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is visible]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
+plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is in location of player]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
+plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are in location of player] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
 book stores
@@ -86,8 +86,8 @@ evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule
 cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's that trap door? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
 diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair rule	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 I'd Cede	I'd Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
-ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
-lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
+ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [further-upscale] the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
+lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [further-upscale]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 lager	lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	--	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
@@ -612,6 +612,8 @@ this is the post-master-or-bolster rule:
 	if lobster is in Boredom Bedroom, now lobster is LLPish;
 	say "[if ME ARTS is moot and lobster is moot]You feel your arch-greed recharged. [end if]You're [one of][or]even [stopping]more up to grokking LEAD, now.";
 
+to say further-upscale: say "[if arts-lobster is 2]further [end if]"
+
 this is the post-lager-glare rule:
 	set the pronoun it to LEAD;
 
@@ -627,7 +629,7 @@ this is the post-deal rule:
 	set the pronoun them to Browse Bowers;
 
 this is the post-strive-or-aspire rule:
-	if praise spirea is reflexed and rivets are reflexed:
+	if cone-points is 2:
 		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
 		min-up;
 		set the pronoun it to pernod;
@@ -644,7 +646,7 @@ this is the post-rivets-strive rule:
 	now Trevis Vister is reflexed; [?? this should be something else]
 
 this is the post-pernod-ponder rule:
-	if rivets are reflexive or praise spirea is reflexive, poss-d;
+	if cone-points < 2, poss-d;
 
 this is the post-redvees-deserve rule:
 	move wonga wagon to Upscale Capsule;
@@ -674,7 +676,7 @@ this is the post-mbb-ramble rule:
 	report-glarers;
 
 this is the pre-nectar-recant rule:
-	if mbb is in Upscale Capsule and sister tressi is in Upscale Capsule:
+	if mbb-sis-pts is 0:
 		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
 		preef trance nectar instead;
 
@@ -683,7 +685,7 @@ this is the post-nectar-recant rule:
 	if Sister Tressi is prefigured, increment temp;
 	if mbb is prefigured, increment temp;
 	if DIVORCES is prefigured, increment temp;
-	if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, because your desire for more isn't totally drained.)[paragraph break]";
+	if temp > 0, say "(NOTE: before moving on, you muck with some stuff to get a few extra points, stuff you weren't quite ready to yet, because your desire for more isn't totally drained.)[paragraph break]";
 	increase min-score of troves by temp;
 	increase cur-score of troves by temp;
 
@@ -995,7 +997,7 @@ this is the post-spike-pikes rule:
 	process the post-scrap-carps rule;
 
 to say spike-and-scrap:
-	"'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
+	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
 
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
@@ -1229,7 +1231,7 @@ this is the pre-unlocked rule:
 this is the post-tentative-attentive rule:
 	now ag-atten is true;
 
-to say how-safe: say You'd feel [if blaster is reflexive or turbos are reflexive]]marginally safer[else]totally safe[end if] crossing Leak Lake on the boat now"
+to say how-safe: say "You'd feel [if blaster is reflexive or turbos are reflexive]marginally safer[else]totally safe[end if] crossing Leak Lake on the boat now"
 
 this is the post-detours-rousted rule:
 	move player to last-detour;
@@ -2515,7 +2517,7 @@ gins sign	"[if i-sung is true]You already managed to SING.[else][one of]The gins
 clam	"[one of]The clam is agitated. It probably doesn't want to attack you.[plus][or]You need to settle the clam down.[plus][or]I mean CALM it.[minus][cycling]"
 urn	"[one of]You can't walk away from the urn. You need to do something more decisive.[plus][or]You should RUN from the urn.[minus][cycling]"
 Shoer Osher	"You might've learned something from Shoer Osher's publicist before Elvira came by, but for the game's purposes, Shoer Osher is just there for decoration and amusement."
-river	"[one of]There are two ways across the river.[plus][or]You can get the boats' attention--one verb--or get on the raft, which requires two.[plus][or]Hint the boats or frat raft individually.[minus][cycling]"
+Saccade Cascade	"[one of]There are two ways across Saccade Cascade.[plus][or]You can get the boats' attention--one verb here, one in a side room--or launch the raft, which requires two.[plus][or]Hint the boats or frat raft individually.[minus][cycling]"
 frat raft	"[one of]Just getting on the frat raft is no fun. You want it to, well. move.[plus][or]Those oars on the frat raft would be a drag to pull around.[plus][or]Hint the oars if you can't figure out what to do with them.[minus][cycling]"
 boats	"[one of]The sailors aboard the boats seem to like a good chat about accomplishments.[plus][or]How could you get the boats['] attention with your own bragging or self-promotion?[plus][or]BOAST.[minus][cycling]"
 crays	--	plea

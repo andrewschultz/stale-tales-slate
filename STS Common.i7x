@@ -75,7 +75,7 @@ a portal has a rule called entry-rule. entry-rule of a portal is usually the deb
 report entering a portal: process the move dumbdrops rule;
 
 this is the debug-fill-in-here rule:
-	if debug-stat is true, say "We need to fill this in.";
+	if debug-state is true, say "We need to fill this in.";
 
 section actions on portals
 
@@ -387,6 +387,25 @@ carry out bsing:
 	say "Now bugsquash (end game on <BUG> text) is [on-off of bugsquash].";
 	the rule succeeds;
 
+volume multiple items
+
+the first time takeall notify rule is listed first in the instead rules.
+the don't allow dropping all rule is listed before the first time takeall notify rule in the instead rules.
+
+getall-warn is a truth state that varies.
+
+instead of taking when number of entries in multiple object list > 1 (this is the first time takeall notify rule): [no-irp] [??]
+	if getall-warn is false:
+		say "Multiple item-pull!";
+		now getall-warn is true;
+	continue the action;
+
+instead of dropping when number of entries in multiple object list > 1 (this is the don't allow dropping all rule): [no-irp] [??]
+	let Q be the noun;
+	say "[game-specific-drop-msg].";
+	alter the multiple object list to { Q };
+	continue the action;
+
 volume boring things
 
 part rooms are sort of boring
@@ -522,6 +541,7 @@ check quitting the game when currently transcripting:
 report switching the story transcript on:
 	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type TRANSCRIPT and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
 	continue the action;
+
 volume specific items
 
 part hubs bush popup
