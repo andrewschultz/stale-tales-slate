@@ -5825,14 +5825,10 @@ check going nowhere (this is the main can't go that way rule) :
 			now upwarned is true instead;
 	repeat through table of nowheres:
 		if theloc entry is location of player, say "[thereject entry][line break]" instead;
-	if number of viable directions is 0:
-		say "You can't go--well, any way here. This is a sort of puzzle room." instead;
-	else if number of viable directions is 1:
-		say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
-	else:
-		say "You can go [list of viable directions] here." instead;
-	if noun is outside:
-		say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
+	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
+	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
+	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
+	say "You can go [list of viable directions] here." instead;
 
 table of nowheres [tnw]
 theloc	thereject
@@ -6587,7 +6583,8 @@ chapter smelling
 
 the block smelling rule is not listed in any rulebook.
 
-smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster }
+smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster, [routes] pipe soot, seed pit, [troves] [presto] ether, casserole, [oyster] [towers] angriest ingrates, nerd-aid, [others] slime }
+
 rule for supplying a missing noun when listening:
 	repeat with Q running through smell-candidates:
 		if Q is in location of player:
@@ -6598,41 +6595,41 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
 	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
-	if noun is mangiest steaming, "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know." instead;
+	if noun is mangiest steaming, "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know." instead; [stores]
 	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
 	if noun is store y or noun is barnacle balancer, say "Seawater scents from [the noun]." instead;
 	if noun is throes hoster, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
-	if player is in Adobe Abode, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead; [routes]
-	if seed pit is visible, say "The seed pit smells a bit musty." instead;
+	if noun is pipe soot, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead; [routes]
+	if noun is seed pit, say "The seed pit smells a bit musty." instead;
 	if player is in Ripe Pier, say "It smells of adventure and going [i]abroad[r]--or, at least, a bit away from the brackish, salty whiffs of trash." instead;
 	if player is in Loather Rathole or player is in Bustle Sublet, say "Eew-gas sewage. Skint-stink." instead; [troves]
 	if player is in Drain Nadir, say "Ew--mild mildew. A mustier semi-rut." instead;
+	if noun is Large Regal Lager, say "It's not open. You don't want to open it to smell it." instead;
 	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule, say "Perfumed. Dump-free." instead;
-	if noun is ether, say "Nontoxic, but still potentially dangerous, [if ether-try is true]since[else]if[end if] someone's hiding there." instead;
-	if mrlp is presto, say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead; [presto]
+	if noun is ether, say "The ether is nontoxic but still potentially dangerous, [if ether-try is true]since[else]if[end if] someone's hiding there." instead;
+	if noun is casserole, say "That casserole doesn't smell very good, but it's not toxic." instead;
 	if player is in a mazeroom or player is in Unwary Runway, say "'You smell a gefilte and think 'get a life.'" instead;
-	if player is in Hacks' Shack and casserole is in Hacks' Shack, say "That casserole doesn't smell very good, but it's not toxic." instead;
+	if mrlp is presto, say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead; [presto]
 	if player is in Posh Hops Shop, say "You catch a whiff of some mokes['] smoke." instead; [oyster]
 	if player is in Disease Seaside, say "Say, spare sea spray." instead;
 	if player is in Fighter Freight, say "You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly." instead;
 	if player is in Sclerous Closures and sardine is in Sclerous Closures, say "Sea rind." instead;
-	if aunt tuna is visible, say "Antiseptic spice taint." instead;
+	if player is in Lean Lane, say "Antiseptic spice taint." instead;
 	if player is in Rascal Craals, say "This situation only stinks in general, not literally." instead;
 	if player is in Tenfold Teflon'd Den Loft, say "Old heat. Loathed hot lead." instead;
-	if ingrates are in location of player, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
-	if leak lake is visible, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
+	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
+	if mrlp is towers and leak lake is visible, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
 	if player is in Mesprise Premises, say "Noodles so olden." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
-	if dandier arid den is in location of player, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
+	if noun is nerd-aid, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if the deli rye is visible or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
 	if player is in Disowned Downside, say "You can [if macks are visible]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
 	if player is in Loop Pool, say "Salt Water. Wet, astral." instead;
 	if player is in Rancho Archon Anchor, say "Vast vats['] sulfinyl reek clearly eliminates all hope of silly fun." instead;
-	if mrlp is others:
-		if player is in rustic and slime is in rustic, say "The slime actually smells...nice, like dishwashing detergent." instead;
-		say "Smells, savory, vary so." instead;
+	if noun is slime, say "The slime actually smells...nice, like dishwashing detergent." instead; [others]
+	if mrlp is others, say "Smells, savory, vary so." instead;
 	say "Aroma-o-rama? Nothing's [i]tons[r] nigh." instead;
 
 chapter sleeping
