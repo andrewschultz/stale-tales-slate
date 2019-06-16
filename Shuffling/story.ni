@@ -271,24 +271,13 @@ section about the player
 
 does the player mean examining the player: it is unlikely.
 
-description of player is "[player-descrip][run paragraph on]"
+description of player is "[player-descrip]."
 
 to say player-descrip:
 	if Trips Strip is unvisited:
 		say "You're [tag-status]. And hey, your ex-company let you dress casually[one of]. It'd stink if the dress code STILL applied[or][stopping]";
 	else:
-		if warts are part of player:
-			say "Those warts are making you feel ugly right now";
-		else:
-			say "You're wearing generic, comfortable and inoffensive clothes, which have enough pockets for a modest inventory";
-	say "."
-
-section diagonals
-
-before going (this is the reject diagonals rule):
-	if noun is a diagonal:
-		if player is in Busiest Subsite, say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
-		say "[one of](NOTE: you never have to go in a diagonal direction in this game.)[paragraph break][or][stopping][one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
+		say "[if warts are part of player]Those warts are making you feel ugly right now[else]You're wearing generic, comfortable and inoffensive clothes, which have enough pockets for a modest inventory[end if]";
 
 section dropping
 
@@ -2374,50 +2363,42 @@ to say last-scan-thing:
 
 to shuffle-chat-lists:
 	repeat through table of megachatter:
-		if there is no ent-per entry:
-			now ent-per entry is 1;
-		if there is no end-count entry:
-			now end-count entry is 0;
+		if there is no ent-per entry, now ent-per entry is 1;
+		if there is no end-count entry, now end-count entry is 0;
 		now done-once entry is false;
 		sort mytab entry in random order;
 		now table-size entry is number of rows in mytab entry;
-		if there is a lasties entry and number of characters in lasties entry > 2:
-			increment table-size entry;
+		if there is a lasties entry and number of characters in lasties entry > 2, increment table-size entry;
 		if there is a maxidx entry:
-			if maxidx entry is 0 or maxidx entry > number of rows in mytab entry:
-				now maxidx entry is number of rows in mytab entry;
+			if maxidx entry is 0 or maxidx entry > number of rows in mytab entry, now maxidx entry is number of rows in mytab entry;
 		now curidx entry is 0;
-		if there is no maxbeforepause entry:
-			now maxbeforepause entry is 30;
+		if there is no maxbeforepause entry, now maxbeforepause entry is 30;
 
 to place-random-garbage:
-	if a random chance of 1 in 2 succeeds:
-		now blot-first is true; [hint blot or bugle at door]
-	if a random chance of 1 in 2 succeeds:
-		now rock-first is true;	[hint rock or swing 1st]
+	if a random chance of 1 in 2 succeeds, now blot-first is true; [hint blot or bugle at door]
+	if a random chance of 1 in 2 succeeds, now rock-first is true;	[hint rock or swing 1st]
 	move random guider to sf;
 	d "[random guider in sf] in SF.";
 	move random off-stage guider to rf;
 	d "[random guider in rf] in RF.";
 
 check going when player is in sf or player is in rf:
-	if player is in sf or player is in rf:
-		let mygu be a random visible guider;
-		if noun is godir of mygu:
-			say "The [mygu] seems to be pushing you [noun]. Walking that way, there aren't many obstacles or branching paths[one of][or] again[stopping].[paragraph break]";
-			if player is in sf:
-				say "You wind up in an area that doesn't look that much different but feels a bit colder.";
-				reg-inc;
-				move player to rf;
-				move leaves to rf;
-				the rule succeeds;
-			else:
-				say "You follow the path some more, really getting somewhere. 'Mastery of a forest, my!' you say, feeling vainer and promptly tumbling into a ravine! It's too steep to climb, so you walk on some more...";
-				reg-inc;
-				move player to Self-ID Fields;
-				the rule succeeds;
-		if noun is inside or noun is outside, say "Any of the four directions could lead inside somewhere else, or outside the forest. So you need to figure which." instead;
-		say "You go [noun] a bit, but the paths and vegetation multiply. Percuss-spruces behind bush-hubs make warning noises that drive you back to where you were." instead;
+	let mygu be a random visible guider;
+	if noun is godir of mygu:
+		say "The [mygu] seems to be pushing you [noun]. Walking that way, there aren't many obstacles or branching paths[one of][or] again[stopping].[paragraph break]";
+		if player is in sf:
+			say "You wind up in an area that doesn't look that much different but feels a bit colder.";
+			reg-inc;
+			move player to rf;
+			move leaves to rf;
+			the rule succeeds;
+		else:
+			say "You follow the path some more, really getting somewhere. 'Mastery of a forest, my!' you say, feeling vainer and promptly tumbling into a ravine! It's too steep to climb, so you walk on some more...";
+			reg-inc;
+			move player to Self-ID Fields;
+			the rule succeeds;
+	if noun is inside or noun is outside, say "Any of the four directions could lead inside somewhere else, or outside the forest. So you need to figure which." instead;
+	say "You go [noun] a bit, but the paths and vegetation multiply. Percuss-spruces make warning noises that drive you back to where you were." instead;
 
 to set-other-default: now cask is not flipped-yet.
 
@@ -2778,8 +2759,6 @@ book Thickest Thickets
 
 Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in Thickest Thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
 
-check going nowhere in Thickest Thickets: say "[one of]You hit a snag, and the [if toga is visible]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]." instead;
-
 the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.".
 
 the lgth of toga is 4. gpos of toga is 3. rpos of toga is 1. cert-text of toga is "-[ast]O[d1][d1]". rect-text of toga is "G[d1][d1][ast]T". the rgtext of toga is "[rc][gc][rc][rc]".
@@ -2864,8 +2843,6 @@ to say get-a-man:
 check going outside in Notices Section: try entering getaway gateway instead;
 
 check going inside in Notices Section: try entering getaway gateway instead;
-
-check going nowhere in Notices Section: say "You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[unless gateman is in Notices Section], though it'd be nice to have some help." instead;
 
 section broad board
 
@@ -4393,8 +4370,6 @@ after looking in Self-ID Fields:
 
 check going inside in Self-ID Fields: try going north instead;
 
-check going nowhere in Self-ID Fields: say "No going back. Storing's west, sorting's east, and Corses Crosse is north." instead;
-
 check going north in Self-ID Fields when Enclosure is unvisited and player has gadget and tag is part of the gadget (this is the forest gadget checkpoint rule):
 	if player has beard or player wears beard:
 		if forest-warn is false and button-locked is false:
@@ -4520,8 +4495,6 @@ rule for printing a locale paragraph about a glopmeat when Flesh Shelf is visite
 		say "The [list of glopmeats] [if number of glopmeats in Flesh Shelf is 1]is[else]are[end if] still in the skin sink.";
 		now all glopmeats are mentioned;
 		the rule succeeds;
-
-check going nowhere in Flesh Shelf: say "It's too steep down every way except back east." instead;
 
 section canister / red ring
 
@@ -4745,15 +4718,11 @@ chapter Gnarliest Triangles
 
 Gnarliest Triangles is east of Self-ID Fields. Gnarliest Triangles is in Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
 
-check going nowhere in Gnarliest Triangles: say "You don't need an alert sign to know running into the walls any direction but east would cause a real sting." instead;
-
 to decide whether still-need-in-triangles:
 	if ones are in bucket, yes;
 	if dashes are in shell, yes;
 	if noughts are in bubble, yes;
 	no;
-
-check going nowhere in Gnarliest Triangles: say "You can only go back west." instead;
 
 the stick figures are amusing scenery in Gnarliest Triangles. understand "stick/ figure" as stick figures.
 
@@ -4839,8 +4808,6 @@ after looking in Cruel Ones' Enclosure:
 		set the pronoun them to liches;
 
 to say d-s: say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]".
-
-check going nowhere in Cruel Ones' Enclosure: say "You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north." instead;
 
 Include (-
 	has transparent animate
@@ -4976,10 +4943,6 @@ chapter Trap Part
 Trap Part is a room in Sortie. last-loc of Sortie is Trap Part. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge, with a dial in the center. Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
 
 check scaning dial when centrifuge-stopped is false: say "You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, [if gadget is cert]all red except for the middle that flashes green[else]green flashing between 5 and 7, red flashing between 1 and 6[end if]. Hm, exits plus two letters. What number could that be, or become." instead;
-
-check going nowhere in Trap Part:
-	if centrifuge-stopped is false, say "That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first." instead;
-	say "[dmm]. You can only go north to the kitchen or east[if roomroom is visited] to the (plain) room[end if]." instead;
 
 to say maybe-shift: say "[if kitchen is unvisited and roomroom is unvisited], and you're pretty sure they won't fake you out at the last minute[else], and they've been behaving since you fixed that dial[end if]".
 
@@ -5268,8 +5231,6 @@ does the player mean putting an ingredient on the tortilla: it is very likely.
 
 description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the Trap Part you escaped, and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
 
-check going nowhere in Kitchen: say "Dud, mum mud blocks your way [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]." instead;
-
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
 understand "chefs/chef/statues/statue" as tall trio.
@@ -5511,8 +5472,6 @@ check scaning location (this is the air scan rule):
 	if player does not have gadget, continue the action;
 	if player is in the nick or player is in Esoteric Coteries or player is in moor or player is in roomroom or player is in Means Manse:
 		if player has gadget, try examining gadget instead;
-
-check going nowhere in roomroom: say "Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if].".
 
 roomroom is east of Trap Part.
 
@@ -5789,10 +5748,7 @@ check going east in Stiller Trellis:
 to say dmm:
 	say "Mum, dud mud blocks your way"
 
-check going nowhere in Stiller Trellis: say "[dmm]. You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]." instead;
-
-check inserting into scraped wall:
-	if noun is not straw and noun is not hay, say "That doesn't seem to fit. You need something stuffing-like." instead;
+check inserting into scraped wall: if noun is not straw and noun is not hay, say "That doesn't seem to fit. You need something stuffing-like." instead;
 
 check throwing cask at scraped wall: say "The cask bounces off harmlessly, no worse for the wear. You take it back." instead;
 
@@ -5942,8 +5898,6 @@ this is the bore-anapest rule:
 			say ". Too bad you don't have a device to scan it more practically.";
 			the rule succeeds;
 	abide by the bore-exam rule;
-
-check going nowhere in moor: say "The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 
 the peasant is a man. "A peasant is here[if peasant has hay], carrying some hay over his shoulder[end if]."
 
@@ -6251,8 +6205,6 @@ the serve verse is scenery in Sacred Cedars.
 
 description of serve verse is "It's all calligraphic, and it reads[paragraph break][i]From here, where lumbers slumber, is, lo! Purest oil snout erupts: solution! Ground unsod becomes sound. Lovely volley. A stone atones![paragraph break]  --LOIS[r]"
 
-check going nowhere in Sacred Cedars: say "There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads." instead;
-
 the sc are privately-named plural-named scenery in Sacred Cedars. printed name of sc is "cedar wall/walls". understand "cedars" and "cedar/ wall/walls" as sc.
 
 description of sc is "They look nice and even smell nice. Serve verse veers all over them."
@@ -6430,12 +6382,7 @@ the library is scenery in Roarings Garrison. "Libraries aren't supposed to be be
 
 the barrier is useless scenery in Roarings Garrison. "[if dry cake is in Obtains Boastin' Bastion]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
 
-check going north in Roarings Garrison:
-	if bastion-evac is true, say "You'd probably be recognized and arrested." instead;
-
-check going nowhere in Roarings Garrison:
-	if noun is up or noun is down, continue the action;
-	say "There's [if Obtains Boastin' Bastion is visited]the Obtains Boastin['] Bastion[else]condos[end if] north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south." instead;
+check going north in Roarings Garrison: if bastion-evac is true, say "You'd probably be recognized and arrested." instead;
 
 the fuzzy clover is a thing in Roarings Garrison. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3. cert-text of clover is "-[d1][d1][d1][d1][d1]". rect-text of clover is "V[d1][d1][d1][d1][ast]O".
 
@@ -6565,8 +6512,6 @@ this is the bore-beatniks rule:
 chapter Bile Libe
 
 Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. A lease easel covers every direction except back east."
-
-check going nowhere in Bile Libe: say "Only way out's back east." instead;
 
 some words are a thing in Bile Libe. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
 
@@ -6785,8 +6730,6 @@ rule for printing a locale paragraph about faeries:
 	now heaths are mentioned;
 	now begonias are mentioned;
 
-check going nowhere in Fo' Real Florae: say "The only safe way is back west." instead;
-
 violets is a truth state that varies.
 
 report going west in Fo' Real Florae when violets is false:
@@ -7003,8 +6946,6 @@ check taking the ketchup bottle: say "[if night thing is not in location of play
 
 check inserting into the bottle: say "Ketchup bottles have those narrow necks, so nothing really fits. One look at the bottle, and you probably don't WANT anything to fit." instead;
 
-check going nowhere in The Ol' Hotel: say "You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city." instead;
-
 check going outside in The Ol' Hotel: try going east instead;
 
 The termite emitter is a device. "A termite emitter lies here, forgotten. It still looks operational. Perhaps it's part of why the hotel is so beaten up."
@@ -7114,8 +7055,6 @@ after printing the locale description for Esoteric Coteries when Esoteric Coteri
 	reg-inc;
 	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.";
 	continue the action;
-
-check going nowhere in Esoteric Coteries: say "The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher." instead;
 
 the optical beam is part of the friend finder. description of optical beam is "I wouldn't advise staring into it, but you could put something on it."
 
@@ -7292,8 +7231,6 @@ check scaning in Elm Train Terminal (this is the can't scan some things til you 
 
 check going west in Elm Train Terminal: say "The cafe face is in the way. Maybe you could climb it[if cafe-climbed is true] again[end if]." instead;
 
-check going nowhere in Elm Train Terminal: say "The tracks lead down east, and the city is back north." instead;
-
 the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims ARTISAN, TSARINA: TRANSIT!!! and also that it's an anti-sot 'I sat not to stain' station. Which doesn't help you."
 
 Pa's PSA is amusing scenery in Elm Train Terminal. "[randbla]."
@@ -7416,8 +7353,6 @@ every turn when player is in Bassy Abyss:
 
 to say rieuw: say "[if siren is visible][one of].[paragraph break]A siren off to the side kicks in, to make things even more head-achingly techno up in here. Too loud to get near[or]. And still, that stupid siren near you[stopping][end if]".
 
-check going nowhere in Bassy Abyss: say "You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]." instead;
-
 section aligns signal
 
 the aligns signal is bounding boring scenery in Bassy Abyss. description of aligns signal is "You can't see the aligns signal, but you'll probably feel it if you try to cross it. Maybe if you vanquish the [b-b], it'll vanish.". bore-text is "The aligns signal probably comes from the [b-b]. So it's best just to destroy the [b-b] first."
@@ -7474,10 +7409,6 @@ Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "This is
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
-check going nowhere in astral altars:
-	now feral flare is in astral altars;
-	say "[one of]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE![or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]" instead;
-
 tiles are plural-named flippable boring scenery in Astral Altars. description of tiles is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.". bore-text is "There must be some way to magic the stile and/or tiles."
 
 gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles is "[rc][rc][gc][gc][rc]". the lgth of tiles is 5. cert-text of tiles is "-[d1][ast]L[ast]E[d1]". rect-text of tiles is "I[d1][d1][d1][ast]T".
@@ -7517,13 +7448,6 @@ to say lei-lala:
 check taking the l2: say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead;
 
 section an odd low woodland
-
-check going nowhere in Leis Isle:
-	say "[if woodland-revealed is true]No, you already saw the woodland was faked[else]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]." instead;
-
-to say lei-down: say "[if l2 are not in Leis Isle], but then, the leis were fake, too"
-
-woodland-revealed is a truth state that varies.
 
 an odd low woodland is boring scenery in Leis Isle. description of woodland is "[if woodland-revealed is false]You stare at it for a while, and eventually the word DOWNLOAD... starts blinking. Hmm. It doesn't seem real at all[woodrev][else]It still seems computer-generated, wrong[end if].". bore-text is "[if woodland-revealed is true]You already know it's a bit hosed. You don't need to do anything with it[else]It seems imposing. You're not sure you want anything to do with it[end if].".
 
@@ -7618,7 +7542,7 @@ Rived Drive is a room in Resort.
 does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
 
-check going nowhere in Rived Drive: say "You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s] seems worth seeing." instead;
+to say p-s: say "[if poles are in location of player]poles[else]slope[end if]
 
 section blow bowl
 
@@ -7693,12 +7617,6 @@ to say check-tools:
 		say ", which the grips give--but it's too risky. You need some safety";
 	else:
 		say ", so maybe a couple tools--or a way to change the smoothness of the slope--will make it climbable";
-
-to say p-s:
-	if poles are visible:
-		say "poles";
-	else:
-		say "slope";
 
 section Rived Drive escape
 
@@ -7799,8 +7717,6 @@ check going east in Potshot Hotspot:
 	if red bull burdell is visible, say "Not with Red Bull Burdell around you aren't." instead;
 	if protest is visible, say "They still outnumber you. Though they're only blocking you out of spite. They just--well, they don't have anything to do, and they're sort of expecting you to give them something better to do than, well, [i]protest[r]." instead;
 	if potters are visible and kilns are not visible, say "They seem a civil trio, buy as you inch east, they get vitriolic. 'Give us something to do!'" instead;
-
-check going nowhere in Potshot Hotspot: say "The only way you want to try to go is east." instead;
 
 section roman manors
 
@@ -7967,11 +7883,11 @@ the final-exits are flippable privately-named plural-named scenery in Means Mans
 
 understand "exits" as final-exits when player is in Means Manse.
 
-the marble is amusing  scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
+the marble is amusing scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
 
 the spire is amusing scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
 
-before going in Means Manse (this is the clue final verb rule): say "[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking[stopping]." instead;
+check going west in Means Manse: try going east instead; [don't allow the player to back out]
 
 section existing
 
@@ -8185,12 +8101,6 @@ Rule for printing a parser error when the latest parser error is didn't understa
 						the rule succeeds;
 	say "[reject]";
 	reject the player's command;
-
-check going nowhere in Rested Desert:
-	say "The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if] is[if bugle-played is true or blot is visible]. The one you can probably go through[end if]." instead;
-
-check going nowhere:
-	say "This is a generic message to say you can't go that way. It should be changed to add variety and flavor. [if number of viable directions is 1]You can only go [list of viable directions][else if number of viable directions is 0]You can't seem to go any direction, so there is probably a puzzle to solve[else]Here is a list of ways you can go: [list of viable directions][end if]." instead;
 
 book parsing
 
@@ -9226,14 +9136,77 @@ Talking to is an action applying to one visible thing.  Understand "talk to [som
 
 part going
 
+chapter going diagonally
+
+the reject diagonals rule is listed first in the check going rules.
+
+check going when noun is a diagonal (this is the reject diagonals rule):
+	if player is in Busiest Subsite, say "You walk around the perimeter of the big hall. It's weird. The passage by the Vacate Caveat isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
+	say "[one of](NOTE: you never have to go in a diagonal direction in this game.)[paragraph break][or][stopping][one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
+
+chapter going nowhere
+
+upwarned is a truth state that varies.
+
+check going nowhere (this is the main can't go that way rule) :
+	if upwarned is false:
+		if noun is up or noun is down:
+			say "You can't go [noun] here[if mrlp is demo dome and player is not in Sparse Spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
+			now upwarned is true instead;
+	repeat through table of nowheres:
+		if theloc entry is location of player, say "[thereject entry][line break]" instead;
+	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
+	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
+	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
+	say "You can go [list of viable directions] here." instead;
+
+table of nowheres [tnw]
+theloc	thereject
+Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if] is[if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
+Thickest Thickets	"[one of]You hit a snag, and the [if toga is in thickest thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
+Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[unless gateman is in Notices Section], though it'd be nice to have some help."
+Self-ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
+Flesh Shelf	"It's too steep down every way except back east."
+Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
+Cruel Ones' Enclosure	"You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north."
+Trap Part	"[if centrifuge-stopped is false]That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first[else][dmm]. You can only go north to the kitchen or east[or-room][end if]."
+Kitchen	"Dud, mum mud blocks your way [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
+roomroom	"Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if].".
+Stiller Trellis	"[dmm]. You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
+moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
+Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
+Roarings Garrison	"There's [if Obtains Boastin' Bastion is visited]the Obtains Boastin['] Bastion[else]condos[end if] north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south. But there are no special exits."
+Bile Libe	"Only way out's back east."
+Fo' Real Florae	"The only safe way out is back west."
+The Ol' Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
+Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
+Elm Train Terminal	"The tracks lead down east, and the city is back north."
+Bassy Abyss	"You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
+Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE![or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
+Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
+Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s] seems worth seeing."
+Potshot Hotspot	"The only way you'll want to [if red bull burdell is not moot]try to [end if]go is east."
+Means Manse	"[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking[stopping]."
+
+chapter nowhere auxiliary stuff
+
+to say or-room: say "[if roomroom is visited] to the (plain) room[end if]"
+
+to say flare-to: now feral flare is in astral altars;
+
+to say lei-down: say "[if l2 are not in Leis Isle], but then, the leis were fake, too";
+
+woodland-revealed is a truth state that varies.
+
+part gotoing
+
 [see the common file for the main syntax]
 
 carry out gotoing:
 	if noun is Trips Strip and Trips Strip is visited:
 		say "You may mean to RETRY instead. Do so?";
 		if the player yes-consents, try retrying instead;
-	if map region of noun is not mrlp:
-		if map region of noun is solved, say "You already solved that area." instead;
+	if map region of noun is not mrlp and map region of noun is solved, say "You already solved that area." instead;
 		say "That'd be hyperwarping to another region. Sorry." instead;
 	if noun is unvisited, say "You haven't gotten there yet." instead;
 	if noun is subsite, say "Goodness, no. [location of player] is way more interesting than the Busiest Subsite." instead; [start Ordeal Loader]
