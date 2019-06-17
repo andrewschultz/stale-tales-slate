@@ -291,7 +291,7 @@ every turn when Strip of Profits is visited (this is the region-hint on no score
 					choose row with hint-reg of mrlp in table of region-spoilers;
 					say "This region focuses on [spoil-expl entry].";
 					now block-north is true;
-				otherwise:
+				else:
 					say "Ok--I'll ask again in a few moves.";
 					now last-hint-turns of mrlp is turns-spent of mrlp;
 [				reject the player's command;]
@@ -981,7 +981,7 @@ to say full-monty of (myobj - a thing):
 	let sw be settler-space-warned;
 	if cheat-on is true:
 		let A be "[b-text of myobj]";
-	otherwise:
+	else:
 		let A be "[a-text of myobj]";
 	if number of characters in A > 15:
 		say "Something went wrong. [myobj] had a [number of characters in A]-letter scan. Let me know what you were doing. [bug-report]";
@@ -1146,7 +1146,7 @@ to item-warp:
 		if mrlp is solved:
 			if mrlp is Ordeal Reload or mrlp is others:
 				say "This game just removed an item it should not have: ([list of carried not warpable things]) ([list of worn not warpable things]). [bug-report]";
-			otherwise:
+			else:
 				say "[one of]An acuter curate relieves you of the items you won't need any more. He points at himself. 'Rod Hare, Hoarder.' He [if player is female]mumbles pensively, 'Her road...[run paragraph on][else]points at you. 'Rad, hero.[run paragraph on][end if]' He points away. 'I scour curios.'[or]The hoarder takes your surplus stuff again.[stopping]";
 		mootl list of all carried not warpable things;
 		mootl list of all worn not warpable things;
@@ -3559,7 +3559,7 @@ to add-errs (reg - a region):
 				let XYZ be the hash of this-cmd entry;
 				now hashval entry is XYZ;
 				d "Making hashval entry [XYZ] for [this-cmd entry].[line break]";
-			otherwise:
+			else:
 				continue the action;
 				[d "[this-cmd entry] has a hashval entry of [hashval entry].[line break]";]
 
@@ -3797,7 +3797,7 @@ to reg-inc:
 	increment the score;
 	if mrlp is nothing:
 		say "BUG NOTE: This location needs a map region!";
-	otherwise:
+	else:
 		increment the cur-score of mrlp;
 		if mrlp is Ordeal Reload and rifle is off-stage and cur-score of Ordeal Reload is max-score of Ordeal Reload - 4:
 			say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the gallery now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
@@ -3905,7 +3905,7 @@ carry out requesting the score:
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
-	otherwise:
+	else:
 		d "# of turns = [turn count].";
 		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
 		if cur-score of mrlp is max-score of mrlp:
@@ -3935,9 +3935,8 @@ carry out requesting the score:
 		say "[line break]Won now:";
 		repeat with rgn running through markable regions:
 			increment temp;
-			if mrlp is not rgn:
-				say " [rgn] ([cur-score of rgn]/[max-score of rgn])[if temp < number of markable regions],[else].[end if]";
-	otherwise:
+			if mrlp is not rgn, say " [rgn] ([cur-score of rgn]/[max-score of rgn])[if temp < number of markable regions],[else].[end if]";
+	else:
 		say "[line break]You haven't solved any regions yet.";
 	show-rank;
 	if mrlp is others:
@@ -3975,12 +3974,9 @@ rank-name
 "Lengthier Lightener" [4]
 "Truculenter Unclutterer" [5 solved]
 
-to say lomax of (re - a region):
-	say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
+to say lomax of (re - a region): say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
 
-to check-guru:
-	if did-guru is false and cur-score of others is 41:
-		say "[line break]Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Valence Enclave [if player is not in Gates Stage]north of the Gates Stage[else]to the north[end if] without using GURU."
+to check-guru: if did-guru is false and cur-score of others is max-score of others - 1, say "[line break]Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Valence Enclave [if player is not in Gates Stage]north of the Gates Stage[else]to the north[end if] without using GURU."
 
 possibles is a truth state that varies. min-alert is a truth state that varies.
 
@@ -5174,8 +5170,7 @@ carry out oyster-hinting:
 
 book towers-hinting
 
-to say seesaw:
-	say "[if scope is examined]saw[else]could see[end if]";
+to say seesaw: say "[if scope is examined]saw[else]could see[end if]";
 
 to say to-center:
 	repeat with mydir running through directions:
@@ -5291,8 +5286,7 @@ to say loop-pool-already: say "[one of]The Bran Barn isn't critical since you've
 
 to say bran-barn-already: say "[one of]The Loop Pool isn't critical since you've solved the Bran Barn, but it'll get extra points.[paragraph break][or][stopping]";
 
-to say tho-work:
-	say ", though you still have work there[if power-back is false], which you might not be up for yet[end if]"
+to say tho-work: say ", though you still have work there[if power-back is false], which you might not be up for yet[end if]"
 
 table of animal randomness
 this-animal
@@ -5308,12 +5302,10 @@ badger
 last-thing-hinted is a thing that varies. last-thing-hinted is the palm.
 
 to decide which thing is animal-to-hint:
-	if last-thing-hinted is in location of player and last-thing-hinted is reflexive:
-		decide on last-thing-hinted;
+	if last-thing-hinted is in location of player and last-thing-hinted is reflexive, decide on last-thing-hinted;
 	repeat through table of animal randomness:
 		if this-animal entry is in location of player:
-			if this-animal entry is not reflexed:
-				decide on this-animal entry;
+			if this-animal entry is not reflexed, decide on this-animal entry;
 	d "bad fallthrough in animal-to-hint.";
 	decide on the player; [this should never happen]
 
@@ -5394,7 +5386,7 @@ after reading a command:
 			append "COMMENT: [the player's command]" to the file of gamehints;
 		if currently transcripting:
 			say "Noted.";
-		otherwise:
+		else:
 			if ignore-transcript-nag is false:
 				say "You've made a comment-style command, but Transcript is off. Type TRANSCRIPT to turn it on, if you wish to make notes.[paragraph break]The long version of this nag will only appear once. You may press any key to continue.";
 				wait for any key;
@@ -7307,7 +7299,7 @@ carry out retrying:
 		say "You shouldn't need to go anywhere else[if number of bypassed regions > 0]. While you destroyed some regions with the patcher, you can't revisit them without restarting[end if]. Are you sure?";
 		if the player yes-consents:
 			say "Okay, back to the Strip of Profits.";
-		otherwise:
+		else:
 			say "Okay, back to the endgame." instead;
 	repeat with MI running through held things:
 		if MI is not warpable:
@@ -8853,7 +8845,7 @@ to say painful-memory:
 	say "[one of]You see red at a further painful memory. Relive it?[or]Re-relive the painful memory associated with it?[stopping]";
 	if the player direct-consents:
 		say "[one of]The person who gave it to you said it would help you [if player is female]meet[else]feel like[end if] Mr. Pa. You see red as you cringe at the memory.[or]The memory of encouragement to [if player is female]meet[else]be[end if] Mr. Pa still makes you see red after all this time.[stopping][run paragraph on]";
-	otherwise:
+	else:
 		say "Yeah, you probably don't need to, to figure what to do with the pram.[no line break]";
 
 the ramp is scenery. "The ramp slopes down, not too sharply."
@@ -9295,7 +9287,7 @@ to say cur-has:
 			else:
 				if remainder after dividing A by 4 is 0:
 					say "[if A > 0].[line break]--[end if]";
-				otherwise:
+				else:
 					say ", ";
 				increment A;
 				say "[if readyet entry is false][i][end if][short entry]";
@@ -9311,7 +9303,7 @@ to say cur-has:
 				if mrlp is fixed-region entry and introtoo entry is unrelevant:
 					if remainder after dividing A by 4 is 0:
 						say "[if A > 0].[line break]--";
-					otherwise:
+					else:
 						say ", ";
 					increment A;
 					say "[if readyet entry is false][i][end if][short entry][r]";
@@ -10236,7 +10228,7 @@ check entering passage:
 	if the player direct-consents:
 		say "You step into studio E. There, you see well-known pharmaceutical industry barons discussing perfectly legal and safe substitutes to various illegal drugs, along with perfectly air-tight patents and tax avoidance schemes. You also see a bottle 'DORI'S ROIDS: for IAN' with a so-tired needle beside it.[paragraph break]You rush out of Studio E before you see anything more--although you quickly [if cheat-on is false]switch your gadget back and forth and note it[else]note your gadget[end if] flashes YYRRGRG.";
 		now e-revealed is true;
-	otherwise:
+	else:
 		say "You decide to rely on what you see in the Lectures to get out.";
 	the rule succeeds;
 
@@ -10270,7 +10262,7 @@ to say ian-pamph:
 		if the player yes-consents:
 			now player has pamphlets;
 			say "'Good choice. Say, if they're good enough, do you think you could put in a word for me--to a lecturer like THAT?";
-		otherwise:
+		else:
 			say "Ian looks hurt but blames it on the lack of attention span from the drugs you've been taking. That cheers him up.";
 
 this is the bore-ian rule:
@@ -10432,10 +10424,8 @@ after scaning scripture picturers:
 	if cheat-on is true and sign-pushed-prompt is false:
 		now sign-pushed-prompt is true;
 		say "Man! That wasn't helpful at all! The sign does look a bit wobbly, though, and you know these things are two-sided. Give it a push?";
-		if the player yes-consents:
-			try pushing scripture picturers instead;
-		otherwise:
-			say "Well, if you feel like it later, the sign or whoever put it there will forgive you."
+		if the player yes-consents, try pushing scripture picturers instead;
+		say "Well, if you feel like it later, the sign or whoever put it there will forgive you."
 
 inwarn is a truth state that varies.
 
@@ -10457,7 +10447,7 @@ check entering Uhh Tut Hut:
 	if Adobe Abode is unvisited:
 		now oscar-annoy is true;
 		say "You try going directly to Oscar's, but the place curves away from you." instead;
-	otherwise:
+	else:
 		if oscar-annoy is true:
 			say "No more funny business from Oscar's. You walk in without having to pretend to walk away.";
 			now oscar-annoy is false;
@@ -11642,7 +11632,7 @@ every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey ru
 	if location of player is Nowt Town:
 		if Leo was visible:
 			say "'Oo Boss. We ain't up to dat maze. It's makes us fink too much!' Leo and Rand wait outside.";
-	otherwise:
+	else:
 		if location of player is adjacent to location of Leo:
 			if Leo is not dismissed:
 				if location of player is Saps' Pass and location of hogs is Saps' Pass:
@@ -12454,11 +12444,7 @@ understand the command "this" as something new.
 understand "this" as thising.
 
 carry out thising:
-	if location of player is location of plebe:
-		say "The plebe flinches a bit, but maybe you need something more general?";
-	otherwise:
-		say "No excuse for that sort of language. Really.";
-	the rule succeeds;
+	say "[if location of player is location of plebe]The plebe flinches a bit, but maybe you need something more general?[else]No excuse for that sort of language. Really.[end if]" instead;
 
 chapter chewing
 
@@ -12470,8 +12456,7 @@ understand "chew" as chewing.
 understand "chew [something]" as chewing.
 
 carry out chewing:
-	if noun is gum:
-		say "The gum looks like it tastes like clay." instead;
+	if noun is gum, say "Nah. The gum looks like it tastes like clay. But it looks like you could pull it into something else." instead;
 	try eating noun instead;
 
 chapter Starch Charts
@@ -13476,9 +13461,7 @@ does the player mean doing something with capers recaps when player is in Posh H
 
 understand "book" as Capers Recaps.
 
-check scaning casper:
-	if recaps are reflexed:
-		try scaning recaps instead;
+check scaning casper: try scaning recaps instead;
 
 check scaning recaps when recaps is not reflexed and cheat-on is true:
 	say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
@@ -13486,6 +13469,8 @@ check scaning recaps when recaps is not reflexed and cheat-on is true:
 a-text of capers recaps is "RRRYRY". b-text of capers recaps is "RRR??Y". parse-text of capers recaps is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 check taking capers recaps: say "The whole bar would beat you up for that. Think of other ways to distract the trolls. Disturb the peace more directly." instead;
+
+chapter stein
 
 a stein is a thing in Posh Hops Shop. initial appearance is "You see a stein here by some tines. It looks like it'd almost fit in."
 
@@ -13498,12 +13483,11 @@ description of stein is "It's undoubtedly from the Set-In-Nites corporation, mos
 
 shop-hint-items is a list of thing variable. shop-hint-items is { tines, tips pits, recaps, gins sign, tunes }.
 
-chapter min up rule
+chapter Posh Hops Shop min up rule
 
 to silly-min:
 	increment silly-acts;
-	if silly-acts < 3:
-		min-up;
+	if silly-acts < 3, min-up;
 
 chapter remaping
 
@@ -13515,11 +13499,14 @@ understand "remap [something]" as remaping.
 
 does the player mean remaping the perma-amper: it is very likely.
 
+rule for supplying a missing noun when remaping:
+	if player is in Posh Hops Shop, now noun is perma-amper;
+
 carry out remaping:
 	if noun is perma-amper:
 		if tunes are moot, say "The tunes have already been altered. Remapping won't do any good. Or bad." instead;
 		try fliptoing tunes instead;
-	say "Remapping could break something. So maybe try something else." instead;
+	say "There's only one thing to remap in the game." instead;
 
 remapped is a truth state that varies.
 
@@ -13534,11 +13521,14 @@ understand "spit in/at/on [something]" as spiting.
 
 does the player mean spiting the location: it is very likely.
 
+rule for supplying a missing noun when spiting:
+	if player is in Posh Hops Shop, now noun is tips' pits;
+
 carry out spiting:
-	if noun is tips['] pits or noun is location of player, try fliptoing tips pits instead;
-	if noun is a person, say "You don't want to start a fight." instead;
-	if player is in Cripple Clipper, say "Pointless." instead;
-	say "How rude[if player is in hops shop and tips pits are reflexed]. Once is enough!" instead; [?? test double]
+	if noun is the player, say "I! Pst! It's I! Psst!" instead;
+	if noun is tips['] pits, try fliptoing tips pits instead;
+	if player is in Cripple Clipper or player is in Fighter Freight or player is in Disease Seaside or player is in Rawest Waters, say "Pointless." instead;
+	if noun is a person, say "Loogy-ology is not useful except in one specific case[if noun is a person]. Plus, spitting on people is rude[end if]."; [?? test double]
 
 chapter inseting
 
@@ -13556,7 +13546,7 @@ carry out inseting:
 		if player does not have stein:
 			say "(Taking the stein)";
 			try fliptoing tines instead;
-	say "You can't really inset that--you might be better off inserting it." instead;
+	say "You can't really inset [the noun]--you might be better off inserting it, and even so, inserting is only marginally useful in this game." instead;
 
 chapter unseting
 
@@ -13569,12 +13559,9 @@ understand "unset [something]" as unseting.
 does the player mean unseting tunes: it is very likely.
 
 carry out unseting:
-	if tunes are moot:
-		say "You already dealt with the tunes[if unset-not-remap is false] when you mucked up the perma-amper[end if]." instead;
-	if noun is tunes:
-		try fliptoing tunes instead;
-	if noun is jukebox:
-		say "The jukebox--or the tunes?" instead;
+	if tunes are moot and player is in Posh Hops Shop, say "You already dealt with the tunes[if unset-not-remap is false] when you mucked up the perma-amper[end if]." instead;
+	if noun is tunes, try fliptoing tunes instead;
+	if noun is jukebox, say "The jukebox--or the tunes?" instead;
 	say "That doesn't quite make sense here." instead;
 
 chapter scrapeing
@@ -13589,15 +13576,11 @@ understand "scrape" as scrapeing.
 does the player mean scraping capers recaps: it is very likely.
 
 carry out scrapeing:
-	if noun is casper or noun is capers:
-		if capers is reflexed:
-			say "Casper would be alert to that, now." instead;
-		if noun is casper:
-			say "Hm, what he's writing on would make even more noise...so, let's try that.";
-		try fliptoing recaps instead;
-	d "scrape to attack.";
+	if noun is casper or noun is capers recaps:
+		if capers is reflexed, say "Casper would be alert to that, now." instead;
+		if noun is casper, say "Hm, what he's writing on would make even more noise...so, let's try that.";
+		try fliptoing capersrecaps instead;
 	try attacking noun instead;
-	the rule succeeds;
 
 section insert-shorting
 
@@ -13608,10 +13591,8 @@ understand the command "insert [something]" as something new.
 understand "insert [something]" as insetring.
 
 carry out insetring:
-	if noun is tines or noun is stein:
-		try inserting stein into tines instead;
+	if noun is tines or noun is stein, try inserting stein into tines instead;
 	say "You need to specify what to insert that into." instead;
-	the rule succeeds;
 
 chapter inseting
 
@@ -13628,8 +13609,7 @@ to annoy-trolls:
 	else:
 		say "The trolls and patrons have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
 
-to say gloaty:
-	say "[one of]. The galoots gloat so[or]. They say, what a LOLstr[or]. They act sore to scare, sure you stole a coaster[or][stopping]. Perhaps if you were more obnoxious, they'd be less inclined to keep you in";
+to say gloaty: say "[one of]. The galoots gloat so[or]. They say, what a LOLstr[or]. They act sore to scare, sure you stole a coaster[or][stopping]. Perhaps if you were more obnoxious, they'd be less inclined to keep you in";
 
 to check-silly-death:
 	say "You've caused enough damage for the trolls to kick you out. Any more and they might just kick you. Still, you sure?";
@@ -13676,10 +13656,7 @@ after spilling:
 	if pills are moot and cheated-guy is nothing:
 		d "BUG I mistracked a pill spill.[line break]";
 	else if scams is true:
-		if cheated-guy is nothing:
-			say "PILLS NOT USED SUCCESSFULLY.";
-		else:
-			say "[how-pills-used].";
+		say "[if cheated-guy is nothing]PILLS NOT USED SUCCESSFULLY[else][how-pills-used][end if].";
 	continue the action;
 
 to guy-cheat (gc - a thing):
@@ -13722,7 +13699,7 @@ dialer	"You spill the pills on the dialer, and they change DIALER to enough of t
 
 pill-use is a truth state that varies.
 
-every turn when mrlp is oyster:
+every turn when mrlp is oyster and debug-state is true:
 	d "Current hint item = [oyster-item].";
 
 carry out spilling:
@@ -14549,7 +14526,7 @@ to pearl-check:
 		now player has general gleaner;
 		set the pronoun it to general gleaner;
 		now paler pearl is off-stage;
-	otherwise:
+	else:
 		say "The pearl seems only half a sphere. Maybe the other half is elsewhere.";
 		set the pronoun it to paler pearl;
 		now player has paler pearl;
@@ -16197,7 +16174,7 @@ check pushing repeat button:
 	if raves saver is yow-talk and duck is visible:
 		if duck is friendly:
 			say "You've already got the duck's attention." instead;
-		otherwise:
+		else:
 			say "The duck perks up. It recognizes Dr. Yow's voice! It gives a hankering honk.";
 			now duck is friendly instead;
 	say "[if raves saver is silent]Silence. Nothing has been recorded, yet.[else if raves saver is yow-yell]You hear someone yelling.[else if raves saver is ducky]Quack, quack.[else if raves saver is goosey]Honk, honk.[else]You hear Dr. Yow talking.[end if]" instead;
@@ -16558,29 +16535,20 @@ after scaning (this is the tell us about x in parse mode rule) :
 		now ever-parse is true;
 		ital-say "x means a consonant, as nothing in this game becomes anything with an x in it, and the dash means a vowel.";
 
-before scaning a clue-used thing:
-	say "You read what the settler says--and you realize you already took care of something else like [the noun]." instead;
+before scaning a clue-used thing: say "You read what the settler says--and you realize you already took care of something else like [the noun]." instead;
 
-before scaning a reflexed thing:
-	if noun is not dialer and noun is not sit a nag, say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
+before scaning a reflexed thing: if noun is not dialer and noun is not sit a nag, say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
 
 check opening prison ropins:
-	if Dr Yow is in prison ropins:
-		say "You rattle it a bit, but it's too strong. Probably dead-bolted too, so it's physically impossible to use brute force.";
-	otherwise:
-		say "It's got nothing you want there any more.";
+	say "[if Dr Yow is in prison ropins]You rattle it a bit, but it's too strong. Probably dead-bolted too, so it's physically impossible to use brute force[else]It's got nothing you want there any more[end if].";
 	the rule succeeds;
 
-check opening ropins:
-	say "It's too sturdy, and you've no reason to believe what's behind it is worth visiting." instead;
+check opening ropins: say "It's too sturdy, and you've no reason to believe what's behind it is worth visiting." instead;
 
-check unlocking ropins with duck:
-	if prison ropins is reflexed:
-		say "Almost. You're going about it wrong, though. What do you want the fence to BE? Or be described AS?" instead;
+check unlocking ropins with duck: if prison ropins is reflexed, say "Almost. You're going about it wrong, though. What do you want the fence to BE? Or be described AS?" instead;
 
 before locking (this is the yow unlock rule) :
-	if noun is ropins or noun is fissure:
-		say "[if Dr Yow is in prison ropins]It already is, and two locks won't make an unlock[else]No need to fuss any more[end if]." instead;
+	if noun is ropins or noun is fissure, say "[if Dr Yow is in prison ropins]It already is, and two locks won't make an unlock[else]No need to fuss any more[end if]." instead;
 	say "There's no need to lock anything in this game." instead;
 
 does the player mean unlocking with dagger: it is very likely;
@@ -16596,23 +16564,15 @@ the can't unlock without a lock rule is not listed in any rulebook.
 check unlocking:
 	if player is in Obscurest Subsector:
 		if noun is prison ropins or noun is fissure:
-			if prison ropins is reflexed:
-				say "The prison is already open." instead;
-			if second noun is gizmo:
-				say "You fumble with the gizmo but have utterly no luck. The prison remains locked." instead;
-			if duck is visible:
-				say "The duck looks curiously at what you're trying to do. You can't pick it up, but maybe you can coax the duck with the right word..." instead;
-			if noun is fissure:
-				say "Nothing you have seems to fit in there." instead;
+			if prison ropins is reflexed, say "The prison is already open." instead;
+			if second noun is gizmo, say "You fumble with the gizmo but have utterly no luck. The prison remains locked." instead;
+			if duck is in location of player, say "The duck looks curiously at what you're trying to do. You can't pick it up, but maybe you can coax the duck with the right word..." instead;
+			if noun is fissure, say "Nothing you have seems to fit in there." instead;
 			say "The prison doesn't seem like something you can unlock--well, not with a key. 'Luck...done,' you mumble as you try. 'Done, luck.' You see red. There's nothing that resembles a keyhole. That weird fissure, maybe..." instead;
-	if noun is drab yoke:
-		say "It doesn't seem to have a key or anything. But whatever's inside it might." instead;
-	if noun is isolani liaison:
-		say "[if Gunter is off-stage]Just open it instead[else]With what's outside? Bad idea[end if]." instead;
-	if noun is span pans:
-		say "There's no keyhole in the span pans." instead;
-	if noun is prison ropins:
-		say "[if duck is returned]You already did[else]Yes. There should be a way to open it...but you haven't found a key, or anything like it, anywhere[end if]." instead;
+	if noun is drab yoke, say "It doesn't seem to have a key or anything. But whatever's inside it might." instead;
+	if noun is isolani liaison, say "[if Gunter is off-stage]Just open it instead[else]With what's outside? Bad idea[end if]." instead;
+	if noun is span pans, say "There's no keyhole in the span pans. But there must be some easy way to open the pans!" instead;
+	if noun is prison ropins, say "[if duck is returned]You already did[else]Yes. There should be a way to open it...but you haven't found a key, or anything like it, anywhere[end if]." instead;
 	say "You don't have anything resembling a key, and that doesn't seem to need to be unlocked." instead;
 
 the fissure is part of the ropins. description is "It's rounded, more ovular than elliptical. It doesn't seem to fit any sort of keycard--and you can't see any tumblers in it. It's shaped like a mouth mid-complaint. A name by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]". the fissure is vanishing and auxiliary.
@@ -16670,15 +16630,12 @@ understand the command "rowdy" as something new.
 understand "rowdy" as rowdying.
 
 carry out rowdying:
-	if Dr Yow is not visible:
-		if location of player is not obscurest:
-			say "[reject]" instead;
+	if Dr Yow is not in location of player, say "[reject]" instead;
 	if Dr Yow is rowdy:
 		say "You recharge Dr. Yow's rowdiness.";
-	otherwise:
+	else:
 		say "Dr. Yow appears charged! [he-she-c] begins ranting about scientific solutions and implementations and so forth, and how [one of][he-she] was called [if player is male]wormy Mr. Yow[else]My Sow Ms. Yow[end if] until [he-she] got [his-her] Ph.D., and the worst [he-she] gets is 'Wooly Ol['] Yow' now[or]someone needs to grundy Dr. Yung[or]you can be a weirdo AND woe-rid[or]Dr. Ney is [his-her] idol[cycling]. It's quite a sight[if Dr Yow is in prison ropins], even through the jail door[end if][unless Dr Yow has been rowdy][one of]. You doubt [he-she]'s like this all the time, though. Maybe [he-she] can speak more calmly, in other situations[or][stopping][end if].";
-	unless Dr Yow has been rowdy:
-		reg-inc;
+	unless Dr Yow has been rowdy, reg-inc;
 	now Dr Yow is rowdy;
 	now doc-cool is 3;
 	if agnostic is in location of player, ag-gets-it instead;
@@ -16710,23 +16667,18 @@ understand the command "wordy" as something new.
 understand "wordy" as wordying.
 
 carry out wordying:
-	if Dr Yow is not visible:
-		if location of player is not obscurest:
-			say "[reject]" instead;
+	if Dr Yow is not in location of player, say "[reject]" instead;
 	if Dr Yow is wordy:
 		say "You recharge Dr. Yow's wordiness.";
-	otherwise:
-		say "[if agnostic is visible]Dr. Yow starts discussing Wry Do too theoretical for adolescent ears to appreciate. You hear the agnostic mutter 'Ow. Dry.'[line break][else]Dr. Yow just starts talking about stuff like the weather, etc. It's drivel, a nice version of Dr. Evil[wordy-hinty].[end if]";
-	unless Dr Yow has been wordy:
-		reg-inc;
+	else:
+		say "[if agnostic is visible]Dr. Yow starts discussing Wry Do too theoretical for uninitiated ears to appreciate. You hear the agnostic mutter 'Ow. Dry.'[line break][else]Dr. Yow just starts talking about stuff like the weather, etc. It's drivel, a nice version of Dr. Evil[wordy-hinty].[end if]";
+	unless Dr Yow has been wordy, reg-inc;
 	now Dr Yow is wordy;
 	now doc-cool is 3;
-	if agnostic is visible:
-		say "[line break][if Dr Yow was wordy]Dr. Yow's wordiness isn't helping the agnostic[else]The agnostic initially seems excited as Dr. Yow begins to talk, but it's all a bit too wonky, y'know? It quickly becomes dry--ok, dorky. Perhaps if the presentation were more exciting[end if].";
+	if agnostic is in location of player, say "[line break][if Dr Yow was wordy]Dr. Yow's wordiness isn't helping the agnostic[else]The agnostic initially seems excited as Dr. Yow begins to talk, but it's all a bit too wonky, y'know? It quickly becomes dry--ok, dorky. Perhaps if the presentation were more exciting[end if].";
 	the rule succeeds;
 
-to say wordy-hinty:
-	say "[unless Dr Yow has been wordy][one of]. You doubt [he-she]'s like this all the time, though. Maybe [he-she] can speak more excitingly, in other situations[or][stopping]"
+to say wordy-hinty: say "[unless Dr Yow has been wordy][one of]. You doubt [he-she]'s like this all the time, though. Maybe [he-she] can speak more excitingly, in other situations[or][stopping]"
 
 book Actionless Coastlines
 
@@ -18692,7 +18644,7 @@ after fliptoing a mack-idea:
 		say "Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic.";
 	otherwise if macked-out is 2:
 		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
-	otherwise:
+	else:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
 		moot macks;
@@ -21111,7 +21063,7 @@ check hinting:
 				ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
 				if the player direct-consents:
 					say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
-				otherwise:
+				else:
 					say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
 				ital-say "you can type NO HINT to disable hints for this session, or NOTHIN to disable them fully."
 
