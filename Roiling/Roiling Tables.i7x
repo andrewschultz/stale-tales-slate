@@ -357,7 +357,7 @@ pipe panel fence	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--	"With
 omen prism	persimmon	true	707273074	--	"persimmon"	"persimmon"	--	--	"The omen prism's red outside schlurps and changes color to form something better looking--a persimmon."
 magenta rope	pomegranate	true	769822574	--	"pomegranate"	"pomegranate"	--	post-pomegranate rule	"With a splatch, the note and rant get yellowed and ball themselves up around the rope to form a pomegranate. You have done either Curtis or society a favor by getting rid of those writings."
 prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	pre-kumquat rule	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
-caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	pre-papayas rule	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."
+auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	pre-papayas rule	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."
 quince	quince	true	450223472	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
 peach	peach	true	267747770	--	"cheap"	"cheap"	--	--	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."
 Ammo Gang	mango	true	242122758	--	"among"	"among"	pre-among rule	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token and give you a mango. You let out an OMG. It seems the right thing to do."
@@ -370,7 +370,6 @@ green stain	tangerines	true	757915387	--	"tangerines"	"tangerines/tangerine"	--	
 inapt paint	guava	true	778533808	--	"reversed"	"reversed"	--	--	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
 a brr hub	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	--	--	"The brr hub expands and lengthens. It turns a bit greener. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Even weird fruit like rhubarb."
 buried raft	breadfruit	true	619813094	--	"breadfruit"	"breadfruit"	--	--	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."
-briar screen	cranberries	true	761370255	--	"cranberries"	"cranberries"	--	--	"The prickly screen turns into (you hope) less prickly cranberries."
 a banna'	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
 orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!"
 coin	icon	false	207258516	--	"icon"	"icon"	--	--	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money."
@@ -878,7 +877,7 @@ this is the post-yak-keyboard rule:
 	check-trivial-presto-llp;
 
 this is the pre-tba-tab rule:
-	if yak is in location of player or yak is on skid:
+	if yak-around:
 		say "The yak generates an apathy that doesn't allow this. Yet.";
 		preef TBA key;
 		do nothing instead;
