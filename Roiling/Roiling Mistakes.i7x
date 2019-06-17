@@ -598,6 +598,8 @@ understand "atn" as a mistake ("You've already got the ant's attention. You'll n
 
 understand "nat" as a mistake ("You don't need to name the ant. It's not a pet.") when player is in Plasm Lamps.
 
+understand "splam" as a mistake ("There's a simpler way to attack the ant.") when player is in Plasm Lamps.
+
 chapter Tenfold Teflon'd Den Loft
 
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.

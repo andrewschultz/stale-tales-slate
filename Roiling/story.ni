@@ -1946,7 +1946,7 @@ Hostile-Is-He Lot	"They complain[hostile-red]!"
 Atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if flowerpot is reflexed]St. Teri looks at your flowerpot, sadly[else if player has crocus]St. Teri looks at your flowerpot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
+Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your flowerpot, sadly[else if crocus is not moot]St. Teri looks at your flowerpot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
@@ -2224,7 +2224,7 @@ Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yor
 Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but the Tetris Sitter's observations were a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
 Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know. They're nice, but ... they don't help ENOUGH.'[else if crocus is moot]Don't push-poll her about your generosity.[else if crocus is in flowerpot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
 Tetris Sitter	flowerpot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
-Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'There's a name. I sort of miss him.'[else if flowerpot is reflexed]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
+Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'There's a name. I sort of miss him.'[else if crocus is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
 macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
@@ -5916,12 +5916,11 @@ rule for supplying a missing noun when entering:
 chapter waiting
 
 check waiting:
-	if mrlp is troves:
-		if player is in Drain Nadir, say "Solo detail? Isolated? No. Desolation." instead;
-		if cur-score of troves is 0, say "That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping]." instead;
-		if player is in Upscale Capsule, say "You're...thinking hard. No really." instead;
-		say "You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say." instead;
-	if carps are in location of player, try listening instead;
+	if player is in Drain Nadir, say "Solo detail? Isolated? No. Desolation." instead;
+	if player is in Upscale Capsule, say "You're...thinking hard. No really." instead;
+	if mrlp is troves, say "[if cur-score of troves is 0, say "That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping][else]You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say[end if]." instead;
+	if carps are in location of player, try listening instead; [oyster]
+	if player is in dourest detours, say "You see red and feel like a true sod." instead; [towers]
 	say "[randbla][line break]" instead;
 
 chapter drinking
@@ -5995,7 +5994,7 @@ procedural rule while eating something:
 check eating (this is the general eating rule):
 	if noun is grid, say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead; [ordeal reload]
 	if noun is balancer barnacle, say "It is a balancer barnacle. Another would come along to eat you." instead; [stores]
-	if noun is mushrooms, say "One of them is probably poisonous, and not even I can tell[if list o toils is examined]. Plus, Brother Horbert needs them[end if]." instead; [routes
+	if noun is mushrooms, say "One of them is probably poisonous, and not even I can tell[if list o toils is examined]. Plus, Brother Horbert needs them[end if]." instead; [routes]
 	if noun is Bortles Lobster, say "You don't quite feel you deserve to eat it, yet." instead; [troves]
 	if noun is escaroles, say "The escaroles aren't nearly substantial enough." instead; [presto]
 	if noun is casserole, say "Ugh. You're not sure what's in the casserole, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
@@ -12934,7 +12933,7 @@ a-text of Tom Alvez is "RYRYRRYR". b-text of Tom Alvez is "RYRYRPYR". parse-text
 
 chapter Lev Tzoma
 
-Tom Alvez is a mazeguide.
+Lev Tzoma is a mazeguide.
 
 a-text of Lev Tzoma is "RYRYRRYR". b-text of Lev Tzoma is "RYRYRPYR". parse-text of Lev Tzoma is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -14258,21 +14257,21 @@ to pearl-check:
 
 book Plasm Lamps
 
-Plasm Lamps is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel rousted from just a true sod and glad you've suffered no redouts."
+Plasm Lamps is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel like going SPLAM! SPLAM! with it."
 
-bogus-lamps is privately-named vanishing LLPish scenery in plasm lamps.
+bogus-lamps is privately-named reflexive LLPish scenery in plasm lamps. description of bogus-lamps is "They light this murky area, [if bogus-lamps are reflexed]and you managed to be clever around them[else]but maybe they present another challenge[end if].".
 
 a-text of bogus-lamps is "RRYRR". b-text of bogus-lamps is "?R?R?". parse-text of bogus-lamps is "x[sp]x[sp]-[sp]x[sp]x".
 
 plasm-warn is a truth state that varies.
 
-check going outside in Plasm Lamps: say "C'mon. The natant ant isn't meant to be tough. [if bogus-lamps is moot]You already did the bonus preparation[else]Not as tough as the other optional point here[end if]." instead;
+check going outside in Plasm Lamps: say "C'mon. The natant ant isn't meant to be tough. [if bogus-lamps are reflexed]You already did the bonus preparation[else]Not as tough as the other optional point here[end if]." instead;
 
 after looking in Plasm Lamps:
 	it-him-her the ant;
 	continue the action;
 
-the natant ant is a flippable animal in Plasm Lamps. "Attn: an ant! It is swimming about in the plasm on the floor, making it a NATANT ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are moot]. But maybe you can show something for style points, first[end if]."
+the natant ant is a flippable animal in Plasm Lamps. "Attn: an ant! It is swimming about in the plasm on the floor, making it a NATANT ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are reflexed]. But maybe you can show something for style points, first[end if]."
 
 check taking natant ant: say "The action for dealing with the ant is even shorter and easier than TAKE. But not GET." instead;
 
@@ -14296,7 +14295,7 @@ does the player mean taning the natant ant: it is very likely;
 carry out taning:
 	if noun is not natant ant, try attacking noun instead;
 	say "Whack! Pow! 'Scum ant! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!";
-	if bogus-lamps are not moot:
+	if bogus-lamps are reflexive:
 		say "[line break]And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.";
 		poss-d;
 	reg-inc; [this is an optional point, but it was already predestined by you entering]
@@ -14567,7 +14566,7 @@ book Lapsin' Plains
 to say knob-link:
 	say "[if knob is in Lapsin' Plains], linked by a knob,[end if]"
 
-Lapsin' Plains is north of Anger Range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. Sloppy polyps make travel advisable everywhere except past [if pans are in Lapsin' Plains]the pans[else]where the pans were[end if] and back south."
+Lapsin' Plains is north of Anger Range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. Sloppy polyps make travel inadvisable everywhere except past [if pans are in Lapsin' Plains]the pans[else]where the pans were[end if] and back south."
 
 the sloppy polyps are plural-named bounding boring scenery in Lapsin' Plains. description of sloppy polyps is "Maybe the polyps are holding the plains together, but crossing them would be inadvisable. You can guess why.". bore-text is "It's more likely the sloppy polyps would do something with you instead of the other way around. You don't need to go beyond.".
 
@@ -14619,7 +14618,7 @@ understand the command "embrace" as something new.
 
 chapter splaining
 
-bogus-plains is privately-named LLPish reflexive scenery in Lapsin' Plains. understand "plains" as bogus-plains when player is in Lapsin' Plains and debug-state is true. bogus-plains is undesc. printed name is "all around the plains"
+bogus-plains is privately-named LLPish reflexive scenery in Lapsin' Plains. understand "plains" as bogus-plains when player is in Lapsin' Plains and debug-state is true. printed name is "all around the plains". description of bogus-plains is "The plains would be bigger except for the sloppy polyps."
 
 understand "bp" as bogus-plains when debug-state is true.
 
@@ -15491,6 +15490,8 @@ book Loftier Trefoil
 
 Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightly classier than servant taverns. Still, you can't afford to stay, and you can't leave it with Rodney around. It has other rooms, but since this isn't an RPG, the cellar below and rooms upstairs are off-limits.".
 
+last-loc of Towers is Loftier Trefoil.
+
 after looking in Loftier Trefoil:
 	set the pronoun him to rodney;
 	set the pronoun them to w-p;
@@ -16047,7 +16048,7 @@ check giving gizmo to agnostic:
 	else:
 		say "'Wow! That'd be neat if I had something to build.'" instead;
 
-description of agnostic is "Freckly-faced and buck-toothed and talking to [him-her]self[if Dr Yow is visible]. [he-she-c]'s visibly [i][at-ten][r] just being around Dr. Yow[end if].";
+description of agnostic is "Freckly-faced and buck-toothed and talking to [him-her]self[if Dr Yow is in location of player]. [he-she-c]'s visibly [i][at-ten][r] just being around Dr. Yow[end if].";
 
 to say at-ten:
 	say "[if agnostic is reflexed]attentive[else]tentative[end if]"
@@ -16109,7 +16110,7 @@ after printing the locale description for Shaven Havens when havens-visit is fal
 	now havens-visit is true;
 	continue the action;
 
-The lone duck is an animal in Shaven Havens. "[if lone duck is friendly]That[else]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if agnostic is visible], and it's ignoring the agnostic[end if]."
+The lone duck is an animal in Shaven Havens. "[if lone duck is friendly]That[else]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if agnostic is in location of player], and it's ignoring the agnostic[end if]."
 
 a-text of lone duck is "YRRYRRYR". b-text of lone duck is "YRRYRRYR". parse-text of lone duck is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -16278,16 +16279,13 @@ check entering fissure: say "It's not the right size or shape for you." instead;
 
 section rowdying
 
-every turn (this is the cool rowdy rule):
-	if doc-cool > 0:
-		decrement doc-cool;
-		if doc-cool is 1:
-			if Dr Yow is visible:
-				say "Dr. Yow was [if Dr Yow is rowdy]rowdier[else]wordier[end if] a bit ago. Now [he-she]'s worried.";
-		if doc-cool is 0:
-			if Dr Yow is visible:
-				say "Dr. Yow quits talking. [he-she-c]'s not [if Dr Yow is rowdy]rowdy[else]wordy[end if] any more.";
-			now Dr Yow is calm;
+every turn when doc-cool > 0 (this is the cool rowdy rule):
+	decrement doc-cool;
+	if doc-cool is 1:
+		if Dr Yow is in location of player, say "Dr. Yow was [if Dr Yow is rowdy]rowdier[else]wordier[end if] a bit ago. Now [he-she]'s worried.";
+	if doc-cool is 0:
+		if Dr Yow is in location of player, say "Dr. Yow quits talking. [he-she-c]'s not [if Dr Yow is rowdy]rowdy[else]wordy[end if] any more.";
+		now Dr Yow is calm;
 
 doc-cool is a number that varies. doc-cool is usually 0.
 
@@ -16339,7 +16337,7 @@ carry out wordying:
 	if Dr Yow is wordy:
 		say "You recharge Dr. Yow's wordiness.";
 	else:
-		say "[if agnostic is visible]Dr. Yow starts discussing Wry Do too theoretical for uninitiated ears to appreciate. You hear the agnostic mutter 'Ow. Dry.'[line break][else]Dr. Yow just starts talking about stuff like the weather, etc. It's drivel, a nice version of Dr. Evil[wordy-hinty].[end if]";
+		say "[if agnostic is in location of player]Dr. Yow starts discussing Wry Do too theoretical for uninitiated ears to appreciate. You hear the agnostic mutter 'Ow. Dry.'[line break][else]Dr. Yow just starts talking about stuff like the weather, etc. It's drivel, a nice version of Dr. Evil[wordy-hinty].[end if]";
 	unless Dr Yow has been wordy, reg-inc;
 	now Dr Yow is wordy;
 	now doc-cool is 3;
@@ -16376,7 +16374,7 @@ this is the bore-thearchy-hatchery rule:
 		if player is in Artist Traits Strait, say "[if the-hostile are moot]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 		say "That would probably be sacrilegious. You'd get a good scolding, I'm sure." instead;
 
-description of Thearchy Hatchery is "It's a pretty impressive structure, with a note 'RIP once-sad deacons: aced, son (just before release 4).' Hmm[if the-hostile is visible]. You'd think [relig-mf] would belong there, but maybe they are trying to preach to whatever masses drop by[end if]."
+description of Thearchy Hatchery is "It's a pretty impressive structure, with a note 'RIP once-sad deacons: aced, son (just before release 4).' Hmm[if the-hostile is in location of player]. You'd think [relig-mf] would belong there, but maybe they are trying to preach to whatever masses drop by[end if]."
 
 book side-path rooms
 
@@ -16412,7 +16410,7 @@ section strudel
 
 some strudel is a LLPish reflexive hintpastry in Fringe Finger. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
-understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is visible
+understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is in location of player
 
 a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
 
@@ -16663,10 +16661,10 @@ to decide whether the action is procedural: [aip]
 
 definition: a thing is followy:
 	if it is rodney, no;
-	if it is a warrior and it is visible, yes;
+	if it is a warrior and it is in location of player, yes;
 	no.
 
-chapter Mesprise/Emprise Premise(s)
+book Mesprise/Emprise Premise(s)
 
 Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
@@ -16680,17 +16678,10 @@ check going east in Mesprise Premises (this is the force give flowerpot rule):
 	if player has flowerpot and flowerpot contains crocus and Tetris Sitter is reflexed:
 		say "Before you leave, you remember Ornate Atoner Renato's speech--the flowerpot seems like a nice gift for the Tetris Sitter, now she's not stuck on her game. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
 		moot flowerpot;
+		reg-inc;
 	continue the action;
 
 Ornate Atoner Renato is an undesc.
-
-before giving the crocus to:
-	try giving flowerpot to second noun instead;
-
-before showing the crocus to:
-	try showing flowerpot to second noun instead;
-
-understand "flower" as crocus.
 
 check giving to Tetris Sitter:
 	if second noun is crocus, try giving flowerpot to Tetris Sitter instead;
@@ -16706,11 +16697,13 @@ check giving to Tetris Sitter:
 
 check going outside in Mesprise Premises: try going east instead;
 
+chapter welt-proof flowerpot
+
 the welt-proof flowerpot is a container. description of flowerpot is "You don't know what good welt-proofing will do, but it seems pretty sturdy. The [if bulb is in flowerpot]blub bulb[else]succor crocus you found under the ur-pine[end if] rests in the flowerpot."
 
 check examining welt-proof flowerpot: ignore the examine containers rule;
 
-the blub bulb is a thing. the flowerpot contains the blub bulb.
+the blub bulb is a boring thing. description of blub bulb is "One look makes you b blu and not bubl. But maybe it can become something cheerier some day.". the flowerpot contains the blub bulb. bore-text of blub bulb is "You don't want to mess with the blub bulb. Maybe it could become something better, but it's fragile. Growing plants takes time."
 
 after printing the name of the flowerpot while taking inventory:
 	say " (holding a [if crocus is in flowerpot]succor crocus[else]blub bulb[end if])";
@@ -16731,13 +16724,22 @@ check wearing the flowerpot: say "Devo is not accepting new members." instead;
 
 check putting on the flowerpot: say "The flowerpot is just for holding a flower. Or future flowers." instead;
 
-check taking crocus: say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]. Taking it from the flowerpot might ruin it for good." instead;
+chapter succor crocus
 
-the succor crocus is an LLPish flippable thing. "A succor crocus lies here, full of livid colors that don't make you happier."
+before giving the crocus to: try giving flowerpot to second noun instead;
+before giving the blub bulb to: try giving flowerpot to second noun instead;
 
-description of crocus is "[if flowerpot is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
+before showing the crocus to: try showing flowerpot to second noun instead;
+before showing the blub bulb to: try showing flowerpot to second noun instead;
 
-a-text of crocus is "RYRRO". b-text of crocus is "PYRRO". parse-text of crocus is "d[sp]i[sp]x[sp]x[sp]y". crocus is parse-spoilable.
+understand "flower" as crocus.
+
+the succor crocus is a boring LLPish flippable thing. "A succor crocus lies here, full of livid colors that don't make you happier."
+
+this is the bore-crocus rule:
+	if current action is taking, say "No. It took long enough for the crocus to grow." instead;
+
+description of crocus is "It looks much better than the blub bulb it was."
 
 to say new-yerg-thing: now flip-final-clue is true;
 
@@ -16752,9 +16754,8 @@ understand the command "plant" as something new.
 understand "plant [something]" as planting.
 
 carry out planting:
-	if noun is not crocus, say "You can only plant a, well, plant." instead;
-	if flowerpot is reflexive, say "It already is. But maybe you could fix it and replant it." instead;
-	say "The crocus is already in the flowerpot. That is planted enough." instead;
+	if noun is bulb or noun is crocus, say "It already is.";
+	say "You can only plant a, well, plant. One that's not too big." instead;
 
 book Mislit Limits
 
@@ -20045,17 +20046,23 @@ chapter gender dependent greedy person
 
 greedy-person is a person that varies.
 
-Red Rat Art Erd is a person. "[gree-app]."
+Red Rat Art Erd is a person. "[gree-app].". description of Art Erd is "[gree-desc].". bore-text of Art Erd is "[greedy-sez]?". bore-check is bore-greedy rule.
 
-Dr Tera Darter is a female person. "[gree-app].". printed name of Dr Tera Darter is "Dr. Tera Darter".
+Dr Tera Darter is a female person. "[gree-app].". printed name of Dr Tera Darter is "Dr. Tera Darter". description of Dr Tera is "[gree-desc].". bore-text of Dr Tera is "[greedy-sez]?". bore-check is bore-greedy rule.
 
 the chum of dr tera darter is red rat art erd.
 
-to say greedy-s:
-	say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]"
+to say gree-desc: say "Tarred literally and figuratively, [he-she] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her]"
 
-to say trader-clue:
-	say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of moot fruits < 12]Curtis's third gift, after [12 - number of moot fruits in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
+this is the bore-greedy rule:
+	if action is procedural, continue the action;
+	if player has storage, say "You don't want to deal with [greedy-s] any more than you have to." instead;
+
+to say greedy-sez: say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
+
+to say greedy-s: say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]"
+
+to say trader-clue: say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of moot fruits < 12]Curtis's third gift, after [12 - number of moot fruits in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
 
 to say gree-app:
 	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in Scape Space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if][if guava is off-stage], and [he-she] is only partially hiding a sign[end if]"
@@ -20092,19 +20099,6 @@ check giving something to greedy-person:
 		now player has storage instead;
 	if noun is tekno-token, say "Traceable. Be real, cat." instead;
 	say "'An empty payment.' He's not interested in that. Just money." instead;
-
-description of Art Erd is "[gree-desc].". bore-text of Art Erd is "[greedy-sez]?". bore-check is bore-greedy rule.
-
-description of Dr Tera is "[gree-desc].". bore-text of Dr Tera is "[greedy-sez]?". bore-check is bore-greedy rule.
-
-to say gree-desc:
-	say "Tarred literally and figuratively, [he-she] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her]"
-
-this is the bore-greedy rule:
-	if action is procedural, continue the action;
-	if player has storage, say "You don't want to deal with [greedy-s] any more than you have to." instead;
-
-to say greedy-sez: say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
 
 check opening slot: say "It will fit if you give it the right thing." instead;
 
@@ -20998,10 +20992,6 @@ to say yerg-ok:
 
 to say give-croc:
 		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if Mesprise Premises is unvisited]You can, but you don't have to, visit the den to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
-
-to say if-cro:
-	if flowerpot is reflexive:
-		say ", if you figure what to do with the crocus";
 
 to say casp-cap:
 	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or]SCRAPE the blackboard.[minus][cycling]"

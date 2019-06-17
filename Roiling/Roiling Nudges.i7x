@@ -575,7 +575,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "plasm"	297816735	Plasm Lamps	--	--	"You already managed to PSALM." [PLASM LAMPS]
-"plam"	201542769	Plasm Lamps	--	--	"[if bogus-lamps are moot]You did enough[else]Maybe riff on ALL the lamps. But only for fun[end if]."
+"plam"	201542769	Plasm Lamps	--	--	"[if bogus-lamps are reflexed]You did enough[else]Maybe riff on ALL the lamps. But only for fun[end if]."
 "ant"	174205344	Plasm Lamps	--	--	"That's close. Something brutal and direct."
 "tenfold"	475534036	tenfold	--	--	"[locname]." [TENFOLD TEFLON'D DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."
@@ -772,7 +772,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "erip"	339588717	--	unripe ur-pine	--	"It's officially an ur-pine, not a pine."
 "pester"	621785964	--	serpent	--	"The serpent doesn't just pester, it's pester'n."
 "present"	690693472	--	--	serpent-hiding rule	"The serpent is taken care of."
-"occurs"	399067323	--	crocus	--	"[if flowerpot is reflexive]You realize you can't change the crocus to something, but you can change its condition--it's dying[else]The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it[end if]."
+"occurs"	399067323	--	succor crocus	--	"Changing the blub bulb to a succor crocus was good enough. Why risk more?"
 "accurst"	430012582	--	accurst leap	--	"[focus-castle]."
 "leap"	265273725	--	accurst leap	--	"[focus-castle]."
 "clear"	288137154	--	clear catsup	--	"[focus-castle]."
@@ -1591,7 +1591,7 @@ to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you ch
 
 to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway"
 
-to say flow-fine: say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if Mislit Limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"
+to say flow-fine: say "The flowerpot [if crocus is in flowerpot]itself [end if]is just fine--[if Mislit Limits are unvisited]you haven't found anything to put in it yet[else if ur-pine is reflexed], and so is the crocus in it[else]. Maybe something around here could go in it[end if]"
 
 this is the got-pot rule:
 	if flowerpot is not off-stage, the rule succeeds;

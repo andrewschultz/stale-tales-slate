@@ -1162,7 +1162,7 @@ this is the post-weeds-sewed rule:
 this is the post-urpine-punier rule:
 	now blub bulb is in location of player; [?? I forget if this is necessary but I am being overcautious]
 	moot blub bulb;
-	now crocus is in flowerpot;
+	now succor crocus is in flowerpot;
 
 this is the pre-strudel-rustled rule:
 	if player has strudel and strudel is reflexive, say "(Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)";
