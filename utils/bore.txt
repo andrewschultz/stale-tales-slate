@@ -1,0 +1,8 @@
+bore-propaganda rule
+usually the bore-propaganda rule
+bore-exstore rule
+usually the bore-exstore rule
+bore-sparse-spares rule
+usually the bore-sparse-spares rule
+bore-portal rule
+usually the bore-portal rule
