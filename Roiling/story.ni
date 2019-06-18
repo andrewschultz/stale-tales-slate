@@ -4362,10 +4362,10 @@ check scaning location of the player (this is the location scan rule):
 		say "The settler points towards the door and the trolls.";
 		try scaning trolls instead;
 	if location of player is freight, try scaning pale plea instead;
-	if location of player is Hardest Trashed Dearths, say "The air's full of eeks, which your settler picks up." instead;
+	if location of player is Hardest Trashed Dearths:
+		say "The air's full of eeks, which your settler picks up.";
 		try scaning eeks instead;
-	if location of player is plains:
-		if bogus-plains is reflexive, say "[full-monty of bogus-plains]" instead;
+	if location of player is plains and bogus-plains is reflexive, say "[full-monty of bogus-plains]" instead;
 	if location of player is Minded Midden and bleary barley is reflexive, try scaning bleary barley instead; [start otters]
 	if location of player is clangier: [start others]
 		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of Ammo Gang] on your settler." instead;
@@ -4648,7 +4648,7 @@ carry out others-hinting:
 		let levdelt be (fruits-flipped / 4) - curtis-level;
 		say "Flipped [fruits-flipped] Level [curtis-level] delta [levdelt].";
 		if levdelt > 1, say "You can go back to Curtis for [if player has coin or player has icon or player has coins or player has icons or player has s-c or player has s-i]another[else]a[end if] reward[if levdelt > 2]. More than one, in fact[end if][if fruits-flipped >= 20]. You've gotten all the fruits you need[end if]." instead;
-	if player is in Gates Stage and if passport is off-stage, all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
+	if player is in Gates Stage and passport is off-stage, all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
 	if droll dollar is not off-stage and enuf-fruit-poke is false:
 		now enuf-fruit-poke is true;
 		say "You have gotten enough fruits, so from here on out you'll need to hint something specific if you want to change it. You'll want to go [if player is in Gates Stage]north of the gates[else if Gates Stage is visited]back north to the Gates Stage[else]north[end if]." instead;
@@ -4665,7 +4665,7 @@ carry out others-hinting:
 		if droll dollar is off-stage, say "You'll eventually want to get that storage box down the road.";
 		if storage box is in Scape Space and player has droll dollar, try objhinting storage box instead;
 	abide by the fruit-hint rule;
-	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you can HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left > 0]. There [fruits-to-clear] you can still pick off here[else if player is not in Gates Stage]. There are no more fruits to scrounge up here[end if]."
+	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you can HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left > 0]. There [fruits-to-clear] you can still pick off here[else if player is not in Gates Stage]. There are no more fruits to scrounge up here[end if].";
 	the rule succeeds;
 
 to say fruits-to-clear: say "[if fruits-left is 1]is[else]are[end if] [fruits-left in words] fruit[if fruits-left > 1]s[end if]"
@@ -4695,7 +4695,7 @@ clearing-hintables is a list of things variable. clearing-hintables is { melon, 
 
 scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', orange, a brr hub, inapt paint }
 
-to decide which list is my-fruit-list:
+to decide which list of things is my-fruit-list:
 	if moss cap is off-stage, decide on rustic-easy-items;
 	if moss cap is moot, decide on rustic-hard-items;
 	if player is in Swell Wells, decide on wells-hintables;
@@ -5116,7 +5116,8 @@ to any-guardian-hint: [note: we are assured there is > 1 guardian]
 		ital-say "in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to HINT (guardian) instead.";
 		now gua-warn is true;
 	if guar-here is 1:
-		try objhinting a random guardian in location of player;
+		let myg be a random guardian in location of player;
+		try objhinting myg;
 		continue the action;
 	repeat with D running through { north, east, west, south }:
 		repeat with VG running through guardians in location of player:
@@ -5918,7 +5919,7 @@ chapter waiting
 check waiting:
 	if player is in Drain Nadir, say "Solo detail? Isolated? No. Desolation." instead;
 	if player is in Upscale Capsule, say "You're...thinking hard. No really." instead;
-	if mrlp is troves, say "[if cur-score of troves is 0, say "That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping][else]You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say[end if]." instead;
+	if mrlp is troves, say "[if cur-score of troves is 0]That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping][else]You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say[end if]." instead;
 	if carps are in location of player, try listening instead; [oyster]
 	if player is in dourest detours, say "You see red and feel like a true sod." instead; [towers]
 	say "[randbla][line break]" instead;
@@ -6437,7 +6438,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
 	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
-	if noun is mangiest steaming, "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know." instead; [stores]
+	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know." instead; [stores]
 	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
 	if noun is store y or noun is barnacle balancer, say "Seawater scents from [the noun]." instead;
 	if noun is throes hoster, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
@@ -8406,12 +8407,11 @@ before talking to (this is the default talking to rule):
 				now selftalk-warn is true;
 			try objasking noun about noun instead;
 	if noun is door, say "The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
-		repeat through table of default-gen-blather:
-			if noun is default-talker entry, say "[gen-blah entry][line break]" instead;
-		if noun is not brr hub, say "You can only talk to animate objects. This isn't one, or the game (mistakenly or otherwise) doesn't think it's one." instead;
+	repeat through table of default-gen-blather:
+		if noun is default-talker entry, say "[gen-blah entry][line break]" instead;
+	if noun is not brr hub, say "You can only talk to animate objects. This isn't one, or the game (mistakenly or otherwise) doesn't think it's one." instead;
 
-check talking to Mole Elmo (this is the can't talk while Elmo has the rifle rule) :
-	if rifle is not moot, say "'Hostages['] hot gases!' Elmo booms, waving his rifle." instead;
+check talking to Mole Elmo (this is the can't talk while Elmo has the rifle rule) : if rifle is not moot, say "'Hostages['] hot gases!' Elmo booms, waving his rifle." instead;
 
 to say hi-sign: if high-sign is true, say ", even flashing a high sign.";
 
@@ -9909,7 +9909,7 @@ the shells are a boring thing. they are part of store y. the shells are uncluing
 
 section barnacle balancer
 
-the balancer barnacle is a portal. diffic of balancer barnacle is 6. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.".
+the balancer barnacle is a portal. diffic of balancer barnacle is 6. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.". entry-rule of balancer barnacle is enter-oyster rule.
 
 oyster-warn is a truth state that varies.
 
@@ -11082,7 +11082,7 @@ The ME ARTS are plural-named vanishing boring scenery in Boredom Bedroom. descri
 
 a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
 
-to decide which number is further-upscale:
+to decide which number is bedroom-solve:
 	let temp be 0;
 	if lobster is moot, increment temp;
 	if me arts are moot, increment temp;
@@ -11783,7 +11783,7 @@ the dart is a reflexive thing. description is "[if dart is in popgun]Locked and 
 
 the cretins' cistern contains the dart.
 
-checo scaning cretins' cistern:
+check scaning cretins' cistern:
 	if dart is in cistern:
 		say "Hmm...there's a reading when you scan over the dart.";
 		try scaning dart instead;
@@ -12951,7 +12951,7 @@ check going nowhere when location of player is a mazeroom or location of player 
 		now symp-yet is true;
 	say "." instead;
 
-the zaphint rule is listed before the spam can't go that way rule in the check going rulebook.
+the zaphint rule is listed before the main can't go that way rule in the check going rulebook.
 
 before going up when location of player is a mazeroom or location of player is Unwary Runway (this is the photopia reference rule) :
 	say "You know, there was one really fun text adventure where this was the solution. I'd be plagiarizing if that was here. And if you haven't played it, I don't want to spoil it." instead;
@@ -13278,11 +13278,11 @@ understand "spit in/at/on [something]" as spiting.
 does the player mean spiting the location: it is very likely.
 
 rule for supplying a missing noun when spiting:
-	if player is in Posh Hops Shop, now noun is tips' pits;
+	if player is in Posh Hops Shop, now noun is tips pits;
 
 carry out spiting:
 	if noun is the player, say "I! Pst! It's I! Psst!" instead;
-	if noun is tips['] pits, try fliptoing tips pits instead;
+	if noun is tips pits, try fliptoing tips pits instead;
 	if player is in Cripple Clipper or player is in Fighter Freight or player is in Disease Seaside or player is in Rawest Waters, say "Pointless." instead;
 	if noun is a person, say "Loogy-ology is not useful except in one specific case[if noun is a person]. Plus, spitting on people is rude[end if]."; [?? test double]
 
@@ -13335,7 +13335,7 @@ carry out scrapeing:
 	if noun is casper or noun is capers recaps:
 		if capers is reflexed, say "Casper would be alert to that, now." instead;
 		if noun is casper, say "Hm, what he's writing on would make even more noise...so, let's try that.";
-		try fliptoing capersrecaps instead;
+		try fliptoing capers recaps instead;
 	try attacking noun instead;
 
 section insert-shorting
@@ -15251,8 +15251,7 @@ to draw-my-loc: [this draws a black square in your current location]
 
 carry out looking when mrlp is towers (this is the towers YOU ARE HERE redraw rule):
 	now location of player is visited;
-	if can-see-map:
-		draw-my-loc;
+	if can-see-map, draw-my-loc;
 	continue the action;
 
 to wipe-towers-map:
@@ -15824,6 +15823,11 @@ description of ragged dagger is "It can't shag much less gash. For cutting, it's
 
 does the player mean doing something with repeat button when repeat button is not visible: it is unlikely.
 
+this is the saver-check rule:
+	if lone duck is moot, say "[one of]You don't really need to fiddle with the raves saver any more.[or][stopping]"; [?? run paragraph on??]
+	if rawest waters is visited or Mislit Limits is visited, say "The saver has suffered permanent water damage. It doesn't even make any weird warpy noises." instead;
+	if saver is in location of player and player does not have saver, try silently taking raves saver;
+
 check pushing retape button:
 	abide by the saver-check rule;
 	if raves saver is not silent:
@@ -15840,7 +15844,7 @@ check pushing retape button:
 			if raves saver is yow-yell, say "That's already on the saver." instead;
 			say "You record Dr. Yow ranting[prev-rec].";
 			now raves saver is yow-yell instead;
-	if duck is visible:
+	if duck is in location of player:
 		if raves saver is ducky, say "The duck's already on the saver." instead;
 		say "The clicking of the RETAPE button causes the duck to quack inquisitively. The saver records the quacks[prev-rec].";
 		now raves saver is ducky instead;
@@ -16688,7 +16692,7 @@ check giving to Tetris Sitter:
 	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
 		if noun is not flowerpot, say "She mumbles '[']S trite,' [if noun is flowerpot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
 	unless noun is flowerpot, say "St. Teri thanks you, but [if flowerpot is moot]the flowerpot was probably enough[else]that's not quite what she wants[end if]." instead;
-	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but there's nothing in it, yet. Maybe you could find a plant outside. Maybe the unripe ur-pine is hiding something." instead;
+	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
 	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
 	process the maxminchange check rule;
