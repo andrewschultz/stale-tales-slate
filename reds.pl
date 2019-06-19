@@ -53,6 +53,7 @@ my $checkForDup = 0;
 
 my $cur = 0;
 
+my $line_check     = "";
 my $disableSettler = 0;
 my $fileName       = "";
 my $firstString    = 0;
@@ -92,6 +93,13 @@ while ( $cur <= $#av ) {
       $cur++;
       next;
       };
+    /^l=/ && do {
+      die("Already defined a line-check") if $line_check;
+      ( $line_check = $arg ) =~ s/^l=//;
+      print("Line checking $line_check.\n");
+      $cur++;
+      next;
+    };
     /^-?f$/ && do { $fileName = $arg2; $cur += 2; next; };
     /^-?y$/
       && do {
@@ -174,8 +182,13 @@ while ( $cur <= $#av ) {
 
 if ( !$fileName ) {
   if ( $#wordArray == -1 ) {
-    usage();
-    exit();
+    if ($line_check) {
+      @wordArray = get_line_check($line_check);
+    }
+    if ( $#wordArray == -1 ) {
+      usage();
+      exit();
+    }
   }
 PRINTRESULTS:
   $printResults = 1;
@@ -829,6 +842,21 @@ sub open_right_line {
     }
   }
   die("Could not find a match for string $_[0].");
+}
+
+sub get_line_check {
+  open( A, $reds ) || die("No file $reds");
+  my $line;
+  while ( $line = <A> ) {
+    next if ( $line =~ /^#/ );
+    if ( $line =~ /$_[0]/i ) {
+      chomp($line);
+      print("Found line $.: $line\n");
+      $setQYet = ( $line =~ /\?/ );
+      return split( ",", $line );
+    }
+  }
+  die("Oops, did not find string $_[0] in $reds.");
 }
 
 sub usage {
