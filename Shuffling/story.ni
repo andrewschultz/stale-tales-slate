@@ -4009,7 +4009,7 @@ section store f
 
 Store F is a sto. description of store f is "This is odd. It's kind of green on top, brown on the bottom. You smell pine needles and dirt and leaves you can't quite discern[if forest is unvisited]. You think back to the gateway and how you got here. There might be a way to do something to this store[end if].".
 
-lgth of store f is 6. gpos of store f is 6. rpos of store f is 2. cert-text of store f is "-[d1][d1][d1][d1][d1]". rect-text of store f is "F[d1][d1][d1][d1][ast]T".
+lgth of store f is 6. gpos of store f is 6. rpos of store f is 2. cert-text of store f is "-[d1][d1][d1][d1][d1]". rect-text of store f is "F[d1][d1][d1][d1][ast]T". rgtext of store f is "[rcn][rc][rc][rc][rc][rc]".
 
 understand "store 6/six" and "6/six" as store f when player is in Trips Strip.
 

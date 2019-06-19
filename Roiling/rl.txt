@@ -9,7 +9,7 @@ raw=roiling-logic-invisiclues-raw.htm
 >GENERAL
 ?Which puzzles are discussed here?
 Only puzzles where the settler throws a question mark in cheat mode.
-There's a brief recap of how to deal with the settler if it doesn't throw a question mark, but since the question mark may be confusing, I tried to break down how it actually helps you long-term once you know how to deal with it.
+There's a brief recap of how to deal with the settler if it doesn't throw a question mark, but since the question mark may be unusually confusing, I tried to break down how it actually helps you long-term once you know how to deal with it.
 ?Can I get a recap of the settler in general in non-cheat mode?
 Yes. If you scan certain items and then see what they should be, you'll notice a pattern. There's some spoilers below, but if you track settler vs. the right word, you should see a pattern.
 Yellow slots wind up as AEIOU: for instance, STABLE is RRYRRY.
@@ -199,6 +199,12 @@ But it does the same for the first: one of S or P must be right.
 The third is O or S, and the fourth is P or T, but since the first and second can't be consonants, the third must be.
 (SP)(SP)O(PT) is left. That means T must be in slot 4.
 SPOT is right, and PSOT is not.
+>>BOARDED ROADBED
+# logic for l'clear cellar
+?How do I see L'Clear Cellar?
+You can't, because it's clear. Oh, you mean if you scan it.
+R?RYRR is what you get, so the ? must be a vowel, and since slot 4 cannot be E and most be A, slot 2 is E. So we have -E-A--.
+But now slot 1 cannot be L or C, so it is R. Slot 3 cannot be L, leaving C. But then slots 5 and 6 only have L remaining. RECALL.
 >>BOREDOM BEDROOM
 # logic for me arts mr east stream tamers
 ?How do I decipher the ME ARTS?

@@ -36,7 +36,7 @@ oyster,toyers
 #same mesa
 #qver of warts do sow drat
 towards,R??Y??R=wartsdo=sowdrat
-inside,diesin
+inside,diesin,dinesi,edisin
 towards,radwost
 #qver of anti sag sit a nag
 against,?RY??RR=antisag=sitanag
@@ -67,7 +67,8 @@ spot,?R??=stop=post
 #qver of sob ever verbose
 observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers
-recall,cEllar
+#qver of l'clear cellar
+recall,R?RYRR=lclear=cellar
 derive,idveer,viered,everid
 #ignore,ergnio,onregi,region,goerin
 reason,noears,sorena,anorse,oasner,asnero

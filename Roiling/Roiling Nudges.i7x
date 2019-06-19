@@ -100,7 +100,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storem"	550941626	--	metros	--	"[so-last]!"
 "storeo"	561219050	--	store o	--	"Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote."
 "storeq"	571272090	--	store q	--	"Nothing happens. You didn't really expect it to since, hey, no u with the q."
-"storer"	572190276	--	store r	--	"Store R led back to the Means Manse last game. It won't go anywhere new, and you don't need or want to go back, right now[if roved is false]. You wouldn't be safe there[end if]."
+"storer"	572190276	--	resort	--	"The resort and Store R led to the Means Manse last game. It won't go anywhere new, and you don't need or want to go back, right now[if roved is false]. You wouldn't be safe there[end if]."
 "stores"	583140439	--	store s	--	"[no-cand]."
 "storex"	599634554	--	store x	--	"[no-way]."
 "shell"	368990052	--	store y	--	"[shell-no]."

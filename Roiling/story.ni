@@ -1726,7 +1726,7 @@ section talk tables
 
 to say uf: say "Any attempt at conversation would be banefully unflyable.[no line break]"
 
-table of reflexive-blather	[ask x about x] [tor] [trb]
+table of reflexive-blather	[ask x about x] [tor] [trb] [xxtalk1]
 him-asked	him-told
 Gunter	"His views would be biased."
 Elmo	"You already know about his mission and what he's done to help you. No time for small talk."
@@ -1848,7 +1848,7 @@ pat-whine is a truth state that varies.
 
 to say pat-rant: now pat-whine is whether or not pat-whine is false; [this is for asking pat anything to get random deli foods]
 
-table of default-gen-blather	[ask x about nonsense] [tod]
+table of default-gen-blather	[ask x about nonsense] [tod] [xxtalk2]
 default-talker	gen-blah
 yourself	"You give an elfish 'Hi, self.' You discuss how maybe the game needs better developed NPCs, or maybe they just need to give more hints."
 tokers	"The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do." [begin stores]
@@ -2022,7 +2022,7 @@ before objasking agnostic about bot boat:
 	if bot boat is off-stage, say "'Ooh, I'd like to make one. I just don't know enough, yet.'" instead;
 	try entering bot boat instead;
 
-table of default-sub-blather	[dsb] [ask x about Gunter]
+table of default-sub-blather	[dsb] [ask x about Gunter] [xxtalk3]
 him-who	him-say
 yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
 aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
@@ -2044,7 +2044,7 @@ to say ohai-casper:
 	else:
 		now casper-mumble is true;
 
-table of subject-blather	[ask x about thing they know about] [tosb]
+table of subject-blather	[ask x about thing they know about] [tosb] [xxtalk4]
 him-who	person-subj	him-say
 Elmo	settler	"This shouldn't be available." [start INTRO]
 Ian	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
@@ -2388,15 +2388,20 @@ to say pick-keep:
 to say around-gone:
 	say "[if Dr Yow is visible]around[else]gone"
 
-table of general-blather	[ask x about any old unusual subject]
+table of general-blather	[ask x about any old unusual subject] [xxtalk5]
 him-who	topic	him-say
 nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
 Gunter	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
 Ian	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too."
+trolls	"horned/hedron" or "horned hedron"	"'Even more fun than here. So we hear.'"
+aunt tuna	"horned/hedron" or "horned hedron"	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'"
+sardine	"horned/hedron" or "horned hedron"	"'I work here. Well, I guard the outside.'"
+walleyes	"horned/hedron" or "horned hedron"	"'Nice place, eh? Especially for not being very nice at all!'"
+yapper	"horned/hedron" or "horned hedron"	"'That's where we are.'"
 
-table of object-blather [this gives people default things to say about stuff, if they are not terse.]
+table of object-blather [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
 person-subj	right-region	him-say
 Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way.'"
 settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
@@ -2404,10 +2409,12 @@ pedanto-notepad	--	"The pedanto-notepad is yours and private. Nobody can help yo
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get there[end if]!'"
 haunter	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
 
-table of popular-blather	[ask anyone about specific topic. Yeah, this fizzled.]
+table of popular-blather	[ask anyone about specific topic. Yeah, this fizzled.] [xxtalk7]
 topic	right-region	him-say
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
+"old warpy" or "old/warpy"	--	"Nobody comes close to understanding Old Warpy. It gets you where you want to go."
+"horned/hedron" or "horned hedron"	--	"The horned hedron is just sort of there and needs to be tackled. You suspect you'll need to find out how on your own."
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
 	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the arid den is moot if this is not true]
@@ -4349,7 +4356,7 @@ check scaning location of the player (this is the location scan rule):
 		if bee-score is 0:
 			say "That bee is all up in your face. So you sort of scan it by default.";
 			try scaning evil bee instead;
-		try scaning cellar door instead;
+		try scaning L'Clear Cellar instead;
 	if location of player is Drain Nadir:
 		if diapers are reflexive, say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the Ires Pad, the diapers, a spider..." instead;
 	if location of player is Hacks' Shack and BUB DUDE EGG is in location of player: [start presto]
@@ -4941,7 +4948,7 @@ carry out troves-hinting:
 			try objhinting evil bee instead;
 		if bee's head is reflexive, try objhinting bee's head instead;
 		if evil bee is reflexive, try objhinting evil bee instead;
-		try objhinting cellar door instead;
+		try objhinting L'Clear Cellar instead;
 	if player is in Drain Nadir:
 		if diapers are in Drain Nadir, try objhinting diapers instead;
 		try objhinting I'd Cede instead;
@@ -5705,7 +5712,7 @@ Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambian
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
 Bustle Sublet	"The reastier arteries lead nowhere good. You [if evil bee is in Bustle Sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
-Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
+Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L'Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad piesy[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
@@ -6438,7 +6445,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
 	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
-	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know." instead; [stores]
+	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!" instead; [stores]
 	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
 	if noun is store y or noun is barnacle balancer, say "Seawater scents from [the noun]." instead;
 	if noun is throes hoster, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
@@ -7271,7 +7278,7 @@ carry out fliptoing (this is the main fliptoing rule):
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
 				say "[the-to entry] to [the-from entry] denied! Push ff to change this![line break]" instead;
 			d "OK, [the-from entry] to [the-to entry].";
-			if the-from entry is reflexive, say "[reject]" instead;
+			if the-from entry is reflexed, say "[reject]" instead;
 			if there is a pre-rule entry, abide by the pre-rule entry;
 			if the-from entry is reflexive, now the-from entry is reflexed;
 			now the-from entry is unfigured;
@@ -7517,7 +7524,7 @@ check going nowhere in Dusty Study:
 Rule for printing the description of a dark room (this is the Dusty Study rule):
 	if location of player is Dusty Study, say "[one of]Rats, kid, it's dark[or]Aww, dark. Awkward[in random order]. You probably can't go stumbling around--you'd poke your eye on that palm, or something. Wouldn't be bright." instead;
 
-the giant pin is an LLPish boring thing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description of boring pin is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "You don't need to change the giant pin, you sense, but you probably could if you wanted.". bore-check is bore-pin rule.
+the giant pin is an LLPish boring thing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description of giant pin is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "You don't need to change the giant pin, you sense, but you probably could if you wanted.". bore-check is bore-pin rule.
 
 this is the bore-pin rule:
 	if current action is pushing or pulling, say "It won't budge. It's tall but too thin to hide a way out, too." instead; [??check if this works in general]
@@ -7976,7 +7983,7 @@ after examining diorama when player is in Dusty Study and niche-found is false:
 	now niche-found is true;
 	say "Oh, hey, there's some words on the ceiling. MY NICHE. Wonder what those could be." instead;
 
-the niche is flippable boring scenery in Dusty Study. description of the niche is "The words MY NICHE have a square dotted outline around them.". bore-text is "It's--well, it's not close enough to do much with.";
+my niche is flippable boring scenery in Dusty Study. description of my niche is "The words MY NICHE have a square dotted outline around them.". bore-text is "It's--well, it's not close enough to do much with.";
 
 understand "my niche" and "my" as niche
 
@@ -8244,7 +8251,7 @@ check going inside in Carven Cavern:
 	if act ruin curtain is in Carven Cavern:
 		now curtain-know is true;
 		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it." instead;
-	say "You walk through the former act ruin curtain--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
+	say "You walk through the former act ruin curtain--and through an obscure part of Old Warpy, the mysterious area of Yorpwald that connects distant and seemingly unrelated parts of Yorpwald. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	moot satchel;
 	moot teariest treatise;
 	solve-region Ordeal Reload;
@@ -8890,7 +8897,7 @@ definition: a thing (called mbbl) is blurry:
 table of altviews
 altview	alttext
 darkness	"a weird outline in the darkness" [routes]
-cellar door	"a cellar door (no, it can't be THERE)" [troves]
+L'Clear Cellar	"the outline of L'Clear Cellar. You check: nope, not there" [troves]
 lager	"the can of Large Regal Lager (with the rubbish story on it lit up too)"
 rubbish story	--
 praise	"the praise floating in the air"
@@ -9481,7 +9488,6 @@ check entering a sto:
 	if noun is store c, say "You'd have to show ID. Then they'd know who you were. Then Elvira would have you arrested. Plus, ew." instead;
 	if noun is store h, say "[if roved is true]You need to figure how to convert Store H into something different[else]Store H looks so wild and confusing, you're disoriented when approaching it. Maybe take care of Elvira first[end if]." instead;
 	if noun is store k or noun is store n, say "That looks distinctly too seedy. It actually does need to be demolished, somehow." instead;
-	if noun is store r, say "You can't go back to your resort. Not until Elvira's dispatched." instead;
 	if noun is useless, say "There's nothing you'd want in that store, even if you were shopping." instead;
 	if noun is flippable, say "Probably not in its present state." instead;
 	say "You're not here to shop. You're here to save Yorpwald[if noun is nonreflexive]. Not shop in some random store[one of]. You changed a few other stores to get where you needed before--maybe do that again[or]. Like this one[stopping][else], and you remember how changing stores helped you get places before[end if]." instead;
@@ -9777,7 +9783,7 @@ section odorant tornado
 the odorant tornado is a portal. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if grey gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if grey gyre is visited]re-[end if]ENTER them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-presto rule.
 
 this is the enter-presto rule:
-	say "[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
+	say "[one of]Shoof! Foosh! A tentacle of Old Warpy snatches at you as you enter the odorant tornado, and you don't stop spinning for a minute. [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through the odorant tornado and Old Warpy again, managing to land on your feet this time.[stopping]"
 
 chapter store q
 
@@ -9787,9 +9793,9 @@ understand "store 17/seventeen" and "17/seventeen" as store q when player is in 
 
 chapter store r
 
-the resort is an exstore in Strip of Profits. description of Store R is "It could lead back to the (not really) resort from your first time, to your Means Manse. But that would be backtracking, and you would not be welcome or safe there."
+the resort is an exstore in Strip of Profits. description of resort is "It would probably lead back to the Means Manse, which is surrounded. So, bad idea."
 
-understand "store 18/eighteen" and "18/eighteen" as store r when player is in Strip of Profits.
+understand "store 18/eighteen" and "18/eighteen" as resort when player is in Strip of Profits.
 
 chapter store s
 
@@ -9817,8 +9823,8 @@ this is the enter-otters rule:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
 		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
-	if minded midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]And yet, once through, your powers feel dormant, but thankfully not mordant.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
-	say "[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
+	if minded midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
+	say "[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
 	pad-rec-q "asking";
 
 chapter store u
@@ -9840,7 +9846,7 @@ section course source
 the course source is a portal. diffic of course source is 3. understand "routes" as course source when player is in strip of profits. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if same mesa is visited]re[end if]enter it.". entry-rule of course source is enter-routes rule. go-region of course source is Routes.
 
 this is the enter-routes rule:
-	say "[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
+	say "[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and each seems to lead through Old Warpy, anyway. But still you keep walking, until you cross a red line and hear a buzz. There is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 
 chapter store v
 
@@ -9861,7 +9867,7 @@ section Tastee Estate
 the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
 
 this is the enter-troves rule:
-	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
+	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. Yourun through the darkness, and when it finally gets light, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 
 chapter store w
 
@@ -9885,7 +9891,7 @@ this is the enter-towers rule:
 		else:
 			say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of portals in strip of profits is 1]stores[else if number of stos in strip of profits is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the balancer barnacle[end if]. Proceed anyway?";
 			unless the player yes-consents, say "You decide to look around a bit more." instead;
-	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
+	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, and of course you feel that churning sensation that only happens when you discovered Old Warpy accidentally, and you can't tell when you're out for a while, but eventually you realize you have arrived at the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 
 chapter store x
 
@@ -9917,7 +9923,7 @@ this is the enter-oyster rule:
 		else:
 			say "The oyster looks very wide but not tall--it's quite possible there's a ton to do. It's not particularly magical or scary--not as much as [if store w is in location of player]store W[else if towers is not unsolved]the towers were[else]the truster turrets[end if], but you may want to warm up your skills somewhere else first. Proceed anyway?";
 			unless the player yes-consents, say "You decide to look around a bit more." instead;
-	say "[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
+	say "[one of]You'r a bit worried the balancer barnacle will gobble you up, but Old Warpy puts the jinx on that. You're sucked well away to a bar--so busy and loud people don't notice you fell in. They don't even notice that, unlike them, you are not a seafood person. Err, sea person. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 
 chapter store z
 
@@ -10725,7 +10731,7 @@ chapter two ways out
 
 section da mist
 
-da mist is vanishing scenery in Ripe Pier. description of da mist is "My, It's misty. It phases through shapes, and there doesn't seem to be any clear way through.". bore-check of da mist is bore-mist rule.
+da mist is vanishing boring scenery in Ripe Pier. description of da mist is "My, It's misty. It phases through shapes, and there doesn't seem to be any clear way through.". bore-check of da mist is bore-mist rule.
 
 a-text of da mist is "YRYRRR". b-text of da mist is "YRYRPP". parse-text of da mist is "x[sp]-[sp]x[sp]-[sp]s[sp]t". da mist is parse-spoilable.
 
@@ -10886,7 +10892,7 @@ a-text of heat is "RYRY". b-text of heat is "R?R?". parse-text of heat is "[sp]x
 
 book Bustle Sublet
 
-Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs, not that you'd risk the reastier arteries to get there. Someone seedy owns this area, [randbla]. This messhole with a sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is in Bustle Sublet]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]." [?? todo rewrite]
+Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs, not that you'd risk the reastier arteries to get there. Someone seedy owns this area, [randbla]. This messhole with a sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is in Bustle Sublet]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. You'll need to look around to find what to do." [flipping the stop post now sends you to Boarded Roadbed.]
 
 after looking in Bustle Sublet:
 	set the pronoun it to sob ever verbose;
@@ -10953,9 +10959,9 @@ book Boarded Roadbed
 every turn when player is in Boarded Roadbed:
 	if bee-score > 0:
 		if current action is not listening:
-			say "How to get down to the cellar? The cellar. Distractions have gone, and you're focused there, now[if bee-score is 1]... though you may also have fun smacking the bee down a bit more[end if].[paragraph break]";
+			say "How to discover L'Clear Cellar? Distractions have gone, and you're focused there, now[if bee-score is 1]... though you may also have fun smacking the bee down a bit more[end if].[paragraph break]";
 
-Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help."
+Boarded Roadbed is a room in Troves. "It's odd...bare... But you know L'Clear Cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help."
 
 chapter THE BEE and 2 solutions
 
@@ -10982,7 +10988,7 @@ Include (-
 	has transparent animate
 -) when defining evil bee.
 
-description of evil bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to the cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][else]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score < 2]. It seems pretty [vile-evil][end if]."
+description of evil bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to L'Clear Cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][else]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score < 2]. It seems pretty [vile-evil][end if]."
 
 to say vile-evil: say "[if bee-score is 0]evil[else if bee-score is 1]vile[else]live[end if]"
 
@@ -11015,14 +11021,14 @@ to decide which number is bee-score:
 	if evil bee is reflexed, increment temp;
 	decide on temp;
 
-chapter cellar door (after bee dispatched)
+chapter L'Clear Cellar door (after bee dispatched)
 
-the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is, but maybe walking away for a bit -- or trying to -- will give you some sort of clue what is going on, here.". bore-text of cellar door is "No, you need to do something to find the cellar. Since you can't quite remember...". bore-check of cellar is bore-cellar rule.
+L'Clear Cellar is proper-named vanishing boring scenery in Boarded Roadbed. "You can't really examine L'Clear Cellar if you don't know where it is, but maybe finding ways to hone your mind or remove distractions will give you some sort of clue what is going on, here.". bore-text of L'Clear Cellar is "No, you need to do something to find L'Clear Cellar. Since you can't quite remember...". bore-check of cellar is bore-cellar rule.
 
-a-text of cellar door is "RYRYRR". b-text of cellar door is "RGRYRR". parse-text of cellar door is "x[sp]e[sp]x[sp]a[sp]x[sp]x".
+a-text of L'Clear Cellar is "RYRYRR". b-text of L'Clear Cellar is "R?RYRR". parse-text of L'Clear Cellar is "x[sp]e[sp]x[sp]a[sp]x[sp]x". L'Clear Cellar is cheat-spoilable.
 
 this is the bore-cellar rule:
-	if current action is taking or current action is opening or current action is closing, say "But you're not sure where the door is, so you can't do that." instead;
+	if current action is taking or current action is opening or current action is closing, say "Easier said than done, until you locate L'Clear Cellar." instead;
 
 book Drain Nadir
 
@@ -11382,14 +11388,14 @@ this is the bore-divorces rule:
 
 chapter St Al Salt
 
+the St Al Salt is vanishing boring scenery. printed name of salt is "St. Al Salt". description of salt is "St. Al Salt is, from what you are reading, engineered to maximize your productivity from (motivational stress * remaining years,) much better than other brands. It helps you preserve yourself, sort of. It is emblazoned with a picture of St. Al, recently enshrined as Yorpwald's patron saint of Not Faffing Around.". bore-text is "Your mind stalls at what to do with the salt, or how to ignore it.". bore-check is bore-salt rule.
+
 this is the bore-salt rule:
 	if current action is eating, say "That would be potentially lethal. And gross." instead;
 	if current action is putting on:
 		ignore the can't put what's not held rule;
 		if second noun is lobster, say "That'd ruin it." instead;
 		say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
-
-the St Al Salt is vanishing scenery. printed name of salt is "St. Al Salt". description of salt is "St. Al Salt is, from what you are reading, engineered to maximize your productivity from (motivational stress * remaining years,) much better than other brands. It helps you preserve yourself, sort of. It is emblazoned with a picture of St. Al, recently enshrined as Yorpwald's patron saint of Not Faffing Around.". bore-text is "Your mind stalls at what to do with the salt, or how to ignore it.". bore-check is bore-salt rule.
 
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
@@ -12098,7 +12104,7 @@ this is the bore-mount-um-not rule:
 
 [	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead; ?? ]
 
-Deil's Slide is bounding boring scenery in Saps' Pass. description of Deil's Slide is "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma].". bore-check of deilsslide is bore-deils-slide rule.
+Deil's Slide is bounding boring scenery in Saps' Pass. description of Deil's Slide is "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma].". bore-check of deil's slide is bore-deils-slide rule.
 
 this is the bore-deils-slide rule:
 	if current action is taking, say "The Deil's Slide is more likely to take YOU." instead;
@@ -12919,19 +12925,19 @@ chapter Zo Mavelt
 
 Zo Mavelt is a mazeguide.
 
-a-text of Zo Mavelt is "RYRYRRYR". b-text of Zo Mavelt is "RYRYRPYR". parse-text of Zo Mavelt is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of Zo Mavelt is "RYRYRRYR". b-text of Zo Mavelt is "RYRYRRYR". parse-text of Zo Mavelt is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 chapter Tom Alvez
 
 Tom Alvez is a mazeguide.
 
-a-text of Tom Alvez is "RYRYRRYR". b-text of Tom Alvez is "RYRYRPYR". parse-text of Tom Alvez is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of Tom Alvez is "RYRYRRYR". b-text of Tom Alvez is "RYRYPRYR". parse-text of Tom Alvez is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 chapter Lev Tzoma
 
 Lev Tzoma is a mazeguide.
 
-a-text of Lev Tzoma is "RYRYRRYR". b-text of Lev Tzoma is "RYRYRPYR". parse-text of Lev Tzoma is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of Lev Tzoma is "RYRYRRYR". b-text of Lev Tzoma is "RYRYRRYR". parse-text of Lev Tzoma is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 chapter going nowhere in volt maze
 
@@ -14094,7 +14100,7 @@ check scaning the cans (this is the bonus point rule) :
 
 section eeks
 
-the eeks are plural-named vanishing scenery in Hardest Trashed Dearths. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.". bore-check of eeks is bore-eeks rule.
+the eeks are plural-named boring vanishing scenery in Hardest Trashed Dearths. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.". bore-check of eeks is bore-eeks rule.
 
 a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "x[sp]e[sp]e[sp]x". eeks are parse-spoilable.
 
@@ -14829,7 +14835,7 @@ this is the bore-handsome-sand-home rule:
 
 to say hedron-if-v:	if Horned Hedron is visited, say " to the Horned Hedron"
 
-OH NERD HERD NO is scenery in Sclerous Closures. "OH NERD HERD NO covers the front of the Horned Hedron. I suppose it's not meant to be welcoming.". understand "horned/hedron" and "horned hedron" as OH NERD HERD NO when player is in Sclerous Closures. bore-text of OH NERD HERD NO is "Doing anything with or to a 'welcoming' message isn't constructive.". bore-check of OH NERD HERD NO is bore-onho rule.
+OH NERD HERD NO is boring scenery in Sclerous Closures. "OH NERD HERD NO covers the front of the Horned Hedron. I suppose it's not meant to be welcoming.". understand "horned/hedron" and "horned hedron" as OH NERD HERD NO when player is in Sclerous Closures. bore-text of OH NERD HERD NO is "Doing anything with or to a 'welcoming' message isn't constructive.". bore-check of OH NERD HERD NO is bore-onho rule.
 
 this is the bore-onho rule:
 	if current action is entering, try going north instead;
@@ -15917,13 +15923,13 @@ understand "gander" as geese when geese are in danger garden.
 
 understand "gander garden" as Danger Garden when mrlp is towers and geese are in danger garden..
 
-the geese are useless boring plural-named scenery. description of gander is "You can't get a glimpse of the gander for all their noise.". bore-text is "The gander is noisy but not worth poking for. None of the geese can help you."
+the geese are useless boring plural-named scenery. description of geese is "You can't get a glimpse of the gander for all their noise.". bore-text is "The gander is noisy but not worth poking for. None of the geese can help you."
 
 book Salted Deltas
 
 Salted Deltas is north of Treading Gradient and east of Anemic Cinema. "Leak Lake, with its shoals aslosh, is to the north and far too wide to cross[tow-dirs].". Salted Deltas is in Towers.
 
-s-d are useless scenery in salted deltas. description of s-d is "Not as dangerous as Leak Lake but not worth exploring.". bore-text of s-d is "The Salted Deltas are scenery. No need to futz."
+s-d are useless boring scenery in salted deltas. description of s-d is "Not as dangerous as Leak Lake but not worth exploring.". bore-text of s-d is "The Salted Deltas are scenery. No need to futz.".
 
 understand "salted/ deltas" as s-d. printed name of s-d is "salted deltas".
 
@@ -16519,11 +16525,11 @@ a-text of eastern shore is "RYYRYRR". b-text of eastern shore is "RYYRGRR". pars
 
 section southwestern shore
 
-the southwestern shore is scenery in Rawest Waters. description of southwestern shore is "You can barely see it--the agnostic isn't there either.". bore-text is "No way to get back to the southwestern shore, really."
+the southwestern shore is boring scenery in Rawest Waters. description of southwestern shore is "You can barely see it--the agnostic isn't there either.". bore-text is "No way to get back to the southwestern shore, really."
 
 section northern shore
 
-the northern shore is scenery in Rawest Waters. description of northern shore is "You can barely see it--it's as far as the eastern shore--but it seems darker and more foreboding.". bore-text is "It's too far to swim or do much more than magick."
+the northern shore is boring scenery in Rawest Waters. description of northern shore is "You can barely see it--it's as far as the eastern shore--but it seems darker and more foreboding.". bore-text is "It's too far to swim or do much more than magick."
 
 section raspy spray
 
@@ -20326,11 +20332,11 @@ understand "shall-halls" as Shall Halls.
 
 section design deigns
 
-The Design Deigns are scenery. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain."
+The Design Deigns are boring scenery. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain.". bore-text of design deigns are "They're secret. I haven't even figured some of them out yet, and those I have are in private GitHub repositories. So you can't do much with them. But thanks for your interest."
 
 section talks stalk
 
-a talks stalk is scenery. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs.". bore-text is "You can't do much with the stalk on the other side of the Grate. And the author hasn't, yet. One day, the author will write those games and write postmortems.";
+a talks stalk is boring scenery. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs.". bore-text is "You can't do much with the stalk on the other side of the Grate. And the author hasn't, yet. One day, the author will write those games and write postmortems.";
 
 section Flashed Ad Shelf
 
