@@ -2111,9 +2111,9 @@ hogs	Leo	"They size him up and give a thumbs-down. Then they give you a double t
 hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
 hogs	Elvira	"They snicker and nod."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger." [end presto]
+Trolls	Horned Hedron	"'Even more fun than here. So we hear.'"
 trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]" [start oyster]
 trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
-trolls	h-h	"'Even more fun than here. So we hear.'"
 trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
 trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
 trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
@@ -2149,21 +2149,21 @@ aunt tuna	pre-haun	"'It is searching for a stolen treasure. They say it will wre
 aunt tuna	walleyes	"[fish-these-days]."
 aunt tuna	sardine	"[fish-these-days]."
 aunt tuna	yapper	"[fish-these-days]."
-aunt tuna	h-h	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'"
+aunt tuna	Horned Hedron	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'" [??]
 aunt tuna	Elvira	"'A horrible person! No, I have never met her. But Yorpwald is the worse for her arrival.'"
 aunt tuna	trout	"'He is a good boy despite no fine uncle influence, [if trout is reflexed]and you have helped him to ward off those weirdos so wired in the future[else]but those weirdos so wired may still pick on him[end if].' Tortu blushes at being treated like he might be eavesdropping."
 aunt tuna	ruby	"Aunt Tuna wouldn't believe you knew anything about the jewel[if player has ruby], and seeing it might cause her heart failure[end if]."
 aunt tuna	Casper Spacer	"'A vile man, I'm sure! And those BOOKS of his! Or so I've heard!'"
 sardine	haunter	"'I'd be scared of it, if it existed. And if I was the one stole its jewel. We all would. Well, weak-os are, anyway.'"
 sardine	Elvira	"'I wouldn't have this job if it weren't for her.'"
-sardine	h-h	"'I work here. Well, I guard the outside.'"
+sardine	Horned Hedron	"'I work here. Well, I guard the outside.'"
 haunter	ruby	"It acts all ghostly and asks you to take it where the ruby might be."
 haunter	Elvira	"'Already marked for...' the haunter abruptly stops."
 walleyes	pre-haun	"'Anything to keep the sheeple scared.'"
 walleyes	ruby	"'Bet we could sell it to raise funds for the Base! But we'd keep a nice cut.'"
 walleyes	sardine	"'We'll have fun narcing him out for letting you in. What? He's already gone? Eh.'"
 walleyes	Casper	"'Nice books, love the violence, but too many big words.'"
-walleyes	h-h	"'Nice place, eh? Especially for not being very nice at all!'"
+walleyes	Horned Hedron	"'Nice place, eh? Especially for not being very nice at all!'"
 walleyes	Elvira	"'Helps fund our little social club here.'"
 yapper	dialer	"'Very complex machinery! Shouldn't be used without proper certification.'"
 yapper	gleaner	"'Very pretty! I--well, I know a friend who could be bribed by it.' The yapper winks."
@@ -2174,7 +2174,7 @@ yapper	sardine	"'Pft, foot soldiers, working for mere salary.'"
 yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
 yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
-yapper	h-h	"'That's where we are.'"
+yapper	Horned Hedron	"'That's where we are.'"
 butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'" [start TOWERS]
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
 muscly luc sym	Elvira	"Luc Sym blinks and shrugs and grunts."
@@ -14833,9 +14833,9 @@ this is the bore-handsome-sand-home rule:
 
 to say hedron-if-v:	if Horned Hedron is visited, say " to the Horned Hedron"
 
-h-h is privately-named scenery in Sclerous Closures. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h when player is in Sclerous Closures. printed name of h-h is "the Horned Hedron". bore-text of h-h is "You can't do much with the Horned Hedron itself, or the insulting sign 'welcoming' you to it". bore-check of h-h is bore-h-h rule.
+OH NERD HERD NO is scenery in Sclerous Closures. "OH NERD HERD NO covers the front of the Horned Hedron. I suppose it's not meant to be welcoming.". understand "horned/hedron" and "horned hedron" as OH NERD HERD NO when player is in Sclerous Closures. bore-text of OH NERD HERD NO is "Doing anything with or to a 'welcoming' message isn't constructive.". bore-check of OH NERD HERD NO is bore-onho rule.
 
-this is the bore-h-h rule:
+this is the bore-onho rule:
 	if current action is entering, try going north instead;
 
 the Achers' Chaser Arches are plural-named reflexive scenery in Sclerous Closures. description of Achers' Chaser Arches is "[if Achers' Chaser Arches is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].".
