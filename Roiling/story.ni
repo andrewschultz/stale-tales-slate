@@ -7251,11 +7251,6 @@ check fliptoing (this is the reject flipping with distractions around rule):
 	if noun is alert or noun is log ons or noun is ought:
 		if Rand is not in location of player and noun is in location of player, say "You remember having more fun than you thought you'd have, bashing about with Leo and Rand. It was more fun than you realized at the time. But you have a mission to accomplish." instead;
 
-check fliptoing (this is the by Rand and Leo rule):
-	if noun is log ons or noun is alert or noun is ought:
-		if Leo is in Char Arch, say "You mumble other words to shoo Rand and Leo, but you sort of miss them. Maybe you can get them to provide some muscle." instead;
-	continue the action;
-
 to pill-list (pilly - a thing):
 	if pilly is not a pill-thing listed in table of pill-comments:
 		say "**Need pill entry for [pilly].";
@@ -7269,13 +7264,14 @@ definition: a thing (called th) is pronoun-settable:
 	if th is vanishing, no;
 	yes;
 
-carry out fliptoing:
+carry out fliptoing (this is the main fliptoing rule):
 	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
 			if ff is true:
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
 				say "[the-to entry] to [the-from entry] denied! Push ff to change this![line break]" instead;
 			d "OK, [the-from entry] to [the-to entry].";
+			if the-from entry is reflexive, say "[reject]" instead;
 			if there is a pre-rule entry, abide by the pre-rule entry;
 			if the-from entry is reflexive, now the-from entry is reflexed;
 			now the-from entry is unfigured;
@@ -13317,7 +13313,7 @@ understand "unset [something]" as unseting.
 does the player mean unseting tunes: it is very likely.
 
 carry out unseting:
-	if tunes are moot and player is in Posh Hops Shop, say "You already dealt with the tunes[if unset-not-remap is false] when you mucked up the perma-amper[end if]." instead;
+	if tunes are moot and player is in Posh Hops Shop, say "You already dealt with the tunes[if remapped is true] when you mucked up the perma-amper[end if]." instead;
 	if noun is tunes, try fliptoing tunes instead;
 	if noun is jukebox, say "The jukebox--or the tunes?" instead;
 	say "That doesn't quite make sense here." instead;
@@ -21632,6 +21628,7 @@ this is the oyster-alt rule:
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
 	if olde lode is visited:
 		say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop patrons, though the game restricted you to three of five.";
+		if tunes are moot, say "[2da]You could have also [if remapped is true]UNSET the tunes[else]REMAPped the perma-amper[end if] to break the jukebox.";
 	else:
 		say "[2da]You won't be able to use all actions to leave the shop.";
 	if anger range is unvisited:

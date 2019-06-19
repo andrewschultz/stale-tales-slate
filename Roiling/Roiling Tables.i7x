@@ -123,9 +123,9 @@ maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pr
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-bye rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	--	post-hogs-bye rule	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
-log ons	log ons	false	400300169	--	"solong"	"so long" or "solong"	--	post-harpings-flip rule	"[increm]"
-alert	alert	false	372241587	--	"later"	"later"	--	post-harpings-flip rule	"[increm]"
-ought	ought	false	352450403	--	"tough"	"tough"	--	post-harpings-flip rule	"[increm]"
+log ons	log ons	false	400300169	--	"solong"	"so long" or "solong"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
+alert	alert	false	372241587	--	"later"	"later"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
+ought	ought	false	352450403	--	"tough"	"tough"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
 hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	--	--	"You realize you have done a lot of mental calculations with anagrams, but some of it feels rote, and while Elvira probably overdid it, there are times you relied just on calculation without asking deeper questions. Why is hawt-thaw as it is? Even Yorpwald's best scientists can't answer that question. So, you make a commitment to be more than just someone who finds anagrams, once this whole shebang is over, and you remind yourself that puzzles for their own sake only go so far.[paragraph break]The hawt thaw shrivels up and blows away, leaving you wiser--and more intellectually curious--for its brief presence in your life, even if it doesn't help you on your immediate quest.[paragraph break]You make plans, once Yorpwald is back to normal, to lobby for a Thaws-Swath to answer these questions. It will frequently be wash't, so it doesn't get shawt."
 starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	--	--	"You half-memorize the charts, just in case, before dismissing them. Calling them tras(c)h sort of works as a noun or an interjection, and, well, you needed to rip up something harmless. This act [if shack-flip-yet is true]clues[else]reinforces[end if] to you that the main interjections are mostly used up, and it's probably all nouns and verbs, like the word trash itself, inside the Hacks['] Shack."
 clack ops locs pack	caps lock	true	399038507	--	"capslock"	"capslock" or "caps lock"	--	--	"You think WHOAH as the locs pack morps into a caps lock button, which you pick up."
@@ -156,7 +156,7 @@ gins sign	gins sign	false	242774022 [not really covered in the default verb SING
 tunes	tunes	false	501203408	--	"unset"	"unset"	--	post-tunes-unset rule	"[remap-or-unset]. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect."
 tines	tines	false	441090447	--	"inset"	"inset" or "inset stein/tines"	--	--	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."
 recaps	recaps	false	412063240	--	"scrape"	"scrape"	--	--	"Skr-r-r-r. You give [i]Capers Recaps[r] a good scratch. The fish in the bar, including the trolls, all whip around. You're the only suspect, since you are the only one with anything resembling nails. Casper shoots you an inspired, snide rip. The other patrons glare at you for doing so, too."
-trolls	trolls	false	466688042	Olde Lode	"stroll"	"stroll" or "stroll past/by trolls"	--	--	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"
+trolls	trolls	false	466688042	Olde Lode	"stroll"	"stroll" or "stroll past/by trolls"	pre-trolls-stroll rule	--	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"
 clam	clam	false	139082395	--	"calm"	"calm"	--	post-calm-clam rule	"You try some odd combination of singing and storytelling and jokes which really shouldn't work at all, but then, clams aren't very smart, so it goes over okay. The clam ...(cl)ambulates...off. You notice what it was guarding so aggressively: a beautiful urn you feel pulled to and you can't walk away from!"
 urn	urn	false	259337118	Disease Seaside	"run"	"run"	--	--	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."
 boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boats"	pre-boats-boast rule	--	"You start yelling about how great you are and how you deserve a free ride. A beat-foil lifeboat (not shippish) passes you by, but eventually a Fighter Freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"
@@ -822,6 +822,9 @@ this is the post-hogs-bye rule:
 
 to say h-n-k: now hogs-not-keys is true;
 
+this is the pre-harpings-flip rule:
+	if Leo is in Dirge Ridge, say "You mumble other words to shoo Rand and Leo, but you sort of miss them. Maybe you can get them to provide some muscle." instead;
+
 this is the post-harpings-flip rule:
 	remove noun from byebyes, if present;
 	set the pronoun it to harpings phrasing;
@@ -965,7 +968,13 @@ to say remap-or-unset:
 to say stein-drop:
 	if player has stein:
 		say "[paragraph break]Oh, as you leave, you drop and break the stein. Tiens";
-	moot stein;
+		moot stein;
+
+this is the pre-trolls-stroll rule:
+	if silly-acts >= 3, continue the action;
+	say "[if silly-acts is 0]The trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside[gloaty][else if silly-acts is 1]The trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now[gloaty][else if silly-acts is 2]The trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused[gloaty]. They're not fully on their game, though. Maybe you can be even more annoying[end if].";
+	preef trolls;
+	the rule succeeds;
 
 this is the post-calm-clam rule:
 	now urn is in Olde Lode;
@@ -1536,23 +1545,11 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 
 section oyster
 
-check fliptoing when player is in Posh Hops Shop: [?? if noun is reflexed]
-	if noun is trolls:
-		if silly-acts is 0:
-			say "The trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside[gloaty].";
-			preef trolls;
-			the rule succeeds;
-		if silly-acts is 1:
-			say "The trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now[gloaty].";
-			preef trolls;
-			the rule succeeds;
-		if silly-acts is 2:
-			say "The trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused[gloaty]. They're not fully on their game, though. Maybe you can be even more annoying.";
-			preef trolls;
-			the rule succeeds;
-		continue the action;
-	if silly-acts is 3:
-		check-silly-death instead;
+check fliptoing when player is in posh hops shop:
+	if debug-state is true, say "ping...";
+	if noun is not trolls:
+		if silly-acts is 3:
+			check-silly-death instead;
 
 after fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
@@ -2549,7 +2546,7 @@ tubs	"[one of]The tubs seem tough to crack.[plus][or]You could blast the tubs, o
 prod	"[one of]The prod seems like it should be more than it is, but you can't figure how to operate it.[plus][or]Operating the prod is probably simple and dumb, but something you do by accident.[plus][or]To operate the prod, you need a simple standard action this game doesn't usually let you do.[plus][or]DROP the prod.[minus][cycling]"
 rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The digger can get what's in the plain.[plus][or]How would you summon the HAUNTER?[plus][or]You can UNEARTH it.[cycling]"
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not moot][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
-h-h	"The Horned Hedron is where you need to go [if Horned Hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
+OH NERD HERD NO	"That's just a warning you aren't welcome in the Horned Hedron."
 Achers' Chaser Arches	"[if Achers' Chaser Arches is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
