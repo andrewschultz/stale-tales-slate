@@ -8379,7 +8379,7 @@ chapter Mole Elmo
 
 Mole Elmo is a person. description is "He is waving that rifle you probably need to neutralize. Yet you can't tell if his expression says wry, or worry.". "[if do-i-chat is true]Mole Elmo's rifle changes to a flier[else]Mole Elmo looks at you, then the rifle, half as if he wants you to do something with it[hi-sign][end if].".
 
-Mole Elmo holds the rifle. description of rifle is "It's probably loaded with a bullet with your name on it. But you don't want to find out. You think you can read writing on it, if you look closely.". bore-text of rifle is "You're not in a position to do anything physical with the rifle. Maybe it can become something.";
+Mole Elmo holds the rifle. description of rifle is "It's probably loaded with a bullet with your name on it. But you don't want to find out. You think you can read writing on it, if you look closely.". bore-text of rifle is "You're not in a position to do anything physical with the rifle. Maybe it can become something.". bore-check of rifle is bore-rifle rule.
 
 understand "gun" as rifle.
 
@@ -9983,7 +9983,7 @@ after examining engravings when eng-scan is false:
 
 chapter windows
 
-the windows are useless plural-named boring scenery in Strip of Profits. understand "window" as windows. description of windows is "Unfortunately, you can't do much with the windows. Since stores sort of have to have them, that gets ambiguous. It's probably simpler to refer to the store you want to inspect.". bore-text is "Unfortunately, with all those windows, it's hard to be specific. But you should be able to refer to the store with the windows you want to look in."
+the windows are useless plural-named boring scenery in Strip of Profits. understand "window" as windows. description of windows is "Unfortunately, you can't do much with the windows. Since stores sort of have to have them, that gets ambiguous. It's probably simpler to refer to the store you want to inspect.". bore-text is "Unfortunately, with all those windows, it's hard to be specific. But you should be able to refer to the store with the windows you want to look in.". bore-check of windows is bore-windows rule.
 
 this is the bore-windows rule:
 	if current action is attacking, say "Unfortunately, if you enter a store that way, while it's still a store, there'd be nothing worth exploring.[paragraph break]Plus Elvira'd have a field day if and when you get caught." instead;
@@ -10404,7 +10404,7 @@ check going when THE BEAN is in Same Mesa and player is in Same Mesa:
 
 section a drama armada
 
-a drama armada is plural-named boring scenery. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way.". bore-text is "The drama armada is probably waiting for something, well, dramatic to happen."
+a drama armada is plural-named boring scenery. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way.". bore-text is "The drama armada is probably waiting for something, well, dramatic to happen.". bore-check of drama armada is bore-armada rule.
 
 this is the bore-armada rule:
 	if the action is talkative, say "You could never win them over with a speech. They need to see action." instead;
@@ -11021,7 +11021,7 @@ to decide which number is bee-score:
 
 chapter cellar door (after bee dispatched)
 
-the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is, but maybe walking away for a bit -- or trying to -- will give you some sort of clue what is going on, here.". bore-text of cellar door is "No, you need to do something to find the cellar. Since you can't quite remember...".
+the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is, but maybe walking away for a bit -- or trying to -- will give you some sort of clue what is going on, here.". bore-text of cellar door is "No, you need to do something to find the cellar. Since you can't quite remember...". bore-check of cellar is bore-cellar rule.
 
 a-text of cellar door is "RYRYRR". b-text of cellar door is "RGRYRR". parse-text of cellar door is "x[sp]e[sp]x[sp]a[sp]x[sp]x".
 
@@ -11946,7 +11946,7 @@ after looking in Austerer Treasure:
 	if ye hoop is in Austerer Treasure, set the pronoun it to ye hoop;
 	continue the action;
 
-Ye Hoop is proper-named vanishing boring scenery in Austerer Treasure. description of Ye Hoop is "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is."
+Ye Hoop is proper-named vanishing boring scenery in Austerer Treasure. description of Ye Hoop is "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is.". bore-check of Ye Hoop is bore-hoop rule.
 
 this is the bore-hoop rule:
 	if current action is jumping or current action is pushing or current action is pulling or current action is taking, say "It's too high up to grab. Especially with your possessions weighing you down. You may need to find the right way to say you don't need them for a moment." instead;
@@ -12102,7 +12102,7 @@ this is the bore-mount-um-not rule:
 
 [	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead; ?? ]
 
-Deil's Slide is bounding boring scenery in Saps' Pass. description of Deil's Slide is "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
+Deil's Slide is bounding boring scenery in Saps' Pass. description of Deil's Slide is "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma].". bore-check of deilsslide is bore-deils-slide rule.
 
 this is the bore-deils-slide rule:
 	if current action is taking, say "The Deil's Slide is more likely to take YOU." instead;
@@ -13113,7 +13113,7 @@ Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop.
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of patrons to 0;
 
-the patrons are useless boring plural-named people in Posh Hops Shop. description of patrons is "Indistinguishable from most barflies, er, bar-fish.". bore-text of patrons is "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].".
+the patrons are useless boring plural-named people in Posh Hops Shop. description of patrons is "Indistinguishable from most barflies, er, bar-fish.". bore-text of patrons is "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of patrons is bore-patrons rule.
 
 this is the bore-patrons rule:
 	if current action is attacking, say "You'd be outnumbered." instead;
@@ -13169,12 +13169,14 @@ check scaning jukebox:
 
 the perma-amper is part of the jukebox. understand "perma/amper" as perma-amper.
 
-the perma-amper is an auxiliary boring thing. description of perma-amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.".
+the perma-amper is an auxiliary boring thing. description of perma-amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.". bore-check is bore-perma-amper rule.
 
 a-text of perma-amper is "RYRYR.". b-text of perma-amper is "R?RYR". parse-text of perma-amper is "x[sp]-[sp]m[sp]a[sp]x". perma-amper is cheat-spoilable.
 
 this is the bore-perma-amper rule:
+	if debug-state is true, say "[current action].";
 	if current action is remaping, now boring-exception is true;
+	if debug-state is true, say "[boring-exception].";
 
 the song buttons are part of the jukebox. description is "They're number and letter, though you're not familiar with the song, so no one button seems worse than any other. You hope."
 
@@ -13679,7 +13681,7 @@ this is the bore-boats rule:
 
 description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the boats[end if]."
 
-Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade so fast you can't stop blinking and looking around. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
+Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade so fast you can't stop blinking and looking around. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up.". bore-check of Saccade Cascade is bore-cascade rule.
 
 this is the bore-cascade rule:
 	if current action is taking, say "Saccade Cascade drips through your fingers. You blink." instead;
@@ -14096,7 +14098,7 @@ check scaning the cans (this is the bonus point rule) :
 
 section eeks
 
-the eeks are plural-named vanishing scenery in Hardest Trashed Dearths. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.".
+the eeks are plural-named vanishing scenery in Hardest Trashed Dearths. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.". bore-check of eeks is bore-eeks rule.
 
 a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "x[sp]e[sp]e[sp]x". eeks are parse-spoilable.
 
@@ -14389,7 +14391,7 @@ chapter pins
 
 [?? if player has pills then reg-inc]
 
-some pins are reflexive boring plural-named scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in.". bore-text of pins is "You need to get the pins out of the way, but don't worry, it's pretty simple.".
+some pins are reflexive boring plural-named scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in.". bore-text of pins is "You need to get the pins out of the way, but don't worry, it's pretty simple.". bore-check of pins is bore-pins rule.
 
 this is the bore-pins rule:
 	if current action is sniping or current action is spining, now boring-exception is true;
@@ -15668,7 +15670,7 @@ Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre 
 
 section sway ways
 
-sway ways are plural-named boring bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway.". bore-text of sway ways is "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to.".
+sway ways are plural-named boring bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway.". bore-text of sway ways is "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to.". bore-check of sway ways is bore-sway-ways rule.
 
 understand "yaws" and "sway-ways" as sway ways.
 
@@ -15766,7 +15768,7 @@ Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] th
 after printing the locale description for Anemic Cinema when Anemic Cinema is unvisited:
 	say "The ingrates grumble about how their territory is useless, and that's really not their fault. Maybe you don't really need to get rid of them.[paragraph break]";
 
-The theater thereat is boring useless scenery in Anemic Cinema. description of theater is "The theater has long since been in disuse. It can't be important. I mean, who needs visual images to have an adventure? Really!". bore-text of theater thereat is "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'I, Manic Menace,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world.".
+The theater thereat is boring useless scenery in Anemic Cinema. description of theater is "The theater has long since been in disuse. It can't be important. I mean, who needs visual images to have an adventure? Really!". bore-text of theater thereat is "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'I, Manic Menace,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world.". bore-check of theater thereat is bore-theater rule.
 
 understand "theatre" and "theatre thereat" as theater thereat.
 
@@ -16371,7 +16373,7 @@ this is the bore-maturation-natatorium rule:
 
 section Thearchy Hatchery
 
-the Thearchy Hatchery is a boring backdrop. Thearchy Hatchery is in Actionless Coastlines and Artist Traits Strait. bore-text of thearchy hatchery is "There's nothing much to do with the Hatchery. It's just a gaudy structure."
+the Thearchy Hatchery is a boring backdrop. Thearchy Hatchery is in Actionless Coastlines and Artist Traits Strait. bore-text of thearchy hatchery is "There's nothing much to do with the Hatchery. It's just a gaudy structure.". bore-check of thearchy hatchery is bore-thearchy-hatchery rule.
 
 this is the bore-thearchy-hatchery rule:
 	if current action is entering:
@@ -16396,7 +16398,7 @@ check opening a hintpastry: say "You can just try to [if player has toaster]TOAS
 
 section sporties' ripostes
 
-the sporties' ripostes are plural-named vanishing boring scenery in Lost Lots. description of sporties' ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.".
+the sporties' ripostes are plural-named vanishing boring scenery in Lost Lots. description of sporties' ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.". bore-check of sporties' ripostes is bore-ripostes rule.
 
 a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
@@ -16529,7 +16531,7 @@ the northern shore is scenery in Rawest Waters. description of northern shore is
 
 section raspy spray
 
-the raspy spray is boring bounding scenery in Rawest Waters. description is "Well, you don't have much time to look at it in detail. You'd just like to get to one of the shores.". bore-text of raspy spray is "You need to worry about getting away from the spray. One of the shores must be reachable."
+the raspy spray is boring bounding scenery in Rawest Waters. description is "Well, you don't have much time to look at it in detail. You'd just like to get to one of the shores.". bore-text of raspy spray is "You need to worry about getting away from the spray. One of the shores must be reachable.". bore-check of raspy spray is bore-raspy-spray rule.
 
 does the player mean drinking the spray: it is very likely.
 
@@ -16738,7 +16740,7 @@ before showing the blub bulb to: try showing flowerpot to second noun instead;
 
 understand "flower" as crocus.
 
-the succor crocus is a boring LLPish flippable thing. "A succor crocus lies here, full of livid colors that don't make you happier."
+the succor crocus is a boring LLPish flippable thing. "A succor crocus lies here, full of livid colors that don't make you happier.". bore-check of succor crocus is bore-crocus rule.
 
 this is the bore-crocus rule:
 	if current action is taking, say "No. It took long enough for the crocus to grow." instead;
@@ -17023,7 +17025,7 @@ a-text of dandier arid den is "RRYYRYR". b-text of dandier arid den is "??YYRGR"
 
 description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
 
-the bottles of Nerd-Aid are boring auxiliary plural-named scenery. the arid den carries the nerd-aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid. description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd-aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.".
+the bottles of Nerd-Aid are boring auxiliary plural-named scenery. the arid den carries the nerd-aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid. description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd-aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd-aid is bore-nerd-aid rule.
 
 a-text of Nerd-Aid is "RRYYRYR". b-text of Nerd-Aid is "RRYYRYP". parse-text of nerd-aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
@@ -17998,7 +18000,7 @@ this is the bore-dune rule:
 
 chapter Ed Riley
 
-Ed Riley is a vanishing boring man. description is "'Er, yield idly [']ere!' Ed Riley booms at regular intervals. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward, carrying a loaf of deli rye.". bore-text of ed riley is "You probably don't need much more than your usual tricks to get past him. Even in your diminished state."
+Ed Riley is a vanishing boring man. description is "'Er, yield idly [']ere!' Ed Riley booms at regular intervals. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward, carrying a loaf of deli rye.". bore-text of ed riley is "You probably don't need much more than your usual tricks to get past him. Even in your diminished state.". bore-check is bore-ed-riley rule.
 
 check taking ed riley: say "Ed Riley raises up on his toes and booms 'I'm no YIELDER!'" instead;
 
@@ -18054,7 +18056,7 @@ the Edictal Citadel is a boring backdrop in Disowned Downside. description is "I
 
 section sad elm
 
-the sad elm is boring useless scenery in Disowned Downside. description of sad elm is "It was probably sad before the macks came along, but it's not really important.". bore-text of sad elm is "You can't make the elm happier[if player had medals], not even if you do something with the damsel medals you got from it[end if]."
+the sad elm is boring useless scenery in Disowned Downside. description of sad elm is "It was probably sad before the macks came along, but it's not really important.". bore-text of sad elm is "You can't make the elm happier[if player had medals], not even if you do something with the damsel medals you got from it[end if].". bore-check is bore-sad-elm rule.
 
 this is the bore-sad-elm rule:
 	if current action is climbing, say "[if Gretta is in location of player]You can beat [']em, so don't join [']em trying to impress her[else]Yorpwald's still up a tree. Don't join it[end if]." instead;
@@ -19651,7 +19653,7 @@ some coins are plural-named things. description is "The coins really look more o
 
 section singed design
 
-the singed design is part of the coin. the singed design is boring. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.".
+the singed design is part of the coin. the singed design is boring. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.". bore-check is bore-singed-design rule.
 
 this is the bore-singed-design rule:
 	if current action is scaning:
@@ -19833,7 +19835,7 @@ a-text of prices precis is "RRYRYR". b-text of prices precis is "RP?R?P". parse-
 
 the kumquat is a fruit. description is "Weird and orange and oblong."
 
-the auction caution is reflexive boring scenery in Clangier Clearing. description of auction caution is "It's pretty clear: PAY ASAP covers over half of it. That probably applies to non-auctions, too.". understand "banner" as auction caution. bore-text is "You can really only examine the banner[if caution is reflexive] or maybe get another fruit from it[end if]."
+the auction caution is reflexive boring scenery in Clangier Clearing. description of auction caution is "It's pretty clear: PAY ASAP covers over half of it. That probably applies to non-auctions, too.". understand "banner" as auction caution. bore-text is "You can really only examine the banner[if caution is reflexive] or maybe get another fruit from it[end if].". bore-check is bore-auction-caution rule.
 
 a-text of auction caution is "RYRYOYR". b-text of auction caution is "PGRGOGR". parse-text of auction caution is "x[sp]a[sp]x[sp]a[sp]y[sp]a[sp]x".
 

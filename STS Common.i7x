@@ -421,7 +421,7 @@ a thing can be boring. a thing has text called bore-text. a thing has a rule cal
 boring-exception is a truth state that varies.
 
 instead of doing something with a boring thing: [no-irp]
-	if debug-state is true, say "DEBUG note: [current action] with [noun] is under scrutiny.";
+	if debug-state is true, say "DEBUG note: [current action] with [noun] is under scrutiny, with [bore-check of noun].";
 	abide by the bore-check of noun;
 	if action is procedural or boring-exception is true:
 		if debug-state is true and boring-exception is true, say "DEBUG note: [current action] with [noun] slips general boring-thing rules.";

@@ -1536,9 +1536,7 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 
 section oyster
 
-check fliptoing when player is in Posh Hops Shop:
-	if noun is reflexed:
-		say "You need to mix it up a bit. You've already done that." instead;
+check fliptoing when player is in Posh Hops Shop: [?? if noun is reflexed]
 	if noun is trolls:
 		if silly-acts is 0:
 			say "The trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside[gloaty].";
@@ -2202,7 +2200,7 @@ I'm Le Cop polemic	"After compiling, you often need to make small tweaks, but no
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 tips pits	"You can't and don't want to do anything else to the tips pits." [START oyster]
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
-gins sign	"The sign mainly just disallowed singing."
+gins sign	"There's no other way to disobey the sign."
 tines	"You destroyed the stein, and that's enough."
 frat raft	"The frat raft has fuel. It needs to use that fuel, now, with the oars."
 trout	"Retutor? Torture. Rot. True!"
