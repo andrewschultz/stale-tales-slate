@@ -4402,30 +4402,25 @@ understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as lin
 
 section corses crosse
 
-Corses Crosse is boring scenery in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is crosse-enter rule.
+Corses Crosse is boring scenery in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is bore-crosse rule.
 
-this is the crosse-enter rule:
+this is the bore-crosse rule:
 	if current action is entering, try going north instead;
-	abide by the bore-exam rule;
 
 beard-unmade is a truth state that varies. beard-unmade is usually false.
 
 section selves vessel
 
-The selves vessel is boring scenery in Self-ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south.". bore-text is "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it.". bore-check is selves-vessel-enter rule.
+The selves vessel is boring scenery in Self-ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south.". bore-text is "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it.". bore-check is bore-selves-vessel rule.
 
-this is the selves-vessel-enter rule:
+this is the bore-selves-vessel rule:
 	if current action is entering, try going south instead;
-	abide by the bore-exam rule;
 
-check going south in Self-ID Fields:
-	say "Given that the people leaving the selves vessel look dead, you probably don't want to go in." instead;
+check going south in Self-ID Fields: say "Given that the people leaving the selves vessel look dead, you probably don't want to go in." instead;
 
 section random ID field text
 
-every turn when player is in Self-ID Fields (this is the crosse-guys-through rule):
-	if Cruel Ones' Enclosure is unvisited:
-		say "[guy-by-description]";
+every turn when player is in Self-ID Fields and Cruel Ones' Enclosure is unvisited (this is the crosse-guys-through rule): say "[guy-by-description]";
 
 to say guy-by-description: say "Dude, an undead! It's got [burns] and is wearing [glasstype] and [nosey]. Corses Crosse glows briefly as the undead walks through."
 
@@ -4948,8 +4943,7 @@ section for Mondale-Doleman to be referenced everywhere
 
 Mean Old Mondale Doleman is a boring thing. description is "You can't see Mean Old Mondale Doleman, but you'll have to defeat him.". bore-text is "Mondale-Doleman is out there, you know. But thinking about what he's done won't help you solve things.". bore-check is bore-doleman rule.
 
-this is the bore-doleman rule:
-	if current action is scaning, try examining doleman instead;
+this is the bore-doleman rule: if current action is scaning, try examining doleman instead;
 
 printed name of Mean Old Mondale Doleman is "Mean Old Mondale-Doleman".
 
@@ -7328,7 +7322,7 @@ the siren is boring scenery in Bassy Abyss. description of siren is "Blue and re
 this is the bore-siren rule:
 	if current action is xmxing or current action is attacking, now boring-exception is true instead;
 
-some resin is singular-named boring thing. printed name of resin is "some resin[if resin is held] (all over your hands)[end if]". description of resin is "It feels sticky on your hands.".
+some resin is singular-named boring thing. printed name of resin is "some resin[if resin is held] (all over your hands)[end if]". description of resin is "It feels sticky on your hands.". bore-check is bore-resin rule.
 
 this is the bore-resin rule:
 	if current action is dropping, say "You'll have to wash it off, and there's no running water nearby." instead;
@@ -7712,7 +7706,7 @@ some china is a useless thing. description is "The china is nice and artsy and f
 
 section cutlery
 
-the cruelty cutlery is boring scenery. "It's built for cruel looks, not practicality. But it looks impressive. Like, +2 or +3. Not that numbers are your thing, more words. Or that you want to look too closely. Red Bull Burdell has a firm grip on it."
+the cruelty cutlery is boring scenery. "It's built for cruel looks, not practicality. But it looks impressive. Like, +2 or +3. Not that numbers are your thing, more words. Or that you want to look too closely. Red Bull Burdell has a firm grip on it.". bore-check is bore-cutlery rule.
 
 this is the bore-cutlery rule:
 	if current action is taking, say "No, Red Bull Burdell's not letting go. He must have another weakness." instead;
@@ -8863,13 +8857,12 @@ this is the bore-spread rule:
 
 lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rcn][rc][rc][rc][rc][rc]". cert-text of spread is "-[d1][d1][d1][d1][d1]". rect-text of spread is "D[d1][d1][d1][d1][ast]S".
 
-the drapes are plural-named scenery. description of drapes is "Too thick and heavy to walk through.". bore-text of drapes is "This isn't some living room. (Sorry.) Those drapes are thick and oppressive. You'll need something sharp to cut through them.". bore-check of drapes is drapes-bore rule;
+the drapes are plural-named scenery. description of drapes is "Too thick and heavy to walk through.". bore-text of drapes is "This isn't some living room. (Sorry.) Those drapes are thick and oppressive. You'll need something sharp to cut through them.". bore-check of drapes is bore-drapes rule.
 
 understand "cloth" as drapes when drapes are visible.
 
-this is the drapes-bore rule:
-	if current action is cutwithing or current action is unfolding:
-		now boring-exception is true;
+this is the bore-drapes rule:
+	if current action is cutwithing or current action is unfolding, now boring-exception is true;
 
 understand "cloth" as spread when spread is visible.
 
