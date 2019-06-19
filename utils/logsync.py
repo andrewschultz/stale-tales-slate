@@ -323,7 +323,7 @@ def sa_r_g_check():
         print("I found no errors in the hinting source for Shuffling! Hooray!")
     flip_miss = [x for x in sa_flips if x not in sa_got]
     if len(flip_miss):
-        print("Flips from logsync.txt to SA source missed:", ', '.join(flip_miss))
+        print("{:02d}".format(len(flip_miss)), "Flips from logsync.txt to SA source missed:", ', '.join(["{:s}/{:d}".format(f, sa_line[f]) for f in flip_miss]))
     else:
         print("No SA flips missed.")
 
@@ -345,8 +345,6 @@ def aro_settler_check():
     b_count = 0
     desc_count = 0
     in_bore_rule = False
-    insteads_in_bore = 0
-    instead_bore_latest = 0
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             skip = False
@@ -360,22 +358,17 @@ def aro_settler_check():
                 if not line.strip():
                     in_bore_rule = False
                     continue
-                if 'instead;' in line.lower():
-                    print("Extraneous instead at line", line_count, ":", line.strip())
-                    insteads_in_bore += 1
-                    instead_bore_latest = line_count
-                    continue
             if ('boringscen' in first_sentence or 'boringthing' in first_sentence) and 'description of' not in line:
                 if 'propaganda is' not in line:
                     l1 = re.sub(" (is|are).*", "", line.lower().strip())
                     l1 = re.sub(" \..*", "", l1)
                     desc_count += 1
                     print('{:02d} <description is> replacement needed at line {:d} and not just quoted text. description of {:s} is'.format(desc_count, line_count, l1))
-            if 'scenery' in first_sentence and 'bore-text' in line: #these first two checks are so the compiler is less likely to complain
+            if 'scenery' in line and ('bore-text' in line or 'bore-check' in line) and 'boring' not in line: #these first two checks are so the compiler is less likely to complain
                 l1 = re.sub(" (is|are).*", "", line.lower().strip())
                 l1 = re.sub(" \..*", "", l1)
                 desc_count += 1
-                print('{:02d} Need to change {:s} at line {:d} to boringscen. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
+                print('{:02d} {:s} at line {:d} needs to be defined as boring. {:s}'.format(desc_count, l1, line_count, "<description is>" if 'description is' in line else ''))
             ms = match_score(line, aro_settings, line_count, "ARO")
             if ms >= 2 and not line.startswith("\t"):
                 global_raw = ""
@@ -489,10 +482,9 @@ def aro_settler_check():
                     print("WARNING code rewrite of", global_raw, "to", my_thing, "at line", line_count)
     flip_miss = [x for x in aro_flips if x not in aro_got]
     if len(flip_miss):
-        print("Flips from logsync.txt to ARO source missed:", ', '.join(flip_miss))
+        print("{:02d}".format(len(flip_miss)), "Flips from logsync.txt to ARO source missed:", ', '.join(["{:s}/{:d}".format(f, aro_line[f]) for f in flip_miss]))
     else:
         print("No ARO flips missed.")
-    if insteads_in_bore: print(insteads_in_bore, "insteads in bore-rules. Latest is", instead_bore_latest)
 
 def check_aftertexts():
     markedokay = 0
@@ -543,26 +535,26 @@ def check_aftertexts():
     if mayneedaftertext + mayneedsource + markedokay: print("May need", mayneedaftertext, "aftertext and", mayneedsource, "source and may've wrongly marked", markedokay)
 
 def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message = "", other_test = True):
+    need_in_logic = 0
+    need_in_source = 0
     print("=" * 40, "Checking", outs)
     # for x in needs.keys(): print (x, needs[x], gots[x])
     t2 = [x for x in needs.keys() if x not in gots.keys()]
-    need_in_logic = 0
     if len(t2):
         for y in sorted(t2, key=needs.get):
-            need_in_logic = need_in_logic + 1
+            need_in_logic += 1
             if show_count:
                 print(need_in_logic, y, "is in the source line", need_logic[y], "but needs to be commented in", file_desc)
             if show_code:
                 print(format_string.format(y))
     t3 = sorted([x for x in gots.keys() if x not in needs.keys()], key=gots.get)
-    need_in_source = 0
     if len(t3):
         for y in sorted(t3, key=gots.get):
-            need_in_source = need_in_source + 1
+            need_in_source += 1
             print(need_in_source, y, "is commented in {:s} file line".format(outs), gots[y] ,"but is not in the source.")
     if need_in_logic + need_in_source > 0 and other_test:
         print("TEST FAILED:", need_in_logic, file_desc, "comments needed ({:s}),".format(outs), need_in_source, "source file definitions needed.")
-        if launch_message: print(launch_message)
+        if launch_message: print("LAUNCH WITH", launch_message)
     else:
         print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
     extraneous = list(set(gots) - set(needs))
@@ -699,7 +691,7 @@ check_aftertexts()
 
 check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues", launch_message = "invis.pl rl e")
-check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed > 0), launch_message = "reds.txt")
+check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed >= 0), launch_message = "reds.txt / reds.pl -e")
 
 aro_settler_check()
 sa_r_g_check()

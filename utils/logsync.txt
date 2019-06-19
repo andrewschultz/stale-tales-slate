@@ -144,14 +144,11 @@ pamphlets~i used to>outside
 ########REGION routes
 >IGNORE=scripture picturers
 worst ad~warts do sow drat>towards
-sindie>inside
-diesin>inside
 anti sag sit a nag>against
 side art>astride
 woe bow bell>below
 rude 'n nuder>under
 lairage regalia~oscar's>across
-grubby restaurant~pat's>past
 adsorbing signboard~pat's>past
 cravings carvings~speed it sit deep>despite
 pipe soot>opposite
@@ -160,7 +157,7 @@ seed pit>despite
 hurt hog>through
 bent ewe>between
 rude 'n nuder>under
-the-b~the bean>beneath
+the bean>beneath
 darkness~unlit>until
 yob den>beyond
 # note that "all" is clipped in the table_shorten function
@@ -180,7 +177,7 @@ pa egg pea~pa egg pea peg a page>gape
 evil bee>believe
 vile bee>believe
 bee's head~no ears so near>reason
-cellar door~cellar>recall
+l'clear cellar>recall
 ####drain nadir
 diapers>despair
 a spider>despair
@@ -218,11 +215,12 @@ lamb>blam
 plebe>bleep
 hump>umph
 volt maze>mazeltov
+zo mavelt>mazeltov
+lev tzoma>mazeltov
+tom alvez>mazeltov
 ####nowt town
 maze walls~voltmaze>mazeltov
 ####unwary runway
-m-l~lev matzo>mazeltov
-l-m~matzo lev>mazeltov
 tom alvez>mazeltov
 ####char arch
 tsar star>rats
@@ -273,7 +271,7 @@ disk>skid
 flea>leaf
 speel>sleep
 usb>sub,bus
-t-key~tba>tab
+tba key~tba>tab
 bub dude egg>debug
 small blue button~to be or>reboot
 i'm le cop polemic>compile
@@ -287,7 +285,7 @@ tines>inset
 tunes>unset
 perma-amper>remap
 trolls>stroll
-pills>spill
+li'l p's pills>spill
 ####olde lode
 clam>calm
 urn>run
@@ -326,7 +324,7 @@ heaps>shape
 waste>sweat
 lance>clean
 ####achers' arches
-a-s~achers' chaser arches>search
+achers' chaser arches>search
 general gleaner>enlarge
 ####horned hedron
 ol' trap>patrol
@@ -433,8 +431,6 @@ reading a dinger>grained
 ####rawest waters
 eastern shore~eastern>nearest
 ####mislit limits
-flowerpot~dying>dingy
-crocus~dying>dingy
 pester'n serpent>present
 unripe ur-pine>punier
 accurst leap>spectacular
@@ -577,7 +573,7 @@ a brr hub>rhubarb
 ####gates stage
 searcher>research
 viewer>review
-perp-priv~perp>prep
+perp>prep
 ##############logic file checks (eventually delete this all)
 ###################stuff that is okay for aftertexts
 #means manse
