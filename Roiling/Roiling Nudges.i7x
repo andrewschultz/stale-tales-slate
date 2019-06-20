@@ -152,7 +152,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "picture"	566810127	Same Mesa	--	--	"[picturer-change]."
 "pictures"	663084093	Same Mesa	--	--	"[picturer-change]."
 "circle"	349947767	Cleric Circle	--	--	"[locname]." [CLERIC CIRCLE]
-"lairage"	348911935	Same Mesa	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if regalia is reflexed], and you don't need to[else], but maybe noting what's on it will help you get in[end if]."
+"lairage"	348911935	Same Mesa	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if regalia is reflexed], and you don't need to, now you've visited Oscar[else], but maybe noting what's on it will help you get in[end if]."
+"sos"	266900509	Same Mesa	--	--	"[sos-arc]."
+"arc"	106517206	Same Mesa	--	--	"[sos-arc]."
 "satin"	315472156	Same Mesa	--	--	"The church's name is not as important as its mission."
 "worst"	466995137	--	worst ad	--	"If you change the ad from the worst, maybe you won't make it better. Maybe you'll make something else even worse. So, focus on the whole."
 "adsorbing"	444086214	Same Mesa	--	--	"[board-change]."
@@ -217,7 +219,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rude"	339264808	--	nuder	--	"That's not quite the book's whole title."
 "boko"	220057237	--	U NERD	--	"[horb-magic of U NERD]."
 "runedbook"	628229553	--	U NERD	--	"[horb-magic of U NERD]."
-"along"	231861444	--	--	am-along rule	"You think of No-Gal Logan, wondering how to find a way to him."
+"along"	231861444	--	--	am-along rule	"You think of how to find a way to No-Lag Logan."
 "darknses"	550735437	--	darkness	--	"[dark-been]."
 "dakr"	161473888	--	darkness	--	"[dark-been]."
 "marsh"	285143039	Harms Marsh	--	--	"[locname]." [HARMS MARSH]
@@ -1314,6 +1316,8 @@ to say name-worry: say "Perhaps it's better to focus on the proper names instead
 
 to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
+to say sos-arc: say "[if adobe abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole SOS ARC in the lairage regalia can become[end if]."
+
 to say board-change: say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
 
 this is the has-reag rule:
@@ -1356,7 +1360,7 @@ to say dark-been: say "The darkness has always been there and always will be. Yo
 
 to say sheol-c: say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help"
 
-to say py-glow: say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan"
+to say py-glow: say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Lag Logan"
 
 to say pat-cont: say "It's more the content of the patters that you could deal with, if you wanted"
 

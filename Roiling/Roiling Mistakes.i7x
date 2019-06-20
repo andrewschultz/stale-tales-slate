@@ -149,7 +149,9 @@ understand "below" as a mistake ("Nice try, but wrong preposition for the situat
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when Gast has rude 'n nuder or player has u nerd or WOE BOW BELL is in location of player.
 
-understand "bowel" and "elbow" as a mistake ("The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa
+understand "bowel" and "elbow" as a mistake ("The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa.
+
+understand "car" as a mistake ("Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.") when player is in Same Mesa.
 
 understand "ides" and "rat" and "tar" as a mistake ("It's the whole side art you need[if tirades are moot]ed[end if] to deal with.") when player is in Same Mesa and side art is in Same Mesa.
 
@@ -190,9 +192,11 @@ understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you ne
 
 chapter Adobe Abode
 
-understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Adobe Abode.
+understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Same Mesa or player is in Adobe Abode.
 
 understand "poopiest" as a mistake ("This is the wrong area for adjectives. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
+
+understand "scoar" and "scoars" as a mistake ("You don't get points just for asking them.") when player is in Same Mesa or player is in Adob Abode.
 
 chapter Idle Deli
 

@@ -5706,7 +5706,7 @@ Highest Heights	"You can go back IN to the study, though you don't need to, or y
 Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [stores]
 Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. There must be a generic way to leave!"
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat." [routes]
-Harms Marsh	"Far into a rift? No. You can't [if darkness is visible]see far enough to [end if]rely on directions, here[if darkness is visible]. You just need to find No-Gal Logan[end if]."
+Harms Marsh	"Far into a rift? No. You can't [if darkness is visible]see far enough to [end if]rely on directions, here[if darkness is visible]. You just need to find No-Lag Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
@@ -9201,7 +9201,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "methods"	true	"You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too."	"methods"	false
 "red"	true	"Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way."	"red"	true
 "shuffling/ around" or "shuffling around"	true	"Postmortems? Most sport em. Details: I lasted. I miss my tagged gadget and how it helped me through the Forest (store F,) Sortie (store I,) and Metros (store M) in the Trips Strip. To the resort (store R.) Redness = guised guides (letters all wrong.)"	"Shuffling Around"	true
-"no-gal/logan" or "no-gal logan"	false	"No-Gal Logan may have a ship that can get you out of here. It is beyond an un-road."	"No-Gal Logan"	true	routes
+"no-lag/logan" or "no-lag logan"	false	"No-Lag Logan may have a ship that can get you out of here. It is beyond an un-road."	"No-Lag Logan"	true	routes
 "tagged/gadget" or "tagged gadget"	true	"You wrote some notes about the Tagged Gadget in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right[if player does not have settler]. You could do with a new thingamabob now[else]. How Secure allowed you to keep both modes and Recuse let you skip a store. Your settler is apparently handy in a different way[end if][if Carven Cavern is unvisited]. Probably a bunch of different commands to use, though[end if]."	"tagged gadget"	true
 "retry" or "terry"	true	"You wrote notes about how you can RETRY thanks to Terry if you get stuck somewhere past a store."	"retry"	true
 "warp"	true	"[i][bracket]FOURTH WALL NOTE: if you solved Store P, U, V, W, or Y in an earlier release, you can type the final command to bypass it. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"	"warp"	true
@@ -10426,8 +10426,8 @@ Cleric Circle is an innie room in Routes. "Things seem less confused here than o
 after looking in Cleric Circle:
 	if number of held quest-items is 3:
 		mootl list of all quest-items;
-		say "'You have all the reagents! Wonderful!' The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Gal Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Gal Logan. That's an odd name. You write it down.";
-		pad-rec "No-Gal Logan";
+		say "'You have all the reagents! Wonderful!' The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Lag Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Lag Logan. That's an odd name. You write it down.";
+		pad-rec "No-Lag Logan";
 		moot Brother Horbert;
 		pad-del "reagents";
 		now MORF FORM is in Same Mesa;
@@ -10676,7 +10676,7 @@ after looking in Harms Marsh:
 	set the pronoun it to sheol holes;
 	continue the action;
 
-description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is visible][paragraph break]And this area seems like it was always unlit... but you intuit null about how to change that...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
+description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is visible][paragraph break]And this area seems like it was always unlit... but you intuit null about how to change that...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Lag Logan, how to navigate it?[else]Now, you need to find No-Lag Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
 
 section Sheol Holes
 
@@ -10686,7 +10686,7 @@ understand "hole" and "sheol hole" as sheol holes when player is in Harms Marsh.
 
 section stripey pyrites
 
-the stripey pyrites are useless scenery. "The pyrites look pretty, but you're not here for a treasure hunt. You're here to find No-Gal Logan."
+the stripey pyrites are useless scenery. "The pyrites look pretty, but you're not here for a treasure hunt. You're here to find No-Lag Logan."
 
 check taking stripey pyrites: say "Take a hint from them, where they may lead you." instead;
 
@@ -10696,18 +10696,17 @@ the darkness is vanishing boring scenery in Harms Marsh. description of darkness
 
 a-text of darkness is "YRRYR". b-text of darkness is "GPRGR". parse-text of darkness is "u[sp]n[sp]x[sp]i[sp]x". darkness is cheat-spoilable.
 
-to say to-o:
-	say "Brother Horbert talked about how if you had faith, and patience to see them right, they might lead you to an un-road or to No-Gal Logan if you knew how to study them."
+to say to-o: say "Brother Horbert talked about how if you had faith, and patience to see them right, they might lead you to an un-road or to No-Lag Logan if you knew how to study them."
 
 section all noon gag
 
-the all noon gag is a vanishing boring thing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Gal Logan.". description of noon gag is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
+the all noon gag is a vanishing boring thing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Lag Logan.". description of noon gag is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
 
 a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text of all noon gag is "?[sp]?[sp]-[sp]?[sp]?".
 
 chapter un-road
 
-the un-road is vanishing boring scenery. description of un-road is "The un-road must lead to No-Gal Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Gal Logan?";
+the un-road is vanishing boring scenery. description of un-road is "The un-road must lead to No-Lag Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Lag Logan?";
 
 understand "trail" as un-road.
 
@@ -10717,7 +10716,7 @@ understand "unroad" as un-road.
 
 book Ripe Pier
 
-Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be. No-Gal's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
+Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be. No-Lag's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
 
 after looking in Ripe Pier for the first time:
 	say "A man walks by, mumbling. 'Da mist! Da mist!' Ah, so it's not just mist. But his next babbling leaves you seeing red before he walks off. 'Sad Tim sat, dim... it's mad...' You see red at such nonsense.";
@@ -10739,9 +10738,9 @@ this is the bore-mist rule:
 	if current action is taking, say "Mistake. Ha ha ha." instead;
 	if current action is entering, say "Part of you admits it will be tricky to figure out. Maybe if you entered the right way, with a good plan...or a bad..." instead;
 
-chapter no-gal's boat
+chapter No-Lag's boat
 
-No-Gal's Boat is boring scenery in Ripe Pier. description of No-Gal's Boat is "You can barely see it, but you can't hear No-Gal Logan calling you.". bore-text is "Just poking it won't help you get there. You need to find a way to it."
+No-Lag's Boat is boring scenery in Ripe Pier. description of No-Lag's Boat is "You can barely see it, but you can't hear No-Lag Logan calling you.". bore-text is "Just poking it won't help you get there. You need to find a way to it."
 
 check going inside in Ripe Pier: try entering mist instead;
 
