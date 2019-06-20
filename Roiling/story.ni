@@ -10285,13 +10285,13 @@ check scaning resto store:
 
 does the player mean scaning resto store: it is likely.
 
-the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's[ast][r][paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal."
+the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's Stap[ast][r][paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal. You also note the intended pronunciation of Stap is probably Stahp, because that sort of forced anagramming is abused in Yorpwald these days. True, there are bigger problems, but..."
 
 understand "sign/board" and "adsorbing sign/board" as signboard.
 
 understand "pat's/pats" as the resto store.
 
-a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "PGRR". parse-text of signboard is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
+a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of signboard is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
 
 does the player mean entering the Uhh Tut Hut:
 	if lairage regalia is reflexed, it is very likely;
