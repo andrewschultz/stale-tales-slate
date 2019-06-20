@@ -1,0 +1,26 @@
+d-word-u	damn
+d-word	damn
+a-word-u	ass
+a-word	ass
+c-word-u	cnut
+c-word	cnut
+crap-u	crap
+dick-u	dick
+f-w	kcuf
+s-w	this
+toti	tino
+mle	mel
+i-n	ian
+sim	simeon
+a-b	abe
+d-t	tod
+n-t	nate
+tt	tio
+ta	tai
+e-m	elmer
+i	-
+b	-
+r	-
+!ê	e
+!é	e
+;
