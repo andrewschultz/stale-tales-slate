@@ -10241,7 +10241,7 @@ check entering the snatchier chantries:
 
 chapter Uhh Tut Hut
 
-the Uhh Tut Hut is auxiliary scenery in Same Mesa. "An Uhh Tut Hut probably houses a grouchy resident, one who wants to see people in order to grouse at them a bit.[paragraph break]The lairage regalia announces the Uhh Tut Hut as Oscar's."
+the Uhh Tut Hut is auxiliary scenery in Same Mesa. "Yorpwaldian Uhh Tut Huts are usually round and house a grouchy resident, one who wants to see people in order to complain to them a bit.[paragraph break]The lairage regalia announces the Uhh Tut Hut's owner. That might be a helpful clue."
 
 check entering Uhh Tut Hut:
 	if Gast is in Same Mesa, try fliptoing lairage instead;
@@ -10257,17 +10257,17 @@ check entering Uhh Tut Hut:
 
 does the player mean scaning Uhh Tut Hut: it is likely.
 
-understand "oscar's/oscars/oscar" as the Uhh Tut Hut.
+understand "oscar's/oscars/oscar" and "sos/arc" and "sos arc" as the Uhh Tut Hut when player is in Same Mesa.
 
-the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's[ast][r]."
+the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's SOS ARC[ast][r]. [if adobe abode is visited]Well, Oscar wasn't so bad[else]Whoever's in there will probably be a bit of a complainer[end if]."
 
 to say ast: say "[if screenread is true] ** [end if]"
 
 check scaning Uhh Tut Hut:
-	say "The lairage regalia gives a reading.";
+	say "The uhh tut hut gives nothing, but te lairage regalia above it gives a reading.";
 	try scaning lairage regalia instead;
 
-a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYRP". parse-text of lairage regalia is "-[sp]x[sp]x[sp]-[sp]x[sp]s".
+a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYR?". parse-text of lairage regalia is "-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 chapter resto store
 
@@ -10289,9 +10289,9 @@ the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's Stap[a
 
 understand "sign/board" and "adsorbing sign/board" as signboard.
 
-understand "pat's/pats" as the resto store.
+understand "pat's/pats/pat" and "pat's/pats/pat stap" as the resto store when player is in Same Mesa.
 
-a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of signboard is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
+a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of signboard is "?[sp]?[sp]x[sp]x". it is parse-spoilable.
 
 does the player mean entering the Uhh Tut Hut:
 	if lairage regalia is reflexed, it is very likely;
