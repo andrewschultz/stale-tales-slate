@@ -131,6 +131,7 @@ def get_brackets():
                 acc[l[0][1:]] = l[1]
             else:
                 brax[l[0]] = l[1]
+    return r'\[({:s})\]'.format('|'.join(brax))
 
 def no_focus_markers(s, reduce = False):
     if reduce: s = s.lower().strip()
@@ -195,6 +196,14 @@ cmd_count = 1
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count].lower()
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
+    elif ' ' in arg or arg[0] == '=':
+        regex_str = get_brackets()
+        print_freq = True
+        if actual_anagram(arg):
+            print("Anagram ok")
+        else:
+            print("for", arg)
+        exit()
     elif arg == 'c': convert_anagram_focused = True
     elif arg == 'cb' or arg == 'cc':
         convert_anagram_focused = True
@@ -217,9 +226,9 @@ anas = [ ]
 if get_roiling: anas.append("roi")
 if get_shuffling: anas.append("sa")
 
-get_brackets()
+
+regex_str = get_brackets()
 get_anagram_focus()
 
-regex_str = r'\[({:s})\]'.format('|'.join(brax))
 
 for a in anas: ana_check(a)
