@@ -103,17 +103,17 @@ def ana_check(a):
                 this_table = re.sub(" *\[.*", "", line.lower().strip())
                 this_tl = 0
                 continue
-            ll = line.lower.strip()
+            ll = line.lower().strip()
             if ll in focused_already: continue
             this_tl += 1
             if not line.startswith("\""): continue
             if actual_anagram(line): continue
             if this_table != last_table:
-                print("New table", this_table, "line", line_count, "for", fb)
+                print("**** new table ****", this_table, "line", line_count, "for", fb)
                 last_table = this_table
             all_ana += 1
             this_ana += 1
-            print(this_ana, all_ana, this_tl, line_count, fb, this_table, "may not be anagram", line.strip())
+            print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, line.strip()))
             if all_ana == max_do:
                 print("Got", max_do, "bailing.")
                 sys.exit()
@@ -132,6 +132,10 @@ def get_brackets():
             else:
                 brax[l[0]] = l[1]
 
+def no_focus_markers(s, reduce = False):
+    if reduce: s = s.lower().strip()
+    return re.sub("[`><]", "", s)
+
 def get_anagram_focus():
     with open(anagram_focus_file) as file:
         for (line_count, line) in enumerate(file, 1):
@@ -139,11 +143,44 @@ def get_anagram_focus():
             if line.startswith(";"): break
             ll = line.lower().strip()
             if not ll: continue
-            ll = re.sub("[`><]", "", line.lower().strip())
+            ll = no_focus_markers(ll)
             if ll in focused_already:
                 print("Uh oh duplicate focused already", ll, "at", line_count, "duplicating", focused_already[ll])
             else:
                 focused_already[ll] = line_count
+
+def rewrite_focus_examples(my_game):
+    hdr = i7.hdr(my_game, "ra")
+    file_out = "hdr_temp.i7x"
+    ana_temp = "anc_focus_temp.txt"
+    fout = open(file_out, "w")
+    focout = open(ana_temp, "a")
+    changes_sent = 0
+    with open(hdr) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if has_focus_markers(line):
+                fout.write(no_focus_markers(line))
+                if copy_i7x_back:
+                    focout.write(line)
+                changes_sent += 1
+            else:
+                fout.write(line)
+    focout.close()
+    fout.write()
+    if not changes_sent:
+        print("No changes added to", my_game)
+    else:
+        print(changes_sent, "changes added to", my_game)
+        if copy_i7x_back:
+            os.copy(file_out, hdr)
+        else:
+            print("Use -cc or -cb to copy back the changes.")
+    os.delete(file_out)
+                
+
+def rewrite_focused_file():
+    rewrite_focus_examples("sa")
+    rewrite_focus_examples("roi")
 
 ###################################
 # main program
@@ -151,11 +188,17 @@ def get_anagram_focus():
 
 get_roiling = False
 get_shuffling = False
+convert_anagram_focused = False
+copy_i7x_back = False
 
 cmd_count = 1
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count].lower()
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
+    elif arg == 'c': convert_anagram_focused = True
+    elif arg == 'cb' or arg == 'cc':
+        convert_anagram_focused = True
+        copy_i7x_back = True
     elif arg == 'ss': show_skips = True
     elif re.search("^[rs]+", arg):
         get_roiling = 'r' in arg
@@ -163,8 +206,11 @@ while cmd_count < len(sys.argv):
     else: usage("bad command " + arg)
     cmd_count += 1
 
-if not get_roiling and not get_shuffling:
-    get_roiling = get_shuffling = True
+if convert_anagram_focused:
+    rewrite_focused_file()
+    exit()
+
+if not get_roiling and not get_shuffling: get_roiling = get_shuffling = True
 
 anas = [ ]
 
