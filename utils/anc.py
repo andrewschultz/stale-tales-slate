@@ -19,6 +19,8 @@ mt.bail_if_not(anagram_focus_file)
 
 open_the_files = defaultdict(int)
 focused_already = defaultdict(int)
+last_table_search = ""
+first_table_search = ""
 
 show_skips = False
 print_freq = False
@@ -42,7 +44,7 @@ def ignore_tokens(x):
 
 def check_valid_token_count(x):
     x1 = x
-    if '"' in x: x = re.sub("\"[^\"]*$", "", x)
+    if '"' in x: x = to_end_quote(x)
     tix = x.count('`')
     if tix % 2: sys.exit("UH OH bailing. We need even number of backticks but have {:d} for this line: {:s}".format(tix, x.strip()))
     gt = x.count('>')
@@ -92,8 +94,8 @@ def actual_anagram(l):
     q = gcd(lcv[0], lcv[1])
     for x in range(2, len(lcv)): q = gcd(q, lcv[x])
     if q > 1: return True
-    if re.search("^(the|an|a) ", lx):
-        lx = re.sub("^(the|an|a) ", "", lx)
+    if re.search("^(continues|the|an|a) ", lx):
+        lx = re.sub("^(continues|the|an|a) ", "", lx)
         if actual_anagram(lx): return True
         print_freq_loc = False
     if print_freq and print_freq_loc: print(' '.join(["{:s}={:d}".format(x, letter_count[x]) for x in sorted(letter_count)]))
@@ -112,27 +114,48 @@ def ana_check(a):
     f = i7.hdr(a, "ra")
     fb = os.path.basename(f)
     print("Going through", fb)
+    first_table_yet = False
+    last_table_yet = False
+    any_in = defaultdict(int)
+    any_count = defaultdict(int)
     with open(f) as file:
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("table") and "\t" not in line:
                 this_table = re.sub(" *\[.*", "", line.lower().strip())
-                this_tl = 0
+                if first_table_search and not first_table_yet and first_table_search not in this_table:
+                    this_table = ""
+                else:
+                    first_table_yet = True
+                    this_tl = 0
                 continue
-            ll = line.lower().strip()
-            if ll in focused_already: continue
+            ll = to_end_quote(line.lower().strip())
+            if last_table_search and last_table_search in this_table and not ll:
+                last_table_yet = True
+                break
+            if ll in focused_already:
+                print("Skipping line", line_count, ll[:15])
+                continue
+            if 'huck taft' in ll:
+                print(ll)
+                sys.exit(focused_already)
             this_tl += 1
+            if not first_table_yet: continue
             if not line.startswith("\""): continue
             if actual_anagram(line): continue
             if this_table != last_table:
+                any_in[this_table] = line_count
                 print("**** new table ****", this_table, "line", line_count, "for", fb)
                 last_table = this_table
             all_ana += 1
             this_ana += 1
+            any_count[this_table] += 1
             print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, line.strip()))
             if all_ana == max_do:
                 print("Got", max_do, "bailing.")
                 break
     if open_the_files[f]: i7.npo(f, open_the_files[f], bail = False)
+    if len(any_in) > 1:
+        print('SUMMARY ({:d}):'.format(len(any_in)), ' '.join(["{:s}-{:d}-{:d}".format(x, any_in[x], any_count[x]) for x in sorted(any_in, key=any_in.get)]))
 
 def get_brackets():
     with open(replacement_dict_file) as file:
@@ -154,7 +177,9 @@ def no_focus_markers(s, reduce = False):
     return re.sub("[`><]", "", s)
 
 def to_end_quote(s):
-    return re.sub("\"[^\"]*$", "", s)
+    if len(s) == 0: return ""
+    if s[0] == '"': s = s[1:]
+    return re.sub("\".*", "", s)
 
 def has_focus_markers(s):
     return '`' in s or '<' in s or '>' in s
@@ -167,7 +192,7 @@ def get_anagram_focus():
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
             if line.startswith(";"): break
-            ll = line.lower().strip()
+            ll = to_end_quote(line.lower().strip())
             if not ll: continue
             ll = no_focus_markers(ll)
             if ll in focused_already:
@@ -245,6 +270,10 @@ cmd_count = 1
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count].lower()
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
+    elif arg[0] == '.':
+        first_table_search = re.sub("\.", " ", arg[1:])
+    elif arg[-1] == '.':
+        last_table_search = re.sub("\.", " ", arg[:-1])
     elif ' ' in arg or arg[0] == '=':
         print_freq = True
         if actual_anagram(arg):
@@ -278,7 +307,6 @@ anas = [ ]
 
 if get_roiling: anas.append("roi")
 if get_shuffling: anas.append("sa")
-
 
 get_anagram_focus()
 

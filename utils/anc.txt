@@ -10,6 +10,8 @@ f-w	kcuf
 f-w-u	kcuf
 s-w	this
 s-w-u	this
+t-w	watt
+t-w-u	watt
 toti	tino
 mle	mel
 i-n	ian
@@ -25,4 +27,11 @@ b	-
 r	-
 !ê	e
 !é	e
+if censor-minor is true	-
+else	-
+end if	-
+one of	-
+or	-
+in random order	-
+sic	-
 ;

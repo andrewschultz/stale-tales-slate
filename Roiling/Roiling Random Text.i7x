@@ -936,7 +936,7 @@ blurb
 "Earth-Free, Hereafter: Ether Fare!"
 "Eek! Rats! Retakes?"
 "Ehh, took the hook!"
-"End goes! O goodness!"
+"End go! SOS, goodness!"
 "End! Nuts! Stunned!"
 "Endurance's Sunderance!"
 "Erg! No! Goner!"
@@ -990,7 +990,7 @@ blurb
 "Mm, uber-bummer!"
 "Mount a World? Mortal Wound!"
 "Narrow Bed. Barrow-Den."
-"Nod. We do end."
+"Nod. We end, ow."
 "Now Dealt a Let-Down!"
 "Nuts, I go sign out!"
 "O fleeing life, gone!"
@@ -1438,7 +1438,7 @@ blurb
 "Murdering?! Demurring!"
 "Nice hit? Thin ice."
 "No belts = noblest."
-"None of your items emits smite." [x]
+"'Items, smite! Emits!' It's, em..."
 "O, smite it some!"
 "Oh, turn no hurt!" []
 "Oho, swipe? Whoopsie." []
@@ -1574,7 +1574,7 @@ blurb
 "To yawns? Say, won't! Stay, now!"
 "To zen, cad? Can't doze!"
 "Yo! Want to yawn? Aw, t/y, no."
-"You fear a super-long gulp-snore." [x]
+"Splurge no super-long gulp-snore."
 
 table of undo allows [xxg9]
 blurb
@@ -1645,7 +1645,7 @@ blurb
 "'More to re-moot!'"
 "Most haywire! More THIS way!"
 "'Much done. Ouch, mend, undo-mech!'"
-"A mutter: erratum."
+"Rem: a rut. Erratum! Maturer?"
 "Neat! Retro! Retreat on!"
 "Nil wrested? Let's rewind."
 "'No! A slip so plain!'"
@@ -1866,7 +1866,7 @@ blurb
 "Oh, told to hold."
 "On, ho? No! Oh!"
 "Oy, Lotza Too-Lazy."
-"Pacin['] beats panic."
+"Panic?! Pacin[']?!"
 "Paroles? Reposal."
 "Pass time? A misstep!"
 "Passivity pays visit."
@@ -2045,6 +2045,7 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Ana Peck's Pancakes"	false
 "Angela's Lasagne"	false
 "Angelica's Analgesic"	false
+"Near edge? Renegade Green-Ade!"	false
 "Angelis Leasing"	false
 "Annetta's Tannates"	false
 "Annoyed? Nay, Done? Anodyne!"	true
@@ -4751,6 +4752,7 @@ table of comedians [xxm4]
 blurb
 "Absurdist Trudi Bass" []
 "Acerbic Ric Cabe"
+"Kid C"
 "Actor Ann Cantoran"
 "Actor Bo Brocato"
 "Actor Don Coonradt"
@@ -8071,7 +8073,6 @@ blurb
 "Fakin['], a Fink"
 "Far Punk Rap Funk Fun Park"
 "Fat Chance Chant Cafe"
-"Fat Duck" [x: REDACTED]
 "Fear Me, Framee"
 "Feel a Cup, Peaceful" []
 "Feel, Hit: the Life"
@@ -8098,6 +8099,7 @@ blurb
 "From Mo, For Mom"
 "Fun Style Fly Tunes"
 "Funk Row Fun Work"
+"Fat Duck" [x: REDACTED]
 "FunkCo" [x: REDACTED]
 "Funkiest Tikes['] Fun"
 "Fur Aline, Fraulein"
@@ -8222,7 +8224,7 @@ blurb
 "I, Punk, Pukin['] Up Ink"
 "I Rap Oft: A Profit"
 "I Re-Tag a Tiger" []
-"I Shatter a [s-word-u]er"
+"I Shatter a [s-w]ter"
 "I Smack Down Wacko Minds"
 "I Smoked Some Kid"
 "I Snatch a Snitch"
@@ -8718,7 +8720,6 @@ table of mob chants [xxm02]
 blurb
 "'Adventurous? Suave? ROTUND!'"
 "'And shout thousand daunts, ho!'"
-"'Con can't contact!'"
 "'Astoundingly sludgy nation!'"
 "'BS! Low blows!'"
 "'Cur, to court!'"
@@ -12770,7 +12771,7 @@ blurb	prio
 "History of Fishy Root[r], by Io Forsyth & Sofyi Hort"
 "Hit Knot to Think[r], by Nik Toth"
 "A Hit[r], by [ta] Haith"
-"Hitler's a Real ****[r], by [if player is male]Seth Rail[else]Ilse Hart[end if]" [x]
+"Hitler's a Real [s-w][r], by [if player is male]Seth Rail[else]Ilse Hart[end if]" [x]
 "Ho, Nigh on High Noon[r], by Nino Hogh"
 "Hobert's Bothers[r], by Rob Tesh" []
 "Hobo Rey, Boy Hero[r], by Herb Yoo"
@@ -14567,7 +14568,7 @@ blurb	prio
 "Oh, Besty, the Boys, They Sob[r], by Toby Esh"
 "Oh, Brat, Hot Bar[r], by Bo Hart & Bart Ho" []
 "Oh, Cancer or Chance, Encroach[r], by [if player is male]Ron Chace[else]Cora Chen[end if]-Cochrane"
-"Oh, Cap a Chap? Ah, Cop[r], by Papa Chooch"
+"Oh, Cap Cop? HA[r], by Papa Chooch"
 "Oh, Darby, Hard Yob[r], by Brad Hoy"
 "Oh, Drear Hoarder Dr. O'Hare[r], by Ro Heard"
 "Oh, Fair of Hair[r], by Ari Hof"
@@ -15068,7 +15069,7 @@ blurb	prio
 "Poaching: Go In, Chap[r], by Pia Chong"
 "Poem Sty So Empty: Mo['] Types[r], by Tom Espy"
 "Poet, Ask to Speak[r], by Pat Seko"
-"Poet, Prince, Perceptions[r], by Eric Toppen"
+"Poet, Prince, Perception[r], by Eric Toppen"
 "Poet, Rudely Type Louder[r], by Pedro Tuley"
 "A Poet's Po['] Eats[r], by Pat Ose"
 "Poetaster Operettas[r], by [if player is male]Peter Sato[else]Pat Rosete[end if]"
@@ -16780,7 +16781,7 @@ blurb	prio
 "To Urbs Robust[r], by Brutus Botros"	100
 "To Weary Year Two[r], by Ewa Troy"
 "To Weigh With Ego[r], by Og White"
-"To Whine One Whit on White[r], by [toti] Wehn"
+"To Whine One Whit on White[r], by [tt] Wehn"
 "To Wring it Wrong[r], by Rog Wint"
 "To Write Rote Wit: Ow, Trite[r], by [if player is male]Trot Wei[else]Teri Two[end if]"
 "To Yank on Katy[r], by Tony Ka"
@@ -17491,7 +17492,7 @@ blurb
 "'Each KO, a choke!'"
 "'Ed Ford? Odd ref. Fodder.'" []
 "'Eh, umps push me.'"
-"Elmo mentions he doesn't like the Losin['] Lions." [x]
+"'Lions? Losin[']!'" [x]
 "'Evah have an ump man up?'"
 "'Fake punt. Punk fate.'"
 "'Fest for soft ref efforts.'" []
@@ -17543,14 +17544,15 @@ blurb
 "'Unkind dunkin[']!'"
 "'We lost. Lowest.'" []
 "'Ye Snake-Yankees!'" []
-"You bemoan spitin['] tip-ins." [x]
-"You bemoan whiffs at whatiffs." [x]
-"You both get all meh about the LeSage Eagles." [x]
-"You compare the Riskin['] Kirins and Bossin['] Bisons." [x]
-"You impugn gumpin['] umping." [x]
-"You say at least you don't like Duke FC." [x]
-"You talk of FGs hit, of fights." [x]
-"You transfer ref rants." [x]
+"'Tip-ins? Spitin['] tip-ins.'"
+"'Whiffs at whatiffs? Haw, stiff.'"
+"'LeSage Eagles? Gee, las[']."
+"'Bossin['] Bisons? Is NOBS.'"
+"'Riskin['] Kirins? Irkins[']!'"
+"'Impugn gumpin['] umping!'"
+"'Duke FC?!'"
+"Of FGs hit, of fights: 'Go fifths, stiff hog.'"
+"Ref rants transfer."
 
 book stores
 
@@ -17588,10 +17590,10 @@ blurb
 "notes even crackheads can see POT is the reverse of TOP." [x]
 "notes the underlying sympathy of the no-punches-pulled [i]Plausible Pill Abuse: Pa, Bullies[r]."
 "outlines DevOps vs. Dope." [x]
-"points out STONED anagrams DOESN'T. Not that he likes that...anagram person." [x]
-"proves people drugged aren't grudged." [x]
-"pushes the virtues of Tim's Stim-Mist over drugs." [x]
-"rages 'Dopers to doorstep, so? DEPORT!'"
+"continues 'STONED: DOESN'T. TO ENDS."
+"continues 'Drugged? Grudged'"
+"pushes the virtues of `Tim's Stim-Mist` over drugs." [x]
+"continues 'Dopers to doorstep, so? DEPORT!'"
 "rails against the Oceanic Cocaine cartel."
 "recounts how [i]Axed to a Detox[r] could be about you, or you... OR YOU!"
 "revels in his repenters presenter role."
@@ -38792,7 +38794,7 @@ blurb
 "'Bilger Gerbil!'"
 "'Boogery ogre-boy!'"
 "'Booky boy? KO!'"
-"A brief hoodlums['] sumo hold." [x]
+"Hoodlums['] sumo hold." [x]
 "Apin['] pain."
 "'Bullies? Us? Libel! Li'l [']buse!'" [x]
 "'Burnt-out trout-nub!'"
@@ -38811,7 +38813,6 @@ blurb
 "'Faky bore! Freak boy!'"
 "'FILA? Fail!'" [x]
 "'Feca-face!'"
-"'FFS, joker!'" [x]
 "'A fight: fit? Gah!'"
 "'Fit? STFU! Stuff it!'"
 "'Flat-out fat lout!'" []
@@ -38833,7 +38834,7 @@ blurb
 "'Hyurr! Hurry!'"
 "'I mean, anime?!'" []
 "'I...' / 'Psh, Mr. Shrimp.'"
-"'Jerkos? Jokers!' they laugh." [x]
+"'Jerkos? Jokers!'"
 "'Jerks? J/k-ers!'"
 "'Le gawkin['] Weakling!'" []
 "'A lil['] dork! Roadkill!'"
@@ -38882,25 +38883,21 @@ blurb
 "'Soap a sop! Oops, a sap!'"
 "'Trip-Me Permit? I'm pert!'"
 "'Sore lad! Real sod!' Reloads." []
-"'Spy Us?'" [x] []
 "'Swarthy, shy wart!'"
 "'Eco-runt?! Trounce!"
 "Taunting-attuning." []
-"'Tawt!'" [x]
 "Mo['] nuts um-nots.'" [x]
 "'Classwork Crosswalk? Slack! Rows!'"
-"'Sham ills! Smallish li'l smash!'" [x]
-"'Queer-[a-word] squarese!'" [x]
+"'Sham ills! Smallish li'l smash!'"
+"'Queer-[a-word] squarese!'"
 "'Acne cane? [']E can!'"
-"They call him a ploated tadpole." [x]
+"'Ploated tadpole!"
 "'Schnook ... no shock.'"
 "'Fragile, e.g. frail.'" [x]
 "'Mr. Those-Smother-Mothers!'" [x]
 "'Pick on cop kin! Poinck!"
 "'D'oh! Cue Ed Chou!'"
 "'Fart? I? No! Not fair!'"
-"They develop senso-noses. 'Fart? I? No! Not fair!'" [x]
-"They fake-offer him some Renegade Green-Ade until he's near-edge." [x]
 "Sorta-Ratso-Roast." [x]
 "'Taunted-attuned? End? Tut, a ...'"
 "'Apt rub. Rap, but ... abrupt 'Up, brat!'"
@@ -38912,14 +38909,13 @@ blurb
 "'Dork-KO Dr.!" [x]
 "Nice-o?! On ice!" [x]
 "'Ratlet! Tatler!' Rattle, rattle." [x]
-"They repeat an anti-dork joke from popular comedian Kid C." [x]
 "Mean name. Amen." [x]
 "'Big head? Bag, hide!'"
 "'Aunt Tuna? A nut!'"
 "'A rebel? Be real!'"
 "'Leper-Repel!'" [x]
-"'Knits stink.' Tskin[']." [x]
-"They treat the lil['] guy uglily." [x]
+"'Knits stink.' Tskin[']."
+"'Li[']l guy...' uglily."
 "'The toad-head tot!'"
 "Tons-loud 'Told on us, lout?' Nods."
 "'Too-fat oaf tot!'"
@@ -39601,7 +39597,7 @@ blurb
 "pal-comrades camelopards"
 "a peeringer peregrine"
 "a pencil pelican" []
-"Perspiro-Prosperi-Porpoise"
+"an oppo-ires porpoise"
 "a pest-made stampede"
 "a pholdin['] dolphin" []
 "pig-nose pigeons" []

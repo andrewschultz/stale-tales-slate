@@ -1,3 +1,11 @@
+"Huck Taft"
+"Fat Duck"
+"FunkCo"
+"'Duke FC?!'"
+"'FFS, joker!'"
+"'Tawt!'"
+"'Spy Us?'" []
+"Kid C"
 "You don't need `pure OCD` to `produce`." [x]
 "You either `UPHOLD` or `HOLD UP` the economy!" [x]
 "You're never too `aliterate` to `retaliate`." [x]

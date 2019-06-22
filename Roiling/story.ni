@@ -606,103 +606,73 @@ section gender specific stubs and/or silliness
 
 to say w-man: say "[if player is female]wo[end if]man";
 
-to say a-b:
-	say "[if player is male]Abe[else]Bea[end if]"
+to say a-b: say "[if player is male]Abe[else]Bea[end if]"
 
-to say d-t:
-	say "[if player is male]Tod[else]Dot[end if]"
+to say d-t: say "[if player is male]Tod[else]Dot[end if]"
 
-to say n-t:
-	say "[if player is male]Nate[else]Tena[end if]"
+to say n-t: say "[if player is male]Nate[else]Tena[end if]"
 
-to say fs: [Mr/Mrs]
-	say "[if player is male][else]s[end if]";
+to say fs: say "[if player is male][else]s[end if]"; [s added for Mr/Mrs option]
 
-to say i-n:
-	say "[if player is male]Ian[else]Nia[end if]"
+to say i-n: say "[if player is male]Ian[else]Nia[end if]"
 
-to say m-e:
-	say "[one of]Me[or][']Em[in random order]"
+to say m-e: say "[one of]Me[or][']Em[in random order]"
 
-to say mle:
-	say "[one of]Mel[or]Lem[in random order]"
+to say mle: say "[one of]Mel[or]Lem[in random order]"
 
-to say sic: [for when I totally have to bail out]
-	if player is female, say " (sic) "
+to say sic: if player is female, say " (sic) " [for when I totally have to bail out]
 
-to say sim:
-	say "[if player is male]Simeon[else]Simone[end if]"
+to say sim: say "[if player is male]Simeon[else]Simone[end if]"
 
-to say toti:
-	say "[if player is male]Tino[else]Toni[end if]"
+to say toti: say "[if player is male]Tino[else]Toni[end if]"
 
-to say tt:
-	say "[if player is male]Tio[else]Toi[end if]"
+to say tt: say "[if player is male]Tio[else]Toi[end if]"
 
-to say ta:
-	say "[if player is male]Tai[else]Tia[end if]"
+to say ta: say "[if player is male]Tai[else]Tia[end if]"
 
 [this is strictly speaking bad coding but "of x" and "of y" got tedious]
 
-to say he-she:
-	say "[if player is male]he[else]she[end if]"
+to say he-she: say "[if player is male]he[else]she[end if]"
 
-to say him-her:
-	say "[if player is male]him[else]her[end if]"
+to say him-her: say "[if player is male]him[else]her[end if]"
 
-to say his-her:
-	say "[if player is male]his[else]her[end if]"
+to say his-her: say "[if player is male]his[else]her[end if]"
 
-to say he-she-c:
-	say "[if player is male]He[else]She[end if]"
+to say he-she-c: say "[if player is male]He[else]She[end if]"
 
-to say him-her-c: [unused]
-	say "[if player is male]Him[else]Her[end if]"
+to say him-her-c: say "[if player is male]Him[else]Her[end if]" [probably unused but why chance it]
 
-to say his-her-c:
-	say "[if player is male]His[else]Her[end if]"
+to say his-her-c: say "[if player is male]His[else]Her[end if]"
 
-to say mrmaam:
-	say "[if player is female]ma'am[else]mister[end if]";
+to say mrmaam: say "[if player is female]ma'am[else]mister[end if]";
 
 section redact cussing
 
 censor-minor is a truth state that varies.
 
-to say a-word:
-	say "[if censor-minor is true]---[else]ass[end if]";
+to say a-word: say "[if censor-minor is true]---[else]ass[end if]";
 
-to say a-word-u:
-	say "[if censor-minor is true]---[else]Ass[end if]";
+to say a-word-u: say "[if censor-minor is true]---[else]Ass[end if]";
 
-to say crap:
-	say "[if censor-minor is true]----[else]crap[end if]";
+to say crap: say "[if censor-minor is true]----[else]crap[end if]";
 
-to say crap-u:
-	say "[if censor-minor is true]----[else]Crap[end if]";
+to say crap-u: say "[if censor-minor is true]----[else]Crap[end if]";
 
-to say d-word:
-	say "[if censor-minor is true]----[else]damn[end if]";
+to say d-word: say "[if censor-minor is true]----[else]damn[end if]";
 
-to say d-word-u:
-	say "[if censor-minor is true]----[else]Damn[end if]";
+to say d-word-u: say "[if censor-minor is true]----[else]Damn[end if]";
 
-to say dick:
-	say "[if censor-minor is true]----[else]dick[end if]";
+to say dick: say "[if censor-minor is true]----[else]dick[end if]";
 
-to say dick-u:
-	say "[if censor-minor is true]----[else]Dick[end if]";
+to say dick-u: say "[if censor-minor is true]----[else]Dick[end if]";
 
-[these 'say' the same thing but I wanted to put them here so my spell- and anagram-checker didn't go off-base. They're a bit too strong of swears.]
+[these 'say' the same thing but I wanted to put them here so my spell- and anagram-checker didn't go off-base. They're a bit too strong of swears to print.]
 
-to say f-w:
-	say "****";
+to say f-w: say "****";
 
-to say s-w:
-	say "****";
+to say s-w: say "****";
 
-to say t-w:
-	say "****";
+to say t-w: say "****";
 
 section question
 
@@ -997,17 +967,17 @@ to say full-monty of (myobj - a thing):
 			change current foreground-color to (R 0 G 0 B 0);
 			if settler-space-warned is false:
 				now sw is true;
-		if C is "R" or C is "r": [consonant no match]
+		if C is "R" or C is "r":
 			change current foreground-color to (R 210 G 0 B 0);
-		if C is "Y" or C is "y":
+		else if C is "Y" or C is "y":
 			change current foreground-color to (R 210 G 210 B 0);
-		if C is "O" or C is "o": [y no match]
+		else if C is "O" or C is "o": [y no match]
 			change current foreground-color to (R 210 G 105 B 0);
-		if C is "P" or C is "p": [consonant match]
+		else if C is "P" or C is "p": [consonant match]
 			change current foreground-color to (R 210 G 0 B 210);
-		if C is "G" or C is "g": [vowel match]
+		else if C is "G" or C is "g": [vowel match]
 			change current foreground-color to (R 0 G 210 B 0);
-		if C is "B" or C is "b": [y match]
+		else if C is "B" or C is "b": [y match]
 			change current foreground-color to (R 168 G 42 B 42);
 		draw a rectangle (current foreground-color) in current graphics window at D by 12 with size 12 by 12;
 		increase D by 13;
@@ -1113,19 +1083,19 @@ rule for deciding whether to allow undo:
 	if undo is prevented and scams is false:
 		if undo-code is -1:
 			say "Don't worry. There's no wrong way through dialogues, nothing disappears, and important stuff is recorded in your pedanto-notepad.";
-		if undo-code is 1:
+		else if undo-code is 1:
 			say "[eh-eh]Ucky, yuck, you think at the biology behind the crust coming back up your throat. For your own health, see. That's something not even a tree eater could re-eat.";
-		if undo-code is 2:
+		else if undo-code is 2:
 			say "[eh-eh]I can't let that un-see ensue.";
-		if undo-code is 3:
+		else if undo-code is 3:
 			say "[eh-eh]The sugared sea-drug has you. You think you can use its insights, but it will subtly decrease the pleasure you could've gotten figuring things out on your own.";
-		if undo-code is 4:
+		else if undo-code is 4:
 			say "[eh-eh]You can't undo learning such knowledge.";
-		if undo-code is 5:
+		else if undo-code is 5:
 			say "[eh-eh]You probably don't need to revisit that headache anyway.";
-		if undo-code is 6:
+		else if undo-code is 6:
 			say "[eh-eh]No ops can bring that spoon back.";
-		if undo-code is 7:
+		else if undo-code is 7:
 			say "[eh-eh]You think, I'd reuse residue, then seem to hear 'Sure! Die!'";
 		ital-say "undo is only denied if you've used a cheat item, so don't worry. You can undo any death, and the game should not become unwinnable.";
 		deny undo;
@@ -1224,15 +1194,13 @@ carry out gotoing:
 		elvira-flee-taunt;
 	if mrlp is demo dome, say "You rush, despite having nothing urgent to do.";
 	move player to noun;
-	if mrlp is towers and can-see-map:
-		draw-my-loc;
+	if mrlp is towers and can-see-map, draw-my-loc;
 
 when play begins (this is the seed room progress for GO TO rule) :
 	repeat through table of progvals:
 		if there is a regs entry:
 			repeat with myrm running through rooms in regs entry:
-				if progval of myrm is 0:
-					now progval of myrm is rmprog entry;
+				if progval of myrm is 0, now progval of myrm is rmprog entry;
 		else:
 			now progval of rm entry is rmprog entry;
 
@@ -1294,33 +1262,22 @@ persuasion rule for asking the parrot to try giving:
 persuasion rule for asking an animal to try doing something:
 	if noun is spider:
 		say "No...will...power.";
-	if noun is dead flea:
+	else if noun is dead flea:
 		say "It's dead.";
-		persuasion fails;
-	if noun is yak:
+	else if noun is yak:
 		say "It's far too apathetic.";
-		persuasion fails;
-	if noun is parrot:
-		if player is in Reclusion Inclosure:
-			say "You aren't sure you want to alert the coevals to the parrot, helpless as it is right now.";
-			persuasion fails;
-		say "The parrot flies around, cocking its head vaguely west.";
-		persuasion fails;
-	if noun is raptor:
+	else if noun is parrot:
+		say "[if player is in Reclusion Inclosure]You aren't sure you want to alert the coevals to the parrot, helpless as it is right now[else]The parrot flies around, cocking its head vaguely west[end if].";
+	else if noun is raptor:
 		say "You'd be better off changing it.";
-		persuasion fails;
-	if noun is eels:
+	else if noun is eels:
 		say "You need to use just one word at the right time.";
-		persuasion fails;
-	if noun is lamb:
+	else if noun is lamb:
 		say "The lamb doesn't understand orders, or full sentences.";
-		persuasion fails;
-	if player is in Lamer Realm:
+	else if player is in Lamer Realm:
 		say "[if noun is reflexive]You don't have its trust[else]It perks up as if looking for something to attack but settles down again[end if].";
-		persuasion fails;
-	if player is in Perverse Preserve:
+	else if player is in Perverse Preserve:
 		say "The animal cannot understand your words.";
-		persuasion fails;
 	persuasion fails;
 
 [routes]
@@ -1412,8 +1369,7 @@ persuasion rule for asking span pans to try doing something:
 	say "[make-open].";
 	persuasion fails;
 
-to say make-open:
-	say "They don't respond to speech but action";
+to say make-open: say "They don't respond to speech but action";
 
 persuasion rule for asking Aunt Tuna to try doing something:
 	say "Hard to tell her what to do.";
@@ -1504,7 +1460,7 @@ persuasion rule for asking Ed Riley to try doing something:
 
 persuasion rule for asking Le Mer to try doing something:
 	say "You need to communicate less forcefully.";
-		persuasion fails;
+	persuasion fails;
 
 persuasion rule for asking macks to try doing something:
 	say "The macks, like any good alpha males, blow you off and show Gretta Garett-Tatger SHE is most important.";
@@ -1619,8 +1575,7 @@ section specifically
 
 Rand-first is a truth state that varies.
 
-to washup-clue:
-	say "[one of]'Us? Whaps?'[no line break][or]'Pah, wuss,'[or]'Haw, puss,'[or]'You'd place last in a saw push,'[or]'I like dat TV show the Upshaws,'[or]'Don't push aws on me,'[or]'Ssh! Up...aw,'[cycling] [noun] says, red-faced. He's not in the mood for deep discussion. But maybe a nice word would help.";
+to washup-clue: say "[one of]'Us? Whaps?'[no line break][or]'Pah, wuss,'[or]'Haw, puss,'[or]'You'd place last in a saw push,'[or]'I like dat TV show the Upshaws,'[or]'Don't push aws on me,'[or]'Ssh! Up...aw,'[cycling] [noun] says, red-faced. He's not in the mood for deep discussion. But maybe a nice word would help.";
 
 to reason-clue:
 	say "It has NO EARS! Yet it buzzes its name...Sorena A. Norse. The noise makes you see red but lets up when you deduce the bee is a senora.";
@@ -1636,7 +1591,7 @@ check objasking it about (This is the check for object information rule):
 		if haunter is reflexive, say "You need to get the haunter to trust you, first." instead;
 		if player is not in Rascal Craals:
 			say "It acts all ghostly and asks you to take it where the ruby might be.[paragraph break]You describe the path to take to get to the ruby, neglecting why you know--fortunately, the haunter doesn't seem to care.";
-			if player is in Anger Range:
+			if player is in Anger Range: [no elses here. This rolls the haunter out to Rascal Craals]
 				try going west;
 				process the track haunter rule;
 			if player is in Sclerous Closures:
@@ -6417,6 +6372,7 @@ check listening:
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
 	if noun is whiners, say "The volume and speed they're at, the actual words don't matter. You need to bite the men's style somehow." instead;
 	if noun is sly imp, say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
+	if player is in Perverse Preserve, say "You hear no monotremes you could turn into metronomes." instead;
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
 	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead; [others]
 	if player is in Rustic Citrus, say "Curtis is mumbling about some perceived slight." instead;
@@ -6433,7 +6389,7 @@ chapter smelling
 
 the block smelling rule is not listed in any rulebook.
 
-smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster, [routes] pipe soot, seed pit, [troves] [presto] ether, casserole, [oyster] [towers] angriest ingrates, nerd-aid, [others] slime }
+smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster, [routes] pipe soot, seed pit, [troves] [presto] ether, casserole, [oyster] weaselly walleyes, [towers] angriest ingrates, nerd-aid, [others] slime }
 
 rule for supplying a missing noun when listening:
 	repeat with Q running through smell-candidates:
@@ -6467,6 +6423,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Sclerous Closures and sardine is in Sclerous Closures, say "Sea rind." instead;
 	if player is in Lean Lane, say "Antiseptic spice taint." instead;
 	if player is in Rascal Craals, say "This situation only stinks in general, not literally." instead;
+	if noun is weaselly walleyes, say "The weaselly walleyes smell of Skum-Musk." instead;
 	if player is in Tenfold Teflon'd Den Loft, say "Old heat. Loathed hot lead." instead;
 	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
 	if mrlp is towers and leak lake is visible, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
@@ -8567,7 +8524,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 49	85	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
 50	86	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
 51	80	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
-52	89	oyster	"A seashore seahorse mentioned a seaside dis-ease you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
+52	89	oyster	"A seashore seahorse mentioned a subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
 53	87	towers	"The Bland Sad Badlands are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
 54	84	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
 48	--	--	"You'd guess area zero would be this, here, now, but you've been doing okay so far."
