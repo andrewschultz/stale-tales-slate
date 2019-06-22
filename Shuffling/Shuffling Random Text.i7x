@@ -3636,7 +3636,9 @@ blurb
 table of nerd natter [xxms3]
 blurb
 "'Ah! No NaOH, Noah!'"
+"'Malware war?! Lame?!'"
 "'Clear-BBS Scrabble?' Blab recs!" [p]
+"'Cal's pal? All-Caps!'"
 "'Ain't Herb the brain? Bah, inert!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy? And y'd...'"

@@ -1328,6 +1328,7 @@ table of noage [xxg5]
 blurb
 "Another rote 'Nah.'" []
 "Arguing? Gag! Ruin!"
+"Grief, u figure."
 "Bien Sur be RUINS!"
 "Blase? Edgy? Be glad! Yes!"
 "Boo, sulky? Look busy!"
@@ -17561,7 +17562,7 @@ blurb
 "applauds the rigorous squalor of [i]Grub, Dust, Drug Bust[r]."
 "asks, how do you want your life? Bald? Acne? Or BALANCED?" [x]
 "asks the crowd to chant 'Hemp? So po[']. Mehs.'" [x]
-"avoids neater points in his presentation." [x]
+"continues presentation neater points." [x]
 "bemoans cut-rules cultures." [x]
 "berates a front-rower drawing smileys messily." [x]
 "booms ADORE METH? MORE DEATH." [x]
@@ -17570,10 +17571,9 @@ blurb
 "claims things happening causally happen casually. Or vice versa." [x]
 "continues to belt out stipulated platitudes." [x]
 "cuts down famous, um, oafs." [x]
-"discusses his move from troublemaker to maturer bloke." [x]
+"discusses his move from troublemaker to maturer bloke."
 "endorses the work of Dr. Gus Gruds." [x]
-"eschews the lo-med model of rehab." [x]
-"exhorts you to avoid a void. Yes, it should be obvious." [x]
+"continues 'Lo-med model? Me: OLD!'"
 "explains weasely leeways drug addicts use to avoid their punishment." [x]
 "forces the crowd to chant, 'Nope! Do no dope!'" [x]
 "gives radioactive advice--a riot, if you had ironic distance or didn't have a quest to get back to." [x]
@@ -17581,35 +17581,36 @@ blurb
 "intones 'Hemp, dust: the dumps! Um, depths!'" [x]
 "isn't here for dealin['] denial." [x]
 "laments how e-drugs surged." [x]
-"mentions how that person who saved Yorpwald from Red Bull Burdell saved fewer people than anti-drug measures will." [x]
-"mentions pupils slip up without Baehr Herba-Rehab and shouts down a Thera-Heart Hater." [x]
+"mentions pupils slip up without Baehr Herba-Rehab.
+"shouts down a Thera-Heart Hater."
 "moans 'The drugs SHRED! GUT!'" [x]
 "moves between anecdotalism and declamations." [x]
-"booms 'DRUGS: medicating? Decimating!'" [x]
-"booms 'DRUGS: soul-y? LOUSY!'" [x]
+"continues 'DRUGS: medicating? Decimating!'" [x]
+"continues 'DRUGS: soul-y? LOUSY!'" [x]
 "notes even crackheads can see POT is the reverse of TOP." [x]
 "notes the underlying sympathy of the no-punches-pulled [i]Plausible Pill Abuse: Pa, Bullies[r]."
 "outlines DevOps vs. Dope." [x]
 "continues 'STONED: DOESN'T. TO ENDS."
 "continues 'Drugged? Grudged'"
-"pushes the virtues of `Tim's Stim-Mist` over drugs." [x]
+"pushes the virtues of Tim's Stim-Mist over drugs." [x]
 "continues 'Dopers to doorstep, so? DEPORT!'"
 "rails against the Oceanic Cocaine cartel."
 "recounts how [i]Axed to a Detox[r] could be about you, or you... OR YOU!"
 "revels in his repenters presenter role."
-"says cold turkey is a cloudy trek that will leave you truly coked. Which gets retold. Yuck." [x]
+"continues 'Truly coked? Cold turkey? Cloudy trek.' Retold. Yuck." [x]
 "says drugs don't leave you nicked--they give a deckin[']." [x]
-"shouts 'Habits? Bash it!'" [x]
+"continues 'Habits? Bash it!'" [x]
 "smacks down someone who yells 'Poobah? Pah! Boo!'" [x]
 "warns against strudel laced with LSD-ture." [x]
 "warns people against trying Methy Thyme." [x]
-"yells 'Dope. How WHOOPED.'" [x]
-"yells 'Dope is POISED: Die-ops!'" [x]
-"yells 'Hie to dope? Hope to die!'" [x]
-"yells 'No roids indoors! Rid soon!'" [x]
+"continues 'Dope. How WHOOPED.'" [x]
+"continues 'Dope is POISED: Die-ops!'" [x]
+"continues 'Hie to dope? Hope to die!'" [x]
+"continues 'No roids indoors! Rid soon!'" [x]
 "yells 'Sh, li'l shill' at some interruption you didn't hear." [p] [x]
-"yells 'smoke shop: Hemp, ok? SOS!'" [p] [x]
-"yells STD! DTs!" [x]
+"continues 'smoke shop: Hemp, ok? SOS!'" [p] [x]
+"continues 'STD! DTs!'" [x]
+"booms 'Dopamine Paid Me? No!'" [x]
 
 table of overdone movies [xxs2]
 blurb
@@ -17626,7 +17627,6 @@ blurb
 "assures the camp value of [i]Peg's Tot Gets Pot[r] causes even MORE deaths, but that's not the video's fault." [x]
 "assures the veracity of [i]Nose Candy Once, Sandy? Any Second[r]." [x]
 "blabs on a while how there's not much to add to [i]Chaotic Coca Hit[r]." [x]
-"booms 'Dopamine Paid Me? No!'" [x]
 "branches into non-physical addiction with a discussion of [i]Lots-Lost Slot[r]." [x]
 "calls for more fantasy novels like [i]Shipmate is at Hemp[r]." [x]
 "claims [i]Mr. Heaping: Hampering a Hemp Ring[r] is more exciting than any high." [x]
@@ -17642,7 +17642,7 @@ blurb
 "discusses the deeper meaning of [i]The Bar: Her Tab[r]." [x]
 "discusses the NECESSARY repetition in [i]That Heroin: Another Hit[r]." [x]
 "discusses treatment of mental addictions in [i]Sad Dice Caddies[r]."
-"dismisses claims of overacting by the star of [i]One Pill Hilltop[r], Phil Olt." [x]
+"dismisses claims of overacting by the star of [i]Hot Pill Hilltop[r], Phil Olt." [x]
 "dismisses those who gave [i]Noe Rast: Saner to a Stoner[r] one star." [x]
 "dissects [i]So I Went to Wines, Townies[r]." [x]
 "elucidates the gripping story of [i]A Dud's Growth: What Drugs Do[r]." [x]
@@ -17658,7 +17658,7 @@ blurb
 "hashes out legal details of [i]Audi: a DUI[r]." [x]
 "hat-tips [i]Mess Around: Sour Amends[r]." [x]
 "hints at the fantasy redefinition in [i]A Demon on Mead[r]." [x]
-"hopes nobody ever FULLY sympathizes with the subjects of [i]To Scrape at Capers: Pot Scare[r]." [x]
+"hopes nobody ever FULLY sympathizes with the subjects of [i]To Scrape at Copers: Pot Scare[r]." [x]
 "injects deeper social meaning into [i]The Wimp Wit['] Hemp Met WHIP[r]." [x]
 "knows everyone knows about [i]Durham's Rum Dash[r]." [x]
 "knows everyone's seen [i]Addicted Dad, Cited[r]." [x]
@@ -17670,7 +17670,7 @@ blurb
 "lauds the poetry-like quality of [i]No Spiel: One Slip Piles On[r]." [x]
 "lauds the refreshing directness of [i]Point in Pot? Tip: NO[r]."
 "lauds the revolutionary perspective in [i]I, a New Drug, Waged Ruin[r]." [x]
-"lauds the supernatural creepiness of [i]Methadone: Death Omen, the Daemon Ahem, Noted." [x]
+"lauds the supernatural creepiness of [i]Methadone: Death Omen, the Daemon Ahem, Noted[r]." [x]
 "laughs at people who laugh at [i]Jean, Took: Not a Joke[r]." [x]
 "loud-whispers that [i]Not Dirk: Kid, Torn, to Drink[r], has an understated truth to it." [x]
 "mansplains [i]Turds Go to Drugs[r] is full of tough love, not snide put-downs." [x]
@@ -17749,7 +17749,7 @@ blurb
 "says [i]Strom, Mr. Sot[r] is nowhere near as demeaning as the drug itself." [x]
 "says [i]To Snare a Stoner[r] by Ron East is grippingly realistic." [x]
 "says [i]Way Stoned, Swayed Not: Today's New, Steady Now[r], deserves to be such an epic." [x]
-"says [i]Withdrawal: a Wild Wrath[r] won't happen to EVERYONE, but..." [x]
+"says [i]Withdrawal: a Wild Wrath[r] has one unrealistic point: the junkies are too attractive." [x]
 "says if you're on drugs, of COURSE you'll miss the point of [i]Drugstore: Urges Trod[r]." [x]
 "says ignorance is no excuse, proved by [i]Ten Fools to Felons[r]."
 "says nobody's disproven [i]Like Drugs? Sulk, Dirge[r], yet, though they've tried."
@@ -17757,7 +17757,6 @@ blurb
 "says only fools laugh at [i]I'm Seth: Meth is This, Me[r]." [x]
 "says right-thinking folk deserve the humor in [i]The Drunks['] Herd Stunk[r]." [x]
 "says the audience just can't admit they want to be the narrator in [i]Woe Underway: We Warned You[r]." [x]
-"says the only unrealistic part of [i]Rose Dove's Overdoses[r] is, victims are less attractive." [x]
 "says you can laugh at AND with [i]Toasted Ted: a Sot[r]." [x]
 "says you really need to re-watch [i]Try Once: Note, Cry[r] for the full effect." [x]
 "says you'll have to re-watch [i]One Puff is Fun? Fie, Sop[r]." [x]
@@ -35490,7 +35489,7 @@ blurb
 table of catechism pages [xxp2]
 blurb
 "A 'touching' article: our kids, Rod, Suki, UI dorks risk duo." [x]
-"'817351837 bites I bet' is written on a blank page." [p] [x]
+"'817351837 bites I bet' is written on a blank page." [p]
 "An ad for Algebra Lab Gear." [x]
 "An ad for Hi-Res Shire, which has the lean trim terminal for YOU." [x]
 "Add-ins I Disdain, on third-party software." [x]
@@ -35498,8 +35497,7 @@ blurb
 "Ah, info's FASHION." []
 "Alerting! Triangle Altering? Integral Relating? Tanglier, tanglier!" [x]
 "Analysis of the Carter Crater Tracer." [x]
-"Another I Rethank a Thinker section." [x]
-"Another page in a big long boring source course." [x]
+"Ah, tinker! Harken it! I Rethank a Thinker." [x]
 "Another page referring to the seminal work [i]Equations: A Question[r], by Otis Quane." [x]
 "Aplomb, regrets, great problems, leet BS program."
 "An article called [i]RSI, Sir[r]: Tips on being by a computer too long." [x]
@@ -35508,11 +35506,11 @@ blurb
 "Back, HALT, black hat!"
 "Basic regular expressions from [i]I Grep to Grope It[r], by Rog Piet." [x]
 "Blame lag? Ballgame!" [x]
-"Blather about UserLoc Closure." [x]
+"Blather about UserLoc Closure: our cels." [x]
 "Boggling blogging: both good and bad." [x]
-"Brigit's Bit Rigs and the big stir they created." [x]
+"Brigit's Bit Rigs: big stir!"
 "'C is OK? Sicko!' is written in the margins." [x]
-"A call for legislation against slur-URLs." [x]
+"Slur-URLs: LULs? Urrs..."
 "A cartoon: by the way, why a byte?" [x]
 "A cartoon: hangs, gnash [']n gash." [x]
 "A cartoon: I Dub a bad UI, bud, ai!" [x]
@@ -35525,29 +35523,28 @@ blurb
 "A cautionary tale of the last boor who programmed toolbars on a barstool." [x]
 "A chapter begins: sir, compel compilers!" [x]
 "A character named Senor Uric exclaims 'Us, Cornier?' as he explains recursion." [x]
-"A character named Winko Owkin shows how saying 'I KNOW' helps you win, ok?" [p] [x]
+"A character named Winko Owkin shows how saying 'I KNOW' helps you win, ok?" [p]
 "Chi-Spy's Physics." [x]
-"Chips Reed deciphers hip creeds here." [x]
+"Chips Reed deciphers hip creeds." [x]
 "A codec ace-doc."
-"The coder credo of Dr. Coe." [x]
+"Dr. Coe's coders['] credos: recs, do!"
 "A comic: [i]Online Lonnie, El Nino[r], by Noe Lin." [x]
 "A comic poem: Yelp! Shrink! Hyperlinks!" [x]
 "Comparisons of NetBios: Ben Tsoi or Bo Stein?" [x]
 "Confused? Code's Fun! So fecund!" []
-"A confusing example of the TreksCo Rockets Stocker." [x]
+"A confusing example of the TreksCo Rockets Stocker."
 "A cool fig of logic."
 "Cope, sod: scooped opcodes!"
 "Cosine, E-coins: So Nice!" []
 "A creed, so: Ed's Core Recodes."
-"Dealing with e-trash haters." [x]
+"E-trash haters? Eh, rats."
 "The debate: piracy v. privacy." [p] [x]
 "A deconstruction of the elitism of [i]Boolean Loon [a-b][r], by Bo O'Neal." [x]
-"Dig now. Godwin = WIN, dog!" []
+"Dig now. Godwin? WIN, dog!" []
 "Discussion of a game of GPS'in pings." [x]
-"A discussion of pluses and minuse of the major EOLNs: Olsen, Slone, and Noles." [x]
-"A discussion of whether [i]Pa Huck's Hack-Ups[r] was actually written by Cap Husk." [x]
+"A discussion of pluses and minuse of the major EOLNs: Olsen, Slone, and Noles."
+"A discussion of whether [i]Pa Huck's Hack-Ups[r] was actually written by Cap Husk."
 "Dos, eh? Hosed!"
-"Dr. Evie discusses how I'd ever derive." [x]
 "Drivel from Fact-Born Bancroft." [x]
 "Ed Hart endorses Red Hat, noting the rad hatred thread dearth." [x]
 "Ed's GUI Guides come recommended." [x]
@@ -35555,10 +35552,10 @@ blurb
 "Electric atrial article recital. Critical! Relate!" []
 "Enumeration mountaineer? Mean routine!"
 "An essay on looking to the future asks, programs or Gramps?" [x]
-"Examples of bad UI from Dubai to Baidu." [x]
+"Examples of bad UI from Dubai to Baidu."
 "Excerpts from [i]Open Source Uprose Once[r], by Enos Couper & Ponce Rouse." [x]
-"Excerpts from Pa Grin's Graspin['] Parsing, and an opposite view, Sparing Parsing by Paris Ng." [x]
-"A fascinating recap of the most recent Math Cup Matchup." [x]
+"Excerpts from Pa Grin's [i]Graspin['] Parsing[r], and an opposite view, [i]Sparing Parsing[r] by Paris Ng[r]." [x]
+"A fascinating recap of the most recent Math Cup Matchup."
 "Flaccid generalities and aphorimsms under 'Resigned? Re-design, designer!' It credits Sid Green and Desire Ng." [x]
 "Found imp. info dump? Fun, dim op." [p]
 "'FTP? PFT! HTTP? THPT!'"
@@ -35567,54 +35564,51 @@ blurb
 "Globals? BS! All go!" [x]
 "Grampa's Pragmas."
 "Hark Dat Dark Hat, a section on hackers." [x]
-"Here's notes on an obscure sub-core of some programming language." [x]
+"A bro cues some programming language's obscure sub-core."
 "Here's why plugins (GNU, LISP) shouldn't cause gulpins." [x]
-"Hm, a rant for Fortran." [x]
-"How a tech cheat can inspect pectins--with net pics." [x]
+"A rant for Fortran."
+"How to inspect pectins['] net pics." [x]
 "How to be Cred-Rec'd, by Dr. Deccer." [x]
 "How to detect a lurid URL ID." [x]
-"How to guard yourself from login oglin[']." [x]
 "How to put hefts in if-thens." [x]
 "How your firewall will fare." [x]
 "'I cap a pic,' advice on Internet memes." [x]
 "If STR first, RTF is siftr." []
-"An introductory page covers all that can be coined in code." [x]
+"'No dice?!' One dic, coined in code."
 "'Is derpin['] inspired?' An interesting discussion." [x]
 "It's crocked. Direct sock? Doc Rickets['] code tricks/edicts rock!"
 "Know, wonk, know!"
 "Knuth-Thunk, a pompous biography of computers." [x]
-"A last bit about a StatLib." [x]
+"StatLib's last bits."
 "Lemmas: slam [']em!"
 "The life story of Sabermetrics Master Scribe [if player is male]Crabtree Sims[else]Cassi Rembert[end if]." [x]
 "A list of Elkins-Lenski-Klein's E-Links." [x]
 "List-Op Pilots['] Spoilt Ol['] tips to slip." []
 "A lo-tech ol['] etch."
-"A long remade readme by Ma Reed. Dear, me!" [x]
+"A long remade readme by Ma Reed. Dear, me!"
 "Lord Howell's Hello Worlds."
-"Make your Header Adhere." [x]
-"Malaise as email: Internet addiction." [x]
-"Mentions of tweest tweets." [x]
-"Messy lab assembly may bless? Bye! (SLAMS)." [x]
+"Header Adhere, eh? Read."
+"Malaise as email: on Internet addiction."
+"Mentions of tweest tweets."
+"Messy lab assembly may bless? Bye! (SLAMS)."
 "The Misc. Chemist Techism explores how computer science applies elsewhere." [x]
 "More reference from [i]To Happen on the App[r], by Pop Neath." [x]
 "A MS Paint rendering of a spam tin." [x]
 "MS Paint tips, man!" [] [x]
 "Murals of Formulas, drawn by Rolf Maus." [x]
 "My VM: YMMV."
-"A new shill shows why the WinShell means hell wins." [x]
-"Nobody sensible would find a malware war lame." [x]
+"New shill: 'WinShell?! Hell wins!'"
 "Notes from Le Prof of Perl, Pop Rolf Freel." [x]
 "Notes on webring brewing." [x]
 "Notes scrawled: Duke CS sucked." [x]
 "Nyan So Annoys a Sonny." [x]
 "Oi! I/O!"
-"On the fall of the Richest Itchers, a computer game company." [x]
+"On the fall of the Richest Itchers, a computer game company." [sir-tech, heh]
 "On the Snafu as Fun." [x]
-"One look at Figure U: grief." [x]
 "One page claims to have a radioactive advice ratio." [x]
 "One picture of a man trying to out-sprint printouts is actually kind of funny stuff." [x]
 "Ops for pros of proofs." []
-"Ouch, a grisly tale of a hardcoder who got hardcore'd." [x]
+"Ouch, a grisly tale of a hardcore'd hardcoder." [x]
 "An overview of U-Bag-a-Bug software tracking." [x]
 "Overviews of Rex Gee's Regexes." [x]
 "Pam Gror's programs."
@@ -35623,12 +35617,12 @@ blurb
 "A picture of the original Vicuna Univac." [x]
 "Pip's Nets Snippets pop up in several places." [x]
 "Power is ripe. Sow, wise pro!"
-"A primer on OOP, which has been vandalized." [x]
+"A primer on OOP, which has been vandalized."
 "A print-how section on the Pinthrow-Nipworth-Twiphorn Whiptron." [x]
 "A profile of PC Ham, HP/MAC Champ." [x]
 "A profile of the computing genius ENIAC Caine." [x]
-"Pros of proofs present proofs for ops." [x]
-"Race-smit? Mistrace Matrices." [x]
+"Pros of proofs for ops: so, Prof." [x]
+"Race-smit? Mistrace Matrices."
 "Ragged? Ref: defragger."
 "Raster Starer? Err, rats, tears."
 "Re-deriving, given drier."
@@ -35636,22 +35630,21 @@ blurb
 "Redef, deref, defer...freed!" []
 "Refute a feature, rue fate."
 "Reproduce Procedure, Dour Creep! Purer code."
-"A review of [i]APIs, APIS[r], by Issa Paip." [x]
+"A review of [i]APIs, APIS[r], by Issa Paip."
 "A review of [i]Reborn AI, Airborne[r], by Robin Rea."
-"A review of Fathom of Math, by Mo Fath." [x]
-"A review of Mr. Gee's Merges, by Ms. Eger." [x]
-"A review of Ow to Woot, Yorpwald's seminal book on programming tricks." [x]
-"The sad tale of Cal's Pal, who always used ALL CAPS." [x]
-"A sample of Plotnik's Top Links is listed here." [x]
+"A review of [i]Fathom of Math[r], by Mo Fath."
+"A review of [i]Mr. Gee's Merges[r], by Ms. Eger."
+"A review of Ow to Woot, Yorpwald's seminal book on programming tricks."
+"Plotnik's Top Links: lots, pink."
 "Samples from the decoding bible Bug Tiffs: Big Stuff." [x]
 "Scribbling: U dig GUID I dug?" [x]
 "A section labeled Doran's And-Ors." [x]
-"Semaphores and why the novice phears em so." [x]
+"Semaphores: ahem, posers phears [']em so." [x]
 "A short RHost guide." [x]
 "Slashdot? Old stash."
 "So, input spin out? Point us. Sit up on..." []
 "Some neat [']PuterSci Pictures." [x]
-"Some semi-mathematical proof piles on the epsilon." [x]
+"Some semi-mathematical proof piles on epsilon." [x]
 "Something about bitmaps baptism." [x]
 "Something about to BinHex in the box." [x]
 "Sourced ur-codes so crude? Us, decor." []
@@ -35659,7 +35652,7 @@ blurb
 "Sysadmin says mind, Many Diss."
 "The tale of one OS's SOS." [x]
 "Tautologies tautologise."
-"Tend to Dot net? Not Ted Denton! -- reads some anti-Microsoft propaganda." [x]
+"Tend to Dot net? Not Ted! -- reads some anti-Microsoft propaganda." [x]
 "There is a warning against creating a bogus GOSUB or worse, an OS bug." [x]
 "A thorough smackdown of [i]Ifdefs? DIE, FFS[r], by Ed Siff." [x]
 "Tips for recognizing a hax-o-hoax." [x]
@@ -35669,20 +35662,21 @@ blurb
 "A tribute to Odd Hack Haddock." [x]
 "A tribute to Rox Fife, fixer of Firefox." [x]
 "A tutorial cartoon! Igg Did Dig GDI!" [x]
-"A unit for 'No fruit: info rut? Or unfit?' as a debate." [x]
+"A unit for 'No fruit: info rut? Or unfit?'"
 "The virtues of process scopers, whatever those are." [x]
-"Ways a flowchart does not cause howlcraft." [x]
-"Ways to get brainy with binary." [x]
+"A howlcraft flowchart."
+"I, Barny, binary-brainy."
 "We'll love low-level!"
-"What a dip paid for an ipad." [x]
-"What's more evil: Prada or DARPA?" [x]
-"Why not to dis STDIO do-its like LocalAlloc." [x]
+"A dip paid. iPad?!" [p]
+"What's more evil: Prada? DARPA?"
+"Why not to dis STDIO do-its."
+"LocalAlloc: All Cool, Cal."
 "Why to consider coders in Doc Erin's." [x]
 "Why WLAN care is trickier than lawn care." [x]
 "Word processing reviews from [if player is male]Neil[else]Elin[end if] Le In-Line." [x]
-"WTF FTW is a section on creativity and coding." [x]
+"WTF FTW: on creativity and coding." [x]
 "Ye algebra agreeably? Garble, aye."
-"You are told you will need to log off of golf if you really want to rock the computer science." [x]
+"Log off of golf!"
 "You flip through multiple instances of someone named Garj on Jargon. JR Noga, too." [x]
 "User ruse? Sure, sure."
 "Login lingo oglin[']."
@@ -38306,35 +38300,38 @@ blurb
 "'Monied-up opium den?' / 'Um, nope, I'd...'" [x]
 "'Wendi! Wined?'" [x]
 "'Some ban?' Bemoans. Sob 'amen.'" [x]
-"Someone brags about rulin['] a urinal the last twenty minutes." [x]
-"Someone explains you can't unpaste peanuts or untape a peanut from a joke bowl." [x]
-"Someone expresses a tacit yen that Natty Ice gives Tenacity in this neat city." [x]
-"Someone expresses disdain for fashionable abalone fish." [x]
-"Someone fails to out-stare a stouter sea trout." [x]
-"Someone gets a belchy ale belly ache." [x]
-"Someone gets sousier and serious. 'Sure, so I...'" [x]
-"Someone kibitzes that XX Ale works like Ex-Lax." [x]
-"Someone mentions Dungbury Burgundy is surprisingly tasteful." [x]
+"'Rulin['] a urinal? La! Ruin!'"
+"'Ante up! Un-tape, Peanut!'"
+"'Peanuts: neat sup? Un. Paste!'"
+"Tacit yen: ''Nattby Ice. Neat city tenacity."
+"'Fashionable abalone fish? Banal! Fies, oh!'"
+"'Out-stare a stouter sea trout?' A sore tut."
+"A belchy ale belly ache." [x]
+"Sousier, serious 'Sure, so I...'"
+"'XX Ale?! Ex-Lax!'"
+"'Dungbury Burgundy? Buy gun, Dr.!'"
 "Someone mentions Loki has a kilo." [x]
-"Someone mentions Rake Pub is a great place to go to break up." [x]
+"'Break up Rake Pub. Puke bar.'"
 "Someone orders a bar specialty: Handy's Shandy." [x]
-"Someone orders a picante nitecap." [x]
-"Someone orders qualite-tequila." [x]
-"Someone orders Umbrella Label Rum." [x]
+"'Picante nitecap? Ace! PINT!'"
+"'Qualite-tequila!' / 'Quite, Al!'"
+"'Umbrella Label Rum? Lure-balm!'" [x]
 "Someone refuses to drink Pabst--a tbsp, even." [x]
-"Someone remarks this place has so much soul, you can skip Kip's and scram from Marc's." [x]
-"Someone saves a bar seat abreast." [x]
-"Someone wears plastic catlips as a gag." [x]
+"'Skip Kip's!':
+"'Marc's? Scram!'"
+"'Bar seat abreast Base Art?!'"
+"'Plastic catlips? It ... ' Claps."
 "'Sorghum rum? Gosh!'" []
 "'Sounds on! Suds!'"
-"A sour gent sturgeon mumbles about runt egos." [x]
+"'Runt egos, sour gent sturgeon?'"
 "Spry male lampreys fish for companionship." [x]
-"A squalider real squid walks by." [x]
+"'Squalider? Real squid!'"
 "'Streak Staker.' ... 'Takers!'" []
-"A stringy, straying stingray trying as limpest limpets hog the bar." [x] []
+"A stringy, straying stingray! It's angry!"
+"Limpest limpets: 'Split [']em!'"
 "A strumpet trumpets pert smut."
-"A sturgeon so urgent almost clatters into you. 'Nuts, ogre,' you mumble at it." [x]
-"Tales of the dolphins['] spin-hold." [x]
+"'Sturgeon so urgent? Nuts, ogre!'"
+"'Hold! Spin, hind-slop dolphins!'"
 "'Tequila be equitable!' / 'Al, be quiet!'"
 "'Tip here, prithee!' / 'Eh, tripe!'" []
 "'To sip is top!' / 'O, pits!'" []
@@ -38787,6 +38784,9 @@ blurb
 table of fish fries [xxy5]
 blurb
 "'Ain't Fly, Faintly!'"
+"'FFS, joker!'"
+"'Spy, us?'"
+"'Tawt!'"
 "'Bad short trash-bod!'"
 "'Baited, eh?' / 'I...' / 'Be hated!'"
 "'Bed-wetter! We'd better...'"
@@ -39160,7 +39160,7 @@ blurb
 "'Sammi, a miasma.'"
 "'Stacy? A cyst!'"
 "'Tania's a saint!'" []
-"'`There's Hester`...'
+"'There's Hester...'"
 "'Evelyn? Le envy, evenly...'"
 "'Thresa's Rashest.'"
 "'Tiffy? Fifty.'"

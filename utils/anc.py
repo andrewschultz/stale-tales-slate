@@ -22,11 +22,13 @@ focused_already = defaultdict(int)
 last_table_search = ""
 first_table_search = ""
 
+match_focuses = True
 show_skips = False
 print_freq = False
 view_different = False
 open_after = False
 
+min_to_list = 0
 focus_max = 10
 max_do = 0
 brax = defaultdict(str)
@@ -107,6 +109,7 @@ this_table = ""
 last_table = ""
 
 def ana_check(a):
+    global match_focuses
     global this_tl
     global this_table
     global last_table
@@ -159,14 +162,22 @@ def ana_check(a):
                 consec_err += 1
             else:
                 consec_err = 0
-            print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d}{:s} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, "" if consec_err == 0 else "/{:d}".format(consec_err),line.strip()))
+            print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d}{:s} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, "" if consec_err == 0 else "/{:d}".format(consec_err+1),line.strip()))
             last_err = line_count
             if all_ana == max_do:
                 print("Got", max_do, "bailing.")
+                match_focuses = False
                 break
     if open_the_files[f]: i7.npo(f, open_the_files[f], bail = False)
     if len(any_in) > 1:
         print('SUMMARY ({:d}):'.format(len(any_in)), ' '.join(["{:s}-{:d}-{:d}".format(x, any_in[x], any_count[x]) for x in sorted(any_in, key=any_in.get)]))
+        if min_to_list == 0:
+            max_entry = max(any_count, key=any_count.get)
+            print("Table with most entries:", max_entry, "with", any_count[max_entry])
+        else:
+            temp_list = sorted([x for x in any_count if any_count[x] >= min_to_list], key=any_count.get, reverse=True)
+            print(len(temp_list), "Tables with at least", min_to_list, "entries:")
+            print(", ".join(["{:s}={:d}".format(x, any_count[x]) for x in temp_list]))
 
 def get_brackets():
     with open(replacement_dict_file) as file:
@@ -299,7 +310,7 @@ regex_str = get_brackets()
 
 cmd_count = 1
 while cmd_count < len(sys.argv):
-    arg = sys.argv[cmd_count].lower()
+    arg = mt.nohy(sys.argv[cmd_count].lower())    
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
     elif arg[0] == '.' or arg[-1] == '.':
         table_search = re.sub("\.", " ", arg).strip()
@@ -314,6 +325,8 @@ while cmd_count < len(sys.argv):
         exit()
     elif arg == 'c': convert_anagram_focused = True
     elif arg == 'v' or arg == 'vd': view_different = True
+    elif arg[:2] == 'ml' and arg[2:].isdigit():
+        min_to_list = int(arg[2:])
     elif arg[0] == 'm' and arg[1:].isdigit():
         max_do = int(arg[1:])
     elif arg == 'cb' or arg == 'cc':
@@ -335,7 +348,7 @@ while cmd_count < len(sys.argv):
         if 'r' in arg or arg == 'pc': temp += pre_commit_check('roi')
         if 's' in arg or arg == 'pc': temp += pre_commit_check('sa')
         if temp > 0:
-            print("Fix errors before continuing. -pc or -pcors will open the last wrong line automatically.")
+            print("Fix errors before continuing with -cc. -pc or -pcors will open the last wrong line automatically.\n-cc will copy over to the focus file.")
             if 'o' in arg or arg == 'pc':
                 for q in open_the_files: i7.npo(q, open_the_files[q], bail=False)
             sys.exit(temp)
@@ -360,7 +373,9 @@ get_anagram_focus()
 
 for a in anas: ana_check(a)
 
-if not first_table_search and not last_table_search:
+match_focuses &= not first_table_search and not last_table_search
+
+if match_focuses:
     lfa = len(focused_already)
     if lfa:
         q = list(focused_already)
