@@ -5,6 +5,7 @@
 import mytools as mt
 from math import gcd
 from collections import defaultdict
+from shutil import copy
 import sys
 import os
 import re
@@ -16,10 +17,13 @@ anagram_focus_file = "anc-focus.txt"
 mt.bail_if_not(replacement_dict_file)
 mt.bail_if_not(anagram_focus_file)
 
+open_the_files = defaultdict(int)
 focused_already = defaultdict(int)
 
 show_skips = False
 print_freq = False
+view_different = False
+open_after = False
 
 max_do = 0
 brax = defaultdict(str)
@@ -36,8 +40,19 @@ def ignore_tokens(x):
     if 'of psas' in x: return True
     return False
 
+def check_valid_token_count(x):
+    x1 = x
+    if '"' in x: x = re.sub("\"[^\"]*$", "", x)
+    tix = x.count('`')
+    if tix % 2: sys.exit("UH OH bailing. We need even number of backticks but have {:d} for this line: {:s}".format(tix, x.strip()))
+    gt = x.count('>')
+    if gt > 1: sys.exit("UH OH bailing. We can only have 1 greater-than sign but have {:d} for this line: {:s}".format(gt, x.strip()))
+    lt = x.count('<')
+    if lt > 1: sys.exit("UH OH bailing. We can only have 1 greater-than sign but have {:d} for this line: {:s}".format(lt, x.strip()))
+
 def use_isolate_tokens(x):
     if ignore_tokens(this_table): return x
+    check_valid_token_count(x)
     if '>' in x: x = re.sub(".*>", "", x)
     if '<' in x: x = re.sub("<.*", "", x)
     if '`' in x:
@@ -116,7 +131,8 @@ def ana_check(a):
             print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, line.strip()))
             if all_ana == max_do:
                 print("Got", max_do, "bailing.")
-                sys.exit()
+                break
+    if open_the_files[f]: i7.npo(f, open_the_files[f], bail = False)
 
 def get_brackets():
     with open(replacement_dict_file) as file:
@@ -137,6 +153,15 @@ def no_focus_markers(s, reduce = False):
     if reduce: s = s.lower().strip()
     return re.sub("[`><]", "", s)
 
+def to_end_quote(s):
+    return re.sub("\"[^\"]*$", "", s)
+
+def has_focus_markers(s):
+    return '`' in s or '<' in s or '>' in s
+
+def valid_reduce_table(q):
+    return 'table of psas' not in q and 'table of megachatter' not in q #should be expanded if there is more than 2
+
 def get_anagram_focus():
     with open(anagram_focus_file) as file:
         for (line_count, line) in enumerate(file, 1):
@@ -152,31 +177,53 @@ def get_anagram_focus():
 
 def rewrite_focus_examples(my_game):
     hdr = i7.hdr(my_game, "ra")
-    file_out = "hdr_temp.i7x"
+    file_out = "hdr_{:s}_temp.i7x".format(my_game)
     ana_temp = "anc_focus_temp.txt"
-    fout = open(file_out, "w")
+    fout = open(file_out, "w", newline='\n')
+    copy(anagram_focus_file, ana_temp)
     focout = open(ana_temp, "a")
     changes_sent = 0
+    in_table = False
+    table_name = ""
+    hbase = os.path.basename(hdr)
     with open(hdr) as file:
         for (line_count, line) in enumerate(file, 1):
-            if has_focus_markers(line):
+            if not in_table:
+                fout.write(line)
+                if line.startswith("table of") and "\t" not in line:
+                    in_table = True
+                    table_name = line
+                continue
+            if in_table and not line.strip():
+                in_table = False
+            if valid_reduce_table(table_name) and has_focus_markers(to_end_quote(line)):
+                if not actual_anagram(line):
+                    print("{:s} line {:d} has bad focus-marked anagram: {:s}".format(hbase, line_count, line.strip()))
+                    i7.npo(hdr, line_count)
+                    sys.exit()
                 fout.write(no_focus_markers(line))
-                if copy_i7x_back:
-                    focout.write(line)
+                focout.write(line)
                 changes_sent += 1
+                # print(changes_sent, line.strip())
             else:
                 fout.write(line)
     focout.close()
-    fout.write()
+    fout.close()
     if not changes_sent:
         print("No changes added to", my_game)
     else:
         print(changes_sent, "changes added to", my_game)
         if copy_i7x_back:
-            os.copy(file_out, hdr)
+            copy(file_out, hdr)
+            copy(ana_temp, anagram_focus_file)
         else:
             print("Use -cc or -cb to copy back the changes.")
-    os.delete(file_out)
+    if view_different:
+        if changes_sent:
+            i7.wm(hdr, file_out)
+            i7.wm(anagram_focus_file, ana_temp)
+    os.remove(file_out)
+    os.remove(ana_temp)
                 
 
 def rewrite_focused_file():
@@ -192,12 +239,13 @@ get_shuffling = False
 convert_anagram_focused = False
 copy_i7x_back = False
 
+regex_str = get_brackets()
+
 cmd_count = 1
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count].lower()
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
     elif ' ' in arg or arg[0] == '=':
-        regex_str = get_brackets()
         print_freq = True
         if actual_anagram(arg):
             print("Anagram ok")
@@ -205,10 +253,15 @@ while cmd_count < len(sys.argv):
             print("for", arg)
         exit()
     elif arg == 'c': convert_anagram_focused = True
+    elif arg == 'v' or arg == 'vd': view_different = True
+    elif arg[0] == 'm' and arg[1:].isdigit():
+        max_do = int(arg[1:])
     elif arg == 'cb' or arg == 'cc':
         convert_anagram_focused = True
         copy_i7x_back = True
     elif arg == 'ss': show_skips = True
+    elif arg == 'o': open_after = True
+    elif arg == 'no' or arg == 'on': open_after = False
     elif re.search("^[rs]+", arg):
         get_roiling = 'r' in arg
         get_shuffling = 's' in arg
@@ -227,8 +280,6 @@ if get_roiling: anas.append("roi")
 if get_shuffling: anas.append("sa")
 
 
-regex_str = get_brackets()
 get_anagram_focus()
-
 
 for a in anas: ana_check(a)

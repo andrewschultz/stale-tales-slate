@@ -7,7 +7,9 @@ c-word	cnut
 crap-u	crap
 dick-u	dick
 f-w	kcuf
+f-w-u	kcuf
 s-w	this
+s-w-u	this
 toti	tino
 mle	mel
 i-n	ian
