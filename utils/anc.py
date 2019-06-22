@@ -38,8 +38,9 @@ def usage(cmd="GENERAL USAGE"):
     print("s = show skips, f = print frequencies")
     exit()
 
-def ignore_tokens(x):
+def ignore_tokens(x): #should have a dict with iterations if there are more than 2 tables to skip
     if 'of psas' in x: return True
+    if 'of megachatter' in x: return True
     return False
 
 def check_valid_token_count(x):
@@ -111,6 +112,8 @@ def ana_check(a):
     global all_ana
     this_ana = 0
     this_tl = 0
+    last_err = 0
+    consec_err = 0
     f = i7.hdr(a, "ra")
     fb = os.path.basename(f)
     print("Going through", fb)
@@ -133,7 +136,7 @@ def ana_check(a):
                 last_table_yet = True
                 break
             if ll in focused_already:
-                print("Skipping line", line_count, ll[:15])
+                if show_skips: print("Skipping line", line_count, ll[:15])
                 continue
             if 'huck taft' in ll:
                 print(ll)
@@ -149,7 +152,13 @@ def ana_check(a):
             all_ana += 1
             this_ana += 1
             any_count[this_table] += 1
-            print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, line.strip()))
+            if open_after: open_the_files[f] = line_count
+            if line_count == last_err + 1:
+                consec_err += 1
+            else:
+                consec_err = 0
+            print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d}{:s} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, "" if consec_err == 0 else "/{:d}".format(consec_err),line.strip()))
+            last_err = line_count
             if all_ana == max_do:
                 print("Got", max_do, "bailing.")
                 break
@@ -184,8 +193,28 @@ def to_end_quote(s):
 def has_focus_markers(s):
     return '`' in s or '<' in s or '>' in s
 
-def valid_reduce_table(q):
-    return 'table of psas' not in q and 'table of megachatter' not in q #should be expanded if there is more than 2
+def pre_commit_check(my_game):
+    hdr = i7.hdr(my_game, "ra")
+    my_table = ""
+    bad_lines = 0
+    last_bad_line = 0
+    with open(hdr) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if line.startswith('table') and not '\t' in line:
+                my_table = line.lower().strip()
+                continue
+            if not line.strip():
+                my_table = ""
+                continue
+            if not my_table: continue
+            if not ignore_tokens(my_table):
+                ll = to_end_quote(line)
+                if '`' in ll or '>' in ll or '<' in ll:
+                    last_bad_line = line_count
+                    bad_lines += 1
+                    print("Line", line_count, "in", os.path.basename(hdr), "/", my_table, "needs tokens removed:", line.lower().strip())
+    if last_bad_line: open_the_files[hdr] = last_bad_line
+    return bad_lines
 
 def get_anagram_focus():
     with open(anagram_focus_file) as file:
@@ -221,7 +250,7 @@ def rewrite_focus_examples(my_game):
                 continue
             if in_table and not line.strip():
                 in_table = False
-            if valid_reduce_table(table_name) and has_focus_markers(to_end_quote(line)):
+            if not ignore_tokens(table_name) and has_focus_markers(to_end_quote(line)):
                 if not actual_anagram(line):
                     print("{:s} line {:d} has bad focus-marked anagram: {:s}".format(hbase, line_count, line.strip()))
                     i7.npo(hdr, line_count)
@@ -270,10 +299,10 @@ cmd_count = 1
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count].lower()
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
-    elif arg[0] == '.':
-        first_table_search = re.sub("\.", " ", arg[1:])
-    elif arg[-1] == '.':
-        last_table_search = re.sub("\.", " ", arg[:-1])
+    elif arg[0] == '.' or arg[-1] == '.':
+        table_search = re.sub("\.", " ", arg[1:])
+        if arg[-1] == '.': first_table_search = table_search
+        if arg[0] == '.': last_table_search = table_search
     elif ' ' in arg or arg[0] == '=':
         print_freq = True
         if actual_anagram(arg):
@@ -290,7 +319,19 @@ while cmd_count < len(sys.argv):
         copy_i7x_back = True
     elif arg == 'ss': show_skips = True
     elif arg == 'o': open_after = True
+    elif arg == 'ec': i7.npo("anc.txt")
+    elif arg == 'ef': i7.npo("anc-focus.txt")
+    elif arg == 'es': i7.npo("anc.py")
     elif arg == 'no' or arg == 'on': open_after = False
+    elif arg[:2] == 'pc':
+        temp = 0
+        if 'r' in arg or arg == 'pc': temp += pre_commit_check('roi')
+        if 's' in arg or arg == 'pc': temp += pre_commit_check('sa')
+        if temp > 0:
+            print("Fix errors before continuing. -pc or -pcors will open the last wrong line automatically.")
+            if 'o' in arg or arg == 'pc':
+                for q in open_the_files: i7.npo(q, open_the_files[q], bail=False)
+            sys.exit(temp)
     elif re.search("^[rs]+", arg):
         get_roiling = 'r' in arg
         get_shuffling = 's' in arg
