@@ -9,6 +9,9 @@ import os
 import re
 import i7
 
+replacement_dict_file = "anc.txt"
+anagram_focus_file = "anc-focus.txt"
+
 show_skips = False
 print_freq = False
 
@@ -108,7 +111,7 @@ def ana_check(a):
                 sys.exit()
 
 def get_brackets():
-    with open("anc.txt") as file:
+    with open(replacement_dict_file) as file:
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
             if line.startswith(";"): break
@@ -121,21 +124,37 @@ def get_brackets():
             else:
                 brax[l[0]] = l[1]
 
+def get_anagram_focus():
+    return
+
 ###################################
 # main program
 ###################################
 
+get_roiling = False
+get_shuffling = False
+
 cmd_count = 1
 while cmd_count < len(sys.argv):
-    arg = sys.argv[cmd_count]
-    if arg == 'f': print_freq = True
-    elif arg == 's': show_skips = True
+    arg = sys.argv[cmd_count].lower()
+    if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
+    elif arg == 'ss': show_skips = True
+    elif re.search("^[rs]+", arg):
+        get_roiling = 'r' in arg
+        get_shuffling = 's' in arg
     else: usage("bad command " + arg)
     cmd_count += 1
 
-anas = [ "sa", "roi" ]
-anas = [ "sa" ]
+if not get_roiling and not get_shuffling:
+    get_roiling = get_shuffling = True
+
+anas = [ ]
+
+if get_roiling: anas.append("roi")
+if get_shuffling: anas.append("sa")
+
 get_brackets()
+get_anagram_focus()
 
 regex_str = r'\[({:s})\]'.format('|'.join(brax))
 
