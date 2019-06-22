@@ -4014,6 +4014,7 @@ blurb
 table of psas [xxms4]
 blurb
 "11+2=12+1"
+"OBESITY BITES, YO!"
 "ABLEISM'S MISSABLE"
 "ACID TRIPS => RAPID TICS"
 "APHORISMS...OR MISHAPS"

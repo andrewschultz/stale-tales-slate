@@ -1,1 +1,85 @@
-;
+"You don't need `pure OCD` to `produce`." [x]
+"You either `UPHOLD` or `HOLD UP` the economy!" [x]
+"You're never too `aliterate` to `retaliate`." [x]
+"They mock his computer game `Fowl, Wolf, Lowf` (lowfat loaf) across the `Flow`." [x]
+"`AUNT TUNA` (an unflattering picture, captioned weight: `A TUN`)" [p] [x]
+"Do not `REVIAL ELVIRA!`" [x]
+"Down with the `Snuf-Funs` league!" [x]
+"Legalize the `Noisier ioniser!`" [x]
+"Listen to the `Cad-Spot Podcast`!" [x]
+"Aunt Tuna notes `Trina's starin['] strain`." [x]
+"moans about `Crissi` and the latest `crisis`."
+"being as gung-ho as `All-In Niall`"
+"being as wily as, but more loyal than, `Varlet Valter`"
+"being better and more focused without `Clowny Colwyn`" [x]
+"being in better shape than `Bloater Alberto`" [x]
+"being lackluster like `Not-Very Treyvon`"
+"being `Le Bad Blade`" [x]
+"being less demoralizing than `Jader Jared`" [x]
+"being ruthless like `Levelin['] Neville`" [x]
+"being sweatier but cleaner than `Grody Gordy`" [x]
+"being team players like `Nobler LeBron`" [x]
+"craving the big time big city unlike `Ozark Ozkar`"
+"deserving a sterling write-up from `Plyin['] Pliny`"
+"doing far better than `Dreg Gerd`" [x]
+"emulating `Clasher Charles`" [x]
+"everyone being a little stouter than `Frail Ralfi`" [x]
+"everyone being more attentive than `Lax Axl`" [x]
+"exhorts his team to be more together than `Envier Vernie`" [x]
+"following the leadership lessons of `Steerin['] Steiner`" [x]
+"getting grittier than `Vain Ivan`" [x]
+"getting out in the real world unlike `Cyber-Bryce`" [x]
+"the guy who called him, `Rodney, one dry nerd, yo`"
+"hanging around unlike `Ditchier Dietrich`"
+"having more discipline than `Beerin['] Bernie`" [x]
+"having more of a clue than `Mess-it-Up Septimus`" [x]
+"having top skills like `Eagle Algee`" [x]
+"keeping in shape unlike `Lardo Roald`" [x]
+"keeping it simple as possible, like `Able Abel`" [x]
+"keeping motivated unlike `Jader Jared`"
+"keeping sharp unlike `Mangier Germain`" [x]
+"labels `Fearin['] Efrain naifer. Fainer`" [x]
+"needing to go all `Cursy Cyrus` on everyone here" [x]
+"nobody escaping through a `fuel flue`" [x]
+"nobody getting all '`Do fly`' like `Foldy Floyd`" [p] [x]
+"not backstabbing like `Rodent Dontre`" [x]
+"not being `snorin['] Ronins`"
+"not demotivating the team like `Jader Jared`" [x]
+"not getting `Flayer Farley`" [x]
+"not having to be as brilliant as `Dazing Danzig`" [x]
+"not mouthing off like `Crowin['] Corwin`" [x]
+"not needing the bulk of `Frigate Freitag`" [x]
+"not stepping out of line like `Fool Olof`" [x]
+"not sticking heads in the sand like `Ostrich Christo`"
+"paying more attention than `Zonked Zdenko`" [x]
+"regrets not mandating haircuts like `Sheared Rasheed`" [x]
+"remembering the example of `Labor-y Baylor`" [x]
+"roars they want to stand tall, but not space out like `Inert Terin`" [x]
+"running a tighter ship than `Froody Fyodor`" [x]
+"says it'd be good to be half as brave as `Afar Rafa`" [x]
+"showing the work ethic of `No-Flair Florian`" [x]
+"standing straight like `Larchey Charley`" [x]
+"standing stronger than `[']Fraid Farid`" [x]
+"staying violent unlike `Fair Rafi`" [x]
+"sticking to a regimen unlike `Fried Fredi`" [x]
+"[e-m] berates `Cauled Claude`'s magic ability." [x]
+"[e-m] berates `laymen meanly, namely, Mel Yan.`" [x]
+"[e-m] berates lesser `citadels['] dialects`." [x]
+"[e-m] blabs about the top-secret `Infrared DNA Frier` at the `Nerd Fair.`" [x]
+"[e-m] cackles, '`Son, mini-minions,`' before his friend quiets him." [x]
+"[e-m] chafes at his `Counsel XI exclusion`."
+"[e-m] claims they're `top-stair patriots`, not some `po['] artist` with a `riot past`." [x]
+"[e-m] details more `POS ops`, like a `sop. 'SOS, Pop!'`"
+"[e-m] gets all `'Is she evil? Is she vile?! She is live!'`"
+"[e-m] mentions he once liked `polarimetry. Temporarily`."
+"[e-m] mumbles '`Tailor my morality.`'" [x]
+"[e-m] pours a box of `false fleas` down his friend's back." [x]
+"[e-m] says, `'Add iron: android!'`" [x]
+"[e-m] snaps his fingers. `'Er, Lem? ... Er, Mel?'`" [x]
+"[e-m] starts up some `fudgein['] feuding.`"
+"[e-m] tries and fails at `castin['] antics`."
+"[e-m] whispers reverentially about the `Lab-Gen Bengal` Elvira's creating."
+"`'My tic's MYSTIC!'` [e-m] lashes back at his companion." [x]
+"'`Stormy [if player is male]Toys, Mr.[else]Toy, Mrs.[end if]`' says [e-m], looking at your inventory." [x]
+"Talk stops. `Morose Mooers` wait for their `Romeos`, getting `mo['] sore` then `moreso`." [x]
+"`'Try. Ignite.'` You point to your rivals. `'Tiring yet? INTEGRITY!'`" [x]
