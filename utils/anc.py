@@ -27,6 +27,7 @@ print_freq = False
 view_different = False
 open_after = False
 
+focus_max = 10
 max_do = 0
 brax = defaultdict(str)
 acc = defaultdict(str)
@@ -137,6 +138,7 @@ def ana_check(a):
                 break
             if ll in focused_already:
                 if show_skips: print("Skipping line", line_count, ll[:15])
+                focused_already.pop(ll)
                 continue
             if 'huck taft' in ll:
                 print(ll)
@@ -300,7 +302,7 @@ while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count].lower()
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
     elif arg[0] == '.' or arg[-1] == '.':
-        table_search = re.sub("\.", " ", arg[1:])
+        table_search = re.sub("\.", " ", arg).strip()
         if arg[-1] == '.': first_table_search = table_search
         if arg[0] == '.': last_table_search = table_search
     elif ' ' in arg or arg[0] == '=':
@@ -323,6 +325,11 @@ while cmd_count < len(sys.argv):
     elif arg == 'ef': i7.npo("anc-focus.txt")
     elif arg == 'es': i7.npo("anc.py")
     elif arg == 'no' or arg == 'on': open_after = False
+    elif arg[:2] == 'fm':
+        if isdigit(arg[2:]):
+            focus_max = int(arg[2:])
+        else:
+            sys.exit("fm requires a number after.")
     elif arg[:2] == 'pc':
         temp = 0
         if 'r' in arg or arg == 'pc': temp += pre_commit_check('roi')
@@ -352,3 +359,13 @@ if get_shuffling: anas.append("sa")
 get_anagram_focus()
 
 for a in anas: ana_check(a)
+
+if not first_table_search and not last_table_search:
+    lfa = len(focused_already)
+    if lfa:
+        q = list(focused_already)
+        print("Did not find i7x file for focus file entries:")
+        for temp in range(0, min(focus_max, lfa)):
+            print(temp+1, q[temp])
+        if focus_max < lfa:
+            print("Only showed", focus_max, "of", lfa, "unused.")
