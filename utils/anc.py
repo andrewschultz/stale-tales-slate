@@ -2,6 +2,7 @@
 # anc.py : python anagram checker
 #
 
+import mytools as mt
 from math import gcd
 from collections import defaultdict
 import sys
@@ -11,6 +12,11 @@ import i7
 
 replacement_dict_file = "anc.txt"
 anagram_focus_file = "anc-focus.txt"
+
+mt.bail_if_not(replacement_dict_file)
+mt.bail_if_not(anagram_focus_file)
+
+focused_already = defaultdict(int)
 
 show_skips = False
 print_freq = False
@@ -97,6 +103,8 @@ def ana_check(a):
                 this_table = re.sub(" *\[.*", "", line.lower().strip())
                 this_tl = 0
                 continue
+            ll = line.lower.strip()
+            if ll in focused_already: continue
             this_tl += 1
             if not line.startswith("\""): continue
             if actual_anagram(line): continue
@@ -125,7 +133,17 @@ def get_brackets():
                 brax[l[0]] = l[1]
 
 def get_anagram_focus():
-    return
+    with open(anagram_focus_file) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if line.startswith("#"): continue
+            if line.startswith(";"): break
+            ll = line.lower().strip()
+            if not ll: continue
+            ll = re.sub("[`><]", "", line.lower().strip())
+            if ll in focused_already:
+                print("Uh oh duplicate focused already", ll, "at", line_count, "duplicating", focused_already[ll])
+            else:
+                focused_already[ll] = line_count
 
 ###################################
 # main program
