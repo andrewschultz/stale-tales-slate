@@ -120,6 +120,7 @@ def ana_check(a):
     consec_err = 0
     f = i7.hdr(a, "ra")
     fb = os.path.basename(f)
+    quote_mismatch = []
     print("Going through", fb)
     first_table_yet = False
     last_table_yet = False
@@ -127,7 +128,7 @@ def ana_check(a):
     any_count = defaultdict(int)
     with open(f) as file:
         for (line_count, line) in enumerate(file, 1):
-            if line.startswith("table") and "\t" not in line:
+            if line.startswith("table") and "\t" not in line and 'table of megachatter' not in line:
                 this_table = re.sub(" *\[.*", "", line.lower().strip())
                 if first_table_search and not first_table_yet and first_table_search not in this_table:
                     this_table = ""
@@ -136,6 +137,10 @@ def ana_check(a):
                     this_tl = 0
                 continue
             ll = to_end_quote(line.lower().strip())
+            if not ll: this_table = ""
+            if this_table and line.count('"') != 2 and this_tl != 0:
+                print("Oh no! Wrong number of quotes {:d} at line {:d}: {:s}".format(this_tl, line_count, line.strip()))
+                quote_mismatch.append(line.strip())
             if last_table_search and last_table_search in this_table and not ll:
                 last_table_yet = True
                 break
@@ -162,7 +167,7 @@ def ana_check(a):
                 consec_err += 1
             else:
                 consec_err = 0
-            print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:4d}{:s} may not be anagram: {:s}".format(this_ana, all_ana, line_count, this_tl, "" if consec_err == 0 else "/{:d}".format(consec_err+1),line.strip()))
+            print("{:4d}/{:4d} LINE {:5d} TAB-ROW {:3d} {:4d}{:s} may not be anagram: {:s}".format(this_ana, all_ana, line_count, any_count[this_table], this_tl, "" if consec_err == 0 else "/{:d}".format(consec_err+1),line.strip()))
             last_err = line_count
             if all_ana == max_do:
                 print("Got", max_do, "bailing.")
@@ -178,6 +183,9 @@ def ana_check(a):
             temp_list = sorted([x for x in any_count if any_count[x] >= min_to_list], key=any_count.get, reverse=True)
             print(len(temp_list), "Tables with at least", min_to_list, "entries:")
             print(", ".join(["{:s}={:d}".format(x, any_count[x]) for x in temp_list]))
+    if len(quote_mismatch):
+        print("QUOTE MISMATCHES ({:d}):".format(len(quote_mismatch)))
+        print("\n".join(quote_mismatch))
 
 def get_brackets():
     with open(replacement_dict_file) as file:

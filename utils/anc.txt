@@ -22,6 +22,9 @@ n-t	nate
 tt	tio
 ta	tai
 e-m	elmer
+fg	afg
+paragraph break	-
+line break	-
 i	-
 b	-
 r	-

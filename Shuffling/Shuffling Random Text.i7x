@@ -1624,6 +1624,9 @@ table of poem codas [xxi]
 blurb
 "[d-word]ed Men, Add Mad End."
 "Shover, shrove, hovers."
+"Bub's nuns snub buns."
+"'Fess at a fest's safest feasts."
+"Murals of Formulas? So [']armful, farm soul!"
 "A defly-flayed fey lad, day elf."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
@@ -3162,6 +3165,7 @@ book metros
 table of garrison chants [xxms1]
 blurb
 "'La, elites lie, steal!'"
+"'BastardCo Broadcast? Bad actors! Drab coats! Abort, cads!'"
 "'Abusive USA vibe!'"
 "'Rages at tear gas!'"
 "'Account, U-Can't-Co!'"
@@ -3636,6 +3640,7 @@ blurb
 table of nerd natter [xxms3]
 blurb
 "'Ah! No NaOH, Noah!'"
+"'Navo-Nova-O-Van? On va!'"
 "'Malware war?! Lame?!'"
 "'Clear-BBS Scrabble?' Blab recs!" [p]
 "'Cal's pal? All-Caps!'"
@@ -3892,7 +3897,7 @@ blurb
 "'Old techs? The clods!'"
 "'Oleg, go Google!'"
 "'On, up, geeky! Keep young!'"
-"'Ion-Duct Unit-Doc Conduit? I'd count!'
+"'Ion-Duct Unit-Doc Conduit? I'd count!'"
 "'U-Adept Update? Due! Tap!'"
 "'AcidSoft factoids: cad, foist fiat docs!'"
 "'Oo! Ban a noob!'"
@@ -3942,7 +3947,7 @@ blurb
 "'Sell short shell sort? She trolls!'"
 "'Le Site is leet!'"
 "'Sign up! Ping us!'"
-"'Since I'm not omniscient...'
+"'Since I'm not omniscient...'"
 "'Sarcastic, arctic [a-word]."
 "'Sir-Tech is...RETCH!' / 'Rec this!'"
 "'Sky-Tech? Sketchy!'"

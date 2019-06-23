@@ -668,6 +668,8 @@ to say dick-u: say "[if censor-minor is true]----[else]Dick[end if]";
 
 [these 'say' the same thing but I wanted to put them here so my spell- and anagram-checker didn't go off-base. They're a bit too strong of swears to print.]
 
+to say fg: say "***";
+
 to say f-w: say "****";
 
 to say s-w: say "****";

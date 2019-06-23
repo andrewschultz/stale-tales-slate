@@ -2009,6 +2009,7 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Acne Irks? Skin Care!"	true
 "Acne? LOL, One Call: Cal Leon!"	true
 "Acne-Plus Clean Ups"	false
+"Rich Best Britches"	false
 "Adeline's Sane Deli"	false
 "Adless Slade's"	false
 "Aethers-Heaters"	false []
@@ -7895,7 +7896,9 @@ blurb
 table of lousy hit songs [xxm01]
 blurb
 "[d-word-u], Be Bad Men"
+"Dead Harm Made Hard"
 "A-OK We Awoke" []
+"Greef's Free, G's"
 "USA Vibe: IB Suave, Abusive"
 "Abby, Baby"
 "About Me: Mo['] Beaut"
@@ -8721,6 +8724,7 @@ table of mob chants [xxm02]
 blurb
 "'Adventurous? Suave? ROTUND!'"
 "'And shout thousand daunts, ho!'"
+"'Pred? Derp!'"
 "'Astoundingly sludgy nation!'"
 "'BS! Low blows!'"
 "'Cur, to court!'"
@@ -17481,6 +17485,9 @@ to say an-other:
 table of sports chatter [xxm05]
 blurb
 "'Bad calls, ball-cads!'"
+"'Buckets Stu Beck be stuck.'"
+"'Air Ira?! Air Ari!'"
+"'Air Lev?!'"
 "'Bad team! Mad! Beat!'"
 "'Bears are BS!'" []
 "'Cal won?! A clown!'"
@@ -17581,7 +17588,7 @@ blurb
 "intones 'Hemp, dust: the dumps! Um, depths!'" [x]
 "isn't here for dealin['] denial." [x]
 "laments how e-drugs surged." [x]
-"mentions pupils slip up without Baehr Herba-Rehab.
+"mentions pupils slip up without Baehr Herba-Rehab."
 "shouts down a Thera-Heart Hater."
 "moans 'The drugs SHRED! GUT!'" [x]
 "moves between anecdotalism and declamations." [x]
@@ -20307,6 +20314,7 @@ blurb
 table of missing deli foods [xxu4]
 blurb
 "Appealing lagniappe"
+"riot-act ricotta"
 "Apposed peapods"
 "Artichoke, heck, a trio"
 "Beef or beer of before"
@@ -24345,7 +24353,7 @@ blurb
 "'Beef tins? Benefits be finest!'"
 "'Beehive vibe. Eeh.'"
 "'Been shot? Be honest.'" []
-"'Beg ME for...? Forge, bum!'"
+"'Bug ME for...? Forge, bum!'"
 "'Bend to Deb? NOT!'" []
 "'Bet on Ben to not be.'"
 "'Bid them debt? HIM?'"
@@ -24553,7 +24561,7 @@ blurb
 "'Elijah, eh? Jail!'"
 "'Emo hearts? Horse meat!'" []
 "'Enis, no.' / 'One sin. So?' / 'NINE.'"
-"'Entirely tiny tear.'"
+"'Entirely tiny leer.'"
 "Eponym: 'P-Money!' / 'My peon!'"
 "'Er, [s-w]! The IRS! Eh, stir!'" []
 "'Er, goon? No gore!'" []
@@ -24577,7 +24585,7 @@ blurb
 "'Fade, guy!' / 'Udge-fay!'"
 "'Fail my family? Flay [']im!' / 'I'm-a fly.'" []
 "Faint ropy profanity." [p] []
-"'Fake it, cur!' / 'Fruitcake!' / 'Irate...'" [x]
+"'Fake it, cur!' / 'Fruitcake!' / 'Irate [f-w]...'" [x]
 "'Fan riot info art? Ain't for faint or...'" [p] []
 "'Fashion? Oh, naifs! As if, hon!'" []
 "'Fat Fred f-farted!'"
@@ -24655,7 +24663,6 @@ blurb
 "'Got mine. Tim?! Gone!'"
 "'Gouger? Rousse? Grouse, rogues!'" []
 "'Grant is a string-gnat! Sir.'" []
-"'Greef's Free, G's!' (the spelling can be gritty, too.)" [x]
 "'Grief, us? Figures.'" []
 "'Growin['], Ma! Am I wrong?'"
 "'Grub, clown? Wrong club!'"
@@ -24686,7 +24693,7 @@ blurb
 "'Hate crime? Reach time!'"
 "'Hate pinups? Unhappiest!'"
 "'Haw. Fit? What if?'" []
-"'Haw, it's...' / 'What is' / 'Aw...'" [x]
+"'Haw, it's...' / 'What is' / 'Aw [s-w]...'"
 "'Haw. Oft fat? How?'"
 "'He's ...' / 'It is the...'"
 "'He's a cop. Poaches cheapos.'" []
@@ -24979,7 +24986,7 @@ blurb
 "'Miswrote? Wormiest...'"
 "'Mo hid. DO HIM.' / 'D'oh! I'm...'"
 "'Mo, slice! Lo, sic [']em!' / 'I'm close!'" []
-"'Mo['] grass or grams? Gross, Ma!'"
+"'Mo['] grass? grams? So gross, Ma!'"
 "'Mock us? OK, scum...'"
 "'Mocked? Dock [']em.'"
 "'Mocks OK MCs? Sock'm!'"
@@ -25075,7 +25082,7 @@ blurb
 "'O My God! G-Moody!'"
 "'O, toast to a sot.'"
 "'O, tons not so, snoot-o-snot!'" []
-"'Oaf-guy!' / 'You ***!'" [x]
+"'Oaf-guy!' / 'You [fg]!'" [x]
 "'Obey Dad!' ... 'Dead boy!'"
 "'Obituary? I? You brat! I bray out!'" []
 "'Obscurity? Scrub it, yo!'" []
@@ -25397,7 +25404,7 @@ blurb
 "'So shy, yo!' / 'Ssh!'"
 "'So, son. No SOS?'"
 "'So, then, Shonte Heston, the son: he's not honest? Eh, tons.'"
-"'So thin! / No!'" [x]
+"'So thin! / No [s-w]!'"
 "'So, um, buy? YOU BUMS!'"
 "'So, um, us mo[']?'"
 "'So urgent, nurse. Got...'" []
@@ -25409,7 +25416,7 @@ blurb
 "'Solver Les...oversells.'"
 "'Some food? Doom, foes!'"
 "'Sordid dis, Rod!'" []
-"'Sorest tosser!' No, you haven't moved behind Store S." [x]
+"'Sorest tosser!' Er, sots? Store S?"
 "'Sort of soft or...[']s troof!'"
 "'Soul? [d-t] sold out!'"
 "'Soup's up!' / 'SOS!'"
@@ -25431,7 +25438,7 @@ blurb
 "'Stop trying, prying tots!'"
 "'Street Smarts Matter. STRESS.'"
 "'Stride? It's red, driest. I'd rest.'" []
-"'Strongarm Armstrong!' someone cries in fear." [x]
+"'Gram snort, Strongarm Armstrong?!'"
 "'Stu! Deb! BUSTED!'" []
 "'Stu, I'm...I must...it's, um, stimu...'" []
 "'Sty, men? My nest!'"
@@ -25486,7 +25493,7 @@ blurb
 "'They won? Note why. Won't, hey?'"
 "'Thinkers!' / 'Shtinker!'"
 "'Thirties? [s-w]tier.'"
-"'This hoser, he is short.' / 'Horse!'" [x]
+"'This hoser, he is short.' / 'Horse [s-w]!'" [x]
 "'Thump Ed! Dump the...' / 'Umph, Ted!'" []
 "'Thumpin[']! Hunt imp!' / 'Punt him!'"
 "'Tiger, a triage!' / 'Great, I...'" []
@@ -25708,7 +25715,7 @@ blurb
 "'You sign in, Gus! Yo!'" []
 "'You snake!' / 'OK, uneasy.'"
 "'You yap, you pay.'"
-"'You'd like the USSR, Russ.' / 'U SRS?'" [x]
+"'You'd like the USSR, Russ.' / 'U SRS?'"
 "'You're feminine! You're mine!' / 'Fine!'"
 "'Young guy, no!' / 'Young gun, yo!'"
 "'Your name? Yo, manure!'"
@@ -35491,6 +35498,7 @@ blurb
 "A 'touching' article: our kids, Rod, Suki, UI dorks risk duo." [x]
 "'817351837 bites I bet' is written on a blank page." [p]
 "An ad for Algebra Lab Gear." [x]
+"Hitman-in-Math-am hint."
 "An ad for Hi-Res Shire, which has the lean trim terminal for YOU." [x]
 "Add-ins I Disdain, on third-party software." [x]
 "Advice from a sod tent and tot dens: don't set dot-nets." [x]
@@ -38021,141 +38029,77 @@ blurb
 
 book oyster
 
+Neo Sconce's Cones? Scone?
+
 table of aunt tuna chatter [xxy1]
 blurb
 "asks Tortu why she's tough to hug." [x]
-"bangs on some more. If only she were his mother! You could ENTRAP PARENT!" [x]
+"bemoans she cannot execute a full parent-entrap."
 "begins anti-aint-atin[']." [x]
 "bemoans explosive vile poxes." [x]
 "bemoans gift-fair graffiti." [x]
-"bemoans how people are so babbly or blabby. And don't know the difference." [x]
 "bemoans kids hooked on DSL these days." [x]
-"bemoans Rich Best saying she and friends should wear britches. Harsh of him." [x]
-"bemoans stick-up upticks." [x]
-"bemoans the craziest zits care these days." [x]
 "bemoans Tortu's pouter's posture." [x]
-"calls Mr. O'Steel leer-most." [x]
 "can't afford Hi-LCD like the parents of that Dilch child." [x]
-"checks her Pred-Derp spray is in her purse." [x]
-"claims 'I am sick of hearing Vera's Raves.' She proceeds to babble about Ruth's hurts and serial re-ails." [x]
-"claims, at ill-ease, 'I see all! Lea lies!'" [x]
-"claims, like a real nut, neutral is un-alert!" [x]
-"clucks 'Phases pass, eh?' then 'OK, I scold cool kids.'" [x]
-"clucks a few scareful 'carefuls' about the fabled Wholer Howler." [x]
-"clucks at what Dustin became." [x]
-"confides 'My belief, I'm feebly!'" [x]
-"considers starting an evict-civet petition." [x]
+"clucks at what Dustin became." [x: nudist]
+"considers starting an evict-civet petition."
 "continues groans or nags." [x]
-"'Creak, blow, lower back! Rack, elbow!'" [x]
-"cries 'Diedre, er... DIED!'" [x]
-"cries, 'Gad, sly Gladys!'" [x]
-"cries, 'I have a hive!'" [x]
-"cries 'Pains! I snap!'" [x]
-"cries 'Sheldon called us old hens!'" [x]
-"cries 'Slacken, cankles!'" [x]
-"decries loud mosh hoodlums." [x]
 "details Flo Fink's slink-off." [x]
-"discusses a sugared sea-drug that will cause a dinkey kidney." [x]
-"explains she can't just go zizap and make Tortu a pizza." [x]
+"bemoans the newest latest sugared sea-drug."
+"explains she can't just go zizap! Pizza!"
 "'Eye-sag? Age? Yes. Gee. Say.'" [x]
 "fawns over the Buscher cherubs." [x]
-"frets 'Dr. Ace CARED!'" [x]
-"frets: 'I smell ills, me!'" [x]
 "gives a tut, taut." [x]
 "gives unhs. 'Shun huns.'" [x]
-"goes back to melodrama, alarm mode." [x]
-"greasily, Gary lies!"
-"has heard bad kids these days snort wasp paws." [x]
-"has said before: 'Bernice, be nicer!'" [x]
-"heaps scorn on her corns." [x]
-"hears parents should hate Napster--it ENTRAPS." [x]
-"'Hives on veins, oh!'" [] [x]
-"'Hobbled bod. Bleh.'" [x]
+"has heard bad kids these days snort wasp paws. Apps? Awws." [x]
 "hopes she didn't catch fungal nag-flu." [x]
 "hopes Tortu can pass the Ax [']Em Exam. Fish schools are so competitive." [x]
 "hopes Tortu doesn't become a truant art nut." [x]
-"hopes Tortu drinks lots of green tea when he's a teenager." [x]
+"hopes Tortu drinks lots of Generate Green Tea as a teenager." [x]
 "hopes Tortu never comes home smelling of caporal crapola." [x]
-"'I am sore! Some air!'"
-"is all 'Hormones, eh, morons!' and Tortu is like, 'Oh, sermon.'" [x]
-"is glad Tortu daren't visit the Ardent Rat Den. It's been a trend." [x]
-"is GLAD Tortu has stayed away from the Rapt Prat Tarp. She has heard rumors." [x]
-"is sure the SharkNet Thankers are a bogus charity." [x]
-"jokes, with ego/tact, 'Get coat! Tot cage cottage!'" [x]
-"knows she's not as un-zen as Suzanne." [x]
-"laughs 'So funny of Sunny!'" [x]
-"lectures Tortu on the (lack of) nutrition in toast-tatos." [x]
-"mentions: 'About me: a bum toe!'" [x]
+"is all 'Hormones, eh, morons!' Oh. Sermon."
+"is glad Tortu daren't make visiting the Ardent Rat Den a trend."
+"is GLAD Tortu has stayed away from the Rapt Prat Tarp."
+"jokes, with ego/tact, 'Get coat! Tot cage cottage!'"
 "mentions a friend who needs a hernial inhaler." [x]
-"mentions her latest rant is rats in trains." [x]
 "mentions how more can learn what an author Cameron Mancore is." [x]
-"moans 'Bad cons abscond.'" [x]
-"moans 'I fear a fire!'" [x]
 "moans 'I have told Terrie, RETIRE!'" [x]
-"moans 'Malaise ails me. A Malaise!'" [x]
-"moans 'Mopy. Dire. My...'" [x]
-"moans 'Painful flu! I nap!'" [x]
-"moans 'Tendonitis! Distention!'" [x]
-"moans for Bed-Lain Belinda." [x]
-"mourns 'These times hit esteems.'" [x]
-"mumbles 'Dreadful, fad-ruled...'" [x]
-"muses, 'Tenser age generates TEENAGERS.'" [x]
-"mutters 'Have no oven? Ha!'" [x]
-"mutters 'I've eggs, veggies...'" [x]
-"mutters 'Slang is sin, gals.'" [x]
-"mutters about an insole lesion." [x]
-"notes 'Cats ruin curtains!'" [x]
-"notes 'So, pigs gossip!'" [x]
-"notes 'This ear, it hears. Discretion. Consider it!'" [x]
-"notes baking soda makes bad soaking." [x]
 "notes it's almost time to watch [i]Wives['] Views[r]." [x]
-"notes Shad or Rod Ash hoards so hard." [x]
-"notes starch charts for the foods Tortu likes." [x]
 "offers PTIs, then tips." [x]
 "offers Tortu Astro-Roast for dinner if he learns to be like you." [x]
-"reads Tortu the riot act over ricotta." [x]
 "recites staler alerts." [x]
-"relates what Meredith mithered." [x]
-"says 'A C grade is disgrace!'" [x]
-"says 'Ahem. Ah, me! Rotten is snottier!'" [x]
-"says 'Body fat? Daft boy.'" [x]
-"says 'I'd seen Denise denies needs I...'" [x]
-"says 'you can't!' Coy aunt!" [p] [x]
-"says her gout left her ego hurt but tougher." [x]
+"mentions her gout: ego hurt, tougher."
 "'The spine. Tense hip. Eh, instep.'"
-"starts a mere nag about Ma Green, which becomes a germane near-gem." [x]
-"starts utterin['] nuttier: 'Tut, Erin!'" [x]
-"SWEARS men's ego is in their genomes." [p] [x]
-"talks about her favorite card game, Spades Passed." [x]
-"tells how Tortu once thought a scone was shaped like cones." [x]
-"tells Tortu Damp Cay Day Camp is better than scamp-camps." [x]
-"tut-tuts things in general with severer reserve than you've seen." [x]
-"uncoops a soupcon about coupons." [x]
+"cuts down men's ego-genomes."
+"considers her (and Yorpwald's) favorite card game, Spades Passed." [x]
+"scorns scamp-camps['] bad influence."
+"tut-tuts. Severer reserve!"
+"uncoops a soupcon: coupons." [x]
 "warns Tortu 'No party if profanity!'" [x]
-"whines forty's frosty and worries about reaching the iffiest fifties." [x]
-"wonders why Tortu can't have Edgar's grades and be a hitman in math." [x]
+"worries about reaching the iffiest fifties." [x]
+"wonders why Tortu can't have Edgar's grades."
 "worries about pliers['] re-slip perils." [x]
 "worries about Verne's nerves." [x]
-"worries Gro-Vite pills may give Tortu vertigo." [x]
 "worries over unstable tan lubes." [x]
 
 table of bar dialogue [xxy2]
 blurb
-"An abnormal ol['] barman serves up some martini mini-art, and a patron gives an abrupt burp at the pub art." [x]
+"Pub art: abrupt burp at 'Up, brat.'"
+"'Abnormal ol['] barman!'"
+"'Martini? Mini-art!'"
 "'Add ale.' / 'La-de-da.'"
 "'Addie's is dead.'"
 "'Ah, Bert? Re-bath breath!' / 'Eh, Bart?'" []
 "'Ah, Leo. A hole? Heal, o! Ale, ho!'"
-"'Ah, novices! Have coins, anchovies?' ask carps playing craps." [x]
+"'Ah, novices! Have coins, anchovies?'"
 "'Ahab? Baha!'"
 "'Alco-cola! Loca!'"
 "'Alcohol call! Ooh!'" []
 "'Any tip for profanity?'" []
-"'As to a sot, oats!' Worst hangover cure yet." [x]
+"'As to a sot, oats!'"
 "'Ashtray?! Ray's hat!'"
 "'The bar!' / 'Eh? ... BART!'" []
-"'Bart sucks. His coffee shop, too.'" [x]
-"'BastardCo Broadcast sets my system with formulas so [']armful,' moans some paranoid next to you." [x]
+"'Bart sucks. His coffee shop, too.'"
 "'Bear the beer hat.'" []
 "'Beer day: be ready!'"
 "'Beer? Gin? Re-binge!'" []
@@ -38163,26 +38107,23 @@ blurb
 "'Begin being human? Uh, MAN.'"
 "'BEHAVIOR!' / 'Bro, I have!'" []
 "'Bettina's ain't best!'" []
-"A bogus lardo whines about his blood sugar." [x]
-"A bonefish wishes he had the fishbone to talk to that woman across the bar." [x]
+"'Blood sugar? Bogus lardo! Labours, dog!'"
+"'Fine bosh, bonefish!'"
 "'Boor! Snub Bourbons?'" []
 "'Burbank bunk-bar? Rank, bub!'"
 "'Bus stop sots['] pub? [']S sub-opt.'"
-"'By darn, brandy!' calls a patron." [x]
+"'By darn, brandy!'"
 "'Champagne, chap? Nag [']em!'"
 "A chirp: 'I parch!'"
 "'A coke OK, Ace?'"
-"'Cost us to cuss? Scouts!' moans a patron." [x]
+"'Cost us to cuss? Scouts!'"
 "'Coward! Raw cod!'" []
 "'Crikey! Ickyer Rickey!'"
-"A customer's leering is turned to reeling." [x]
 "'Dan Klum's slam dunk!'" []
 "'Dares? ... Arsed? Er, sad.'" []
-"Dead Harm Made Hard blasts through the speakers." [x]
-"Dolor-drool from a neighboring patron." [x]
+"Dolor-drool. O lord!"
 "'Don's up pounds.'"
 "'Dr. Ice Riced Cider? I cred!'" []
-"'Draft?! F-tard.' says a particularly annoying drinker." [x] []
 "'Drink to Dirk? Not!'"
 "Dronier Orderin[']." []
 "'Each gin nice? Agh!'" []
@@ -38190,11 +38131,13 @@ blurb
 "'Enos Tam? Mean sot. No mates.'" []
 "'Er, [a-b]? A beer?'"
 "'Ethanols are another sale.'" []
-"A factish catfish shows the ladies he's cash-fit, mentioning his Navo-Nova-O-Van." [x]
+"A factish catfish shows the ladies he's cash-fit."
 "'Feel rad, Fred? Ale! Red Leaf Federal!'" []
-"Female voices: 'Octo-coot? Friendly nerd? I fly!' / 'Mobs o['] moobs? Sob mo[']!' / 'Her BEAT beer hat!'" [x]
+"'Octo-coot!'"
+"'Friendly nerd? I fly!'"
+"'Mobs o['] moobs? Sob mo[']!'"
+"'Her BEAT beer hat!'"
 "A fish in a dirty suit yells 'To bar! Abort!' repeatedly in a funny accent." [x]
-"Fishmice create mischief." [x]
 "'Float to Alf! ... O, flat.'" []
 "'Fun bile, bluefin?'"
 "'Gee! Brave beverage!'"
@@ -38205,9 +38148,9 @@ blurb
 "'Gin, Rob? Big Ron?' / 'Boring.'" []
 "'Got any not-gay Tang? Oy!'"
 "'Grandi Gin? Rad! Gradin[']: daring!'" []
-"A gullible bluegill buys more drinks for ladies out of his league." [x]
+"'I'll bulge! ... Gullible bluegill!'"
 "'Had enough?' / 'Uhh...no. Egad!' A honed UGH."
-"A halibut continues acting habitual." [x]
+"A halibut, habitual ... 'Aha! Built!'" [x]
 "'He dreads redheads. Sadder, eh?'" []
 "'Healthy?! Hey! Halt!'"
 "'Herbal? Er, blah.'"
@@ -38217,7 +38160,7 @@ blurb
 "'Howdy! A kiss? Soda? Whisky?'"
 "'Humbler rum? Bleh.'"
 "'I, born free, in for beer!'"
-"'I LOVES olives!' cries a drunk ordering a martini." [x]
+"'Olives? I LOVES! Live so!'"
 "'I sample a simple lame sip.'" []
 "'I'd fry if dry.'"
 "'I'll set a li'l seat.'"
@@ -38226,19 +38169,18 @@ blurb
 "'Irksome. Smokier.' / 'Sore, Kim?'"
 "'Konig gin? OK!'"
 "'Latham's malts? Ah!'"
-"'Le Bore, Lo-Beer!' someone mumbles." [x]
+"'Le Bore, Lo-Beer!'"
 "'Lo-cal? Us? Callous.'" []
 "'Lose, sole, lose!'"
-"Lots of drinking around here, but not one kind grin." [x]
+"Kind grin? Drinking."
 "'Low fat? Ow, flat.'" []
 "'Man, sick mackins[']!'" []
-"Marlins snarl 'I'm...' at pinkos['] ink-ops." [x]
+"Marlins snarl 'I'm...'"
 "'Martini! Ram it in!'" []
 "'Mel's IPA? I sample. Lime sap!'" []
-"Menu here doesn't have the safest feasts." [x]
 "'Mid-life file? Dim.'"
 "'Mo['] rum, yo!' / 'Your mom!'"
-"A moray bemoans Mayor Amory." [x]
+"'Moray Mayor Amory? Oy, mar!'"
 "'More beer? Mere bore!'"
 "'Mud-bass!' / 'Sad Bums!'"
 "'My ale's measly!'" []
@@ -38255,33 +38197,30 @@ blurb
 "'A Fish Has Info on Fashion.'"
 "'Ol['] bar labor...' Oral blab, or...?"
 "'Ole Burt Boulter ... trouble.'"
-"Leering. Reeling." [x]
+"Leering. Reeling."
 "One sip. Opines. 'No pies.'"
-"'Alps? Pall, saps!' Pals slap laps.""
+"'Alps? Pall, saps!' Pals slap laps."
 "Pre-rant: 'Err, pant, partner.'"
 "'Patching nightcap?' / 'Natch.' / 'Pig.'"
-"A patron heads to the cretin's cistern." [x]
-"Patrons compare Buckets Stu Beck, Air Ira, Air Ari and Air Lev's skills." [x]
-"Patrons engage in grudging drugging." [x]
-"Patrons migrate as the tune changes to ragtime." [x]
-"Patrons snub buns: 'Croissant? No? Racists!'" [x]
-"Patrons whisper to bewarre clingfish filchings." [x]
-"People discuss the WarpClub Pub Crawl." [x]
+"Grudging drugging."
+"'Ragtime? I'm great. Migrate.'"
+"'Croissant? No? Racists!'"
+"Patrons whisper to beware clingfish filchings."
+"'WarpClub Pub Crawl? Claw! Burp!'"
 "'Phony tee. Neophyte.'"
-"'Pink gin, Kingpin?' asks a waitress." [x]
-"'Pst! Pal! Need a tough job done? I co-opt octopi!'" [x]
-"Rah-rahs and har-hars abound. Drinking games all over." [x]
-"A random drinker observes a crouton's contours." [x]
+"'Pink gin, Kingpin?'"
+"'I co-opt octopi!' / 'Coop it.'"
+"'Rah-rah!' / 'Har-har!'"
 "'Randomly manly, Rod!'"
 "A rant by Bryant. 'Ban! Try!'"
 "'Rap? Bunk! Punk bar.'"
 "'Rec?' / 'Gin.' / 'Cringe.'" []
-"A rich sot ostrich claims to own ShirtCo." [x]
+"A rich sot ostrich claims to own ShirtCo."
 "'Root beer? Rote bore.'"
 "'Root pie? Too ripe.'"
 "'Rum? Kind. ...I'm drunk!'"
 "'Rum shot hurts mo[']? Mush! Rot!'"
-"Scorn out. 'Croutons?! Corn snot!'"
+"Scorn out. 'Croutons? Scoot! Run!'"
 "'Seven evens?'"
 "'KRASH! Shark!' Harks." [x]
 "'Shout? Sh! Hush, sot!'"
@@ -38303,21 +38242,20 @@ blurb
 "'Rulin['] a urinal? La! Ruin!'"
 "'Ante up! Un-tape, Peanut!'"
 "'Peanuts: neat sup? Un. Paste!'"
-"Tacit yen: ''Nattby Ice. Neat city tenacity."
+"Tacit yen: ''Natty Ice. Neat city tenacity."
 "'Fashionable abalone fish? Banal! Fies, oh!'"
 "'Out-stare a stouter sea trout?' A sore tut."
 "A belchy ale belly ache." [x]
 "Sousier, serious 'Sure, so I...'"
 "'XX Ale?! Ex-Lax!'"
 "'Dungbury Burgundy? Buy gun, Dr.!'"
-"Someone mentions Loki has a kilo." [x]
+"'Kilo, Loki?' / 'I? Ill, kook.'"
 "'Break up Rake Pub. Puke bar.'"
-"Someone orders a bar specialty: Handy's Shandy." [x]
 "'Picante nitecap? Ace! PINT!'"
 "'Qualite-tequila!' / 'Quite, Al!'"
 "'Umbrella Label Rum? Lure-balm!'" [x]
-"Someone refuses to drink Pabst--a tbsp, even." [x]
-"'Skip Kip's!':
+"'Pabst? A tbsp.?'"
+"'Skip Kip's!'"
 "'Marc's? Scram!'"
 "'Bar seat abreast Base Art?!'"
 "'Plastic catlips? It ... ' Claps."
@@ -38336,8 +38274,8 @@ blurb
 "'Tip here, prithee!' / 'Eh, tripe!'" []
 "'To sip is top!' / 'O, pits!'" []
 "'Too drunk! No? OK, turd!'" []
-"Tripes show esprit denouncing the ripest spiter." [x]
-"The trolls leave people with BYOBs sobby." [x]
+"Tripes['] esprit: 'Ripest spiter!'"
+"'BYOBs? SOBby.'" [x]
 "'Um, Ron?' / 'No rum, Munro. Mourn.'"
 "'Um, sir? ... is rum...?'"
 "'Un-flat? Flaunt!'"
@@ -38357,8 +38295,10 @@ table of Casper mumbles [xxy3]
 blurb
 "[if player is male]Lon Veist[else]Lois Vent[end if], novelist? Vile snot!" []
 "Anti-novel? Let on, vain Valentino!"
+"Draft? A fat rad art fad."
 "Author? Clem Crouthamel?!" []
 "Author? Erb Rothbauer?!" []
+"Pinkos['] ink-ops? No. Skip."
 "Author? Ess Osterhaus?!" []
 "Author? Or haut?"
 "Bar-Quotes? Art Bosque? Square-bot!" []
@@ -38394,7 +38334,7 @@ blurb
 "Poems, else sleep some."
 "Poetry slam: masterly op? Sporty? Lame. Ample tyros." []
 "Poetry? Stop. Potty prose prototypes."
-"Prose of spoofer, free? Sop."
+"Peso for Prose of spoofer. Pro-foes."
 "Prosey Osprey Ros Pye? O, pyres!"
 "Punter's pen, RUST!" []
 "Rats, naiver narratives."
@@ -38420,6 +38360,7 @@ table of competing bars [xxy4]
 blurb
 "[a-b]'s Base" [p] []
 "Absorbing Bingo Bars" []
+"Shy and Handy's Shandy"
 "Abstract Cat Bart's"
 "Absurd Sud-Bar"
 "Ageless Lesage's" []
@@ -39116,7 +39057,77 @@ blurb
 
 table of tuna gossip [xxy7]
 blurb
+"'Vera's raves...'"
+"'Ruth's hurts? Rush-thrust.."
+"'Serial, serial re-ails!"
+"'Diedre, er... DIED!'"
+"Scareful 'Carefuls.'"
+"'Wholer Howler? Low, her.'"
+"'Gro-Vite?! Vertigo!'"
+"'Forty's frosty."
+"'Damp Cay Day Camp? Pay'd, mac!'"
+"'Shad or Rod Ash hoards so hard.'"
+"'C grade is disgrace!'"
+"'Ahem. Ah, me!"
+"'Snottier is rotten!'"
+"'Body fat? Daft boy.'" [x]
+"'I'd seen Denise denies needs I...'"
+"'You can't!' Coy aunt!" [p] [x]
+"'Mere nag. Ma Green, Ma Green.' Germane near-gem."
+"'Tut! Erin? Utterin['] nuttier!'"
+"'Loud mosh hoodlums. Hum, so old!'"
+"'Slacken, cankles!'"
+"'Dr. Ace CARED!'"
+"'I smell ills, me!'"
+"'Melodrama?! Alarm mode!'"
+"'Greasily, Gary lies!"
+"'Bernice, be nicer!'"
+"'Corns?! Scorn!'"
+"'Napster ENTRAPS!'"
+"'Hives on veins, oh!'" [] [x]
+"'Hobbled bod. Bleh.'" [x]
+"'Creak, blow, lower back! Rack, elbow!'" [x]
+"'Gad, sly Gladys!'" [x]
+"'I have a hive!'" [x]
+"'Pains! I snap!'" [x]
+"'Old hens?! Sheldon: held, son.'" [x]
+"'Dinkey kidney. Key'd in?'"
+"'I am sore! Some air!'"
+"'SharkNet Thankers? Ken? Trash!'"
+"'So funny of Sunny!'" [x]
+"'Un-zen as Suzanne?!'"
+"'About me: a bum toe!'"
+"'Rant is: rats in trains!"
+"'Bad cons abscond.'" [x]
+"'I fear a fire!'" [x]
+"'Malaise ails me. A Malaise!'"
+"'Mopy, dire period. My!'"
+"'Painful flu! I nap!'"
+"'Tendonitis! Distention!'"
+"'Belinda? Bed-lain!'"
+"'These times hit esteems.'"
+"'Dreadful, fad-ruled lad, Freud.'"
+"'Tenser age generates TEENAGERS.'"
+"'Have no oven? Ha!'"
+"'I've eggs, veggies...'"
+"'Slang is sin, gals.'"
+"'Insole lesion: lies? NO!'"
+"'Cats ruin curtains!'"
+"'So, pigs gossip!'"
+"'This ear, it hears.'"
+"'Discretion. Consider it!'"
+"'Baking soda? Bad soaking!'"
 "'Annie's insane.'" []
+"'Mr. O'Steel? Leer-most!'"
+"'Zits care? Craziest!'"
+"'Stick-up upticks! Tips? Uck!'"
+"'Ill-ease, I see all! Lea lies!'"
+"'Phases pass, eh?'"
+"'OK, I scold cool kids.'"
+"'Neutral? Un-alert, real nut!'"
+"'My belief, I'm feebly!'"
+"'Meredith mithered.'"
+"'Babbly, blabby...'"
 "'Arlette's alertest.'"
 "'As to Phil? Hospital!'" []
 "Aunt Tuna notes Trina's starin['] strain." [x]
@@ -39292,6 +39303,7 @@ blurb
 "a-parted data pre-adapter"
 "all-portion pollinator"
 "alt-speed pedestal"
+"ensconce-so cones"
 "senso-noses"
 "anti-germ-emigrant"
 "anti-slam talisman"
@@ -39502,6 +39514,7 @@ table of animal friends [xxt1]
 blurb
 "acid-snarl cardinals"
 "an agreeable bear-eagle"
+"mischief fish-mice"
 "a steed, teased, sedate"
 "an ambient mine-bat"
 "ants of no fats" []
