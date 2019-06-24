@@ -55,20 +55,32 @@ def check_valid_token_count(x):
     if gt > 1: sys.exit("UH OH bailing. We can only have 1 greater-than sign but have {:d} for this line: {:s}".format(gt, x.strip()))
     lt = x.count('<')
     if lt > 1: sys.exit("UH OH bailing. We can only have 1 greater-than sign but have {:d} for this line: {:s}".format(lt, x.strip()))
+    if (tix > 0) + gt + lt > 1: sys.exit("Uh oh. You mixed markers. The backtick ` is best for broken-up anagrams.\n    {:s}".format(x.strip()))
 
 def use_isolate_tokens(x):
-    if ignore_tokens(this_table): return x
+    if ignore_tokens(this_table): return (x, False)
     check_valid_token_count(x)
-    if '>' in x: x = re.sub(".*>", "", x)
-    if '<' in x: x = re.sub("<.*", "", x)
-    if '`' in x:
+    if '>' in x: x = re.sub(".*>", "", x) #anc doesn't let you combine tokens any more
+    elif '<' in x: x = re.sub("<.*", "", x)
+    elif '`' in x:
         y = x.split("`")
         x = ' '.join(y[1::2])
-    return x
+    else: return(x, False)
+    return (x, True)
 
-def fm(l):
+def fm(l, debug = False):
     m = re.sub("\[if player is male\](.*?)\[else\].*?\[end if\]", lambda x: x.group(1), l)
-    f = re.sub("\[if player is male\].*?\[else\](.*?)\[end if\]", lambda x: x.group(1), l)
+    if m == l:
+        m = re.sub("\[if player is male\](.*?)[end if]", lambda x: x.group(1), m)
+    f = re.sub("\[if player is female\].*?\[else\](.*?)\[end if\]", lambda x: x.group(1), l)
+    if f == l:
+        f = re.sub("\[if player is female\](.*?)[end if]", lambda x: x.group(1), f)
+    if m == l and f == l: sys.exit("I choked on " + l)
+    if m == l: m = ""
+    if f == l: f = ""
+    if debug:
+        print("Male after:", m)
+        print("Female after:", f)
     return (m, f)
     
 def convert_brackets(l):
@@ -81,12 +93,24 @@ def convert_brackets(l):
         if q in l: l = re.sub(q, acc[q], l)
     return l
 
-def actual_anagram(l):
+def actual_anagram(l, debug = False, in_preview = False):
     print_freq_loc = True
-    if 'if player is male' in l:
-        x = fm(l)
-        return actual_anagram(x[0]) + actual_anagram(x[1])
-    lx = use_isolate_tokens(l)
+    if not l: return True
+    if debug: print("DEBUG INFO", l)
+    if 'if player is female' in l or 'if player is male' in l:
+        x = fm(l, debug)
+        ret_val = 0
+        if len(x[0]): ret_val += actual_anagram(x[0], debug, in_preview)
+        if len(x[1]): ret_val += actual_anagram(x[1], debug, in_preview)
+        return ret_val
+    (lx, iso_used) = use_isolate_tokens(l)
+    if lx != l:
+        if actual_anagram(no_focus_markers(l), debug, in_preview):
+            print("FOCUS MARKERS NOT NEEDED FOR ANAGRAM")
+            print(l)
+            print(lx)
+        if no_focus_markers(l) in focused_already:
+            sys.exit("Oops you already put in focus-file information for {:s}.".format(l))
     lx = convert_brackets(lx)
     letter_count = defaultdict(int)
     for j in lx:
@@ -100,9 +124,11 @@ def actual_anagram(l):
     if q > 1: return True
     if re.search("^(continues|the|an|a) ", lx):
         lx = re.sub("^(continues|the|an|a) ", "", lx)
-        if actual_anagram(lx): return True
+        if actual_anagram(lx, debug, in_preview): return True
         print_freq_loc = False
-    if print_freq and print_freq_loc: print(' '.join(["{:s}={:d}".format(x, letter_count[x]) for x in sorted(letter_count)]))
+    if q == 1 and print_freq and print_freq_loc and not in_preview:
+        print(' '.join(["{:s}={:d}".format(x, letter_count[x]) for x in sorted(letter_count)]))
+        print(l)
     return q > 1
 
 this_table = ""
@@ -137,9 +163,11 @@ def ana_check(a):
                     this_tl = 0
                 continue
             ll = to_end_quote(line.lower().strip())
-            if not ll: this_table = ""
+            if not ll:
+                if last_table_search and last_table_search in this_table: break
+                this_table = ""
             if this_table and line.count('"') != 2 and this_tl != 0:
-                print("Oh no! Wrong number of quotes {:d} at line {:d}: {:s}".format(this_tl, line_count, line.strip()))
+                print("Oh no! Wrong number of quotes {:d}/{:s} at line {:d}: {:s}".format(this_tl, this_table, line_count, line.strip()))
                 quote_mismatch.append(line.strip())
             if last_table_search and last_table_search in this_table and not ll:
                 last_table_yet = True
@@ -148,9 +176,6 @@ def ana_check(a):
                 if show_skips: print("Skipping line", line_count, ll[:15])
                 focused_already.pop(ll)
                 continue
-            if 'huck taft' in ll:
-                print(ll)
-                sys.exit(focused_already)
             this_tl += 1
             if not first_table_yet: continue
             if not line.startswith("\""): continue
@@ -240,17 +265,27 @@ def pre_commit_check(my_game):
     return bad_lines
 
 def get_anagram_focus():
+    bail_open_line = 0
+    not_needed = 0
     with open(anagram_focus_file) as file:
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
             if line.startswith(";"): break
             ll = to_end_quote(line.lower().strip())
             if not ll: continue
-            ll = no_focus_markers(ll)
-            if ll in focused_already:
-                print("Uh oh duplicate focused already", ll, "at", line_count, "duplicating", focused_already[ll])
+            ll2 = no_focus_markers(ll)
+            if actual_anagram(ll2, in_preview = True):
+                not_needed += 1
+                print(anagram_focus_file, line_count, not_needed, "FOCUS MARKERS NOT NEEDED FOR ANAGRAM:")
+                print(ll)
+                print(ll2)
+                actual_anagram(ll2, debug = True, in_preview = True)
+                bail_open_line = line_count
+            if ll2 in focused_already:
+                print("Uh oh duplicate focused already", ll2, "at", line_count, "duplicating", focused_already[ll])
             else:
-                focused_already[ll] = line_count
+                focused_already[ll2] = line_count
+    if bail_open_line: i7.npo(anagram_focus_file, bail_open_line)
 
 def rewrite_focus_examples(my_game):
     bail_line = 0

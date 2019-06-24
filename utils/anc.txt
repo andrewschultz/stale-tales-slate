@@ -35,6 +35,10 @@ else	-
 end if	-
 one of	-
 or	-
+at random	-
 in random order	-
 sic	-
+#needs the space after the accented a
+!à	a
 ;
+"Et Voilà, Violate a Violet[r], by Avi Leto"
