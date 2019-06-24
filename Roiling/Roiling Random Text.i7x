@@ -1,5 +1,10 @@
 Version 1/151216 of Roiling Random Text by Andrew Schultz begins here.
 
+[
+anc.py checks anagrams.
+pch.pl checks punctuation.
+]
+
 volume megachatter table
 
 table of megachatter [tmc] [these are general rules that must take precedence]
@@ -2009,6 +2014,7 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Acne Irks? Skin Care!"	true
 "Acne? LOL, One Call: Cal Leon!"	true
 "Acne-Plus Clean Ups"	false
+"Mrs. Pape Pampers"	false
 "Rich Best Britches"	false
 "Adeline's Sane Deli"	false
 "Adless Slade's"	false
@@ -11798,7 +11804,7 @@ blurb	prio
 "Dressing Up Purged Sins[r], by Gund Priess"
 "Drew and Red Dawn[r], by Ned Ward"
 "Drink Tea, Darn Tike[r], by [if player is male]Nate Dirk[else]Kira Dent[end if]"
-"Dripped Did Prep[r], by Pip Reid"
+"Dripped Did Prep[r], by Pip Redd"
 "Drive Any Vineyard[r], by Ervin Day"
 "A Drive, Varied[r], by [if player is male]Davide Rivera[else]Deadra Vivier[end if]"
 "A Driver Arrived[r], by Vi Rader"
@@ -12815,7 +12821,7 @@ blurb	prio
 "Hot Tea: the Tao[r], by Tate Ho"
 "Hotspur Up Short[r], by Su Thorp"
 "Hovel Ten, Then Love: the Novel[r], by Neel Voth"
-"Hovering Over Night[r], by Ervin Goh"
+"Hovering Over Nigh[r], by Ervin Goh"
 "How Guys Go Why Us?[r] by Gus Yhow"
 "How I Feel: Whole, Fie![r], by Leif Howe"
 "How I Met With Moe[r], by Tom Hwei"
@@ -13450,7 +13456,8 @@ blurb	prio
 "Last Year, Stay Real[r], by Art Ayles"
 "Lastly I Stay Ill[r], by Lita Sly"
 "Lastly We Stay Well[r], by Twyla Les"
-"Late Life: I Feel Fat[r], by [if player is male]Eli Tafel[else]Leia Felt[end if]"
+"Late Life Leaflet: I[r], by [if player is male]Eli Tafel[else]Leia Felt[end if]"
+"Feet Fail: I Feel Fat[r], by Elie Taff"
 "Late Retro Tolerater Errol Tate[r], by Lea Rotter"
 "Later Ed Related, Altered[r], by Lee Dart" []
 "Later Now: a Low-Rent Real Town[r], by Al Wroten"
@@ -17605,7 +17612,7 @@ blurb
 "recounts how [i]Axed to a Detox[r] could be about you, or you... OR YOU!"
 "revels in his repenters presenter role."
 "continues 'Truly coked? Cold turkey? Cloudy trek.' Retold. Yuck." [x]
-"says drugs don't leave you nicked--they give a deckin[']." [x]
+"says drugs leave you nicked?! DECKIN[']." [x]
 "continues 'Habits? Bash it!'" [x]
 "smacks down someone who yells 'Poobah? Pah! Boo!'" [x]
 "warns against strudel laced with LSD-ture." [x]
@@ -18590,7 +18597,6 @@ blurb
 "Mr. Up-Rump."
 "Mr. Was-Ms., Raw."
 "Mrs. Male-Slammer." []
-"Mrs. Pape Pampers, Pa." [x]
 "Ms. Hypno-Nympho's."
 "Must Do Mo['], Stud."
 "A MVP Vamp Pam V."
@@ -19180,30 +19186,32 @@ table of store c ads [xxs4]
 blurb
 "Ace Sin As Nice!"
 "Adults only! On, Lady Lust!"
-"All Lipsopolis and Margo's items are 20% off, whatever those are." [x]
+"Lipsopolis: Oops, I Spill!"
+"Margo's."
 "Bobo's advertises here." [x]
 "Burma Station advertises here." [x]
 "BYO BOY has a line through it. Good they have SOME morals." [x]
-"A cheery bud encourages debauchery." [x]
+"Bud, a cheery debauchery!" [x]
 "Crotches['] Crochets are sold here." [x]
 "Dancy Candy advertises here." [x]
 "Date/time for an evident id event." [x]
 "David's VD Aids!"
-"Directions to Mo['] Impure Emporium." [x]
+"Um, mopier? Mo['] Impure Emporium." [x]
 "A discount on a Tingles Singlet." [x]
 "A document that would turn your settler PGRYRYGP makes you blush." [x]
 "An Erotic Creation." [x]
 "Everbond lube is on sale." [x]
 "Hef-T-Sins Fishnets are this season's hot item." [x]
 "'Helpin['] you deuces seduce!'" [x]
-"HIDEOUS ID-HOUSE and HERPES PHEERS SPHERE are spray-painted here." [x]
+"Vandalism! HIDEOUS ID-HOUSE defaces part of Store C."
+"Vandalism! HERPES PHEERS SPHERE defaces part of Store C."
 "Kim Rosen: Smokin-er! More Skin!" [x]
-"Le Hot Hotel gives discounts to Store C shoppers." [x]
-"LEGALIZE HERB LOTS a sign reads." [x]
-"A lurid URL ID for the spiciest pics site." [x]
+"LEGALIZE HERB LOTS, a sign reads." [x]
+"Spiciest Pics Site."
+"A lurid URL ID."
 "Mad Dog's Odd Mags."
 "The Mod Method is the latest 'literature.'" [p] [x]
-"No coital location? Margo's Onan-Anon!" [x]
+"No coital location? Clan I-Too! Lo, action!"
 "No-Saint Nations are apparently a support groups for the Onanist." [x]
 "'No SHOWER here. Don't ask.'" [x]
 "Oh, darn! Throb-Broth, debonair boner aid, sold here." [x]
@@ -19213,14 +19221,14 @@ blurb
 "A personal porn sale." [x]
 "Porn We Preown: Adult Epics['] duplicates." [x]
 "PORNOG = NO PROG is spray-painted in a corner." [x]
-"Racy Lit full of Clarity (with the Jeff Kors, Geoff T or Raw Ken Newark personal porn seal) sold here." [x]
+"Racy Lit: Clarity!"
+"Jeff Kors and Geoff T have given this place their personal porn seal."
 "Riesgo-Ogier's Orgies." [x]
 "Smoking Kim Song and Illegal Li'l Gale have shopped here." [x]
-"Something for Steamy Mateys." [x]
+"Steamy Mateys may set." [x]
 "Splitman Implants sold here!" [x]
 "A strumpet trumpets all-babes baseball." [x]
 "They don't discriminate: nudies or undies." [x]
-"'This is a LEGIT AD to help you (censored)!!!'" [x]
 "Tommy's Mm-toys: dirty I'd try." [x]
 "Wares from Bad John's." [x]
 "Whoopie's Whoopsie: Bondage Gone Bad."
@@ -19321,7 +19329,8 @@ blurb
 "Pay-Lots Top Lays"
 "Penni's Penis [']N Sin Pen"
 "Pert Erv's" [x]
-"Perversions-Vision Peers"
+"Perversions-Preen Visors"
+"Perversion Prior Seven"
 "Phallic Pic Hall." []
 "Pleasure's Super Sale"
 "Po['] Ron's Pornos"
@@ -19398,7 +19407,7 @@ blurb
 "Aw, sock? So wack!"
 "'Bad-Poey Peabody be a dopy...'" []
 "'Bake crew, we're back!'" []
-"'Bake mud, make bud,' one toker giggles." [x]
+"'Bake mud, make bud. BAM, Duke!'"
 "'Bake some, Kemo Sabe!'"
 "'Bakins['] ... baskin[']...'"
 "'Bask there: Herbs take the breaks!' they say, channeling Herb Keats." [x]
@@ -19448,7 +19457,7 @@ blurb
 "'HIS pot? Po['] [s-w]! To pish!'" []
 "'Hog his high, so? Shh! I go!'"
 "'Hog it, ho!' / 'Too high.'"
-"'Hog it? Oh, too high!'" [x]
+"'Hog it? Oh, too high!'"
 "'Hop to pot, ho!'" []
 "'Hot [']n big bong hit!'"
 "'Hotbox?' / 'Thx, Boo!'"
@@ -19519,7 +19528,7 @@ blurb
 "'SunFit: it's fun!' / 'If NUTS!'" []
 "'Take-home toke, me? Ha!'" []
 "'Ten-high night, eh?'"
-"They discuss smart neon stoner man ornaments." [x]
+"'Stoner man ornaments? Neon? Smart!'"
 "They jock the THC MD Si Schmidt." [x]
 "They lecture that mescal-pot-ectoplasm has ample cost--you clamp toes then come splat." [x]
 "They perform a skit on St. Niko Kitson." [x]
@@ -19532,26 +19541,26 @@ blurb
 "'Toke up to puke.'"
 "The tokers dance a rebels['] BS reel for a bit, then settle down." [x]
 "The tokers discuss [i]Postmodern Stoned Romp[r], by Red Tompson." [x]
-"The tokers dream of esp-word powders." [x]
-"The tokers give ahhs hearing of a new hash shah." [x]
+"The tokers dream of ESP-word powders." [x]
+"'Hash shah?!' Ahhs."
 "The tokers have a mid-store idea storm." [x]
 "The tokers have a moment of silence for Hotboxer Rex Booth before whooping his cry 'Oh, bro Tex!'" [x]
 "The tokers joke 'Mo['] grass? Gross, ma!' You groan when you see the 'subtlety.'" [p] [x]
 "The tokers mention they want to read [i]Hemp Chat: the Champ[r], by [if player is male]Chet Pham[else]Pam Hecht[end if]." [x]
-"The tokers pan 'The Jock's Chest O'J/Ks' as not real THC jokes." [p] [x]
-"The tokers pan the book LSD Trips: TLDR Piss." [x]
+"The tokers pan [i]The Jock's Chest O'J/K[r]. Not real THC jokes!" [p] [x]
+"The tokers pan the book [i]LSD Trips: TLDR Piss[r]." [x]
 "The tokers pooh-pooh eyespot peyotes." [x]
 "The tokers quote the latest issue of [i]Sedition Editions[r], by [if player is male]Sid Nieto[else]Enid Tsoi[end if]." [x]
 "The tokers recall a hot drug drought." [x]
 "The tokers recap the plot of [i]The Scamp Hemp Cats[r]." [x]
-"The tokers recap Toke Hobby By the Book, by Hotkey Bob." [x]
+"The tokers recap [r]Toke Hobby By the Book[r], by Hotkey Bob." [x]
 "The tokers recite from the canon of Bad-Joke Baked Jo." [x]
-"The tokers sing 'Dime Bag Mega Bid' by Dim Gabe." [p] [x]
-"The tokers sing 'Heed Pot, the Dope,' by [d-t] Heep. They claim it's hot, deep." [x]
-"The tokers sing 'Hip Tune up in the Pine Hut.'" [x]
-"The tokers sing 'The Wide Weed Hit With Dee.'" [x]
-"The tokers sing 'We ain't at Wine' by [if player is male]Nat Wie[else]Tia Wen[end if]." [p] [x]
-"The tokers sing tha dope phat ode 'Oh Adept Pothead,' by Tad Hope, Dah Poet." [x]
+"The tokers sing [i]Dime Bag Mega Bid[r] by Dim Gabe." [p] [x]
+"The tokers sing [i]Heed Pot, the Dope[r] by [d-t] Heep. Hot! Deep!"
+"The tokers sing [i]Hip Tune up in the Pine Hut.[r]" [x]
+"The tokers sing [i]The Wide Weed Hit With Dee.[r]" [x]
+"The tokers sing [i]We ain't at Wine[r] by [if player is male]Nat Wie[else]Tia Wen[end if]." [p] [x]
+"The tokers sing tha dope phat ode [i]Oh Adept Pothead[r] by Tad Hope, Dah Poet." [x]
 "Tokes, Smack, Smokestack!"
 "'Tokin[']? No kit?'"
 "'Tom! Repo more pot! Promote!'"
@@ -19780,8 +19789,7 @@ blurb
 "St. Alex exalts..."
 "St. Aric... St. Leo... so imperfect." [x]
 "St. Audrey: rudest, ay."
-"St. Candice ... helps with accidents..." [x]
-"St. Care-Caster deserves a crest." [x]
+"St. Candice ... accidents desiccant..." [x]
 "St. Elmo lost me..." []
 "St. Kerin, stinker? Ten irks." []
 "St. Kira, Tark is At-Risk."
@@ -19793,7 +19801,7 @@ blurb
 "Stern Rents, St. Ren." []
 "Stu? Jed? St. Jude? Just Ed."
 "stuff by St. Buffy."
-"Sustain us, St. Sanitus!" [x]
+"Sustain us, Saint Sanitus!" [x]
 "Thanks, St. Hank!"
 "theologian? Healing, too."
 "to be like Rev. Figo, Giver of Org Five."
@@ -19823,6 +19831,8 @@ blurb
 table of mantle laments [xxu3]
 blurb
 "ABET?! BEAT"
+"PERVERSION RISE? PROVEN"
+"PERVERSIONS? SERVE PRISON"
 "ABNORMAL BAN = MORAL" []
 "ADS KILL ALL KIDS"
 "ADULTERY? TRY A DUEL"
@@ -21184,7 +21194,7 @@ blurb
 "Nice Olin Lencioni"
 "Nice Omar Caminero"
 "Nice Palma Campanile"
-"Nice Person [if player is male]Eric Snopes[else]Roni Spence[end if]"
+"Nice Person [if player is male]Prince Enos[else]Roni Spence[end if]"
 "Nice Rob Briceno"
 "Nice Ross Cisneros"
 "Nice Seth Steichen"
@@ -22114,7 +22124,7 @@ blurb
 "Allay Layla."
 "Approve Vera Opp."
 "Ask out Otsuka."
-"Assimilate rule-cut culture." [x]
+"Assimilate rule-cut culture."
 "Astonish Shinsato." []
 "Avert Icy Veracity: evict Ray." []
 "Ax Bert Baxter."
@@ -22143,7 +22153,7 @@ blurb
 "Bar Kyle Barkley, Ray Belk, Bry Lake." []
 "Bar Tex Baxter." []
 "Bash mad, bad sham."
-"Be bailed out for what I lied about." [x]
+"Lied about? Be outlaid?! Bailed out."
 "Be had = bad, eh?"
 "Be late? Baleet!" []
 "Be Lean. Enable."
@@ -22176,7 +22186,7 @@ blurb
 "Break Baker."
 "Break up Pa Burke."
 "Broach Co-Brah Orbach."
-"BS til blush." [x]
+"BS til blush."
 "BUDGET: bug Ted."
 "Bug Al Glaub."
 "Bug Albertha Bartlebaugh."
@@ -22309,9 +22319,10 @@ blurb
 "Call Ben LeBlanc."
 "Call Clint of FlintCo." [x]
 "Call Export Pro Tex." [x]
-"Call politicians repealing tax breaks remiss misers." [x]
-"Call Steven in Events re: Can-Do AdCon and Co." [x]
-"Call Stevie in Evites!" [x]
+"Remiss misers, sirs? Me?"
+"Call Events Steven."
+"Can-Do AdCon and Co: Canon Cad-Do."
+"Call Evites Stevie."
 "Can Mister Miscreant." []
 "Can't Like Nice-Talk Late Nick."
 "Cast for factors."
@@ -22326,12 +22337,13 @@ blurb
 "Compress MessCorp."
 "Conceal Clean-Co Eco-Clan."
 "Confuse FunesCo."
-"Congratulate Coe, the eco-CEO on his UltraAltru award from GiveAll Village." [x]
+"Congratulate Eco-CEO Coe."
+"Altru? La ultra-rut!"
 "Conk Up PunkCo."
 "Conquer QuernCo."
 "Conspire. Jot projections." []
 "Consult Luc tons." []
-"Contact A. Greer, your too-easy agreer." [x]
+"Arr, gee: Agree'r re: rage."
 "Convert NVertCo Vectron."
 "Convince Ceci Vonn Vennicco."
 "Cool Off FloofCo."
@@ -22629,11 +22641,11 @@ blurb
 "Gaslight Hal Tiggs." []
 "Gaslight Tal Higgs." []
 "Get a tie on! Negotiate!"
-"Get designer re-signed." [x]
+"Designer Ed Singer? Re-signed!"
 "Get Hines Seething."
 "Get so-so stooges, toss ego."
 "Get soil so legit to Giles." []
-"Give executives a no-bus bonus for buying a fancy new car they must work harder to pay for. Everyday workers can just take the bus, of course." [x]
+"No Sub-Bonus."
 "Give Short Oversight." []
 "Go paste Potages Gestapo."
 "'Grab. Brag. Brag. Grab.'"
@@ -22779,7 +22791,7 @@ blurb
 "Land Yen Neyland."
 "Layoff Alf Foy." []
 "Let bums stumble."
-"Lobby for weirdos['] dowries so everyday people don't have to pay taxes." [x]
+"Lobby for weirdos['] dowries."
 "Locate Cole at LateCo Ace Lot."
 "Lock in LinkCo."
 "Lock out KloutCo."
@@ -23216,7 +23228,7 @@ blurb
 "Nix Mae Maxine." []
 "Nix test tent six."
 "No to Mr. Ron Tom, To Norm Morton."
-"Note areas feared ad-free." [x]
+"Defer a fad ere feared ad-free."
 "'Once up, pounce.'"
 "Only half? Nah, folly."
 "Oust Brenner Stoneburner." []
@@ -23287,7 +23299,7 @@ blurb
 "Reject Jr. E-tec."
 "Remind Dim Ren."
 "Reminds: Mr. Denis, Ms. Rendi, Mrs. Nied, Dr. Nimes."
-"Renew Milo's Limos contract." [x]
+"Milo's Limos: moil, lissom."
 "Replace Lee Carp, Creep Al, PC Earle, Carl. Eep!"
 "Reprog. Org-Rep Groper."
 "Results of the paperboy pay probe." [x]
@@ -23489,7 +23501,7 @@ blurb
 "Send Lee Needles." []
 "Shadow Ad Show. (How sad!)"
 "Shake down Hank Dowes." []
-"Shake down the claret cartel." [x]
+"Claret cartel arclet: retract a cell."
 "Shun Bad Husband Dan Bush/Bud Nash." []
 "Shut off Stu Hoff."
 "Sidestep Despites."
@@ -24125,7 +24137,7 @@ blurb
 "Varasci Caviars."
 "Very fun fur envy."
 "Vestal Valets." []
-"Vi, Top VIP."
+"Vi, a Top VIP Tao."
 "Vitreous voitures."
 "Voguiest Give-Outs."
 "Waistlines, A-List Wines."
@@ -24146,13 +24158,13 @@ blurb
 "Ad-shy = shady."
 "Adroitly dilatory idolatry: ail? Do try." []
 "AFL/CIO? Co-fail!"
-"All games distract a true leader, even the socially logical [i]Beggar Bagger[r]." [x]
+"Beggar bagger gab. Erg."
 "All spent? Let's plan."
 "Am Close = LOSE, MAC!"
 "Ardent: a trend!" []
 "Be [']round. Rebound." []
 "Beamy maybe by me? Yea, BAM."
-"Better to spend time in buildings than an idling bus." [x]
+"Idling bus? Buildings!"
 "Bones worn? Brown-nose!"
 "Bore [']em? Be more!"
 "Bore, or be." []
@@ -24160,14 +24172,14 @@ blurb
 "Brightest, right bets."
 "Bud, to doubt, but do."
 "Bust buts: Bub's tuts."
-"Can't outsell a sellout." [x]
+"Let soul sell out. Outsell -- Lout Les."
 "'Confused? Focus!' - Ned."
 "Cope lab: Placebo? Able, cop!"
 "Cost-free = scot-free."
 "Default flat due? Proper repo PR."
 "Deuced? Deduce!"
-"Do whatever busses in business." [x]
-"Don't put the whiny in WHY." [x]
+"Business bins['] uses. Busses-in."
+"Whyin[']? Whiny!"
 "Earning: in range!"
 "Eff Eco-Coffee!" []
 "Egotist? Got ties?"
@@ -24181,9 +24193,10 @@ blurb
 "Got Narcs? Congrats!"
 "Groan over a governor or grave? No."
 "Have cries. Search, vie, achievers."
-"How to be less noper-prone, except around an important nopers-person." [x]
-"How to deal with buttheads['] hated buts." [x]
-"How to derail a idler (grammar police need not try.)" [x]
+"Noper-prone? Preen on, pro!"
+"Nopers person? None prospers."
+"Hated? Buts? Tut, bashed buttheads."
+"Derail a idler."
 "'I can'ts?! ANTICS!"
 "I persuade! Super idea!"
 "'I respect receipts:' rec spite, cite reps."
@@ -24224,8 +24237,8 @@ blurb
 "Stop? Nope. Postpone." []
 "Stunk, doc? Don't suck!"
 "Stupidity? I tip: study!"
-"Success is all in the mind, but it is diet-tied too." [x]
-"A successful leader needs lifters and a stifler." [x]
+"It? Deed it. Diet-tied."
+"Lifters? Trifles stifler!"
 "A swindle! Sane? Wild? Win deals!"
 "Tarry, I? Rarity!"
 "Those pricy hypocrites['] ropy ethics." []
@@ -24233,13 +24246,13 @@ blurb
 "To get in, get on it!" []
 "Too smug? Mo['] gusto!"
 "Trust?! STRUT!"
-"Using math to whine about exponentially increasing salaries is bigotry, trig boy!" [x]
-"Usury tips from a loner's loaners." [x]
+"Big Tory Bigotry? Bit gory. Grit, boy."
+"A loner's loaners learn so."
 "When? Not then. Now." []
 "Whoot! How to log a goal."
 "The wit: whet it!"
-"A worn ode of how the doer won, not some idiot who made one word from a new door." [x]
-"You don't need pure OCD to produce." [x]
+"'DOER WON.' Worn ode."
+"Produce pure OCD!"
 "You either UPHOLD or HOLD UP the economy!" [x]
 "You're never too aliterate to retaliate." [x]
 
@@ -26062,7 +26075,7 @@ blurb
 "'Consigned.' / 'Seconding.'"
 "'Contrary! Rory can't!'" []
 "'Cookin['], eh? No...I choke.'"
-"'Coper's rec? Oops!'"
+"'Cooper's rec? Oops!'"
 "'Coquettish?' / 'Quit, Chet! So...'"
 "'Cordial? Acrid ol['] liar, Doc!'" []
 "'Cork wine? Ew, no, Rick! Nice work!'" []
@@ -27071,7 +27084,7 @@ blurb
 "'Stripes persist. Press it, sir! Step!'" []
 "'Stu, my musty, um, sty!'"
 "'Su's age? A guess?'"
-"'Subscribers['] bribes? Curs!'"
+"'Subscriber bribes? Curs!'"
 "'Such brats! Trash-cubs!'"
 "'Suck it!' / 'Ick, Stu!'"
 "'A sulk, Klaus? Ask Lu.'" []
@@ -27153,7 +27166,7 @@ blurb
 "'To ideas, toadies!'" []
 "'To rides! So tired? Do rites! Or diets!'" []
 "'Toasted! Go, good taste!'"
-"'Tofu, hick?' / 'Oh, ---- it!'" [x]
+"'Tofu, hick?' / 'Oh, [f-w] it!'" [x]
 "'Tofu? No, too fun.'"
 "'Tofu year? After you!'" []
 "'Tom, I...' / 'I'm to Omit it, Mo.'"
@@ -27540,7 +27553,7 @@ blurb
 "Beastly Ty Bales" []
 "Beau 'Ranch' Brancheau"
 "Becki 'Ranch' Rickenbach"
-"Been-Legal Been Ballengee"
+"Been-Legal Ballengee"
 "Beer-Swigs Weissberg"
 "Bein[']-Sly Lisenby" []
 "Beldin's Bindles"
@@ -27789,7 +27802,7 @@ blurb
 "Chubster Schubert" []
 "Chun 'Ski' Huckins"
 "Churlish Lush Rich"
-"CIA-*** Caissa Isaacs" [x]
+"CIA-[a-word] Caissa Isaacs" [x]
 "Cider Edric Redic" []
 "Cigar Man Ragin['] Mac"
 "Cigar Nut Traci Ung" []
@@ -27856,10 +27869,10 @@ blurb
 "Cool Cat Al Tocco"
 "Cool Kid Dick Loo" []
 "Cop-Shy Psycho Posh Cy"
-"Coppery Cy Roper"
+"Coppery Cy Poper"
 "Cougher Goucher"
 "Cougher Reg Chou" []
-"Coughin['] Gino Cho"
+"Coughin['] Gino Chu"
 "Count Arvilla Vaillancourt"
 "Count Berta Betancourt"
 "Count Cain Antonucci"
@@ -28641,7 +28654,7 @@ blurb
 "Gorgeous Grouse Og" []
 "Gorgeous Ogg Rouse"
 "Gorgon Ron Ogg"
-"Gorilla Garrilo"
+"Gorilla Garillo"
 "Gormless Gross Mel"
 "Gory Al Gaylor"
 "Gory Dan Graydon" []
@@ -29968,7 +29981,7 @@ blurb
 "Plant Mo Lampton"
 "Plant Ned Pentland"
 "Plant Poe Appleton"
-"Play-Col Claypool"
+"Play-Cool Claypool"
 "Pleasant Pale Stan" []
 "Plonker Ren Polk"
 "Plottin['] [if player is male]Lon Pitt[else]Lin Pott[end if]"
@@ -30228,7 +30241,7 @@ blurb
 "Sad-Wink Dawkins" []
 "Sadler 'Fibs' Brassfield"
 "Safe-Con Fonseca" []
-"Saintly [if player is female]Sly Tina[else]Tiny Sal[r]" []
+"Saintly [if player is female]Sly Tina[else]Tiny Sal[end if]" []
 "Sallow Slow Al"
 "Sam 'Gun' Mangus"
 "Sam 'Nah' Ashman" []
@@ -33733,7 +33746,7 @@ blurb
 "Cary Tudor's Courtyards"
 "Casandra's Sandaracs"
 "Celebrity Rebel City"
-"Clean Pine Nice Place"
+"Clean Epic Clan-Piece Nice Place"
 "Covered Red Cove" []
 "Coy Slots So Costly"
 "Crime-Pays Pricy Mesa"
@@ -34220,7 +34233,7 @@ blurb
 "Led of Ego? Feel Good[r], by Flo Goede" []
 "Legit to Let It Go[r], by Egil Ott"
 "Legs of Self, Go[r], by Egloff Goessl"
-"Let's Tag Gestalt[r], by SDal Gett"
+"Let's Tag Gestalt[r], by Sal Gett"
 "Leverage! Rave! Glee[r], by [if player is male]Lee Grave[else]Eve Agler[end if]"
 "Lie, Wreath: The Wailer, Wealthier[r], by Earl White" []
 "Lo, and We Deal Now[r], by Lon Wade"
@@ -34594,6 +34607,7 @@ table of songs you could write [xxvx]
 blurb
 "[if player is male]She,[else]He's[end if] My Base: Shames, Bye"
 "A-Holes So Hale"
+"Bonus Sun Soon, Bub"
 "A-One St.: So Neat" []
 "Ace, Pine in Peace"
 "Ach, Gut-Caught" []
@@ -35428,7 +35442,7 @@ blurb
 "Blessing-Page Sleeping Bags"
 "Bo's Famed Foam Beds"
 "Bodett Tot-Bed"
-"Bold-Fet Loft Beds"
+"Bold-Fest Loft Beds"
 "The Cap'n's Nap Techs" [p]
 "Chiesa Chaise" []
 "Comfier Eco-Firm"
@@ -35700,19 +35714,18 @@ blurb
 "[l-r] discusses Sweaty-Way Set training." [x]
 "[l-r] discusses the plexus-suplex, not willing to practice it on each other." [x]
 "[l-r] does a quick-start squat trick to try to get into shape." [x]
-"[l-r] feels guilt over a long-gone goonie-noogie." [x]
+"[l-r] feels guilt over goonie-noogie: oi, gone." [x]
 "[l-r] flatter Typhoon Tony Pho." [x]
-"[l-r] mutters[if player is female], ignoring your gender,[end if] 'Ugly slam, small guy.'" [x]
+"'Ugly slam, small guy.' La, smugly? As glumly"
 "[l-r] recalls good seats at the Limburger Rumble Rig." [x]
 "[l-r] recaps favorite quotes from Steroidal Idolaters." [x]
-"[l-r] resolves to do abs so bad." [x]
 "[l-r] talk of Huck's Pec Checkups." [x]
 "[l-r] talks of working at a tungsten guns tent." [x]
 "[l-r] vows to read My Abs By Sam." [x]
 "[l-r] wonder about the Of Abs So Fab regimen."
 "[l-r] wonders if Invig-Givin['] is too good to be true." [x]
 "[lrp] begin construing trouncings, but not anyone. Just abstractly." [x]
-"[lrp] both weep 'Machos? A schmo.'" [x]
+"'Machos? A schmo.'"
 "[lrp] discuss the wrestling event: Mean Nils's Nine-Slams Manliness." [x]
 "[lrp] figure at least they tried, unlike Quit-Goon Quitongo." [x]
 "[lrp] grit flesh so. 'Fight losers. Griefs. Sloth.'" [x]
@@ -35721,7 +35734,9 @@ blurb
 "[lrp] mention Police Pec-Oil HAS to work." [x]
 "[lrp] moan they're no Brooks KO Bros." [x]
 "[lrp] realize they're no Rad Ryno and Rory." [x]
-"[lrp] regret picking on Pinko Sal Polanski, Pinko Lis Polinski, Pinko Shon Hopkinson and Pinko Ann Pankonin." [x]
+"[lrp] regret picking on Pinko Sal Polanski."
+"[ltp] regret picking on Pinko Shon Hopkinson."
+"[ltp] regret picking on Pinko Ann Pankonin."
 "[lrp] suddenly see the sad side of [i]Sucker-Punch Checkup Runs[r]." [x]
 "[lrp] suddenly sympathize with the losers in [i]Booyahs: Oh, Ay, Sob[r]." [x]
 "[lrp] try and fail to make that move from Neat-KO Keaton." [x]
@@ -35730,7 +35745,7 @@ blurb
 "Each wishes he were a gung ho gun hog." [x]
 "'Eats gum? Me gusta!'"
 "'Galoots also got gals, too. To goals!'"
-"'Gawd, dawg,' they say, still unable to believe their defeats." [x]
+"'Gawd, dawg. Gaww, gadd,' they say, still unable to believe their defeats." [x]
 "Grunts, strung."
 "'Hamstrings...stings...harm!'"
 "'I'm such a booby.' / 'I'm such a yobbo.'" [x]
@@ -35745,14 +35760,14 @@ blurb
 "'Ow, my teef!' / 'Ow, my feet!'"
 "'Oy. Heck. Hockey.'"
 "'So weak now. Knows a woe!'"
-"'Talk about a lot a['] bulk!'"
-"They [lrblab] each dislikes Adrena-Andrea's workout routine." [x]
-"They [lrblab] each likes GoonLab Bologna." [x]
-"They [lrblab] their mutual admiration for Machado Da Macho." [x]
-"They [lrblab] their mutual love for Big Nox Boxing." [x]
-"They are sure their idol, Diesel Sid Lee (solid ol['] Sid,) would be ashamed of them now." [x]
-"They are too beat-up to feel upbeat." [x]
-"They argue over the best flavor of U-GOTS-GUSTO energy drink." [x]
+"'Adrena-Andrea? Rad?! Nae!'" [x]
+"'Glob on a GoonLab Bologna~'" [x]
+"'Machado Da Macho?! A ham, doc!'" [x]
+"'Big Nox Boxing?! Bing! XO!'" [x]
+"'Diesel Sid Lee? [']Ed ... lies!'"
+"'Solid ol['] Sid?' / 'I'd slid, solo.'"
+"'Upbeat?! Beat-up!'"
+"They need U-GOTS-GUSTO for when gusts go out, even if it might cause gouts."
 "They bemoan being on the wrong side of the GPA gap." [x]
 "They both recall reading 'Hi-Fat? Ha? FIT' as kids. It givs you faith, that each remembers ... a fith."
 "They both reckon they need to do abs so bad." [x]

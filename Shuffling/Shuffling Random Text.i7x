@@ -1,5 +1,10 @@
 Version 1/151216 of Shuffling Random Text by Andrew Schultz begins here.
 
+[
+anc.py checks anagrams.
+pch.pl checks punctuation.
+]
+
 volume megachatter table
 
 table of megachatter [tmc]
@@ -1386,6 +1391,8 @@ blurb
 "Absorbing-Brains Bog"
 "the AH! Heath"
 "All-Bots-Lost Lab"
+"Evil-Lag Village"
+"Gave-Ill Village" []
 "All-Down Lowland"
 "Any-Con Canyon"
 "the asp spa"
@@ -1493,6 +1500,7 @@ blurb
 "Lousiest Soul Site"
 "Low Gods['] Glow-Sod"
 "Lucie's Sluice"
+"Slice-U Sluice"
 "Mad-Snorts Sandstorm"
 "Mad Woe Meadow"
 "Malice-Nest Lemniscate"
@@ -3641,9 +3649,11 @@ table of nerd natter [xxms3]
 blurb
 "'Ah! No NaOH, Noah!'"
 "'Navo-Nova-O-Van? On va!'"
+"'GPA gap? Pap! Agg!'"
 "'Malware war?! Lame?!'"
 "'Clear-BBS Scrabble?' Blab recs!" [p]
 "'Cal's pal? All-Caps!'"
+"'Talk about Oak Lab? Tut!'"
 "'Ain't Herb the brain? Bah, inert!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy? And y'd...'"
