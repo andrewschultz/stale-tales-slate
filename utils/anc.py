@@ -154,7 +154,7 @@ def ana_check(a):
             this_tl += 1
             if not first_table_yet: continue
             if not line.startswith("\""): continue
-            if actual_anagram(line): continue
+            if actual_anagram(ll): continue
             if this_table != last_table:
                 any_in[this_table] = line_count
                 print("**** new table ****", this_table, "line", line_count, "for", fb)
@@ -183,6 +183,8 @@ def ana_check(a):
             temp_list = sorted([x for x in any_count if any_count[x] >= min_to_list], key=any_count.get, reverse=True)
             print(len(temp_list), "Tables with at least", min_to_list, "entries:")
             print(", ".join(["{:s}={:d}".format(x, any_count[x]) for x in temp_list]))
+    else:
+        print("Yay no bad anagrams found!")
     if len(quote_mismatch):
         print("QUOTE MISMATCHES ({:d}):".format(len(quote_mismatch)))
         print("\n".join(quote_mismatch))
@@ -251,6 +253,8 @@ def get_anagram_focus():
                 focused_already[ll] = line_count
 
 def rewrite_focus_examples(my_game):
+    bail_line = 0
+    bail_without_copy = False
     hdr = i7.hdr(my_game, "ra")
     file_out = "hdr_{:s}_temp.i7x".format(my_game)
     ana_temp = "anc_focus_temp.txt"
@@ -273,15 +277,17 @@ def rewrite_focus_examples(my_game):
                 in_table = False
             if not ignore_tokens(table_name) and has_focus_markers(to_end_quote(line)):
                 if not actual_anagram(line):
-                    print("{:s} line {:d} has bad focus-marked anagram: {:s}".format(hbase, line_count, line.strip()))
-                    i7.npo(hdr, line_count)
-                    sys.exit()
+                    bail_without_copy += ("BAILING WITHOUT COPYOVER {:s} line {:d} has bad focus-marked anagram: {:s}\n".format(hbase, line_count, line.strip()))
+                    bail_line = line_count
                 fout.write(no_focus_markers(line))
                 focout.write(line)
                 changes_sent += 1
                 # print(changes_sent, line.strip())
             else:
                 fout.write(line)
+    if bail_without_copy:
+        print(bail_without_copy.rstrip())
+        i7.npo(hdr, bail_line)
     focout.close()
     fout.close()
     if not changes_sent:

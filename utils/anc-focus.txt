@@ -1,3 +1,4 @@
+"FUN? ICK" [x]
 "clucks at what Dustin became." [x: nudist]
 "The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learning Girl Anne, Bytes Betsy, Learned Nerd-Ale Darlene, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain? Gamer Marge?" [x]
 "A fish in a dirty suit yells 'To bar! Abort!' repeatedly in a funny accent." [x]
@@ -466,3 +467,63 @@
 "A `factish catfish` shows the ladies he's `cash-fit`."
 "Patrons whisper to beware `clingfish filchings`."
 "A `rich sot ostrich` claims to own `ShirtCo`."
+"`Nun bio`...gave me a `bunion`." [x]
+"to be like `Rev. Figo, Giver of Org Five`."
+"`truce cruet`... he doesn't `eruct`." [x]
+"Ping `Victor` at `TrivCo`."
+"Plan new `sugared ad surge`."
+"Promote `feel-raw welfare-free law`." [x]
+"Read `[i]This Org So Right[r], by Sig Roth`."
+"Results of the `paperboy pay probe`." [x]
+"Secure `private VIP rate`." [x]
+"Sponsor `Madcap Ad Camp`."
+"They both recall reading '`Hi-Fat? Ha? FIT`' as kids. It givs you `faith`, that each remembers ... `a fith`."
+"They both reckon they need to `do abs so bad`." [x]
+"They're both glad they didn't grow up in `Far Friff` with `riff-raff`."
+"They hear it's really exciting at the `Anarch-a-Ranch`." [x]
+"They both enjoy the `Exhil-Helix` coaster rides."
+"They find the `To-Scare Coaster` an `ace sort`." [x]
+"They consider applying to the `We-Mighty White Gym`."
+"They consider `radico-cardio`."
+"They cry how they're no `Dyna-Andy Nady`." [x]
+"They discount the side effects of `Brain-Rust NutriBars`." [x]
+"They discuss `Bilal's ill abs`."
+"They discuss favorite flavors of `Clobber Cobbler`." [x]
+"They discuss techniques from `Strongmen Gent Norms`."
+"They discuss the training methods of `Hard-Way Hayward`." [x]
+"They discuss `Tricep-Rip Tec`." [x]
+"They discuss what to buy from the `Sporty Pro Sty`." [x]
+"They discuss whether `Alec's Escal-Laces` really add 2 inches to your gym shoes['] vertical." [x]
+"They discuss working out at `Expend-Pex Den`." [x]
+"They disparage `Mo-Funk Monk-Fu`." [x]
+"They dream of `Ole Vince Violence`." [x]
+"They find they both love the song [i]`Loud boys? Doubly So, Bold Yous`[r]." [x]
+"They know how `poor Ted Torpedo` felt." [x]
+"They know they'll never be `Typee Petey`." [x]
+"They manage to `misppel pimples`." [x]
+"They mention there's something off about `Mista Vin Vitamins`." [x]
+"They mumble about some `dim lame dilemma`." [x]
+"They pine for `Rip-Em-Prime`."
+"They discuss how to `rip mo['] primo`."
+"They plot ways from `U SOFT` to `SO TUF`." [x]
+"They recall friendly `dust-ups: Stu, Spud`." [x]
+"They recap the latest `Mach-Boor/Arch-Boom Rochambo` tournament, sponsored by `Moorbach` and won by `Hobo Marc`." [x]
+"They recap the workout routines of `Expand-Pex Dan`." [x]
+"They recap their favorite literary work, `Us Was a Wuss`." [x]
+"A stewing: they reconsider visiting `Sweating Wingate's`." [x]
+"They recount the best of `[i]Pissant Pastins[r]. 'It snaps!'`" [x]
+"They recount the `GimpyNet Inept Gym emptying`." [x]
+"They recount `pro wrestling triple-wrongs`." [x]
+"They share the best panels of the comic strip '`U THINK I THUNK`' from `Ink-Hut`." [x]
+"They regret saying `yoga's so gay` but still won't eat `a soggy soya`." [x]
+"They remember both being `despot depots-posted`." [x]
+"They remember winning their local `Turbo-Bruto` contests: `'our trot, Bub.'`" [x]
+"They reminisce of `melee fests`, of `self esteem`." [x]
+"They reminisce on `shmoes['] moshes`." [x]
+"They rhapsodize about `'I burn' Bruin Rubin`."
+"They share `menmost moments`." [x]
+"They should've gotten a `punchage change up` or `cheap gun` from `Ape Chung`." [x]
+"They take time to admire `'Le Plow' Powell.`" [p] [x]
+"They wish for `HamCo Macho-Mocha (ach, mo[']`!)[line break]" [p] [x]
+"They wonder aloud how to `exert tidy dexterity`." [x]
+"They wonder if `I'm-Strong-Gro Mints` really work." [x]

@@ -3773,7 +3773,7 @@ carry out requesting the score:
 	if mrlp is nothing, say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
 		if dome-score-not is false:
-			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee? Or Greaten-Grantee? Or Derivin' Diviner?";
+			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee? Or Greaten-Grantee? Or Derivin' Diviner? Or Sharper Phraser?";
 			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true:

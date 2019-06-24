@@ -19631,7 +19631,6 @@ blurb
 "banters be rants." []
 "Be set, St. Bee."
 "best mode: be modest."
-"better Godly than Gold-y." [x]
 "a bilk? I balk..."
 "a bliss-gen blessing."
 "bring down? Bind? Wrong."
@@ -19642,7 +19641,7 @@ blurb
 "cattiness? Scantiest."
 "chartless? St. Charles."
 "clans weep: new places, clean pews."
-"complaints of aching pre-preaching." [x]
+"aching pre-preaching? Change. Rip. Recap nigh."
 "Cure Dan Durance...uncared..."
 "Cyan nun? Uncanny."
 "Dave's saved!"
@@ -19734,7 +19733,7 @@ blurb
 "narcissism: man's crisis."
 "Nazareth? Ah, art, zen."
 "Nun bio...gave me a bunion." [x]
-"O Kevin, invoke no vein." [x]
+"O Kevin, invoke: vein OK, vine OK."
 "O, St. Nina anoints nations." []
 "O, venom, move on."
 "Oh, Tither Hitherto."
@@ -19745,7 +19744,7 @@ blurb
 "Or sin? No, sir!" []
 "ordering? Err, doing."
 "pilpul, li'l pup."
-"a prayer to Sanitary Saint Ray." [x]
+"Sanitary Saint Ray: a strayin[']?"
 "presently sly? Repent."
 "...prevents ten pervs."
 "pride? He's perished!"
@@ -19797,7 +19796,7 @@ blurb
 "Sustain us, St. Sanitus!" [x]
 "Thanks, St. Hank!"
 "theologian? Healing, too."
-"to be like Rev. Figo, Giver of Org Five." [x]
+"to be like Rev. Figo, Giver of Org Five."
 "to prey? Rot. Yep."
 "To sin is not on, is't?" []
 "to undergo a good nature: outraged? No!" []
@@ -23250,11 +23249,10 @@ blurb
 "Pack tie, take pic."
 "Pass on Spanos." []
 "Patronise Petrosian."
-"'Perform awful law-fu.'" [x]
 "Pester Peters, Streep."
 "Pick on PinkCo, cop kin."
-"Ping Victor at TrivCo." [x]
-"Plan new sugared ad surge." [x]
+"Ping Victor at TrivCo."
+"Plan new sugared ad surge."
 "Play Les Lapsley."
 "Play Mel Lampley."
 "Plot lax poll tax."
@@ -23278,7 +23276,7 @@ blurb
 "Re-auth Huerta."
 "Re-dock OK-Cred Ed Rock."
 "Re-stun unrest."
-"Read [i]This Org So Right[r] by Sig Roth." [x]
+"Read [i]This Org So Right[r], by Sig Roth."
 "Ream/Nag Manager."
 "Rec Clean Canceler Clarence."
 "Rec Tim's Metrics." []
@@ -23462,8 +23460,8 @@ blurb
 "Scorn Tisa Croissant."
 "Secure private VIP rate." [x]
 "See Dr. Drees." []
-"See SimplyCo Olympics." [x]
-"See your dope-[a-word] ad posse." [x]
+"SimplyCo Olympics? Copy, Slim."
+"Dope-[a-word] ad posse aped? SOS."
 "Sell Amy Smalley." []
 "Sell Aron Ornellas." []
 "Sell Ash Hassell."
@@ -23628,7 +23626,7 @@ blurb
 "Smoke Lin Mikelson." []
 "Smoke Link Mikkelson." []
 "Smoke Rhea Shoemaker." []
-"Sponsor Madcap Ad Camp." [x]
+"Sponsor Madcap Ad Camp."
 "Spur. Be Superb."
 "Stagier triages."
 "Startle Statler."
@@ -23707,8 +23705,8 @@ blurb
 "Tag Tess Gassett."
 "Tag Trish Straight."
 "Tag Yan Gaytan."
-"Tell BenjiCo, Joe B Inc. Nice Job!" [x] []
-"Throw several employees['] names in the votes stove." [x]
+"Nice-job BenjiCo, Joe B Inc." []
+"So vets veto? Votes stove!"
 "Tip Bates Baptiste."
 "Tip Cher Pitcher." []
 "Tip Dara Partida."
@@ -24188,14 +24186,14 @@ blurb
 "How to derail a idler (grammar police need not try.)" [x]
 "'I can'ts?! ANTICS!"
 "I persuade! Super idea!"
-"'I respect receipts' is a good general busy sounding phrase." [p] [x]
+"'I respect receipts:' rec spite, cite reps."
 "If at a fit: FIAT."
 "If shy, fishy!"
 "In the NOW, whine not." []
 "Industry runs tidy. [']S un-dirty."
 "Less drugged, less grudged."
 "Loaf it to fail, ail oft."
-"Loot begging, bootlegging: which is worse?" [x]
+"Loot begging, bootlegging: bilge to gong."
 "Mark now, man. Work. Know. ARM." []
 "Minutely untimely: le mutiny!"
 "Monetised not? Demise!"
@@ -35756,55 +35754,56 @@ blurb
 "They are too beat-up to feel upbeat." [x]
 "They argue over the best flavor of U-GOTS-GUSTO energy drink." [x]
 "They bemoan being on the wrong side of the GPA gap." [x]
-"They both recall reading 'Hi-Fat? Ha? FIT' as kids. It's sort of touching." [p] [x]
+"They both recall reading 'Hi-Fat? Ha? FIT' as kids. It givs you faith, that each remembers ... a fith."
 "They both reckon they need to do abs so bad." [x]
-"They both wish they'd grown up in Far Friff or the Anarch-a-Ranch." [x]
-"They compare the Exhil-Helix and To-Scare Coaster rides." [x]
+"They're both glad they didn't grow up in Far Friff with riff-raff."
+"They hear it's really exciting at the Anarch-a-Ranch." [x]
+"They both enjoy the Exhil-Helix coaster rides."
+"They find the To-Scare Coaster an ace sort." [x]
 "They consider applying to the We-Mighty White Gym."
 "They consider radico-cardio."
-"They continue be-a-lug blague, beached like a beluga." [x]
 "They cry how they're no Dyna-Andy Nady." [x]
 "They discount the side effects of Brain-Rust NutriBars." [x]
 "They discuss Bilal's ill abs."
 "They discuss favorite flavors of Clobber Cobbler." [x]
-"They discuss techniques from Strongmen Most Green."
+"They discuss techniques from Strongmen Gent Norms."
 "They discuss the training methods of Hard-Way Hayward." [x]
-"They discuss their fear of Slice-U Sluice." [x]
 "They discuss Tricep-Rip Tec." [x]
 "They discuss what to buy from the Sporty Pro Sty." [x]
 "They discuss whether Alec's Escal-Laces really add 2 inches to your gym shoes['] vertical." [x]
 "They discuss working out at Expend-Pex Den." [x]
-"They disparage Monk-Fu by Mo-Funk." [x]
-"They dream of violence with Ole Vince." [x]
-"They find they both love the song [i]Loud boys? Doubly So[r]." [x]
-"They just need to feel okay after that kayo." [x]
+"They disparage Mo-Funk Monk-Fu." [x]
+"They dream of Ole Vince Violence." [x]
+"They find they both love the song [i]Loud boys? Doubly So, Bold Yous[r]." [x]
+"'Kayo! Okay?!' / 'Ay, ya kook!'"
 "They know how poor Ted Torpedo felt." [x]
 "They know they'll never be Typee Petey." [x]
 "They manage to misppel pimples." [x]
 "They mention there's something off about Mista Vin Vitamins." [x]
 "They mumble about some dim lame dilemma." [x]
-"They now feel more soft, foremost." [x]
-"They pine for Rip-Em-Prime to rip mo['] primo." [x]
+"'Foremost, smote for foe storm. Foremost.'"
+"They pine for Rip-Em-Prime."
+"They discuss how to rip mo['] primo."
 "They plot ways from U SOFT to SO TUF." [x]
 "They recall friendly dust-ups: Stu, Spud." [x]
 "They recap the latest Mach-Boor/Arch-Boom Rochambo tournament, sponsored by Moorbach and won by Hobo Marc." [x]
 "They recap the workout routines of Expand-Pex Dan." [x]
 "They recap their favorite literary work, Us Was a Wuss." [x]
-"They reconsider visiting Sweating Wingate's to bulk up." [x]
-"They recount the best of [i]Pissant Pastins[r]." [x]
-"They recount the emptying of GimpyNet Inept Gym." [x]
-"They recount triple-wrongs in pro wrestling." [x]
-"They regret laughing at the comic strip 'U THINK I THUNK.'" [x]
-"They regret saying yoga's so gay." [x]
-"They remember both being posted at despot depots." [x]
-"They remember winning their local Turbo-Bruto contests." [x]
+"A stewing: they reconsider visiting Sweating Wingate's." [x]
+"They recount the best of [i]Pissant Pastins[r]. 'It snaps!'" [x]
+"They recount the GimpyNet Inept Gym emptying." [x]
+"They recount pro wrestling triple-wrongs." [x]
+"They share the best panels of the comic strip 'U THINK I THUNK' from Ink-Hut." [x]
+"They regret saying yoga's so gay but still won't eat a soggy soya." [x]
+"They remember both being despot depots-posted." [x]
+"They remember winning their local Turbo-Bruto contests: 'our trot, Bub.'" [x]
 "They reminisce of melee fests, of self esteem." [x]
-"They reminisce on moshes with shmoes." [x]
-"They rhapsodize about Bruin Rubin and his catch phrase 'I burn!'" [x]
+"They reminisce on shmoes['] moshes." [x]
+"They rhapsodize about 'I burn' Bruin Rubin."
 "They share menmost moments." [x]
 "They should've gotten a punchage change up or cheap gun from Ape Chung." [x]
 "They take time to admire 'Le Plow' Powell." [p] [x]
-"They talk favorite flavors of One-Trip Protein, which is no tripe." [x]
+"'One-Trip Protein? No tripe!'"
 "They wish for HamCo Macho-Mocha (ach, mo[']!)[line break]" [p] [x]
 "They wonder aloud how to exert tidy dexterity." [x]
 "They wonder if I'm-Strong-Gro Mints really work." [x]
@@ -36597,7 +36596,7 @@ blurb
 "Broering's Resorbing"
 "Bromsey embryos"
 "Bucci's Cubics"
-"Buellugo's Globules"
+"Bellugo's Globules"
 "Bussiere's subseries"
 "Butcher's chest-rub" []
 "Cabateri bacteria"
@@ -37250,7 +37249,7 @@ blurb
 "Adept Giron Daigrepont" []
 "Adept Lis Plaisted" []
 "Amie 'Duh' Duhaime"
-"Analytic [if player is male]Ty Lancia[else]Tina Lacy[end if]" [sourcesz>>blue lacuna]
+"Analytic [if player is male]Ty Lancia[else]Tina Lacy[end if]" [source size >> blue lacuna's]
 "Angla 'Duh' Haugland"
 "Ard 'IQ' Qadir"
 "Art 'Duh' Duhart"
@@ -39513,6 +39512,8 @@ book otters
 table of animal friends [xxt1]
 blurb
 "acid-snarl cardinals"
+"a be-a-lug beluga"
+"a blague-beluga"
 "an agreeable bear-eagle"
 "mischief fish-mice"
 "a steed, teased, sedate"
