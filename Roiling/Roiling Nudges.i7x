@@ -1606,11 +1606,11 @@ this is the pas-vis rule:
 	if number of touchable hintpastries > 0, the rule succeeds;
 	the rule fails;
 
-to say eat-pastry: say "The pastry is for eating, not for changing[if toaster is not visible]. It might be more edible if you heated it up, though[end if]"
+to say eat-pastry: say "The pastry is for eating, not for changing[if toaster is not touchable]. It might be more edible if you heated it up, though[end if]"
 
 to say not-singular-hp: say "Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway";
 
-to say cop-sco: say "The copse and the scope are both fine as-is[if yurts are visible], though maybe you can do something about the yurts[end if]"
+to say cop-sco: say "The copse and the scope are both fine as-is[if yurts are touchable], though maybe you can do something about the yurts[end if]"
 
 to say plutry of (pg - a guardian): now pg is plurtry
 
@@ -1625,7 +1625,7 @@ to say wets-no: say "You can't really do anything about the stew wets. Maybe onc
 to say wait-see: say "The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix."
 
 this is the see-female-admirer rule:
-	if player is female and mardier admirer is visible, the rule succeeds;
+	if player is female and mardier admirer is touchable, the rule succeeds;
 	the rule fails;
 
 this is the strood rule:
@@ -1644,7 +1644,7 @@ to say all-of-mel: say "No, you need to deal with all of Mel."
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
-to say gradient-rej: say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
+to say gradient-rej: say "This is a weird place, being at the crossroads, but better to [if number of touchable guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are touchable]get rid of the weeds[else if number of touchable guardians > 0]tackle a guardian[else if denim is touchable]see if you can get rid of the denim[end if]";
 
 to say prob-denim: say "You look at the denim and it's probably the denim you want to deal with, not its properties."
 
@@ -1675,7 +1675,7 @@ this is the agnostic-can-learn rule:
 to say could-cloud: say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form"
 
 this is the agnostic-male rule:
-	if agnostic is visible and agnostic is male, the rule succeeds;
+	if agnostic is touchable and agnostic is male, the rule succeeds;
 	the rule fails;
 
 to say smart-agnostic-no: say "[agnostic-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";

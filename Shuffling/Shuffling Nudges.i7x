@@ -33,7 +33,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "thickets"	584514019	Thickest Thickets	--	--	"[loc-rej]." [start Thickest Thickets]
 "thicket"	488240053	Thickest Thickets	--	--	"[loc-rej]"
 "darnel"	359068166	Thickest Thickets	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
-"shrub"	342404780	Thickest Thickets	--	--	"The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else]opening in the thickets[end if]."
+"shrub"	342404780	Thickest Thickets	--	--	"The [if goat is touchable]remains of the [end if]shrub and brush waver, then point towards the [if toga is touchable]toga[else]opening in the thickets[end if]."
 "darnels"	455342132	--	darnels	--	"[darnels-inst]."
 "notices"	534448609	Notices Section	--	--	"[loc-rej]." [start Notices Section]
 "borda"	201312192	Notices Section	--	--	"The broad board is just there to read."
@@ -47,7 +47,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "warmup"	446093313	Notices Section	--	--	"You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you."
 "gateway"	498185490	Notices Section	--	--	"Nothing changes. Maybe you just need to walk through it, if and when you're prepared."
 "oldman"	284365984	--	gateman	--	"He's too old to change. At least, in his present form."
-"dollhouse"	643830102	--	doll house	--	"Thinking that doesn't do much, but the [if static is visible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
+"dollhouse"	643830102	--	doll house	--	"Thinking that doesn't do much, but the [if static is touchable]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
 "attic"	272406285	--	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
 "ordeal"	364513235	--	--	degen-true rule	"[reg-rej]." [end-ordeal-loader]
 
@@ -208,13 +208,13 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "bleads"	319529726	Flesh Shelf	--	--	"The blades, buried in the grinder, remain lifeless."
 "meat"	297179098	--	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	--	see-meats rule	"[spec-meat]."
-"liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not visible or viler liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
+"liver"	419101417	--	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not touchable or viler liver is not touchable]Your thoughts go to the other liver[else][bothlivers][end if]."
 "ville"	387591453	--	river ville liver	--	"[rivliv]."
 "river"	450611381	--	river ville liver	--	"[rivliv]."
 "cruel"	391055143	Cruel Ones' Enclosure	--	--	"[loc-rej]." [START OF CRUEL ONES ENCLOSURE]
 "ones"	367340160	Cruel Ones' Enclosure	--	--	"[loc-rej]."
 "enclosure"	758395303	Cruel Ones' Enclosure	--	--	"[loc-rej]."
-"cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here."
+"cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is touchable]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
 "snow"	347468824	Frost Forts	--	--	"[froz-ha-ha]."
@@ -403,7 +403,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "bottel"	480611466	The Ol' Hotel	--	--	"[no-ketch]."
 "ketchup"	526708955	The Ol' Hotel	--	--	"[no-ketch]."
 "catsup"	407149153	The Ol' Hotel	--	--	"You think of how to make the ketchup slightly classier. [no-ketch]."
-"mattress"	678160851	The Ol' Hotel	--	--	"Nothing to change the mattress to[if night thing is visible], even if you could move the night thing off[else if emitter is off-stage], but something might be inside it[else], and you already looted it[end if]."
+"mattress"	678160851	The Ol' Hotel	--	--	"Nothing to change the mattress to[if night thing is touchable], even if you could move the night thing off[else if emitter is off-stage], but something might be inside it[else], and you already looted it[end if]."
 "thing"	286892373	--	night thing	--	"The night thing is twisted beyond redemption."
 "potato"	438578967	--	night thing	--	"The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it."
 "lucre"	391055143	--	ulcer	--	"You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway."
@@ -486,8 +486,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "and"	92124415	Leis Isle	--	--	"[the-sand]."
 "sands"	284672347	Leis Isle	--	--	"[the-sand]."
 "islet"	425996778	Leis Isle	--	--	"Nothing happens. You may need to deal with something specific on the Leis Isle to leave."
-"eter"	444046039	Leis Isle	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
-"oflat"	259979148	Leis Isle	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
+"eter"	444046039	Leis Isle	--	--	"The tree sits there[if swing is touchable], but the swing rocks a bit[end if]."
+"oflat"	259979148	Leis Isle	--	--	"[if cork is touchable and wings are touchable]You can just use either the cork or the wings to leave to the east[else if cork is touchable or wings are touchable]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
 "drive"	386316667	Rived Drive	--	--	"[loc-rej]." [start Rived Drive]
 "blow"	254520094	Rived Drive	--	--	"You don't need to make any blow bowl more chaotic."
 "tool"	305629011	--	tool shed	--	"Hm, no, the whole tool shed."
@@ -510,7 +510,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "uprisers"	722566259	--	riot	--	"[simple-riot]."
 "protesters"	980846328	--	protest	--	"They're just a simple protest."
 "potter"	575168484	--	potters	--	"Picking one person out of a crowd never works."
-"clay"	197366494	--	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is visible]protest[else]trio[end if] really wants to do."
+"clay"	197366494	--	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is touchable]protest[else]trio[end if] really wants to do."
 "three"	481328338	--	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in Potshot Hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "chainlinks"	489297393	--	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
 "tugtoe"	546084231	--	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
@@ -640,7 +640,7 @@ to say no-warpy:
 	say "You can't change Old Warpy. You have to just trust it";
 
 to say stat-at:
-	say "[if static is visible]The static crackles[else]The attics shake slightly[end if]."
+	say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
 
 to say reg-rej:
 	say "You don't want to change a region drastically while you're in it"
@@ -708,7 +708,7 @@ to say nau-zer-enuf:
 	say "The naughts, err, noughts seem zero-y enough to contain an o";
 
 this is the see-meats rule:
-	if River Ville is visible or Spam is visible or viler liver is visible or player is in Flesh Shelf, the rule succeeds;
+	if River Ville is touchable or Spam is touchable or viler liver is touchable or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
 
 to say spec-meat:
@@ -732,7 +732,7 @@ this is the spread-drapes rule:
 	the rule fails;
 
 to say froz-ha-ha:
-	say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are visible]. Except those vowels[end if]";
+	say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
 
 to say marsh-lake:
 	say "The marsh and lake are symptoms of--whatever evil is beyond here"
@@ -795,7 +795,7 @@ this is the panel-in-silo rule:
 	if player is in moor and panel is part of the silo, the rule succeeds;
 	the rule fails;
 
-to say but-but: say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
+to say but-but: say "It's the buttons['] purposes that need[if steer button is touchable and shoot button is touchable]ed[end if] changing";
 
 to say what-b-says:
 	say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."

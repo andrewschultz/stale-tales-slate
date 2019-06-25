@@ -284,7 +284,7 @@ section dropping
 to say game-specific-drop-msg: say "You don't need to drop anything in this game, much less multiple things. There is no inventory limit";
 
 check dropping:
-	if noun is shotgun, say "You[if wolves are visible] probably [else]'re going to [end if] need that gun." instead;
+	if noun is shotgun, say "You[if wolves are touchable] probably [else]'re going to [end if] need that gun." instead;
 	say "You shouldn't need to drop [if noun is plural-named]those[else]that[end if]. You have enough hands and pockets." instead;
 
 to say tag-status:
@@ -326,7 +326,7 @@ to decide whether (nt - a table name) is hash-found:
 					say "[this-clue entry][line break]";
 					decide yes;
 			if there is a this-item entry:
-				if this-item entry is visible:
+				if this-item entry is touchable:
 					say "[this-clue entry][line break]";
 					decide yes;
 	decide no;
@@ -336,7 +336,7 @@ to say reject:
 	now firstword is the hash of word number 1 in the player's command;
 	d "The hash of the command is [fullcmd]. The hash of word #1 is [firstword].";
 	repeat through regana of mrlp:
-		if the-from entry is visible:
+		if the-from entry is touchable:
 			if firstword is the hashkey entry or fullcmd is the hashkey entry:
 				say "[spec-help of the-from entry]";
 				if last-hash is fullcmd or last-hash is firstword:
@@ -840,14 +840,14 @@ section Ordeal Loader
 carry out ordeal-loader-hinting:
 	if player is in Busiest Subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if vacate caveat is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
 	if player is in Rested Desert:
-		if odor is visible, try objhinting odor instead;
-		if bolt is visible and bulge is visible:
+		if odor is touchable, try objhinting odor instead;
+		if bolt is touchable and bulge is touchable:
 			if blot-first is true, try objhinting bolt instead;
 			try objhinting bulge instead;
-		if bugle is visible and bugle-played is false, try objhinting bugle instead;
+		if bugle is touchable and bugle-played is false, try objhinting bugle instead;
 		try objhinting OR DO door instead;
 	if player is in Thickest Thickets:
-		if toga is visible, try objhinting toga instead;
+		if toga is touchable, try objhinting toga instead;
 		all-say "You can just go IN, now." instead;
 	if player is in Notices Section:
 		if gateman is not in Notices Section, try objhinting magenta nametag instead;
@@ -874,8 +874,8 @@ section forest
 
 carry out forest-hinting:
 	if location of player is rf or location of player is sf:
-		if number of visible guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
-		try objhinting a random visible guider instead;
+		if number of touchable guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
+		try objhinting a random touchable guider instead;
 	if location of player is Self-ID Fields:
 		if Gnarliest Triangles is unvisited, all-say "Go east and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
 		if Flesh Shelf is unvisited, all-say "Go west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
@@ -915,8 +915,8 @@ carry out forest-hinting:
 	if player is in Ghouls' Slough, try objhinting maps instead;
 	if player is not in Frost Forts, all-say "You should be able to go north [if player is not in Cruel Ones' Enclosure]from the enclosure [end if]now." instead;
 	if player is in Frost Forts:
-		if vowels are visible, try objhinting vowels instead;
-		if wolves are visible, try objhinting wolves instead;
+		if vowels are touchable, try objhinting vowels instead;
+		if wolves are touchable, try objhinting wolves instead;
 	all-say "I can't find anything more to do in the forest. This is probably a [bug-report]" instead;
 
 section metros
@@ -953,7 +953,7 @@ carry out metros-hinting:
 				if dry cake is in Obtains Boastin' Bastion, all-say "You need something to put the barcode on. Maybe check out what's north of the Roarings Garrison." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
-		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
+		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae]Maybe check out the flower shop northeast[else if words are touchable or sword is touchable]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
 		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
 	if player is in Roarings Garrison:
 		if dry cake is in Obtains Boastin' Bastion, all-say "You need to clear out the Bastion to the north to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
@@ -994,9 +994,9 @@ carry out metros-hinting:
 	if location of player is Bassy Abyss:
 		if stickyhanded is false, try objhinting siren instead;
 		if player has sword or player has sheath:
-			if beats are visible, try objhinting beats instead;
+			if beats are touchable, try objhinting beats instead;
 			all-say "ATTACK BEAST. You win." instead;
-		if beats are visible, try objhinting beats instead;
+		if beats are touchable, try objhinting beats instead;
 		if player has noise bag, try objhinting noise bag instead;
 		all-say "[bug-report] I let you in with an item I should not have." instead;
 	if player is in Obtains Boastin' Bastion:
@@ -1013,26 +1013,26 @@ isle-clue is a truth state that varies.
 carry out resort-hinting:
 	if player is in Astral Altars, try objhinting tiles instead;
 	if player is in Leis Isle:
-		if cork is visible or wings are visible, all-say "You've found one way across the water[if cork is off-stage], though you can HINT ROCK for another[else if wings are off-stage], though you can HINT SWING for another[end if]." instead;
+		if cork is touchable or wings are touchable, all-say "You've found one way across the water[if cork is off-stage], though you can HINT ROCK for another[else if wings are off-stage], though you can HINT SWING for another[end if]." instead;
 		if isle-clue is false:
 			now isle-clue is true;
 			all-say "Either item lying around can help you across the water." instead;
-		if rock-first is true and rock is visible, try objhinting rock instead;
-		if swing is visible, try objhinting swing instead;
+		if rock-first is true and rock is touchable, try objhinting rock instead;
+		if swing is touchable, try objhinting swing instead;
 		all-say "You can just go east here now." instead;
 	if player is in Rived Drive:
 		if toeholds are in Rived Drive and poles are in Rived Drive, try objhinting poles instead;
-		if ropes are visible and grips are visible:
+		if ropes are touchable and grips are touchable:
 			all-say "You can just go east now, up the slope." instead;
-		if spore is visible, try objhinting spore instead;
-		if sprig is visible, try objhinting sprig instead;
-		if poles are visible, try objhinting poles instead;
+		if spore is touchable, try objhinting spore instead;
+		if sprig is touchable, try objhinting sprig instead;
+		if poles are touchable, try objhinting poles instead;
 		all-say "You can just go east here[if toeholds are off-stage or ropes are off-stage or grips are off-stage], though you haven't gotten full points for Rived Drive yet[end if]." instead;
 	if player is in Potshot Hotspot:
-		if riot is visible, try objhinting riot instead;
-		if protest is visible, try objhinting protest instead;
-		if potters are visible and kilns are not visible, try objhinting links instead;
-		if red bull burdell is visible, try objhinting red bull burdell instead;
+		if riot is touchable, try objhinting riot instead;
+		if protest is touchable, try objhinting protest instead;
+		if potters are touchable and kilns are not touchable, try objhinting links instead;
+		if red bull burdell is touchable, try objhinting red bull burdell instead;
 		all-say "There is nothing more to do here except go east." instead;
 	if player is in Means Manse, try objhinting final-exits instead;
 	all-say "Unhandled case. I need to fix this, so a transcript would be an enormous help." instead;
@@ -1053,15 +1053,15 @@ carry out sortie-hinting:
 		if numset of dial is 16, all-say "You don't need to do anything else here." instead;
 		try objhinting dial instead;
 	if location of player is the nick, try objhinting great instead;
-	if taco is visible, try objhinting taco instead;
+	if taco is touchable, try objhinting taco instead;
 	if location of player is kitchen:
 		if player wears coat or player has taco, all-say "Your work in the kitchen is done[if moor is unvisited]. There's one location outside this underground area to find, and your coat should help you feel more comfortable there[end if]." instead;
 		if ingred-check is false and taco is off-stage:
 			now ingred-check is true;
 			all-say "It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm." instead;
-		if number of visible pregredients > 0, try objhinting a random visible pregredient instead;
+		if number of touchable pregredients > 0, try objhinting a random touchable pregredient instead;
 		all-say "You just need to combine ingredients you've already made and PUT them on each other." instead;
-	if warts are visible, try objhinting warts instead;
+	if warts are touchable, try objhinting warts instead;
 	if roomroom is visited and sack is off-stage, try objhinting cask instead;
 	if player is in roomroom:
 		if hoses are in roomroom, try objhinting hoses instead;
@@ -1074,7 +1074,7 @@ carry out sortie-hinting:
 	if player is in Stiller Trellis:
 		if roomroom is unvisited, all-say "You can still visit the room to the south." instead;
 		if crashing archings are in Stiller Trellis, say "You don't need to do anything more here. Or in Sacred Cedars." instead;
-		if scraped wall is not visible, all-say "[if oils are in cask]You'll want to visit the moor with the oils[else]You'll probably have more to do to the east, now you opened the passage there[end if]." instead;
+		if scraped wall is not touchable, all-say "[if oils are in cask]You'll want to visit the moor with the oils[else]You'll probably have more to do to the east, now you opened the passage there[end if]." instead;
 		if moor is unvisited, all-say "You have visited everywhere here, but you can break away outside. There's one place you can zap to, but not from here." instead;
 		try objhinting scraped wall instead;
 	if player is in Sacred Cedars:
@@ -1083,27 +1083,27 @@ carry out sortie-hinting:
 		if caskfillings is 0, all-say "[if sack is not moot]Once you change the sack to a cask, y[else if player does not have cask]Once you get the cask, y[else]Y[end if]ou can FILL CASK here, to start." instead;
 		if caskfillings is 1, all-say "You can fill the cask with more oils once more." instead;
 	if player is in moor:
-		if anapest is visible, try objhinting anapest instead;
-		if peasant is visible, try objhinting peasant instead;
+		if anapest is touchable, try objhinting anapest instead;
+		if peasant is touchable, try objhinting peasant instead;
 		unless smilies are moot:
 			if poem is unexamined, all-say "You should read the poem the peasant gave you. It's not terrible, but it contains some things that don't belong in a poem." instead;
 			try objhinting smilies instead;
-		if soil is not visible or silo is not visible:
+		if soil is not touchable or silo is not touchable:
 			if Sacred Cedars is unvisited, all-say "You need to visit the room you opened east of the trellis first." instead;
 			if cask is moot, all-say "You need to change the sack into a cask to carry the oils from Sacred Cedars." instead;
 			if oils are not in cask, all-say "You need to fill the cask[if soil is in moor]. Yes, again[end if]." instead;
 			try objhinting oils;
-		if roadblock is visible, try objhinting roadblock instead;
+		if roadblock is touchable, try objhinting roadblock instead;
 		if black door is not part of the silo, try objhinting black door instead;
 		if missile is not in silo, all-say "You can PUT MISSILE IN SILO." instead;
-		if poem is visible:
+		if poem is touchable:
 			if poem is folded, all-say "[one of]The plane is useless. What can it become? [plus][or]It can become a PANEL. [minus][cycling]" instead;
 			try objhinting poem instead;
 		if panel is not part of the silo, try objhinting panel instead;
-		if hoots button is visible, try objhinting hoots button instead;
-		if trees button is visible, try objhinting trees button instead;
-		if steer button is visible and missile-steered is false, try objhinting steer button instead;
-		if shoot button is visible, try objhinting shoot button instead;
+		if hoots button is touchable, try objhinting hoots button instead;
+		if trees button is touchable, try objhinting trees button instead;
+		if steer button is touchable and missile-steered is false, try objhinting steer button instead;
+		if shoot button is touchable, try objhinting shoot button instead;
 	all-say "Oops. I did not account for this hint. This is a [bug-report], and you'll need to see the walkthrough.";
 	the rule succeeds;
 
@@ -1134,7 +1134,7 @@ carry out helpoffing:
 book silly verbs
 
 before exiting:
-	if red bull burdell is visible, say "You may believe in brawns over brain, but I don't. I believe in you! And your ability to exploit what Red Bull keeps repeating!" instead;
+	if red bull burdell is touchable, say "You may believe in brawns over brain, but I don't. I believe in you! And your ability to exploit what Red Bull keeps repeating!" instead;
 	if player is in Trap Part and centrifuge-stopped is false, try going west instead;
 
 chapter don't get a rifle
@@ -1199,22 +1199,22 @@ check waving hands:
 	if player is in Obtains Boastin' Bastion and poses posse are in Obtains Boastin' Bastion, say "They pointedly ignore you." instead;
 	if beast is in Bassy Abyss and player is in Bassy Abyss, say "It's not very friendly at all." instead;
 	if goat is in Thickest Thickets and player is in Thickest Thickets, say "Do you expect it to wave back? It'd probably fall over trying." instead;
-	if number of visible people > 1, say "There's someone else here, but just TALK TO them or ASK them about something instead." instead;
+	if number of npcish people > 0, say "There's someone else here, but just TALK TO them or ASK them about something instead." instead;
 	say "An Inform 7 programmer waves at you from behind the fourth wall and points meaningfully to your keyboard or whatever you're typing on." instead;
 
 check jumping:
 	if player is in Busiest Subsite, say "Apparently, it's your career that needs the jump, not you." instead;
 	if player is on cafe face, say "Bad idea. Just climb down instead." instead;
-	if player is in Rived Drive, say "You don't get anywhere close to over the [slo-po]. Perhaps it's better to [if poles are visible]try to [end if]CLIMB." instead;
+	if player is in Rived Drive, say "You don't get anywhere close to over the [slo-po]. Perhaps it's better to [if poles are touchable]try to [end if]CLIMB." instead;
 	say "What am I supposed to do with THAT four-letter mess?" instead;
 
-to say slo-po: say "[if slope is visible]slope[else]poles[end if]"
+to say slo-po: say "[if slope is touchable]slope[else]poles[end if]"
 
 understand the command "eat [something]" as something new.
 understand "eat [something]" as eating.
 
 check eating: [?? eat weird stuff]
-	if noun is snarled darnels, say "[if goat is visible]The goat did enough[else]You're the wrong sort of animal for that, but maybe you can summon the right one[end if]." instead; [ordeal reload]
+	if noun is snarled darnels, say "[if goat is touchable]The goat did enough[else]You're the wrong sort of animal for that, but maybe you can summon the right one[end if]." instead; [ordeal reload]
 	if noun is info-lit, say "If this were a spy game, that would be ideal. But it isn't." instead;
 	if noun is bread, say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use." instead; [forest]
 	if noun is beard, say "It's less appetizing as a beard than as bread. And if there WERE anything edible in it, ... eww." instead;
@@ -1367,10 +1367,10 @@ check pushing:
 		say "It's not pushable." instead;]
 	if noun is panel and panel is part of the silo, say "Brute force is no way to figure what the panel does! Well, you could try mental brute force..." instead;
 	if noun is black door:
-		if silo is visible, try putting black door on silo instead;
+		if silo is touchable, try putting black door on silo instead;
 		say "Unfortunately, you don't have anything to push the door onto. Yet." instead;
 	if noun is missile:
-		if silo is visible, try inserting missile into silo instead;
+		if silo is touchable, try inserting missile into silo instead;
 		say "Unfortunately, you don't have anything to push the missile into. Yet." instead;
 	if noun is panel, say "You give a few hups but fail to push[if panel is part of the silo]. Probably better to put it on something[else]. Maybe push the buttons individually[end if]." instead;
 	if noun is drapes, say "The drapes almost seem to enfold you as you get close. You may need to cut your way through." instead;
@@ -1393,8 +1393,8 @@ understand "fire [something]" as fireing.
 
 carry out fireing:
 	if noun is missile:
-		if missile is visible:
-			if panel is visible:
+		if missile is touchable:
+			if panel is touchable:
 				if panel is not part of silo, say "Maybe if you plugged that panel in." instead;
 				say "That panel probably holds the key to firing the missile." instead;
 			say "You probably need some circuitry or machinery for that." instead;
@@ -1420,7 +1420,7 @@ check attacking:
 	if noun is the player:
 		if player has shotgun, try attacking the player instead;
 		say "I hope it's not the puzzles that made you try this." instead;
-	if noun is not visible, say "You don't have any weapon with that sort of range." instead;
+	if noun is not touchable, say "You don't have any weapon with that sort of range." instead;
 	if noun is gadget, say "Boy, if that's how you treat stuff that's there to HELP you..." instead; [general]
 	if noun is knot, say "You fail to tonk it." instead;
 	if noun is phial, say "The lube would ooze out and be useless." instead;
@@ -1450,7 +1450,7 @@ check attacking:
 	if noun is tomato, say "Why not get it all over someone, or something, else instead?" instead;
 	if noun is faeries:
 		say "They might spray you back with disaster asterids.";
-	if noun is siren, say "It's surprisingly resilient, and your [if sword is visible and stickyhanded is true]sword[else]fist[end if] bounces off it. Plus, it's probably hooked up to a hidden alarm that sounds even worse." instead;
+	if noun is siren, say "It's surprisingly resilient, and your [if sword is touchable and stickyhanded is true]sword[else]fist[end if] bounces off it. Plus, it's probably hooked up to a hidden alarm that sounds even worse." instead;
 	if noun is beats:
 		if player carries words, say "You have words, but they're drowned out by the beats." instead;
 		if player carries sword, say "The beats seem to pulse harder, as your sword-swinging looks remarkably like some techno dance." instead;
@@ -1459,7 +1459,7 @@ check attacking:
 		if player has noise bag, say "You have nothing that can physically attack the beast." instead;
 		if player has sheath:
 			if player has sword, metro-victory instead;
-			if sword is visible:
+			if sword is touchable:
 				try taking sword;
 				if player has sword, metro-victory instead;
 				do nothing instead;
@@ -1621,7 +1621,7 @@ understand the command "hush" as something new.
 understand "hush" as hushing.
 
 carry out hushing:
-	if red bull burdell is visible, say "[one of]Being the main villain, Red Bull Burdell's just too loud. But perhaps you can make the Talking Villain pay for his big mouth[or]You may want to pay attention to what Red Bull Burdell says every turn, since you can't zone it out[stopping]." instead;
+	if red bull burdell is touchable, say "[one of]Being the main villain, Red Bull Burdell's just too loud. But perhaps you can make the Talking Villain pay for his big mouth[or]You may want to pay attention to what Red Bull Burdell says every turn, since you can't zone it out[stopping]." instead;
 	if talk-quiet is true, say "You already can't hear random dialogue." instead;
 	now talk-quiet is true;
 	say "HUSH on. [i][bracket]NOTE: you will still hear the first random dialogue in an area, but it will be noted as such.[close bracket][r][line break]" instead;
@@ -1640,7 +1640,7 @@ understand "rk" as angleing.
 understand "kn" as angleing.
 
 carry out angleing:
-	if phial is not visible, all-say "[reject]" instead;
+	if phial is not touchable, all-say "[reject]" instead;
 	if phial is in cabinet:
 		if lube-asked is true:
 			try taking phail phial;
@@ -1663,8 +1663,8 @@ carry out angleing:
 	else if player is in Means Manse:
 		all-say "All the exits seem lit up.";
 		now see-others is true;
-	else if beats are visible:
-		all-say "The blue glow pulses with the beats[if words are visible], forming angry words[end if].";
+	else if beats are touchable:
+		all-say "The blue glow pulses with the beats[if words are touchable], forming angry words[end if].";
 		now see-others is true;
 	if see-others is true:
 		say "[line break]";
@@ -1703,7 +1703,7 @@ definition: a thing (called cand) is angleable:
 		if player has begonias or player has noise bag, decide no;
 	if cand is begonias:
 		if player has heaths or player has sheath, decide no;
-	if cand is visible and cand is flippable and cand is not flipped-yet, decide yes;
+	if cand is touchable and cand is flippable and cand is not flipped-yet, decide yes;
 	decide no;
 
 to h-check:
@@ -1975,7 +1975,7 @@ chapter the verb
 definition: a thing (called xx) is fungible:
 	if xx is held, yes;
 	if location of xx is location of player, yes;
-	if xx is visible, yes;
+	if xx is touchable, yes;
 	no.
 
 fliptoing is an action applying to one visible thing.
@@ -1984,7 +1984,7 @@ carry out fliptoing (this is the main flipping rule) :
 	let mything be the player;
 	let got-yet be false;
 	repeat through regana of mrlp:
-		if the-to entry is noun and got-yet is false and the-from entry is visible:
+		if the-to entry is noun and got-yet is false and the-from entry is touchable:
 			if there is a pre-rule entry:
 				if debug-state is true, say "DEBUG: checking [pre-rule entry].";
 				abide by the pre-rule entry;
@@ -2018,7 +2018,7 @@ carry out fliptoing (this is the main flipping rule) :
 			if the-to entry is a person:
 				set the pronoun him to the-to entry;
 				set the pronoun her to the-to entry;
-			if player does not have the noun and noun is not visible and noun is not teleporter, move noun to location of player; [?? may need special case for slippery sword]
+			if player does not have the noun and noun is not touchable and noun is not teleporter, move noun to location of player; [?? may need special case for slippery sword]
 			if there is a post-rule entry:
 				if debug-state is true, say "DEBUG: checking [post-rule entry].";
 				abide by the post-rule entry;
@@ -2038,7 +2038,7 @@ after fliptoing (this is the set pronouns rule) :
 	if noun is beast or noun is wolves:
 		set the pronoun him to noun;
 		set the pronoun her to noun;
-	if noun is visible:
+	if noun is touchable:
 		if noun is plural-named, set the pronoun them to noun;
 		set the pronoun it to noun; [if noun is singular-named: ... is grammatically proper but this seems more convenient for the user]
 		if noun provides the property male and noun is male, set the pronoun him to noun;
@@ -2048,13 +2048,13 @@ after fliptoing (this is the set pronouns rule) :
 chapter special cases
 
 check fliptoing when player is in kitchen (this is the tortilla check rule):
-	if noun is taco and tortilla is visible:
+	if noun is taco and tortilla is touchable:
 		if ingredients-in-tort < 4:
 			say "[one of]The tortilla's not ENOUGH of a taco yet.[or][stopping]";
 			try examining tortilla instead;
 
 check fliptoing (this is the enter pray or examine rule):
-	if noun is visible:
+	if noun is touchable:
 		if noun is portal and noun is enter-clued:
 			say "(entering instead)";
 			try entering noun instead;
@@ -2062,9 +2062,9 @@ check fliptoing (this is the enter pray or examine rule):
 		try examining noun instead;
 
 check fliptoing (this is the should we bother flipping rule):
-	if noun is not visible:
+	if noun is not touchable:
 		repeat through regana of mrlp:
-			if the-to entry is noun and the-from entry is visible, continue the action;
+			if the-to entry is noun and the-from entry is touchable, continue the action;
 		if noun is sword and noise bag contains words and location of player is Abyss:
 			now noise bag is open;
 			continue the action;
@@ -2175,7 +2175,7 @@ topic (topic)	known	blurb	short	verify
 "access"	true	"ACCESS toggles screen reader accessibility."	"access"	false
 "space/spaces"	false	"SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) ON/SON forces it on, while NO SPACE(S)/NOS forces it off."	"spaces"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
-"store/stores/malls/shop/shops/lots/mall"	false	"--[if scented descent is visible]Forest[found-status of forest][else]Store F[end if][line break]--[if posted depots are visible]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is visible]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
+"store/stores/malls/shop/shops/lots/mall"	false	"--[if scented descent is touchable]Forest[found-status of forest][else]Store F[end if][line break]--[if posted depots are touchable]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is touchable]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is touchable]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
 "poss"	false	"POSS toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points."	"poss"
 "store 6/six/f" or "6/six/f"	false	"Store F is very leafy and woodsy."	"store f"
@@ -2190,7 +2190,7 @@ topic (topic)	known	blurb	short	verify
 "recuse"	false	"If you secured, RECUSE will come in handy once you've solved two quests, to skip a third."	"recuse"
 "talking"	false	"ASK for other people, or just say the word/s otherwise."	"talking"
 "goat/toga"	false	"Certify = [rcn][gc][rc][rc] and Rectify = [rcn][bc][gc][bc]."	"the goat"
-"warts"	false	"[if warts are visible]'No, too stupid a fad. I put soot on warts.' But what's too stupid?[else]This puzzle's crossed out. You feel good about that.[end if]"	"warts"
+"warts"	false	"[if warts are touchable]'No, too stupid a fad. I put soot on warts.' But what's too stupid?[else]This puzzle's crossed out. You feel good about that.[end if]"	"warts"
 "red bull burdell" or "red/ bull/ burdell/" 	false	"The guy I need to beat. Probably not with strength or anything like that."	"Red Bull Burdell"
 "broad/board"	false	"[if location of player is Notices Section]It's got notes on needing two simple 7-letter portmanteaux[how-many-notices][else]You're past the bit about the introductory puzzles.[end if]"	"board"
 "terry" or "retry"	false	"RETRY gets Terry to send you [if Trips Strip is visited]back [end if]to the Trips Strip[if Trips Strip is unvisited], wherever that is[end if]."	"retry"
@@ -2383,7 +2383,7 @@ to place-random-garbage:
 	d "[random guider in rf] in RF.";
 
 check going when player is in sf or player is in rf:
-	let mygu be a random visible guider;
+	let mygu be a random touchable guider;
 	if noun is godir of mygu:
 		say "The [mygu] seems to be pushing you [noun]. Walking that way, there aren't many obstacles or branching paths[one of][or] again[stopping].[paragraph break]";
 		if player is in sf:
@@ -2588,14 +2588,10 @@ check dropping magenta nametag:
 the magenta nametag is a thing. rgtext of magenta nametag is "[rcn][gc][rc][gc][rc]*[rc]". lgth of nametag is 7. gpos of nametag is 7. rpos of nametag is 1. cert-text of nametag is "-[ast]A[d1][ast]E[d1][ast]A[d1]". rect-text of nametag is "G[d1][d1][d1][d1][d1][ast]N".
 
 does the player mean doing something with the magenta nametag:
-	if Notices Section is not visited:
-		it is possible;
-	if the nametag is not visible:
-		it is very unlikely;
-	if the show hows tag is examined:
-		it is unlikely;
-	if the tagged gadget is examined:
-		it is unlikely;
+	if Notices Section is not touchable, it is possible;
+	if the nametag is not touchable, it is very unlikely;
+	if the show hows tag is examined, it is unlikely;
+	if the tagged gadget is examined, it is unlikely;
 	it is possible.
 
 understand "tag" and "name tag" as nametag.
@@ -2617,7 +2613,7 @@ report taking off magenta nametag when player has gadget: say "You remove the ma
 
 to say nametag-desc:
 	if player is in Rested Desert:
-		say "[one of]You were the only person stuck with this color. Others got plain white or grey. Surely that can't mean anything...can it?[paragraph break]Because it seems totally useless now [if player wears nametag]on your shirt[else]it's detached[end if][if goat is visible]. But after what you did to the goat, maybe it'll be useful somewhere[else]. You'd like it to be useful for more than identification[end if][or]An ugly magenta[stopping].[no line break]";
+		say "[one of]You were the only person stuck with this color. Others got plain white or grey. Surely that can't mean anything...can it?[paragraph break]Because it seems totally useless now [if player wears nametag]on your shirt[else]it's detached[end if][if goat is touchable]. But after what you did to the goat, maybe it'll be useful somewhere[else]. You'd like it to be useful for more than identification[end if][or]An ugly magenta[stopping].[no line break]";
 		continue the action;
 	if broad board is examined:
 		say "You never noticed it before, but the nametag is made by [first custom style]TENGAMA[r], whoever they are. The red writing is odd--just like A TAN GEM on the broad board.[no line break]";
@@ -2648,7 +2644,7 @@ every turn when player is in Rested Desert and odor is in Rested Desert and play
 
 to say final-hint: say "[one of]You know you need to find the right thing to think, [i]or do[r].[or]You suddenly wish someone would come by to help, so you could be all [one of]'Dr.! Oo!'[or]'Oo! Dr.!'[cycling][cycling]"
 
-description of Rested Desert is "This is the center of a wide-open space. There's only a shrub and brush for vegetation[if odor is visible]. You definitely smell an odor, though[else]. A door stands here, too[end if]."
+description of Rested Desert is "This is the center of a wide-open space. There's only a shrub and brush for vegetation[if odor is touchable]. You definitely smell an odor, though[else]. A door stands here, too[end if]."
 
 the shrub is scenery in Rested Desert. "[shru-bru]."
 
@@ -2687,7 +2683,7 @@ to say bul-blo:
 	else:
 		say "bolt"
 
-the OR DO door is a fixed in place thing. description is "It has OR DO written on it, with musical chords interspersed above [if bulge is visible]a bulge which doesn't seem to belong on the door[else]where the bulge was[end if]. [if bolt is visible]A bolt's sticking out, too, not locked into anything[else]It's covered by a blot, too[end if]. You have no clue where the door could lead [if blot is visible or bugle-played is true]now you've opened it[else]even if you figure how to open it[end if][can-enter-ordo]."
+the OR DO door is a fixed in place thing. description is "It has OR DO written on it, with musical chords interspersed above [if bulge is touchable]a bulge which doesn't seem to belong on the door[else]where the bulge was[end if]. [if bolt is touchable]A bolt's sticking out, too, not locked into anything[else]It's covered by a blot, too[end if]. You have no clue where the door could lead [if blot is touchable or bugle-played is true]now you've opened it[else]even if you figure how to open it[end if][can-enter-ordo]."
 
 to say can-enter-ordo:
 	say ". ";
@@ -2712,7 +2708,7 @@ lgth of bolt is 4. gpos of bolt is 1. rpos of bolt is 4. cert-text of bolt is "[
 
 bugle-played is a truth state that varies. bugle-played is false.
 
-the blot is a thing. description of blot is "It almost looks like a musical chord[if bulge is visible]. It stands out by the bulge[end if].". understand "music" as blot.
+the blot is a thing. description of blot is "It almost looks like a musical chord[if bulge is touchable]. It stands out by the bulge[end if].". understand "music" as blot.
 
 check taking the blot: say "It's pretty much bled into the door." instead;
 
@@ -2728,27 +2724,26 @@ check taking the bulge: say "[bugle-clue]." instead;
 
 the bugle is a thing. description of bugle is "It's brass, you guess, and it probably can't be too hard to play."
 
-understand "horn" as bugle when bugle is visible.
+understand "horn" as bugle when bugle is touchable.
 
-understand "doorway" as OR DO door when OR DO door is visible.
+understand "doorway" as OR DO door when OR DO door is touchable.
 
 check opening OR DO door:
-	if bugle-played is false and bolt is visible, say "There's no real handle to grab[if bulge is part of the OR DO door]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
+	if bugle-played is false and bolt is touchable, say "There's no real handle to grab[if bulge is part of the OR DO door]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
 	say "You already unlocked it. Would you like to walk through?";
 	if the player yes-consents, try entering OR DO door instead;
 	say "There's nowhere else to go, though." instead;
 
 check entering OR DO door:
 	if player has bugle and bugle-played is false and bolt is not moot, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
-	if blot is off-stage, say "The door seems stuck by an invisible force[if bolt is visible]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
+	if blot is off-stage, say "The door seems stuck by an invisible force[if bolt is touchable]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
 	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of OR DO door]Without the bolt, the door swings open easily. [end if]";
 	say "You can't see what's behind, but fortunately it's just a small tumble[if player has bugle], though the bugle gets caught on an outgrowth on the way down[end if]...[wfak]";
 	if player has bugle, moot bugle;
 	if blot is off-stage and bugle is off-stage, poss-d;
 	now player is in Thickest Thickets instead;
 
-check going inside in Rested Desert:
-	if OR DO door is visible, try entering OR DO door instead;
+check going inside in Rested Desert: if OR DO door is touchable, try entering OR DO door instead;
 
 book Thickest Thickets
 
@@ -2774,7 +2769,7 @@ the lgth of snarled darnels is 7. gpos of snarled darnels is 7. rpos of snarled 
 
 the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
 
-understand "animal" as goat when goat is visible.
+understand "animal" as goat when goat is touchable.
 
 check waking the goat: say "If the goat is having a bad dream, you'll probably get kicked at. If you interrupt a good dream, you'll probably get kicked at." instead;
 
@@ -2822,18 +2817,7 @@ understand "tmi/tmis" as broad board when player is in Notices Section.
 
 check taking gateman: say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions.'" instead; [??]
 
-to say get-a-man:
-	if Notices Section is unvisited:
-		say "[reject]";
-		continue the action;
-	if Trips Strip is visited:
-		say "Tan Mage Nat Egam cannot help you now.";
-		continue the action;
-	if gateman is visible:
-		say "You already did.";
-		continue the action;
-	say "Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?";
-	continue the action;
+to say get-a-man: say "[if Notices Section is unvisited][reject][else if Trips Strip is visited]Tan Mage Nat Egam cannot help you now.[else if gateman is touchable]You already did[else]Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?[end if]";
 
 check going outside in Notices Section: try entering getaway gateway instead;
 
@@ -2841,7 +2825,7 @@ check going inside in Notices Section: try entering getaway gateway instead;
 
 section broad board
 
-the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to RETRY and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is visible]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, if you see too much of it. So look out for red.[stopping]"
+the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to RETRY and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, if you see too much of it. So look out for red.[stopping]"
 
 to say board-note:
 	pad-rec-q "board";
@@ -2871,7 +2855,7 @@ understand "dollhouse" as doll house.
 
 check taking the doll house: say "Some hero(ine) you'd be, stealing a doll house." instead;
 
-description of the doll house is "[if attics are visible]It's much nicer and quieter now that you tacked the attics on[else]You hear static hissing from it. Plus, the doll house isn't nearly as tall as it could be. It could use an extra floor or two[end if]."
+description of the doll house is "[if attics are touchable]It's much nicer and quieter now that you tacked the attics on[else]You hear static hissing from it. Plus, the doll house isn't nearly as tall as it could be. It could use an extra floor or two[end if]."
 
 the static is reversible LLPish scenery in Notices Section. lgth of static is 6. gpos of static is 3. rpos of static is 1. rgtext of static is "[rcn][gc][rc][rc][rc][rc]". cert-text of static is "-[ast]T[d1][d1][d1][d1]". rect-text of static is "A[d1][d1][d1][d1][ast]S".
 
@@ -2881,7 +2865,7 @@ understand "noise" as static when player is in Notices Section and static is in 
 
 the attics are reversible plural-named scenery. the attics are flippable and flipped-yet. lgth of attics is 6. gpos of attics is 6. rpos of attics is 5. rgtext of attics is "[rcn][gc][rc][rc][rc][rc]". cert-text of attics is "-[ast]T[d1][d1][d1][d1]". rect-text of attics is "S[d1][d1][d1][d1][ast]C".
 
-understand "attic" as attics when attics are visible or static is visible.
+understand "attic" as attics when attics are touchable or static is touchable.
 
 check taking the attics: say "You could flip them back to the static if you want, but it'd be mean to steal what you just built. And useless." instead;
 
@@ -3026,7 +3010,7 @@ carry out xmxing:
 			say "You stare at where the words may be coming from.";
 			try xmxing words instead;
 		if player is in the moor:
-			if pat is visible:
+			if pat is touchable:
 				say "You imagine a peasant coming by to disrupt Pat's poetry.";
 				ditch-saltine instead;
 			say "Before staring at anything, you wonder if you could just think yourself back to the ROOM." instead;
@@ -3034,7 +3018,7 @@ carry out xmxing:
 	if noun is nametag: [start Ordeal Loader]
 		if tag-warn is false:
 			now tag-warn is true;
-			say "You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is visible]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
+			say "You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is touchable]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
 		say "Well, you probably just need to get through with things. You take a bite of the saltine, then you think 'How do I get through that gate, man?' Hmm...GATEMAN. That'd fit." instead;
 	if noun is gateway:
 		if nametag is moot, say "You don't need to unlock any further mysteries of the gateway." instead;
@@ -3044,10 +3028,10 @@ carry out xmxing:
 		unless the player direct-consents:
 			say "Ok." instead;
 	if noun is static:
-		say "[if gateman is visible]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
+		say "[if gateman is touchable]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
 		unless the player direct-consents:
 			say "OK." instead;
-		say "[v-b]the static seems to form attics near the doll house[if gateman is visible]. Nat Egam makes a dubious noise[end if].";
+		say "[v-b]the static seems to form attics near the doll house[if gateman is touchable]. Nat Egam makes a dubious noise[end if].";
 		ditch-saltine instead;
 	if noun is attics, say "After some thought, that seems like it'd be a waste, since you know what they were. You can probably change things back, if you want." instead;
 	if noun is thorn: [start forest]
@@ -3101,7 +3085,7 @@ carry out xmxing:
 	if noun is pat, say "You try to, but it's awkward making eye contact. Maybe you could stare at the air, to flow with the poetry's anapest beat." instead;
 	if noun is poem:
 		if poem is not folded:
-			say "[v-b][if smilies are visible]you see the smilies fly off the page, and the folded poem becomes[else]the poem fold and become[end if] a panel.";
+			say "[v-b][if smilies are touchable]you see the smilies fly off the page, and the folded poem becomes[else]the poem fold and become[end if] a panel.";
 			ditch-saltine instead;
 		say "You imagine a panel of experts critiquing the poem, before it was folded. Hm. You don't need THAT sort of panel.";
 		ditch-saltine instead;
@@ -3177,11 +3161,11 @@ to say salt-text of (xxx - a thing):
 to say v-b: say "Your vision blurs a bit, and instead ".
 
 check eating the saltine:
-	if gateman is visible:
+	if gateman is touchable:
 		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is moot or attics are moot]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
 		the rule succeeds;
-	if faeries are visible, say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
+	if faeries are touchable, say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
 	choose row with short of "xx" in table of pad-stuff;
 	if known entry is false:
 		say "You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them.";
@@ -3199,7 +3183,7 @@ the tinfoil info-lit is an amusing thing in cabinet. understand "tin/info/lit/pa
 
 description of tinfoil info-lit is "[one of]It's tinfoil only in writing content--it's actually just paper. It's excessively all-caps and underlined, but I'll spare you that.[or]You read it again.[stopping]--If you can change stuff, why can't the people who made the gadget? How do they know you can? Or why couldn't they find someone off the street? Perhaps they're the real enemy and you're the pawn.[line break]--If they really wanted you to clean things up, why don't you have even MORE cluing items?[line break]--That NEW DOOR is not really ONE WORD. Same as the guy who can lift it! They are two short words, easier than one big scary seven-letter word.[line break]--Anyone smart enough to untangle this world won't get any fulfillment from doing so. So there, stupider disputer![paragraph break]--Sane Sean, Farce Facer, Saltier Realist[paragraph break][if store f is moot or store i is moot or store m is moot]This seems like total nonsense, now you've found other portals and such[else if player is in Trips Strip]This guy must be wrong. You've gotten to the Trips Strip, and you just need a way out[else]It'd all be distressingly persuasive gotcha-logic if you hadn't been able to flip that toga. But this is a fantasy world, [logic-cracks][end if]."
 
-to say logic-cracks: say "[if getaway is visible or gateman is visible]and you've already shown cracks in his logic[else]so there's a chance he's wrong[end if]"
+to say logic-cracks: say "[if getaway is touchable or gateman is touchable]and you've already shown cracks in his logic[else]so there's a chance he's wrong[end if]"
 
 section tagged gadget
 
@@ -3219,11 +3203,7 @@ after taking the tagged gadget:
 		the rule succeeds;
 	continue the action;
 
-to say buz-help:
-	if gateman is visible:
-		say "[one of]. 'That means you can't change the item back,' says the gateman.[or].[stopping]";
-	else:
-		say ".";
+to say buz-help: say "[if gateman is touchable][one of]. 'That means you can't change the item back,' says the gateman.[or].[stopping][else].[end if]".
 
 rule for supplying a missing noun (this is the scan the location if you can rule) :
 	if current action is scaning or current action is rectifying or current action is certifying or current action is cring:
@@ -3294,7 +3274,7 @@ check examining the tagged gadget (this is the see if gadget clues locations rul
 
 rule for printing a locale paragraph about the tagged gadget:
 	if location of player is hotspot:
-		say "[if red bull burdell is visible]Your gadget lies here, but no way you get to it[else]Your gadget, kicked from your hands by Red Bull Burdell, is here for the taking[end if].";
+		say "[if red bull burdell is touchable]Your gadget lies here, but no way you get to it[else]Your gadget, kicked from your hands by Red Bull Burdell, is here for the taking[end if].";
 		now tagged gadget is mentioned;
 
 does the player mean switching on the gadget: it is likely.
@@ -3468,7 +3448,7 @@ the blue lube is a boring thing. it is part of the phail phial. description of b
 cabinet-bit-me is a truth state that varies.
 
 check taking phial:
-	if cabinet is visible:
+	if cabinet is touchable:
 		if lube-asked is false and player is not in Trips Strip:
 			now cabinet-bit-me is true;
 			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, at least[if gateman is in Notices Section][one of]. Nat Egam coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
@@ -3520,21 +3500,21 @@ carry out recuseing:
 	if number of solved regions is 1, say "The RECUSE button is for after you've solved two areas, but you haven't solved any, yet." instead;
 	if number of solved regions < 3, say "You can't recuse yet. You still need to work through one more store." instead;
 	if forest is unsolved:
-		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store F[else]the forest you didn't get through[end if]. As if in a blur, you see werewolves in ice being shot, and you hear distant applause.";
+		say "Suddenly, you know what to do. You point the gadget at [if store f is touchable]store F[else]the forest you didn't get through[end if]. As if in a blur, you see werewolves in ice being shot, and you hear distant applause.";
 		moot store f;
 		moot scented descent;
 		now forest is bypassed instead;
 	if sortie is unsolved:
-		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
+		say "Suddenly, you know what to do. You point the gadget at [if store f is touchable]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
 		moot store i;
 		moot posted depots;
 		now sortie is bypassed instead;
 	if metros is unsolved:
-		say "Suddenly, you know what to do. You point the gadget at [if store f is visible]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
+		say "Suddenly, you know what to do. You point the gadget at [if store f is touchable]store I[else]the sortie you didn't get through[end if]. As if in a blur, you see a missile launched, and it bathes a grey castle in bubbles and rainbows and other obnoxiously smiley stuff.";
 		moot store m;
 		moot trade tread;
 		now metros is bypassed instead;
-	say "You don't seem to have any regions to recuse yourself from. From which to recuse yourself. And you don't get to skip [if store r is visible]store R[else]the resort[end if]." instead;
+	say "You don't seem to have any regions to recuse yourself from. From which to recuse yourself. And you don't get to skip [if store r is touchable]store R[else]the resort[end if]." instead;
 	the rule succeeds;
 
 book weird stuff
@@ -3556,23 +3536,23 @@ understand the command "glean/hanker/nk/kr/hnr/hkr" as something new.
 understand "glean" and "hanker" and "nk" and "kr" and "hnr" and "hkr" as gleaning.
 
 carry out gleaning:
-	if phial is not visible, say "[reject]" instead;
+	if phial is not touchable, say "[reject]" instead;
 	if phial is in cabinet:
 		if lube-asked is true:
 			try taking phail phial;
 			if player does not have phail phial, all-say "[bug-report] Please let me know how this happened." instead;
 		all-say "You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe [if gateman is off-stage]find someone to ask[else]ask the gateman[end if]." instead;
-	if blue lube is not visible, all-say "[reject]" instead;
+	if blue lube is not touchable, all-say "[reject]" instead;
 	all-say "You stare into the blue lube for a bit. You see a small story unfold.[line break]";
 	if location of player is Notices Section:
-		if nametag is visible, all-say "You see yourself looking down at your nametag, mouthing a word and pointing to the gate as an old man appears. Then you see yourself tinkering with the tagged gadget on both settings, snapping your fingers and groaning, and walking through the gate." instead;
+		if nametag is touchable, all-say "You see yourself looking down at your nametag, mouthing a word and pointing to the gate as an old man appears. Then you see yourself tinkering with the tagged gadget on both settings, snapping your fingers and groaning, and walking through the gate." instead;
 		all-say "You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...[paragraph break]And a few seconds later, he does[one of]. Well, the clairvoyance bit seems to work[or]. Again. Hooray for double-checking, I think[stopping]." instead;
 	if location of player is Trips Strip:
-		if store f is visible, all-say "You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble." instead;
-		if store i is visible, all-say "You see yourself examining the pictures on store I, then store I, then watching it collapse. You see yourself walking down a narrow exit. You even hear something like a rocket launch." instead;
-		if store m is visible, all-say "You see yourself examining the map on store M. You hear a subway--or maybe just a busy city street." instead;
-		if number of solved regions < 3, all-say "You see yourself entering [random visible portal]." instead;
-		if store r is visible, all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
+		if store f is touchable, all-say "You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble." instead;
+		if store i is touchable, all-say "You see yourself examining the pictures on store I, then store I, then watching it collapse. You see yourself walking down a narrow exit. You even hear something like a rocket launch." instead;
+		if store m is touchable, all-say "You see yourself examining the map on store M. You hear a subway--or maybe just a busy city street." instead;
+		if number of solved regions < 3, all-say "You see yourself entering [random touchable portal]." instead;
+		if store r is touchable, all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
 		all-say "You see yourself relaxing in a large manse far from here." instead;
 	if mrlp is forest:
 		if Self-ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
@@ -3581,8 +3561,8 @@ carry out gleaning:
 		if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
 		unless drapes are moot, all-say "You see yourself slashing at the drapes, which billow out." instead;
 		if shotgun is off-stage, all-say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
-		if spread is visible, all-say "You see the spread fluttering as if outside an open window." instead;
-		if red asp is visible, all-say "You see the a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
+		if spread is touchable, all-say "You see the spread fluttering as if outside an open window." instead;
+		if red asp is touchable, all-say "You see the a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
 		if drapes are off-stage, all-say "You see yourself changing the [if red asp is in Cruel Ones' Enclosure]red asp[else]spread[end if] [if player is not in Cruel Ones' Enclosure]in the Enclosure [end if]into something easier to cut with the sliver." instead;
 		unless silver is moot, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
 		if Frost Forts is unvisited:
@@ -3602,7 +3582,7 @@ carry out gleaning:
 		if hay is not part of scraped wall, all-say "You see yourself filling up a wall then making it disappear." instead;
 		if silo is not in moor, all-say "You see yourself building a huge structure without saying anything." instead;
 		if black door is off-stage or panel is off-stage or missile is off-stage, all-say "You see yourself programming the silo, seeing it moving. It has something in it, a way to get in, and it's programmable." instead;
-		if hoots button is visible or trees button is visible, all-say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
+		if hoots button is touchable or trees button is touchable, all-say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
 		all-say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
 	if mrlp is metros:
 		if night thing is in The Ol' Hotel, all-say "You see yourself giving something reddish to [if The Ol' Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
@@ -3618,9 +3598,9 @@ carry out gleaning:
 			if player has noise bag or player has begonias, all-say "You see yourself grabbing the tulip as the nerds close their ears!" instead;
 			all-say "You see yourself opening the termite emitter so it swarms over the nerds[if emitter is not ungnatted]. You wonder who would be dirty enough to give you a quick refill[end if]." instead;
 		if player is not in Bassy, all-say "You see yourself (finally) walking across the tracks." instead;
-		if siren is visible, all-say "You see yourself pounding the siren and then doing various gymnastic tricks--wait, no, that'd be cray. Too many verbs to guess." instead;
-		if beats are visible, all-say "You see a crooked musical chord replaced with a monster worse than the night thing. Then you take something from your [if player has noise bag]noise bag[else]sheath[end if] and it collapses before you touch it." instead;
-		if sword is visible, all-say "A quick swordfight, and the beast is vanquished!" instead;
+		if siren is touchable, all-say "You see yourself pounding the siren and then doing various gymnastic tricks--wait, no, that'd be cray. Too many verbs to guess." instead;
+		if beats are touchable, all-say "You see a crooked musical chord replaced with a monster worse than the night thing. Then you take something from your [if player has noise bag]noise bag[else]sheath[end if] and it collapses before you touch it." instead;
+		if sword is touchable, all-say "A quick swordfight, and the beast is vanquished!" instead;
 		all-say "Words morph into a sword that overpowers the beast." instead;
 	if mrlp is resort:
 		if player is in Astral Altars, all-say "You watch as the tiles shrink from a large land mass to a smaller one." instead;
@@ -3628,11 +3608,11 @@ carry out gleaning:
 		if player is in Rived Drive:
 			if poles are in Rived Drive, all-say "You see the poles to the east bend at an angle." instead;
 			all-say "You see two visions: one, [if tool shed is not in Rived Drive]you trying out the toeholds[else]the tool shed being destroyed[end if], and another, you wearing the [if sprig is in Rived Drive]sprig, modified[else]grips[end if] and the [if spore is in Rived Drive]spore, modified[else]ropes[end if]. In each, you climb east." instead;
-			if toeholds are visible, all-say "You see yourself walking east." instead;
-			if ropes are visible and grips are visible, all-say "You see yourself walking east." instead;
+			if toeholds are touchable, all-say "You see yourself walking east." instead;
+			if ropes are touchable and grips are touchable, all-say "You see yourself walking east." instead;
 			all-say "You see yourself struggling with the tool shed, or with things around, to find a way to climb the slope." instead;
 		if player is in Potshot Hotspot:
-			if red bull burdell is visible, all-say "You somehow manage to defeat Red Bull Burdell while still on the ground." instead;
+			if red bull burdell is touchable, all-say "You somehow manage to defeat Red Bull Burdell while still on the ground." instead;
 			if red bull burdell is moot, all-say "You see yourself walking east." instead;
 			all-say "You see the [if riot is in Potshot Hotspot]riot[else]trio[end if], happier now, discussing art and wearing dirty smocks." instead;
 		if player is in Means Manse, all-say "You see yourself just being. No, abiding. No, it's hard to describe what you're doing, since it's so passive." instead;
@@ -3763,13 +3743,13 @@ section direction redirection
 
 check going down in Trips Strip:
 	if metros is solved and sortie is solved, say "You've solved both the metros and sorties." instead;
-	if trade tread is visible and posted depots are visible:
+	if trade tread is touchable and posted depots are touchable:
 		if metros is solved, try entering posted depots instead;
 		if sortie is solved, try entering trade tread instead;
 		say "You've opened two ways down, so you'll specifically need to ENTER SORTIE or ENTER METROS instead." instead;
-	if trade tread is not visible and posted depots are not visible, say "You can't find any place to go down[if sortie is solved or metros is solved] that you need to any more[end if][if sortie is not solved or metros is not solved], but there's at least one to find[end if]." instead;
-	if trade tread is visible, try entering trade tread instead;
-	if posted depots are visible, try entering posted depots instead;
+	if trade tread is not touchable and posted depots are not touchable, say "You can't find any place to go down[if sortie is solved or metros is solved] that you need to any more[end if][if sortie is not solved or metros is not solved], but there's at least one to find[end if]." instead;
+	if trade tread is touchable, try entering trade tread instead;
+	if posted depots are touchable, try entering posted depots instead;
 	say "Unfortunately, there are no cool hidden passages beneath the stores. That you can see. Yet." instead;
 
 check going inside in Trips Strip:
@@ -3813,10 +3793,10 @@ check searching:
 chapter stores
 
 to say store-summary:
-	if number of visible flippable stos is 0:
+	if number of touchable flippable stos is 0:
 		say "You don't see any more stores. You should probably get going to that resort";
 	else:
-		say "Of the various stores you see, only [list of puzzlematic stos] look[if number of puzzlematic stos is 1]s[end if] like you can do anything with [if number of puzzlematic stos is 1]it[else]them[end if]. [if store b is visible]Store B looks--well, not quite dead, but not very substantial, either. [end if]Store R [if you-can-advance]finally looks like you can visit[else]has COMING SOON spray-painted to the side it[end if]"
+		say "Of the various stores you see, only [list of puzzlematic stos] look[if number of puzzlematic stos is 1]s[end if] like you can do anything with [if number of puzzlematic stos is 1]it[else]them[end if]. [if store b is touchable]Store B looks--well, not quite dead, but not very substantial, either. [end if]Store R [if you-can-advance]finally looks like you can visit[else]has COMING SOON spray-painted to the side it[end if]"
 
 definition: a sto (called stst) is puzzlematic:
 	if stst is store b, decide no;
@@ -3924,14 +3904,14 @@ check entering a sto: say "It's closed and locked, and you won't find a key[if n
 check taking a sto: say "[ment-not-phys]." instead;
 
 to say store-overview:
-	if number of visible flippable stos is 0:
+	if number of touchable flippable stos is 0:
 		say "You've gotten rid of all four stores you could have.";
 		the rule succeeds;
 	say "Most seem greyed out. [run paragraph on]";
-	if number of visible flippable stos is 1:
-		say "Only [list of visible flippable stos] seems worth a closer look.";
+	if number of touchable flippable stos is 1:
+		say "Only [list of touchable flippable stos] seems worth a closer look.";
 		the rule succeeds;
-	say "You might be able to do something with [list of visible flippable stos].";
+	say "You might be able to do something with [list of touchable flippable stos].";
 	the rule succeeds;
 
 to say sto-desc:
@@ -3940,21 +3920,21 @@ to say sto-desc:
 		say "[store-overview]";
 		the rule succeeds;
 	else:
-		if store f is visible:
+		if store f is touchable:
 			say "Okay, the first one you see is store f...";
 			try examining store f;
 			the rule succeeds;
-		if store i is visible:
+		if store i is touchable:
 			say "Okay, the first one you see is store i...";
-			try examining store f;
+			try examining store i;
 			the rule succeeds;
-		if store m is visible:
+		if store m is touchable:
 			say "Okay, the first one you see is store m...";
-			try examining store f;
+			try examining store m;
 			the rule succeeds;
-		if store r is visible:
+		if store r is touchable:
 			say "Okay, the first one you see is store r...";
-			try examining store f;
+			try examining store r;
 			the rule succeeds;
 		say "No remaining store looks terribly adventurous.";
 		the rule succeeds;
@@ -4179,7 +4159,7 @@ does the player mean examining a direction when player is in Trips Strip: it is 
 section general portal checks
 
 Rule for supplying a missing noun while entering (this is the other stuff to enter rule):
-	if passage is visible:
+	if passage is touchable:
 		now the noun is the passage;
 		continue the activity;
 	if location is Trips Strip:
@@ -4256,7 +4236,7 @@ to say sortie-have:
 	if sortie is solved:
 		say ". But you already did. It's not worth revisiting.";
 	else:
-		say ". Though you probably want to ENTER it to exit the strips[if trade tread is not visible]. Or go DOWN[end if].[no line break]"
+		say ". Though you probably want to ENTER it to exit the strips[if trade tread is not touchable]. Or go DOWN[end if].[no line break]"
 
 section metros portal
 
@@ -4297,7 +4277,7 @@ check going in sf:
 
 description of sf is "You recognize no trees: a sprucy cyprus, or even forensic conifers, and no clear sign of clearings. But [vis-hint]."
 
-to say vis-hint: say "[if stew is visible or teas are visible]there's a[nuthers] smell[else if shout is visible]you hear a shout[else if thorn is visible]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
+to say vis-hint: say "[if stew is touchable or teas are touchable]there's a[nuthers] smell[else if shout is touchable]you hear a shout[else if thorn is touchable]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
 
 to say nuthers: if player is in rf, say "[if stew is in sf or teas are in sf]nother[end if]"
 
@@ -4545,7 +4525,7 @@ check inserting into the scantier canister:
 		else:
 			say "The canister seems to whir. The meat you put in is shortly unrecognizable.";
 			if noun is a glopmeat:
-				if number of visible glopmeats is 2:
+				if number of touchable glopmeats is 2:
 					if noun is River Ville liver:
 						now cur-liv is viler liver;
 					else:
@@ -4593,7 +4573,7 @@ description of bread is "It appears gritty, like a five o'clock shadow. Not mold
 
 some Spam is part of the sandwich. rgtext of Spam is "[rcn][rc][rc][rc]". lgth of Spam is 4. gpos of Spam is 4. rpos of Spam is 1. Spam is singular-named. the indefinite article of Spam is "some". cert-text of spam is "-[d1][d1][d1]". rect-text of spam is "M[d1][d1][ast]S".
 
-understand "meat" as Spam when Spam is visible. does the player mean doing something with Spam: it is likely.
+understand "meat" as Spam when Spam is touchable. does the player mean doing something with Spam: it is likely.
 
 check peelxing Spam:
 	if Spam is part of the sandwich, try taking Spam instead;
@@ -4633,9 +4613,9 @@ understand "meat" as viler liver when cur-liv is the viler liver.
 
 liver-disambig-yet is a truth state that varies.
 
-before doing something with the viler liver when viler liver is visible: now liver-disambig-yet is true.
+before doing something with the viler liver when viler liver is touchable: now liver-disambig-yet is true.
 
-before doing something with the River Ville liver when River Ville liver is visible:
+before doing something with the River Ville liver when River Ville liver is touchable:
 	if liver-disambig-yet is false:
 		now liver-disambig-yet is true;
 		if the player's command does not match "River Ville":
@@ -4784,7 +4764,7 @@ after looking in Cruel Ones' Enclosure:
 	if liches are in Cruel Ones' Enclosure:
 		set the pronoun them to liches;
 
-to say d-s: say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]".
+to say d-s: say "[if drapes are touchable]drapes make[else if red asp is touchable]red asp makes[else]spread makes[end if]".
 
 Include (-
 	has transparent animate
@@ -4881,7 +4861,7 @@ understand "a/e/i/o/u" as vowels when player is in Frost Forts.
 this is the bore-vowels rule:
 	if current action is taking, say "They're just way too big. Like that LOVE statue in Philadelphia. But they fill you with fear, unlike the LOVE statue, because they spell AIE OOU, and that's how it sounds as the wind blows through them." instead;
 
-understand "vowels/letters/five/six/tall/aplastic/capital/capitals/pyramid" as vowels when vowels are visible.
+understand "vowels/letters/five/six/tall/aplastic/capital/capitals/pyramid" as vowels when vowels are touchable.
 
 description of vowels is "[vowel-desc]"
 
@@ -5100,7 +5080,7 @@ The great grate is scenery in The Nick. "Huge. Eugh. Nat Egam couldn't magic it,
 
 check opening great grate: say "You utterly fail to move it. If it could speak, it might sarcastically say [one of]Boring? Brig? No![or]Give up! And mean it, inmate![or]Denied, Indeed![or]Weak Try, Raw Tyke![at random]" instead;
 
-understand "gate" as great grate when grate is visible.
+understand "gate" as great grate when grate is touchable.
 
 some jail cell graffiti is scenery in The Nick. description of jail cell graffiti is "[one of]There are a few things. Here is the first.[paragraph break][or][stopping]In red crayon: [first custom style][one of]N. THICKE-HECKTIN was here.[or]Chetnik was here.[or]Think, C.E.![or]Hecknit was here.[in random order][r]"
 
@@ -5115,7 +5095,7 @@ every turn:
 		if player is in The Nick:
 			say "[one of]Boy. Incarceration's making you hungry already[or]You think back to your home and all its comfy rooms[or]Mmm, Foood. Even a lame meal. You'd even make it yourself[or]You feel the heat of Mean Old Mondale-Doleman's hate even from here. You can't take it, so you want to get out of the The Nick. The Nick[or]You counter your urge to sink in despair. Or maybe you just table it[or]You doze off and dream you're watching a cooking show featuring ten hicks. They work in multiple...oops, you wake up and forget[or]You'd do housework to avoid this workhouse[or]You doze off--some guy named Chen has a kit for getting out of here--you wake up. Dang[or]You feel your mind thicken. You're hungry for a new location and whatever new puzzles it has cooked up[stopping].";
 		if the remainder after dividing turn count by 5 is startmod5:
-			if warts are visible:
+			if warts are touchable:
 				if player is in the nick:
 					say "[line break]";
 				say "You almost pick at your new warts[if player has gadget], and your gadget activates slightly[end if]. Man! If only you could say something to make the warts grow backwards, or just make them disappear. Or both.";
@@ -5130,18 +5110,7 @@ every turn:
 given-pass-yet is a truth state that varies. given-pass-yet is false.
 
 to say last-store:
-	if store f is visible:
-		say "store f";
-	if store i is visible:
-		say "store i";
-	if store m is visible:
-		say "store m";
-	if metros are visible:
-		say "the metros";
-	if forest is visible:
-		say "the forest";
-	if sortie is visible:
-		say "the sortie";
+	say "[if store f is touchable]store f[else if store i is touchable]store i[else if store m is touchable]store m[else if metros are touchable]the metros[else if forest is touchable]the forest[else if sortie is touchable]the sortie[end if]"
 
 to say gad: say "Your gadget's not near anything, but it's registering ".
 
@@ -5150,19 +5119,21 @@ chapter Kitchen
 Kitchen is north of Trap Part. Kitchen is in Sortie.
 
 after choosing notable locale objects when player is in kitchen:
-	if straw is in kitchen and straw is not enclosed by player:
-		set the locale priority of the straw to 9;
+	if straw is in kitchen and straw is not enclosed by player, set the locale priority of the straw to 9;
 
 an ingredient is a kind of thing. a pregredient is a kind of thing.
 
-definition: an ingredient (called ing) is separate-visible:
+definition: an ingredient (called ing) is separate-in-kitchen:
 	if ing is part of the tortilla, no;
-	if ing is visible, yes;
+	if ing is touchable, yes;
 	no;
 
 definition: a thing (called thi) is tacoish:
 	if thi is a pregredient or thi is an ingredient, yes;
 	no;
+
+to decide which number is nvp: decide on number of touchable pregredients;
+to decide which number is nvi: decide on number of touchable ingredients;
 
 for printing a locale paragraph about a tacoish thing (called xyzyx) when player is in kitchen:
 	now the player is mentioned;
@@ -5171,10 +5142,10 @@ for printing a locale paragraph about a tacoish thing (called xyzyx) when player
 	now grief'd fridge is mentioned;
 	if xyzyx is a pregredient or xyzyx is an ingredient:
 		if xyzyx is not mentioned and xyzyx is not part of the tortilla:
-			say "The Red Inn contains things that [if number of visible pregredients > 0 and number of separate-visible ingredients > 0]do and don't [else if number of visible pregredients > 0]don't [end if]belong in a kitchen: ";
-			if number of visible pregredients > 0, say "[a list of visible pregredients]";
-			if number of visible pregredients > 0 and number of visible ingredients > 0, say ". It also contains, more suitably, ";
-			if number of visible ingredients > 0, say "[the list of separate-visible ingredients]";
+			say "The Red Inn contains things that [if nvp > 0 and number of separate-touchable ingredients > 0]do and don't [else if number of touchable pregredients > 0]don't [end if]belong in a kitchen: ";
+			if nvp > 0, say "[a list of touchable pregredients]";
+			if nvp > 0 and nvi > 0, say ". It also contains, more suitably, ";
+			if nvi > 0, say "[the list of separate-in-kitchen ingredients]";
 			say ".[paragraph break]";
 			now all pregredients are mentioned;
 			now all ingredients are mentioned;
@@ -5208,7 +5179,7 @@ the tortilla is an ingredient. understand "taco" as tortilla.
 
 to say tort-desc:
 	say "tortilla";
-	if tortilla is visible:
+	if tortilla is touchable:
 		say " ([if ingredients-in-tort is 0]nothing on it[else if ingredients-in-tort is 1]too plain to eat[else if ingredients-in-tort is 2]edible looking, but could be better[else if ingredients-in-tort is 3]almost perfect[else]BUG[end if])";
 
 does the player mean doing something with the tortilla: it is likely.
@@ -5228,7 +5199,7 @@ check putting something on the tortilla (this is the tortilla-onto rule):
 ingredients-in-tort is a number that varies. ingredients-in-tort is 0.
 
 check opening HOTSAUCE:
-	if tortilla is visible, try inserting the HOTSAUCE into the tortilla instead;
+	if tortilla is touchable, try inserting the HOTSAUCE into the tortilla instead;
 	say "You don't seem to have anything to put the hot sauce in. Or on." instead;
 
 understand "covering" as HOTSAUCE when HOTSAUCE is part of tortilla.
@@ -5304,7 +5275,7 @@ after doing something with the spearman:
 
 the cheesy spearman is a male pregredient in Kitchen. "A cheesy spearman is here. Well, he's [i]posed[r] all cheesy.". rgtext of spearman is "[rcn][rc][rc][rc][rc][rc][gc][gc]". lgth of spearman is 8. gpos of spearman is 2. rpos of spearman is 8. cert-text of spearman is "-[d1][d1][d1][d1][d1][ast]A[ast]N". rect-text of spearman is "P[d1][d1][d1][d1][d1][d1][ast]N".
 
-understand "man" as spearman when spearman is visible. the spearman can be female or male. the spearman is male.
+understand "man" as spearman when spearman is touchable. the spearman can be female or male. the spearman is male.
 
 description of spearman is "[if player does not have spearman]Hmm. You could TAKE him. [end if]He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You could probably READ him for clues, like his name and [if player carries spearman]what's on the base and [end if]so forth.".
 
@@ -5319,7 +5290,7 @@ understand "spear man" as spearman.
 
 the spear is a boring thing. it is part of the spearman. bore-text of spear is "The spear is about as tall as the spearman, but there's nothing special about it, other than it makes him a spearman.". spear is useless.
 
-the pile of grated Parmesan cheese is an ingredient. understand "cheese" as Parmesan when Parmesan is visible.
+the pile of grated Parmesan cheese is an ingredient. understand "cheese" as Parmesan when Parmesan is touchable.
 
 description of Parmesan is "Already grated, for which you are grateful. (Sorry if the description grates.)"
 
@@ -5518,7 +5489,7 @@ check tying to (this is the check for big quest item attachment rule):
 	if noun is missile or noun is hay or noun is straw or noun is panel or noun is black door, try inserting noun into second noun instead;
 	if second noun is missile or second noun is hay or second noun is straw or second noun is panel or second noun is black door, try inserting second noun into noun instead;
 	if second noun is cafe face:
-		if gin nope opening is not visible, say "[if player is on cafe face]The cafe face doesn't have any sort of recess[else]Sticking something to the steel wool would do very little[end if]." instead;
+		if gin nope opening is not touchable, say "[if player is on cafe face]The cafe face doesn't have any sort of recess[else]Sticking something to the steel wool would do very little[end if]." instead;
 		if player is not on cafe face, say "You'd need to climb the cafe face first." instead;
 		try inserting noun into gin nope opening instead;
 	if second noun is gin nope opening, try inserting noun into gin nope opening instead;
@@ -5565,7 +5536,7 @@ check inserting it into (this is the straw-hay insert rule):
 	if second noun is silo:
 		if noun is not missile and noun is not panel and noun is not door, say "That doesn't belong in or on the silo." instead;
 	if second noun is cafe face:
-		if gin nope opening is visible, try putting noun on gin nope opening instead;
+		if gin nope opening is touchable, try putting noun on gin nope opening instead;
 		say "[if player is on cafe face]There's no place something'll stick on the cafe face this high up. Well, not yet[else]The bottom of the cafe face doesn't seem like a useful place to stick things[end if]." instead;
 
 check putting on scraped wall: try inserting noun into scraped wall instead;
@@ -5675,7 +5646,7 @@ trel-priv is privately-named scenery in Stiller Trellis. printed name of trel-pr
 
 understand "decoration" as trel-priv.
 
-description of trel-priv is "[if Sacred Cedars is visited]The trellis feels appropriate to guard or indicate the room to the east, now you've been there[else if scraped wall is visible]It arches over the scraped bit of wall, as if the wall wasn't supposed to be there. You could picture a passage through it, somehow[else]You could just walk under it to the east, now[end if]."
+description of trel-priv is "[if Sacred Cedars is visited]The trellis feels appropriate to guard or indicate the room to the east, now you've been there[else if scraped wall is touchable]It arches over the scraped bit of wall, as if the wall wasn't supposed to be there. You could picture a passage through it, somehow[else]You could just walk under it to the east, now[end if]."
 
 to say the-trellis:
 	if Sacred Cedars is visited:
@@ -5704,7 +5675,7 @@ check taking archings: say "The rubble seems to have dried and stuck like lava."
 description of scraped wall is "It's scraped away, but not enough to bust through[if scraped is hayfilled]. In fact, you stuffed hay where the wall was sort of peeled away[else]. You see HALLWAY UNDER (UN-)UN-CONSTRUCTION scrawled on it[end if].".
 
 check going east in Stiller Trellis:
-	if scraped wall is visible, say "You're going to have to do something about that wall, first[if scraped wall is hayfilled]. You already have, but just one more thing[end if]." instead;
+	if scraped wall is touchable, say "You're going to have to do something about that wall, first[if scraped wall is hayfilled]. You already have, but just one more thing[end if]." instead;
 	if caskfillings is 2, say "The rubble from the archings is too high and too solid." instead;
 
 to say dmm:
@@ -5748,7 +5719,7 @@ after choosing notable locale objects when player is in moor:
 reset-already is a truth state that varies.
 
 to say reset-goof:
-	if steer button is visible:
+	if steer button is touchable:
 		say "You don't need to reset the steer button[if trees-is-pushed is true] like you did the trees button[end if]. It's what it's supposed to be";
 	else if reset-already is false:
 		say "Unfortunately, it's not QUITE as easy as just pushing a reset button[if trees-is-pushed is true], which only worked to undo the trees[end if]. You have one more puzzle to navigate";
@@ -5799,9 +5770,9 @@ check listening to anapest:
 
 the roadblock is a thing in the moor. "A roadblock that isn't actually blocking any roads lies here. Maybe it can become more useful.". rgtext of roadblock is "[rcn][rc][gc][rc][rc][rc][gc][rc][rc]". lgth of roadblock is 9. gpos of roadblock is 5. rpos of roadblock is 1. cert-text of roadblock is "-[d1][ast]A[d1][d1][d1][ast]O[d1][d1]". rect-text of roadblock is "B[d1][d1][d1][d1][d1][d1][d1][ast]R".
 
-understand "block" as roadblock when roadblock is visible.
+understand "block" as roadblock when roadblock is touchable.
 
-the road is useless boring scenery in moor. description of road is "[if roadblock is visible]You'd expect to see a road, what with the roadblock, but you don't[else]Removing the roadblock did not make a road appear. But hey, free black door[end if].". bore-text is "Though there [if roadblock is in moor]is[else]was[end if] a roadblock, there is no road.". bore-check of road is bore-road rule.
+the road is useless boring scenery in moor. description of road is "[if roadblock is touchable]You'd expect to see a road, what with the roadblock, but you don't[else]Removing the roadblock did not make a road appear. But hey, free black door[end if].". bore-text is "Though there [if roadblock is in moor]is[else]was[end if] a roadblock, there is no road.". bore-check of road is bore-road rule.
 
 this is the bore-road rule:
 	if current action is climbing, say "There's no path behind it. Some roadblock, eh? It might be better reincarnated as something else." instead;
@@ -5816,7 +5787,7 @@ description of black door is "It's a swinging door. No knob or bolt or anything.
 black door is pushable between rooms.
 
 check pushing black door to:
-	if second noun is inside and silo is visible, try pushing black door instead;
+	if second noun is inside and silo is touchable, try pushing black door instead;
 	say "You don't need to get rid of the black door or move it anywhere else." instead;
 
 check opening black door: say "[if black door is part of the silo][one of]A quick peek inside, and you see enough machinery to know this is not a grain silo. You quickly close the door--the machinery may be beyond you, and you don't need to deal with it[or]You should probably work at the silo from the outside[stopping][else]Other doors in this game may lead somewhere for no reason, but this doesn't[end if]." instead;
@@ -5836,7 +5807,7 @@ the bright red graffiti is a boring thing. it is part of the roadblock. bore-tex
 
 description of bright red graffiti is "DOC OLBARK has chosen to deface this roadblock, in bright red paint, no less."
 
-the anapest is boring scenery in moor. understand "anapests" as anapest. understand "poem/poetry" as anapest when anapest is visible.
+the anapest is boring scenery in moor. understand "anapests" as anapest. understand "poem/poetry" as anapest when anapest is touchable.
 
 rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T". bore-text is "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)". description of anapest is "You can't help NOT paying attention to the anapest.". bore-check is bore-anapest rule.
 
@@ -5900,7 +5871,7 @@ chapter poem
 
 a poem is a thing. lgth of poem is 5. gpos of poem is 1. rpos of poem is 2. rgtext of poem is "[gcn][rc][rc][rc][rc]". cert-text of poem is "P[d1][d1][d1][d1]". rect-text of poem is "P[d1][d1][d1][ast]L".
 
-understand "poetry" as poem when poem is visible.
+understand "poetry" as poem when poem is touchable.
 
 after printing the name of the poem while taking inventory:
 	if smilies are part of the poem, say " (improperly punctuated)";
@@ -5909,11 +5880,11 @@ after printing the name of the poem while taking inventory:
 does the player mean folding the poem: it is likely.
 does the player mean doing something with the tinfoil info-lit: it is very unlikely.
 
-does the player mean doing something with prep paper when the poem is visible: it is unlikely.
+does the player mean doing something with prep paper when the poem is touchable: it is unlikely.
 
 understand "limerick" as poem when poem is not folded.
 
-understand "paper" as poem when poem is visible.
+understand "paper" as poem when poem is touchable.
 
 the smilies are part of poem. smilies are plural-named.
 
@@ -5942,10 +5913,10 @@ lgth of trees button is 5. gpos of trees button is 5. rpos of trees button is 2.
 
 the steer button is a thing. description is "It's on the left, and it's labeled STEER."
 
-understand "right" and "right button" as hoots button when hoots button is visible.
-understand "right" and "right button" as shoot button when shoot button is visible.
-understand "left" and "left button" as trees button when trees button is visible.
-understand "left" and "left button" as steer button when steer button is visible.
+understand "right" and "right button" as hoots button when hoots button is touchable.
+understand "right" and "right button" as shoot button when shoot button is touchable.
+understand "left" and "left button" as trees button when trees button is touchable.
+understand "left" and "left button" as steer button when steer button is touchable.
 
 check pushing hoots button: say "You hear loud hoots. You're not sure if people are laughing, or alerting you to the fact that this button doesn't do what it's supposed to, or if maybe it's some high-tech/magic war dance or even an air raid siren. Whatever it is, it's clear noise won't get the missile launched." instead;
 
@@ -5974,7 +5945,7 @@ check pushing trees button:
 
 check pushing steer button:
 	if missile-steered is true:
-		say "That'd be overkill. You imagine it's [if shoot button is visible]the other[else]another[end if] one you need to push to launch.";
+		say "That'd be overkill. You imagine it's [if shoot button is touchable]the other[else]another[end if] one you need to push to launch.";
 	else:
 		now missile-steered is true;
 		say "'AMUSING GUNS! AIM!' The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.";
@@ -6052,7 +6023,7 @@ check putting it on (this is the silo-put rule):
 	if second noun is the straw or second noun is the hay, say "That'd crush [the second noun]." instead;
 	if noun is the missile, say "You roll the missile around, but you can't find anywhere to put it." instead;
 
-before doing something with the missile when the missile is visible:
+before doing something with the missile when the missile is touchable:
 	if missile is moot, say "It's where it needs to be. No need to worry about it." instead;
 
 check inserting missile into silo:
@@ -6067,35 +6038,31 @@ section stuff for after cedars
 
 the soil is scenery.
 
-description of soil is "It's a rich foundation for [if silo is visible]that silo you built[else]a big, big place, you're sure[end if]. Stronger and denser than the usual mush on this moor."
+description of soil is "It's a rich foundation for [if silo is touchable]that silo you built[else]a big, big place, you're sure[end if]. Stronger and denser than the usual mush on this moor."
 
 the silo is a transparent container. it is fixed in place. "That silo you poured from the cask of oils towers above you here[if black door is part of the silo]. You see the outline of the black door on it, but you probably don't want to go in[end if][if missile is in the silo]. You know the missile's in there, too[end if][if panel is part of the silo]. There's also a panel attached to the silo[end if]."
 
-does the player mean shooting the missile when the missile is visible: it is likely.
+does the player mean shooting the missile when the missile is touchable: it is likely.
 
 check shooting the missile:
-	if silo is not visible, say "Not on your own you won't shoot the missile." instead;
+	if silo is not touchable, say "Not on your own you won't shoot the missile." instead;
 	if the missile is not in the silo, say "You're not strong enough to launch it by yourself, but there's a handy silo nearby you can put it in." instead;
 	if missile is in silo:
 		if player has panel, say "There are no controls attached to the silo at the moment. You happen to have some handy, though." instead;
 		if panel is not part of silo, say "The missile's in the silo, but there's no button to push to launch it. Or thing that has lots of buttons to push. " instead;
 		say "Maybe you should explicitly try a button and see what happens." instead;
 
-the dashed boundary is part of the silo. description of dashed boundary is "It seems to have writing, one letter per dash: PUT CORRECTLY COLORED DOOR ON SILO[if black door is not visible]. You wonder what you could change into a door[else]. Hm, you doubt there's a red or blue door you have to find[end if]."
+the dashed boundary is part of the silo. description of dashed boundary is "It seems to have writing, one letter per dash: PUT CORRECTLY COLORED DOOR ON SILO[if black door is not touchable]. You wonder what you could change into a door[else]. Hm, you doubt there's a red or blue door you have to find[end if]."
 
 the dotted rectangle is part of the silo. description of dotted rectangle is "[if player has panel]Curiously, it's about the size of the panel[else]It's as if you need to put something on there, but you wonder what[end if]."
 
 description of silo is "It's thirty feet tall and dark and forbidding, except for [if black door is part of silo]the door you slapped on it[else]a six-by-eight-foot dashed boundary that rises from the ground[end if] and [if panel is part of the silo]that panel you installed[else]a smaller dotted rectangle, chest-high, to the side[end if]."
 
-check entering the silo: say "[if dashed is part of the silo]Bam! That outline almost looked like a door, but it wasn't[door-clue][else]A quick peek in shows the silo's empty inside. You're not even sure if you could open the door from the inside, [if-missile][end if]." instead;
+check entering the silo: say "[if dashed is part of the silo]Bam! That outline almost looked like a door, but it wasn't. [door-clue][else]A quick peek in shows the silo's empty inside. You're not even sure if you could open the door from the inside, [if-missile][end if]." instead;
 
 to say if-missile: say "[if missile is in silo]and the missile wouldn't make good company[else]but you could put something that belongs through the door[end if]".
 
-to say door-clue:
-	if black door is visible:
-		say ". But there's a door nearby";
-	else:
-		say ". Maybe something can be changed into a door";
+to say door-clue: say "[if black door is touchable]But there's a door nearby[else]Maybe something can be changed into a door[end if]";
 
 chapter Sacred Cedars
 
@@ -6172,7 +6139,7 @@ understand "tap [something]" as taping.
 carry out taping:
 	if noun is pat, say "Not apt." instead;
 	if noun is spout:
-		if cask is visible, try filling the cask instead;
+		if cask is touchable, try filling the cask instead;
 		say "The oils would go to waste." instead;
 	say "PUSH may be the synonym you want, here." instead;
 
@@ -6305,7 +6272,7 @@ check showing emitter to deadbeat: try objasking deadbeat about emitter instead;
 
 check giving emitter to deadbeat: try objasking deadbeat about emitter instead;
 
-understand "man" as deadbeat when deadbeat is visible.
+understand "man" as deadbeat when deadbeat is touchable.
 
 to say are-were: say "[if controls are in gin nope opening]we[else]['][end if]re"
 
@@ -6331,13 +6298,13 @@ description of clover is "You touch the leaves a bit, and the are sturdy, fuzzy,
 
 check wearing clover: say "You can't wear that as-is, but it'd be helpful to stick to something if it became wearable." instead;
 
-understand "leaves" as clover when clover is visible.
+understand "leaves" as clover when clover is touchable.
 
 Report taking the clover:
 	say "You pluck it.";
 	the rule succeeds;
 
-some Velcro is a singular-named thing. it is not fixed in place. understand "mittens" and "gloves" as Velcro when Velcro is visible.
+some Velcro is a singular-named thing. it is not fixed in place. understand "mittens" and "gloves" as Velcro when Velcro is touchable.
 
 check taking off Velcro:
 	if player is on cafe face, say "You'd fall. Best get down from the cafe face, first." instead;
@@ -6402,13 +6369,13 @@ check taking lost corn:
 
 the yellow kernels are part of the lost corn. understand "buttons" as kernels.
 
-does the player mean doing something with the discolored buttons when lost corn is visible: it is likely.
+does the player mean doing something with the discolored buttons when lost corn is touchable: it is likely.
 
 does the player mean examining the location: it is very likely.
 
 description of kernels is "Most are yellow but others are discolored--red and black and white."
 
-understand "red/black/white buttons/kernels/" and "red/black/white" as discolored buttons when lost corn is visible.
+understand "red/black/white buttons/kernels/" and "red/black/white" as discolored buttons when lost corn is touchable.
 
 some controls are a thing.
 
@@ -6446,7 +6413,7 @@ this is the bore-beatniks rule:
 
 chapter Bile Libe
 
-Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. A lease easel covers every direction except back east."
+Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are touchable], and words buzz about enough to drown out the intense beats heard elsewhere in the city. A lease easel covers every direction except back east."
 
 some words are a thing in Bile Libe. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
 
@@ -6463,7 +6430,7 @@ description of hilt is "It's bright and polished and slippery-looking, [if stick
 check taking hilt: try taking sword instead;
 
 check taking sword:
-	if stickyhanded is false, say "The sword slips from your hands[if player wears Velcro], and there's nothing the Velcro mittens can hook onto[end if][if resin is not visible]. Hmm, you haven't found anything that'd help you grasp it[end if]." instead;
+	if stickyhanded is false, say "The sword slips from your hands[if player wears Velcro], and there's nothing the Velcro mittens can hook onto[end if][if resin is not touchable]. Hmm, you haven't found anything that'd help you grasp it[end if]." instead;
 	say "The sword is yours, and you grab it firmly in your resined hands!";
 	now player has sword instead;
 
@@ -6481,12 +6448,7 @@ check opening noise bag:
 			choose row 2 in the table of tulip-acq;
 			now chosen entry is true;
 			move player to underside instead;
-		if location of player is Abyss:
-			if beast is visible:
-				say "The beast has no time for words! You need to attack it more directly, with something else.";
-			else:
-				say "The beats will drown the words out.";
-			the rule succeeds;
+		if location of player is Abyss, say "[if beast is touchable]The beast has no time for words! You need to attack it more directly, with something else[else]The beats will drown the words out[end if]." instead;
 		say "The words currently caught in the bag would do no good here.";
 		the rule succeeds;
 	if player is in Fo' Real Florae, say "The faeries are not making noise." instead;
@@ -6560,7 +6522,7 @@ description of the rentals is "The antlers are gone."
 
 check going to Obtains Boastin' Bastion for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
 
-description of Obtains Boastin' Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. A poses posse chatters away amongst themselves here[end if]. A barnacled candelabra hangs above[if antlers are visible], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
+description of Obtains Boastin' Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. A poses posse chatters away amongst themselves here[end if]. A barnacled candelabra hangs above[if antlers are touchable], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
 
 A barnacled candelabra is amusing boring scenery in Obtains Boastin' Bastion. description of candelabra is "It's tasteful and clever, as much as you hate to admit it.". bore-text is "You couldn't even jump to get close to it. But it's not important. Someone just put it there because they could.".
 
@@ -6711,7 +6673,7 @@ understand "heath" as heaths.
 
 description of heaths is "They're tied together so their stems seem to form a sort of narrow tube. But surely flowers alone aren't going to stop the thumping here."
 
-stems are part of the heaths. understand "narrow tube" as stems when stems are visible.
+stems are part of the heaths. understand "narrow tube" as stems when stems are touchable.
 
 description of stems is "The stems seem to be forming a narrow tube. It's weird--you can't see anything holding the flowers together."
 
@@ -6801,7 +6763,7 @@ the merchandise is scenery in Fo' Real Florae. "All sorts of flower-related semi
 
 does the player mean objasking the faeries about the merchandise: it is likely.
 
-understand "flowers/seeds/flower/seed" as merchandise when merchandise is visible.
+understand "flowers/seeds/flower/seed" as merchandise when merchandise is touchable.
 
 description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. A torn cue above it indicates it's not part of the normal merchandise[end if]."
 
@@ -6811,7 +6773,7 @@ description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[el
 
 the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. A torn cue is written into the counter, next to a brocade[else]."
 
-the barcode is a thing. understand "code" and "bar" as barcode when barcode is visible.
+the barcode is a thing. understand "code" and "bar" as barcode when barcode is touchable.
 
 check objhinting barcode when barcode is part of the keycard: try objhinting keycard instead;
 
@@ -6832,13 +6794,13 @@ check buying:
 	if location of player is Notices Section:
 		if noun is gateman, say "Just ask him for what he knows. Knowledge is free." instead;
 		say "Awfully generous, but your quest-aiding items here are all free." instead;
-	if noun is tulip and nerds are visible, say "You have nothing to barter with. Either find what to ask, or outflank them somehow." instead;
+	if noun is tulip and nerds are touchable, say "You have nothing to barter with. Either find what to ask, or outflank them somehow." instead;
 	if location of player is Trips Strip, say "Your job is presumably to raise property values here, not take advantage of them." instead;
 	if player is in Fo' Real Florae:
 		if noun is brocade, say "It is free." instead;
 		if noun is heaths or noun is begonias, say "You don't have any money[if fairy-worthy is true], and the faeries don't seem to want to barter any more[else], but perhaps if you gave the faeries a flower, they would be willing to trade[end if]." instead;
-	if peasant is visible and noun is hay, say "Maybe there's something you can give him, instead." instead;
-	if peasant is visible and noun is peasant, say "Things aren't THAT feudal here." instead;
+	if peasant is touchable and noun is hay, say "Maybe there's something you can give him, instead." instead;
+	if peasant is touchable and noun is peasant, say "Things aren't THAT feudal here." instead;
 	say "Nothing seems to be on sale here." instead;
 
 chapter The Ol' Hotel
@@ -6861,7 +6823,7 @@ after doing something with the night thing:
 
 description of Night Thing is "It's grown wrong, a gigantic hairy eyeless potato clearly not the right girth. And it's wired weird, with a cruel ulcer for a mouth. It seems more in the mood for bellowing than fighting, but it still probably doesn't belong in the hotel. It's too big to fight and too fearsome to get near. It appears to be sitting on some sort of mattress."
 
-understand "potato" as night thing when night thing is visible.
+understand "potato" as night thing when night thing is touchable.
 
 check showing something to the night thing: try giving noun to night thing instead;
 
@@ -6873,7 +6835,7 @@ check giving something to the night thing:
 
 the cruel ulcer is a boring thing. it is part of the night thing. description of cruel ulcer is "It's nasty and yellowed and an indication maybe scaring people in the hotel is more stressful than you think. You wonder how food goes down there.". bore-text is "It's neither a clue-r nor lucre."
 
-the ketchup bottle is a thing in The Ol' Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is visible]is roaring nearby[else]was here[end if]."
+the ketchup bottle is a thing in The Ol' Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is touchable]is roaring nearby[else]was here[end if]."
 
 the description of the ketchup bottle is "It is THE PUCK brand ketchup. And it's shaped that way, too. They apparently put, heck, whatever they want in it! And you'll like it that way!"
 
@@ -6910,8 +6872,8 @@ to get-tulip:
 
 check switching on the termite emitter:
 	if flies-in-emitter is true:
-		if deadbeat is visible, say "It'd be rude to throw the gift back in the deadbeat's face." instead;
-		if faeries are visible, say "The faeries are on your side. Try someone else, maybe." instead;
+		if deadbeat is touchable, say "It'd be rude to throw the gift back in the deadbeat's face." instead;
+		if faeries are touchable, say "The faeries are on your side. Try someone else, maybe." instead;
 		if player is in Bassy Abyss, say "Those angst gnats have no chance. You need something much more powerful." instead;
 		if location is not Esoteric Coteries, say "There's nobody here worth bumming out with the angst gnats." instead;
 		if player has lit-up tulip, say "You already have the tulip. That'd be mean." instead;
@@ -6949,8 +6911,7 @@ this is the bore-mattress rule:
 	if action is examining or action is searching or action is reading, say "Not with the night thing on it." instead;
 
 rule for printing a locale paragraph about the smartest mattress:
-	if night thing is not visible:
-		say "The mattress still conforms to the shape of the night thing that sat on it[if emitter is off-stage]--but it also has a bump in one corner[end if].";
+	if night thing is not touchable, say "The mattress still conforms to the shape of the night thing that sat on it[if emitter is off-stage]--but it also has a bump in one corner[end if].";
 	now mattress is mentioned;
 
 description of smartest mattress is "The Smartest Mattress doesn't have a one-page proof of Fermat's Last Theorem in it or anything. It just 'remembers' the shape of whatever sat on it for a long, long time[if emitter is off-stage][get-the-bump][else]. It doesn't seem to have held anything other than the termite emitter[end if]."
@@ -6969,17 +6930,15 @@ this is the bore-bump rule:
 	moot bump;
 	now player has the emitter;
 
-understand "something" as bump when bump is part of the mattress and mattress is visible.
+understand "something" as bump when bump is part of the mattress and mattress is touchable.
 
 does the player mean throwing the tomato at the night thing: it is very likely.
 
 rule for supplying a missing second noun while throwing:
-	if night thing is visible:
-		now the second noun is the night thing;
+	if night thing is touchable, now the second noun is the night thing;
 
 rule for supplying a missing noun while throwing:
-	if night thing is visible:
-		now the noun is the tomato;
+	if night thing is touchable, now the noun is the tomato;
 
 chapter Esoteric Coteries
 
@@ -7076,7 +7035,7 @@ ever-shut is a truth state that varies.
 
 every turn when signers' ingress was open:
 	now signers' ingress is closed;
-	if signers' ingress is visible:
+	if signers' ingress is touchable:
 		say "The signers' ingress slides shut.";
 		if ever-shut is false:
 			now ever-shut is true;
@@ -7111,7 +7070,7 @@ lgth of nerds is 8. gpos of nerds is 7. rpos of nerds is 2. rect-text of nerds i
 the lit-up tulip is a thing in Esoteric Coteries.
 
 check taking lit-up tulip:
-	if nerds are visible and player does not have tulip:
+	if nerds are touchable and player does not have tulip:
 		say "Someone grabs your wrist. 'No light for the unenlightened! You have to ASK NERDS the right thing before you can get it. What do you want it for? Why? And ASK us, don't TELL us.'[paragraph break]That was kind of abrasive[one of]. You think of the places you haven't been and the obstacles to getting there[or]. You wonder if there's a way to disrupt their little gathering if you can't figure what to ask[or]. These intellectual elites are almost as annoying as the economic elites[cycling]." instead;
 
 check dropping the lit-up tulip: say "No. It's useful." instead;
@@ -7155,9 +7114,9 @@ chapter Elm Train Terminal
 
 Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in gin nope opening]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in gin nope opening], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if]."
 
-to say terminal-if-piggy: say "[if neon pig is visible]a neon pig embedded in the cafe face above a fading cafe face. It seems terribly inappropriate[else if controls are in gin nope opening]controls working nicely in the opening you made above[else]an empty opening where the neon pig was. Perhaps something could fit in it[end if]"
+to say terminal-if-piggy: say "[if neon pig is touchable]a neon pig embedded in the cafe face above a fading cafe face. It seems terribly inappropriate[else if controls are in gin nope opening]controls working nicely in the opening you made above[else]an empty opening where the neon pig was. Perhaps something could fit in it[end if]"
 
-to say terminal-if-pigcon: say "[if pig is visible] with the pig[else if controls are not in gin nope opening] and away from the opening you made[else] and away from the controls you put in[end if]".
+to say terminal-if-pigcon: say "[if pig is touchable] with the pig[else if controls are not in gin nope opening] and away from the opening you made[else] and away from the controls you put in[end if]".
 
 check scaning in Elm Train Terminal (this is the can't scan some things til you climbed rule):
 	if noun is neon pig or noun is gin nope opening:
@@ -7206,12 +7165,12 @@ check climbing when player is in Elm Train Terminal:
 cafe-climbed is a truth state that varies.
 
 check climbing cafe face:
-	if player is on cafe face, say "You can't see anything worth getting to above the [if neon pig is visible]neon pig[else]recess[end if]. And you're up dangerously high as is." instead;
+	if player is on cafe face, say "You can't see anything worth getting to above the [if neon pig is touchable]neon pig[else]recess[end if]. And you're up dangerously high as is." instead;
 	if player has Velcro and player is not wearing the Velcro:
 		say "You can't climb up there with bare hands, so you decide to wear the Velcro. [run paragraph on]";
 		try silently wearing the Velcro;
 	if player is not wearing the Velcro, say "The cafe face is vertical. You'd need something that sticks to the bits of steel wool." instead;
-	say "The Velcro strip is just the thing to climb the cafe face and reach the [if neon pig is visible]pig[else]small recess[end if].";
+	say "The Velcro strip is just the thing to climb the cafe face and reach the [if neon pig is touchable]pig[else]small recess[end if].";
 	now cafe-climbed is true;
 	now player is on the cafe face instead;
 
@@ -7227,7 +7186,7 @@ the tracks are plural-named scenery in Elm Train Terminal. understand "rail" and
 
 check taking tracks:
 	if power-shut is false, say "They're charged, and they're too heavy, anyway." instead;
-	say "And what would you do with the tracks?[if sword is visible] You have a sword as a weapon[else] There's got to be a better weapon if you need it[end if]." instead;
+	say "And what would you do with the tracks?[if sword is touchable] You have a sword as a weapon[else] There's got to be a better weapon if you need it[end if]." instead;
 
 check putting something on tracks: say "Good way to get electrocuted. You'll need to find some place to switch them off before you get near them." instead;
 
@@ -7272,20 +7231,18 @@ understand "controls" as gin nope opening when controls are in gin nope opening.
 
 chapter Bassy Abyss
 
-Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are visible]. You feel like a movie star (not of a GOOD movie, mind,) with the beats pulsing in the background to lead you on to defeating--oh, wait. The beats ARE what you're trying to defeat[rieuw][else if beast is visible]. The beast is growling, probably to frighten or distract you into doing nothing constructive. I guess it worked for so long when it was incorporeal and it got lazy[rieuw][else]. You should've been kicked back to the Trips Strip, since you won. This is a BUG[end if].". Abyss is in Metros.
+Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are touchable]. You feel like a movie star (not of a GOOD movie, mind,) with the beats pulsing in the background to lead you on to defeating--oh, wait. The beats ARE what you're trying to defeat[rieuw][else if beast is touchable]. The beast is growling, probably to frighten or distract you into doing nothing constructive. I guess it worked for so long when it was incorporeal and it got lazy[rieuw][else]. You should've been kicked back to the Trips Strip, since you won. This is a BUG[end if].". Abyss is in Metros.
 
 after printing the locale description for abyss when abyss is unvisited:
 	set the pronoun it to siren;
 	continue the action;
 
 every turn when player is in Bassy Abyss:
-	if siren was visible:
-		if siren is visible:
-			say "[b]RRIIEEUUWW. [r]That siren just won't shut up. Man, you just want to pound it into a powder.";
-	if noise bag is visible and words are in noise bag:
-		say "The words in your noise bag [one of]rattle it enough that you feel a sharp poke in your leg[or]continue to rattle[stopping]."
+	if siren was touchable:
+		if siren is touchable, say "[b]RRIIEEUUWW. [r]That siren just won't shut up. Man, you just want to pound it into a powder.";
+	if noise bag is touchable and words are in noise bag, say "The words in your noise bag [one of]rattle it enough that you feel a sharp poke in your leg[or]continue to rattle[stopping]."
 
-to say rieuw: say "[if siren is visible][one of].[paragraph break]A siren off to the side kicks in, to make things even more head-achingly techno up in here. Too loud to get near[or]. And still, that stupid siren near you[stopping][end if]".
+to say rieuw: say "[if siren is touchable][one of].[paragraph break]A siren off to the side kicks in, to make things even more head-achingly techno up in here. Too loud to get near[or]. And still, that stupid siren near you[stopping][end if]".
 
 section aligns signal
 
@@ -7303,7 +7260,7 @@ description of beats is "You're sure some idiot would call them funky, but you d
 
 check taking the beats: say "Hmph. Your ears are already sort of taking a beating, but that's not really the same thing." instead;
 
-check examining beats: if night thing is visible or player is in Bassy or location of player is Esoteric Coteries, say "You can't hear the beats right now, but then, there's [if nerds are visible]chatter[else]chatter[end if] to contend with." instead;
+check examining beats: if night thing is touchable or player is in Bassy or location of player is Esoteric Coteries, say "You can't hear the beats right now, but then, there's [if nerds are touchable]chatter[else]chatter[end if] to contend with." instead;
 
 The beast is a thing.
 
@@ -7384,7 +7341,7 @@ to say woodrev:
 
 section nonbounding scenery
 
-There is a boring useless thing called sand and sands and sands in Leis Isle. It is scenery. description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if].". bore-text is "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here.".
+There is a boring useless thing called sand and sands and sands in Leis Isle. It is scenery. description of the sand is "It's not worth digging through[if cork is touchable or wings are touchable]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if].". bore-text is "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here.".
 
 the tree is useless scenery in Leis Isle.
 
@@ -7463,7 +7420,7 @@ carry out swiming:
 
 chapter Rived Drive
 
-There is a room called Rived Drive. "You've reached a Rived Drive. It's an odd low woodland, or was, until release 5. There's a gigantic [if poles are visible]set of poles[else]slope you could climb[end if] off to the east[if tool shed is visible]. Also, a tool shed that's in bad shape[else]. You see toeholds on the [p-s][end if]."
+There is a room called Rived Drive. "You've reached a Rived Drive. It's an odd low woodland, or was, until release 5. There's a gigantic [if poles are touchable]set of poles[else]slope you could climb[end if] off to the east[if tool shed is touchable]. Also, a tool shed that's in bad shape[else]. You see toeholds on the [p-s][end if]."
 
 Rived Drive is a room in Resort.
 
@@ -7480,11 +7437,11 @@ section poles-slope
 
 the poles are plural-named scenery in Rived Drive. understand "pole" as poles.
 
-description of poles is "They are too vertical [if toeholds are not visible]and smooth [end if]to climb. You can't push them--they look quite sturdy and are at least twenty feet tall--but maybe, if they were at an angle..[if tool shed is visible]. Or you could get a grip somewhere[end if].". lgth of poles is 5. gpos of poles is 5. rpos of poles is 4. rgtext of poles is "[rcn][rc][rc][rc][rc]". cert-text of poles is "-[d1][d1][d1][d1]". rect-text of poles is "S[d1][d1][d1][ast]E".
+description of poles is "They are too vertical [if toeholds are not touchable]and smooth [end if]to climb. You can't push them--they look quite sturdy and are at least twenty feet tall--but maybe, if they were at an angle..[if tool shed is touchable]. Or you could get a grip somewhere[end if].". lgth of poles is 5. gpos of poles is 5. rpos of poles is 4. rgtext of poles is "[rcn][rc][rc][rc][rc]". cert-text of poles is "-[d1][d1][d1][d1]". rect-text of poles is "S[d1][d1][d1][ast]E".
 
 the slope is scenery.
 
-description of slope is "It's forty-five degrees. Too steep to climb without any traction[if toeholds are visible], so thank goodness you dismantled that tool shed[else][check-tools][end if]."
+description of slope is "It's forty-five degrees. Too steep to climb without any traction[if toeholds are touchable], so thank goodness you dismantled that tool shed[else][check-tools][end if]."
 
 check climbing poles: try going east instead;
 
@@ -7494,7 +7451,7 @@ section tool shed - toeholds
 
 the tool shed is scenery in Rived Drive. rgtext of tool shed is "[gcn][gc][rc][rc][rc][rc][rc][rc]". the lgth of tool shed is 8. gpos of tool shed is 1. rpos of tool shed is 5. cert-text of tool shed is "T[ast]O[d1][d1][d1][d1][d1][d1]". rect-text of tool shed is "T[d1][d1][d1][d1][d1][d1][ast]S".
 
-description of tool shed is "It's metal, with no visible entry or even windows. A forbidding u-lock (a padlock could become an old pack, after all,) is welded to it, just to make sure. You notice outcroppings scattered around the tool shed walls.". understand "toolshed" as tool shed.
+description of tool shed is "It's metal, with no touchable entry or even windows. A forbidding u-lock (a padlock could become an old pack, after all,) is welded to it, just to make sure. You notice outcroppings scattered around the tool shed walls.". understand "toolshed" as tool shed.
 
 the windows are part of the tool shed. the windows are useless and plural-named.
 
@@ -7525,16 +7482,16 @@ this is the bore-ulock rule:
 
 check entering tool shed: say "You couldn't break into any stores, and you're not breaking into the tool shed." instead;
 
-toeholds are a plural-named thing. description of toeholds is "They [if poles are visible]could almost help you up the poles, if the poles weren't so vertical[else]should make it easy to climb the slope to the east[end if]."
+toeholds are a plural-named thing. description of toeholds is "They [if poles are touchable]could almost help you up the poles, if the poles weren't so vertical[else]should make it easy to climb the slope to the east[end if]."
 
 section Rived Drive text shortcuts
 
 to say check-tools:
-	if ropes are visible or grips are visible:
+	if ropes are touchable or grips are touchable:
 		say ", but you might be able to just walk up with the tools you have";
-	else if ropes are visible:
+	else if ropes are touchable:
 		say ", and with just a little, the ropes would provide enough safety";
-	else if grips are visible:
+	else if grips are touchable:
 		say ", which the grips give--but it's too risky. You need some safety";
 	else:
 		say ", so maybe a couple tools--or a way to change the smoothness of the slope--will make it climbable";
@@ -7542,8 +7499,8 @@ to say check-tools:
 section Rived Drive escape
 
 check going east in Rived Drive:
-	if poles are visible, say "The poles are too vertical to climb[if toeholds are visible]. Even with the toeholds[else if ropes are visible and grips are visible]. Even with your tools[else if ropes are visible or grips are visible], and your one climbing tool wouldn't be quite enough anyway[end if]." instead;
-	if toeholds are visible:
+	if poles are touchable, say "The poles are too vertical to climb[if toeholds are touchable]. Even with the toeholds[else if ropes are touchable and grips are touchable]. Even with your tools[else if ropes are touchable or grips are touchable], and your one climbing tool wouldn't be quite enough anyway[end if]." instead;
+	if toeholds are touchable:
 		say "You make it up the [p-s] with some effort and surprisingly little risk. The toeholds are more like footholds, really[if player has grips or player has ropes]. You didn't even need any climbing gadgets--and in fact you drop them in surprise when you see what awaits[end if].";
 		moot grips;
 		moot ropes;
@@ -7571,7 +7528,7 @@ rgtext of spore is "[rcn][rc][rc][rc][rc]". lgth of spore is 5. rpos of spore is
 
 section sprig - grips
 
-the sprig is in Rived Drive. "A sprig of some tree or weed you can't identify is here.". understand "weed" as sprig when sprig is visible.
+the sprig is in Rived Drive. "A sprig of some tree or weed you can't identify is here.". understand "weed" as sprig when sprig is touchable.
 
 check taking the sprig: say "Uprooting it would probably kill it." instead;
 
@@ -7582,8 +7539,8 @@ description of sprig is "Very fragile in its present form."
 some grips are a plural-named thing. some ropes are a plural-named thing.
 
 check climbing ropes:
-	if poles are visible, try climbing poles instead;
-	if slope is visible, try climbing slope instead;
+	if poles are touchable, try climbing poles instead;
+	if slope is touchable, try climbing slope instead;
 
 description of grips is "They appear to be suction-based, but you wouldn't climb anything TOO steep with them."
 
@@ -7599,18 +7556,14 @@ Potshot Hotspot is east of Rived Drive. Potshot Hotspot is in Resort.
 
 check going inside in Potshot Hotspot: try going east instead;
 
-description of Potshot Hotspot is "An arid, trod dirt road. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is visible][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is visible]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are visible]The potters aren't just pottering around[pottiness][else if red bull burdell is visible]Red Bull Burdell is here, looking down at you[else]It's nice and peaceful here, but it's not quite home[end if].".
+description of Potshot Hotspot is "An arid, trod dirt road. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is touchable]Red Bull Burdell is here, looking down at you[else]It's nice and peaceful here, but it's not quite home[end if].".
 
 after printing the locale description for hotspot when hotspot is unvisited:
 	set the pronoun it to riot;
 	set the pronoun them to riot;
 	continue the action;
 
-to say ri-tri:
-	if riot is visible:
-		say "rioters";
-	else:
-		say "remaining protesters";
+to say ri-tri: say "[if riot is touchable]rioters[else]remaining protesters[end if]";
 
 riot-count is a number that varies.
 
@@ -7619,13 +7572,10 @@ every turn while player is in Potshot Hotspot:
 		say "The potters eye you with a mixture of contempt, boredom and expectation.";
 
 to say pottiness:
-	if kilns are visible:
-		say "--they're working happily at their kilns";
-	else:
-		say "--they have nothing better to do with their hands right now than wave signs and pump their fists and point at you"
+	say "--[if kilns are touchable]they're working happily at their kilns[else]they have nothing better to do with their hands right now than wave signs and pump their fists and point at you[end if]"
 
 before going in Potshot Hotspot:
-	if red bull burdell is visible:
+	if red bull burdell is touchable:
 		if noun is east, say "Not with Red Bull Burdell around, you aren't. That 'get out' is just villain talk." instead;
 		say "I don't think Red Bull Burdell wants you to take him literally. Villains just talk like that, you know?" instead;
 	if red bull burdell is moot:
@@ -7634,10 +7584,10 @@ before going in Potshot Hotspot:
 check going west in Potshot Hotspot: say "No going back now." instead;
 
 check going east in Potshot Hotspot:
-	if riot is visible, say "That rabble seems mad at you. You'd better disperse them first." instead;
-	if red bull burdell is visible, say "Not with Red Bull Burdell around you aren't." instead;
-	if protest is visible, say "They still outnumber you. Though they're only blocking you out of spite. They just--well, they don't have anything to do, and they're sort of expecting you to give them something better to do than, well, [i]protest[r]." instead;
-	if potters are visible and kilns are not visible, say "They seem a civil trio, buy as you inch east, they get vitriolic. 'Give us something to do!'" instead;
+	if riot is touchable, say "That rabble seems mad at you. You'd better disperse them first." instead;
+	if red bull burdell is touchable, say "Not with Red Bull Burdell around you aren't." instead;
+	if protest is touchable, say "They still outnumber you. Though they're only blocking you out of spite. They just--well, they don't have anything to do, and they're sort of expecting you to give them something better to do than, well, [i]protest[r]." instead;
+	if potters are touchable and kilns are not touchable, say "They seem a civil trio, buy as you inch east, they get vitriolic. 'Give us something to do!'" instead;
 
 section roman manors
 
@@ -7663,11 +7613,11 @@ the protest is privately-named scenery. printed name of protest is "trio".
 
 lgth of protest is 7. gpos of protest is 1. rpos of protest is 6. rgtext of protest is "[gcn][rc][rc][gc][gc][rc][rc]". cert-text of protest is "P[d1][d1][ast]T[ast]E[d1][d1]". rect-text of protest is "P[d1][d1][d1][d1][d1][ast]S".
 
-understand "trio" as protest when riot is not visible and tall trio is not visible.
+understand "trio" as protest when riot is not touchable and tall trio is not touchable.
 
-understand "protest/three/protesters/crowd/uprisers/horde/rioters" and "rabble" and "mob" as protest when protest is visible.
+understand "protest/three/protesters/crowd/uprisers/horde/rioters" and "rabble" and "mob" as protest when protest is touchable.
 
-understand "protest" and "protesters" and "crowd" and "uprisers" and "horde" and "rioters" and "rabble" and "mob" as riot when riot is visible.
+understand "protest" and "protesters" and "crowd" and "uprisers" and "horde" and "rioters" and "rabble" and "mob" as riot when riot is touchable.
 
 Include (-
 	has transparent animate
@@ -7675,7 +7625,7 @@ Include (-
 
 description of protest is "They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest."
 
-the potters are plural-named scenery. understand "trio/protest/three" as potters when potters are visible.
+the potters are plural-named scenery. understand "trio/protest/three" as potters when potters are touchable.
 
 Include (-
 	has transparent animate
@@ -7683,11 +7633,10 @@ Include (-
 
 before asking potters about: say "They don't want talk. They want action. Maybe even bribery." instead;
 
-description of potters is "[if kilns are visible]They're happily working away at their kilns[else]They're looking around antsily. But they don't look saintly. They're a bit upset you've given them nothing to do with their hands[end if]."
+description of potters is "[if kilns are touchable]They're happily working away at their kilns[else]They're looking around antsily. But they don't look saintly. They're a bit upset you've given them nothing to do with their hands[end if]."
 
 rule for printing a locale paragraph about kilns:
-	if potters are visible:
-		now kilns are mentioned;
+	if potters are touchable, now kilns are mentioned;
 
 to hello-bull:
 	say "[wfak]Tremors re-storm. 'Eh, we fly!' / 'Why flee?' / 'Erm, it's Mister Smiter!' The potters have wheeled their kilns to a mowed meadow.[paragraph break]You hear a shout from the south and mad snorts from a sandstorm, then see a man too ham-nosed to be handsome. He washes down some walnuts of wan lust with liquid from one purple metal can labeled Sado-Soda, then a bottle of Renegade Green-Ade.[paragraph break]'I am RED BULL BURDELL!' he shouts, in a voice neither earthy nor hearty. 'From my ROOTS to my TORSO! Um, poser? Mo['] super Supremo!'[paragraph break]The size of a large hut, bellowing real thug laughter, he emits 'It's me! I'm set! Sit [']em! Mites-smite times!'";
@@ -7750,7 +7699,7 @@ lgth of chain links is 5. gpos of chain links is 4. rpos of chain links is 5. ce
 
 description of chain links is "A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin[']. But they're still more violent things than you'd like, this near the Means Manse."
 
-understand "chains" as chain links when chain links are visible.
+understand "chains" as chain links when chain links are touchable.
 
 check taking chain links: say "[one of]Get chain = cheating.[paragraph break]Seriously, though. You'd still be outnumbered. They need something to do with their hands[or]Maybe you could change the links, instead[stopping]." instead;
 
@@ -7758,7 +7707,7 @@ some kilns are a plural-named thing.
 
 check taking the kilns: say "[one of]Way too heavy. (fourth wall time: try this again for a horrible spoiler pun.)[or]How would you potter around with such heavy things?[stopping]" instead;
 
-description of kilns is "You certainly managed to summon the deluxe version. I guess all that practice earlier in the game, you learned how to give your anagrams OOMPH. You gaze at your work proudly, [if potters are visible]as do the potters[else]but it's not work you can work with further[end if]."
+description of kilns is "You certainly managed to summon the deluxe version. I guess all that practice earlier in the game, you learned how to give your anagrams OOMPH. You gaze at your work proudly, [if potters are touchable]as do the potters[else]but it's not work you can work with further[end if]."
 
 section tugtoeing
 
@@ -7771,7 +7720,7 @@ understand "tug [something]" as tuging.
 does the player mean tuging the player: it is very likely.
 
 carry out tuging:
-	if red bull burdell is visible:
+	if red bull burdell is touchable:
 		if noun is the player, say "You tug at yourself, nervous from hearing GET OUT yet again." instead;
 		if noun is red bull, say "Try a small part of him. Both lexicographically and physically." instead;
 		if noun is not toe, say "Right verb, wrong thing." instead;
@@ -7897,7 +7846,7 @@ to say blurby:
 		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
 		continue the action;
 	if location of player is Rested Desert:
-		say "A magnet [if goat is visible]wouldn't have helped you[else]won't help you[end if] get past the thickets[if goat is not visible]. Right idea, though. Wrong item[end if].[run paragraph on]";
+		say "A magnet [if goat is touchable]wouldn't have helped you[else]won't help you[end if] get past the thickets[if goat is not touchable]. Right idea, though. Wrong item[end if].[run paragraph on]";
 		continue the action;
 	say "[reject][run paragraph on]";
 
@@ -7925,7 +7874,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 	repeat through regana of mrlp:	[this code vacuums up the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
 		if myh is hashkey entry or myh2 is hashkey entry:
 			[d "[myh] [the-from entry] [the-to entry] try.";]
-			if the-from entry is visible:
+			if the-from entry is touchable:
 				[d "the-from [myh] [the-from entry] visible.";]
 				if there is an exact-text entry and the player's command matches exact-text entry:
 					[d "2nd loop Fliptoing from anagram loop: [the-from entry] with command [the player's command].";]
@@ -7937,14 +7886,14 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 					now ignore-line-break is true;
 					try fliptoing the-from entry;
 					the rule succeeds;
-			if the-to entry is visible and the-to entry is not reversible:
+			if the-to entry is touchable and the-to entry is not reversible:
 				d "(VERB GUESS CODE) the-to [myh] [the-to entry] visible.";
 				if there is a dubdip entry:
 					say "[dubdip entry][line break]";
 				else:
 					if the-to entry is sliver:
 						say "The sliver seems to bend, but it snaps back[unless drapes are moot]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
-					else if the-to entry is soil and silo is not visible:
+					else if the-to entry is soil and silo is not touchable:
 						say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
 					else if the-to entry is potters:
 						say "You cut the riot down, but you need to change their protest now.";
@@ -7953,7 +7902,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 				do nothing instead;
 			d "[myh] [the-from entry] [the-to entry] failed.";
 	repeat through regana of mrlp: [this is for an extreme case where you have "attic" instead of "attics"]
-		if the-to entry is visible:
+		if the-to entry is touchable:
 			if there is an exact-text entry and the player's command matches exact-text entry:
 				d "3rd pass through: [the-to entry].";
 				try fliptoing the-to entry instead;
@@ -8008,7 +7957,7 @@ Rule for printing a parser error when the latest parser error is didn't understa
 	if the player's command includes "writing":
 		say "You don't have to do anything with any writing, just READ whatever the writing is on. That said, sorry for not implementing any and all writing fully.";
 		reject the player's command;
-	if deadbeat is visible:
+	if deadbeat is touchable:
 		if the player's command includes "hipster":
 			say "He trips (tough, when you're sitting down) at being called a hipster. Whether that makes him more likely to be one, I don't know.";
 	if mrlp is forest:
@@ -8097,7 +8046,7 @@ after reading a command:
 	let XX be indexed text;
 	let XX be the player's command in lower case;
 	change the text of the player's command to XX;
-	if the viler liver is visible or the River Ville liver is visible or livers are visible or Spam is visible:
+	if the viler liver is touchable or the River Ville liver is touchable or livers are touchable or Spam is touchable:
 		if the player's command matches the regular expression "\bmeats\b", case insensitively:
 			say "What kind of meats they are is important. As are their physical characteristics. So you'll need to be specific.";
 			reject the player's command;
@@ -8128,13 +8077,13 @@ after reading a command:
 						say "The SECURE/RECUSE button locks in place as you say the magic word.";
 					now button-locked is true;
 				say "[warp-result entry][paragraph break]";
-				say "You watch [if mystore entry is visible][mystore entry][else if myport entry is visible]the [myport entry][end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
+				say "You watch [if mystore entry is touchable][mystore entry][else if myport entry is touchable]the [myport entry][end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
 				now myreg entry is bypassed;
-				if mystore entry is visible, reg-inc;
+				if mystore entry is touchable, reg-inc;
 				process the notify score changes rule;
 				reject the player's command;
 	if the player's command matches the regular expression "\bdoor\b":
-		if odor is visible:
+		if odor is touchable:
 			if number of words in the player's command > 1:
 				ital-say "Just the one word will usually be sufficient in the future. But something happens when you focus: door.";
 				change the text of the player's command to "door";
@@ -8145,9 +8094,9 @@ after reading a command:
 			say "(I[one of]n the future, i[or][stopping]f you want to SAY something, you can just say the single word. To talk to someone, ASK someone ABOUT something.)";
 			replace the regular expression "^(say|think|shout|speak|yell) " in XX with "";
 			change the text of the player's command to XX;
-	if panel is visible and panel is part of silo:
+	if panel is touchable and panel is part of silo:
 		if the player's command matches the regular expression "buttons", say "One button at a time, please." instead;
-	if goat is visible and toga is not visible:
+	if goat is touchable and toga is not touchable:
 		if the player's command matches the regular expression "\bgoat\b":
 			say "[one of]The goat is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
 			reject the player's command;
@@ -8158,7 +8107,7 @@ after reading a command:
 		replace the regular expression "^chisel" in XX with "scrape";
 		change the text of the player's command to XX;
 	if word number 1 in the player's command is "silver":
-		if player has livers or viler liver is visible or River Ville liver is visible:
+		if player has livers or viler liver is touchable or River Ville liver is touchable:
 			say "The livers are too dull to do anything like that with. Yet.[liv-preef]";
 			reject the player's command;
 	if word number 1 in the player's command is "tell":
@@ -8191,7 +8140,7 @@ warp-cmd (indexed text)	mystore	myport	myreg	warp-result
 "say bs"	store m	trade tread	metros	"You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense."
 
 definition: a thing (called x) is takeable:
-	if x is not visible, decide no;
+	if x is not touchable, decide no;
 	if x is part of something, decide no;
 	if x is the blue lube, decide no;
 	if x is carried, decide no;
@@ -8229,11 +8178,7 @@ does the player mean scaning the player:
 		it is unlikely;
 	it is likely;
 
-to say cant-change:
-	if gateman is visible:
-		say "[one of]'That means what you have can't be changed.'[or].[stopping]";
-	else:
-		say "Hm, maybe you can't do anything with that.";
+to say cant-change: say "[if gateman is touchable][one of]'That means what you have can't be changed.'[or].[stopping][else]Hm, maybe you can't do anything with that.[end if]";
 
 gadget-scanned is a truth state that varies. gadget-scanned is usually false.
 
@@ -8244,7 +8189,7 @@ before scaning (this is the take gadget if you can rule):
 		if player does not have gadget, say "Yes, it'd be nice to have the gadget, now." instead;
 		say "[kicks]" instead;
 	if player does not have the tagged gadget:
-		if gadget is visible:
+		if gadget is touchable:
 			say "(Taking the gadget first)";
 			try taking the gadget;
 		if player does not have gadget, say "Oops, you should've automatically taken the gadget. This is a bug." instead;
@@ -8279,8 +8224,8 @@ carry out scaning:
 		say "You'll need the gadget to scan anything." instead;
 	now scanned-g is true;
 	if noun is banshee:
-		if liches are visible, say "The banshee's annoying but not as obstructive as the liches. In fact, you can't tell where it is." instead;
-	if noun is tulip and nerds are visible, say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sort of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
+		if liches are touchable, say "The banshee's annoying but not as obstructive as the liches. In fact, you can't tell where it is." instead;
+	if noun is tulip and nerds are touchable, say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sort of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
 	if noun is faeries, say "You sense that would be a breach of some magical etiquette you don't understand." instead;
 	if noun is jail cell graffiti or noun is grate:
 		say "You see nothing new other than the latent colors registering.";
@@ -8290,7 +8235,7 @@ carry out scaning:
 	if location of player is Fo' Real Florae:
 		say "[one of]You feel a bit self-conscious waving your gadget around such intrinsically magical beings. But they do not seem to mind.[paragraph break][or][stopping]";
 	if noun is poem and poem is not folded:
-		if smilies are visible:
+		if smilies are touchable:
 			say "Your gadget doesn't do much [']til it's over the smilies. So you look more closely at those.";
 			try scaning smilies instead;
 	if noun is tinfoil info-lit, say "Nothing happens. Which just proves the paper's premise that this is all too ridiculous, amirite?" instead;
@@ -8298,9 +8243,9 @@ carry out scaning:
 		say "[one of]You receive a rush of insight unlike anything anywhere else in the game![or]You receive more practical insight![stopping][paragraph break]";
 		say "[one of]Bread, $1 per loaf[or]Condensed cream of mushroom soup, $.39[or]Cabbage, $.19/lb[or]Ice Cream, $2.50/gallon[or]Jack's Pizza, 5/$10, limit 5[or]OnCor entrees, $2[or]Hot dogs, 89 cents[or]7 oz. pasta, 3/$1[or]Milk, $1.99/gallon[or]Root Beer, $.68 per liter bottle[at random] at BreadCo. Much better than [one of]Winn-Dixie[or]Strack and Van Til[or]SuperFresh[or]Marsh[or]Kroger[or]Piggly Wiggly[or]Jewel Finer Foods[or]Aldi[or]Safeway[or]Moo and Oink[at random]!" instead;
 	if noun is pat, say "'Fie!' yells Pat. 'My poem transcends technology! I am sure such a fancy gadget could not even tell me its meter!' Then he gets back to recitation." instead;
-	if noun is the broad board, say "The gadget makes no noise[if gateman is visible][cant-change][else]." instead;
+	if noun is the broad board, say "The gadget makes no noise[if gateman is touchable][cant-change][else]." instead;
 	if noun is the player:
-		if warts are visible:
+		if warts are touchable:
 			say "Hm, the warts are registering. [no line break]";
 			try scaning warts instead;
 		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
@@ -8311,11 +8256,11 @@ carry out scaning:
 	if noun is sandwich, say "Your gadget refuses to remain stable. As if it's trying to read two things at once. Perhaps if you pulled the components apart?" instead;
 	if noun is candelabra, say "Way too high up." instead;
 	if noun is doll house:
-		if attics are visible, try scaning attics instead;
-		if static is visible:
+		if attics are touchable, try scaning attics instead;
+		if static is touchable:
 			say "Before your gadget gets close, you begin to pick something up. Perhaps it isn't the doll house you need to do something with. Something ambient--like the static. So you do that.";
 			try scaning static instead;
-		say "[bug-report] One of attics and static should be visible." instead;
+		say "[bug-report] One of attics and static should be touchable." instead;
 	if noun is part of the gadget, say "If that part of the gadget were detectable, you'd have gone crazy from the beeping by now." instead;
 	if noun is gadget:
 		if the player's command matches "scan":
@@ -8429,7 +8374,7 @@ this is the enter-gateway rule:
 	if player has gadget:
 		now player has a prep paper;
 		pad-rec-q "retry";
-	say "[line break]The gate disappears behind you[if static is visible] as you hear Nat Egam grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
+	say "[line break]The gate disappears behind you[if static is touchable] as you hear Nat Egam grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
 	say "[wfak]...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
 	now cabinet is LLPish;
 	solve-region Ordeal Loader instead;
@@ -8442,7 +8387,7 @@ the new land is boring scenery in Notices Section. description of new land is "Y
 this is the bore-new-land rule:
 	if current action is entering, try entering the getaway instead;
 
-understand "gate" as getaway when getaway is visible.
+understand "gate" as getaway when getaway is touchable.
 
 gadget-warned is a truth state that varies. gadget-warned is false.
 
@@ -8470,7 +8415,7 @@ objasking generically is an action applying to one visible thing. Understand "as
 
 check objasking generically (This is the check for only one sensible object converser rule):
 	if the number of NPCish persons in location of the player is 0:
-		repeat with X running through visible scenery:
+		repeat with X running through touchable scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
@@ -8505,7 +8450,7 @@ understand "tell [thing] about [text]" as asking it about.
 
 Check asking generically (This is the check for only one sensible converser rule):
 	if the number of npcish people in location of the player is 0:
-		repeat with X running through visible scenery:
+		repeat with X running through touchable scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
@@ -8531,7 +8476,7 @@ check objasking it about (This is the check for object information rule):
 			if second noun is not goat:
 				if second noun is in Rested Desert, say "'In the past now. Nothing more to learn from that.'" instead;
 				if second noun is in Busiest Subsite, say "You'd know more about that than he would." instead;
-			if second noun is visible, say "Examining would probably work better." instead;
+			if second noun is touchable, say "Examining would probably work better." instead;
 		if noun is him-who entry, say "[him-say entry][line break]" instead;
 	repeat through table of default-gen-blather:
 		if noun is default-talker entry, say "[gen-blah entry][line break]" instead;
@@ -8578,7 +8523,7 @@ to say oma-gate:
 
 check asking the player about: say "If only learning were so easy." instead;
 
-does the player mean doing something with the merchandise when the merchandise is visible: it is very likely.
+does the player mean doing something with the merchandise when the merchandise is touchable: it is very likely.
 
 to say faery-flower: say "[if fairy-worthy is true]'We have faith in you! You will make the city safe to grow flowers again!'[else]'We trade in flowers! Flowers we have for flowers we want! What do you have?'[end if][run paragraph on]"
 
@@ -8604,8 +8549,8 @@ him-who	person-subj	him-say
 gateman	redness	"[one of]'Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help.'[paragraph break]He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.[ask-red][or]'Hm. To keep it simple, red is wrong. And that helps you eliminate wrong guesses.'[stopping]"
 gateman	board	"'Good idea to take notes on it. But I can tell you about other stuff. Like [if player has gadget]your gadget[else]the gadget in the cabinet[end if]. Or even how it works.'"
 gateman	doll house	"[if attics are off-stage]'A nice warm-up puzzle, but if you're in a hurry, I'll respect that too. Not the doll house that needs changing.'[else]'You don't need to take it with or anything. Nice job with it, though.'[end if]"
-gateman	static	"'[if attics are off-stage]If it's kind of annoying, you can get rid of it. Or you should be able to. But you don't have to.[else if attics are visible]Good job getting rid of it.[else]Err...I know you're in a hurry, but can if you could change it back to the attics before you get going, my ears would thank you.[end if]'"
-gateman	attics	"'[if attics are off-stage]Yes. Do--whatever it is--to make them appear. I hope you haven't lost your powers.[else if attics are visible]They're more appropriate to the doll house, definitely.[else]I kind of prefer [']em to the static. You wouldn't mind switching them back?[end if]'"
+gateman	static	"'[if attics are off-stage]If it's kind of annoying, you can get rid of it. Or you should be able to. But you don't have to.[else if attics are touchable]Good job getting rid of it.[else]Err...I know you're in a hurry, but can if you could change it back to the attics before you get going, my ears would thank you.[end if]'"
+gateman	attics	"'[if attics are off-stage]Yes. Do--whatever it is--to make them appear. I hope you haven't lost your powers.[else if attics are touchable]They're more appropriate to the doll house, definitely.[else]I kind of prefer [']em to the static. You wouldn't mind switching them back?[end if]'"
 gateman	blue lube	"[about-lube]"
 gateman	phail phial	"[about-lube]"
 gateman	prep paper	"'No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start.'"
@@ -8650,7 +8595,7 @@ deadbeat	nerds	"The deadbeat starts shaking as he rattles off how the nerds east
 deadbeat	faeries	"The deadbeat doesn't believe in magic, now. But he did as a kid."
 deadbeat	red bull burdell	"'He is oppressive, man, but he is just a symptom of disparity and malaise.'"
 deadbeat	poses posse	"[if poses posse are moot]'You showed them, dude!'[else]The deadbeat starts up some nonsense pseudo-sociological mumblings.[end if]"
-deadbeat	lost corn	"[if bastion-evac is false]'Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?'[else if lost corn is visible]'Oh, yeah, it's yours, man, I guess. It's real corn, not that genetically modified stuff from,' he sees red for a sentence, '[first custom style]SLORNTCO[r] or that nasty dried stuff from [first custom style]ST ROLCNO[r].'[else]'Whoah. You must've like did something with that corn. Biosustainibility, man.'"
+deadbeat	lost corn	"[if bastion-evac is false]'Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?'[else if lost corn is touchable]'Oh, yeah, it's yours, man, I guess. It's real corn, not that genetically modified stuff from,' he sees red for a sentence, '[first custom style]SLORNTCO[r] or that nasty dried stuff from [first custom style]ST ROLCNO[r].'[else]'Whoah. You must've like did something with that corn. Biosustainibility, man.'"
 deadbeat	termite emitter	"[if player does not have emitter]'What? Do you know something?' he looks furtively around, more convinced than ever you're with The Man, man.[else if bastion-evac is false]'Whoah. No fingerprints, no proof it's mine.' He clearly doesn't trust you, yet.[else][try-flies][no line break][end if]"
 faeries	drainage	"'Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?'"
 faeries	gardenia	"[if drainage is in Undesired Underside]You don't have a gardenia, yet. But you can find or make one.[else][faery-flower][end if]"
@@ -8716,10 +8661,10 @@ Red Bull Burdell	"'Ego? Tut!' you mumble, but it has nothing on action."
 banshee	"'I strip spirit!' it wails, then, 'Rather be breather!'"
 beast	"It cares not for conversation, only noise."
 beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act."
-deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Esoteric Coteries are visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
+deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is touchable]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Esoteric Coteries are visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
 faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'You are our hero! Thank you so much[sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
 goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
-gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has tagged gadget] once you have the tagged gadget[end if]. Oh, about the gadget: you'll learn by doing.'[stopping]"
+gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is touchable]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has tagged gadget] once you have the tagged gadget[end if]. Oh, about the gadget: you'll learn by doing.'[stopping]"
 gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
@@ -8859,12 +8804,12 @@ lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread 
 
 the drapes are plural-named scenery. description of drapes is "Too thick and heavy to walk through.". bore-text of drapes is "This isn't some living room. (Sorry.) Those drapes are thick and oppressive. You'll need something sharp to cut through them.". bore-check of drapes is bore-drapes rule.
 
-understand "cloth" as drapes when drapes are visible.
+understand "cloth" as drapes when drapes are touchable.
 
 this is the bore-drapes rule:
 	if current action is cutwithing or current action is unfolding, now boring-exception is true;
 
-understand "cloth" as spread when spread is visible.
+understand "cloth" as spread when spread is touchable.
 
 the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 3. rpos of red asp is 5. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]". cert-text of red asp is "-[d1][d1][d1][d1][d1]". rect-text of red asp is "D[d1][d1][d1][d1][ast]S".
 
@@ -8880,11 +8825,11 @@ the sliver is a thing. the sliver is flippable. rgtext of sliver is "[gcn][rc][r
 
 description of sliver is "Surprisingly sharp and of an odd metal. It could cut something as long as you didn't have to saw much."
 
-the silver is a thing. the printed name of silver is "silver cylinder". understand "silver cylinder" and "cylinder" and "silver bullet" and "bullet" as silver when silver is visible.
+the silver is a thing. the printed name of silver is "silver cylinder". understand "silver cylinder" and "cylinder" and "silver bullet" and "bullet" as silver when silver is touchable.
 
-understand "shell" as silver when silver is visible.
+understand "shell" as silver when silver is touchable.
 
-does the player mean doing something with the shell when silver is visible: it is unlikely.
+does the player mean doing something with the shell when silver is touchable: it is unlikely.
 
 description of silver is "[if silver is in shotgun]It's locked and loaded, Junior[else]It's shaped like a small rocket. It'd make a nifty projectile[end if]."
 
@@ -8913,7 +8858,7 @@ after doing something with noughts:
 
 nau-nou is a truth state that varies.
 
-the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is visible.
+the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is touchable.
 
 the shotgun can be loaded. the shotgun is not loaded.
 
@@ -8937,7 +8882,7 @@ description of dashes is "Each seems to have a pattern carved into it."
 
 the shades are a plural-named disguise-piece. the elevation of the shades is 2.
 
-understand "shade" and "glasses" as shades when shades are visible.
+understand "shade" and "glasses" as shades when shades are touchable.
 
 description of shades is "They're not dark enough to prevent you seeing anything. You suspect they'd fit your face just fine. They also have a small hook between the lens bits[if shades are part of the nose] and are attached to a nose[else if shades are part of beard]. A fake beard hangs snugly over the stems[end if]."
 
@@ -8987,8 +8932,8 @@ description of the beard is "[if nose is part of beard and shades are part of be
 to decide what thing is the current getup:
 	if nose is part of the beard or shades are part of the beard, decide on beard;
 	if shades are part of nose, decide on nose;
-	if shades are visible, decide on shades;
-	if nose is visible, decide on nose;
+	if shades are touchable, decide on shades;
+	if nose is touchable, decide on nose;
 	decide on beard.
 
 the current getup is a thing that varies.
@@ -9024,8 +8969,8 @@ after doing something with liches:
 description of liches is "They seem to be moaning about being reduced to a tool of greater evil."
 
 check listening when player is in Cruel Ones' Enclosure:
-	if liches are visible, say "The liches are whining about their former lives. 'Tried to...I rotted...' One was a sculpted abstract artist worth far less than its fees, one cheated others for any amount of money it felt like, and one was an obsessive bodybuilder. All forgot about their spiritual life[if banshee is visible]. They almost drown out the banshee's screams[end if]." instead;
-	if banshee is visible, say "The banshee is still moaning. Not threateningly, but annoyingly. Be nice to get rid of it, if you could." instead;
+	if liches are touchable, say "The liches are whining about their former lives. 'Tried to...I rotted...' One was a sculpted abstract artist worth far less than its fees, one cheated others for any amount of money it felt like, and one was an obsessive bodybuilder. All forgot about their spiritual life[if banshee is touchable]. They almost drown out the banshee's screams[end if]." instead;
+	if banshee is touchable, say "The banshee is still moaning. Not threateningly, but annoyingly. Be nice to get rid of it, if you could." instead;
 
 The chisel is a thing. description of the chisel is "It seems like it can PEEL all sorts of things you may not want to handle."
 
@@ -9237,7 +9182,7 @@ to ask-to-cut:
 
 the doorway is scenery.
 
-understand "door" as doorway when doorway is visible.
+understand "door" as doorway when doorway is touchable.
 
 description of doorway is "It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide."
 
@@ -9383,7 +9328,7 @@ to say die-die-die:
 check waiting:
 	if player is in Frost Forts, say "[one of]Ish. Very shivery.[or]Looks like you have a Mexican standoff, if Mexico were in Greenland.[or]The wolves get antsy. I mean, they don't turn into ants. You are getting colder.[or]Your blood runs cold as the wolves inch closer. These aren't totally causally related.[or]If you don't do something cold-blooded, you'll be too cold-blooded to do anything.[or][die-die-die][stopping]" instead;
 	if player is in Means Manse, say "Well, you sort of almost have it, but you want to (not) do something with the exits." instead;
-	if player is in Rested Desert and goat is not visible, say "There's something important to do here. But what?" instead;
+	if player is in Rested Desert and goat is not touchable, say "There's something important to do here. But what?" instead;
 	if player is in Esoteric Coteries, say "The Esoteric Coteries becomes a lo-action location for a bit." instead;
 	say "[one of]Time passes... [no line break][or][stopping][one of]A mist seeps...[or]I see stamps...[or]Me, sit? Passe![or]Sit, see maps...[at random]" instead;
 
@@ -9420,7 +9365,7 @@ carry out smelling:
 	if noun is Spam, say "It reminds you of long-gone days you liked its smell. Before having a taste." instead;
 	if noun is tomato, say "Could be worse, like rotting meat. You're worried it might be very rotten on the inside." instead;
 	if noun is motto, say "Okay, it doesn't PHYSICALLY stink." instead;
-	if noun is Hotel, say "You've smelled worse, but the night thing's [if night thing is not visible]lingering stench is [end if]pretty bad." instead;
+	if noun is Hotel, say "You've smelled worse, but the night thing's [if night thing is not touchable]lingering stench is [end if]pretty bad." instead;
 	if noun is slough, say "I suppose it's a smell of nearby evil or something." instead;
 	if noun is noisome moonies, say "Sadly, you already can without trying." instead;
 	if noun is Frost Forts, say "Decayin[']. Cyanide. Nice day? Nay, ICED." instead;
@@ -9431,8 +9376,8 @@ carry out smelling:
 	if location of player is cedars, say "Still strong and pleasant. Better than ample maple or an a-ok oak. Those cedars." instead;
 	if location of player is Thickest Thickets, say "[if goat is in Thickest Thickets]You smell the goat a bit[else]Very green and nature-ish[end if]." instead;
 	if player is in sf or player is in rf:
-		if stew is visible, say "You catch a whiff of stew. What kind, you're not sure." instead;
-		if teas is visible, say "You catch a whiff of teas. What kind, you're not sure." instead;
+		if stew is touchable, say "You catch a whiff of stew. What kind, you're not sure." instead;
+		if teas is touchable, say "You catch a whiff of teas. What kind, you're not sure." instead;
 	say "Nothing unusual." instead;
 
 part listening
@@ -9441,21 +9386,21 @@ to say thissy: say "[one of]A passing conversation among the rushing and yelling
 
 check listening:
 	if player is in Potshot Hotspot:
-		if riot is in Potshot Hotspot or protest is in Potshot Hotspot, say "The [if riot is visible]riot[else]protest[end if] sounds like it can go on for a while, but thankfully, it's not getting violent." instead;
+		if riot is in Potshot Hotspot or protest is in Potshot Hotspot, say "The [if riot is touchable]riot[else]protest[end if] sounds like it can go on for a while, but thankfully, it's not getting violent." instead;
 		if red bull burdell is in Potshot Hotspot, say "Tenso-tones (notes?) add drama to it all." instead;
 	if location of player is Esoteric Coteries, say "The nerds are nattering about something or other[one of]. Their RPG GRP[or]. 'Vie, Red, Derive!' they chant at someone marking up scratch paper[or]. Complaining of their briefs['] fibers[or]. How to be a nerd mo['] modern[or]. Their time in the Undergrad Nerd Guard[or]. How they like to bug Sundberg[or]. How they're an IQ/clue clique[or]. How the newcomer might be a decent pretend nerd pet[or]. Stupid people who don't vote, or who vote stupid when they do[or]. Some dolt who got TOLD[or]. How text adventures are for losers stuck in the eighties[or]. How nothing's stopping dumb people from getting on the internet and building the same soundproof bunker they have[or][stopping]." instead;
 	if location of player is Abyss:
-		if beats are visible, say "The beats are worse than ever[if siren is visible], accompanied by that siren[end if]. The Hears-Share sound system dishes out supersonic percussion--a croupiness, if you will." instead;
-		say "The beats are gone, replaced with a beast's roaring[if siren is visible], which clashes nastily with the siren[end if]." instead;
+		if beats are touchable, say "The beats are worse than ever[if siren is touchable], accompanied by that siren[end if]. The Hears-Share sound system dishes out supersonic percussion--a croupiness, if you will." instead;
+		say "The beats are gone, replaced with a beast's roaring[if siren is touchable], which clashes nastily with the siren[end if]." instead;
 	if mrlp is metros:
 		if player is in Bile Libe:
-			if words are visible:
+			if words are touchable:
 				if player has heaths, say "'That's just words. Shift them to a weapon, and you'll have something!'" instead;
 				if player has sheath, say "'Talk is cheap! Now, weapons, there's something valuable!'" instead;
 				if player has begonias or player has noise bag, say "[if words are not in bag]'Put a bag over it!' you hear.[else]The semi-sheltered Bile Libe offers some respite from the beats, especially with the words gone. But not enough.[end if]" instead;
 				say "The words drown out the beats for the moment. They're sharp words, attacking words, hard to shield yourself from, but they're local enough they can't be twisted." instead;
 		if player is in Roarings Garrison, try examining music instead;
-		if night thing is visible, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
+		if night thing is touchable, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
 		if player is in Obtains Boastin' Bastion, say "The conversation changes subject rapidly and randomly." instead;
 		if player is in Fo' Real Florae, say "The faeries have managed to block out the beats here, which is nice." instead;
 		say "[one of]Acoustics so caustic.[or]Phoniest hip tones.[or]Fatal a-flat.[or]Thumping's SUMPTHING.[or]Ouch! Hearin['] Hernia.[in random order]" instead;
@@ -9468,8 +9413,8 @@ check listening:
 	if player is in moor and peasant is in moor, say "With less, he whistles, eh?" instead;
 	if player is in Rived Drive, say "You hear something from above the [p-s] to the east, but you'll need to get closer to make out details." instead;
 	if player is in kitchen, say "Dietist ditties pipe through from somewhere unseen. They're kind of catchy but really distracting." instead;
-	if doll house is visible:
-		if static is visible, say "You hear static coming from the doll house." instead;
+	if doll house is touchable:
+		if static is touchable, say "You hear static coming from the doll house." instead;
 		say "Each attic is tacit now." instead;
 	if player is in astral altars, say "You hear mumblings you aren't in the ELITE LISTS. They make you see red." instead;
 	if shout is in location of player, say "You still hear that shout[one of], and if you listen again, you could get a couple of words.[or] that turns you red from its silliness: [one of]'Hut! SO!'[or]'Uh?! SOT!'[or]'Us, HOT!'[in random order][stopping]" instead;
@@ -9675,7 +9620,7 @@ before going down:
 	if player is in Busiest Subsite or player is in Obtains Boastin' Bastion, continue the action;
 	if player is on cafe face, try getting off the cafe face instead;
 	if player is in Trips Strip:
-		if posted depots are visible or trade tread is visible, continue the action;
+		if posted depots are touchable or trade tread is touchable, continue the action;
 		say "You can't see any [if sortie is solved or metros is solved]other [end if]way down[if sortie is not solved or metros is not solved][else] any more[end if]." instead;
 	say "You see no clear way down. Usually there'll be stairs, if you need to." instead;
 
@@ -9764,7 +9709,7 @@ does the player mean knocking the OR DO door: it is very likely.
 does the player mean knocking the signers' ingress: it is very likely.
 does the player mean knocking Corses Crosse: it is very likely.
 does the player mean knocking a portal:
-	if cabinet is visible, it is unlikely;
+	if cabinet is touchable, it is unlikely;
 	it is very likely;
 
 carry out knocking:
@@ -9785,11 +9730,8 @@ understand the command "grind" as something new.
 understand "grind [something]" as grinding.
 
 carry out grinding:
-	if canister is visible:
-		try inserting noun into the canister;
-	else:
-		say "There appears to be nothing that can grind anything here.";
-	the rule succeeds.
+	if canister is touchable, try inserting noun into the canister instead;
+	say "There appears to be nothing that can grind anything here." instead;
 
 chapter untieing
 
@@ -10025,7 +9967,7 @@ lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 i
 
 the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 
-understand "oil" as oils when oils are visible.
+understand "oil" as oils when oils are touchable.
 
 check taking oils: say "They'd go through your fingers[if player has cask]. You can pour the oils, or fill the cask, instead[end if]." instead;
 
@@ -10041,11 +9983,11 @@ carry out filling:
 			if straw is in sack, try inserting straw into scraped wall instead;
 		say "You don't have any sort of stuffing to put in the wall." instead;
 	if noun is fridge, say "You don't need a separate storage space." instead;
-	if sack is not visible and cask is not visible, say "You don't see any containers." instead;
+	if sack is not touchable and cask is not touchable, say "You don't see any containers." instead;
 	if noun is sack:
 		if straw is in sack or hay is in sack, say "You already have something in there." instead;
-		if straw is visible, try inserting straw into sack instead;
-		if cask is visible, try inserting hay into sack instead;
+		if straw is touchable, try inserting straw into sack instead;
+		if cask is touchable, try inserting hay into sack instead;
 	if location of player is not cedars:
 		if oils are in cask, say "The cask is full already." instead;
 		say "You may have to be more specific. Try PUT x IN y instead." instead;
@@ -10092,9 +10034,9 @@ understand "shoot [something]" as shooting.
 
 understand "fire at [something]" as shooting.
 
-does the player mean shooting the wolves when the wolves are visible: it is very likely.
+does the player mean shooting the wolves when the wolves are touchable: it is very likely.
 
-does the player mean shooting the hoots button when the hoots button is visible: it is very likely.
+does the player mean shooting the hoots button when the hoots button is touchable: it is very likely.
 
 Rule for clarifying the parser's choice of hoots button when shooting: do nothing.
 
@@ -10107,7 +10049,7 @@ carry out shooting:
 	if player does not have shotgun, say "No gun." instead;
 	if noun is drapes, say "[if silver is off-stage]If you had ammo, y[else]Y[end if]ou'd probably want to shoot something more dangerous than the drapes." instead;
 	if noun is the player, say "Oh dear. Did the puzzles really lead you to that? I'm so sorry[if shotgun is not loaded], and you didn't even get to load the gun[end if]!" instead;
-	if shotgun is not loaded, say "Your shotgun is not loaded[if wolves are not visible], and there's nothing threatening enough around, yet[end if]." instead;
+	if shotgun is not loaded, say "Your shotgun is not loaded[if wolves are not touchable], and there's nothing threatening enough around, yet[end if]." instead;
 	if noun is dice, say "Gambling? At a dramatic point in the narrative like THIS?!" instead;
 	if noun is wolves:
 		say "Blam! Some part of the shotgun you couldn't see carves the silver bullet into sixths. Each flies off in a slightly different direction--taking out the wolves. The poison works quickly on them, and the Frost Forts and iced dice begin to melt quickly with a 'WHAT? THAW? HAWT!' Behind them, you see the strip. You walk back there.[paragraph break]The lupine lineup is no more, thanks to your adept hit in the death pit![paragraph break]You remember seeing the word LOGOI in an igloo that melted--you wonder if you could've said it to save yourself the whole trip in an alternate universe.";
@@ -10135,7 +10077,7 @@ understand "pry [thing] with [thing]" as peeling it with.
 
 understand "livers" as the plural of glopmeats.
 
-does the player mean doing something with livers when a glopmeat is visible: it is very unlikely.
+does the player mean doing something with livers when a glopmeat is touchable: it is very unlikely.
 
 rule for supplying a missing second noun while peeling: now the second noun is chisel.
 
@@ -10555,7 +10497,7 @@ understand the command "askthru" as something new.
 understand "askthru" as askthruing.
 
 carry out askthruing:
-	repeat with the-thingamabob running through the list of visible things:
+	repeat with the-thingamabob running through the list of touchable things:
 		say "Asking about [the-thingamabob].";
 		try objasking gateman about the-thingamabob;
 	repeat with the-thingamabob running through the list of things in Busiest Subsite:
@@ -10577,7 +10519,7 @@ understand the command "xray" as something new.
 understand "xray" as xraying.
 
 carry out xraying:
-	repeat with ABC running through visible things:
+	repeat with ABC running through touchable things:
 		if ABC is flippable or ABC is the location:
 			say "Xraying [ABC]:";
 			try xmxing ABC;
@@ -10614,7 +10556,7 @@ understand "sc1" as sc1ing.
 carry out sc1ing:
 	if player does not have tagged gadget, say "Giving you the gadget." instead;
 	now player has tagged gadget;
-	repeat with ABC running through visible things:
+	repeat with ABC running through touchable things:
 		say "Scanning [ABC]:[line break]";
 		try scaning ABC;
 	the rule succeeds;
@@ -10632,7 +10574,7 @@ understand the command "xall" as something new.
 understand "xall" as xalling.
 
 carry out xalling:
-	repeat with this-item running through visible things:
+	repeat with this-item running through touchable things:
 		say "[this-item]: [no line break]";
 		try examining this-item;
 	the rule succeeds;

@@ -17780,7 +17780,7 @@ blurb
 "shows tough-but-fair sympathy for the main character in [i]I Began a Binge[r]." [x]
 "shrugs over the conclusion of [i]A LSD Lad's Sad L[r]."
 "shudders at [i]Tad's Habit is THAT Bad[r]."
-"ssays the humor in [i]So, Teach Each Sot[r] is NOT overbearing, thank you." [x]
+"says the humor in [i]So, Teach Each Sot[r] is NOT overbearing, thank you." [x]
 "suggests people watch the 'classic' [i]Falk's Flask[r]." [x]
 "sympathizes with Fay Klos, the main character in [i]Yo, Flask? So Flaky[r]." [x]
 "takes a while to say there's nothing to say about [i]Needle Lendee[r]."
@@ -19400,7 +19400,7 @@ blurb
 
 table of tokers nonsense [xxs6]
 blurb
-"'[n-t] Tokes. Take notes,' says [if nestor is visible]Nestor[else]one of them[end if], and his pals all giggle." [x]
+"'[n-t] Tokes. Take notes,' says [if nestor is touchable]Nestor[else]one of them[end if], and his pals all giggle." [x]
 "'The A-Ok Toke! Ah!'"
 "'Ah, post: Host Pa has pot so phat!'" []
 "'Any pot? Pay not!' they tempt you, but things are mind-bending enough." [x]

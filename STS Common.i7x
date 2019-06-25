@@ -12,22 +12,15 @@ hub-region is a region that varies. [stores in each case]
 
 hub-room is a room that varies. [trips strip/strip of profits]
 
-To process (RL - a rule): [used to avoid Inform giving line breaks when I don't want them]
-	(- ProcessRulebook({RL}, 0, true); -)
-
-to rulesOn: [used to turn rules on at the very start of play]
-	(- RulesOnSub(); -)
-
-to say this-sts:
-	(- print (string) Story; -)
+to say this-sts: (- print (string) Story; -)
 
 to say gm-short: say "[if is-roiling is true]Roiling[else]Shuffling[end if]"
 
-to moot (th - a thing): move th to Emerita Emirate; [ it's meateier emerita emirate in roiling, but the namespace works out ok ]
+to moot (th - a thing): move th to Emerita Emirate; [ it's meatier emerita emirate in roiling, but the namespace works out ok, so we don't need to specify moot-room.]
 
-to mootl (lt - a list of things):
+to mootl (lt - a list of things): [used in particular for getting rid of fruits in Rustic Citrus.]
 	repeat with Q running through lt:
-		move Q to Emerita Emirate;
+		moot Q;
 
 definition: a thing (called th) is moot:
 	if th is in Emerita Emirate, yes;
@@ -131,8 +124,8 @@ to min-and:
 chapter person stuff
 
 definition: a person (called pe) is npcish:
-	if pe is the player, decide no;
-	if location of pe is the location of the player, decide yes;
+	if pe is the player, no;
+	if pe is touchable, yes;
 	decide no;
 
 chapter debug variables that need to be in release
