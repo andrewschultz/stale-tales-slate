@@ -464,7 +464,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 720.
+use MAX_VERBS of 730.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -480,7 +480,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 740. [delta=20]
+use MAX_VERBS of 750. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -4267,13 +4267,7 @@ to say sb-choose:
 	say "Your settler registers ";
 	if sb-cur is true, say "([if cheat-on is true]cheat on[else]no cheat[end if]) "
 
-chapter scaning air
-
-[?! how to bother scaning air ]
-
-check scaning heat: say "You look for a clue how to bother being a race acer...";
-
-check scaning cold: say "You look for a clue how to make some heat..."
+chapter scaning
 
 check scaning location of the player (this is the location scan rule):
 	d "scaning player location.";
@@ -4322,6 +4316,12 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Swell Wells:
 		if sorer bogey is touchable, try scaning sorer bogey instead;
 	say "You can't find anything specific to scan, and nothing shows up on your settler." instead;
+
+section preambles
+
+check scaning heat: say "You look for a clue how to bother being a race acer...";
+
+check scaning cold: say "You look for a clue how to make some heat..."
 
 chapter aftertexts
 
@@ -4422,6 +4422,7 @@ frat raft	true	true	false	false	"You're pretty sure you can get this one quickly
 gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
 inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
 i'm le cop polemic	true	true	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
+l'clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
 large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
 mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
 me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
@@ -15127,7 +15128,7 @@ understand "xa" as xaing.
 
 carry out xaing:
 	now xraytrump is true;
-	repeat with xc running through all things touchable:
+	repeat with xc running through all touchable things:
 		if xc is not curst palace and xc is not the player:
 			say "[xc]:[line break]";
 			try xraying xc;
@@ -15355,7 +15356,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 			d "Room not defined but not critical";
 	if player is in Actionless Coastlines:
 		if agnostic is off-stage:
-			say "You think you hear rustling off to the side, as if someone or something is hiding from the [random guardian touchable].[paragraph break]";
+			say "You think you hear rustling off to the side, as if someone or something is hiding from the [random touchable guardian].[paragraph break]";
 	continue the action;
 
 the castle near/far rule is listed last in the after printing the locale description rulebook.
@@ -17236,7 +17237,7 @@ to shuffle-guardians (goner - a guardian):
 	d "Blues left = [list of not moot blue guardians].";
 	d "Reds now [RG], blues now [BG]. [goner] = [if goner is red]red[else if goner is blue]blue[else if goner is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
 	if guar-here > 0:
-		now mr-hinty is a random guardian touchable;
+		now mr-hinty is a random touchable guardian;
 	else if Scope Copse is visited:
 		if any-cleared is false:
 			now any-cleared is true;
@@ -17310,7 +17311,7 @@ after going (this is the guardian reposition after rule):
 	if mrlp is Towers:
 		now guardians-seen is 0;
 		reposition-guardians;
-		if guar-here > 0, now mr-hinty is a random guardian touchable;
+		if guar-here > 0, now mr-hinty is a random touchable guardian;
 	continue the action;
 
 chapter reposition-guardians

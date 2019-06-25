@@ -1170,7 +1170,7 @@ this is the post-weeds-sewed rule:
 	now player has raves saver;
 
 this is the post-urpine-punier rule:
-	move blub bulb is to location of player; [?? I forget if this is necessary but I am being overcautious]
+	move blub bulb to location of player; [?? I forget if this is necessary but I am being overcautious]
 	moot blub bulb;
 	now succor crocus is in flowerpot;
 
