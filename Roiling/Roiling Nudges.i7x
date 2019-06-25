@@ -21,7 +21,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "abstract"	429617931	--	abstract painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining."
 "latch"	215399559	--	latches	--	"Not one latch. All of them."
 "table"	305336689	Dusty Study	--	--	"A bleat: 'tableS!'"
-"ceiling"	392118435	Dusty Study	--	--	"[if niche is visible]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
+"ceiling"	392118435	Dusty Study	--	--	"[if niche is touchable]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
 "subpoena"	574518649	--	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting."
 "palm"	201542769	--	--	is-study-dark rule	"You think you feel the palm shake a bit, but nothing terribly magical happens."
 "gape"	244059588	--	op-ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
@@ -51,8 +51,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "closet"	474362094	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "plate"	368383743	--	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	--	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
-"tenbeams"	608585586	--	--	basement-visible rule	"You probably just want to go DOWN to the [if Largely All-Grey Gallery is visited]gallery[else]basement[end if]."
-"stable"	401610655	--	--	stable-visible rule	"You probably just want to go IN to the stable."
+"tenbeams"	608585586	--	--	study-see-basement rule	"You probably just want to go DOWN to the [if Largely All-Grey Gallery is visited]gallery[else]basement[end if]."
+"stable"	401610655	--	--	study-see-stable rule	"You probably just want to go IN to the stable."
 "satchel"	439479634	--	satchel	--	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
 "chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
@@ -75,7 +75,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "flier"	338451493	--	--	elmo-chat rule	"Better to pump Elmo for information."
 "elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle is moot] that needed changing[end if]."
 "cavern"	410395643	Carven Cavern	--	--	"[locname]." [start Carven Cavern]
-"terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
+"terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are touchable]plates[else]staple[end if] are probably part of your training."
 "act"	124303421	--	act ruin curtain	--	"[curtain-block]."
 "ruin"	304329964	--	act ruin curtain	--	"[curtain-block]."
 "curtain"	428633385	--	act ruin curtain	--	"[curtain-block]."
@@ -339,8 +339,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "mazeentry"	824545388	--	zany meter	--	"[mz-chg]."
 "zany"	316424196	--	zany meter	--	"[mz-chg]."
 "meter"	508121192	--	zany meter	--	"[mz-chg]."
-"volt"	338441254	--	--	volt-maze-visible rule	"That can't be it. It's a volt MAZE."
-"maze"	317038698	--	--	volt-maze-visible rule	"That can't be it. It's a VOLT maze."
+"volt"	338441254	--	--	can-see-volt-maze rule	"That can't be it. It's a volt MAZE."
+"maze"	317038698	--	--	can-see-volt-maze rule	"That can't be it. It's a VOLT maze."
 "bigl"	149825292	Nowt Town	--	--	"The big L may be some sort of clue, but you can't do anything with it."
 "mazeltov"	655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if Saps' Pass is visited]back [end if]north."
@@ -602,7 +602,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "palace"	286467128	--	--	degen-true rule	"It's not just that it's a palace, it's CURST, too."
 "castle"	402197335	--	--	degen-true rule	"Not just any castle. Castle Apcur."
 "apcur"	293088972	--	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
-"lake"	236740944	--	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is visible]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if Mislit Limits is visited]You're beyond the lake now.[else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
+"lake"	236740944	--	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if Mislit Limits is visited]You're beyond the lake now.[else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
 "trefoil"	515914088	Loftier Trefoil	--	--	"[towersloc]." [LOFTIER TREFOIL 0 0]
 "warrior"	485439423	Loftier Trefoil	--	--	"[war-one]."
 "warriors"	581713389	Loftier Trefoil	--	--	"[war-one]."
@@ -730,7 +730,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "gadflie"	308944299	--	Lost Lots	--	"[gasgad]."
 "obscurest"	725670736	Obscurest Subsector	--	--	"[towersloc]." [OBSCUREST SUBSECTOR 4 1]
 "locked"	348940377	Obscurest Subsector	--	--	"Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if]."
-"gol"	160766118	Obscurest Subsector	--	--	"[if fissure is visible]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
+"gol"	160766118	Obscurest Subsector	--	--	"[if fissure is touchable]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
 "gaol"	162953936	Obscurest Subsector	--	--	"The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer."
 "loggaol"	323720054	Obscurest Subsector	--	--	"Nah, you're pretty sure you're overthinking things now. You [if duck is returned]opened[else]may want to open[end if] the prison."
 "jail"	149955028	Obscurest Subsector	--	--	"It's not just any jail--but prison ropins."
@@ -877,7 +877,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "terse"	540320005	--	ram3	--	"[add-ly]."
 "mack"	138201734	--	macks	--	"If you messed with one mack, the others would gang up on you. Work on the argument, instead."
 "macks"	234475700	--	macks	--	"Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if]."
-"gretta"	454137468	--	Gretta	--	"Gretta's been manipulated enough[if macks are visible]. Deal with the macks['] arguments, instead[end if]."
+"gretta"	454137468	--	Gretta	--	"Gretta's been manipulated enough[if macks are touchable]. Deal with the macks['] arguments, instead[end if]."
 "pool"	283984952	Loop Pool	--	--	"[locname]." [start Loop Pool]
 "allot"	287278091	Loop Pool	--	--	"[if eels are reflexed]You already made it there, and you don't need to go back[else]You don't need to change it, and the eels might not like it if you did[end if]."
 "wier"	366057531	Loop Pool	--	--	"The wire weir doesn't need to be changed."
@@ -919,7 +919,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "nail"	169902011	--	nails	--	"So many nails, hard to pick one. Might as well take care of them all."
 "critters"	664946148	Perverse Preserve	--	--	"[restrictr]."
 "critter"	568672182	Perverse Preserve	--	--	"[restrictr]."
-"raccoon"	343135453	Perverse Preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
+"raccoon"	343135453	Perverse Preserve	--	--	"[if corona is touchable]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
 "throne"	496782314	--	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
 "weltish"	 571213850	--	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
 "crone"	375395582	Rancho Archon Anchor	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act."
@@ -987,7 +987,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "needle"	527168763	--	compass	--	"The needle is working fine. No need to meddle."
 "tekno"	427109390	--	tekno-token	--	"There's enough credit on the token. Don't get greedy."
 "icon"	207258516	--	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
-"singed"	391609220	--	singed design	--	"The design is sort of glommed onto the coin[if coins are visible]s[end if]. So you should figure what to do, there."
+"singed"	391609220	--	singed design	--	"The design is sort of glommed onto the coin[if coins are touchable]s[end if]. So you should figure what to do, there."
 "lola"	184168073	--	dr lola	degen-true rule	"[count-enuf]."
 "drol"	234519308	--	lord al	degen-true rule	"[count-enuf]."
 "droll"	288333147	--	dollar	degen-true rule	"[count-enuf]."
@@ -1256,11 +1256,11 @@ to say dark-palm: say "[one of]You punch your fist as you realize DARK has no an
 
 to say g-pin: say "It's more that it's a giant pin and not, like, a safety pin";
 
-this is the basement-visible rule:
+this is the study-see-basement rule:
 	if player is in Dusty Study and meet bans is not in Dusty Study, the rule succeeds;
 	the rule fails;
 
-this is the stable-visible rule:
+this is the study-see-stable rule:
 	if player is in Dusty Study and tables are not in Dusty Study, the rule succeeds;
 	the rule fails;
 
@@ -1323,7 +1323,7 @@ to say board-change: say "It's what's on the board you need[if signboard is refl
 this is the has-reag rule:
 	if list o toils is examined:
 		if player is in Cleric Circle, the rule succeeds;
-		if number of visible quest-items > 0, the rule succeeds;
+		if number of touchable quest-items > 0, the rule succeeds;
 	the rule fails;
 
 to say fol-reag: say "[if player is in Cleric Circle][follow-the-list][else]Brother Horbert will do [i]his[r] magic on the reagents at the right time";
@@ -1430,8 +1430,9 @@ section presto auxiliary
 
 to say mz-chg: say "It's the maze you need to change, not the zany meter"
 
-this is the volt-maze-visible rule:
+this is the can-see-volt-maze rule:
 	if ether is off-stage and player is in Grey Gyre, the rule succeeds;
+	if player is in a mazeroom or player is in Unwary Runway, the rule succeeds;
 	the rule fails.
 
 this is the maze-gone rule:
@@ -1479,7 +1480,7 @@ to say d-sli: say "Despite being dangerous to walk into, Deil's Slide serves an 
 
 to say harphr: say "Concentrate on the words of the harpings phrasing"
 
-to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if usb is visible]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
+to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if usb is touchable]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
 
 to say slab-score:
 	if slab-pts < 10, increment slab-pts; [prevent rollover]
@@ -1498,7 +1499,7 @@ to say shackbut: say "There are buttons all over the shack, but they should rema
 to say caffeine-no: say "The name brand is not important. Besides, your body will break down the caffeine on its own, when needed"
 
 this is the my-cola rule:
-	if fizzy cola is visible or dirty cola is visible, the rule succeeds;
+	if fizzy cola is touchable or dirty cola is touchable, the rule succeeds;
 	the rule fails;
 
 to say cola-is-cola: say "It's cola, not soda or pop. And you can just drink it"
@@ -1510,7 +1511,7 @@ to say romstix: say "You'll know what to do with the sticks when you're ready to
 to say budge-note: say "Nothing happens. 'Budge, BUDGE!' you mutter, turning red and reading the whole message"
 
 this is the bookvis rule:
-	if number of visible badbooks > 0, the rule succeeds;
+	if number of touchable badbooks > 0, the rule succeeds;
 	the rule fails;
 
 to say kboard-det:
@@ -1526,7 +1527,7 @@ to say kboard-det:
 
 this is the wise-to-sleep rule:
 	if player is in Hacks' Shack:
-		if I'm Le Cop polemic is visible and I'm Le Cop polemic is reflexive, the rule succeeds;
+		if I'm Le Cop polemic is touchable and I'm Le Cop polemic is reflexive, the rule succeeds;
 	the rule fails;
 
 section oyster auxiliary
@@ -1561,7 +1562,7 @@ to say all-fish: say "You need to deal with all the bullies at once, somehow, no
 
 this is the is-hauntable rule:
 	if player is in Anger Range and haunter is off-stage, the rule succeeds;
-	if haunter is visible, the rule succeeds;
+	if haunter is touchable, the rule succeeds;
 	the rule fails;
 
 to say to-dig: say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
@@ -1589,7 +1590,7 @@ to say towersloc:
 	if number of guardians in location of player > 0:
 		say ". You might also want to try to deal with [the list of guardians in location of player]";
 
-to say war-one: say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of moot warriors > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
+to say war-one: say "[if vw is 1]There's only one warrior left, and his name is Rodney[else if mw > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life"
 
@@ -1602,7 +1603,7 @@ this is the got-pot rule:
 	the rule fails;
 
 this is the pas-vis rule:
-	if number of visible hintpastries > 0, the rule succeeds;
+	if number of touchable hintpastries > 0, the rule succeeds;
 	the rule fails;
 
 to say eat-pastry: say "The pastry is for eating, not for changing[if toaster is not visible]. It might be more edible if you heated it up, though[end if]"
@@ -1680,7 +1681,7 @@ this is the agnostic-male rule:
 to say smart-agnostic-no: say "[agnostic-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";
 
 this is the agnostic-female rule:
-	if agnostic is visible and agnostic is female, the rule succeeds;
+	if agnostic is touchable and agnostic is female, the rule succeeds;
 	the rule fails;
 
 to say fix-boat-parts: say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
@@ -1811,7 +1812,7 @@ this is the need-mango rule:
 	the rule fails.
 
 this is the lemnomel rule:
-	if lemons are visible and melon is not visible, the rule succeeds;
+	if lemons are touchable and melon is not touchable, the rule succeeds;
 	the rule fails;
 
 to say papay: say "[if auction caution is reflexive]You're probably over-thinking it--just pay attention to what it says, instead[else]You've taken the banner's advice well enough[end if]";

@@ -52,7 +52,7 @@ understand "trestle" as a mistake ("The settler is pretty powerful, but it can't
 
 chapter Largely All-Grey Gallery
 
-understand "astir" as a mistake ("[if stair is visible]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if].") when stair is visible or stria is in location of player or sitar is in location of player.
+understand "astir" as a mistake ("[if stair is touchable]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if].") when stair is touchable or stria is in location of player or sitar is in location of player.
 
 understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and meet bans are in Dusty Study.
 
@@ -60,7 +60,7 @@ understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly abo
 
 understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is in location of player.
 
-understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
+understand "sitar" as a mistake ("[if stair is touchable]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
 chapter Carven Cavern
 
@@ -196,7 +196,7 @@ understand "orcas" as a mistake ("But the whales would be beached. [if list o to
 
 understand "poopiest" as a mistake ("This is the wrong area for adjectives. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
 
-understand "scoar" and "scoars" as a mistake ("You don't get points just for asking them.") when player is in Same Mesa or player is in Adob Abode.
+understand "scoar" and "scoars" as a mistake ("You don't get points just for asking them.") when player is in Same Mesa or player is in Adobe Abode.
 
 chapter Idle Deli
 
@@ -696,7 +696,7 @@ understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, bu
 
 chapter shoals aslosh (backdrop)
 
-understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is visible.
+understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is touchable.
 
 understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is in location of player.
 
