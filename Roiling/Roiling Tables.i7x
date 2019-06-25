@@ -26,8 +26,8 @@ niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney ru
 meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-basement rule	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
-plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is in location of player]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are in location of player] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
+plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
+plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are touchable] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
 book stores
@@ -106,7 +106,7 @@ book presto
 table of presto anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 lamb	lamb	false	138495715	--	"blam"	"blam"	a rule	a rule	"You make pretend the gun noises as you point your finger at the poor little lamb. It runs off, scared. But the right kind of scared! And towards greener--well, less grey--pastures[if cur-score of presto is 0]. Hmm. That was a loud word you used, there. You make a mental note of others[end if]."
-hump	hump	false	287929218	Austerer Treasure	"umph"	"umph"	--	post-hump-umph rule	"You don't need to ham up 'Hup, ma!' to get over a hump, because it's enough just to try umph. The hump vanishes once you get oveer it[if Leo is in location of player]. Leo and Rand follow, jumping unnecessarily[end if]."
+hump	hump	false	287929218	Austerer Treasure	"umph"	"umph"	--	post-hump-umph rule	"You don't need to ham up 'Hup, ma!' to get over a hump, because it's enough just to try umph. The hump vanishes once you get oveer it[if Leo is touchable]. Leo and Rand follow, jumping unnecessarily[end if]."
 star	star	true	286895605	--	"rats"	"rats"	--	post-tsar-star rule	"The tsar star seems lodged in the tars. But you twist it around saying RATS, and it seems to wiggle a bit. Just as you're about to give up, you give one more twiddle, and the tsar star pops in the air![paragraph break]You manage to juggle it before it falls in the tars again, and you just manage to swat it onto dry ground before it falls. You take time to wipe the remaining tars off the tsar star, and as you do, the main tars themselves schlurp into the ground.[paragraph break]Now the tsar star is clean, you see you can affix it to your clothes. So you do."
 dart	dart	true	211650728	--	"drat"	"drat"	--	--	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."
 plebe	plebe	false	409310921	--	"bleep"	"bleep"	pre-plebe-bleep rule	--	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing tsar star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[else]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"
@@ -854,7 +854,7 @@ this is the post-disk-skid rule:
 	if disk is not prefigured:
 		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
 		preef disk;
-	now skid is in location of player;
+	move skid to location of player;
 
 this is the pre-skid-disk rule:
 	if yak is on skid, say "The yak doesn't need that sort of shock." instead;
@@ -1073,7 +1073,7 @@ this is the pre-warp-wrap rule:
 		say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'";
 		preef ruby;
 		do nothing instead;
-	if Aunt Tuna is in location of player:
+	if Aunt Tuna is touchable:
 		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe it needs to be saved [']til you find the right person to annoy.";
 		preef ruby;
 		do nothing instead;
@@ -1135,9 +1135,9 @@ this is the post-yapper-prepay rule:
 		move templar ramplet to Tenfold Teflon'd Den Loft;
 
 this is the pre-lever-revel rule:
-	if yapper is in location of player:
-		preef lever;
+	if yapper is touchable:
 		say "Nothing to celebrate yet--dispose of the yapper first." instead; [?? check to make sure preefing is first. Also, maybe have a post-preef rule?]
+		preef lever;
 
 this is the post-spin-pins rule:
 	now d2 is in Tenfold Teflon'd Den Loft;
@@ -1146,7 +1146,7 @@ this is the pre-dialer-redial rule:
 	if pins are reflexive, say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard..." instead;
 
 this is the pre-dialer-derail rule:
-	if yapper is in location of player:
+	if yapper is touchable:
 		say "The yapper'd totally tell on you. Good thing the yapper's more interested in telling you off.";
 		preef dialer;
 		do nothing instead;
@@ -1170,7 +1170,7 @@ this is the post-weeds-sewed rule:
 	now player has raves saver;
 
 this is the post-urpine-punier rule:
-	now blub bulb is in location of player; [?? I forget if this is necessary but I am being overcautious]
+	move blub bulb is to location of player; [?? I forget if this is necessary but I am being overcautious]
 	moot blub bulb;
 	now succor crocus is in flowerpot;
 
@@ -1215,7 +1215,7 @@ this is the post-dinger-grained rule: [?? this should not be necessary if take e
 	now player has solve a loaves;
 
 this is the pre-fussier rule:
-	if duck is not in location of player:
+	if duck is not touchable:
 		say "The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.";
 		preef fissure;
 		do nothing instead;
@@ -1232,7 +1232,7 @@ this is the post-yow-free rule:
 		now duck is returned;
 
 this is the pre-unlocked rule:
-	if duck is not in location of player:
+	if duck is not touchable:
 		say "You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
 		preef prison ropins;
 		do nothing instead;
@@ -1393,7 +1393,7 @@ this is the post-seacube-because rule:
 
 this is the pre-eels-else rule:
 	abide by the medal check rules for eels;
-	if sea cube is in location of player:
+	if sea cube is touchable:
 		preef eels;
 		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word." instead;
 
@@ -1446,7 +1446,7 @@ this is the post-ocelots-coolest rule:
 	process the post-lamer-realm-flip rule;
 
 this is the pre-whistle-deeply rule:
-	if Elvira is in location of player:
+	if Elvira is touchable:
 		say "Elvira summons her monsters to attack as you learn to play the whistle. 'Sorriest resistor! Apt end, pedant.' is the last you hear. Maybe you should've practiced somewhere else.";
 		get-dead;
 		follow the shutdown rules instead;

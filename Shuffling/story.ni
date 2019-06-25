@@ -291,7 +291,7 @@ to say tag-status:
 	if player is wearing the nametag:
 		say "still wearing that nametag";
 	else:
-		say "[if gateman is in location of player]at least [end if]not wearing that stupid nametag any more";
+		say "[if gateman is touchable]at least [end if]not wearing that stupid nametag any more";
 
 check dropping tomato: say "Much as you'd like to drop it, it [if player is in The Ol' Hotel]is actually handy here[else]might come in handy somewhere[end if]." instead;
 
@@ -1182,7 +1182,7 @@ check drinking:
 	say "I show no kind grin on drinking!" instead;
 
 check sleeping:
-	if mattress is in location of player and night thing is moot, say "On that mattress? Eww." instead;
+	if mattress is touchable and night thing is moot, say "On that mattress? Eww." instead;
 	say "On basker breaks? No!" instead;
 
 check squeezing: say "That's either icky or impossible or both." instead;
@@ -1286,9 +1286,9 @@ check throwing it at: say "No worth in that throw[if noun is tomato], but it cou
 
 rule for supplying a missing second noun while throwing:
 	if noun is tomato:
-		if night thing is in location of player, now second noun is night thing;
-		if faeries are in location of player, now second noun is faeries;
-		if nerds are in location of player, now second noun is nerds; [I doubt this will ever happen
+		if night thing is touchable, now second noun is night thing;
+		if faeries are touchable, now second noun is faeries;
+		if nerds are touchable, now second noun is nerds; [I doubt this will ever happen
 	else:
 		say "No need to go pitching items. [line break]";
 		continue the action;
@@ -1648,7 +1648,7 @@ carry out angleing:
 		say "You'd need to get the phial from the cabinet first." instead;
 	if player does not have phail phial, all-say "[reject]" instead;
 	if player is in sf or player is in rf:
-		if thorn is not in location of player, say "There's a weird haze in each of the four directions--north, south, east and west." instead;
+		if thorn is not touchable, say "There's a weird haze in each of the four directions--north, south, east and west." instead;
 	let ANG be the number of angleable things;
 	let see-others be false;
 	if player is in nick:
@@ -3221,7 +3221,7 @@ rule for supplying a missing noun (this is the scan the location if you can rule
 			now noun is anapest;
 			continue the action;
 		if player is in sf or player is in rf:
-			now noun is a random guider in location of player;
+			now noun is a random guider touchable;
 			say "You're picking something up. Probably [the noun].";
 			continue the action;
 	if current action is cring:
@@ -3753,12 +3753,12 @@ check going down in Trips Strip:
 	say "Unfortunately, there are no cool hidden passages beneath the stores. That you can see. Yet." instead;
 
 check going inside in Trips Strip:
-	if number of portals in location of player is 1:
-		let RP be a random portal in location of player;
+	if number of touchable portals is 1:
+		let RP be a random portal touchable;
 		d "Trying portal [RP].";
 		try entering RP instead;
-	if number of portals in location of player is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
-	say "That's ambiguous--you can currently enter [the list of portals in location of player] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
+	if number of touchable portals is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
+	say "That's ambiguous--you can currently enter [the list of touchable portals] to explore areas you haven't solved yet. No one looks more intimidating than the other." instead;
 
 cool-index is a number that varies.
 
@@ -4163,10 +4163,10 @@ Rule for supplying a missing noun while entering (this is the other stuff to ent
 		now the noun is the passage;
 		continue the activity;
 	if location is Trips Strip:
-		let Q be number of portals in location of player;
-		if Q > 1, say "That's ambiguous--you can currently enter [the list of portals in location of player] to explore areas you haven't solved yet." instead;
+		let Q be number of touchable portals;
+		if Q > 1, say "That's ambiguous--you can currently enter [the list of touchable portals] to explore areas you haven't solved yet." instead;
 		if Q is 0, say "You don't have anywhere to enter." instead;
-		now the noun is a random portal in location of player;
+		now the noun is a random portal touchable;
 		continue the activity;
 	continue the activity.
 
@@ -4294,19 +4294,19 @@ a whiff of stew is a guider. godir of whiff of stew is west. description of whif
 
 lgth of stew is 4. gpos of stew is 4. rpos of stew is 2. rgtext of stew is "[rc][rc][rc][rc]". cert-text of stew is "-[d1][d1][d1]". rect-text of stew is "W[d1][d1][ast]T".
 
-understand "smell" as whiff of stew when whiff of stew is in location of player.
+understand "smell" as whiff of stew when whiff of stew is touchable.
 
 a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or any of its brethren. Maybe it indicates the way to go, if you stop and think for a moment.". the rgtext of thorn is "[rc][rc][rc][rc][rc]". the lgth of thorn is 5. gpos of thorn is 5. rpos of thorn is 2. cert-text of thorn is "-[d1][d1][d1][d1]". rect-text of thorn is "N[d1][d1][d1][ast]H".
 
 an aroma of teas is a guider. godir of aroma of teas is east. description of teas is "You're not refined enough to know which teas. It's kind of a combination of them, a new direction in olfactory sense.". the rgtext of teas is "[rc][rc][rc][rc]". the lgth of teas is 4. gpos of teas is 2. rpos of teas is 1. cert-text of teas is "-[d1][d1][d1]". rect-text of teas is "E[d1][d1][ast]T".
 
-understand "smell" as aroma of teas when aroma of teas is in location of player.
+understand "smell" as aroma of teas when aroma of teas is touchable.
 
 understand "tea" as aroma of teas.
 
 a rambling shout is a guider. godir of rambling shout is south. description of shout is "It's gibberish, but it has to be coming from somewhere.". the rgtext of shout is "[gc][rc][rc][rc][rc]". the lgth of shout is 5. gpos of shout is 1. rpos of shout is 2. cert-text of shout is "S[d1][d1][d1][d1]". rect-text of shout is "S[d1][d1][d1][ast]H".
 
-understand "noise/sound" as rambling shout when rambling shout is in location of player.
+understand "noise/sound" as rambling shout when rambling shout is touchable.
 
 chapter Rest of Forest
 
@@ -5329,7 +5329,7 @@ check opening large packet: try attacking large packet instead;
 
 description of HOTSAUCE is "[if hotsauce is part of tortilla]It certainly gives the taco color[else]It's some disturbing mix of reddish shades of orange-red. The ungrammatical HOTSAUCE on the packet blocks out any list of ingredients, which is probably for the best[end if]."
 
-understand "hot sauce" and "hot/sauce" as HOTSAUCE when player has HOTSAUCE or HOTSAUCE is in location of player.
+understand "hot sauce" and "hot/sauce" as HOTSAUCE when player has HOTSAUCE or HOTSAUCE is touchable.
 
 section red inn
 
@@ -5607,9 +5607,9 @@ carry out pouring:
 	if player has sack and cask is abrod, say "Fluids would leak through the sack. The cask you had would be better." instead;
 	if player does not have cask, say "Nothing to pour anything into." instead;
 	if noun is cask and oils are not in cask, say "Nothing in the cask to pour." instead;
-	if noun is soil and oils are in cask and soil is not in location of player, try fliptoing soil instead;
+	if noun is soil and oils are in cask and soil is not touchable, try fliptoing soil instead;
 	if noun is silo and if oils are in cask and and soil is in moor, try fliptoing silo instead;
-	if noun is not in location of player, say "You can't see any such thing." instead;
+	if noun is not touchable, say "You can't see any such thing." instead;
 	if noun is oils and location of player is Sacred Cedars:
 		if oils are in cask, say "[cask-full]." instead;
 		try filling cask instead;
@@ -6839,7 +6839,7 @@ the ketchup bottle is a thing in The Ol' Hotel. "A ketchup bottle lies here, tor
 
 the description of the ketchup bottle is "It is THE PUCK brand ketchup. And it's shaped that way, too. They apparently put, heck, whatever they want in it! And you'll like it that way!"
 
-check taking the ketchup bottle: say "[if night thing is not in location of player]Trust me. You don't need it[else]The night thing roars. Though it's drained the bottle of its contents, it still feels an emotional attachment you would be wise not to break[end if]." instead;
+check taking the ketchup bottle: say "[if night thing is not touchable]Trust me. You don't need it[else]The night thing roars. Though it's drained the bottle of its contents, it still feels an emotional attachment you would be wise not to break[end if]." instead;
 
 check inserting into the bottle: say "Ketchup bottles have those narrow necks, so nothing really fits. One look at the bottle, and you probably don't WANT anything to fit." instead;
 
@@ -7427,7 +7427,7 @@ Rived Drive is a room in Resort.
 does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
 
-to say p-s: say "[if poles are in location of player]poles[else]slope[end if]
+to say p-s: say "[if poles are touchable]poles[else]slope[end if]
 
 section blow bowl
 
@@ -8414,12 +8414,12 @@ asking generically is an action applying to one topic. Understand "ask about [te
 objasking generically is an action applying to one visible thing. Understand "ask about [any thing]" or "talk about [any thing]" or "a [any thing]" as objasking generically.
 
 check objasking generically (This is the check for only one sensible object converser rule):
-	if the number of NPCish persons in location of the player is 0:
+	if the number of NPCish persons is 0:
 		repeat with X running through touchable scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
-	if the number of NPCish persons in the location of the player is 1:
+	if the number of NPCish persons is 1:
 		try objasking a random NPCish person about the noun instead;
 	if debug-state is true, say "[list of NPCish people].";
 	say "Ambiguous--more than two people here." instead;
@@ -8449,12 +8449,12 @@ understand the command "tell [thing] about [text]" as something new.
 understand "tell [thing] about [text]" as asking it about.
 
 Check asking generically (This is the check for only one sensible converser rule):
-	if the number of npcish people in location of the player is 0:
+	if the number of npcish people is 0:
 		repeat with X running through touchable scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
-	if the number of NPCish people in location of player is 1:
+	if the number of NPCish people is 1:
 		try asking a random NPCish person about the topic understood instead;
 	if debug-state is true, say "[list of NPCish people].";
 	say "Ambiguous--more than two people here." instead;
@@ -9417,7 +9417,7 @@ check listening:
 		if static is touchable, say "You hear static coming from the doll house." instead;
 		say "Each attic is tacit now." instead;
 	if player is in astral altars, say "You hear mumblings you aren't in the ELITE LISTS. They make you see red." instead;
-	if shout is in location of player, say "You still hear that shout[one of], and if you listen again, you could get a couple of words.[or] that turns you red from its silliness: [one of]'Hut! SO!'[or]'Uh?! SOT!'[or]'Us, HOT!'[in random order][stopping]" instead;
+	if shout is touchable, say "You still hear that shout[one of], and if you listen again, you could get a couple of words.[or] that turns you red from its silliness: [one of]'Hut! SO!'[or]'Uh?! SOT!'[or]'Us, HOT!'[in random order][stopping]" instead;
 	say "[one of]Silent[or]Quite quiet[cycling]." instead;
 
 to say no-you: say "[one of]No, y[or]Y[stopping]".
@@ -10846,7 +10846,7 @@ understand "disas" as disasing.
 
 carry out disasing:
 	repeat with Q running through disguise-pieces:
-		now Q is in location of player;
+		move Q to location of player;
 		now player has Q;
 	say "The three beard parts are now all disassembled.";
 	the rule succeeds;

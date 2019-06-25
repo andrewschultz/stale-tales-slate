@@ -406,7 +406,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "phat"	224046094	Phat Path	--	--	"[locname]." [start Phat Path]
 "saps"	276201709	Phat Path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks' Shack is visited]back [end if]north, here."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
-"entyr"	507506690	Phat Path	--	--	"[if leo is in location of player]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
+"entyr"	507506690	Phat Path	--	--	"[if leo is touchable]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
 "summit"	477632943	--	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks' Shack]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	--	harpings phrasing	--	"[harphr]."
 "harping"	352759935	--	harpings phrasing	--	"[harphr]."
@@ -1587,8 +1587,7 @@ to say bland-sad: say "[if Mislit Limits is not visited and waters are not visit
 
 to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
-	if number of guardians in location of player > 0:
-		say ". You might also want to try to deal with [the list of guardians in location of player]";
+	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
 to say war-one: say "[if vw is 1]There's only one warrior left, and his name is Rodney[else if mw > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 

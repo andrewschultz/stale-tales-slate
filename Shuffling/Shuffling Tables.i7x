@@ -122,8 +122,8 @@ this is the post-bolt-blot rule:
 
 this is the post-toga-goat rule:
 	if player has toga or player has goat:
-		now toga is in location of player;
-		now goat is in location of player;
+		,move toga to location of player;
+		,move goat to location of player;
 	set the pronoun him to goat;
 	set the pronoun her to goat;
 
@@ -150,7 +150,7 @@ this is the pre-nametag-gateman rule:
 		the rule succeeds;
 	if player wears the nametag:
 		say "If you really CAN change the nametag, you don't want a gateman in your face--so you chuck the nametag away. Not really believing...";
-	now nametag is in location of player;
+	move nametag to location of player;
 
 this is the post-nametag-gateman rule:
 	set the pronoun him to gateman;
