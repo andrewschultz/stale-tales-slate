@@ -271,7 +271,7 @@ section about the player
 
 does the player mean examining the player: it is unlikely.
 
-description of player is "[player-descrip]."
+description of player is "[player-descrip].". initial appearance of player is "You should never see yourself.".
 
 to say player-descrip:
 	if Trips Strip is unvisited:
@@ -621,7 +621,7 @@ to show-missed (curr - a region):
 		if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
 		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
 		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.";
-		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
+		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
 		say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess[or]you could also have tried [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
 
 rule for showing what the player missed:
@@ -1188,8 +1188,8 @@ check sleeping:
 check squeezing: say "That's either icky or impossible or both." instead;
 
 check singing:
-	if location of player is Gnarliest Triangles: say "Alas, the notes stone does not interact favorably with your tones." instead;
-	say "Oddly, when you start, you see a big sign telling you not to.". instead;
+	if location of player is Gnarliest Triangles, say "Alas, the notes stone does not interact favorably with your tones." instead;
+	say "Oddly, when you start, you see a big sign telling you not to." instead;
 
 check waving hands:
 	if player is in Busiest Subsite, say "You don't see any friends nearby, sadly. It's all a bit awkward." instead;
@@ -1228,7 +1228,7 @@ check eating: [?? eat weird stuff]
 	if noun is pancake, say "Too cold and bland. Plus, it's probably someone else's, like Ana Peck. Or Cap. Kane[if taco is off-stage]. You might want to fiddle with what's on the counter[else]. The stuff on the counter was what was really important, anyway[end if]." instead;
 	if noun is grits, say "You have an attack of conscience and decide to leave them for someone else." instead;
 	if noun is a pregredient, say "Not in that form, and not by itself." instead;
-	if noun is an ingredient and noun is part of the tortilla, tortilla, try eating tortilla instead;
+	if noun is an ingredient and noun is part of the tortilla, try eating tortilla instead;
 	if noun is lettuce, say "Too plain by itself." instead;
 	if noun is steak, say "It's cooked, but really, it'd go better with something." instead;
 	if noun is Parmesan, say "Too strong by itself. You could've when you were three. Not now." instead;
@@ -1288,7 +1288,7 @@ rule for supplying a missing second noun while throwing:
 	if noun is tomato:
 		if night thing is touchable, now second noun is night thing;
 		if faeries are touchable, now second noun is faeries;
-		if nerds are touchable, now second noun is nerds; [I doubt this will ever happen
+		if nerds are touchable, now second noun is nerds; [I doubt this will ever happen, but let's make sure]
 	else:
 		say "No need to go pitching items. [line break]";
 		continue the action;
@@ -1425,7 +1425,7 @@ check attacking:
 	if noun is knot, say "You fail to tonk it." instead;
 	if noun is phial, say "The lube would ooze out and be useless." instead;
 	if noun is mega ant, say "The ant spits, and you back off. You don't have a weapon, and you can't see any, even in the cabinet." instead; [Ordeal Loader]
-	if noun is doll house: say "Some hero(ine) you'd be, vandalizing a doll house." instead;
+	if noun is doll house, say "Some hero(ine) you'd be, vandalizing a doll house." instead;
 	if noun is gateman, say "But he's here to help you. And he's, uh, bigger than you, too." instead;
 	if noun is sandwich, try opening noun instead; [forest]
 	if noun is spread, try cutting noun instead;
@@ -1481,7 +1481,8 @@ understand the command "stab [something]" as something new.
 understand "stab [something]" as stabing.
 
 carry out stabing:
-	if player has sliver, if noun is drapes or noun is spread, try cutting noun instead;
+	if player has sliver:
+		if noun is drapes or noun is spread, try cutting noun instead;
 	if player has sword or sword is in sheath, try attacking the noun instead;
 	say "Stab? With what you have? Bats." instead;
 	the rule succeeds;
@@ -1902,6 +1903,8 @@ carry out sging:
 		say "You switch the gadget to certify.";
 		now gadget is cert;
 	the rule succeeds;
+
+report taking tagged gadget for the first time: say "Nat Egam nods. 'Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo.'";
 
 book area-save
 
@@ -2663,7 +2666,7 @@ understand "nat/egam" and "nat egam" and "tan/mage" and "tan mage" and "gate man
 
 understand "old man" and "man" as gateman when player is in Notices Section and gateman is in Notices Section.
 
-the odor is boring scenery. it is in Rested Desert. bore-text is "You smell an odor of adventure and new and different things.". bore-check is bore-odor rule.
+the odor is boring scenery. it is in Rested Desert. description of odor is "The odor makes you yearn for adventure and new and different things.". bore-check is bore-odor rule.
 
 this is the bore-odor rule:
 	if current action is smelling, try examining the odor instead;
@@ -3193,10 +3196,7 @@ after printing the name of the tagged gadget when taking inventory:
 	if tagged gadget is examined or ever-scan is true:
 		say " ([if button-locked is true]locked into [end if][if gadget is cert]CERTIFY[else]RECTIFY[end if] mode)";
 
-check taking gadget:
-	if gadget is in Potshot Hotspot and red bull is in Potshot Hotspot, say "Red Bull Burdell kicks it out of the way." instead;
-
-	[say "Nat Egam coughs. 'Be a bit unfair if you had both. Y'wanna leave that other doohickey? I mean, I believe you're gonna fix things, but just in case, the next guy'll need a little...plus, I'm kinda proud of it...'"]
+check taking gadget: if gadget is in Potshot Hotspot and red bull is in Potshot Hotspot, say "Red Bull Burdell kicks it out of the way." instead;
 
 after taking the tagged gadget:
 	say "[one of]It's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget[or]You pick up the gadget, again[stopping].";
@@ -3221,7 +3221,7 @@ rule for supplying a missing noun (this is the scan the location if you can rule
 			now noun is anapest;
 			continue the action;
 		if player is in sf or player is in rf:
-			now noun is a random guider touchable;
+			now noun is a random touchable guider;
 			say "You're picking something up. Probably [the noun].";
 			continue the action;
 	if current action is cring:
@@ -3286,7 +3286,7 @@ this is the bore-pit rule:
 		say "You check the tip's setting in the pit.";
 		try examining the tip instead;
 
-the tip is a boring thing. it is part of the tagged gadget. "The tip points to [c-r][if gadget-secured is true] and is stuck there, so you can't[else], but you can[end if] switch it back to [r-c][if button-locked is false] unless you push SECURE[end if].". bore-text is "The tip's just there to examine, so you know the gadget's setting.".
+the tip is a boring thing. it is part of the tagged gadget. description of tip is "The tip points to [c-r][if gadget-secured is true] and is stuck there, so you can't[else], but you can[end if] switch it back to [r-c][if button-locked is false] unless you push SECURE[end if].". bore-text is "The tip's just there to examine, so you know the gadget's setting.".
 
 the block setting it to rule is not listed in any rulebook.
 
@@ -3330,7 +3330,7 @@ the show hows tag is part of the tagged gadget. understand "show-hows" and "show
 
 does the player mean taking off the magenta nametag when the player is not wearing the magenta nametag: it is very unlikely.
 
-the gadget-screen is a boring thing. it is part of the tagged gadget. the gadget-screen is privately-named. the printed name of the gadget-screen is "gadget's screen". Understand "gadget screen" and "screen" as the gadget-screen. bore-text is "Looking at the tag, you see you probably need to SCAN other objects to change the screen productively. There's probably not much else you want to do with or to the screen.". bore-check is bore-gadget-screen rule.
+the gadget-screen is a boring thing. it is part of the tagged gadget. the gadget-screen is privately-named. the printed name of the gadget-screen is "gadget's screen". Understand "gadget screen" and "screen" as the gadget-screen. bore-text is "Looking at the tag, you see you probably need to SCAN other objects to change the screen productively. There's probably not much else you want to do with or to the screen.". bore-check is bore-gadget-screen rule. description of gadget-screen is "The screen will be blank until you SCAN something.".
 
 this is the bore-gadget-screen rule:
 	if current action is examining:
@@ -3413,6 +3413,7 @@ the small print disclaimer is part of the show hows tag.
 description of small print disclaimer is "'Adventurers using the gadget frequently are no less certifiably heroic and no more certifiably practical than those who don't. Manufacturer not responsible for guilt and lack of intellectual self-satisfaction over using gadget too frequently or frustration from using gadget too rarely.'"
 
 check taking off the show hows tag: try silently taking the show hows tag instead;
+
 check taking the show hows tag:
 	ignore the can't take component parts rule;
 	say "If it were a mattress tag, you'd laugh and pull it off, but everything's gotten a bit weird. You don't know about the warranty on it, but the tag seems pretty important. It's made of some weird plastic you can't just rip[one of].[paragraph break]Plus, embarrassingly, you've no clue how to undo the knot tying the tag to the handle--and you're not strong enough to pull the tag off[or][stopping].";
@@ -3423,7 +3424,7 @@ check taking the show hows tag:
 			try taking the gadget instead;
 		else:
 			say "Ok.";
-	the rule succeds;
+	the rule succeeds;
 
 check pulling show hows tag: try taking show hows tag instead;
 
@@ -3754,7 +3755,7 @@ check going down in Trips Strip:
 
 check going inside in Trips Strip:
 	if number of touchable portals is 1:
-		let RP be a random portal touchable;
+		let RP be a random touchable portal;
 		d "Trying portal [RP].";
 		try entering RP instead;
 	if number of touchable portals is 0, say "You'll need to figure a store out to go inside[if number of not unsolved regions > 1], on top of what you solved[else], first[end if]." instead;
@@ -3762,7 +3763,7 @@ check going inside in Trips Strip:
 
 cool-index is a number that varies.
 
-the begad badge is boring scenery in Trips Strip. bore-text of begad badge is "'For warping purposes, a store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'".
+the begad badge is boring scenery in Trips Strip. description of begad badge is "'For warping purposes, a store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'".
 
 chapter stos
 
@@ -3893,8 +3894,8 @@ does the player mean entering disamb-store: it is likely.
 description of disamb-store is "[sto-desc]".
 
 check burning:
-	if noun is a sto, say "The stores have suffered enough.";
-	if noun is warts, say "That's a false cure that makes them worse." iinstead;
+	if noun is a sto, say "The stores have suffered enough." instead;
+	if noun is warts, say "That's a false cure that makes them worse." instead;
 	say "You've got no source of fire[if player has lit-up tulip]. The tulip doesn't count--it's child safe and stuff[end if]." instead;
 
 check pushing a sto: say "Physical activity won't do it, here." instead;
@@ -4166,7 +4167,7 @@ Rule for supplying a missing noun while entering (this is the other stuff to ent
 		let Q be number of touchable portals;
 		if Q > 1, say "That's ambiguous--you can currently enter [the list of touchable portals] to explore areas you haven't solved yet." instead;
 		if Q is 0, say "You don't have anywhere to enter." instead;
-		now the noun is a random portal touchable;
+		now the noun is a random touchable portal;
 		continue the activity;
 	continue the activity.
 
@@ -4352,12 +4353,11 @@ Include (-
 	has transparent animate
 -) when defining gy.
 
-gy is privately-named boring scenery in Self-ID Fields. understand "man" as gy when player is in Self-ID Fields. bore-check is bore-too-late rule.
+gy is privately-named boring scenery in Self-ID Fields. understand "man" as gy when player is in Self-ID Fields. description of gy is "They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.". bore-text of gy is "Any individual guy going by doesn't matter. All they can do is face their fate. Maybe you can learn from them.".
 
-this is the bore-too-late rule:
-	it-them gy;
-	if action is procedural, say "Any invdividual guy going by doesn't matter." instead;
-	say "Too late. He's gone. But here's another.".
+this is the bore-gy rule:
+	set the pronoun it to gy;
+	set the pronoun him to gy;
 
 printed name of gy is "bearded man".
 
@@ -4803,9 +4803,9 @@ chapter Ghouls' Slough
 
 Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough.
 
-the dog is amusing boring scenery in Ghouls' Slough. bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
+the dog is amusing boring scenery in Ghouls' Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
 
-the bog is amusing boring scenery in Ghouls' Slough. bore-text is "The bog feels like a big old gob that could suck you in. You just want to find a way away from it."
+the bog is amusing boring scenery in Ghouls' Slough. description is "The bog is pretty much all around. Maybe something could help you through it, though.". bore-text is "The bog feels like a big old gob that could suck you in. You just want to find a way away from it. Maybe something could help you through it, though."
 
 to say end-it: end the story.
 
@@ -4842,13 +4842,15 @@ understand "ice" as iced dice.
 
 section forts (scenery)
 
-the fos are privately-named amusing boring scenery in frost forts. printed name of fos is "forts". understand "forts" and "frost forts" as fos. bore-text of fos is "The forts cannot help you in any way.". bore-check of fos is bore-forts rule.
+the fos are privately-named amusing boring scenery in frost forts. printed name of fos is "forts". understand "forts" and "frost forts" as fos. bore-text of fos is "The forts aren't doing much more than intimidating you.". bore-check of fos is bore-forts rule. description of fos is "The forts surround you. Still, nothing seems to be inside them. The [wo-vo], on the other hand..."
 
 this is the bore-forts rule:
 	if current action is entering, say "The Frost Forts would provide no protection from the final conflict you face." instead;
 	if wolves are in Frost Forts and current action is taking, say "If you could pick the dice up, you wouldn't need another weapon to trash the wolves." instead;
 
-the frowns are plural-named amusing boring things. They are part of the fos. description of frowns is "Frowny, as if they want you to fry now. Also, impassable. They have no doors but you're worried something will jump at you from them. As unpleasant as the [if wolves are in Frost Forts]wolves[else]vowels[end if]."
+the frowns are plural-named amusing boring things. They are part of the fos. description of frowns is "Frowny, as if they want you to fry now. Also, impassable. They have no doors but you're worried something will jump at you from them. As unpleasant as the [wo-vo]."
+
+to say wo-vo: say "[if wolves are in Frost Forts]wolves[else]vowels[end if]"
 
 section vowels
 
@@ -4875,7 +4877,7 @@ section gnash hangs
 
 the gnash hangs are bounding boring scenery in Frost Forts. description of gnash hangs is "They menace you from all around, ready to jump if you try to escape. The ones you see stay still, but you can hear the ones behind you snapping.". bore-text of gnash hangs is "The gnash hangs are just there for atmosphere, to force you into the final conflict."
 
-the bumps are a plural-named boring thing. the bumps are part of the vowels. bore-text of bumps is "They look almost like fangs or very long nails."
+the bumps are a plural-named boring thing. the bumps are part of the vowels. description of bumps is "They look almost like fangs or very long nails."
 
 volume Sortie
 
@@ -5142,7 +5144,7 @@ for printing a locale paragraph about a tacoish thing (called xyzyx) when player
 	now grief'd fridge is mentioned;
 	if xyzyx is a pregredient or xyzyx is an ingredient:
 		if xyzyx is not mentioned and xyzyx is not part of the tortilla:
-			say "The Red Inn contains things that [if nvp > 0 and number of separate-touchable ingredients > 0]do and don't [else if number of touchable pregredients > 0]don't [end if]belong in a kitchen: ";
+			say "The Red Inn contains things that [if nvp > 0 and number of separate-in-kitchen ingredients > 0]do and don't [else if number of touchable pregredients > 0]don't [end if]belong in a kitchen: ";
 			if nvp > 0, say "[a list of touchable pregredients]";
 			if nvp > 0 and nvi > 0, say ". It also contains, more suitably, ";
 			if nvi > 0, say "[the list of separate-in-kitchen ingredients]";
@@ -5288,7 +5290,7 @@ check scaning (this is the scan the spearman and not his parts rule):
 
 understand "spear man" as spearman.
 
-the spear is a boring thing. it is part of the spearman. bore-text of spear is "The spear is about as tall as the spearman, but there's nothing special about it, other than it makes him a spearman.". spear is useless.
+the spear is a boring thing. it is part of the spearman. description of spear is "The spear is about as tall as the spearman, but there's nothing special about it, other than it makes him a spearman.". spear is useless.
 
 the pile of grated Parmesan cheese is an ingredient. understand "cheese" as Parmesan when Parmesan is touchable.
 
@@ -5368,7 +5370,7 @@ understand "heapin/ helpin/" as grist
 
 understand "heapin/ helpin/" as grits
 
-the grits are a plural-named LLPish thing. the grits are in the fridge.lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S".
+the grits are a plural-named LLPish thing. the grits are in the fridge. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S".
 
 rule for deciding whether all includes a thing in fridge: it does not.
 
@@ -5480,7 +5482,7 @@ check examining the panel:
 
 tie-warn is a truth state that varies.
 
-the check for big quest item attachment rule is listed first in the check tying rules.
+the check for big quest item attachment rule is listed first in the check tying it to rules.
 
 check tying to (this is the check for big quest item attachment rule):
 	if tie-warn is false:
@@ -5574,7 +5576,7 @@ after doing something with hoses:
 	set the pronoun it to hoses;
 	continue the action;
 
-the shoes are a plural-named boring thing. bore-text is "You're wearing the shoes. They fit fine, like you don't notice. No need to adjust them.".
+the shoes are a plural-named boring thing. bore-text is "You're wearing the shoes. They fit fine, like you don't notice. No need to adjust them.". description of shoes is "Since thee shoes are mooted after you changed them from the hoses, you shouldn't see this.".
 
 understand "hose" as hoses.
 
@@ -5608,7 +5610,7 @@ carry out pouring:
 	if player does not have cask, say "Nothing to pour anything into." instead;
 	if noun is cask and oils are not in cask, say "Nothing in the cask to pour." instead;
 	if noun is soil and oils are in cask and soil is not touchable, try fliptoing soil instead;
-	if noun is silo and if oils are in cask and and soil is in moor, try fliptoing silo instead;
+	if noun is silo and oils are in cask and soil is in moor, try fliptoing silo instead;
 	if noun is not touchable, say "You can't see any such thing." instead;
 	if noun is oils and location of player is Sacred Cedars:
 		if oils are in cask, say "[cask-full]." instead;
@@ -6574,7 +6576,7 @@ report taking the dry cake:
 	say "Taking it is a piece of cake with everyone gone, you note dryly.";
 	the rule succeeds;
 
-check taking heaths: if the player's command matches the regular expression "\bheath\b":, say "(all of them, why not?)";
+check taking heaths: if the player's command matches the regular expression "\bheath\b", say "(all of them, why not?)";
 
 check taking begonias: if the player's command matches the regular expression "begonia\b", say "(all of them, why not?)";
 
@@ -6722,7 +6724,7 @@ check giving gardenia to faeries:
 	now fairy-worthy is true instead;
 
 to say take-flower:
-	say "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel".
+	say "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel";
 	now faeries are realized;
 
 report taking heaths:
@@ -6903,12 +6905,12 @@ check switching on the termite emitter:
 	if location is Bassy, say "The termites would put up a valiant but futile effort." instead;
 	say "The termites don't have enough to eat here." instead;
 
-the smartest mattress is a boring fixed in place container in The Ol' Hotel. bore-text of smartest mattress is "The night thing is sitting on the smartest mattress. You'll need to get rid of the mattress. bore-check is bore-mattress rule.
+the smartest mattress is a boring fixed in place container in The Ol' Hotel. bore-text of smartest mattress is "The night thing is sitting on the smartest mattress. You'll need to get rid of the mattress.". bore-check is bore-mattress rule.
 
 does the player mean entering the mattress: it is likely.
 
 this is the bore-mattress rule:
-	if action is examining or action is searching or action is reading, say "Not with the night thing on it." instead;
+	if current action is examining or current action is searching or current action is reading, say "Not with the night thing on it." instead;
 
 rule for printing a locale paragraph about the smartest mattress:
 	if night thing is not touchable, say "The mattress still conforms to the shape of the night thing that sat on it[if emitter is off-stage]--but it also has a bump in one corner[end if].";
@@ -7211,7 +7213,7 @@ after examining the neon pig:
 			say "Don't blame you.";
 	continue the action;
 
-the glowing flowers are a plural-named amusing boring thing. they are part of the neon pig. bore-text of glowing flowers is "The flowers['] symbolism is obvious and probably meant to be. You probably want to deal with the whole hog (sorry.)"
+the glowing flowers are a plural-named amusing boring thing. they are part of the neon pig. description of glowing flowers is "The flowers make the neon pig look tackier, but maybe if you get rid of the neon pig, they'll go away, too.". bore-text is "The glowing flowers aren't important. You probably want to deal with the whole hog (sorry.)".
 
 check taking neon pig: say "You'd let go of the cafe face and fall to your doom." instead;
 
@@ -7318,7 +7320,7 @@ section leis
 
 the l2 are privately-named plural-named scenery in Leis Isle. "Looking at the leis, you half forget you came through Store R to beat Red Bull Burdell."
 
-the lies are a privately-named thing.
+the lies are a privately-named thing. description of lies is "You should not see the actual lies."
 
 understand "leis" as l2 when l2 are in Leis Isle.
 
@@ -7427,7 +7429,7 @@ Rived Drive is a room in Resort.
 does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
 
-to say p-s: say "[if poles are touchable]poles[else]slope[end if]
+to say p-s: say "[if poles are touchable]poles[else]slope[end if]"
 
 section blow bowl
 
@@ -7467,7 +7469,7 @@ carry out scaning outcroppings: say "They don't seem to give a different scan th
 
 description of outcroppings is "They are something you could put your feet--no, the edge of them--on. They look sturdy enough to hold you, but the problem is, they don't lead anywhere."
 
-the u-lock is a boring thing. the u-lock is part of the tool shed. understand "lock" as u-lock. bore-check of u-lock is bore-ulock rule. bore-text is "You probably won't be able to do anything with the u-lock. But you could RAD it."
+the u-lock is a boring thing. the u-lock is part of the tool shed. understand "lock" as u-lock. bore-check of u-lock is bore-ulock rule. description of u-lock is "You probably won't be able to do anything with the u-lock. But you could READ it."
 
 this is the bore-ulock rule:
 	if current action is scaning or current action is cring or current action is certifying or current action is rectifying:
@@ -7477,8 +7479,9 @@ this is the bore-ulock rule:
 		else:
 			say "OK." instead;
 	if action is procedural:
+		if current action is reading, continue the action;
 		say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
-		say "[if the player yes-consents]It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently[else]You don't bother with it[end if]." instead;
+		say "[if the player yes-consents]It's from the [first custom style]OLD, THOSE[r] company, written in red. Locks should be functional and not beautiful, apparently[else]You don't bother with it[end if]." instead;
 
 check entering tool shed: say "You couldn't break into any stores, and you're not breaking into the tool shed." instead;
 
@@ -7502,13 +7505,14 @@ check going east in Rived Drive:
 	if poles are touchable, say "The poles are too vertical to climb[if toeholds are touchable]. Even with the toeholds[else if ropes are touchable and grips are touchable]. Even with your tools[else if ropes are touchable or grips are touchable], and your one climbing tool wouldn't be quite enough anyway[end if]." instead;
 	if toeholds are touchable:
 		say "You make it up the [p-s] with some effort and surprisingly little risk. The toeholds are more like footholds, really[if player has grips or player has ropes]. You didn't even need any climbing gadgets--and in fact you drop them in surprise when you see what awaits[end if].";
-		moot grips;
-		moot ropes;
+		if grips are not moot, poss-d;
+		if ropes are not moot, poss-d;
 		now player is in Potshot Hotspot instead;
 	if player has ropes and player has grips:
 		say "Tying the rope around your waist, throwing it [']til it catches on a rock above, and using the grips, you make it up the slope. What you see makes you drop them in surprise!";
-		moot grips;
-		moot ropes;
+		if toeholds are not moot:
+			poss-d;
+			poss-d;
 		now player is in Potshot Hotspot instead;
 	else if player has ropes:
 		say "You aren't skilled enough to make it up there with the ropes. You might need one more gadget that lets you hold your place on the slope." instead;
@@ -7556,7 +7560,7 @@ Potshot Hotspot is east of Rived Drive. Potshot Hotspot is in Resort.
 
 check going inside in Potshot Hotspot: try going east instead;
 
-description of Potshot Hotspot is "An arid, trod dirt road. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is touchable]Red Bull Burdell is here, looking down at you[else]It's nice and peaceful here, but it's not quite home[end if].".
+description of Potshot Hotspot is "An arid, trod dirt road. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is not touchable]It's nice and peaceful here, but it's not quite home[end if].".
 
 after printing the locale description for hotspot when hotspot is unvisited:
 	set the pronoun it to riot;
@@ -7643,7 +7647,7 @@ to hello-bull:
 	if talk-quiet is true:
 		say "[line break]Boy, he's pretty loud. So loud, you can't tune him out every turn.";
 		now talk-quiet is false;
-	say "[wfak][line break]'Armed with a dream, I forged my RESPECT SCEPTER--an alum-maul--went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet in a back pocket and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!' Bad time to maunder unarmed.[line break][wfak]";
+	say "[wfak][line break]'Armed with a dream, I forged my RESPECT SCEPTER--an alum-maul--went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet inside his rage gear and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!' Bad time to maunder unarmed.[line break][wfak]";
 	now Red Bull Burdell is in Potshot Hotspot;
 	set the pronoun him to Red Bull Burdell;
 	set the pronoun it to cruelty cutlery;
@@ -7653,6 +7657,16 @@ to hello-bull:
 
 some china is a useless thing. description is "The china is nice and artsy and fragile but probably not useful to you."
 
+chapter RED BULL BURDELL
+
+Red Bull Burdell is a flippable person. "Red Bull Burdell rages here, snarling and mocking you."
+
+before asking red bull burdell about: say "Realizing he's not going to help you, you mutter, ineffectually, 'Ego? Tut!' [one of]Surprisingly[or]Again[stopping], he is slightly taken aback." instead;
+
+understand "rbb" as Red Bull Burdell.
+
+description of Red Bull Burdell is "His face is covered with crass scars, and he's wearing a t-shirt saying 'thirst' over some rage gear. He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason."
+
 section cutlery
 
 the cruelty cutlery is boring scenery. "It's built for cruel looks, not practicality. But it looks impressive. Like, +2 or +3. Not that numbers are your thing, more words. Or that you want to look too closely. Red Bull Burdell has a firm grip on it.". bore-check is bore-cutlery rule.
@@ -7660,21 +7674,17 @@ the cruelty cutlery is boring scenery. "It's built for cruel looks, not practica
 this is the bore-cutlery rule:
 	if current action is taking, say "No, Red Bull Burdell's not letting go. He must have another weakness." instead;
 
-Red Bull Burdell is a flippable person.
+section THIRST t-shirt
 
-Red Bull Burdell wears the Thirst T-Shirt. understand "thirst/-- tshirt" and "rage/gear" as t-shirt.
+the THIRST t-shirt is a boring thing. Red Bull Burdell wears the thirst t-shirt. description of thirst t-shirt is "The THIRST t-shirt is not very practical, but it establishes Red Bull Burdell as the bad guy.". bore-text is "The THIRST t-shirt is not Red Bull Burdell's weakness."
 
-before asking red bull burdell about: say "Realizing he's not going to help you, you mutter, ineffectually, 'Ego? Tut!'" instead;
+understand "thirst/tshirt/shirt" and "thirst tshirt/shirt" as THIRST t-shirt.
 
-understand "rbb" as Red Bull Burdell.
-
-the thirst t-shirt is a boring thing. description is "The Thirst t-shirt is a decent piece of rage gear but not worth bothering with. You're down on the ground, anyway.".
-
-rule for printing a locale paragraph about Red Bull Burdell: now Red Bull Burdell is mentioned.
-
-description of Red Bull Burdell is "His face is covered with crass scars, and he's wearing a t-shirt saying 'thirst'. He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason."
+the rage gear is a boring thing. Red Bull Burdell wears the rage gear. description of rage gear is "It's a rare egg--impenetrable, covering almost all of Red Bull Burdell's body. It's no mere flimsy eager rag to re-garage.[paragraph break]If you're looking for a weakness of Red Bull Burdell's, it's elsewhere.". bore-text of rage gear is "No. The rage gear is sturdy. But it can't cover ALL of Red Bull Burdell.".
 
 the crass scars are a boring thing. They are part of red bull burdell. description of scars is "Every villain has a few. Red Bull Burdell maxed out his useful attributes, but no amount of leveling up could improve his looks.". bore-text of scars is "He'd want to beat you up for looking at them even if he didn't already want to beat you up.".
+
+section RBB's toe
 
 The toe is part of Red Bull Burdell.
 
@@ -7682,7 +7692,7 @@ understand "his toe" as toe.
 
 description of toe is "A toe just juts out from Burdell's boot, looking infected."
 
-understand "fear/ boot/" and "bare/ foot/" as toe.
+understand "fear boot" and "fear/boot" and "bare foot" and "bare/foot" as toe.
 
 to say kicks:
 	say "Red Bull Burdell kicks the gadget out of the way! You were only able to read [if gadget is cert]six reds, then [bcn][rc][gc][bc][bc][bc][else][bcn][rc][gc][bc][bc][bc], then six reds[end if] as he apparently kicked the switch, too[if gadget-secured is true], which is impressive given how you locked it[end if]. He's not going to let you near it.";
@@ -7690,8 +7700,7 @@ to say kicks:
 		now gadget is rect;
 	else:
 		now gadget is cert;
-	if player has gadget:
-		now tagged gadget is in Potshot Hotspot;
+	if player has gadget, now tagged gadget is in Potshot Hotspot;
 
 the chain links are a plural-named thing.
 
@@ -8260,7 +8269,7 @@ carry out scaning:
 		if static is touchable:
 			say "Before your gadget gets close, you begin to pick something up. Perhaps it isn't the doll house you need to do something with. Something ambient--like the static. So you do that.";
 			try scaning static instead;
-		say "[bug-report] One of attics and static should be touchable." instead;
+		say "[bug-report] One of attics and static should always be in view." instead;
 	if noun is part of the gadget, say "If that part of the gadget were detectable, you'd have gone crazy from the beeping by now." instead;
 	if noun is gadget:
 		if the player's command matches "scan":
@@ -8640,7 +8649,7 @@ to say lubeit: now lube-asked is true.
 
 to say ana-true: now anapest-clued is true.
 
-the Memo Tote Tome is a boring thing in Esoteric Coteries. bore-text is "Maybe you could EXAMINE or READ the book, but you can't do much else with it.". initial appearance of Memo Tote Tome is "A Memo Tote Tome lies here. Perhaps it has some simple information useful to you amidst all the weird stuff the nerds use it for."
+the Memo Tote Tome is a boring thing in Esoteric Coteries. bore-text is "Maybe you could EXAMINE or READ the book, but you can't do much else with it.". initial appearance of Memo Tote Tome is "A Memo Tote Tome lies here. Perhaps it has some simple information useful to you amidst all the weird stuff the nerds use it for.". description of memo tote tome is "You should never see this, because the check rules should prevent it.".
 
 check reading the Memo Tote Tome: say "Too dense. Really, only examining the Tome briefly [if memo tote tome is examined]could be[else]might've been[end if] worth trying." instead;
 
@@ -8697,9 +8706,9 @@ before asking nerds about:
 
 to say riot-trio-blather: say "You're not going to reason with them. Maybe reason about them, though.[no line break]"
 
-Bud Helm is a useless person. description of Bud Helm is "He has been condemned to obscurity."
+Bud Helm is a useless person. "You should not see Bud Helm.". description of Bud Helm is "He has been condemned to obscurity."
 
-Raw Rori is a useless person. description of Raw Rori is "Condemned to obscurity."
+Raw Rori is a useless person. "You should not see Raw Rori.". description of Raw Rori is "Condemned to obscurity."
 
 does the player mean objasking generically the deadbeat: it is unlikely.
 does the player mean objasking about the deadbeat: it is unlikely.
@@ -9010,7 +9019,7 @@ upwarned is a truth state that varies.
 check going nowhere (this is the main can't go that way rule) :
 	if upwarned is false:
 		if noun is up or noun is down:
-			say "You can't go [noun] here[if mrlp is demo dome and player is not in Sparse Spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
+			say "You never need to go up or down anywhere in this game. Some passages may be described as leading down or up, but the four cardinal directions are all you need.";
 			now upwarned is true instead;
 	repeat through table of nowheres:
 		if theloc entry is location of player, say "[thereject entry][line break]" instead;
@@ -9030,7 +9039,7 @@ Gnarliest Triangles	"You don't need an alert sign to know running into the walls
 Cruel Ones' Enclosure	"You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north."
 Trap Part	"[if centrifuge-stopped is false]That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first[else][dmm]. You can only go north to the kitchen or east[or-room][end if]."
 Kitchen	"Dud, mum mud blocks your way [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
-roomroom	"Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if].".
+roomroom	"Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if]."
 Stiller Trellis	"[dmm]. You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
@@ -9065,7 +9074,8 @@ carry out gotoing:
 	if noun is Trips Strip and Trips Strip is visited:
 		say "You may mean to RETRY instead. Do so?";
 		if the player yes-consents, try retrying instead;
-	if map region of noun is not mrlp and map region of noun is solved, say "You already solved that area." instead;
+	if map region of noun is not mrlp:
+		if map region of noun is solved, say "You already solved that area." instead;
 		say "That'd be hyperwarping to another region. Sorry." instead;
 	if noun is unvisited, say "You haven't gotten there yet." instead;
 	if noun is subsite, say "Goodness, no. [location of player] is way more interesting than the Busiest Subsite." instead; [start Ordeal Loader]
@@ -9783,6 +9793,7 @@ a reading	"On one of several pages, you see: [one of]AID ANGER is written[or]con
 neon pig	"Apparently the neon pig is a creation of one INPENGO."
 gin nope opening	"You [if controls are in gin nope opening]remember[else]notice[end if] that it's underwritten (in red) by Orton LSC, whoever they are."
 tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." [resort]
+u-lock	"Red writing shows the U-Lock brand is OLD THOSE."
 
 chapter following
 
@@ -10635,14 +10646,17 @@ carry out tsing:
 		say "<METROS SOLVED>[line break]";
 		solve-region metros;
 		decrease curstuff by 4;
+		reg-inc;
 	if curstuff >= 2:
 		say "<SORTIE SOLVED>[line break]";
 		solve-region sortie;
 		decrease curstuff by 2;
+		reg-inc;
 	if curstuff >= 1:
 		say "<FOREST SOLVED>[line break]";
 		solve-region forest;
 		decrease curstuff by 1;
+		reg-inc;
 	the rule succeeds;
 
 chapter tsfing

@@ -344,9 +344,9 @@ understand "tang" and "tangs" as a mistake ("How the angst gnats taste doesn't m
 
 chapter Obtains Boastin' Bastion
 
-understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when player is in Obtains Boastin' Bastion and pesos posse are in Obtains Boastin' Bastion.
+understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when player is in Obtains Boastin' Bastion and poses posse are in Obtains Boastin' Bastion.
 
-understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when player is in Obtains Boastin' Bastion and pesos posse are in Obtains Boastin' Bastion.
+understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when player is in Obtains Boastin' Bastion and poses posse are in Obtains Boastin' Bastion.
 
 chapter Fo' Real Florae
 

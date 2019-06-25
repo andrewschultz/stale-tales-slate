@@ -257,7 +257,7 @@ understand the command "yack" as something new.
 understand "yack" as yacking.
 
 carry out yacking:
-	let cur-guy be talkers;
+	let cur-guy be poses posse;
 	let cur-line be 0;
 	repeat through the table of subject-blather:
 		if him-who entry is not visible:

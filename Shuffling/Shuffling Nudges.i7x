@@ -517,12 +517,14 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "red"	234159001	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
 "bull"	231152390	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
 "burdell"	465311391	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
+"rage"	247917432	--	red bull burdell	--	"No, the rage gear is too strong."
 "boot"	270234077	--	red bull burdell	--	"The boot is already a little--modified. You can see its toe. Maybe that is a weakness."
 "toe"	305268704	--	red bull burdell	--	"But what to do with Red Bull Burdell's toe now that he's yelling GET OUT?"
 "scar"	202791172	--	red bull burdell	--	"No time for cosmetic changes."
 "crass"	299065138	--	red bull burdell	--	"No time for cosmetic changes."
 "cutlery"	616524413	--	red bull burdell	--	"Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery--maybe somewhere, or something, else?"
-"tshirt"	470092950	--	red bull burdell	--	"You slur out a few consonants--maybe you should work with something closer, lower down."
+"tshirt"	470092950	--	red bull burdell	--	"[tshirt-no]."
+"shirt"	366982932	--	red bull burdell	--	"[tshirt-no]."
 "manse"	359250554	Means Manse	--	--	"You like your manse just fine now. No need to change it. It's just all the EXITS you don't want to worry about." [start Means Manse]
 "extis"	484951020	Means Manse	--	--	"That's not quite the right sort of nothing."
 "marble"	351625627	Means Manse	--	--	"[ennui]."
@@ -616,63 +618,45 @@ book auxiliary text and rules
 
 section ordeal loader auxiliary
 
-to say loc-rej:
-	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
+to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
 
-to say name-list:
-	say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
+to say name-list: say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
 
-to say word-games:
-	say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
+to say word-games: say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
 
 to say sofa-there: say "The Oafs['] Sofa is there, and there's nothing you can do about it"
 
-to say nope-odor:
-	say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
+to say nope-odor: say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
 
-to say com-chor:
-	say "It's a pretty complex chord[if cur-score of ordeal loader is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
+to say com-chor: say "It's a pretty complex chord[if cur-score of ordeal loader is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
 
-to say darnels-inst:
-	say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
+to say darnels-inst: say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
 
-to say no-warpy:
-	say "You can't change Old Warpy. You have to just trust it";
+to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
 
-to say stat-at:
-	say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
+to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
 
-to say reg-rej:
-	say "You don't want to change a region drastically while you're in it"
+to say reg-rej: say "You don't want to change a region drastically while you're in it"
 
 section stores auxiliary
 
-to say tid:
-	say "The depiction is there as a hint, not as a puzzle";
+to say tid: say "The depiction is there as a hint, not as a puzzle";
 
-to say say-which:
-	say "You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X"
+to say say-which: say "You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X"
 
-to say lotmaso:
-	say "You need to manipulate each store as a store, not a mall or a lot"
+to say lotmaso: say "You need to manipulate each store as a store, not a mall or a lot"
 
-to say no-cand:
-	say "Nothing happens. You'd think that store could be a good candidate to change, but it isn't"
+to say no-cand: say "Nothing happens. You'd think that store could be a good candidate to change, but it isn't"
 
-to say no-way:
-	say "Nothing happens. The store remains impassive and dark"
+to say no-way: say "Nothing happens. The store remains impassive and dark"
 
-to say no-mb:
-	say "Nothing happens. Maybe if Yorpwald were in even more danger, it would";
+to say no-mb: say "Nothing happens. Maybe if Yorpwald were in even more danger, it would";
 
-to say road-sign:
-	say "Hmm...you get the feeling the store itself holds more adventure"
+to say road-sign: say "Hmm...you get the feeling the store itself holds more adventure"
 
-to say no-store-m:
-	say "No, it's a map of something behind Store M, it looks like."
+to say no-store-m: say "No, it's a map of something behind Store M, it looks like."
 
-to say hub-stur:
-	say "The hubs bush is too sturdy. You can't escape the Trips Strip"
+to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Trips Strip"
 
 section forest auxiliary
 
@@ -680,50 +664,38 @@ this is the first-two-forest rule:
 	if player is in sf or player is in rf, the rule succeeds;
 	the rule fails;
 
-to say no-con:
-	say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
+to say no-con: say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
 
-to say guider-content:
-	say "No, that's not the [i]essence[r] of the thing."
+to say guider-content: say "No, that's not the [i]essence[r] of the thing."
 
-to say forest-no:
-	say "Your compass feels extra jumbled, but--well, you must be close"
+to say forest-no: say "Your compass feels extra jumbled, but--well, you must be close"
 
-to say no-un:
-	say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
+to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
 
-to say crosse-to-you:
-	say "Whatever you could do to Corses Crosse, it might do worse to you"
+to say crosse-to-you: say "Whatever you could do to Corses Crosse, it might do worse to you"
 
-to say in-sort of (q - a thing):
-	say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
+to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
 
-to say tack-heap:
-	say "No need to try to turn the stack into a heap. Ho ho ho"
+to say tack-heap: say "No need to try to turn the stack into a heap. Ho ho ho"
 
-to say vand-art:
-	say "Don't vandalize the art, man"
+to say vand-art: say "Don't vandalize the art, man"
 
-to say nau-zer-enuf:
-	say "The naughts, err, noughts seem zero-y enough to contain an o";
+to say nau-zer-enuf: say "The naughts, err, noughts seem zero-y enough to contain an o";
 
 this is the see-meats rule:
 	if River Ville is touchable or Spam is touchable or viler liver is touchable or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
 
-to say spec-meat:
-	say "You'll need to be more specific about the meat to poke at"
+to say spec-meat: say "You'll need to be more specific about the meat to poke at"
 
 this is the liv-vis rule:
 	if number of carried glopmeats > 0, the rule succeeds;
 	if player is in Flesh Shelf and number of glopmeats in Flesh Shelf > 1, the rule succeeds;
 	the rule fails;
 
-to say bothlivers:
-	say "The one liver seems inactive by itself"
+to say bothlivers: say "The one liver seems inactive by itself"
 
-to say rivliv:
-	say "It's just a liver. No need to parse the brand name"
+to say rivliv: say "It's just a liver. No need to parse the brand name"
 
 this is the spread-drapes rule:
 	if player is in Cruel Ones' Enclosure:
@@ -731,11 +703,9 @@ this is the spread-drapes rule:
 			the rule succeeds;
 	the rule fails;
 
-to say froz-ha-ha:
-	say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
+to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
 
-to say marsh-lake:
-	say "The marsh and lake are symptoms of--whatever evil is beyond here"
+to say marsh-lake: say "The marsh and lake are symptoms of--whatever evil is beyond here"
 
 section sortie auxiliary
 
@@ -797,11 +767,9 @@ this is the panel-in-silo rule:
 
 to say but-but: say "It's the buttons['] purposes that need[if steer button is touchable and shoot button is touchable]ed[end if] changing";
 
-to say what-b-says:
-	say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
+to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
 
-to say best-not-defile:
-	say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
+to say best-not-defile: say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
 
 section metros auxiliary
 
@@ -866,11 +834,9 @@ this is the resin-lala rule:
 
 section resort auxiliary
 
-to say the-sand:
-	say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
+to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
 
-to say simple-riot:
-	say "Perhaps it's best to keep it simple and cut down the riot"
+to say simple-riot: say "Perhaps it's best to keep it simple and cut down the riot"
 
 this is the hotspot-no-kilns rule:
 	if player is in Potshot Hotspot:
@@ -882,22 +848,19 @@ this is the riot-gone rule:
 	if player is in Potshot Hotspot and riot is moot, the rule succeeds;
 	the rule fails;
 
-to say ennui:
-	say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
+to say tshirt-no: say "You slur out a few consonants--maybe you should work with something closer, lower down"
+
+to say ennui: say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
 
 section general auxiliary
 
-to say no-2:
-	say "You can't really second-guess the help on the prep paper";
+to say no-2: say "You can't really second-guess the help on the prep paper";
 
-to say chem-bad:
-	say "Bad idea to mess with chemical compounds you don't understand"
+to say chem-bad: say "Bad idea to mess with chemical compounds you don't understand"
 
-to say gad-part:
-	say "You don't need to mess with the gadget or any part of it. It's probably better not to try"
+to say gad-part: say "You don't need to mess with the gadget or any part of it. It's probably better not to try"
 
-to say titenot:
-	say "It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway";
+to say titenot: say "It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway";
 
 this is the know-point rule:
 	if pointcue is true, the rule succeeds;
@@ -917,38 +880,27 @@ this is the past-strip rule:
 	if Self-ID Fields is visited or underside is visited or Trap Part is visited, the rule succeeds;
 	the rule fails;
 
-to say what-for:
-	say "[if Notices Section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
+to say what-for: say "[if Notices Section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
 
-to say no-pen:
-	say "If you changed the pen, you'd have nothing to write with";
+to say no-pen: say "If you changed the pen, you'd have nothing to write with";
 
-to say diag-dir-rej:
-	say "This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief";
+to say diag-dir-rej: say "This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief";
 
-to say dir-rej:
-	say "This game usually doesn't require you to mess with cardinal directions";
+to say dir-rej: say "This game usually doesn't require you to mess with cardinal directions";
 
-to say xyzzys:
-	say "A hollow voice booms, 'Lo! Of...'[no line break]"
+to say xyzzys: say "A hollow voice booms, 'Lo! Of...'[no line break]"
 
-to say cussy:
-	say "You're not fooling ME. Shame on you";
+to say cussy: say "You're not fooling ME. Shame on you";
 
-to say no-pock:
-	say "You don't need to mess with your pockets"
+to say no-pock: say "You don't need to mess with your pockets"
 
-to say no-special-verb:
-	say "There's no secret verb or verbs to find trying that"
+to say no-special-verb: say "There's no secret verb or verbs to find trying that"
 
-to say no-scram:
-	say "There's no way to scramble your score. And scoring another point won't help you solve things, anyway"
+to say no-scram: say "There's no way to scramble your score. And scoring another point won't help you solve things, anyway"
 
-to say no-cred-spec:
-	say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"
+to say no-cred-spec: say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"
 
-to say meta-rej:
-	say "Meta-commands don't have any easter eggs, sadly"
+to say meta-rej: say "Meta-commands don't have any easter eggs, sadly"
 
 book support rules
 

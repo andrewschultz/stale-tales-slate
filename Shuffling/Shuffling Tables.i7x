@@ -122,8 +122,8 @@ this is the post-bolt-blot rule:
 
 this is the post-toga-goat rule:
 	if player has toga or player has goat:
-		,move toga to location of player;
-		,move goat to location of player;
+		move toga to location of player;
+		move goat to location of player;
 	set the pronoun him to goat;
 	set the pronoun her to goat;
 
@@ -507,7 +507,8 @@ this is the post-chain-china rule:
 	moot china;
 
 this is the post-links-kilns rule:
-	if potters are in Potshot Hotspot and kilns are in Potshot Hotspot, hello-bull;
+	if china is not moot, poss-d;
+	process the post-protest-potters rule;
 
 book general auxiliary rules
 
