@@ -206,6 +206,14 @@ chapter oyster
 
 test oyster with "oyster/enter oyster/y/z/z/z/ask casper about casper/sing/sing/spit/inset/stroll/calm/run/enter raft/fart/soar/scrap/z/z/e/scan cans/seek/eat tea/tutor/tend/swipe/z/z/w/n/kiss skis/trace/react/bonk knob/splain/in/bust/drop prod/sweat/clean lance/shape/out/s/w/warp/n/w/bury/e/s/e/unearth/assuage/w/search arches/enlarge/n/x theses/w/e/patrol/x gleaner/in/y/tan ant/prepay/revel/derail/pull lever/redial/coff 1"
 
+test oy1 with "oyster/enter oyster/spit/sing/inset/stroll/calm/run".
+test oy2 with "boast/leap/scrap/e/scan/seek/tend/swipe/tutor/eat"
+test oy3 with "w/n/trace/react/kiss skis/bonk knob/span/splain/in".
+test oy4 with "bust/drop/sweat/clean/shape/out/s/w".
+test oy5 with "w/warp/search/enlarge/x gleaner/n/w/bury/e/s/e"
+test oy6 with "unearth/ask about ruby/patrol/in/prepay/trample/psalm/tan"
+test oy7 with "derail/spin/revel/redial".
+
 test oyster-min with "oyster/enter oyster/spill pills/y/calm/run/boast/leap/scrap/n/kiss skis/bonk knob/trace/react/in/bust/out/s/e/seek/eat tea/tutor/tend/w/w/warp/n/bury/s/e/unearth/assuage/w/search arches/enlarge/n/x gleaner/patrol/enter portal/revel/derail/pull lever"
 
 test oyster-oops with "retsyo/oyster/retsyo/in/gnis/sing/gnis/gnis/sing/gnis/tips/spit/tips/tesni/inset/tesni/llorts/stroll/llorts/mlac/calm/run/mlac/enter raft/traf/fart/traf/raos/soar/raos/parcs/scrap/parcs/e/kees/seek/kees/eat tea/rotut/tutor/rotut/drawer/reward/drawer/epiws/swipe/epiws/w/n/kiss skis/ecart/trace/ecart/tcaer/react/tcaer/bonk knob/in/tsub/bust/tsub/drop prod/taews/sweat/taews/clean lance/epahs/shape/epahs/tuo/out/tuo/s/w/praw/warp/praw/n/w/yrub/bury/yrub/e/s/e/htraenu/unearth/htraenu/egaussa/assuage/egaussa/w/search arches/egralne/enlarge/egralne/n/w/e/lortap/patrol/lortap/x gleaner/in/y/tan ant/yaperp/prepay/yaperp/lever/revel/lever/liared/derail/liared/pull lever/laider/redial/laider/coff 1"

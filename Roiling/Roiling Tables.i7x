@@ -2,7 +2,9 @@ Version 1/180729 of Roiling Tables by Andrew Schultz begins here.
 
 volume main anagram tables
 
-[?? clean/tend]
+[?? clean/tend/eat/seek/scan]
+
+[tables are arranged roughly in walkthrough order.]
 
 book Ordeal Reload
 
@@ -149,13 +151,17 @@ USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	--	--	"[sub-bus]!"
 
 book oyster
 
+[because oyster is about verbs, it's tougher to have a one-to-one correspondence between points and lines in the anagram table.
+REMAP/PERMA-AMPER is shuffled to TUNES/UNSET. "remap" is listed in the table of oyster nudges.
+]
+
 table of oyster anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 tips pits	tips pits	false	325842789	--	"spit"	"spit" or "spit on the/ tips"	a rule	a rule	"Saliva avails to show your disdain for the bar staff and for generosity in general. The bar patrons, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."
 gins sign	gins sign	false	242774022 [not really covered in the default verb SING]	--	"sing"	"sing"	--	--	"Your singing is abominable. But not as abominable as the lyrics or the 'melody' played in the bar right now. So customers only glare at you, but others order another beer because they're not as drunk as you, clearly." [not really covered in the default verb SING]
 tunes	tunes	false	501203408	--	"unset"	"unset"	--	post-tunes-unset rule	"[remap-or-unset]. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect."
 tines	tines	false	441090447	--	"inset"	"inset" or "inset stein/tines"	--	--	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."
-recaps	recaps	false	412063240	--	"scrape"	"scrape"	--	--	"Skr-r-r-r. You give [i]Capers Recaps[r] a good scratch. The fish in the bar, including the trolls, all whip around. You're the only suspect, since you are the only one with anything resembling nails. Casper shoots you an inspired, snide rip. The other patrons glare at you for doing so, too."
+recaps	recaps	false	412063240	--	"scrape"	"scrape"	--	--	"Skr-r-r-r. You give [i]Capers Recaps[r] a good scratch. The fish in the bar, including the trolls, all whip around. You're the only suspect, since you are the only one with anything resembling nails. Casper shoots you an inspired, snide rip. The other patrons glare at you for disturbing them, too."
 trolls	trolls	false	466688042	Olde Lode	"stroll"	"stroll" or "stroll past/by trolls"	pre-trolls-stroll rule	--	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"
 clam	clam	false	139082395	--	"calm"	"calm"	--	post-calm-clam rule	"You try some odd combination of singing and storytelling and jokes which really shouldn't work at all, but then, clams aren't very smart, so it goes over okay. The clam ...(cl)ambulates...off. You notice what it was guarding so aggressively: a beautiful urn you feel pulled to and you can't walk away from!"
 urn	urn	false	259337118	Disease Seaside	"run"	"run"	--	--	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."
@@ -165,30 +171,34 @@ oars	oars	false	258138164	Anger Range	"soar"	"soar"	pre-oars-soar rule	--	"The o
 frat raft	frat raft	false	217136535	--	"fart"	"fart" or "fart on raft"	pre-raft-fart rule	--	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"
 carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-spike-pikes rule	"[spike-and-scrap]."
 carps	carps	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-scrap-carps rule	"[spike-and-scrap]."
-pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
+cans	cans	false	18637477	--	"scan"	"scan"	--	--	"You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths."
+eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-seek-eeks rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
+dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule	"You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and you can't see it in the drawer any more. Aunt Tuna is pleased, and Tortu is impressed."
+tea	tea	false	233103945	--	"eat"	"eat tea" or "eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"
+trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	pre-tutor-trout rule	--	"[trout-tut]."
+wipes	wipes	true	458473653	--	"swipe"	"swipe"	--	--	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	pre-crate-react rule	--	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
 skis	skis	false	290473956	--	"kiss"	"kiss"	pre-kiss-skis rule	--	"As you kiss them, they pull up--and dissolve."
 knob	knob	false	214612168	--	"bonk"	"bonk"	pre-bonk-knob rule	--	"BONK! You hit the knob just right. It falls from between the pans and rolls off...well, somewhere." [?? check for knob/skis if it's all gone]
 pans	pans	false	248835251	--	"snap"	"snap"	pre-snap-span-pans rule	--	"You snap your fingers. Then, for good measure, you go off on a random tangent about something that doesn't really matter but has always bothered you. You're not sure which action worked, or if they both worked together, but the result's what counts: the pans detach and clank and fall over and melt into the ground."
 bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	--	--	"[if span pans are in Lapsin' Plains]You brag, to nobody and everyone in particular, how you SHOWED those pans[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
-dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule	"You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and you can't see it in the drawer any more. Aunt Tuna is pleased, and Tortu is impressed."
-trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	pre-tutor-trout rule	--	"[trout-tut]."
-wipes	wipes	true	458473653	--	"swipe"	"swipe"	--	--	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	pre-warp-wrap rule	post-warp-wrap rule	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
 Achers' Chaser Arches	Achers' Chaser Arches	false	367879580	--	"search"	"search"	pre-search-arches rule	post-search-arches rule	"'Reach, acher,' you say, stretching a bit more to find something interesting."
 ol' trap	pol art portal	false	400254014	--	"patrol"	"patrol"	pre-patrol-ol-trap rule	post-patrol-ol-trap rule	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. As it vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, passages to new locations."
-eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-eeks-seek rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
-tubs	waste	false	322908696	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
+tubs	tubs	false	322908696	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	--	--	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
-waste	lance	false	437312684	--	"sweat"	"sweat"	pre-sweat-waste rule	post-sweat-waste rule	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. It's a bit too dirty to take."
+waste	waste	false	437312684	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. Too dirty to take."
+lance	lance	true	271720859	--	"clean"	"clean" or "clean lance"	--	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	--	--	"You channel your inner artist and make something beautiful out of the heaps."
 ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
+pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	--	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
 lever	lever	false	501914680	--	"revel"	"revel"	--	pre-lever-revel rule	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
-templar ramplet	templar ramplet	false	517782699	--	"trample"	"trample" or "trample ramplet"	--	--	"Trample trample!" [??]
+templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" or "trample ramplet"	--	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
+natant ant	natant ant	false	174205344	Tenfold Teflon'd Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"
 bogus-lamps	bogus-lamps	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	--	post-spin-pins rule	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	--	pre-dialer-redial rule	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
@@ -945,6 +955,9 @@ this is the post-bub-dude-egg rule:
 	now USB is in Hacks' Shack;
 	moot golden dongle;
 
+this is the post-clean-lance rule:
+	moot wipes;
+
 this is the post-drive-flip rule:
 	if usb is not off-stage, say "Well, flipping [noun] didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
 
@@ -1001,6 +1014,15 @@ this is the post-scrap-carps rule:
 	now scrawl is in Anger Range;
 	now pre-haun is in Anger Range;
 
+this is the post-trample-ramplet rule:
+	min-up; [you get at least another point for TANing the ant]
+
+this is the post-tan-ant rule:
+	if bogus-lamps are reflexive:
+		say "[line break]And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.";
+		poss-d;
+	now Plasm Lamps is shunned;
+
 this is the post-spike-pikes rule:
 	now spikes is true;
 	process the post-scrap-carps rule;
@@ -1010,13 +1032,24 @@ to say spike-and-scrap:
 
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
-	d "[whether or not player has digger], [location of ruby].";
+	d "UNEARTHING FAILED. Has digger = [whether or not player has digger], Ruby moot = [whether or not ruby is moot].";
 	say "[h-not-yet].";
-	preef pre-haun;
-	the rule succeeds;
+	if haunter is not off-stage, say "The haunter has been unearthed." instead;
+	say "Ravage a grave!";
+	if ruby is off-stage:
+		say "[line break]You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'[paragraph break]You haven't found or discovered a jewel, yet.";
+		preef pre-haun;
+		do nothing instead;
+	if player has ruby:
+		say "[line break]As you begin to dig, you hear 'My...jewel...close...thieves...pay.'[paragraph break]It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or some people-forms. People-forms who deserve SOMETHING pinned on them.";
+		preef pre-haun;
+		do nothing instead;
 
 this is the post-unearth-haunter rule:
+	moot scrawl;
+	now haunter is unfigured;
 	now haunter is in Anger Range;
+	it-him-her haunter;
 
 this is the pre-crate-react rule:
 	if c2 is in Lapsin' Plains:
@@ -1064,7 +1097,7 @@ this is the pre-tutor-trout rule:
 
 to say trout-tut:
 	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]";
-	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is touchable]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are touchable], though maybe you could sneak the wipes[end if][if dent is touchable]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
+	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is touchable]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are reflexive], though maybe you could sneak the wipes[end if][if dent is touchable]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
 	now player has bubble wrap;
 
 this is the pre-warp-wrap rule:
@@ -1086,9 +1119,13 @@ this is the post-warp-wrap rule:
 	moot sandier sardine;
 
 this is the pre-search-arches rule:
-	if sardine is touchable, say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
+	if sardine is touchable:
+		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
 		preef Achers' Chaser Arches;
 		do nothing instead;
+
+this is the post-eat-tea rule:
+	pearl-check;
 
 this is the post-search-arches rule:
 	pearl-check;
@@ -1102,25 +1139,22 @@ this is the pre-patrol-ol-trap rule:
 this is the post-patrol-ol-trap rule:
 	moot digger;
 
-this is the post-eeks-seek rule:
+this is the post-seek-eeks rule:
 	now Hardest Trashed Dearths is shunned;
-	change the east exit of Anger Range to Lean Lane;
-	change the west exit of Lean Lane to Anger Range;
+	now Anger Range is mapped west of Lean Lane;
+	now Lean Lane is mapped east of Anger Range;
 	if cans are in Hardest Trashed Dearths, poss-d;
 
 this is the post-bust-tubs rule:
+	now waste is in Shuttle Hutlets;
 	now player has prod;
-	now heaps are in Shuttle Hutlets;
-	set the pronoun them to heaps;
 	set the pronoun it to prod;
-	[now waste is in Shuttle Hutlets;] [??]
-
-this is the pre-sweat-waste rule:
-	if waste is reflexed, say "You've had enough of that." instead;
 
 this is the post-sweat-waste rule:
 	now heaps are in Shuttle Hutlets;
+	set the pronoun them to heaps;
 	moot waste;
+	now lance is in Shuttle Hutlets;
 
 this is the pre-bury-ruby rule:
 	if player does not have rigged digger:
@@ -1321,6 +1355,7 @@ this is the post-lamer-realm-flip rule:
 		now random reflexive animal in Perverse Preserve is llpish;
 
 this is the post-perverse-preserve-flip rule:
+	increment nounsolve;
 	let temp be number of touchable animals;
 	if temp is 2:
 		say "The IQ medal you're wearing clanks against the LUCKY medal. It looks a bit clearer, now.";
@@ -1564,11 +1599,7 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 
 section oyster
 
-check fliptoing when player is in posh hops shop:
-	if debug-state is true, say "ping...";
-	if noun is not trolls:
-		if silly-acts is 3:
-			check-silly-death instead;
+check fliptoing when player is in posh hops shop: if noun is not trolls and silly-acts is 3, check-silly-death instead;
 
 after fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
@@ -2224,7 +2255,7 @@ wipes	"Now that you've got the wipes, you need to find how to use them construct
 crate	"Besides identifying it as a rect, you can't do much else with the crate."
 knob	"You should leave the knob to b'n OK."
 bogus-plains	"You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on."
-waste	"The heaps are still technically waste, but you cleaned them up enough."
+waste	"The heaps are still technically waste, but you tidied them up enough."
 lance	"Your work turned up enough."
 rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."

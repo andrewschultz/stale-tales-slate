@@ -4959,7 +4959,7 @@ to decide which thing is oyster-item:
 		if prod is touchable, decide on prod;
 		if aunt-tuna-cross is false or wipes are not in Lean Lane: [hint the side quest ONLY IF you can still get the wipes]
 			if waste is in Shuttle Hutlets, decide on waste;
-			if lance is not cleaned and lance is in Shuttle Hutlets, decide on lance;
+			if lance is reflexive and lance is in Shuttle Hutlets, decide on lance;
 			if heaps are reflexive and heaps are in Shuttle Hutlets, decide on heaps;
 	if player is in Lean Lane:
 		if tea tray is touchable, decide on tea tray;
@@ -6052,7 +6052,7 @@ check pushing (this is the new can't push rule) :
 	if noun is caps lock:
 		if noun is not part of keyboard, say "On its own, you can't push a caps lock." instead;
 		say "You'll push it once you're ready to program." instead;
-	if noun is a person, say "Pushing or pulling live things is probably even less effective than attacking." instead;
+	if noun is a person, say "You don't need to attack anyone or start a fight, except in one instance." instead;
 	say "You give a few hups but fail to push." instead;
 
 check pulling (this is the new can't pull rule):
@@ -7224,9 +7224,6 @@ carry out fliptoing (this is the main fliptoing rule):
 			if there is a pre-rule entry, abide by the pre-rule entry;
 			if the-from entry is reflexive, now the-from entry is reflexed;
 			now the-from entry is unfigured;
-			if location of player is preserve:
-				if the-to entry is not parrot and the-from entry is not parrot:
-					increment nounsolve;
 			if the-from entry is pronoun-settable and the-from entry is not the-to entry:
 				if the-to entry is singular-named, set pronoun it to the-to entry;
 				if the-to entry is plural-named, set pronoun them to the-to entry;
@@ -7240,7 +7237,9 @@ carry out fliptoing (this is the main fliptoing rule):
 			if mrlp is stores:
 				if the-from entry is Store T or the-from entry is lecturer: [you need to get rid of the lecturer to leave Cruelest Lecturers, so no min-up]
 					do nothing;
-				else if the-from entry is bedruggled or the-from entry is Store H:
+				else if the-from entry is store H:
+					if roved is false, min-up;
+				else if the-from entry is bedruggled:
 					min-up;
 				else if number of supporting stos < 4:
 					min-up;
@@ -7274,7 +7273,6 @@ carry out fliptoing (this is the main fliptoing rule):
 				move player to roomjump entry;
 				process the show blues rule; [for debugging]
 				process the process random dialogue rule;
-				the rule succeeds;
 			else if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
@@ -7286,7 +7284,7 @@ carry out fliptoing (this is the main fliptoing rule):
 				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
 				if the-to entry is plural-named, set the pronoun them to the-to entry;
 			if there is a post-rule entry, process the post-rule entry;
-			follow the show blues rule instead; [for debugging]
+			process the show blues rule instead; [for debugging]
 			the rule succeeds;
 	repeat through regana of mrlp:
 		if noun is the-from entry and location of noun is location of player, say "You can't seem to change things back to how they were." instead;
@@ -13460,7 +13458,7 @@ carry out spilling:
 				say "[if oi is heaps]Yeah. Maybe writers and musicians need to pop pills to do their work, but sculptors don't. Maybe you can make the heaps more beautiful on your own[else]Yeah, it's not wise to put off general sanitation tasks with pills[end if]." instead;
 		if oi is lance:
 			say "The pills stick to the lance, making it so gross you feel compelled to CLEAN the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it.";
-			now lance is cleaned;
+			now lance is reflexed;
 			now lance is unfigured;
 			now player has lance;
 			now cheated-guy is lance;
@@ -13750,16 +13748,11 @@ understand "tortu" as trout.
 
 a-text of trout is "RYRYR". b-text of trout is "PYRYR". parse-text of trout is "t[sp]-[sp]x[sp]-[sp]x". trout is cheat-spoilable.
 
-the pikes are plural-named flippable nasty people in Anger Range. initial appearance of pikes is "[bug-report]"
+the pikes are plural-named nasty vanishing people in Anger Range. initial appearance of pikes is "[bug-report]"
 
-check taking pikes:
-	say "That's the wrong way to 'take' them.'" instead;
+check taking a nasty person: say "That's the wrong way to 'take' [the noun].'" instead;
 
-check taking carps:
-	say "That's the wrong way to 'take' them.'" instead;
-
-check taking trout:
-	say "You can't just take him and run. You need to fight back." instead;
+check taking trout: say "You can't just take him and run. You need to fight back." instead;
 
 the chum of the pikes is the carps.
 
@@ -13844,7 +13837,12 @@ understand the command "unearth" as something new.
 
 understand "unearth [something]" as unearthing.
 
-the pre-haun is privately-named proper-named vanishing scenery. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it."
+the pre-haun is privately-named proper-named vanishing boring scenery. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it.". bore-text of pre-haun is "[h-not-yet].". bore-check is bore-haun rule.
+
+to say h-not-yet: say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is moot]shouldn't dig the haunter back up. You've no reason to[else]don't know what you'd do if you'd unearth the haunter[end if]"
+
+this is the bore-haun rule:
+	if current action is unearthing, now boring-exception is true;
 
 a-text of pre-haun is "YRYYRRR". b-text of pre-haun is "YRYYRRR". parse-text of pre-haun is "-[sp]x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
@@ -13852,56 +13850,24 @@ understand "haunter" as pre-haun when pre-haun is in Anger Range.
 
 does the player mean unearthing the pre-haun: it is very likely.
 
-to say h-not-yet:
-	say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is moot]shouldn't dig the haunter back up. You've no reason to[else]don't know what you'd do if you'd unearth the haunter[end if]"
-
-before doing something with pre-haun:
-	if current action is unearthing or current action is scaning or current action is fliptoing or current action is objhinting, continue the action;
-	say "[h-not-yet]." instead;
-
-before doing something with ruby when ruby is moot:
-	if current action is unearthing or current action is objhinting, continue the action;
-	if current action is objasking about or current action is objasking generically, continue the action;
-	say "You must forget about the ruby." instead;
-
 carry out unearthing:
-	if mrlp is not oyster:
-		say "[reject]";
+	if mrlp is not oyster, say "[reject]" instead;
+	if player does not have rigged digger:
+		say "You need something to dig here[if Shuttle Hutlets is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
+		preef pre-haun;
+		do nothing instead;
+	if noun is haunter, say "It already is." instead;
 	if player is in Rascal Craals:
 		if noun is location, say "You haven't buried anything, and you're not aware of treasure here. Plus, if you dig too long without knowing what to look for, you might attract attention." instead;
 		if noun is ruby, say "That is wasted work." instead;
 		if noun is thin hint, say "That would be wasted work, unearthing the thin hint[if haunter is not moot] and the ruby below it[end if]." instead;
 	if player is not in Anger Range, say "Nothing to unearth here. Maybe somewhere more wide-open." instead;
-	if noun is not pre-haun:
-		say "Not worth unearthing, but that's the right idea.";
-		preef pre-haun;
-		the rule succeeds;
-	if player does not have rigged digger:
-		say "You need something to dig here[if Shuttle Hutlets is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
-		preef pre-haun;
-		the rule succeeds;
-	if noun is haunter, say "It already is." instead;
-	if haunter is not off-stage, say "The haunter has been unearthed." instead;
-	say "Ravage a grave!";
-	if player has ruby:
-		say "[line break]As you begin to dig, you hear 'My...jewel...close...thieves...pay.'[paragraph break]It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or some people-forms. People-forms who deserve SOMETHING pinned on them.";
-		preef pre-haun;
-		do nothing instead;
-	if ruby is not moot:
-		say "[line break]You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'[paragraph break]You haven't found or discovered a jewel, yet.";
-		preef pre-haun;
-		do nothing instead;
-	now haunter is unfigured;
-	say "[line break]A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'";
-	reg-inc;
-	now haunter is in Anger Range;
-	set the pronoun it to haunter;
-	set the pronoun him to haunter;
-	set the pronoun her to haunter;
-	moot scrawl;
+	if noun is pre-haun, try fliptoing pre-haun instead;
+	say "Not worth unearthing, but that's the right idea.";
+	preef pre-haun;
 	the rule succeeds;
 
-the haunter is a reflexive neuter person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon."
+the haunter is a reflexive neuter person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon.". "The haunter is here--it's disturbingly shaped like a sausage[if haunter is reflexive]. You should really get on good terms with it[end if]."
 
 check taking haunter:
 	say "It's incorporeal. But maybe you can take it somewhere." instead;
@@ -13918,8 +13884,6 @@ a-text of haunter is "YRRYYRY". b-text of haunter is "YRRYGPG". parse-text of ha
 check going when location of haunter is location of player: if haunter is reflexive, say "Running would be an admission of guilt. That sausage needs to hear good words." instead;
 
 every turn (this is the track haunter rule):
-	if location of player is location of haunter:
-		if haunter is reflexive, say "You should really get on good terms with the sausage." instead;
 	if haunter has been in Anger Range:
 		if location of haunter is adjacent to location of player:
 			say "The haunter follows you.";
@@ -14028,10 +13992,7 @@ check taking the cans:
 	say "There are too many. Even one or two would be too icky and mess up your super purse. You don't even have a garbage sticker, but maybe another tool would work." instead;
 
 check scaning the cans (this is the bonus point rule) :
-	if the player's command includes "scan":
-		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths.";
-		min-and;
-		moot cans instead;
+	if the player's command includes "scan", try fliptoing cans instead;
 	say "You're over-thinking this one." instead;
 
 section eeks
@@ -14058,7 +14019,9 @@ Aunt Tuna is a female person in Lean Lane. description is "Grayin['], grainy. 'S
 
 does the player mean eating the tea tray: it is very likely;
 
-The tea tray is edible flippable scenery in Lean Lane. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
+chapter tea (eat)
+
+The tea tray is edible vanishing scenery in Lean Lane. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
 
 a-text of tea tray is "YYR". b-text of tea tray is "YYR". parse-text of tea is "e[sp]a[sp]t". tea tray is parse-spoilable.
 
@@ -14164,8 +14127,7 @@ check eating tea tray:
 	if the player's command includes "tray", say "You probably just want the tea on the tray. Not the tray." instead;
 	if the player's command does not include "eat", say "Be straightforward, here." instead;
 	if trout is reflexive, say "You feel slightly guilty eating before helping the trout, but Aunt Tuna nods, it's okay for you to eat first.";
-	say "Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]";
-	pearl-check;
+	try fliptoing tea tray instead;
 	moot tea tray;
 	reg-inc;
 
@@ -14211,7 +14173,7 @@ after looking in Plasm Lamps:
 	it-him-her the ant;
 	continue the action;
 
-the natant ant is a flippable animal in Plasm Lamps. "Attn: an ant! It is swimming about in the plasm on the floor, making it a NATANT ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are reflexed]. But maybe you can show something for style points, first[end if]."
+the natant ant is a vanishing animal in Plasm Lamps. "Attn: an ant! It is swimming about in the plasm on the floor, making it a NATANT ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are reflexed]. But maybe you can show something for style points, first[end if]."
 
 check taking natant ant: say "The action for dealing with the ant is even shorter and easier than TAKE. But not GET." instead;
 
@@ -14227,8 +14189,7 @@ understand "tan [something]" as taning.
 understand "tan" as taning.
 
 rule for supplying a missing noun when taning:
-	if location of player is Plasm Lamps:
-		now noun is natant ant;
+	if location of player is Plasm Lamps, now noun is natant ant;
 
 does the player mean taning the natant ant: it is very likely;
 
@@ -14373,7 +14334,11 @@ a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[
 
 chapter templar ramplet
 
-the templar ramplet is scenery. "The templar ramplet isn't something to be approached lightly. You sense you need the right way to get on it."
+the templar ramplet is vanishing boring LLPish scenery. description of templar ramplet is "The templar ramplet isn't something to be approached lightly. You sense you need the right way to get on it.". bore-text of templar ramplet is "Hmm. You need to make a scene to cross the templar ramplet.". bore-check of templar ramplet is bore-ramplet rule.
+
+this is the bore-ramplet rule:
+	if current action is entering or current action is climbing, say "Too tame a way to get on the templar ramplet." instead;
+	if current action is trampleing, now boring-exception is true;
 
 a-text of templar ramplet is "RRYRRRY". b-text of templar ramplet is "?RYRRRY". parse-text of templar ramplet is "x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]".
 
@@ -14388,15 +14353,10 @@ understand "trample [thing]" as trampleing.
 does the player mean trampleing the templar ramplet: it is very likely.
 
 carry out trampleing:
-	if templar ramplet is not touchable, say "You have no need to trample anyone or anything here.";
+	if templar ramplet is not touchable, say "You have no need to trample anyone or anything here." instead;
 	if noun is not templar ramplet, say "Wrong thing to trample." instead;
 	if wipes are not moot, say "You should've cleaned the lance before seeing the ramplet. That you don't is a BUG. I don't know what to do, but it's not story-critical. Sorry." instead;
-	say "You make a big show of walking noisily down the templar ramplet. It works! You tumble out in...";
-	min-and;
-	min-up; [you will get another point for TANing the ant]
-	move player to Plasm Lamps;
-	moot templar ramplet;
-	the rule succeeds.
+	try fliptoing templar ramplet instead;
 
 check entering templar ramplet: say "You need to enter the right way." instead;
 
@@ -14434,7 +14394,7 @@ chapter wipes
 after choosing notable locale objects when player is in Lean Lane:
 	if wipes are in Lean Lane, set locale priority of wipes to 0;
 
-some wipes are plural-named and reflexive and LLPish. description of wipes is "I-SPEW wipes is written in red on them.".
+some wipes are plural-named and reflexive and LLPish. some wipes are in lean lane. description of wipes is "I-SPEW wipes is written in red on them.".
 
 a-text of wipes is "RRYRY". b-text of wipes is "RRYRY". parse-text of wipes is "x[sp]x[sp]-[sp]x[sp]-".
 
@@ -14486,25 +14446,17 @@ does the player mean cleaning the player when player does not have lance: it is 
 
 carry out cleaning:
 	if noun is the player, say "You are morally and physically okay." instead;
-	if noun is lance and lance is cleaned, say "The lance is as shiny as can be." instead;
+	if noun is lance, try fliptoing lance instead;
 	if player does not have wipes:
 		say "You have nothing to clean [if noun is lance]the lance[else]anything[end if] with.";
 		if noun is lance, preef lance;
 		the rule succeeds;
 	if noun is waste, say "The wipes won't begin to clear away the waste. You need good old fashioned physical effort." instead;
 	if noun is not lance, say "You don't need to clean that." instead;
-	now lance is cleaned;
-	now lance is unfigured;
-	now player has lance;
-	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry.";
-	moot wipes;
-	min-and;
-	the rule succeeds; [since you can't pick up the lance before cleaning it, no need to test tricky cases like cleaning the lance in Tenfold]
 
 book Lapsin' Plains
 
-to say knob-link:
-	say "[if knob is in Lapsin' Plains], linked by a knob,[end if]"
+to say knob-link: say "[if knob is in Lapsin' Plains], linked by a knob,[end if]"
 
 Lapsin' Plains is north of Anger Range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are touchable]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are touchable]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. Sloppy polyps make travel inadvisable everywhere except past [if pans are in Lapsin' Plains]the pans[else]where the pans were[end if] and back south."
 
@@ -14558,7 +14510,7 @@ understand the command "embrace" as something new.
 
 chapter splaining
 
-bogus-plains is privately-named LLPish reflexive scenery in Lapsin' Plains. understand "plains" as bogus-plains when player is in Lapsin' Plains and debug-state is true. printed name is "all around the plains". description of bogus-plains is "The plains would be bigger except for the sloppy polyps."
+bogus-plains is privately-named LLPish reflexive scenery in Lapsin' Plains. understand "plains" as bogus-plains when player is in Lapsin' Plains and debug-state is true and bogus-plains are not moot. printed name is "all around the plains". description of bogus-plains is "The plains would be bigger except for the sloppy polyps."
 
 understand "bp" as bogus-plains when debug-state is true.
 
@@ -14644,11 +14596,9 @@ check opening the span pans:
 
 book Shuttle Hutlets
 
-to say mr-miss:
-	say "[if player is male]Mr.[run paragraph on][else]Miss[end if]";
+to say mr-miss: say "[if player is male]Mr.[run paragraph on][else]Miss[end if]";
 
-to say heepy:
-	say "[if waste is touchable]waste lying around, though you probably don't need to expend the physical effort to clean it unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
+to say heepy: say "[if waste is touchable]waste lying around, though you probably don't need to expend the physical effort to clean it unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
 
 Shuttle Hutlets is inside of Lapsin' Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are touchable or waste is touchable]. You see [heepy][end if]. You can only go back outside."
 
@@ -14670,7 +14620,7 @@ check dropping prod:
 	if word number 1 in the player's command is not "drop", say "That's not the right way to abuse the prod to open it." instead;
 	try fliptoing rigged digger instead; [eg flipping the prod to the digger]
 
-the tubs are a plural-named thing in Shuttle Hutlets. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
+the tubs are a plural-named vanishing thing in Shuttle Hutlets. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
 
 check taking tubs: say "Way too bulky. But actually not as heavy as you thought." instead;
 
@@ -14706,7 +14656,7 @@ to say dig-purpose:
 check searching the heaps:
 	say "[if player has rigged digger]Don't get greedy[else]That'd be too boring. You might have more fun creating something with the heaps. You don't know why, but you just do[end if]." instead;
 
-the waste is vanishing scenery. "It'd take strength and effort to move or pick through." [it is not LLPish because you flip the tubs to it]
+the waste is vanishing LLPish scenery. "It'd take strength and effort to move or pick through.".
 
 check taking waste: say "Waste of inventory space. Even with the purse." instead;
 
@@ -14714,15 +14664,13 @@ check taking heaps: say "[if heaps are reflexive]They're too big and amorphous t
 
 a-text of waste is "RRYYR". b-text of waste is "RRYYR". parse-text of waste is "x[sp]x[sp]-[sp]-[sp]x". waste is cheat-spoilable.
 
-the clean lance is an LLPish reflexive thing. description of lance is "[if lance is cleaned]Clean and ready for righteous smiting[else]Too grimy and dirty[end if].". "A lance lies here, too dirty and gross to pick up."
+the clean lance is an LLPish reflexive thing. description of lance is "[if lance is reflexed]Clean and ready for righteous smiting[else]Too grimy and dirty[end if].". "A lance lies here, too dirty and gross to pick up."
 
-printed name of lance is "[if lance is cleaned]clean [end if]lance"
-
-the lance can be cleaned. the lance is not cleaned.
+printed name of lance is "[if lance is reflexed]clean [end if]lance"
 
 a-text of lance is "RRYYR". b-text of lance is "RRYYR". parse-text of lance is "x[sp]x[sp]-[sp]-[sp]x".
 
-check taking lance:	say "It's too icky." instead;
+check taking lance when player does not have lance:	say "It's too icky." instead;
 
 chapter shadier airshed
 
@@ -14755,7 +14703,7 @@ understand "bust [something]" as busting.
 does the player mean busting tubs: it is very likely.
 
 carry out busting:
-	if noun is tubs, try fliptoing waste instead;
+	if noun is tubs, try fliptoing tubs instead;
 	try attacking noun instead;
 
 book Sclerous Closures
@@ -14802,8 +14750,6 @@ check scaning sardine: say "[one of]The sardine smirks a bit then comments he's 
 
 chapter burying
 
-[we can't quite get away with doing nothing here]
-
 burying is an action applying to one thing.
 
 understand the command "bury [something]" as something new.
@@ -14811,8 +14757,7 @@ understand the command "bury [something]" as something new.
 understand "bury [something]" as burying.
 understand "bury" as burying.
 
-does the player mean burying the ruby:
-	it is very likely;
+does the player mean burying the ruby: it is very likely;
 
 rule for supplying a missing noun when burying:
 	if player has ruby:
@@ -14820,15 +14765,13 @@ rule for supplying a missing noun when burying:
 	else:
 		now noun is the player;
 
-the ruby is a reflexive thing.
+the ruby is a vanishing thing. description of ruby is "[one of]See ruby, rub eyes. [or][stopping]You feel heat run from you as you see the words HAUNTER on it."
 
 a-text of ruby is "RYRO". b-text of ruby is "RGRB". parse-text of ruby is "b[sp]u[sp]r[sp]y". ruby is parse-spoilable.
 
-description of ruby is "[one of]See ruby, rub eyes. [or][stopping]You feel heat run from you as you see the words HAUNTER on it."
-
 carry out burying:
-	if noun is not ruby, say "That's not something worth BURYing." instead;
 	if ruby is moot, say "You half forgot where you dug the ruby. You're not sure if you want it back." instead;
+	if noun is not ruby, say "That's not something worth BURYing." instead;
 	if player does not have ruby, say "Nothing you have is valuable enough to bury." instead;
 	if player is in Anger Range, say "That would reunite the haunter with the ruby, but you might be a prime suspect for taking it. Maybe you can use the haunter to take out an enemy." instead;
 	if player is in Horned Hedron, say "The walleyes would find the ruby and take it, and you'd be out--but maybe you could frame them for its theft by burying the ruby somewhere near." instead;
@@ -21705,12 +21648,12 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
 		else if waste is not moot:
 			say "[2dmiss of myreg]you could've tried to SWEAT to remove the waste.";
-		else if lance is not cleaned:
+		else if lance is reflexive:
 			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
-		else if Plasm Lamps is visited and bogus-lamps are not moot:
+		else if templar ramplet is not moot:
+			say "[2dmiss of myreg]you could've tried to TRAMPLE the Templar Ramplet.";
+		else if Plasm Lamps is visited and bogus-lamps are not reflexed:
 			say "[2dmiss of myreg]you could've tried to PSALM in Plasm Lamps.";
-		else if ant is not moot:
-			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Plasm Lamps.";
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	else if myreg is Towers:
