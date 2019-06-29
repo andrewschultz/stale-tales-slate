@@ -94,19 +94,20 @@ exit() if $lengthBail;
 seedHashesInSource() if $tryDetail;
 
 my @roilingArray = (
-  "means manse", "stores", "routes", "troves", "presto", "oyster",
-  "towers",      "otters", "others"
+  "Ordeal Reload", "stores", "routes", "troves",
+  "presto",        "oyster", "towers", "otters",
+  "others"
 );
 
 my @shufflingArray =
-  ( "Intro", "Stores", "Forest", "Sortie", "Metros", "Resort" );
+  ( "Ordeal Loader", "Stores", "Forest", "Sortie", "Metros", "Resort" );
 
 if ($doShuf) {
   $gotAnyBad = 0;
   for $reg (@shufflingArray) {
     hashVer( "shuffling", 0, 1, "table of $reg nudges", 5, "nudges" );
 
-    hashVer( "shuffling", 3, 6, "table of $reg anagrams", 0, "" )
+    hashVer( "shuffling", 3, 6, "table of $reg anagrams", 0, "tables" )
       if $anagramCheck;
   }
   print "No hash value errors for Shuffling Around.\n" if !$gotAnyBad;
@@ -116,7 +117,7 @@ if ($doRoil) {
   for $reg (@roilingArray) {
     hashVer( "roiling", 0, 1, "table of $reg nudges", 5, "nudges" );
 
-    hashVer( "roiling", 3, 6, "table of $reg anagrams", 0, "" )
+    hashVer( "roiling", 3, 6, "table of $reg anagrams", 0, "tables" )
       if $anagramCheck;
   }
   print "No hash value errors for A Roiling Original.\n" if !$gotAnyBad;
@@ -140,7 +141,7 @@ sub hashVer {
   print "Looking at $_[3] in $file:\n" if $verbose;
 
   while ( $a = <A> ) {
-    if ( $a =~ /^$_[3]/ ) { $everTable = 1; $inTable = 1; <A>; next; }
+    if ( $a =~ /^$_[3]/i ) { $everTable = 1; $inTable = 1; <A>; next; }
     if ( ($inTable) && ( $a !~ /^[a-z\"]/i ) ) { close(A); last; }
     if ($inTable) {
       chomp($a);

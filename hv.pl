@@ -156,6 +156,8 @@ for my $idx ( 0 .. $#ARGV ) {
     /^-?s$/  && do { $doShuf   = 1; $doRoil    = 0; next; };
     /^-?r$/  && do { $doShuf   = 0; $doRoil    = 1; next; };
     /^-?m$/ && do { matchHash("shuffling"); matchHash("roiling"); exit; };
+    /^-?mr$/ && do { matchHash("roiling"); exit; };
+    /^-?ms$/ && do { matchHash("shuffling"); exit; };
     /\\/ && do {
       $tabString = $this;
       $tabString =~ s/\//\t/g;
@@ -291,40 +293,65 @@ sub wordit {
 #####################################
 #compare story.ni with nudges to check overlap
 sub matchHash {
+  my $inTable = "";
+  my $dupCount = 0;
   my %inFile;
-  print "Matching hashes for $_[0].\n";
-  my $fi =
+  my %inLong;
+  print "Matching hashes for $_[0]...\n";
+  my $fi1 =
 "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] tables.i7x";
-  open( A, $fi ) || die("No source file");
+  open( A, $fi1 ) || die("No table file");
+  print("Checking table file for $_[0]...\n");
+  my @ary;
   while ( $line = <A> )    #first read in the source with table of anagrams
   {
-    if ( $line =~ /^table of anagrams/ ) { $inTable = 1; }
-    if ( $inTable && ( $line =~ /\t[0-9]/ ) ) {
+    if ( $line =~ /^table of .* anagrams/ ) { $inTable = 1; }
+    if ( $inTable && ( $line =~ /\t[0-9]{6,}/ ) ) {
       chomp($line);
-      $b = $line;
-      $b =~ s/.*\t//g;
-      $b =~ s/[^0-9].*//g;
-      $inFile{$b} = $.;
-      $inLong{$b} = $line;
+	  @ary = split(/\t/, $line);
+	  for my $temp (@ary) {
+	    if ($temp =~ /[0-9]{6}/) {
+		  $line =~ s/\"[^\"\t]{15,}\"/XXXX/g;
+      if ( $inFile{$temp} ) {
+	  $dupCount++;
+        print
+"We have a potential duplicate ($dupCount) at line $./$inTable of $_[0] tables with hash value $temp from line $inFile{$temp}:\n--$inLong{$temp}\n--$line\n";
+      } else {
+		  $inFile{$temp} = "table $.";
+		  $inLong{$temp} = $line; }
+	  last;
+		}
+	  }
     }
-    if ( $line !~ /[a-z]/i ) { $inTable = 0; }
+    if ( $line !~ /[a-z]/i ) { $inTable = ""; }
   }
   close(A);
-  $fi =
+  my $fi2 =
 "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x";
-  open( A, $fi ) || die("No nudge/table file");
+  open( A, $fi2 ) || die("No nudge file");
+  print("Checking nudges file for $_[0]...\n");
   while ( $line = <A> )    #first read in the source with table of anagrams
   {
-    if ( $line =~ /^table of nudges/ ) { $inTable = 1; }
-    if ( $inTable && ( $line =~ /\t[0-9]/ ) ) {
-      my @tabary = split( /\t/, $line );
-      my $c = $tabary[1];
-      if ( $inFile{$c} ) {
+    if ( $line =~ /^table of .* nudges/i ) { $inTable = $line; chomp($inTable); }
+    if ( $inTable && ( $line =~ /\t[0-9]{6,}/ ) ) {
+	  chomp($line);
+	  @ary = split(/\t/, $line);
+	  for my $temp (@ary) {
+	    if ($temp =~ /[0-9]{6,}/) {
+		  $line =~ s/\"[^\"\t]{15,}\"/XXXX/g;
+      if ( $inFile{$temp} ) {
+	  $dupCount++;
         print
-"We have a potential duplicate with hash value $c:\n--$inLong{$c}\n--$line\n";
-      }
+"We have a potential duplicate ($dupCount) at line $./$inTable of $_[0] nudges with hash value $temp at line $inFile{$temp}:\n--$inLong{$temp}\n--$line\n";
+      } else {
+		  $inFile{$temp} = "nudges $.";
+		  $inLong{$temp} = $line;
+		  }
+	  last;
+		}
+	  }
     }
-    if ( $line !~ /[a-z]/i ) { $inTable = 0; }
+    if ( $line !~ /[a-z]/i ) { $inTable = ""; }
   }
 
 }
