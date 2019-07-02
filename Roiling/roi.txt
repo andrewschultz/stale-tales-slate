@@ -3,8 +3,7 @@
 # rl.txt has the logic clues
 #
 !A Roiling Original HTML Clues
-->c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling
-out=roiling-invisiclues.htm
+outfile=c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling/roiling-invisiclues.htm
 outraw=roiling-invisiclues-raw.htm
 ==endheader
 >General

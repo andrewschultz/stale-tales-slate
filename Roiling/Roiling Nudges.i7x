@@ -1316,7 +1316,7 @@ to say name-worry: say "Perhaps it's better to focus on the proper names instead
 
 to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
-to say sos-arc: say "[if adobe abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole SOS ARC in the lairage regalia can become[end if]."
+to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole SOS ARC in the lairage regalia can become[end if]."
 
 to say board-change: say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
 

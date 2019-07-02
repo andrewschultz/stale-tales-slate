@@ -88,7 +88,7 @@ understand "gots er" as a mistake ("And what would you do with Store G, when you
 
 understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is unexamined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is in location of player.
 
-understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in strip of profits]Store U[else]the course source[end if], but how to get there?") when Store U is in location of player or course source is in location of player.
+understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in Strip of Profits]Store U[else]the course source[end if], but how to get there?") when Store U is in location of player or course source is in location of player.
 
 understand "pteros" as a mistake ("You don't need to face any predators. Aigh!") when player is in Strip of Profits and store p is in Strip of Profits.
 
@@ -300,9 +300,9 @@ understand "penrod" as a mistake ("Juvenile children's literature? At a time lik
 chapter Upscale Capsule
 
 to decide whether mbb-in:
-	unless player is in upscale capsule, no;
-	if Mr Beal is in upscale capsule, yes;
-	if balmer is in upscale capsule, yes;
+	unless player is in Upscale Capsule, no;
+	if Mr Beal is in Upscale Capsule, yes;
+	if balmer is in Upscale Capsule, yes;
 	no;
 
 understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
@@ -333,7 +333,7 @@ understand "bleep" as a mistake ("I don't know what you said, but it's vulgar, I
 
 understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.[paragraph break][uurrgg]") when location of player is Grey Gyre and maze entry is in Grey Gyre.
 
-understand "hm up" and "up hm" as a mistake ("You don't need to levitate the hump. You need a way to jump over it.") when hump is in grey gyre and player is in Grey Gyre.
+understand "hm up" and "up hm" as a mistake ("You don't need to levitate the hump. You need a way to jump over it.") when hump is in Grey Gyre and player is in Grey Gyre.
 
 chapter Char Arch
 
@@ -500,7 +500,7 @@ chapter Fighter Freight
 
 understand "peal" as a mistake ("The pale plea already sort of is. You need a stronger action than that.") when player is in Fighter Freight.
 
-chapter Anger Range / hero's shore
+chapter Anger Range / Hero's Shore
 
 understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in Anger Range and carps are in Anger Range.
 
@@ -644,9 +644,9 @@ understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing
 
 chapter Topside Deposit
 
-understand "dopiest" as a mistake ("You sense that the dreads adders [if dreads adders are in Topside Deposit]are[else]were[end if] one of the easier things to deal with, here, but you don't want to overstate it.") when player is in topside deposit.
+understand "dopiest" as a mistake ("You sense that the dreads adders [if dreads adders are in Topside Deposit]are[else]were[end if] one of the easier things to deal with, here, but you don't want to overstate it.") when player is in Topside Deposit.
 
-understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in topside deposit.
+understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in Topside Deposit.
 
 understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is enclosed by location of player.
 
@@ -864,9 +864,9 @@ understand "coins lure" as a mistake ("[if elmer is moot]You're not after loot r
 
 understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in Reclusion Inclosure.
 
-understand "nicer soul" as a mistake ("[if elmer is in reclusion inclosure]Elmer and Merle are beyond redemption[else]Yes, you are. But you need to be a braver soul and go west[end if].") when player is in Reclusion Inclosure.
+understand "nicer soul" as a mistake ("[if elmer is in Reclusion Inclosure]Elmer and Merle are beyond redemption[else]Yes, you are. But you need to be a braver soul and go west[end if].") when player is in Reclusion Inclosure.
 
-understand "rule scion" as a mistake ("That's what you're trying to stop, here[if elmer is in reclusion inclosure]. Besides, Elmer and Merle wouldn't trust your word, anyway[end if].") when player is in Reclusion Inclosure.
+understand "rule scion" as a mistake ("That's what you're trying to stop, here[if elmer is in Reclusion Inclosure]. Besides, Elmer and Merle wouldn't trust your word, anyway[end if].") when player is in Reclusion Inclosure.
 
 book others
 

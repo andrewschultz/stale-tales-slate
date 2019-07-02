@@ -564,7 +564,7 @@ this is the post-thebean-beneath rule:
 
 this is the post-unlit-until rule:
 	now noon gag is in Harms Marsh;
-	now sheol holes are in harms marsh;
+	now sheol holes are in Harms Marsh;
 
 this is the pre-around-unroad rule:
 	if darkness is in Harms Marsh:
@@ -783,7 +783,7 @@ this is the post-phooey rule:
 this is the pre-solve-maze rule:
 	if noun is maze walls and cur-score of presto < 3:
 		say "You're not messing around! You see the best way to destroy the maze, and you're going for it.[line break]";
-	else if nowt town is unvisited:
+	else if Nowt Town is unvisited:
 		say "No point actually going through the maze when you can destroy it.[line break]";
 	if player is not in Grey Gyre:
 		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
@@ -1399,7 +1399,7 @@ to say shout-check:
 this is the pre-ghoul-hat-although rule: abide by the medal check rules for ghoul hat;
 
 this is the post-ghoul-hat-although rule:
-	move gore ogre to bran barn;
+	move gore ogre to Bran Barn;
 	if sea cube is moot, min-up;
 
 this is the pre-ogre-ergo rule:
@@ -1596,7 +1596,7 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 
 section oyster
 
-check fliptoing when player is in posh hops shop: if noun is not trolls and silly-acts is 3, check-silly-death instead;
+check fliptoing when player is in Posh Hops Shop: if noun is not trolls and silly-acts is 3, check-silly-death instead;
 
 after fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
@@ -2706,7 +2706,7 @@ Shane	"[one of]Shane's skin has a healthy sun-kissed glow.[plus][or]Not if he's 
 Terrance	"[one of]Terrance seems stuck to his task.[plus][or]What if you could make him more RECREANT?[minus][cycling]"
 Tyson	"[one of]Tyson seems quite cheery about this whole adventure, like it's fun. Make him frowny.[plus][or]Or STONY.[minus][cycling]"
 Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.[minus][cycling]"
-succor crocus	"[if mesprise premises is unvisited]Maybe you haven't found where to do something with the crocus[else]You should probably give the succor crocus to the Tetris Sitter[end if]."
+succor crocus	"[if Mesprise Premises is unvisited]Maybe you haven't found where to do something with the crocus[else]You should probably give the succor crocus to the Tetris Sitter[end if]."
 flowerpot	--	succor crocus
 Ornate Atoner Renato	"[if Mislit Limits is unvisited]You don't need to worry about Renato's gift until the very end[else if crocus is off-stage]You may find something to put in the flowerpot behind the unripe ur-pine[else if player has crocus]The crocus can be given to someone else[else]You've taken care of Ornate Atoner Renato's gift[end if]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
