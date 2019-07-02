@@ -101,15 +101,14 @@ def read_region_chunks():
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
             if line.startswith(";"): continue
+            line = re.sub(" *#.*", "", line)
             #print("Adding", ary[0])
             if line.strip().endswith("\\") or line.strip().endswith("/"):
-                print(line_count)
                 whole_string += re.sub(" *$", "", line.strip()[:-1])
                 if not whole_string.endswith(","): whole_string += ","
                 continue
             if whole_string:
                 line = whole_string + line.strip()
-                print("Full line", line)
                 whole_string = ""
             ll = line.lower().strip()
             assign_stuff(ll)
@@ -137,6 +136,7 @@ if len(sys.argv) > 1:
     for q in sys.argv[1:]:
         if q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
+        elif q == 'e': os.system(amak_txt)
         else:
             if q in reg_verbs:
                 rs = reg_verbs[q].split(",")
