@@ -179,13 +179,13 @@ this is the pre-storer-resort rule:
 		say "That seems like it should work, but you sense you have not done enough yet[if Leis Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
 		preef store r instead;
 
-this is the pre-cabinet-bactine rule:
+this is the pre-cabinet-bactine rule: [ic]
 	if Trips Strip is unvisited:
 		say "That is a good idea, but you're not powerful enough yet.";
 		preef cabinet;
 		the rule fails;
 
-this is the post-cabinet-bactine rule:
+this is the post-cabinet-bactine rule: [ic]
 	move cabinet to location of player;
 	move cratered bits to location of player;
 	moot cratered bits;
@@ -513,7 +513,7 @@ this is the post-links-kilns rule:
 book general auxiliary rules
 
 this is the realize-rived-drive rule:
-	if grips are in rived drive and ropes are in rived drive and slope is in rived drive:
+	if grips are in Rived Drive and ropes are in Rived Drive and slope is in Rived Drive:
 		now slope is realized;
 		now grips are realized;
 		now ropes are realized;

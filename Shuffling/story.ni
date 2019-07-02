@@ -4743,7 +4743,7 @@ check inserting into:
 	if noun is notepad, say "Goodness, no, you might leave it there." instead;
 	if second noun is bubble or second noun is bucket or second noun is shell, say "But it's already been sorted. No need to muck it up." instead;
 
-check examining (this is the ignore-container-examine rule): if noun is sack or noun is cask or noun is a container in gnarliest triangles, ignore the examine containers rule.
+check examining (this is the ignore-container-examine rule): if noun is sack or noun is cask or noun is a container in Gnarliest Triangles, ignore the examine containers rule.
 
 Rule for printing room description details:
 	if location of player is Gnarliest Triangles:
@@ -6550,7 +6550,7 @@ check going in Obtains Boastin' Bastion:
 	if noun is up, say "You're pushed back. As you leave, someone baits on. You aren't allowed anywhere except the main area." instead;
 	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
 
-Some dry cake is a singular-named thing in Obtains Boastin' Bastion. "Some dry cake is here[if poses posse is in Bastion]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
+Some dry cake is a singular-named thing in Obtains Boastin' Bastion. "Some dry cake is here[if poses posse is in Obtains Boastin' Bastion]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
 
 indefinite article of dry cake is "some".
 
@@ -8369,7 +8369,7 @@ check putting something on cabinet: [??]
 
 section getaway gateway
 
-the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping].". entry-rule of getaway gateway is enter-gateway rule. description of getaway gateway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ[one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping].". bore-text of getaway gateway is "It's mostly there to enter, to go somewhere new[if mega ant is in notices section], once you get rid of the mega ant[end if].". bore-check of getaway gateway is bore-gateway rule.
+the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping].". entry-rule of getaway gateway is enter-gateway rule. description of getaway gateway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ[one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping].". bore-text of getaway gateway is "It's mostly there to enter, to go somewhere new[if mega ant is in Notices Section], once you get rid of the mega ant[end if].". bore-check of getaway gateway is bore-gateway rule.
 
 this is the enter-gateway rule:
 	if gateman is off-stage:
@@ -9031,7 +9031,7 @@ check going nowhere (this is the main can't go that way rule) :
 table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if] is[if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
-Thickest Thickets	"[one of]You hit a snag, and the [if toga is in thickest thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
+Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
 Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[unless gateman is in Notices Section], though it'd be nice to have some help."
 Self-ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
 Flesh Shelf	"It's too steep down every way except back east."
