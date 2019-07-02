@@ -1,0 +1,35 @@
+###################optionals are in CAPS
+# ordeal reload has +2 for basement and a point for stapling the curtain, so total ponts = anagrams + 2
+reload/loader/ordeal=lamp,satchel,PAINTING,BASEMENT,CHIMNEY,stable,stair,RAMP,SNIB,staple,stapler,flier
+# stores is, well, stores.
+stores=sorbet,routes,troves,presto,oyster,towers,others,otters,TOKERS,NESTOR,OUTSIDE
+#routes is straightforward about points. There's no bonus. There are no longer alternates.
+routes=TOWARDS,inside,past,across,despite,opposite,against,astride,below,under,from,beneath,until,around,along,amidst,athwart,between,through,beyond,WITHOUT
+#troves has a few verbs where you can get one of two and pass, but nothing is exclusionary any more.
+troves=hate,care,GAPE,observe,spot,reason,BELIEVE,recall,despair,decide,GLARE,master,BOLSTER,deal,desire,aspire,STRIVE,ponder,deserve,DISCOVER,last,ramble,RESIST,recant
+#presto has the volt maze solutions (2 verbs, 3 max points for the best one) and the hoop solutions(2 verbs, 2 max points for the best one) for a net of -1 verbs vs. points.
+#you can also get only 2 of the 3 sign solutions: 3 verbs, 2 points. Net = 0.
+#The hogs and keys give 2 verbs, 1 point. Net = -1.
+#it also gives a point for getting the yoke from the yak. 0 verbs, 1 point. Net = 0.
+#skid/disk only gives one point. +1 verbs vs points.
+#bus/sub only gives one point. +2 verbs vs points.
+#reboot is technically not an anagram as there are alt solutions, but for our purposes it counts as one.
+presto=BLAM,mazeltov,wont,umph,phooey,pooh,screen,rats,drat,ole,darn,whassup,GOODNESS,bleep,bingo,PROST,there,gosh,syke,WHAT,solong,later,tough,TRASCH,disk,skid,cola,mug,leaf,futon,CASSEROLE,ROMSTICKS,keyboard,TAB,capslock,sleep,debug,compile,bus,sub,AVIDER,DERIVE,reboot
+#oyster has 3 extra in the Shop. Spill is an extra that can be used any time. Only one of scrap/spike is usable.
+#One of boast/leap and fart/soar is also extraneous. That's 7 extra anagrams.
+#You also get a point for telling the haunter about the ruby, so total points = anagrams - 6
+oyster=sing,spit,scrape,spill,inset,unmap,unset,stroll,calm,run,boast,fart,soar,leap,spike,scrap,seek,SCAN,tutor,eat,SWIPE,TEND,SPLAIN,trace,react,kiss,bonk,snap,bust,drop,SHAPE,SWEAT,CLEAN,warp,search,bury,unearth,assuage,patrol,enlarge,prepay,TRAMPLE,PSALM,TAN,derail,REVEL,spin,redial
+# otters has +2 verbs for the imp and whiners
+# then +2 verbs for the alternate ergo/else paths
+# then -1 for PLAY WHISTLE
+# then +1 for discern/rescind
+# then +25 for the macks
+otters=barely,reedily,discern,rescind /
+	loathingly,stoically,tersely,brutely,angrily,enragedly, /
+	slow,paroled,artsy,coolest,garbed, /
+	parrot,raptor,snail,snipe,racoon,raccoon,hornets /
+	although,ergo,because,else,however /
+	bossily,nastily,seedily,shadily,snidely,starkly,cattily,tearily,irately,blearily,ribaldly,formally,coitally,modestly,shabbily,shoddily,silently,steamily,suddenly,stupidly,martially,sincerely,sobbingly,tediously,wearingly,drawlingly,emotionally,desperately,despairingly /
+atom /
+	honestly,aside,deeply,quickly
+;
