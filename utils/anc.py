@@ -18,7 +18,7 @@ mt.bail_if_not(replacement_dict_file)
 mt.bail_if_not(anagram_focus_file)
 
 open_the_files = defaultdict(int)
-focused_already = defaultdict(int)
+focused_already = defaultdict(lambda: defaultdict(int))
 last_table_search = ""
 first_table_search = ""
 
@@ -109,7 +109,7 @@ def actual_anagram(l, debug = False, in_preview = False):
             print("FOCUS MARKERS NOT NEEDED FOR ANAGRAM")
             print(l)
             print(lx)
-        if no_focus_markers(l) in focused_already:
+        if no_focus_markers(l) in focused_already[cur_proj]:
             sys.exit("Oops you already put in focus-file information for {:s}.".format(l))
     lx = convert_brackets(lx)
     letter_count = defaultdict(int)
@@ -172,9 +172,9 @@ def ana_check(a):
             if last_table_search and last_table_search in this_table and not ll:
                 last_table_yet = True
                 break
-            if ll in focused_already:
+            if ll in focused_already[a]:
                 if show_skips: print("Skipping line", line_count, ll[:15])
-                focused_already.pop(ll)
+                focused_already[a].pop(ll)
                 continue
             this_tl += 1
             if not first_table_yet: continue
@@ -271,8 +271,12 @@ def get_anagram_focus():
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
             if line.startswith(";"): break
+            if line.lower().startswith("proj="):
+                cur_proj = line[5:].strip()
+                continue
             ll = to_end_quote(line.lower().strip())
             if not ll: continue
+            if not cur_proj: sys.exit("Need current project with PROJ= at line {:d} of {:s}.".format(line_count, anagram_focus_file))
             ll2 = no_focus_markers(ll)
             if actual_anagram(ll2, in_preview = True):
                 not_needed += 1
@@ -281,10 +285,10 @@ def get_anagram_focus():
                 print(ll2)
                 actual_anagram(ll2, debug = True, in_preview = True)
                 bail_open_line = line_count
-            if ll2 in focused_already:
-                print("Uh oh duplicate focused already", ll2, "at", line_count, "duplicating", focused_already[ll])
+            if ll2 in focused_already[cur_proj]:
+                print("Uh oh duplicate focused already", ll2, "at", line_count, "duplicating", focused_already[cur_proj][ll])
             else:
-                focused_already[ll2] = line_count
+                focused_already[cur_proj][ll2] = line_count
     if bail_open_line: i7.npo(anagram_focus_file, bail_open_line)
 
 def rewrite_focus_examples(my_game):
@@ -420,16 +424,17 @@ if get_shuffling: anas.append("sa")
 
 get_anagram_focus()
 
-for a in anas: ana_check(a)
+for cur_proj in anas: ana_check(cur_proj)
 
 match_focuses &= not first_table_search and not last_table_search
 
 if match_focuses:
-    lfa = len(focused_already)
-    if lfa:
-        q = list(focused_already)
-        print("Did not find i7x file for focus file entries:")
-        for temp in range(0, min(focus_max, lfa)):
-            print(temp+1, q[temp])
-        if focus_max < lfa:
-            print("Only showed", focus_max, "of", lfa, "unused.")
+    for a in anas:
+        lfa = len(focused_already[a])
+        if lfa:
+            q = list(focused_already[a])
+            print("Did not find i7x file for focus file entries:")
+            for temp in range(0, min(focus_max, lfa)):
+                print(temp+1, q[temp])
+            if focus_max < lfa:
+                print("Only showed", focus_max, "of", lfa, "unused.")

@@ -1,3 +1,4 @@
+PROJ=roi
 "Old IDs are sold here. Huh?" [x]
 "Jeff Kors and Geoff T have given this place their personal porn seal."
 "Burma Station advertises here." [x]
@@ -31,7 +32,6 @@
 "FUN? ICK" [x]
 "clucks at what Dustin became." [x: nudist]
 "Wares from Bad John's." [x] [handjobs]
-"The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learning Girl Anne, Bytes Betsy, Learned Nerd-Ale Darlene, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain? Gamer Marge?" [x]
 "A fish in a dirty suit yells 'To bar! Abort!' repeatedly in a funny accent." [x]
 "'Gag! Soft!' a bigot moans." [x]
 "bemoans kids hooked on DSL these days." [x]
@@ -582,7 +582,7 @@
 "You see a warning: >Loot Porn? Poltroon!" [x]
 "You see `striptease tapestries` and are sorry you did." [x]
 "You think you hear '`You perv, voyeur :p`' but notice the `nice moot emoticon`." [p] [x]
-"'[n-t] Tokes. Take notes<,' says [if nestor is visible]Nestor[else]one of them[end if], and his pals all giggle." [x]
+"'[n-t] Tokes. Take notes<,' says [if nestor is touchable]Nestor[else]one of them[end if], and his pals all giggle." [x]
 "'Any pot? Pay not!<' they tempt you, but things are mind-bending enough." [x]
 "'`Bask there: Herbs take the breaks`!' they say, channeling `Herb Keats`." [x]
 "'Cop, toke! Pot! Coke!<' they chant." [x]
@@ -669,8 +669,8 @@
 "[lrp] moan they're no `Brooks KO Bros`." [x]
 "[lrp] realize they're no `Rad Ryno and Rory`." [x]
 "[lrp] regret picking on `Pinko Sal Polanski`."
-"[ltp] regret picking on `Pinko Shon Hopkinson`."
-"[ltp] regret picking on `Pinko Ann Pankonin`."
+"[lrp] regret picking on `Pinko Shon Hopkinson`."
+"[lrp] regret picking on `Pinko Ann Pankonin`."
 "[lrp] suddenly see the sad side of `[i]Sucker-Punch Checkup Runs[r]`." [x]
 "[lrp] suddenly sympathize with the losers in `[i]Booyahs: Oh, Ay, Sob[r]`." [x]
 "[lrp] try and fail to make that move from `Neat-KO Keaton`." [x]
@@ -682,3 +682,5 @@
 "'`Not gross. So strong`.' they mutter to each other." [x]
 "They need `U-GOTS-GUSTO` for when gusts go out, even if it might cause `gouts`."
 "They bemoan being on the wrong side of the `GPA gap`." [x]
+PROJ=sa
+"The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learning Girl Anne, Bytes Betsy, Learned Nerd-Ale Darlene, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain? Gamer Marge?" [x]
