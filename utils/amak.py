@@ -4,9 +4,13 @@
 # in other words, HEAT and HATE have the first letter identical, but EATH has no letter slots in common with HEAT.
 #
 
+import os
 import re
 import sys
 from collections import defaultdict
+
+reg_verbs = defaultdict(str)
+amak_txt = "c:/writing/scripts/amak.txt"
 
 #option(s). There may be more later.
 shift_1_on_no_repeat = False
@@ -81,10 +85,45 @@ def show_results(q, result_string = "has this anagram with no letters in common:
     if not temp: return
     print(q, result_string, temp)
 
+def assign_stuff(x):
+    ary = x.split("=")
+    if len(ary) != 2: sys.exit("Need REGION=(CSVS) at line {:d}, has {:d} partitions via =".format(line_count, len(ary)))
+    if ',' not in ary[1]: sys.exit("Need CSV on right hand side at line {:d}".format(line_count))
+    for rv in ary[0].split("/"):
+        reg_verbs[rv] = ary[1]
+
+def read_region_chunks():
+    whole_string = ""
+    if not os.path.exists(amak_txt):
+        print("Skipping word-combo config file.")
+        return
+    with open(amak_txt) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if line.startswith("#"): continue
+            if line.startswith(";"): continue
+            #print("Adding", ary[0])
+            if line.strip().endswith("\\") or line.strip().endswith("/"):
+                print(line_count)
+                whole_string += re.sub(" *$", "", line.strip()[:-1])
+                if not whole_string.endswith(","): whole_string += ","
+                continue
+            if whole_string:
+                line = whole_string + line.strip()
+                print("Full line", line)
+                whole_string = ""
+            ll = line.lower().strip()
+            assign_stuff(ll)
+    if whole_string:
+        print("OOPS did not end with proper unslashed line.")
+        assign_stuff(whole_string)
+
+read_region_chunks()
+
 my_tests = [ "aabbb",
   "stroll", #this "broke" my original tries of just flipping every next letters, or trying to cycle through letters
   "aaabbbc", # this is a tricky case where if we just swap the a's and b's, we fail. But we can swap an (a or b) with a C.
   "aaabbcc", # this is another case where we only have 3 different letters, which may be tricky
+  "babaab", # another boundary case where ababba is the only solution
   "basically", # this is a random word used for a potential puzzle. It has two pairs of identical letters
   "TeTrIs", # making sure odd input like capital letters is processed ok
   "try this", # making sure that we allow spaces and nothing goes wrong
@@ -98,7 +137,13 @@ if len(sys.argv) > 1:
     for q in sys.argv[1:]:
         if q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-        else: words_to_shift.append(q.lower())
+        else:
+            if q in reg_verbs:
+                rs = reg_verbs[q].split(",")
+                print("Getting verb chunk for", q, "and found", len(rs))
+                words_to_shift += rs
+            else:
+                words_to_shift.append(q.lower())
 
 if not len(words_to_shift):
     print("Using my tests")
