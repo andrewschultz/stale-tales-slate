@@ -41,11 +41,6 @@ bail_on_mismatch = False
 max_file_difs = 0
 file_difs = 0
 
-table_starts = defaultdict(int)
-table_order = defaultdict(tuple)
-first_table = defaultdict(str)
-sect_order = defaultdict(int)
-
 temp_file = os.path.join(i7.extdir, "temp.i7x")
 tbase = os.path.basename(temp_file)
 
@@ -71,8 +66,10 @@ def invalid_conditional(s):
     return False
 
 def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, exp_cols = 0):
-    sect_order.clear()
-    table_order.clear()
+    table_starts = defaultdict(int)
+    table_order = defaultdict(tuple)
+    first_table = defaultdict(str)
+    sect_order = defaultdict(int)
     in_table = False
     my_table = ""
     write_lines = True
@@ -85,7 +82,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     ever_necc_section = False
     ever_table = False
     ever_sort_start = False
-    temp_out = open(temp_file, "w")
+    temp_out = open(temp_file, "w", newline="\n")
     fbase = os.path.basename(my_f)
     dupes = 0
     garbage = ""
@@ -241,7 +238,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         copy(temp_file, my_f)
     else:
         print("Use -c flag to copy back instead of showing differences.")
-        i7.wm(temp_file, my_f)
+        i7.wm(temp_file, my_f, ignore_if_identical = True)
     #os.remove(temp_file)
     print("Finished", fbase)
     global file_difs
