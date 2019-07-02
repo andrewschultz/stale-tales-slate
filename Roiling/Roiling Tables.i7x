@@ -68,7 +68,7 @@ darkness	darkness	false	375930018	--	"until"	"until"	--	post-unlit-until rule	"T
 sheol holes	sheol holes	false	356906602	--	"around"	"around"	pre-around-unroad rule	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	un-road	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water under Da Mist over there."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' It is No-Lag Logan. You protest. You need someone to show you the way! 'You will learn from my impetuousness,' says No-Lag Logan. I needed some weird unusual direction, but I just went ahead and tried any old thing ... and now I have just this Cripple Clipper. It will not work for me, but if you got here, it will work for you."
-thickness sketchins	thickness sketchins	false	329930229	Sonancy Canyons	"athwart"	"athwart"	--	post-athwart rule	"Not just any direction will do. You need something nautical. And there it is. Athwart--helps you navigate around tough bits. 'Ahoy, eh? Oh yeah!' you yell, identifying the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction.[paragraph break]Harbor! Rah, bro! The bad oar helps you on your way but snaps as you land. You think you yourself, scan yon... so canny... and you wind up somewhere different."
+thickness sketchins	thickness sketchins	false	441136547	Sonancy Canyons	"athwart"	"athwart"	--	post-athwart rule	"Not just any direction will do. You need something nautical. And there it is. Athwart--helps you navigate around tough bits. 'Ahoy, eh? Oh yeah!' you yell, identifying the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction.[paragraph break]Harbor! Rah, bro! The bad oar helps you on your way but snaps as you land. You think you yourself, scan yon... so canny... and you wind up somewhere different."
 hurt hog	hurt hog	false	475056505	--	"through"	"through"	--	post-hurt-hog-through rule	"You realize it's time to move on. So you do."
 bent ewe	bent ewe	false	681789531	--	"between"	"between"	pre-between-bentewe rule	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
 raptest patters	raptest patters	false	575888338	--	"without"	"without"	--	--	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
@@ -159,7 +159,8 @@ table of oyster anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 tips pits	tips pits	false	325842789	--	"spit"	"spit" or "spit on the/ tips"	a rule	a rule	"Saliva avails to show your disdain for the bar staff and for generosity in general. The bar patrons, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."
 gins sign	gins sign	false	242774022 [not really covered in the default verb SING]	--	"sing"	"sing"	--	--	"Your singing is abominable. But not as abominable as the lyrics or the 'melody' played in the bar right now. So customers only glare at you, but others order another beer because they're not as drunk as you, clearly." [not really covered in the default verb SING]
-tunes	tunes	false	501203408	--	"unset"	"unset"	--	post-tunes-unset rule	"[remap-or-unset]. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect."
+tunes	tunes	false	501203408	--	"unset"	"unset"	--	--	"You fiddle with the knobs and such on the jukebox according to the instructions[post-remap-unset]."
+tunes	tunes	false	360858842	--	"remap"	"remap"	--	post-amper-remap rule	"You brave the electrical underpinnings of the perma-amper to create an ampish mishap[post-remap-unset]."
 tines	tines	false	441090447	--	"inset"	"inset" or "inset stein/tines"	--	--	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."
 recaps	recaps	false	412063240	--	"scrape"	"scrape"	--	--	"Skr-r-r-r. You give [i]Capers Recaps[r] a good scratch. The fish in the bar, including the trolls, all whip around. You're the only suspect, since you are the only one with anything resembling nails. Casper shoots you an inspired, snide rip. The other patrons glare at you for disturbing them, too."
 trolls	trolls	false	466688042	Olde Lode	"stroll"	"stroll" or "stroll past/by trolls"	pre-trolls-stroll rule	--	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"
@@ -169,9 +170,9 @@ boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boat
 pale plea	pale plea	false	265273725	Anger Range	"leap"	"leap" or "leap at plea" or "leap at pale plea"	--	--	"You're a bit scared to jump, but when it's a majestic leap--whee! You jump overboard, and nobody can really follow you, since the boat is moving away, and they don't want to be left behind. Even if they could swim better. Your super purse remains water-tight, so no possessions get soaked."
 oars	oars	false	258138164	Anger Range	"soar"	"soar"	pre-oars-soar rule	--	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the frat raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
 frat raft	frat raft	false	217136535	--	"fart"	"fart" or "fart on raft"	pre-raft-fart rule	--	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"
-carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-spike-pikes rule	"[spike-and-scrap]."
-carps	carps	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-scrap-carps rule	"[spike-and-scrap]."
-cans	cans	false	18637477	--	"scan"	"scan"	--	--	"You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths."
+carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-scrap-carps rule	"[spike-and-scrap]."
+pikes	pikes	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-spike-pikes rule	"[spike-and-scrap]."
+cans	cans	false	186374877	--	"scan"	"scan"	--	--	"You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths."
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-seek-eeks rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule	"You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and you can't see it in the drawer any more. Aunt Tuna is pleased, and Tortu is impressed."
 tea	tea	false	233103945	--	"eat"	"eat tea" or "eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"
@@ -970,14 +971,10 @@ to say sub-bus:
 
 section oyster auxiliary
 
-this is the post-tunes-unset rule:
-	if the player's command includes "remap", now remapped is true;
+to say post-remap-unset: say ". The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect"
 
-to say remap-or-unset:
-	if word number 1 in the player's command is "unset":
-		say "You fiddle with the knobs and such on the jukebox according to the instructions";
-	else:
-		say "You brave the electrical underpinnings of the perma-amper to create an ampish mishap";
+this is the post-amper-remap rule:
+	now remapped is true;
 
 to say stein-drop:
 	if player has stein:
@@ -1007,6 +1004,13 @@ this is the pre-raft-fart rule:
 		preef raft;
 		the rule succeeds;
 
+this is the post-spike-pikes rule:
+	now spikes is true;
+	process the post-scrap-carps rule;
+
+to say spike-and-scrap:
+	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
+
 this is the post-scrap-carps rule:
 	now trout is in Lean Lane;
 	moot carps;
@@ -1022,13 +1026,6 @@ this is the post-tan-ant rule:
 		say "[line break]And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.";
 		poss-d;
 	now Plasm Lamps is shunned;
-
-this is the post-spike-pikes rule:
-	now spikes is true;
-	process the post-scrap-carps rule;
-
-to say spike-and-scrap:
-	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
 
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;

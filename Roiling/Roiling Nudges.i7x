@@ -1057,6 +1057,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "popstar"	524180100	--	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
 "gates"	361977613	Gates Stage	--	--	"[no-gate]." [GATES STAGE START]
 "gate"	265703647	Gates Stage	--	--	"[no-gate]."
+"sagest"	458251579	Gates Stage	--	--	"[no-gate]."
 "halt"	196393974	Gates Stage	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
 "arena"	286413056	Gates Stage	--	--	"[val-chg]."
 "nera"	284225238	Gates Stage	--	--	"[val-chg]."

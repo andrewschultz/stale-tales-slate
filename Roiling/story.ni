@@ -5520,10 +5520,8 @@ to say set-det:
 
 to say slider-detail:
 	if list-headache is false, continue the action;
-	if headaches is 0:
-		say ", and you can't put up with the slider's beeps any more";
-	else:
-		say ", and you can put up with its beepings [headaches in words] more time[if headaches > 1]s[end if]"
+	say ", and you [if headaches is 0]can't put up with the slider's beeps any more[else]can put up with its beepings [headaches in words] more time[plur of headaches][end if]";
+	if headaches is 0 and debug-state is true, say "[line break]Debug note: HR recharges the headaches."
 
 After printing the name of the satchel while taking inventory:
 	say " (somewhere in the purse)";
@@ -8948,7 +8946,6 @@ to twiddle-slider:
 		try switching on slider;
 
 check switching on slider:
-	if mrlp is oyster, say "Geez. It's jammed[if cur-score of oyster > 0]. Well, it's harder for the slider to ascertain actions instead of ideas[else]. Hm, maybe thinking is less important than other things, here[end if]." instead;
 	toggle-slider-note;
 	if slider is switched on, say "It already is." instead;
 	if headaches is 0, say "You can't afford any more headaches." instead;
@@ -21478,7 +21475,7 @@ this is the oyster-alt rule:
 		say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
 	else:
 		say "[2da]you can defeat the carps and pikes two different ways ahead.";
-	if end den is unvisited, say "[2da][if den loft is visited]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there[else]You could jump past the End Den[end if].";
+	if end den is unvisited, say "[2da][if den loft is visited]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there[else]You have a chance to jump past the End Den[end if].";
 
 bredo-bored is a truth state that varies.
 
