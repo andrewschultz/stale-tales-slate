@@ -82,7 +82,7 @@ def fm(l, debug = False):
         print("Male after:", m)
         print("Female after:", f)
     return (m, f)
-    
+
 def convert_brackets(l):
     if l[0] == '"': l = l[1:]
     l = re.sub("\".*", "", l.strip().lower())
@@ -344,7 +344,7 @@ def rewrite_focus_examples(my_game):
             i7.wm(anagram_focus_file, ana_temp)
     os.remove(file_out)
     os.remove(ana_temp)
-                
+
 
 def rewrite_focused_file():
     rewrite_focus_examples("sa")
@@ -363,7 +363,7 @@ regex_str = get_brackets()
 
 cmd_count = 1
 while cmd_count < len(sys.argv):
-    arg = mt.nohy(sys.argv[cmd_count].lower())    
+    arg = mt.nohy(sys.argv[cmd_count].lower())
     if arg == 'f' or arg == 'fp' or arg == 'pf': print_freq = True
     elif arg[0] == '.' or arg[-1] == '.':
         table_search = re.sub("\.", " ", arg).strip()

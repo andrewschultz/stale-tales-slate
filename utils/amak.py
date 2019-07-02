@@ -28,16 +28,16 @@ def can_take_even(x):
 
 def find_nomatch_anagram(x):
     x = re.sub("[- '\.]", "", x.lower()) # allow for spaces, apostrophes, etc.
+    if not len(x):
+        print("Blank string...")
+        return ""
     old_string = list(x)
     new_string = ['-'] * len(x)
     f = defaultdict(list)
     letters_to_place = len(old_string)
-    if not len(x):
-        print("Blank string...")
-        return ""
     for y in range(0, len(x)):
         if old_string[y] not in 'abcdefghijklmnopqrstuvwxyz':
-            print("Nonalphabetical character in", x, 'slot', y, "--", old_string[y])
+            print("Nonalphabetical character ({:s}) in {:s} slot {:d}".format(old_string[y], x, y+1))
             return ""
         f[x[y]].append(y)
     if shift_1_on_no_repeat and len(f) == len(old_string): return x[1:] + x[0] #abcde quickly sent to bcdea
@@ -81,18 +81,28 @@ def show_results(q, result_string = "has this anagram with no letters in common:
     if not temp: return
     print(q, result_string, temp)
 
+my_tests = [ "aabbb",
+  "stroll", #this "broke" my original tries of just flipping every next letters, or trying to cycle through letters
+  "aaabbbc", # this is a tricky case where if we just swap the a's and b's, we fail. But we can swap an (a or b) with a C.
+  "aaabbcc", # this is another case where we only have 3 different letters, which may be tricky
+  "basically", # this is a random word used for a potential puzzle. It has two pairs of identical letters
+  "TeTrIs", # making sure odd input like capital letters is processed ok
+  "try this", # making sure that we allow spaces and nothing goes wrong
+  "123abc", # we need to bail on bad values
+  "" # we need to handle blank values acceptably
+  ]
+
+words_to_shift = []
+
 if len(sys.argv) > 1:
     for q in sys.argv[1:]:
         if q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-    for q in sys.argv[1:]:
-        if q != 's1' and q != 'tr': show_results(q, "<=>") # this feels like a real hack, again. I want to process meta commands before any results, though.
-else:
-    show_results("aabbb") #throw error
-    show_results("stroll")
-    show_results("aaabbbc")
-    show_results("aaabbcc")
-    show_results("basically")
-    show_results("TeTrIs")
-    show_results("try this")
-    show_results("")
+        else: words_to_shift.append(q.lower())
+
+if not len(words_to_shift):
+    print("Using my tests")
+    words_to_shift = list(my_tests)
+
+for w in words_to_shift: show_results(w, "<=>")
+

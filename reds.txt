@@ -38,6 +38,10 @@ oyster,toyers
 towards,R??Y??R=wartsdo=sowdrat
 inside,diesin,dinesi,edisin
 towards,radwost
+#qver of pat's stap
+past,??RR=pats=stap
+#qver of oscar's sos arc
+across,YRRYR?=oscars=sosarc
 #qver of anti sag sit a nag
 against,?RY??RR=antisag=sitanag
 #qver of rude 'n nuder
