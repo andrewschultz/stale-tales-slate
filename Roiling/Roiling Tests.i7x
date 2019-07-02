@@ -169,7 +169,7 @@ chapter routes
 
 test fixed with "ts/routes/in/inside/x list/pad/pad reagents/pad"
 
-test routes with "routes/enter routes/towards/inside/x list/out/against/astride/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/amidst/above/without/between/through/beyond/coff"
+test routes with "routes/enter routes/towards/inside/x list/out/against/astride/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/amidst/athwart/without/between/through/beyond/coff"
 
 test routesord with "routes/enter routes/towards/astride/inside/x list/out/under/below/astride/against/under/below/astride/under/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/aboard/within/through/coff"
 

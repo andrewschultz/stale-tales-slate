@@ -1,10 +1,17 @@
 ###################optionals are in CAPS
 # ordeal reload has +2 for basement and a point for stapling the curtain, so total ponts = anagrams + 2
-reload/loader/ordeal=lamp,satchel,PAINTING,BASEMENT,CHIMNEY,stable,stair,RAMP,SNIB,staple,stapler,flier
+reload/loader/ordeal=lamp,satchel,PAINTING,BASEMENT,CHIMNEY,stable /
+    stair,RAMP /
+    SNIB /
+    staple,stapler,flier
 # stores is, well, stores.
-stores=sorbet,routes,troves,presto,oyster,towers,others,otters,TOKERS,NESTOR,OUTSIDE
+stores=sorbet,routes,troves,presto,oyster,towers,others,otters /
+    TOKERS,NESTOR,OUTSIDE
 #routes is straightforward about points. There's no bonus. There are no longer alternates.
-routes=TOWARDS,inside,past,across,despite,opposite,against,astride,below,under,from,beneath,until,around,along,amidst,athwart,between,through,beyond,WITHOUT
+routes=TOWARDS,inside,past,across,against,astride,below,under /
+    despite,opposite /
+    from,beneath /
+    until,around,along,amidst,athwart,between,through,beyond,WITHOUT
 #troves has a few verbs where you can get one of two and pass, but nothing is exclusionary any more.
 troves=hate,care,GAPE,observe,spot,reason,BELIEVE,recall,despair,decide,GLARE,master,BOLSTER,deal,desire,aspire,STRIVE,ponder,deserve,DISCOVER,last,ramble,RESIST,recant
 #presto has the volt maze solutions (2 verbs, 3 max points for the best one) and the hoop solutions(2 verbs, 2 max points for the best one) for a net of -1 verbs vs. points.
@@ -22,14 +29,24 @@ oyster=sing,spit,scrape,spill,inset,unmap,unset,stroll,calm,run,boast,fart,soar,
 # otters has +2 verbs for the imp and whiners
 # then +2 verbs for the alternate ergo/else paths
 # then -1 for PLAY WHISTLE
-# then +1 for discern/rescind
+# then +1 for discern/rescind (rescind is an LLP but you can try both)
 # then +25 for the macks
-otters=barely,reedily,discern,rescind /
-	loathingly,stoically,tersely,brutely,angrily,enragedly, /
-	slow,paroled,artsy,coolest,garbed, /
-	parrot,raptor,snail,snipe,racoon,raccoon,hornets /
-	although,ergo,because,else,however /
-	bossily,nastily,seedily,shadily,snidely,starkly,cattily,tearily,irately,blearily,ribaldly,formally,coitally,modestly,shabbily,shoddily,silently,steamily,suddenly,stupidly,martially,sincerely,sobbingly,tediously,wearingly,drawlingly,emotionally,desperately,despairingly /
-atom /
-	honestly,aside,deeply,quickly
+otters=barely,reedily,discern,RESCIND /
+    loathingly,stoically,tersely,brutely,angrily,enragedly, /
+    slow,paroled,artsy,coolest,GARBED, / #lamer realm
+    parrot,raptor,snail,snipe,racoon,raccoon,HORNETS, / #perverse preserve including turning parrot back
+    although,ergo,because,else,HOWEVER, / #regaining powers plus LLP
+    bossily,nastily,seedily,shadily,snidely,starkly,cattily,tearily,irately,blearily,ribaldly,formally,coitally,modestly,shabbily,shoddily,silently,steamily,suddenly,stupidly,martially,sincerely,sobbingly,tediously,wearingly,drawlingly,emotionally,desperately,despairingly / #the macks say a lot but you only need 3
+	atom / # downside
+    honestly,aside,deeply,quickly / #elmer merle and endgame
+#others has -1 verbs vs points for not using arugula.
+# there is +1 verbs vs points for using the passport. (3 available, need 2)
+	others=plums,pears,grapes,limes,compass / #easy Rustic
+	tamarind,persimmon,maraschino,cantaloupe,blueberries,pomegranate / #hard Rustic
+	apricot,apples,coconuts,gooseberry,tangerines,mulberries / #swell wells
+	raspberry,pineapple,breadfruit,strawberries,blackberries,watermelon,grapefruit,cranberries / #filed field
+	nomel,cheap,among,cinque,cripes,solemn,papayas,ancienter / #clangier clearing
+	banana,gonear,rhubarb,reversed #reversed = inapt paint = guava / #scape space
+	sonic,icons / #gifts from Curtis
+	research,review,prep / #final bits
 ;
