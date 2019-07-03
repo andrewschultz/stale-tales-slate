@@ -38,15 +38,25 @@ otters=barely,reedily,discern,RESCIND /
     although,ergo,because,else,HOWEVER, / #regaining powers plus LLP
     bossily,nastily,seedily,shadily,snidely,starkly,cattily,tearily,irately,blearily,ribaldly,formally,coitally,modestly,shabbily,shoddily,silently,steamily,suddenly,stupidly,martially,sincerely,sobbingly,tediously,wearingly,drawlingly,emotionally,desperately,despairingly / #the macks say a lot but you only need 3
 	atom / # downside
-    honestly,aside,deeply,quickly / #elmer merle and endgame
+    honestly,aside,deeply,quickly #elmer merle and endgame
+#towers was automatically generated
+#but it is missing rowdy and wordy and resealed too
+towers=sadder,rinsed,angstier,weariest,clumsy,himself,broken,resting,subtler,drained,restful,married,naivest,prosiest,released,resealed,marginal,hastiest,holiest,nerdiest,pastier / #guardians
+	sewed / #necessary in Gradient
+	GRANDIOSE,RUSTLED,PEARLY,RUSTY,CREAKY,COILED,MINED / #very miscellaneous stuff
+	wordy,rowdy,fussier,unlocked,attentive / #Dr Yow stuff
+	grained,robust,stabler,rewired,nearest / #Shoreline stuff
+	rousted / #Detours stuff	snared,warned,achier,nearby,bleak,bored,cricked,lardy,timider,weedy,wined,olden,tenser,gone,godly,learned,calmer,normal,pronest,eggier,coyer,ashen,recreant,stony,awed,yonder / #warriors
+	punier,triste,present,spectacular #mislit limits and mesprise premises
 #others has -1 verbs vs points for not using arugula.
 # there is +1 verbs vs points for using the passport. (3 available, need 2)
-	others=plums,pears,grapes,limes,compass / #easy Rustic
-	tamarind,persimmon,maraschino,cantaloupe,blueberries,pomegranate / #hard Rustic
-	apricot,apples,coconuts,gooseberry,tangerines,mulberries / #swell wells
-	raspberry,pineapple,breadfruit,strawberries,blackberries,watermelon,grapefruit,cranberries / #filed field
-	nomel,cheap,among,cinque,cripes,solemn,papayas,ancienter / #clangier clearing
-	banana,gonear,rhubarb,reversed #reversed = inapt paint = guava / #scape space
-	sonic,icons / #gifts from Curtis
-	research,review,prep / #final bits
+	others=grapes,limes,pears,plums,compass / #easy Rustic. Note compass would be alphabetical but comes after these
+	blueberries,cantaloupe,maraschino,persimmon,pomegranate,tamarind / #hard Rustic
+	apricot,apples,coconuts,gooseberry,mulberries,tangerines / #swell wells
+	blackberries,breadfruit,cranberries,grapefruit,pineapple,raspberry,strawberries,watermelon / #filed field
+	among,ancienter,cheap,cinque,cripes,nomel,papayas,solemn / #clangier clearing
+	banana,gonear,rhubarb,reversed / #scape space: reversed = inapt paint = guava
+	sonic,icons,icon / #gifts from Curtis
+	research,review,prep #final bits
 ;
+others=icon,sonic,sonic,icons/icon,sonic,icons,sonic icons

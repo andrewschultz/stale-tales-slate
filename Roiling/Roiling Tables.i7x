@@ -8,7 +8,7 @@ volume main anagram tables
 
 book Ordeal Reload
 
-table of Ordeal Reload anagrams
+atable of Ordeal Reload anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 palm	lamp	true	201542769	--	"lamp"	"lamp" or "get lamp"	a rule	post-palm-lamp rule	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too.[paragraph break]You blink and look around and stare at your diorama. You remember how [gtmn] gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage].[paragraph break]Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[preefies]."
 latches	satchel	true	439479634	--	"satchel"	"satchel"	--	post-latches-satchel rule	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."
@@ -346,44 +346,44 @@ book others
 
 table of others anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	a rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which might actually be able to tell the direction!"
-lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	--	--	"The lumps grow circular and purplish, and suddenly plums are rolling all around."
-eerie blurbs	blueberries	true	891090201	--	"blueberries"	"blueberries/blueberry"	--	--	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes."
-barriers west	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	--	--	"The barriers west collapse into a pile of strawberries."
-spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold!"
+moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	a rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which might actually be able to tell the direction!" [this comes first or Inform thinks we want a fruit]
+pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers turn into grapes. 'Wow, got rid of the noise AND got me more merchandise.'" [start rustic citrus easy]
 slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry."
-pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers turn into grapes. 'Wow, got rid of the noise AND got me more merchandise.'"
-barren cries	cranberries	true	761370255	--	"cranberries"	"cranberries/cranberry"	--	post-cranberries rule	"The barren cries and briar screen swirl into a reddish mist and become cranberries."
+spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold!"
+lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	--	--	"The lumps grow circular and purplish, and suddenly plums are rolling all around."
+eerie blurbs	blueberries	true	891090201	--	"blueberries"	"blueberries/blueberry"	--	--	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes." [start rustic citrus hard]
 peanut cola	cantaloupe	true	637943038	--	"cantaloupe"	"cantaloupe"	--	--	"The cola bottle turns into a sort of tannish sphere, and you hear pulps splup inside."
-mad train	tamarind	true	391814053	--	"tamarind"	"tamarind"	--	--	"Well, you aren't sure if it is that much of an improvement, but a fruit is a fruit. Curtis seems pleased. Everybody gets suckered into buying one of these once, and after a few months, they forget how nasty it was and buy it again."
-silly shirt	apples	true	443013650	--	"apples"	"apples/apple"	--	--	"The t-shirt crumples into a few apples. Well, you may not have ESP, but it's something almost as good. You remember a pen pal called Papa Len, too."
-riot cap	apricot	true	410438606	--	"apricot"	"apricot"	--	--	"The riot cap rounds into an apricot, which you take."
-sorer bogey	gooseberry	true	844616803	--	"gooseberry"	"gooseberry"	--	--	"A howling from the well, and the reddish letters fly off! A rather large gooseberry falls on the ground. You pick it up."
-stucco	coconuts	true	560113623	--	"coconuts"	"coconuts/coconut"	--	--	"The stucco that was part of the well congeals into a hairy ball (don't ASK where the hair came from) and rolls on the ground."
-miser ruble	mulberries	true	808940340	--	"mulberries"	"mulberries/mulberry"	--	--	"The ruble blossoms in your hand, turning to a more pleasant sight: a clump of berries."
-barber sickle	blackberries	true	732304866	--	"blackberries"	"blackberries/blackberry"	--	--	"The barber sickle grows into a bunch of vines which sprout black fruits, and a basket pops out to hold them. How convenient."
-pryer bars	raspberry	true	704483418	--	"raspberry"	"raspberry"	--	--	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."
 harmonicas	maraschino cherry	true	494589373	--	"maraschino"	"maraschino" or "maraschino cherries/cherry"	--	--	"Several painfully tinny chords later, the off-red harmonicas become a maraschino cherry."
-pipe panel fence	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--	"With a plain peep, the fence collapses into a pineapple!"
 omen prism	persimmon	true	707273074	--	"persimmon"	"persimmon"	--	--	"The omen prism's red outside schlurps and changes color to form something better looking--a persimmon."
 magenta rope	pomegranate	true	769822574	--	"pomegranate"	"pomegranate"	--	post-pomegranate rule	"With a splatch, the note and rant get yellowed and ball themselves up around the rope to form a pomegranate. You have done either Curtis or society a favor by getting rid of those writings."
-prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	pre-kumquat rule	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
-auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	pre-papayas rule	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."
-quince	quince	true	450223472	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
-peach	peach	true	267747770	--	"cheap"	"cheap"	--	--	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."
-Ammo Gang	mango	true	242122758	--	"among"	"among"	pre-among rule	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token and give you a mango. You let out an OMG. It seems the right thing to do."
-lemons	lemons	true	485229152	--	"solemn"	"solemn"	--	--	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"
-melon	melon	true	388955186	--	"melon"	"mo len" or "len mo"	--	--	"You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash."
-rapt figure	grapefruit	true	694430761	--	"grapefruit"	"grapefruit"	--	--	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"
-mean trowel	watermelon	true	815317707	--	"watermelon"	"watermelon"	--	--	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."
-nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	--	--	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."
+mad train	tamarind	true	391814053	--	"tamarind"	"tamarind"	--	--	"Well, you aren't sure if it is that much of an improvement, but a fruit is a fruit. Curtis seems pleased. Everybody gets suckered into buying one of these once, and after a few months, they forget how nasty it was and buy it again."
+silly shirt	apples	true	443013650	--	"apples"	"apples/apple"	--	--	"The t-shirt crumples into a few apples. Well, you may not have ESP, but it's something almost as good. You remember a pen pal called Papa Len, too." [start swell wells]
+riot cap	apricot	true	410438606	--	"apricot"	"apricot"	--	--	"The riot cap rounds into an apricot, which you take."
+stucco	coconuts	true	560113623	--	"coconuts"	"coconuts/coconut"	--	--	"The stucco that was part of the well congeals into a hairy ball (don't ASK where the hair came from) and rolls on the ground."
+sorer bogey	gooseberry	true	844616803	--	"gooseberry"	"gooseberry"	--	--	"A howling from the well, and the reddish letters fly off! A rather large gooseberry falls on the ground. You pick it up."
+miser ruble	mulberries	true	808940340	--	"mulberries"	"mulberries/mulberry"	--	--	"The ruble blossoms in your hand, turning to a more pleasant sight: a clump of berries."
 green stain	tangerines	true	757915387	--	"tangerines"	"tangerines/tangerine"	--	--	"The green stain coalesces and brightens...and becomes a few tangerines! It changed color, too. Every single one ain't green."
-inapt paint	guava	true	778533808	--	"reversed"	"reversed"	--	--	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
-a brr hub	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	--	--	"The brr hub expands and lengthens. It turns a bit greener. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Even weird fruit like rhubarb."
+barber sickle	blackberries	true	732304866	--	"blackberries"	"blackberries/blackberry"	--	--	"The barber sickle grows into a bunch of vines which sprout black fruits, and a basket pops out to hold them. How convenient." [start filed field]
 buried raft	breadfruit	true	619813094	--	"breadfruit"	"breadfruit"	--	--	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."
+barren cries	cranberries	true	761370255	--	"cranberries"	"cranberries/cranberry"	--	post-cranberries rule	"The barren cries and briar screen swirl into a reddish mist and become cranberries."
+rapt figure	grapefruit	true	694430761	--	"grapefruit"	"grapefruit"	--	--	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"
+pipe panel fence	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--	"With a plain peep, the fence collapses into a pineapple!"
+pryer bars	raspberry	true	704483418	--	"raspberry"	"raspberry"	--	--	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."
+barriers west	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	--	--	"The barriers west collapse into a pile of strawberries."
+mean trowel	watermelon	true	815317707	--	"watermelon"	"watermelon"	--	--	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."
+Ammo Gang	mango	true	242122758	--	"among"	"among"	pre-among rule	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token and give you a mango. You let out an OMG. It seems the right thing to do." [start Clangier Clearing]
+nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	--	--	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."
+peach	peach	true	267747770	--	"cheap"	"cheap"	--	--	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."
+quince	quince	true	450223472	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
+prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	pre-kumquat rule	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
+melon	melon	true	388955186	--	"melon"	"mo len" or "len mo"	--	--	"You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash."
+auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	pre-papayas rule	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."
+lemons	lemons	true	485229152	--	"solemn"	"solemn"	--	--	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"
 a banna'	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
-orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!"
-coin	icon	false	207258516	--	"icon"	"icon"	--	--	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money."
+orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
+a brr hub	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	--	--	"The brr hub expands and lengthens. It turns a bit greener. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Even weird fruit like rhubarb."
+inapt paint	guava	true	778533808	--	"reversed"	"reversed"	--	--	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
+coin	icon	false	207258516	--	"icon"	"icon"	--	--	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money." [start curtis gift flips]
 coins	s-c	false	303532482	--	"sonic"	"sonic coins" or "sonic"	--	post-sonic-flip rule	"Blam! The coins begin to rattle gently and don't stop."
 icons	s-i	false	303532482	--	"sonic"	"sonic icons" or "sonic"	--	post-sonic-flip rule	"Blam! The icons begin to rattle gently and don't stop."
 coins	icons	false	303532482	--	"icons/icon"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."

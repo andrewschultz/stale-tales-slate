@@ -7,6 +7,7 @@
 import os
 import re
 import sys
+import i7
 from collections import defaultdict
 
 reg_verbs = defaultdict(str)
@@ -15,6 +16,29 @@ amak_txt = "c:/writing/scripts/amak.txt"
 #option(s). There may be more later.
 shift_1_on_no_repeat = False
 try_rotating_first = False
+
+def generate_it(tab_name_short):
+    tnl = "table of {:s} anagrams".format(tab_name_short).lower()
+    ana_col = 5
+    in_table = False
+    stuff = []
+    with open(i7.hdr("roi", "ta")) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if tnl in line.lower():
+                in_table = True
+                print("Started", tnl)
+                continue
+            if in_table:
+                if not line.strip():
+                    print("#total anagrams found in table={:d}".format(len(stuff)))
+                    print("{:s}={:s}".format(tab_name_short, ','.join(stuff)))
+                    return
+                ary=line.split("\t")
+                the_ana = ary[5]
+                if '"' not in the_ana: continue
+                the_ana = re.sub("\"", "", the_ana)
+                stuff.append(the_ana)
+    sys.exit("Failed to generate anagrams for " + tab_name_short)
 
 # determine if we can still switch a pair. With 3 letters left, it is not possible. With 2, it should be.
 #
@@ -85,7 +109,8 @@ def show_results(q, result_string = "has this anagram with no letters in common:
     if not temp: return
     print(q, result_string, temp)
 
-def assign_stuff(x):
+def assign_stuff(x, line_count):
+    x = re.sub(" *[\\\/] *$", "", x)
     ary = x.split("=")
     if len(ary) != 2: sys.exit("Need REGION=(CSVS) at line {:d}, has {:d} partitions via =".format(line_count, len(ary)))
     if ',' not in ary[1]: sys.exit("Need CSV on right hand side at line {:d}".format(line_count))
@@ -100,21 +125,25 @@ def read_region_chunks():
     with open(amak_txt) as file:
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
-            if line.startswith(";"): continue
+            if line.startswith(";"): break
             line = re.sub(" *#.*", "", line)
             #print("Adding", ary[0])
             if line.strip().endswith("\\") or line.strip().endswith("/"):
+                if whole_string and not whole_string.endswith(","):
+                    whole_string += ","
                 whole_string += re.sub(" *$", "", line.strip()[:-1])
-                if not whole_string.endswith(","): whole_string += ","
                 continue
             if whole_string:
+                if line.strip() and not whole_string.endswith(","):
+                    whole_string += ","
                 line = whole_string + line.strip()
                 whole_string = ""
             ll = line.lower().strip()
-            assign_stuff(ll)
+            assign_stuff(ll, line_count)
     if whole_string:
-        print("OOPS did not end with proper unslashed line.")
-        assign_stuff(whole_string)
+        print("OOPS did not end file with proper unslashed line.")
+        print(whole_string)
+        assign_stuff(whole_string, line_count)
 
 read_region_chunks()
 
@@ -134,9 +163,13 @@ words_to_shift = []
 
 if len(sys.argv) > 1:
     for q in sys.argv[1:]:
-        if q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
+        if q[:2] == 'g=':
+            generate_it(q[2:])
+        elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-        elif q == 'e': os.system(amak_txt)
+        elif q == 'e':
+            os.system(amak_txt)
+            sys.exit()
         else:
             if q in reg_verbs:
                 rs = reg_verbs[q].split(",")
