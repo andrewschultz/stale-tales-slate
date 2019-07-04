@@ -3,27 +3,39 @@
 #
 # table of spechelp/table of anagrams comparator
 #
+# probably does not need any parameters but just in case you want to run just one, you can:
+#
+# shel.py (r) (s)
+#
 
 from collections import defaultdict
 import re
 import i7
 import sys
 
-# these should technically be defined by project, but I'm 99.99% sure there'll be no overlap.
-
-ok_dupe = {
-  'ye hoop': 1,
-  'tunes': 1,
-  'trim socks': 1,
-  'coins': 3,
-  'oils': 1, #shuffling
-  'chain links': 1
+ok_dupe = defaultdict(lambda: defaultdict(int))
+ok_dupe = { 'roi':
+    {
+    'ye hoop': 1,
+    'tunes': 1,
+    'trim socks': 1,
+    'coins': 3
+    },
+  'sa':
+    {
+    'oils': 1, #shuffling
+    'chain links': 1
+    }
   }
 
 ignore = ['marble blamer mr beal']
 comp_dir = defaultdict(lambda: defaultdict(str))
 
+# functions below
+
 def count_difs(from_d, to_d, msg):
+    ''' counts the differences between the anagram tables and the spechelp tables
+    It ignores specific items and the t- (macks' ideas) '''
     count = 0
     part_count = 0
     for x in comp_dir[from_d]:
@@ -48,12 +60,15 @@ def count_difs(from_d, to_d, msg):
     print("==============FINAL STATS", count, "misses", part_count, "partial misses.")
 
 def table_ext(nam):
+    '''in case of bad input, we tack on "table of " to the start of table names'''
     if nam.startswith("table of "): return nam
     return "table of " + nam.strip()
 
-def scrape_stuff_from(table_names, dict_name, col_number, hdr_name):
-    all_froms = [table_ext(x) for x in table_names] if type(table_names) == list else [table_ext(table_names)]
+def scrape_stuff_from(table_names, dict_name, col_number, hdr_abb):
+    '''given a list of table names and a file, we scrape the first column from that file for each table'''
+    all_froms = [table_ext(x) for x in table_names.split(",")]
     got_yet = defaultdict(bool)
+    hdr_name = i7.hdr(hdr_abb, "ta")
     for q in all_froms: got_yet[q] = False
     in_table = False
     got_table = False
@@ -82,12 +97,14 @@ def scrape_stuff_from(table_names, dict_name, col_number, hdr_name):
                 continue
             ary = ll.split("\t")
             if ary[0] in comp_dir[dict_name]:
-                if ary[0] not in ok_dupe:
+                if hdr_abb not in ok_dupe or ary[0] not in ok_dupe[hdr_abb]:
                     print("Possible duplicate", ary[0], "at line", line_count, table_name)
                 else:
-                    ok_dupe[ary[0]] -= 1
-                    if ok_dupe[ary[0]] == 0: ok_dupe.pop(ary[0])
+                    ok_dupe[hdr_abb][ary[0]] -= 1
+                    if ok_dupe[hdr_abb][ary[0]] == 0: ok_dupe[hdr_abb].pop(ary[0])
             comp_dir[dict_name][ary[0]] = table_name
+    if len(ok_dupe[hdr_abb]):
+        print("The number of flagged duplicates was not quite right:", ', '.join(["{:s} {:d}".format(x, ok_dupe[hdr_abb][x]) for x in ok_dupe[hdr_abb]]))
     bail = False
     for q in got_yet:
         if not got_yet[q]:
@@ -96,13 +113,30 @@ def scrape_stuff_from(table_names, dict_name, col_number, hdr_name):
     if bail: sys.exit()
     print("Successfully scraped all tables")
 
-def scrape_project(table_array, table_file):
+def scrape_project(table_csv, table_file):
+    '''scrape from the anagram tables and spechelp table'''
     comp_dir.clear()
-    scrape_stuff_from(table_array, "flippable", 0, table_file)
+    scrape_stuff_from(table_csv, "flippable", 0, table_file)
     scrape_stuff_from("table of spechelp", "flipto", 0, table_file)
     count_difs("flippable", "flipto", "May need spechelp entry for <{:s}>.")
     count_difs("flipto", "flippable", "Spechelp entry <{:s}> doesn't correspond to any anagram table entry.")
 
-scrape_project([ "ordeal reload", "stores", "routes", "troves", "presto", "oyster", "towers", "otters", "others" ], i7.hdr("roi", "ta"))
-scrape_project([ "ordeal loader", "stores", "forest", "sortie", "metros", "resort" ], i7.hdr("sa", "ta"))
+do_roiling = False
+do_shuffling = False
+cmd_count = 1
+while cmd_count < len(sys.argv):
+    cmd = nohy(sys.argv[cmd_count])
+    if cmd == 'r' or cmd == 'roi': do_roiling = True
+    elif cmd == 's' or cmd == 'sa': do_shuffling = True
+    else: sys.exit("Can only specify roiling/shuffling or we do both if it is left blank.")
+    cmd_count += 1
+
+if not do_roiling and not do_shuffling:
+    do_roiling = do_shuffling = True
+elif do_roiling and do_shuffling:
+    print("You can just run with no arguments to try both projects.")
+
+if do_roiling: scrape_project("ordeal reload,stores,routes,troves,presto,oyster,towers,otters,others", "roi")
+
+if do_shuffling: scrape_project("ordeal loader,stores,forest,sortie,metros,resort", "sa")
 
