@@ -23,7 +23,7 @@ store f	scented descent	"forest"	"store f"	--	--	"The greens and browns of Store
 store i	posted depots	"sortie"	"store i"	--	--	"The store rumbles, revealing shady posted depots you can enter to somewhere new."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	--	--	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
 store r	ogled lodge	"resort"	"store r"	pre-storer-resort rule	--	"Store R rumbles and reforms into something far posher. Not just a resort, but an ogled lodge! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
-cabinet	tenibac	"bactine"	"bactine"	pre-cabinet-bactine rule	post-cabinet-bactine rule	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
+acne-bit cabinet	tenibac	"bactine"	"bactine"	pre-cabinet-bactine rule	post-cabinet-bactine rule	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
 
 book Forest
 
@@ -103,8 +103,8 @@ poles	slope	"slope"	"poles"	--	post-poles-slope rule	"The poles rumble and slide
 tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	--	post-toolshed-toeholds rule	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are touchable] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
 riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
 protest	potters	"potters/potter"	"protest" or "riot"	--	post-protest-potters rule	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are touchable]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
-links	china	"china"	"china"	pre-chain-china rule	post-chain-china rule	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are touchable]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is touchable]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is touchable]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
-links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and swell into luxury kilns[if potters are touchable]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
+chain links	china	"china"	"china"	pre-chain-china rule	post-chain-china rule	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are touchable]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is touchable]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is touchable]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
+chain links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and swell into luxury kilns[if potters are touchable]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
 
 book auxiliary text and rules
 
@@ -537,9 +537,7 @@ Store I	"Store I shakes a bit. You see red wondering how you'll rise to the chal
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
 acne-bit cabinet	"The cabinet wobbles a bit."
-stew	"The stew smells a bit burnt for a minute. No, that can't quite be it..." [forest]
-shout	"The shout wavers for a bit. Maybe you're on to something..."
-ones	"The ones rattle a bit. Maybe you can sense out what they should be."
+ones	"The ones rattle a bit. Maybe you can sense out what they should be." [forest]
 dashes	"The dashes seemed to rattle a bit, but you feel slightly uncool."
 noughts	"Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you."
 banshee	"The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom."
@@ -555,6 +553,7 @@ hoses	"Something leaks out of the hoses. Hm. What else can be rubber, now."
 cask	"[if sack is moot]You doubt the sack/cask has a triple purpose[else]Nothing happens. Maybe you are trying to do too much to change the cask[end if]." [sortie]
 sack	"You doubt the sack/cask has a triple purpose."
 warts	"The warts itch slightly."
+t-n	"The nick blurs a little but snaps back to normal."
 poem	"[if poem is not folded]You need to fold the poem into a plane before you can try that[else]The plane can probably become something else, but not that[end if]."
 CATHOUSE	"The CATHOUSE perfume suddenly smells a bit spicier."
 roadblock	"The roadblock changes all the colors of the rainbow, but none seem appropriate."
@@ -565,6 +564,8 @@ tall trio	"The tall trio seem to look interested for a minute."
 spearman	"The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names."
 taco	"Weird. The taco almost seemed to grow arms, or even sleeves."
 cult tee	"The cult tee seems to vegetate there. Change things around and it may become something."
+r2	"[m-r-almost]."
+m2	"[m-r-almost]."
 scraped wall	"Hm, yes, a haywall might become something more passable, if you muddle it right."
 anapest	"You think you had the right idea, but your execution was poor. Maybe be more workmanlike."
 smilies	"The smilies momentarily grow eyebrows that point aggressively, then vanish."
@@ -586,6 +587,7 @@ siren	"The siren continues to blind you--like it's throwing dust in your eyes."
 neon pig	"The neon pig blinks as if in last-ditch defiance."
 tiles	"The tiles rattle as if to shift but settle down." [resort start]
 swing	"The swing goes slightly airborne."
+l2	"You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief."
 tool shed	"You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here."
 rock	"Hmm, a rock, but only so much you can do with it."
 sprig	"The sprig seems to grow less fragile for a moment."
@@ -594,9 +596,6 @@ spore	"You briefly wonder what the spore could grow into, given time. Time you d
 protest	"The protesters mumble at you for trying to exert mind control. You've struck a nerve."
 chain links	"The links rattle slightly. Perhaps they are chaining others['] creativity as well as your own, as they are now."
 riot	"The riot's still a crowd. A BIG crowd."
-r2	"[m-r-almost]."
-m2	"[m-r-almost]."
-t-n	"The nick blurs a little but snaps back to normal."
 
 to say m-r-almost:
 	if moor is visited:

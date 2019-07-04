@@ -158,10 +158,10 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "whiff"	243239710	--	whiff of stew	--	"[guider-content]."
 "aroma"	228127169	--	aroma of teas	--	"[guider-content]."
 "leaves"	515052661	--	leaves	--	"You have no time to play with leaves."
-"south"	416124667	--	--	first-two-forest rule	"[forest-no]."
-"north"	368976205	--	--	first-two-forest rule	"[forest-no]."
-"west"	435124866	--	--	first-two-forest rule	"[forest-no]."
-"east"	329377911	--	--	first-two-forest rule	"[forest-no]."
+"south"	416124667	--	--	forest-south rule	"[forest-no of shout]."
+"north"	368976205	--	--	forest-north rule	"[forest-no of north]."
+"west"	435124866	--	--	forest-west rule	"[forest-no of stew]."
+"east"	329377911	--	--	forest-east rule	"[forest-no of teas]."
 "eat"	233103945	--	teas	--	"[forest-no]. Anyway, it doesn't smell like just one tea."
 "rest"	412513896	rf	--	--	"[loc-rej]." [START OF REST OF FOREST]
 "selfid"	370430745	self-id	--	--	"[loc-rej]." [START SELF-ID FIELDS]
@@ -662,13 +662,13 @@ section forest auxiliary
 
 this is the first-two-forest rule:
 	if player is in sf or player is in rf, the rule succeeds;
-	the rule fails;
+	the rule fails
 
 to say no-con: say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
 
 to say guider-content: say "No, that's not the [i]essence[r] of the thing."
 
-to say forest-no: say "Your compass feels extra jumbled, but--well, you must be close"
+to say forest-no of [x - a thing]: say "Your compass feels extra jumbled[if x is touchable]. [badana of x][else if x is moot], and you remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
 
 to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
 
