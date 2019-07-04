@@ -478,7 +478,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "customers"	771326984	hops shop	--	--	"[patron]."
 "tune"	404929442	--	tunes	--	"Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all."
 "jar"	136472146	--	pills	--	"You suspect it's what's in the jar that's important."
-"spill"	330360449	--	pills	--	"You seem to be fumbling what to do with the pills."
+"spill"	330360449	--	pills	--	"You seem to be fumbling what to do with the pills[if slider is switched on]. You hear nothing from the slider--perhaps it won't help you with auxiliary cheating items[end if]."
 "pit"	229568823	--	tips pits	--	"You [if tips pits are reflexed]already dealt with the tips pits[else]can't pick out which pit to do something to[end if]."
 "jukebox"	540345182	--	jukebox	--	"You can't change the jukebox. The bad music has seeped into it[if tunes are in Posh Hops Shop]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if]."
 "remap"	360858842	--	jukebox	--	"You can't change the bad music selection[if tunes are in Posh Hops Shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."

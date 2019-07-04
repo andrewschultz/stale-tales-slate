@@ -8964,9 +8964,6 @@ understand the command "sl" as something new.
 understand "sl" as sling.
 
 carry out sling: twiddle-slider instead;
-	if slider is switched off, try switching on slider instead;
-	try switching off slider;
-	the rule succeeds;
 
 chapter teariest treatise
 
@@ -13315,7 +13312,7 @@ to check-silly-death:
 
 chapter spilling
 
-the Li'L P's pills is in Posh Hops Shop. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory weird pictorial warning suggests that dumping the pills out may cause stick figures and possibly even real people to fall over, and once spilt, it will be split[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping]."
+the Li'L P's pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did nopt solve them yourself[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping]."
 
 understand "jar/jr" and "jar of pills" and "pill jar" as li'l p's pills when player is in Posh Hops Shop or player carries li'l p's pills.
 
@@ -13659,7 +13656,7 @@ understand "sob at [something]" as sobating.
 does the player mean sobating the boats: it is very likely.
 
 carry out sobating:
-	if player is not in Hero's Shore, say "[reject]" instead;
+	if player is not in Disease Seaside, say "[reject]" instead;
 	if noun is not boats, say "That's not a good thing to sob at. At which to sob. Actually, nothing is." instead;
 	say "Show some confidence! Boats are no places for whining." instead;
 	the rule succeeds;
@@ -14280,7 +14277,7 @@ this is the bore-lever rule:
 	if current action is pushing or current action is pulling or current action is taking, say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]" instead; [??check pulling lever/check pushing lever]
 
 check exiting in Tenfold Teflon'd Den Loft:
-	say "You can always find your way back easily enough.";
+	say "You could finish things off now, but hey, you can always find your way back easily enough.";
 	now player is in Horned Hedron instead;
 
 chapter pins
@@ -14838,7 +14835,7 @@ check entering pol art portal:
 	if ruby is not moot, say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Horned Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
 	if walleyes are in Horned Hedron, say "Not with those walleyes waiting and watching." instead;
 	if find-base is true:
-		say "You make your way [if Tenfold Teflon'd Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking.";
+		say "You make your way [if Tenfold Teflon'd Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking[end if].";
 		move player to Tenfold Teflon'd Den Loft instead;
 	else:
 		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.[paragraph break]";

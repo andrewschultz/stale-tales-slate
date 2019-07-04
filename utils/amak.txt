@@ -25,7 +25,7 @@ presto=BLAM,mazeltov,wont,umph,phooey,pooh,screen,rats,drat,ole,darn,whassup,GOO
 #oyster has 3 extra in the Shop. Spill is an extra that can be used any time. Only one of scrap/spike is usable.
 #One of boast/leap and fart/soar is also extraneous. That's 7 extra anagrams.
 #You also get a point for telling the haunter about the ruby, so total points = anagrams - 6
-oyster=sing,spit,scrape,spill,inset,unmap,unset,stroll,calm,run,boast,fart,soar,leap,spike,scrap,seek,SCAN,tutor,eat,SWIPE,TEND,SPLAIN,trace,react,kiss,bonk,snap,bust,drop,SHAPE,SWEAT,CLEAN,warp,search,bury,unearth,assuage,patrol,enlarge,prepay,TRAMPLE,PSALM,TAN,derail,REVEL,spin,redial
+oyster=sing,spit,scrape,spill,inset,remap,unset,stroll,calm,run,boast,fart,soar,leap,spike,scrap,seek,SCAN,tutor,eat,SWIPE,TEND,SPLAIN,trace,react,kiss,bonk,snap,bust,drop,SHAPE,SWEAT,CLEAN,warp,search,bury,unearth,assuage,patrol,enlarge,prepay,TRAMPLE,PSALM,TAN,derail,REVEL,spin,redial
 # otters has +2 verbs for the imp and whiners
 # then +2 verbs for the alternate ergo/else paths
 # then -1 for PLAY WHISTLE
