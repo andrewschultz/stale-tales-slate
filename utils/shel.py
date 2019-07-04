@@ -8,6 +8,7 @@
 # shel.py (r) (s)
 #
 
+from mytools import nohy
 from collections import defaultdict
 import re
 import i7
@@ -33,7 +34,7 @@ comp_dir = defaultdict(lambda: defaultdict(str))
 
 # functions below
 
-def count_difs(from_d, to_d, msg):
+def count_difs(from_d, to_d, msg, test_type):
     ''' counts the differences between the anagram tables and the spechelp tables
     It ignores specific items and the t- (macks' ideas) '''
     count = 0
@@ -57,7 +58,7 @@ def count_difs(from_d, to_d, msg):
             if not got_short_long:
                 count += 1
                 print(count, msg.format(x))
-    print("==============FINAL STATS", count, "misses", part_count, "partial misses.")
+    if (not quiet) or count + part_count: print("==============", test_type, "FINAL STATS", count, "misses", part_count, "partial misses.")
 
 def table_ext(nam):
     '''in case of bad input, we tack on "table of " to the start of table names'''
@@ -111,25 +112,34 @@ def scrape_stuff_from(table_names, dict_name, col_number, hdr_abb):
             print("Failed to scrape {:s}, bailing".format(q))
             bail = True
     if bail: sys.exit()
-    print("Successfully scraped all tables")
+    if not quiet: print("Successfully scraped all tables for", hdr_abb, "/", dict_name)
 
 def scrape_project(table_csv, table_file):
     '''scrape from the anagram tables and spechelp table'''
     comp_dir.clear()
     scrape_stuff_from(table_csv, "flippable", 0, table_file)
     scrape_stuff_from("table of spechelp", "flipto", 0, table_file)
-    count_difs("flippable", "flipto", "May need spechelp entry for <{:s}>.")
-    count_difs("flipto", "flippable", "Spechelp entry <{:s}> doesn't correspond to any anagram table entry.")
+    count_difs("flippable", "flipto", "May need spechelp entry for <{:s}>.", "anagrams-to-spechelp")
+    count_difs("flipto", "flippable", "Spechelp entry <{:s}> doesn't correspond to any anagram table entry.", "anagrams-to-spechelp")
 
 do_roiling = False
 do_shuffling = False
+verbose = False
+quiet = False
 cmd_count = 1
+
 while cmd_count < len(sys.argv):
     cmd = nohy(sys.argv[cmd_count])
     if cmd == 'r' or cmd == 'roi': do_roiling = True
     elif cmd == 's' or cmd == 'sa': do_shuffling = True
+    elif cmd == 'v': verbose = True
+    elif cmd == 'vn' or cmd == 'nv': verbose = False
+    elif cmd == 'q': quiet = True
+    elif cmd == 'qn' or cmd == 'nq': quiet = False
     else: sys.exit("Can only specify roiling/shuffling or we do both if it is left blank.")
     cmd_count += 1
+
+if quiet and verbose: sys.exit("Can't be quiet and verbose at once.")
 
 if not do_roiling and not do_shuffling:
     do_roiling = do_shuffling = True
