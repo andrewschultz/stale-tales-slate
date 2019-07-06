@@ -18,6 +18,21 @@ total_shifts = 0
 shift_1_on_no_repeat = False
 try_rotating_first = False
 
+def usage(header="Usage for amak.py"):
+    print(header)
+    print("=" * 80)
+    print("g= ... lists all anagrams in a region table")
+    print("s1 = just rotate if there are no repeats")
+    print("tr = try rotating first before the more detailed algorithm")
+    print("c/cx = use command/test format for output. x=extended test written ou")
+    print("<s=q> start at word q")
+    print("<e=q> end at word q")
+    print("<a=q> start after word q")
+    print("e  = edit the amak.txt text/cfg file")
+    print("ts = process output for CSV oif tests")
+    print("otherwise, words are changed to anagrams, or if they are regions, all words in the region are anagrammed.")
+    exit()
+
 def test_search(to_search):
     file_name = "rbr-roi-{0}.txt".format(to_search).replace(' ', '-')
     slider_tests = defaultdict(bool)
@@ -196,6 +211,7 @@ if len(sys.argv) > 1:
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
         elif q == 'c': format_string = "#slider test for {0}\n>{1}"
+        elif q == 'cx': format_string = "#slider test for {0}\n>{1}\nYour settler begins to make noises: a low hum, but nothing really piercing."
         elif q[:2] == 's=':
             start_word = q[2:]
         elif q[:2] == 'e=':
@@ -208,6 +224,9 @@ if len(sys.argv) > 1:
             sys.exit()
         elif q[:3] == 'ts=':
             tests_to_search = q[3:].split(",")
+        elif q == '?':
+            usage()
+            exit()
         else:
             if q in reg_verbs:
                 rs = reg_verbs[q].split(",")
