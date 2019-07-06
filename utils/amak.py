@@ -12,6 +12,7 @@ from collections import defaultdict
 
 reg_verbs = defaultdict(str)
 amak_txt = "c:/writing/scripts/amak.txt"
+total_shifts = 0
 
 #option(s). There may be more later.
 shift_1_on_no_repeat = False
@@ -163,6 +164,7 @@ words_to_shift = []
 
 format_string = "{0} <=> {1}"
 start_word = ""
+end_word = ""
 start_after = False
 
 if len(sys.argv) > 1:
@@ -174,6 +176,8 @@ if len(sys.argv) > 1:
         elif q == 'c': format_string = ">{1}"
         elif q[:2] == 's=':
             start_word = q[2:]
+        elif q[:2] == 'e=':
+            end_word = q[2:]
         elif q[:2] == 'a=':
             start_word = q[2:]
             start_after = True
@@ -185,6 +189,7 @@ if len(sys.argv) > 1:
                 rs = reg_verbs[q].split(",")
                 print("Getting verb chunk for", q, "and found", len(rs))
                 words_to_shift += rs
+                total_shifts += len(rs)
             else:
                 words_to_shift.append(q.lower())
 
@@ -192,6 +197,8 @@ if not len(words_to_shift):
     print("Using my tests")
     words_to_shift = list(my_tests)
 
+actual_convert = 0
+found_end_word = True
 found_start_word = True
 if start_word:
     found_start_word = False
@@ -204,5 +211,14 @@ for w in words_to_shift:
         else:
             continue
     show_results(w, format_string)
+    actual_convert += 1
+    if not found_end_word:
+        if end_word in w:
+            if not found_start_word:
+                print("End word found before start word.")
+            break
 
 if not found_start_word: print("Did not find start word", start_word)
+
+if actual_convert < total_shifts:
+    print(actual_convert, "of", total_shifts, "words converted.")
