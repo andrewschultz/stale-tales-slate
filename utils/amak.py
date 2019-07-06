@@ -104,10 +104,10 @@ def find_nomatch_anagram(x):
             sys.exit()
     return ''.join(new_string)
 
-def show_results(q, result_string = "has this anagram with no letters in common:"):
+def show_results(q, result_string = "{0} has this anagram with no letters in common: {1}"):
     temp = find_nomatch_anagram(q)
     if not temp: return
-    print(q, result_string, temp)
+    print(result_string.format(q, temp))
 
 def assign_stuff(x, line_count):
     x = re.sub(" *[\\\/] *$", "", x)
@@ -161,12 +161,15 @@ my_tests = [ "aabbb",
 
 words_to_shift = []
 
+format_string = "{0} <=> {1}"
+
 if len(sys.argv) > 1:
     for q in sys.argv[1:]:
         if q[:2] == 'g=':
             generate_it(q[2:])
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
+        elif q == 'c': format_string = ">{1}"
         elif q == 'e':
             os.system(amak_txt)
             sys.exit()
@@ -182,5 +185,5 @@ if not len(words_to_shift):
     print("Using my tests")
     words_to_shift = list(my_tests)
 
-for w in words_to_shift: show_results(w, "<=>")
+for w in words_to_shift: show_results(w, format_string)
 

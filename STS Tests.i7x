@@ -456,6 +456,18 @@ carry out bouing:
 	say "No bounding: [list of noboundy rooms].";
 	the rule succeeds.
 
+chapter sloning
+
+sloning is an action out of world.
+
+understand the command "slon" as something new.
+
+understand "slon" as sloning.
+
+carry out sloning:
+	if slider is switched on, say "The slider already is." instead;
+	try switching the slider on instead;
+
 STS tests ends here.
 
 ---- DOCUMENTATION ----
