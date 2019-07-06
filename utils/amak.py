@@ -18,6 +18,27 @@ total_shifts = 0
 shift_1_on_no_repeat = False
 try_rotating_first = False
 
+def test_search(to_search):
+    file_name = "rbr-roi-{0}.txt".format(to_search).replace(' ', '-')
+    slider_tests = defaultdict(bool)
+    orig_array = reg_verbs[to_search].split(",")
+    for y in reg_verbs[to_search].split(","):
+        slider_tests[y] = True
+    with open(file_name) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if not line.startswith("#slider test for "): continue
+            l = re.sub(".* for ", "", line.strip().lower())
+            if l not in slider_tests:
+                print("Extra" if l in orig_array else "Bad", "slider test", l, "at line", line_count, "of", file_name)
+            else:
+                slider_tests.pop(l)
+    if len(slider_tests):
+        print("Slider tests uncaptured ({0}): {1}".format(len(slider_tests), ', '.join(sorted(slider_tests))))
+        for x in slider_tests:
+            print("#slider test for {0}".format(x))
+    else:
+        print("All slider testfile tests passed for {0}.".format(to_search))
+
 def generate_it(tab_name_short):
     tnl = "table of {:s} anagrams".format(tab_name_short).lower()
     ana_col = 5
@@ -166,6 +187,7 @@ format_string = "{0} <=> {1}"
 start_word = ""
 end_word = ""
 start_after = False
+tests_to_search = []
 
 if len(sys.argv) > 1:
     for q in sys.argv[1:]:
@@ -173,7 +195,7 @@ if len(sys.argv) > 1:
             generate_it(q[2:])
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-        elif q == 'c': format_string = ">{1}"
+        elif q == 'c': format_string = "#slider test for {0}\n>{1}"
         elif q[:2] == 's=':
             start_word = q[2:]
         elif q[:2] == 'e=':
@@ -184,6 +206,8 @@ if len(sys.argv) > 1:
         elif q == 'e':
             os.system(amak_txt)
             sys.exit()
+        elif q[:3] == 'ts=':
+            tests_to_search = q[3:].split(",")
         else:
             if q in reg_verbs:
                 rs = reg_verbs[q].split(",")
@@ -192,6 +216,11 @@ if len(sys.argv) > 1:
                 total_shifts += len(rs)
             else:
                 words_to_shift.append(q.lower())
+
+if len(tests_to_search):
+    for x in tests_to_search:
+        test_search(x)
+    exit()
 
 if not len(words_to_shift):
     print("Using my tests")

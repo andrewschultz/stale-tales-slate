@@ -1,4 +1,6 @@
-files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudmis.txt
+# run this file with rbr.py
+#
+files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudmis.txt,reg-roi2-oyster-slider.txt
 
 ## *FILE
 
@@ -17,6 +19,33 @@ Posh Hops Shop
 
 >score
 Score in a scenario: 0 out of 40 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+
+==t3
+>slon
+#slider test for sing
+>isgn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for spit
+>psti
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for scrape
+>csarep
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for spill
+>lilsp
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for inset
+>niets
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for remap
+>erapm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for unset
+>nuets
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stroll
+>lrtlso
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 >inset
@@ -199,6 +228,10 @@ You don't need to riff on any location names to win the game, unless there's not
 #spechelp for clam
 >caml
 The clam still seems enraged.
+==t3
+#slider test for calm
+>acml
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >calm
 Your score has just gone up by one point
@@ -210,10 +243,25 @@ Odd, how you feel a need to panic and flee after calming the clam.
 #spechelp for urn
 >rnu
 The urn sits there, daring you to walk away.
+==t3
+#slider test for run
+>nru
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >run
 Your score has just gone up by one point
 Disease Seaside
+
+==t3
+#slider test for fart
+>aftr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for soar
+>osra
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for boast
+>obsta
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for frat raft
@@ -301,6 +349,10 @@ WRONG
 Your score has just gone up by one point
 Fighter Freight
 
+==t3
+#slider test for leap
+>elpa
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #nudge for freight
 >freigth
@@ -325,6 +377,13 @@ Yes, the pale plea is calling and warning you to leave. But how?
 Your score has just gone up by one point
 Anger Range
 
+==t3
+#slider test for spike
+>pskei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for scrap
+>csapr
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for pre-haun
 >unearht
@@ -378,6 +437,13 @@ Etahn Ru. Near-Hut Haunter.
 >e
 Dearths
 
+==t3
+#slider test for seek
+>eske
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for scan
+>csna
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for eeks
 >eesk
@@ -412,7 +478,7 @@ Score in a scenario: 9 out of 39 total points in the current region, Oyster. Low
 #notana 'nudge for cans'
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
-
+\\
 >score
 Score in a scenario: 10 out of 39 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 39.
 
@@ -462,6 +528,20 @@ You already fixed the dent. It's gone.
 
 >score
 Score in a scenario: 13 out of 39 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 39.
+
+==t3
+#slider test for tutor
+>utort
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for eat
+>ate
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for swipe
+>wspei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tend
+>etdn
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >tutor
 Your score has just gone up by one point
@@ -578,6 +658,23 @@ The pans wobble slightly.
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
 
+==t3
+#slider test for splain
+>splain
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for trace
+>rtcea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for kiss
+>sski
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for bonk
+>obkn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for snap
+>nspa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==!1
 >splain
 by one point
@@ -596,6 +693,11 @@ Score in a scenario: 16 out of 39 total points in the current region, Oyster. Lo
 
 >trace
 Your score has just gone up by one point
+
+==t3
+#slider test for react
+>ercta
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #change, this is WRONG
@@ -669,8 +771,18 @@ The lance is still itself[if lance is cleaned]--and you probably did enough clea
 >tusb
 Hm. The tubs rattle a bit, but you need to do something strong.
 
+==t3
+#slider test for bust
+>ubts
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >bust
 Your score has just gone up by one point
+
+==t3
+#slider test for drop
+>rdpo
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for prod
@@ -685,6 +797,10 @@ Your score has just gone up by one point
 >drpo
 You managed to get a digger from a prod, and that's good enough.
 
+==t3
+#slider test for sweat
+>wsate
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for waste
 >waset
@@ -706,11 +822,20 @@ The heaps are still technically waste, but you cleaned them up enough.
 >heasp
 The heaps still look ugly as ever.
 
+==t3
+#slider test for shape
+>hspea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==!1
 >shape
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
+==t3
+#slider test for clean
+>lcane
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #nudge for lance
 >clena
@@ -773,6 +898,14 @@ Hm, you almost thought you found something. Well, not QUITE like that.
 WRONG
 That's not quite what to do with the arches.
 
+==t3
+#slider test for warp
+>awpr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for search
+>esrahc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >warp
 Your score has just gone up by one point
 >search
@@ -791,6 +924,11 @@ The gleaner remains too small to read.
 #readables for gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
+
+==t3
+#slider test for enlarge
+>neergal
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >enlarge
 Your score has just gone up by one point
@@ -850,6 +988,10 @@ It's what it needs to be, you imagine.
 #spechelp for ruby
 >ruyb
 No, that's not quite it. The ruby dulls as if covered by dirt.
+==t3
+#slider test for bury
+>ubyr
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >bury
 Your score has just gone up by one
@@ -868,10 +1010,20 @@ The thin hint doesn't reveal anything else.
 >s
 >e
 
+==t3
+#slider test for unearth
+>nuaethr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ##>unearth haunter
 
 >unearth
 by one point
+
+==t3
+#slider test for assuage
+>saagseu
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for haunter
@@ -898,6 +1050,11 @@ by one point
 >w
 
 >e
+
+==t3
+#slider test for patrol
+>aptrlo
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for ol' trap
@@ -931,28 +1088,6 @@ You don't need to riff on any location names to win the game, unless there's not
 >out
 
 >x gleaner
-
->in
-==!1
-Dourest Detours
->score
-Score in a scenario: 33 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
-#?? this is actually wrong! If you are in the sanctum you're forced to kill the ant and get the min-point
-
-==t2
-#nudge for dourest
->dourets
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [DOUREST DETOURS]
-#nudge for detour
->detoru
-You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for ant
->atn
-That's close. Something brutal and direct.
-
->tan
-#notana 'nudge for ant'
-Your score has just gone up by one point
 
 Tenfold Teflon'd Den Loft
 
@@ -997,12 +1132,51 @@ The yapper might alert its cronies if you try anything. Even something not quite
 >score
 Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 39.
 
+==t3
+#slider test for prepay
+>rppeya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >prepay
 Your score has just gone up by one
 >undo
 >prepay yapper
 Your score has just gone up by one point
 
+==t3
+#slider test for trample
+>rtmalep
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+==!1
+>trample
+Plasm Lamps
+>score
+Score in a scenario: 33 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
+==t3
+#slider test for psalm
+>splma
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tan
+>nta
+Your settler begins to make noises: a low hum, but nothing really piercing.
+==t2
+#nudge for psalm
+>alpms
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [DOUREST DETOURS]
+#nudge for detour
+#nudge for ant
+>atn
+That's close. Something brutal and direct.
+
+>tan
+#notana 'nudge for ant'
+Your score has just gone up by one point
+
+==t3
+#slider test for revel
+>erlve
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for lever
 >levre
@@ -1026,9 +1200,18 @@ The dialer seems to click slightly
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
 
+==t3
+#slider test for derail
+>edarli
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >derail
 Your score has just gone up by one point
 
+==t3
+#slider test for spin
+>psni
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for pins
 >spni
@@ -1040,6 +1223,10 @@ Your score has just gone up by one
 >spin pins
 Your score has just gone up by one point
 
+==t3
+#slider test for redial
+>eridla
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for d2
 >redila

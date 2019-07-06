@@ -1,7 +1,7 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just means manse
 
-files=reg-roi2-means-manse-max.txt,reg-roi2-means-manse-min.txt,reg-roi2-means-manse-nudmis.txt
+files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ordeal-reload-nudmis.txt
 ~	nu	t2
 
 ## *FILE
@@ -11,7 +11,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* means-manse-thru
+* ordeal-reload-thru
 
 >think
 >x chair

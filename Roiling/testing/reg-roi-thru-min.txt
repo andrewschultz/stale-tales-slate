@@ -11,7 +11,7 @@
 
 >posf
 >score
-Score in a scenario: 0 out of 14 total points in the current region, Means Manse. Lowest score to solve is 8. Maximum score available is 14.
+Score in a scenario: 0 out of 14 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 14.
 
 >x chair
 You thought you preferred
@@ -109,7 +109,7 @@ Strip of Profits
 
 #xc
 >score
-Won now: Means Manse (8/14).
+Won now: Ordeal Reload (8/14).
 
 * _stores
 
