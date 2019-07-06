@@ -162,6 +162,8 @@ my_tests = [ "aabbb",
 words_to_shift = []
 
 format_string = "{0} <=> {1}"
+start_word = ""
+start_after = False
 
 if len(sys.argv) > 1:
     for q in sys.argv[1:]:
@@ -170,6 +172,11 @@ if len(sys.argv) > 1:
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
         elif q == 'c': format_string = ">{1}"
+        elif q[:2] == 's=':
+            start_word = q[2:]
+        elif q[:2] == 'a=':
+            start_word = q[2:]
+            start_after = True
         elif q == 'e':
             os.system(amak_txt)
             sys.exit()
@@ -185,5 +192,17 @@ if not len(words_to_shift):
     print("Using my tests")
     words_to_shift = list(my_tests)
 
-for w in words_to_shift: show_results(w, format_string)
+found_start_word = True
+if start_word:
+    found_start_word = False
 
+for w in words_to_shift:
+    if not found_start_word:
+        if start_word in w:
+            found_start_word = True
+            if start_after: continue
+        else:
+            continue
+    show_results(w, format_string)
+
+if not found_start_word: print("Did not find start word", start_word)
