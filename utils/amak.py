@@ -4,6 +4,7 @@
 # in other words, HEAT and HATE have the first letter identical, but EATH has no letter slots in common with HEAT.
 #
 
+from glob import glob
 import os
 import re
 import sys
@@ -18,26 +19,61 @@ total_shifts = 0
 shift_1_on_no_repeat = False
 try_rotating_first = False
 
+def usage(header="Usage for amak.py"):
+    print(header)
+    print("=" * 80)
+    print("g= ... lists all anagrams in a region table")
+    print("s1 = just rotate if there are no repeats")
+    print("tr = try rotating first before the more detailed algorithm")
+    print("c/cx = use command/test format for output. x=extended test written ou")
+    print("<s=q> start at word q")
+    print("<e=q> end at word q")
+    print("<a=q> start after word q")
+    print("e  = edit the amak.txt text/cfg file")
+    print("ts = process output for CSV oif tests")
+    print("otherwise, words are changed to anagrams, or if they are regions, all words in the region are anagrammed.")
+    exit()
+
 def test_search(to_search):
-    file_name = "rbr-roi-{0}.txt".format(to_search).replace(' ', '-')
+    search_mod = to_search.replace(' ', '-')
+    file_names = ["rbr-roi-{0}.txt".format(search_mod), "reg-roi-slider-randoms.txt" ]
     slider_tests = defaultdict(bool)
     orig_array = reg_verbs[to_search].split(",")
+    cur_rand_test = ""
     for y in reg_verbs[to_search].split(","):
         slider_tests[y] = True
-    with open(file_name) as file:
-        for (line_count, line) in enumerate(file, 1):
-            if not line.startswith("#slider test for "): continue
-            l = re.sub(".* for ", "", line.strip().lower())
-            if l not in slider_tests:
-                print("Extra" if l in orig_array else "Bad", "slider test", l, "at line", line_count, "of", file_name)
-            else:
-                slider_tests.pop(l)
+    for file_name in file_names:
+        with open(file_name) as file:
+            for (line_count, line) in enumerate(file, 1):
+                if line.startswith("####randtest"):
+                    cur_rand_test = re.sub("####randtest *", "", cur_rand_test)
+                if not line.startswith("#slider test for "): continue
+                l = re.sub(".* for ", "", line.strip().lower())
+                if l not in slider_tests:
+                    if cur_rand_test != to_search and 'randoms' in file_name: continue
+                    print("Extra" if l in orig_array else "Bad", "slider test", l, "at line", line_count, "of", file_name)
+                else:
+                    slider_tests.pop(l)
     if len(slider_tests):
         print("Slider tests uncaptured ({0}): {1}".format(len(slider_tests), ', '.join(sorted(slider_tests))))
         for x in slider_tests:
-            print("#slider test for {0}".format(x))
+            print("==t3\n#slider test for {0}".format(x)) # it may not always be #3, but we can search and replace if it isn't
     else:
         print("All slider testfile tests passed for {0}.".format(to_search))
+    to_glob = "reg*-{0}*.txt".format(search_mod)
+    negtest = glob(to_glob)
+    slider_false = 0
+    for x in negtest:
+        if x == "reg-roi-{0}-slider.txt".format(search_mod): continue
+        with open(x) as file:
+            for (line_count, line) in enumerate(file, 1):
+                if "#slider test for" in line:
+                    slider_false += 1
+                    print("UH OH errant slider test at line {0}: {:1}".format(line_count, line.strip()))
+    if slider_false:
+        print(slider_false, "total errant slider tests in", to_glob)
+    else:
+        print("No false positives in non-slider reg-*{0} test files.".format(search_mod))
 
 def generate_it(tab_name_short):
     tnl = "table of {:s} anagrams".format(tab_name_short).lower()
@@ -146,10 +182,12 @@ def read_region_chunks():
         return
     with open(amak_txt) as file:
         for (line_count, line) in enumerate(file, 1):
+            if re.search("#.*[a-zA-Z],[a-zA-Z]", line):
+                print("WARNING line", line_count, "has commas after #")
             if line.startswith("#"): continue
             if line.startswith(";"): break
             line = re.sub(" *#.*", "", line)
-            #print("Adding", ary[0])
+            #print("Adding", line.strip())
             if line.strip().endswith("\\") or line.strip().endswith("/"):
                 if whole_string and not whole_string.endswith(","):
                     whole_string += ","
@@ -195,7 +233,8 @@ if len(sys.argv) > 1:
             generate_it(q[2:])
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-        elif q == 'c': format_string = "#slider test for {0}\n>{1}"
+        elif q == 'c': format_string = "==t3\n#slider test for {0}\n>{1}"
+        elif q == 'cx': format_string = "==t3\n#slider test for {0}\n>{1}\nYour settler begins to make noises: a low hum, but nothing really piercing."
         elif q[:2] == 's=':
             start_word = q[2:]
         elif q[:2] == 'e=':
@@ -208,6 +247,9 @@ if len(sys.argv) > 1:
             sys.exit()
         elif q[:3] == 'ts=':
             tests_to_search = q[3:].split(",")
+        elif q == '?':
+            usage()
+            exit()
         else:
             if q in reg_verbs:
                 rs = reg_verbs[q].split(",")

@@ -19,9 +19,10 @@ troves=hate,care,GAPE,observe,spot,reason,BELIEVE,recall,despair,decide,GLARE,ma
 #The hogs and keys give 2 verbs, 1 point. Net = -1.
 #it also gives a point for getting the yoke from the yak. 0 verbs, 1 point. Net = 0.
 #skid/disk only gives one point. +1 verbs vs points.
-#bus/sub only gives one point. +2 verbs vs points.
+#bus/sub are cut down to 1
+#romsticks/romstick give +1, to +2, verbs vs points, since either is an accepted solution.
 #reboot is technically not an anagram as there are alt solutions, but for our purposes it counts as one.
-presto=BLAM,mazeltov,wont,umph,phooey,pooh,screen,rats,drat,ole,darn,whassup,GOODNESS,bleep,bingo,PROST,there,gosh,syke,WHAT,solong,later,tough,TRASCH,disk,skid,cola,mug,leaf,futon,CASSEROLE,ROMSTICKS,keyboard,TAB,capslock,sleep,debug,compile,bus,sub,AVIDER,DERIVE,reboot
+presto=BLAM,mazeltov,wont,umph,phooey,pooh,screen,rats,drat,ole,darn,whassup,GOODNESS,bleep,bingo,PROST,there,gosh,syke,WHAT,solong,later,tough,TRASCH,disk,skid,cola,mug,leaf,futon,CASSEROLE,ROMSTICKS,ROMSTICK,keyboard,TAB,capslock,sleep,debug,compile,sub,AVIDER,DERIVE,reboot
 #oyster has 3 extra in the Shop. Spill is an extra that can be used any time. Only one of scrap/spike is usable.
 #One of boast/leap and fart/soar is also extraneous. That's 7 extra anagrams.
 #You also get a point for telling the haunter about the ruby, so total points = anagrams - 6
@@ -29,9 +30,8 @@ oyster=sing,spit,scrape,spill,inset,remap,unset,stroll,calm,run,boast,fart,soar,
 # otters has +2 verbs for the imp and whiners
 # then +2 verbs for the alternate ergo/else paths
 # then -1 for PLAY WHISTLE
-# then +1 for discern/rescind (rescind is an LLP but you can try both)
 # then +25 for the macks
-otters=barely,reedily,discern,RESCIND /
+otters=barely,reedily,RESCIND /
     loathingly,stoically,tersely,brutely,angrily,enragedly, /
     slow,paroled,artsy,coolest,GARBED, / #lamer realm
     parrot,raptor,snail,snipe,racoon,raccoon,HORNETS, / #perverse preserve including turning parrot back
@@ -46,7 +46,8 @@ towers=sadder,rinsed,angstier,weariest,clumsy,himself,broken,resting,subtler,dra
 	GRANDIOSE,RUSTLED,PEARLY,RUSTY,CREAKY,COILED,MINED / #very miscellaneous stuff
 	wordy,rowdy,fussier,unlocked,attentive / #Dr Yow stuff
 	grained,robust,stabler,rewired,nearest / #Shoreline stuff
-	rousted / #Detours stuff	snared,warned,achier,nearby,bleak,bored,cricked,lardy,timider,weedy,wined,olden,tenser,gone,godly,learned,calmer,normal,pronest,eggier,coyer,ashen,recreant,stony,awed,yonder / #warriors
+	rousted / #Detours stuff
+	snared,warned,achier,nearby,bleak,bored,cricked,lardy,timider,weedy,wined,olden,tenser,gone,godly,learned,calmer,normal,pronest,eggier,coyer,ashen,recreant,stony,awed,yonder / #warriors
 	punier,triste,present,spectacular #mislit limits and mesprise premises
 #others has -1 verbs vs points for not using arugula.
 # there is +1 verbs vs points for using the passport. (3 available, need 2)
