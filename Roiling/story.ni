@@ -3682,8 +3682,7 @@ to reg-inc:
 					pad-rec "opt in/no tip";
 			now doneyet entry is true;
 			the rule succeeds;
-	if score-after is true:
-		try requesting the score;
+	if score-after is true, try requesting the score;
 
 score-after is a truth state that varies.
 
@@ -5682,7 +5681,7 @@ Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is vi
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
 Dourest Detours	"Ehh. You don't have the energy to go even a WRONG way."
-Fringe Finger	"Unorg'd ground is every way except back east. Falling there off the Fringe Finger would result in ... grief'n."
+Fringe Finger	"Unorg'd ground falls off every way except back east. Going off the Fringe Finger would result in ... grief'n."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
@@ -7243,10 +7242,8 @@ carry out fliptoing (this is the main fliptoing rule):
 					min-up;
 			if the-from entry is maze walls:
 				if the-from entry is maze walls:
-					if Tom Alvez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned:
-						increment the score;
-						increment cur-score of mrlp;
-					two-up; [this is kind of a bad hack--two-up checks the score for increases, hence no min-up in the unless above]
+					if Tom Alvez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned, min-and;
+					min-and;
 			else if the-to entry is not moot or the-to entry is satchel: [more than one point here]
 				if the-from entry is boats and frat raft is reflexed:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
@@ -7258,16 +7255,13 @@ carry out fliptoing (this is the main fliptoing rule):
 					two-up;
 				else if the-from entry is not part of the diorama:
 					reg-inc;
-			if the-from entry is a backdrop:
-				remove the-from entry from play;
+			if the-from entry is a backdrop, remove the-from entry from play;
 			else if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
 				moot the-from entry;
 			if taked entry is true or player has the-from entry:
 				if the-from entry is not ruby and the-from entry is not medals, now player has the-to entry; [else medals go from worn to carried]
 			if there is a roomjump entry:
-				if roomjump entry is Strip of Profits:
-					solve-region the map region of the location of the player;
-					the rule succeeds;
+				if roomjump entry is Strip of Profits, solve-region the map region of the location of the player;
 				move player to roomjump entry;
 				process the show blues rule; [for debugging]
 				process the process random dialogue rule;
@@ -11022,7 +11016,7 @@ to decide which number is bedroom-solve:
 
 chapter LEAD
 
-LEAD is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "LEAD, All: A Deed".
+LEAD is a vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "LEAD, All: A Deed".
 
 a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of LEAD is "x[sp]e[sp]a[sp]x". LEAD is parse-spoilable.
 
@@ -16281,9 +16275,13 @@ this is the bore-ripostes rule:
 
 chapter Fringe Finger
 
-Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger leads to a dead end pretty much every which way. So there's not much to do except go back east."
+Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down. So there's not much to do except go back east."
 
 understand "loaves" and "loaf" as solve a loaves.
+
+section logged dogleg
+
+the logged dogleg is bounding boring scenery in Fringe Finger. description of logged dogleg is "The logged dogleg curves around so you don't fall off the fringe finger.". bore-check of logged dogleg is bore-dogleg rule. bore-text of logged dogleg is "You can't move the dogleg. It's there for your safety.".
 
 section strudel
 
@@ -17015,12 +17013,12 @@ muscly Ms Lucy	Scope Copse	north	"She shows surprising dexterity for someone so 
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
-ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
-mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
-Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
 Mel Fish	Unblest Sunbelt	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
+ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
+mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
+Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
@@ -17269,6 +17267,19 @@ to reposition-guardians:
 			if the room blockdir entry of loc entry is location of player:
 				move guy entry to location of player;
 				if there is an aux entry, move aux entry to location of player;
+
+chapter allranding
+
+allranding is an action applying to nothing.
+
+understand the command "allrand" as something new.
+
+understand "allrand" as allranding.
+
+carry out allranding:
+	now all mack-ideas are in Disowned Downside;
+	now all warriors are in Loftier Trefoil;
+	the rule succeeds.
 
 chapter warwaring - not for release
 
