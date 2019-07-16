@@ -1,7 +1,8 @@
 # spechelp should be right before ==t!1,2
-files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudmis.txt
+files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudmis.txt,reg-roi2-towers-slider.txt
 ~	nudges	t4
 ~	nu	t4
+~	sli	t5
 
 ## *FILE
 
@@ -1369,6 +1370,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ri
 #spechelp for tetris sitter
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
+
 
 ==!1,2
 >triste

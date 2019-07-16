@@ -4,8 +4,9 @@
 #
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
-files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt
+files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt,reg-roi2-others-slider.txt
 ~	nu	t2
+~	sli	t3
 
 ## *FILE
 
@@ -21,6 +22,20 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >others
 >in
 >z
+
+@sli
+#slider test for grapes
+>rgpase
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for limes
+>ilesm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pears
+>eprsa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for plums
+>lpmsu
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #nudge for arugula
@@ -65,6 +80,7 @@ Nothing happens. Maybe just examine it.
 Nothing happens. Maybe just examine it.
 
 >x stand
+
 
 ==t2
 #nudge for stand
@@ -126,6 +142,10 @@ Nothing happens. Perhaps it's the whole item that's important.
 #spechelp for moss cap
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
+@sli
+#slider test for compass
+>smoascp
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >compass
 Your score has just gone up by one point.
@@ -235,6 +255,26 @@ Score in a scenario: 5 out of 42 total points in the current region, Others. Low
 
 # ok, we are now able to go north, but we are just trying to get to 16
 
+@sli
+#slider test for blueberries
+>ebeblreisur
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cantaloupe
+>acalntuoep
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for maraschino
+>amarcsihon
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for persimmon
+>mreisponm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pomegranate
+>opeargetnam
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tamarind
+>atamirdn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >limes
 Your score has just gone up by one point.
 >score
@@ -269,6 +309,25 @@ There's enough credit on the token. Don't get greedy.
 >n
 Swell Wells
 
+@sli
+#slider test for apricot
+>pairotc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for apples
+>palpse
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for coconuts
+>ococunst
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for gooseberry
+>resooebgyr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mulberries
+>umblreesri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tangerines
+>atennesgri
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #nudge for wells
 >swlle
@@ -364,6 +423,10 @@ The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. 
 #spechelp for green stain
 >tangerinse
 Parts of the green stain turn orange-ish but is too small to be oranges.
+@sli
+#slider test for icon
+>cino
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >n
 
@@ -388,6 +451,31 @@ Score in a scenario: 18 out of 42 total points in the current region, Others. Lo
 >w
 Filed Field
 
+@sli
+#slider test for blackberries
+>ealkcrbbesri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for breadfruit
+>rbrdauefti
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cranberries
+>rerbnrcasie
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for grapefruit
+>rgrepuafti
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pineapple
+>eppplinea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for raspberry
+>arrreyspb
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for strawberries
+>rssrbwreaeit
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for watermelon
+>etawelrmno
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #nudge for eog
 >eog
@@ -513,9 +601,20 @@ The coins rattle and hum promisingly.
 >read singed design
 The singed design on the coins reads, when you look close, property of NISCO.
 
+@sli
+#there are more possible tests here but let's worry about this...
+#slider test for sonic
+>osicn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >sonic
 by one point
 Blam!
+
+@sli
+#slider test for icons
+>cinso
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for s-c
@@ -570,6 +669,31 @@ Score in a scenario: 28 out of 42 total points in the current region, Others. Lo
 >e
 Clangier Clearing
 
+@sli
+#slider test for among
+>magon
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for ancienter
+>neicnarte
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cheap
+>hcape
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cinque
+>icqneu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cripes
+>rcpise
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for nomel
+>onelm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for papayas
+>apapsya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for solemn
+>oselnm
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 ###########below is melon/lemon nudge trickiness
 >abstract melon to ll
@@ -791,6 +915,19 @@ The A shines for a split-second.
 #spechelp for inapt paint
 >reservde
 You seem to read the inapt paint backwards for a second.
+@sli
+#slider test for banana
+>anaban
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for gonear
+>ogenra
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for rhubarb
+>brbruha
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for reversed
+>ereredvs
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t!1
 >nab an a
@@ -893,6 +1030,16 @@ It hurt to be called a perp. But maybe you can figure a way to think of it right
 >pepr
 Don't want to over-prep.
 
+@sli
+#slider test for research
+>erarsehc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for review
+>erewvi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for prep
+>rppe
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t1
 >review
