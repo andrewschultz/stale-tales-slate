@@ -1,8 +1,8 @@
 ###############################
 #
-#reg-roi-cheats.txt
+#reg-roi-slider.txt
 #
-#regression test for trying cheats for the various regions
+#test for basic wearing the slider out
 #
 # routes/troves/presto written
 # oyster/towers started
@@ -17,6 +17,10 @@
 >ts
 >i
 You're carrying your letters settler, to help with hints. Cheat/teach mode is off, and idlers' slider is off.
+
+#prepare the recharge right away
+>tokers
+>nestor
 
 >switch slider
 SL
@@ -59,26 +63,41 @@ You figure you can take that noise eight more times.
 
 >pull slider
 >sorbte
+You figure you can take that noise seven more times.
 >pull slider
 >sorbte
+You figure you can take that noise six more times.
+
+>undo
+WRONG
 
 >i
 You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can put up with its beepings six more times.
 
 >pull slider
 >sorbte
+You figure you can take that noise five more times.
 
 >pull slider
 >sorbte
+You figure you can take that noise four more times.
 
 >pull slider
 >sorbte
+You figure you can take that noise three more times.
 
 >pull slider
 >sorbte
+You figure you can take that noise two more times.
 
 >pull slider
 >sorbte
+You figure you can take that noise one more time.
+
+>enter steaming
+>outside
+WRONG
+!You can use the slider again, now.
 
 >pull slider
 >sorbte
@@ -91,9 +110,7 @@ You can't afford any more headaches.
 >i
 You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can't put up with the slider's beeps any more.
 
->tokers
->nestor
->in
+>enter steaming
 >outside
 
 You can use the slider again, now.
@@ -105,6 +122,7 @@ You're carrying your letters settler, to help with hints. Cheat/teach mode is of
 
 >pull slider
 >sorbte
+You figure you can take that noise nine more times.
 
 * munchies-right-away
 

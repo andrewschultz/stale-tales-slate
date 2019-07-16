@@ -2,7 +2,7 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt
+files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt,reg-roi2-routes-slider.txt
 
 ## *FILE
 
@@ -19,6 +19,20 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >enter routes
 >score
 Score in a scenario: 0 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 21.
+
+==t3
+#slider test for towards
+>otawdsr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for inside
+>niised
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for past
+>apts
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for across
+>srcsao
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #nudge for spoon
@@ -247,6 +261,10 @@ The seed pit seems to bubble slightly.
 #readables for cravings carvings
 >read cravings carvings
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
+==t3
+#slider test for despite
+>edeitps
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >despite
 Your score has just gone up by one point
@@ -321,6 +339,10 @@ Brother Horbert will work his magic with that.
 >ocras
 You don't need to do anything with Oscar, but maybe you can sneak the pipe soot away.
 
+==t3
+#slider test for opposite
+>poopiset
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for pipe soot
 >opposiet
@@ -360,11 +382,15 @@ The bench is too sturdy. You can't do anything with it, but you may be able to d
 >byburg
 Perhaps it's better to focus on the proper names instead. Simpler, too.
 
-
 ==t2
 #spechelp for bench
 >againts
 You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should.
+
+==t3
+#slider test for against
+>gaiastn
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >against
 Your score has just gone up by one point
@@ -381,6 +407,11 @@ You leaned on the bench right. Time to get on it.
 #nudge for tirade
 >tiraed
 There's more than one tirade
+
+==t3
+#slider test for astride
+>sartdei
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for bench-end
@@ -402,6 +433,11 @@ You've sort of dealt with the tirades, but there's still more than one, and you 
 #nudge for elbows
 >eblows
 Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?
+
+==t3
+#slider test for below
+>ebowl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for giant's elbow
@@ -427,6 +463,11 @@ The giant is too old and set in its ways. You may just need to listen to him fro
 #nudge for grouchy
 >groucyh
 The giant is too old and set in its ways. You may just need to listen to him from one more angle.
+
+==t3
+#slider test for under
+>nuerd
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for nuder
@@ -467,10 +508,18 @@ DEBUG INFO: Taking away a max point.
 #spechelp for morf form
 >frmo
 WRONG
+==t3
+#slider test for from
+>rfmo
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >from
 Your score has just gone up by one point
 
+==t3
+#slider test for beneath
+>ebentha
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #nudge for bean
 >bena
@@ -526,6 +575,10 @@ Score in a scenario: 11 out of 21 total points in the current region, Routes. Lo
 #spechelp for darkness
 >untli
 You feel it's ALMOST the right time for the darkness to lift.
+==t3
+#slider test for until
+>nuilt
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >until
 Your score has just gone up by one point
@@ -542,6 +595,10 @@ not something you
 #spechelp for un-road
 >aroudn
 You thought you saw an un-road for a second, but ... not quite.
+==t3
+#slider test for around
+>rauodn
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >around
 Your score has just gone up by one point
@@ -561,6 +618,10 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 #spechelp for along-bogus
 >alogn
 The un-road seems to lead somewhere, but you couldn't quite make it out like that.
+==t3
+#slider test for along
+>lango
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >along
 Your score has just gone up by one point
@@ -579,6 +640,10 @@ Nothing happens. It's DA mist, after all.
 #spechelp for da mist
 >amidts
 Hmm, you almost see a way through the mist.
+==t3
+#slider test for amidst
+>madits
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >amidst
 Your score has just gone up by one point
@@ -601,6 +666,10 @@ No need to alter them. Worth looking at, though.
 #spechelp for thickness sketchins
 >athwatr
 The cripple clipper rocks and makes negligible forward progress. Still, it's a start.
+==t3
+#slider test for athwart
+>tawrtha
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >athwart
 Your score has just gone up by one point
@@ -627,6 +696,16 @@ The new beet seems to spin slightly away from Thor for a second.
 >throuhg
 Thor seems to gesture you by for a second.
 
+==t3
+#slider test for without
+>ttwouhi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for between
+>ebentwe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for through
+>hthugor
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >between
 Your score has just gone up by one point
@@ -656,6 +735,10 @@ REGION MIN INCREASED BY 1, 2 OVERALL.
 Score in a scenario: 20 out of 21 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 21.
 !you missed some extra stuff you can't go back for
 
+==t3
+#slider test for beyond
+>eboydn
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ==t2
 #spechelp for yob den
 >beyodn
