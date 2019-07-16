@@ -1,7 +1,8 @@
-files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.txt,reg-roi2-troves-nudmis.txt
+files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.txt,reg-roi2-troves-nudmis.txt,reg-roi2-troves-slider.txt
 ~	nudges	t3
 ~	nu	t3
-
+~	sli	t4
+~	slider	t4
 ## *FILE
 
 TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges
@@ -19,6 +20,18 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 
 >l
 Loather Rathole
+
+@sli
+>slon
+#slider test for hate
+>ahet
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for care
+>acer
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for gape
+>agep
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #nudge for hurt
@@ -166,11 +179,26 @@ You're not seeing the right way to see the stop post, here.
 #nudge for observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
+@sli
+#slider test for observe
+>esbover
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for spot
+>psto
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >spot
 Your score has just gone up by one point
 
 Boarded Roadbed
+
+@sli
+#slider test for reason
+>ersano
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for believe
+>ebevlei
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #nudge for stop
@@ -215,11 +243,16 @@ But it's not just any bee. It's a WRONG
 >believe
 Your score has just gone up by one point
 
+@sli
+#slider test for recall
+>lcelra
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==t!1
 >reason
 Your score has just gone up by one point
 
-`nu
+@nu
 #done rejects for what-a-bee
 >belieev
 The bee's already taken enough of your in-my-heartitude.
@@ -263,6 +296,10 @@ Score in a scenario: 8 out of 24 total points in the current region, Troves. Low
 #spechelp for diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
+@sli
+#slider test for despair
+>edpsira
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >despair
 Your score has just gone up by one point
@@ -285,6 +322,11 @@ It's the song name--I'd Cede.
 >decied
 You try to groove to Eddie's song, but that's not quite it.
 
+@sli
+#slider test for decide
+>ediced
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >decide
 Your score has just gone up by one point
 Boredom Bedroon
@@ -299,18 +341,32 @@ You don't need to riff on any location names to win the game, unless there's not
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
 
+@sli
+#slider test for glare
+>lgrea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for master
+>amtsre
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for bolster
+>obslert
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for deal
+>edla
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==t0,3
 >glare
 Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 24 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 24.
 
-==t3
+@nu
 #nudge for glare
 >glaer
 You stare into space some more but get distracted.??
 
-`nu
+@nu
 #spechelp for lobster
 >bolstre
 That's not quite the way to deserve that lobster.
@@ -371,17 +427,19 @@ You should never need to riff on part of a location name, though you may get a l
 >nta
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
 
-
 ==t1,2
 Score in a scenario: 10 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 ==!
 Score in a scenario: 14 out of 24 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 24.
 
-
 @nu
 #spechelp for si reed
 >desier
 Your longing increases...but not enough.
+@sli
+#slider test for desire
+>ederis
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >desire
 Your score has just gone up by one point
@@ -417,6 +475,13 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 #spechelp for praise spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
+@sli
+#slider test for aspire
+>saiper
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for strive
+>tsirev
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t!2
 >aspire
@@ -463,6 +528,10 @@ The bottle of Pernod seems to rattle and spin slightly.
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
+@sli
+#slider test for ponder
+>opdnre
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >ponder
 Your score has just gone up by one point
@@ -488,6 +557,10 @@ The red vees seem like they should link together somehow, but you don't have thi
 #readables for red vees
 >read red vees
 Etched into the vees are the names of this motivational device's inventors. One is
+@sli
+#slider test for deserve
+>edesver
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >deserve
 Your score has just gone up by one point
@@ -532,7 +605,7 @@ You see red slightly as the marble Blamer Balmer fails to walk away.
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 
-`nu
+@nu
 #spechelp for marble blamer mr beal
 >rambel
 seems slightly taken aback
@@ -542,6 +615,17 @@ seems slightly taken aback
 #spechelp for sister tressi siters
 >resits
 Sister Tressi seems a bit more upset than usual.
+
+#slider test for ramble
+>arbmel
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for resist
+>ssrtei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for recant
+>eractn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 
 ==t!2
 >ramble
@@ -574,6 +658,14 @@ DIVORCES suddenly seems more alluring and more rubbish at once.
 >read divorces
 All sorts of articles that make you see red. This one's about
 /(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
+
+@sli
+#slider test for discover
+>idcsvore
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for last
+>alts
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >discover
 Your score has just gone up by one point
