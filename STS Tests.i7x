@@ -466,7 +466,7 @@ understand "slon" as sloning.
 
 carry out sloning:
 	if slider is switched on, say "The slider already is." instead;
-	try switching the slider on instead;
+	try switching on slider instead;
 
 STS tests ends here.
 

@@ -482,7 +482,7 @@ understand "dole" as a mistake ("Alas, no unemployment check, pineapple or forme
 
 understand "el doodle" as a mistake ("That would be more in place in a game with palindromes. Someone should write one! Whoops, they already did and called it Ailihphilia. Um, I mean, I already did. If you haven't played it, you totally should. After you're done here, of course.") when player is in Olde Lode.
 
-understand "sabre" as a mistake ("A weapon won't do much good here. You need action!") when player is in Olde Lode.
+understand "sabre" and "sabre" as a mistake ("A weapon won't do much good here. You need action!") when player is in Olde Lode.
 
 chapter Disease Seaside
 
