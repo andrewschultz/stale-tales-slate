@@ -1492,12 +1492,13 @@ chapter kissing
 understand "kiss [something]" as kissing.
 
 check kissing:
-	if noun is goat, say "The goat doesn't seem like it appreciates affection." instead;
+	if noun is goat, say "The goat doesn't seem like it appreciates affection." instead; [start ordeal loader]
 	if noun is the player, say "[if Notices Section is unvisited]Hooray for loving yourself even after losing your job. I guess.[else]You love yourself! You can do it! You can solve this game! You can...try something more serious next move![end if]" instead;
-	if noun is faeries, say "You're not their type." instead;
-	if noun is night thing or noun is beast, say "Yeah, love thy enemy, but only in thy heart." instead;
-	if noun is Woeful Pat, say "'Please! I am not finished!'" instead;
+	if noun is wolves, say "Hit wolves with loves?!" instead; [start forest]
+	if noun is Woeful Pat, say "'Please! I am not finished!'" instead; [start sortie]
 	if noun is peasant, say "He has a wife. Sorry." instead;
+	if noun is faeries, say "You're not their type." instead; [start metros]
+	if noun is night thing or noun is beast, say "Yeah, love thy enemy, but only in thy heart." instead;
 	say "Affection's so fine. Fact." instead;
 
 chapter thinking
