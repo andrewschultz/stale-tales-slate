@@ -1,5 +1,7 @@
-files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt
+files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt,reg-roi2-presto-slider.txt
+
 ~	nu	t2
+~	sli	t3
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
@@ -10,6 +12,20 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >presto
 >enter spot
 Grey Gyre
+
+@sli
+#slider test for blam
+>lbma
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mazeltov
+>ameztlvo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for umph
+>muhp
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for bleep
+>eebpl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #nudge for volt
@@ -59,6 +75,14 @@ The hoop dips a bit as if to taunt you.
 >poho
 WRONG
 
+@sli
+#slider test for phooey
+>oophye
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pooh
+>opho
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==t0,2
 >phooey
 Your score has just gone up by two points
@@ -74,6 +98,11 @@ Taking away a max point.
 REGION MAX DECREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 2 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 36.
+
+@sli
+#slider test for screen
+>ercsne
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #done rejects for onyx censer
@@ -156,6 +185,13 @@ The star seems to wiggle a bit, but not enough to pull it out.
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
 
+@sli
+#slider test for rats
+>arst
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for drat
+>rdta
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >rats
 Your score has just gone up by one point
@@ -242,6 +278,13 @@ The number's got more numerals than letters.
 #spechelp for boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
+@sli
+#slider test for bingo
+>ibgon
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for prost
+>rpsto
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >bingo
 Your score has just gone up by one point
@@ -268,9 +311,6 @@ The sport ports seem even shinier for a second.
 #readables for sport ports
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
-#spechelp for n-t-air
->wotn
-You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 
 ==t!1
 >prost
@@ -308,6 +348,16 @@ REGION MAX DECREASED BY 1
 ==t2
 >n
 Nowt Town
+
+==t3
+#spechelp for n-t-air
+>wotn
+You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
+#slider test for wont
+>owtn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+==t2
 #nudge for mazeroom
 >mazeromo
 This is just the entry. You may want to tackle the whole maze.
@@ -422,6 +472,17 @@ You don't need to face double the strength.
 >danr
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 
+@sli
+#slider test for ole
+>leo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for darn
+>adnr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for goodness
+>osgndsoe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >darn
 Your score has just gone up by one point
 
@@ -440,6 +501,10 @@ Maybe something like that'd work with just one washup. But there are two.
 #spechelp for wzup
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
+@sli
+#slider test for whassup
+>sahwups
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >whassup
 Your score has just gone up by one point
@@ -470,6 +535,11 @@ No, you definitely need to say THERE. You just need to have backup and maybe wea
 >theer
 The ether pulsates, but you still can't see through it.
 
+@sli
+#slider test for there
+>eethr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >there
 Your score has just gone up by one point
 
@@ -493,6 +563,14 @@ Saps' Pass
 The ether is gone. You can just go back north.
 >ethre
 >n
+
+@sli
+#slider test for gosh
+>oghs
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for syke
+>ysek
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #nudge for lawl
@@ -550,6 +628,23 @@ No, it's not just any clump, but hawt thaw.
 #spechelp for hawt thaw
 >whta
 The hawt thaw crackles slightly.
+
+@sli
+#slider test for what
+>hwta
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for solong
+>osolgn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for later
+>alert
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tough
+>otghu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for trasch
+>rtsahc
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t!1
 >what
@@ -791,10 +886,46 @@ The locs pack mentions, in red, PC Cloaks are also a super cool productivity boo
 >read clack ops locs pack
 The locs pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!
 
+@sli
+#slider test for skid
+>ksdi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cola
+>ocal
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mug
+>ugm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for leaf
+>elfa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for futon
+>ufont
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for casserole
+>aceesolrs
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for romstick
+>orsmitkc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for romsticks
+>smorsckit
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for avider
+>vadire
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for derive
+>edevir
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >capslock
 Your score has just gone up by one point
 >skid
 Your score has just gone up by one point
+
+#slider test for disk
+>idks
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #done rejects for caps lock
@@ -929,6 +1060,17 @@ Your score has just gone up by one point
 >keyboadr
 It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
 
+@sli
+#slider test for keyboard
+>ekbyaodr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tab
+>abt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for capslock
+>acclskpo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >keyboard
 Your score has just gone up by one point
 
@@ -958,6 +1100,10 @@ Even more nothing happens than you expected. The blue button really is too broke
 #nudge for reboot
 >reboto
 You need to give that computer another (figurative) kick.
+@sli
+#slider test for reboot
+>oberto
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >disk
 >put disk in drive
@@ -968,6 +1114,10 @@ Your score has just gone up by one point
 #nudge for sleep
 >slepe
 Your mind is a tired jumble right now, yes.
+@sli
+#slider test for sleep
+>eespl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >sleep
 Your score has just gone up by one point
@@ -983,6 +1133,10 @@ You don't need to give that computer another (figurative) kick.
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 
+@sli
+#slider test for compile
+>ocpmlei
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >compile
 ==t1
@@ -1063,6 +1217,10 @@ Score in a scenario: 26 out of 37 total points in the current region, Presto. Lo
 >debgu
 Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here.
 BUDGE
+@sli
+#slider test for debug
+>edugb
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >pour cola in mug
 >debug
@@ -1091,6 +1249,11 @@ Strip of Profits
 >misses
 WRONG
 >undo
+
+@sli
+#slider test for sub
+>usb
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >sub
 Your score has just gone up by one point
