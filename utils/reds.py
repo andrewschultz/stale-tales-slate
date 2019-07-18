@@ -2,6 +2,9 @@
 #
 # anagram checker in python, rewritten from perl
 
+from collections import defaultdict
+from itertools import permutations
+from mytools import nohy
 import sys
 import re
 
@@ -15,6 +18,36 @@ verbose = False
 wild_card = ""
 
 reds_file = "c:/writing/dict/reds.txt"
+
+def match_types(w1, w2):
+    if len(w1) != len(w2): return False
+    for x in range(len(w1)):
+        if letter_type(w1[x]) != letter_type(w2[x]): return False
+    return True
+
+def reds_okay(w1, w2):
+    for x in range(0, len(w1)):
+        if w1[x] == w2[x]: return False
+    return True
+
+def count_remaining_possibilities(my_array, print_whats_valid = True):
+    target = my_array[0]
+    match_array = my_array[1:]
+    tl = list(target)
+    total_valid_perms = 0
+    poss_dict = defaultdict(lambda:defaultdict(int))
+    for x in permutations(tl):
+        if know_types and not match_types(x, target):
+            continue
+        valid_perm = True
+        for y in match_array:
+            if not valid_perm: continue
+            if not reds_okay(x, y):
+                valid_perm = False
+        if valid_perm:
+            if print_whats_valid:
+                total_valid_perms += 1
+                print(total_valid_perms, ''.join(x), "is a valid possible guess")
 
 def letter_type(ltr):
     ll = ltr.lower()
@@ -114,15 +147,34 @@ def verify_reds_file(my_file):
 
 cmd_count = 1
 
+my_array = []
+count_remaining = True
+
 while cmd_count < len(sys.argv):
     arg = nohy(sys.argv[cmd_count])
     if arg == 'v':
         verbose = True
-    if arg.startswith("w="):
+    elif arg.startswith("w="):
         wild_card = arg[2:]
+    elif arg == '%':
+        know_types = True
+    elif len(arg) >= 3:
+        my_array.append(arg)
     else:
         usage()
     cmd_count += 1
 
+if len(my_array): read_file = False
+
 if read_file:
     verify_reds_file(reds_file)
+else:
+    if len(my_array) < 2:
+        sys.exit("Need more than 2 arguments.")
+    if verify_one_array(my_array) == 0:
+        print(my_array, "verified OK.")
+    else:
+        print(my_array, "failed.")
+        sys.exit()
+    if count_remaining:
+        count_remaining_possibilities(my_array)
