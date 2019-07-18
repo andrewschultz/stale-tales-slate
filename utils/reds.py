@@ -30,7 +30,7 @@ def reds_okay(w1, w2):
         if w1[x] == w2[x]: return False
     return True
 
-def count_remaining_possibilities(my_array, print_whats_valid = True):
+def count_remaining_possibilities(my_array, print_whats_valid = True, collate_results = True, show_poss = True):
     target = my_array[0]
     match_array = my_array[1:]
     tl = list(target)
@@ -48,6 +48,18 @@ def count_remaining_possibilities(my_array, print_whats_valid = True):
             if print_whats_valid:
                 total_valid_perms += 1
                 print(total_valid_perms, ''.join(x), "is a valid possible guess")
+            if collate_results or show_poss:
+                for l in range(0, len(x)):
+                    print("Adding", x[l], "to slot", l)
+                    poss_dict[l][x[l]] += 1
+    if show_poss:
+        possibility_string = ''
+        for j in range(0, len(x)):
+            temp = ''
+            temp = ''.join(poss_dict[j])
+            if len(temp) > 1: temp = "({0})".format(temp)
+            possibility_string += temp
+        print("Possibilities:", possibility_string)
 
 def letter_type(ltr):
     ll = ltr.lower()
