@@ -88,7 +88,7 @@ deal,???R=lead=dale=elda=leda=adle
 #qver of bortles lobster
 bolster,?GR??G?=bortles=lobster
 #qver of me arts mr east stream tamers
-master,??rryr=mearts=mreast=stream=tamers
+master,??RRYR=mearts=mreast=stream=tamers
 #econ cone
 strive,trevis,vister
 #qver of praise spirea
@@ -180,7 +180,7 @@ inset,tiens
 #disease seaside
 ocean,canoe
 #qver of frat raft
-fart,??R?=frat=raft
+fart,??RP=frat=raft
 soar,oars
 #anger range
 unearth,haunter,etahnru,nearhut
