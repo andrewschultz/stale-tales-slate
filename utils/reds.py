@@ -3,8 +3,9 @@
 # anagram checker in python, rewritten from perl
 
 from collections import defaultdict
-from itertools import permutations
+from sympy.utilities.iterables import multiset_permutations
 from mytools import nohy
+from math import factorial
 import sys
 import re
 
@@ -13,11 +14,23 @@ CONSONANT=1
 VOWEL=2
 Y=3
 
+check_every = 10000
+know_types = False
 read_file = True
 verbose = False
 wild_card = ""
 
 reds_file = "c:/writing/dict/reds.txt"
+
+def comb_calc(this_word, try_perms = False):
+    freq = defaultdict(int)
+    ret_val = factorial(len(this_word))
+    if try_perms: return ret_val
+    for x in this_word:
+        freq[x] += 1
+    for x in freq:
+        ret_val //= factorial(freq[x])
+    return ret_val
 
 def match_types(w1, w2):
     if len(w1) != len(w2): return False
@@ -30,13 +43,19 @@ def reds_okay(w1, w2):
         if w1[x] == w2[x]: return False
     return True
 
-def count_remaining_possibilities(my_array, print_whats_valid = True, collate_results = True, show_poss = True):
+def count_remaining_possibilities(my_array, print_whats_valid = True, collate_results = True, show_poss = True, max_guesses = 0):
     target = my_array[0]
     match_array = my_array[1:]
     tl = list(target)
     total_valid_perms = 0
+    total_combinations = 0
     poss_dict = defaultdict(lambda:defaultdict(int))
-    for x in permutations(tl):
+    print(comb_calc(target), "total combinations of", target, "out of", comb_calc(target, True), "permutations")
+    ptl = multiset_permutations(tl)
+    for x in ptl:
+        total_combinations += 1
+        if check_every and total_combinations % check_every == 0:
+            print(total_combinations, "....")
         if know_types and not match_types(x, target):
             continue
         valid_perm = True
@@ -47,19 +66,39 @@ def count_remaining_possibilities(my_array, print_whats_valid = True, collate_re
         if valid_perm:
             if print_whats_valid:
                 total_valid_perms += 1
+                if max_guesses:
+                    if total_valid_perms == max_guesses + 1:
+                        print("Went over maximum of", max_guesses)
+                    if total_valid_perms > max_guesses: continue
                 print(total_valid_perms, ''.join(x), "is a valid possible guess")
             if collate_results or show_poss:
                 for l in range(0, len(x)):
-                    print("Adding", x[l], "to slot", l)
+                    # print("Adding", x[l], "to slot", l)
                     poss_dict[l][x[l]] += 1
+    print("Read through", total_combinations, "total combinations")
+    if max_guesses and max_guesses < total_valid_perms:
+        print(total_valid_perms, "total valid permutations, only", max_guesses, "shown.")
     if show_poss:
         possibility_string = ''
-        for j in range(0, len(x)):
+        for j in range(0, len(tl)):
             temp = ''
             temp = ''.join(poss_dict[j])
             if len(temp) > 1: temp = "({0})".format(temp)
             possibility_string += temp
         print("Possibilities:", possibility_string)
+    if collate_results:
+        header = ""
+        for x in range(0, len(tl)):
+            header += "Slot {:<2d}|".format(x)
+        print(header)
+        for j in tl:
+            this_line = ""
+            for x in range(0, len(tl)):
+                if j not in poss_dict[x]:
+                    this_line += "xxxxxxx|"
+                else:
+                    this_line += "{:s}={:5d}|".format(j, poss_dict[x][j])
+            print(this_line)
 
 def letter_type(ltr):
     ll = ltr.lower()
@@ -161,6 +200,7 @@ cmd_count = 1
 
 my_array = []
 count_remaining = True
+max_guesses = 1000
 
 while cmd_count < len(sys.argv):
     arg = nohy(sys.argv[cmd_count])
@@ -170,6 +210,10 @@ while cmd_count < len(sys.argv):
         wild_card = arg[2:]
     elif arg == '%':
         know_types = True
+    elif arg[0] == 'm' and arg[1:].isdigit():
+        max_guesses = int(arg[1:])
+    elif arg[0] == 'ce' and arg[2:].isdigit():
+        check_every = int(arg[2:])
     elif len(arg) >= 3:
         my_array.append(arg)
     else:
@@ -181,7 +225,7 @@ if len(my_array): read_file = False
 if read_file:
     verify_reds_file(reds_file)
 else:
-    if len(my_array) < 2:
+    if len(my_array) < 2 and not know_types:
         sys.exit("Need more than 2 arguments.")
     if verify_one_array(my_array) == 0:
         print(my_array, "verified OK.")
@@ -189,4 +233,4 @@ else:
         print(my_array, "failed.")
         sys.exit()
     if count_remaining:
-        count_remaining_possibilities(my_array)
+        count_remaining_possibilities(my_array, max_guesses=max_guesses)
