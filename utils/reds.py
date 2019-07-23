@@ -19,6 +19,7 @@ know_types = False
 read_file = True
 verbose = False
 wild_card = ""
+space_char = 'x'
 
 reds_file = "c:/writing/dict/reds.txt"
 
@@ -87,17 +88,26 @@ def count_remaining_possibilities(my_array, print_whats_valid = True, collate_re
             possibility_string += temp
         print("Possibilities:", possibility_string)
     if collate_results:
+        max_digits = 1
+        for x in poss_dict:
+            for j in poss_dict[x]:
+                digits = len(str(poss_dict[x][j]))
+                max_digits = max(digits, max_digits)
         header = ""
         for x in range(0, len(tl)):
-            header += "Slot {:<2d}|".format(x)
+            header += " " * max_digits + "{:<2d}|".format(x)
         print(header)
+        got_yet = defaultdict(bool)
         for j in tl:
+            if j in got_yet: continue
+            got_yet[j] = True
             this_line = ""
             for x in range(0, len(tl)):
                 if j not in poss_dict[x]:
-                    this_line += "xxxxxxx|"
+                    this_line += space_char * (max_digits + 2) + "|"
                 else:
-                    this_line += "{:s}={:5d}|".format(j, poss_dict[x][j])
+                    this_line += ('{:s}={:{:d}d}|').format(j, poss_dict[x][j], max_digits)
+                    #this_line += j + "=" + "{num:{width}}".format(num=poss_dict[x][j], width=max_digits) + "|"
             print(this_line)
 
 def letter_type(ltr):
@@ -171,6 +181,8 @@ def verify_one_array(my_array):
         for y in range(0, len(target_words[0])):
             if target_words[0][y] == my_word[y]:
                 print("Uh oh, letter match between {0} and {1} at index {2}: {3}.".format(target_words[0], my_word, y+1, target_words[0][y]))
+            elif my_word[y] != '.' and my_word[y] == my_word[y].upper() and target_words[0][y] != my_word[y].lower():
+                print("Uh oh, we need a letter match between {0} and {1} at index {2}: {3}.".format(target_words[0], my_word, y+1, target_words[0][y]))
     return ret_val
 
 def verify_one_line(my_line):

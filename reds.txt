@@ -300,7 +300,7 @@ grandiose,R?YRR?YRY=organised=egodrains
 grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
 weirder,drewrie
 stabler,alberts
-hastiest,setithas,thiseats
+hastiest,setithas,thiseats,tieshats
 #rawest waters
 nearest,ernesta,strenae,stearne
 #mislit limits
