@@ -10418,7 +10418,6 @@ blurb	prio
 "Ach, Sir: Chairs I Crash[r], by Charis Sarich-Raisch"
 "Ache, Sorer Racehorse[r] by Rose Reach"
 "Achy Lull[r], by [if player is male]Clay Hull[else]Lucy Hall[end if]"
-"Down Ball Wall Bond by Dawn Boll"
 "Achy Odes: Days Echo[r], by Doc Hayes"
 "Acidly, Icy Lad[r], by Di Clay"
 "AcidSoft Factoids[r], by Tad Scifo" []
@@ -11754,6 +11753,7 @@ blurb	prio
 "Doug the Huge Dot[r], by Ted Hugo"
 "Dour Glad Old Guard[r], by Olga Rudd" []
 "Dovetail, Violated Old Evita[r], by Teo Vidal" []
+"Down Ball Wall Bond by Dawn Boll"
 "Down Gin Now, DING[r], by Don Wing" []
 "Downfall of Lladwn[r], by Dan'l Wolf"
 "Downtime's Wisdom Net[r], by Owen Smidt"
@@ -38044,7 +38044,7 @@ blurb
 
 book oyster
 
-table of aunt tuna chatter [xxy1]
+table of aunt tuna chatter [xxy1] [xxtunachat]
 blurb
 "asks Tortu why she's tough to hug." [x]
 "begins anti-aint-atin[']." [x]
@@ -38095,7 +38095,7 @@ blurb
 "worries about Verne's nerves." [x]
 "worries over unstable tan lubes." [x]
 
-table of bar dialogue [xxy2]
+table of bar dialogue [xxy2] [xxbarchat]
 blurb
 "'Abnormal ol['] barman!'"
 "'Add ale.' / 'La-de-da.'"
@@ -38304,7 +38304,7 @@ blurb
 "'Wine goblet! Belting woe!'"
 "'XX Ale?! Ex-Lax!'"
 
-table of Casper mumbles [xxy3]
+table of Casper mumbles [xxy3] [xxcasper]
 blurb
 "[if player is male]Lon Veist[else]Lois Vent[end if], novelist? Vile snot!" []
 "Anti-novel? Let on, vain Valentino!"
@@ -38369,7 +38369,7 @@ blurb
 "Writing. Wring it..." []
 "Yep, so-posey Poesy!" []
 
-table of competing bars [xxy4]
+table of competing bars [xxy4] [xxcompeting] [xxcompete] [xxbars]
 blurb
 "[a-b]'s Base" [p] []
 "Absorbing Bingo Bars" []
@@ -38735,7 +38735,7 @@ blurb
 "Yer Rye"
 "Zestful Zufelt's"
 
-table of fish fries [xxy5]
+table of fish fries [xxy5] [xxfish] [xxfries]
 blurb
 "'Acne cane? [']E can!'"
 "'Ain't Fly, Faintly!'"
@@ -38890,7 +38890,7 @@ blurb
 "'Yob-boy!'"
 "'Yon kid's so dinky!'"
 
-table of theses [xxy6]
+table of theses [xxy6] [xxtheses] [xxsheets]
 blurb
 "Ah, tote hate to the tao!"
 "Alert, clown: we can troll!"
@@ -39068,7 +39068,7 @@ blurb
 "Yo, glug: go ugly!"
 "Your ideas? Aye, I'd sour."
 
-table of tuna gossip [xxy7]
+table of tuna gossip [xxy7] [xxtunagossip]
 blurb
 "'About me: a bum toe!'"
 "'Ahem. Ah, me!"
@@ -39197,7 +39197,7 @@ blurb
 "'You can't!' Coy aunt!" [p] [x]
 "'Zits care? Craziest!'"
 
-table of unpopular girls [xxy8]
+table of unpopular girls [xxy8] [xxgirls]
 blurb
 "Achier Charie" []
 "Acrid Darci Icard"
@@ -39311,7 +39311,7 @@ blurb
 
 book towers
 
-table of gizmo parts [xxw1]
+table of gizmo parts [xxw1] [xxgizmo]
 blurb
 "a-parted data pre-adapter"
 "all-portion pollinator"
@@ -39462,7 +39462,7 @@ blurb
 "wrest-it twister"
 "yarn of no fray"
 
-table of rodney bluster [xxw2]
+table of rodney bluster [xxw2] [xxrodney]
 blurb
 "being as gung-ho as All-In Niall"
 "being as wily as, but more loyal than, Varlet Valter"
