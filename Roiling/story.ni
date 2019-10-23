@@ -5666,7 +5666,7 @@ Posh Hops Shop	"[if noun is not outside]You just got here, so direction means no
 Saps' Pass	"There's no way around the hogs. You need to get rid of them."
 Path Path	"It's best to say on the Phat Path."
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
-Disease Seaside	"The matterless streamlets don't matter. You need to cross to the north for more action."
+Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.[paragraph break]You need to cross to the north for more action."
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
@@ -5681,7 +5681,7 @@ Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is vi
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
 Dourest Detours	"Ehh. You don't have the energy to go even a WRONG way."
-Fringe Finger	"Unorg'd ground falls off every way except back east. Going off the Fringe Finger would result in ... grief'n."
+Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You enter the logged dogleg's [noun] entry and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
@@ -7255,7 +7255,8 @@ carry out fliptoing (this is the main fliptoing rule):
 					two-up;
 				else if the-from entry is not part of the diorama:
 					reg-inc;
-			if the-from entry is a backdrop, remove the-from entry from play;
+			if the-from entry is a backdrop:
+				remove the-from entry from play;
 			else if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
 				moot the-from entry;
 			if taked entry is true or player has the-from entry:
@@ -16275,13 +16276,36 @@ this is the bore-ripostes rule:
 
 chapter Fringe Finger
 
-Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down. So there's not much to do except go back east."
+Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down to the unorg'd ground. Falling would mean grief'n. So there's not much to do except go back east."
 
 understand "loaves" and "loaf" as solve a loaves.
 
 section logged dogleg
 
 the logged dogleg is bounding boring scenery in Fringe Finger. description of logged dogleg is "The logged dogleg curves around so you don't fall off the fringe finger.". bore-check of logged dogleg is bore-dogleg rule. bore-text of logged dogleg is "You can't move the dogleg. It's there for your safety.".
+
+this is the bore-dogleg rule:
+	if current action is climbing, say "But you would fall to your death on the unorg'd ground." instead;
+	if current action is entering:
+		let Q be a random number from 1 to number of entries in dogleg-dirs;
+		let mydir be entry Q in dogleg-dirs;
+		try going mydir instead;
+
+dogleg-dirs is a list of directions variable. dogleg-dirs is { north, west, south }.
+
+to say dogleg-other of (myd - a direction):
+	let NE be number of entries in dogleg-dirs;
+	let X be a random number from 1 to NE;
+	if myd is not entry X in dogleg-dirs:
+		say "[entry X in dogleg-dirs]";
+	else:
+		increase X by a random number from 1 to NE - 1;
+		if X > NE, now X is X - NE;
+		say "[entry X in dogleg-dirs]";
+
+section unorg'd ground
+
+the unorg'd ground is bounding boring scenery in Fringe Finger. description of unorg'd ground is "The unorg'd ground is not worth falling down to explore. Or worth falling down.". bore-text of unorg'd ground is "The unorg'd ground is not worth your time."
 
 section strudel
 
@@ -16952,7 +16976,7 @@ chapter Salted Deltas
 
 section atheists
 
-the Asset-Hit Atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will."
+the Asset-Hit Atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping]."
 
 understand "atheist" as atheists.
 
@@ -17531,7 +17555,7 @@ every turn when player is in Rancho Archon Anchor and player was in Rancho Archo
 			if current action is not playing whistle and current action is not qbc responding with and current action is not objasking generically and current action is not objasking about and current action is not asking about and current action is not asking generically:
 				increment Elvira-delay;
 				if Elvira-delay is 2:
-					say "Elvira smirks when she sees you have no plan. 'Wane anew, blunder bundler,' she says as she gives that silvery laugh.[paragraph break] 'Potent--to PENT' are the final words you hear. Hmm. You probably can't hang around, but there must be a simple way to defeat her[if whistle is not reflexed]. Perhaps you can even retreat to prepare to defeat her[end if].";
+					say "Elvira smirks when she sees you have no plan. 'Antagonist stagnation? Wane anew, blunder bundler,' she says as she gives that silvery laugh.[paragraph break] 'Potent--to PENT' are the final words you hear. Hmm. You probably can't hang around, but there must be a simple way to defeat her[if whistle is not reflexed]. Perhaps you can even retreat to prepare to defeat her[end if].";
 					get-dead instead;
 				else:
 					say "Elvira looks a little less shocked, now. You might want to retreat if you have no plan to defeat her.";
@@ -18861,7 +18885,7 @@ the warpish warship is amusing boring scenery in Rancho Archon Anchor. descripti
 
 a stocked stockade is amusing boring scenery in Rancho Archon Anchor. description of a stocked stockade is "You don't know the details, being the good guy and all, but you don't need to.". bore-text is "You shudder to think what you could do with it--or what it could do to you.".
 
-Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]'Coren,' she cries, over the rapidly vaporizing body of her pet hydra.[or]Elvira seems impatient for you to make a move.[stopping]". description is "Elvira's actually quite attractive. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
+Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]'Coren,' she cries, over the rapidly vaporizing body of her pet hydra.[or]Elvira seems impatient for you to make a move.[stopping]". description is "Elvira's actually got ... persistent prettiness. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
 
 Elvira wears the Ultimate Mutilate-It Amulet.
 
