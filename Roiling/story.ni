@@ -5643,8 +5643,7 @@ theloc	thereject
 Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
 Farming Framing	"No time for mooching around Ordeal Reload. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
-Strip of Profits	"Why run off for fun? See [if number of touchable portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [stores]
-Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. There must be a generic way to leave!"
+Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. There must be a generic way to leave!" [stores]
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat." [routes]
 Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You just need to find No-Lag Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
@@ -5680,13 +5679,12 @@ Loftier Trefoil	"[if rodney is touchable]One look from Rodney, and you stay put[
 Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is visited] back[end if] north[if unripe ur-pine is touchable], and the ur-pine's in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
-Dourest Detours	"Ehh. You don't have the energy to go even a WRONG way."
+Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
 Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You enter the logged dogleg's [noun] entry and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
-Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to make your way through. You need a way to change that."
 Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west." [otters]
 Clarthead Cathedral	"[no-coma]."
 Shiner Shrine	"[no-coma]."

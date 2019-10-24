@@ -550,9 +550,9 @@ to decide whether any-store-visited:
 	no;
 
 check going nowhere in hub-room:
-	if hubs bush is in location of player, say "The hubs bush forces you back to the center of the [location of player]. You're stuck here with the stores, unless you can change or enter one." instead;
+	say "[if hubs bush is in location of player]The hubs bush forces you back to the center of the [location of player][else]As you try to flee the [location of player], a voice boomes 'Run off for fun? Urff, no!'[paragraph break]Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.[paragraph break]Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole [location of player][end if]. Guess you'll need to explore the stores[if number of moot stos > 0], or what you made of them[end if]."
 	move hubs bush to hub-room;
-	say "As you try to flee the [location of player], up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands. Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole [location of player]." instead;
+	the rule fails;
 
 to say if-bush: say "[if hubs bush is in location of player]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]"
 
