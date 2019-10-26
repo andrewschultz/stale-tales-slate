@@ -2,6 +2,7 @@
 # gono.py: going nowhere test verifier
 #
 
+import sys
 import mytools
 import re
 import i7
@@ -42,8 +43,8 @@ def check_exits(my_project, table_to_proc = "table of nowheres"):
                 my_loc = ary[0]
             elif line.startswith("check going nowhere"):
                 if ' in' not in line: continue
-                my_loc = re.sub(".* in ", "", line.strip().lower())
-                my_loc = re.sub(" *(:|\(.*)", "", my_loc)
+                my_loc = re.sub(" *(:|\().*", "", line.strip().lower())
+                my_loc = re.sub(".* in ", "", my_loc)
             else:
                 continue
             if my_loc in to_find:
@@ -81,7 +82,19 @@ def check_exits(my_project, table_to_proc = "table of nowheres"):
     if falsepos or needed or falseglo or needglo:
         print("Totals:", falseglo, "false positives,", needglo, "needed")
 
-check_exits("roi")
-check_exits("sa")
+cmd_count = 1
+
+while cmd_count < len(sys.argv):
+    arg = mytools.nohy(sys.argv[cmd_count])
+    cmd_count += 1
+    if re.search("^[rs]+$", arg):
+        check_roiling = 'r' in arg
+        check_shuffling = 's' in arg
+
+if check_roiling:
+    check_exits("roi")
+
+if check_shuffling:
+    check_exits("sa")
 
 mytools.postopen_files()
