@@ -2402,7 +2402,7 @@ check going when player is in sf or player is in rf:
 			move player to Self-ID Fields;
 			the rule succeeds;
 	if noun is inside or noun is outside, say "Any of the four directions could lead inside somewhere else, or outside the forest. So you need to figure which." instead;
-	say "You go [noun] a bit, but the paths and vegetation multiply. Percuss-spruces make warning noises that drive you back to where you were." instead;
+	say "You go [noun] a bit, but the paths and vegetation multiply. You detect [one of]a sneak-snake[or]a fauns snafu[or]a stag or gators[or]a stoat making toast of you[or]percuss-spruces[or]slickest stickles[in random order], which is enough to drive you back to where you were." instead;
 
 to set-other-default: now cask is not flipped-yet.
 
@@ -4273,10 +4273,6 @@ understand "forest1" as sf when debug-state is true.
 
 understand "softer" and "softer forest" as sf when mrlp is forest.
 
-check going in sf:
-	say "Hm. You don't have any reason to believe anything interesting's that direction. Except maybe bad interesting, like [one of]having a snake sneak[or]a fauns snafu[or]a stag or gators[or]a stoat making toast of you[or]slickest stickles[at random] or something." instead;
-	the rule succeeds;
-
 description of sf is "You recognize no trees: a sprucy cyprus, or even forensic conifers, and no clear sign of clearings. But [vis-hint]."
 
 to say vis-hint: say "[if stew is touchable or teas are touchable]there's a[nuthers] smell[else if shout is touchable]you hear a shout[else if thorn is touchable]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
@@ -4815,7 +4811,7 @@ the bog is amusing boring scenery in Ghouls' Slough. description is "The bog is 
 
 to say end-it: end the story.
 
-check going in Ghouls' Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead;
+check going nowhere in Ghouls' Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead;
 
 check examining maps in Ghouls' Slough:
 	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
@@ -4828,7 +4824,7 @@ Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimer
 
 Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
 
-check going in Frost Forts: say "[if vowels are in Frost Forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]." instead;
+check going nowhere in Frost Forts: say "[if vowels are in Frost Forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]." instead;
 
 after printing the locale description for forts when forts is unvisited:
 	set the pronoun them to vowels;
@@ -9044,12 +9040,13 @@ Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
 Cruel Ones' Enclosure	"You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north."
 Trap Part	"[if centrifuge-stopped is false]That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first[else][dmm]. You can only go north to the kitchen or east[or-room][end if]."
-Kitchen	"Dud, mum mud blocks your way [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
+The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
+Kitchen	"[dmm] [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
 roomroom	"Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if]."
 Stiller Trellis	"[dmm]. You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
-Roarings Garrison	"There's [if Obtains Boastin' Bastion is visited]the Obtains Boastin['] Bastion[else]condos[end if] north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south. But there are no special exits."
+Roarings Garrison	"There's [if Obtains Boastin' Bastion is visited]the Obtains Boastin['] Bastion[else]a residence[end if] north[if dry cake is not off-stage], which you were booted out of[end if], a library west, a flower shop east, and a seedier area south. But there are no special exits."
 Bile Libe	"Only way out's back east."
 Fo' Real Florae	"The only safe way out is back west."
 The Ol' Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
@@ -9058,9 +9055,9 @@ Elm Train Terminal	"The tracks lead down east, and the city is back north."
 Bassy Abyss	"You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
 Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE![or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
 Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
-Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s] seems worth seeing."
+Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s], seems worth seeing."
 Potshot Hotspot	"The only way you'll want to [if red bull burdell is not moot]try to [end if]go is east."
-Means Manse	"[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking[stopping]."
+Means Manse	"[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.[stopping]"
 
 chapter nowhere auxiliary stuff
 
