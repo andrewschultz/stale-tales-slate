@@ -731,7 +731,7 @@ this is the pre-plebe-bleep rule:
 	if player is not wearing tsar star:
 		say "You try and cuss, but the plebe is not intimidated by your civilian clothes[if Rand is in Grey Gyre] or even your companions[end if]. Perhaps you need something proclaiming your authority.";
 		preef plebe;
-		the rule succeeds;
+		do nothing instead;
 
 this is the pre-boing-bingo rule:
 	if player does not have the PG-on-up popgun and popgun is touchable:

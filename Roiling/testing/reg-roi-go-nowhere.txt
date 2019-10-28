@@ -42,7 +42,111 @@ Up pops a bush--a hubs bush! It's too thick to walk through. You move to the sid
 >n
 The hubs bush forces you back to the center of the Strip of Profits. Guess you'll need to explore the stores, or what you made of them.
 
+>gonear cruelest lectures
+#nowhere cruelest lectures
+>n
+The trumped-up charges and the teleological lectures have totally conked your sense of compass directions. There must be a generic way to leave!
+
 #nowhere gates stage
 >gonear gates stage
 >e
 You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway.
+
+>gonear same mesa
+#nowhere same mesa
+>e
+You try going east and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the west, after several minutes.
+>n
+You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the south, after several minutes.
+
+>inside
+#nowhere cleric circle
+>n
+'Directions are not important here, my child. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to.' So you do.
+You go back outside.
+>n
+"One day, my child, you will learn to put aside your need for compass directions."
+You go back outside.
+
+>past
+#nowhere idle deli
+>n
+Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms.
+
+>out
+>across
+#nowhere adobe abode
+>e
+This do be a one-room place. You can really only go outside.
+
+>gonear harms marsh
+#nowhere harms marsh
+>n
+Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You just need to find No-Lag Logan[end if].
+
+#nowhere ripe pier
+>gonear ripe pier
+You've lost all sense of direction here, but you need to figure how to get on that boat.
+
+#nowhere cripple clipper
+>d
+Locked ol' deck. No bowel on below.
+>s
+Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.
+
+#nowhere sonancy canyons
+>gonear sonancy canyons
+>n
+You must be close, but you can't quite rely on compass directions, yet.
+
+>gonear loather rathole
+#nowhere loather rathole
+>e
+Consciously going into any hurt thru might leave you vulnerable. You need to lash out. Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.
+>hate
+>e
+Consciously going into any hurt thru might leave you vulnerable. You need to lash out. You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.
+
+>gonear bustle sublet
+#nowhere bustle sublet
+The reastier arteries lead nowhere good. You still have a lot to look for.
+
+>gonear boarded roadbed
+#nowhere boarded roadbed
+>e
+A voice says 'Bad! Redo!' when you try to drift away from where L'Clear Cellar must be. Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think
+>believe
+There's a chance you might wind up in ruts: Rustin' Ruin St.!
+
+>gonear drain nadir
+#nowhere drain nadir
+>e
+No. You're so low, you might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies.
+>e
+No. You're so low, you [can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow.
+
+>gonear boredom bedroom
+#nowhere boredom bedroom
+>e
+Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better.
+
+>gonear browse bowers
+#nowhere browse bowers
+>e
+You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice.
+
+>gonear econ cone
+#nowhere econ cone
+>e
+The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!
+
+>gonear upscale capsule
+#nowhere upscale capsule
+>e
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out before doing ANYTHING.
+>deserve
+>e
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you'd need to have proved yourself. You haven't, yet.
+>last
+>e
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. I guess you could leave now, if you did the right thing, first[end if].

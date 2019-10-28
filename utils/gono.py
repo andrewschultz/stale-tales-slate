@@ -9,7 +9,32 @@ import i7
 from collections import defaultdict
 import os
 
+ignores = defaultdict(list)
+adds = defaultdict(list)
+
 falseglo = needglo = 0
+
+def read_ignore_need():
+    ignore = True
+    with open("gono.txt") as file:
+        for (line_count, line) in enumerate(file, 1):
+            ll = line.lower().strip()
+            if ll.startswith(";"): break
+            if ll.startswith("#"): continue
+            if ll.startswith("ignore"):
+                ignore = True
+                continue
+            if ll.startswith("add"):
+                ignore = False
+                continue
+            ary = line.lower().strip().split(":")
+            if ary[0] != 'sa' and ary[0] != 'roi':
+                print("WARNING line {} has invalid project before colon. Need {}.".format(line_count, '/'.join(proj_ary)))
+            for q in ary[1].split(','):
+                if ignore:
+                    ignores[ary[0]].append(q)
+                else:
+                    adds[ary[0]].append(q)
 
 def check_exits(my_project, table_to_proc = "table of nowheres"):
     in_nowhere_table = False
@@ -18,6 +43,7 @@ def check_exits(my_project, table_to_proc = "table of nowheres"):
     print("Looking up", my_project)
     to_find = defaultdict(int)
     found_in_test = defaultdict(int)
+    for x in adds[my_project]: to_find[x] = 0
     file_base = "reg-{}-go-nowhere.txt".format(my_project)
     file_dir = i7.proj2dir(my_project)
     file_full = os.path.join(file_dir, file_base)
@@ -71,18 +97,31 @@ def check_exits(my_project, table_to_proc = "table of nowheres"):
             mytools.add_postopen_file_line(file_full, line_count)
     for x in to_find:
         if x not in found_in_test:
-            print("Need test for {} at line {} of source.".format(x, to_find[x]))
+            if max_errs and needed <= max_errs:
+                print("Need test for {} at line {} of source.".format(x, to_find[x]))
+                if print_what:
+                    print(">gonear", x)
+                    print("#nowhere", x)
             mytools.add_postopen_file_line(my_src, to_find[x])
             needed += 1
     print(falsepos, "false positives,", needed, "needed")
     global falseglo
     global needglo
+    if not falsepos and not needed:
+        print("HOORAY! {} worked out.".format(my_project))
     needglo += needed
     falseglo += falsepos
-    if falsepos or needed or falseglo or needglo:
+    if falseglo or needglo:
         print("Totals:", falseglo, "false positives,", needglo, "needed")
 
 cmd_count = 1
+
+read_ignore_need()
+
+check_roiling = check_shuffling = True
+
+print_what = True
+max_errs = 15
 
 while cmd_count < len(sys.argv):
     arg = mytools.nohy(sys.argv[cmd_count])
@@ -90,6 +129,8 @@ while cmd_count < len(sys.argv):
     if re.search("^[rs]+$", arg):
         check_roiling = 'r' in arg
         check_shuffling = 's' in arg
+    elif arg.isdigit():
+        max_errs = int(arg)
 
 if check_roiling:
     check_exits("roi")

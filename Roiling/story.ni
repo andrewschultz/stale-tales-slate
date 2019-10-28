@@ -5643,20 +5643,21 @@ theloc	thereject
 Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
 Farming Framing	"No time for mooching around Ordeal Reload. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
-Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. There must be a generic way to leave!" [stores]
-Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat." [routes]
+Cruelest Lectures	"The trumped-up charges and the teleological lectures have conked your sense of compass directions. There must be a generic way to leave!" [stores]
+Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
+Adobe Abode	"This do be a one-room place. You can really only go outside."
+Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
 Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You just need to find No-Lag Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
-Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
-Adobe Abode	"This do be a one-room place. You can really only go outside."
-Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here.[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters.[end if]" [troves]
-Bustle Sublet	"The reastier arteries lead nowhere good. You [if evil bee is in Bustle Sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
+Sonancy Canyons	"You must be close, but you can't quite rely on compass directions, yet."
+Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters[end if]." [troves]
+Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L'Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
-Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad piesy[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
+Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
-Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is touchable]. And you'd need to have proved yourself. You haven't, yet[else]. I guess you could leave now, if you did the right thing, first[end if]."
+Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out before doing ANYTHING[if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
@@ -10046,7 +10047,7 @@ after looking in Same Mesa:
 		set the pronoun it to sit a nag;
 	continue the action;
 
-check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
+check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 	if Gast is in Same Mesa, say "Even without [Gast]'s unavoidable tirades, your head is spinning too much for directions." instead;
 	if noun is a direction:
 		if noun is inside:
@@ -10369,7 +10370,7 @@ check exiting in Cleric Circle (this is the horbert-bye rule):
 		say "You look back at the [if toils is examined]pews[else if pews are examined]list-o-toils[else]pews and list-o-toils[end if]. Perhaps closer inspection might give you [if toils is examined]the 'why'[else if pews are examined]the 'what'[else]the 'what' and 'why'[end if] for dealing with the directionless Same Mesa.[paragraph break][randbla]";
 	now player is in Same Mesa instead;
 
-check going in Cleric Circle:
+check going nowhere in Cleric Circle:
 	if noun is not outside:
 		say "[one of]'Directions are not important here, my son. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to.' So you do.[or]'One day, my son, you will learn to put aside your need for compass directions.'[stopping][line break]You go back outside.";
 	move player to Same Mesa instead;
