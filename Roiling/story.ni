@@ -5662,9 +5662,11 @@ Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try 
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
 Marines Seminar Remains	"While you're impressed with people who can navigate sport ports, you [if sport ports are reflexed]already saluted them. No need to do more[else]couldn't do much more than show respect for them, if you need a distraction from your main quest[end if]."
-Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
+Nowt Town	"Nowt Town holds no secrets. You can only go west or south."
+Unwary Runway	"The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?"
 Saps' Pass	"There's no way around the hogs. You need to get rid of them."
-Path Path	"It's best to say on the Phat Path."
+Path Path	"It's best to stay on the Phat Path."
+Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]." [troves]
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.[paragraph break]You need to cross to the north for more action."
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
@@ -5677,7 +5679,7 @@ Rascal Craals	"The round bay boundary blocks you from going any way but back eas
 End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
 Tenfold Teflon'd Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is touchable]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
-Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is visited] back[end if] north[if unripe ur-pine is touchable], and the ur-pine's in the way right now[end if]."
+Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
 Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
@@ -5686,14 +5688,16 @@ Lost Lots	"Any exit through the gasfield--especially without die flags (and ther
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise is unvisited]. Maybe there is a clue to the west[end if]."
-Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west." [otters]
-Clarthead Cathedral	"[no-coma]."
+Clarthead Cathedral	"[no-coma]." [otters]
 Shiner Shrine	"[no-coma]."
 Loop Pool	"The pool is wide and long. You can only go back south."
+Bran Barn	"You don't need to go any way but back north."
+Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Blest Belts are private to animals[end if]."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
+Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
-Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
+Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
@@ -11484,7 +11488,7 @@ check going north in Grey Gyre:
 		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous ACTING people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is touchable]. Leo and Rand mutter that if you point out where dose peoples is, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not touchable]and some henchmen to tackle them[end if][stopping].";
 		set the pronoun it to ether instead;
 		now ether-try is true instead;
-	if Saps' Pass is not visited, say "You stride confidently north with your two friends. You can tackle anyone!";
+	if Saps' Pass is not visited and ether is not off-stage, say "You stride confidently north with your two friends. You can tackle anyone!";
 
 section dart
 

@@ -79,9 +79,17 @@ def check_exits(my_project, table_to_proc = "table of nowheres"):
             else:
                 to_find[my_loc] = line_count
     if not ever_table: sys.exit("Could not find table: {}".format(table_to_proc))
+    next_thing = ""
+    need_dir_next = False
     with open(file_full) as file:
         for (line_count, line) in enumerate(file, 1):
             ll = line.lower().strip()
+            if need_dir_next:
+                if not ll.startswith(">"):
+                    print("Need a command after {} at line {} of {}".format(next_thing, line_count, file_full))
+                    mytools.add_postopen_file_line(file_full, line_count)
+                need_dir_next = False
+                continue
             if ll.startswith("#nowhere"):
                 my_loc = re.sub("#nowhere *", "", ll)
                 if my_loc in found_in_test:
@@ -89,6 +97,11 @@ def check_exits(my_project, table_to_proc = "table of nowheres"):
                     mytools.add_postopen_file_line(file_full, line_count)
                 else:
                     found_in_test[my_loc] = line_count
+                next_thing = re.sub("^#nowhere *", "", ll)
+                need_dir_next = True
+    if need_dir_next:
+        print("File ended on a #nowhere ({}).".format(line_count))
+        mytools.add_postopen_file_line(file_full, line_count)
     falsepos = needed = 0
     for x in found_in_test:
         if x not in to_find:
@@ -102,7 +115,7 @@ def check_exits(my_project, table_to_proc = "table of nowheres"):
                 if print_what:
                     print(">gonear", x)
                     print("#nowhere", x)
-            mytools.add_postopen_file_line(my_src, to_find[x])
+            if to_find[x]: mytools.add_postopen_file_line(my_src, to_find[x])
             needed += 1
     print(falsepos, "false positives,", needed, "needed")
     global falseglo
@@ -137,5 +150,8 @@ if check_roiling:
 
 if check_shuffling:
     check_exits("sa")
+
+if not (falseglo + needglo):
+    print("EVERYTHING WORKED!")
 
 mytools.postopen_files()

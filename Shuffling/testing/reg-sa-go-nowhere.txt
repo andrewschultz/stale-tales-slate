@@ -87,8 +87,8 @@ No going back. Storing's west, sorting's east, and Corses Crosse is north.
 It's too steep down every way except back east.
 
 >e
->e
 #nowhere gnarliest triangles
+>e
 You don't need an alert sign to know running into the walls any direction but west would cause a real sting.
 
 >gonear enclosure
@@ -176,8 +176,8 @@ Only way out's back east.
 
 >e
 >e
->e
 #nowhere Fo' Real Florae
+>e
 The only safe way out is back west.
 >n
 The only safe way out is back west.
@@ -185,8 +185,8 @@ The only safe way out is back west.
 >w
 >s
 >w
->s
 #nowhere the ol' hotel
+>s
 You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city.
 >e
 You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city.

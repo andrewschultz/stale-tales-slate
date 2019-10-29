@@ -118,8 +118,8 @@ odes song	odes song	false	591595494	--	"goodness"	"goodness"	--	--	"You manage t
 Leo	Leo	false	255972525	--	"ole"	"ole"	--	post-leo-ole rule	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."
 Rand	Rand	false	177448218	--	"darn"	"darn"	--	post-rand-darn rule	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	pre-wzup rule	post-wzup rule	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble.[paragraph break]'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
-ye hoop	censer	true	267453412	--	"pooh"	"pooh"	--	post-pooh rule	"[get-censer]."
-ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	post-phooey rule	"[get-censer]."
+ye hoop	censer	true	267453412	--	"pooh"	"pooh"	--	post-pooh-phooey rule	"[get-censer]."
+ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	post-pooh-phooey rule	"[get-censer]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
@@ -766,8 +766,12 @@ this is the post-wzup rule:
 	now Leo is eager;
 	now Rand is eager;
 
-this is the post-pooh rule:
-	poss-d;
+this is the post-pooh-phooey rule:
+	if the player's command contains the word "phooey":
+		min-up;
+		now phooeyed is true;
+	else:
+		poss-d;
 
 to say get-censer:
 	if the player's command includes "pooh":
@@ -775,10 +779,6 @@ to say get-censer:
 	else:
 		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, revealing an onyx censer from a hidden compartment. Wow";
 	if Leo is touchable, say "! Leo and Rand applaud your agility";
-
-this is the post-phooey rule:
-	min-up;
-	now phooeyed is true;
 
 this is the pre-solve-maze rule:
 	if noun is maze walls and cur-score of presto < 3:
