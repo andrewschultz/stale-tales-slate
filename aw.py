@@ -2,6 +2,7 @@
 # aw.py: command line and stdin generator
 #
 
+import subprocess
 import re
 import sys
 import os
@@ -21,10 +22,11 @@ def usage():
     print("-o/no = only anagram, or (no) add/lose a letter" + on_off(only_anagram))
     print("-p/np = plurals, or no plurals" + on_off(plural))
     print("-v/nv = verbose or not" + on_off(verbose))
-    print("-s = get STDIN, can be combined with command line")
     print("-? = this usage message")
     print("You can put more than one word on the command line or on STDIN. This is case insensitive, too.")
+    print("-s/-i = get STDIN, can be combined with command line")
     print("?(word) on stdin launches the word in Thefreedictionary. /(word) launches it in thesaurus.com. (123)word sends that word * (123) to the anagram server.")
+    print("`/~ searches for the word in the STS source.")
     exit()
 
 def alfy(a):
@@ -84,7 +86,8 @@ with open("c:/writing/dict/brit-1word.txt") as file:
         ag[l2] = ag[l2] + ' ' + line
 
 if len(sys.argv) is 1:
-    print("Need an argument")
+    print("Need an argument. Most common is -s for stdin, if you're running multiple queries. Otherwise, any words will do.")
+    usage()
     exit()
 
 only_anagram = True
@@ -102,7 +105,7 @@ while count < len(sys.argv):
     arg = sys.argv[count]
     if arg[0] == '-':
         arg = arg[1:]
-    if arg == 's':
+    if arg == 's' or arg == 'i':
         get_stdin = True
     elif arg == 'o':
         print("Checking only-anagram, no +/- 1 letter")
@@ -133,7 +136,7 @@ while count < len(sys.argv):
         usage()
         exit()
     else:
-        new_arg = new_arg + arg.split(",")
+        new_arg = new_arg + re.split("[, ]", arg)
     count += 1
 
 def anagram_check(x):
@@ -187,7 +190,7 @@ for x in new_arg:
     anagram_check(x)
 
 if get_stdin:
-    input_line = "Enter line (blank quits, ?=find definitions):\n>>>>"
+    input_line = "Enter line (blank quits, ? at start=find definitions, ~=search):\n>>>>"
     print(input_line, end='')
     for line in sys.stdin:
         ll = line.strip().lower()
@@ -195,6 +198,14 @@ if get_stdin:
             print("Exiting.")
             exit()
         skip = False
+        if ll.startswith('`') or ll.startswith('~'):
+            ll = ll[1:].strip()
+            q = ['gr.bat']
+            q.extend(ll.split(" "))
+            x = [('"' + a + '"' if ' ' in a else a) for a in q]
+            print("Running command: {}".format(' '.join(x)))
+            result=subprocess.run(q, stdout=subprocess.PIPE).stdout.decode("utf-8")
+            print(result)
         if ll[0].isdigit():
             mult = int(ll[0])
             ll = ll[1:]
@@ -208,18 +219,11 @@ if get_stdin:
                 print(sys_string)
                 os.system(sys_string)
             skip = True
-        if ll.startswith('?'):
+        if ll.startswith('?') or ll.startswith('/'):
             ll = ll[1:]
             new_arg = re.split("[ ,]", ll.strip())
             for x in new_arg:
                 os.system("start http://www.thefreedictionary.com/{:s}".format(x))
-            skip = True
-        if ll.startswith('/'):
-            ll = ll[1:]
-            new_arg = re.split("[ ,]", ll.strip())
-            for x in new_arg:
-                print("Defining", x)
-                os.system("start http://www.thesaurus.com/browse/{:s}".format(x))
             skip = True
         if re.search("[^a-z, ]", ll, re.IGNORECASE):
             print("WARNING: invalid characters skipped in", ll)
