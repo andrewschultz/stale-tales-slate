@@ -51,7 +51,7 @@ table of catechism pages	false	0	10	catechism-over-research rule	presto	"Hacks['
 table of research topics	false	0	10	research-over-doctors rule	presto	"[one of]Some[or]More[stopping] explanation of research by Arch Rees:[indic of presto]"	"Arch Rees[one of][or] further[stopping] explaining research on "	"."
 table of smartypants	false	0	10	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"." [p]
 table of bedding brands	false	0	20	read-futon rule	presto	"Sleep aide brands"	--	""	"Smartest Mattress, hopefully cleaner than the one you remember from The Ol['] Hotel in the Metros behind Store M."
-table of bar dialogue	true	0	15	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]"	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
+table of bar dialogue	true	0	15	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
 table of competing bars	true	0	15	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here. You can't imagine any more bars being discussed.[pre-brk]"
 table of Casper mumbles	false	0	20	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""	"'[if player is male]Rhett Weir[else]Teri Werth[end if], the writer? Eh, err...TWIT!' Casper suddenly flips back to the start of his notes. Perhaps he feels you are not good enough to hear any more of his original thoughts."
 table of fish fries	true	0	15	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if Anger Range is visited]in Anger Range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
@@ -3550,7 +3550,7 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Seagull Ale-Slug"	false
 "Seagull-Slug Ale"	false []
 "Sean Boy's Soybeans"	false
-"Seattle Lattees: Le Taste!"	true []
+"Seattle Lattees: Le Taste!" 	true []
 "Seaward Adwares"	false
 "Sedgwick Wigs Deck"	false
 "Seed-Mart Red Meats"	false
@@ -33785,7 +33785,6 @@ blurb
 "Last Elite Satellite"
 "Le God-Lodge" []
 "Leroux Luxore"
-"Leveraged Everglade"
 "Live at IT-Vale" []
 "Liveliest-Site Ville"
 "Lo-Meh-Holme"

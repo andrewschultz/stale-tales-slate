@@ -3,7 +3,8 @@
 # rl.txt has the logic clues
 #
 !A Roiling Original HTML Clues
-outfile=c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling/roiling-invisiclues.htm
+outdir=c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling
+out=roiling-invisiclues.htm
 outraw=roiling-invisiclues-raw.htm
 ==endheader
 >General
@@ -820,7 +821,7 @@ Eleven, minimum, including the serpent.
 There are eighteen total including the serpent.
 You must clear five guardians to reach and leave certain corners (NW-N, SE-E, and by the copse,) and you must clear both guardians by the coastlines so the Coasting Agnostic comes out and has a bit of peace by the seashore.
 ?What's the quickest way?
-To get to the Coastlines and clear it, you must zap at least seven guardians. You can actually avoid visiting (Saltbed and Strait) or (Sunbelt and Deltas).
+To get to the Coastlines and clear it, you must zap at least seven guardians. You can actually avoid visiting (Saltbed and Strait) or (Everglade and Deltas).
 The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. The H corresponds to clearing the west and east sides, as well as west and east in the Treading Gradient. The I corresponds to the north and south sides, as well as north and south in the Treading Gradient. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
 This isn't the only way to do things, but it's the most intuitive, because it isn't that crooked, and the HI seems easiest. It took me a while to see the other shortest way through.
 You must clear the two guardians from the Coastlines, so we'll always assume they are gone. This makes the calculations easier.
@@ -915,9 +916,9 @@ Neither is better or worse than the other.
 While you have to go through the Scope Copse, and you have to pick off the guardians there, there's nothing critical. Though having the map is helpful.
 Artist Traits Strait and Salted Deltas have nothing else, though you'll probably wind up going through both of them.
 Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing there.
-Baldest Blasted Saltbed and Unblest Sunbelt have scenery that gives LLPs.
+Baldest Blasted Saltbed and Leveraged Everglade have scenery that gives LLPs.
 Fringe Finger and Lost Lots have pastries and an LLP each, but nothing critical.
-Of course, you must pass through one of the Strait/Deltas and Saltbed/Sunbelt. But you don't have to visit both to solve the Towers area or even get maximum points. Though they make getting around a bit quicker.
+Of course, you must pass through one of the Strait/Deltas and Saltbed/Everglade. But you don't have to visit both to solve the Towers area or even get maximum points. Though they make getting around a bit quicker.
 >>SCOPE COPSE
 ?What's the scope for?
 It shows you where you need to go.
@@ -930,7 +931,7 @@ Unless, or until, they're RUSTY.
 An LLP.
 You can change it to something more interesting.
 Make it COILED.
->>UNBLEST SUNBELT
+>>LEVERAGED EVERGLADE
 ?What are the organised ego drains doing?
 You can't actually dispel them so you can get past them, but you can still hit them up for a Last Lousy Point.
 They make you feel like you can't do anything, and they're very reasonable and not overdone.

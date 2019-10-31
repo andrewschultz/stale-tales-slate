@@ -15085,7 +15085,7 @@ book which room is how far
 to decide which number is palace-let: [I could've defined a new variable but it's nice to have this in one place. This shows how many letters the settler gives.]
 	if location of player is Topside Deposit or location of player is Outer Route, decide on 4;
 	if location of player is Scope Copse, decide on 5;
-	if location of player is Lost Lots or location of player is Fringe Finger or location of player is Unblest Sunbelt or location of player is Baldest Blasted Saltbed, decide on 6;
+	if location of player is Lost Lots or location of player is Fringe Finger or location of player is Leveraged Everglade or location of player is Baldest Blasted Saltbed, decide on 6;
 	if location of player is Treading Gradient or location of player is Obscurest Subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is Anemic Cinema, decide on 7;
 	if location of player is Salted Deltas or location of player is Artist Traits Strait, decide on 8;
 	if location of player is Actionless Coastlines or location of player is Rawest Waters, decide on 9;
@@ -15199,7 +15199,7 @@ Treading Gradient	2	2
 Artist Traits Strait	3	2
 Outer Route	0	3
 Scope Copse	1	3
-Unblest Sunbelt	2	3
+Leveraged Everglade	2	3
 Danger Garden	3	3
 Obscurest Subsector	4	3
 Topside Deposit	1	4
@@ -15316,8 +15316,8 @@ towloc	towdist	towquo
 Loftier Trefoil	0	"The castle--well, you couldn't even see it outside. Maybe someone will help you, once you've sorted this mess out."
 Outer Route	--	"The palace has receded a bit, but--well--that machine's got to be good for something."
 Scope Copse	2	--
-saltbed	3	--
-sunbelt	3	--
+Baldest Blasted Saltbed	3	--
+Leveraged Everglade	3	--
 Anemic Cinema	4	--
 Treading Gradient	4	--
 Danger Garden	5	--
@@ -15513,8 +15513,8 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]+[pc of cinema and west].[pc of cinema and east].[pc of deltas and east].~ +
 [line break]  [pc of saltbed and north] [pc of gradient and north] [pc of strait and north]~
 [line break]  .[pc of saltbed and east].[pc of gradient and east].~
-[line break]  [pc of copse and north] [pc of sunbelt and north] [pc of garden and north]~
-[line break]![pc of copse and west].[pc of copse and east].[pc of sunbelt and east].[pc of garden and east]!
+[line break]  [pc of copse and north] [pc of everglade and north] [pc of garden and north]~
+[line break]![pc of copse and west].[pc of copse and east].[pc of everglade and east].[pc of garden and east]!
 [line break]  [pc of topside and north]   [pc of garden and south]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
 
@@ -15615,19 +15615,19 @@ a-text of docile old ice is "RYYRYR". b-text of docile old ice is "R?YRYR". pars
 
 check taking old ice: say "You'd get your hands stuck. And I won't double dog dare you." instead;
 
-book Unblest Sunbelt
+book Leveraged Everglade
 
-Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. Screech creches block your way south, but you can go any other way. You doubt there's much to do here besides get on[if guar-here is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Unblest Sunbelt]. They're not blocking you, but they do leave you feeling slightly bummed[end if]."
+Leveraged Everglade is east of Scope Copse. Leveraged Everglade is in Towers. "The land here is mucky, but something unseen and man-made allows passage every way except south, where screech creches block your way south, but you can go any other way. You doubt there's much to do here besides get on[if guar-here is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Leveraged Everglade]. They're not blocking you, but they do leave you feeling slightly bummed[end if]."
 
 [?? bounding scenery?]
 
 section organised ego drains
 
-the organised ego drains are plural-named LLPish vanishing boring scenery in Unblest Sunbelt. description of ego drains is "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red.". bore-text is "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance.".
+the organised ego drains are plural-named LLPish vanishing boring scenery in Leveraged Everglade. description of ego drains is "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red.". bore-text is "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance.".
 
 a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "R?YRR?YRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
-the screech creches are bounding boring scenery in Unblest Sunbelt. description of screech creches is "You can't get close enough to the screeching to get a good look at the creches. They're pretty much there just to block you.". bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
+the screech creches are bounding boring scenery in Leveraged Everglade. description of screech creches is "You can't get close enough to the screeching to get a good look at the creches. They're pretty much there just to block you.". bore-text is "You don't want or need to do anything with the screech creches.". bore-check is bore-creches rule.
 
 this is the bore-creches rule:
 	if current action is entering, try going south instead;
@@ -15652,7 +15652,7 @@ this is the bore-theater rule:
 
 book Treading Gradient
 
-Treading Gradient is north of Unblest Sunbelt and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are touchable and mended mini denim is touchable][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are touchable][we-g][else if mended mini denim is touchable]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if guar-here is 0], all unobstructed[else if guar-here is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
+Treading Gradient is north of Leveraged Everglade and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are touchable and mended mini denim is touchable][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are touchable][we-g][else if mended mini denim is touchable]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if guar-here is 0], all unobstructed[else if guar-here is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
 
 to say we-g: say "weeds swaying, despite no wind,"
 
@@ -15786,7 +15786,7 @@ carry out repeating: try pushing repeat button instead;
 
 book Danger Garden
 
-Danger Garden is a room in Towers. Danger Garden is east of Unblest Sunbelt. printed name of Danger Garden is "[if stinger is not moot]Danger[else]Gander[end if] Garden". "[if stinger is not moot]This garden seems both describable and indescribable. You're sure it's inspired its share of overblown prose and poetry, and of thinking how things are or should be, but there's no time for that now[else]You hear a gander of geese honking now with the bonker and stinger gone, but they are too scared of you[end if]. The curst palace is barely visible in the distance north-ish, and you can take a path any which way.".
+Danger Garden is a room in Towers. Danger Garden is east of Leveraged Everglade. printed name of Danger Garden is "[if stinger is not moot]Danger[else]Gander[end if] Garden". "[if stinger is not moot]This garden seems both describable and indescribable. You're sure it's inspired its share of overblown prose and poetry, and of thinking how things are or should be, but there's no time for that now[else]You hear a gander of geese honking now with the bonker and stinger gone, but they are too scared of you[end if]. The curst palace is barely visible in the distance north-ish, and you can take a path any which way.".
 
 understand "gander" as geese when geese are in Danger Garden.
 
@@ -16812,9 +16812,9 @@ the initial appearance of a guardian is usually "[gd of the item described]."
 
 book who are the guardians?
 
-[this is arranged from south to north, then east to west, the first place you can see a guardian.]
+[this is arranged from south to north, then east to west, and the first place you see a guardian running through this way is where we define the guardian.]
 
-chapter Scope Copse
+chapter Scope Copse guardians
 
 section bluster butlers
 
@@ -16850,7 +16850,7 @@ understand "diner" as diners.
 
 a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-text of diners is "x[sp]?[sp]?[sp]x[sp]?[sp]x".
 
-chapter Baldest Blasted Saltbed
+chapter Baldest Blasted Saltbed guardians
 
 section fluster self rut
 
@@ -16876,7 +16876,7 @@ every turn when traipse pirates are touchable:
 
 a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "?YRRY?R". parse-text of traipse pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". traipse pirates are cheat-spoilable.
 
-chapter Anemic Cinema
+chapter Anemic Cinema guardians
 
 section resident trendies
 
@@ -16905,7 +16905,7 @@ description of mardier admirer is "[if mardier admirer is male]He[else]She[end i
 to say admsex:
 	say "[if mardier admirer is male]he[else]she[end if]"
 
-chapter Unblest Sunbelt
+chapter Leveraged Everglade guardians
 
 SMH Life Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.' You recognize him...wait, it's 'SMH Life' Mel Fish, the former reality show star (his names--real and stage--both make you see red) who always kept trying crazier and crazier ways to be more individual than you, before he burned out!"
 
@@ -16930,7 +16930,7 @@ a-text of Nerd-Aid is "RRYYRYR". b-text of Nerd-Aid is "RRYYRYP". parse-text of 
 this is the bore-nerd-aid rule:
 	if current action is taking or current action is eating or current action is drinking, say "You'd need to buy the Nerd-Aid, and you've no money, and it's pretty much glorified sugar-water anyway." instead;
 
-chapter Treading Gradient
+chapter Treading Gradient guardians
 
 section alarming grailman
 
@@ -16975,7 +16975,7 @@ description of Reed's Ale is "It's open and, from [el-la-f]'s frequent swigs, ap
 
 rese is a truth state that varies.
 
-chapter Salted Deltas
+chapter Salted Deltas guardians
 
 section atheists
 
@@ -16985,7 +16985,7 @@ understand "atheist" as atheists.
 
 a-text of asset-hit atheists is "RYRRYYRR". b-text of asset-hit atheists is "RY?R?YR?". parse-text of asset-hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 
-chapter Danger Garden
+chapter Danger Garden guardians
 
 section natives' site van
 
@@ -17011,7 +17011,7 @@ The stinger is a purple guardian. "The stinger that replaced the bonker remains 
 
 a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
-chapter Artist Traits Strait
+chapter Artist Traits Strait guardians
 
 section lois the hostile
 
@@ -17040,8 +17040,8 @@ muscly Ms Lucy	Scope Copse	north	"She shows surprising dexterity for someone so 
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
-Mel Fish	Unblest Sunbelt	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
-arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
+Mel Fish	Leveraged Everglade	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
+arid den	Leveraged Everglade	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
@@ -17216,7 +17216,7 @@ to shuffle-guardians (goner - a guardian):
 
 to decide which number is gua-to-clear:
 	let temp be 0;
-	if blasted saltbed is not accessible and sunbelt is not accessible, decide on 5; [1]
+	if blasted saltbed is not accessible and Leveraged Everglade is not accessible, decide on 5; [1]
 	if Treading Gradient is not accessible, increment temp; [2]
 	if Anemic Cinema is not accessible, increment temp; [3]
 	if Danger Garden is not accessible, increment temp; [4]
@@ -18587,7 +18587,7 @@ the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthea
 
 book Lamer Realm
 
-Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer. [end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelts it could be[end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
 
 printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[end if]"
 
@@ -21705,7 +21705,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
-		if sporties' ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Unblest Sunbelt could've become PROSIEST.";
+		if sporties' ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Leveraged Everglade could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
 		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
 		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";

@@ -670,9 +670,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unlocked"	522953692	--	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
 "ravages"	453544036	Shaven Havens	--	--	"[rav-chao]."
 "ravage"	357270070	Shaven Havens	--	--	"[rav-chao]."
-"unblest"	573436152	Unblest Sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
-"screech"	512503456	Unblest Sunbelt	--	--	"[no-creche]."
-"creech"	416229490	Unblest Sunbelt	--	--	"[no-creche]."
+"leveraged"	685537398	Leveraged Everglade	--	--	"[towersloc]." [LEVERAGED EVERGLADE 2 1]
+"leverage"	664508309	Leveraged Everglade	--	--	"[towersloc]."
+"screech"	512503456	Leveraged Everglade	--	--	"[no-creche]."
+"creech"	416229490	Leveraged Everglade	--	--	"[no-creche]."
 "smh"	197631418	--	Mel Fish	--	"[all-of-mel]."
 "life"	253127690	--	Mel Fish	--	"[all-of-mel]."
 "mel"	245695101	--	Mel Fish	--	"[all-of-mel]."
