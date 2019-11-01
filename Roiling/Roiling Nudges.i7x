@@ -6,6 +6,7 @@ volume table of nudges
 
 [nuch.py makes sure that all the nudges have a test case assigned]
 [?? todo: make sure that nothing seeps into non-nudge stuff]
+[stsv.py verifies the hash values with the strings]
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Midden/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Inclosure, Rancho. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
 
@@ -594,9 +595,8 @@ table of towers nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storew"	594801246	--	--	degen-true rule	"[not-the-reg]."
 "torew"	498527280	--	--	degen-true rule	"[not-the-reg]."
-"badlands"	283848032	--	--	degen-true rule	"[bland-sad]." [general stuff first]
-"asd"	119490873	--	--	degen-true rule	"[bland-sad]."
-"bland"	164357159	--	--	degen-true rule	"[bland-sad]."
+"wildest"	554960640	--	--	degen-true rule	"[wi-wi]." [general stuff first]
+"wilted"	458686674	--	--	degen-true rule	"[wi-wi]."
 "curst"	408819179	--	--	degen-true rule	"It's not just that it's curst, it's a PALACE, too."
 "palace"	286467128	--	--	degen-true rule	"It's not just that it's a palace, it's CURST, too."
 "castle"	402197335	--	--	degen-true rule	"Not just any castle. Castle Apcur."
@@ -761,7 +761,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wires"	462331497	--	weirder red wire	--	"The wires are okay. They're just organized WEIRDER."
 "waster"	522636487	Rawest Waters	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better." [RAWEST WATERS 4 3]
 "spray"	387610798	Rawest Waters	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
-"water"	426362521	Rawest Waters	--	--	"The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?"
+"water"	426362521	Rawest Waters	--	--	"The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to a shore?"
 "northern"	651013625	Rawest Waters	--	--	"The northern shore does not waver. Maybe try the eastern shore."
 "shore"	421038754	Rawest Waters	--	--	"You need to focus on one specific shore."
 "shores"	517312720	Rawest Waters	--	--	"You need to focus on one shore."
@@ -1584,7 +1584,7 @@ to say i-com: say "The intercom crackles a bit, but you hear a louder buzz from 
 
 section towers auxiliary
 
-to say bland-sad: say "[if Mislit Limits is not visited and waters are not visited]The badlands can't be changed on their own. They must be trekked through[else]You're beyond the badlands now[end if]"
+to say wi-wi: say "[if Mislit Limits is not visited and waters are not visited]The Wildest Wilteds can't be changed on their own. They must be trekked through[else]You're beyond the Wildest Wilteds now[end if]"
 
 to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
@@ -1592,7 +1592,7 @@ to say towersloc:
 
 to say war-one: say "[if vw is 1]There's only one warrior left, and his name is Rodney[else if mw > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 
-to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life"
+to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life"
 
 to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway"
 

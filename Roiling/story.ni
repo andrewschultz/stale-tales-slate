@@ -2150,7 +2150,7 @@ lois the hostile	Elvira	"'I could do even better than her...Yorpwald is missing 
 hostile-is-he lot	Elvira	"'Any one of us could do even better than her...Yorpwald is missing out...'"
 organised	Elvira	"Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before."
 natives' site van	Elvira	"The natives mention she says everyone deserves their own place, unless they don't, because they're lame."
-natives' site van	curst palace	"'Why go there when you could live in the Badlands?'"
+natives' site van	curst palace	"'Why go there when you could live in the Wildest Wilteds?'"
 fluster self rut	Elvira	"You hear nothing and imagine Elvira laughing at you."
 bonker	Elvira	"'She has increased bonker production by 1000%!'"
 bonker	curst palace	"'It must be guarded by a thousand like me!'"
@@ -5021,7 +5021,7 @@ carry out towers-hinting:
 		any-guardian-hint instead;
 	if player is in Loftier Trefoil, try objhinting h-w instead;
 	if Scope Copse is unvisited, all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
-	if Shaven Havens is unvisited, all-say "There's an important location in the center of the Bland Sad Badlands, [to-center] of here. You'll want to [if Shaven Havens is accessible]go[else]make a path[end if] there." instead;
+	if Shaven Havens is unvisited, all-say "There's an important location in the center of the Wildest Wilteds, [to-center] of here. You'll want to [if Shaven Havens is accessible]go[else]make a path[end if] there." instead;
 	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient, all-say "Collect the loot from the Treading Gradient." instead;
 	if Obscurest Subsector is unvisited, all-say "[if bonker is moot]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the Scope Copse.[end if]" instead;
 	if Treading Gradient is unvisited, all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit you [seesaw] in the Scope Copse.[end if]" instead;
@@ -5679,7 +5679,7 @@ Rascal Craals	"The round bay boundary blocks you from going any way but back eas
 End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
 Tenfold Teflon'd Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is touchable]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
-Topside Deposit	"The badlands are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
+Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
 Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
@@ -5760,7 +5760,7 @@ check attacking: [this takes responses for general types. The table below it is 
 		choose row with target of noun in table of attack-specific;
 		say "[nohit entry][line break]" instead;
 	if player has lance, say "[if noun is a person]Wrong enemy for the lance[else]." instead;
-	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Bland Sad Badlands is evil, just a nuisance[end if]." instead;
+	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
 
 sign-other is a truth state that varies.
@@ -5805,7 +5805,7 @@ sweatier wait-seer	"You find it tough to get close to his sweatiness. 'Ew...I...
 bluster butlers	"They're probably trained to hand out ur-belts."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
 prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
-log gaol	"[which-sharp]----but there is probably nothing beyond in the Badlands anyway."
+log gaol	"[which-sharp]----but there is probably nothing beyond in the Wildest Wilteds anyway."
 Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow,' which isn't quite an anagram, but suddenly remember a fellow called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
 lone duck	"The poor thing at least doesn't have a clonk due. You can see red at this, if you want."
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
@@ -8503,7 +8503,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 50	86	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
 51	80	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
 52	89	oyster	"A seashore seahorse mentioned a subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
-53	87	towers	"The Bland Sad Badlands are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
+53	87	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
 54	84	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
 48	--	--	"You'd guess area zero would be this, here, now, but you've been doing okay so far."
 55	--	--	"You vaguely dread a seventh area, as if there isn't enough already."
@@ -9149,7 +9149,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
-"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for...well, someone Renato was sad to miss."	"badlands"	true	towers
+"wilteds/wildest" or "wildest wilteds"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for...well, someone Renato was sad to miss."	"wilteds"	true	towers
 "guru"	false	"You can GURU something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 
 to say xray-help:
@@ -9823,7 +9823,7 @@ this is the enter-towers rule:
 		else:
 			say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of portals in Strip of Profits is 1]stores[else if number of stos in Strip of Profits is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the balancer barnacle[end if]. Proceed anyway?";
 			unless the player yes-consents, say "You decide to look around a bit more." instead;
-	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, and of course you feel that churning sensation that only happens when you discovered Old Warpy accidentally, and you can't tell when you're out for a while, but eventually you realize you have arrived at the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
+	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, and of course you feel that churning sensation that only happens when you discovered Old Warpy accidentally, and you can't tell when you're out for a while, but eventually you realize you have arrived at the Wildest Wilteds! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Wildest Wilteds again.[stopping]"
 
 chapter store x
 
@@ -15412,7 +15412,7 @@ for printing a locale paragraph about a thing (called nongua) in Topside Deposit
 	if nongua is start tarts and toaster is in Topside Deposit, now start tarts are mentioned;
 	continue the action:
 
-check taking a guardian: say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
+check taking a guardian: say "Sadly, you can't just move anyone or anything out of the way in the Wildest Wilteds." instead;
 
 section fire torn frontier
 
@@ -15541,7 +15541,7 @@ Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre 
 
 section sway ways
 
-sway ways are plural-named boring bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway.". bore-text of sway ways is "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to.". bore-check of sway ways is bore-sway-ways rule.
+sway ways are plural-named boring bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the Wildest Wilteds, anyway.". bore-text of sway ways is "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to.". bore-check of sway ways is bore-sway-ways rule.
 
 understand "yaws" and "sway-ways" as sway ways.
 
@@ -16798,7 +16798,7 @@ to say gd of (zz - a guardian):
 	if zz is the-hostile, say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
 	if zz is atheists, say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
 	if zz is arid den, say "[one of][or] still hawking Nerd-Aid[stopping]";
-	if zz is natives' site van, say "[one of][or] (you assume, by how the people inside are talking about the Badlands and looking at you funny)[stopping]";
+	if zz is natives' site van, say "[one of][or] (you assume, by how the people inside are talking about the Wildest Wilteds and looking at you funny)[stopping]";
 
 to say mb-aswell:
 	if guardians-seen is 3:
@@ -16993,7 +16993,7 @@ the natives' site van is a white guardian. "A natives['] site van block your way
 
 understand "native" as natives' site van.
 
-description of natives' site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Badlands like they know all about it, and they're looking at you funny, as if they know you don't fit in."
+description of natives' site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Wildest Wilteds like they know all about it, and they're looking at you funny, as if they know you don't fit in."
 
 a-text of natives' site van is "RYYRYRR". b-text of natives' site van is "??YRYRR". parse-text of natives' site van is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
@@ -20491,7 +20491,7 @@ check burning:
 	if noun is on labs slab, say "You may figuratively want to, right now, but that's natural when you're programming something tough." instead;
 	if noun is frat raft, say "[if player is in frat raft]No way. Especially not while you're on it[else]That might be a way across. Somehow[end if]." instead; [oyster]
 	if noun is crate, say "This is totally the wrong genre of game for that." instead;
-	if noun is log gaol, say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead; [towers]
+	if noun is log gaol, say "Even if the Wildest Wilteds weren't desolate enough, you don't have anything incendiary." instead; [towers]
 	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
 	if noun is bot boat, say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
 	if noun is flowerpot or noun is crocus, say "Renato would be so upset." instead;

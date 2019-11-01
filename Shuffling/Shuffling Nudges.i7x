@@ -5,8 +5,9 @@ volume nudges
 [remember to sort with nud.pl after changes or, perhaps, before release. NUD.PL organizes the "to say" and "rule" in the same order they appear in the table.]
 
 [nuch.py makes sure that all the nudges have a test case assigned]
+[stsv.py verifies the hash values with the strings]
 
-[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take random priority over others. For instance, you can go west or east from Self-ID Fields, or north or south from Undesired Underside.]
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take random (or likely quickest-walkthrough) priority over others. For instance, you can go west or east from Self-ID Fields, or north or south from Undesired Underside. But going north in the Underside leads to more immediately solvable puzzles.]
 
 book nudge tables
 
