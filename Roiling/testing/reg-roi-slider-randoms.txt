@@ -1,7 +1,13 @@
+# reg-roi-slider-randoms.txt
+#
+# this tests for random puzzle appearances like in the trefoil or in the downside.
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
+#this dumps everything in the downside and trefoil
 >allrand
+
 >gonear disowned downside
 
 ####randtest otters

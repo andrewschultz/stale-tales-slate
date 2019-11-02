@@ -1110,9 +1110,9 @@ The GT command may be particularly useful here to save dealing with trivia.
 > TOWERS
 > ENTER TOWERS
 
-Now, a clue is what the towers inspired. Adjectives. You've got a bunch of guys to deal with here in the Trefoil. Seven, to be exact, though you only need to get rid of four, including Rodney. Rodney's babble should give you a clue as to what to do.
+Now, a clue is what the towers inspired. Adjectives. You've got a bunch of prosaic picaros to deal with here in the Trefoil. Seven, to be exact, though you only need to get rid of four, including Rodney. Rodney's babble should give you a clue as to what to do.
 
-Since Rodney is the leader, you can't get rid of him until two or fewer others are left. You get no penalty for leaving someone, and you get no reward for clearing everything beyond just points. The enemies appear at random, and they are chosen from pods of five or so to ensure that they're not randomly too long or too short overall. I've listed them in alphabetical order, by warrior.
+Since Rodney is the leader, you can't get rid of him until two or fewer others are left. You get no penalty for leaving someone, and you get no reward for clearing everything beyond just points. The enemies appear at random, and they are chosen from pods of five or so to ensure that they're not randomly too long or too short overall. I've listed each of the prosaic picaros in alphabetical order.
 
 Andres
 > SNARED
@@ -1979,7 +1979,7 @@ Store P has a minimum of 132 and a maximum of 185. You can save a letter with th
 
 Store Y has a minimum of 130 and a maximum of 187. Many solutions are short words. The five-command side quest is a big one. You can spill the pills right away to "lose" 8 more letters.  You can add a few letters with the right bar actions, crossing the river the two-step way, and several LLPs.
 
-Store W has a minimum of 157-161 and a maximum of 316-318, subjected to some randomness. Both the "H" and "I" paths through the guardians are 36 letters. You can save keystrokes, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two since one group of enemies has 4 or 5 letters, and another has 7 or 8. That makes for the estimates in the totals. The warriors are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip a lot, like three of the warriors, the strudel, the denim and other LLPs and, of course, five central guardians and two outlying ones. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
+Store W has a minimum of 157-161 and a maximum of 316-318, subjected to some randomness. Both the "H" and "I" paths through the guardians are 36 letters. You can save keystrokes, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two since one group of enemies has 4 or 5 letters, and another has 7 or 8. That makes for the estimates in the totals. The prosaic picaros are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip a lot, like three of the prosaic picaros, the strudel, the denim and other LLPs and, of course, five central guardians and two outlying ones. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
 Store T has a minimum of 145 and a maximum of 209. The bran barn forces you to use one more letter, and you can LLP Elmer and Merle twice, pick off the vow here and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. There's randomness with the adverbs given but not their length. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 123 to 178.
 
@@ -2030,7 +2030,7 @@ Which are they? The live bee/senora, lobster/stream, blamer/sister, and praise s
 
 TOWERS:
 
-Note that five of the guardians can be left alone. They aren't covered below. Similarly, three of the warriors can be left alone.
+Note that five of the guardians can be left alone. They aren't covered below. Similarly, three of the prosaic picaros can be left alone.
 
 In the Scope Copse:
 The Try Us Yurts can be LHEGF.

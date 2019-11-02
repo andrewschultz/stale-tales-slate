@@ -603,8 +603,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "apcur"	293088972	--	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
 "lake"	236740944	--	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if Mislit Limits is visited]You're beyond the lake now.[else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
 "trefoil"	515914088	Loftier Trefoil	--	--	"[towersloc]." [LOFTIER TREFOIL 0 0]
-"warrior"	485439423	Loftier Trefoil	--	--	"[war-one]."
-"warriors"	581713389	Loftier Trefoil	--	--	"[war-one]."
+"picaro"	307328588	Loftier Trefoil	--	--	"[picaro-note]."
+"picaros"	403602554	Loftier Trefoil	--	--	"[picaro-note]."
 "deposit"	549030564	Topside Deposit	--	--	"[towersloc]." [TOPSIDE DEPOSIT 1 0]
 "fire"	284637654	--	Topside Deposit	--	"[ftf]."
 "torn"	331693906	--	Topside Deposit	--	"[ftf]."
@@ -1590,7 +1590,7 @@ to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
-to say war-one: say "[if vw is 1]There's only one warrior left, and his name is Rodney[else if mw > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
+to say war-one: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already dealt with one individual picaro--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life"
 

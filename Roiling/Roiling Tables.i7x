@@ -252,7 +252,7 @@ Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	pre-curst-palace-spectacular rule	post-curstpalace-spectacular rule	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Wildest Wilteds are already on their way back to being the Reenergise-Greeneries. The towers crumble as you fly back through to the Trips Strip."
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	--	--	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair." [keycar and detours are randomly located. Put them near the end.]
 bogus-detours	bogus-detours	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
-Andres	Andres	false	401528293	--	"snared"	"snared"	--	--	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee." [even though the warriors are at the beginning, I've placed them at the end, because this saves time in the long run.]
+Andres	Andres	false	401528293	--	"snared"	"snared"	--	--	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee." [even though the picaros are at the beginning, I've placed them at the end, because this saves time in the long run.]
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	--	--	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
 Archie	Archie	false	316598460	--	"achier"	"achier"	--	--	"Archie begins grabbing his joints and moaning 'I reach!' then 'I crack a crick!' until Rodney yells at him to get out. Which he does."
 Barney	Barney	false	425003395	--	"nearby"	"nearby"	--	--	"Barney assures Rodney he'll look for any unused exits captives might sneak out. But you can see him sneaking off once he is out of Rodney's sight."
@@ -1295,9 +1295,9 @@ this is the pre-rodney rule:
 		preef Rodney instead;
 
 this is the post-rodney rule:
-	now all warriors in Loftier Trefoil are pinko;
+	now all picaros in Loftier Trefoil are pinko;
 	if vw > 0, decrease poss-score of towers by vw;
-	mootl list of all warriors in Loftier Trefoil;
+	mootl list of all picaros in Loftier Trefoil;
 	now player has flowerpot;
 	reposition-guardians;
 	pad-rec-q "curst palace";
@@ -1313,7 +1313,7 @@ to say rodney-ditch:
 		say ". Well, maybe he can repel the lightning and sparks kind, but not yours. He is blown through the doorway and looks up, dazed. Nobody goes to help him";
 		if vw is 0:
 			continue the action;
-		say ". The remaining warrior[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in Loftier Trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
+		say ". The remaining picaro[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of picaros in Loftier Trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
 
 to say add-adj:
 	pad-rec "wilteds";
@@ -2144,7 +2144,7 @@ to say spec-help of (itm - a thing):
 	if itm is prefigured:
 		say "No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!";
 		continue the action;
-	if itm is a warrior:
+	if itm is a picaro:
 		say "[if itm is rodney]Rodney blinks a bit, then frowns[else][itm] shakes his head, but a glare from Rodney sets him straight--for now[end if].";
 		continue the action;
 	if itm is a mack-idea:

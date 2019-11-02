@@ -636,7 +636,7 @@ understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might 
 
 understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is in location of player.
 
-understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random moot warrior][end if].") when Andrew is in location of player.
+understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random moot picaro][end if].") when Andrew is in location of player.
 
 understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.") when Andrew is in location of player.
 

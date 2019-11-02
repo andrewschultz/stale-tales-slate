@@ -131,7 +131,7 @@ Presto is a region. regtab of Presto is table of presto nudges. regana of Presto
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 51. min-score of towers is 25.
 [Necessary points:
-4=4 for minimum warriors to leave Trefoil
+4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
 7=12 for the minimum number of other guardians you need to dispel to get through the map
 1=13 for subtler (see rapier repair)
@@ -145,7 +145,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 2=24 for a bot boat
 1=25 for the palace]
 [BONUS:
-3=3 for the extra warriors
+3=3 for the extra picaros
 5=8 for the H/I beyond needing to clear the coastlines
 2=10 for the ingrates/natives to get to the edge
 1=11 for the yurts, 1=12 for the mended mini denim
@@ -211,7 +211,7 @@ a person can be superchatty, subject-talking or terse. a person is usually subje
 
 a person can be terse-warned. a person is usually not terse-warned.
 
-a person has a person called the chum. [a chum is someone whom they imitate in dialogue. For instance, Rand's chum is Leo. All warriors' chums are Andres. And so on.]
+a person has a person called the chum. [a chum is someone whom they imitate in dialogue. For instance, Rand's chum is Leo. All picaros' chums are Andres. And so on.]
 
 chapter portals
 
@@ -1424,7 +1424,7 @@ persuasion rule for asking a guardian to try doing something:
 	say "If only it were that easy, to ask someone or something to move. You'll have to change them to get by.";
 	persuasion fails;
 
-persuasion rule for asking a warrior to try doing something:
+persuasion rule for asking a picaro to try doing something:
 	say "Rodney is the one giving the orders, here[if noun is rodney], and he doesn't want to take them from you[end if].";
 	persuasion fails;
 
@@ -2319,7 +2319,7 @@ to say maze-before: say "'Oh! You met him? I hope he helped you a bit. He told m
 
 to say maze-later: say "'Oh! He'll drop by later. I hope you don't need his help too much.'"
 
-check objasking a warrior about a warrior:
+check objasking a picaro about a picaro:
 	if noun is rodney:
 		if second noun is moot, say "No gloating, now" instead;
 		if second noun is off-stage, say "I don't think you want Rodney to call up reinforcements." instead;
@@ -2327,7 +2327,7 @@ check objasking a warrior about a warrior:
 	if second noun is rodney, say "You wouldn't expect to hear any secrets. Rodney's got [noun] scared." instead;
 	say "[if second noun is off-stage]Who?[else if second noun is moot]You consider some 'you'll end up line [second noun]' threats, but that's not your wordsmithing strength[else]You probably won't be able to start dissent that way. Better to [pick-keep]." instead;
 
-check objasking a warrior about curst palace: say "[noun] only knows he's supposed to defend it from you. He probably wasn't given any secrets to divulge." instead;
+check objasking a picaro about curst palace: say "[noun] only knows he's supposed to defend it from you. He probably wasn't given any secrets to divulge." instead;
 
 to say pick-keep: say "[if mw > 0]keep picking[else]pick[end if] off Rodney's gang [if mw < 3]one by one[else] though you probably don't need to[end if]";
 
@@ -4414,7 +4414,7 @@ bub dude egg	true	true	false	false	"Only one color for sure? And you don't even 
 capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
 casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
 clack ops locs pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
-dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the warriors who had only one name, the dreads adders give a double clue."
+dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue."
 elmer	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
@@ -5050,8 +5050,8 @@ carry out towers-hinting:
 	if player is in Mislit Limits, try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
 
-to decide what indexed text is the vul of (w - a warrior):
-	choose row with the-from of w in table of towers anagrams;
+to decide what indexed text is the vul of (pi - a picaro):
+	choose row with the-from of pi in table of towers anagrams;
 	decide on "[right-word entry]";
 
 to decide which direction is the psgdir of (gu - a guardian):
@@ -14889,7 +14889,7 @@ check exiting in End Den:
 
 volume towers
 
-[this is the biggest area of the game, though Oyster has almost as many lines. Guardians are a sort of specific person, as are warriors. Because warriors are only in the Trefoil, they will be in that section.]
+[this is the biggest area of the game, though Oyster has almost as many lines. Guardians are a sort of specific person, as are picaros. Because picaros are only in the Trefoil, they will be in that section.]
 
 book towers specific verbs
 
@@ -14952,10 +14952,10 @@ rule for supplying a missing noun when xraying:
 to say if-duck: if duck is not touchable, say "--but nothing [if Shaven Havens is visited]here [end if]seems to fit with UNLOCKED";
 
 to say big-hint of (rayx - a thing) :
-	if rayx is a guardian or rayx is a warrior:
+	if rayx is a guardian or rayx is a picaro:
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
-	else: [only for non guardians/non warriors] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
+	else: [only for non guardians/non picaros] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
 		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
@@ -15018,7 +15018,7 @@ check xraying:
 				say "You decide to be pretty sure you can figure it on your own, instead." instead;
 	if noun is guardian:
 		say "Hmm. You bet you could get past if [the noun] were [big-hint of noun].";
-	else if noun is warrior: [do I need this? Since warriors moved to start]
+	else if noun is picaro: [do I need this? Since picaros moved to start]
 		say "Boy! Sure would be nice if [noun] were [big-hint of noun].";
 	else if noun is rayed:
 		say "You remember you could still think [big-hint of noun]." instead;
@@ -15368,23 +15368,25 @@ after looking in Loftier Trefoil:
 	set the pronoun them to w-p;
 	continue the action;
 
-w-p is privately-named plural-named boring scenery in Loftier Trefoil. printed name of w-p is "warriors". description of w-p is "Deal with the warriors individually.". bore-check of w-p is bore-warriors rule. bore-text of w-p is "Deal with the warriors individually."
+w-p is privately-named plural-named boring scenery in Loftier Trefoil. printed name of w-p is "picaros". description of w-p is "Deal with the picaros individually.". bore-check of w-p is bore-picaros rule. bore-text of w-p is "Deal with the picaros individually."
 
-to decide which number is vw: decide on number of warriors in Loftier Trefoil;
-to decide which number is mw: decide on number of moot warriors;
+understand "picaros/picaro" as w-p.
 
-this is the bore-warriors rule:
+to decide which number is vw: decide on number of picaros in Loftier Trefoil;
+to decide which number is mw: decide on number of moot picaros;
+
+this is the bore-picaros rule:
 	if vw is 1, try objhinting rodney instead;
 
 after printing the locale description for Loftier Trefoil when Loftier Trefoil is unvisited:
 	say "The ambience here makes you think 'Lo, I fret.'";
 	continue the action;
 
-rule for printing a locale paragraph about a warrior (called ww):
+rule for printing a locale paragraph about a picaro (called pp):
 	if ww is not Rodney, The rule succeeds;
 	now Rodney is mentioned;
-	say "Sir Rodney, still loud and boastful, is [if vw is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of warriors blocking the way out. [they-just] [list of followy warriors][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
-	now all touchable warriors are mentioned;
+	say "Sir Rodney, still loud and boastful, is [if vw is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of prosaic picaros blocking the way out. [they-just] [list of followy picaros][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
+	now all touchable picaros are mentioned;
 
 to say they-just:
 	say "[if vw is 2]Well, there's just[else]They include[end if]"
@@ -16565,7 +16567,7 @@ to decide whether the action is procedural: [aip]
 
 definition: a thing is followy:
 	if it is rodney, no;
-	if it is a warrior and it is touchable, yes;
+	if it is a picaro and it is touchable, yes;
 	no.
 
 book Mesprise/Emprise Premise(s)
@@ -17305,7 +17307,7 @@ understand "allrand" as allranding.
 
 carry out allranding:
 	now all mack-ideas are in Disowned Downside;
-	now all warriors are in Loftier Trefoil;
+	now all picaros are in Loftier Trefoil;
 	the rule succeeds.
 
 chapter warwaring - not for release
@@ -17317,33 +17319,33 @@ understand the command "warwar" as something new.
 understand "warwar" as warwaring when player is in Loftier Trefoil.
 
 carry out warwaring:
-	repeat with WA running through not leaderly warriors in Loftier Trefoil:
+	repeat with WA running through not leaderly picaros in Loftier Trefoil:
 		try fliptoing WA;
 	try fliptoing Rodney;
 	the rule succeeds;
 
-chapter warriors
+chapter picaros
 
-A warrior is a kind of person. a warrior is usually vanishing. a warrior can be leaderly. a warrior is usually not leaderly. a warrior can be pinko. a warrior is usually not pinko. a warrior is usually terse. a warrior has a number called pod-num. a warrior has a number called pod-ord.
+A picaro is a kind of person. a picaro is usually vanishing. a picaro can be leaderly. a picaro is usually not leaderly. a picaro can be pinko. a picaro is usually not pinko. a picaro is usually terse. a picaro has a number called pod-num. a picaro has a number called pod-ord.
 
-h-w is a warrior that varies. [h-w means hinted warrior]
+h-p is a picaro that varies. [h-w means hinted picaro]
 
-the chum of a warrior is usually Andres.
+the chum of a picaro is usually Andres.
 
-the specification of warrior is "A person who blocks your way out of the Trefoil."
+the specification of picaro is "A person who blocks your way out of the Trefoil."
 
 roddro is a truth state that varies.
 rodyon is a truth state that varies.
 
-after fliptoing a warrior (this is the trefoil exit rule):
+after fliptoing a picaro (this is the trefoil exit rule):
 	if noun is Rodney, continue the action;
-	d "[list of warriors in Loftier Trefoil].";
+	d "[list of picaros in Loftier Trefoil].";
 	if vw < 4:
 		min-up;
 	else if vw is 4:
 		say "Rodney's followers look a bit shaken. If you got rid of him by saying [if roddro is true and rodyon is true]YONDER or DRONEY[else if rodyon is true]YONDER[else if roddro is true]DRONEY[else]something to shoo him[end if], you might be able to clear the lot. Or you can mess with all his pals, first. Your choice.";
 	if vw > 1:
-		now h-w is a random not leaderly warrior in Loftier Trefoil;
+		now h-w is a random not leaderly picaro in Loftier Trefoil;
 	else:
 		say "Time to put Rodney out of his misery. Okay, he'll still be miserable, so just put [i]yourself[r] out of the range of his misery.";
 		now h-w is rodney;
@@ -17351,138 +17353,138 @@ after fliptoing a warrior (this is the trefoil exit rule):
 
 rod-hint is a truth state that varies.
 
-check objhinting a not leaderly warrior (this is the poke Rodney but don't spoil him rule):
+check objhinting a not leaderly picaro (this is the poke Rodney but don't spoil him rule):
 	if cur-score of towers > 3 and rod-hint is false:
 		ital-say "Rodney's vulnerable enough now, you can HINT RODNEY if you don't care about maximum points. I will simply plow through his comrades, otherwise.";
 		now rod-hint is true;
 
-check taking a warrior: say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
+check taking a picaro: say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
 
-Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1.
+Sir Rodney is a leaderly picaro. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1.
 
 a-text of Rodney is "OYRRYR". b-text of Rodney is "OGRRGR". parse-text of rodney is "y[sp]o[sp]x[sp]x[sp]e[sp]x". rodney is cheat-spoilable.
 
-Geno is a warrior. description is "Well, Geno is ... here. He hasn't left yet. He may not be the best warrior, but he's still stronger than you.". pod-num of Geno is 1. pod-ord of Geno is 1.
+Geno is a picaro. description is "Well, Geno is ... here. He hasn't left yet. He may ordinary even among the prosaic picaros, but he's still stronger than you.". pod-num of Geno is 1. pod-ord of Geno is 1.
 
 a-text of Geno is "RYRY". b-text of Geno is "PYPY". parse-text of geno is "g[sp]-[sp]n[sp]-". geno is any-spoilable.
 
-Shane is a warrior. description is "Shane looks well-tanned, but a bit reddish-faced.". pod-num of Shane is 1. pod-ord of Shane is 2.
+Shane is a picaro. description is "Shane looks well-tanned, but a bit reddish-faced.". pod-num of Shane is 1. pod-ord of Shane is 2.
 
 a-text of Shane is "YRRYR". b-text of Shane is "YRRYR". parse-text of shane is "-[sp]x[sp]x[sp]-[sp]x".
 
-Tyson is a warrior. description is "Tyson keeps snarling at people, red-faced.". pod-num of Tyson is 1. pod-ord of Tyson is 3.
+Tyson is a picaro. description is "Tyson keeps snarling at people, red-faced.". pod-num of Tyson is 1. pod-ord of Tyson is 3.
 
 a-text of Tyson is "RRYRO". b-text of Tyson is "RRYRO". parse-text of tyson is "x[sp]x[sp]o[sp]x[sp]y". tyson is any-spoilable.
 
-Wade is a warrior. description is "Wade looks confident, as if nothing can drain that. He's dressed in red.". pod-num of Wade is 1. pod-ord of Wade is 4.
+Wade is a picaro. description is "Wade looks confident, as if nothing can drain that. He's dressed in red.". pod-num of Wade is 1. pod-ord of Wade is 4.
 
 a-text of Wade is "YRYR". b-text of wade is "YRYR". parse-text of wade is "-[sp]x[sp]-[sp]x". wade is cheat-spoilable.
 
-Edwin is a warrior. description is "Edwin looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here he isn't allowed to destroy yet.". pod-num of Edwin is 2. pod-ord of Edwin is 1.
+Edwin is a picaro. description is "Edwin looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here he isn't allowed to destroy yet.". pod-num of Edwin is 2. pod-ord of Edwin is 1.
 
 a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". parse-text of edwin is "x[sp]-[sp]x[sp]-[sp]x". edwin is cheat-spoilable.
 
-Eldon is a warrior. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.". pod-num of Eldon is 2. pod-ord of Eldon is 2.
+Eldon is a picaro. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.". pod-num of Eldon is 2. pod-ord of Eldon is 2.
 
 a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "-[sp]l[sp]d[sp]-[sp]n". eldon is parse-spoilable.
 
-Goldy is a warrior. description is "Goldy has an amoral, mercenary look about him.". pod-num of Goldy is 2. pod-ord of Goldy is 3.
+Goldy is a picaro. description is "Goldy has an amoral, mercenary look about him.". pod-num of Goldy is 2. pod-ord of Goldy is 3.
 
 a-text of Goldy is "RYRRO". b-text of Goldy is "PGRRB". parse-text of goldy is "g[sp]o[sp]d[sp]l[sp]y". goldy is parse-spoilable.
 
-Royce is a warrior. description is "Royce seems to be muttering-not-muttering about what a tough guy he is.". pod-num of Royce is 2. pod-ord of Royce is 4.
+Royce is a picaro. description is "Royce seems to be muttering-not-muttering about what a tough guy he is.". pod-num of Royce is 2. pod-ord of Royce is 4.
 
 a-text of Royce is "RYOYR". b-text of royce is "RGBYR". parse-text of royce is "c[sp]o[sp]y[sp]e[sp]r". royce is parse-spoilable.
 
-Blake is a warrior. description is "Blake beams, likely a paragon of positive thinking.". pod-num of Blake is 3. pod-ord of Blake is 1.
+Blake is a picaro. description is "Blake beams, likely a paragon of positive thinking.". pod-num of Blake is 3. pod-ord of Blake is 1.
 
 a-text of Blake is "RRYYR". b-text of Blake is "PPYYR". parse-text of blake is "b[sp]l[sp]e[sp]a[sp]k". blake is any-spoilable.
 
-Bredo is a warrior. description is "Bredo seems unusually focused and interested.". pod-num of Bredo is 3. pod-ord of Bredo is 2.
+Bredo is a picaro. description is "Bredo seems unusually focused and interested.". pod-num of Bredo is 3. pod-ord of Bredo is 2.
 
 a-text of Bredo is "RYRYR". b-text of Bredo is "PYRYR". parse-text of bredo is "b[sp]-[sp]x[sp]-[sp]x". bredo is cheat-spoilable.
 
-Daryl is a warrior. description is "Daryl appears to be in tremendous physical shape.". pod-num of Daryl is 3. pod-ord of Daryl is 3.
+Daryl is a picaro. description is "Daryl appears to be in tremendous physical shape.". pod-num of Daryl is 3. pod-ord of Daryl is 3.
 
 a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". parse-text of daryl is "x[sp]a[sp]r[sp]x[sp]y". daryl is parse-spoilable.
 
-Dewey is a warrior. description is "Dewey is solidly build, almost less just a man than a big tree.". pod-num of Dewey is 3. pod-ord of Dewey is 4.
+Dewey is a picaro. description is "Dewey is solidly build, almost less just a man than a big tree.". pod-num of Dewey is 3. pod-ord of Dewey is 4.
 
 a-text of Dewey is "RYYRO". b-text of Dewey is "RGYRB". parse-text of dewey is "w[sp]e[sp]e[sp]d[sp]y". dewey is any-spoilable.
 
-Ernest is a warrior. description is "Ernest looks relaxed and ready to gaffle tavernlings.". pod-num of Ernest is 4. pod-ord of Ernest is 1.
+Ernest is a picaro. description is "Ernest looks relaxed and ready to gaffle tavernlings.". pod-num of Ernest is 4. pod-ord of Ernest is 1.
 
 a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR". parse-text of ernest is "x[sp]-[sp]n[sp]x[sp]-[sp]x".
 
-Marcel is a warrior. description is "Marcel looks just plain agitated, which can't hurt in his line of work.". pod-num of Marcel is 4. pod-ord of Marcel is 2.
+Marcel is a picaro. description is "Marcel looks just plain agitated, which can't hurt in his line of work.". pod-num of Marcel is 4. pod-ord of Marcel is 2.
 
 a-text of Marcel is "RYRRYR". b-text of Marcel is "RGRRGR". parse-text of marcel is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
-Marlon is a warrior. description is "Marlon doesn't look like all the rest. In fact, he's sort of looking down his nose at them a bit.". pod-num of Marlon is 4. pod-ord of Marlon is 3.
+Marlon is a picaro. description is "Marlon doesn't look like all the rest. In fact, he's sort of looking down his nose at them a bit.". pod-num of Marlon is 4. pod-ord of Marlon is 3.
 
 a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". parse-text of marlon is "x[sp]-[sp]r[sp]x[sp]-[sp]x". marlon is cheat-spoilable.
 
-Reggie is a warrior. description is "Reggie looks spotless--no stains on his clothes. He probably smells as nice as he looks, too.". pod-num of Reggie is 4. pod-ord of Reggie is 4.
+Reggie is a picaro. description is "Reggie looks spotless--no stains on his clothes. He probably smells as nice as he looks, too.". pod-num of Reggie is 4. pod-ord of Reggie is 4.
 
 a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR". parse-text of reggie is "-[sp]x[sp]g[sp]-[sp]-[sp]x". reggie is cheat-spoilable.
 
-Andres is a warrior. description is "Andres's movements are carefree as he sways back and forth.". pod-num of Andres is 5. pod-ord of Andres is 1.
+Andres is a picaro. description is "Andres's movements are carefree as he sways back and forth.". pod-num of Andres is 5. pod-ord of Andres is 1.
 
 a-text of Andres is "RRYRYR". b-text of Andres is "RPYPGR". parse-text of andres is "x[sp]n[sp]a[sp]r[sp]e[sp]x". andres is any-spoilable.
 
-Andrew is a warrior. description is "Andrew has a careless look in his eyes. He does not seem to be aware of risk. Just imagine the sort of bugs that would slip through if he wrote text adventures and kept adding one more feature! Oops, maybe you don't have to.". pod-num of Andrew is 5. pod-ord of Andrew is 2.
+Andrew is a picaro. description is "Andrew has a careless look in his eyes. He does not seem to be aware of risk. Just imagine the sort of bugs that would slip through if he wrote text adventures and kept adding one more feature! Oops, maybe you don't have to.". pod-num of Andrew is 5. pod-ord of Andrew is 2.
 
 a-text of Andrew is "RYRRYR". b-text of Andrew is "RYRRGR". parse-text of andrew is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
-Archie is a warrior. description is "Archie looks free of pain, big or small.". pod-num of Archie is 5. pod-ord of Archie is 3.
+Archie is a picaro. description is "Archie looks free of pain, big or small.". pod-num of Archie is 5. pod-ord of Archie is 3.
 
 a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". parse-text of archie is "a[sp]x[sp]x[sp]-[sp]-[sp]x". archie is cheat-spoilable.
 
-Barney is a warrior. description is "Barney feels close and far at the same time, like he should be placed somewhere else.". pod-num of Barney is 5. pod-ord of Barney is 4.
+Barney is a picaro. description is "Barney feels close and far at the same time, like he should be placed somewhere else.". pod-num of Barney is 5. pod-ord of Barney is 4.
 
 a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". parse-text of barney is "x[sp]-[sp]-[sp]x[sp]x[sp]y". barney is cheat-spoilable.
 
-Cedrick is a warrior. description is "Cedrick stretches effortlessly, without any hitches.". pod-num of Cedrick is 6. pod-ord of Cedrick is 1.
+Cedrick is a picaro. description is "Cedrick stretches effortlessly, without any hitches.". pod-num of Cedrick is 6. pod-ord of Cedrick is 1.
 
 a-text of Cedrick is "RRYRRYR". b-text of Cedrick is "PRYRRYR". parse-text of cedrick is "c[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-Demitri is a warrior. description is "Demitri stares out confidently, bolder than his compatriots.". pod-num of Demitri is 6. pod-ord of Demitri is 2.
+Demitri is a picaro. description is "Demitri stares out confidently, bolder than his compatriots.". pod-num of Demitri is 6. pod-ord of Demitri is 2.
 
 a-text of Demitri is "RYRYRYR". b-text of Demitri is "RYPGRYR". parse-text of demitri is "x[sp]-[sp]m[sp]i[sp]x[sp]-[sp]x". demitri is cheat-spoilable.
 
-Leander is a warrior. description is "Leander looks too dumb to contemplate anything besides knocking people's heads in.". pod-num of Leander is 6. pod-ord of Leander is 3.
+Leander is a picaro. description is "Leander looks too dumb to contemplate anything besides knocking people's heads in.". pod-num of Leander is 6. pod-ord of Leander is 3.
 
 a-text of Leander is "RYYRRYR". b-text of Leander is "PGGRRGR". parse-text of leander is "l[sp]e[sp]a[sp]x[sp]x[sp]e[sp]x". leander is cheat-spoilable.
 
-Preston is a warrior. description is "Preston appears to be the best protected of your persecutors.". pod-num of Preston is 6. pod-ord of Preston is 4.
+Preston is a picaro. description is "Preston appears to be the best protected of your persecutors.". pod-num of Preston is 6. pod-ord of Preston is 4.
 
 a-text of Preston is "RRYRYRR". b-text of Preston is "PPYRYRR". parse-text of preston is "p[sp]r[sp]-[sp]x[sp]-[sp]x[sp]x". preston is cheat-spoilable.
 
-Terrance is a warrior. description is "Terrance constantly looks at Rodney and nods obediently. Perhaps you could help him gain a freer mindset.". pod-num of Terrance is 6. pod-ord of Terrance is 5.
+Terrance is a picaro. description is "Terrance constantly looks at Rodney and nods obediently. Perhaps you could help him gain a freer mindset.". pod-num of Terrance is 6. pod-ord of Terrance is 5.
 
 a-text of terrance is "RYRRYYRR". b-text of terrance is "RGRPYYRR". parse-text of terrance is "x[sp]e[sp]x[sp]r[sp]-[sp]-[sp]x[sp]x".
 
 The chum of Andres is yourself.
 
-max-war-pods is a number that varies. max-war-pods is usually 7.
+max-picaro-pods is a number that varies. max-picaro-pods is usually 7.
 
-to decide which number is war-count of (wc - a number):
+to decide which number is picaro-count of (wc - a number):
 	let temp be 0;
-	repeat with QQ running through warriors:
+	repeat with QQ running through picaros:
 		if pod-num of QQ is wc:
 			increment temp;
 	decide on temp.
 
-when play begins (this is the distribute warriors rule) :
-	now all warriors are off-stage;
-	repeat with mypod running from 1 to max-war-pods:
-		let G be the war-count of mypod;
-		[say "[mypod] has war-count of [G].";]
+when play begins (this is the distribute picaros rule) :
+	now all picaros are off-stage;
+	repeat with mypod running from 1 to max-picaro-pods:
+		let G be the picaro-count of mypod;
+		[say "[mypod] has picaro-count of [G].";]
 		let H be a random number from 1 to G;
-		repeat with QQ running through warriors:
+		repeat with QQ running through picaros:
 			if pod-num of QQ is mypod and pod-ord of QQ is H:
 				now QQ is in Loftier Trefoil;
-	now h-w is a random not leaderly warrior in Loftier Trefoil;
+	now h-w is a random not leaderly picaro in Loftier Trefoil;
 
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 
@@ -21689,8 +21691,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	else if myreg is Towers:
-		if number of pinko warriors > 0:
-			repeat with pk running through pinko warriors:
+		if number of pinko picaros > 0:
+			repeat with pk running through pinko picaros:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 		let xxx be unripe ur-pine;
 		if number of not moot guardians > 0:
@@ -21924,7 +21926,7 @@ section instructions
 
 when play begins:
 	now in-beta is true;
-	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.[line break]--[b]warwar[r] wipes out the warriors in Store W.";
+	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.[line break]--[b]warwar[r] wipes out the prosaic picaros in Store W.";
 
 book cheatage
 

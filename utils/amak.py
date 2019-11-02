@@ -265,8 +265,9 @@ if len(tests_to_search):
     exit()
 
 if not len(words_to_shift):
-    print("Using my tests")
+    print("Nothing found. Using my tests")
     words_to_shift = list(my_tests)
+    print("amak.py should be used to see how to shift a word.")
 
 actual_convert = 0
 found_end_word = True
