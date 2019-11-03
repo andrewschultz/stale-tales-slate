@@ -197,6 +197,11 @@ Score in a scenario: 7 out of 50 total points in the current region, Towers. Low
 ==!
 Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 47.
 
+@sli
+#slider test for sadder
+>ddsare
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 #spechelp for dreads adders
 >saddre
 The adders look downcast for a minute before resuming a threatening pose.
@@ -229,6 +234,26 @@ There's more than one yurt there.
 #spechelp for try us yurts
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
+
+@sli
+#slider test for rusty
+>urtys
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for rinsed
+>irsnde
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for subtler
+>ustberl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+@sli
+#slider test for clumsy
+>lcmuys
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>gs
+#extra slider test for clumsy
+>lcmuys
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>gs
 
 ==t!1,2
 >rusty
@@ -375,6 +400,11 @@ Your score has just gone up by one point
 >rinsed
 Your score has just gone up by one point
 
+@sli
+#slider test for creaky
+>rcaeyk
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 #readables for keycar
 >read keycar
 /(KC AYER|RAY ECK)
@@ -392,6 +422,14 @@ The keycar sputters momentarily.
 >creaky
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
+
+@sli
+#slider test for himself
+>ihsmlfe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for grandiose
+>rgnaidseo
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 >e
@@ -423,6 +461,17 @@ They're not just bottles! They're bottles of NERD-AID!
 
 ==t!1,2
 >n
+
+@sli
+#slider test for coiled
+>oclide
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pastier
+>aptseri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for restful
+>ertsulf
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #nudge for baldest
@@ -471,6 +520,17 @@ Twist the ice too much, it might not look right.
 ==t!1,2
 >n
 
+@sli
+#slider test for angstier
+>nasgitre
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for married
+>rrmaedi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for nerdiest
+>eneidrts
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nu
 #nudge for cinema
 >cineam
@@ -504,6 +564,11 @@ The ingrates seem to wonder if it's worth complaining to you for a moment. You g
 >angstier
 Your score has just gone up by one point
 >w
+
+@sli
+#slider test for rustled
+>urtsedl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #nudge for finger
@@ -596,6 +661,14 @@ That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 >atheits
 Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly.
 
+@sli
+#slider test for hastiest
+>ahtseits
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for weariest
+>eweirats
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nu
 #spechelp for asset-hit atheists
 >atheisst
@@ -622,6 +695,12 @@ Elsa listens to what you're saying for a minute, but--no, you didn't quite get i
 >mel fihs
 Mel Fish mutters, 'No, that's not how to be me. Gotta be something simple and plain.'
 
+#slider test for released
+# oh crap released/resealed
+>ereledas
+WRONG
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==t!1,2
 >resealed
 Your score has just gone up by one point
@@ -633,6 +712,17 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >himself
 Your score has just gone up by one point
+
+@sli
+#slider test for sewed
+>esdwe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mined
+>imedn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pearly
+>eprayl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #nudge for lars
@@ -762,6 +852,17 @@ Lois the Hostile momentarily gives a fake smile, but it's not as fake as it coul
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
 >gs
 
+@sli
+#slider test for holiest
+>ohilste
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@sli
+#slider test for marginal
+>amaiglrn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+
 ==t!1,2
 >marginal
 #notmax
@@ -838,6 +939,11 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
 >e
 >s
 
+@sli
+#slider test for prosiest
+>sorpstie
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nu
 #nudge for riposte
 >riposet
@@ -869,6 +975,32 @@ You can't change the gadflies. There are too many.
 You can't change the gadflies. There are too many.
 
 >gt garden
+
+@sli
+#slider test for broken
+>rbkone
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for resting
+>ertsngi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for drained
+>rddneia
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for naivest
+>anviste
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+==!t1,2
+>s
+
+@sli
+#slider test for rousted
+>orsuedt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+==!t1,2
+>rousted
+Your score has just gone up by one point
 
 @nu
 #spechelp for bonker
@@ -922,6 +1054,22 @@ He's a doctor! Have some respect when you try to scramble him up.
 That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
 
 >e
+
+@sli
+#slider test for wordy
+# (?? not possible? Or map to the nudges?)
+>owdyr
+WRONG
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for rowdy
+>ordyw
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for fussier
+>ssfueri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for unlocked
+>nuolkcde
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #nudge for wordy
@@ -1108,6 +1256,11 @@ WRONG: What about hostile?
 >grainde
 Scot Agin blinks and ruffles Reading: a Dinger and yawns before flipping a page, slightly less interested than before.
 
+@sli
+#slider test for grained
+>rgiaedn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >grained
 Your score has just gone up by one point
 >ask agnostic about doctor yow
@@ -1123,6 +1276,11 @@ The 'replay player' letters brighten for a second.
 The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
+
+@sli
+#slider test for attentive
+>teatievnt
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #spechelp for atblock
@@ -1163,6 +1321,14 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 
 >gt coastlines
 >give gizmo to agnostic
+
+@sli
+>gonear rawest waters
+#slider test for nearest
+>enesatr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+>undo
 
 @nu
 >gonear rawest waters
@@ -1289,6 +1455,17 @@ Mislit Limits
 >robust
 Your score has just gone up by one point
 
+@sli
+#slider test for rewired
+>eriderw
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for robust
+>orubts
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stabler
+>tsbaerl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nu
 #renudge for turbo
 >turob
@@ -1322,6 +1499,17 @@ The serpent doesn't just pester, it's pester'n.
 #nudge for erip
 >erpi
 It's officially an ur-pine, not a pine.
+
+@sli
+#slider test for punier
+>upinre
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for spectacular
+>pscaacelrtu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for present
+>eepnrts
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nu
 #spechelp for ur-pine
@@ -1371,6 +1559,10 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ri
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
 
+@sli
+#slider test for triste
+>rtteis
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==!1,2
 >triste

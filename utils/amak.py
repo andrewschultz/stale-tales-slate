@@ -19,6 +19,8 @@ total_shifts = 0
 shift_1_on_no_repeat = False
 try_rotating_first = False
 
+add_suggested = True
+
 def usage(header="Usage for amak.py"):
     print(header)
     print("=" * 80)
@@ -31,6 +33,7 @@ def usage(header="Usage for amak.py"):
     print("<a=q> start after word q")
     print("e  = edit the amak.txt text/cfg file")
     print("ts = process output for CSV oif tests")
+    print("as = add suggestions (default), nas/asn = turn them off")
     print("otherwise, words are changed to anagrams, or if they are regions, all words in the region are anagrammed.")
     exit()
 
@@ -38,6 +41,9 @@ def test_search(to_search):
     search_mod = to_search.replace(' ', '-')
     file_names = ["rbr-roi-{0}.txt".format(search_mod), "reg-roi-slider-randoms.txt" ]
     slider_tests = defaultdict(bool)
+    if to_search not in reg_verbs:
+        print("Uh oh! {} is not in reg_verbs, which has {}.".format(', '.join(sorted(reg_verbs))))
+        return
     orig_array = reg_verbs[to_search].split(",")
     cur_rand_test = ""
     for y in reg_verbs[to_search].split(","):
@@ -48,6 +54,7 @@ def test_search(to_search):
                 if line.startswith("####randtest"):
                     cur_rand_test = re.sub("####randtest *", "", cur_rand_test)
                 if not line.startswith("#slider test for "): continue
+                if line.startswith("#extra slider test for"): continue
                 l = re.sub(".* for ", "", line.strip().lower())
                 if l not in slider_tests:
                     if cur_rand_test != to_search and 'randoms' in file_name: continue
@@ -57,7 +64,10 @@ def test_search(to_search):
     if len(slider_tests):
         print("Slider tests uncaptured ({0}): {1}".format(len(slider_tests), ', '.join(sorted(slider_tests))))
         for x in slider_tests:
-            print("==t3\n#slider test for {0}".format(x)) # it may not always be #3, but we can search and replace if it isn't
+            print_string = "@sli\n#slider test for {0}".format(x)
+            if add_suggested:
+                print_string += "\n>{}\nYour settler begins to make noises: a low hum, but nothing really piercing.".format(find_nomatch_anagram(x))
+            print(print_string) # it may not be defined as @sli, but that is the best way, in case the file numbering changes. We can search and replace if it isn't, anyway.
     else:
         print("All slider testfile tests passed for {0}.".format(to_search))
     to_glob = "reg*-{0}*.txt".format(search_mod)
@@ -233,8 +243,8 @@ if len(sys.argv) > 1:
             generate_it(q[2:])
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-        elif q == 'c': format_string = "==t3\n#slider test for {0}\n>{1}"
-        elif q == 'cx': format_string = "==t3\n#slider test for {0}\n>{1}\nYour settler begins to make noises: a low hum, but nothing really piercing."
+        elif q == 'c': format_string = "@sli\n#slider test for {0}\n>{1}"
+        elif q == 'cx': format_string = "@sli\n#slider test for {0}\n>{1}\nYour settler begins to make noises: a low hum, but nothing really piercing."
         elif q[:2] == 's=':
             start_word = q[2:]
         elif q[:2] == 'e=':
@@ -245,6 +255,12 @@ if len(sys.argv) > 1:
         elif q == 'e':
             os.system(amak_txt)
             sys.exit()
+        elif q == 'as':
+            add_suggested = True
+        elif q == 'asn' or q == 'nas':
+            add_suggested = False
+        elif q[:3] == 'tsa':
+            tests_to_search = [ "ordeal-reload", "routes", "troves", "presto", "oyster", "towers", "otters", "others"]
         elif q[:3] == 'ts=':
             tests_to_search = q[3:].split(",")
         elif q == '?':

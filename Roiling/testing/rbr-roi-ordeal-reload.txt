@@ -1,8 +1,9 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just means manse
 
-files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ordeal-reload-nudmis.txt
+files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ordeal-reload-nudmis.txt,reg-roi2-ordeal-reload-slider.txt
 ~	nu	t2
+~	sli	t3
 
 ## *FILE
 
@@ -22,6 +23,11 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >1
 >5
 
+@sli
+#slider test for lamp
+>alpm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==t2
 #spechelp for palm
 >lapm
@@ -29,6 +35,23 @@ You think you feel the palm shake a bit, but nothing terribly magical happens.
 
 >lamp
 Your score has just gone up by one point
+
+@sli
+#slider test for satchel
+>asctelh
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for painting
+>apnignit
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for basement
+>esabemtn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for chimney
+>hcmieyn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stable
+>tsbael
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #done rejects for lamp
@@ -54,6 +77,11 @@ You probably just want to go DOWN to the basement.
 "Rats, I..." you think as you see red. That's not quite it.
 >undo
 >undo
+
+@sli
+#slider test for stair
+>tsira
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t!1,2
 >d
@@ -143,6 +171,11 @@ You don't need to do any more with the stair.
 >out
 >u
 
+@sli
+#slider test for ramp
+>arpm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==t2
 #spechelp for pram
 >rapm
@@ -189,6 +222,11 @@ WRONG
 >d
 Largely All-Grey Gallery
 
+@sli
+#slider test for snib
+>nsbi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 ==t2
 #spechelp for ISBN bins
 >snbi
@@ -205,6 +243,11 @@ The ISBN bins are secure. Best not tinker.
 
 >x settler
 >in
+
+@sli
+#slider test for flier
+>lferi
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 ==t2
 #spechelp for rifle
@@ -243,6 +286,13 @@ Better to pump Elmo for information.
 >1
 >3
 Carven Cavern
+
+@sli
+#slider test for staple
+>tspael
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stapler
+>tspaerl
 
 ==t2
 #spechelp for plates

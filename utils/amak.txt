@@ -1,6 +1,6 @@
 ###################optionals are in CAPS
 # ordeal reload has +2 for basement and a point for stapling the curtain, so total ponts = anagrams + 2
-reload/loader/ordeal=lamp,satchel,PAINTING,BASEMENT,CHIMNEY,stable /
+ordeal-reload/reload/loader/ordeal=lamp,satchel,PAINTING,BASEMENT,CHIMNEY,stable /
     stair,RAMP /
     SNIB /
     staple,stapler,flier
