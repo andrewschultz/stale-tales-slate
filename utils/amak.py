@@ -37,6 +37,26 @@ def usage(header="Usage for amak.py"):
     print("otherwise, words are changed to anagrams, or if they are regions, all words in the region are anagrammed.")
     exit()
 
+def slider_script_check():
+    extraneous = linebreak_errs = 0
+    for x in glob("rbr-*.txt"):
+        with open(x) as file:
+            for (line_count, line) in enumerate(file, 1):
+                if line.startswith("@sli") and not line.strip:
+                    linebreak_errs += 1
+                    print("Need line break before @sli in {} line {}.".format(x, line_count))
+                prev_blank = not line.strip()
+    for x in glob("reg-*.txt"):
+        if 'slider' in x: continue
+        with open(x) as file:
+            for (line_count, line) in enumerate(file, 1):
+                if '#slider' in line:
+                    print("Extraneous slider test in {} line {}.".format(x, line_count))
+                    extraneous += 1
+                prev_blank = not line.strip()
+    if not extraneous + linebreak_errs: print("No errors in the script check test!")
+    else: print(extraneous, "extraneous tests and", linebreak_errs, "line break tests.")
+
 def test_search(to_search):
     search_mod = to_search.replace(' ', '-')
     file_names = ["rbr-roi-{0}.txt".format(search_mod), "reg-roi-slider-randoms.txt" ]
@@ -254,6 +274,9 @@ if len(sys.argv) > 1:
             start_after = True
         elif q == 'e':
             os.system(amak_txt)
+            sys.exit()
+        elif q == 'sc':
+            slider_script_check()
             sys.exit()
         elif q == 'as':
             add_suggested = True
