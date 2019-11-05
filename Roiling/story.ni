@@ -115,7 +115,7 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regtab of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
+Ordeal Reload is an unsolved region. regtab of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib] [non-anagram = staple curtain]
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
@@ -5008,7 +5008,7 @@ to say to-center:
 	say "[if player is in Actionless Coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Fringe Finger]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
 
 carry out towers-hinting:
-	if player is in Loftier Trefoil, try objhinting h-w instead;
+	if player is in Loftier Trefoil, try objhinting h-p instead;
 	if location of player is Rawest Waters, try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
 	if player is in Anemic Cinema and mardier admirer is in Anemic Cinema, try objhinting mardier admirer instead; [we do some intelligent hinting here for guardians of highest priority]
 	if player is in Danger Garden and bonker is in Danger Garden, try objhinting bonker instead;
@@ -5019,7 +5019,7 @@ carry out towers-hinting:
 		if mr-hinty is touchable, try objhinting mr-hinty instead;
 		d "Oops! A bug!";
 		any-guardian-hint instead;
-	if player is in Loftier Trefoil, try objhinting h-w instead;
+	if player is in Loftier Trefoil, try objhinting h-p instead;
 	if Scope Copse is unvisited, all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
 	if Shaven Havens is unvisited, all-say "There's an important location in the center of the Wildest Wilteds, [to-center] of here. You'll want to [if Shaven Havens is accessible]go[else]make a path[end if] there." instead;
 	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient, all-say "Collect the loot from the Treading Gradient." instead;
@@ -5647,7 +5647,7 @@ Cruelest Lectures	"The trumped-up charges and the teleological lectures have con
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
-Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You just need to find No-Lag Logan[end if]."
+Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes, far from No-Lag Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
 Sonancy Canyons	"You must be close, but you can't quite rely on compass directions, yet."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters[end if]." [troves]
@@ -5657,7 +5657,7 @@ Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just wa
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
-Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out before doing ANYTHING[if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
+Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out before doing ANYTHING[else if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
@@ -7165,6 +7165,11 @@ check fliptoing (this is the check region ending flip rule):
 		consider the check final region action rule for noun;
 		unless the rule succeeded, do nothing instead;
 
+this is the mesa-pass rule:
+	if noun is lairage regalia and adobe abode is visited, try entering Uhh Tut Hut instead;
+	if noun is adsorbing signboard and Idle Deli is visited, try entering resto store instead;
+	if noun is scripture picturers and Cleric Circle is visited, try entering snatchier chantries instead;
+
 check fliptoing (this is the portal palm and reflexive flip rule):
 	d "Trying to flip [noun].";
 	if noun is touchable:
@@ -7172,6 +7177,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 		if noun is reflexive or noun is vanishing, continue the action;
 		repeat through regana of mrlp:
 			if noun is the-to entry and the-from entry is reflexed:
+				abide by the mesa-pass rule;
 				print-the-from the-from entry;
 				the rule succeeds;
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [noun] for a point, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
@@ -7648,7 +7654,7 @@ check opening isolani liaison:
 		now urgent Gunter is in Dusty Study;
 		set the pronoun him to Urgent Gunter;
 		set the pronoun her to Elvira;
-		pad-del "rove over";
+		[pad-del "rove over";] [?? not sure why this is here]
 		try talking to urgent Gunter instead;
 	say "A rallies sallier? With snipers pressin[']? Better not." instead;
 
@@ -10079,6 +10085,8 @@ part verbs
 
 chapter make sure they don't clash
 
+[?? can we delete this?]
+
 insideing is an action applying to nothing.
 
 understand the command "inside" as something new.
@@ -10086,7 +10094,7 @@ understand the command "inside" as something new.
 understand "inside" as insideing.
 
 carry out insideing:
-	if player is in Same Mesa, try fliptoing picturers instead;
+	if player is in Same Mesa and Cleric Circle is unvisited, try fliptoing picturers instead;
 	try going inside instead;
 
 part people and things
@@ -15383,7 +15391,7 @@ after printing the locale description for Loftier Trefoil when Loftier Trefoil i
 	continue the action;
 
 rule for printing a locale paragraph about a picaro (called pp):
-	if ww is not Rodney, The rule succeeds;
+	if pp is not Rodney, The rule succeeds;
 	now Rodney is mentioned;
 	say "Sir Rodney, still loud and boastful, is [if vw is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of prosaic picaros blocking the way out. [they-just] [list of followy picaros][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
 	now all touchable picaros are mentioned;
@@ -17326,9 +17334,9 @@ carry out warwaring:
 
 chapter picaros
 
-A picaro is a kind of person. a picaro is usually vanishing. a picaro can be leaderly. a picaro is usually not leaderly. a picaro can be pinko. a picaro is usually not pinko. a picaro is usually terse. a picaro has a number called pod-num. a picaro has a number called pod-ord.
+A picaro is a kind of person. a picaro is usually vanishing. a picaro can be leaderly. a picaro is usually not leaderly. a picaro can be pinko. a picaro is usually not pinko. a picaro is usually terse. a picaro has a number called pod-num. a picaro has a number called pod-ord. the plural of picaro is picaros.
 
-h-p is a picaro that varies. [h-w means hinted picaro]
+h-p is a picaro that varies. [h-p means hinted picaro]
 
 the chum of a picaro is usually Andres.
 
@@ -17345,10 +17353,10 @@ after fliptoing a picaro (this is the trefoil exit rule):
 	else if vw is 4:
 		say "Rodney's followers look a bit shaken. If you got rid of him by saying [if roddro is true and rodyon is true]YONDER or DRONEY[else if rodyon is true]YONDER[else if roddro is true]DRONEY[else]something to shoo him[end if], you might be able to clear the lot. Or you can mess with all his pals, first. Your choice.";
 	if vw > 1:
-		now h-w is a random not leaderly picaro in Loftier Trefoil;
+		now h-p is a random not leaderly picaro in Loftier Trefoil;
 	else:
 		say "Time to put Rodney out of his misery. Okay, he'll still be miserable, so just put [i]yourself[r] out of the range of his misery.";
-		now h-w is rodney;
+		now h-p is rodney;
 	continue the action;
 
 rod-hint is a truth state that varies.
@@ -17484,7 +17492,7 @@ when play begins (this is the distribute picaros rule) :
 		repeat with QQ running through picaros:
 			if pod-num of QQ is mypod and pod-ord of QQ is H:
 				now QQ is in Loftier Trefoil;
-	now h-w is a random not leaderly picaro in Loftier Trefoil;
+	now h-p is a random not leaderly picaro in Loftier Trefoil;
 
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 

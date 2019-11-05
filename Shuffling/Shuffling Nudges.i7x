@@ -7,7 +7,11 @@ volume nudges
 [nuch.py makes sure that all the nudges have a test case assigned]
 [stsv.py verifies the hash values with the strings]
 
-[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take random (or likely quickest-walkthrough) priority over others. For instance, you can go west or east from Self-ID Fields, or north or south from Undesired Underside. But going north in the Underside leads to more immediately solvable puzzles.]
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take random (or likely quickest-walkthrough) priority over others.
+For instance, you can go west or east from Self-ID Fields, or north or south from Undesired Underside.
+Going east from Self-ID Fields leads to an area you can clear quickly and ignore.
+Going north in the Underside leads to more immediately solvable puzzles.
+]
 
 book nudge tables
 

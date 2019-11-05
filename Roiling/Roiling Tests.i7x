@@ -507,7 +507,7 @@ carry out whiing:
 
 chapter fixtowing
 
-[* FIXTOW fixes certain warriors in Loftier Trefoil. The easiest ones. geno daryl blake eldon wade goldy]
+[* FIXTOW fixes certain picaros in Loftier Trefoil. The easiest ones. geno daryl blake eldon wade goldy]
 
 fixtowing is an action out of world.
 
@@ -518,7 +518,7 @@ understand "fixtow" as fixtowing.
 carry out fixtowing:
 	if Loftier Trefoil is visited:
 		say "Note: you've visited the Trefoil, so anything goofy that happens is not really fixable. It's best to use this before doing so, so you can access trickier parts of Towers.";
-	repeat with WA running through warriors:
+	repeat with WA running through picaros:
 		if WA is not rodney:
 			moot WA;
 	now geno is in Loftier Trefoil;
@@ -923,7 +923,7 @@ carry out ploping:
 	if Loftier Trefoil is visited:
 		say "Skipping the Trefoil as you've been there.";
 	else:
-		now all warriors are in Loftier Trefoil;
+		now all picaros are in Loftier Trefoil;
 		say "Dumping every warrior in the Trefoil.";
 		say "ts, towers, in, y for towers.";
 	if macked-out > 0:
@@ -949,7 +949,7 @@ every turn when player is in Disowned Downside and macks are in Disowned Downsid
 
 every turn when player is in Loftier Trefoil and uber-rand-cheat is true (this is the uber-towers rule):
 	say "Adjectives available:";
-	repeat with QQ running through warriors in Loftier Trefoil:
+	repeat with QQ running through picaros in Loftier Trefoil:
 		choose row with the-from of QQ in table of towers anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
@@ -968,7 +968,7 @@ to place-warrior (myp - a number) and (myi - a number):
 	let temp-ord be 0;
 	let cur-war be Rodney;
 	let max-pod be 0;
-	repeat with QQ running through warriors:
+	repeat with QQ running through picaros:
 		if pod-num of QQ is myp:
 			if pod-ord of QQ > max-pod:
 				now max-pod is pod-ord of QQ;
@@ -976,7 +976,7 @@ to place-warrior (myp - a number) and (myi - a number):
 	if myi2 > max-pod:
 		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
 		now myi2 is max-pod;
-	repeat with QQ running through warriors:
+	repeat with QQ running through picaros:
 		if pod-num of QQ is myp and pod-ord of QQ is myi2:
 			if QQ is in Loftier Trefoil:
 				say "Oops, we placed [QQ] twice. [myp] [myi2].";
@@ -1012,7 +1012,7 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 	let found-yet be false;
 	let act-index be the remainder after dividing number understood by 100;
 	let seedflags be number understood / 100;
-	say "USAGE NOTES:[line break]1=Balmer 2=Mr Beal[line break], 10=the pod(1..8) for the macks, 1=the pod number(1..5) for the warriors.[paragraph break]Seed flags can be anything up to 4.";
+	say "USAGE NOTES:[line break]1=Balmer 2=Mr Beal[line break], 10=the pod(1..8) for the macks, 1=the pod number(1..5) for the picaros.[paragraph break]Seed flags can be anything up to 4.";
 	if act-index > 8:
 		say "[b]WARNING: this is probably out of range, but we are rounding down.[r][line break]";
 	if act-index < 1:
@@ -1037,13 +1037,13 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 			else:
 				assign-fixed-mack-priority;
 	if the remainder after dividing seedflags by 4 < 2:
-		if Loftier Trefoil is visited and number of moot warriors > 0: [first, seed the start of TOWERS]
+		if Loftier Trefoil is visited and number of moot picaros > 0: [first, seed the start of TOWERS]
 			say "Skipping Trefoil seeding as you've already disposed of one warrior. Restart if you wish to re-seed.";
 		else:
 			if act-index > 5:
 				say "Decreasing index to 5 for the Trefoil.";
 				now act-index is 5;
-			now all warriors are off-stage;
+			now all picaros are off-stage;
 			repeat with J running from 1 to 7:
 				place-warrior J and act-index;
 

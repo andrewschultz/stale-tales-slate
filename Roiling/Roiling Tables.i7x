@@ -69,8 +69,8 @@ sheol holes	sheol holes	false	356906602	--	"around"	"around"	pre-around-unroad r
 un-road	un-road	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water under Da Mist over there."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' It is No-Lag Logan. You protest. You need someone to show you the way! 'You will learn from my impetuousness,' says No-Lag Logan. I needed some weird unusual direction, but I just went ahead and tried any old thing ... and now I have just this Cripple Clipper. It will not work for me, but if you got here, it will work for you."
 thickness sketchins	thickness sketchins	false	441136547	Sonancy Canyons	"athwart"	"athwart"	--	post-athwart rule	"Not just any direction will do. You need something nautical. And there it is. Athwart--helps you navigate around tough bits. 'Ahoy, eh? Oh yeah!' you yell, identifying the mast and stuff. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction.[paragraph break]Harbor! Rah, bro! The bad oar helps you on your way but snaps as you land. You think you yourself, scan yon... so canny... and you wind up somewhere different."
-hurt hog	hurt hog	false	475056505	--	"through"	"through"	--	post-hurt-hog-through rule	"You realize it's time to move on. So you do."
-bent ewe	bent ewe	false	681789531	--	"between"	"between"	pre-between-bentewe rule	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
+hurt hog	hurt hog	false	475056505	--	"through"	"through"	pre-hurt-hog-through rule	post-hurt-hog-through rule	"You realize it's time to move on. So you do."
+bent ewe	bent ewe	false	681789531	--	"between"	"between"	--	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
 raptest patters	raptest patters	false	575888338	--	"without"	"without"	--	--	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
 yob den	yob den	false	432873440	Strip of Profits	"beyond"	"beyond"	--	--	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface. And you do... it's much quicker than you'd think! You turn around, and there's the yob den, cheering for you. A drama armada is also there, applauding you. You realize you're just outside of the poison stripe, and it turns a final shade of bright green before it winks out and vanishes. 'Pardone...a pro end! One, pard!' It's Brother Horbert. 'These other people, well, they promoted me to an Aproned Padrone. I hope I'm up to it. But I know you have other places to be ... thank you... just one more thing?[paragraph break]In private, you help him change a Groans Sarong back to organs, which will spread joy and music and art through Yorpwald. Behind the sarong is a way through Old Warpy. As you enter, you notice No-Lag Logan has joined the crowd waving to you."
 
@@ -497,12 +497,6 @@ this is the post-lecturer-outside rule:
 
 section routes auxiliary
 
-this is the pre-between-bentewe rule:
-	if noun is hurt hog and bent ewe is reflexive:
-		say "That could work later, but the hog and ewe don't trust you to go by yet.";
-		preef noun;
-		do nothing instead;
-
 this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
 	[if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:]
 	if drama armada is in Same Mesa or THE BEAN is in Same Mesa, say "But... [if THE BEAN is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
@@ -528,7 +522,7 @@ this is the post-past rule: now resto store is clue-used; [?? rivets/Trevis Vist
 
 this is the pre-sitanag-against rule:
 	if list o toils is unexamined:
-		say "You hear loud footsteps and hide under the [sit a nag] in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. [if Cleric Circle is not visited]Maybe if you could find a way inside that church[else]Perhaps you could find something to do from Brother Horbert[end if].";
+		say "You hear loud footsteps and hide under the [sit a nag] in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. [if Cleric Circle is not visited]Maybe if you could find a way to visit the Cleric Circle and find inner peace[else]Perhaps you could find something to do from Brother Horbert[end if].";
 		preef sit a nag instead;
 	if Gast is off-stage:
 		say "You hear a giant's footsteps in the distance--but your talk with Brother Horbert has helped you be fearless.";
@@ -579,6 +573,12 @@ this is the post-around-unroad rule:
 this is the post-athwart rule:
 	moot bad oar;
 
+this is the pre-hurt-hog-through rule:
+	if bent ewe is reflexive:
+		say "That could work later, but the hog and ewe don't trust you to go by yet.";
+		preef noun;
+		do nothing instead;
+
 this is the post-hurt-hog-through rule:
 	moot bent ewe;
 	moot hurt hog;
@@ -609,7 +609,6 @@ this is the bee-less-active rule:
 		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
 
 this is the pre-cellar-recall rule:
-	if evil bee is off-stage, say "You haven't forgotten anything important, yet." instead;
 	if bee-score is 0:
 		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
 		preef l'clear cellar;
@@ -767,7 +766,7 @@ this is the post-wzup rule:
 	now Rand is eager;
 
 this is the post-pooh-phooey rule:
-	if the player's command contains the word "phooey":
+	if the player's command includes "phooey":
 		min-up;
 		now phooeyed is true;
 	else:

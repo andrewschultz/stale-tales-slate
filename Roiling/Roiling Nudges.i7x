@@ -8,7 +8,13 @@ volume table of nudges
 [?? todo: make sure that nothing seeps into non-nudge stuff]
 [stsv.py verifies the hash values with the strings]
 
-[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. I try for the room that probably has more immediate stuff to do. Then I just loop clockwise from the direction you entered. For instance, Towers does the clockwise thing because it's sort of a grid anyway, but with Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region. Otters is stll a bit messy, but the way through is Midden/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Inclosure, Rancho. Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last.]
+[Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. There's a combination of most immediate stuff to do and the most efficient walkthrough. Then I just loop clockwise from the direction you entered. For Routes and Troves, it's pretty much a one-way shot, though exploring the Cleric Circle is the most natural way through, and the Deli and Adobe have equal priority..
+With Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region.
+For Presto, the maze, which is unnecessary, comes right after the gyre so I don't forget it. Also, you can kill it off right away. Then west of the Gyre, because there's only one thing to do. Then you need to go south to see what's east.
+Towers goes south-to-north then east-to-west, picking off side rooms like Lost Lots as they open up, because it's sort of a grid anyway.
+Otters is stll a bit messy, but the way through is Midden/Brunt, Downside, Pool (easier than barn), Barn, north/south rooms, Inclosure, Rancho.
+Others leaves Gates Stage for last, the last room to visit, with the Swell Wells below being second-last. The Field and Clearing are both equally critical, but since the Field's puzzles are more tightly themed, I put it first.
+]
 
 book nudge tables
 
