@@ -1,9 +1,9 @@
 # rl.txt = logic clues for A Roiling Original
 #
+->c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling
 out=roiling-logic-invisiclues.htm
 raw=roiling-logic-invisiclues-raw.htm
 !A Roiling Original HTML Logic Clues
-->c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling
 # remember to check this with logsync.py
 ====end header
 >GENERAL
@@ -119,13 +119,13 @@ You have BUBDU and DEEGG. They give ???Y?. This looks like a tall task.
 D and G are only possible one place, giving us D(EU)(BE)(EU)G.
 But now B is only possible one place! D(EU)B(EU)G. DUBEG doesn't quite work.
 DEBUG.
-#logic for drive a a drive varied
+#logic for drive a / a drive / varied
 ?Why does Drive A throw out all these question marks?
 It's A Drive, Varied, as well. This presents a lot of potential conflicts, but it makes some things easy, too.
 The ?R?R?R clue tells you where the vowels are, and slot 1 must be A, 3 must be I, and 5 must be E, since one of the letters must be right, and these are the only vowels.
 Then slot 2 is forced to be V.
 Slot 6 must be R. AVIDER.
-#logic for drive e e drive
+#logic for drive e / e drive
 ?Why does Drive E throw out all these question marks?
 It's not only Drive E but also E Drive. The puzzle might be too easy with question marks, so I threw this curve ball in.
 But actually, it's still not too bad, as the question marks fall out quickly. The green at the end is a nice help.
@@ -142,6 +142,20 @@ That means the others must be consonants. Now we should probably be conservative
 Slot 6 is D, and that makes things easier. (RT)(OA)(RW)(OA)(RST)D(RSW). We can make an educaated guess that S is the last letter, since .....D(RW) would be nonsense.
 That helps a few things fall out: (RT)(OA)(RW)(OA)(RT)DS, or (RT)(OA)W(RT)DS.
 The RADWOST red text leaves us with TOWARDS.
+#logic for pat's stap
+?How do I enter Pat's Stap?
+The ??RR suggests that there is one vowel in the first two letters.
+But the first letter is P or S, so the second letter is the vowel.
+The fourth letter gives a red reading, so it can't be S or P. It is T.
+This leaves two possibilities, PAST or SAPT.
+Go PAST.
+#logic for Oscar's SOS ARC
+?How do I enter Oscar's SOS Arc?
+The YRRYR? reading means the final letter is a consonant, but we already kmew it was S or C, so that's not really helpful. But having the SOS ARC helps us place a lot of letters.
+The first letter is a vowel, so it must be O. That means the fourth letter must be A. (We could also solve the fourth, then the first.)
+S cannot be in positions 2 or 3. That leaves 5 and 6.
+So with A--OSS, you may be able to guess, but just in case, position 3 can't be C. That solves everything.
+ACROSS.
 #logic for anti sag sit a nag
 ?What's with the Anti Sag Sit a Nag?
 It has a few question marks, but the double A's help a lot. Slot 4 must be a vowel and 5 must be a consonant, making slot 1 an A. A(GST)(AI)(AI)(NS)(GNST)(NST).

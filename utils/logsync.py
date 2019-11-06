@@ -657,6 +657,7 @@ with open(logic_invis) as file:
             last_question_line = line_count
         if ll.startswith("# logic for ") or ll.startswith("#logic for"):
             scanned = re.sub("^# ?logic for ", "", ll)
+            scanned = re.sub(" */ *", " ", scanned)
             if scanned in got_logic_invis.keys():
                 print("Duplicate logic-for in rl.txt:", scanned, "line", line_count, "originally", got_logic_invis[scanned])
             else:
@@ -689,7 +690,8 @@ with open(logic_reds) as file:
 
 check_aftertexts()
 
-check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
+#we no longer need to check logic.htm as it is generated from the invisiclues file.
+#check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
 check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues", launch_message = "invis.pl rl e")
 check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed >= 0), launch_message = "reds.txt / reds.pl -e")
 
