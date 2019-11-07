@@ -2,7 +2,7 @@ Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
 
 volume nudges
 
-[remember to sort with nud.pl after changes or, perhaps, before release. NUD.PL organizes the "to say" and "rule" in the same order they appear in the table.]
+[remember to sort with rorg.py so say/rules are in same order post-table as in the table]
 
 [nuch.py makes sure that all the nudges have a test case assigned]
 [stsv.py verifies the hash values with the strings]
@@ -673,7 +673,23 @@ to say no-con: say "No conifers appear. Maybe you can just use your senses, and 
 
 to say guider-content: say "No, that's not the [i]essence[r] of the thing."
 
+this is the forest-south rule:
+	if shout is touchable, the rule succeeds;
+	the rule fails;
+
 to say forest-no of [x - a thing]: say "Your compass feels extra jumbled[if x is touchable]. [badana of x][else if x is moot], and you remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
+
+this is the forest-north rule:
+	if thorn is touchable, the rule succeeds;
+	the rule fails;
+
+this is the forest-west rule:
+	if stew is touchable, the rule succeeds;
+	the rule fails;
+
+this is the forest-east rule:
+	if teas are touchable, the rule succeeds;
+	the rule fails;
 
 to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
 

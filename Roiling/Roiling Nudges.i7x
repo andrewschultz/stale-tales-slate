@@ -2,7 +2,7 @@ Version 1/151226 of Roiling Nudges by Andrew Schultz begins here.
 
 volume table of nudges
 
-[remember to sort with nud.pl after changes or, perhaps, before release. NUD.PL organizes the "to say" and "rule" in the same order they appear in the table.]
+[remember to sort with rorg.py so say/rules are in same order post-table as in the table]
 
 [nuch.py makes sure that all the nudges have a test case assigned]
 [?? todo: make sure that nothing seeps into non-nudge stuff]

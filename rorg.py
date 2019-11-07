@@ -249,7 +249,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
 
 cmd_count = 1
 while cmd_count < len(sys.argv):
-    arg = sys.argv[cmd_count].lower()
+    arg = mytools.nohy(sys.argv[cmd_count])
     if arg == 'c': copy_file = True
     elif arg == 'nc' or arg == 'cn': copy_file = False
     elif arg == 'v': verbose = True
