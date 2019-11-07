@@ -365,8 +365,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unwary"	491818961	Unwary Runway	--	--	"[locname]." [start Unwary Runway]
 "bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "dreidl"	353994775	--	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
-"alvez"	413942204	--	Tom Alvez	--	"No, his full name is the clue, here."
-"tom"	241537748	--	Tom Alvez	--	"No, his full name is the clue, here."
+"avlez"	413942204	--	Tom Avlez	--	"No, his full name is the clue, here."
+"tom"	241537748	--	Tom Avlez	--	"No, his full name is the clue, here."
 "mavelt"	458157757	--	Zo Mavelt	--	"No, his full name is the clue, here."
 "lev"	288784768	--	Lev Tzoma	--	"No, his full name is the clue, here."
 "tzoma"	366695184	--	Lev Tzoma	--	"No, his full name is the clue, here."

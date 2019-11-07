@@ -9,7 +9,7 @@ raw=roiling-logic-invisiclues-raw.htm
 >GENERAL
 ?Which puzzles are discussed here?
 Only puzzles where the settler throws a question mark in cheat mode.
-There's a brief recap of how to deal with the settler if it doesn't throw a question mark, but since the question mark may be unusually confusing, I tried to break down how it actually helps you long-term once you know how to deal with it.
+There's a brief recap of how to deal with the settler if it doesn't throw a question mark, but since the question mark may be unusually confusing, I tried to break down how it actually helps you long-term once you know how to deal with it. One exception is the Volt Maze, which can be determined logically.
 ?Can I get a recap of the settler in general in non-cheat mode?
 Yes. If you scan certain items and then see what they should be, you'll notice a pattern. There's some spoilers below, but if you track settler vs. the right word, you should see a pattern.
 Yellow slots wind up as AEIOU: for instance, STABLE is RRYRRY.
@@ -36,7 +36,7 @@ Combining these observations may allow you to knock off several question marks r
 These won't always get you to the right answer, but they'll often get you closer than even a standard cheat readout with just colors. But they may seem confusing at first.
 ?Are there any fake puzzles in here to throw me off?
 No. That'd be a jerk move. But there are some in the game invisiclues file proper.
->MEANS MANSE
+>ORDEAL RELOAD
 >>CARVEN CAVERN
 # logic for palest pastel plates
 ?How do I decode the palest pastel plates?
@@ -182,7 +182,7 @@ Then 2 must be L. ONALG or ALONG are the only two left. ALONG is the only word o
 ?What is with the thickness sketchins?
 Logan's poem on the Cripple Clipper may be confusing, too,but let's break it down.
 <pre>WHATTAR\nTAWRATH\nTHATRAW\nARTTHAW\n?RRR?RR</pre>
-<br>Now it's frustrating to have two questions marks, but they must both be vowels. The only vowel is A, so ... A---A--.
+Now it's frustrating to have two questions marks, but they must both be vowels. The only vowel is A, so ... A---A--.
 But now we note there must be two T's, and T cannot be in slots 3, 4 or 6, pushing it to 2 and 7. AT--A-T.
 There are three choices left here, based on if slot 6 is H, R or W, and it turns out ATHWART works.
 >STORE V
@@ -628,3 +628,68 @@ The inapt paint says DESERVER RESERVED. It has a lot of question marks, but all 
 #logic for naa na b a banna
 ?Is a banna that tough, with all those question marks?
 Not really. Naa Na b / a banna has only one vowel, A. So you can figure a bit out.
+#skipstart
+>MISCELLANEOUS EXAMPLES
+>>VOLT MAZE
+?How do I solve the volt maze fully logcally?
+First, what is a vowel and what is a consonant? You can scan anywhere.
+<font face="courier new">&nbsp; 1 2 3 4 5 6 7 8
+m . x . x . . x .
+a x . x . x x . x
+z . x . x . . x .
+e x . x . x x . x
+l . x . x . . x .
+t . x . x . . x .
+o x . x . x x . x
+v . x . x . . x .</font>
+VOLT MAZE ditches some possibilities. So do two of the architects: Olav Metz and Zemo Valt. As does the brad: EZ-Ol'-Av'(TM). Everything is red, thus eliminating some possibilities.
+<font face="courier new">&nbsp; 1 2 3 4 5 6 7 8
+m . x x x x x x x
+a x . x x x x x x
+z x x . x . . x x
+e x x x . x x x x
+l . x x x . . x .
+t . x x x . . x x
+o x x x x x x . x
+v x x . x x x x .</font>
+Let's look at the vowels: only A can be in slot 2, leaving only O for slot 7 and E for slot 4.
+<font face="courier new">&nbsp; 1 2 3 4 5 6 7 8
+m . x x x x x x x
+a x + x x x x x x
+z x x . x . . x x
+e x x x + x x x x
+l . x x x . . x .
+t . x x x . . x x
+o x x x x x x + x
+v x x . x x x x .</font>
+But how can we knock out some of the consonants? VZT, Lame-O! knocks out no possibilities even though it is red text. The guys at the end give special hints:l-to-v maze is a big hint, too...you notice it starts at L and goes to V.
+Then if you meet Zo Mavelt and note he's red, you get no further clues. But he's there, if you need him.
+Tom Avlez is the next person you see going through the maze.
+<font face="courier new">&nbsp; 1 2 3 4 5 6 7 8
+m . x x x . x x .
+a x . x x x x . x
+z x x . x . . x x
+e x . x . x x x x
+l . x x x . x x .
+t x x x x . . x x
+o x x x . x x . x
+v x x . x x x x .</font>
+There aren't very many possibilities left, now! But Lev Tzoma is the final guy you'll find. He knocks a few out.
+<font face="courier new">&nbsp; 1 2 3 4 5 6 7 8
+m . x x x . x x .
+a x . x x x x . x
+z x x . x x . x x
+e x x x . x x x x
+l x x x x . x x .
+t x x x x . . x x
+o x x x . x x . x
+v x x x x x x x .</font>
+Now let's see: A must be in slot 2, leaving O for 7 and E for 4.
+<font face="courier new">&nbsp; 1 3 5 6 8
+m . x . x .
+z x . x . x
+l x x . x .
+t x x . . x
+v x x x x .</font>
+Also, m must be in slot 1. Z must be in 3. That leaves T for slot 6. That leaves L fo 5 and V for 8.
+#skipend

@@ -933,7 +933,7 @@ The volt maze is not worth going through manually. You can solve it just reading
 
 > WONT
 
-But if you want full points and want to look through the maze, you meet a guy named Lev Matzo, then Matzo Lev, then Tom Alvez. The maze also goes from L to V. It also has a brand name, and touching the walls makes you see red. The scanner may be necessary, too, though altogether you have enough clues for...
+But if you want full points, first examine the sign for some red clues (Volt Maze, EZ Ol Av TM.) If you want to look through the maze, you meet a guy named Zo Mavelt, then Tom Avlez, then Lev Tzoma. The maze also goes from L to V. It also has a brand name, and touching the walls makes you see red. The scanner may be necessary, too, though altogether you have enough clues for...
 
 (ALT) > MAZELTOV
 

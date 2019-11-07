@@ -1703,7 +1703,7 @@ Rand	"Rand gives a whole new dimension to small talk. But not for long, thankful
 Leo	"Leo gives a whole new dimension to small talk. But not for long, thankfully."
 hogs	"The whole 'Who do you think you are' won't go well with these hogs. They're here to guard you from what's beyond, and that wall is helping."
 Zo Mavelt	"'If you scan me and go north, I'll go away, and someone else might appear.'"
-Tom Alvez	"'If you scan me and go north, I'll go away, and someone else might appear.'"
+Tom Avlez	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 Lev Tzoma	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 trolls	"They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh." [reflex OYSTER]
 patrons	--
@@ -1827,7 +1827,7 @@ lamb	"It's a baaaaad conversationalist." [begin presto]
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
 Lev Tzoma	"[left-here].'"
 Zo Mavelt	"[left-here].'"
-Tom Alvez	"[left-here].'"
+Tom Avlez	"[left-here].'"
 hogs	"They snort and laugh as if you are beneath speaking to or even wasting harsh words at."
 bored yak	"The yak, not being very yakety, does not talk back."
 giant dead flea	"It's sort of dead. Not that it was great conversation when it was alive."
@@ -2048,16 +2048,16 @@ Leo	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
 Rand	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
 Lev Tzoma	Elvira	"'I'm safe from her in this maze. I think?'"
 Zo Mavelt	Elvira	"'I'm safe from her in this maze. I think?'"
-Tom Alvez	Elvira	"'I'm safe from her in this maze. I think?'"
+Tom Avlez	Elvira	"'I'm safe from her in this maze. I think?'"
 Lev Tzoma	volt maze	"[maze-end-clue].'"
 Zo Mavelt	volt maze	"[maze-end-clue].'"
-Tom Alvez	volt maze	"[maze-end-clue].'"
+Tom Avlez	volt maze	"[maze-end-clue].'"
 Zo Mavelt	Lev Tzoma	"[maze-later]."
-Zo Mavelt	Tom Alvez	"[maze-later]."
+Zo Mavelt	Tom Avlez	"[maze-later]."
 Lev Tzoma	Zo Mavelt	"[maze-before]."
-Lev Tzoma	Tom Alvez	"[maze-later]."
-Tom Alvez	Lev Tzoma	"[maze-before]."
-Tom Alvez	Zo Mavelt	"[maze-before]."
+Lev Tzoma	Tom Avlez	"[maze-later]."
+Tom Avlez	Lev Tzoma	"[maze-before]."
+Tom Avlez	Zo Mavelt	"[maze-before]."
 hogs	popgun	"They snicker at the memory."
 hogs	Rand	"They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect."
 hogs	Leo	"They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect."
@@ -7251,7 +7251,7 @@ carry out fliptoing (this is the main fliptoing rule):
 					min-up;
 			if the-from entry is maze walls:
 				if the-from entry is maze walls:
-					if Tom Alvez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned, min-and;
+					if Tom Avlez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned, min-and;
 					min-and;
 			else if the-to entry is not moot or the-to entry is satchel: [more than one point here]
 				if the-from entry is boats and frat raft is reflexed:
@@ -12862,11 +12862,11 @@ Zo Mavelt is a mazeguide.
 
 a-text of Zo Mavelt is "RYRYRRYR". b-text of Zo Mavelt is "RYRYRRYR". parse-text of Zo Mavelt is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-chapter Tom Alvez
+chapter Tom Avlez
 
-Tom Alvez is a mazeguide.
+Tom Avlez is a mazeguide.
 
-a-text of Tom Alvez is "RYRYRRYR". b-text of Tom Alvez is "RYRYPRYR". parse-text of Tom Alvez is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of Tom Avlez is "RYRYRRYR". b-text of Tom Avlez is "RYRYPRYR". parse-text of Tom Avlez is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 chapter Lev Tzoma
 
@@ -13007,7 +13007,7 @@ r14 is a privately-named mazeroom in Presto. it is north of r13.
 
 r04 is a privately-named mazeroom in Presto. it is west of r14.
 
-Unwary Runway is an innie room in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but ahead things narrow--it's a bit scary, and you could be ambushed. Maybe it's worth a try[if Zo Mavelt is off-stage and Tom Alvez is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
+Unwary Runway is an innie room in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but ahead things narrow--it's a bit scary, and you could be ambushed. Maybe it's worth a try[if Zo Mavelt is off-stage and Tom Avlez is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
 
 to say zztrue: now voltzap is true;
 
@@ -13020,7 +13020,7 @@ check going north in Unwary Runway:
 
 section replacing mazeguys
 
-maze-guys is a list of things that varies. maze-guys is { Zo Mavelt, Tom Alvez, Lev Tzoma }.
+maze-guys is a list of things that varies. maze-guys is { Zo Mavelt, Tom Avlez, Lev Tzoma }.
 
 guide-loop is a truth state that varies.
 
