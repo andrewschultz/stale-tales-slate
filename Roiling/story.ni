@@ -409,7 +409,7 @@ every-turn-hint is a truth state that varies. every-turn-hint is false.
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
 
-description of player is "As every[w-man]nish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if]."
+description of player is "As every[w-man]nish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if].". initial appearance of player is "[BUG]".
 
 does the player mean examining the player when mrlp is troves: it is very likely.
 
@@ -12846,7 +12846,7 @@ a mazeroom is a kind of room. the printed name of a mazeroom is usually "Nowt To
 
 the specification of mazeroom is "A room you don't need to visit at all but which might give clues."
 
-a mazeguide is a kind of person. a mazeguide has a number called maze-order. description of a mazeguide is usually "[one of]A man introducing himself as [or][stopping][the person described] stands here [if the person described is bscanned or person described is escanned]nervously[else]waiting for you to do something[end if]."
+a mazeguide is a kind of person. a mazeguide has a number called maze-order. initial appearance of a mazeguide is usually "[one of]A man introducing himself as [or][stopping][the person described] stands here [if the person described is bscanned or person described is escanned]nervously[else]waiting for you to do something[end if].". description of a mazeguide is usually "[the person described] looks around nervously, aware he's a bit of a prop.".
 
 mazeguide-scanned is a truth state that varies.
 
@@ -13050,7 +13050,7 @@ Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop.
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of patrons to 0;
 
-the patrons are useless boring plural-named people in Posh Hops Shop. description of patrons is "Indistinguishable from most barflies, er, bar-fish.". bore-text of patrons is "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of patrons is bore-patrons rule.
+the patrons are useless boring plural-named people in Posh Hops Shop. description of patrons is "Indistinguishable from most barflies, er, bar-fish.". bore-text of patrons is "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of patrons is bore-patrons rule. the patrons are scenery.
 
 this is the bore-patrons rule:
 	if current action is attacking, say "You'd be outnumbered." instead;
@@ -17336,9 +17336,9 @@ chapter picaros
 
 A picaro is a kind of person. a picaro is usually vanishing. a picaro can be leaderly. a picaro is usually not leaderly. a picaro can be pinko. a picaro is usually not pinko. a picaro is usually terse. a picaro has a number called pod-num. a picaro has a number called pod-ord. the plural of picaro is picaros.
 
-h-p is a picaro that varies. [h-p means hinted picaro]
+initial appearance of a picaro is "[the person described] looks to Rodney for orders, though he really should be lumped in with the rest."
 
-the chum of a picaro is usually Andres.
+h-p is a picaro that varies. [h-p means hinted picaro]
 
 the specification of picaro is "A person who blocks your way out of the Trefoil."
 
@@ -17371,6 +17371,8 @@ check taking a picaro: say "You'll have to deal with him[if noun is rodney] and/
 Sir Rodney is a leaderly picaro. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1.
 
 a-text of Rodney is "OYRRYR". b-text of Rodney is "OGRRGR". parse-text of rodney is "y[sp]o[sp]x[sp]x[sp]e[sp]x". rodney is cheat-spoilable.
+
+the chum of a picaro is usually Andres. [moved here so Rodney appears first when iterating through picaros]
 
 Geno is a picaro. description is "Well, Geno is ... here. He hasn't left yet. He may ordinary even among the prosaic picaros, but he's still stronger than you.". pod-num of Geno is 1. pod-ord of Geno is 1.
 
@@ -18943,7 +18945,7 @@ prompt	response	enabled
 
 chapter hydra
 
-The hardy hydra is an animal in Rancho Archon Anchor. description is "One whiff of the decayin['] cyanide smell proves he melts helmets."
+The hardy hydra is an animal in Rancho Archon Anchor. description is "One whiff of the decayin['] cyanide smell proves he melts helmets.". the hardy hydra is scenery.
 
 volume others
 
@@ -19774,7 +19776,7 @@ a-text of peach is "RRYYR". b-text of peach is "RRYYR". parse-text of peach is "
 check taking (this is the shoplift in Clangier Clearing rule) :
 	if noun is in Clangier Clearing, say "No stealing. This is a marketplace!" instead;
 
-people called the No Ammo Gang are in Clangier Clearing. they are plural-named. "People labeled the No Ammo Gang wander about, babbling. Maybe you could find the right way to chat them up.".
+people called the No Ammo Gang are in Clangier Clearing. they are plural-named. "People labeled the No Ammo Gang wander about, babbling. Maybe you could find the right way to chat them up.". description of No Ammo Gang is "Harmless traders. But how to schmooze correctly to get them to trade?"
 
 a-text of No Ammo Gang is "YRYRR". b-text of No Ammo Gang is "YRY??". parse-text of No Ammo Gang is "-[sp]x[sp]-[sp]x[sp]x".
 
