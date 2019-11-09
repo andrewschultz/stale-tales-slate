@@ -26,6 +26,11 @@ definition: a thing (called th) is moot:
 	if th is in Emerita Emirate, yes;
 	no;
 
+definition: a thing (called th) is dislodged: [useful for fruits checking especially in ARO]
+	if th is moot, yes;
+	if th is carried by the player, yes;
+	no;
+
 definition: a thing (called ht) is spayshul:
 	if ht is an xtrhelp listed in the table of spechelp, decide yes;
 	decide no.

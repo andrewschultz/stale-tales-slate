@@ -19,7 +19,7 @@ TOA  = the tables of big point scoring changes, table of * anagrams
 TOH  = table of hint logic
 TMC  = mega-chatter, which logs all the tables I search lists for
 TAF  = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
-TOR/TRB = reflexive blather, asking people about themselves (this is often a default)
+TOR/TRB = reflexive blather, asking people about themselves (this is often a default)person die
 TOD  = default gen blather, about general nonsense e.g. a misunderstood request
 DSB  = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
 TOB  = read ALL the book titles!
@@ -347,7 +347,9 @@ to say email:
 	say "blurglecruncheon@gmail.com";
 
 check taking a fruit (this is the probably archaic debug fruit-flips in case rule) :
-	say "Oops! You should've taken this fruit when you flipped it. [bug-report]" instead;
+	if noun is not carried:
+		now player has noun;
+		say "Oops! You should've taken [the noun] when you flipped it. [bug-report]" instead;
 
 yes-no-warn is a truth state that varies.
 
@@ -409,7 +411,7 @@ every-turn-hint is a truth state that varies. every-turn-hint is false.
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
 
-description of player is "As every[w-man]nish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if].". initial appearance of player is "[BUG]".
+description of player is "As every[w-man]nish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if].". initial appearance of player is "[bug-report]".
 
 does the player mean examining the player when mrlp is troves: it is very likely.
 
@@ -1572,6 +1574,10 @@ check talking to (this is the hint looking not talking rule):
 	if noun is armada, say "They're not in the mood for remotely reasonable conversation." instead;
 	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
 	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead;
+	if litany of noun is not table of no conversation:
+		now qbc_litany is litany of noun;
+		do nothing instead;
+	if noun is span pans, say "The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
 
 section specifically
 
@@ -3763,14 +3769,14 @@ carry out requesting the score:
 		left-to-see instead;
 	if roved is true:
 		if player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to get to store H[else]Enter the Throes Hoster for the final region[end if]." instead;
-		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region[if min-score of mrlp < max-score of mrlp], but you only need [min-score of mrlp][end if].";
+		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region[if min-score of mrlp < max-score of mrlp], but you only need [min-score of mrlp][end if][if did-guru is true]. You can't get the maximum, since you used the arugula[end if].";
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
 	else:
 		d "# of turns = [turn count].";
 		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
-		if cur-score of mrlp is max-score of mrlp:
+		if cur-score of mrlp is poss-score of mrlp:
 			if mrlp is Ordeal Reload:
 				say ". You should go IN to the Strip of Profits, now";
 			else if mrlp is others:
@@ -3778,7 +3784,7 @@ carry out requesting the score:
 			else if mrlp is stores:
 				say ". You have access to all the sub-areas";
 			else:
-				say ". BUG: your final action should always score the final point";
+				say ". BUG: your final action should score the final point in this region";
 		else:
 			if mrlp is not solved and possibles is true:
 				if min-score of mrlp < poss-score of mrlp:
@@ -5593,17 +5599,19 @@ after taking inventory when mrlp is others:
 	eval-fruits;
 	continue the action;
 
+to decide which number is fruits-got: decide on number of moot fruits + number of held fruits;
+
 to eval-fruits:
+	say "[line break]DEBUG NOTE: MISSES shows fruits left.";
 	if moss cap is off-stage, continue the action;
-	if player has droll dollar:
+	if droll dollar is not off-stage:
 		say "You can't expect anything more from Curtis.";
 		continue the action;
 	let next-goal be (curtis-level + 2) * 4;
-	let fruits-got be number of moot fruits + number of held fruits;
 	if fruits-got >= next-goal:
-		say "You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
+		say "[line break]You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
 	else:
-		say "You need [next-goal - fruits-got in words] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
+		say "[line break]You need [next-goal - fruits-got in words] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
 
 section iving
 
@@ -7180,7 +7188,8 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 				abide by the mesa-pass rule;
 				print-the-from the-from entry;
 				the rule succeeds;
-		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [noun] for a point, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
+		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [the noun] for a point and failed, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
+		say "(examining)[line break]";
 		try examining noun instead;
 	if noun is meet bans or noun is tables or noun is palm or noun is giant pin or noun is niche:
 		if Gunter is not moot:
@@ -8324,7 +8333,7 @@ chapter Mole Elmo
 
 Mole Elmo is a person. description is "He is waving that rifle you probably need to neutralize. Yet you can't tell if his expression says wry, or worry.". "[if do-i-chat is true]Mole Elmo's rifle changes to a flier[else]Mole Elmo looks at you, then the rifle, half as if he wants you to do something with it[hi-sign][end if].".
 
-Mole Elmo holds the rifle. description of rifle is "It's probably loaded with a bullet with your name on it. But you don't want to find out. You think you can read writing on it, if you look closely.". bore-text of rifle is "You're not in a position to do anything physical with the rifle. Maybe it can become something.". bore-check of rifle is bore-rifle rule.
+Mole Elmo holds the rifle. description of rifle is "It's probably loaded with a bullet with your name on it. But you don't want to find out. You think you can read writing on it, if you look closely.". bore-text of rifle is "You're not in a position to do anything physical with the rifle. Maybe it can become something.". bore-check of rifle is bore-rifle rule. the rifle is vanishing.
 
 understand "gun" as rifle.
 
@@ -8342,18 +8351,21 @@ a-text of rifle is "RRYYR". b-text of rifle is "RRYYR". parse-text of rifle is "
 
 selftalk-warn is a truth state that varies.
 
-before talking to (this is the default talking to rule):
-	if noun is not Elmo and noun is not Gunter and noun is not Elvira and noun is not Gretta:
-		if noun is Gretta and macks are touchable, say "The macks are monopolizing the conversation. Maybe you should get rid of them." instead;
-		if noun is a person:
-			if selftalk-warn is false:
-				ital-say "ASK (PERSON) ABOUT (PERSON/THING) is what this game uses for detailed conversation. However, TALKing asks about a default subject and gives a general reply, which may be useful, too. You can do so now, and this warning won't appear again.";
-				pad-rec "talking";
-				now selftalk-warn is true;
-			try objasking noun about noun instead;
-	if noun is door, say "The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
+check talking to Gretta:
+	if macks are touchable, say "The macks are monopolizing the conversation. Maybe you should get rid of them." instead;
+
+check talking to a person:
+	if litany of noun is table of no conversation:
+		ital-say "ASK (PERSON) ABOUT (PERSON/THING) is what this game uses for detailed conversation. However, TALKing asks about a default subject and gives a general reply, which may be useful, too. You can do so now, and this warning won't appear again.";
+		pad-rec "talking";
+		now selftalk-warn is true;
+		try objasking noun about noun instead;
+	now qbc_litany is litany of noun;
+	display the QBC options;
+
+check talking to:
 	repeat through table of default-gen-blather:
-		if noun is default-talker entry, say "[gen-blah entry][line break]" instead;
+		if noun is default-talker entry and there is a gen-blah entry, say "[gen-blah entry][line break]" instead;
 	if noun is not brr hub, say "You can only talk to animate objects. This isn't one, or the game (mistakenly or otherwise) doesn't think it's one." instead;
 
 check talking to Mole Elmo (this is the can't talk while Elmo has the rifle rule) : if rifle is not moot, say "'Hostages['] hot gases!' Elmo booms, waving his rifle." instead;
@@ -12846,7 +12858,7 @@ a mazeroom is a kind of room. the printed name of a mazeroom is usually "Nowt To
 
 the specification of mazeroom is "A room you don't need to visit at all but which might give clues."
 
-a mazeguide is a kind of person. a mazeguide has a number called maze-order. initial appearance of a mazeguide is usually "[one of]A man introducing himself as [or][stopping][the person described] stands here [if the person described is bscanned or person described is escanned]nervously[else]waiting for you to do something[end if].". description of a mazeguide is usually "[the person described] looks around nervously, aware he's a bit of a prop.".
+a mazeguide is a kind of person. a mazeguide has a number called maze-order. initial appearance of a mazeguide is usually "[one of]A man introducing himself as [or][stopping][printed name] stands here [if the item described is bscanned or item described is escanned]nervously[else]waiting for you to do something[end if].". description of a mazeguide is usually "[the person described] looks around nervously, aware he's a bit of a prop.".
 
 mazeguide-scanned is a truth state that varies.
 
@@ -17336,7 +17348,7 @@ chapter picaros
 
 A picaro is a kind of person. a picaro is usually vanishing. a picaro can be leaderly. a picaro is usually not leaderly. a picaro can be pinko. a picaro is usually not pinko. a picaro is usually terse. a picaro has a number called pod-num. a picaro has a number called pod-ord. the plural of picaro is picaros.
 
-initial appearance of a picaro is "[the person described] looks to Rodney for orders, though he really should be lumped in with the rest."
+initial appearance of a picaro is "[the item described] looks to Rodney for orders, though he really should be lumped in with the rest."
 
 h-p is a picaro that varies. [h-p means hinted picaro]
 
@@ -18989,6 +19001,19 @@ after printing the name of arugula when taking inventory:
 
 can-guru is a truth state that varies.
 
+section gxing
+
+gxing is an action applying to one thing.
+
+understand the command "gx" as something new.
+
+understand "gx [something]" as gxing when mrlp is others.
+
+carry out gxing:
+	try guruing the noun;
+	say "Taking arugula back. NOTE: this totally trashes your score.";
+	now player has arugula;
+
 section guruing
 
 guruing is an action applying to one thing.
@@ -19011,6 +19036,8 @@ carry out guruing:
 		if noun is the-from entry:
 			if noun is compass:
 				say "Whoah! A compass begins spinning.";
+			else if noun is a fruit:
+				say "You focus and squint and realize you need to think or say [right-word entry in upper case].";
 			else:
 				say "You focus and squint, and some fruit appears in your vision: [if indefinite article of the-to entry is non-empty][indefinite article of the-to entry] [end if][the-to entry]. The aftertaste of arugula finally dissipates.";
 			now can-guru is false;
@@ -19190,7 +19217,7 @@ to say if-clear: say "[if Clangier Clearing is visited]--ah, you're nodding, you
 
 table of coingiving
 levb4	levaf	get-token	get-coin	get-coins	get-dollar	blabber
-0	1	1	0	0	0	"'Ok. Neat. Take on a token. There's a clearing some ways away[if-clear]where you can swipe it to trade for things. Haggle. That sort of thing.'"
+0	1	1	0	0	0	"'Ok. Neat. Take on a token. There's a clearing some ways away[if-clear]where you can swipe it to trade for things. Haggle. That sort of thing.' Curtis hands you a tekno-token."
 0	2	1	1	0	0	"'Wow! You got a lot done on that errand. Here's a tekno-token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something.'"
 0	3	1	0	1	0	"'Surprised you can lug all that back! Here's a tekno-token to use in the clearing east of the wells, along with some coins. Maybe you'll find what to do with them. Keep it up!'"
 0	4	1	0	1	1	"'Wow! Impressive! I'm half curious if you cheated somehow! Here's a tekno-token for the clearing up north and east--not that you may need it--and a couple coins, and a dollar. Don't know if I can give you anything else.'"
@@ -19311,10 +19338,11 @@ book Swell Wells
 
 Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing[one of][or], or down the un-mod mound[stopping], or west to a Filed Field[if sorer bogey is in Swell Wells]. You think you hear something from the wells[end if][if green stain is touchable]. There's also a green stain among the wells[end if].". Swell Wells is in Others.
 
-after looking in Swell Wells for the first time:
-	say "One thing is not like the others. An un-mod mound looks suspicious--and when you look at it more carefully, it reveals a way down!";
-	say "[line break]And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
-	now miser ruble is in Swell Wells;
+after printing the locale description for Swell Wells:
+	if miser ruble is off-stage:
+		say "One thing is not like the others. An un-mod mound looks suspicious--and when you look at it more carefully, it reveals a way down!";
+		say "[line break]And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
+		now miser ruble is in Swell Wells;
 	continue the action;
 
 the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewher new[end if]."
@@ -19362,7 +19390,7 @@ a-text of miser ruble is "RYRRYRRYYR". b-text of miser ruble is "PYRRYPRYYR". pa
 
 chapter gooseberry
 
-the sorer bogey is ghostly scenery in Swell Wells. "You can't see the sorer bogey, but knowing it's there makes your skin break out in pimples...no, bumps."
+the sorer bogey is ghostly vanishing scenery in Swell Wells. "You can't see the sorer bogey, but knowing it's there makes your skin break out in pimples...no, bumps."
 
 check taking sorer bogey: say "Don't be a silly goose." instead;
 
@@ -19649,12 +19677,7 @@ chapter reviewing
 
 book Clangier Clearing
 
-check fliptoing when player is in Clangier Clearing and player does not have tekno-token:
-	if noun is not carried by player:
-		let temp be number of moot fruits + number of fruits carried by player;
-		say "That would work, but you don't have anything resembling currency to haggle with. Maybe you [if temp < 8]can earn some currency elsewhere[else]can go see Curtis for remuneration. You've done a good bit[end if].";
-		preef noun;
-		do nothing instead;
+check going east in swell wells: if player does not have tekno-token, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
 
 Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
 
@@ -21758,7 +21781,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
 			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
 			if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a PERSIMMON.";
-		if apples are not moot, say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES."; [Swell Wells]
+		if apples are not dislodged, say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES."; [Swell Wells]
 		if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
 		if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
 		if riot cap is not moot, say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";
@@ -21772,16 +21795,16 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if pryer bars are not moot, say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
 		if barber sickle is not moot, say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
 		if mean trowel is not moot, say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";
-		if lemons are not moot, say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons."; [Clangier Clearing]
-		if melon is not moot, say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
-		if papayas are not moot, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
+		if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons."; [Clangier Clearing]
+		if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
+		if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
 		if mango is not moot, say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
 		if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
 		if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said CRIPES at the prices precis.";
-		if quince is not moot, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
-		if nectarine is not moot, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
-		if orange is not moot, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [Scape Space]
-		if banana is not moot, say "[2drm of Scape Space]you could've tried to change a banna['] to a BANANA.";
+		if quince is not dislodged, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
+		if nectarine is not dislodged, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
+		if orange is not dislodged, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [Scape Space]
+		if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a BANANA.";
 		if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub RHUBARB.";
 		if inapt paint is not moot, say "[2drm of Scape Space]you could've made the inapt paint ('DESERVER RESERVED') REVERSED.";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";

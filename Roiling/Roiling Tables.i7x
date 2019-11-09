@@ -4,7 +4,11 @@ volume main anagram tables
 
 [?? clean/tend/eat/seek/scan]
 
+[rorg.py checks organization order]
+
 [tables are arranged roughly in walkthrough order.]
+
+[pres.py checks to make sure all pre- rules appear in some RBR files.]
 
 book Ordeal Reload
 
@@ -371,13 +375,13 @@ pipe panel fence	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--	"With
 pryer bars	raspberry	true	704483418	--	"raspberry"	"raspberry"	--	--	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."
 barriers west	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	--	--	"The barriers west collapse into a pile of strawberries."
 mean trowel	watermelon	true	815317707	--	"watermelon"	"watermelon"	--	--	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."
-Ammo Gang	mango	true	242122758	--	"among"	"among"	pre-among rule	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token and give you a mango. You let out an OMG. It seems the right thing to do." [start Clangier Clearing]
+Ammo Gang	mango	true	242122758	--	"among"	"among"	--	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token and give you a mango. You let out an OMG. It seems the right thing to do." [start Clangier Clearing]
 nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	--	--	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."
 peach	peach	true	267747770	--	"cheap"	"cheap"	--	--	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."
 quince	quince	true	450223472	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
-prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	pre-kumquat rule	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
+prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	--	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
 melon	melon	true	388955186	--	"melon"	"mo len" or "len mo"	--	--	"You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash."
-auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	pre-papayas rule	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."
+auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	--	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."
 lemons	lemons	true	485229152	--	"solemn"	"solemn"	--	--	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"
 a banna'	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
 orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
@@ -1505,16 +1509,6 @@ this is the post-pomegranate rule: [the magenta rope is already flipped]
 	moot megaton pear;
 	moot rampage note;
 	moot mopeage rant;
-
-this is the pre-kumquat rule: if kumquat is moot, say "Len Craig already gave you enough for your help. Don't push it." instead; [?? this should not matter.]
-
-this is the pre-papayas rule: if papayas are moot, say "You already got credit for prompt payment." instead; [?? this should not matter.]
-
-this is the pre-among rule:
-	if player does not have tekno-token:
-		say "You'd look a little too suspicious mingling without anything of value to trade. Maybe when you have something, though.";
-		preef mango;
-		the rule succeeds;
 
 this is the post-sonic-flip rule:
 	if player has so-great storage, slot-appear;
