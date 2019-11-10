@@ -16570,6 +16570,7 @@ to decide whether the action is procedural: [aip]
 	if xraying, yes; [cheat verbs]
 	if discerning, yes;
 	if guruing, yes;
+	if gxing, yes;
 	if swearing obscenely, yes; [silly verbs]
 	if swearing mildly, yes;
 	if saying yes, yes;
@@ -19007,12 +19008,16 @@ gxing is an action applying to one thing.
 
 understand the command "gx" as something new.
 
-understand "gx [something]" as gxing when mrlp is others.
+understand "gx [things]" as gxing when mrlp is others and debug-state is true.
 
 carry out gxing:
+	if can-guru is false, now can-guru is true;
+	let prev-max-poss be poss-score of others;
 	try guruing the noun;
-	say "Taking arugula back. NOTE: this totally trashes your score.";
-	now player has arugula;
+	if player does not have arugula:
+		say "Taking arugula back. NOTE: this totally trashes your score.";
+		now can-guru is true;
+		now poss-score of others is prev-max-poss;
 
 section guruing
 
@@ -19027,19 +19032,27 @@ did-guru is a truth state that varies.
 carry out guruing:
 	if can-guru is false:
 		if arugula is moot, say "You lost your guru powers." instead;
-		say "You'll near to eat the arugula, first." instead;
+		say "You'll need to eat the arugula, first." instead;
 	if noun is megaton pear or noun is mopeage rant or noun is rampage note:
-		say "You blink and wind up refocusing on the magenta rope.";
+		say "You blink and wind up refocusing on the magenta rope.[paragraph break]";
 		try guruing magenta rope instead;
-	if noun is viewer or noun is searcher or noun is feeling you're a perp, say "No. It's got to be pretty simple." instead;
+	if noun is briar screen. try guruing barren cries instead;
+	if noun is the player, say "You don't want to change. Well, not in that way." instead;
+	if noun is a person:
+		if noun is len craig, say "Nothing, despite all Len Craig [if number of entries in clearing-hintables > 0]has[else]had[end if] to sell." instead;
+		if noun is not ammo gang:
+			say "A person shouldn't and can't be changed into a fruit[unless no ammo gang is moot], though perhaps you could trade someone for one." instead;
+	if noun is viewer or noun is searcher or noun is feeling you're a perp, say "No. You don't want to use the arugula on this. It's got to be pretty simple." instead;
 	repeat through table of others anagrams:
 		if noun is the-from entry:
-			if noun is compass:
+			if noun is reflexed:
+				say "You've already changed [the noun].";
+			else if noun is compass:
 				say "Whoah! A compass begins spinning.";
-			else if noun is a fruit:
-				say "You focus and squint and realize you need to think or say [right-word entry in upper case].";
+			else if noun is coins:
+				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS!";
 			else:
-				say "You focus and squint, and some fruit appears in your vision: [if indefinite article of the-to entry is non-empty][indefinite article of the-to entry] [end if][the-to entry]. The aftertaste of arugula finally dissipates.";
+				say "You focus and squint, and letters appears in your sight: [right-word entry in upper case]. The aftertaste of arugula finally dissipates.";
 			now can-guru is false;
 			now noun is prefigured;
 			now did-guru is true;
@@ -19048,8 +19061,6 @@ carry out guruing:
 	if noun is iconic:
 		if noun is s-i, say "The icons seem appropriate as-is." instead;
 		say "Hm. That's not fruit and not going to be fruit. You are pretty sure you can decide what to do." instead;
-	if noun is the player, say "You don't want to change. Well, not in that way." instead;
-	if noun is a person, say "A person shouldn't and can't be changed into a fruit." instead;
 	say "Nothing happens. Maybe something else.";
 	the rule succeeds.
 
@@ -19474,7 +19485,7 @@ to say two-of-three: say "[if searcher is not reflexed]prep and review[else if v
 the feeling you're a perp is a vanishing boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the feeling you're a perp.". bore-check is bore-perp rule.
 
 this is the bore-perp rule:
-	if current action is not objhinting and current action is not fliptoing, say "You just can't shake the feeling you're a perp. Maybe there's a simple way to shift things around." instead;
+	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the feeling you're a perp. Maybe there's a simple way to shift things around." instead;
 
 a-text of perp is "RRYR". b-text of perp is "PRYP". parse-text of perp is "P[sp]R[sp]E[sp]P". perp is cheat-spoilable.
 
