@@ -4,6 +4,8 @@ volume main anagram tables
 
 [?? clean/tend/eat/seek/scan]
 
+[ruch.py does general cleanup checks]
+
 [rorg.py checks organization order]
 
 [tables are arranged roughly in walkthrough order.]
@@ -121,7 +123,7 @@ sport ports	sport ports	false	440526323	--	"prost"	"prost"	--	--	"You mentally t
 odes song	odes song	false	591595494	--	"goodness"	"goodness"	--	--	"You manage to let our a 'goodness!' at the worst parts of the odes song. Somehow, it works. While you may not have done anything super-significant, your task here feels a bit easier."
 Leo	Leo	false	255972525	--	"ole"	"ole"	--	post-leo-ole rule	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."
 Rand	Rand	false	177448218	--	"darn"	"darn"	--	post-rand-darn rule	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."
-wzup	wzup	false	526524588	--	"whassup"	"whassup"	pre-wzup rule	post-wzup rule	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble.[paragraph break]'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
+wzup	wzup	false	526524588	--	"whassup"	"whassup"	--	post-wzup rule	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble.[paragraph break]'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
 ye hoop	censer	true	267453412	--	"pooh"	"pooh"	--	post-pooh-phooey rule	"[get-censer]."
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	post-pooh-phooey rule	"[get-censer]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
@@ -180,7 +182,7 @@ cans	cans	false	186374877	--	"scan"	"scan"	--	--	"You scan the cans, and at firs
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-seek-eeks rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule	"You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and you can't see it in the drawer any more. Aunt Tuna is pleased, and Tortu is impressed."
 tea	tea	false	233103945	--	"eat"	"eat tea" or "eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"
-trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	pre-tutor-trout rule	--	"[trout-tut]."
+trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	pre-tutor-trout rule	post-tutor-trout rule	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	--	--	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	pre-crate-react rule	--	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
@@ -201,12 +203,12 @@ pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pr
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	--	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
-lever	lever	false	501914680	--	"revel"	"revel"	--	pre-lever-revel rule	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
+lever	lever	false	501914680	--	"revel"	"revel"	pre-lever-revel rule	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" or "trample ramplet"	--	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
 natant ant	natant ant	false	174205344	Tenfold Teflon'd Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"
 bogus-lamps	bogus-lamps	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	--	post-spin-pins rule	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."
-d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	--	pre-dialer-redial rule	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
+d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	pre-dialer-redial rule	--	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
 dialer	dialer	false	335153504	--	"derail"	"derail"	pre-dialer-derail rule	post-dialer-derail rule	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the Horned Hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation, and the dialer quits humming. It doesn't look broken, but you guess you'll need to do something about those pins.";
 
 book towers
@@ -536,10 +538,9 @@ this is the post-sitanag-against rule:
 	now tirades are in Same Mesa;
 
 this is the pre-side-art-astride rule:
-	if side art is reflexed, say "You already did that." instead; [?? check rule order]
 	if Gast is not in Same Mesa:
-		say "You get astride the [sit a nag] for a while, but it's pointless with nobody around. Maybe later";
-		preef sit a nag;
+		say "You get astride the [sit a nag] for a while, but it's pointless with nobody around. Maybe later.";
+		preef side art;
 		the rule succeeds;
 
 this is the post-side-art-astride rule:
@@ -758,12 +759,8 @@ this is the post-leo-ole rule:
 this is the post-rand-darn rule:
 	set the pronoun him to Rand;
 	set the pronoun them to wzup;
+	move wzup to Dirge Ridge;
 	now Rand is washed up;
-
-this is the pre-wzup rule:
-	if Leo is fightin, say "Leo doesn't seem interested in explaining why he's fighting you." instead;
-	if Rand is fightin, say "Rand isn't in a mood  to be greeted right now." instead;
-	if Leo is eager, say "You've already got their attention. You wouldn't want to get caught in an endless cycle of whassups. You'd probably need to drink a lot of cheap beer to recover from that." instead;
 
 this is the post-wzup rule:
 	now Leo is eager;
@@ -903,17 +900,19 @@ this is the pre-tba-tab rule:
 
 this is the pre-polemic-compile rule:
 	if player is not in Hacks' Shack:
-		say "There is no computer around.";
+		say "There is no computer around. You probably want to go back to the Hacks['] Shack for this.";
 		preef I'm Le Cop polemic instead;
 	if computer screen is not touchable:
 		say "Good idea, but tough without a screen.";
 		preef I'm Le Cop polemic instead;
 	if computer screen is not on slab:
-		say "Hmm. You may want to put the screen pon the slab. Do so?";
+		say "Hmm. You may want to put the screen on the slab. Do so?";
 		if the player direct-consents:
 			now computer screen is on slab;
+			say "Done.";
 		else:
-			say "Ok, but by 'may want' I meant 'really probably need to.'" instead;
+			say "Ok, but by 'may want' I meant 'really probably need to.'";
+		the rule fails;
 	if keyboard is not touchable:
 		say "Good idea, but tough to program without a keyboard.";
 		preef I'm Le Cop polemic instead;
@@ -923,12 +922,11 @@ this is the pre-polemic-compile rule:
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
 		preef I'm Le Cop polemic instead;
-	if disk is not in Drive A, say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]." instead;
+	if disk is not in Drive A:
+		say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if].";
+		preef I'm Le Cop polemic instead;
 	if rebooted is false:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
-		preef I'm Le Cop polemic instead;
-	if disk is not in Drive A:
-		say "You probably want to save your work to disk.";
 		preef I'm Le Cop polemic instead;
 	if slept is false:
 		if speel is off-stage:
@@ -948,9 +946,6 @@ this is the post-polemic-compile rule:
 	if player has rom sticks, moot rom sticks;
 
 this is the pre-bub-dude-egg rule:
-	if I'm Le Cop polemic is not reflexed:
-		say "No hope of debugging when you can't even build! No, what is it? Something in the polemic, all garbled.";
-		preef BUB DUDE EGG instead;
 	if fizzy cola is not in mug:
 		say "The process of debugging is going to take a while. You will need some sort of energy[if dirty looking cola is touchable]. That bottle of cola just won't be enough for the task ahead[else]. That coal won't cut it. Too early 20th century[end if].";
 		preef BUB DUDE EGG instead;
@@ -1073,7 +1068,6 @@ this is the pre-kiss-skis rule:
 		the rule succeeds;
 
 this is the pre-bonk-knob rule:
-	if knob is reflexed, say "That might undo what you did[if bonkies is true], and it might get you another knock on the noggin anyway[end if]." instead;
 	abide by the pre-kiss-skis rule;
 
 this is the pre-snap-span-pans rule:
@@ -1091,21 +1085,19 @@ this is the post-tend-dent rule:
 
 this is the pre-tutor-trout rule:
 	if player is in Anger Range:
-		say "[if carps are touchable]You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here[else]The poor trout's probably getting beaten up for learning in the first place[end if].";
+		say "You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.";
 		preef trout;
 		do nothing instead;
+
+this is the post-tutor-trout rule:
+	now player has bubble wrap;
 
 to say trout-tut:
 	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]";
 	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is touchable]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are reflexive], though maybe you could sneak the wipes[end if][if dent is touchable]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
-	now player has bubble wrap;
 
 this is the pre-warp-wrap rule:
 	now warp-try is true;
-	if player is in Lean Lane and trout is reflexive:
-		say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'";
-		preef ruby;
-		do nothing instead;
 	if Aunt Tuna is touchable:
 		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe it needs to be saved [']til you find the right person to annoy.";
 		preef ruby;
@@ -1120,7 +1112,7 @@ this is the post-warp-wrap rule:
 
 this is the pre-search-arches rule:
 	if sardine is touchable:
-		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
+		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.";
 		preef Achers' Chaser Arches;
 		do nothing instead;
 
@@ -1170,8 +1162,8 @@ this is the post-yapper-prepay rule:
 
 this is the pre-lever-revel rule:
 	if yapper is touchable:
-		say "Nothing to celebrate yet--dispose of the yapper first." instead; [?? check to make sure preefing is first. Also, maybe have a post-preef rule?]
-		preef lever;
+		say "Nothing to celebrate yet--dispose of the yapper first."; [?? check to make sure preefing is first. Also, maybe have a post-preef rule?]
+		preef lever instead;
 
 this is the post-spin-pins rule:
 	now d2 is in Tenfold Teflon'd Den Loft;
@@ -1181,7 +1173,7 @@ this is the pre-dialer-redial rule:
 
 this is the pre-dialer-derail rule:
 	if yapper is touchable:
-		say "The yapper'd totally tell on you. Good thing the yapper's more interested in telling you off.";
+		say "The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.";
 		preef dialer;
 		do nothing instead;
 
@@ -1402,7 +1394,6 @@ to say shout-check:
 this is the pre-ghoul-hat-although rule: abide by the medal check rules for ghoul hat;
 
 this is the post-ghoul-hat-although rule:
-	move gore ogre to Bran Barn;
 	if sea cube is moot, min-up;
 
 this is the pre-ogre-ergo rule:
@@ -1489,15 +1480,15 @@ this is the pre-whistle-deeply rule:
 		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
 
 this is the pre-medals-quickly rule:
+	if nounsolve < 3 or adjsolve < 3:
+		say "You feel a surge, but not enough. [if nounsolve < 3 and adjsolve < 3]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still[med-unf].";
+		preef medals instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 	if Merle is touchable:
 		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals instead;
 	if player is not in Reclusion Inclosure:
 		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf].";
 		preef medals instead;
-	if nounsolve < 3 or adjsolve < 3:
-		say "You feel a surge, but not enough. [if nounsolve < 3 and adjsolve < 3]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still[med-unf].";
-		preef medals instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 
 section others auxiliary
 
@@ -1611,8 +1602,8 @@ section otters
 
 a medal check rule for a thing (called x):
 	if player does not have medals:
-		preef x;
-		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if location of player is Bran Barn]Mr. Lee[else]Le Mer[end if] is unmoved." instead;
+		preef x; [preef mr lee/le mer]
+		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [x] is unmoved." instead;
 
 section general
 
@@ -2205,7 +2196,7 @@ adsorbing signboard	"No, you don't see any other way around the signboard to ent
 Gast	"[if Gast is in Same Mesa]It wouldn't be wise to argue against [Gast][else if Gast is moot]You had your vigorous conversation for the day[else][bug-report][end if]."
 sit a nag	"[if Gast is moot][giant-over][else]You leaned on the [sit a nag] right. Time to get on it[end if]."
 side art	"[if Gast is moot][giant-over][else if nuder is in Same Mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the [sit a nag] right. Time to start ducking[end if]."
-WOE BOW BELL	"[if Gast is moot][giant-over][else]You don't need to avoid the WOE BOW BELL any more[end if]."
+Rude 'N Nuder	"You don't want the WOE BOW BELL to come back."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."

@@ -9207,6 +9207,7 @@ to say what-can-flip:
 table of pres [xxpre]
 preflip	thereg	pretodo
 sit a nag	routes	"Find a way to be fearless so you can lean AGAINST the [sit a nag]." [routes]
+side art	routes	"Find a reason to sit ASTRIDE the [sit a nag]."
 sheol holes	routes	"You can look AROUND to find the un-road."
 un-road	routes	"You can go ALONG the un-road...once you find it."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
@@ -11873,7 +11874,7 @@ the wzup is privately-named reflexive boring scenery in Dirge Ridge. printed nam
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-check asking about "whassup": if noun is Leo or noun is Rand, try fliptoing wzup instead;
+check asking about "whassup" when wzup is touchable: if noun is Leo or noun is Rand, try fliptoing wzup instead;
 
 chapter sods gone odes song
 
@@ -18482,7 +18483,7 @@ check scaning Mr Lee when ghoul hat is touchable:
 
 section Gore Ogre
 
-the Gore Ogre is a vanishing person. description is "Fortunately, the Gore Ogre doesn't seem immediately violent, but it is still intimidating Mr. Lee.". the Gore Ogre is cheat-spoilable.
+the Gore Ogre is a vanishing person in Bran Barn. description is "Fortunately, the Gore Ogre doesn't seem immediately violent, but it is still intimidating Mr. Lee.". the Gore Ogre is cheat-spoilable. "[one of]A[or]The[stopping] Gore Ogre paces back and forth here, intimidating Mr. Lee."
 
 a-text of Gore Ogre is "YRRY". b-text of Gore Ogre is "YRRY". parse-text of Gore Ogre is "-[sp]x[sp]x[sp]-".
 
@@ -19036,12 +19037,11 @@ carry out guruing:
 	if noun is megaton pear or noun is mopeage rant or noun is rampage note:
 		say "You blink and wind up refocusing on the magenta rope.[paragraph break]";
 		try guruing magenta rope instead;
-	if noun is briar screen. try guruing barren cries instead;
+	if noun is briar screen, try guruing barren cries instead;
 	if noun is the player, say "You don't want to change. Well, not in that way." instead;
 	if noun is a person:
 		if noun is len craig, say "Nothing, despite all Len Craig [if number of entries in clearing-hintables > 0]has[else]had[end if] to sell." instead;
-		if noun is not ammo gang:
-			say "A person shouldn't and can't be changed into a fruit[unless no ammo gang is moot], though perhaps you could trade someone for one." instead;
+		if noun is not ammo gang, say "A person shouldn't and can't be changed into a fruit[unless ammo gang is moot], though perhaps you could trade someone for one." instead;
 	if noun is viewer or noun is searcher or noun is feeling you're a perp, say "No. You don't want to use the arugula on this. It's got to be pretty simple." instead;
 	repeat through table of others anagrams:
 		if noun is the-from entry:
