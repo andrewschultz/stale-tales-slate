@@ -1345,7 +1345,7 @@ persuasion rule for asking Casper to try doing something:
 	say "You're not Casper's publicist or his editor, and they're the only one with a chance of telling him what to do[if recaps are reflexed]. Plus, there was that scraping incident[end if].";
 	persuasion fails;
 
-persuasion rule for asking patrons to try doing something:
+persuasion rule for asking pesty types to try doing something:
 	say "They're here to NOT be ordered around.";
 	persuasion fails;
 
@@ -1712,7 +1712,7 @@ Zo Mavelt	"'If you scan me and go north, I'll go away, and someone else might ap
 Tom Avlez	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 Lev Tzoma	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 trolls	"They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh." [reflex OYSTER]
-patrons	--
+pesty types	--
 Casper	"Once he starts, he won't stop. But he's feeling standoffish after his first big lecture."
 clam	"Asking the clam about its feelings is a start."
 boats	"They're too far away for proper conversation. Maybe you can do something bold to show them you're worth having aboard."
@@ -1840,7 +1840,7 @@ giant dead flea	"It's sort of dead. Not that it was great conversation when it w
 Leo	"[lrduh]"
 Rand	"[lrduh]"
 computer screen	"[if screen is on labs slab]Yelling at a computer never works. If you need to say something, just say it[else]The screen isn't even plugged in[end if]."
-patrons	"The patrons would probably think YOU were drunk if you told them why you were here or asked questions." [begin OYSTER]
+pesty types	"The pesty types would probably think YOU were drunk if you told them why you were here or asked questions." [begin OYSTER]
 trolls	"Talking wouldn't distract them from [if silly-acts is 3]eventually beating you up[else]keeping you in the Posh Hops Shop[end if]. They'd just win the argument. They're trolls, after all."
 clam	"It snaps back at you. Physically, not verbally. Words--okay, conversation--won't help it relax, so you clam up."
 Casper	"'[ohai-casper][randbla][ohai-casper][run paragraph on]' Casper mutters to nobody in particular."
@@ -2079,9 +2079,9 @@ trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing w
 trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
 trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
 trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
-patrons	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot.'"
-patrons	trolls	"'They rather keep us in and make us spend more than kick us out.'"
-patrons	Elvira	"You endure annoying pro- and anti-Elvira half-drunken banter for a bit."
+pesty types	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot.'"
+pesty types	trolls	"'They rather keep us in and make us spend more than kick us out.'"
+pesty types	Elvira	"You endure annoying pro- and anti-Elvira half-drunken banter for a bit."
 Casper	pre-haun	"'I heard it's buried on the other side of the shore. Need to bring it something lost.'"
 Casper	trolls	"'They are rough and ready types. I will include some of their gritty dialogue in Capers Recaps. With their permission, of course.'"
 Casper	capers recaps	"Casper wants you to acknowledge he's writing it, but he's not going to hand out spoilers."
@@ -6322,7 +6322,7 @@ check listening:
 	if player is in Dirge Ridge, say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite dealing with Rand and Leo[end if]." instead;
 	if player is in Hacks' Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
-	if noun is tunes, say "The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. Patrons would be upset if something happened." instead; [oyster]
+	if noun is tunes, say "The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened." instead; [oyster]
 	if player is in Posh Hops Shop, say "Silence. Awkward silence. An occasional cough." instead;
 	if noun is clam, say "You hear the clam snapping." instead;
 	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
@@ -13061,11 +13061,11 @@ book Posh Hops Shop
 Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and trolls block the way out."
 
 after choosing notable locale objects when player is in Posh Hops Shop:
-	set the locale priority of patrons to 0;
+	set the locale priority of pesty types to 0;
 
-the patrons are useless boring plural-named people in Posh Hops Shop. description of patrons is "Indistinguishable from most barflies, er, bar-fish.". bore-text of patrons is "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of patrons is bore-patrons rule. the patrons are scenery.
+the pesty types are useless boring plural-named people in Posh Hops Shop. description of pesty types is "Indistinguishable from most barflies, er, bar-fish.". bore-text of pesty types is "The pesty types aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of pesty types is bore-pesty-types rule. the pesty types are scenery.
 
-this is the bore-patrons rule:
+this is the bore-pesty-types rule:
 	if current action is attacking, say "You'd be outnumbered." instead;
 
 the tips pits are reflexive plural-named boring scenery in Posh Hops Shop. description of tips pits is "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
@@ -13107,7 +13107,7 @@ check taking tunes: say "Ironically, they're the sort of tunes you really can't 
 
 a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "u[sp]x[sp]x[sp]e[sp]x". tunes is cheat-spoilable.
 
-The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
+The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the pesty types aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
 
 a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "x[sp]x[sp]i[sp]x". tips pits are cheat-spoilable.
 
@@ -13134,7 +13134,7 @@ check pushing the song buttons: say "They're probably all pretty terrible. You n
 
 does the player mean doing something with song buttons when player is in Posh Hops Shop: it is likely.
 
-the trolls are plural-named reflexive people in Posh Hops Shop. description is "Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets' vest. They're hired to cram patrons back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]Trolls return your gapin['] with aping, menacingly. They probably don't want an apology[else]Trolls block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
+the trolls are plural-named reflexive people in Posh Hops Shop. description is "Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets' vest. They're hired to cram pesty types back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]Trolls return your gapin['] with aping, menacingly. They probably don't want an apology[else]Trolls block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
 
 the vets' vest is a useless thing. description is "It reads: [i]We toss sots. Ew![r] You suspect this means probably only the disruptive, broke sots who patronise this noise trap."
 
@@ -13311,11 +13311,11 @@ strolled is a truth state that varies.
 to annoy-trolls:
 	silly-min;
 	if silly-acts is 1:
-		say "Your singular antic seems to have attracted the attention of a few patrons, and the trolls look up, too.";
+		say "Your singular antic seems to have attracted the attention of a few pesty types, and the trolls look up, too.";
 	else if silly-acts is 2:
-		say "'Job perks: bop jerks.' say the trolls. The patrons have formed a half-circle around you now.";
+		say "'Job perks: bop jerks.' say the trolls. The pesty types have formed a half-circle around you now.";
 	else:
-		say "The trolls and patrons have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
+		say "The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
 
 to say gloaty: say "[one of]. The galoots gloat so[or]. They say, what a LOLstr[or]. They act sore to scare, sure you stole a coaster[or][stopping]. Perhaps if you were more obnoxious, they'd be less inclined to keep you in";
 
@@ -13324,7 +13324,7 @@ to check-silly-death:
 	unless the player yes-consents:
 		say "The trolls nod as if they were the ones who stopped you from further nonsense.";
 		continue the action;
-	say "The patrons still stare in belief, but the trolls are onto you. They give you a (self-) righteous beat-down. As the trolls beat you up, they mention you're probably the sort of punk who needs to undo stuff a lot to win a game, and that's not really hardcore.[paragraph break]Perhaps you should've played it cool and fled, instead.";
+	say "The pesty types still stare in belief, but the trolls are onto you. They give you a (self-) righteous beat-down. As the trolls beat you up, they mention you're probably the sort of punk who needs to undo stuff a lot to win a game, and that's not really hardcore.[paragraph break]Perhaps you should've played it cool and fled, instead.";
 	now undo-code is 8;
 	get-dead;
 	follow the shutdown rules;
@@ -21541,7 +21541,7 @@ this is the oyster-alt rule:
 	say "[eqls]OYSTER[line break]";
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
 	if Olde Lode is visited:
-		say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop patrons, though the game restricted you to three of five.";
+		say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop pesty types, though the game restricted you to three of five.";
 		if tunes are moot, say "[2da]You could have also [if remapped is true]UNSET the tunes[else]REMAPped the perma-amper[end if] to break the jukebox.";
 	else:
 		say "[2da]You won't be able to use all actions to leave the shop.";

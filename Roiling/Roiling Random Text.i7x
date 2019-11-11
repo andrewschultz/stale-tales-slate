@@ -38232,7 +38232,7 @@ blurb
 "'Out-stare a stouter sea trout?' A sore tut."
 "'Pabst? A tbsp.?'"
 "'Patching nightcap?' / 'Natch.' / 'Pig.'"
-"Patrons whisper to beware clingfish filchings."
+"Pesty types whisper to beware clingfish filchings."
 "'Peanuts: neat sup? Un. Paste!'"
 "'Phony tee. Neophyte.'"
 "'Picante nitecap? Ace! PINT!'"

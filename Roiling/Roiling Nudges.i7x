@@ -479,10 +479,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "vets"	434354913	Posh Hops Shop	--	--	"[tro-clo]."
 "vet"	338080947	Posh Hops Shop	--	--	"[tro-clo]."
 "recap"	315789274	hops shop	--	--	"Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all."
-"patrons"	511621649	hops shop	--	--	"[patron]."
-"patron"	415347683	hops shop	--	--	"[patron]."
-"customer"	675053018	hops shop	--	--	"[patron]."
-"customers"	771326984	hops shop	--	--	"[patron]."
+"pesty"	531015304	Posh Hops Shop	--	--	"[no-pesty]"
+"type"	434741338	Posh Hops Shop	--	--	"[no-pesty]"
 "tune"	404929442	--	tunes	--	"Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all."
 "jar"	136472146	--	pills	--	"You suspect it's what's in the jar that's important."
 "spill"	330360449	--	pills	--	"You seem to be fumbling what to do with the pills[if slider is switched on]. You hear nothing from the slider--perhaps it won't help you with auxiliary cheating items[end if]."
@@ -1541,7 +1539,7 @@ section oyster auxiliary
 
 to say tro-clo: say "Focus on the trolls, not their clothes"
 
-to say patron: say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
+to say no-pesty: say "The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
 
 this is the clam-gone rule:
 	if player is in Olde Lode and clam is not in Olde Lode, the rule succeeds;
