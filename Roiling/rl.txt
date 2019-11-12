@@ -482,6 +482,11 @@ Casper Spacer gives ?RRYRY, meaning the first letter is a consonant, C or S. He 
 CAPERS RECAPS gives RRR??Y. That means either E or A is in slot 4, and the C and R in slot 1 are wrong. Along with the information about Casper, this tells us the word we need starts with S. Also, one of R/P is right in slot 5.
 Note that slot 3 is a consonant but not P, C or (slot 1) S. So it is R.
 S(CP)R(ae)(rp)(ae) then becomes SCR(ae)P(ae). SCRAPE.
+# logic for LOLstr trolls
+?What do I do with the LOLstr trolls?
+The one question mark must be a consonant, but the others eliminate a lot of letters.
+In particular, the vowel is in slot 4, so the L's must be in slots 2, 5 or 6. We aren't sure if T or L is in slot 5, but if it is in slot 5, we get -L-OTL and SLROTL and RLSOTL are garbled.
+So, L is in slot 5. -T-OLL, RTSOLL or STROLL. It's STROLL.
 >>DISEASE SEASIDE
 # logic for frat raft
 ?Why does the frat raft give so many question marks?

@@ -1105,7 +1105,7 @@ rule for deciding whether to allow undo:
 		deny undo;
 	else:
 		if undo-code is 8:
-			say "You could've sworn you heard the trolls mumble something about how they could probably kick your butt at computer games, too, and save states and do-overs were for wimps.";
+			say "You could've sworn you heard the LOLstr trolls mumble something about how they could probably kick your butt at computer games, too, and save states and do-overs were for wimps.";
 		else if undo-code is 9:
 			now the have-died flag is true;
 		else if undo-code is 10:
@@ -1216,7 +1216,7 @@ Carven Cavern	2	--	[Ordeal Reload]
 Harms Marsh	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
 Ripe Pier	3	--	"You have no idea how to turn the Cripple Clipper around, and you don't want to."
 Cripple Clipper	4	-- [routes]
-Posh Hops Shop	1	--	"The trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
+Posh Hops Shop	1	--	"The LOLstr trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
 Olde Lode	2	--	"You don't want to go back near that urn[if progval of location of player > 3], and it'd be hard, being on the other side of the shore[end if]."
 Disease Seaside	3	--	"No sense crossing back. There's more on this side of the shore."
 Fighter Freight	4	--	"You don't really want to revisit the crays."
@@ -1337,8 +1337,8 @@ persuasion rule for asking a person to try doing something when player is in Unw
 
 [oyster]
 
-persuasion rule for asking trolls to try doing something:
-	say "'You know what we'd like YOU to do?' the trolls chuckle.";
+persuasion rule for asking LOLstr trolls to try doing something:
+	say "'You know what we'd like YOU to do?' the LOLstr trolls chuckle.";
 	persuasion fails;
 
 persuasion rule for asking Casper to try doing something:
@@ -2070,20 +2070,20 @@ hogs	Leo	"They size him up and give a thumbs-down. Then they give you a double t
 hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
 hogs	Elvira	"They snicker and nod."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger." [end presto]
-Trolls	Horned Hedron	"'Even more fun than here. So we hear.'"
-trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]" [start oyster]
-trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
-trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
-trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
-trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
-trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
-trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
-trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
+LOLstr trolls	Horned Hedron	"'Even more fun than here. So we hear.'"
+LOLstr trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]" [start oyster]
+LOLstr trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
+LOLstr trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
+LOLstr trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
+LOLstr trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
+LOLstr trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
+LOLstr trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
+LOLstr trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
 pesty types	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot.'"
-pesty types	trolls	"'They rather keep us in and make us spend more than kick us out.'"
+pesty types	LOLstr trolls	"'They rather keep us in and make us spend more than kick us out.'"
 pesty types	Elvira	"You endure annoying pro- and anti-Elvira half-drunken banter for a bit."
 Casper	pre-haun	"'I heard it's buried on the other side of the shore. Need to bring it something lost.'"
-Casper	trolls	"'They are rough and ready types. I will include some of their gritty dialogue in Capers Recaps. With their permission, of course.'"
+Casper	LOLstr trolls	"'They are rough and ready types. I will include some of their gritty dialogue in Capers Recaps. With their permission, of course.'"
 Casper	capers recaps	"Casper wants you to acknowledge he's writing it, but he's not going to hand out spoilers."
 Casper	Elvira	"'She certainly knows how to seek out power. She showed that anagram chump what's what. [if player is female]She's no woman[else]He's no man[end if] of action.'"
 carps	trout	"[mean-fish]!" [chum=pikes]
@@ -2315,7 +2315,7 @@ to say no-plebe: say "'I respect da military too much to push him outta da way. 
 
 to say bbbullies: say "She seems more worked up about them than Tortu was[if trout is reflexed], even after your lesson[end if]. But she means well"
 
-to say yeah-cute: say "[if silly-acts is 1]The trolls patronize you not to try any more funny stuff.[else if silly-acts is 2]The trolls mention they can still take a little more of your destructive nonsense. They've seen worse. And dealt with it, too.[else]The trolls shoot you a look that says both stay here and get lost at once. Best not to bait them any more.[end if]";
+to say yeah-cute: say "[if silly-acts is 1]The LOLstr trolls patronize you not to try any more funny stuff.[else if silly-acts is 2]The LOLstr trolls mention they can still take a little more of your destructive nonsense. They've seen worse. And dealt with it, too.[else]The LOLstr trolls shoot you a look that says both stay here and get lost at once. Best not to bait them any more.[end if]";
 
 to say lost-faith: say "'One of many of my flock who have lost faith they can help.'[no line break]";
 
@@ -2346,7 +2346,7 @@ nestor	"father" or "his father"	"You have a country to save. Don't waste time sh
 Gunter	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
 Ian	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too."
-trolls	"horned/hedron" or "horned hedron"	"'Even more fun than here. So we hear.'"
+LOLstr trolls	"horned/hedron" or "horned hedron"	"'Even more fun than here. So we hear.'"
 aunt tuna	"horned/hedron" or "horned hedron"	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'"
 sardine	"horned/hedron" or "horned hedron"	"'I work here. Well, I guard the outside.'"
 walleyes	"horned/hedron" or "horned hedron"	"'Nice place, eh? Especially for not being very nice at all!'"
@@ -4308,8 +4308,8 @@ check scaning location of the player (this is the location scan rule):
 	if player is in Nowt Town, say "Your settler scans [if cheat-on is true]RGR?[else]RYRR[end if] as you wave it around Nowt Town." instead;
 	if volt maze is touchable, try scaning volt maze instead;
 	if location of player is Posh Hops Shop: [start oyster]
-		say "The settler points towards the door and the trolls.";
-		try scaning trolls instead;
+		say "The settler points towards the door and the LOLstr trolls.";
+		try scaning LOLstr trolls instead;
 	if location of player is freight, try scaning pale plea instead;
 	if location of player is Hardest Trashed Dearths:
 		say "The air's full of eeks, which your settler picks up.";
@@ -4936,8 +4936,8 @@ trolls-hinted is a truth state that varies.
 
 to decide which thing is oyster-item:
 	if player is in Posh Hops Shop:
-		if trolls-hinted is false and cur-score of oyster is 0, decide on trolls;
-		if number of entries in shop-hint-items is 2, decide on trolls;
+		if trolls-hinted is false and cur-score of oyster is 0, decide on LOLstr trolls;
+		if number of entries in shop-hint-items is 2, decide on LOLstr trolls;
 		decide on entry 1 of shop-hint-items;
 	if player is in Olde Lode:
 		if clam is in Olde Lode, decide on clam;
@@ -5674,7 +5674,7 @@ Nowt Town	"Nowt Town holds no secrets. You can only go west or south."
 Unwary Runway	"The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?"
 Saps' Pass	"There's no way around the hogs. You need to get rid of them."
 Path Path	"It's best to stay on the Phat Path."
-Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]." [troves]
+Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The LOLstr trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the LOLstr trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The LOLstr trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The LOLstr trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]." [troves]
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.[paragraph break]You need to cross to the north for more action."
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
@@ -5793,7 +5793,7 @@ Rand	"[dont-hit of Rand]"
 lamb	"Meanie. There's a better way to help it flee home."
 walls	"Brute force is ineffective. As well as all the swears you use with the brute force. You need to wipe out the whole volt maze, not just these walls."
 hogs	"If you were as strong as Rand and Leo, maybe. But you're not. Maybe you can out-think them."
-trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down." [START oyster]
+LOLstr trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down." [START oyster]
 urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
 boats	"Sabot? Batso!"
 frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
@@ -6112,7 +6112,7 @@ check kissing:
 	if noun is skis, try fliptoing skis instead; [start OYSTER]
 	if noun is haunter, say "The ghost can't respond to affection." instead;
 	If noun is aunt tuna, say "That would be cruel to poor Tortu. She would blackmail him into kissing her long after you left." instead;
-	if noun is trolls, say "There's loving your enemy, then..." instead;
+	if noun is LOLstr trolls, say "There's loving your enemy, then..." instead;
 	if noun is clam, say "It could use a bit of friendship, but not like that." instead;
 	if noun is mardier admirer, say "You are not a lousy enough kisser to discourage [him-her]. Perhaps there's another way to sour [if player is male]her[else]him[end if] on you." instead; [start TOWERS]
 	if noun is bonker, say "Not even with a good dental plan." instead;
@@ -9225,7 +9225,7 @@ DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
 onyx censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
 plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative."
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
-trolls	oyster	"You can't quite STROLL past the trolls, yet." [oyster]
+LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyster]
 haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
 Achers' Chaser Arches	oyster	"SEARCH the arches."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
@@ -12879,7 +12879,7 @@ chapter Tom Avlez
 
 Tom Avlez is a mazeguide.
 
-a-text of Tom Avlez is "RYRYRRYR". b-text of Tom Avlez is "RYRYPRYR". parse-text of Tom Avlez is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of Tom Avlez is "RYRYRRYR". b-text of Tom Avlez is "RYRYRRYR". parse-text of Tom Avlez is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 chapter Lev Tzoma
 
@@ -13058,12 +13058,12 @@ volume oyster
 
 book Posh Hops Shop
 
-Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and trolls block the way out."
+Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and LOLstr trolls block the way out."
 
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of pesty types to 0;
 
-the pesty types are useless boring plural-named people in Posh Hops Shop. description of pesty types is "Indistinguishable from most barflies, er, bar-fish.". bore-text of pesty types is "The pesty types aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of pesty types is bore-pesty-types rule. the pesty types are scenery.
+the pesty types are useless boring plural-named people in Posh Hops Shop. description of pesty types is "Indistinguishable from most barflies, er, bar-fish. They're definitely not pets-y (sorry.)". bore-text of pesty types is "The pesty types aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of pesty types is bore-pesty-types rule. the pesty types are scenery.
 
 this is the bore-pesty-types rule:
 	if current action is attacking, say "You'd be outnumbered." instead;
@@ -13134,7 +13134,7 @@ check pushing the song buttons: say "They're probably all pretty terrible. You n
 
 does the player mean doing something with song buttons when player is in Posh Hops Shop: it is likely.
 
-the trolls are plural-named reflexive people in Posh Hops Shop. description is "Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets' vest. They're hired to cram pesty types back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]Trolls return your gapin['] with aping, menacingly. They probably don't want an apology[else]Trolls block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
+the LOLstr trolls are plural-named reflexive people in Posh Hops Shop. description is "LOLstr trolls have gained prominence in Yorpwald by being especially good at baiting patrons they don't like. Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets' vest. They're hired to cram pesty types back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]LOLstr return your gapin['] with aping, menacingly. They probably don't want an apology[else]LOLstr block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
 
 the vets' vest is a useless thing. description is "It reads: [i]We toss sots. Ew![r] You suspect this means probably only the disruptive, broke sots who patronise this noise trap."
 
@@ -13142,9 +13142,9 @@ check scaning vets' vest:
 	say "You scan the trolls instead.";
 	try scaning trolls instead;
 
-the trolls wear the vets' vest.
+the LOLstr trolls wear the vets' vest.
 
-a-text of trolls is "RRRYRR". b-text of trolls is "RRRYPR". parse-text of trolls is "x[sp]x[sp]x[sp]o[sp]l[sp]x".
+a-text of LOLstr trolls is "RRRYRR". b-text of LOLstr trolls is "RRRY?R". parse-text of LOLstr trolls is "x[sp]x[sp]x[sp]o[sp]l[sp]x".
 
 Casper Spacer is a person in Posh Hops Shop. description is "He hides the writing in his Capers Recaps from your prying eyes.". "Casper Spacer, the famous fish author, is here, working on his latest book, Capers Recaps[one of]. He seems to want to be bothered and not want to be at the same time. Writers have a way of massaging life's contradictions[or][stopping]."
 
@@ -13317,7 +13317,7 @@ to annoy-trolls:
 	else:
 		say "The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
 
-to say gloaty: say "[one of]. The galoots gloat so[or]. They say, what a LOLstr[or]. They act sore to scare, sure you stole a coaster[or][stopping]. Perhaps if you were more obnoxious, they'd be less inclined to keep you in";
+to say gloaty: say "[one of]. The galoots gloat so[or]. They act sore to scare, sure you stole a coaster[or][stopping]. Perhaps if you were more obnoxious, they'd be less inclined to keep you in";
 
 to check-silly-death:
 	say "You've caused enough damage for the trolls to kick you out. Any more and they might just kick you. Still, you sure?";
