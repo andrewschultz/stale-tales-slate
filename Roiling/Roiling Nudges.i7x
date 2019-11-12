@@ -390,8 +390,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "liev"	333777614	Dirge Ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "leonard"	433420743	--	Rand	--	"[if lawl wall is moot]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 "austerer"	732937433	austerer	--	--	"[locname]." [start Austerer Treasure]
-"onyx"	378387418	--	onyx censer	--	"You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be."
-"onyxcenser"	903510498	--	onyx censer	--	"You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter."
+"recs"	328409463	--	censer	--	"[full-cens]."
+"rec"	232135497	--	censer	--	"[full-cens]."
 "marines"	489567203	Marines Seminar Remains	--	--	"[locname]." [start Marines Seminar Remains]
 "marine"	393293237	Marines Seminar Remains	--	--	"[locname]."
 "port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]No, all the ports[else]You already observed all the ports. No need to try to single one out[end if]."
@@ -1462,6 +1462,8 @@ this is the dreidl-dread rule:
 to say no-scen: say "Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins['] cistern";
 
 to say cistern-to-dart: say "[if dart is in cistern]You won't change the cistern, but maybe you can track down the dart[else]You got the dart from the cistern. No need to futz further[end if]"
+
+to say full-cens: say "It's the censer that's important, not the brand name"
 
 to say is-boing: say "[if boing is reflexive]The number's got more numerals than letters[else]You got the boing-go bin working[end if]";
 

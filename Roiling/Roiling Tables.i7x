@@ -143,7 +143,7 @@ flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dea
 gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."
 coal	dirty looking cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if I'm Le Cop polemic is reflexive], though you're not really tired yet[end if]."
-onyx censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"
+censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
 TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	pre-tba-tab rule	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
 I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
@@ -775,9 +775,9 @@ this is the post-pooh-phooey rule:
 
 to say get-censer:
 	if the player's command includes "pooh":
-		say "You convince yourself reaching the hoop can't be that bad. You jump up, and you grab the hoop! It falls from the wall, revealing an onyx censer from a hidden compartment. Wow! Maybe you didn't get full style points, but you got what you needed";
+		say "You convince yourself reaching the hoop can't be that bad. You jump up, and you grab the hoop! It falls from the wall, revealing an N-E-Recs censer from a hidden compartment. Wow! Maybe you didn't get full style points, but you got what you needed";
 	else:
-		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, revealing an onyx censer from a hidden compartment. Wow";
+		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, revealing an N-E-Recs censer from a hidden compartment. Wow";
 	if Leo is touchable, say "! Leo and Rand applaud your agility";
 
 this is the pre-solve-maze rule:
@@ -872,10 +872,10 @@ this is the pre-skid-disk rule:
 	if location of player is not shack, say "Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.";
 
 this is the pre-censer-screen rule:
-	if onyx censer is touchable:
+	if censer is touchable:
 		if Hacks' Shack is unvisited:
 			say "[one of]You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den[or]Not yet[stopping].";
-			preef onyx censer instead;
+			preef censer instead;
 
 this is the post-censer-screen rule:
 	if Hacks' Shack is visited and player is not in Hacks' Shack:
@@ -1882,7 +1882,7 @@ ether	"[if ether is prefigured]No, you definitely need to say THERE. You just ne
 ye hoop	"The hoop dips a bit as if to taunt you."
 boing	"You try something that doesn't [i]quite[r] work, but now you're that much closer to an a-ha moment."
 maze walls	"The maze walls rumble a bit."
-onyx censer	"That feels right, but it's not enough yet. You don't need anything grumbly, here."
+censer	"That feels right, but it's not enough yet. You don't need anything grumbly, here."
 Hogs	"The hogs snicker a bit, but they seem a little nervous, too."
 Keys	"The hogs snicker a bit, but they seem a little nervous, too."
 hawt thaw	"The hawt thaw crackles slightly."
@@ -2211,7 +2211,7 @@ praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
 tsar star	"No need for additional arts."	[START presto]
 dart	"The dart's just fine as-is."
-onyx censer	"You don't want to change the censer back, but maybe you can change it to something more practical than treasure."
+censer	"You can't shut the censer up back where the hoop was, but maybe you can change it to something more practical than treasure."
 boing go bin	"You can't force another revelation, but you don't need to."
 sport ports	"You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism."
 Leo	"Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
@@ -2475,7 +2475,7 @@ Lev Tzoma	"You can scan Lev for hints. He's not much for conversation."	--	"MAZE
 Zo Mavelt	"You can scan Zo for hints. He's not much for conversation."	--	"MAZEL TOV"
 Tom Avlez	"You can scan Tom for hints. He's not much for conversation."	--	"MAZEL TOV"
 lamb	"[one of]The lamb is petrified with fear, but maybe the right fear would get it going again.[plus][or]What sort of noise can you make to get it going?[plus][or]BLAM.[minus][cycling]"	--	"BLAM"
-onyx censer	"[one of]The censer's black and green and really retro.[plus][or]The censer may remind you of what people used to play text adventures on a long time ago.[plus][or]It can become a SCREEN.[minus][cycling]"	--	"make a SCREEN"
+censer	"[one of]The censer's black and green and really retro.[plus][or]The censer may remind you of what people used to play text adventures on a long time ago.[plus][or]It can become a SCREEN.[minus][cycling]"	--	"make a SCREEN"
 dart	"[one of]The dart is stuck in the dumpster, and taking it doesn't work.[plus][or]Frustrating, eh?[plus][or]What's a good word of frustration?[plus][or]Four letters.[plus][or]DRAT.[minus][cycling]"	--	"DRAT"
 tsar star	"[one of]The tsar star is stuck in the tars, and taking it is too frustrating.[plus][or]Sticky, eh? The tars and the tsar star.[plus][or]What's a good clean word of frustration?[plus][or]Four letters, but not FOUR LETTERS.[plus][or]RATS.[minus][cycling]"	--	"RATS"
 tars	--	tsar star

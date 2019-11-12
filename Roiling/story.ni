@@ -4769,7 +4769,7 @@ carry out presto-hinting:
 		try objhinting drab yoke instead;
 	if Hacks' Shack is visited:
 		if hump is not moot, try objhinting hump instead;
-		if onyx censer is not moot, try objhinting onyx censer instead;
+		if censer is not moot, try objhinting censer instead;
 		if yak is not moot: [?! rearrange this]
 			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak[if yak is not in Hacks' Shack] you left back...wherever[end if]." instead;
 			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
@@ -7267,7 +7267,7 @@ carry out fliptoing (this is the main fliptoing rule):
 					two-up;
 				else if the-to entry is meet bans:
 					if Largely All-Grey Gallery is unvisited, two-up;
-				else if the-to entry is onyx censer and the player's command includes "phooey":
+				else if the-to entry is censer and the player's command includes "phooey":
 					two-up;
 				else if the-from entry is not part of the diorama:
 					reg-inc;
@@ -9220,7 +9220,7 @@ Sister Tressi	Troves	"You can RESIST Sister Tressi."
 Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
 Blamer Mr Beal	Troves	"You can RAMBLE to ignore Blamer Mr Beal."
 DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
-onyx censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
+censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
 plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative."
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
 LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyster]
@@ -11601,7 +11601,7 @@ understand the command "place" as "put".
 
 check putting it on (this is the yak-skid rule):
 	if second noun is skid:
-		if noun is onyx censer, say "That would roll off the skid. Or fall over and roll off, if you stood it on end." instead;
+		if noun is censer, say "The censer isn't flat enough to stay on the skid over all the bumps. Maybe it could become something flatter." instead;
 	if noun is yak and second noun is skid:
 		ignore the can't put what's not held rule;
 		say "[if yak is on skid]It already is.[else]The yak doesn't want to budge. Maybe if you had something tasty.[end if]" instead;
@@ -11932,14 +11932,14 @@ check going outside in Austerer Treasure: try going east instead;
 
 phooeyed is a truth state that varies.
 
-the onyx censer is a thing. description of onyx censer is "It's dark with blocky flecks of bright green. If they were lumped together and you stared too long, you'd get a headache. The year 1983 is scratched in, possibly AD or BC.". "An onyx censer, dark with flecks of black green, rests here."
+the N E Recs censer is a thing. description of censer is "N-E-Recs is a popular brand name in Yorpwald for stuff you can pass off as classier or more vintage or whatever than it is. It's black with blocky flecks of bright green. If they were lumped together and you stared too long, you'd get a headache. The year 1983 is scratched in, possibly AD or BC.". "The N-E-Recs censer, black with flecks of black green, rests here.". printed name of censer is "N-E-Recs Censer"
 
-after printing the name of the onyx censer while taking inventory:
+after printing the name of the censer while taking inventory:
 	if censer is prefigured:
 		say " (which could become a screen)";
 	continue the action;
 
-a-text of onyx censer is "RRRYYR". b-text of onyx censer is "RRRYGR". parse-text of onyx censer is "x[sp]x[sp]x[sp]e[sp]e[sp]x".
+a-text of N E Recs censer is "RRRYYR". b-text of N E Recs censer is "RRRYGR". parse-text of N E Recs censer is "x[sp]x[sp]x[sp]e[sp]e[sp]x".
 
 the switch computer pieces rule is listed before the can't switch on unless switchable rule in the check switching on rules.
 
@@ -12262,7 +12262,7 @@ check inserting into (this is the cola/mug/censer rule) :
 	if noun is fizzy cola, say "Bad idea to pour the fizzy cola out of the mug." instead;
 	if noun is dirty looking cola:
 		if second noun is on slab, say "Programmer rage! Love it!" instead;
-		if noun is onyx censer, say "The censer wasn't made for that." instead;
+		if noun is censer, say "The censer wasn't made for that." instead;
 		if second noun is not mug, say "You need to pour into something that can contain a liquid." instead;
 
 chapter fount
@@ -12355,13 +12355,13 @@ after printing the locale description for shack when shack is unvisited:
 	if computer screen is in Austerer Treasure:
 		say "Drive A could use a screen. Like the one you uncovered in the treasure room. Which you run back and get.";
 		now player has computer screen;
-	else if onyx censer is in Austerer Treasure and censer is prefigured:
+	else if censer is in Austerer Treasure and censer is prefigured:
 		say "You remember that censer it would've been awkward to carry around. You decide to go back for it.";
-		moot onyx censer;
+		moot censer;
 		now player has computer screen;
 		reg-inc;
 	else:
-		say "Drive A on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--you can probably change the onyx censer now.[else if player has the screen]--yours would do.[else if player has onyx censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
+		say "Drive A on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--you can probably change the N-E-Recs censer now.[else if player has the screen]--yours would do.[else if player has censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
 	continue the action;
 
 to go-back (rm - a room):
@@ -12389,7 +12389,7 @@ check going in Hacks' Shack (this is the maybe lock player in rule): [check goin
 	abide by the shack-south rule;
 
 after printing the locale description for Hacks' Shack (this is the auto-screen rule):
-	if player has onyx censer:
+	if player has censer:
 		if censer is prefigured:
 			now Hacks' Shack is visited;
 			say "Hmm, now would be a good time to change the censer to a screen. Get it off your hands.";
@@ -12440,7 +12440,7 @@ to say treas-west:
 	else if hoop is in Austerer Treasure:
 		say "the hoop in Austerer Treasure";
 	else:
-		say "what the onyx censer could become";
+		say "what the censer could become";
 
 a giant dead flea is a thing in Hacks' Shack. "A giant dead flea is here, probably not decomposing yet."
 

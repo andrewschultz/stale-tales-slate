@@ -117,6 +117,7 @@ there,ether
 mazeltov,ezolavtm,vztlameo,zvtlameo,ltovmaze,olavmetz,zemovalt
 #austerer treasure
 phooey,oyehop
+screen,RR???R=nerecs=censer
 #char arch
 drat,tard
 rats,RYRR=tsar=star

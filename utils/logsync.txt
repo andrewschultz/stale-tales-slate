@@ -215,13 +215,12 @@ lamb>blam
 plebe>bleep
 hump>umph
 volt maze>mazeltov
-zo mavelt>mazeltov
-lev tzoma>mazeltov
-tom avlez>mazeltov
 ####nowt town
 maze walls~voltmaze>mazeltov
 ####unwary runway
-tom alvez>mazeltov
+zo mavelt>mazeltov
+lev tzoma>mazeltov
+tom avlez>mazeltov
 ####char arch
 tsar star>rats
 tars>rats
@@ -237,7 +236,7 @@ sods gone odes song>goodness
 >IGNORE=ye hoop
 hoop2~ye hoop>phooey
 hoop1~hoop>pooh
-onyx censer~censer>screen
+n e recs censer~censer>screen
 ####marines seminar remains
 popgun~boing go bin>bingo
 sport ports>prost

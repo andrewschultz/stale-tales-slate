@@ -278,10 +278,10 @@ PUT DART IN POPGUN.
 If you try to take it, your possessions weigh you down. You can't find the right way to ditch your possessions for a second.
 Say POOH...
 ...or, to really do the job, say PHOOEY.
-?What can the censer be?
-Onyx is out, as is onyx censer.
+?What can the N-E-Recs censer be?
+Recs and Rec are too short to make a word.
 The green semi-text on black may be a clue.
-It becomes a SCREEN.
+The censer becomes a SCREEN.
 >>CHAR ARCH
 ?What's in the cretins' cistern?
 A dart. It's frustrating to get. You'll probably get it as soon as you give up.

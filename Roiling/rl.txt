@@ -52,6 +52,12 @@ Slot 3 is a vowel that is not O, so it's E, and slot 6 is a vowel, and O is the 
 But now slot 4 can't be P or T, and slot 2 covers R, so slot 4 is S.
 (TP)RES(TP)O = PRESTO.
 >STORE P
+>>AUSTERER TREASURE
+?What do I do now that I got the item behind (ye) hoop?
+It's an N E RECS CENSER. It gives RR???R. This looks pretty ugly, until you count vowels and consonants.
+Slots 4 and 5 must be E. That leaves few possibilities for ---EE-.
+You have (RS)(CNRS)(NR)EE(CN). But guesing R gives us RSNEEC. So the first letter is S.
+Similarly, R in the second place gives SRNEEC. So it is in the third. That leaves SNEERC or SCREEN. SCREEN.
 >>DIRGE RIDGE
 #logic for sods gone odes song
 ?What do I do about the sods gone odes song?
