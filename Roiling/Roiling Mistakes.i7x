@@ -468,6 +468,8 @@ understand "parsec" as a mistake ("Casper doesn't take too kindly to sci-fi term
 
 understand "phos" as a mistake ("The bar fails to change into an ethnic restaurant.") when player is in Posh Hops Shop.
 
+understand "spyte" as a mistake ("The pesty types probably spell it that way, but I'm not letting YOU do so.") when player is in Posh Hops Shop.
+
 understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop.
 
 understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is in hops shop and player is in hops shop.

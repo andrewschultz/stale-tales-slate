@@ -966,10 +966,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pager"	329383391	--	pagers	--	"[plur-fruit]."
 "lime"	290687947	--	slime	--	"[plur-fruit]."
 "harmonica"	398315407	--	harmonicas	--	"The harmonicas seem stuck together, so you probably have to deal with both of them."
-"drinksstand"	660968789	--	drinks stand	--	"[drink-stand]."
-"drinks"	369460390	--	drinks stand	--	"[drink-stand]."
-"stand"	291508399	--	drinks stand	--	"[drink-stand]."
-"abandoned"	404826421	--	drinks stand	--	"[drink-stand]."
+"circuit"	421536490	--	ruts circuits	--	"[ru-ci]."
+"circuits"	517810456	--	ruts circuits	--	"[ru-ci]."
+"rut"	293539628	--	ruts circuits	--	"[ru-ci]."
+"ruts"	389813594	--	ruts circuits	--	"[ru-ci]."
 "eerie"	513734976	--	eerie blurbs	--	"[whole-item]."
 "blurbs"	377355225	--	eerie blurbs	--	"[whole-item]."
 "megaton"	473038885	--	mopeage rant	--	"[part-of-lots]."
@@ -1793,7 +1793,7 @@ to say border-arbor: say "Bad idea to ruin such life-giving scenery[if compass i
 
 to say plur-fruit: say "Well, you don't technically need plurals for this, but you're on the right track"
 
-to say drink-stand: say "Nothing happens. [if stand is examined]You found enough inside it, anyway[else]Maybe just examine it[end if]"
+to say ru-ci: say "Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up"
 
 to say whole-item: say "Nothing happens. Perhaps it's the whole item that's important"
 

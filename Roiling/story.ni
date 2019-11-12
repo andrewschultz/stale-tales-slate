@@ -2412,7 +2412,6 @@ carry out reading:
 		if there is a what-read entry, say "[what-read entry][line break]" instead;
 		try reading alt-read entry instead;
 	if noun is large regal lager, try examining rubbish story instead;
-	if noun is drinks stand, try examining blurbs instead;
 	try examining noun instead;
 
 does the player mean reading LEAD: it is very likely.
@@ -2472,8 +2471,7 @@ cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
-drinks stand	--	blurbs	[others]
-eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red."
+eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
 riot cap	"It's red and [one of]made of I-TARP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
@@ -4593,7 +4591,7 @@ viewer-first is a truth state that varies.
 enuf-fruit-poke is a truth state that varies.
 
 carry out others-hinting:
-	if player is in Clangier Clearing and cur-score of others >= 3 and drinks stand is unexamined, try objhinting stand instead;
+	if player is in Clangier Clearing and cur-score of others >= 3 and ruts circuits are unexamined, try objhinting ruts circuits instead;
 	if player has moss cap, try objhinting moss cap instead;
 	if player has s-i and player has storage, all-say "You probably want to put the icons in the storage." instead;
 	if player has s-c, try objhinting s-c instead;
@@ -18983,7 +18981,35 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is touchable]--I don't think the spear stuck in the ground counts[end if][if mad train is touchable], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are touchable]The ground's covered with lumps, too. [end if][if pagers are touchable]You hear pagers beeping all around as well. [end if][if slime is touchable]You also have trouble not looking at some slime oozing off to the side. [end if][if omen prism is in Rustic Citrus]That omen prism you uncovered from the drinks stand lies here, too. [end if]"
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break][if ruts circuits are in Rustic Citrus]Ruts circuits may have random stuff strewn, so they may be wortth EXAMINEing[else][fruit-rollup][end if]."
+
+to say fruit-rollup:
+	if spear is moot and mad train is moot and lumps are moot and pages are moot and slime is moot and omen prism is moot and eerie blurbs are moot:
+		say "You've tracked down all the fruits here";
+		continue the action;
+	let pres-available be boolval of whether or not spear is touchable +  boolval of whether or not spear is touchable +  boolval of whether or not spear is touchable +  boolval of whether or not spear is touchable +  boolval of whether or not omen prism is touchable;
+	let cur-got be 0;
+	if pres-available > 0:
+		say "You see ";
+		if spear is touchable:
+			say "a spear stuck in the ground";
+			increment cur-got;
+		if mad train is touchable:
+			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
+			increment cur-got;
+		if lumps are touchable:
+			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
+			increment cur-got;
+		if slime is touchable:
+			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]slime oozing off to the side"
+			increment cur-got;
+		if omen prism is touchable:
+			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts"
+			increment cur-got;
+	if pagers are touchable:
+		say ". Pagers seem to be beeping all around"
+		increment pres-available;
+	if eerie blurbs are touchable, say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
 
 a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
 
@@ -19264,27 +19290,25 @@ check going north in Rustic Citrus:
 	if player has moss cap, say "The moss cap isn't helping your sense of direction as much as it should. Well, not in its present form." instead;
 	now others is unspoiled;
 
-chapter drinks stand
+chapter ruts circuits
 
-the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a weird omen prism.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are touchable] You notice some eerie blurbs written on the stand.[end if]"
+the ruts circuits are plural-named boring scenery in Rustic Citrus. "[one of]A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a weird omen prism.[or]There's no other nasty cola, or writing, or 'art,' to find. Finally, some eerie blurbs are traced along the edge of the ruts.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things once you've picked off all the, uh, low-hanging fruit here that you can.".
 
-check taking drinks stand: say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
-
-the citrus sign is part of the abandoned drinks stand. description is "It says CURTIS['] (sic) RUSTIC CITRUS.". the citrus sign is useless.
-
-after examining abandoned drinks stand (this is the three fruits in drinks stand rule) : [all 3 conditions should be all true or all false, but just in case...]
-	if peanut cola is off-stage, now peanut cola is in Rustic Citrus;
-	if magenta rope is off-stage:
-		if pears are not off-stage, now megaton pear is in Rustic Citrus;
-		now magenta rope is in Rustic Citrus;
-		now rampage note is in Rustic Citrus;
-		now mopeage rant is in Rustic Citrus;
-	if omen prism is off-stage, now omen prism is in Rustic Citrus;
+after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 conditions should be all true or all false, but just in case...]
+	move peanut cola to Rustic Citrus;
+	if pears are not off-stage, move megaton pear to Rustic Citrus;
+	move magenta rope to Rustic Citrus;
+	move rampage note to Rustic Citrus;
+	move mopeage rant to Rustic Citrus;
+	move omen prism to Rustic Citrus;
+	moot ruts circuits;
+	say "[line break]Tracing the ruts circuits to find useful items wore them down. You can no longer see them any more. But it's still a net gain.";
+	move eerie blurbs to Rustic Citrus;
 	continue the action;
 
 chapter blueberries
 
-the eerie blurbs are part of the abandoned drinks stand. description is "A weird blue-purple. None of them make sense, but you can read them."
+the eerie blurbs are scenery. description is "A weird blue-purple. None of them make sense, but you can read them."
 
 a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "RRYYRYRRYYP". parse-text of eerie blurbs is "b[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]s".
 
@@ -19318,7 +19342,7 @@ to say pre-pom-blah: say "A glance seems to indicate some unfortunate writing--e
 
 section magenta rope
 
-the magenta rope is a vanishing boring thing. initial appearance of the magenta rope is "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant.". description of magenta rope is "Oddly colored. It's got a yellowish tinge.". bore-check of magenta rope is bore-magenta-rope rule.
+the magenta rope is a vanishing boring thing. initial appearance of the magenta rope is "A magenta rope is left by where the ruts circuits were, partially obscuring a rampage note and mopeage rant[if megaton pear is touchable] and megaton pear[end if].". description of magenta rope is "Oddly colored. It's got a yellowish tinge.". bore-check of magenta rope is bore-magenta-rope rule.
 
 this is the bore-magenta-rope rule:
 	if current action is taking, say "It would uncover Curtis's silly writings--the note and the rant. You'd be best off getting rid of all three, somehow.";
@@ -21784,8 +21808,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
 		if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
 		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become grapes.";
-		if drinks stand is unexamined:
-			say "[2drm of Rustic Citrus]you could've examined the drinks stand to find more pre-fruits.";
+		if ruts circuits is unexamined:
+			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more pre-fruits.";
 		else:
 			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
 			if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become LIMES.";

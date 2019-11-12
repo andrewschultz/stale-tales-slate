@@ -1551,8 +1551,8 @@ For starters, get 4 fruits. A few are easy.
 The Spear will be PEARS.
 The Lumps can be PLUMS.
 The Pagers can be GRAPES.
-Examine the drinks stand, then the slime can be LIMES.
-There are more potential fruits, which you may be able to guess, but you only need four.
+Examine the ruts circuits, then the slime can be LIMES.
+There are more potential fruits, which you may be able to guess, but you only need four to start, and I wanted to make them easy.
 ?What's the augural arugula for?
 Well, it's a cheat item. You can EAT it, then GURU something, and if it can become a fruit, there you go.
 But you lose a last lousy point at the end if you GURU something. So it's double-edged.
