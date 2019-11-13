@@ -127,6 +127,21 @@ Score in a scenario: 1 out of 21 total points in the current region, Routes. Low
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 
+==t0
+#pre-side-art-astride rule
+>astride
+You get astride the sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
+!by one point
+>pad flips
+ASTRIDE
+#pre-sitanag-against rule
+>against
+!by one point
+You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
+[You add the information to your pedanto-notepad under FLIPS.]
+>pad flips
+Find a way to be fearless so you can lean AGAINST the anti-sag sit-a-nag.
+
 >inside
 Your score has just gone up by one point
 
@@ -392,6 +407,17 @@ You hang around the bench, hoping for something to happen, but nothing happens. 
 >gaiastn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+==t0
+#pre-mesa-dir-flip rule
+>past
+!by one point
+#pre-mesa-dir-flip rule
+>across
+!by one point
+#pre-mesa-dir-flip rule
+>towards
+!by one point
+
 >against
 Your score has just gone up by one point
 
@@ -580,6 +606,10 @@ You feel it's ALMOST the right time for the darkness to lift.
 >nuilt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+==t0
+#pre-around-unroad rule
+>around
+
 >until
 Your score has just gone up by one point
 
@@ -675,6 +705,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 Sonancy Canyons
+
+==t0
+#pre-hurt-hog-through rule
+>through
+WRONG
+!by one point
 
 ==t2
 #nudge for canyon
