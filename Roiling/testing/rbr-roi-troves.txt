@@ -170,6 +170,12 @@ No, you'll want to zone out the whole verbose distraction.
 >obserev
 WRONG
 
+==to
+#pre-spot-stop-post rule
+>spot
+!by one point
+That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.
+
 >observe
 Your score has just gone up by one point
 
@@ -240,6 +246,7 @@ Score in a scenario: 7 out of 24 total points in the current region, Troves. Low
 But it's not just any bee. It's a WRONG
 
 ==t0
+#pre-cellar-recall rule
 >recall
 WRONG
 !by one point
@@ -377,7 +384,7 @@ You stare into space some more but get distracted.??
 That's not quite the way to deserve that lobster.
 
 ==t0
-#can't deal right away
+#pre-deal rule
 >deal
 WRONG
 !by one point
@@ -651,6 +658,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >rrecant
 WRONG
+
+==t0
+#pre-nectar-recant rule
+>recant
+!by one point
+It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With
 
 ==t!2
 >ramble
