@@ -93,7 +93,7 @@ include Glulx Status Window Control by Erik Temple.
 
 book separate modules
 
-include Trivial Niceties by Andrew Schultz.
+include Intro Restore Skip by Andrew Schultz.
 
 include Shuffling Random Text by Andrew Schultz.
 
@@ -2347,12 +2347,13 @@ when play begins (this is the initialise anagrams pad and beats rule) :
 		if Q is a sto, move Q to Trips Strip;
 
 when play begins (this is the skip small intro if wanted rule):
-	intro-restore-skip;
-	if read-intro is true:
-		say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
-		if the player no-consents, now sr-acc is true;
-		say "OK. This can be toggled at any time with ACCESS.";
-		say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
+	process the check-skip-intro rule;
+	let skip-stuff be whether or not the rule succeeded;
+	say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
+	if the player no-consents, now sr-acc is true;
+	if skip-stuff is true, continue the action;
+	say "OK. This can be toggled at any time with ACCESS.";
+	say "[line break]So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
 	move player to Busiest Subsite, without printing a room description;
 
 last-was-cert is a truth state that varies.
@@ -2475,7 +2476,7 @@ the auditorium entry is useless scenery in Busiest Subsite. "You'd love any excu
 
 section vacate caveat
 
-the vacate caveat is scenery in Busiest Subsite. description of vacate caveat is "It advertises the way to ACT AVE, and below it there's side passage.".
+the vacate caveat is scenery in Busiest Subsite. description of vacate caveat is "It advertises the way to ACT AVE, and below it there's a side passage.".
 
 understand "act/ave" and "act ave" as vacate caveat when player is in Busiest Subsite.
 
@@ -4756,7 +4757,7 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure.
 
-Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
+Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west and east[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
 
 after looking in Cruel Ones' Enclosure:
 	if banshee is in Cruel Ones' Enclosure:
@@ -4801,6 +4802,12 @@ to check-score (a - indexed text):
 	say "We need to zap the Check-Score for [a] for the new version.";
 	the rule succeeds;
 
+section scoffer coffers
+
+the scoffer coffers are boring bounding scenery in Cruel Ones' Enclosure. "The coffers remind you of all the times you were laughed at.". bore-text of scoffer coffers is "You don't want to mess with the scoffer coffers and the horrible laughter contained therein."
+
+understand "coffer" and "scoffer coffer" as scoffer coffers.
+
 chapter Ghouls' Slough
 
 Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough.
@@ -4820,7 +4827,7 @@ check examining maps in Ghouls' Slough:
 
 chapter Frost Forts
 
-Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if]."
+Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if]."
 
 Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
 
@@ -7379,8 +7386,8 @@ section going
 
 check going in Leis Isle (this is the Isle escape rule):
 	if player has wings and noun is up, try going east instead;
+	if noun is not east, say "You bounce smack off the woodland! Now that's weird." instead;
 	if player does not have cork and player does not have wings, say "It's too far to swim, and you've got no way to go over the lake or whatever it is." instead;
-	if noun is not east, say "Maybe something's that way, but you see land far off to the east." instead;
 	unless rock is moot and swing is moot, poss-d;
 	if l2 is in Leis Isle, poss-d;
 	say "Yes. It's time to move on from the [isle]. You need to find Red Bull Burdell.[paragraph break]";
@@ -7512,7 +7519,7 @@ check going east in Rived Drive:
 		now player is in Potshot Hotspot instead;
 	if player has ropes and player has grips:
 		say "Tying the rope around your waist, throwing it [']til it catches on a rock above, and using the grips, you make it up the slope. What you see makes you drop them in surprise!";
-		if toeholds are not moot:
+		if toolshed is not moot:
 			poss-d;
 			poss-d;
 		now player is in Potshot Hotspot instead;
@@ -7558,11 +7565,11 @@ report going east in Rived Drive:
 	say "You won't be able to repo the rope.";
 	continue the action;
 
-Potshot Hotspot is east of Rived Drive. Potshot Hotspot is in Resort.
+Potshot Hotspot is east of Rived Drive. Potshot Hotspot is in Resort. printed name of Potshot Hotspot is "[if red bull burdell is moot]Setter Street[else]Potshot Hotspot[end if]".
 
 check going inside in Potshot Hotspot: try going east instead;
 
-description of Potshot Hotspot is "An arid, trod dirt road. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is not touchable]It's nice and peaceful here, but it's not quite home[end if].".
+description of Potshot Hotspot is "An arid, trod dirt road[if red bull burdell is moot]--named after you, who set things straight[end if]. Frust turfs blocks the way north and south. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is not touchable]It's a nice and peaceful neighborhood now, with Red Bull Burdell gone, but you're not fully home[else]There's one more person with potshots, though[end if].".
 
 after printing the locale description for hotspot when hotspot is unvisited:
 	set the pronoun it to riot;
@@ -7594,6 +7601,10 @@ check going east in Potshot Hotspot:
 	if red bull burdell is touchable, say "Not with Red Bull Burdell around you aren't." instead;
 	if protest is touchable, say "They still outnumber you. Though they're only blocking you out of spite. They just--well, they don't have anything to do, and they're sort of expecting you to give them something better to do than, well, [i]protest[r]." instead;
 	if potters are touchable and kilns are not touchable, say "They seem a civil trio, buy as you inch east, they get vitriolic. 'Give us something to do!'" instead;
+
+section frust turfs
+
+the frust turfs are plural-named bounding scenery in Potshot Hotspot. "The frust turfs are too treacherous. What you really want is to make it to the ransom manors."
 
 section roman manors
 
@@ -7739,7 +7750,7 @@ carry out tuging:
 		if the player's command matches the regular expression "^(tug)? *toe":
 			reg-inc;
 			say "'It's ju-jitsu!' you yell, grabbing his toe.[paragraph break]'Gritty try, git,' he says, with a sporting pig snort. 'Ha! Inept!' ... 'Ho-ho! Oohh! ... Oh-oh.'[run paragraph on]";
-			say "[wfak][paragraph break]'THE PAIN!' Burdell's toe yellows, and he yells 'OW!' A raw 'EEK' proves he's getting weaker. 'Rematch, Mr. Cheat!' he squeaks, failing to reobtain his baritone or, indeed, consider your gender. 'My buffs! FFS, Y'bum!'[paragraph break]'No go, goon! No terms, monster!' You ignore the predator's teardrops through a rain of 'No fair!' and 'Violent, not evil!'[paragraph break]Then he moans 'No Mas,' and a wan NAW! 'I predate adepter. I...'[paragraph break]'Who? How?' you reply. He has no answer.[paragraph break]Ya won! No way!";
+			say "[wfak][paragraph break]'THE PAIN! HEAP'N IT! AH, INEPT!' Burdell's toe yellows, and he yells 'OW!' A raw 'EEK' proves he's getting weaker. 'Rematch, Mr. Cheat!' he squeaks, failing to reobtain his baritone or, indeed, consider your gender. 'My buffs! FFS, Y'bum!'[paragraph break]'No go, goon! No terms, monster!' You ignore the predator's teardrops through a rain of 'No fair!' and 'Violent, not evil!'[paragraph break]Then he moans 'No Mas,' and a wan NAW! 'I predate adepter. I...'[paragraph break]'Who? How?' you reply. He has no answer.[paragraph break]Ya won! No way![paragraph break]The area feels more ... suburban, now. There's even a name for the street you're on!";
 			if gadget is in Potshot Hotspot:
 				say "[line break]You pick up your gadget, not because you need any more puzzles, but because you may need proof you're, well, you.";
 				now player has gadget;
@@ -9038,7 +9049,7 @@ Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once i
 Self-ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
-Cruel Ones' Enclosure	"You think you hear 'Lo! Censure lures once!' There seems to be nothing, or worse than nothing, that way. You can go back south or try to go north."
+Cruel Ones' Enclosure	"You think you hear 'Lo! Censure lures once!' The scoffer coffers would drain you mentally if you tried to go any way other than north or back south."
 Trap Part	"[if centrifuge-stopped is false]That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first[else][dmm]. You can only go north to the kitchen or east[or-room][end if]."
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
 Kitchen	"[dmm] [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
