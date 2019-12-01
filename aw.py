@@ -190,7 +190,7 @@ for x in new_arg:
     anagram_check(x)
 
 if get_stdin:
-    input_line = "Enter line (blank quits, ? at start=find definitions, ~=search):\n>>>>"
+    input_line = "Enter line (blank quits, ? at start=find definitions, ~=search, 123=call up anagram server):\n>>>>"
     print(input_line, end='')
     for line in sys.stdin:
         ll = line.strip().lower()
@@ -226,8 +226,9 @@ if get_stdin:
                 os.system("start http://www.thefreedictionary.com/{:s}".format(x))
             skip = True
         if re.search("[^a-z, ]", ll, re.IGNORECASE):
-            print("WARNING: invalid characters skipped in", ll)
-            ll = re.sub("[^a-z, ]", "", ll, 0, re.IGNORECASE)
+            ll_old = ll
+            ll = re.sub("[^a-z, ]", "", ll_old, 0, re.IGNORECASE)
+            print("WARNING: invalid characters. Changing {} to {}.".format(ll_old, ll))
         if not skip:
             new_arg = re.split("[ ,]", ll.strip())
             for x in new_arg:
