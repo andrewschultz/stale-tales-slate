@@ -18,7 +18,6 @@ book nudge tables
 table of Ordeal Loader nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "busiest"	591981617	Busiest Subsite	--	--	"[loc-rej]." [start Busiest Subsite]
-"noentry"	650766775	Busiest Subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
 "slim"	259155804	Busiest Subsite	--	--	"[name-list]."
 "neat"	302011453	Busiest Subsite	--	--	"[name-list]."
 "name"	262976588	Busiest Subsite	--	--	"[name-list]."
@@ -164,10 +163,10 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "aroma"	228127169	--	aroma of teas	--	"[guider-content]."
 "leaves"	515052661	--	leaves	--	"You have no time to play with leaves."
 "south"	416124667	--	--	forest-south rule	"[forest-no of shout]."
-"north"	368976205	--	--	forest-north rule	"[forest-no of north]."
+"north"	368976205	--	--	forest-north rule	"[forest-no of thorn]."
 "west"	435124866	--	--	forest-west rule	"[forest-no of stew]."
 "east"	329377911	--	--	forest-east rule	"[forest-no of teas]."
-"eat"	233103945	--	teas	--	"[forest-no]. Anyway, it doesn't smell like just one tea."
+"eat"	233103945	--	teas	--	"[forest-no of teas]. Anyway, it doesn't smell like just one tea."
 "rest"	412513896	rf	--	--	"[loc-rej]." [START OF REST OF FOREST]
 "selfid"	370430745	self-id	--	--	"[loc-rej]." [START SELF-ID FIELDS]
 "selves"	609138809	self-id	--	--	"The selves vessel is much too sturdy to manipulate."
@@ -219,6 +218,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "cruel"	391055143	Cruel Ones' Enclosure	--	--	"[loc-rej]." [START OF CRUEL ONES ENCLOSURE]
 "ones"	367340160	Cruel Ones' Enclosure	--	--	"[loc-rej]."
 "enclosure"	758395303	Cruel Ones' Enclosure	--	--	"[loc-rej]."
+"coffer"	359517866	Cruel Ones' Enclosure	--	--	"[scof-no]."
+"coffers"	455791832	Cruel Ones' Enclosure	--	--	"[scof-no]."
 "cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is touchable]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
@@ -506,6 +507,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "rope"	368948448	--	ropes	--	"Those are already useful."
 "grip"	244382310	--	grips	--	"Those are already useful."
 "hotsopt"	569947414	Potshot Hotspot	--	--	"[loc-rej]." [start Potshot Hotspot]
+"setter"	643430023	--	--	bull-moot rule	"It's Setter Street now. Seems like an appropriate tribute to a hero like you."
+"frust"	416328490	Potshot Hotspot	--	--	"The frust turfs are unchangeable."
+"turf"	320054524	Potshot Hotspot	--	--	"The frust turfs are unchangeable."
 "ransom"	391120825	Potshot Hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
 "manor"	294846859	Potshot Hotspot	--	--	"You don't need to change the manors. You just need to be able to get there."
 "rioters"	617183122	--	riot	--	"[simple-riot]."
@@ -677,7 +681,7 @@ this is the forest-south rule:
 	if shout is touchable, the rule succeeds;
 	the rule fails;
 
-to say forest-no of [x - a thing]: say "Your compass feels extra jumbled[if x is touchable]. [badana of x][else if x is moot], and you remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
+to say forest-no of (x - a thing): say "Your compass feels extra jumbled[if x is touchable]. [badana of x][else if x is moot], and you remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
 
 this is the forest-north rule:
 	if thorn is touchable, the rule succeeds;
@@ -717,6 +721,8 @@ this is the liv-vis rule:
 to say bothlivers: say "The one liver seems inactive by itself"
 
 to say rivliv: say "It's just a liver. No need to parse the brand name"
+
+to say scof-no: say "You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get"
 
 this is the spread-drapes rule:
 	if player is in Cruel Ones' Enclosure:

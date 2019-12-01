@@ -49,8 +49,6 @@ understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you ha
 
 understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.") when player is in Busiest Subsite.
 
-understand "no entry" as a mistake ("[if player is in subsite]Hm, interesting. You wonder if anything is REALLY stopping you from entering.[else]You solved that puzzle already. Onward![end if]")
-
 understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be THAT dreary. But what if there is something else?") when the player is in Busiest Subsite.
 
 understand "try" as a mistake ("[if player is in subsite]You're sure the lecture to the east will be about trying versus doing. Ugh[else]That's more sensible than the five alternatives, but it's not concrete enough[end if].")
@@ -269,7 +267,7 @@ understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep r
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
-understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]");
+understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when weoful pat is touchable or poem is touchable.
 
 understand "nepal" as a mistake ("Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.") when plane-or-panel
 
@@ -281,7 +279,7 @@ understand "reset" and "reset button" as a mistake ("[reset-goof].") when player
 
 understand "rifle" as a mistake ("Shooting things up is not the answer.") when got-flier.
 
-understand "similes" as a mistake ("[if smilies are touchable]Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.[else if missile is touchable]You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.[else][reject]")
+understand "similes" as a mistake ("[if smilies are touchable]Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.[else if missile is touchable]You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.[else][reject]") when smilies are touchable or missile is touchable.
 
 understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is touchable or hoots button is touchable.
 
@@ -441,6 +439,8 @@ understand "lacy" as a mistake ("No, the clay is a clue to what the protest real
 
 understand "morans" and "moran" as a mistake ("A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!") when player is in Potshot Hotspot and ransom manors are in Potshot Hotspot.
 
+understand "retest" as a mistake ("Oh, wow! Do you really want to play through again? I'm flattered!") when player is in Potshot Hotspot and Red Bull Burdell is moot.
+
 understand "roister" as a mistake ("That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.") when protest is touchable.
 
 understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.") when player is in Potshot Hotspot and ransom manors are in Potshot Hotspot.
@@ -448,6 +448,8 @@ understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need san
 understand "slink" as a mistake ("[if red bull burdell is touchable]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in Potshot Hotspot
 
 understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in Potshot Hotspot and potters are not moot.
+
+understand "tester" as a mistake ("Your tester, Red Bull Burdell, is vanquished. Let's keep it that way.[paragraph break]On the other hand, if you're volunteering to test my other games, I could always use the help.") when player is in Potshot Hotspot and Red Bull Burdell is moot.
 
 chapter Means Manse
 
