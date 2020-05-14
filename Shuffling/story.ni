@@ -7519,7 +7519,7 @@ check going east in Rived Drive:
 		now player is in Potshot Hotspot instead;
 	if player has ropes and player has grips:
 		say "Tying the rope around your waist, throwing it [']til it catches on a rock above, and using the grips, you make it up the slope. What you see makes you drop them in surprise!";
-		if toolshed is not moot:
+		if tool shed is not moot:
 			poss-d;
 			poss-d;
 		now player is in Potshot Hotspot instead;

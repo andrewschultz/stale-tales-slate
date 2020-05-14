@@ -83,7 +83,7 @@ the release number is 4.
 
 section game specific stuff
 
-include Trivial Niceties by Andrew Schultz.
+include Intro Restore Skip by Andrew Schultz.
 
 include Roiling Random Text by Andrew Schultz.
 
@@ -513,38 +513,39 @@ include Object Response Tests by Juhana Leinonen.
 section screenreading and censoring
 
 when play begins (this is the screenread gender swears and precursor rule) :
-	if debug-state is false:
-		intro-restore-skip;
-		say "A Roiling Original has some features that can be adjusted for screen readers. Are you using a screen reader?";
-		if the player direct-consents:
-			say "Accessibility is turned on. It is something I had trouble meaningfully planning and testing, so please let me know at [email] if you feel it could be improved. Thank you!";
-			now screenread is true;
-			now setspace is true;
-		say "You can alternate accessibility mode with the ACCESS command.[paragraph break]Also, A Roiling Original contains some minor profanity. Unfortunately, it can't wipe out some implied profanity that results, but nothing is intended to be malicious. Disable profanity?";
-		if the player direct-consents:
-			now censor-minor is true;
-		say "Also, this is not critical to game mechanics and only gives minor differences, but you can play as a male (M) or female (F) -- case insensitive. Which will it be?";
-		let cholet be 0;
-		while cholet is irrelevant:
-			let cholet be the chosen letter;
-			if cholet is irrelevant:
-				say "M or F, please.";
-		if cholet is 70 or cholet is 102:
-			choose-female;
-		else:
-			choose-male;
-		if read-intro is false, continue the action;
-		say "And one final thing: A Roiling Original is a sequel to Shuffling Around. It's strongly recommended you play Shuffling Around first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
-		if the player direct-consents:
-			say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Ordeal Reload as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
-			if the player consents: [start of game]
-				say "Things were, well, anagrams. Store F became the forest. Store I, the sortie. Store M, the metros. You were particularly proud of changing the liches to a chisel and the drapes to a spread.";
-			else:
-				say "OK, let's get to it!";
+	if debug-state is true:
+		choose-male;
+		continue the action;
+	process the check-skip-intro rule;
+	let skip-stuff be whether or not the rule succeeded;
+	say "A Roiling Original has some features that can be adjusted for screen readers. Are you using a screen reader?";
+	if the player direct-consents:
+		say "Accessibility is turned on. It is something I had trouble meaningfully planning and testing, so please let me know at [email] if you feel it could be improved. Thank you!";
+		now screenread is true;
+		now setspace is true;
+	say "You can alternate accessibility mode with the ACCESS command.[paragraph break]Also, A Roiling Original contains some minor profanity. Unfortunately, it can't wipe out some implied profanity that results, but nothing is intended to be malicious. Disable profanity?";
+	if the player direct-consents:
+		now censor-minor is true;
+	say "Also, this is not critical to game mechanics and only gives minor differences, but you can play as a male (M) or female (F) -- case insensitive. Which will it be?";
+	let cholet be 0;
+	while cholet is irrelevant:
+		let cholet be the chosen letter;
+		if cholet is irrelevant:
+			say "M or F, please.";
+	if cholet is 70 or cholet is 102:
+		choose-female;
+	else:
+		choose-male;
+	if skip-stuff is true, continue the action;
+	say "And one final thing: A Roiling Original is a sequel to Shuffling Around. It's strongly recommended you play Shuffling Around first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
+	if the player direct-consents:
+		say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Ordeal Reload as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
+		if the player consents: [start of game]
+			say "Things were, well, anagrams. Store F became the forest. Store I, the sortie. Store M, the metros. You were particularly proud of changing the liches to a chisel and the drapes to a spread.";
 		else:
 			say "OK, let's get to it!";
-	else: [force certain values]
-		choose-male;
+	else:
+		say "OK, let's get to it!";
 
 to decide whether gen-gone of (g - a guardian):
 	if g is moot, yes;
@@ -11947,7 +11948,7 @@ check switching on (this is the switch computer pieces rule) :
 	if noun is drive a, say "There [if drive a is reflexed]was[else]is[end if] a button for that." instead;
 	if noun is computer screen or noun is keyboard or noun is dongle, say "You don't need to switch any auxiliary equipment on or off." instead;
 
-the computer screen is a thing. description is "[if computer screen is not on labs slab]Vid-o-Void, since it's not hooked up to anything[else if BUB DUDE EGG is part of the computer screen]Ugh. It's got BUB DUDE EGG on the screen. You've compiled, but there's one more thing to do[else]A bunch of nonsense code that might not even work[end if]."
+the computer screen is a thing. description is "The brand name is scratched up, but really, there's no difference between the SEEN-CR, SEER-CN, CN-SEER and CR-SEEN that all fight over market share.[paragraph break]Technical details? [if computer screen is not on labs slab]Vid-o-Void, since it's not hooked up to anything[else if BUB DUDE EGG is part of the computer screen]Ugh. It's got BUB DUDE EGG on the screen. You've compiled, but there's one more thing to do[else]A bunch of nonsense code that might not even work[end if]."
 
 Include (-
 	has transparent talkable
@@ -22053,6 +22054,18 @@ carry out blaaing:
 	if found-chat is false:
 		say "Oops, nobody around.";
 	the rule succeeds;
+
+chapter sloning
+
+sloning is an action out of world.
+
+understand the command "slon" as something new.
+
+understand "slon" as sloning when player has letters settler.
+
+carry out sloning:
+	if slider is switched on, say "The slider already is." instead;
+	try switching on slider instead;
 
 chapter tsing
 
