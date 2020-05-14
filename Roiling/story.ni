@@ -4367,12 +4367,14 @@ marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
 sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
+n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
 maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe."
 alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
 Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
+LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 li'l p's pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five for the scary crays[end if]."
@@ -11935,12 +11937,12 @@ phooeyed is a truth state that varies.
 
 the N E Recs censer is a thing. description of censer is "N-E-Recs is a popular brand name in Yorpwald for stuff you can pass off as classier or more vintage or whatever than it is. It's black with blocky flecks of bright green. If they were lumped together and you stared too long, you'd get a headache. The year 1983 is scratched in, possibly AD or BC.". "The N-E-Recs censer, black with flecks of black green, rests here.". printed name of censer is "N-E-Recs Censer"
 
+a-text of n e recs censer is "RRRYYR". b-text of n e recs censer is "RR???R". parse-text of n e recs censer is "x[sp]x[sp]x[sp]e[sp]e[sp]x".
+
 after printing the name of the censer while taking inventory:
 	if censer is prefigured:
 		say " (which could become a screen)";
 	continue the action;
-
-a-text of N E Recs censer is "RRRYYR". b-text of N E Recs censer is "RRRYGR". parse-text of N E Recs censer is "x[sp]x[sp]x[sp]e[sp]e[sp]x".
 
 the switch computer pieces rule is listed before the can't switch on unless switchable rule in the check switching on rules.
 
@@ -12621,9 +12623,9 @@ chapter drive e
 
 Drive E is proper-named reflexive LLPish boring scenery in Hacks' Shack. description of drive e is "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if].". bore-text is "[if drive e is reflexed]You already improved Drive E[else]There's probably a way to make Drive E more efficient, but it's probably some irregular action[end if].".
 
-understand "e drive" as drive e.
-
 a-text of drive e is "RYRYRY". b-text of drive e is "?Y???G". parse-text of drive e is "x[sp]-[sp]x[sp]-[sp]x[sp]-".
+
+understand "e drive" as drive e.
 
 check inserting into drive e: say "Drive e is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive a may be able to hold stuff[end if]." instead;
 
@@ -13062,6 +13064,8 @@ Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop.
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of pesty types to 0;
 
+chapter pesty types
+
 the pesty types are useless boring plural-named people in Posh Hops Shop. description of pesty types is "Indistinguishable from most barflies, er, bar-fish. They're definitely not pets-y (sorry.)". bore-text of pesty types is "The pesty types aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of pesty types is bore-pesty-types rule. the pesty types are scenery.
 
 this is the bore-pesty-types rule:
@@ -13072,6 +13076,8 @@ the tips pits are reflexive plural-named boring scenery in Posh Hops Shop. descr
 this is the bore-pits rule:
 	if current action is taking, say "Even the people who didn't give tips would notice your rudeness." instead;
 	if current action is spiting, now boring-exception is true;
+
+chapter gins sign
 
 the gins sign is reflexive scenery in Posh Hops Shop. "It advertises various gins and intox-toxin-tonix--'Thirsty? Try this,' though someone scribbled 'Embrace Beer, Mac!' at the bottom. It advises against sharing garnish as well as making your own music."
 
@@ -13084,6 +13090,8 @@ m-bk is useless privately-named boring scenery in Posh Hops Shop. description of
 understand "posh/hops shop" and "shop" and "posh hops shop" as m-bk when player is in Posh Hops Shop. [?? instead of doing something with a location]
 
 check exiting when in Posh Hops Shop: try going outside instead;
+
+chapter tines
 
 the tines are plural-named reflexive scenery in Posh Hops Shop. "They look perfect for fitting a stein into, for refills."
 
@@ -13100,6 +13108,8 @@ rule for supplying a missing second noun when inserting into:
 rule for supplying a missing noun when inserting into:
 	if stein is in Posh Hops Shop, now noun is stein;
 
+chapter tunes
+
 The tunes are plural-named vanishing scenery in Posh Hops Shop. "The tunes really are awful. You wish you could just get rid of them with some technical know-how."
 
 check taking tunes: say "Ironically, they're the sort of tunes you really can't take. Isn't that ironic? Yes, I really do think." instead;
@@ -13115,6 +13125,8 @@ check scaning jukebox:
 		say "You wind up scanning the tunes that come from the jukebox.";
 		try scaning tunes instead;
 	say "The jukebox gives nothing with the tunes gone." instead;
+
+chapter perma amper
 
 the perma-amper is part of the jukebox. understand "perma/amper" as perma-amper.
 
@@ -13135,6 +13147,8 @@ does the player mean doing something with song buttons when player is in Posh Ho
 
 the LOLstr trolls are plural-named reflexive people in Posh Hops Shop. description is "LOLstr trolls have gained prominence in Yorpwald by being especially good at baiting patrons they don't like. Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets' vest. They're hired to cram pesty types back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]LOLstr return your gapin['] with aping, menacingly. They probably don't want an apology[else]LOLstr block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
 
+a-text of LOLstr trolls is "RRRYRR". b-text of LOLstr trolls is "RRRY?R". parse-text of LOLstr trolls is "x[sp]x[sp]x[sp]o[sp]l[sp]x".
+
 the vets' vest is a useless thing. description is "It reads: [i]We toss sots. Ew![r] You suspect this means probably only the disruptive, broke sots who patronise this noise trap."
 
 check scaning vets' vest:
@@ -13142,8 +13156,6 @@ check scaning vets' vest:
 	try scaning trolls instead;
 
 the LOLstr trolls wear the vets' vest.
-
-a-text of LOLstr trolls is "RRRYRR". b-text of LOLstr trolls is "RRRY?R". parse-text of LOLstr trolls is "x[sp]x[sp]x[sp]o[sp]l[sp]x".
 
 Casper Spacer is a person in Posh Hops Shop. description is "He hides the writing in his Capers Recaps from your prying eyes.". "Casper Spacer, the famous fish author, is here, working on his latest book, Capers Recaps[one of]. He seems to want to be bothered and not want to be at the same time. Writers have a way of massaging life's contradictions[or][stopping]."
 

@@ -37,8 +37,8 @@ aro_ignore = defaultdict(str)
 aro_got = defaultdict(bool)
 aro_line = defaultdict(int)
 
-logic_invis = "c:\\writing\\scripts\\invis\\rl.txt"
-logic_reds = "c:\\writing\\dict\\reds.txt"
+logic_invis_file = "c:\\writing\\scripts\\invis\\rl.txt"
+logic_reds_file = "c:\\writing\\dict\\reds.txt"
 scanned = ""
 data_file = "logsync.txt"
 
@@ -560,7 +560,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
     extraneous = list(set(gots) - set(needs))
     if len(extraneous):
         if data_file not in open_line:
-            open_line[logic_reds] = gots[min(extraneous, key=gots.get)]
+            open_line[logic_reds_file] = gots[min(extraneous, key=gots.get)]
         print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), ', '.join(["{:s}-{:d}".format(x, gots[x]) for x in extraneous]))
 
 show_count = False
@@ -646,7 +646,7 @@ hunt_for_comments = False
 last_comment_line = 0
 last_question_line = 0
 
-with open(logic_invis) as file:
+with open(logic_invis_file) as file:
     for (line_count, line) in enumerate(file, 1):
         if 'STORE P' in line:
             hunt_for_comments = True
@@ -661,14 +661,16 @@ with open(logic_invis) as file:
             if scanned in got_logic_invis.keys():
                 print("Duplicate logic-for in rl.txt:", scanned, "line", line_count, "originally", got_logic_invis[scanned])
             else:
-                got_logic_invis[scanned] = line_count
-            got_logic_invis[scanned] = line_count
+                if scanned == 'volt maze':
+                    print("Acknowledging volt maze in invisiclues file without requiring it in source.")
+                else:
+                    got_logic_invis[scanned] = line_count
             if last_comment_line > last_question_line:
                 print("RL.TXT Two logic-for comments in a row without a question:", last_comment_line, line_count, ll)
             last_comment_line = line_count
         last_comment = ll.startswith("#")
 
-with open(logic_reds) as file:
+with open(logic_reds_file) as file:
     qm_needed = 0
     need_question_mark = 0
     last_qver = ""
@@ -677,7 +679,7 @@ with open(logic_reds) as file:
         if re.search("#qver (of|for) ", ll):
             if need_question_mark:
                 print("REDS.TXT: Need question mark in settler results before line", line_count, "to cover last #qver ({:s})".format(last_qver), "at line", need_question_mark)
-                if logic_reds not in open_line.keys() or not open_first: open_line[logic_reds] = line_count
+                if logic_reds_file not in open_line.keys() or not open_first: open_line[logic_reds_file] = line_count
                 qm_needed += 1
             scanned = re.sub("#qver (of|for) ", "", ll)
             scanned = re.sub("~.*", "", scanned)
@@ -692,8 +694,12 @@ check_aftertexts()
 
 #we no longer need to check logic.htm as it is generated from the invisiclues file.
 #check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
-check_logic_file(need_logic, got_logic_invis, "c:\\writing\\scripts\\invis\\rl.txt", "# logic for {:s}", "raw InvisiClues", launch_message = "invis.pl rl e")
-check_logic_file(need_logic, got_logic_reds, logic_reds, "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)), other_test = (qm_needed >= 0), launch_message = "reds.txt / reds.pl -e")
+check_logic_file(need_logic, got_logic_invis, logic_invis_file,
+  "# logic for {:s}", "raw InvisiClues",
+  launch_message = "invis.pl rl e")
+check_logic_file(need_logic, got_logic_reds, logic_reds_file,
+  "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)),
+  launch_message = "reds.txt / reds.pl -e", other_test = (qm_needed >= 0))
 
 aro_settler_check()
 sa_r_g_check()

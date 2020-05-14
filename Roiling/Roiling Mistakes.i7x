@@ -204,6 +204,8 @@ understand "apt" as a mistake ("Actually, Pat's advice may not be apt[if seed pi
 
 understand "atp" as a mistake ("No need for biochemistry, here.") when player is in Idle Deli.
 
+understand "lied" as a mistake ("There has been no false advertising.") when player is in Idle Deli.
+
 understand "pat pat" and "pat" as a mistake ("Pat doesn't need consolation for his lost business.") when player is in Idle Deli.
 
 understand "pta" as a mistake ("You don't need to attend any school board meetings.") when player is in Idle Deli.

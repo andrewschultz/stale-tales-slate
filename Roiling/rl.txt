@@ -53,6 +53,7 @@ But now slot 4 can't be P or T, and slot 2 covers R, so slot 4 is S.
 (TP)RES(TP)O = PRESTO.
 >STORE P
 >>AUSTERER TREASURE
+# logic for n e recs censer
 ?What do I do now that I got the item behind (ye) hoop?
 It's an N E RECS CENSER. It gives RR???R. This looks pretty ugly, until you count vowels and consonants.
 Slots 4 and 5 must be E. That leaves few possibilities for ---EE-.
@@ -488,7 +489,7 @@ Casper Spacer gives ?RRYRY, meaning the first letter is a consonant, C or S. He 
 CAPERS RECAPS gives RRR??Y. That means either E or A is in slot 4, and the C and R in slot 1 are wrong. Along with the information about Casper, this tells us the word we need starts with S. Also, one of R/P is right in slot 5.
 Note that slot 3 is a consonant but not P, C or (slot 1) S. So it is R.
 S(CP)R(ae)(rp)(ae) then becomes SCR(ae)P(ae). SCRAPE.
-# logic for LOLstr trolls
+# logic for lolstr trolls
 ?What do I do with the LOLstr trolls?
 The one question mark must be a consonant, but the others eliminate a lot of letters.
 In particular, the vowel is in slot 4, so the L's must be in slots 2, 5 or 6. We aren't sure if T or L is in slot 5, but if it is in slot 5, we get -L-OTL and SLROTL and RLSOTL are garbled.
@@ -642,7 +643,8 @@ Not really. Naa Na b / a banna has only one vowel, A. So you can figure a bit ou
 #skipstart
 >MISCELLANEOUS EXAMPLES
 >>VOLT MAZE
-?How do I solve the volt maze fully logcally?
+# logic for volt maze
+?How do I solve the volt maze fully logically?
 First, what is a vowel and what is a consonant? You can scan anywhere.
 <font face="courier new">&nbsp; 1 2 3 4 5 6 7 8
 m . x . x . . x .
