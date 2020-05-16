@@ -22,6 +22,7 @@ pattern = ''
 
 err_string = ""
 html_string = ""
+excess_global = dupe_global = re_global = to_add_global = 0
 
 count = 1
 
@@ -135,6 +136,10 @@ def int_wo_space(i):
 def poke_nudge_files(gm):
     global err_string
     global html_string
+    global excess_global
+    global dupe_global
+    global re_global
+    global to_add_global
     tn = re.sub(".*table of", "table of", gm)
     count = 0
     count2 = 0
@@ -212,6 +217,10 @@ def poke_nudge_files(gm):
             html_string += "<tr><td>{:s}<td>{:s}<td>need #nudge for {:s}<td>{:s}</tr>".format(nudge_proj[short], short, j, c2)
     if count2 > 0:
         err_string = "{:s}\n{:s}/{:s} had {:d} total errors: {:d} to add, {:d} excess nudges, {:d} duplicate nudges, {:d} bad renudges.".format(err_string, tn, short_file, count2, to_add, excess_nudges, dupe_nudges, renudges)
+        to_add_global += to_add
+        excess_global += excess_nudges
+        dupe_global += dupe_nudges
+        re_global += renudges
     for y in nudge_add.keys():
         nudge_add[y] = re.sub("^ ", "", nudge_add[y])
     if count2 == 0:
@@ -256,6 +265,7 @@ for q in nudge_files.keys():
 
 if err_string != "":
     print("Error summary:", err_string)
+    print("TOTAL:", to_add_global, 'to add', excess_global, 'excess', dupe_global, 'dupe', re_global, 'bad renudges')
 #dupnudge should be implemented (?)
 
 if use_html:
