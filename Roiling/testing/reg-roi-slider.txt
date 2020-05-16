@@ -2,7 +2,11 @@
 #
 #reg-roi-slider.txt
 #
-#test for basic wearing the slider out
+# test for basic wearing the slider out
+#
+# region specific slider tests are in the generated files
+#
+#
 #
 # routes/troves/presto written
 # oyster/towers started

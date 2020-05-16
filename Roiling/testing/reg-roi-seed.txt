@@ -1,4 +1,4 @@
-## reg-roi-nudmis-seed.txt
+	## reg-roi-nudmis-seed.txt
 ## nudges and mistakes for seeds in Roiling Original that aren't covered in the main walkthrough
 ## e.g. seed > 1
 ##
@@ -13,37 +13,37 @@
 >seed 1
 
 >gonear trefoil
-#spechelp for geno
+#respechelp for geno
 >geon
 Geno looks around, as if he's about to bolt.
 >gone
 by one point
-#spechelp for edwin
+#respechelp for edwin
 >edwni
 Edwin hiccups.
 >wined
 by one point
-#spechelp for blake
+#respechelp for blake
 >blaek
 Blake looks a bit sadder.
 >bleak
 by one point
-#spechelp for ernest
+#respechelp for ernest
 >ernets
 Ernest seizes up.
 >tenser
 by one point
-#spechelp for andres
+#respechelp for andres
 >andrse
 Andres looks a bit more tied up at the moment.
 >snared
 by one point
-#spechelp for cedrick
+#respechelp for cedrick
 >cedrikc
 Cedrick cringes slightly.
 >cricked
 by one point
-#spechelp for sir rodney
+#respechelp for rodney
 >rodnye
 Rodney looks around, as if he is sick of this place.
 >yonder
