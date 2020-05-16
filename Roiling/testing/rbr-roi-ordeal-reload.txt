@@ -2,12 +2,13 @@
 #--this should be done for all RBR files and not just means manse
 
 files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ordeal-reload-nudmis.txt,reg-roi2-ordeal-reload-slider.txt
-~	nu	t2
+~	min	t1
+~	nudges,nud,nu	t2
 ~	sli	t3
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges ## slider testing
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -20,6 +21,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 }}CURMIN=8
 
 }$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >think
 >x chair
@@ -35,7 +37,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >alpm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for palm
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
@@ -64,12 +66,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tsbael
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #done rejects for lamp
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
 
-==t2
+@nud
 #spechelp for t-b
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
@@ -79,7 +81,7 @@ Now you remember why there were ten beams. Of course, the ten beams lead down to
 Your score has just gone up by two points
 }}SCORE+=2
 
-==t2
+@nud
 #nudge for tenbeams
 >basemetn
 You probably just want to go DOWN to the basement.
@@ -95,19 +97,19 @@ You probably just want to go DOWN to the basement.
 >tsira
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t!1,2
+@!min,nud
 >d
 >stair
 by one point
 >undo
 >undo
 
-==t2
+@nud
 #spechelp for tables
 >stabel
 The tables seem to shift a bit.
 
-==t!1
+@!min
 >stable
 DEBUG INFO: Adding a min point
 \\
@@ -116,7 +118,7 @@ DEBUG INFO: Adding a min point
 >score
 {$SCOS}
 
-==t2
+@nud
 #nudge for stable
 >stabel
 You probably just want to go IN to the stable.
@@ -125,7 +127,7 @@ You probably just want to go IN to the stable.
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
 
-==t!1
+@!min
 >chimney
 DEBUG INFO: Adding a min point
 \\
@@ -134,22 +136,25 @@ DEBUG INFO: Adding a min point
 >score
 {$SCOS}
 
-==t2
+@nud
 #done rejects for chimney
 >chimnye
 You probably just want to go UP the chimney.
 
-==t2
+@nud
 #spechelp for latches
 >satchle
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 
-==t2
+@nud
 #spechelp for giant pin
 >paintign
 The pin wobbles.
+#readables for giant pin
+>read giant pin
+GNAT. I NIP is nonsensically written on the giant pin.
 
-==t!1
+@!min
 >painting
 DEBUG INFO: Adding a min point
 \\
@@ -160,7 +165,7 @@ DEBUG INFO: Adding a min point
 {$SCOS}
 
 
-==t2
+@nud
 #done rejects for painting
 >paintign
 The painting really goes better with the study than the giant pin.
@@ -168,22 +173,22 @@ The painting really goes better with the study than the giant pin.
 
 >satchel
 Your score has just gone up
-==t2
+@nud
 all the secrets here
 
 }}SCORE++
 >score
 {$SCOS}
 
-==t2
+@nud
 #done rejects for satchel
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
-==t!1
+@!min
 >in
 
-==t2
+@nud
 #spechelp for sitar
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
@@ -191,7 +196,7 @@ You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you
 >read sitar
 Oh, right. You bought it from Trisa Israt.
 
-==t!1
+@!min
 >stair
 DEBUG INFO: Adding a min point
 \\
@@ -200,12 +205,12 @@ DEBUG INFO: Adding a min point
 >score
 {$SCOS}
 
-==t2
+@nud
 #done rejects for stair
 >stari
 You don't need to do any more with the stair.
 
-==t!1
+@!min
 >out
 >u
 
@@ -214,12 +219,12 @@ You don't need to do any more with the stair.
 >arpm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for pram
 >rapm
 The pram creaks back and forth slightly.
 
-==t!1
+@!min
 >ramp
 DEBUG INFO: Adding a min point
 \\
@@ -232,7 +237,7 @@ DEBUG INFO: Adding a min point
 >rapm
 The ramp is useful now. Best keep it.
 
-==t2
+@nud
 #spechelp for pavement
 >event mpa
 >event map
@@ -270,12 +275,12 @@ Largely All-Grey Gallery
 >nsbi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for ISBN bins
 >snbi
 The ISBN bins creak slightly.
 
-==t!1
+@!min
 >snib
 DEBUG INFO: Adding a min point
 }}CURMIN++
@@ -284,7 +289,7 @@ DEBUG INFO: Adding a min point
 >score
 {$SCOS}
 
-==t2
+@nud
 #done rejects for ISBN bins
 >snbi
 The ISBN bins are secure. Best not tinker.
@@ -297,7 +302,7 @@ The ISBN bins are secure. Best not tinker.
 >lferi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for rifle
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
@@ -312,7 +317,7 @@ by one point
 >score
 {$SCOS}
 
-==t2
+@nud
 >flire
 Better to pump Elmo for information.
 
@@ -346,7 +351,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for stapler
 >tspaerl
 
-==t2
+@nud
 #spechelp for plates
 >stapel
 The plates shine slightly and rattle.
@@ -361,12 +366,12 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
-==t2
+@nud
 #done rejects for staple
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
 
-==t2
+@nud
 #spechelp for plaster
 >staplre
 The plaster crackles and shines slightly.
@@ -378,7 +383,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
-==t2
+@nud
 #done rejects for stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
