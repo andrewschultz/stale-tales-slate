@@ -407,7 +407,7 @@ The bench is too sturdy. You can't do anything with it, but you may be able to d
 Perhaps it's better to focus on the proper names instead. Simpler, too.
 
 @nud
-#spechelp for bench
+#spechelp for sit a nag
 >againts
 You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should.
 
@@ -483,9 +483,9 @@ The anti-sag sit-a-nag isn't important with [Gast] gone.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for giant's elbow
+#spechelp for woe bow bell
 >belwo
-You seem like you should be able to avoid the elbow, but you may need to mix things up a bit.
+You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
 
 >below
 Your score has just gone up by one point
@@ -513,7 +513,7 @@ The giant is too old and set in its ways. You may just need to listen to him fro
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for nuder
+#spechelp for rude 'n nuder
 >undre
 The pages of Rude 'N Nuder flutter a bit.
 
@@ -575,7 +575,7 @@ They're too unruly and confused, and you probably need to get away from them, an
 #nudge for armad
 >rmaad
 They're too unruly and confused, and you probably need to get away from them, anyway.
-#spechelp for the-b
+#spechelp for the bean
 >beneaht
 The bean rolls back and forth a bit.
 
@@ -629,6 +629,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @max
 #pre-around-unroad rule
 >around
+WRONG
 
 >until
 Your score has just gone up by one point
@@ -642,7 +643,7 @@ The underground is already lit. Un-unlit.
 #nudge for pyrites
 >pyrites
 not something you
-#spechelp for un-road
+#spechelp for sheol holes
 >aroudn
 You thought you saw an un-road for a second, but ... not quite.
 
@@ -666,7 +667,7 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Gal Logan.
 
 @nud
-#spechelp for along-bogus
+#spechelp for un-road
 >alogn
 The un-road seems to lead somewhere, but you couldn't quite make it out like that.
 

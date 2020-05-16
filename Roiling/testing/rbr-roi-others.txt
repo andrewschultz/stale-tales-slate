@@ -263,7 +263,7 @@ The peanut cola smells slightly fruity for a minute.
 #spechelp for magenta rope
 >magenta roep
 The magenta rope and other items you uncovered briefly seem as one.
-#spechelp for videotape
+#spechelp for omen prism
 >persimmno
 You must be on the right track--but nothing happens. Yet.
 
@@ -601,9 +601,6 @@ It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moa
 #spechelp for barren cries
 >barren crise
 The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
-#spechelp for briar screen
->briar screne
-The briar screen briefly turns darker.
 #spechelp for barber sickle
 >barber sickel
 The barber sickle darkens a bit. You must be on the right track.
@@ -835,11 +832,6 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 
-==t2
-#nudge for among
->ogman
-WRONG
-
 ===!1
 >among
 Your score has just gone up by one point.
@@ -854,9 +846,9 @@ Len frowns at the lemons.
 #spechelp for melon
 >melno
 Hm, there must be a better melon than that, but how to ask Len, now.
-#spechelp for pre-mang
+#spechelp for ammo gang
 >amogn
-It would be nice to find a mango, yes. But you don't find anything that way.
+You must not be mingling right with the No Ammo Gang.
 #spechelp for nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
@@ -985,15 +977,15 @@ Dr. Tera is tarred real good. That's the point of tarring. But she might trade t
 >gs
 
 ==t2
-#spechelp for pugnacious plant
+#spechelp for a brr hub
 >rhubabr
-The plant seems to adopt a defensive position with its arms/branches.
+The (a) brr hub seems to swirl closed for a bit.
 #spechelp for orange
 >oraneg
 The orange seems a bit closer for a bit.
-#spechelp for an-a
+#spechelp for a banna'
 >nabaan
-The A shines for a split-second.
+The (a) banna' flutters about for a bit.
 #spechelp for inapt paint
 >reservde
 You seem to read the inapt paint backwards for a second.
@@ -1112,6 +1104,9 @@ The Valence Enclave doesn't need modifications. Especially with people potential
 PERP
 
 ==t2
+>reviwe
+#spechelp for viewer
+That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 \\
 #spechelp for searcher
 >searchre

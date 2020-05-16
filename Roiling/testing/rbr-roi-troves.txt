@@ -282,7 +282,7 @@ The bee's already taken enough of your in-my-heartitude.
 #done rejects for bee's head
 >reasno
 Too much fiddling with reason is unreasonable.
-#spechelp for cellar door
+#spechelp for l'clear cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
 
@@ -342,7 +342,7 @@ It's the song name--I'd Cede.
 It's the song name--I'd Cede.
 
 @nud
-#spechelp for eddie's song
+#spechelp for i'd cede
 >decied
 You try to groove to Eddie's song, but that's not quite it.
 

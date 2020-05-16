@@ -72,7 +72,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
 
 @nud
-#spechelp for t-b
+#spechelp for meet bans
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
 

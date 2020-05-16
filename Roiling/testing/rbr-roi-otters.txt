@@ -343,13 +343,11 @@ Hm, you probably can't change the macks. They're dead set in their ways. Perhaps
 Gretta's been manipulated enough. Deal with the macks' arguments, instead.
 
 @nud
-#spechelp for t-bossily
+#note these are not spechelps since these are generic
 >bossiyl
 You feel you're on the right track to expose the macks. But that's not quite it.
-#spechelp for t-nastily
 >nastiyl
 You feel you're on the right track to expose the macks. But that's not quite it.
-#spechelp for t-blearily
 >bleariyl
 You feel you're on the right track to expose the macks. But that's not quite it.
 
@@ -537,9 +535,9 @@ The whole picture.
 #spechelp for ghoul hat
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
-#spechelp for ergo ogre
+#spechelp for gore ogre
 >erog
-??WRONG
+The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
 >listen
 ??WRONG
 

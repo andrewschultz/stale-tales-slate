@@ -2433,7 +2433,7 @@ definition: a thing (called cand) is readable:
 
 table of readables [tre]
 to-read	what-read	alt-read
-giant pin	"GNAT. I NIP is nonsensically written on the giant pin." [Ordeal Reload]
+giant pin	"GNAT. I NIP is nonsensically written on the giant pin."	a thing	[Ordeal Reload]
 sitar	"Oh, right. You bought it from Trisa Israt."
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
@@ -2456,6 +2456,7 @@ drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end
 drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [oyster]
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
+tips pits	"IT'S P is written in red on the bottom."
 scrawl	"[if carps are touchable][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
 span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
@@ -2473,6 +2474,7 @@ coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cat
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
+ruts circuits	"	"
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
 riot cap	"It's red and [one of]made of I-TARP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
@@ -18997,10 +18999,10 @@ to check-fruit-min:
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break][if ruts circuits are in Rustic Citrus]Ruts circuits may have random stuff strewn, so they may be wortth EXAMINEing[else][fruit-rollup][end if]."
 
 to say fruit-rollup:
-	if spear is moot and mad train is moot and lumps are moot and pages are moot and slime is moot and omen prism is moot and eerie blurbs are moot:
+	if spear is moot and mad train is moot and lumps are moot and pagers are moot and slime is moot and omen prism is moot and eerie blurbs are moot:
 		say "You've tracked down all the fruits here";
 		continue the action;
-	let pres-available be boolval of whether or not spear is touchable +  boolval of whether or not spear is touchable +  boolval of whether or not spear is touchable +  boolval of whether or not spear is touchable +  boolval of whether or not omen prism is touchable;
+	let pres-available be boolval of (whether or not spear is touchable) + boolval of (whether or not mad train is touchable) + boolval of (whether or not lumps are touchable) + boolval of (whether or not slime is touchable) + boolval of (whether or not omen prism is touchable);
 	let cur-got be 0;
 	if pres-available > 0:
 		say "You see ";
@@ -19014,13 +19016,13 @@ to say fruit-rollup:
 			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
 			increment cur-got;
 		if slime is touchable:
-			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]slime oozing off to the side"
+			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]slime oozing off to the side";
 			increment cur-got;
 		if omen prism is touchable:
-			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts"
+			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
 			increment cur-got;
 	if pagers are touchable:
-		say ". Pagers seem to be beeping all around"
+		say ". Pagers seem to be beeping all around";
 		increment pres-available;
 	if eerie blurbs are touchable, say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
 
@@ -19305,7 +19307,12 @@ check going north in Rustic Citrus:
 
 chapter ruts circuits
 
-the ruts circuits are plural-named boring scenery in Rustic Citrus. "[one of]A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a weird omen prism.[or]There's no other nasty cola, or writing, or 'art,' to find. Finally, some eerie blurbs are traced along the edge of the ruts.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things once you've picked off all the, uh, low-hanging fruit here that you can.".
+the ruts circuits are plural-named boring scenery in Rustic Citrus. "[one of]A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a weird omen prism[or]There's no other nasty cola, or writing, or 'art,' to find. Finally, some eerie blurbs are traced along the edge of the ruts[stopping].". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things once you've picked off all the, uh, low-hanging fruit here that you can.".
+
+check reading ruts circuits:
+	if eerie blurbs are moot, say "With the eerie blurbs gone, there's nothing much to read." instead;
+	say "Nothing much to read except the eerie blurbs..." instead;
+	try reading eerie blurbs instead;
 
 after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 conditions should be all true or all false, but just in case...]
 	move peanut cola to Rustic Citrus;

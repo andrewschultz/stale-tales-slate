@@ -189,7 +189,7 @@ Not even you can make that icky stuff in the dumpster worthwhile, but maybe ther
 Not even you can make that icky stuff in the dumpster worthwhile, but maybe you could reach for the dart.
 >adumpstre
 Not even you can make that icky stuff in the dumpster worthwhile, but maybe you could reach for the dart.
-#nudge for decorative
+#nudge for tsar star
 >decoratiev
 You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude.
 
@@ -200,9 +200,6 @@ The stump doesn't move, but the star seems to rattle a bit.
 #spechelp for dart
 >drta
 Some 4-letter word or other will get the dart.
-#spechelp for decorative star
->stra
-The star seems to wiggle a bit, but not enough to pull it out.
 #readables for drab yoke
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
@@ -223,6 +220,11 @@ Perhaps it would be an act of kindness to move the yak from bored to sleepy. A b
 #pre-tba-tab rule
 >tab
 The yak generates an apathy that doesn't allow this. Yet.
+
+@nud
+#spechelp for tsar star
+>rast
+The tsar star seems to wiggle a bit, but not enough to pull it out.
 
 >rats
 Your score has just gone up by one point
@@ -270,6 +272,9 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 Your score has just gone up by one point
 
 @nud
+#spechelp for volt maze
+>mazeltvo
+The volt maze sign shakes a bit. Oy vey! I hope this one's not too meshuggenah.
 >n
 >w
 #spechelp for maze walls
@@ -460,9 +465,6 @@ You won't be able to do anything to the dreidl to see it, but it'll be so horrif
 #spechelp for lamb
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
-#spechelp for volt maze
->mazeltvo
-The volt maze crackles with increased energy, almost ready to break down. Oy vey! I hope this one's not too meshuggenah.
 
 @max
 #pre-solve-maze rule
@@ -523,6 +525,8 @@ You don't need to face double the strength.
 #spechelp for rand
 >danr
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
+#spechelp for odes song
+The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it, even if it's not REALLY hurting you.
 
 @sli
 #slider test for ole
@@ -815,6 +819,15 @@ You'll need to enter the shack to take care of things here.
 >entyr
 The Entry doesn't need disabling, since you're the only person that can enter.
 
+@nud
+#spechelp for starch charts
+>trashc
+The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
+
+@max
+>trasch
+by one point
+
 >n
 Hacks' Shack
 
@@ -1052,7 +1065,7 @@ You don't need to do anything with the skid's rope.
 #nudge for fountain
 >fountani
 It's too small to be a fountain--really, just a fount.
-#spechelp for pile of coal
+#spechelp for coal
 >cloa
 Microscopic bubbles seem to form on the coal and burst in the air.
 #spechelp for flea
@@ -1087,7 +1100,7 @@ You'd get cola all over you if you tried anything with the mug.
 #done rejects for leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
-#spechelp for onyx censer
+#spechelp for n e recs censer
 >screne
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
 #spechelp for escaroles
@@ -1280,7 +1293,7 @@ Even more nothing happens than you expected. The blue button really is too broke
 #renudge for reboot
 >reboto
 You don't need to give that computer another (figurative) kick.
-#spechelp for piece of scratch paper
+#spechelp for i'm le cop polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 
@@ -1389,8 +1402,8 @@ BUDGE
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
->pre-bub-dude-egg rule
-#spechelp for cola
+#pre-bub-dude-egg rule
+>debug
 The process of debugging is going to take a while. You will need some sort of energy. That bottle of cola just won't be enough for the task ahead, as-is
 
 >pour cola in mug

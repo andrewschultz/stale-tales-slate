@@ -115,9 +115,9 @@ You think of mocking Casper's writing style, but that's not quite it. Something 
 >igns
 Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT.
 \\
-#spechelp for tumblers
+#spechelp for tips pits
 >spti
-The tumblers wobble a bit as you try to do ... something ... to them.
+The tips pits wobble a bit as you try to do ... something ... to them.
 \\
 #spechelp for tines
 >inste
@@ -523,6 +523,10 @@ You try to eke out an eek, but you only have one data point, and that's not enou
 >score
 Score in a scenario: 9 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
 
+#spechelp for cans
+>scna
+You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
+
 ==!1
 >scan
 #notana 'nudge for cans'
@@ -564,6 +568,15 @@ Quit playing with your food, already.
 >eat
 #notana 'nudge for eat'
 Your score has just gone up by one point
+
+==t2
+#spechelp for dent
+>detn
+That's not quite the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
+#spechelp for tea
+>tae
+Really, stop playing with your food. You know what to do.
+
 
 ==!1
 >tend
@@ -920,8 +933,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >clena
 The lance is still itself--you can't figure how to apply the wipes.
 >abstract wipes to lean lane
+#spechelp for lance
 >clena
-The lance is still itself--but how to make it neater, now.
+The lance glimmers slightly. It has potential to be shiny.
 >clean
 WRONG
 >purloin wipes
@@ -1260,6 +1274,9 @@ Your score has just gone up by one point
 Someone named LAMPERT (written in red) constructed the templar ramplet.
 
 ==t3
+#spechelp for templar ramplet
+>trampel
+There MUST be a way to storm down the templar ramplet. But not that.
 #slider test for trample
 >rtmalep
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1276,6 +1293,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tan
 >nta
 Your settler begins to make noises: a low hum, but nothing really piercing.
+#spechelp for natant ant
+>tna
+There must be a simple way to take down the ant. You haven't quite got it right yet, though.
+#spechelp for bogus-lamps
+>psaml
+The plasm lamps flicker slightly.
+
 ==t2
 #nudge for psalm
 >alpms
@@ -1285,9 +1309,11 @@ You don't need to riff on any location names to win the game, unless there's not
 >atn
 That's close. Something brutal and direct.
 
->tan
+==!1
+tan
 #notana 'nudge for ant'
 Your score has just gone up by one point
+
 
 ==t3
 #slider test for revel
